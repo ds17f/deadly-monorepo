@@ -8,7 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  docs-build-deploy:
+    name: Docs: Build and Deploy
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -25,12 +26,11 @@ jobs:
           python-version: '3.x'
           cache: 'pip'
 
-      - name: Install documentation dependencies
-        run: |
-          pip install -r docs/requirements.txt
+      - name: Install documentation dependencies via Makefile
+        run: make docs-install
 
-      - name: Build MkDocs site using custom config
-        run: mkdocs -f docs/mkdocs.yml build
+      - name: Build MkDocs site via Makefile
+        run: make docs-build
 
       # Deploy to GitHub Pages using the official gh-pages action
       - name: Deploy to GitHub Pages
