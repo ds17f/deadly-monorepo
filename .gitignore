@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Secrets directory – never commit API keys or credentials
+.secrets/
