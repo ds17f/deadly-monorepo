@@ -1,0 +1,27 @@
+# iOS .gitignore for the iOS app module
+## Xcode build products & derived data
+/DerivedData/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+*/xcuserdata/*
+/*.xcuserdatad
+
+## Build artefacts
+/build/
+*.app
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## SwiftPM / CocoaPods
+/.swiftpm/
+/**/Pods/
+Podfile.lock
+
+## Carthage
+/Carthage/Build
+
+## Miscellaneous
+*.log
+*.swp
+*~

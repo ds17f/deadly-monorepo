@@ -1,0 +1,21 @@
+# Android .gitignore for the Android app module
+## Gradle & build outputs
+/build/
+.gradle/
+*.apk
+*.ap_   # Android Studio intermediate files
+
+## Local configuration files (should not be committed)
+local.properties
+/.cxx/
+
+## IDE / tooling
+.idea/
+*.iml
+*.hprof
+
+## Kotlin/Java generated files
+/app/build/
+
+# Miscellaneous
+*.log
