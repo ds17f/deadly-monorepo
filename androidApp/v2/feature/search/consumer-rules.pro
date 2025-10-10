@@ -1,0 +1,1 @@
+# V2 Browse feature consumer rules

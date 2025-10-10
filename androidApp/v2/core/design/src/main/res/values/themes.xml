@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme for design system -->
+    <style name="DeadlyDesignTheme" parent="android:Theme.Material">
+        <item name="colorControlNormal">@color/default_icon_tint</item>
+    </style>
+</resources>

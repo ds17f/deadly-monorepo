@@ -1,0 +1,1 @@
+# V2 Search implementation consumer rules

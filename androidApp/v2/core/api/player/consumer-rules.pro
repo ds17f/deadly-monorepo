@@ -1,0 +1,1 @@
+# Add project specific ProGuard rules for V2 Player API module

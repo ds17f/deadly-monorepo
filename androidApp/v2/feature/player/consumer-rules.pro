@@ -1,0 +1,1 @@
+# Consumer rules for player feature module

@@ -1,0 +1,1 @@
+# V2 Model consumer rules
