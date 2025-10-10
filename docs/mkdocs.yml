@@ -1,11 +1,30 @@
-site_name: Deadly Monorepo Documentation
+site_name: The Deadly Site
+site_url: https://docs.thedeadly.app/
+repo_url: https://github.com/ds17f/TheDeadlySite
+repo_name: ds17f/TheDeadlySite
+
 nav:
   - Home: index.md
+  - Legal:
+      - Grateful Dead Streaming Rights: gd-streaming-rights.md
+      - Privacy: privacy.md
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
 markdown_extensions:
   - admonition
-  - toc:
-      permalink: true
-  - footnotes
-docs_dir: src
+  - pymdownx.details
+  - pymdownx.superfences

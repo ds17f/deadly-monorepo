@@ -15,6 +15,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+  run:
+    working-directory: ./docs
+
 jobs:
   deploy:
     environment:
@@ -32,10 +36,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          make docs-install
+          pip install -r requirements.txt
 
       - name: Build site
-        run: make docs-build
+        run: mkdocs build
 
       - name: Setup Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
@@ -48,3 +52,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+
