@@ -1,42 +1,50 @@
-name: Docs CI
+name: Deploy MkDocs to GitHub Pages
 
-# Build and publish MkDocs site on pushes to main (or any tag)
 on:
   push:
-    branches: [main]
-    tags: ['*']
+    branches:
+      - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  docs-build-deploy:
-    name: "Docs: Build and Deploy"
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write   # for gh-pages deployment
-      id-token: write
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3 # v5.2.0
         with:
-          python-version: '3.x'
-          cache: 'pip'
+          python-version: "3.x"
 
-      - name: Install documentation dependencies via Makefile
-        run: make docs-install
+      - name: Install dependencies
+        run: |
+          make docs-install
 
-      - name: Build MkDocs site via Makefile
+      - name: Build site
         run: make docs-build
 
-      # Deploy to GitHub Pages using the official gh-pages action
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          # optional: keep history of previous builds
-          force_orphan: true
+          path: "./site"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
