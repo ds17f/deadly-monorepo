@@ -1,0 +1,11 @@
+site_name: Deadly Monorepo Documentation
+nav:
+  - Home: index.md
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - footnotes
+docs_dir: src

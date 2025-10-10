@@ -16,3 +16,6 @@ local.properties
 
 # Secrets directory – never commit API keys or credentials
 .secrets/
+
+# MkDocs generated site should not be versioned
+site/

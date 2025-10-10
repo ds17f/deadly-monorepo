@@ -1,0 +1,42 @@
+name: Docs CI
+
+# Build and publish MkDocs site on pushes to main (or any tag)
+on:
+  push:
+    branches: [main]
+    tags: ['*']
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write   # for gh-pages deployment
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install documentation dependencies
+        run: |
+          pip install -r docs/requirements.txt
+
+      - name: Build MkDocs site using custom config
+        run: mkdocs -f docs/mkdocs.yml build
+
+      # Deploy to GitHub Pages using the official gh-pages action
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          # optional: keep history of previous builds
+          force_orphan: true
