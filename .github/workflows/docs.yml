@@ -9,7 +9,7 @@ on:
 
 jobs:
   docs-build-deploy:
-    name: Docs: Build and Deploy
+    name: "Docs: Build and Deploy"
     runs-on: ubuntu-latest
     permissions:
       contents: read
