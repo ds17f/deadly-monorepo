@@ -1,6 +1,15 @@
 import java.util.Properties
 import java.io.ByteArrayOutputStream
 
+// Load version from version.properties (single source of truth for both Android and iOS)
+val versionPropsFile = rootProject.file("../../version.properties")
+val versionProps = Properties()
+if (versionPropsFile.exists()) {
+    versionPropsFile.inputStream().use { versionProps.load(it) }
+}
+val appVersionName = versionProps.getProperty("VERSION_NAME") ?: "1.0.0"
+val appVersionCode = versionProps.getProperty("VERSION_CODE")?.toIntOrNull() ?: 1
+
 // Function to get git commit hash (configuration cache friendly)
 fun getGitCommitHash(): Provider<String> {
     return try {
@@ -29,8 +38,8 @@ android {
         applicationId = "com.grateful.deadly"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = appVersionCode
+        versionName = appVersionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -45,20 +54,22 @@ android {
 
     signingConfigs {
         create("release") {
-            // Use standard properties file approach
-            val signingPropsFile = rootProject.file("signing.properties")
-            if (signingPropsFile.exists()) {
-                val signingProps = Properties()
-                signingProps.load(signingPropsFile.inputStream())
+            // Use keystore.properties from monorepo .secrets/ directory
+            val keystorePropsFile = rootProject.file("../../.secrets/keystore.properties")
+            if (keystorePropsFile.exists()) {
+                val keystoreProps = Properties()
+                keystoreProps.load(keystorePropsFile.inputStream())
 
-                storeFile = file(signingProps["storeFile"] as String)
-                storePassword = signingProps["storePassword"] as String
-                keyAlias = signingProps["keyAlias"] as String
-                keyPassword = signingProps["keyPassword"] as String
+                // Resolve storeFile path relative to monorepo root
+                val storeFilePath = keystoreProps["storeFile"] as String
+                storeFile = rootProject.file("../../$storeFilePath")
+                storePassword = keystoreProps["storePassword"] as String
+                keyAlias = keystoreProps["keyAlias"] as String
+                keyPassword = keystoreProps["keyPassword"] as String
 
-                println("✅ Release signing configuration loaded from signing.properties")
+                println("✅ Release signing configuration loaded from .secrets/keystore.properties")
             } else {
-                println("⚠️ signing.properties not found - release builds will be unsigned")
+                println("⚠️ .secrets/keystore.properties not found - release builds will be unsigned")
             }
         }
     }

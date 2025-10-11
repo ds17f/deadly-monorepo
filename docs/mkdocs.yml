@@ -5,6 +5,10 @@ repo_name: ds17f/TheDeadlySite
 
 nav:
   - Home: index.md
+  - Developer:
+      - Overview: developer/index.md
+      - Version Management: developer/version-management.md
+      - CI/CD: developer/ci-cd.md
   - Legal:
       - Grateful Dead Streaming Rights: gd-streaming-rights.md
       - Privacy: privacy.md

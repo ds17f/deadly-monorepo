@@ -1,0 +1,85 @@
+name: Android Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@b36c23c0d998641eff861008f374ee103c25ac73 # v4.4.0
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
+      with:
+        ruby-version: '3.1'
+        bundler-cache: false
+
+    - name: Install fastlane
+      run: |
+        gem install fastlane
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x androidApp/gradlew
+
+    - name: Decode keystore
+      run: |
+        mkdir -p .secrets
+        echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > .secrets/my-release-key.jks
+
+    - name: Create keystore.properties
+      run: |
+        cat > .secrets/keystore.properties << EOF
+        storeFile=.secrets/my-release-key.jks
+        storePassword=${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        keyAlias=${{ secrets.ANDROID_KEY_ALIAS }}
+        keyPassword=${{ secrets.ANDROID_KEY_PASSWORD }}
+        EOF
+
+    - name: Build release APK with fastlane
+      run: |
+        cd androidApp
+        fastlane build_release
+
+    - name: Build release AAB with fastlane
+      run: |
+        cd androidApp
+        fastlane build_bundle
+
+    - name: Decode Play Store service account JSON
+      run: |
+        echo "${{ secrets.PLAY_STORE_JSON_BASE64 }}" | base64 -d > .secrets/thedeadly-app-f48493c2a133.json
+
+    - name: Deploy to Play Store Internal Testing
+      run: |
+        cd androidApp
+        fastlane deploy_testing
+
+    - name: Upload signed APK (backup)
+      uses: actions/upload-artifact@84480863f228bb9747b473957fcc9e309aa96097 # v4.4.2
+      with:
+        name: release-apk
+        path: androidApp/app/build/outputs/apk/release/*.apk
+        retention-days: 30
+
+    - name: Upload signed AAB (backup)
+      uses: actions/upload-artifact@84480863f228bb9747b473957fcc9e309aa96097 # v4.4.2
+      with:
+        name: release-aab
+        path: androidApp/app/build/outputs/bundle/release/*.aab
+        retention-days: 30
+
+    - name: Clean up secrets
+      if: always()
+      run: rm -f .secrets/my-release-key.jks .secrets/keystore.properties .secrets/thedeadly-app-f48493c2a133.json

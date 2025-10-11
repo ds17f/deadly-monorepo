@@ -1,0 +1,8 @@
+# Android Fastlane Configuration
+
+# Package name
+package_name("com.grateful.deadly")
+
+# Google Play service account JSON key
+# Fastlane runs from androidApp/fastlane/, so ../../.secrets/ goes to monorepo root
+json_key_file("../../.secrets/thedeadly-app-f48493c2a133.json")

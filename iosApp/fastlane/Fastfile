@@ -1,0 +1,181 @@
+# iOS Fastlane Configuration
+# This file contains the fastlane.tools configuration for iOS builds
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Update iOS version from version.properties"
+  private_lane :update_version_from_properties do
+    # Fastlane changes to Fastfile directory (iosApp/fastlane/)
+    # version.properties is two levels up at monorepo root
+    version_props = File.read("../../version.properties")
+    version_name = version_props.match(/VERSION_NAME=(.+)/)[1].strip
+    version_code = version_props.match(/VERSION_CODE=(.+)/)[1].strip
+
+    UI.message("📝 Setting iOS version to #{version_name} (#{version_code})")
+
+    # Get absolute path to xcodeproj (one level up from fastlane/)
+    xcodeproj_path = File.expand_path("../deadly.xcodeproj", __dir__)
+
+    # Update build settings directly (not Info.plist, which is auto-generated)
+    # This ensures version persists when Xcode regenerates Info.plist
+    require 'xcodeproj'
+    project = Xcodeproj::Project.open(xcodeproj_path)
+
+    project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings["MARKETING_VERSION"] = version_name
+        config.build_settings["CURRENT_PROJECT_VERSION"] = version_code
+      end
+    end
+
+    project.save
+
+    UI.success("✅ iOS version updated to #{version_name} (#{version_code})")
+  end
+
+  desc "Build debug app for simulator"
+  lane :build_debug do
+    # Build iOS app
+    gym(
+      project: "deadly.xcodeproj",
+      scheme: "deadly",
+      configuration: "Debug",
+      destination: "generic/platform=iOS Simulator",
+      derived_data_path: "./build",
+      skip_package_ipa: true,
+      skip_archive: true,
+      build_path: "./build",
+      output_directory: "./build"
+    )
+
+    UI.success("✅ Debug app built successfully!")
+  end
+
+  desc "Build release app for device"
+  lane :build_release do
+    # Update version from version.properties
+    update_version_from_properties
+
+    # Build and sign iOS app
+    gym(
+      project: "deadly.xcodeproj",
+      scheme: "deadly",
+      configuration: "Release",
+      destination: "generic/platform=iOS",
+      export_method: "app-store",
+      derived_data_path: "./build",
+      output_directory: "./build",
+      output_name: "Deadly.ipa",
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: {
+          "com.grateful.deadly" => "DeadlyApp_AppStore2"
+        }
+      }
+    )
+
+    UI.success("✅ Release IPA built successfully!")
+  end
+
+  desc "Build and install debug app to connected device"
+  lane :deploy_device do
+    # Get connected device
+    devices = sh("xcrun xctrace list devices | grep 'iPhone' | grep -v 'Simulator' || true").strip
+    if devices.empty?
+      UI.user_error!("❌ No iOS device detected. Please connect an iOS device and ensure it's trusted.")
+    end
+
+    device_id = devices.split("\n").first.match(/\(([A-F0-9-]+)\)/).captures.first
+    UI.message("📱 Installing to device: #{device_id}")
+
+    # Build and install to device
+    gym(
+      project: "deadly.xcodeproj",
+      scheme: "deadly",
+      configuration: "Debug",
+      destination: "id=#{device_id}",
+      derived_data_path: "./build",
+      skip_package_ipa: true,
+      skip_archive: true
+    )
+
+    UI.success("✅ App installed to device successfully!")
+  end
+
+  desc "Sync certificates and provisioning profiles"
+  lane :sync_certs do
+    # This lane can be configured to use match or manual certificate management
+    UI.message("🔐 Certificate syncing...")
+    UI.message("💡 Configure this lane based on your certificate management strategy:")
+    UI.message("   - Use 'match' for automatic certificate syncing")
+    UI.message("   - Or manually import certificates and provisioning profiles")
+
+    # Example using match (uncomment and configure):
+    # match(
+    #   type: "development",
+    #   readonly: true
+    # )
+    #
+    # match(
+    #   type: "appstore",
+    #   readonly: true
+    # )
+  end
+
+  desc "Run tests"
+  lane :test do
+    run_tests(
+      project: "deadly.xcodeproj",
+      scheme: "deadly",
+      destination: "platform=iOS Simulator,name=iPhone 16"
+    )
+  end
+
+  desc "Deploy to TestFlight"
+  lane :deploy_testflight do
+    # Update version from version.properties
+    update_version_from_properties
+
+    # Configure App Store Connect API key
+    # Use absolute path to API key file
+    api_key_path = File.expand_path("../../.secrets/AuthKey_V862XWV7WB.p8", __dir__)
+    api_key = app_store_connect_api_key(
+      key_id: "V862XWV7WB",
+      issuer_id: "9501cc7b-1a6c-4e4d-8c37-c04149a31886",
+      key_filepath: api_key_path,
+      in_house: false
+    )
+
+    # Build and sign iOS app
+    gym(
+      project: "deadly.xcodeproj",
+      scheme: "deadly",
+      configuration: "Release",
+      destination: "generic/platform=iOS",
+      export_method: "app-store",
+      derived_data_path: "./build",
+      output_directory: "./build",
+      output_name: "Deadly.ipa",
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: {
+          "com.grateful.deadly" => "DeadlyApp_AppStore2"
+        }
+      }
+    )
+
+    UI.success("✅ Release IPA built successfully!")
+
+    upload_to_testflight(
+      api_key: api_key,
+      skip_waiting_for_build_processing: true,
+      ipa: "./build/Deadly.ipa"
+    )
+
+    UI.success("✅ App uploaded to TestFlight!")
+  end
+end

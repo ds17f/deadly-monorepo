@@ -1,0 +1,67 @@
+name: iOS Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-release:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
+      with:
+        ruby-version: '3.1'
+        bundler-cache: false
+
+    - name: Install fastlane
+      run: |
+        gem install fastlane
+        gem install xcodeproj
+
+    - name: Decode certificate
+      run: |
+        mkdir -p .secrets
+        echo "${{ secrets.IOS_CERTIFICATE_BASE64 }}" | base64 -d > .secrets/certificate.p12
+
+    - name: Decode provisioning profile
+      run: |
+        echo "${{ secrets.IOS_PROVISIONING_PROFILE_BASE64 }}" | base64 -d > .secrets/profile.mobileprovision
+        mkdir -p ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles
+        cp .secrets/profile.mobileprovision ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/
+
+    - name: Import certificate to keychain
+      run: |
+        security create-keychain -p "" build.keychain
+        security default-keychain -s build.keychain
+        security unlock-keychain -p "" build.keychain
+        security set-keychain-settings -t 3600 -u build.keychain
+        security import .secrets/certificate.p12 -k build.keychain -P "${{ secrets.IOS_CERTIFICATE_PASSWORD }}" -T /usr/bin/codesign
+        security set-key-partition-list -S apple-tool:,apple: -s -k "" build.keychain
+
+    - name: Decode App Store Connect API key
+      run: |
+        echo "${{ secrets.APP_STORE_CONNECT_KEY_BASE64 }}" | base64 -d > .secrets/AuthKey_V862XWV7WB.p8
+
+    - name: Build and deploy to TestFlight with fastlane
+      run: |
+        cd iosApp
+        fastlane deploy_testflight
+
+    - name: Upload IPA (backup)
+      uses: actions/upload-artifact@84480863f228bb9747b473957fcc9e309aa96097 # v4.4.2
+      with:
+        name: release-ipa
+        path: iosApp/build/*.ipa
+        retention-days: 30
+
+    - name: Clean up
+      if: always()
+      run: |
+        rm -f .secrets/certificate.p12 .secrets/profile.mobileprovision .secrets/AuthKey_V862XWV7WB.p8
+        security delete-keychain build.keychain || true
