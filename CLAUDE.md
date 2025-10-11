@@ -97,3 +97,4 @@ Gradle properties:
 - **Project names**: iOS Xcode project name is "deadly", Android rootProject name is "Deadly"
 - **No shared code yet**: While AGENTS.md mentions KMM shared modules, none currently exist
 - **Future KMM**: Place shared Kotlin Multiplatform modules in top-level `shared/` directory when needed
+- Always use the make targets in the makefile if there is a suitable one

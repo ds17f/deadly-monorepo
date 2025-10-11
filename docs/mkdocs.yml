@@ -7,6 +7,7 @@ nav:
   - Home: index.md
   - Developer:
       - Overview: developer/index.md
+      - Architecture: developer/architecture.md
       - Version Management: developer/version-management.md
       - CI/CD: developer/ci-cd.md
   - TODO:
@@ -37,3 +38,5 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
