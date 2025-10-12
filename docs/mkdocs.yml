@@ -1,7 +1,7 @@
-site_name: The Deadly Site
+site_name: Deadly
 site_url: https://docs.thedeadly.app/
-repo_url: https://github.com/ds17f/TheDeadlySite
-repo_name: ds17f/TheDeadlySite
+repo_url: https://github.com/ds17f/deadly-monorepo
+repo_name: ds17f/deadly-monorepo
 
 nav:
   - Home: index.md
@@ -10,6 +10,21 @@ nav:
       - Architecture: developer/architecture.md
       - Version Management: developer/version-management.md
       - CI/CD: developer/ci-cd.md
+      - Database:
+          - Overview: developer/database/index.md
+          - Design Philosophy: developer/database/design-philosophy.md
+          - Data Sources: developer/database/data-sources.md
+          - Query Patterns: developer/database/query-patterns.md
+          - Data Flow: developer/database/data-flow.md
+          - Platform Implementation: developer/database/platform-implementation.md
+          - Entities:
+              - Shows: developer/database/entities/shows.md
+              - Recordings: developer/database/entities/recordings.md
+              - Library Shows: developer/database/entities/library-shows.md
+              - Recent Shows: developer/database/entities/recent-shows.md
+              - Collections: developer/database/entities/collections.md
+              - Show Search (FTS4): developer/database/entities/show-search.md
+              - Data Version: developer/database/entities/data-version.md
   - TODO:
       - API Integration: todo/api-integration.md
       - Architecture Patterns: todo/architecture-patterns.md

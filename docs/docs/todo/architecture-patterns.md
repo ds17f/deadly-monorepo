@@ -346,13 +346,13 @@ To write this documentation, investigate:
     - [ ] Document nested navigation handling
     - [ ] Document back stack management strategies
 - [x] Document data flow with diagrams
-- [ ] Document database architecture
-    - [ ] Confirm database technology (appears to be Room based on entity references)
-    - [ ] Document complete database schema
-    - [ ] Document all entities and their relationships
-    - [ ] Document DAOs and query patterns
-    - [ ] Document migration strategy and versioning
-    - [ ] Document FTS5 search implementation details
+- [x] Document database architecture
+    - [x] Confirm database technology (Room + SQLite with FTS4)
+    - [x] Document complete database schema (7 entities fully documented)
+    - [x] Document all entities and their relationships
+    - [x] Document DAOs and query patterns (query-patterns.md)
+    - [x] Document migration strategy and versioning (destructive in v2 dev, documented)
+    - [x] Document FTS4 search implementation details (show-search.md)
 - [ ] Document design system usage
     - [ ] Document reusable UI components in `v2:core:design`
     - [ ] Document typography scale and usage
