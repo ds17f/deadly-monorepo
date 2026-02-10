@@ -61,7 +61,29 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to dark mode
+  features:
+    # Navigation
+    - navigation.footer        # Prev/next links in footer
+    - navigation.instant       # Instant loading (SPA-like)
+    - navigation.tracking      # URL updates with active anchor
+    - navigation.top           # Back to top button
+    - navigation.tabs          # Top-level navigation tabs
+    - navigation.sections      # Render sections as groups
+    - navigation.indexes       # Section index pages
+
+    # Search
+    - search.suggest           # Search suggestions
+    - search.highlight         # Highlight search terms
+    - search.share             # Share search results
+
+    # Content
+    - content.code.copy        # Copy button for code blocks
+    - toc.follow               # Auto-scroll TOC to active heading
+    - toc.integrate            # Integrate TOC into left sidebar
+
+plugins:
+  - search
 
 markdown_extensions:
   - admonition
@@ -69,3 +91,11 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - attr_list                  # Add attributes to elements
+  - md_in_html                 # Markdown in HTML
+  - pymdownx.emoji:            # Emoji support
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:           # Content tabs
+      alternate_style: true
+  - pymdownx.keys              # Keyboard keys rendering

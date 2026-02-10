@@ -1,3 +1,7 @@
+---
+icon: material/feature-search
+---
+
 # Features
 
 This section documents the user-facing features of TheDeadly app from a developer perspective. Each feature page explains what the feature does, why it exists, and how it's implemented.
