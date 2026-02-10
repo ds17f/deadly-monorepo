@@ -1,3 +1,7 @@
+---
+icon: material/code-braces
+---
+
 # Developer Guide
 
 Welcome to the Deadly app developer documentation. This section contains guides for building, releasing, and maintaining the Deadly apps.

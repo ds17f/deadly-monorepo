@@ -50,7 +50,7 @@ docs-build:
 
 # Serve the documentation locally for development.
 docs-serve:
-	mkdocs serve -f docs/mkdocs.yml
+	mkdocs serve -f docs/mkdocs.yml -a localhost:8099
 
 # Remove generated site directory.
 docs-clean:

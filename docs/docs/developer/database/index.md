@@ -1,3 +1,7 @@
+---
+icon: material/database
+---
+
 # Database Design
 
 ## Overview
