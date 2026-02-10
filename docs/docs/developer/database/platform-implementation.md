@@ -572,29 +572,29 @@ Check: recent_shows has 1 row with totalPlayCount = 2
 These questions must be answered before iOS implementation:
 
 1. **Which iOS database framework?** (GRDB vs Core Data vs SQLite.swift vs raw SQLite)
-   - Pros/cons of each
-   - FTS4/FTS5 support
-   - Swift ergonomics
-   - Migration support
+    - Pros/cons of each
+    - FTS4/FTS5 support
+    - Swift ergonomics
+    - Migration support
 
 2. **FTS4 or FTS5?**
-   - Is FTS4 `tokenchars=-.` supported on iOS?
-   - Does FTS5 offer better performance?
-   - Can we match Android's tokenization behavior?
+    - Is FTS4 `tokenchars=-.` supported on iOS?
+    - Does FTS5 offer better performance?
+    - Can we match Android's tokenization behavior?
 
 3. **How to handle denormalization sync in Swift?**
-   - Transaction API
-   - Error handling
-   - Rollback behavior
+    - Transaction API
+    - Error handling
+    - Rollback behavior
 
 4. **Which reactive pattern for SwiftUI?**
-   - Combine vs AsyncSequence vs @Observable
-   - Best practices for database observation
+    - Combine vs AsyncSequence vs @Observable
+    - Best practices for database observation
 
 5. **How to test database on iOS?**
-   - In-memory database for tests?
-   - XCTest patterns
-   - Mock vs real database
+    - In-memory database for tests?
+    - XCTest patterns
+    - Mock vs real database
 
 ---
 
