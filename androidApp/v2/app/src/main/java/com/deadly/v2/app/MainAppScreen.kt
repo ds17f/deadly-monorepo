@@ -1,5 +1,6 @@
 package com.deadly.v2.app
 
+import android.net.Uri
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -16,10 +17,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.deadly.v2.app.navigation.BottomNavDestination
 import com.deadly.v2.core.theme.api.ThemeAssets
 import com.deadly.v2.feature.search.screens.searchResults.SearchResultsScreen
@@ -91,31 +94,35 @@ fun MainAppScreen(
             ) {
                 composable("search-main") {
                     SearchScreen(
-                        onNavigateToPlayer = { recordingId ->
-                            // TODO: Navigate to player when implemented in V2
-                        },
                         onNavigateToShow = { showId ->
                             // TODO: Navigate to show details when implemented in V2
                         },
-                        onNavigateToSearchResults = {
-                            navController.navigate("search-results")
+                        onNavigateToSearchResults = { query ->
+                            val encoded = Uri.encode(query)
+                            navController.navigate("search-results?query=$encoded")
                         },
                         initialEra = null
                     )
                 }
-                
-                composable("search-results") {
+
+                composable(
+                    route = "search-results?query={query}",
+                    arguments = listOf(
+                        navArgument("query") {
+                            type = NavType.StringType
+                            defaultValue = ""
+                        }
+                    )
+                ) { backStackEntry ->
+                    val query = backStackEntry.arguments?.getString("query") ?: ""
                     SearchResultsScreen(
-                        initialQuery = "",
+                        initialQuery = query,
                         onNavigateBack = {
                             navController.popBackStack()
                         },
                         onNavigateToShow = { showId ->
                             // TODO: Navigate to show details when implemented in V2
                         },
-                        onNavigateToPlayer = { recordingId ->
-                            // TODO: Navigate to player when implemented in V2
-                        }
                     )
                 }
             }

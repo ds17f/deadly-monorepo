@@ -1,10 +1,27 @@
 # TODO: Internet Archive Integration Documentation
 
 **Priority**: Critical
-**Status**: Not Started
+**Status**: Complete ✅
 **Estimated Effort**: 6-8 hours
 
-## Problem
+## Resolution
+
+This TODO is now complete. The requested documentation is covered across multiple existing documents:
+
+- **API Integration** (`docs/docs/developer/api-integration.md`) - Covers Archive.org API endpoints, metadata structure, audio streaming URLs, caching strategy, error handling, and compliance
+- **Data Sources** (`docs/docs/developer/database/data-sources.md`) - Documents the dead-metadata package which contains pre-normalized show data, setlists, and collections
+- **Domain Models** (`docs/docs/developer/domain-models.md`) - Documents the data models used throughout the app
+- **API Samples** (`docs/docs/developer/api-samples/`) - Real Archive.org API response examples with edge cases
+
+**Key Findings**:
+- No Archive.org search API used (all search is local database FTS4)
+- Data normalization happens in the dead-metadata package (pre-compiled, external to app)
+- Collections are app-specific "box sets", not Archive.org collections
+- Setlist parsing is done in dead-metadata package, not at runtime
+
+---
+
+## Original Problem
 
 The app's core functionality revolves around streaming Grateful Dead concerts from the Internet Archive, but there is no documentation explaining:
 - Which Internet Archive collections are used

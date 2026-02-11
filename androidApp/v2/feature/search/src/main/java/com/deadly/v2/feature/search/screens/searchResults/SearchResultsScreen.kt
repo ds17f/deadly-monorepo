@@ -49,11 +49,17 @@ fun SearchResultsScreen(
     initialQuery: String = "",
     onNavigateBack: () -> Unit,
     onNavigateToShow: (String) -> Unit,
-    onNavigateToPlayer: (String) -> Unit,
     viewModel: SearchViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    
+
+    // Pre-fill search when navigating from browse buttons
+    LaunchedEffect(initialQuery) {
+        if (initialQuery.isNotEmpty()) {
+            viewModel.onSearchQueryChanged(initialQuery)
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -98,8 +104,7 @@ fun SearchResultsScreen(
                         searchResults = uiState.searchResults,
                         searchStatus = uiState.searchStatus,
                         searchStats = uiState.searchStats,
-                        onShowSelected = onNavigateToShow,
-                        onRecordingSelected = onNavigateToPlayer
+                        onShowSelected = onNavigateToShow
                     )
                 }
             }
@@ -282,8 +287,7 @@ private fun SearchResultsSection(
     searchResults: List<SearchResultShow>,
     searchStatus: SearchStatus,
     searchStats: SearchStats,
-    onShowSelected: (String) -> Unit,
-    onRecordingSelected: (String) -> Unit
+    onShowSelected: (String) -> Unit
 ) {
     Column {
         // Results header with stats

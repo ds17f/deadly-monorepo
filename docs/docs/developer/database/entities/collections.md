@@ -449,13 +449,13 @@ Collections come from **dead-metadata package** (curated dataset).
 
 1. Read `collections.json` from metadata ZIP
 2. For each collection:
-   - Generate `id` (slug from name)
-   - Extract show IDs from `shows` array
-   - Serialize `tags` to JSON string
-   - Serialize `showIds` to JSON string
-   - Count shows for `total_shows`
-   - Extract first tag for `primary_tag`
-   - Set timestamps
+    - Generate `id` (slug from name)
+    - Extract show IDs from `shows` array
+    - Serialize `tags` to JSON string
+    - Serialize `showIds` to JSON string
+    - Count shows for `total_shows`
+    - Extract first tag for `primary_tag`
+    - Set timestamps
 3. Insert as `DeadCollectionEntity` with `REPLACE` conflict strategy
 4. Verify all referenced shows exist in `shows` table
 
