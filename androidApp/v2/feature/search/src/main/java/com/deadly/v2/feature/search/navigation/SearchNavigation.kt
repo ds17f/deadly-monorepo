@@ -17,10 +17,6 @@ fun NavGraphBuilder.searchGraph(navController: NavController) {
     ) {
         composable("search") {
             SearchScreen(
-                onNavigateToPlayer = { recordingId ->
-                    // TODO: Navigate to player when implemented
-                    // navController.navigate("player/$recordingId")
-                },
                 onNavigateToShow = { showId ->
                     navController.navigate("playlist/$showId")
                 },
@@ -40,10 +36,6 @@ fun NavGraphBuilder.searchGraph(navController: NavController) {
                 onNavigateToShow = { showId ->
                     navController.navigate("playlist/$showId")
                 },
-                onNavigateToPlayer = { recordingId ->
-                    // TODO: Navigate to player when implemented
-                    // navController.navigate("player/$recordingId")
-                }
             )
         }
     }

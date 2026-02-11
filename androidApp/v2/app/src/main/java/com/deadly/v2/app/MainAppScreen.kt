@@ -91,9 +91,6 @@ fun MainAppScreen(
             ) {
                 composable("search-main") {
                     SearchScreen(
-                        onNavigateToPlayer = { recordingId ->
-                            // TODO: Navigate to player when implemented in V2
-                        },
                         onNavigateToShow = { showId ->
                             // TODO: Navigate to show details when implemented in V2
                         },
@@ -113,9 +110,6 @@ fun MainAppScreen(
                         onNavigateToShow = { showId ->
                             // TODO: Navigate to show details when implemented in V2
                         },
-                        onNavigateToPlayer = { recordingId ->
-                            // TODO: Navigate to player when implemented in V2
-                        }
                     )
                 }
             }

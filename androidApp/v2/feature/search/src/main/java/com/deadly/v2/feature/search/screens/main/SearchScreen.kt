@@ -70,7 +70,6 @@ data class BrowseAllItem(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchScreen(
-    onNavigateToPlayer: (String) -> Unit,
     onNavigateToShow: (String) -> Unit,
     onNavigateToSearchResults: () -> Unit,
     initialEra: String? = null,
