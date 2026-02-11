@@ -52,7 +52,14 @@ fun SearchResultsScreen(
     viewModel: SearchViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    
+
+    // Pre-fill search when navigating from browse buttons
+    LaunchedEffect(initialQuery) {
+        if (initialQuery.isNotEmpty()) {
+            viewModel.onSearchQueryChanged(initialQuery)
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()

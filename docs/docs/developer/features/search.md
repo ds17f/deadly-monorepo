@@ -45,6 +45,43 @@ The Search feature enables users to find Grateful Dead shows using a powerful lo
 - **Quick selection** - Tap suggestion to execute immediately
 - **No debounce** - Deliberate selections execute instantly
 
+### Discovery UI (SearchScreen)
+
+The main search screen offers three browsing sections before the user types a query:
+
+**Decade Cards** — Fixed 2x2 grid of decade buttons (1960s–1990s). Each fires a wildcard FTS query like `197*`.
+
+**Discover Section** — Three cards drawn from the `SearchShortcut` catalog, rotated on a time-based schedule. Uses a deterministic shuffle seeded by `System.currentTimeMillis() / (4 hours)`, so the same three cards appear across recompositions, navigation, and app restarts within the same 4-hour window. After 4 hours the seed changes and the user sees a fresh set. Cards render with a vertical gradient and title/subtitle (image support is backlogged as DEAD-50).
+
+**Browse All Section** — 8 rotating items drawn from shortcuts with `priority >= 5` in the `SearchShortcut` catalog (filters, venues, cities, songs), using the same time-based seed mechanism as Discover (offset by 1 to rotate independently). Displayed in a 2-column grid (4 rows). Each card fires its `searchQuery` through the same FTS pipeline as typed queries.
+
+**Pull-to-Refresh** — Both Discover and Browse All support pull-to-refresh via Material3 `PullToRefreshBox`. Pulling down increments a `refreshCounter` in the ViewModel, which invalidates the `remember` keys in both sections and recomputes the shuffle with a fresh seed (`timeBasedSeed + counter`). Each pull produces a different selection of cards.
+
+#### SearchShortcut Catalog
+
+Defined in `SearchShortcuts.kt`, the catalog is a flat list of `SearchShortcut` entries:
+
+```kotlin
+data class SearchShortcut(
+    val title: String,          // Display name
+    val subtitle: String,       // Short description
+    val searchQuery: String,    // FTS query to execute
+    val priority: Int = 0,      // Controls visibility (>= 5 for Browse All)
+    val discoverImageRes: Int?, // Optional tall image (Discover cards)
+    val browseImageRes: Int?,   // Optional short image (Browse All cards)
+)
+```
+
+Priority levels:
+
+| Priority | Category | Examples |
+|----------|----------|----------|
+| 10 | Filters | Top Rated, Popular, Soundboard, Audience |
+| 5 | Venues, Cities, Songs | Fillmore, Red Rocks, Dark Star, San Francisco |
+| 3 | Eras | Brent Era, Pigpen Era, Keith Era |
+
+Both Discover and Browse All draw from the same catalog. Discover picks 3 random items (any priority); Browse All shows all items with priority >= 5.
+
 ### Search Filters (Planned)
 - Venue, Year, Location
 - Has Downloads, Recent, Popular
@@ -128,6 +165,10 @@ CREATE VIRTUAL TABLE show_search_v2 USING fts5(
 - City, state, country
 - Band member names (from lineup)
 - Date variations (YYYY-MM-DD, YYYY-MM, YYYY)
+- Source type tags: `soundboard`/`sbd`, `audience`/`aud`, `matrix`
+- Quality tags: `top-rated` (avg rating >= 4.0 with >= 10 reviews), `popular` (>= 50 total reviews)
+
+The source type and quality tags are synthetic — they don't appear in the raw show text but are appended to `searchText` during import based on `ShowImportData` metadata fields (`sourceTypes`, `avgRating`, `totalHighRatings`, `totalLowRatings`). This allows Browse All categories like "Soundboard" and "Popular" to return results via normal FTS queries.
 
 **Search flow**:
 1. `ShowSearchDao.searchShows(query)` queries FTS5 table

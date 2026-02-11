@@ -49,6 +49,8 @@ data class ShowImportData(
     @SerialName("recording_count") val recordingCount: Int = 0,
     val confidence: Double = 0.0,
     @SerialName("source_types") val sourceTypes: Map<String, Int> = emptyMap(),
+    @SerialName("total_high_ratings") val totalHighRatings: Int = 0,
+    @SerialName("total_low_ratings") val totalLowRatings: Int = 0,
     @SerialName("matching_method") val matchingMethod: String? = null,
     @SerialName("filtering_applied") val filteringApplied: List<String> = emptyList(),
     val collections: List<String> = emptyList()
@@ -375,8 +377,8 @@ class DataImportService @Inject constructor(
         val averageRating = showData.avgRating.toFloat()
         val bestRecordingId = showData.bestRecording
         
-        // Calculate total reviews from source types (approximation)
-        val totalReviews = showData.sourceTypes.values.sum()
+        // Calculate total reviews from high + low ratings across all recordings
+        val totalReviews = showData.totalHighRatings + showData.totalLowRatings
         
         val currentTime = System.currentTimeMillis()
         
@@ -511,6 +513,16 @@ class DataImportService @Inject constructor(
             if (!songList.isNullOrBlank()) {
                 add(songList.replace(",", " ")) // "Scarlet Begonias Fire On The Mountain"
             }
+
+            // Source type tags
+            if (showData.sourceTypes.containsKey("SBD")) add("soundboard sbd")
+            if (showData.sourceTypes.containsKey("AUD")) add("audience aud")
+            if (showData.sourceTypes.containsKey("MATRIX")) add("matrix")
+
+            // Quality/popularity tags
+            val totalReviews = showData.totalHighRatings + showData.totalLowRatings
+            if (showData.avgRating >= 4.0 && totalReviews >= 10) add("top-rated")
+            if (totalReviews >= 50) add("popular")
         }.joinToString(" ")
         
         return ShowSearchEntity(rowid = 0, showId = showData.showId, searchText = searchableText)
