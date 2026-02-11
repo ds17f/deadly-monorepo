@@ -1,8 +1,11 @@
 package com.deadly.v2.feature.search.navigation
 
+import android.net.Uri
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavType
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import androidx.navigation.navigation
 import com.deadly.v2.feature.search.screens.main.SearchScreen
 import com.deadly.v2.feature.search.screens.searchResults.SearchResultsScreen
@@ -17,33 +20,35 @@ fun NavGraphBuilder.searchGraph(navController: NavController) {
     ) {
         composable("search") {
             SearchScreen(
-                onNavigateToPlayer = { recordingId ->
-                    // TODO: Navigate to player when implemented
-                    // navController.navigate("player/$recordingId")
-                },
                 onNavigateToShow = { showId ->
                     navController.navigate("playlist/$showId")
                 },
-                onNavigateToSearchResults = {
-                    navController.navigate("search-results")
+                onNavigateToSearchResults = { query ->
+                    val encoded = Uri.encode(query)
+                    navController.navigate("search-results?query=$encoded")
                 },
                 initialEra = null
             )
         }
-        
-        composable("search-results") {
+
+        composable(
+            route = "search-results?query={query}",
+            arguments = listOf(
+                navArgument("query") {
+                    type = NavType.StringType
+                    defaultValue = ""
+                }
+            )
+        ) { backStackEntry ->
+            val query = backStackEntry.arguments?.getString("query") ?: ""
             SearchResultsScreen(
-                initialQuery = "",
+                initialQuery = query,
                 onNavigateBack = {
                     navController.popBackStack()
                 },
                 onNavigateToShow = { showId ->
                     navController.navigate("playlist/$showId")
                 },
-                onNavigateToPlayer = { recordingId ->
-                    // TODO: Navigate to player when implemented
-                    // navController.navigate("player/$recordingId")
-                }
             )
         }
     }

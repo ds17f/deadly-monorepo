@@ -265,9 +265,9 @@ When metadata package updates are implemented:
 3. **Download delta or full**: Decide on update strategy
 4. **Preserve user data**: Don't delete `library_shows` or `recent_shows`
 5. **Apply changes**:
-   - INSERT new shows
-   - UPDATE changed shows (setlist corrections, etc.)
-   - DELETE removed shows (rare)
+    - INSERT new shows
+    - UPDATE changed shows (setlist corrections, etc.)
+    - DELETE removed shows (rare)
 6. **Update data version**: Update `data_version_v2` record
 
 **Challenges**:
