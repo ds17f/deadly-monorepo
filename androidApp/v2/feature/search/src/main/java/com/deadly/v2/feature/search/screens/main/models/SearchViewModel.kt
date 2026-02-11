@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.Job
 import javax.inject.Inject
@@ -46,6 +47,13 @@ class SearchViewModel @Inject constructor(
     private val _searchQueryFlow = MutableStateFlow("")
     private var searchJob: Job? = null
     
+    // Pull-to-refresh state
+    private val _refreshCounter = MutableStateFlow(0)
+    val refreshCounter: StateFlow<Int> = _refreshCounter.asStateFlow()
+
+    private val _isRefreshing = MutableStateFlow(false)
+    val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
+
     // Configurable debounce delay
     private val _debounceDelayMs = MutableStateFlow(800L)
     val debounceDelayMs: StateFlow<Long> = _debounceDelayMs.asStateFlow()
@@ -198,6 +206,19 @@ class SearchViewModel @Inject constructor(
         }
     }
     
+    /**
+     * Re-roll Discover and Browse All shortcut selections.
+     * Increments the refresh counter which invalidates the remember keys in the UI.
+     */
+    fun refreshShortcuts() {
+        viewModelScope.launch {
+            _isRefreshing.value = true
+            _refreshCounter.value++
+            delay(400)
+            _isRefreshing.value = false
+        }
+    }
+
     /**
      * Update the debounce delay for search queries
      */
