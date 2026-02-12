@@ -151,7 +151,7 @@ class ZipExtractionService @Inject constructor(
     ): DataExtractionResult = withContext(Dispatchers.IO) {
         try {
             // Create extraction directory
-            val extractionDir = File(context.filesDir, "v2_data_extraction")
+            val extractionDir = File(context.filesDir, "data_extraction")
             if (extractionDir.exists()) {
                 extractionDir.deleteRecursively()
             }
@@ -193,7 +193,7 @@ class ZipExtractionService @Inject constructor(
     ): DatabaseExtractionResult = withContext(Dispatchers.IO) {
         try {
             // Create extraction directory
-            val extractionDir = File(context.filesDir, "v2_database_extraction")
+            val extractionDir = File(context.filesDir, "database_extraction")
             if (extractionDir.exists()) {
                 extractionDir.deleteRecursively()
             }
@@ -244,8 +244,8 @@ class ZipExtractionService @Inject constructor(
      */
     suspend fun cleanupExtractions(): Unit = withContext(Dispatchers.IO) {
         try {
-            val dataDir = File(context.filesDir, "v2_data_extraction")
-            val dbDir = File(context.filesDir, "v2_database_extraction")
+            val dataDir = File(context.filesDir, "data_extraction")
+            val dbDir = File(context.filesDir, "database_extraction")
             
             if (dataDir.exists()) {
                 dataDir.deleteRecursively()

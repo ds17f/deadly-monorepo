@@ -1,7 +1,7 @@
 package com.grateful.deadly.core.database.service
 
 import android.util.Log
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.DataVersionDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowSearchDao
@@ -99,10 +99,10 @@ data class TrackFormatData(
 
 @Singleton
 class DataImportService @Inject constructor(
-    @V2Database private val showDao: ShowDao,
-    @V2Database private val showSearchDao: ShowSearchDao,
-    @V2Database private val recordingDao: RecordingDao,
-    @V2Database private val dataVersionDao: DataVersionDao,
+    @AppDatabase private val showDao: ShowDao,
+    @AppDatabase private val showSearchDao: ShowSearchDao,
+    @AppDatabase private val recordingDao: RecordingDao,
+    @AppDatabase private val dataVersionDao: DataVersionDao,
     private val collectionsImportService: CollectionsImportService
 ) {
     

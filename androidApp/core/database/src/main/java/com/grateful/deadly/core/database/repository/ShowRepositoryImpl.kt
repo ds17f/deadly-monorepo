@@ -7,7 +7,7 @@ import com.grateful.deadly.core.database.mappers.ShowMappers
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.core.model.Recording
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
@@ -22,9 +22,9 @@ import javax.inject.Singleton
  */
 @Singleton
 class ShowRepositoryImpl @Inject constructor(
-    @V2Database private val showDao: ShowDao,
-    @V2Database private val recordingDao: RecordingDao,
-    @V2Database private val dataVersionDao: DataVersionDao,
+    @AppDatabase private val showDao: ShowDao,
+    @AppDatabase private val recordingDao: RecordingDao,
+    @AppDatabase private val dataVersionDao: DataVersionDao,
     private val showMappers: ShowMappers
 ) : ShowRepository {
     

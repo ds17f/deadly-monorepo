@@ -1,7 +1,7 @@
 package com.grateful.deadly.core.database.service
 
 import android.util.Log
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.RecordingDao
 import javax.inject.Inject
@@ -9,8 +9,8 @@ import javax.inject.Singleton
 
 @Singleton
 class DatabaseHealthService @Inject constructor(
-    @V2Database private val showDao: ShowDao,
-    @V2Database private val recordingDao: RecordingDao
+    @AppDatabase private val showDao: ShowDao,
+    @AppDatabase private val recordingDao: RecordingDao
 ) {
     
     companion object {

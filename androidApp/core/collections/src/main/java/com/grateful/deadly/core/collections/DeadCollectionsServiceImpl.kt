@@ -6,7 +6,7 @@ import com.grateful.deadly.core.api.collections.DeadCollectionsService
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.DeadCollection
 import com.grateful.deadly.core.model.Show
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.CollectionsDao
 import kotlinx.serialization.json.Json
 import kotlinx.coroutines.CoroutineScope
@@ -28,7 +28,7 @@ import javax.inject.Singleton
 @Singleton
 class DeadCollectionsServiceImpl @Inject constructor(
     private val showRepository: ShowRepository,
-    @V2Database private val collectionsDao: CollectionsDao
+    @AppDatabase private val collectionsDao: CollectionsDao
 ) : DeadCollectionsService {
     
     companion object {

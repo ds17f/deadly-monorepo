@@ -8,7 +8,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import com.grateful.deadly.core.database.DeadlyDatabase
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import com.grateful.deadly.core.database.dao.RecordingDao
@@ -32,43 +32,43 @@ object DatabaseModule {
     }
     
     @Provides
-    @V2Database
+    @AppDatabase
     fun provideShowDao(database: DeadlyDatabase): ShowDao {
         return database.showDao()
     }
     
     @Provides
-    @V2Database
+    @AppDatabase
     fun provideShowSearchDao(database: DeadlyDatabase): ShowSearchDao {
         return database.showSearchDao()
     }
     
     @Provides
-    @V2Database
+    @AppDatabase
     fun provideRecordingDao(database: DeadlyDatabase): RecordingDao {
         return database.recordingDao()
     }
     
     @Provides
-    @V2Database
+    @AppDatabase
     fun provideDataVersionDao(database: DeadlyDatabase): DataVersionDao {
         return database.dataVersionDao()
     }
     
     @Provides
-    @V2Database
+    @AppDatabase
     fun provideLibraryDao(database: DeadlyDatabase): LibraryDao {
         return database.libraryDao()
     }
     
     @Provides
-    @V2Database
+    @AppDatabase
     fun provideRecentShowDao(database: DeadlyDatabase): RecentShowDao {
         return database.recentShowDao()
     }
     
     @Provides
-    @V2Database
+    @AppDatabase
     fun provideCollectionsDao(database: DeadlyDatabase): CollectionsDao {
         return database.collectionsDao()
     }

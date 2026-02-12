@@ -13,7 +13,7 @@ import javax.inject.Inject
 class DeadlyApplication : Application() {
 
     @Inject
-    lateinit var v2DatabaseManager: DatabaseManager
+    lateinit var databaseManager: DatabaseManager
 
     private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 
@@ -24,7 +24,7 @@ class DeadlyApplication : Application() {
         applicationScope.launch {
             try {
                 android.util.Log.d("DeadlyApplication", "Initializing database...")
-                val result = v2DatabaseManager.initializeV2DataIfNeeded()
+                val result = databaseManager.initializeDataIfNeeded()
                 when (result) {
                     is com.grateful.deadly.core.database.service.DatabaseImportResult.Success -> {
                         android.util.Log.d(

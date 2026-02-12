@@ -1,7 +1,7 @@
 # Deadly Android App - Makefile
 # Simplifies common development tasks
 
-.PHONY: help build clean test lint install run run-emulator debug release tag-release tag-release-quick update-release-descriptions dry-run-release setup deps check status logs capture-test-data clean-test-data view-test-data v2-enable v2-disable v2-status theme-install theme-remove theme-status
+.PHONY: help build clean test lint install run run-emulator debug release tag-release tag-release-quick update-release-descriptions dry-run-release setup deps check status logs capture-test-data clean-test-data view-test-data theme-install theme-remove theme-status
 
 # Default target
 help:
@@ -56,11 +56,8 @@ help:
 	@echo "  make emu-list    - List all available Android Virtual Devices"
 	@echo "  make emu-stop    - Stop all running emulators"
 	@echo "  make emu-cold-boot - Perform a cold boot of the emulator with virtual audio"
-	@echo "  make v2-enable   - Enable V2 app (file-based toggle)"
-	@echo "  make v2-disable  - Disable V2 app (fall back to V1)"
-	@echo "  make v2-status   - Check current V2 app status"
 	@echo ""
-	@echo "Theme Management (V2):"
+	@echo "Theme Management:"
 	@echo "  make theme-install - Install Grateful Dead Classic theme"
 	@echo "  make theme-remove  - Remove all custom themes (use default)"
 	@echo "  make theme-status  - Check current theme status"
@@ -77,7 +74,7 @@ help:
 	@echo "  make deps-tree   - Show dependency tree"
 	@echo ""
 	@echo "Documentation:"
-	@echo "  make view-db-schema - Generate and view V2 database schema diagram"
+	@echo "  make view-db-schema - Generate and view database schema diagram"
 	@echo ""
 	@echo "Cleanup:"
 	@echo "  make deep-clean  - Clean everything including Gradle cache"
@@ -465,8 +462,8 @@ download-icons:
 		pip install -r requirements.txt && \
 		python download_material_icons.py \
 		--from-json "$(PWD)/scripts/material_icons_config.json" \
-		--output "$(PWD)/v2/core/design/src/main/res/drawable" \
-		--icon-registry-path "$(PWD)/v2/core/design/src/main/java/com/deadly/v2/core/design/resources/IconResources.kt" \
+		--output "$(PWD)/core/design/src/main/res/drawable" \
+		--icon-registry-path "$(PWD)/core/design/src/main/java/com/grateful/deadly/core/design/resources/IconResources.kt" \
 		--update-registry
 	@echo "✅ Icons downloaded and processed!"
 
@@ -778,37 +775,13 @@ view-test-data:
 		echo "  💡 Use 'make capture-test-data' after exporting from Debug screen"; \
 	fi
 
-# V2 App Toggle Commands
-v2-enable:
-	@echo "🚀 Enabling V2 app..."
-	@adb shell run-as com.deadly.app.debug "touch files/enable-v2-app" 2>/dev/null || \
-	 adb shell run-as com.deadly.app "touch files/enable-v2-app" 2>/dev/null || \
-	 echo "❌ Failed to enable V2 app. Make sure the app is installed."
-	@echo "✅ V2 app enabled! Restart the app to see changes."
-
-v2-disable:
-	@echo "🔄 Disabling V2 app (falling back to V1)..."
-	@adb shell run-as com.deadly.app.debug "rm -f files/enable-v2-app" 2>/dev/null || \
-	 adb shell run-as com.deadly.app "rm -f files/enable-v2-app" 2>/dev/null || \
-	 echo "❌ Failed to disable V2 app. Make sure the app is installed."
-	@echo "✅ V2 app disabled! Restart the app to see V1."
-
-v2-status:
-	@echo "📊 V2 App Status:"
-	@if adb shell run-as com.deadly.app.debug "test -f files/enable-v2-app" 2>/dev/null || \
-	   adb shell run-as com.deadly.app "test -f files/enable-v2-app" 2>/dev/null; then \
-		echo "✅ V2 app is ENABLED"; \
-	else \
-		echo "❌ V2 app is DISABLED (using V1)"; \
-	fi
-
 # Documentation
 view-db-schema:
 	@echo "📊 Generating database schema diagram..."
-	@npx -p @mermaid-js/mermaid-cli mmdc -i docs/v2/database/database-schema-diagram.md -o docs/v2/database/schema-diagram.png
+	@npx -p @mermaid-js/mermaid-cli mmdc -i docs/database/database-schema-diagram.md -o docs/database/schema-diagram.png
 	@echo "✅ Schema diagram generated"
-	@if [ -f "docs/v2/database/schema-diagram-1.png" ]; then \
-		mv docs/v2/database/schema-diagram-1.png docs/v2/database/schema-diagram.png; \
+	@if [ -f "docs/database/schema-diagram-1.png" ]; then \
+		mv docs/database/schema-diagram-1.png docs/database/schema-diagram.png; \
 	fi
-	@open docs/v2/database/schema-diagram.png
+	@open docs/database/schema-diagram.png
 

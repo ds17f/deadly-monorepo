@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 
 /**
  * V2 LibraryRepository - Pure V2 implementation integrating database and domain layers
@@ -22,7 +22,7 @@ import com.grateful.deadly.core.model.V2Database
  */
 @Singleton
 class LibraryRepository @Inject constructor(
-    @V2Database private val libraryDao: LibraryDao,
+    @AppDatabase private val libraryDao: LibraryDao,
     private val showRepository: ShowRepository
 ) {
     

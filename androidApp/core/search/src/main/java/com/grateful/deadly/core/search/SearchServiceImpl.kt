@@ -4,7 +4,7 @@ import android.util.Log
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.api.search.SearchFilter
 import com.grateful.deadly.core.model.*
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import kotlinx.coroutines.flow.Flow
@@ -24,7 +24,7 @@ import javax.inject.Singleton
 @Singleton
 class SearchServiceImpl @Inject constructor(
     private val showRepository: ShowRepository,
-    @V2Database private val showSearchDao: ShowSearchDao
+    @AppDatabase private val showSearchDao: ShowSearchDao
 ) : SearchService {
     
     companion object {

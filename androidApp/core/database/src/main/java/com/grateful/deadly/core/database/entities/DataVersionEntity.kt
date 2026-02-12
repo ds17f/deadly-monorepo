@@ -3,7 +3,7 @@ package com.grateful.deadly.core.database.entities
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "data_version_v2")
+@Entity(tableName = "data_version")
 data class DataVersionEntity(
     @PrimaryKey
     val id: Int = 1,              // Only one row ever

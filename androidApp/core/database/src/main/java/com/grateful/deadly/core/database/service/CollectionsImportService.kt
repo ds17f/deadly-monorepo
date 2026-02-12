@@ -1,7 +1,7 @@
 package com.grateful.deadly.core.database.service
 
 import android.util.Log
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.CollectionsDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.entities.DeadCollectionEntity
@@ -27,8 +27,8 @@ import javax.inject.Singleton
  */
 @Singleton
 class CollectionsImportService @Inject constructor(
-    @V2Database private val collectionsDao: CollectionsDao,
-    @V2Database private val showDao: ShowDao
+    @AppDatabase private val collectionsDao: CollectionsDao,
+    @AppDatabase private val showDao: ShowDao
 ) {
     
     companion object {

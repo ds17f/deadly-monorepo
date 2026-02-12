@@ -3,7 +3,7 @@ package com.grateful.deadly.core.database.service
 import android.content.Context
 import android.util.Log
 import com.grateful.deadly.core.database.DeadlyDatabase
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.DataVersionDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -20,11 +20,11 @@ import javax.inject.Singleton
 class DatabaseRestoreService @Inject constructor(
     @dagger.hilt.android.qualifiers.ApplicationContext private val context: Context,
     private val database: DeadlyDatabase,
-    @V2Database private val dataVersionDao: DataVersionDao
+    @AppDatabase private val dataVersionDao: DataVersionDao
 ) {
     companion object {
         private const val TAG = "DatabaseRestoreService"
-        private const val DATABASE_FILE_NAME = "dead_archive_v2.db"
+        private const val DATABASE_FILE_NAME = "grateful_deadly.db"
     }
     
     /**
