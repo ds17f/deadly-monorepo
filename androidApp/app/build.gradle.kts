@@ -134,10 +134,10 @@ android {
 dependencies {
     // V2 App Module and Core Dependencies
     implementation(project(":v2:app"))
-    implementation(project(":v2:core:theme"))
-    implementation(project(":v2:core:theme-api"))
-    implementation(project(":v2:core:miniplayer"))
-    implementation(project(":v2:core:database"))
+    implementation(project(":core:theme"))
+    implementation(project(":core:theme-api"))
+    implementation(project(":core:miniplayer"))
+    implementation(project(":core:database"))
 
     // Core Android
     implementation("androidx.core:core-ktx:1.12.0")
