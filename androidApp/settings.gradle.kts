@@ -18,7 +18,6 @@ rootProject.name = "Deadly"
 
 include(":app")
 
-include(":v2:app")
 include(":core:database")
 include(":core:design")
 include(":core:domain")
