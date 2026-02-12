@@ -56,50 +56,50 @@ class LibraryServiceImpl @Inject constructor(
         )
     
     init {
-        Log.d(TAG, "LibraryServiceImpl initialized with PURE V2 architecture")
+        Log.d(TAG, "LibraryServiceImpl initialized with database architecture")
         Log.d(TAG, "Dependencies: ShowRepository=${showRepository::class.simpleName}, LibraryRepository=${libraryRepository::class.simpleName}")
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Load library shows (reactive via database StateFlow)
     override suspend fun loadLibraryShows(): Result<Unit> {
-        Log.d(TAG, "loadLibraryShows() - PURE V2 implementation with reactive database flows")
+        Log.d(TAG, "loadLibraryShows() - loading from database")
         // StateFlow automatically loads data reactively from V2 database
         return Result.success(Unit)
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Get current shows from V2 database StateFlow
     override fun getCurrentShows(): StateFlow<List<LibraryShow>> {
-        Log.d(TAG, "getCurrentShows() - PURE V2 implementation returning V2 database StateFlow")
+        Log.d(TAG, "getCurrentShows() - returning database StateFlow")
         return _currentShows
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Get library statistics from V2 database StateFlow
     override fun getLibraryStats(): StateFlow<LibraryStats> {
-        Log.d(TAG, "getLibraryStats() - PURE V2 implementation returning V2 database StateFlow")
+        Log.d(TAG, "getLibraryStats() - returning database StateFlow")
         return _libraryStats
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Add show to library using V2 database
     override suspend fun addToLibrary(showId: String): Result<Unit> {
-        Log.d(TAG, "addToLibrary('$showId') - PURE V2 implementation using V2 LibraryRepository")
+        Log.d(TAG, "addToLibrary('$showId') - using LibraryRepository")
         return libraryRepository.addShowToLibrary(showId)
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Remove show from library using V2 database
     override suspend fun removeFromLibrary(showId: String): Result<Unit> {
-        Log.d(TAG, "removeFromLibrary('$showId') - PURE V2 implementation using V2 LibraryRepository")
+        Log.d(TAG, "removeFromLibrary('$showId') - using LibraryRepository")
         return libraryRepository.removeShowFromLibrary(showId)
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Clear entire library using V2 database
     override suspend fun clearLibrary(): Result<Unit> {
-        Log.d(TAG, "clearLibrary() - PURE V2 implementation using V2 LibraryRepository")
+        Log.d(TAG, "clearLibrary() - using LibraryRepository")
         return libraryRepository.clearLibrary()
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Check if show is in library using V2 database
     override fun isShowInLibrary(showId: String): StateFlow<Boolean> {
-        Log.d(TAG, "isShowInLibrary('$showId') - PURE V2 implementation returning V2 database StateFlow")
+        Log.d(TAG, "isShowInLibrary('$showId') - returning database StateFlow")
         return libraryRepository.isShowInLibraryFlow(showId)
             .stateIn(
                 scope = coroutineScope,
@@ -110,19 +110,19 @@ class LibraryServiceImpl @Inject constructor(
     
     // ✅ PURE V2 IMPLEMENTATION: Pin show using V2 database
     override suspend fun pinShow(showId: String): Result<Unit> {
-        Log.d(TAG, "pinShow('$showId') - PURE V2 implementation using V2 LibraryRepository")
+        Log.d(TAG, "pinShow('$showId') - using LibraryRepository")
         return libraryRepository.pinShow(showId)
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Unpin show using V2 database
     override suspend fun unpinShow(showId: String): Result<Unit> {
-        Log.d(TAG, "unpinShow('$showId') - PURE V2 implementation using V2 LibraryRepository")
+        Log.d(TAG, "unpinShow('$showId') - using LibraryRepository")
         return libraryRepository.unpinShow(showId)
     }
     
     // ✅ PURE V2 IMPLEMENTATION: Check if show is pinned using V2 database
     override fun isShowPinned(showId: String): StateFlow<Boolean> {
-        Log.d(TAG, "isShowPinned('$showId') - PURE V2 implementation returning V2 database StateFlow")
+        Log.d(TAG, "isShowPinned('$showId') - returning database StateFlow")
         return libraryRepository.isShowPinnedFlow(showId)
             .stateIn(
                 scope = coroutineScope,

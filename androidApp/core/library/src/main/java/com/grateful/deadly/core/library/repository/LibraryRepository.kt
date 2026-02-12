@@ -18,7 +18,7 @@ import com.grateful.deadly.core.model.V2Database
  * Combines LibraryDao (library-specific data) with ShowRepository (show data)
  * to provide rich LibraryShow domain models for the service layer.
  * 
- * Follows V2 architecture patterns with reactive Flow-based operations.
+ * Follows architecture patterns with reactive Flow-based operations.
  */
 @Singleton
 class LibraryRepository @Inject constructor(
@@ -27,7 +27,7 @@ class LibraryRepository @Inject constructor(
 ) {
     
     companion object {
-        private const val TAG = "V2LibraryRepository"
+        private const val TAG = "LibraryRepository"
     }
     
     /**

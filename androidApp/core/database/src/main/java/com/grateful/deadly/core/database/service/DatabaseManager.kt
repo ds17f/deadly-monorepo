@@ -58,10 +58,10 @@ class DatabaseManager @Inject constructor(
      */
     suspend fun isV2DataInitialized(): Boolean {
         return try {
-            Log.d(TAG, "Checking if V2 data is initialized...")
+            Log.d(TAG, "Checking if data is initialized...")
             databaseHealthService.isDatabaseHealthy()
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to check if V2 data is initialized", e)
+            Log.e(TAG, "Failed to check if data is initialized", e)
             false
         }
     }
@@ -72,7 +72,7 @@ class DatabaseManager @Inject constructor(
     suspend fun initializeV2DataIfNeeded(): DatabaseImportResult {
         return try {
             if (isV2DataInitialized()) {
-                Log.i(TAG, "V2 data already initialized")
+                Log.i(TAG, "Data already initialized")
                 // Get actual counts from database
                 val healthInfo = databaseHealthService.getDatabaseCounts()
                 return DatabaseImportResult.Success(healthInfo.showCount, healthInfo.recordingCount)
@@ -99,7 +99,7 @@ class DatabaseManager @Inject constructor(
                 }
             }
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to initialize V2 data", e)
+            Log.e(TAG, "Failed to initialize data", e)
             DatabaseImportResult.Error(e.message ?: "Initialization failed")
         }
     }
@@ -109,10 +109,10 @@ class DatabaseManager @Inject constructor(
      */
     suspend fun clearV2Database() {
         try {
-            Log.i(TAG, "Clearing V2 database data")
+            Log.i(TAG, "Clearing database data")
             dataVersionDao.deleteAll()
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to clear V2 database", e)
+            Log.e(TAG, "Failed to clear database", e)
             throw e
         }
     }

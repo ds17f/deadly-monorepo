@@ -20,33 +20,33 @@ class DeadlyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        // Initialize V2 database
+        // Initialize database
         applicationScope.launch {
             try {
-                android.util.Log.d("DeadlyApplication", "Initializing V2 database...")
+                android.util.Log.d("DeadlyApplication", "Initializing database...")
                 val result = v2DatabaseManager.initializeV2DataIfNeeded()
                 when (result) {
                     is com.grateful.deadly.core.database.service.DatabaseImportResult.Success -> {
                         android.util.Log.d(
                             "DeadlyApplication",
-                            "✅ V2 database initialized: ${result.showsImported} shows, ${result.venuesImported} venues"
+                            "✅ Database initialized: ${result.showsImported} shows, ${result.venuesImported} venues"
                         )
                     }
                     is com.grateful.deadly.core.database.service.DatabaseImportResult.Error -> {
                         android.util.Log.e(
                             "DeadlyApplication",
-                            "❌ V2 database initialization failed: ${result.error}"
+                            "❌ Database initialization failed: ${result.error}"
                         )
                     }
                     is com.grateful.deadly.core.database.service.DatabaseImportResult.RequiresUserChoice -> {
                         android.util.Log.d(
                             "DeadlyApplication",
-                            "V2 database requires user choice - will be handled by splash screen"
+                            "Database requires user choice - will be handled by splash screen"
                         )
                     }
                 }
             } catch (e: Exception) {
-                android.util.Log.e("DeadlyApplication", "❌ Failed to initialize V2 database", e)
+                android.util.Log.e("DeadlyApplication", "❌ Failed to initialize database", e)
             }
         }
     }

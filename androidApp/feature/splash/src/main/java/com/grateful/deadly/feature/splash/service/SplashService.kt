@@ -16,7 +16,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Service for coordinating V2 database initialization during splash screen
+ * Service for coordinating Database initialization during splash screen
  */
 @Singleton
 class SplashService @Inject constructor(
@@ -93,11 +93,11 @@ class SplashService @Inject constructor(
     }
     
     /**
-     * Initialize V2 database with progress tracking
+     * Initialize database with progress tracking
      */
     suspend fun initializeV2Database(): InitResult {
         return try {
-            Log.d(TAG, "Starting V2 database initialization")
+            Log.d(TAG, "Starting Database initialization")
             
             // Test GitHub API integration
             databaseManager.testGitHubIntegration()
@@ -115,11 +115,11 @@ class SplashService @Inject constructor(
             
             when (result) {
                 is DatabaseImportResult.Success -> {
-                    Log.d(TAG, "V2 database initialization completed: ${result.showsImported} shows, ${result.venuesImported} venues")
+                    Log.d(TAG, "Database initialization completed: ${result.showsImported} shows, ${result.venuesImported} venues")
                     InitResult.Success(result.showsImported, result.venuesImported)
                 }
                 is DatabaseImportResult.Error -> {
-                    Log.e(TAG, "V2 database initialization failed: ${result.error}")
+                    Log.e(TAG, "Database initialization failed: ${result.error}")
                     InitResult.Error(result.error)
                 }
                 is DatabaseImportResult.RequiresUserChoice -> {
@@ -135,7 +135,7 @@ class SplashService @Inject constructor(
                 }
             }
         } catch (e: Exception) {
-            Log.e(TAG, "V2 database initialization exception", e)
+            Log.e(TAG, "Database initialization exception", e)
             InitResult.Error(e.message ?: "Initialization failed")
         }
     }
@@ -178,14 +178,14 @@ class SplashService @Inject constructor(
     }
     
     /**
-     * Retry V2 database initialization
+     * Retry Database initialization
      */
     fun retryInitialization(coroutineScope: CoroutineScope) {
         coroutineScope.launch {
             updateUiState(
                 showError = false,
                 showProgress = true,
-                message = "Retrying V2 database initialization...",
+                message = "Retrying Database initialization...",
                 errorMessage = null
             )
             
@@ -202,7 +202,7 @@ class SplashService @Inject constructor(
                     updateUiState(
                         showError = true,
                         showProgress = false,
-                        message = "V2 database initialization failed",
+                        message = "Database initialization failed",
                         errorMessage = result.error
                     )
                 }
@@ -218,7 +218,7 @@ class SplashService @Inject constructor(
             isReady = true,
             showError = false,
             showProgress = false,
-            message = "Skipped V2 database initialization"
+            message = "Skipped Database initialization"
         )
     }
     
@@ -317,7 +317,7 @@ data class SplashUiState(
 )
 
 /**
- * Result of V2 database initialization
+ * Result of Database initialization
  */
 sealed class InitResult {
     data class Success(val showsImported: Int, val venuesImported: Int) : InitResult()
