@@ -23,7 +23,7 @@ import javax.inject.Singleton
 annotation class ArchiveRetrofit
 
 /**
- * Hilt module for V2 Archive service dependencies
+ * Hilt module for Archive service dependencies
  */
 @Module
 @InstallIn(SingletonComponent::class)

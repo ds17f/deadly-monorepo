@@ -14,7 +14,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 Metadata Hydration Service
+ * Metadata Hydration Service
  * 
  * Responsible for enriching MediaItems restored by MediaSession with fresh metadata
  * from the database. Uses embedded MediaId to identify show/recording context and

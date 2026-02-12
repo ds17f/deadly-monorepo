@@ -4,7 +4,7 @@ import com.grateful.deadly.core.model.Recording
 import com.grateful.deadly.core.model.Track
 
 /**
- * V2 Archive URL Utility for generating Archive.org URLs for recordings and tracks
+ * Archive URL Utility for generating Archive.org URLs for recordings and tracks
  */
 object ArchiveUrlUtil {
     

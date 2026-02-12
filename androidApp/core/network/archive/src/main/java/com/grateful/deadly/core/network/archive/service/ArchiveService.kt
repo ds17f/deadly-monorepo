@@ -5,10 +5,10 @@ import com.grateful.deadly.core.model.RecordingMetadata
 import com.grateful.deadly.core.model.Track
 
 /**
- * V2 Archive service interface for accessing Archive.org data
+ * Archive service interface for accessing Archive.org data
  * 
  * Provides clean domain interface for Archive.org API operations with
- * integrated filesystem caching. All methods return V2 domain models.
+ * integrated filesystem caching. All methods return domain models.
  */
 interface ArchiveService {
     

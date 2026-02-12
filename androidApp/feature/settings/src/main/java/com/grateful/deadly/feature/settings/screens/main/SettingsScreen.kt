@@ -13,7 +13,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.ThemeChooser
 
 /**
- * SettingsScreen - V2 Settings interface
+ * SettingsScreen - Settings interface
  * 
  * Simple settings content for theme management and configuration.
  * Scaffold-free content designed for use within MainNavigation's AppScaffold.

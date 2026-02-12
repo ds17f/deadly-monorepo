@@ -3,7 +3,7 @@ package com.grateful.deadly.core.model
 import kotlinx.serialization.Serializable
 
 /**
- * V2 Show domain model
+ * Show domain model
  * 
  * Represents a Grateful Dead concert as a pure domain entity.
  * Contains show-level metadata and references to recordings,

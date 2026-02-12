@@ -20,7 +20,7 @@ import com.grateful.deadly.core.model.LibraryShowViewModel
 import com.grateful.deadly.core.model.LibraryDownloadStatus
 
 /**
- * V2 Library Show List Item Component
+ * Library Show List Item Component
  * 
  * Focused component for displaying library shows in list view.
  * Shows date, venue, location, pin status, and download status.
@@ -150,7 +150,7 @@ fun LibraryShowListItem(
 }
 
 /**
- * V2 Library Show Grid Item Component
+ * Library Show Grid Item Component
  * 
  * Focused component for displaying library shows in grid view.
  * Compact layout showing essential information.

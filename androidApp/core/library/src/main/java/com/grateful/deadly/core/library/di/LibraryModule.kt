@@ -15,9 +15,9 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 /**
- * V2 LibraryModule - Hilt dependency injection for V2 Library services
+ * LibraryModule - Hilt dependency injection for Library services
  * 
- * Following V2 architecture patterns with service-oriented design.
+ * Following architecture patterns with service-oriented design.
  * Uses SingletonComponent for application-scoped services with the
  * real LibraryServiceImpl implementation.
  */

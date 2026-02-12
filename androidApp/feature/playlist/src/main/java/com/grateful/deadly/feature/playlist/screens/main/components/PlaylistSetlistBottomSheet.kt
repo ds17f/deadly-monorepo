@@ -17,7 +17,7 @@ import com.grateful.deadly.core.model.SetlistSetViewModel
 import com.grateful.deadly.core.model.SetlistSongViewModel
 
 /**
- * PlaylistSetlistBottomSheet - V2 setlist modal component
+ * PlaylistSetlistBottomSheet - Setlist modal component
  * 
  * Displays show setlist in a Material3 bottom sheet modal.
  * Shows sets and songs with proper formatting and segue indicators.

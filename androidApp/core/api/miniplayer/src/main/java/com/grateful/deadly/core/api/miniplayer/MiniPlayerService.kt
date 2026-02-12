@@ -7,12 +7,12 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 
 /**
- * V2 MiniPlayer Service Interface
+ * MiniPlayer Service Interface
  * 
  * Business logic interface for MiniPlayer functionality.
  * Provides reactive state streams and playback control commands.
  * 
- * Implementation delegates to V2 MediaControllerRepository for state synchronization.
+ * Implementation delegates to MediaControllerRepository for state synchronization.
  */
 interface MiniPlayerService {
     

@@ -15,9 +15,9 @@ import com.grateful.deadly.core.design.component.CompactStarRating
 import com.grateful.deadly.core.model.RecordingOptionViewModel
 
 /**
- * PlaylistV2RecordingOptionCard - Individual recording option card for V2 architecture
+ * PlaylistRecordingOptionCard - Individual recording option card
  * 
- * Based on V1 RecordingOptionCard but uses V2 View Models and follows V2 patterns.
+ * Recording option card using standard View Models and patterns.
  * Displays recording information with selection state and recommendation status.
  */
 @Composable

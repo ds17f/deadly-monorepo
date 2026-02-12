@@ -7,19 +7,19 @@ import androidx.navigation.compose.composable
 import com.grateful.deadly.feature.library.screens.main.LibraryScreen
 
 /**
- * V2 Library Navigation - Navigation integration for V2 Library feature
+ * Library Navigation - Navigation integration for Library feature
  * 
- * Provides type-safe navigation routing following V2 navigation patterns.
- * Integrates with the overall V2 app navigation system.
+ * Provides type-safe navigation routing following standard navigation patterns.
+ * Integrates with the overall app navigation system.
  */
 
-// V2 Library route constants
+// Library route constants
 object LibraryRoutes {
     const val LIBRARY_MAIN = "library"
 }
 
 /**
- * Add V2 Library navigation graph to the overall navigation
+ * Add Library navigation graph to the overall navigation
  * Feature owns all routing decisions for true encapsulation
  */
 fun NavGraphBuilder.libraryNavigation(navController: NavController) {
@@ -39,9 +39,9 @@ fun NavGraphBuilder.libraryNavigation(navController: NavController) {
 }
 
 /**
- * Navigation extension functions for V2 Library
+ * Navigation extension functions for Library
  */
-fun NavController.navigateToV2Library() {
+fun NavController.navigateToLibrary() {
     navigate(LibraryRoutes.LIBRARY_MAIN) {
         // Single top to avoid multiple instances
         launchSingleTop = true
@@ -51,7 +51,7 @@ fun NavController.navigateToV2Library() {
 }
 
 /**
- * V2 Library Navigation Destination - For use in bottom navigation
+ * Library Navigation Destination - For use in bottom navigation
  */
 data class LibraryDestination(
     val route: String = LibraryRoutes.LIBRARY_MAIN,

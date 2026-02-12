@@ -15,7 +15,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 Last Played Track Persistence Service
+ * Last Played Track Persistence Service
  * 
  * Internal service (no API interface) for persisting and restoring last played track state.
  * Critical for maintaining user's playback position across app restarts.
@@ -54,7 +54,7 @@ class LastPlayedTrackService @Inject constructor(
         val positionMs: Long,
         val trackTitle: String,
         val trackFilename: String,
-        val selectedFormat: String,      // Store V2 format selection
+        val selectedFormat: String,      // Store format selection
         val showDate: String,            // For MiniPlayer display
         val venue: String?,              // For MiniPlayer display
         val location: String?,           // For MiniPlayer display

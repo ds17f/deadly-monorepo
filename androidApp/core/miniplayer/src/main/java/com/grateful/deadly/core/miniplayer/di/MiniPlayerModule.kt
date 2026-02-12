@@ -8,7 +8,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 
 /**
- * V2 MiniPlayer Hilt DI Module
+ * MiniPlayer Hilt DI Module
  * 
  * Provides dependency injection configuration for MiniPlayer services.
  * Binds MiniPlayerService interface to real implementation.
@@ -22,7 +22,7 @@ abstract class MiniPlayerModule {
     
     /**
      * Bind MiniPlayerService interface to real implementation
-     * Enables clean dependency injection throughout V2 feature modules
+     * Enables clean dependency injection throughout feature modules
      */
     @Binds
     abstract fun bindMiniPlayerService(

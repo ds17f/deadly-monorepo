@@ -20,10 +20,10 @@ import androidx.compose.ui.graphics.Color
 import kotlinx.coroutines.delay
 
 /**
- * V2 MiniPlayer Screen
+ * MiniPlayer Screen
  * 
- * Clean V2 implementation matching V1 MiniPlayer visual design exactly.
- * Direct ViewModel integration following established V2 patterns.
+ * MiniPlayer implementation.
+ * Direct ViewModel integration following established patterns.
  * 
  * No container component - service layer handles business logic.
  */

@@ -15,15 +15,15 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 /**
- * LibraryServiceImpl - PURE V2 implementation with zero v1 dependencies
+ * LibraryServiceImpl - Production implementation
  * 
  * Phase 3 Implementation:
- * ✅ Pure V2 database entities (LibraryShowEntity)
- * ✅ Pure V2 database access (LibraryDao) 
- * ✅ Pure V2 repository layer (LibraryRepository)
- * ✅ Direct delegation architecture following V2 patterns
+ * ✅ Database entities (LibraryShowEntity)
+ * ✅ Database access (LibraryDao) 
+ * ✅ Repository layer (LibraryRepository)
+ * ✅ Direct delegation architecture
  * 
- * Eliminates all v1 dependencies and implements clean V2 service architecture.
+ * 
  */
 @Singleton
 class LibraryServiceImpl @Inject constructor(
@@ -38,7 +38,7 @@ class LibraryServiceImpl @Inject constructor(
         private const val TAG = "LibraryServiceImpl"
     }
     
-    // Real reactive StateFlows backed by V2 database
+    // Real reactive StateFlows backed by database
     private val _currentShows: StateFlow<List<LibraryShow>> = libraryRepository
         .getLibraryShowsFlow()
         .stateIn(
@@ -60,44 +60,44 @@ class LibraryServiceImpl @Inject constructor(
         Log.d(TAG, "Dependencies: ShowRepository=${showRepository::class.simpleName}, LibraryRepository=${libraryRepository::class.simpleName}")
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Load library shows (reactive via database StateFlow)
+    // Load library shows (reactive via database StateFlow)
     override suspend fun loadLibraryShows(): Result<Unit> {
         Log.d(TAG, "loadLibraryShows() - loading from database")
-        // StateFlow automatically loads data reactively from V2 database
+        // StateFlow automatically loads data reactively from database
         return Result.success(Unit)
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Get current shows from V2 database StateFlow
+    // Get current shows from database StateFlow
     override fun getCurrentShows(): StateFlow<List<LibraryShow>> {
         Log.d(TAG, "getCurrentShows() - returning database StateFlow")
         return _currentShows
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Get library statistics from V2 database StateFlow
+    // Get library statistics from database StateFlow
     override fun getLibraryStats(): StateFlow<LibraryStats> {
         Log.d(TAG, "getLibraryStats() - returning database StateFlow")
         return _libraryStats
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Add show to library using V2 database
+    // Add show to library
     override suspend fun addToLibrary(showId: String): Result<Unit> {
         Log.d(TAG, "addToLibrary('$showId') - using LibraryRepository")
         return libraryRepository.addShowToLibrary(showId)
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Remove show from library using V2 database
+    // Remove show from library
     override suspend fun removeFromLibrary(showId: String): Result<Unit> {
         Log.d(TAG, "removeFromLibrary('$showId') - using LibraryRepository")
         return libraryRepository.removeShowFromLibrary(showId)
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Clear entire library using V2 database
+    // Clear entire library
     override suspend fun clearLibrary(): Result<Unit> {
         Log.d(TAG, "clearLibrary() - using LibraryRepository")
         return libraryRepository.clearLibrary()
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Check if show is in library using V2 database
+    // Check if show is in library
     override fun isShowInLibrary(showId: String): StateFlow<Boolean> {
         Log.d(TAG, "isShowInLibrary('$showId') - returning database StateFlow")
         return libraryRepository.isShowInLibraryFlow(showId)
@@ -108,19 +108,19 @@ class LibraryServiceImpl @Inject constructor(
             )
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Pin show using V2 database
+    // Pin show
     override suspend fun pinShow(showId: String): Result<Unit> {
         Log.d(TAG, "pinShow('$showId') - using LibraryRepository")
         return libraryRepository.pinShow(showId)
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Unpin show using V2 database
+    // Unpin show
     override suspend fun unpinShow(showId: String): Result<Unit> {
         Log.d(TAG, "unpinShow('$showId') - using LibraryRepository")
         return libraryRepository.unpinShow(showId)
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Check if show is pinned using V2 database
+    // Check if show is pinned
     override fun isShowPinned(showId: String): StateFlow<Boolean> {
         Log.d(TAG, "isShowPinned('$showId') - returning database StateFlow")
         return libraryRepository.isShowPinnedFlow(showId)
@@ -131,25 +131,25 @@ class LibraryServiceImpl @Inject constructor(
             )
     }
     
-    // TODO: Download integration - will implement when V2 download service is available
+    // TODO: Download integration - will implement when download service is available
     override suspend fun downloadShow(showId: String): Result<Unit> {
-        Log.d(TAG, "downloadShow('$showId') - TODO: V2 download service integration")
+        Log.d(TAG, "downloadShow('$showId') - TODO: download service integration")
         return Result.success(Unit)
     }
     
     override suspend fun cancelShowDownloads(showId: String): Result<Unit> {
-        Log.d(TAG, "cancelShowDownloads('$showId') - TODO: V2 download service integration")
+        Log.d(TAG, "cancelShowDownloads('$showId') - TODO: download service integration")
         return Result.success(Unit)
     }
     
     override fun getDownloadStatus(showId: String): StateFlow<LibraryDownloadStatus> {
-        Log.d(TAG, "getDownloadStatus('$showId') - TODO: V2 download service integration")
+        Log.d(TAG, "getDownloadStatus('$showId') - TODO: download service integration")
         return kotlinx.coroutines.flow.MutableStateFlow(LibraryDownloadStatus.NOT_DOWNLOADED)
     }
     
-    // ✅ PURE V2 IMPLEMENTATION: Share show using V2 ShareService
+    // Share show using ShareService
     override suspend fun shareShow(showId: String): Result<Unit> {
-        Log.d(TAG, "shareShow('$showId') - PURE V2 implementation using V2 ShareService")
+        Log.d(TAG, "shareShow('$showId') - using ShareService")
         
         return try {
             // Get show data from repository

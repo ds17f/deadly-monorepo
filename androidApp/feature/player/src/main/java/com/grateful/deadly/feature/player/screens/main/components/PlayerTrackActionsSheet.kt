@@ -16,7 +16,7 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.component.ShareMenuRow
 
 /**
- * Track Actions Bottom Sheet for V2 Player
+ * Track Actions Bottom Sheet for Player
  * Shows current track info and available actions (Share, Add to Playlist, Download, etc.)
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -41,7 +41,7 @@ fun PlayerTrackActionsSheet(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            // Track card (similar to V2 playlist patterns)
+            // Track card (similar to playlist patterns)
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
@@ -95,7 +95,7 @@ fun PlayerTrackActionsSheet(
             
             HorizontalDivider()
             
-            // Action buttons using V2 patterns
+            // Action buttons using standard patterns
             ShareMenuRow(
                 onClick = {
                     onShare()
@@ -136,7 +136,7 @@ fun PlayerTrackActionsSheet(
 }
 
 /**
- * Action menu row component following V2 patterns
+ * Action menu row component
  */
 @Composable
 private fun ActionMenuRow(
@@ -166,7 +166,7 @@ private fun ActionMenuRow(
 }
 
 /**
- * Clickable without ripple effect to match V1 design
+ * Clickable without ripple effect
  */
 @Composable
 private fun Modifier.clickableWithoutRipple(onClick: () -> Unit): Modifier {

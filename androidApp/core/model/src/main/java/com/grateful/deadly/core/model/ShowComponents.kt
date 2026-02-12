@@ -3,7 +3,7 @@ package com.grateful.deadly.core.model
 import kotlinx.serialization.Serializable
 
 /**
- * V2 Show domain model components
+ * Show domain model components
  * 
  * Value objects that compose the Show domain model.
  */

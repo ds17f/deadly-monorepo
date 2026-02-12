@@ -19,14 +19,14 @@ import com.grateful.deadly.feature.home.screens.main.components.collectHomeDebug
 /**
  * HomeScreen - Rich home interface with content discovery
  * 
- * V2 implementation featuring:
+ * Implementation featuring:
  * - Recent Shows Grid (2x4 layout)
  * - Today In Grateful Dead History (horizontal scroll)
  * - Featured Collections (horizontal scroll)
  * - Debug integration for development
  * 
  * Scaffold-free content designed for use within AppScaffold.
- * Follows V2 architecture with single HomeService dependency.
+ * Follows architecture with single HomeService dependency.
  */
 @Composable
 fun HomeScreen(
@@ -38,7 +38,7 @@ fun HomeScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     
-    // Debug panel state - always enabled in V2
+    // Debug panel state - always enabled in debug
     var showDebugPanel by remember { mutableStateOf(false) }
     
     // Debug data collection
@@ -107,7 +107,7 @@ fun HomeScreen(
             }
         }
         
-        // Debug activator button (always visible in V2)
+        // Debug activator button (always visible in debug)
         DebugActivator(
             isVisible = true,
             onClick = { showDebugPanel = true },

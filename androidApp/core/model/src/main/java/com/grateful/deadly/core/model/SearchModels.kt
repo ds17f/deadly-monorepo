@@ -3,7 +3,7 @@ package com.grateful.deadly.core.model
 import kotlinx.serialization.Serializable
 
 /**
- * Search specific data models for the V2 search interface
+ * Search specific data models for the search interface
  */
 
 @Serializable

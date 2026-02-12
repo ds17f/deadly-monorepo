@@ -21,7 +21,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 /**
- * PlaylistServiceImpl - Real implementation using V2 domain architecture
+ * PlaylistServiceImpl - Real implementation using domain architecture
  * 
  * Integrates with ShowRepository for real database operations, efficient
  * chronological navigation, and ArchiveService for track/review data.
@@ -161,7 +161,7 @@ class PlaylistServiceImpl @Inject constructor(
             hasNextShow = hasNext,
             hasPreviousShow = hasPrevious,
             isInLibrary = show.isInLibrary,
-            downloadProgress = null // TODO: Integrate with V2 download service
+            downloadProgress = null // TODO: Integrate with download service
         )
     }
     
@@ -285,23 +285,23 @@ class PlaylistServiceImpl @Inject constructor(
     }
     
     override suspend fun playTrack(trackIndex: Int) {
-        Log.d(TAG, "playTrack($trackIndex) - TODO: Integrate with V2 media service")
-        // TODO: Integrate with V2 media service when available
+        Log.d(TAG, "playTrack($trackIndex) - TODO: Integrate with media service")
+        // TODO: Integrate with media service when available
     }
     
     override suspend fun addToLibrary() {
         currentShow?.let { show ->
-            Log.d(TAG, "addToLibrary() for ${show.displayTitle} - TODO: Integrate with V2 library service")
+            Log.d(TAG, "addToLibrary() for ${show.displayTitle} - TODO: Integrate with library service")
         }
-        // TODO: Integrate with V2 library service when available
+        // TODO: Integrate with library service when available
         // TODO: Update show.isInLibrary and persist to database
     }
     
     override suspend fun downloadShow() {
         currentShow?.let { show ->
-            Log.d(TAG, "downloadShow() for ${show.displayTitle} - TODO: Integrate with V2 download service")
+            Log.d(TAG, "downloadShow() for ${show.displayTitle} - TODO: Integrate with download service")
         }
-        // TODO: Integrate with V2 download service when available
+        // TODO: Integrate with download service when available
         // TODO: Update downloadProgress in ViewModel
     }
     

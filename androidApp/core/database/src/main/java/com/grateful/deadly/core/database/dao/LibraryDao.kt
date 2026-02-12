@@ -10,7 +10,7 @@ import com.grateful.deadly.core.database.entities.LibraryShowEntity
 import kotlinx.coroutines.flow.Flow
 
 /**
- * V2 Library DAO - Pure V2 database access for library operations
+ * Library DAO - Database access for library operations
  * 
  * Provides reactive Flow-based queries and full CRUD operations
  * for user's library management with pin support and sorting.

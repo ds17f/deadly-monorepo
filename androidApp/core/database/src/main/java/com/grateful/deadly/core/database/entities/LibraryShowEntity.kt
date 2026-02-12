@@ -6,7 +6,7 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 /**
- * V2 Library Show Entity - Pure V2 database implementation
+ * Library Show Entity
  * 
  * Represents a show that has been added to the user's library.
  * Uses foreign key relationship to ShowEntity for data integrity.

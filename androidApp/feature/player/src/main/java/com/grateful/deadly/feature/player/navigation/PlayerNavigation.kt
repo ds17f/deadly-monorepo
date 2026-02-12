@@ -8,7 +8,7 @@ import androidx.navigation.navArgument
 import com.grateful.deadly.feature.player.screens.main.PlayerScreen
 
 /**
- * V2 Player Navigation
+ * Player Navigation
  * 
  * Defines the player destination and navigation functions.
  * Route: "player" - Shows whatever is currently playing from MediaController

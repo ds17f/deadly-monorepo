@@ -25,7 +25,7 @@ import com.grateful.deadly.feature.library.screens.main.components.*
 import com.grateful.deadly.feature.library.screens.main.models.LibraryViewModel
 
 /**
- * V2 Library Screen - Main library interface following V2 architecture
+ * Library Screen - Main library interface
  * 
  * Features:
  * - Hierarchical decade/season filtering 

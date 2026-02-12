@@ -20,7 +20,7 @@ fun NavController.navigateToSettings() {
 /**
  * Add Settings destination to NavGraphBuilder
  * 
- * Following V2 navigation patterns where screens accept
+ * Following navigation patterns where screens accept
  * navigation callbacks rather than NavController directly.
  */
 fun NavGraphBuilder.settingsScreen(

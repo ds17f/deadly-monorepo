@@ -3,10 +3,10 @@ package com.grateful.deadly.core.model
 import kotlinx.serialization.Serializable
 
 /**
- * V2 Domain model representing a Show within the Library context.
+ * Domain model representing a Show within the Library context.
  * 
  * Combines core concert data with library-specific metadata following
- * V2 architecture patterns. This model provides clean separation between
+ * Architecture patterns. This model provides clean separation between
  * core Show data and library-specific state (pin status, download status).
  */
 @Serializable
@@ -80,7 +80,7 @@ enum class LibraryDownloadStatus {
 }
 
 /**
- * Library statistics for the V2 library service
+ * Library statistics for the library service
  */
 @Serializable
 data class LibraryStats(

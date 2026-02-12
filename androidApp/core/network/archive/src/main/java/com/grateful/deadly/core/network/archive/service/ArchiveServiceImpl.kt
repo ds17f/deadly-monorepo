@@ -16,7 +16,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 Archive service implementation with filesystem caching
+ * Archive service implementation with filesystem caching
  *
  * Caches API responses as JSON files with 24-hour expiry.
  * Cache structure: /cache/archive/{recordingId}.{type}.json

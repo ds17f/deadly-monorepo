@@ -14,10 +14,10 @@ import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.R
 
 /**
- * Centralized resource for all icons used in the V2 Deadly application.
+ * Centralized resource for all icons used in the Deadly application.
  * 
  * This object provides consistent access to Material Icons and custom icons,
- * ensuring consistent icon usage throughout the V2 application.
+ * ensuring consistent icon usage throughout the application.
  * 
  * Usage pattern:
  * - All icons are accessed via @Composable functions that return a Painter

@@ -11,7 +11,7 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 /**
- * Hilt module for V2 media components
+ * Hilt module for media components
  */
 @Module
 @InstallIn(SingletonComponent::class)

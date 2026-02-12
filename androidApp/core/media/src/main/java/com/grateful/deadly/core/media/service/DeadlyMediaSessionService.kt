@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * V2 MediaSessionService with Metadata Hydration
+ * MediaSessionService with Metadata Hydration
  * 
  * Handles basic playback with queue management and automatic metadata enrichment.
  * Uses MediaSession's built-in persistence for queue/position restoration.
@@ -52,7 +52,7 @@ class DeadlyMediaSessionService : MediaSessionService() {
     
     override fun onCreate() {
         super.onCreate()
-        Log.d(TAG, "🕒🎵 [V2-MEDIA] DeadlyMediaSessionService onCreate started at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [MEDIA] DeadlyMediaSessionService onCreate started at ${System.currentTimeMillis()}")
         
         // Initialize ExoPlayer with audio attributes
         exoPlayer = ExoPlayer.Builder(this)
@@ -71,40 +71,40 @@ class DeadlyMediaSessionService : MediaSessionService() {
             override fun onPlaybackStateChanged(playbackState: Int) {
                 val stateString = when (playbackState) {
                     Player.STATE_IDLE -> {
-                        Log.d(TAG, "🕒🎵 [V2-PLAYER] ExoPlayer state: IDLE at ${System.currentTimeMillis()}")
+                        Log.d(TAG, "🕒🎵 [PLAYER] ExoPlayer state: IDLE at ${System.currentTimeMillis()}")
                         "IDLE"
                     }
                     Player.STATE_BUFFERING -> {
-                        Log.d(TAG, "🕒🎵 [V2-PLAYER] ExoPlayer state: BUFFERING (loading URL) at ${System.currentTimeMillis()}")
+                        Log.d(TAG, "🕒🎵 [PLAYER] ExoPlayer state: BUFFERING (loading URL) at ${System.currentTimeMillis()}")
                         "BUFFERING"
                     }
                     Player.STATE_READY -> {
-                        Log.d(TAG, "🕒🎵 [V2-PLAYER] ExoPlayer state: READY (URL loaded, can play) at ${System.currentTimeMillis()}")
+                        Log.d(TAG, "🕒🎵 [PLAYER] ExoPlayer state: READY (URL loaded, can play) at ${System.currentTimeMillis()}")
                         resetRetryCount() // Reset retry count on successful recovery
                         "READY"
                     }
                     Player.STATE_ENDED -> {
-                        Log.d(TAG, "🕒🎵 [V2-PLAYER] ExoPlayer state: ENDED at ${System.currentTimeMillis()}")
+                        Log.d(TAG, "🕒🎵 [PLAYER] ExoPlayer state: ENDED at ${System.currentTimeMillis()}")
                         "ENDED"
                     }
                     else -> {
-                        Log.d(TAG, "🕒🎵 [V2-PLAYER] ExoPlayer state: UNKNOWN($playbackState) at ${System.currentTimeMillis()}")
+                        Log.d(TAG, "🕒🎵 [PLAYER] ExoPlayer state: UNKNOWN($playbackState) at ${System.currentTimeMillis()}")
                         "UNKNOWN"
                     }
                 }
-                Log.d(TAG, "🕒🎵 [V2-PLAYER] Playback state changed to: $stateString")
+                Log.d(TAG, "🕒🎵 [PLAYER] Playback state changed to: $stateString")
             }
             
             override fun onIsPlayingChanged(isPlaying: Boolean) {
                 if (isPlaying) {
-                    Log.d(TAG, "🕒🎵 [V2-AUDIO] AUDIO PLAYBACK STARTED at ${System.currentTimeMillis()}")
+                    Log.d(TAG, "🕒🎵 [AUDIO] AUDIO PLAYBACK STARTED at ${System.currentTimeMillis()}")
                 } else {
-                    Log.d(TAG, "🕒🎵 [V2-AUDIO] Audio playback stopped/paused at ${System.currentTimeMillis()}")
+                    Log.d(TAG, "🕒🎵 [AUDIO] Audio playback stopped/paused at ${System.currentTimeMillis()}")
                 }
             }
             
             override fun onPlayerError(error: androidx.media3.common.PlaybackException) {
-                Log.e(TAG, "🕒🎵 [V2-ERROR] Player error at ${System.currentTimeMillis()}: ${error.message}", error)
+                Log.e(TAG, "🕒🎵 [ERROR] Player error at ${System.currentTimeMillis()}: ${error.message}", error)
                 handlePlayerError(error)
             }
         })
@@ -115,20 +115,20 @@ class DeadlyMediaSessionService : MediaSessionService() {
             .setCallback(MediaSessionCallback())
             .build()
         
-        Log.d(TAG, "🕒🎵 [V2-MEDIA] DeadlyMediaSessionService onCreate completed at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [MEDIA] DeadlyMediaSessionService onCreate completed at ${System.currentTimeMillis()}")
     }
     
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaSession? {
-        Log.d(TAG, "🕒🎵 [V2-MEDIA] Client requesting session: ${controllerInfo.packageName} at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [MEDIA] Client requesting session: ${controllerInfo.packageName} at ${System.currentTimeMillis()}")
         
         // MediaSession will automatically restore queue/position
         // Schedule metadata hydration after restoration completes
         serviceScope.launch {
             delay(2000) // Give MediaSession time to restore state
-            Log.d(TAG, "🕒🎵 [V2-MEDIA] Triggering metadata hydration after restoration at ${System.currentTimeMillis()}")
+            Log.d(TAG, "🕒🎵 [MEDIA] Triggering metadata hydration after restoration at ${System.currentTimeMillis()}")
             try {
                 metadataHydratorService.hydrateCurrentQueue()
-                Log.d(TAG, "🕒🎵 [V2-MEDIA] Metadata hydration completed at ${System.currentTimeMillis()}")
+                Log.d(TAG, "🕒🎵 [MEDIA] Metadata hydration completed at ${System.currentTimeMillis()}")
             } catch (e: Exception) {
                 Log.e(TAG, "Metadata hydration failed", e)
             }

@@ -160,7 +160,7 @@ class ZipExtractionService @Inject constructor(
             
             return@withContext when (result) {
                 is ExtractionResult.Success -> {
-                    // Look for expected V2 data directories
+                    // Look for expected data directories
                     val showsDir = findDirectory(extractionDir, "shows")
                     val recordingsDir = findDirectory(extractionDir, "recordings")
                     

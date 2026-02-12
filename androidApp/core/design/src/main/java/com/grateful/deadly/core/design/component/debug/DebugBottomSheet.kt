@@ -498,16 +498,16 @@ private fun DebugScrollableLogItem(logs: List<String>) {
 }
 
 /**
- * Debug logger for V2 - simplified version for now
+ * Debug logger - simplified version for now
  */
 private object DebugLogger {
     fun logDebugData(data: DebugData, action: String) {
-        // Simplified logging for V2 - can be enhanced later
+        // Simplified logging - can be enhanced later
         println("DEBUG: $action on ${data.screenName} with ${data.getTotalItemCount()} items")
     }
     
     fun logDebugSection(section: DebugSection, screenName: String, action: String) {
-        // Simplified logging for V2 - can be enhanced later  
+        // Simplified logging - can be enhanced later  
         println("DEBUG: $action on $screenName section '${section.title}' with ${section.items.size} items")
     }
 }

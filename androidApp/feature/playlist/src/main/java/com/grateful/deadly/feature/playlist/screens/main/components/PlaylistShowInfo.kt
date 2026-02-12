@@ -12,10 +12,10 @@ import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.model.PlaylistShowViewModel
 
 /**
- * PlaylistV2ShowInfo - Show information with navigation
+ * PlaylistShowInfo - Show information with navigation
  * 
- * Clean V2 implementation displaying concert date, venue, and location
- * with previous/next navigation buttons. Matches V1 layout and styling.
+ * Clean implementation displaying concert date, venue, and location
+ * with previous/next navigation buttons.
  */
 @Composable
 fun PlaylistShowInfo(

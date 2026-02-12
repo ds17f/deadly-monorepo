@@ -31,13 +31,13 @@ import com.grateful.deadly.feature.collections.screens.main.components.Collectio
 /**
  * CollectionsScreen - Main screen for browsing curated collections
  * 
- * V2 implementation featuring:
+ * Implementation featuring:
  * - Featured collections grid
  * - Collection browsing and search
  * - Debug integration for development
  * 
  * Scaffold-free content designed for use within AppScaffold.
- * Follows V2 architecture with CollectionsService integration.
+ * Follows architecture with CollectionsService integration.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

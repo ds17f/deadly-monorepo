@@ -4,9 +4,9 @@ import com.grateful.deadly.core.model.*
 import kotlinx.coroutines.flow.StateFlow
 
 /**
- * V2 Library Service - Clean service interface for library functionality
+ * Library Service - Clean service interface for library functionality
  * 
- * Following V2 architecture patterns with service-oriented design,
+ * Following architecture patterns with service-oriented design,
  * this interface defines all library operations with reactive StateFlow
  * for UI state management and proper Result handling for operations.
  */

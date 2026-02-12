@@ -9,7 +9,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 Library ShareService for sharing shows from library
+ * Library ShareService for sharing shows from library
  * 
  * Simplified sharing service focused on library show sharing functionality.
  * Creates formatted messages with show details and Archive.org URLs.

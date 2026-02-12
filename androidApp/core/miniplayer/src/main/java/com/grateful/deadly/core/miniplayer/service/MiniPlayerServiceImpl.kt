@@ -15,7 +15,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 MiniPlayer Service Implementation
+ * MiniPlayer Service Implementation
  * 
  * Direct delegation to MediaControllerRepository for core playback state and commands.
  * Uses MediaControllerStateUtil for rich CurrentTrackInfo StateFlow.
@@ -46,7 +46,7 @@ class MiniPlayerServiceImpl @Inject constructor(
      * Direct command delegation to MediaControllerRepository
      */
     override suspend fun togglePlayPause() {
-        Log.d(TAG, "🕒🎵 [V2-MINI] MiniPlayer togglePlayPause requested at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [MINI] MiniPlayer togglePlayPause requested at ${System.currentTimeMillis()}")
         mediaControllerRepository.togglePlayPause()
     }
 }

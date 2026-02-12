@@ -97,7 +97,7 @@ private fun createRecordingGradient(recordingId: String?): Brush {
 }
 
 /**
- * PlayerScreen - Clean V2 player interface
+ * PlayerScreen - Clean player interface
  * 
  * Full-screen immersive player experience that fits within AppScaffold.
  * AppScaffold is configured to hide topBar, bottomBar, and miniPlayer for this route.
@@ -109,7 +109,7 @@ fun PlayerScreen(
     onNavigateToPlaylist: (String, String?) -> Unit,
     viewModel: PlayerViewModel = hiltViewModel()
 ) {
-    Log.d("PlayerScreen", "=== V2 PLAYER SCREEN LOADED ===")
+    Log.d("PlayerScreen", "=== PLAYER SCREEN LOADED ===")
     
     // Collect UI state from ViewModel
     val uiState by viewModel.uiState.collectAsState()
@@ -126,7 +126,7 @@ fun PlayerScreen(
     var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
     
-    // Debug mode hardcoded to true for v2 development
+    // Debug mode hardcoded to true for development
     val showDebugInfo = true
     
     // Debug panel state - only when debug mode is enabled
@@ -149,7 +149,7 @@ fun PlayerScreen(
         }
         
         DebugData(
-            screenName = "V2PlayerScreen",
+            screenName = "PlayerScreen",
             sections = listOf(
                 DebugSection(
                     title = "Player State",
@@ -250,7 +250,7 @@ fun PlayerScreen(
                         PlayerCoverArt(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .height(450.dp) // V1 exact height
+                                .height(450.dp)
                                 .padding(horizontal = 24.dp)
                         )
                         

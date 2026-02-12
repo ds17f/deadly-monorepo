@@ -15,7 +15,7 @@ import javax.inject.Inject
 /**
  * HomeViewModel - State management for rich Home screen
  * 
- * Following V2 architecture patterns:
+ * Following architecture patterns:
  * - Single HomeService dependency for data orchestration
  * - StateFlow for reactive UI updates
  * - Clean separation between UI state and service state

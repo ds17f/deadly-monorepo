@@ -7,7 +7,7 @@ import com.grateful.deadly.core.database.entities.RecentShowEntity
 import kotlinx.coroutines.flow.Flow
 
 /**
- * V2 Recent Show database access object
+ * Recent Show database access object
  * 
  * Provides database operations for recent show tracking using UPSERT pattern.
  * Since each show has only one record (updated on each play), queries are

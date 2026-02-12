@@ -41,7 +41,7 @@ import com.grateful.deadly.core.model.*
  * - Search input with back navigation
  * - Recent searches for quick access
  * - Suggested search terms
- * - Search results similar to LibraryV2 cards
+ * - Search results with card layout
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -280,7 +280,7 @@ private fun SuggestedSearchesSection(
 }
 
 /**
- * Search results section with LibraryV2-style cards
+ * Search results section with card layout
  */
 @Composable
 private fun SearchResultsSection(
@@ -339,7 +339,7 @@ private fun SearchResultsSection(
                 )
             }
             SearchStatus.SUCCESS -> {
-                // Search results using LibraryV2-style cards
+                // Search results using card layout
                 searchResults.forEach { result ->
                     SearchResultCard(
                         searchResult = result,
@@ -359,7 +359,7 @@ private fun SearchResultsSection(
 }
 
 /**
- * Search result card component following LibraryV2 patterns
+ * Search result card component
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -385,7 +385,7 @@ private fun SearchResultCard(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            // Album art placeholder (60dp square, LibraryV2 pattern)
+            // Album art placeholder (60dp square)
             Box(
                 modifier = Modifier
                     .size(60.dp)
@@ -406,7 +406,7 @@ private fun SearchResultCard(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.spacedBy(2.dp)
             ) {
-                // Status indicators row (following LibraryV2 pattern)
+                // Status indicators row
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
@@ -450,7 +450,7 @@ private fun SearchResultCard(
 }
 
 /**
- * Search match type indicator (similar to pin indicator in LibraryV2)
+ * Search match type indicator
  */
 @Composable
 private fun SearchMatchIndicator(matchType: SearchMatchType) {

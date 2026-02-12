@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
  * 
  * Represents the current playback position state as a cohesive unit.
  * Combines position and duration with computed progress to eliminate
- * fragmented StateFlow interfaces across V2 services.
+ * fragmented StateFlow interfaces across services.
  * 
  * This model captures the tightly-coupled relationship between current
  * position, duration, and progress - they all change together and represent

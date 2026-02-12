@@ -20,7 +20,7 @@ import javax.inject.Inject
 /**
  * SearchViewModel - State coordination for next-generation search interface
  * 
- * This ViewModel follows the V2 architecture pattern established by PlayerV2:
+ * This ViewModel follows the established architecture pattern:
  * 1. UI drives the requirements (service interface discovered through UI building)
  * 2. ViewModel coordinates between UI and services
  * 3. Single service dependency with clean separation

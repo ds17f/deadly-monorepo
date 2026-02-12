@@ -9,7 +9,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 
 /**
- * V2 Player Hilt DI Module
+ * Player Hilt DI Module
  * 
  * Provides dependency injection configuration for Player services.
  * Binds PlayerService interface to real implementation.
@@ -22,7 +22,7 @@ abstract class PlayerModule {
     
     /**
      * Bind PlayerService interface to real implementation
-     * Enables clean dependency injection throughout V2 feature modules
+     * Enables clean dependency injection throughout feature modules
      */
     @Binds
     abstract fun bindPlayerService(

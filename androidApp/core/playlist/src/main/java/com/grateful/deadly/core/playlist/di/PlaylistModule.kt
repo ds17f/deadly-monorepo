@@ -16,7 +16,7 @@ import javax.inject.Singleton
 /**
  * PlaylistModule - Hilt dependency injection for Playlist
  * 
- * Updated to use real PlaylistServiceImpl with V2 domain architecture.
+ * Uses real PlaylistServiceImpl with domain architecture.
  * Uses SingletonComponent to access ShowRepository from database layer.
  * Provides application-scoped CoroutineScope for background prefetch operations.
  */

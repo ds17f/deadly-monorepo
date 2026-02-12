@@ -4,7 +4,7 @@ import com.grateful.deadly.core.model.Show
 import kotlinx.coroutines.flow.StateFlow
 
 /**
- * V2 RecentShowsService API contract
+ * RecentShowsService API contract
  * 
  * Provides recently played shows based on user listening behavior.
  * Tracks show-level plays and maintains chronological history for

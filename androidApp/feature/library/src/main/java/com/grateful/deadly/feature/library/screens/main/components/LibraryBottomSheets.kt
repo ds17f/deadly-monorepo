@@ -17,7 +17,7 @@ import com.grateful.deadly.core.model.LibrarySortDirection
 import com.grateful.deadly.core.model.LibraryDownloadStatus
 
 /**
- * V2 Add to Library Bottom Sheet Component
+ * Add to Library Bottom Sheet Component
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,7 +54,7 @@ fun AddToLibraryBottomSheet(
 }
 
 /**
- * V2 Sort Options Bottom Sheet Component
+ * Sort Options Bottom Sheet Component
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -127,7 +127,7 @@ fun SortOptionsBottomSheet(
 }
 
 /**
- * V2 Show Actions Bottom Sheet Component
+ * Show Actions Bottom Sheet Component
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

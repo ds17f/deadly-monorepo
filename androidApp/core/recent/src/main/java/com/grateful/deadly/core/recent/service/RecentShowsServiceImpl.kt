@@ -28,7 +28,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 /**
- * V2 RecentShowsService implementation with real database persistence and MediaController observation.
+ * RecentShowsService implementation with real database persistence and MediaController observation.
  * 
  * Architecture:
  * - Observes MediaControllerRepository StateFlows for track changes

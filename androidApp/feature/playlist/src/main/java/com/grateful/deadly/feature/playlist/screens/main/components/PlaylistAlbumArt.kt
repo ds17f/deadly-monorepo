@@ -13,10 +13,10 @@ import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.R
 
 /**
- * PlaylistV2AlbumArt - Album artwork component
+ * PlaylistAlbumArt - Album artwork component
  * 
- * Clean V2 implementation displaying the deadly logo image
- * with proper sizing and styling to match V1 appearance.
+ * Clean implementation displaying the deadly logo image
+ * with proper sizing and styling.
  */
 @Composable
 fun PlaylistAlbumArt(

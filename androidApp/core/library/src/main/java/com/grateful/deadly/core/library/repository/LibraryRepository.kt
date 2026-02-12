@@ -13,7 +13,7 @@ import javax.inject.Singleton
 import com.grateful.deadly.core.model.AppDatabase
 
 /**
- * V2 LibraryRepository - Pure V2 implementation integrating database and domain layers
+ * LibraryRepository - Implementation integrating database and domain layers
  * 
  * Combines LibraryDao (library-specific data) with ShowRepository (show data)
  * to provide rich LibraryShow domain models for the service layer.

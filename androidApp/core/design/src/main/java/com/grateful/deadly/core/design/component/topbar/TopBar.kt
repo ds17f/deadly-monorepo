@@ -41,8 +41,8 @@ sealed class TopBarMode {
 /**
  * TopBar - Spotify-style TopBar with flexible status bar handling and theme support
  * 
- * This component provides consistent styling across all V2 screens with
- * flexible status bar interaction modes. It integrates with the V2 theme system
+ * This component provides consistent styling across all screens with
+ * flexible status bar interaction modes. It integrates with the theme system
  * to display the current theme's logo (lightning bolt by default, or themed logos).
  * 
  * @param title The title text to display
@@ -57,7 +57,7 @@ sealed class TopBarMode {
  * - SearchScreen (SOLID mode)
  * - PlayerScreen (IMMERSIVE mode) 
  * - LibraryScreen (SOLID mode)
- * - Other V2 implementations
+ * - Other implementations
  */
 @Composable
 fun TopBar(
