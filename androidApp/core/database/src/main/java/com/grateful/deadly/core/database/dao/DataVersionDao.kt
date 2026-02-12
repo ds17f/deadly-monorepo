@@ -1,0 +1,32 @@
+package com.grateful.deadly.core.database.dao
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.grateful.deadly.core.database.entities.DataVersionEntity
+
+@Dao
+interface DataVersionDao {
+    
+    // Version management
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdate(dataVersion: DataVersionEntity)
+    
+    @Query("SELECT * FROM data_version WHERE id = 1")
+    suspend fun getCurrentDataVersion(): DataVersionEntity?
+    
+    @Query("SELECT * FROM data_version WHERE id = 1")
+    suspend fun getDataVersion(): DataVersionEntity?
+    
+    @Query("SELECT dataVersion FROM data_version WHERE id = 1")
+    suspend fun getCurrentVersion(): String?
+    
+    // Check if data exists
+    @Query("SELECT COUNT(*) > 0 FROM data_version")
+    suspend fun hasDataVersion(): Boolean
+    
+    // Management operations
+    @Query("DELETE FROM data_version")
+    suspend fun deleteAll()
+}

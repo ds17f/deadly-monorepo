@@ -9,9 +9,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.view.WindowCompat
-import com.deadly.v2.app.MainNavigation
-import com.deadly.v2.core.theme.ThemeManager
-import com.deadly.v2.core.theme.api.ThemeAssetProvider
+import com.grateful.deadly.MainNavigation
+import com.grateful.deadly.core.theme.ThemeManager
+import com.grateful.deadly.core.theme.api.ThemeAssetProvider
 import com.grateful.deadly.theme.DeadlyMaterialTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

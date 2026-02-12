@@ -132,12 +132,31 @@ android {
 }
 
 dependencies {
-    // V2 App Module and Core Dependencies
-    implementation(project(":v2:app"))
-    implementation(project(":v2:core:theme"))
-    implementation(project(":v2:core:theme-api"))
-    implementation(project(":v2:core:miniplayer"))
-    implementation(project(":v2:core:database"))
+    // Core Dependencies
+    implementation(project(":core:design"))
+    implementation(project(":core:theme"))
+    implementation(project(":core:theme-api"))
+    implementation(project(":core:media"))
+    implementation(project(":core:player"))
+    implementation(project(":core:miniplayer"))
+    implementation(project(":core:database"))
+    implementation(project(":core:api:home"))
+    implementation(project(":core:home"))
+    implementation(project(":core:api:collections"))
+    implementation(project(":core:collections"))
+    implementation(project(":core:api:recent"))
+    implementation(project(":core:recent"))
+
+    // Feature Dependencies
+    implementation(project(":feature:splash"))
+    implementation(project(":feature:home"))
+    implementation(project(":feature:search"))
+    implementation(project(":feature:playlist"))
+    implementation(project(":feature:player"))
+    implementation(project(":feature:miniplayer"))
+    implementation(project(":feature:library"))
+    implementation(project(":feature:collections"))
+    implementation(project(":feature:settings"))
 
     // Core Android
     implementation("androidx.core:core-ktx:1.12.0")
