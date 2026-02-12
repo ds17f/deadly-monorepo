@@ -1,7 +1,7 @@
 package com.grateful.deadly
 
 import android.app.Application
-import com.deadly.v2.core.database.service.DatabaseManager
+import com.grateful.deadly.core.database.service.DatabaseManager
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -26,19 +26,19 @@ class DeadlyApplication : Application() {
                 android.util.Log.d("DeadlyApplication", "Initializing V2 database...")
                 val result = v2DatabaseManager.initializeV2DataIfNeeded()
                 when (result) {
-                    is com.deadly.v2.core.database.service.DatabaseImportResult.Success -> {
+                    is com.grateful.deadly.core.database.service.DatabaseImportResult.Success -> {
                         android.util.Log.d(
                             "DeadlyApplication",
                             "✅ V2 database initialized: ${result.showsImported} shows, ${result.venuesImported} venues"
                         )
                     }
-                    is com.deadly.v2.core.database.service.DatabaseImportResult.Error -> {
+                    is com.grateful.deadly.core.database.service.DatabaseImportResult.Error -> {
                         android.util.Log.e(
                             "DeadlyApplication",
                             "❌ V2 database initialization failed: ${result.error}"
                         )
                     }
-                    is com.deadly.v2.core.database.service.DatabaseImportResult.RequiresUserChoice -> {
+                    is com.grateful.deadly.core.database.service.DatabaseImportResult.RequiresUserChoice -> {
                         android.util.Log.d(
                             "DeadlyApplication",
                             "V2 database requires user choice - will be handled by splash screen"

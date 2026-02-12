@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.deadly.v2.feature.player"
+    namespace = "com.grateful.deadly.feature.player"
     compileSdk = 35
 
     defaultConfig {

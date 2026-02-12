@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.deadly.v2.feature.library"
+    namespace = "com.grateful.deadly.feature.library"
     compileSdk = 35
 
     defaultConfig {
