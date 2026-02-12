@@ -30,7 +30,7 @@ class LastPlayedTrackService @Inject constructor(
     
     companion object {
         private const val TAG = "LastPlayedTrackService"
-        private const val PREFS_NAME = "v2_last_played_track"
+        private const val PREFS_NAME = "last_played_track"
         private const val KEY_SHOW_ID = "show_id"
         private const val KEY_RECORDING_ID = "recording_id"
         private const val KEY_TRACK_INDEX = "track_index"

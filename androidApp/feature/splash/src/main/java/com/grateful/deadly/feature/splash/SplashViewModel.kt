@@ -23,10 +23,10 @@ class SplashViewModel @Inject constructor(
     val uiState: StateFlow<SplashUiState> = splashService.uiState
     
     init {
-        initializeV2Database()
+        initializeDatabase()
     }
     
-    private fun initializeV2Database() {
+    private fun initializeDatabase() {
         viewModelScope.launch {
             try {
                 // Always show progress first and let the service handle restoration/import
@@ -40,7 +40,7 @@ class SplashViewModel @Inject constructor(
                 
                 // Collect progress updates
                 launch {
-                    splashService.getV2Progress().collect { progress ->
+                    splashService.getProgress().collect { progress ->
                         val message = when (progress.phase) {
                             Phase.IDLE -> "Preparing V2 database..."
                             Phase.CHECKING -> "Checking existing data..."
@@ -69,7 +69,7 @@ class SplashViewModel @Inject constructor(
                 }
                 
                 // Start the initialization
-                val result = splashService.initializeV2Database()
+                val result = splashService.initializeDatabase()
                 
                 when (result) {
                     is InitResult.Success -> {

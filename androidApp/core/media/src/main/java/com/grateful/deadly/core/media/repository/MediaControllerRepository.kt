@@ -13,7 +13,7 @@ import com.grateful.deadly.core.media.service.DeadlyMediaSessionService
 import com.grateful.deadly.core.media.exception.FormatNotAvailableException
 import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.PlaybackState
-import com.grateful.deadly.core.model.Track as V2Track
+import com.grateful.deadly.core.model.Track
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -579,7 +579,7 @@ class MediaControllerRepository @Inject constructor(
      */
     private fun convertToMediaItems(
         recordingId: String, 
-        tracks: List<V2Track>,
+        tracks: List<Track>,
         showId: String,
         showDate: String,
         venue: String?,
@@ -626,7 +626,7 @@ class MediaControllerRepository @Inject constructor(
     /**
      * Generate Archive.org URL from V2 Track model
      */
-    private fun generateArchiveUrl(recordingId: String, track: V2Track): String {
+    private fun generateArchiveUrl(recordingId: String, track: Track): String {
         // V2 Track should have the filename/name that corresponds to actual Archive.org files
         return "https://archive.org/download/${recordingId}/${track.name}"
     }
@@ -634,7 +634,7 @@ class MediaControllerRepository @Inject constructor(
     // /**
     //  * Extract recording identifier from track name pattern
     //  */
-    // private fun extractRecordingIdFromTrack(track: V2Track): String {
+    // private fun extractRecordingIdFromTrack(track: Track): String {
     //     // Extract recording ID from track name pattern like "gd77-05-08d1t01.mp3"
     //     val name = track.name
     //     return when {

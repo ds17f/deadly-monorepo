@@ -8,7 +8,7 @@ import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.Show
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -46,7 +46,7 @@ import javax.inject.Singleton
  */
 @Singleton
 class RecentShowsServiceImpl @Inject constructor(
-    @V2Database private val recentShowDao: RecentShowDao,
+    @AppDatabase private val recentShowDao: RecentShowDao,
     private val showRepository: ShowRepository,
     private val mediaControllerRepository: MediaControllerRepository,
     @Named("RecentShowsApplicationScope") private val applicationScope: CoroutineScope

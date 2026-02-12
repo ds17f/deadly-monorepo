@@ -2,7 +2,7 @@ package com.grateful.deadly.core.database.service
 
 import android.content.Context
 import android.util.Log
-import com.grateful.deadly.core.model.V2Database
+import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.DataVersionDao
 import com.grateful.deadly.core.network.github.service.GitHubDataService
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -19,7 +19,7 @@ import javax.inject.Singleton
 @Singleton
 class DatabaseManager @Inject constructor(
     @ApplicationContext private val context: Context,
-    @V2Database private val dataVersionDao: DataVersionDao,
+    @AppDatabase private val dataVersionDao: DataVersionDao,
     private val dataImportService: DataImportService,
     private val gitHubDataService: GitHubDataService,
     private val databaseHealthService: DatabaseHealthService,
@@ -56,7 +56,7 @@ class DatabaseManager @Inject constructor(
     /**
      * Check if V2 data is already initialized using health service
      */
-    suspend fun isV2DataInitialized(): Boolean {
+    suspend fun isDataInitialized(): Boolean {
         return try {
             Log.d(TAG, "Checking if data is initialized...")
             databaseHealthService.isDatabaseHealthy()
@@ -69,9 +69,9 @@ class DatabaseManager @Inject constructor(
     /**
      * Initialize V2 data if needed
      */
-    suspend fun initializeV2DataIfNeeded(): DatabaseImportResult {
+    suspend fun initializeDataIfNeeded(): DatabaseImportResult {
         return try {
-            if (isV2DataInitialized()) {
+            if (isDataInitialized()) {
                 Log.i(TAG, "Data already initialized")
                 // Get actual counts from database
                 val healthInfo = databaseHealthService.getDatabaseCounts()
@@ -107,7 +107,7 @@ class DatabaseManager @Inject constructor(
     /**
      * Clear V2 database data
      */
-    suspend fun clearV2Database() {
+    suspend fun clearDatabase() {
         try {
             Log.i(TAG, "Clearing database data")
             dataVersionDao.deleteAll()
@@ -384,7 +384,7 @@ class DatabaseManager @Inject constructor(
         Log.d(TAG, if (isHealthy) "✅ Database health check works!" else "✅ Database health check works - detected empty database")
         
         // Test initialization check
-        val isInitialized = isV2DataInitialized()
+        val isInitialized = isDataInitialized()
         Log.d(TAG, "Database initialization status: $isInitialized")
     }
     

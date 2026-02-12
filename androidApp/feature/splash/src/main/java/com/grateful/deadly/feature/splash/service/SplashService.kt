@@ -23,7 +23,7 @@ class SplashService @Inject constructor(
     private val databaseManager: DatabaseManager
 ) {
     companion object {
-        private const val TAG = "SplashV2Service"
+        private const val TAG = "SplashService"
     }
     
     private val _uiState = MutableStateFlow(SplashUiState())
@@ -35,7 +35,7 @@ class SplashService @Inject constructor(
     /**
      * Convert DatabaseManager progress to V2 splash progress
      */
-    fun getV2Progress(): Flow<Progress> {
+    fun getProgress(): Flow<Progress> {
         return databaseManager.progress.map { v2Progress ->
             val phase = when (v2Progress.phase) {
                 "IDLE" -> Phase.IDLE
@@ -95,7 +95,7 @@ class SplashService @Inject constructor(
     /**
      * Initialize database with progress tracking
      */
-    suspend fun initializeV2Database(): InitResult {
+    suspend fun initializeDatabase(): InitResult {
         return try {
             Log.d(TAG, "Starting Database initialization")
             
@@ -111,7 +111,7 @@ class SplashService @Inject constructor(
             // Test download functionality (optional - can be slow)
             // databaseManager.testDownloadFunctionality()
             
-            val result = databaseManager.initializeV2DataIfNeeded()
+            val result = databaseManager.initializeDataIfNeeded()
             
             when (result) {
                 is DatabaseImportResult.Success -> {
@@ -143,9 +143,9 @@ class SplashService @Inject constructor(
     /**
      * Check if V2 data is already initialized
      */
-    suspend fun isV2DataInitialized(): Boolean {
+    suspend fun isDataInitialized(): Boolean {
         return try {
-            databaseManager.isV2DataInitialized()
+            databaseManager.isDataInitialized()
         } catch (e: Exception) {
             Log.e(TAG, "Failed to check V2 data initialization status", e)
             false
@@ -189,7 +189,7 @@ class SplashService @Inject constructor(
                 errorMessage = null
             )
             
-            val result = initializeV2Database()
+            val result = initializeDatabase()
             when (result) {
                 is InitResult.Success -> {
                     updateUiState(
