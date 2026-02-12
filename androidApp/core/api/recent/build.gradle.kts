@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.deadly.v2.core.api.recent"
+    namespace = "com.grateful.deadly.core.api.recent"
     compileSdk = 35
 
     defaultConfig {

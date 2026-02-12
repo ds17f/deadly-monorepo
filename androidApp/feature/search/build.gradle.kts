@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.deadly.v2.feature.search"
+    namespace = "com.grateful.deadly.feature.search"
     compileSdk = 35
 
     defaultConfig {

@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.deadly.v2.core.database"
+    namespace = "com.grateful.deadly.core.database"
     compileSdk = 35
 
     defaultConfig {

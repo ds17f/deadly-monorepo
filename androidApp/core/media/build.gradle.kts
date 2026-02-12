@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.deadly.v2.core.media"
+    namespace = "com.grateful.deadly.core.media"
     compileSdk = 35
 
     defaultConfig {
