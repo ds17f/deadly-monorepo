@@ -186,70 +186,70 @@ class DeadCollectionsServiceImpl @Inject constructor(
                 name = "Dick's Picks",
                 description = "Dick Latvala's archival series featuring the best soundboard recordings",
                 tags = listOf("official", "soundboard", "archival", "dick-latvala"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "europe-72",
                 name = "Europe '72",
                 description = "The legendary European tour that produced countless classics",
                 tags = listOf("tour", "1972", "europe", "pigpen", "classic"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "greatest-shows",
                 name = "Greatest Shows",
                 description = "The most celebrated concerts in Grateful Dead history",
                 tags = listOf("quality", "greatest", "top-rated"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "wall-of-sound",
                 name = "Wall of Sound",
                 description = "Shows featuring the massive Wall of Sound PA system (1974)",
                 tags = listOf("era", "1974", "wall-of-sound", "technology"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "rare-recordings",
                 name = "Rare Recordings",
                 description = "Hard-to-find and limited circulation recordings",
                 tags = listOf("rarity", "limited", "rare", "circulation"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "acoustic-sets",
                 name = "Acoustic Sets", 
                 description = "Intimate acoustic performances and rare unplugged moments",
                 tags = listOf("theme", "acoustic", "intimate", "unplugged"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "fillmore-west",
                 name = "Fillmore West",
                 description = "Classic performances at Bill Graham's legendary venue",
                 tags = listOf("venue", "fillmore", "bill-graham", "legendary"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "egypt-78",
                 name = "Egypt '78",
                 description = "The mystical concerts at the Great Pyramid of Giza",
                 tags = listOf("tour", "1978", "egypt", "pyramid", "mystical"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "long-jams",
                 name = "Epic Jams",
                 description = "Extended improvisational journeys and marathon songs",
                 tags = listOf("theme", "jams", "improvisation", "extended"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             ),
             DeadCollection(
                 id = "new-years",
                 name = "New Year's Shows",
                 description = "Celebration concerts welcoming each new year",
                 tags = listOf("theme", "new-year", "celebration", "annual"),
-                shows = emptyList() // TODO: Load from database
+                shows = emptyList() // Fallback metadata only; shows load via database in normal path
             )
         )
     }
