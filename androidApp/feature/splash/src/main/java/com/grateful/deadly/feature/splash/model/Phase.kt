@@ -1,7 +1,7 @@
 package com.grateful.deadly.feature.splash.model
 
 /**
- * V2 database initialization phases for progress tracking
+ * Database initialization phases for progress tracking
  */
 enum class Phase {
     IDLE,

@@ -119,7 +119,7 @@ class DataImportService @Inject constructor(
         progressCallback: ((ImportProgress) -> Unit)? = null
     ): ImportResult = withContext(Dispatchers.IO) {
         try {
-            Log.d(TAG, "Starting V2 data import from directories")
+            Log.d(TAG, "Starting data import from directories")
             
             progressCallback?.invoke(ImportProgress("READING_DIRECTORIES", 0, 0, "Scanning directories..."))
             
@@ -324,7 +324,7 @@ class DataImportService @Inject constructor(
                     dataVersion = "2.0.0",
                     packageName = "Deadly Metadata",
                     versionType = "release", 
-                    description = "V2 database import from extracted files with collections",
+                    description = "Database import from extracted files with collections",
                     importedAt = currentTime,
                     gitCommit = null,
                     gitTag = null,

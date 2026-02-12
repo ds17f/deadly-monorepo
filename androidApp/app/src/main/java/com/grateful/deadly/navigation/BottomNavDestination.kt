@@ -5,7 +5,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import com.grateful.deadly.core.design.resources.IconResources
 
 /**
- * Bottom navigation destinations for V2 app
+ * Bottom navigation destinations
  * 
  * Defines the 5 main tabs in the bottom navigation:
  * - Home: Main hub for browsing and discovery

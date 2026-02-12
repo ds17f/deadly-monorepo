@@ -35,14 +35,14 @@ import com.grateful.deadly.core.theme.api.ThemeAssetProvider
 import com.grateful.deadly.core.theme.ThemeManager
 
 /**
- * MainNavigation - Scalable navigation architecture for V2 app with theme system
+ * MainNavigation - Scalable navigation architecture with theme system
  * 
  * This is the main navigation coordinator that orchestrates routing between
  * all feature modules. Each feature owns its own navigation subgraph,
  * maintaining clean separation of concerns.
  * 
- * The V2 app includes a theme system that auto-detects ZIP themes and provides
- * themed assets throughout the application via DeadlyTheme composition provider.
+ * The app includes a theme system that auto-detects ZIP themes and provides
+ * themed assets via DeadlyTheme composition provider.
  * 
  * Navigation Flow:
  * 1. splash → home (after database initialization) 
@@ -56,7 +56,7 @@ import com.grateful.deadly.core.theme.ThemeManager
  * - Modular: Each feature manages its own navigation
  * - Testable: Features accept navigation callbacks
  * - Clean: App module stays minimal and focused
- * - Themeable: Unified theme system across all V2 components
+ * - Themeable: Unified theme system across all components
  */
 @Composable
 fun MainNavigation(
@@ -122,7 +122,7 @@ fun MainNavigation(
                 startDestination = "splash",
                 modifier = Modifier.padding(paddingValues)
             ) {
-                // Splash feature - handles V2 database initialization
+                // Splash feature - handles database initialization
                 splashGraph(navController)
                 
                 // Home feature - main hub screen

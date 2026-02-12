@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.StateFlow
  * - Today in Grateful Dead History from date-based queries  
  * - Featured collections from curated data
  * 
- * Follows V2 architecture patterns with StateFlow for reactive UI updates.
+ * Follows architecture patterns with StateFlow for reactive UI updates.
  */
 interface HomeService {
     

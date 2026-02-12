@@ -167,11 +167,11 @@ class ZipExtractionService @Inject constructor(
                     if (showsDir != null && recordingsDir != null) {
                         val showsCount = showsDir.listFiles()?.size ?: 0
                         val recordingsCount = recordingsDir.listFiles()?.size ?: 0
-                        Log.d(TAG, "Found V2 data directories: shows/ ($showsCount files), recordings/ ($recordingsCount files)")
+                        Log.d(TAG, "Found data directories: shows/ ($showsCount files), recordings/ ($recordingsCount files)")
                         DataExtractionResult.Success(showsDir, recordingsDir, extractionDir)
                     } else {
-                        Log.e(TAG, "V2 data directories not found in extraction. Available: ${extractionDir.listFiles()?.map { it.name } ?: emptyList()}")
-                        DataExtractionResult.Error("Required V2 data directories (shows/, recordings/) not found in ZIP")
+                        Log.e(TAG, "Data directories not found in extraction. Available: ${extractionDir.listFiles()?.map { it.name } ?: emptyList()}")
+                        DataExtractionResult.Error("Required data directories (shows/, recordings/) not found in ZIP")
                     }
                 }
                 is ExtractionResult.Error -> {

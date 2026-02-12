@@ -35,7 +35,7 @@ class SplashViewModel @Inject constructor(
                 // Show progress and start initialization
                 splashService.updateUiState(
                     showProgress = true,
-                    message = "Initializing V2 database..."
+                    message = "Initializing database..."
                 )
                 
                 // Collect progress updates
@@ -84,7 +84,7 @@ class SplashViewModel @Inject constructor(
                         splashService.updateUiState(
                             showError = true,
                             showProgress = false,
-                            message = "V2 database initialization failed",
+                            message = "Database initialization failed",
                             errorMessage = result.error
                         )
                     }
@@ -94,7 +94,7 @@ class SplashViewModel @Inject constructor(
                 splashService.updateUiState(
                     showError = true,
                     showProgress = false,
-                    message = "V2 database initialization failed",
+                    message = "Database initialization failed",
                     errorMessage = e.message
                 )
             }

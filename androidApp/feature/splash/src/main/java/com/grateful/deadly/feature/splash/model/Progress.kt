@@ -1,7 +1,7 @@
 package com.grateful.deadly.feature.splash.model
 
 /**
- * V2 database initialization progress tracking
+ * Database initialization progress tracking
  */
 data class Progress(
     val phase: Phase,
