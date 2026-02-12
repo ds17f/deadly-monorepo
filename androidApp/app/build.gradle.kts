@@ -2,7 +2,7 @@ import java.util.Properties
 import java.io.ByteArrayOutputStream
 
 // Load version from version.properties (single source of truth for both Android and iOS)
-val versionPropsFile = rootProject.file("../../version.properties")
+val versionPropsFile = rootProject.file("../version.properties")
 val versionProps = Properties()
 if (versionPropsFile.exists()) {
     versionPropsFile.inputStream().use { versionProps.load(it) }
@@ -52,26 +52,27 @@ android {
         buildConfigField("long", "BUILD_TIME", "${System.currentTimeMillis()}L")
     }
 
-    signingConfigs {
-        create("release") {
-            // Use keystore.properties from monorepo .secrets/ directory
-            val keystorePropsFile = rootProject.file("../../.secrets/keystore.properties")
-            if (keystorePropsFile.exists()) {
+    // Check for signing keystore before creating signing config
+    val keystorePropsFile = rootProject.file("../.secrets/keystore.properties")
+    val hasReleaseSigningConfig = keystorePropsFile.exists()
+
+    if (hasReleaseSigningConfig) {
+        signingConfigs {
+            create("release") {
                 val keystoreProps = Properties()
                 keystoreProps.load(keystorePropsFile.inputStream())
 
                 // Resolve storeFile path relative to monorepo root
                 val storeFilePath = keystoreProps["storeFile"] as String
-                storeFile = rootProject.file("../../$storeFilePath")
+                storeFile = rootProject.file("../$storeFilePath")
                 storePassword = keystoreProps["storePassword"] as String
                 keyAlias = keystoreProps["keyAlias"] as String
                 keyPassword = keystoreProps["keyPassword"] as String
-
-                println("✅ Release signing configuration loaded from .secrets/keystore.properties")
-            } else {
-                println("⚠️ .secrets/keystore.properties not found - release builds will be unsigned")
             }
         }
+        println("Release signing configuration loaded from .secrets/keystore.properties")
+    } else {
+        println("WARNING: .secrets/keystore.properties not found - release builds will use debug signing")
     }
 
     buildTypes {
@@ -95,8 +96,12 @@ android {
                 "proguard-rules.pro"
             )
 
-            // Use release signing if available
-            signingConfig = signingConfigs.getByName("release")
+            // Use release signing if available, otherwise fall back to debug signing
+            signingConfig = if (hasReleaseSigningConfig) {
+                signingConfigs.getByName("release")
+            } else {
+                signingConfigs.getByName("debug")
+            }
 
             // Add build type and no commit hash for release builds
             buildConfigField("String", "BUILD_TYPE", "\"release\"")
