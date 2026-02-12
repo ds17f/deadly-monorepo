@@ -205,7 +205,7 @@ install-quiet:
 
 run: install
 	@echo "🚀 Launching Deadly app..."
-	adb shell am start -n com.grateful.deadly/.MainActivity
+	adb shell am start -n com.grateful.deadly.debug/com.grateful.deadly.MainActivity
 	@echo "✅ App launched!"
 
 run-emulator:
@@ -234,7 +234,7 @@ run-emulator:
 	@$(MAKE) --no-print-directory install
 	@echo ""
 	@echo "4️⃣ Launching app..."
-	@adb shell am start -n com.deadly.app/.MainActivity
+	@adb shell am start -n com.grateful.deadly.debug/com.grateful.deadly.MainActivity
 	@echo ""
 	@echo "🎉 SUCCESS! Deadly is now running on emulator!"
 	@echo "📱 Use 'make emu-stop' when done"
@@ -339,7 +339,7 @@ install-release:
 
 uninstall:
 	@echo "🗑️ Uninstalling Deadly..."
-	adb uninstall com.deadly.app || echo "App not installed"
+	adb uninstall com.grateful.deadly.debug || echo "App not installed"
 
 # Emulator management
 emu-list:
@@ -739,10 +739,10 @@ capture-test-data:
 	@echo "2️⃣ Pulling files from device..."
 	@mkdir -p testdata
 	@echo "   Trying app external files directory..."
-	@adb pull /storage/emulated/0/Android/data/com.deadly.app.debug/files/testdata/ ./testdata/ 2>/dev/null || \
-	 adb pull /storage/emulated/0/Android/data/com.deadly.app/files/testdata/ ./testdata/ 2>/dev/null || \
-	 adb pull /sdcard/Android/data/com.deadly.app.debug/files/testdata/ ./testdata/ 2>/dev/null || \
-	 adb pull /sdcard/Android/data/com.deadly.app/files/testdata/ ./testdata/ 2>/dev/null || \
+	@adb pull /storage/emulated/0/Android/data/com.grateful.deadly.debug/files/testdata/ ./testdata/ 2>/dev/null || \
+	 adb pull /storage/emulated/0/Android/data/com.grateful.deadly/files/testdata/ ./testdata/ 2>/dev/null || \
+	 adb pull /sdcard/Android/data/com.grateful.deadly.debug/files/testdata/ ./testdata/ 2>/dev/null || \
+	 adb pull /sdcard/Android/data/com.grateful.deadly/files/testdata/ ./testdata/ 2>/dev/null || \
 	 echo "⚠️  No data found. Make sure to export data first using the Debug screen"
 	@if [ -d "testdata/testdata" ]; then mv testdata/testdata/* testdata/ && rmdir testdata/testdata; fi
 	@echo "✅ Test data captured to ./testdata/"
@@ -750,7 +750,7 @@ capture-test-data:
 
 clean-test-data:
 	@echo "🧹 Cleaning test data..."
-	@adb shell pm clear com.deadly.app.debug || adb shell pm clear com.deadly.app || echo "⚠️  App not installed or ADB not connected"
+	@adb shell pm clear com.grateful.deadly.debug || adb shell pm clear com.grateful.deadly || echo "⚠️  App not installed or ADB not connected"
 	@rm -rf testdata/
 	@echo "✅ Test data cleaned"
 
