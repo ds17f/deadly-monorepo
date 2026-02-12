@@ -8,7 +8,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Mapper for converting Archive.org API responses to V2 domain models
+ * Mapper for converting Archive.org API responses to domain models
  */
 @Singleton
 class ArchiveMapper @Inject constructor() {

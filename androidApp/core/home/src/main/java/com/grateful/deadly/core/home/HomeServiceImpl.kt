@@ -22,7 +22,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 HomeService production implementation with real data integration.
+ * HomeService production implementation with real data integration.
  * 
  * Features:
  * - Recent shows from actual user plays (via MediaController observation)

@@ -17,10 +17,10 @@ import com.grateful.deadly.core.model.PlaylistReview
 import com.grateful.deadly.core.model.PlaylistShowViewModel
 
 /**
- * PlaylistV2ReviewDetailsSheet - V2 implementation of review details modal
+ * PlaylistReviewDetailsSheet - Review details modal
  * 
- * Copies V1 ReviewDetailsSheet UI exactly but integrates with V2 architecture.
- * Gets data from PlaylistV2ViewModel instead of separate ReviewViewModel.
+ * Review details sheet integrated with service architecture.
+ * Gets data from PlaylistViewModel.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -170,7 +170,7 @@ fun PlaylistReviewDetailsSheet(
 }
 
 /**
- * Rating summary card showing overall rating and distribution (V1 layout)
+ * Rating summary card showing overall rating and distribution
  */
 @Composable
 private fun RatingSummaryCard(
@@ -218,7 +218,7 @@ private fun RatingSummaryCard(
 }
 
 /**
- * Rating distribution chart (V1 implementation)
+ * Rating distribution chart
  */
 @Composable
 private fun RatingDistributionChart(
@@ -268,7 +268,7 @@ private fun RatingDistributionChart(
 }
 
 /**
- * Individual review item card (V1 layout with stars and date together)
+ * Individual review item card (stars and date together)
  */
 @Composable
 private fun ReviewItemCard(

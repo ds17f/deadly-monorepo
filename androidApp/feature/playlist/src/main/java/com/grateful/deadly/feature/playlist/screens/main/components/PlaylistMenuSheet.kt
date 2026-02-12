@@ -11,8 +11,8 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.component.ShareMenuRow
 
 /**
- * PlaylistV2 menu bottom sheet that appears when triple dot menu is tapped.
- * Follows V1 design patterns with Share and Choose Recording options.
+ * Playlist menu bottom sheet that appears when triple dot menu is tapped.
+ * Follows standard design patterns with Share and Choose Recording options.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

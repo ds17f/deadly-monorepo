@@ -15,7 +15,7 @@ import javax.inject.Inject
 import javax.inject.Named
 
 /**
- * V2 LibraryViewModel - ViewModel for library management following V2 patterns
+ * LibraryViewModel - ViewModel for library management
  * 
  * Uses service-oriented architecture with direct delegation to LibraryService.
  * Provides reactive UI state management with comprehensive error handling
@@ -27,7 +27,7 @@ class LibraryViewModel @Inject constructor(
 ) : ViewModel() {
     
     companion object {
-        private const val TAG = "V2LibraryViewModel"
+        private const val TAG = "LibraryViewModel"
     }
     
     private val _uiState = MutableStateFlow(
@@ -40,7 +40,7 @@ class LibraryViewModel @Inject constructor(
     val uiState: StateFlow<LibraryUiState> = _uiState.asStateFlow()
     
     init {
-        Log.d(TAG, "V2 LibraryViewModel initialized")
+        Log.d(TAG, "LibraryViewModel initialized")
         loadLibrary()
     }
     
@@ -49,7 +49,7 @@ class LibraryViewModel @Inject constructor(
      */
     private fun loadLibrary() {
         viewModelScope.launch {
-            Log.d(TAG, "Loading library via V2 service")
+            Log.d(TAG, "Loading library")
             
             try {
                 // Load library data

@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.StateFlow
 /**
  * PlaylistService - Clean service interface for playlist functionality
  * 
- * Following V2 architecture patterns and clean architecture principles,
+ * Following architecture patterns and clean architecture principles,
  * this interface returns ViewModel types that represent UI concerns.
  * Real implementation will map domain models to ViewModels, stub provides dummy data.
  */

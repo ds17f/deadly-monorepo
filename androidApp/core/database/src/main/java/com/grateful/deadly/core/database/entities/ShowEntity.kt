@@ -57,7 +57,7 @@ data class ShowEntity(
     val averageRating: Float?,
     val totalReviews: Int = 0,
     
-    // Library status (will be used by V2 features later)
+    // Library status (for future use)
     val isInLibrary: Boolean = false,
     val libraryAddedAt: Long?,
     

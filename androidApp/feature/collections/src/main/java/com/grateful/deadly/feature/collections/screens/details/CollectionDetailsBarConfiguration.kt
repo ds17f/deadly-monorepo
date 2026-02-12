@@ -3,7 +3,7 @@ package com.grateful.deadly.feature.collections.screens.details
 /**
  * Bar configuration for Collection Details screen
  * 
- * Provides simple bar configuration following V2 design patterns
+ * Provides simple bar configuration following standard design patterns
  */
 object CollectionDetailsBarConfiguration {
     

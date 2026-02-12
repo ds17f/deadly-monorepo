@@ -15,9 +15,9 @@ import com.grateful.deadly.core.design.component.CompactStarRating
 import com.grateful.deadly.core.model.PlaylistShowViewModel
 
 /**
- * PlaylistV2InteractiveRating - V2 implementation of rating display
+ * PlaylistInteractiveRating - Rating display component
  * 
- * Copies V1 InteractiveRatingDisplay UI exactly but integrates with V2 architecture.
+ * Interactive rating display integrated with service architecture.
  * Always shows (even when no rating), with appropriate empty states.
  */
 @Composable
@@ -49,7 +49,7 @@ fun PlaylistInteractiveRating(
             ) {
                 CompactStarRating(
                     rating = if (showData.rating > 0) showData.rating else null,
-                    confidence = null, // V2 implementation doesn't have confidence yet
+                    confidence = null, // Confidence not yet implemented
                     starSize = IconResources.Size.MEDIUM
                 )
                 

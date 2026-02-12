@@ -60,7 +60,7 @@ data class FilterPath(
 }
 
 /**
- * Spotify-style hierarchical filter component for V2
+ * Spotify-style hierarchical filter component
  * 
  * Features:
  * - Hierarchical navigation through filter tree
@@ -325,7 +325,7 @@ private fun FilterOptionChip(
 }
 
 /**
- * Utility functions for building common filter trees for V2
+ * Utility functions for building common filter trees
  */
 object FilterTrees {
     

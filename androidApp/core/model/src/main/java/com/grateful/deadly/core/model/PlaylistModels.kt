@@ -3,7 +3,7 @@ package com.grateful.deadly.core.model
 import kotlinx.serialization.Serializable
 
 /**
- * Playlist-specific data models for the V2 playlist interface
+ * Playlist-specific data models for the playlist interface
  */
 
 /**
@@ -58,7 +58,7 @@ data class PlaylistTrackViewModel(
 )
 
 /**
- * Review data for V2 architecture
+ * Review data for architecture
  */
 @Serializable
 data class PlaylistReview(
@@ -71,7 +71,7 @@ data class PlaylistReview(
 
 /**
  * RecordingOptionViewModel - UI representation of recording option
- * V2 View Model with rich recording descriptions from real data
+ * View Model with rich recording descriptions from real data
  */
 @Serializable
 data class RecordingOptionViewModel(
@@ -154,7 +154,7 @@ data class PlaylistUiState(
 /**
  * UI State for MiniPlayer component
  * 
- * Reactive state model for V2 MiniPlayer with complete playback information.
+ * Reactive state model for MiniPlayer with complete playback information.
  */
 data class MiniPlayerUiState(
     val isPlaying: Boolean = false,
@@ -170,7 +170,7 @@ data class MiniPlayerUiState(
 // === Archive Domain Models ===
 
 /**
- * Track domain model for V2 Archive integration
+ * Track domain model for Archive integration
  */
 @Serializable
 data class Track(
@@ -186,7 +186,7 @@ data class Track(
 )
 
 /**
- * Review domain model for V2 Archive integration
+ * Review domain model for Archive integration
  */
 @Serializable
 data class Review(
@@ -198,7 +198,7 @@ data class Review(
 )
 
 /**
- * Recording metadata domain model for V2 Archive integration
+ * Recording metadata domain model for Archive integration
  */
 @Serializable
 data class RecordingMetadata(

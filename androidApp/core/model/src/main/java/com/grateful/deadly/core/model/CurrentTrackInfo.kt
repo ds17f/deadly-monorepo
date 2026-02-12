@@ -3,10 +3,10 @@ package com.grateful.deadly.core.model
 import kotlinx.serialization.Serializable
 
 /**
- * Comprehensive track information model for V2 architecture
+ * Comprehensive track information model for architecture
  * 
  * Central data model containing all metadata and playback state for the currently playing track.
- * Used throughout V2 services and UI components to ensure consistent track data representation.
+ * Used throughout services and UI components to ensure consistent track data representation.
  * 
  * FOUNDATION FIRST: Part of Phase 0 architecture improvements to centralize track metadata.
  */

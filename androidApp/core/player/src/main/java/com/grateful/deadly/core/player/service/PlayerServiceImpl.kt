@@ -26,9 +26,9 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 Player Service Implementation with Metadata Hydration
+ * Player Service Implementation with Metadata Hydration
  * 
- * Real implementation of PlayerService that delegates to V2 MediaControllerRepository.
+ * Real implementation of PlayerService that delegates to MediaControllerRepository.
  * Provides perfect synchronization with Media3 playback state through direct StateFlow delegation.
  * Uses MetadataHydratorService for on-demand metadata enrichment from database.
  * 
@@ -89,32 +89,32 @@ class PlayerServiceImpl @Inject constructor(
     }
     
     override suspend fun togglePlayPause() {
-        Log.d(TAG, "🕒🎵 [V2-SERVICE] PlayerService togglePlayPause called at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [SERVICE] PlayerService togglePlayPause called at ${System.currentTimeMillis()}")
         try {
             mediaControllerRepository.togglePlayPause()
         } catch (e: Exception) {
-            Log.e(TAG, "🕒🎵 [V2-ERROR] PlayerService togglePlayPause failed at ${System.currentTimeMillis()}", e)
+            Log.e(TAG, "🕒🎵 [ERROR] PlayerService togglePlayPause failed at ${System.currentTimeMillis()}", e)
         }
     }
     
     override suspend fun seekToNext() {
-        Log.d(TAG, "🕒🎵 [V2-SERVICE] PlayerService seekToNext called at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [SERVICE] PlayerService seekToNext called at ${System.currentTimeMillis()}")
         try {
             val wasPlaying = mediaControllerRepository.isPlaying.value
             mediaControllerRepository.seekToNext()
             
             // Auto-play new track if we were paused
             if (!wasPlaying) {
-                Log.d(TAG, "🕒🎵 [V2-SERVICE] Was paused - starting playback of new track at ${System.currentTimeMillis()}")
+                Log.d(TAG, "🕒🎵 [SERVICE] Was paused - starting playback of new track at ${System.currentTimeMillis()}")
                 mediaControllerRepository.play()
             }
         } catch (e: Exception) {
-            Log.e(TAG, "🕒🎵 [V2-ERROR] PlayerService seekToNext failed at ${System.currentTimeMillis()}", e)
+            Log.e(TAG, "🕒🎵 [ERROR] PlayerService seekToNext failed at ${System.currentTimeMillis()}", e)
         }
     }
     
     override suspend fun seekToPrevious() {
-        Log.d(TAG, "🕒🎵 [V2-SERVICE] PlayerService seekToPrevious called at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [SERVICE] PlayerService seekToPrevious called at ${System.currentTimeMillis()}")
         try {
             val currentPositionMs = mediaControllerRepository.currentPosition.value
             val wasPlaying = mediaControllerRepository.isPlaying.value
@@ -158,16 +158,16 @@ class PlayerServiceImpl @Inject constructor(
                 }
             }
         } catch (e: Exception) {
-            Log.e(TAG, "🕒🎵 [V2-ERROR] PlayerService seekToPrevious failed at ${System.currentTimeMillis()}", e)
+            Log.e(TAG, "🕒🎵 [ERROR] PlayerService seekToPrevious failed at ${System.currentTimeMillis()}", e)
         }
     }
     
     override suspend fun seekToPosition(positionMs: Long) {
-        Log.d(TAG, "🕒🎵 [V2-SERVICE] PlayerService seekToPosition(${positionMs}ms) called at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [SERVICE] PlayerService seekToPosition(${positionMs}ms) called at ${System.currentTimeMillis()}")
         try {
             mediaControllerRepository.seekToPosition(positionMs)
         } catch (e: Exception) {
-            Log.e(TAG, "🕒🎵 [V2-ERROR] PlayerService seekToPosition failed at ${System.currentTimeMillis()}", e)
+            Log.e(TAG, "🕒🎵 [ERROR] PlayerService seekToPosition failed at ${System.currentTimeMillis()}", e)
         }
     }
     

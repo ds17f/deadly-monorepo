@@ -14,12 +14,12 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * V2 MiniPlayer ViewModel
+ * MiniPlayer ViewModel
  * 
- * Service integration layer following V2 architecture patterns.
+ * Service integration layer following Architecture patterns.
  * Coordinates MiniPlayerService state with UI state management.
  * 
- * Follows exact patterns from V2 playlist/search ViewModels.
+ * Follows exact patterns from playlist/search ViewModels.
  */
 @HiltViewModel
 class MiniPlayerViewModel @Inject constructor(

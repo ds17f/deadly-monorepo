@@ -51,7 +51,7 @@ abstract class DeadlyDatabase : RoomDatabase() {
                 DeadlyDatabase::class.java,
                 DATABASE_NAME
             )
-            .fallbackToDestructiveMigration() // Clean rebuild for V2 simplification
+            .fallbackToDestructiveMigration() // Clean rebuild on schema version change
             .build()
         }
     }

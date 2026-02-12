@@ -17,7 +17,7 @@ import javax.inject.Inject
  * ViewModel for Collection Details screen
  * 
  * Manages collection details state and coordinates with DeadCollectionsService
- * following V2 service-oriented architecture patterns.
+ * following service-oriented architecture patterns.
  */
 @HiltViewModel
 class CollectionDetailsViewModel @Inject constructor(

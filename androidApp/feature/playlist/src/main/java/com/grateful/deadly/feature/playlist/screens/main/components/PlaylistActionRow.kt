@@ -11,9 +11,9 @@ import com.grateful.deadly.core.model.LibraryAction
 import com.grateful.deadly.core.model.PlaylistShowViewModel
 
 /**
- * PlaylistActionRow - V2 implementation of action buttons row
+ * PlaylistActionRow - Action buttons row
  * 
- * Copies V1 action buttons layout exactly but integrates with V2 architecture.
+ * Action buttons layout integrated with service architecture.
  * Left side: Grouped action buttons (Library, Download, Setlist, Menu)
  * Right side: Large play/pause button
  */

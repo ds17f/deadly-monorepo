@@ -28,9 +28,9 @@ import com.grateful.deadly.core.design.component.debug.DebugSection
 import com.grateful.deadly.core.design.component.debug.DebugItem
 
 /**
- * PlaylistScreen - Clean V2 playlist interface
+ * PlaylistScreen - Clean playlist interface
  * 
- * Recreation of PlaylistV1 using V2 architecture patterns with
+ * Playlist screen using Architecture patterns with
  * focused components and clean service integration.
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -47,7 +47,7 @@ fun PlaylistScreen(
     Log.d("PlaylistScreen", "=== PLAYLIST SCREEN LOADED === recordingId: $recordingId, showId: $showId")
     
     val uiState by viewModel.uiState.collectAsState()
-    // Debug mode hardcoded to true for v2 development
+    // Debug mode hardcoded to true for development
     val showDebugInfo = true
     
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
@@ -81,7 +81,7 @@ fun PlaylistScreen(
                     title = "Debug Info",
                     items = listOf(
                         DebugItem.Timestamp("Screen loaded", System.currentTimeMillis()),
-                        DebugItem.KeyValue("Architecture", "V2")
+                        DebugItem.KeyValue("Architecture", "Compose")
                     )
                 )
             )

@@ -16,7 +16,7 @@ import javax.inject.Singleton
 /**
  * Shared utility for MediaController state combination and transformation
  * 
- * Eliminates duplication across V2 services by providing common MediaController
+ * Eliminates duplication across services by providing common MediaController
  * state observation and CurrentTrackInfo creation patterns.
  * 
  * FOUNDATION FIRST: Built on solid Phase 0 MediaController threading foundation.

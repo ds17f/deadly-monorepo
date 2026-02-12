@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
 
 /**
- * Flexible V2 Share component that can be used in different contexts:
+ * Flexible Share component that can be used in different contexts:
  * - Icon only (for action bars)
  * - Icon + text row (for menus and panels)
  * - Customizable sizing and spacing

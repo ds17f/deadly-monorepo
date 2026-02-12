@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 import kotlinx.serialization.Serializable
 
 /**
- * V2 Recent Show database entity
+ * Recent Show database entity
  * 
  * Tracks recently played shows using UPSERT pattern - single record per show
  * that gets updated each time the show is played. This eliminates the need

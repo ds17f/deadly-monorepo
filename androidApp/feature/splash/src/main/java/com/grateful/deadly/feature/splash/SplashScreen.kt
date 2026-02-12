@@ -64,7 +64,7 @@ fun SplashScreen(
             )
             
             Text(
-                text = "V2 Database - Enhanced Performance",
+                text = "Initializing Show Database",
                 style = MaterialTheme.typography.titleLarge,
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -142,7 +142,7 @@ fun SplashScreen(
                             onClick = { viewModel.abortInitialization() },
                             modifier = Modifier.padding(horizontal = 32.dp)
                         ) {
-                            Text("Skip V2 Database")
+                            Text("Skip")
                         }
                     }
                 }
@@ -160,7 +160,7 @@ fun SplashScreen(
                         )
                         
                         Text(
-                            text = "V2 Database Setup Failed",
+                            text = "Database Setup Failed",
                             style = MaterialTheme.typography.titleMedium,
                             color = MaterialTheme.colorScheme.error,
                             textAlign = TextAlign.Center
@@ -180,7 +180,7 @@ fun SplashScreen(
                                 Text("Retry")
                             }
                             Button(onClick = { viewModel.skipInitialization() }) {
-                                Text("Skip V2")
+                                Text("Skip")
                             }
                         }
                     }
@@ -320,14 +320,14 @@ fun SplashScreen(
                             )
                         }
                         
-                        // Abort button to skip V2 initialization
+                        // Abort button to skip initialization
                         Spacer(modifier = Modifier.height(16.dp))
                         
                         OutlinedButton(
                             onClick = { viewModel.abortInitialization() },
                             modifier = Modifier.padding(horizontal = 32.dp)
                         ) {
-                            Text("Skip V2 Import")
+                            Text("Skip Import")
                         }
                     }
                 }

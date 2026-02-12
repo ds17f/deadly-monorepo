@@ -15,12 +15,12 @@ import javax.inject.Inject
 import kotlin.system.exitProcess
 
 /**
- * SettingsViewModel - Business logic for V2 Settings screen
+ * SettingsViewModel - Business logic for Settings screen
  * 
  * Handles theme import operations and coordinates with ThemeManager
  * to update available themes and potentially switch to imported themes.
  * 
- * Following V2 architecture patterns with minimal state management
+ * Following architecture patterns with minimal state management
  * since most UI feedback is handled directly by ThemeChooser component.
  */
 @HiltViewModel

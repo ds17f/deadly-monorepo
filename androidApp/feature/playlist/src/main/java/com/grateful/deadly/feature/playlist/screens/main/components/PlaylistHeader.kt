@@ -14,10 +14,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 
 /**
- * PlaylistV2Header - Floating back button overlay
+ * PlaylistHeader - Floating back button overlay
  * 
- * Clean V2 implementation of the circular back button that appears
- * as an overlay on top of the content, matching V1 visual appearance.
+ * Clean implementation of the circular back button that appears
+ * as an overlay on top of the content.
  */
 @Composable
 fun PlaylistHeader(

@@ -230,7 +230,7 @@ class PlaylistViewModel @Inject constructor(
     fun playTrack(trackIndex: Int) {
         viewModelScope.launch {
             try {
-                Log.d(TAG, "🕒🎵 [V2-UI] PlaylistViewModel track selection: User clicked track at index $trackIndex at ${System.currentTimeMillis()}")
+                Log.d(TAG, "🕒🎵 [UI] PlaylistViewModel track selection: User clicked track at index $trackIndex at ${System.currentTimeMillis()}")
                 playlistService.playTrack(trackIndex)
                 
                 _baseUiState.value = _baseUiState.value.copy(
@@ -824,7 +824,7 @@ class PlaylistViewModel @Inject constructor(
     }
     
     /**
-     * Toggle playback (for main play/pause button) - V2 Media System
+     * Toggle playback (for main play/pause button)
      * 
      * Behavior depends on context:
      * - If viewing currently playing show/recording: toggle play/pause
@@ -832,17 +832,17 @@ class PlaylistViewModel @Inject constructor(
      */
     fun togglePlayback() {
         val currentState = uiState.value // Use reactive state with isCurrentShowAndRecording
-        Log.d(TAG, "V2 Toggle playback - playing: ${currentState.isPlaying}, isCurrentShowAndRecording: ${currentState.isCurrentShowAndRecording}")
+        Log.d(TAG, "Toggle playback - playing: ${currentState.isPlaying}, isCurrentShowAndRecording: ${currentState.isCurrentShowAndRecording}")
 
         viewModelScope.launch {
             try {
                 if (currentState.isCurrentShowAndRecording && currentState.isPlaying) {
                     // Currently playing this show/recording → pause
-                    Log.d(TAG, "V2 Media: Pausing current playback")
+                    Log.d(TAG, "Media: Pausing current playback")
                     playlistService.pause()
                 } else {
                     // Either not playing, or different show/recording → start playback
-                    Log.d(TAG, "V2 Media: Starting playback (new or resume)")
+                    Log.d(TAG, "Media: Starting playback (new or resume)")
                     
                     // Get show data to determine recording ID
                     val showData = currentState.showData
@@ -869,10 +869,10 @@ class PlaylistViewModel @Inject constructor(
                     val recordingId = currentRecording
                     
                     if (currentState.isCurrentShowAndRecording) {
-                        Log.d(TAG, "V2 Media: Resuming current recording $recordingId")
+                        Log.d(TAG, "Media: Resuming current recording $recordingId")
                         playlistService.resume()
                     } else {
-                        Log.d(TAG, "V2 Media: Play All for new recording $recordingId ($selectedFormat)")
+                        Log.d(TAG, "Media: Play All for new recording $recordingId ($selectedFormat)")
                         
                         // Get show context from UI state
                         val showContext = currentState.showData
@@ -924,18 +924,18 @@ class PlaylistViewModel @Inject constructor(
                 )
                 
             } catch (e: Exception) {
-                Log.e(TAG, "Error in V2 togglePlayback", e)
+                Log.e(TAG, "Error in togglePlayback", e)
             }
         }
     }
     
     /**
-     * Play track - V2 Media System
+     * Play track
      */
     fun playTrack(track: PlaylistTrackViewModel) {
         viewModelScope.launch {
             try {
-                Log.d(TAG, "🕒🎵 [V2-UI] PlaylistViewModel track selection: User clicked track ${track.title} at ${System.currentTimeMillis()}")
+                Log.d(TAG, "🕒🎵 [UI] PlaylistViewModel track selection: User clicked track ${track.title} at ${System.currentTimeMillis()}")
                 
                 // Get show data to determine recording ID
                 val currentShowData = _baseUiState.value.showData
@@ -962,7 +962,7 @@ class PlaylistViewModel @Inject constructor(
                 val recordingId = currentRecording
                 val trackIndex = track.number - 1 // Convert to 0-based
                 
-                Log.d(TAG, "V2 Media: Play track $trackIndex of $recordingId ($selectedFormat)")
+                Log.d(TAG, "Media: Play track $trackIndex of $recordingId ($selectedFormat)")
                 
                 // Get show context from UI state
                 val showContext = _baseUiState.value.showData
@@ -1015,7 +1015,7 @@ class PlaylistViewModel @Inject constructor(
                 )
                 
             } catch (e: Exception) {
-                Log.e(TAG, "Error in V2 playTrack", e)
+                Log.e(TAG, "Error in playTrack", e)
             }
         }
     }

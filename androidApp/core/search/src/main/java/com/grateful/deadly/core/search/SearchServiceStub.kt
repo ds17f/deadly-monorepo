@@ -23,7 +23,7 @@ import javax.inject.Singleton
  * - Proper search status management with loading states
  * 
  * Enables immediate UI development with comprehensive test data while validating
- * the V2 architecture patterns and service integration.
+ * the Architecture patterns and service integration.
  */
 @Singleton
 class SearchServiceStub @Inject constructor() : SearchService {

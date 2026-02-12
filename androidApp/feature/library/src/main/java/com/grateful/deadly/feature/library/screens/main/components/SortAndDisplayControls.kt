@@ -13,10 +13,10 @@ import com.grateful.deadly.core.model.LibrarySortDirection
 import com.grateful.deadly.core.model.LibraryDisplayMode
 
 /**
- * V2 Sort and Display Controls Component
+ * Sort and Display Controls Component
  * 
  * Focused component for sort controls and grid/list display toggle
- * following V2 component architecture patterns.
+ * following standard component architecture patterns.
  */
 @Composable
 fun SortAndDisplayControls(

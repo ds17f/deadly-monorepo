@@ -15,11 +15,11 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.PlaylistTrackViewModel
 
 /**
- * PlaylistV2TrackItem - Individual track row matching V1 visual design exactly
+ * PlaylistTrackItem - Individual track row
  * 
- * V2 implementation that replicates V1's TrackItem visual layout and behavior.
+ * Replicates the standard TrackItem visual layout and behavior.
  * Simple, clean design focused on browsing tracks with minimal visual complexity.
- * Maintains V2 data patterns and callback structure.
+ * Maintains standard data patterns and callback structure.
  */
 @Composable
 fun PlaylistTrackItem(

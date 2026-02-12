@@ -10,15 +10,15 @@ import com.grateful.deadly.core.design.component.topbar.TopBar
 import com.grateful.deadly.core.design.component.topbar.TopBarMode
 
 /**
- * AppScaffold - Unified scaffold for all V2 screens
+ * AppScaffold - Unified scaffold for all screens
  * 
  * This component encapsulates all screen layout concerns and provides a consistent
- * API for V2 screens. It automatically handles status bar insets based on the
+ * API for screens. It automatically handles status bar insets based on the
  * TopBar mode and provides proper padding for content.
  * 
  * Features:
  * - Automatic WindowInsets handling based on TopBar mode
- * - Unified API for all V2 screen layouts  
+ * - Unified API for all screen layouts  
  * - Support for optional TopBar, bottom navigation
  * - Spotify-style status bar handling (SOLID/IMMERSIVE modes)
  * 
@@ -64,7 +64,7 @@ fun AppScaffold(
         },
         bottomBar = if (showBottomNav) {
             { 
-                // TODO: V2 Bottom Navigation when we implement it
+                // TODO: Bottom Navigation when we implement it
                 // For now, empty placeholder
             }
         } else {
@@ -86,7 +86,7 @@ fun AppScaffold(
  * 
  * This version accepts BarConfiguration objects and handles both top and bottom
  * navigation based on the current route configuration. This is the new unified
- * layout controller for the V2 app with bottom navigation support.
+ * layout controller for the app with bottom navigation support.
  * 
  * Added MiniPlayer support - positioned above bottom navigation like Spotify.
  */

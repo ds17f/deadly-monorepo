@@ -111,7 +111,7 @@ class DataImportService @Inject constructor(
     }
     
     /**
-     * Import data from extracted V2 directories with progress tracking
+     * Import data from extracted directories with progress tracking
      */
     suspend fun importFromExtractedFiles(
         showsDirectory: File,
@@ -225,7 +225,7 @@ class DataImportService @Inject constructor(
                 Log.d(TAG, "Inserting show to database ${index + 1}/${showsMap.size}: ${showData.showId}")
                 
                 try {
-                    // Create ShowEntity from V2 data
+                    // Create ShowEntity from data
                     val showEntity = createShowEntity(showData, recordingsMap)
                     showDao.insert(showEntity)
                     importedShows++
@@ -372,7 +372,7 @@ class DataImportService @Inject constructor(
         // Extract member list from lineup for FTS
         val memberList = extractMemberListFromLineup(showData.lineup)
         
-        // Use the pre-built recording data from V2 show data
+        // Use the pre-built recording data from show data
         val recordingCount = showData.recordingCount
         val averageRating = showData.avgRating.toFloat()
         val bestRecordingId = showData.bestRecording
@@ -403,9 +403,9 @@ class DataImportService @Inject constructor(
             memberList = memberList, // Extracted flat member list for FTS
             showSequence = 1,
             recordingsRaw = if (showData.recordings.isNotEmpty()) Json.encodeToString(showData.recordings) else null, // JSON array of recording IDs
-            recordingCount = recordingCount, // From V2 data
-            bestRecordingId = bestRecordingId, // From V2 data
-            averageRating = averageRating, // From V2 data
+            recordingCount = recordingCount, // From show data
+            bestRecordingId = bestRecordingId, // From show data
+            averageRating = averageRating, // From show data
             totalReviews = totalReviews, // Approximated from source types
             isInLibrary = false,
             libraryAddedAt = null,
@@ -432,7 +432,7 @@ class DataImportService @Inject constructor(
                 setlistElement == null -> null
                 setlistElement.toString() == "null" -> null
                 else -> {
-                    // Try to parse as JSON array (V2 format)
+                    // Try to parse as JSON array
                     val setlistArray = setlistElement.jsonArray
                     val songs = mutableListOf<String>()
                     

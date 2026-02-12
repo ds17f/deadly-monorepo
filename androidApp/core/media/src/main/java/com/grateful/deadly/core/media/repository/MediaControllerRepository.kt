@@ -31,10 +31,10 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 MediaController repository for playback state management
+ * MediaController repository for playback state management
  * 
  * Loads tracks directly from ArchiveService and maintains centralized playback state.
- * All V2 screens observe this repository for consistent playback information.
+ * All screens observe this repository for consistent playback information.
  */
 @Singleton
 class MediaControllerRepository @Inject constructor(
@@ -141,7 +141,7 @@ class MediaControllerRepository @Inject constructor(
                 try {
                     Log.d(TAG, "Loading tracks from ArchiveService for recording: $recordingId")
                     
-                    // Get raw V2 Track models from ArchiveService
+                    // Get raw Track models from ArchiveService
                     val result = archiveService.getRecordingTracks(recordingId)
                     if (result.isSuccess) {
                         val rawTracks = result.getOrNull() ?: emptyList()
@@ -175,28 +175,28 @@ class MediaControllerRepository @Inject constructor(
                         val mediaItems = convertToMediaItems(recordingId, filteredTracks, showId, showDate, venue, location, format)
                         
                         // Set media items and optionally start playing at position
-                        Log.d(TAG, "🕒🎵 [V2-URL] Setting ${mediaItems.size} media items to MediaController at ${System.currentTimeMillis()}")
+                        Log.d(TAG, "🕒🎵 [URL] Setting ${mediaItems.size} media items to MediaController at ${System.currentTimeMillis()}")
                         mediaItems.forEach { item ->
-                            Log.d(TAG, "🕒🎵 [V2-URL] Loading URL: ${item.localConfiguration?.uri} at ${System.currentTimeMillis()}")
+                            Log.d(TAG, "🕒🎵 [URL] Loading URL: ${item.localConfiguration?.uri} at ${System.currentTimeMillis()}")
                         }
                         
                         // Set LOADING state before ExoPlayer operations
                         _playbackState.value = PlaybackState.LOADING
-                        Log.d(TAG, "🕒🎵 [V2-STATE] Manual LOADING state set before setMediaItems")
+                        Log.d(TAG, "🕒🎵 [STATE] Manual LOADING state set before setMediaItems")
                         
                         controller.setMediaItems(mediaItems, 0, startPosition)
-                        Log.d(TAG, "🕒🎵 [V2-URL] MediaController.setMediaItems() completed, calling prepare() at ${System.currentTimeMillis()}")
+                        Log.d(TAG, "🕒🎵 [URL] MediaController.setMediaItems() completed, calling prepare() at ${System.currentTimeMillis()}")
                         controller.prepare()
-                        Log.d(TAG, "🕒🎵 [V2-URL] MediaController.prepare() completed at ${System.currentTimeMillis()}")
+                        Log.d(TAG, "🕒🎵 [URL] MediaController.prepare() completed at ${System.currentTimeMillis()}")
                         
                         // MediaController will provide accurate updates once ready via callbacks
                         
                         if (autoPlay) {
-                            Log.d(TAG, "🕒🎵 [V2-URL] Calling controller.play() to start playback at ${System.currentTimeMillis()}")
+                            Log.d(TAG, "🕒🎵 [URL] Calling controller.play() to start playback at ${System.currentTimeMillis()}")
                             controller.play()
-                            Log.d(TAG, "🕒🎵 [V2-URL] controller.play() call completed at ${System.currentTimeMillis()}")
+                            Log.d(TAG, "🕒🎵 [URL] controller.play() call completed at ${System.currentTimeMillis()}")
                         } else {
-                            Log.d(TAG, "🕒🎵 [V2-URL] Recording loaded at position $startPosition (paused) at ${System.currentTimeMillis()}")
+                            Log.d(TAG, "🕒🎵 [URL] Recording loaded at position $startPosition (paused) at ${System.currentTimeMillis()}")
                         }
                         
                     } else {
@@ -236,7 +236,7 @@ class MediaControllerRepository @Inject constructor(
                 try {
                     Log.d(TAG, "Loading tracks from ArchiveService for playTrack")
                     
-                    // Get raw V2 Track models from ArchiveService
+                    // Get raw Track models from ArchiveService
                     val result = archiveService.getRecordingTracks(recordingId)
                     if (result.isSuccess) {
                         val rawTracks = result.getOrNull() ?: emptyList()
@@ -272,30 +272,30 @@ class MediaControllerRepository @Inject constructor(
                             val mediaItems = convertToMediaItems(recordingId, filteredTracks, showId, showDate, venue, location, format)
                             
                             // Set media items and seek to specific track at position
-                            Log.d(TAG, "🕒🎵 [V2-URL] Setting ${mediaItems.size} media items for track $trackIndex at ${System.currentTimeMillis()}")
+                            Log.d(TAG, "🕒🎵 [URL] Setting ${mediaItems.size} media items for track $trackIndex at ${System.currentTimeMillis()}")
                             mediaItems.forEachIndexed { index, item ->
                                 if (index == trackIndex) {
-                                    Log.d(TAG, "🕒🎵 [V2-URL] Loading target track URL: ${item.localConfiguration?.uri} at ${System.currentTimeMillis()}")
+                                    Log.d(TAG, "🕒🎵 [URL] Loading target track URL: ${item.localConfiguration?.uri} at ${System.currentTimeMillis()}")
                                 }
                             }
                             
                             // Set LOADING state before ExoPlayer operations
                             _playbackState.value = PlaybackState.LOADING
-                            Log.d(TAG, "🕒🎵 [V2-STATE] Manual LOADING state set before setMediaItems for track $trackIndex")
+                            Log.d(TAG, "🕒🎵 [STATE] Manual LOADING state set before setMediaItems for track $trackIndex")
                             
                             controller.setMediaItems(mediaItems, trackIndex, position)
-                            Log.d(TAG, "🕒🎵 [V2-URL] MediaController.setMediaItems(track=$trackIndex, pos=$position) completed at ${System.currentTimeMillis()}")
+                            Log.d(TAG, "🕒🎵 [URL] MediaController.setMediaItems(track=$trackIndex, pos=$position) completed at ${System.currentTimeMillis()}")
                             controller.prepare()
-                            Log.d(TAG, "🕒🎵 [V2-URL] MediaController.prepare() for track $trackIndex completed at ${System.currentTimeMillis()}")
+                            Log.d(TAG, "🕒🎵 [URL] MediaController.prepare() for track $trackIndex completed at ${System.currentTimeMillis()}")
                             
                             // MediaController will provide accurate updates once ready via callbacks
                             
                             if (autoPlay) {
-                                Log.d(TAG, "🕒🎵 [V2-URL] Calling controller.play() for track $trackIndex at ${System.currentTimeMillis()}")
+                                Log.d(TAG, "🕒🎵 [URL] Calling controller.play() for track $trackIndex at ${System.currentTimeMillis()}")
                                 controller.play()
-                                Log.d(TAG, "🕒🎵 [V2-URL] controller.play() for track $trackIndex completed at ${System.currentTimeMillis()}")
+                                Log.d(TAG, "🕒🎵 [URL] controller.play() for track $trackIndex completed at ${System.currentTimeMillis()}")
                             } else {
-                                Log.d(TAG, "🕒🎵 [V2-URL] Track $trackIndex loaded at position $position (paused) at ${System.currentTimeMillis()}")
+                                Log.d(TAG, "🕒🎵 [URL] Track $trackIndex loaded at position $position (paused) at ${System.currentTimeMillis()}")
                             }
                         } else {
                             Log.e(TAG, "Invalid track index: $trackIndex (available: 0-${filteredTracks.size - 1})")
@@ -316,19 +316,19 @@ class MediaControllerRepository @Inject constructor(
      * Simple play/pause toggle
      */
     suspend fun togglePlayPause() {
-        Log.d(TAG, "🕒🎵 [V2-MEDIA] MediaControllerRepository togglePlayPause called at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [MEDIA] MediaControllerRepository togglePlayPause called at ${System.currentTimeMillis()}")
         
         executeWhenConnected {
             val controller = mediaController
             if (controller != null) {
                 val wasPlaying = controller.isPlaying
-                Log.d(TAG, "🕒🎵 [V2-MEDIA] Current state: playing=$wasPlaying")
+                Log.d(TAG, "🕒🎵 [MEDIA] Current state: playing=$wasPlaying")
                 
                 if (wasPlaying) {
-                    Log.d(TAG, "🕒🎵 [V2-MEDIA] Calling controller.pause() at ${System.currentTimeMillis()}")
+                    Log.d(TAG, "🕒🎵 [MEDIA] Calling controller.pause() at ${System.currentTimeMillis()}")
                     controller.pause()
                 } else {
-                    Log.d(TAG, "🕒🎵 [V2-MEDIA] Calling controller.play() at ${System.currentTimeMillis()}")
+                    Log.d(TAG, "🕒🎵 [MEDIA] Calling controller.play() at ${System.currentTimeMillis()}")
                     controller.play()
                 }
                 
@@ -394,7 +394,7 @@ class MediaControllerRepository @Inject constructor(
             else -> PlaybackState.IDLE
         }
         
-        Log.d(TAG, "🕒🎵 [V2-STATE] PlaybackState updated: ExoPlayer=${getExoPlayerStateString(currentExoPlayerState)}, isPlaying=$currentIsPlaying → $newState")
+        Log.d(TAG, "🕒🎵 [STATE] PlaybackState updated: ExoPlayer=${getExoPlayerStateString(currentExoPlayerState)}, isPlaying=$currentIsPlaying → $newState")
         _playbackState.value = newState
     }
     
@@ -414,12 +414,12 @@ class MediaControllerRepository @Inject constructor(
      */
     private fun connectToService() {
         if (_connectionState.value == ConnectionState.Connecting) {
-            Log.d(TAG, "🕒🎵 [V2-MEDIA] Connection already in progress")
+            Log.d(TAG, "🕒🎵 [MEDIA] Connection already in progress")
             return
         }
         
         _connectionState.value = ConnectionState.Connecting
-        Log.d(TAG, "🕒🎵 [V2-MEDIA] Connecting to MediaSessionService at ${System.currentTimeMillis()}")
+        Log.d(TAG, "🕒🎵 [MEDIA] Connecting to MediaSessionService at ${System.currentTimeMillis()}")
         
         try {
             val sessionToken = SessionToken(
@@ -436,15 +436,15 @@ class MediaControllerRepository @Inject constructor(
                     val controller = future.get()
                     mediaController = controller
                     _connectionState.value = ConnectionState.Connected
-                    Log.d(TAG, "🕒🎵 [V2-MEDIA] Connected to MediaSessionService successfully at ${System.currentTimeMillis()}")
+                    Log.d(TAG, "🕒🎵 [MEDIA] Connected to MediaSessionService successfully at ${System.currentTimeMillis()}")
                     
                     // Set up player state listeners
                     controller.addListener(object : Player.Listener {
                         override fun onIsPlayingChanged(isPlaying: Boolean) {
                             if (isPlaying) {
-                                Log.d(TAG, "🕒🎵 [V2-AUDIO] MediaController detected AUDIO STARTED at ${System.currentTimeMillis()}")
+                                Log.d(TAG, "🕒🎵 [AUDIO] MediaController detected AUDIO STARTED at ${System.currentTimeMillis()}")
                             } else {
-                                Log.d(TAG, "🕒🎵 [V2-AUDIO] MediaController detected audio stopped at ${System.currentTimeMillis()}")
+                                Log.d(TAG, "🕒🎵 [AUDIO] MediaController detected audio stopped at ${System.currentTimeMillis()}")
                             }
                             _isPlaying.value = isPlaying
                             currentIsPlaying = isPlaying
@@ -475,7 +475,7 @@ class MediaControllerRepository @Inject constructor(
                         }
                         
                         override fun onPlaybackStateChanged(playbackState: Int) {
-                            Log.d(TAG, "🕒🎵 [V2-EXOPLAYER] ExoPlayer state changed: ${getExoPlayerStateString(currentExoPlayerState)} → ${getExoPlayerStateString(playbackState)}")
+                            Log.d(TAG, "🕒🎵 [EXOPLAYER] ExoPlayer state changed: ${getExoPlayerStateString(currentExoPlayerState)} → ${getExoPlayerStateString(playbackState)}")
                             
                             currentExoPlayerState = playbackState
                             updatePlaybackState()
@@ -498,7 +498,7 @@ class MediaControllerRepository @Inject constructor(
                     }
                     
                 } catch (e: Exception) {
-                    Log.e(TAG, "🕒🎵 [V2-ERROR] Failed to connect MediaController at ${System.currentTimeMillis()}", e)
+                    Log.e(TAG, "🕒🎵 [ERROR] Failed to connect MediaController at ${System.currentTimeMillis()}", e)
                     _connectionState.value = ConnectionState.Failed
                     mediaController = null
                 }
@@ -575,7 +575,7 @@ class MediaControllerRepository @Inject constructor(
     }
     
     /**
-     * Convert V2 Track models to MediaItems for ExoPlayer
+     * Convert Track models to MediaItems for ExoPlayer
      */
     private fun convertToMediaItems(
         recordingId: String, 
@@ -624,10 +624,10 @@ class MediaControllerRepository @Inject constructor(
     }
     
     /**
-     * Generate Archive.org URL from V2 Track model
+     * Generate Archive.org URL from Track model
      */
     private fun generateArchiveUrl(recordingId: String, track: Track): String {
-        // V2 Track should have the filename/name that corresponds to actual Archive.org files
+        // Track should have the filename/name that corresponds to actual Archive.org files
         return "https://archive.org/download/${recordingId}/${track.name}"
     }
     
@@ -683,7 +683,7 @@ class MediaControllerRepository @Inject constructor(
      */
     /**
      * Format show date from YYYY-MM-DD to readable format
-     * Copied from V1 CurrentTrackInfo pattern
+     * Converts YYYY-MM-DD to readable format
      */
     private fun formatShowDate(dateString: String): String {
         return try {

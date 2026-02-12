@@ -33,11 +33,11 @@ class SplashService @Inject constructor(
     private var initStartTimeMs: Long = 0L
     
     /**
-     * Convert DatabaseManager progress to V2 splash progress
+     * Convert DatabaseManager progress to splash progress
      */
     fun getProgress(): Flow<Progress> {
-        return databaseManager.progress.map { v2Progress ->
-            val phase = when (v2Progress.phase) {
+        return databaseManager.progress.map { dbProgress ->
+            val phase = when (dbProgress.phase) {
                 "IDLE" -> Phase.IDLE
                 "CHECKING" -> Phase.CHECKING
                 "USING_LOCAL" -> Phase.USING_LOCAL
@@ -64,29 +64,29 @@ class SplashService @Inject constructor(
                     totalShows = 0,
                     processedShows = 0,
                     currentShow = "",
-                    totalRecordings = v2Progress.totalItems,
-                    processedRecordings = v2Progress.processedItems,
-                    currentRecording = v2Progress.currentItem,
+                    totalRecordings = dbProgress.totalItems,
+                    processedRecordings = dbProgress.processedItems,
+                    currentRecording = dbProgress.currentItem,
                     startTimeMs = initStartTimeMs,
-                    error = v2Progress.error
+                    error = dbProgress.error
                 )
                 Phase.COMPUTING_VENUES -> Progress(
                     phase = phase,
                     totalShows = 0,
                     processedShows = 0,
                     currentShow = "",
-                    totalVenues = v2Progress.totalItems,
-                    processedVenues = v2Progress.processedItems,
+                    totalVenues = dbProgress.totalItems,
+                    processedVenues = dbProgress.processedItems,
                     startTimeMs = initStartTimeMs,
-                    error = v2Progress.error
+                    error = dbProgress.error
                 )
                 else -> Progress(
                     phase = phase,
-                    totalShows = v2Progress.totalItems,
-                    processedShows = v2Progress.processedItems,
-                    currentShow = v2Progress.currentItem,
+                    totalShows = dbProgress.totalItems,
+                    processedShows = dbProgress.processedItems,
+                    currentShow = dbProgress.currentItem,
                     startTimeMs = initStartTimeMs,
-                    error = v2Progress.error
+                    error = dbProgress.error
                 )
             }
         }
@@ -141,13 +141,13 @@ class SplashService @Inject constructor(
     }
     
     /**
-     * Check if V2 data is already initialized
+     * Check if data is already initialized
      */
     suspend fun isDataInitialized(): Boolean {
         return try {
             databaseManager.isDataInitialized()
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to check V2 data initialization status", e)
+            Log.e(TAG, "Failed to check data initialization status", e)
             false
         }
     }
@@ -195,7 +195,7 @@ class SplashService @Inject constructor(
                     updateUiState(
                         isReady = true,
                         showProgress = false,
-                        message = "V2 database ready: ${result.showsImported} shows loaded"
+                        message = "Database ready: ${result.showsImported} shows loaded"
                     )
                 }
                 is InitResult.Error -> {
@@ -211,7 +211,7 @@ class SplashService @Inject constructor(
     }
     
     /**
-     * Skip V2 initialization and proceed
+     * Skip initialization and proceed
      */
     fun skipInitialization() {
         updateUiState(
@@ -223,7 +223,7 @@ class SplashService @Inject constructor(
     }
     
     /**
-     * Abort current V2 initialization and proceed to main screen
+     * Abort current initialization and proceed to main screen
      */
     fun abortInitialization() {
         updateUiState(
@@ -231,7 +231,7 @@ class SplashService @Inject constructor(
             showError = false,
             showProgress = false,
             showSourceSelection = false,
-            message = "V2 database import aborted"
+            message = "Database import aborted"
         )
     }
     
@@ -262,7 +262,7 @@ class SplashService @Inject constructor(
                             showProgress = false,
                             message = when (source) {
                                 DatabaseManager.DatabaseSource.ZIP_BACKUP -> "Database restored from backup"
-                                DatabaseManager.DatabaseSource.DATA_IMPORT -> "V2 database ready: ${result.showsImported} shows loaded"
+                                DatabaseManager.DatabaseSource.DATA_IMPORT -> "Database ready: ${result.showsImported} shows loaded"
                             }
                         )
                     }
@@ -298,7 +298,7 @@ class SplashService @Inject constructor(
 }
 
 /**
- * UI state for SplashV2 screen
+ * UI state for Splash screen
  */
 data class SplashUiState(
     val isReady: Boolean = false,
@@ -306,7 +306,7 @@ data class SplashUiState(
     val showProgress: Boolean = false,
     val showSourceSelection: Boolean = false,
     val availableSources: List<DatabaseManager.DatabaseSource> = emptyList(),
-    val message: String = "Loading V2 database...",
+    val message: String = "Loading database...",
     val errorMessage: String? = null,
     val progress: Progress = Progress(
         phase = Phase.IDLE,

@@ -11,7 +11,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * V2 Share Service for sharing show and recording information via system share intents
+ * Share Service for sharing show and recording information via system share intents
  */
 @Singleton
 class ShareService @Inject constructor(

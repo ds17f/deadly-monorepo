@@ -12,10 +12,10 @@ import com.grateful.deadly.core.model.PlaylistTrackViewModel
 import android.util.Log
 
 /**
- * PlaylistV2TrackList - Scrollable track listing component
+ * PlaylistTrackList - Scrollable track listing component
  * 
- * Clean V2 implementation as LazyListScope extension for integration
- * with main PlaylistV2Screen LazyColumn. Displays track list with
+ * Clean implementation as LazyListScope extension for integration
+ * with main PlaylistScreen LazyColumn. Displays track list with
  * section header and individual track items.
  */
 fun LazyListScope.PlaylistTrackList(
@@ -25,7 +25,7 @@ fun LazyListScope.PlaylistTrackList(
 ) {
     // Service layer provides pre-filtered tracks with smart audio format selection
 
-    // Section header - matches V1 format exactly
+    // Section header
     item {
         Text(
             text = "Tracks (${tracks.size})",
@@ -35,7 +35,7 @@ fun LazyListScope.PlaylistTrackList(
         )
     }
     
-    // Track items - simple list like V1
+    // Track items
     items(
         items = tracks,
         key = { track -> track.number }

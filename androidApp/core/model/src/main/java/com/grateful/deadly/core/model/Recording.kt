@@ -3,7 +3,7 @@ package com.grateful.deadly.core.model
 import kotlinx.serialization.Serializable
 
 /**
- * V2 Recording domain model
+ * Recording domain model
  * 
  * Represents a specific recording/taping of a Grateful Dead show.
  * Contains basic recording metadata from the database. Additional 

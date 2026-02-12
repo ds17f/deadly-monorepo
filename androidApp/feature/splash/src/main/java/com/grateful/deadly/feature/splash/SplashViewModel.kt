@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * ViewModel for SplashV2 screen
+ * ViewModel for Splash screen
  */
 @HiltViewModel
 class SplashViewModel @Inject constructor(
@@ -42,7 +42,7 @@ class SplashViewModel @Inject constructor(
                 launch {
                     splashService.getProgress().collect { progress ->
                         val message = when (progress.phase) {
-                            Phase.IDLE -> "Preparing V2 database..."
+                            Phase.IDLE -> "Preparing database..."
                             Phase.CHECKING -> "Checking existing data..."
                             Phase.USING_LOCAL -> "Using local files..."
                             Phase.DOWNLOADING -> "Downloading files..."
@@ -50,8 +50,8 @@ class SplashViewModel @Inject constructor(
                             Phase.IMPORTING_SHOWS -> "Importing shows (${progress.processedShows}/${progress.totalShows})"
                             Phase.COMPUTING_VENUES -> "Computing venue statistics..."
                             Phase.IMPORTING_RECORDINGS -> "Importing recordings (${progress.processedRecordings}/${progress.totalRecordings})"
-                            Phase.COMPLETED -> "V2 database ready!"
-                            Phase.ERROR -> "V2 database error"
+                            Phase.COMPLETED -> "Database ready!"
+                            Phase.ERROR -> "Database error"
                         }
                         
                         splashService.updateUiState(
@@ -77,7 +77,7 @@ class SplashViewModel @Inject constructor(
                         splashService.updateUiState(
                             isReady = true,
                             showProgress = false,
-                            message = "V2 database ready: ${result.showsImported} shows loaded"
+                            message = "Database ready: ${result.showsImported} shows loaded"
                         )
                     }
                     is InitResult.Error -> {

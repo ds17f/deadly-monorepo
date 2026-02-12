@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
 
 /**
- * Queue Bottom Sheet for V2 Player
+ * Queue Bottom Sheet for Player
  * Shows current queue with track list and play indicators
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -143,7 +143,7 @@ private fun PlayerQueueItem(
     }
 }
 
-// Mock data for queue (following V1 structure)
+// Mock data for queue
 private data class QueueItemData(
     val title: String,
     val isPlaying: Boolean,

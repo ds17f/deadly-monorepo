@@ -10,7 +10,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 /**
- * Connect Bottom Sheet for V2 Player
+ * Connect Bottom Sheet for Player
  * Shows connection and casting options (coming soon placeholder)
  */
 @OptIn(ExperimentalMaterial3Api::class)

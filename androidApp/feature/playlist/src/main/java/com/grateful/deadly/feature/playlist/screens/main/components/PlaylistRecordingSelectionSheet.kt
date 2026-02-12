@@ -15,10 +15,10 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.RecordingSelectionState
 
 /**
- * PlaylistV2RecordingSelectionSheet - Modal bottom sheet for recording selection
+ * PlaylistRecordingSelectionSheet - Modal bottom sheet for recording selection
  * 
- * V2 implementation of recording selection following V1 design patterns but using
- * V2 View Models and architecture. Displays alternative recordings with recommendation
+ * Implementation of recording selection following standard design patterns using
+ * standard View Models and architecture. Displays alternative recordings with recommendation
  * status and allows user selection and preference setting.
  */
 @OptIn(ExperimentalMaterial3Api::class)

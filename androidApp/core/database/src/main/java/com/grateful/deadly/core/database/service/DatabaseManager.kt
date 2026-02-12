@@ -14,7 +14,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Simplified database manager for V2 architecture
+ * Simplified database manager
  */
 @Singleton
 class DatabaseManager @Inject constructor(
@@ -54,7 +54,7 @@ class DatabaseManager @Inject constructor(
     )
     
     /**
-     * Check if V2 data is already initialized using health service
+     * Check if data is already initialized using health service
      */
     suspend fun isDataInitialized(): Boolean {
         return try {
@@ -67,7 +67,7 @@ class DatabaseManager @Inject constructor(
     }
     
     /**
-     * Initialize V2 data if needed
+     * Initialize data if needed
      */
     suspend fun initializeDataIfNeeded(): DatabaseImportResult {
         return try {
@@ -105,7 +105,7 @@ class DatabaseManager @Inject constructor(
     }
     
     /**
-     * Clear V2 database data
+     * Clear database data
      */
     suspend fun clearDatabase() {
         try {

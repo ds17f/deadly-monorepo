@@ -7,11 +7,11 @@ import kotlinx.coroutines.flow.Flow
  * Clean API interface for Search operations.
  * Defines the contract that both stub and real implementations must follow.
  * 
- * This interface follows the V2 architecture pattern with reactive flows
+ * This interface follows the architecture pattern with reactive flows
  * and Result types for proper error handling. Designed through UI-first
  * development where service requirements are discovered by building UI.
  * 
- * Following established patterns from LibraryV2Service and DownloadV2Service.
+ * Following established patterns from LibraryService and DownloadService.
  */
 interface SearchService {
     

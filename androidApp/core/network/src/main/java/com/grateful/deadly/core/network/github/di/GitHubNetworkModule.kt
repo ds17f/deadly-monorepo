@@ -17,7 +17,7 @@ import javax.inject.Singleton
 
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
-annotation class V2GitHub
+annotation class GitHub
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -25,8 +25,8 @@ object GitHubNetworkModule {
     
     @Provides
     @Singleton
-    @V2GitHub
-    fun provideV2OkHttpClient(): OkHttpClient {
+    @GitHub
+    fun provideGitHubOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BASIC
@@ -38,8 +38,8 @@ object GitHubNetworkModule {
     
     @Provides
     @Singleton
-    @V2GitHub
-    fun provideV2Json(): Json {
+    @GitHub
+    fun provideGitHubJson(): Json {
         return Json {
             ignoreUnknownKeys = true
             isLenient = true
@@ -57,10 +57,10 @@ object GitHubNetworkModule {
     
     @Provides
     @Singleton
-    @V2GitHub
-    fun provideV2Retrofit(
-        @V2GitHub okHttpClient: OkHttpClient,
-        @V2GitHub json: Json
+    @GitHub
+    fun provideGitHubRetrofit(
+        @GitHub okHttpClient: OkHttpClient,
+        @GitHub json: Json
     ): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://api.github.com/")
@@ -71,7 +71,7 @@ object GitHubNetworkModule {
     
     @Provides
     @Singleton
-    fun provideGitHubReleasesApi(@V2GitHub retrofit: Retrofit): GitHubReleasesApi {
+    fun provideGitHubReleasesApi(@GitHub retrofit: Retrofit): GitHubReleasesApi {
         return retrofit.create(GitHubReleasesApi::class.java)
     }
 }

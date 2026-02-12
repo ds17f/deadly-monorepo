@@ -6,12 +6,12 @@ import com.grateful.deadly.core.model.QueueInfo
 import kotlinx.coroutines.flow.StateFlow
 
 /**
- * V2 Player Service Interface
+ * Player Service Interface
  * 
- * Business logic interface for V2 Player functionality.
+ * Business logic interface for Player functionality.
  * Provides reactive state streams and playback control commands.
  * 
- * Implementation delegates to V2 MediaControllerRepository for state synchronization.
+ * Implementation delegates to MediaControllerRepository for state synchronization.
  */
 interface PlayerService {
     

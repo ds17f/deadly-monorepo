@@ -8,7 +8,7 @@ import com.grateful.deadly.feature.home.screens.main.HomeUiState
 
 /**
  * Collect debug data for HomeScreen
- * Following the established V2 debug data pattern
+ * Following the established debug data pattern
  */
 @Composable
 fun collectHomeDebugData(
@@ -40,7 +40,7 @@ fun collectHomeDebugData(
                 )
             ),
             DebugSection(
-                title = "V2 Architecture",
+                title = "Architecture",
                 items = listOf(
                     DebugItem.KeyValue("Pattern", "Service Orchestration"),
                     DebugItem.KeyValue("Service", "HomeService (Stub)"),

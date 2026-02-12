@@ -45,15 +45,15 @@ data class DecadeBrowse(
 /**
  * SearchScreen - Next-generation search and discovery interface
  * 
- * This is the V2 implementation of the search/browse experience following
- * the V2 architecture pattern. Built using UI-first development methodology
+ * This is the search/browse experience following
+ * the service architecture pattern. Built using UI-first development methodology
  * where the UI drives the discovery of service requirements.
  * 
  * Architecture:
  * - Material3 design system with Search-specific enhancements
- * - Debug integration following PlayerV2 patterns
+ * - Debug integration following Player patterns
  * - Feature flag enabled foundation ready for UI development
- * - Clean navigation callbacks matching V1 interface
+ * - Clean navigation callbacks
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -68,7 +68,7 @@ fun SearchScreen(
     val isRefreshing by viewModel.isRefreshing.collectAsState()
     val refreshCounter by viewModel.refreshCounter.collectAsState()
     
-    // Debug panel state - hard-coded to true for V2
+    // Debug panel state - hard-coded to true for debug
     var showDebugPanel by remember { mutableStateOf(false) }
     
     // QR Scanner coming soon dialog state
@@ -129,7 +129,7 @@ fun SearchScreen(
             }
         }
 
-        // Debug activator overlay (always enabled in V2)
+        // Debug activator overlay (always enabled in debug)
         DebugActivator(
             isVisible = true,
             onClick = { showDebugPanel = true },
@@ -158,7 +158,7 @@ fun SearchScreen(
 
 /**
  * Collect debug data for SearchScreen
- * Following the established PlayerV2 debug data pattern
+ * Following the established Player debug data pattern
  */
 @Composable
 private fun collectSearchDebugData(
@@ -176,7 +176,7 @@ private fun collectSearchDebugData(
                     DebugItem.KeyValue("Is Loading", uiState.isLoading.toString()),
                     DebugItem.KeyValue("Error State", uiState.error ?: "None"),
                     DebugItem.KeyValue("Initial Era", initialEra ?: "None"),
-                    DebugItem.KeyValue("Feature Flag", "useSearchV2 = true"),
+                    DebugItem.KeyValue("Feature Flag", "search enabled"),
                     DebugItem.KeyValue("Scaffold Mode", "Pure Content (MainNavigation AppScaffold)")
                 )
             ),
@@ -568,7 +568,7 @@ private fun BrowseAllCard(
 
 /**
  * QR Scanner Coming Soon Dialog
- * Shows when user taps camera icon before QrScannerV2 is implemented
+ * Shows when user taps camera icon before QrScanner is implemented
  */
 @Composable
 private fun QrScannerComingSoonDialog(
