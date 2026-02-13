@@ -139,8 +139,6 @@ android {
 dependencies {
     // Core Dependencies
     implementation(project(":core:design"))
-    implementation(project(":core:theme"))
-    implementation(project(":core:theme-api"))
     implementation(project(":core:media"))
     implementation(project(":core:player"))
     implementation(project(":core:miniplayer"))

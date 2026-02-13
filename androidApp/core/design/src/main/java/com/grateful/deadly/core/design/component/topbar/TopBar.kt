@@ -19,7 +19,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import com.grateful.deadly.core.design.R
 import com.grateful.deadly.core.design.resources.IconResources
-import com.grateful.deadly.core.theme.api.ThemeAssets
 
 /**
  * Defines how the TopBar should handle status bar interaction
@@ -39,12 +38,11 @@ sealed class TopBarMode {
 }
 
 /**
- * TopBar - Spotify-style TopBar with flexible status bar handling and theme support
- * 
+ * TopBar - Spotify-style TopBar with flexible status bar handling
+ *
  * This component provides consistent styling across all screens with
- * flexible status bar interaction modes. It integrates with the theme system
- * to display the current theme's logo (lightning bolt by default, or themed logos).
- * 
+ * flexible status bar interaction modes.
+ *
  * @param title The title text to display
  * @param mode How to handle status bar interaction (SOLID or IMMERSIVE)
  * @param navigationIcon Optional navigation icon (typically back arrow)
@@ -52,12 +50,6 @@ sealed class TopBarMode {
  * @param onNavigationClick Callback for navigation icon clicks
  * @param backgroundColor Background color for the top bar content
  * @param contentColor Color for text and icons
- * 
- * Used by:
- * - SearchScreen (SOLID mode)
- * - PlayerScreen (IMMERSIVE mode) 
- * - LibraryScreen (SOLID mode)
- * - Other implementations
  */
 @Composable
 fun TopBar(
@@ -178,7 +170,7 @@ private fun TopBarContent(
         
         // App Logo
         Image(
-            painter = ThemeAssets.current.primaryLogo(),
+            painter = painterResource(R.drawable.lightning_bolt_logo),
             contentDescription = "Deadly",
             modifier = Modifier.size(32.dp)
         )

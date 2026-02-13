@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.feature.splash.model.Phase
 import com.grateful.deadly.core.design.resources.IconResources
-import com.grateful.deadly.core.theme.api.ThemeAssets
+import androidx.compose.ui.res.painterResource
 import kotlinx.coroutines.delay
 
 @Composable
@@ -52,7 +52,7 @@ fun SplashScreen(
         ) {
             // Large App Logo
             Image(
-                painter = ThemeAssets.current.splashLogo(),
+                painter = painterResource(com.grateful.deadly.core.design.R.drawable.lightning_bolt_logo),
                 contentDescription = "Deadly Logo",
                 modifier = Modifier.size(200.dp)
             )

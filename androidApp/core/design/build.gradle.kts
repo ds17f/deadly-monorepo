@@ -44,8 +44,6 @@ dependencies {
     
     // V2 model dependency for V2 Show and Recording types
     implementation(project(":core:model"))
-    // Theme API for accessing themed assets (no circular dependency)
-    implementation(project(":core:theme-api"))
     
     // Activity Compose for file picking
     implementation("androidx.activity:activity-compose:1.8.2")
