@@ -1,6 +1,7 @@
 package com.grateful.deadly.feature.player.screens.main
 
 import android.util.Log
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.debug.DebugActivator
@@ -110,7 +112,9 @@ fun PlayerScreen(
     viewModel: PlayerViewModel = hiltViewModel()
 ) {
     Log.d("PlayerScreen", "=== PLAYER SCREEN LOADED ===")
-    
+
+    val context = LocalContext.current
+
     // Collect UI state from ViewModel
     val uiState by viewModel.uiState.collectAsState()
     
@@ -260,7 +264,7 @@ fun PlayerScreen(
                             showDate = uiState.trackDisplayInfo.showDate,
                             venue = uiState.trackDisplayInfo.venue,
                             onAddToPlaylist = {
-                                // TODO: Show snackbar "Playlists are coming soon"
+                                Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show()
                             },
                             modifier = Modifier.padding(horizontal = 24.dp)
                         )
@@ -284,8 +288,8 @@ fun PlayerScreen(
                             onPlayPause = viewModel::onPlayPauseClicked,
                             onPrevious = viewModel::onPreviousClicked,
                             onNext = viewModel::onNextClicked,
-                            onShuffleToggle = { /* TODO */ },
-                            onRepeatModeChange = { /* TODO */ },
+                            onShuffleToggle = { Toast.makeText(context, "Shuffle is coming soon", Toast.LENGTH_SHORT).show() },
+                            onRepeatModeChange = { Toast.makeText(context, "Repeat is coming soon", Toast.LENGTH_SHORT).show() },
                             modifier = Modifier.padding(horizontal = 24.dp)
                         )
                     }
@@ -322,9 +326,9 @@ fun PlayerScreen(
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,
                 onDismiss = { showTrackActionsBottomSheet = false },
-                onShare = { /* TODO: Share track */ },
-                onAddToPlaylist = { /* TODO: Add to playlist */ },
-                onDownload = { /* TODO: Download track */ }
+                onShare = { viewModel.onShareClicked() },
+                onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
+                onDownload = { Toast.makeText(context, "Downloads are coming soon", Toast.LENGTH_SHORT).show() }
             )
         }
         

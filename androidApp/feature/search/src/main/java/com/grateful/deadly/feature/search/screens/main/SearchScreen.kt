@@ -31,7 +31,6 @@ import com.grateful.deadly.core.design.component.debug.DebugBottomSheet
 import com.grateful.deadly.core.design.component.debug.DebugData
 import com.grateful.deadly.core.design.component.debug.DebugSection
 import com.grateful.deadly.core.design.component.debug.DebugItem
-import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.feature.search.screens.main.models.SearchViewModel
 import com.grateful.deadly.core.model.SearchUiState
 
@@ -70,9 +69,6 @@ fun SearchScreen(
     
     // Debug panel state - hard-coded to true for debug
     var showDebugPanel by remember { mutableStateOf(false) }
-    
-    // QR Scanner coming soon dialog state
-    var showQrComingSoonDialog by remember { mutableStateOf(false) }
     
     // Simplified debug data
     val debugData = collectSearchDebugData(
@@ -148,12 +144,6 @@ fun SearchScreen(
         onDebounceDelayChange = viewModel::updateDebounceDelay
     )
     
-    // QR Scanner coming soon dialog
-    if (showQrComingSoonDialog) {
-        QrScannerComingSoonDialog(
-            onDismiss = { showQrComingSoonDialog = false }
-        )
-    }
 }
 
 /**
@@ -564,53 +554,6 @@ private fun BrowseAllCard(
             )
         }
     }
-}
-
-/**
- * QR Scanner Coming Soon Dialog
- * Shows when user taps camera icon before QrScanner is implemented
- */
-@Composable
-private fun QrScannerComingSoonDialog(
-    onDismiss: () -> Unit
-) {
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = {
-            Text(
-                text = "QR Scanner",
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.Bold
-            )
-        },
-        text = {
-            Column {
-                Text(
-                    text = "QR code scanning is coming soon!",
-                    style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
-                Text(
-                    text = "This feature will let you scan QR codes to instantly discover and play Grateful Dead recordings shared by other users.",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        },
-        confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text("Got it")
-            }
-        },
-        icon = {
-            Icon(
-                painter = IconResources.Content.QrCodeScanner(),
-                contentDescription = "QR Code Scanner",
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(32.dp)
-            )
-        }
-    )
 }
 
 /**

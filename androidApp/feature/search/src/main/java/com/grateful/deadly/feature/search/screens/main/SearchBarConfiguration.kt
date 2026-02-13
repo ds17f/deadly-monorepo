@@ -1,8 +1,10 @@
 package com.grateful.deadly.feature.search.screens.main
 
+import android.widget.Toast
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import com.grateful.deadly.core.design.scaffold.BarConfiguration
 import com.grateful.deadly.core.design.scaffold.BottomBarConfig
 import com.grateful.deadly.core.design.scaffold.MiniPlayerConfig
@@ -50,9 +52,10 @@ object SearchBarConfiguration {
  */
 @Composable
 private fun SearchTopBarActions() {
+    val context = LocalContext.current
     IconButton(
-        onClick = { 
-            // TODO: Handle QR scanner - show coming soon dialog
+        onClick = {
+            Toast.makeText(context, "QR scanning is coming soon", Toast.LENGTH_SHORT).show()
         }
     ) {
         Icon(
