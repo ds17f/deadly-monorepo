@@ -43,9 +43,8 @@ android {
 }
 
 dependencies {
-    // V2 Core Dependencies
+    // Core Dependencies
     implementation(project(":core:design"))
-    implementation(project(":core:theme-api"))
     implementation(project(":core:api:home"))
     implementation(project(":core:home"))
     implementation(project(":core:model"))

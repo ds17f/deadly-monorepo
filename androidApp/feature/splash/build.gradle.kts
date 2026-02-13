@@ -43,10 +43,9 @@ android {
 }
 
 dependencies {
-    // V2 Core Dependencies
+    // Core Dependencies
     implementation(project(":core:design"))
     implementation(project(":core:database"))
-    implementation(project(":core:theme-api"))
     
     // Android & Compose
     implementation("androidx.core:core-ktx:1.12.0")

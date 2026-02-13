@@ -30,135 +30,108 @@ import com.grateful.deadly.feature.player.navigation.playerScreen
 import com.grateful.deadly.feature.miniplayer.screens.main.MiniPlayerScreen
 import com.grateful.deadly.feature.library.navigation.libraryNavigation
 import com.grateful.deadly.feature.collections.navigation.collectionsGraph
-import com.grateful.deadly.core.theme.api.DeadlyTheme
-import com.grateful.deadly.core.theme.api.ThemeAssetProvider
-import com.grateful.deadly.core.theme.ThemeManager
-
 /**
- * MainNavigation - Scalable navigation architecture with theme system
- * 
+ * MainNavigation - Scalable navigation architecture
+ *
  * This is the main navigation coordinator that orchestrates routing between
  * all feature modules. Each feature owns its own navigation subgraph,
  * maintaining clean separation of concerns.
- * 
- * The app includes a theme system that auto-detects ZIP themes and provides
- * themed assets via DeadlyTheme composition provider.
- * 
+ *
  * Navigation Flow:
- * 1. splash → home (after database initialization) 
+ * 1. splash → home (after database initialization)
  * 2. home → search-graph (user taps search)
  * 3. search → search-results (user taps search box)
  * 4. search-results → search (back navigation)
  * 5. Any screen → playlist/{showId} or playlist/{showId}/{recordingId}
- * 
+ *
  * Architecture Benefits:
  * - Scalable: Easy to add new feature subgraphs
  * - Modular: Each feature manages its own navigation
  * - Testable: Features accept navigation callbacks
  * - Clean: App module stays minimal and focused
- * - Themeable: Unified theme system across all components
  */
 @Composable
-fun MainNavigation(
-    themeManager: ThemeManager,
-    themeProvider: ThemeAssetProvider
-) {
-    Log.d("MainNavigation", "MainNavigation: Starting with injected provider: ${themeProvider.getThemeName()}")
-    
-    // Initialize theme system on app startup
-    LaunchedEffect(Unit) {
-        Log.d("MainNavigation", "MainNavigation: Starting theme auto-initialization")
-        themeManager.autoInitialize()
-        Log.d("MainNavigation", "MainNavigation: Theme auto-initialization completed")
-    }
-    
-    // Observe the current theme provider from ThemeManager
-    val currentProvider by themeManager.currentProvider.collectAsState()
-    Log.d("MainNavigation", "MainNavigation: Current provider from ThemeManager: ${currentProvider.getThemeName()}")
-    
-    // Wrap entire navigation with the current theme provider
-    DeadlyTheme(themeProvider = currentProvider) {
-        val navController = rememberNavController()
-        val navBackStackEntry by navController.currentBackStackEntryAsState()
-        val currentRoute = navBackStackEntry?.destination?.route
-        
-        // Get bar configuration based on current route
-        val barConfig = NavigationBarConfig.getBarConfig(currentRoute)
-        
-        AppScaffold(
-            topBarConfig = barConfig.topBar,
-            bottomBarConfig = barConfig.bottomBar,
-            bottomNavigationContent = if (barConfig.bottomBar?.visible == true) {
-                {
-                    BottomNavigationBar(
-                        currentRoute = currentRoute,
-                        onNavigateToDestination = { route ->
-                            navController.navigate(route) {
-                                popUpTo(navController.graph.startDestinationId) {
-                                    saveState = true
-                                }
-                                launchSingleTop = true
-                                restoreState = true
+fun MainNavigation() {
+    val navController = rememberNavController()
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
+
+    // Get bar configuration based on current route
+    val barConfig = NavigationBarConfig.getBarConfig(currentRoute)
+
+    AppScaffold(
+        topBarConfig = barConfig.topBar,
+        bottomBarConfig = barConfig.bottomBar,
+        bottomNavigationContent = if (barConfig.bottomBar?.visible == true) {
+            {
+                BottomNavigationBar(
+                    currentRoute = currentRoute,
+                    onNavigateToDestination = { route ->
+                        navController.navigate(route) {
+                            popUpTo(navController.graph.startDestinationId) {
+                                saveState = true
                             }
+                            launchSingleTop = true
+                            restoreState = true
                         }
-                    )
-                }
-            } else null,
-            miniPlayerConfig = barConfig.miniPlayer,
-            miniPlayerContent = {
-                MiniPlayerScreen(
-                    onTapToExpand = { _ ->
-                        Log.d("MainNavigation", "MiniPlayer tapped - navigating to player")
-                        navController.navigate("player")
                     }
                 )
-            },
-            onNavigationClick = {
-                navController.popBackStack()
             }
-        ) { paddingValues ->
-            NavHost(
-                navController = navController,
-                startDestination = "splash",
-                modifier = Modifier.padding(paddingValues)
-            ) {
-                // Splash feature - handles database initialization
-                splashGraph(navController)
-                
-                // Home feature - main hub screen
-                homeGraph(navController)
-                
-                // Library feature - user's saved content  
-                libraryNavigation(navController)
-                
-                // Collections feature - curated collections and series
-                collectionsGraph(navController)
-                
-                // Search feature - search and browse functionality
-                searchGraph(navController)
-                
-                // Playlist feature - show and recording details
-                playlistGraph(navController)
-                
-                // Player feature - playback interface
-                playerScreen(
-                    onNavigateBack = { navController.popBackStack() },
-                    onNavigateToPlaylist = { showId, recordingId ->
-                        navController.navigateToPlaylist(showId, recordingId)
-                    }
-                )
-                
-                // Settings feature - app configuration
-                composable("settings") {
-                    SettingsScreen()
+        } else null,
+        miniPlayerConfig = barConfig.miniPlayer,
+        miniPlayerContent = {
+            MiniPlayerScreen(
+                onTapToExpand = { _ ->
+                    Log.d("MainNavigation", "MiniPlayer tapped - navigating to player")
+                    navController.navigate("player")
                 }
+            )
+        },
+        onNavigationClick = {
+            navController.popBackStack()
+        }
+    ) { paddingValues ->
+        NavHost(
+            navController = navController,
+            startDestination = "splash",
+            modifier = Modifier.padding(paddingValues)
+        ) {
+            // Splash feature - handles database initialization
+            splashGraph(navController)
+
+            // Home feature - main hub screen
+            homeGraph(navController)
+
+            // Library feature - user's saved content
+            libraryNavigation(navController)
+
+            // Collections feature - curated collections and series
+            collectionsGraph(navController)
+
+            // Search feature - search and browse functionality
+            searchGraph(navController)
+
+            // Playlist feature - show and recording details
+            playlistGraph(navController)
+
+            // Player feature - playback interface
+            playerScreen(
+                onNavigateBack = { navController.popBackStack() },
+                onNavigateToPlaylist = { showId, recordingId ->
+                    navController.navigateToPlaylist(showId, recordingId)
+                }
+            )
+
+            // Settings feature - app configuration
+            composable("settings") {
+                SettingsScreen()
             }
         }
     }
 }
 
 /**
- * Bottom navigation bar component 
+ * Bottom navigation bar component
  */
 @Composable
 private fun BottomNavigationBar(

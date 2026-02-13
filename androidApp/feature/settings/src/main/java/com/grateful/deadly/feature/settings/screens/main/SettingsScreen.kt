@@ -10,17 +10,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import java.io.File
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.grateful.deadly.core.design.component.ThemeChooser
 
 /**
  * SettingsScreen - Settings interface
- * 
- * Simple settings content for theme management and configuration.
+ *
  * Scaffold-free content designed for use within MainNavigation's AppScaffold.
- * 
- * Provides access to app configuration options including:
- * - Theme management and import
- * - Future: App preferences, about info, etc.
  */
 @Composable
 fun SettingsScreen(
@@ -31,23 +25,6 @@ fun SettingsScreen(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
-            // Themes Section
-            item {
-                SettingsSection(title = "Themes") {
-                    ThemeChooser(
-                        onThemeImported = viewModel::onThemeImported,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                    
-                    Spacer(modifier = Modifier.height(8.dp))
-                    
-                    ClearThemesButton(
-                        onClearThemes = viewModel::onClearThemes,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                }
-            }
-            
             // Cache Management Section
             item {
                 SettingsSection(title = "Cache Management") {
@@ -115,59 +92,6 @@ private fun SettingsSection(
             
             content()
         }
-    }
-}
-
-/**
- * Button to clear all themes with confirmation dialog
- */
-@Composable
-private fun ClearThemesButton(
-    onClearThemes: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    var showConfirmDialog by remember { mutableStateOf(false) }
-    
-    OutlinedButton(
-        onClick = { showConfirmDialog = true },
-        modifier = modifier,
-        colors = ButtonDefaults.outlinedButtonColors(
-            contentColor = MaterialTheme.colorScheme.error
-        ),
-        border = androidx.compose.foundation.BorderStroke(
-            1.dp, 
-            MaterialTheme.colorScheme.error
-        )
-    ) {
-        Text("Clear All Themes")
-    }
-    
-    if (showConfirmDialog) {
-        AlertDialog(
-            onDismissRequest = { showConfirmDialog = false },
-            title = { Text("Clear All Themes") },
-            text = { 
-                Text("This will delete all imported themes and restart the app to restore the default theme. Continue?") 
-            },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        showConfirmDialog = false
-                        onClearThemes()
-                    },
-                    colors = ButtonDefaults.textButtonColors(
-                        contentColor = MaterialTheme.colorScheme.error
-                    )
-                ) {
-                    Text("Clear")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showConfirmDialog = false }) {
-                    Text("Cancel")
-                }
-            }
-        )
     }
 }
 
