@@ -257,16 +257,20 @@ class ShowMappersTest {
     @Test
     fun `entityToDomain handles setlist and lineup parsing`() {
         val entity = createTestShowEntity(
-            setlistRaw = """{"sets": [{"name": "Set 1", "songs": ["Song 1", "Song 2"]}]}""",
+            setlistRaw = """[{"set_name": "Set 1", "songs": [{"name": "Song 1", "segue_into_next": false}]}]""",
             lineupRaw = """{"members": [{"name": "Jerry Garcia", "instruments": "Guitar"}]}"""
         )
-        
+
         val result = showMappers.entityToDomain(entity)
-        
-        // These should not be null even if parsing fails - Setlist.parse handles gracefully
-        // The exact structure depends on Setlist.parse implementation
+
         assertNotNull(result.setlist)
+        assertEquals(1, result.setlist!!.sets.size)
+        assertEquals("Set 1", result.setlist!!.sets[0].name)
+
         assertNotNull(result.lineup)
+        assertEquals(1, result.lineup!!.members.size)
+        assertEquals("Jerry Garcia", result.lineup!!.members[0].name)
+        assertEquals("Guitar", result.lineup!!.members[0].instruments)
     }
     
     @Test

@@ -117,6 +117,7 @@ fun PlayerScreen(
 
     // Collect UI state from ViewModel
     val uiState by viewModel.uiState.collectAsState()
+    val panelState by viewModel.panelState.collectAsState()
     
     // For now we'll use a default recordingId for gradients - will be dynamic later
     val recordingId = "default-recording"
@@ -309,6 +310,7 @@ fun PlayerScreen(
             // Extended content as Material panels - let gradient show through
             item {
                 PlayerMaterialPanels(
+                    panelState = panelState,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp)
                 )
             }

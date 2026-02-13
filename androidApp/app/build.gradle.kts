@@ -10,6 +10,13 @@ if (versionPropsFile.exists()) {
 val appVersionName = versionProps.getProperty("VERSION_NAME") ?: "1.0.0"
 val appVersionCode = versionProps.getProperty("VERSION_CODE")?.toIntOrNull() ?: 1
 
+// Load local.properties for API keys
+val localPropsFile = rootProject.file("local.properties")
+val localProps = Properties()
+if (localPropsFile.exists()) {
+    localPropsFile.inputStream().use { localProps.load(it) }
+}
+
 // Function to get git commit hash (configuration cache friendly)
 fun getGitCommitHash(): Provider<String> {
     return try {
@@ -50,6 +57,8 @@ android {
         buildConfigField("String", "VERSION_NAME", "\"${versionName}\"")
         buildConfigField("int", "VERSION_CODE", "${versionCode}")
         buildConfigField("long", "BUILD_TIME", "${System.currentTimeMillis()}L")
+        buildConfigField("String", "GENIUS_ACCESS_TOKEN", "\"${localProps.getProperty("genius.access.token", "")}\"")
+
     }
 
     // Check for signing keystore before creating signing config

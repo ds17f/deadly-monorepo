@@ -3,30 +3,28 @@ package com.grateful.deadly.feature.player.screens.main.models
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
 import com.grateful.deadly.core.model.CurrentTrackInfo
+import com.grateful.deadly.core.model.LineupMember
 import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.QueueInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-/**
- * Player ViewModel - Real MediaController Integration
- * 
- * Uses PlayerService to provide reactive state from MediaControllerRepository.
- * Handles all player UI interactions and delegates to centralized media control.
- */
 @HiltViewModel
 class PlayerViewModel @Inject constructor(
-    private val playerService: PlayerService
+    private val playerService: PlayerService,
+    private val panelContentService: PanelContentService
 ) : ViewModel() {
-    
+
     companion object {
         private const val TAG = "PlayerViewModel"
     }
-    
+
     // Reactive UI state from PlayerService flows - using unified CurrentTrackInfo, PlaybackStatus, and QueueInfo
     val uiState: StateFlow<PlayerUiState> = combine(
         playerService.currentTrackInfo,
@@ -59,7 +57,7 @@ class PlayerViewModel @Inject constructor(
             hasPrevious = queueInfo.hasPrevious,
             error = null
         )
-        
+
         // trackInfo is guaranteed non-null from here on
         PlayerUiState(
             trackDisplayInfo = TrackDisplayInfo(
@@ -115,7 +113,66 @@ class PlayerViewModel @Inject constructor(
             error = null
         )
     )
-    
+
+    // Panel content state
+    private val _panelState = MutableStateFlow(PanelUiState())
+    val panelState: StateFlow<PanelUiState> = _panelState.asStateFlow()
+
+    // Track what we've already loaded to avoid redundant fetches
+    private var lastLoadedShowId: String? = null
+    private var lastLoadedSongTitle: String? = null
+
+    init {
+        // Observe track changes and load panel content
+        viewModelScope.launch {
+            playerService.currentTrackInfo
+                .filterNotNull()
+                .collect { trackInfo ->
+                    val showChanged = trackInfo.showId != lastLoadedShowId
+                    val songChanged = trackInfo.songTitle != lastLoadedSongTitle
+
+                    if (showChanged || songChanged) {
+                        lastLoadedShowId = trackInfo.showId
+                        lastLoadedSongTitle = trackInfo.songTitle
+                        loadPanelContent(trackInfo, showChanged, songChanged)
+                    }
+                }
+        }
+    }
+
+    private fun loadPanelContent(
+        trackInfo: CurrentTrackInfo,
+        showChanged: Boolean,
+        songChanged: Boolean
+    ) {
+        viewModelScope.launch {
+            _panelState.value = _panelState.value.copy(isLoading = true)
+
+            val creditsDeferred = if (showChanged) {
+                async { panelContentService.getCredits(trackInfo.showId) }
+            } else null
+
+            val venueDeferred = if (showChanged) {
+                async { panelContentService.getVenueInfo(trackInfo.showId) }
+            } else null
+
+            val lyricsDeferred = if (songChanged) {
+                async { panelContentService.getLyrics(trackInfo.songTitle) }
+            } else null
+
+            val credits = creditsDeferred?.await() ?: _panelState.value.credits
+            val venueInfo = venueDeferred?.await() ?: _panelState.value.venueInfo
+            val lyrics = lyricsDeferred?.await() ?: _panelState.value.lyrics
+
+            _panelState.value = PanelUiState(
+                credits = credits,
+                venueInfo = venueInfo,
+                lyrics = lyrics,
+                isLoading = false
+            )
+        }
+    }
+
     /**
      * Load recording - No-op since state comes from MediaController
      */
@@ -123,7 +180,7 @@ class PlayerViewModel @Inject constructor(
         Log.d(TAG, "Load recording: $recordingId - state comes from MediaController")
         // MediaController handles track loading, we just observe state
     }
-    
+
     /**
      * Toggle play/pause
      */
@@ -137,7 +194,7 @@ class PlayerViewModel @Inject constructor(
             }
         }
     }
-    
+
     /**
      * Seek to next track
      */
@@ -151,9 +208,9 @@ class PlayerViewModel @Inject constructor(
             }
         }
     }
-    
+
     /**
-     * Seek to previous track  
+     * Seek to previous track
      */
     fun onPreviousClicked() {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel previous clicked at ${System.currentTimeMillis()}")
@@ -165,7 +222,7 @@ class PlayerViewModel @Inject constructor(
             }
         }
     }
-    
+
     /**
      * Seek to position
      */
@@ -182,7 +239,7 @@ class PlayerViewModel @Inject constructor(
             }
         }
     }
-    
+
     /**
      * Get debug metadata for inspection panel
      */
@@ -194,7 +251,7 @@ class PlayerViewModel @Inject constructor(
             mapOf("error" to "Failed to get debug metadata: ${e.message}")
         }
     }
-    
+
     /**
      * Share current track
      */
@@ -252,4 +309,14 @@ data class ProgressDisplayInfo(
     val currentPosition: String,
     val totalDuration: String,
     val progressPercentage: Float // 0.0 to 1.0
+)
+
+/**
+ * UI state for info panels below the player controls
+ */
+data class PanelUiState(
+    val credits: List<LineupMember>? = null,
+    val venueInfo: String? = null,
+    val lyrics: String? = null,
+    val isLoading: Boolean = false
 )
