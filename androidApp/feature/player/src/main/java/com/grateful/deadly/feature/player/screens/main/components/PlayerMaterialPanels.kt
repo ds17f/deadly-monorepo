@@ -7,47 +7,48 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.grateful.deadly.feature.player.screens.main.models.PanelUiState
 
-/**
- * Always-expanded Material3 panels for extended content
- */
 @Composable
 fun PlayerMaterialPanels(
+    panelState: PanelUiState,
     modifier: Modifier = Modifier
 ) {
+    if (panelState.isLoading) return
+
+    val hasAnyContent = panelState.credits != null
+            || panelState.venueInfo != null
+            || panelState.lyrics != null
+
+    if (!hasAnyContent) return
+
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        // About the Venue Panel
-        MaterialPanel(
-            title = "About the Venue",
-            content = "Barton Hall at Cornell University in Ithaca, New York, is legendary among Deadheads for hosting one of the greatest Grateful Dead concerts of all time on May 8, 1977. The show is often cited as the pinnacle of the band's creative peak during their spring 1977 tour."
-        )
-        
-        // Lyrics Panel
-        MaterialPanel(
-            title = "Lyrics",
-            content = "Scarlet begonias tucked into her curls\nI knew right away she was not like other girls\nOther girls\nWell I ain't often right but I've never been wrong\nSeldom turns out the way it does in a song\nOnce in a while you get shown the light\nIn the strangest of places if you look at it right"
-        )
-        
-        // Similar Shows Panel
-        MaterialPanel(
-            title = "Similar Shows",
-            content = "Other standout shows from Spring 1977 include Boston Music Hall (May 7), Buffalo Memorial Auditorium (May 9), and Hartford Civic Center (May 28). This tour is considered the creative peak of the Grateful Dead."
-        )
-        
-        // Credits Panel
-        MaterialPanel(
-            title = "Credits",
-            content = "Jerry Garcia - Lead Guitar, Vocals\nBob Weir - Rhythm Guitar, Vocals\nPhil Lesh - Bass, Vocals\nBill Kreutzmann - Drums\nMickey Hart - Drums\nKeith Godchaux - Piano\nDonna Jean Godchaux - Vocals"
-        )
+        panelState.lyrics?.let { text ->
+            MaterialPanel(
+                title = "Lyrics",
+                content = text
+            )
+        }
+
+        panelState.venueInfo?.let { info ->
+            MaterialPanel(
+                title = "About the Venue",
+                content = info
+            )
+        }
+
+        panelState.credits?.let { members ->
+            MaterialPanel(
+                title = "Credits",
+                content = members.joinToString("\n") { "${it.name} \u2014 ${it.instruments}" }
+            )
+        }
     }
 }
 
-/**
- * Beautiful Material3 panel component
- */
 @Composable
 private fun MaterialPanel(
     title: String,
@@ -76,12 +77,12 @@ private fun MaterialPanel(
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface
             )
-            
+
             Text(
                 text = content,
-                style = MaterialTheme.typography.bodyMedium,
+                style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                lineHeight = MaterialTheme.typography.bodyMedium.lineHeight * 1.2
+                lineHeight = MaterialTheme.typography.bodyLarge.lineHeight * 1.2
             )
         }
     }

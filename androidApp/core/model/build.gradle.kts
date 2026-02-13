@@ -41,4 +41,7 @@ dependencies {
     
     // Javax inject for Hilt qualifiers
     implementation("javax.inject:javax.inject:1")
+
+    // Testing
+    testImplementation("junit:junit:4.13.2")
 }

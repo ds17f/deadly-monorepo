@@ -120,14 +120,36 @@ data class Lineup(
     companion object {
         fun parse(json: String?, status: String?): Lineup? {
             if (json.isNullOrBlank() || status.isNullOrBlank()) return null
-            
-            // For now, return a simple structure
-            // TODO: Implement full JSON parsing when needed
-            return Lineup(
-                status = status,
-                members = emptyList(),
-                raw = json
-            )
+
+            return try {
+                val members = mutableListOf<LineupMember>()
+
+                // Handle both array format [{}] and wrapped format {"members":[{}]}
+                val membersArray = try {
+                    org.json.JSONArray(json)
+                } catch (e: org.json.JSONException) {
+                    val obj = org.json.JSONObject(json)
+                    obj.getJSONArray("members")
+                }
+
+                for (i in 0 until membersArray.length()) {
+                    val memberObj = membersArray.getJSONObject(i)
+                    members.add(
+                        LineupMember(
+                            name = memberObj.getString("name"),
+                            instruments = memberObj.optString("instruments", "")
+                        )
+                    )
+                }
+
+                Lineup(
+                    status = status,
+                    members = members,
+                    raw = json
+                )
+            } catch (e: Exception) {
+                null
+            }
         }
     }
 }

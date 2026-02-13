@@ -41,6 +41,7 @@ dependencies {
     implementation(project(":core:media"))
     implementation(project(":core:domain"))
     implementation(project(":core:model"))
+    implementation(project(":core:network"))
     
     // Media3 for MediaMetadata access
     implementation("androidx.media3:media3-common:1.4.1")
