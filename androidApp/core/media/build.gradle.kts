@@ -38,6 +38,10 @@ dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:network:archive"))
     implementation(project(":core:domain"))
+    implementation(project(":core:api:recent"))
+    implementation(project(":core:api:collections"))
+    implementation(project(":core:api:library"))
+    implementation(project(":core:api:search"))
     
     implementation("androidx.core:core-ktx:1.12.0")
     
@@ -52,6 +56,7 @@ dependencies {
     
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.7.3")
     
     // Testing
     testImplementation("junit:junit:4.13.2")
