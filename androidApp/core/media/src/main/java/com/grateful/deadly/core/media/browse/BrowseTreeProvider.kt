@@ -1,5 +1,6 @@
 package com.grateful.deadly.core.media.browse
 
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.media3.common.MediaItem
@@ -246,6 +247,7 @@ class BrowseTreeProvider @Inject constructor(
                     .setArtist("${formatShowDate(show.date)} - ${show.venue.name}")
                     .setAlbumTitle("${formatShowDate(show.date)} - ${show.venue.name}")
                     .setTrackNumber(track.trackNumber)
+                    .setArtworkUri(Uri.parse("https://archive.org/services/img/$recordingId"))
                     .setIsPlayable(true)
                     .setIsBrowsable(false)
                     .setMediaType(MediaMetadata.MEDIA_TYPE_MUSIC)

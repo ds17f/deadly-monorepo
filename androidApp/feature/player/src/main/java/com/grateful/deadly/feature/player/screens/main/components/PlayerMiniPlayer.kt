@@ -8,11 +8,13 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.feature.player.screens.main.models.PlayerUiState
 
@@ -51,6 +53,25 @@ fun PlayerMiniPlayer(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                // Artwork thumbnail
+                ShowArtwork(
+                    recordingId = uiState.trackDisplayInfo.recordingId,
+                    contentDescription = "Album Art",
+                    modifier = Modifier
+                        .size(48.dp)
+                        .clip(RoundedCornerShape(6.dp)),
+                    placeholderContent = {
+                        Icon(
+                            painter = IconResources.PlayerControls.AlbumArt(),
+                            contentDescription = null,
+                            modifier = Modifier.size(24.dp),
+                            tint = Color.White.copy(alpha = 0.7f)
+                        )
+                    }
+                )
+
+                Spacer(modifier = Modifier.width(8.dp))
+
                 // Track info (clickable area for expand)
                 Column(
                     modifier = Modifier

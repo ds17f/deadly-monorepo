@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.Show
 
@@ -94,21 +95,23 @@ fun RecentShowCard(
                 .padding(4.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Album cover placeholder
-            Box(
+            // Album cover
+            ShowArtwork(
+                recordingId = show.bestRecordingId,
+                contentDescription = null,
                 modifier = Modifier
                     .size(56.dp)
                     .clip(RoundedCornerShape(6.dp))
                     .background(MaterialTheme.colorScheme.surfaceVariant),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    painter = IconResources.PlayerControls.AlbumArt(),
-                    contentDescription = null,
-                    modifier = Modifier.size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+                placeholderContent = {
+                    Icon(
+                        painter = IconResources.PlayerControls.AlbumArt(),
+                        contentDescription = null,
+                        modifier = Modifier.size(24.dp),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
             
             Spacer(modifier = Modifier.width(6.dp))
             

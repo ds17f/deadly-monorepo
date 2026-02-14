@@ -11,15 +11,17 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.R
+import com.grateful.deadly.core.design.component.ShowArtwork
 
 /**
  * PlaylistAlbumArt - Album artwork component
- * 
- * Clean implementation displaying the deadly logo image
- * with proper sizing and styling.
+ *
+ * Displays archive.org artwork for the recording, falling back
+ * to the deadly logo when no recordingId is available.
  */
 @Composable
 fun PlaylistAlbumArt(
+    recordingId: String?,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -28,13 +30,20 @@ fun PlaylistAlbumArt(
             .padding(horizontal = 24.dp, vertical = 16.dp),
         contentAlignment = Alignment.Center
     ) {
-        Image(
-            painter = painterResource(R.drawable.deadly_logo),
+        ShowArtwork(
+            recordingId = recordingId,
             contentDescription = "Album Art",
-            contentScale = ContentScale.Crop,
             modifier = Modifier
                 .size(220.dp)
-                .clip(RoundedCornerShape(8.dp))
+                .clip(RoundedCornerShape(8.dp)),
+            placeholderContent = {
+                Image(
+                    painter = painterResource(R.drawable.deadly_logo),
+                    contentDescription = "Album Art",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
         )
     }
 }

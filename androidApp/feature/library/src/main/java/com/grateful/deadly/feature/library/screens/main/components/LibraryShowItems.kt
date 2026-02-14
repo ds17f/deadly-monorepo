@@ -15,6 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.LibraryShowViewModel
 import com.grateful.deadly.core.model.LibraryDownloadStatus
@@ -50,22 +51,24 @@ fun LibraryShowListItem(
                 .padding(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Album cover placeholder
-            Box(
+            // Album cover
+            ShowArtwork(
+                recordingId = show.bestRecordingId,
+                contentDescription = null,
                 modifier = Modifier
                     .size(60.dp)
                     .clip(RoundedCornerShape(8.dp))
                     .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    painter = IconResources.PlayerControls.AlbumArt(),
-                    contentDescription = null,
-                    modifier = Modifier.size(30.dp),
-                    tint = MaterialTheme.colorScheme.primary
-                )
-            }
-            
+                placeholderContent = {
+                    Icon(
+                        painter = IconResources.PlayerControls.AlbumArt(),
+                        contentDescription = null,
+                        modifier = Modifier.size(30.dp),
+                        tint = MaterialTheme.colorScheme.primary
+                    )
+                }
+            )
+
             Spacer(modifier = Modifier.width(12.dp))
             
             // Show info - 2 line layout
@@ -177,22 +180,24 @@ fun LibraryShowGridItem(
             modifier = Modifier.fillMaxSize()
         ) {
             // Album cover - square aspect ratio
-            Box(
+            ShowArtwork(
+                recordingId = show.bestRecordingId,
+                contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(1f)
                     .padding(8.dp)
                     .clip(RoundedCornerShape(8.dp))
                     .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    painter = IconResources.PlayerControls.AlbumArt(),
-                    contentDescription = null,
-                    modifier = Modifier.size(32.dp),
-                    tint = MaterialTheme.colorScheme.primary
-                )
-            }
+                placeholderContent = {
+                    Icon(
+                        painter = IconResources.PlayerControls.AlbumArt(),
+                        contentDescription = null,
+                        modifier = Modifier.size(32.dp),
+                        tint = MaterialTheme.colorScheme.primary
+                    )
+                }
+            )
             
             // Text section
             Column(

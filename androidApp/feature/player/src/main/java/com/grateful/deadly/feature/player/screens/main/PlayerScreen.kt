@@ -119,8 +119,7 @@ fun PlayerScreen(
     val uiState by viewModel.uiState.collectAsState()
     val panelState by viewModel.panelState.collectAsState()
     
-    // For now we'll use a default recordingId for gradients - will be dynamic later
-    val recordingId = "default-recording"
+    val recordingId = uiState.navigationInfo.recordingId
     
     // Scroll state for mini player detection
     val scrollState = rememberLazyListState()
@@ -253,6 +252,7 @@ fun PlayerScreen(
                         
                         // Large cover art section with generous vertical padding
                         PlayerCoverArt(
+                            recordingId = uiState.trackDisplayInfo.recordingId,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .height(450.dp)
@@ -324,6 +324,7 @@ fun PlayerScreen(
         // Bottom Sheets
         if (showTrackActionsBottomSheet) {
             PlayerTrackActionsSheet(
+                recordingId = uiState.navigationInfo.recordingId,
                 trackTitle = uiState.trackDisplayInfo.title,
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,

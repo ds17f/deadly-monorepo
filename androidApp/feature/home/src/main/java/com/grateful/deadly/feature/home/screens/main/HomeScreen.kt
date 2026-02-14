@@ -72,7 +72,8 @@ fun HomeScreen(
                     HorizontalCollectionItem(
                         id = show.id,
                         displayText = "${show.date}\n${show.venue.name}\n${show.location.displayText}",
-                        type = CollectionItemType.SHOW
+                        type = CollectionItemType.SHOW,
+                        recordingId = show.bestRecordingId
                     )
                 }
                 
