@@ -8,6 +8,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 
 /**
@@ -15,6 +16,7 @@ import com.grateful.deadly.core.design.resources.IconResources
  */
 @Composable
 fun PlayerCoverArt(
+    recordingId: String?,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -23,24 +25,26 @@ fun PlayerCoverArt(
     ) {
         Card(
             modifier = Modifier
-                .fillMaxHeight() // Fill available height
-                .aspectRatio(1f) // Maintain square aspect ratio
+                .fillMaxHeight()
+                .aspectRatio(1f)
                 .clip(RoundedCornerShape(16.dp)),
             colors = CardDefaults.cardColors(
                 containerColor = MaterialTheme.colorScheme.primaryContainer
             )
         ) {
-            Box(
+            ShowArtwork(
+                recordingId = recordingId,
+                contentDescription = "Album Art",
                 modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    painter = IconResources.PlayerControls.AlbumArt(),
-                    contentDescription = "Album Art",
-                    modifier = Modifier.size(160.dp), // Scaled up for larger card
-                    tint = MaterialTheme.colorScheme.onPrimaryContainer
-                )
-            }
+                placeholderContent = {
+                    Icon(
+                        painter = IconResources.PlayerControls.AlbumArt(),
+                        contentDescription = "Album Art",
+                        modifier = Modifier.size(160.dp),
+                        tint = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
+                }
+            )
         }
     }
 }

@@ -12,6 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.component.ShareMenuRow
 
@@ -22,6 +23,7 @@ import com.grateful.deadly.core.design.component.ShareMenuRow
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PlayerTrackActionsSheet(
+    recordingId: String?,
     trackTitle: String,
     showDate: String,
     venue: String,
@@ -46,24 +48,27 @@ fun PlayerTrackActionsSheet(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                // Album cover placeholder
+                // Album cover
                 Card(
                     modifier = Modifier.size(60.dp),
+                    shape = RoundedCornerShape(8.dp),
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer
                     )
                 ) {
-                    Box(
+                    ShowArtwork(
+                        recordingId = recordingId,
+                        contentDescription = "Album Art",
                         modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            painter = IconResources.PlayerControls.AlbumArt(),
-                            contentDescription = "Album Art",
-                            modifier = Modifier.size(30.dp),
-                            tint = MaterialTheme.colorScheme.onPrimaryContainer
-                        )
-                    }
+                        placeholderContent = {
+                            Icon(
+                                painter = IconResources.PlayerControls.AlbumArt(),
+                                contentDescription = "Album Art",
+                                modifier = Modifier.size(30.dp),
+                                tint = MaterialTheme.colorScheme.onPrimaryContainer
+                            )
+                        }
+                    )
                 }
                 
                 // Track info

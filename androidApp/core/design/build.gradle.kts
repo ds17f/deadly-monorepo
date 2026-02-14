@@ -57,7 +57,11 @@ dependencies {
     
     // Compose Foundation (version managed by BOM)
     api("androidx.compose.foundation:foundation")
-    
+
+    // Coil 3 - Image loading for Compose
+    api("io.coil-kt.coil3:coil-compose:3.1.0")
+    api("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

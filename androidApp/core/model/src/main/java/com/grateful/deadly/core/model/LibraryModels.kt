@@ -120,7 +120,8 @@ data class LibraryShowViewModel(
     val downloadStatus: LibraryDownloadStatus,
     val isDownloaded: Boolean,
     val isDownloading: Boolean,
-    val libraryStatusDescription: String
+    val libraryStatusDescription: String,
+    val bestRecordingId: String? = null
 )
 
 /**

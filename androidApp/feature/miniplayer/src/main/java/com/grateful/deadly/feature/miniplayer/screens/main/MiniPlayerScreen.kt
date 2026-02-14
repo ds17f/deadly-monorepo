@@ -11,10 +11,12 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.feature.miniplayer.screens.main.models.MiniPlayerViewModel
 import androidx.compose.ui.graphics.Color
 import kotlinx.coroutines.delay
@@ -69,6 +71,17 @@ fun MiniPlayerScreen(
                     .padding(10.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                // Artwork thumbnail
+                ShowArtwork(
+                    recordingId = uiState.currentTrack?.recordingId,
+                    contentDescription = "Album Art",
+                    modifier = Modifier
+                        .size(48.dp)
+                        .clip(RoundedCornerShape(6.dp))
+                )
+
+                Spacer(modifier = Modifier.width(8.dp))
+
                 // Track information
                 Column(
                     modifier = Modifier.weight(1f)

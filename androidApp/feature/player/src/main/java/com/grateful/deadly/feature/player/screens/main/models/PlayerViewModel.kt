@@ -40,7 +40,7 @@ class PlayerViewModel @Inject constructor(
                 showDate = "",
                 venue = "",
                 duration = "0:00",
-                artwork = null
+                recordingId = null
             ),
             navigationInfo = NavigationInfo(
                 showId = null,
@@ -67,7 +67,7 @@ class PlayerViewModel @Inject constructor(
                 showDate = trackInfo.showDate,
                 venue = trackInfo.venue ?: "",
                 duration = playerService.formatDuration(playbackStatus.duration),
-                artwork = null // TODO: Add artwork support
+                recordingId = trackInfo.recordingId
             ),
             navigationInfo = NavigationInfo(
                 showId = trackInfo.showId,
@@ -95,7 +95,7 @@ class PlayerViewModel @Inject constructor(
                 showDate = "Loading...",
                 venue = "Loading...",
                 duration = "0:00",
-                artwork = null
+                recordingId = null
             ),
             navigationInfo = NavigationInfo(
                 showId = null,
@@ -291,7 +291,7 @@ data class TrackDisplayInfo(
     val showDate: String,
     val venue: String,
     val duration: String,
-    val artwork: String? = null
+    val recordingId: String? = null
 )
 
 /**

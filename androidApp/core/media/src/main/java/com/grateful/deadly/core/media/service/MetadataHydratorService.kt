@@ -1,5 +1,6 @@
 package com.grateful.deadly.core.media.service
 
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.media3.common.MediaItem
@@ -109,6 +110,7 @@ class MetadataHydratorService @Inject constructor(
             return mediaItem.buildUpon()
                 .setMediaMetadata(
                     mediaItem.mediaMetadata.buildUpon()
+                        .setArtworkUri(Uri.parse("https://archive.org/services/img/${recording.identifier}"))
                         .setArtist(
                             if (!show.venue.name.isNullOrBlank()) {
                                 "${formatShowDate(show.date)} - ${show.venue.name}"

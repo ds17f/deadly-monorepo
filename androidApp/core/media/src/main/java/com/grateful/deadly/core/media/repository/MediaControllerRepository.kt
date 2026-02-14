@@ -27,6 +27,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import android.net.Uri
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -613,6 +614,7 @@ class MediaControllerRepository @Inject constructor(
                             }
                         )
                         .setTrackNumber(track.trackNumber)
+                        .setArtworkUri(Uri.parse("https://archive.org/services/img/$recordingId"))
                         .setExtras(Bundle().apply {
                             putString("showId", showId)
                             putString("recordingId", recordingId)
