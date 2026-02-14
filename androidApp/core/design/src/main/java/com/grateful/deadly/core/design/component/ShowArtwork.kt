@@ -15,16 +15,12 @@ import com.grateful.deadly.core.design.R
 
 /**
  * Constructs an Archive.org thumbnail URL for a given recording identifier.
+ *
+ * Uses the /services/img/ endpoint which returns the item's __ia_thumb.jpg.
+ * This is the canonical thumbnail and is consistent across all surfaces.
  */
 fun archiveArtworkUrl(recordingId: String): String =
     "https://archive.org/services/img/$recordingId"
-
-/**
- * Constructs a higher-resolution Archive.org image URL for a given recording identifier.
- * Returns ~900px images when available vs. 180px from the thumbnail API.
- */
-fun archiveArtworkUrlHighRes(recordingId: String): String =
-    "https://archive.org/services/get-item-image.php?identifier=$recordingId"
 
 /**
  * Archive.org auto-generates waveform spectrograms as thumbnails for audio items
@@ -49,15 +45,12 @@ private fun isWaveformThumbnail(state: AsyncImagePainter.State.Success): Boolean
  * Falls back to [placeholderContent] (or the deadly logo) when
  * the image is loading, fails, is a waveform, or [recordingId] is null.
  *
- * Set [highRes] to true for large display surfaces (e.g. playlist header)
- * to load ~900px images instead of 180px thumbnails.
  */
 @Composable
 fun ShowArtwork(
     recordingId: String?,
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    highRes: Boolean = false,
     placeholderContent: @Composable (() -> Unit)? = null
 ) {
     val fallback: @Composable () -> Unit = {
@@ -77,7 +70,7 @@ fun ShowArtwork(
         return
     }
 
-    val url = if (highRes) archiveArtworkUrlHighRes(recordingId) else archiveArtworkUrl(recordingId)
+    val url = archiveArtworkUrl(recordingId)
 
     SubcomposeAsyncImage(
         model = url,

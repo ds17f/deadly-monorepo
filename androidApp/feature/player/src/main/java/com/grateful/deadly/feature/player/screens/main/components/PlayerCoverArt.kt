@@ -34,7 +34,6 @@ fun PlayerCoverArt(
             ShowArtwork(
                 recordingId = recordingId,
                 contentDescription = "Album Art",
-                highRes = true,
                 modifier = Modifier.fillMaxSize()
             )
         }
