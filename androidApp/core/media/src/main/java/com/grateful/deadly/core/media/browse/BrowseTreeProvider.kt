@@ -243,7 +243,7 @@ class BrowseTreeProvider @Inject constructor(
             .setMediaMetadata(
                 MediaMetadata.Builder()
                     .setTitle(track.title ?: track.name)
-                    .setArtist("Grateful Dead")
+                    .setArtist("${formatShowDate(show.date)} - ${show.venue.name}")
                     .setAlbumTitle("${formatShowDate(show.date)} - ${show.venue.name}")
                     .setTrackNumber(track.trackNumber)
                     .setIsPlayable(true)

@@ -597,7 +597,13 @@ class MediaControllerRepository @Inject constructor(
                 .setMediaMetadata(
                     androidx.media3.common.MediaMetadata.Builder()
                         .setTitle(track.title ?: track.name)
-                        .setArtist("Grateful Dead")
+                        .setArtist(
+                            if (!venue.isNullOrBlank()) {
+                                "${formatShowDate(showDate)} - $venue"
+                            } else {
+                                formatShowDate(showDate)
+                            }
+                        )
                         .setAlbumTitle(
                             // Format: "Apr 3, 1990 - The Omni" or just show date if no venue
                             if (!venue.isNullOrBlank()) {

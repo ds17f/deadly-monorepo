@@ -109,6 +109,13 @@ class MetadataHydratorService @Inject constructor(
             return mediaItem.buildUpon()
                 .setMediaMetadata(
                     mediaItem.mediaMetadata.buildUpon()
+                        .setArtist(
+                            if (!show.venue.name.isNullOrBlank()) {
+                                "${formatShowDate(show.date)} - ${show.venue.name}"
+                            } else {
+                                formatShowDate(show.date)
+                            }
+                        )
                         .setAlbumTitle(
                             // Format: "Apr 3, 1990 - The Omni" or just show date if no venue
                             if (!show.venue.name.isNullOrBlank()) {
