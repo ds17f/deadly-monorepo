@@ -3,7 +3,7 @@ name: iOS Release
 on:
   push:
     tags:
-      - 'v*'
+      - 'ios/v*'
 
 jobs:
   build-release:
