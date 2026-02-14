@@ -25,6 +25,15 @@ echo "${BOLD}🔐 GitHub Secrets Upload Script${NORMAL}"
 echo "=================================="
 echo ""
 
+# OS-aware base64 encode: macOS uses -i, Linux uses plain base64
+base64_encode() {
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        base64 -i "$1"
+    else
+        base64 -w 0 "$1"
+    fi
+}
+
 # Check if gh CLI is installed
 if ! command -v gh &> /dev/null; then
     echo -e "${RED}❌ Error: gh CLI is not installed${NC}"
@@ -79,7 +88,7 @@ if [ ! -f ".secrets/my-release-key.jks" ]; then
     exit 1
 fi
 echo -e "${GREEN}✓${NC} Uploading ANDROID_KEYSTORE_BASE64..."
-base64 -i .secrets/my-release-key.jks | gh secret set ANDROID_KEYSTORE_BASE64
+base64_encode .secrets/my-release-key.jks | gh secret set ANDROID_KEYSTORE_BASE64
 
 # Android keystore properties
 if [ ! -f ".secrets/keystore.properties" ]; then
@@ -98,7 +107,7 @@ if [ ! -f ".secrets/thedeadly-app-f48493c2a133.json" ]; then
     echo -e "${YELLOW}⚠️  Warning: .secrets/thedeadly-app-f48493c2a133.json not found - skipping PLAY_STORE_JSON_BASE64${NC}"
 else
     echo -e "${GREEN}✓${NC} Uploading PLAY_STORE_JSON_BASE64..."
-    base64 -i .secrets/thedeadly-app-f48493c2a133.json | gh secret set PLAY_STORE_JSON_BASE64
+    base64_encode .secrets/thedeadly-app-f48493c2a133.json | gh secret set PLAY_STORE_JSON_BASE64
 fi
 
 echo ""
@@ -110,7 +119,7 @@ if [ ! -f ".secrets/DeadlyApp_AppStore2.p12" ]; then
     exit 1
 fi
 echo -e "${GREEN}✓${NC} Uploading IOS_CERTIFICATE_BASE64..."
-base64 -i .secrets/DeadlyApp_AppStore2.p12 | gh secret set IOS_CERTIFICATE_BASE64
+base64_encode .secrets/DeadlyApp_AppStore2.p12 | gh secret set IOS_CERTIFICATE_BASE64
 
 # iOS certificate password
 if [ ! -f ".secrets/cert_password.txt" ]; then
@@ -126,7 +135,7 @@ if [ ! -f ".secrets/DeadlyApp_AppStore2.mobileprovision" ]; then
     exit 1
 fi
 echo -e "${GREEN}✓${NC} Uploading IOS_PROVISIONING_PROFILE_BASE64..."
-base64 -i .secrets/DeadlyApp_AppStore2.mobileprovision | gh secret set IOS_PROVISIONING_PROFILE_BASE64
+base64_encode .secrets/DeadlyApp_AppStore2.mobileprovision | gh secret set IOS_PROVISIONING_PROFILE_BASE64
 
 # App Store Connect API Key
 echo -e "${GREEN}✓${NC} Uploading APP_STORE_CONNECT_KEY_ID..."
@@ -139,7 +148,7 @@ if [ ! -f ".secrets/AuthKey_V862XWV7WB.p8" ]; then
     echo -e "${YELLOW}⚠️  Warning: .secrets/AuthKey_V862XWV7WB.p8 not found - skipping APP_STORE_CONNECT_KEY_BASE64${NC}"
 else
     echo -e "${GREEN}✓${NC} Uploading APP_STORE_CONNECT_KEY_BASE64..."
-    base64 -i .secrets/AuthKey_V862XWV7WB.p8 | gh secret set APP_STORE_CONNECT_KEY_BASE64
+    base64_encode .secrets/AuthKey_V862XWV7WB.p8 | gh secret set APP_STORE_CONNECT_KEY_BASE64
 fi
 
 echo ""

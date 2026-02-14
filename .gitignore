@@ -16,6 +16,12 @@ local.properties
 
 # Secrets directory – never commit API keys or credentials
 .secrets/
+*.jks
+*.keystore
+*.p12
+*.p8
+*.mobileprovision
+keystore.properties
 
 # MkDocs generated site should not be versioned
 site/

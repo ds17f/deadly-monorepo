@@ -5,9 +5,12 @@
 # updates version in version.properties (for Android & iOS), creates a git tag, and pushes to origin
 #
 # Usage:
-#   ./scripts/release.sh             - Regular release with automatic version
-#   ./scripts/release.sh 1.2.3       - Release with specified version
-#   ./scripts/release.sh --dry-run   - Simulate release without making changes
+#   ./scripts/release.sh                          - Android release with automatic version
+#   ./scripts/release.sh --platform ios            - iOS release with automatic version
+#   ./scripts/release.sh --platform all            - Release both platforms
+#   ./scripts/release.sh --platform android 1.2.3  - Android release with specified version
+#   ./scripts/release.sh --dry-run                 - Simulate release without making changes
+#   ./scripts/release.sh --platform android --dry-run 1.2.3
 
 set -e  # Exit on any error
 
@@ -27,28 +30,49 @@ CHANGELOG_FILE="CHANGELOG.md"
 TEMP_CHANGELOG="/tmp/temp_changelog.md"
 VERSION_PROVIDED=false
 DRY_RUN=false
+PLATFORM="android"
 
-# Check for arguments
-if [ "$1" == "--dry-run" ]; then
-  DRY_RUN=true
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --dry-run)
+      DRY_RUN=true
+      shift
+      ;;
+    --platform)
+      PLATFORM="$2"
+      shift 2
+      ;;
+    *)
+      VERSION="$1"
+      VERSION_PROVIDED=true
+      shift
+      ;;
+  esac
+done
+
+# Validate platform
+case "$PLATFORM" in
+  android|ios|all)
+    ;;
+  *)
+    echo -e "${RED}❌ Error: Invalid platform '$PLATFORM'. Must be android, ios, or all${NC}"
+    exit 1
+    ;;
+esac
+
+if [ "$DRY_RUN" = true ]; then
   echo -e "${YELLOW}🧪 DRY RUN MODE - No changes will be made${NC}"
-  echo -e "${BLUE}ℹ️ Will determine version automatically from conventional commits${NC}"
-elif [ -n "$1" ]; then
-  VERSION="$1"
-  VERSION_PROVIDED=true
+fi
 
-  # Check if dry run is the second argument
-  if [ "$2" == "--dry-run" ]; then
-    DRY_RUN=true
-    echo -e "${YELLOW}🧪 DRY RUN MODE - No changes will be made${NC}"
-  fi
+echo -e "${BLUE}ℹ️ Platform: ${PLATFORM}${NC}"
 
+if [ "$VERSION_PROVIDED" = true ]; then
   # Validate version format (simplified semver check)
   if ! [[ $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9_.]+)?$ ]]; then
     echo -e "${RED}❌ Error: Version must follow semantic versioning (e.g., 1.0.0 or 1.1.0-beta)${NC}"
     exit 1
   fi
-
   echo -e "${BLUE}ℹ️ Manual version provided: ${VERSION}${NC}"
 else
   echo -e "${BLUE}ℹ️ Will determine version automatically from conventional commits${NC}"
@@ -75,8 +99,12 @@ PATCH=${VERSION_PARTS[2]%%[-+]*} # Remove any pre-release or build metadata
 
 echo -e "${BLUE}📊 Current version: ${CURRENT_VERSION} (code: ${CURRENT_CODE})${NC}"
 
-# Get latest tag
-LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "none")
+# Get latest tag - look across ALL platform tags for changelog range
+LATEST_TAG=$(git describe --tags --abbrev=0 --match "android/v*" --match "ios/v*" 2>/dev/null || echo "none")
+if [ "$LATEST_TAG" == "none" ]; then
+  # Fall back to old-style v* tags
+  LATEST_TAG=$(git describe --tags --abbrev=0 --match "v*" 2>/dev/null || echo "none")
+fi
 if [ "$LATEST_TAG" == "none" ]; then
   echo -e "${YELLOW}⚠️ No previous tags found. This will be the first release.${NC}"
   FROM_REVISION=""
@@ -141,13 +169,38 @@ if [ "$VERSION_PROVIDED" = false ]; then
   echo -e "${GREEN}✅ Determined version: $VERSION${NC}"
 fi
 
-# Calculate tag name
-TAG="v$VERSION"
+# Calculate tag name(s) based on platform
+build_tags() {
+  local platform=$1
+  case "$platform" in
+    android)
+      TAGS=("android/v$VERSION")
+      ;;
+    ios)
+      TAGS=("ios/v$VERSION")
+      ;;
+    all)
+      TAGS=("android/v$VERSION" "ios/v$VERSION")
+      ;;
+  esac
+}
+build_tags "$PLATFORM"
 
-# Check if tag already exists
-if git rev-parse "$TAG" >/dev/null 2>&1; then
-  echo -e "${RED}❌ Error: Tag $TAG already exists${NC}"
-  exit 1
+# Check if any of the target tags already exist
+for TAG in "${TAGS[@]}"; do
+  if git rev-parse "$TAG" >/dev/null 2>&1; then
+    echo -e "${RED}❌ Error: Tag $TAG already exists${NC}"
+    exit 1
+  fi
+done
+
+echo -e "${BLUE}🏷️ Tags to create: ${TAGS[*]}${NC}"
+
+# Check if the release commit for this version already exists (idempotent bump)
+RELEASE_COMMIT_EXISTS=false
+if git log -1 --pretty=format:"%s" | grep -q "^chore: release version $VERSION$"; then
+  echo -e "${BLUE}ℹ️ Release commit for $VERSION already exists, skipping version bump${NC}"
+  RELEASE_COMMIT_EXISTS=true
 fi
 
 # Generate changelog
@@ -251,7 +304,7 @@ if [ "$DRY_RUN" = true ]; then
   echo -e "${YELLOW}🧪 DRY RUN: Would update the following files:${NC}"
   echo "  - $VERSION_PROPS"
   echo "  - $CHANGELOG_FILE"
-  echo -e "${YELLOW}🧪 DRY RUN: Would create tag $TAG with changelog content${NC}"
+  echo -e "${YELLOW}🧪 DRY RUN: Would create tags: ${TAGS[*]}${NC}"
   echo -e "${YELLOW}🧪 DRY RUN: Would create commit with message:${NC}"
   echo "  chore: release version $VERSION"
   echo "  "
@@ -259,6 +312,8 @@ if [ "$DRY_RUN" = true ]; then
   echo "$CHANGELOG_SECTION" | sed 's/^/  /'
   echo "  "
   echo "  Version code updated from $CURRENT_CODE to $NEW_CODE"
+elif [ "$RELEASE_COMMIT_EXISTS" = true ]; then
+  echo -e "${BLUE}ℹ️ Skipping version bump (release commit already exists)${NC}"
 else
   # Use sed to update versions in version.properties
   if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -293,18 +348,21 @@ $CHANGELOG_SECTION
 Version code updated from $CURRENT_CODE to $NEW_CODE"
 
   git commit -m "$COMMIT_MESSAGE"
+fi
 
-  # Create tag with annotated message including changelog
-  echo "🏷️ Creating tag $TAG..."
+# Create tags (unless dry run)
+if [ "$DRY_RUN" = false ]; then
+  for TAG in "${TAGS[@]}"; do
+    echo "🏷️ Creating tag $TAG..."
 
-  # Create a more descriptive tag message
-  TAG_MESSAGE="Deadly $VERSION
+    TAG_MESSAGE="Deadly $VERSION
 
 Changes in this release:
 
 $CHANGELOG_SECTION"
 
-  git tag -a "$TAG" -m "$TAG_MESSAGE"
+    git tag -a "$TAG" -m "$TAG_MESSAGE"
+  done
 fi
 
 # Handle pushing or next steps
@@ -312,7 +370,7 @@ if [ "$DRY_RUN" = true ]; then
   echo ""
   echo -e "${YELLOW}🧪 DRY RUN SUMMARY:${NC}"
   echo "  • Version to release: $VERSION (code: $NEW_CODE)"
-  echo "  • Tag to create: $TAG"
+  echo "  • Tags to create: ${TAGS[*]}"
   echo "  • Files to change: $VERSION_PROPS, $CHANGELOG_FILE"
   echo "  • Commit message: chore: release version $VERSION (code: $NEW_CODE)"
   echo ""
@@ -328,14 +386,26 @@ else
   echo ""
   echo -e "${GREEN}🚀 Auto-pushing changes and tags to origin...${NC}"
   git push origin HEAD
-  git push origin "$TAG"
+  for TAG in "${TAGS[@]}"; do
+    git push origin "$TAG"
+  done
 
   echo -e "${GREEN}✅ Release $VERSION successfully created and pushed!${NC}"
   echo ""
+  echo "Tags pushed:"
+  for TAG in "${TAGS[@]}"; do
+    echo "  - $TAG"
+  done
+  echo ""
   echo "Next steps:"
-  echo "1. GitHub Actions will now build the release for both Android and iOS"
-  echo "2. Check the release workflow status on GitHub"
-  echo "3. Download the release artifacts when complete"
+  if [ "$PLATFORM" = "android" ] || [ "$PLATFORM" = "all" ]; then
+    echo "  - GitHub Actions will build the Android release (android-release workflow)"
+  fi
+  if [ "$PLATFORM" = "ios" ] || [ "$PLATFORM" = "all" ]; then
+    echo "  - GitHub Actions will build the iOS release (ios-release workflow)"
+  fi
+  echo "  - Check the release workflow status on GitHub"
+  echo "  - Download the release artifacts when complete"
   echo ""
   echo "💀 Keep on truckin'! 💀"
 fi

@@ -1,5 +1,6 @@
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
-.PHONY: release release-version release-dry-run setup-github-secrets
+.PHONY: release release-version release-dry-run ios-release release-all
+.PHONY: setup-signing setup-github-secrets
 .PHONY: android-build-release android-build-bundle android-deploy-testing
 .PHONY: ios-build-release ios-deploy-testflight
 
@@ -9,9 +10,12 @@ help:
 	@echo "========================================"
 	@echo ""
 	@echo "RELEASE MANAGEMENT:"
-	@echo "  release             - Create release with automatic versioning"
-	@echo "  release-version     - Create release with specific version (make release-version VERSION=1.2.3)"
-	@echo "  release-dry-run     - Preview release without making changes"
+	@echo "  release              - Android release with auto-versioning (default)"
+	@echo "  release-version      - Android release with specific version (make release-version VERSION=1.2.3)"
+	@echo "  release-dry-run      - Preview android release without making changes"
+	@echo "  ios-release          - iOS release with auto-versioning"
+	@echo "  release-all          - Release both platforms with auto-versioning"
+	@echo "  setup-signing        - Generate keystore and .secrets/ setup"
 	@echo "  setup-github-secrets - Upload all secrets to GitHub repository"
 	@echo ""
 	@echo "ANDROID FASTLANE:"
@@ -56,55 +60,40 @@ docs-serve:
 docs-clean:
 	rm -rf site/
 
-# Pre‑PR check: clean, build and confirm successful generation.
+# Pre-PR check: clean, build and confirm successful generation.
 docs-pr: docs-clean docs-build
-	@echo "✅ Site built successfully!"
-	@echo "📂 Output in site/ directory"
-	@echo "🚀 Run 'make docs-serve' to test locally"
+	@echo "Site built successfully!"
+	@echo "Output in site/ directory"
+	@echo "Run 'make docs-serve' to test locally"
 
 # =============================================================================
 # RELEASE MANAGEMENT
 # =============================================================================
 
 release:
-	@echo "🚀 Creating release with automatic versioning..."
-	@if [ ! -f scripts/release.sh ]; then \
-		echo "❌ Error: scripts/release.sh not found"; \
-		exit 1; \
-	fi
-	@./scripts/release.sh
-	@echo "✅ Release created successfully!"
-	@echo "💡 GitHub Actions will now build and publish the release"
+	@./scripts/release.sh --platform android
 
 release-version:
-	@echo "🚀 Creating release with version $(VERSION)..."
 	@if [ -z "$(VERSION)" ]; then \
-		echo "❌ Error: VERSION not specified"; \
-		echo "💡 Usage: make release-version VERSION=1.2.3"; \
+		echo "Error: VERSION not specified"; \
+		echo "Usage: make release-version VERSION=1.2.3"; \
 		exit 1; \
 	fi
-	@if [ ! -f scripts/release.sh ]; then \
-		echo "❌ Error: scripts/release.sh not found"; \
-		exit 1; \
-	fi
-	@./scripts/release.sh $(VERSION)
-	@echo "✅ Release $(VERSION) created successfully!"
-	@echo "💡 GitHub Actions will now build and publish the release"
+	@./scripts/release.sh --platform android $(VERSION)
 
 release-dry-run:
-	@echo "🧪 Running release dry run..."
-	@if [ ! -f scripts/release.sh ]; then \
-		echo "❌ Error: scripts/release.sh not found"; \
-		exit 1; \
-	fi
-	@./scripts/release.sh --dry-run
+	@./scripts/release.sh --platform android --dry-run
+
+ios-release:
+	@./scripts/release.sh --platform ios
+
+release-all:
+	@./scripts/release.sh --platform all
+
+setup-signing:
+	@./scripts/setup-signing.sh
 
 setup-github-secrets:
-	@echo "🔐 Uploading secrets to GitHub..."
-	@if [ ! -f scripts/setup-github-secrets.sh ]; then \
-		echo "❌ Error: scripts/setup-github-secrets.sh not found"; \
-		exit 1; \
-	fi
 	@./scripts/setup-github-secrets.sh
 
 # =============================================================================
@@ -112,15 +101,15 @@ setup-github-secrets:
 # =============================================================================
 
 android-build-release:
-	@echo "📱 Building Android release APK..."
+	@echo "Building Android release APK..."
 	@cd androidApp && fastlane build_release
 
 android-build-bundle:
-	@echo "📱 Building Android App Bundle..."
+	@echo "Building Android App Bundle..."
 	@cd androidApp && fastlane build_bundle
 
 android-deploy-testing:
-	@echo "📱 Deploying to Play Store Internal Testing..."
+	@echo "Deploying to Play Store Internal Testing..."
 	@cd androidApp && fastlane deploy_testing
 
 # =============================================================================
@@ -128,9 +117,9 @@ android-deploy-testing:
 # =============================================================================
 
 ios-build-release:
-	@echo "🍎 Building iOS release IPA..."
+	@echo "Building iOS release IPA..."
 	@cd iosApp && fastlane build_release
 
 ios-deploy-testflight:
-	@echo "🍎 Deploying to TestFlight..."
+	@echo "Deploying to TestFlight..."
 	@cd iosApp && fastlane deploy_testflight
