@@ -106,6 +106,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         // Create MediaLibrarySession (callback in constructor, not via setter)
         mediaSession = MediaLibrarySession.Builder(this, exoPlayer, LibrarySessionCallback())
             .setId("DeadlySession")
+            .setBitmapLoader(WaveformFilteringBitmapLoader(this))
             .build()
 
         Log.d(TAG, "[MEDIA] DeadlyMediaSessionService onCreate completed")
