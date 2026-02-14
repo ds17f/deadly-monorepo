@@ -16,7 +16,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.component.ShowArtwork
-import com.grateful.deadly.core.design.resources.IconResources
 
 /**
  * Reusable horizontal collection component for large square images
@@ -75,15 +74,6 @@ fun CollectionItemCard(
             modifier = Modifier
                 .size(160.dp)
                 .clip(RoundedCornerShape(12.dp))
-                .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
-            placeholderContent = {
-                Icon(
-                    painter = IconResources.PlayerControls.AlbumArt(),
-                    contentDescription = null,
-                    modifier = Modifier.size(64.dp),
-                    tint = MaterialTheme.colorScheme.primary
-                )
-            }
         )
         
         // Descriptive text - parse lines and display each with truncation
