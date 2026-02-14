@@ -8,6 +8,13 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     
     <application>
+        <!-- Artwork provider for waveform-filtered album art -->
+        <provider
+            android:name=".artwork.ArtworkProvider"
+            android:authorities="com.grateful.deadly.artwork"
+            android:exported="true"
+            android:grantUriPermissions="true" />
+
         <!-- Android Auto support metadata -->
         <meta-data
             android:name="com.google.android.gms.car.application"

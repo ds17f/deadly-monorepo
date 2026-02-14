@@ -614,7 +614,7 @@ class MediaControllerRepository @Inject constructor(
                             }
                         )
                         .setTrackNumber(track.trackNumber)
-                        .setArtworkUri(Uri.parse("https://archive.org/services/img/$recordingId"))
+                        .setArtworkUri(com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recordingId))
                         .setExtras(Bundle().apply {
                             putString("showId", showId)
                             putString("recordingId", recordingId)

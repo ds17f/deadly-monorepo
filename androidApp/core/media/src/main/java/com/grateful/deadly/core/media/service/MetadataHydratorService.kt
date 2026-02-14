@@ -110,7 +110,7 @@ class MetadataHydratorService @Inject constructor(
             return mediaItem.buildUpon()
                 .setMediaMetadata(
                     mediaItem.mediaMetadata.buildUpon()
-                        .setArtworkUri(Uri.parse("https://archive.org/services/img/${recording.identifier}"))
+                        .setArtworkUri(com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recording.identifier))
                         .setArtist(
                             if (!show.venue.name.isNullOrBlank()) {
                                 "${formatShowDate(show.date)} - ${show.venue.name}"
