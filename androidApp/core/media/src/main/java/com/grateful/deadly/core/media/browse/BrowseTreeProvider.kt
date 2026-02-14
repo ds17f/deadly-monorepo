@@ -141,11 +141,12 @@ class BrowseTreeProvider @Inject constructor(
 
     suspend fun resolveShowToPlayableTracks(showId: String): List<MediaItem> {
         val show = showRepository.getShowById(showId) ?: return emptyList()
-        val recording = showRepository.getBestRecordingForShow(showId)
-            ?: showRepository.getRecordingsForShow(showId).firstOrNull()
+        val recordingId = show.bestRecordingId
+            ?: showRepository.getBestRecordingForShow(showId)?.identifier
+            ?: showRepository.getRecordingsForShow(showId).firstOrNull()?.identifier
             ?: return emptyList()
 
-        val allTracks = archiveService.getRecordingTracks(recording.identifier)
+        val allTracks = archiveService.getRecordingTracks(recordingId)
             .getOrNull() ?: return emptyList()
 
         val format = FORMAT_PRIORITY.firstOrNull { fmt ->
@@ -155,7 +156,7 @@ class BrowseTreeProvider @Inject constructor(
         return allTracks
             .filter { it.format.equals(format, ignoreCase = true) }
             .mapIndexed { index, track ->
-                buildTrackItem(show, recording.identifier, format, track, index)
+                buildTrackItem(show, recordingId, format, track, index)
             }
     }
 
@@ -247,7 +248,7 @@ class BrowseTreeProvider @Inject constructor(
                     .setArtist("${formatShowDate(show.date)} - ${show.venue.name}")
                     .setAlbumTitle("${formatShowDate(show.date)} - ${show.venue.name}")
                     .setTrackNumber(track.trackNumber)
-                    .setArtworkUri(Uri.parse("https://archive.org/services/img/$recordingId"))
+                    .setArtworkUri(com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recordingId))
                     .setIsPlayable(true)
                     .setIsBrowsable(false)
                     .setMediaType(MediaMetadata.MEDIA_TYPE_MUSIC)
