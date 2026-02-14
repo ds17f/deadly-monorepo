@@ -58,15 +58,6 @@ fun LibraryShowListItem(
                 modifier = Modifier
                     .size(60.dp)
                     .clip(RoundedCornerShape(8.dp))
-                    .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
-                placeholderContent = {
-                    Icon(
-                        painter = IconResources.PlayerControls.AlbumArt(),
-                        contentDescription = null,
-                        modifier = Modifier.size(30.dp),
-                        tint = MaterialTheme.colorScheme.primary
-                    )
-                }
             )
 
             Spacer(modifier = Modifier.width(12.dp))
@@ -188,15 +179,6 @@ fun LibraryShowGridItem(
                     .aspectRatio(1f)
                     .padding(8.dp)
                     .clip(RoundedCornerShape(8.dp))
-                    .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
-                placeholderContent = {
-                    Icon(
-                        painter = IconResources.PlayerControls.AlbumArt(),
-                        contentDescription = null,
-                        modifier = Modifier.size(32.dp),
-                        tint = MaterialTheme.colorScheme.primary
-                    )
-                }
             )
             
             // Text section

@@ -393,15 +393,6 @@ private fun SearchResultCard(
                 modifier = Modifier
                     .size(60.dp)
                     .clip(RoundedCornerShape(8.dp))
-                    .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
-                placeholderContent = {
-                    Icon(
-                        painter = IconResources.PlayerControls.AlbumArt(),
-                        contentDescription = null,
-                        modifier = Modifier.size(30.dp),
-                        tint = MaterialTheme.colorScheme.primary
-                    )
-                }
             )
             
             // Text content column

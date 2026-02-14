@@ -59,15 +59,7 @@ fun PlayerTrackActionsSheet(
                     ShowArtwork(
                         recordingId = recordingId,
                         contentDescription = "Album Art",
-                        modifier = Modifier.fillMaxSize(),
-                        placeholderContent = {
-                            Icon(
-                                painter = IconResources.PlayerControls.AlbumArt(),
-                                contentDescription = "Album Art",
-                                modifier = Modifier.size(30.dp),
-                                tint = MaterialTheme.colorScheme.onPrimaryContainer
-                            )
-                        }
+                        modifier = Modifier.fillMaxSize()
                     )
                 }
                 
