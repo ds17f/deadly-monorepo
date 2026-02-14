@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.component.ShowArtwork
-import com.grateful.deadly.core.design.resources.IconResources
 
 /**
  * Large cover art section (~40% of screen height)
@@ -35,15 +34,8 @@ fun PlayerCoverArt(
             ShowArtwork(
                 recordingId = recordingId,
                 contentDescription = "Album Art",
-                modifier = Modifier.fillMaxSize(),
-                placeholderContent = {
-                    Icon(
-                        painter = IconResources.PlayerControls.AlbumArt(),
-                        contentDescription = "Album Art",
-                        modifier = Modifier.size(160.dp),
-                        tint = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                }
+                highRes = true,
+                modifier = Modifier.fillMaxSize()
             )
         }
     }
