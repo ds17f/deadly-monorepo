@@ -29,7 +29,6 @@ fun PlaylistAlbumArt(
         ShowArtwork(
             recordingId = recordingId,
             contentDescription = "Album Art",
-            highRes = true,
             modifier = Modifier
                 .size(220.dp)
                 .clip(RoundedCornerShape(8.dp))
