@@ -64,6 +64,11 @@ jobs:
       run: |
         echo "${{ secrets.PLAY_STORE_JSON_BASE64 }}" | base64 -d > .secrets/thedeadly-app-f48493c2a133.json
 
+    - name: Deploy to Play Store Internal Testing
+      run: |
+        cd androidApp
+        fastlane deploy_testing
+
     - name: Deploy to Play Store Closed Testing (Alpha)
       run: |
         cd androidApp
