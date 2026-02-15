@@ -1,12 +1,17 @@
 package com.grateful.deadly.feature.settings
 
 import android.content.Context
+import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.database.migration.MigrationImportService
+import com.grateful.deadly.core.database.migration.MigrationResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -17,11 +22,46 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
+    private val migrationImportService: MigrationImportService,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
-    
+
     companion object {
         private const val TAG = "SettingsViewModel"
+    }
+
+    sealed class MigrationImportState {
+        data object Idle : MigrationImportState()
+        data object Importing : MigrationImportState()
+        data class Success(val result: MigrationResult) : MigrationImportState()
+        data class Error(val message: String) : MigrationImportState()
+    }
+
+    private val _migrationImportState = MutableStateFlow<MigrationImportState>(MigrationImportState.Idle)
+    val migrationImportState: StateFlow<MigrationImportState> = _migrationImportState
+
+    fun onImportMigration(uri: Uri) {
+        viewModelScope.launch {
+            try {
+                _migrationImportState.value = MigrationImportState.Importing
+                val jsonString = withContext(Dispatchers.IO) {
+                    context.contentResolver.openInputStream(uri)?.use { input ->
+                        input.bufferedReader().readText()
+                    } ?: throw IllegalStateException("Could not open file")
+                }
+                val result = withContext(Dispatchers.IO) {
+                    migrationImportService.importFromJson(jsonString)
+                }
+                _migrationImportState.value = MigrationImportState.Success(result)
+            } catch (e: Exception) {
+                Log.e(TAG, "Migration import failed", e)
+                _migrationImportState.value = MigrationImportState.Error(e.message ?: "Import failed")
+            }
+        }
+    }
+
+    fun onDismissMigrationResult() {
+        _migrationImportState.value = MigrationImportState.Idle
     }
     
     /**

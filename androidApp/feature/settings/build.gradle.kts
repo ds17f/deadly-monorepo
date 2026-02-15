@@ -45,6 +45,8 @@ android {
 dependencies {
     // Core Dependencies
     implementation(project(":core:design"))
+    implementation(project(":core:database"))
+    implementation(project(":core:model"))
     
     // Android & Compose
     implementation("androidx.core:core-ktx:1.12.0")
