@@ -1,5 +1,7 @@
 package com.grateful.deadly.feature.settings
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
@@ -25,6 +27,16 @@ fun SettingsScreen(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
+            // Migration Import Section
+            item {
+                SettingsSection(title = "Migration") {
+                    ImportMigrationButton(
+                        viewModel = viewModel,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+            }
+
             // Cache Management Section
             item {
                 SettingsSection(title = "Cache Management") {
@@ -231,6 +243,90 @@ private fun DeleteDataZipButton(
                 }
             }
         )
+    }
+}
+
+/**
+ * Import migration data from the old app
+ */
+@Composable
+private fun ImportMigrationButton(
+    viewModel: SettingsViewModel,
+    modifier: Modifier = Modifier
+) {
+    val importState by viewModel.migrationImportState.collectAsState()
+
+    val safLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        if (uri != null) {
+            viewModel.onImportMigration(uri)
+        }
+    }
+
+    Column(modifier = modifier) {
+        OutlinedButton(
+            onClick = { safLauncher.launch(arrayOf("application/json")) },
+            enabled = importState !is SettingsViewModel.MigrationImportState.Importing,
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.outlinedButtonColors(
+                contentColor = MaterialTheme.colorScheme.primary
+            )
+        ) {
+            if (importState is SettingsViewModel.MigrationImportState.Importing) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(16.dp),
+                    strokeWidth = 2.dp
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("Importing...")
+            } else {
+                Text("Import Library from Old App")
+            }
+        }
+
+        Text(
+            text = "Import your library and play history from the old Dead Archive app.",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(top = 4.dp)
+        )
+    }
+
+    when (val state = importState) {
+        is SettingsViewModel.MigrationImportState.Success -> {
+            val r = state.result
+            AlertDialog(
+                onDismissRequest = { viewModel.onDismissMigrationResult() },
+                title = { Text("Import Complete") },
+                text = {
+                    val msg = buildString {
+                        append("Imported ${r.libraryImported} library shows and ${r.recentImported} recent plays.")
+                        if (r.skipped > 0) append("\n${r.skipped} shows could not be matched.")
+                        if (r.errors.isNotEmpty()) append("\n${r.errors.size} errors occurred.")
+                    }
+                    Text(msg)
+                },
+                confirmButton = {
+                    TextButton(onClick = { viewModel.onDismissMigrationResult() }) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
+        is SettingsViewModel.MigrationImportState.Error -> {
+            AlertDialog(
+                onDismissRequest = { viewModel.onDismissMigrationResult() },
+                title = { Text("Import Failed") },
+                text = { Text(state.message) },
+                confirmButton = {
+                    TextButton(onClick = { viewModel.onDismissMigrationResult() }) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
+        else -> {}
     }
 }
 
