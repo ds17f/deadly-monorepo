@@ -12,9 +12,10 @@ import kotlinx.serialization.json.Json
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -42,29 +43,26 @@ class DeadCollectionsServiceImpl @Inject constructor(
         coerceInputValues = true
     }
     
-    private val _featuredCollections = MutableStateFlow<List<DeadCollection>>(emptyList())
-    override val featuredCollections: StateFlow<List<DeadCollection>> = _featuredCollections.asStateFlow()
-    
+    override val featuredCollections: StateFlow<List<DeadCollection>> =
+        collectionsDao.getFeaturedCollectionsFlow()
+            .map { entities ->
+                try {
+                    val collections = entities.map { convertToModel(it) }
+                    Log.d(TAG, "Loaded ${collections.size} featured collections from database")
+                    collections
+                } catch (e: Exception) {
+                    Log.e(TAG, "Failed to convert featured collections", e)
+                    createFallbackCollections()
+                }
+            }
+            .stateIn(
+                scope = serviceScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = emptyList()
+            )
+
     init {
         Log.d(TAG, "DeadCollectionsServiceImpl initialized")
-        loadFeaturedCollections()
-    }
-    
-    private fun loadFeaturedCollections() {
-        serviceScope.launch {
-            try {
-                // Get featured collections from database
-                val entities = collectionsDao.getFeaturedCollections()
-                val collections = entities.map { convertToModel(it) }
-                
-                _featuredCollections.value = collections
-                Log.d(TAG, "Loaded ${collections.size} featured collections from database")
-            } catch (e: Exception) {
-                Log.e(TAG, "Failed to load featured collections", e)
-                // Fallback to static collections if database is empty
-                _featuredCollections.value = createFallbackCollections()
-            }
-        }
     }
     
     override suspend fun getAllCollections(): Result<List<DeadCollection>> {
