@@ -73,7 +73,8 @@ fun CollectionItemCard(
             contentDescription = null,
             modifier = Modifier
                 .size(160.dp)
-                .clip(RoundedCornerShape(12.dp))
+                .clip(RoundedCornerShape(12.dp)),
+            imageUrl = item.imageUrl
         )
         
         // Descriptive text - parse lines and display each with truncation
@@ -103,7 +104,8 @@ data class HorizontalCollectionItem(
     val id: String,
     val displayText: String,
     val type: CollectionItemType = CollectionItemType.SHOW,
-    val recordingId: String? = null
+    val recordingId: String? = null,
+    val imageUrl: String? = null
 )
 
 enum class CollectionItemType {

@@ -392,7 +392,8 @@ private fun SearchResultCard(
                 contentDescription = null,
                 modifier = Modifier
                     .size(60.dp)
-                    .clip(RoundedCornerShape(8.dp))
+                    .clip(RoundedCornerShape(8.dp)),
+                imageUrl = searchResult.show.coverImageUrl
             )
             
             // Text content column

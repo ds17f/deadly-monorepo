@@ -56,6 +56,7 @@ fun PlayerMiniPlayer(
                 // Artwork thumbnail
                 ShowArtwork(
                     recordingId = uiState.trackDisplayInfo.recordingId,
+                    imageUrl = uiState.trackDisplayInfo.coverImageUrl,
                     contentDescription = "Album Art",
                     modifier = Modifier
                         .size(48.dp)

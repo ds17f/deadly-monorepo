@@ -6,6 +6,7 @@ package com.grateful.deadly.feature.splash.model
 enum class Phase {
     IDLE,
     CHECKING,
+    UPGRADING,
     USING_LOCAL,
     DOWNLOADING,
     EXTRACTING,

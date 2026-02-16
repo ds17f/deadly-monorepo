@@ -145,7 +145,10 @@ fun PlaylistScreen(
                 else -> {
                     // Album cover image - fixed size at top
                     item {
-                        PlaylistAlbumArt(recordingId = uiState.showData?.currentRecordingId ?: recordingId)
+                        PlaylistAlbumArt(
+                            recordingId = uiState.showData?.currentRecordingId ?: recordingId,
+                            imageUrl = uiState.showData?.coverImageUrl
+                        )
                     }
                     
                     // Show info section - with navigation buttons

@@ -902,12 +902,13 @@ class PlaylistViewModel @Inject constructor(
                         
                         // Use MediaControllerRepository for Play All logic (new show/recording)
                         mediaControllerRepository.playAll(
-                            recordingId = recordingId, 
+                            recordingId = recordingId,
                             format = selectedFormat,
                             showId = showId,
                             showDate = showDate,
                             venue = venue,
-                            location = location
+                            location = location,
+                            coverImageUrl = showContext.coverImageUrl
                         )
                     }
                 }
@@ -994,13 +995,14 @@ class PlaylistViewModel @Inject constructor(
                 
                 // Use MediaControllerRepository for track playback
                 mediaControllerRepository.playTrack(
-                    trackIndex = trackIndex, 
-                    recordingId = recordingId, 
+                    trackIndex = trackIndex,
+                    recordingId = recordingId,
                     format = selectedFormat,
                     showId = showId,
                     showDate = showDate,
                     venue = venue,
-                    location = location
+                    location = location,
+                    coverImageUrl = showContext?.coverImageUrl
                 )
                 
                 // UI state will be updated via MediaController state observation

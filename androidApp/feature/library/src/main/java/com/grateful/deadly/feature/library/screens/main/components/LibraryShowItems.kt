@@ -57,7 +57,8 @@ fun LibraryShowListItem(
                 contentDescription = null,
                 modifier = Modifier
                     .size(60.dp)
-                    .clip(RoundedCornerShape(8.dp))
+                    .clip(RoundedCornerShape(8.dp)),
+                imageUrl = show.coverImageUrl
             )
 
             Spacer(modifier = Modifier.width(12.dp))
@@ -178,7 +179,8 @@ fun LibraryShowGridItem(
                     .fillMaxWidth()
                     .aspectRatio(1f)
                     .padding(8.dp)
-                    .clip(RoundedCornerShape(8.dp))
+                    .clip(RoundedCornerShape(8.dp)),
+                imageUrl = show.coverImageUrl
             )
             
             // Text section

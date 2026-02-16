@@ -3,6 +3,7 @@ package com.grateful.deadly.core.database.service
 import android.util.Log
 import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.DataVersionDao
+import com.grateful.deadly.core.database.dao.LibraryDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import com.grateful.deadly.core.database.dao.RecordingDao
@@ -41,6 +42,10 @@ data class ShowImportData(
     val lineup: List<LineupMember>? = null,
     @SerialName("supporting_acts_status") val supportingActsStatus: String? = null,
     @SerialName("supporting_acts") val supportingActs: JsonElement? = null, // Raw JSON (can be null, string, or array)
+    @SerialName("ticket_images_status") val ticketImagesStatus: String? = null,
+    @SerialName("ticket_images") val ticketImages: List<TicketImage> = emptyList(),
+    @SerialName("photos_status") val photosStatus: String? = null,
+    val photos: List<ShowPhoto> = emptyList(),
     @SerialName("collection_timestamp") val collectionTimestamp: String? = null,
     @SerialName("show_time") val showTime: String? = null,
     val recordings: List<String> = emptyList(), // List of recording IDs
@@ -61,6 +66,20 @@ data class LineupMember(
     val name: String,
     val instruments: String,
     @SerialName("image_url") val imageUrl: String? = null
+)
+
+@Serializable
+data class TicketImage(
+    val url: String,
+    val filename: String? = null,
+    val side: String? = null
+)
+
+@Serializable
+data class ShowPhoto(
+    val url: String,
+    val filename: String? = null,
+    @SerialName("thumbnail_url") val thumbnailUrl: String? = null
 )
 
 @Serializable
@@ -103,6 +122,7 @@ class DataImportService @Inject constructor(
     @AppDatabase private val showSearchDao: ShowSearchDao,
     @AppDatabase private val recordingDao: RecordingDao,
     @AppDatabase private val dataVersionDao: DataVersionDao,
+    @AppDatabase private val libraryDao: LibraryDao,
     private val collectionsImportService: CollectionsImportService
 ) {
     
@@ -116,6 +136,7 @@ class DataImportService @Inject constructor(
     suspend fun importFromExtractedFiles(
         showsDirectory: File,
         recordingsDirectory: File,
+        extractionDirectory: File? = null,
         progressCallback: ((ImportProgress) -> Unit)? = null
     ): ImportResult = withContext(Dispatchers.IO) {
         try {
@@ -131,6 +152,12 @@ class DataImportService @Inject constructor(
             
             progressCallback?.invoke(ImportProgress("READING_FILES", 0, showFiles.size + recordingFiles.size, "Preparing data files..."))
             
+            // Preserve library entries (CASCADE FK on shows would delete them)
+            val savedLibrary = libraryDao.getAllLibraryShows()
+            if (savedLibrary.isNotEmpty()) {
+                Log.i(TAG, "Preserving ${savedLibrary.size} library entries across re-import")
+            }
+
             // Clear existing data
             progressCallback?.invoke(ImportProgress("CLEARING", 0, 0, "Clearing existing data..."))
             showSearchDao.clearAllSearchData()
@@ -316,19 +343,22 @@ class DataImportService @Inject constructor(
             
             progressCallback?.invoke(ImportProgress("FINALIZING", importedShows + importedRecordings, importedShows + importedRecordings, "Finalizing database..."))
             
+            // Parse manifest.json for version info
+            val manifest = parseManifest(extractionDirectory)
+
             // Update data version
             val currentTime = System.currentTimeMillis()
             dataVersionDao.insertOrUpdate(
                 DataVersionEntity(
                     id = 1,
-                    dataVersion = "2.0.0",
+                    dataVersion = manifest?.version ?: "unknown",
                     packageName = "Deadly Metadata",
-                    versionType = "release", 
+                    versionType = "release",
                     description = "Database import from extracted files with collections",
                     importedAt = currentTime,
-                    gitCommit = null,
+                    gitCommit = manifest?.gitCommit,
                     gitTag = null,
-                    buildTimestamp = null,
+                    buildTimestamp = manifest?.buildTimestamp,
                     totalShows = importedShows,
                     totalVenues = 0,
                     totalFiles = importedRecordings,
@@ -336,8 +366,14 @@ class DataImportService @Inject constructor(
                 )
             )
             
+            // Restore library entries that were preserved before clearing
+            if (savedLibrary.isNotEmpty()) {
+                libraryDao.addMultipleToLibrary(savedLibrary)
+                Log.i(TAG, "Restored ${savedLibrary.size} library entries after re-import")
+            }
+
             progressCallback?.invoke(ImportProgress("COMPLETED", importedShows + importedRecordings, importedShows + importedRecordings, "Import completed successfully"))
-            
+
             Log.d(TAG, "Data import completed successfully: $importedShows shows, $importedRecordings recordings, $collectionsImported collections")
             
             ImportResult(
@@ -359,6 +395,50 @@ class DataImportService @Inject constructor(
     }
     
     
+    @Serializable
+    private data class ManifestPackageData(
+        val version: String? = null
+    )
+
+    @Serializable
+    private data class ManifestBuildInfo(
+        @SerialName("git_commit") val gitCommit: String? = null,
+        @SerialName("build_timestamp") val buildTimestamp: String? = null
+    )
+
+    @Serializable
+    private data class ManifestData(
+        @SerialName("package") val packageInfo: ManifestPackageData? = null,
+        @SerialName("build_info") val buildInfo: ManifestBuildInfo? = null
+    ) {
+        val version: String? get() = packageInfo?.version
+        val gitCommit: String? get() = buildInfo?.gitCommit
+        val buildTimestamp: String? get() = buildInfo?.buildTimestamp
+    }
+
+    private fun parseManifest(extractionDirectory: File?): ManifestData? {
+        if (extractionDirectory == null) return null
+        val manifestFile = File(extractionDirectory, "manifest.json")
+        if (!manifestFile.exists()) return null
+        return try {
+            val json = Json { ignoreUnknownKeys = true }
+            json.decodeFromString<ManifestData>(manifestFile.readText())
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to parse manifest.json", e)
+            null
+        }
+    }
+
+    /**
+     * Resolve the best cover image URL for a show.
+     * Priority: ticket front > ticket unknown > first photo > null
+     */
+    private fun resolveCoverImageUrl(showData: ShowImportData): String? {
+        return showData.ticketImages.firstOrNull { it.side == "front" }?.url
+            ?: showData.ticketImages.firstOrNull { it.side == "unknown" }?.url
+            ?: showData.photos.firstOrNull()?.url
+    }
+
     private fun createShowEntity(showData: ShowImportData, recordingsMap: Map<String, RecordingImportData>): ShowEntity {
         // Parse date components
         val dateParts = showData.date.split("-")
@@ -407,6 +487,7 @@ class DataImportService @Inject constructor(
             bestRecordingId = bestRecordingId, // From show data
             averageRating = averageRating, // From show data
             totalReviews = totalReviews, // Approximated from source types
+            coverImageUrl = resolveCoverImageUrl(showData),
             isInLibrary = false,
             libraryAddedAt = null,
             createdAt = currentTime,

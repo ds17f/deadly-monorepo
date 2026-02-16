@@ -16,6 +16,7 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 @Composable
 fun PlayerCoverArt(
     recordingId: String?,
+    imageUrl: String? = null,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -33,6 +34,7 @@ fun PlayerCoverArt(
         ) {
             ShowArtwork(
                 recordingId = recordingId,
+                imageUrl = imageUrl,
                 contentDescription = "Album Art",
                 modifier = Modifier.fillMaxSize()
             )

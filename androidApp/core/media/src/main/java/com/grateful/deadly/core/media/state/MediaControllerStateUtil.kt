@@ -181,6 +181,7 @@ class MediaControllerStateUtil @Inject constructor(
             Log.v(TAG, "Format not specified in MediaMetadata extras")
             "Unknown Format"
         }
+        val coverImageUrl = extras?.getString("coverImageUrl")?.takeIf { it.isNotBlank() }
         
         // No album parsing - use direct metadata only
         
@@ -202,6 +203,7 @@ class MediaControllerStateUtil @Inject constructor(
             showDate = showDate,
             venue = venue,
             location = location,
+            coverImageUrl = coverImageUrl,
             songTitle = title,
             artist = artist,
             album = album,

@@ -61,6 +61,9 @@ data class ShowEntity(
     val isInLibrary: Boolean = false,
     val libraryAddedAt: Long?,
     
+    // Cover art (resolved from ticket/photo images during import)
+    val coverImageUrl: String? = null,
+
     // Timestamps
     val createdAt: Long,
     val updatedAt: Long

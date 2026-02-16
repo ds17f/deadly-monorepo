@@ -74,6 +74,7 @@ fun MiniPlayerScreen(
                 // Artwork thumbnail
                 ShowArtwork(
                     recordingId = uiState.currentTrack?.recordingId,
+                    imageUrl = uiState.currentTrack?.coverImageUrl,
                     contentDescription = "Album Art",
                     modifier = Modifier
                         .size(48.dp)

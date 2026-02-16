@@ -44,6 +44,7 @@ class SplashViewModel @Inject constructor(
                         val message = when (progress.phase) {
                             Phase.IDLE -> "Preparing database..."
                             Phase.CHECKING -> "Checking existing data..."
+                            Phase.UPGRADING -> "New data available, upgrading..."
                             Phase.USING_LOCAL -> "Using local files..."
                             Phase.DOWNLOADING -> "Downloading files..."
                             Phase.EXTRACTING -> "Extracting data files..."

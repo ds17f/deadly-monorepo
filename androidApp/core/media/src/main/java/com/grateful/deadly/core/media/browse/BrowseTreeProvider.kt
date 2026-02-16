@@ -199,6 +199,11 @@ class BrowseTreeProvider @Inject constructor(
                     .setIsPlayable(true)
                     .setIsBrowsable(true)
                     .setMediaType(MediaMetadata.MEDIA_TYPE_FOLDER_ALBUMS)
+                    .apply {
+                        if (!show.coverImageUrl.isNullOrBlank()) {
+                            setArtworkUri(Uri.parse(show.coverImageUrl))
+                        }
+                    }
                     .build()
             )
             .build()
@@ -248,7 +253,13 @@ class BrowseTreeProvider @Inject constructor(
                     .setArtist("${formatShowDate(show.date)} - ${show.venue.name}")
                     .setAlbumTitle("${formatShowDate(show.date)} - ${show.venue.name}")
                     .setTrackNumber(track.trackNumber)
-                    .setArtworkUri(com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recordingId))
+                    .setArtworkUri(
+                        if (!show.coverImageUrl.isNullOrBlank()) {
+                            Uri.parse(show.coverImageUrl)
+                        } else {
+                            com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recordingId)
+                        }
+                    )
                     .setIsPlayable(true)
                     .setIsBrowsable(false)
                     .setMediaType(MediaMetadata.MEDIA_TYPE_MUSIC)
@@ -261,6 +272,7 @@ class BrowseTreeProvider @Inject constructor(
                         putString("filename", track.name)
                         putString("format", format)
                         putString("trackUrl", uri)
+                        show.coverImageUrl?.let { putString("coverImageUrl", it) }
                     })
                     .build()
             )

@@ -29,7 +29,10 @@ data class Show(
     val averageRating: Float?,
     val totalReviews: Int,
     
-    // User state  
+    // Cover art
+    val coverImageUrl: String? = null,
+
+    // User state
     val isInLibrary: Boolean,
     val libraryAddedAt: Long?
 ) {

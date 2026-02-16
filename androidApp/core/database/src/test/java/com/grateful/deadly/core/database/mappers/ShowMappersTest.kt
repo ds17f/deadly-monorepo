@@ -41,7 +41,8 @@ class ShowMappersTest {
         state: String = "NY",
         recordingsRaw: String? = """["rec1", "rec2"]""",
         setlistRaw: String? = null,
-        lineupRaw: String? = null
+        lineupRaw: String? = null,
+        coverImageUrl: String? = null
     ) = ShowEntity(
         showId = showId,
         date = date,
@@ -67,6 +68,7 @@ class ShowMappersTest {
         bestRecordingId = "rec1",
         averageRating = 4.5f,
         totalReviews = 100,
+        coverImageUrl = coverImageUrl,
         isInLibrary = true,
         libraryAddedAt = 1000L,
         createdAt = 2000L,
@@ -105,10 +107,29 @@ class ShowMappersTest {
         assertEquals(entity.bestRecordingId, result.bestRecordingId)
         assertEquals(entity.averageRating, result.averageRating)
         assertEquals(entity.totalReviews, result.totalReviews)
+        assertEquals(entity.coverImageUrl, result.coverImageUrl)
         assertEquals(entity.isInLibrary, result.isInLibrary)
         assertEquals(entity.libraryAddedAt, result.libraryAddedAt)
     }
     
+    @Test
+    fun `entityToDomain maps coverImageUrl when present`() {
+        val entity = createTestShowEntity(coverImageUrl = "https://cdn.example.com/ticket-front.jpg")
+
+        val result = showMappers.entityToDomain(entity)
+
+        assertEquals("https://cdn.example.com/ticket-front.jpg", result.coverImageUrl)
+    }
+
+    @Test
+    fun `entityToDomain maps null coverImageUrl`() {
+        val entity = createTestShowEntity(coverImageUrl = null)
+
+        val result = showMappers.entityToDomain(entity)
+
+        assertNull(result.coverImageUrl)
+    }
+
     @Test
     fun `entityToDomain handles valid recording IDs JSON`() {
         val validJson = """["recording1", "recording2", "recording3"]"""

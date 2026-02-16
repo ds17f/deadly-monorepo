@@ -43,6 +43,7 @@ class ShowMappers @Inject constructor(
             lineup = parseLineup(entity.lineupRaw, entity.lineupStatus),
             recordingIds = parseRecordingIds(entity.recordingsRaw),
             bestRecordingId = entity.bestRecordingId,
+            coverImageUrl = entity.coverImageUrl,
             recordingCount = entity.recordingCount,
             averageRating = entity.averageRating,
             totalReviews = entity.totalReviews,

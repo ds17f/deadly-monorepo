@@ -73,7 +73,8 @@ fun HomeScreen(
                         id = show.id,
                         displayText = "${show.date}\n${show.venue.name}\n${show.location.displayText}",
                         type = CollectionItemType.SHOW,
-                        recordingId = show.bestRecordingId
+                        recordingId = show.bestRecordingId,
+                        imageUrl = show.coverImageUrl
                     )
                 }
                 
