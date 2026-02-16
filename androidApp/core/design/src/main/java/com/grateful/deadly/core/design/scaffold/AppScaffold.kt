@@ -3,8 +3,14 @@ package com.grateful.deadly.core.design.scaffold
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.component.topbar.TopBar
 import com.grateful.deadly.core.design.component.topbar.TopBarMode
@@ -103,6 +109,8 @@ fun AppScaffold(
 ) {
     // Use Box layout to properly layer MiniPlayer above bottom navigation
     val shouldShowMiniPlayer = miniPlayerConfig?.visible == true && miniPlayerContent != null
+    val density = LocalDensity.current
+    var bottomOverlayHeightPx by remember { mutableIntStateOf(0) }
 
     Box(modifier = modifier.fillMaxSize()) {
         Scaffold(
@@ -129,13 +137,8 @@ fun AppScaffold(
                 null -> WindowInsets.systemBars
             }
         ) { paddingValues ->
-            // Main content with extra bottom padding if MiniPlayer or bottom nav are present
-            val extraBottomPadding = when {
-                shouldShowMiniPlayer && bottomBarConfig?.visible == true -> 144.dp // MiniPlayer (88dp) + BottomNav (56dp)
-                shouldShowMiniPlayer -> 88.dp // Just MiniPlayer
-                bottomBarConfig?.visible == true -> 56.dp // Just BottomNav
-                else -> 0.dp
-            }
+            // Dynamically measured from the actual bottom overlay column
+            val extraBottomPadding = with(density) { bottomOverlayHeightPx.toDp() }
 
             content(
                 PaddingValues(
@@ -149,7 +152,9 @@ fun AppScaffold(
 
         // Layer MiniPlayer and bottom navigation at the bottom
         Column(
-            modifier = Modifier.align(Alignment.BottomCenter)
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .onSizeChanged { size -> bottomOverlayHeightPx = size.height }
         ) {
             // MiniPlayer above bottom navigation (Spotify-style) - only if config allows
             if (shouldShowMiniPlayer) {
