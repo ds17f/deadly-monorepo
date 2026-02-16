@@ -5,6 +5,9 @@ on:
     tags:
       - 'ios/v*'
 
+permissions:
+  contents: read
+
 jobs:
   build-release:
     runs-on: macos-latest
