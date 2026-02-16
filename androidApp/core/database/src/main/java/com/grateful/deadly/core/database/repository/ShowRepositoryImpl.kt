@@ -1,5 +1,6 @@
 package com.grateful.deadly.core.database.repository
 
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.RecordingDao
 import com.grateful.deadly.core.database.dao.DataVersionDao
@@ -25,9 +26,17 @@ class ShowRepositoryImpl @Inject constructor(
     @AppDatabase private val showDao: ShowDao,
     @AppDatabase private val recordingDao: RecordingDao,
     @AppDatabase private val dataVersionDao: DataVersionDao,
-    private val showMappers: ShowMappers
+    private val showMappers: ShowMappers,
+    private val appPreferences: AppPreferences
 ) : ShowRepository {
-    
+
+    private val hideRecordingless: Boolean
+        get() = appPreferences.showOnlyRecordedShows.value
+
+    private fun filterByRecordings(shows: List<Show>): List<Show> {
+        return if (hideRecordingless) shows.filter { it.recordingCount > 0 } else shows
+    }
+
     // Show queries - all return domain models
     override suspend fun getShowById(showId: String): Show? {
         return showDao.getShowById(showId)?.let { 
@@ -51,35 +60,35 @@ class ShowRepositoryImpl @Inject constructor(
     }
     
     override suspend fun getShowsByYear(year: Int): List<Show> {
-        return showMappers.entitiesToDomain(showDao.getShowsByYear(year))
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsByYear(year)))
     }
-    
+
     override suspend fun getShowsByYearMonth(yearMonth: String): List<Show> {
-        return showMappers.entitiesToDomain(showDao.getShowsByYearMonth(yearMonth))
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsByYearMonth(yearMonth)))
     }
-    
+
     override suspend fun getShowsByVenue(venueName: String): List<Show> {
-        return showMappers.entitiesToDomain(showDao.getShowsByVenue(venueName))
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsByVenue(venueName)))
     }
-    
+
     override suspend fun getShowsByCity(city: String): List<Show> {
-        return showMappers.entitiesToDomain(showDao.getShowsByCity(city))
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsByCity(city)))
     }
-    
+
     override suspend fun getShowsByState(state: String): List<Show> {
-        return showMappers.entitiesToDomain(showDao.getShowsByState(state))
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsByState(state)))
     }
-    
+
     override suspend fun getShowsBySong(songName: String): List<Show> {
-        return showMappers.entitiesToDomain(showDao.getShowsBySong(songName))
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsBySong(songName)))
     }
-    
+
     override suspend fun getTopRatedShows(limit: Int): List<Show> {
-        return showMappers.entitiesToDomain(showDao.getTopRatedShows(limit))
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getTopRatedShows(limit)))
     }
-    
+
     override suspend fun getRecentShows(limit: Int): List<Show> {
-        return showMappers.entitiesToDomain(showDao.getRecentShows(limit))
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getRecentShows(limit)))
     }
     
     override suspend fun getShowsForDate(month: Int, day: Int): List<Show> {
@@ -90,15 +99,21 @@ class ShowRepositoryImpl @Inject constructor(
     
     // Navigation queries - efficient chronological traversal
     override suspend fun getNextShowByDate(currentDate: String): Show? {
-        return showDao.getNextShowByDate(currentDate)?.let { 
-            showMappers.entityToDomain(it) 
+        val entity = if (hideRecordingless) {
+            showDao.getNextShowByDateWithRecordings(currentDate)
+        } else {
+            showDao.getNextShowByDate(currentDate)
         }
+        return entity?.let { showMappers.entityToDomain(it) }
     }
-    
+
     override suspend fun getPreviousShowByDate(currentDate: String): Show? {
-        return showDao.getPreviousShowByDate(currentDate)?.let { 
-            showMappers.entityToDomain(it) 
+        val entity = if (hideRecordingless) {
+            showDao.getPreviousShowByDateWithRecordings(currentDate)
+        } else {
+            showDao.getPreviousShowByDate(currentDate)
         }
+        return entity?.let { showMappers.entityToDomain(it) }
     }
     
     // Recording queries - all return domain models

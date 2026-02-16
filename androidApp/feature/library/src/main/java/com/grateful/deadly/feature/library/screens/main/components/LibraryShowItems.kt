@@ -9,6 +9,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -34,13 +35,16 @@ fun LibraryShowListItem(
     onLongPress: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val hasRecordings = show.recordingCount > 0
+
     Card(
         modifier = modifier
             .fillMaxWidth()
             .combinedClickable(
                 onClick = onClick,
                 onLongClick = onLongPress
-            ),
+            )
+            .then(if (!hasRecordings) Modifier.alpha(0.5f) else Modifier),
         colors = CardDefaults.cardColors(
             containerColor = Color.Transparent
         )
@@ -139,6 +143,15 @@ fun LibraryShowListItem(
                         }
                     }
                 }
+
+                if (!hasRecordings) {
+                    Text(
+                        text = "No recordings",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(top = 2.dp)
+                    )
+                }
             }
         }
     }
@@ -146,7 +159,7 @@ fun LibraryShowListItem(
 
 /**
  * Library Show Grid Item Component
- * 
+ *
  * Focused component for displaying library shows in grid view.
  * Compact layout showing essential information.
  */
@@ -158,12 +171,15 @@ fun LibraryShowGridItem(
     onLongPress: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val hasRecordings = show.recordingCount > 0
+
     Card(
         modifier = modifier
             .combinedClickable(
                 onClick = onClick,
                 onLongClick = onLongPress
-            ),
+            )
+            .then(if (!hasRecordings) Modifier.alpha(0.5f) else Modifier),
         colors = CardDefaults.cardColors(
             containerColor = Color.Transparent
         )
@@ -243,6 +259,14 @@ fun LibraryShowGridItem(
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
+
+                if (!hasRecordings) {
+                    Text(
+                        text = "No recordings",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
             }
         }
     }

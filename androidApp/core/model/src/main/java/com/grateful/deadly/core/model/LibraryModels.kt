@@ -122,7 +122,8 @@ data class LibraryShowViewModel(
     val isDownloading: Boolean,
     val libraryStatusDescription: String,
     val bestRecordingId: String? = null,
-    val coverImageUrl: String? = null
+    val coverImageUrl: String? = null,
+    val recordingCount: Int = 0
 )
 
 /**

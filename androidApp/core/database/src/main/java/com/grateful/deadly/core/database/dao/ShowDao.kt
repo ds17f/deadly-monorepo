@@ -78,9 +78,16 @@ interface ShowDao {
     @Query("SELECT * FROM shows WHERE date > :currentDate ORDER BY date ASC LIMIT 1")
     suspend fun getNextShowByDate(currentDate: String): ShowEntity?
     
-    @Query("SELECT * FROM shows WHERE date < :currentDate ORDER BY date DESC LIMIT 1") 
+    @Query("SELECT * FROM shows WHERE date < :currentDate ORDER BY date DESC LIMIT 1")
     suspend fun getPreviousShowByDate(currentDate: String): ShowEntity?
-    
+
+    // Navigation queries filtered to shows with recordings
+    @Query("SELECT * FROM shows WHERE date > :currentDate AND recordingCount > 0 ORDER BY date ASC LIMIT 1")
+    suspend fun getNextShowByDateWithRecordings(currentDate: String): ShowEntity?
+
+    @Query("SELECT * FROM shows WHERE date < :currentDate AND recordingCount > 0 ORDER BY date DESC LIMIT 1")
+    suspend fun getPreviousShowByDateWithRecordings(currentDate: String): ShowEntity?
+
     // Specific famous shows for verification
     @Query("SELECT * FROM shows WHERE date = '1977-05-08'")
     suspend fun getCornell77(): List<ShowEntity>

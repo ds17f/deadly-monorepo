@@ -3,6 +3,7 @@ package com.grateful.deadly.core.search
 import android.util.Log
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.api.search.SearchFilter
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.domain.repository.ShowRepository
@@ -24,7 +25,8 @@ import javax.inject.Singleton
 @Singleton
 class SearchServiceImpl @Inject constructor(
     private val showRepository: ShowRepository,
-    @AppDatabase private val showSearchDao: ShowSearchDao
+    @AppDatabase private val showSearchDao: ShowSearchDao,
+    private val appPreferences: AppPreferences
 ) : SearchService {
     
     companion object {
@@ -68,11 +70,18 @@ class SearchServiceImpl @Inject constructor(
             Log.d(TAG, "FTS5 search returned ${showIds.size} show IDs")
             
             // Get domain shows for all IDs (repository handles entity-to-domain conversion)
-            val shows = showIds.mapNotNull { showId -> 
+            val allShows = showIds.mapNotNull { showId ->
                 showRepository.getShowById(showId)
             }
-            
-            Log.d(TAG, "Retrieved ${shows.size} full shows")
+
+            // Filter out recordingless shows when preference is enabled
+            val shows = if (appPreferences.showOnlyRecordedShows.value) {
+                allShows.filter { it.recordingCount > 0 }
+            } else {
+                allShows
+            }
+
+            Log.d(TAG, "Retrieved ${allShows.size} full shows, ${shows.size} after recording filter")
             
             // Convert to SearchResultShow preserving FTS5 ranking
             val results = shows.mapIndexed { index: Int, show ->

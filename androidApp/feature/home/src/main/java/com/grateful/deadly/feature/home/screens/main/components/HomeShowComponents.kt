@@ -12,6 +12,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -74,6 +75,8 @@ fun RecentShowCard(
     onShowLongPress: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val hasRecordings = show.recordingCount > 0
+
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -81,7 +84,8 @@ fun RecentShowCard(
             .combinedClickable(
                 onClick = onShowClick,
                 onLongClick = onShowLongPress
-            ),
+            )
+            .then(if (!hasRecordings) Modifier.alpha(0.5f) else Modifier),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface
         ),
@@ -103,9 +107,9 @@ fun RecentShowCard(
                     .clip(RoundedCornerShape(6.dp)),
                 imageUrl = show.coverImageUrl
             )
-            
+
             Spacer(modifier = Modifier.width(6.dp))
-            
+
             // Show metadata
             Column(
                 modifier = Modifier.weight(1f),
@@ -119,7 +123,7 @@ fun RecentShowCard(
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
-                
+
                 // Location
                 Text(
                     text = show.location.displayText,
@@ -128,6 +132,14 @@ fun RecentShowCard(
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
+
+                if (!hasRecordings) {
+                    Text(
+                        text = "No recordings",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
             }
         }
     }
