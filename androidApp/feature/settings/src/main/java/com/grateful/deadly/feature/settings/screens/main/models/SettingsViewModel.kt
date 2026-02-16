@@ -5,6 +5,7 @@ import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.migration.MigrationImportService
 import com.grateful.deadly.core.database.migration.MigrationResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,6 +24,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
     private val migrationImportService: MigrationImportService,
+    private val appPreferences: AppPreferences,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -39,6 +41,12 @@ class SettingsViewModel @Inject constructor(
 
     private val _migrationImportState = MutableStateFlow<MigrationImportState>(MigrationImportState.Idle)
     val migrationImportState: StateFlow<MigrationImportState> = _migrationImportState
+
+    val showOnlyRecordedShows: StateFlow<Boolean> = appPreferences.showOnlyRecordedShows
+
+    fun toggleShowOnlyRecordedShows() {
+        appPreferences.setShowOnlyRecordedShows(!appPreferences.showOnlyRecordedShows.value)
+    }
 
     fun onImportMigration(uri: Uri) {
         viewModelScope.launch {

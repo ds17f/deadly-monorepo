@@ -16,6 +16,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.text.KeyboardOptions
@@ -369,13 +370,16 @@ private fun SearchResultCard(
     onShowSelected: (String) -> Unit,
     onShowLongPress: (String) -> Unit
 ) {
+    val hasRecordings = searchResult.show.recordingCount > 0
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .combinedClickable(
                 onClick = { onShowSelected(searchResult.show.id) },
                 onLongClick = { onShowLongPress(searchResult.show.id) }
-            ),
+            )
+            .then(if (!hasRecordings) Modifier.alpha(0.5f) else Modifier),
         colors = CardDefaults.cardColors(
             containerColor = Color.Transparent
         )
@@ -438,8 +442,16 @@ private fun SearchResultCard(
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
+
+                if (!hasRecordings) {
+                    Text(
+                        text = "No recordings",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
             }
-            
+
         }
     }
 }

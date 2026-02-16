@@ -192,7 +192,33 @@ fun PlaylistScreen(
                     }
                     
                     // Track list with progressive loading
-                    if (uiState.isTrackListLoading) {
+                    if (uiState.showData?.recordingCount == 0) {
+                        // No recordings available — show explicit message
+                        item {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(48.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Column(
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    Text(
+                                        text = "No recordings available for this show",
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                    Text(
+                                        text = "This concert was played but no audio recordings are known to exist.",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                        }
+                    } else if (uiState.isTrackListLoading) {
                         item {
                             Box(
                                 modifier = Modifier

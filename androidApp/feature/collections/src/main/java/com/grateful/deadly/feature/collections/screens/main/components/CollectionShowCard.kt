@@ -6,6 +6,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -26,8 +27,12 @@ fun CollectionShowCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val hasRecordings = show.recordingCount > 0
+
     Card(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier
+            .fillMaxWidth()
+            .then(if (!hasRecordings) Modifier.alpha(0.5f) else Modifier),
         onClick = onClick,
         shape = RoundedCornerShape(8.dp),
         colors = CardDefaults.cardColors(
@@ -72,13 +77,19 @@ fun CollectionShowCard(
                 )
             }
             
-            // Recording count (if available)
+            // Recording count
+            Spacer(modifier = Modifier.height(4.dp))
             if (show.recordingCount > 0) {
-                Spacer(modifier = Modifier.height(4.dp))
                 Text(
                     text = "${show.recordingCount} recording${if (show.recordingCount != 1) "s" else ""}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.primary
+                )
+            } else {
+                Text(
+                    text = "No recordings",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }

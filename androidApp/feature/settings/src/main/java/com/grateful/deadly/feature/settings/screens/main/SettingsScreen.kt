@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -61,18 +62,34 @@ fun SettingsScreen(
                 }
             }
             
-            // Future sections can be added here
-            // item {
-            //     SettingsSection(title = "Preferences") {
-            //         // App preferences UI
-            //     }
-            // }
-            //
-            // item {
-            //     SettingsSection(title = "About") {
-            //         // About app info
-            //     }
-            // }
+            // Preferences Section
+            item {
+                val showOnlyRecorded by viewModel.showOnlyRecordedShows.collectAsState()
+
+                SettingsSection(title = "Preferences") {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "Hide shows without recordings",
+                                style = MaterialTheme.typography.bodyLarge
+                            )
+                            Text(
+                                text = "Only show concerts that have audio recordings available",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        Switch(
+                            checked = showOnlyRecorded,
+                            onCheckedChange = { viewModel.toggleShowOnlyRecordedShows() }
+                        )
+                    }
+                }
+            }
     }
 }
 

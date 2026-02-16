@@ -162,7 +162,8 @@ class PlaylistServiceImpl @Inject constructor(
             hasPreviousShow = hasPrevious,
             isInLibrary = show.isInLibrary,
             downloadProgress = null, // TODO: Integrate with download service
-            coverImageUrl = show.coverImageUrl
+            coverImageUrl = show.coverImageUrl,
+            recordingCount = show.recordingCount
         )
     }
     
