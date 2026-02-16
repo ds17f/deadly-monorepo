@@ -1,0 +1,81 @@
+name: Android Promote
+
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: 'Promotion target'
+        required: true
+        type: choice
+        options:
+          - alpha
+          - production
+      version:
+        description: 'Version to promote (e.g. 2.1.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.stage }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
+      with:
+        ruby-version: '3.1'
+        bundler-cache: false
+
+    - name: Install fastlane
+      run: gem install fastlane
+
+    - name: Decode Play Store service account JSON
+      run: |
+        mkdir -p .secrets
+        echo "${{ secrets.PLAY_STORE_JSON_BASE64 }}" | base64 -d > .secrets/thedeadly-app-f48493c2a133.json
+
+    - name: Resolve stage display name
+      id: stage
+      run: |
+        if [ "${{ inputs.stage }}" = "alpha" ]; then
+          echo "display_name=Closed Alpha" >> "$GITHUB_OUTPUT"
+        else
+          echo "display_name=Production" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Promote to alpha
+      id: promote
+      if: inputs.stage == 'alpha'
+      run: cd androidApp && fastlane promote_internal_to_alpha
+
+    - name: Promote to production
+      id: promote-prod
+      if: inputs.stage == 'production'
+      run: cd androidApp && fastlane promote_alpha_to_production
+
+    - name: Update release status (success)
+      if: success()
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        chmod +x scripts/update-release-status.sh
+        ./scripts/update-release-status.sh "${{ inputs.version }}" "${{ steps.stage.outputs.display_name }}" deployed
+
+    - name: Update release status (failure)
+      if: failure() && (steps.promote.outcome == 'failure' || steps.promote-prod.outcome == 'failure')
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        chmod +x scripts/update-release-status.sh
+        ./scripts/update-release-status.sh "${{ inputs.version }}" "${{ steps.stage.outputs.display_name }}" failed
+
+    - name: Clean up secrets
+      if: always()
+      run: rm -rf .secrets

@@ -2,6 +2,7 @@
 .PHONY: release release-version release-dry-run ios-release release-all
 .PHONY: setup-signing setup-github-secrets
 .PHONY: android-build-release android-build-bundle android-deploy-testing
+.PHONY: promote-alpha promote-production
 .PHONY: ios-build-release ios-deploy-testflight
 
 # Default target shows all available commands
@@ -17,6 +18,10 @@ help:
 	@echo "  release-all          - Release both platforms with auto-versioning"
 	@echo "  setup-signing        - Generate keystore and .secrets/ setup"
 	@echo "  setup-github-secrets - Upload all secrets to GitHub repository"
+	@echo ""
+	@echo "PROMOTIONS:"
+	@echo "  promote-alpha        - Promote internal build to closed alpha (triggers workflow)"
+	@echo "  promote-production   - Promote alpha build to production (triggers workflow)"
 	@echo ""
 	@echo "ANDROID FASTLANE:"
 	@echo "  android-build-release - Build signed Android release APK"
@@ -99,6 +104,14 @@ setup-github-secrets:
 # =============================================================================
 # ANDROID FASTLANE
 # =============================================================================
+
+promote-alpha:
+	gh workflow run android-promote.yml -f stage=alpha \
+		-f version=$(shell grep VERSION_NAME version.properties | cut -d= -f2)
+
+promote-production:
+	gh workflow run android-promote.yml -f stage=production \
+		-f version=$(shell grep VERSION_NAME version.properties | cut -d= -f2)
 
 android-build-release:
 	@echo "Building Android release APK..."
