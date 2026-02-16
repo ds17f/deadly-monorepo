@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  build-release:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,8 +30,7 @@ jobs:
         bundler-cache: false
 
     - name: Install fastlane
-      run: |
-        gem install fastlane
+      run: gem install fastlane
 
     - name: Grant execute permission for gradlew
       run: chmod +x androidApp/gradlew
@@ -50,43 +49,51 @@ jobs:
         keyPassword=${{ secrets.ANDROID_KEY_PASSWORD }}
         EOF
 
-    - name: Build release APK with fastlane
-      run: |
-        cd androidApp
-        fastlane build_release
+    - name: Build release APK
+      run: cd androidApp && fastlane build_release
 
-    - name: Build release AAB with fastlane
-      run: |
-        cd androidApp
-        fastlane build_bundle
+    - name: Build release AAB
+      run: cd androidApp && fastlane build_bundle
 
-    - name: Decode Play Store service account JSON
-      run: |
-        echo "${{ secrets.PLAY_STORE_JSON_BASE64 }}" | base64 -d > .secrets/thedeadly-app-f48493c2a133.json
-
-    - name: Deploy to Play Store Internal Testing
-      run: |
-        cd androidApp
-        fastlane deploy_testing
-
-    - name: Deploy to Play Store Closed Testing (Alpha)
-      run: |
-        cd androidApp
-        fastlane deploy_alpha
-
-    - name: Upload signed APK (backup)
+    - name: Upload APK artifact
       uses: actions/upload-artifact@84480863f228bb9747b473957fcc9e309aa96097 # v4.4.2
       with:
         name: release-apk
         path: androidApp/app/build/outputs/apk/release/*.apk
         retention-days: 30
 
-    - name: Upload signed AAB (backup)
+    - name: Upload AAB artifact
       uses: actions/upload-artifact@84480863f228bb9747b473957fcc9e309aa96097 # v4.4.2
       with:
         name: release-aab
         path: androidApp/app/build/outputs/bundle/release/*.aab
         retention-days: 30
+
+    - name: Clean up secrets
+      if: always()
+      run: rm -rf .secrets
+
+  github-release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      with:
+        fetch-depth: 0
+
+    - name: Download APK artifact
+      uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
+      with:
+        name: release-apk
+        path: artifacts/apk
+
+    - name: Download AAB artifact
+      uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
+      with:
+        name: release-aab
+        path: artifacts/aab
 
     - name: Extract version from tag
       id: version
@@ -95,11 +102,24 @@ jobs:
     - name: Extract changelog for this version
       id: changelog
       run: |
-        # Extract the section for this version from CHANGELOG.md
         VERSION="${{ steps.version.outputs.version }}"
         NOTES=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" CHANGELOG.md)
-        # Write to file to preserve multiline content
-        echo "$NOTES" > /tmp/release-notes.md
+        echo "$NOTES" > /tmp/changelog-section.md
+
+    - name: Build release body
+      run: |
+        cat > /tmp/release-notes.md << 'HEADER'
+        ## Rollout Status
+
+        | Stage | Status | Updated |
+        |-------|--------|---------|
+        | Internal Testing | ⏳ Pending | — |
+        | Closed Alpha | ⏳ Pending | — |
+        | Production | ⏳ Pending | — |
+
+        ## Changes
+        HEADER
+        cat /tmp/changelog-section.md >> /tmp/release-notes.md
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda # v2.2.1
@@ -107,9 +127,63 @@ jobs:
         name: "Android v${{ steps.version.outputs.version }}"
         body_path: /tmp/release-notes.md
         files: |
-          androidApp/app/build/outputs/apk/release/*.apk
-          androidApp/app/build/outputs/bundle/release/*.aab
+          artifacts/apk/*.apk
+          artifacts/aab/*.aab
+
+  deploy-internal:
+    needs: github-release
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
+      with:
+        ruby-version: '3.1'
+        bundler-cache: false
+
+    - name: Install fastlane
+      run: gem install fastlane
+
+    - name: Download AAB artifact
+      uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
+      with:
+        name: release-aab
+        path: artifacts/aab
+
+    - name: Decode Play Store service account JSON
+      run: |
+        mkdir -p .secrets
+        echo "${{ secrets.PLAY_STORE_JSON_BASE64 }}" | base64 -d > .secrets/thedeadly-app-f48493c2a133.json
+
+    - name: Extract version from tag
+      id: version
+      run: echo "version=${GITHUB_REF_NAME#android/v}" >> "$GITHUB_OUTPUT"
+
+    - name: Upload to Play Store Internal Testing
+      id: deploy
+      run: |
+        cd androidApp
+        fastlane upload_internal aab:${{ github.workspace }}/artifacts/aab/app-release.aab
+
+    - name: Update release status (success)
+      if: success()
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        chmod +x scripts/update-release-status.sh
+        ./scripts/update-release-status.sh "${{ steps.version.outputs.version }}" "Internal Testing" deployed
+
+    - name: Update release status (failure)
+      if: failure() && steps.deploy.outcome == 'failure'
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        chmod +x scripts/update-release-status.sh
+        ./scripts/update-release-status.sh "${{ steps.version.outputs.version }}" "Internal Testing" failed
 
     - name: Clean up secrets
       if: always()
-      run: rm -f .secrets/my-release-key.jks .secrets/keystore.properties .secrets/thedeadly-app-f48493c2a133.json
+      run: rm -rf .secrets

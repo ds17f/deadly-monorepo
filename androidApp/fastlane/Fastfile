@@ -189,6 +189,37 @@ platform :android do
     UI.success("✅ Promoted latest build from Internal to Alpha!")
   end
 
+  desc "Upload AAB to Play Store Internal Testing (no build)"
+  lane :upload_internal do |options|
+    project_root = File.expand_path("..", __dir__)
+    aab_path = options[:aab] || "#{project_root}/app/build/outputs/bundle/release/app-release.aab"
+
+    upload_to_play_store(
+      track: 'internal',
+      aab: aab_path,
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+
+    UI.success("✅ AAB uploaded to Play Store Internal Testing!")
+  end
+
+  desc "Promote from Alpha to Production"
+  lane :promote_alpha_to_production do
+    upload_to_play_store(
+      track: 'alpha',
+      track_promote_to: 'production',
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+
+    UI.success("✅ Promoted latest build from Alpha to Production!")
+  end
+
   desc "Promote from Alpha to Beta"
   lane :promote_alpha_to_beta do
     upload_to_play_store(
