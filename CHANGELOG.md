@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.1.0] - 2026-02-15
+
+### New Features
+* Add settings toggle to hide shows without recordings (8e16191)
+* Add show cover art from ticket/photo images with data upgrade pipeline (b867e21)
+* Deploy to both internal testing and closed alpha on release (1c57520)
+
+### Other Changes
+* chore(gitignore): Ignore Pi and Images (c5c60fb)
+
+
 ## [2.0.0] - 2026-02-15
 
 ### New Features
@@ -70,8 +81,6 @@
 * Merge pull request #20 from ds17f/claude/dead-42-fix-search-navigation (86abd9e)
 * chore(git): ignore secrets directory at root (9f7da16)
 * first commit (36e5323)
-
-
 ## [2.0.0] - 2026-02-15
 
 ### New Features
