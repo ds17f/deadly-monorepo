@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.1.1] - 2026-02-16
+
+### Bug Fixes
+* Dynamically measure miniplayer bottom padding instead of hardcoding (490efeb)
+* Restructure release pipeline into multi-job workflow with gated promotions (46a5743)
+
+### Other Changes
+* security: Remove debug Play Store auth workflow (3252f6d)
+* security: Add repo hardening — CODEOWNERS, workflow permissions, rulesets (45b413c)
+
+
 ## [2.1.0] - 2026-02-15
 
 ### New Features
@@ -9,8 +20,6 @@
 
 ### Other Changes
 * chore(gitignore): Ignore Pi and Images (c5c60fb)
-
-
 ## [2.0.0] - 2026-02-15
 
 ### New Features
