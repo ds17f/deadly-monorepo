@@ -40,6 +40,7 @@ class SplashService @Inject constructor(
             val phase = when (dbProgress.phase) {
                 "IDLE" -> Phase.IDLE
                 "CHECKING" -> Phase.CHECKING
+                "UPGRADING" -> Phase.UPGRADING
                 "USING_LOCAL" -> Phase.USING_LOCAL
                 "DOWNLOADING" -> Phase.DOWNLOADING
                 "EXTRACTING" -> Phase.EXTRACTING
@@ -52,7 +53,7 @@ class SplashService @Inject constructor(
             }
             
             // Initialize start time when we begin processing
-            if (initStartTimeMs == 0L && phase in listOf(Phase.CHECKING, Phase.USING_LOCAL, Phase.DOWNLOADING, Phase.EXTRACTING, Phase.IMPORTING_SHOWS)) {
+            if (initStartTimeMs == 0L && phase in listOf(Phase.CHECKING, Phase.UPGRADING, Phase.USING_LOCAL, Phase.DOWNLOADING, Phase.EXTRACTING, Phase.IMPORTING_SHOWS)) {
                 initStartTimeMs = System.currentTimeMillis()
                 Log.d(TAG, "Database initialization started at ${initStartTimeMs}")
             }

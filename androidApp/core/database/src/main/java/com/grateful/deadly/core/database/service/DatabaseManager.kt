@@ -31,6 +31,7 @@ class DatabaseManager @Inject constructor(
     
     companion object {
         private const val TAG = "DatabaseManager"
+        private const val REQUIRED_DATA_VERSION = "2.3.0"
     }
     
     private val _progress = MutableStateFlow(DatabaseProgress())
@@ -72,6 +73,15 @@ class DatabaseManager @Inject constructor(
     suspend fun initializeDataIfNeeded(): DatabaseImportResult {
         return try {
             if (isDataInitialized()) {
+                // Check if data needs upgrade
+                val currentVersion = dataVersionDao.getCurrentVersion()
+                if (isDataVersionStale(currentVersion)) {
+                    Log.i(TAG, "Data version $currentVersion is below required $REQUIRED_DATA_VERSION, upgrading...")
+                    _progress.value = DatabaseProgress(phase = "UPGRADING", currentItem = "New data available, upgrading...")
+                    deleteStaleLocalDataFile()
+                    return initializeFromSource(DatabaseSource.DATA_IMPORT)
+                }
+
                 Log.i(TAG, "Data already initialized")
                 // Get actual counts from database
                 val healthInfo = databaseHealthService.getDatabaseCounts()
@@ -184,7 +194,8 @@ class DatabaseManager @Inject constructor(
                             Log.i(TAG, "Importing extracted data...")
                             val importResult = dataImportService.importFromExtractedFiles(
                                 showsDirectory = extractionResult.showsDirectory,
-                                recordingsDirectory = extractionResult.recordingsDirectory
+                                recordingsDirectory = extractionResult.recordingsDirectory,
+                                extractionDirectory = extractionResult.extractionDirectory
                             ) { progress ->
                                 _progress.value = DatabaseProgress(
                                     phase = progress.phase,
@@ -304,6 +315,30 @@ class DatabaseManager @Inject constructor(
         }
     }
     
+    private fun isDataVersionStale(currentVersion: String?): Boolean {
+        if (currentVersion.isNullOrBlank()) return true
+        return compareVersions(currentVersion, REQUIRED_DATA_VERSION) < 0
+    }
+
+    private fun compareVersions(a: String, b: String): Int {
+        val aParts = a.split(".").map { it.toIntOrNull() ?: 0 }
+        val bParts = b.split(".").map { it.toIntOrNull() ?: 0 }
+        for (i in 0 until maxOf(aParts.size, bParts.size)) {
+            val av = aParts.getOrElse(i) { 0 }
+            val bv = bParts.getOrElse(i) { 0 }
+            if (av != bv) return av.compareTo(bv)
+        }
+        return 0
+    }
+
+    private fun deleteStaleLocalDataFile() {
+        val localFile = findLocalDataFile()
+        if (localFile != null) {
+            Log.i(TAG, "Deleting stale local data file: ${localFile.name} (${localFile.length()} bytes)")
+            localFile.delete()
+        }
+    }
+
     private suspend fun findAvailableDataSources(): AvailableSources {
         val sources = mutableListOf<DatabaseSource>()
         

@@ -4,6 +4,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import android.content.Context
+import com.grateful.deadly.core.database.migration.DatabaseMigrations
 import com.grateful.deadly.core.database.entities.ShowEntity
 import com.grateful.deadly.core.database.entities.ShowSearchEntity
 import com.grateful.deadly.core.database.entities.RecordingEntity
@@ -29,7 +30,7 @@ import com.grateful.deadly.core.database.dao.CollectionsDao
         RecentShowEntity::class,
         DeadCollectionEntity::class
     ],
-    version = 12,
+    version = 13,
     exportSchema = false
 )
 abstract class DeadlyDatabase : RoomDatabase() {
@@ -51,7 +52,8 @@ abstract class DeadlyDatabase : RoomDatabase() {
                 DeadlyDatabase::class.java,
                 DATABASE_NAME
             )
-            .fallbackToDestructiveMigration() // Clean rebuild on schema version change
+            .addMigrations(DatabaseMigrations.MIGRATION_12_13)
+            .fallbackToDestructiveMigration() // Safety net for fresh installs or skipped versions
             .build()
         }
     }

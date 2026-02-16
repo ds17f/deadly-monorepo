@@ -279,7 +279,8 @@ class LibraryViewModel @Inject constructor(
             isDownloaded = libraryShow.isDownloaded,
             isDownloading = libraryShow.isDownloading,
             libraryStatusDescription = libraryShow.libraryStatusDescription,
-            bestRecordingId = libraryShow.show.bestRecordingId
+            bestRecordingId = libraryShow.show.bestRecordingId,
+            coverImageUrl = libraryShow.show.coverImageUrl
         )
     }
 }

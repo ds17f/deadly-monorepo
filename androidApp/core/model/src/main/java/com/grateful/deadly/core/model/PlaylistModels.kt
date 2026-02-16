@@ -35,7 +35,8 @@ data class PlaylistShowViewModel(
     val hasNextShow: Boolean,
     val hasPreviousShow: Boolean,
     val isInLibrary: Boolean = false,
-    val downloadProgress: Float? = null // null = not downloaded, 0.0-1.0 = downloading, 1.0 = complete
+    val downloadProgress: Float? = null, // null = not downloaded, 0.0-1.0 = downloading, 1.0 = complete
+    val coverImageUrl: String? = null
 )
 
 /**

@@ -100,7 +100,8 @@ fun RecentShowCard(
                 contentDescription = null,
                 modifier = Modifier
                     .size(56.dp)
-                    .clip(RoundedCornerShape(6.dp))
+                    .clip(RoundedCornerShape(6.dp)),
+                imageUrl = show.coverImageUrl
             )
             
             Spacer(modifier = Modifier.width(6.dp))

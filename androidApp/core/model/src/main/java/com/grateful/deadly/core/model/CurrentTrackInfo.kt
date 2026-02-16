@@ -21,6 +21,7 @@ data class CurrentTrackInfo(
     val showDate: String,           // e.g., "1977-05-08"
     val venue: String?,             // e.g., "Barton Hall"
     val location: String?,          // e.g., "Cornell University, Ithaca, NY"
+    val coverImageUrl: String? = null, // Show cover image (ticket/photo art)
     
     // Track-specific data
     val songTitle: String,          // e.g., "Scarlet Begonias"

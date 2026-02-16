@@ -110,7 +110,13 @@ class MetadataHydratorService @Inject constructor(
             return mediaItem.buildUpon()
                 .setMediaMetadata(
                     mediaItem.mediaMetadata.buildUpon()
-                        .setArtworkUri(com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recording.identifier))
+                        .setArtworkUri(
+                            if (!show.coverImageUrl.isNullOrBlank()) {
+                                Uri.parse(show.coverImageUrl)
+                            } else {
+                                com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recording.identifier)
+                            }
+                        )
                         .setArtist(
                             if (!show.venue.name.isNullOrBlank()) {
                                 "${formatShowDate(show.date)} - ${show.venue.name}"
@@ -138,7 +144,8 @@ class MetadataHydratorService @Inject constructor(
                             putString("showDate", show.date)
                             putString("venue", show.venue.name)
                             putString("location", show.location.displayText)
-                            
+                            show.coverImageUrl?.let { putString("coverImageUrl", it) }
+
                             // Add computed values
                             putString("hydratedAt", System.currentTimeMillis().toString())
                             putBoolean("isHydrated", true)

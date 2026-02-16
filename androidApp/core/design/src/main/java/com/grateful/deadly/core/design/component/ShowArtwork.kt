@@ -4,6 +4,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -51,6 +55,7 @@ fun ShowArtwork(
     recordingId: String?,
     contentDescription: String?,
     modifier: Modifier = Modifier,
+    imageUrl: String? = null,
     placeholderContent: @Composable (() -> Unit)? = null
 ) {
     val fallback: @Composable () -> Unit = {
@@ -63,6 +68,29 @@ fun ShowArtwork(
         }
     }
 
+    // Try pre-resolved image URL first (ticket/photo cover art)
+    if (!imageUrl.isNullOrBlank()) {
+        var imageUrlFailed by remember(imageUrl) { mutableStateOf(false) }
+
+        if (!imageUrlFailed) {
+            SubcomposeAsyncImage(
+                model = imageUrl,
+                contentDescription = contentDescription,
+                contentScale = ContentScale.Crop,
+                modifier = modifier,
+                loading = { fallback() },
+                error = {
+                    imageUrlFailed = true
+                },
+                success = {
+                    SubcomposeAsyncImageContent(contentScale = ContentScale.Crop)
+                }
+            )
+            return
+        }
+    }
+
+    // Fall through to archive.org thumbnail
     if (recordingId.isNullOrBlank()) {
         Box(modifier = modifier, contentAlignment = Alignment.Center) {
             fallback()

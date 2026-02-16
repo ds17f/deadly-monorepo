@@ -124,12 +124,13 @@ class MediaControllerRepository @Inject constructor(
      * Loads tracks from ArchiveService and starts playback
      */
     suspend fun playAll(
-        recordingId: String, 
-        format: String, 
+        recordingId: String,
+        format: String,
         showId: String,
         showDate: String,
         venue: String?,
         location: String?,
+        coverImageUrl: String? = null,
         startPosition: Long = 0L,
         autoPlay: Boolean = true
     ) {
@@ -173,8 +174,8 @@ class MediaControllerRepository @Inject constructor(
                         }
                         
                         // Convert to MediaItems
-                        val mediaItems = convertToMediaItems(recordingId, filteredTracks, showId, showDate, venue, location, format)
-                        
+                        val mediaItems = convertToMediaItems(recordingId, filteredTracks, showId, showDate, venue, location, format, coverImageUrl)
+
                         // Set media items and optionally start playing at position
                         Log.d(TAG, "🕒🎵 [URL] Setting ${mediaItems.size} media items to MediaController at ${System.currentTimeMillis()}")
                         mediaItems.forEach { item ->
@@ -218,13 +219,14 @@ class MediaControllerRepository @Inject constructor(
      * Loads full recording queue, then plays specified track at specified position
      */
     suspend fun playTrack(
-        trackIndex: Int, 
-        recordingId: String, 
-        format: String, 
+        trackIndex: Int,
+        recordingId: String,
+        format: String,
         showId: String,
         showDate: String,
         venue: String?,
         location: String?,
+        coverImageUrl: String? = null,
         position: Long = 0L,
         autoPlay: Boolean = true
     ) {
@@ -270,8 +272,8 @@ class MediaControllerRepository @Inject constructor(
                             _duration.value = parseDurationToMs(selectedTrack.duration)
                             
                             // Convert to MediaItems
-                            val mediaItems = convertToMediaItems(recordingId, filteredTracks, showId, showDate, venue, location, format)
-                            
+                            val mediaItems = convertToMediaItems(recordingId, filteredTracks, showId, showDate, venue, location, format, coverImageUrl)
+
                             // Set media items and seek to specific track at position
                             Log.d(TAG, "🕒🎵 [URL] Setting ${mediaItems.size} media items for track $trackIndex at ${System.currentTimeMillis()}")
                             mediaItems.forEachIndexed { index, item ->
@@ -579,13 +581,14 @@ class MediaControllerRepository @Inject constructor(
      * Convert Track models to MediaItems for ExoPlayer
      */
     private fun convertToMediaItems(
-        recordingId: String, 
+        recordingId: String,
         tracks: List<Track>,
         showId: String,
         showDate: String,
         venue: String?,
         location: String?,
-        format: String
+        format: String,
+        coverImageUrl: String? = null
     ): List<androidx.media3.common.MediaItem> {
         return tracks.mapIndexed { index, track ->
             // Use track name/filename for URL construction if no direct URL available
@@ -614,7 +617,13 @@ class MediaControllerRepository @Inject constructor(
                             }
                         )
                         .setTrackNumber(track.trackNumber)
-                        .setArtworkUri(com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recordingId))
+                        .setArtworkUri(
+                            if (!coverImageUrl.isNullOrBlank()) {
+                                Uri.parse(coverImageUrl)
+                            } else {
+                                com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recordingId)
+                            }
+                        )
                         .setExtras(Bundle().apply {
                             putString("showId", showId)
                             putString("recordingId", recordingId)
@@ -624,6 +633,7 @@ class MediaControllerRepository @Inject constructor(
                             putString("filename", track.name)
                             putString("format", format)
                             putString("trackUrl", uri.toString())
+                            coverImageUrl?.let { putString("coverImageUrl", it) }
                         })
                         .build()
                 )

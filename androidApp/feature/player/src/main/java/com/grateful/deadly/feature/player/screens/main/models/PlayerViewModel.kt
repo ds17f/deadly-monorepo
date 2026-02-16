@@ -67,7 +67,8 @@ class PlayerViewModel @Inject constructor(
                 showDate = trackInfo.showDate,
                 venue = trackInfo.venue ?: "",
                 duration = playerService.formatDuration(playbackStatus.duration),
-                recordingId = trackInfo.recordingId
+                recordingId = trackInfo.recordingId,
+                coverImageUrl = trackInfo.coverImageUrl
             ),
             navigationInfo = NavigationInfo(
                 showId = trackInfo.showId,
@@ -291,7 +292,8 @@ data class TrackDisplayInfo(
     val showDate: String,
     val venue: String,
     val duration: String,
-    val recordingId: String? = null
+    val recordingId: String? = null,
+    val coverImageUrl: String? = null
 )
 
 /**

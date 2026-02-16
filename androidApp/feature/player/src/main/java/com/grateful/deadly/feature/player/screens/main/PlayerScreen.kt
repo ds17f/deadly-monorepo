@@ -253,6 +253,7 @@ fun PlayerScreen(
                         // Large cover art section with generous vertical padding
                         PlayerCoverArt(
                             recordingId = uiState.trackDisplayInfo.recordingId,
+                            imageUrl = uiState.trackDisplayInfo.coverImageUrl,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .height(450.dp)
