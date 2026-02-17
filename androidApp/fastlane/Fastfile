@@ -177,13 +177,16 @@ platform :android do
 
   desc "Promote from Internal to Alpha"
   lane :promote_internal_to_alpha do
+    release_notes_text = ENV['RELEASE_NOTES'] || ''
+
     upload_to_play_store(
       track: 'internal',
       track_promote_to: 'alpha',
       skip_upload_aab: true,
       skip_upload_metadata: true,
       skip_upload_images: true,
-      skip_upload_screenshots: true
+      skip_upload_screenshots: true,
+      release_notes: release_notes_text.empty? ? nil : { 'en-US' => release_notes_text }
     )
 
     UI.success("✅ Promoted latest build from Internal to Alpha!")
@@ -193,6 +196,7 @@ platform :android do
   lane :upload_internal do |options|
     project_root = File.expand_path("..", __dir__)
     aab_path = options[:aab] || "#{project_root}/app/build/outputs/bundle/release/app-release.aab"
+    release_notes_text = ENV['RELEASE_NOTES'] || ''
 
     upload_to_play_store(
       track: 'internal',
@@ -200,7 +204,8 @@ platform :android do
       skip_upload_apk: true,
       skip_upload_metadata: true,
       skip_upload_images: true,
-      skip_upload_screenshots: true
+      skip_upload_screenshots: true,
+      release_notes: release_notes_text.empty? ? nil : { 'en-US' => release_notes_text }
     )
 
     UI.success("✅ AAB uploaded to Play Store Internal Testing!")
@@ -208,13 +213,16 @@ platform :android do
 
   desc "Promote from Alpha to Production"
   lane :promote_alpha_to_production do
+    release_notes_text = ENV['RELEASE_NOTES'] || ''
+
     upload_to_play_store(
       track: 'alpha',
       track_promote_to: 'production',
       skip_upload_aab: true,
       skip_upload_metadata: true,
       skip_upload_images: true,
-      skip_upload_screenshots: true
+      skip_upload_screenshots: true,
+      release_notes: release_notes_text.empty? ? nil : { 'en-US' => release_notes_text }
     )
 
     UI.success("✅ Promoted latest build from Alpha to Production!")
