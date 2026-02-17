@@ -179,6 +179,12 @@ platform :android do
   lane :promote_internal_to_alpha do
     release_notes_text = ENV['RELEASE_NOTES'] || ''
 
+    unless release_notes_text.empty?
+      changelog_dir = "/tmp/fl_metadata/en-US/changelogs"
+      sh("mkdir -p '#{changelog_dir}'")
+      File.write("#{changelog_dir}/default.txt", release_notes_text)
+    end
+
     upload_to_play_store(
       track: 'internal',
       track_promote_to: 'alpha',
@@ -186,7 +192,8 @@ platform :android do
       skip_upload_metadata: true,
       skip_upload_images: true,
       skip_upload_screenshots: true,
-      release_notes: release_notes_text.empty? ? nil : { 'en-US' => release_notes_text }
+      skip_upload_changelogs: release_notes_text.empty?,
+      metadata_path: release_notes_text.empty? ? nil : "/tmp/fl_metadata"
     )
 
     UI.success("✅ Promoted latest build from Internal to Alpha!")
@@ -198,6 +205,12 @@ platform :android do
     aab_path = options[:aab] || "#{project_root}/app/build/outputs/bundle/release/app-release.aab"
     release_notes_text = ENV['RELEASE_NOTES'] || ''
 
+    unless release_notes_text.empty?
+      changelog_dir = "/tmp/fl_metadata/en-US/changelogs"
+      sh("mkdir -p '#{changelog_dir}'")
+      File.write("#{changelog_dir}/default.txt", release_notes_text)
+    end
+
     upload_to_play_store(
       track: 'internal',
       aab: aab_path,
@@ -205,7 +218,8 @@ platform :android do
       skip_upload_metadata: true,
       skip_upload_images: true,
       skip_upload_screenshots: true,
-      release_notes: release_notes_text.empty? ? nil : { 'en-US' => release_notes_text }
+      skip_upload_changelogs: release_notes_text.empty?,
+      metadata_path: release_notes_text.empty? ? nil : "/tmp/fl_metadata"
     )
 
     UI.success("✅ AAB uploaded to Play Store Internal Testing!")
@@ -215,6 +229,12 @@ platform :android do
   lane :promote_alpha_to_production do
     release_notes_text = ENV['RELEASE_NOTES'] || ''
 
+    unless release_notes_text.empty?
+      changelog_dir = "/tmp/fl_metadata/en-US/changelogs"
+      sh("mkdir -p '#{changelog_dir}'")
+      File.write("#{changelog_dir}/default.txt", release_notes_text)
+    end
+
     upload_to_play_store(
       track: 'alpha',
       track_promote_to: 'production',
@@ -222,7 +242,8 @@ platform :android do
       skip_upload_metadata: true,
       skip_upload_images: true,
       skip_upload_screenshots: true,
-      release_notes: release_notes_text.empty? ? nil : { 'en-US' => release_notes_text }
+      skip_upload_changelogs: release_notes_text.empty?,
+      metadata_path: release_notes_text.empty? ? nil : "/tmp/fl_metadata"
     )
 
     UI.success("✅ Promoted latest build from Alpha to Production!")
