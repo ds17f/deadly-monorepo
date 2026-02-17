@@ -142,6 +142,12 @@ interface PlaylistService {
     suspend fun getShowCollections(showId: String): List<DeadCollection>
     
     /**
+     * Refresh download status flags on existing track view models without network calls.
+     * Returns the same list with updated isDownloaded / downloadProgress fields.
+     */
+    fun refreshTrackDownloadFlags(tracks: List<PlaylistTrackViewModel>): List<PlaylistTrackViewModel>
+
+    /**
      * Observe download progress for a show reactively
      */
     fun observeShowDownloadProgress(showId: String): Flow<ShowDownloadProgress>

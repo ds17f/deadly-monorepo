@@ -570,6 +570,19 @@ class PlaylistServiceImpl @Inject constructor(
         Log.d(TAG, "Reset to recommended recording successfully: $recommendedRecordingId")
     }
     
+    override fun refreshTrackDownloadFlags(tracks: List<PlaylistTrackViewModel>): List<PlaylistTrackViewModel> {
+        val recordingId = currentRecordingId ?: return tracks
+        return tracks.map { track ->
+            val trackUri = "https://archive.org/download/$recordingId/${track.filename}"
+            val isCached = mediaDownloadManager.isTrackCached(trackUri)
+            val isDownloading = !isCached && mediaDownloadManager.isTrackDownloading(trackUri)
+            track.copy(
+                isDownloaded = isCached,
+                downloadProgress = if (isDownloading) 0f else null
+            )
+        }
+    }
+
     override fun observeShowDownloadProgress(showId: String): Flow<ShowDownloadProgress> {
         return mediaDownloadManager.observeShowDownloadProgress(showId)
     }

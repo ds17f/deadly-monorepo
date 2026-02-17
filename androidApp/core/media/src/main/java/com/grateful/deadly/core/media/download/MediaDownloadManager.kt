@@ -338,13 +338,17 @@ class MediaDownloadManager @Inject constructor(
     private fun computeAllShowProgress(): Map<String, ShowDownloadProgress> {
         val allDownloads = getAllDownloads()
         val showGroups = allDownloads.groupBy { extractShowId(it) }
-        return showGroups.mapNotNull { (showId, _) ->
-            showId?.let { it to computeShowProgress(it) }
+        return showGroups.mapNotNull { (showId, downloads) ->
+            showId?.let { it to computeShowProgressFromDownloads(it, downloads) }
         }.toMap()
     }
 
     private fun computeShowProgress(showId: String): ShowDownloadProgress {
         val downloads = getDownloadsForShow(showId)
+        return computeShowProgressFromDownloads(showId, downloads)
+    }
+
+    private fun computeShowProgressFromDownloads(showId: String, downloads: List<Download>): ShowDownloadProgress {
         if (downloads.isEmpty()) {
             return ShowDownloadProgress(
                 showId = showId,
@@ -361,14 +365,11 @@ class MediaDownloadManager @Inject constructor(
         val totalBytes = downloads.sumOf { it.contentLength.coerceAtLeast(0) }
         val tracksCompleted = downloads.count { it.state == Download.STATE_COMPLETED }
 
-        // Always use per-track percentDownloaded average — avoids inflated progress
-        // when some tracks haven't reported contentLength yet
         val overallProgress = downloads
             .map { it.percentDownloaded / 100f }
             .average()
             .toFloat()
 
-        // Inline status from already-fetched downloads to avoid a second cursor scan
         val states = downloads.map { it.state }
         val status = when {
             states.all { it == Download.STATE_COMPLETED } -> LibraryDownloadStatus.COMPLETED
