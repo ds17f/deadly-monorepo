@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.3.0] - 2026-02-17
+
+### New Features
+* Push release notes to Play Store on deploy and promote (baa67e3)
+* Add pause/resume downloads with Downloads screen integration (d551ce4)
+* Make active download items tappable to navigate to show (d60f3c1)
+* Add Downloads screen with cover art, navigation from Library (9883ba0)
+* Add client-side sorting to search results (cfd6517)
+
+### Bug Fixes
+* Download selected recording and show 3-state track download icons (f1442f5)
+* Tapping media notification now opens the app (db29a4a)
+
+### Performance Improvements
+* Fix download-related UI bottlenecks across three hot paths (cc3c55b)
+
+
 ## [2.2.0] - 2026-02-17
 
 ### New Features
@@ -7,8 +24,6 @@
 
 ### Bug Fixes
 * Resolve download UI reactivity — stable scroll, accurate progress, icon clearing (6965ca4)
-
-
 ## [2.1.1] - 2026-02-16
 
 ### Bug Fixes
