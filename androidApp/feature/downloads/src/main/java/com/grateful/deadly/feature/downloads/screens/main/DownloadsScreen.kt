@@ -145,6 +145,7 @@ private fun DownloadsContent(
             items(uiState.activeDownloads, key = { "active-${it.showId}" }) { show ->
                 ActiveDownloadItem(
                     show = show,
+                    onClick = { onShowClick(show) },
                     onCancel = { onCancelDownload(show.showId) }
                 )
             }
@@ -224,11 +225,13 @@ private fun DownloadsHeader(
 @Composable
 private fun ActiveDownloadItem(
     show: DownloadedShowViewModel,
+    onClick: () -> Unit,
     onCancel: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .clickable(onClick = onClick)
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
