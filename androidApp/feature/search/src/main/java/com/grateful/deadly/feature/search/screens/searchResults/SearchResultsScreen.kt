@@ -1,6 +1,7 @@
 package com.grateful.deadly.feature.search.screens.searchResults
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
@@ -55,6 +56,15 @@ fun SearchResultsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
+    // Sort state (local to composable, resets on new search session)
+    var sortBy by remember { mutableStateOf(SearchSortOption.RELEVANCE) }
+    var sortDirection by remember { mutableStateOf(SearchSortDirection.DESCENDING) }
+
+    // Apply sorting to results
+    val sortedResults = remember(uiState.searchResults, sortBy, sortDirection) {
+        applySorting(uiState.searchResults, sortBy, sortDirection)
+    }
+
     // Pre-fill search when navigating from browse buttons
     LaunchedEffect(initialQuery) {
         if (initialQuery.isNotEmpty()) {
@@ -73,7 +83,47 @@ fun SearchResultsScreen(
             onSearchQueryChange = viewModel::onSearchQueryChanged,
             onNavigateBack = onNavigateBack
         )
-        
+
+        // Pinned results header with title, count, and sort control
+        if (uiState.searchQuery.isNotEmpty() &&
+            uiState.searchStatus == SearchStatus.SUCCESS &&
+            uiState.searchResults.isNotEmpty()
+        ) {
+            var showSortSheet by remember { mutableStateOf(false) }
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Search Results (${uiState.searchStats.totalResults})",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                SearchSortButton(
+                    sortBy = sortBy,
+                    sortDirection = sortDirection,
+                    onClick = { showSortSheet = true }
+                )
+            }
+
+            if (showSortSheet) {
+                SearchSortBottomSheet(
+                    currentSortOption = sortBy,
+                    currentSortDirection = sortDirection,
+                    onSortOptionSelected = { option, direction ->
+                        sortBy = option
+                        sortDirection = direction
+                        showSortSheet = false
+                    },
+                    onDismiss = { showSortSheet = false }
+                )
+            }
+        }
+
         // Search content that scrolls underneath the fixed header
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
@@ -100,12 +150,11 @@ fun SearchResultsScreen(
                         }
                     )
                 }
-                
+
                 item {
                     SearchResultsSection(
-                        searchResults = uiState.searchResults,
+                        searchResults = sortedResults,
                         searchStatus = uiState.searchStatus,
-                        searchStats = uiState.searchStats,
                         onShowSelected = onNavigateToShow
                     )
                 }
@@ -288,33 +337,9 @@ private fun SuggestedSearchesSection(
 private fun SearchResultsSection(
     searchResults: List<SearchResultShow>,
     searchStatus: SearchStatus,
-    searchStats: SearchStats,
     onShowSelected: (String) -> Unit
 ) {
     Column {
-        // Results header with stats
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 12.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = "Search Results",
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold
-            )
-            
-            if (searchResults.isNotEmpty()) {
-                Text(
-                    text = "${searchStats.totalResults} results (${searchStats.searchDuration}ms)",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        }
-        
         when (searchStatus) {
             SearchStatus.SEARCHING -> {
                 Text(
@@ -479,6 +504,180 @@ private fun SearchMatchIndicator(matchType: SearchMatchType) {
     Spacer(modifier = Modifier.width(4.dp))
 }
 
+
+/**
+ * Sort selector button for search results
+ */
+@Composable
+private fun SearchSortButton(
+    sortBy: SearchSortOption,
+    sortDirection: SearchSortDirection,
+    onClick: () -> Unit
+) {
+    TextButton(onClick = onClick) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(
+                painter = IconResources.Navigation.SwapVert(),
+                contentDescription = null,
+                modifier = Modifier.size(16.dp)
+            )
+            Spacer(modifier = Modifier.width(4.dp))
+            Text(text = sortBy.displayName)
+            Spacer(modifier = Modifier.width(4.dp))
+            Icon(
+                painter = if (sortDirection == SearchSortDirection.ASCENDING) {
+                    IconResources.Navigation.KeyboardArrowUp()
+                } else {
+                    IconResources.Navigation.KeyboardArrowDown()
+                },
+                contentDescription = null,
+                modifier = Modifier.size(16.dp)
+            )
+        }
+    }
+}
+
+/**
+ * Bottom sheet for selecting search sort option and direction
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SearchSortBottomSheet(
+    currentSortOption: SearchSortOption,
+    currentSortDirection: SearchSortDirection,
+    onSortOptionSelected: (SearchSortOption, SearchSortDirection) -> Unit,
+    onDismiss: () -> Unit
+) {
+    ModalBottomSheet(
+        onDismissRequest = onDismiss
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
+            Text(
+                text = "Sort results by",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+
+            // Sort option rows — one radio per option
+            SearchSortOption.entries.forEach { option ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable {
+                            val direction = defaultDirectionFor(option)
+                            onSortOptionSelected(option, direction)
+                        }
+                        .padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = currentSortOption == option,
+                        onClick = {
+                            val direction = defaultDirectionFor(option)
+                            onSortOptionSelected(option, direction)
+                        }
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        text = option.displayName,
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
+            }
+
+            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+
+            // Direction toggle
+            Text(
+                text = "Direction",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.padding(bottom = 4.dp)
+            )
+
+            SearchSortDirection.entries.forEach { direction ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable {
+                            onSortOptionSelected(currentSortOption, direction)
+                        }
+                        .padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = currentSortDirection == direction,
+                        onClick = {
+                            onSortOptionSelected(currentSortOption, direction)
+                        }
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        text = direction.displayName,
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+    }
+}
+
+private fun defaultDirectionFor(option: SearchSortOption): SearchSortDirection {
+    return when (option) {
+        SearchSortOption.VENUE, SearchSortOption.STATE -> SearchSortDirection.ASCENDING
+        else -> SearchSortDirection.DESCENDING
+    }
+}
+
+/**
+ * Apply sorting to search results
+ */
+private fun applySorting(
+    results: List<SearchResultShow>,
+    sortBy: SearchSortOption,
+    sortDirection: SearchSortDirection
+): List<SearchResultShow> {
+    if (results.isEmpty()) return results
+
+    return when (sortBy) {
+        SearchSortOption.RELEVANCE -> {
+            if (sortDirection == SearchSortDirection.DESCENDING)
+                results.sortedByDescending { it.relevanceScore }
+            else
+                results.sortedBy { it.relevanceScore }
+        }
+        SearchSortOption.DATE_OF_SHOW -> {
+            if (sortDirection == SearchSortDirection.DESCENDING)
+                results.sortedByDescending { it.show.date }
+            else
+                results.sortedBy { it.show.date }
+        }
+        SearchSortOption.VENUE -> {
+            if (sortDirection == SearchSortDirection.ASCENDING)
+                results.sortedBy { it.show.venue.name }
+            else
+                results.sortedByDescending { it.show.venue.name }
+        }
+        SearchSortOption.STATE -> {
+            if (sortDirection == SearchSortDirection.ASCENDING)
+                results.sortedBy { it.show.location.state ?: "" }
+            else
+                results.sortedByDescending { it.show.location.state ?: "" }
+        }
+        SearchSortOption.RATING -> {
+            if (sortDirection == SearchSortDirection.DESCENDING)
+                results.sortedByDescending { it.show.averageRating ?: 0f }
+            else
+                results.sortedBy { it.show.averageRating ?: 0f }
+        }
+    }
+}
 
 /**
  * Recent search card component
