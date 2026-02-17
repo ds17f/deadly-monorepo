@@ -30,7 +30,7 @@ import com.grateful.deadly.core.database.dao.CollectionsDao
         RecentShowEntity::class,
         DeadCollectionEntity::class
     ],
-    version = 13,
+    version = 14,
     exportSchema = false
 )
 abstract class DeadlyDatabase : RoomDatabase() {
@@ -52,7 +52,7 @@ abstract class DeadlyDatabase : RoomDatabase() {
                 DeadlyDatabase::class.java,
                 DATABASE_NAME
             )
-            .addMigrations(DatabaseMigrations.MIGRATION_12_13)
+            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14)
             .fallbackToDestructiveMigration() // Safety net for fresh installs or skipped versions
             .build()
         }

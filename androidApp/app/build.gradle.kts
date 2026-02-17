@@ -188,8 +188,10 @@ dependencies {
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.7.7")
 
-    // Media3 (for annotations)
+    // Media3 (for annotations + download manager types)
     implementation("androidx.media3:media3-common:1.3.1")
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+    implementation("androidx.media3:media3-datasource:1.3.1")
 
     // WorkManager
     implementation("androidx.work:work-runtime-ktx:2.9.0")

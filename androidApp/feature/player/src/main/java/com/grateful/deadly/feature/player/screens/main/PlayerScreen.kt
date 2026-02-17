@@ -332,7 +332,7 @@ fun PlayerScreen(
                 onDismiss = { showTrackActionsBottomSheet = false },
                 onShare = { viewModel.onShareClicked() },
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
-                onDownload = { Toast.makeText(context, "Downloads are coming soon", Toast.LENGTH_SHORT).show() }
+                onDownload = { viewModel.downloadCurrentShow() }
             )
         }
         

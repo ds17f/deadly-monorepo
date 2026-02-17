@@ -23,4 +23,17 @@ object DatabaseMigrations {
             db.execSQL("ALTER TABLE shows ADD COLUMN coverImageUrl TEXT DEFAULT NULL")
         }
     }
+
+    /**
+     * v13 → v14: Add download tracking columns to library_shows.
+     *
+     * Tracks which recording and format were downloaded for offline playback.
+     * Download state itself is managed by Media3's DownloadManager, not Room.
+     */
+    val MIGRATION_13_14 = object : Migration(13, 14) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("ALTER TABLE library_shows ADD COLUMN downloadedRecordingId TEXT DEFAULT NULL")
+            db.execSQL("ALTER TABLE library_shows ADD COLUMN downloadedFormat TEXT DEFAULT NULL")
+        }
+    }
 }

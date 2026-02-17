@@ -149,7 +149,9 @@ data class PlaylistUiState(
     // Setlist modal state
     val showSetlistModal: Boolean = false,
     val setlistLoading: Boolean = false,
-    val setlistError: String? = null
+    val setlistError: String? = null,
+    // Remove download confirmation dialog
+    val showRemoveDownloadDialog: Boolean = false
 )
 
 

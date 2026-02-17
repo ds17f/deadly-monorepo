@@ -7,7 +7,9 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
+import androidx.media3.datasource.cache.CacheDataSource
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.session.LibraryResult
 import androidx.media3.session.MediaLibraryService
 import androidx.media3.session.MediaSession
@@ -46,6 +48,9 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     @Inject
     lateinit var browseTreeProvider: BrowseTreeProvider
 
+    @Inject
+    lateinit var cacheDataSourceFactory: CacheDataSource.Factory
+
     private lateinit var exoPlayer: ExoPlayer
     private var mediaSession: MediaLibrarySession? = null
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -65,8 +70,9 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         super.onCreate()
         Log.d(TAG, "[MEDIA] DeadlyMediaSessionService onCreate started")
 
-        // Initialize ExoPlayer with audio attributes
+        // Initialize ExoPlayer with cache-aware data source for offline playback
         exoPlayer = ExoPlayer.Builder(this)
+            .setMediaSourceFactory(DefaultMediaSourceFactory(cacheDataSourceFactory))
             .setAudioAttributes(
                 AudioAttributes.Builder()
                     .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC)

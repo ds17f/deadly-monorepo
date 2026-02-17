@@ -79,8 +79,36 @@ class PlaylistViewModel @Inject constructor(
                     }
                 }
         }
+
+        // Reactive track download status - refresh track isDownloaded when tracks complete
+        viewModelScope.launch {
+            _baseUiState
+                .map { it.showData?.showId }
+                .distinctUntilChanged()
+                .flatMapLatest { showId ->
+                    if (showId != null) {
+                        playlistService.observeShowDownloadProgress(showId)
+                            .map { it.tracksCompleted }
+                            .distinctUntilChanged()
+                    } else {
+                        flowOf(0)
+                    }
+                }
+                .collect { tracksCompleted ->
+                    if (tracksCompleted > 0 && _rawTrackData.value.isNotEmpty()) {
+                        Log.d(TAG, "Download track completed ($tracksCompleted) — refreshing track list")
+                        loadTrackListAsync()
+                    }
+                }
+        }
     }
     
+    // Combined library + download state to keep main combine at 5 flows
+    private data class LibraryAndDownloadState(
+        val isInLibrary: Boolean = false,
+        val downloadProgress: Float? = null
+    )
+
     // Reactive UI state that combines base state with MediaController state and library status
     val uiState: StateFlow<PlaylistUiState> = combine(
         _baseUiState,
@@ -92,13 +120,30 @@ class PlaylistViewModel @Inject constructor(
             .distinctUntilChanged()
             .flatMapLatest { showId ->
                 if (showId != null) {
-                    libraryService.isShowInLibrary(showId)
+                    combine(
+                        libraryService.isShowInLibrary(showId),
+                        playlistService.observeShowDownloadProgress(showId)
+                    ) { inLibrary, progress ->
+                        val mappedProgress = when (progress.status) {
+                            LibraryDownloadStatus.NOT_DOWNLOADED -> null
+                            LibraryDownloadStatus.QUEUED -> 0.0f
+                            LibraryDownloadStatus.DOWNLOADING -> progress.overallProgress
+                            LibraryDownloadStatus.COMPLETED -> 1.0f
+                            LibraryDownloadStatus.PAUSED -> progress.overallProgress
+                            LibraryDownloadStatus.FAILED -> null
+                            LibraryDownloadStatus.CANCELLED -> null
+                        }
+                        LibraryAndDownloadState(
+                            isInLibrary = inLibrary,
+                            downloadProgress = mappedProgress
+                        )
+                    }
                 } else {
-                    flowOf(false)
+                    flowOf(LibraryAndDownloadState())
                 }
             }
-    ) { baseState, rawTracks, isPlaying, currentTrackInfo, isInLibrary ->
-        
+    ) { baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload ->
+
         // Update track data with current playing state
         val updatedTracks = rawTracks.map { track ->
             val isCurrentTrack = isTrackCurrentlyPlaying(track, currentTrackInfo)
@@ -107,26 +152,29 @@ class PlaylistViewModel @Inject constructor(
                 isPlaying = isCurrentTrack && isPlaying
             )
         }
-        
+
         // Determine if we're viewing the currently playing show/recording
         val playlistShowId = baseState.showData?.showId
         val playlistRecordingId = baseState.showData?.currentRecordingId
         val mediaShowId = currentTrackInfo?.showId
         val mediaRecordingId = currentTrackInfo?.recordingId
-        
-        val isCurrentShowAndRecording = playlistShowId != null && 
+
+        val isCurrentShowAndRecording = playlistShowId != null &&
                                        playlistRecordingId != null &&
                                        (playlistShowId == mediaShowId || playlistShowId == mediaShowId?.replace("-", "")) &&
                                        playlistRecordingId == mediaRecordingId
-        
+
         Log.v(TAG, "Play button logic: playlistShow='$playlistShowId' vs mediaShow='$mediaShowId'")
-        Log.v(TAG, "Play button logic: playlistRecording='$playlistRecordingId' vs mediaRecording='$mediaRecordingId'")  
+        Log.v(TAG, "Play button logic: playlistRecording='$playlistRecordingId' vs mediaRecording='$mediaRecordingId'")
         Log.v(TAG, "Play button logic: isCurrentShowAndRecording=$isCurrentShowAndRecording, isPlaying=$isPlaying")
-        Log.v(TAG, "Library status: showId='$playlistShowId', isInLibrary=$isInLibrary")
-        
-        // Update showData with current library status
-        val updatedShowData = baseState.showData?.copy(isInLibrary = isInLibrary)
-        
+        Log.v(TAG, "Library status: showId='$playlistShowId', isInLibrary=${libraryAndDownload.isInLibrary}")
+
+        // Update showData with current library and download status
+        val updatedShowData = baseState.showData?.copy(
+            isInLibrary = libraryAndDownload.isInLibrary,
+            downloadProgress = libraryAndDownload.downloadProgress
+        )
+
         baseState.copy(
             trackData = updatedTracks,
             isPlaying = isPlaying,
@@ -345,19 +393,53 @@ class PlaylistViewModel @Inject constructor(
     }
     
     /**
-     * Download show
+     * Download show — or prompt for removal if already downloaded
      */
     fun downloadShow() {
+        val downloadProgress = uiState.value.showData?.downloadProgress
+        if (downloadProgress != null && downloadProgress >= 1.0f) {
+            // Already downloaded — show removal confirmation
+            _baseUiState.value = _baseUiState.value.copy(showRemoveDownloadDialog = true)
+            return
+        }
         viewModelScope.launch {
             try {
                 playlistService.downloadShow()
-                // In real implementation, this would trigger download state updates
             } catch (e: Exception) {
                 Log.e(TAG, "Error downloading show", e)
             }
         }
     }
-    
+
+    /**
+     * Confirm removal of downloaded show files
+     */
+    fun confirmRemoveDownload() {
+        _baseUiState.value = _baseUiState.value.copy(showRemoveDownloadDialog = false)
+        viewModelScope.launch {
+            try {
+                val showId = _baseUiState.value.showData?.showId ?: return@launch
+                libraryService.cancelShowDownloads(showId)
+                    .onSuccess {
+                        Log.d(TAG, "Successfully removed downloads for show $showId")
+                        loadTrackListAsync()
+                    }
+                    .onFailure { error ->
+                        Log.e(TAG, "Failed to remove downloads for show $showId", error)
+                    }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error removing downloads", e)
+            }
+        }
+    }
+
+    /**
+     * Dismiss the remove download confirmation dialog
+     */
+    fun dismissRemoveDownloadDialog() {
+        _baseUiState.value = _baseUiState.value.copy(showRemoveDownloadDialog = false)
+    }
+
     /**
      * Handle library actions from LibraryButton
      */

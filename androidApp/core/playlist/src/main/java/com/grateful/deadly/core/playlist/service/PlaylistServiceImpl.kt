@@ -1,16 +1,19 @@
 package com.grateful.deadly.core.playlist.service
 
 import android.util.Log
+import com.grateful.deadly.core.api.library.LibraryService
 import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.api.collections.DeadCollectionsService
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.network.archive.service.ArchiveService
+import com.grateful.deadly.core.media.download.MediaDownloadManager
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.state.MediaControllerStateUtil
 import com.grateful.deadly.core.player.service.ShareService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
@@ -44,6 +47,8 @@ class PlaylistServiceImpl @Inject constructor(
     private val mediaControllerStateUtil: MediaControllerStateUtil,
     private val shareService: ShareService,
     private val collectionsService: DeadCollectionsService,
+    private val libraryService: LibraryService,
+    private val mediaDownloadManager: MediaDownloadManager,
     @Named("PlaylistApplicationScope") private val coroutineScope: CoroutineScope
 ) : PlaylistService {
     
@@ -300,11 +305,10 @@ class PlaylistServiceImpl @Inject constructor(
     }
     
     override suspend fun downloadShow() {
-        currentShow?.let { show ->
-            Log.d(TAG, "downloadShow() for ${show.displayTitle} - TODO: Integrate with download service")
-        }
-        // TODO: Integrate with download service when available
-        // TODO: Update downloadProgress in ViewModel
+        val show = currentShow ?: return
+        val recordingId = currentRecordingId
+        Log.d(TAG, "downloadShow() for ${show.displayTitle}, recording=$recordingId")
+        libraryService.downloadShow(show.id)
     }
     
     override suspend fun shareShow() {
@@ -554,6 +558,10 @@ class PlaylistServiceImpl @Inject constructor(
         Log.d(TAG, "Reset to recommended recording successfully: $recommendedRecordingId")
     }
     
+    override fun observeShowDownloadProgress(showId: String): Flow<ShowDownloadProgress> {
+        return mediaDownloadManager.observeShowDownloadProgress(showId)
+    }
+
     override fun cancelTrackLoading() {
         Log.d(TAG, "cancelTrackLoading() - Clearing prefetch jobs and cache")
         // Cancel all prefetch jobs and clear cache when explicitly requested
@@ -608,17 +616,22 @@ class PlaylistServiceImpl @Inject constructor(
      * Convert Track domain models to PlaylistTrackViewModel display models
      */
     private fun convertTracksToViewModels(tracks: List<Track>): List<PlaylistTrackViewModel> {
+        val recordingId = currentRecordingId
         return tracks.mapIndexed { index, track ->
+            val trackUri = if (recordingId != null) {
+                "https://archive.org/download/$recordingId/${track.name}"
+            } else null
+            val isCached = trackUri != null && mediaDownloadManager.isTrackCached(trackUri)
             PlaylistTrackViewModel(
                 number = index + 1,
                 title = track.title ?: track.name,
                 duration = track.duration ?: "",
                 format = track.format,
-                filename = track.name, // Store original filename for reliable matching
-                isDownloaded = false,     // TODO: Integrate with download service
-                downloadProgress = null,  // TODO: Integrate with download service
-                isCurrentTrack = false,   // TODO: Integrate with media service to determine current track
-                isPlaying = false         // TODO: Integrate with media service for playback state
+                filename = track.name,
+                isDownloaded = isCached,
+                downloadProgress = null,
+                isCurrentTrack = false,
+                isPlaying = false
             )
         }
     }

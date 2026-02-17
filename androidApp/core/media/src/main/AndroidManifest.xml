@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     
     <application>
         <!-- Artwork provider for waveform-filtered album art -->
@@ -35,6 +36,10 @@
                 android:name="com.google.android.gms.car.application"
                 android:resource="@xml/automotive_app_desc" />
         </service>
+        <service
+            android:name=".download.DeadlyMediaDownloadService"
+            android:foregroundServiceType="dataSync"
+            android:exported="false" />
     </application>
-    
+
 </manifest>
