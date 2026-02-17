@@ -218,6 +218,14 @@ class MediaDownloadManager @Inject constructor(
     }
 
     /**
+     * Check if a specific track URI is queued or actively downloading (not yet completed).
+     */
+    fun isTrackDownloading(uri: String): Boolean {
+        val download = getAllDownloads().find { it.request.uri.toString() == uri }
+        return download != null && (download.state == Download.STATE_QUEUED || download.state == Download.STATE_DOWNLOADING)
+    }
+
+    /**
      * Get all show IDs that have any downloads (completed, in-progress, or queued).
      */
     fun getAllDownloadShowIds(): List<String> {

@@ -308,7 +308,7 @@ class PlaylistServiceImpl @Inject constructor(
         val show = currentShow ?: return
         val recordingId = currentRecordingId
         Log.d(TAG, "downloadShow() for ${show.displayTitle}, recording=$recordingId")
-        libraryService.downloadShow(show.id)
+        libraryService.downloadShow(show.id, recordingId)
     }
     
     override suspend fun shareShow() {
@@ -621,7 +621,10 @@ class PlaylistServiceImpl @Inject constructor(
             val trackUri = if (recordingId != null) {
                 "https://archive.org/download/$recordingId/${track.name}"
             } else null
+
             val isCached = trackUri != null && mediaDownloadManager.isTrackCached(trackUri)
+            val isDownloading = trackUri != null && !isCached && mediaDownloadManager.isTrackDownloading(trackUri)
+
             PlaylistTrackViewModel(
                 number = index + 1,
                 title = track.title ?: track.name,
@@ -629,7 +632,7 @@ class PlaylistServiceImpl @Inject constructor(
                 format = track.format,
                 filename = track.name,
                 isDownloaded = isCached,
-                downloadProgress = null,
+                downloadProgress = if (isDownloading) 0f else null,
                 isCurrentTrack = false,
                 isPlaying = false
             )

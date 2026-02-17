@@ -65,7 +65,7 @@ interface LibraryService {
     /**
      * Download a show
      */
-    suspend fun downloadShow(showId: String): Result<Unit>
+    suspend fun downloadShow(showId: String, recordingId: String? = null): Result<Unit>
     
     /**
      * Cancel show downloads
