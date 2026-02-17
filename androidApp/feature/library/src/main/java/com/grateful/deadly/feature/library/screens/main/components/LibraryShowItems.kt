@@ -87,16 +87,45 @@ fun LibraryShowListItem(
                     }
                     
                     // Download indicator
-                    if (show.downloadStatus == LibraryDownloadStatus.COMPLETED) {
-                        Icon(
-                            painter = IconResources.Status.CheckCircle(),
-                            contentDescription = "Downloaded",
-                            modifier = Modifier.size(12.dp),
-                            tint = MaterialTheme.colorScheme.error
-                        )
-                        Spacer(modifier = Modifier.width(4.dp))
+                    when (show.downloadStatus) {
+                        LibraryDownloadStatus.COMPLETED -> {
+                            Icon(
+                                painter = IconResources.Status.CheckCircle(),
+                                contentDescription = "Downloaded",
+                                modifier = Modifier.size(12.dp),
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                            Spacer(modifier = Modifier.width(4.dp))
+                        }
+                        LibraryDownloadStatus.DOWNLOADING, LibraryDownloadStatus.PAUSED -> {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(12.dp),
+                                strokeWidth = 1.5.dp,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                            Spacer(modifier = Modifier.width(4.dp))
+                        }
+                        LibraryDownloadStatus.QUEUED -> {
+                            Icon(
+                                painter = IconResources.Content.ArrowCircleDown(),
+                                contentDescription = "Queued for download",
+                                modifier = Modifier.size(12.dp),
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            Spacer(modifier = Modifier.width(4.dp))
+                        }
+                        LibraryDownloadStatus.FAILED -> {
+                            Icon(
+                                painter = IconResources.Status.Error(),
+                                contentDescription = "Download failed",
+                                modifier = Modifier.size(12.dp),
+                                tint = MaterialTheme.colorScheme.error
+                            )
+                            Spacer(modifier = Modifier.width(4.dp))
+                        }
+                        else -> { /* NOT_DOWNLOADED, CANCELLED - no indicator */ }
                     }
-                    
+
                     Text(
                         text = "${show.displayDate} • ${show.location}",
                         style = MaterialTheme.typography.bodyMedium,
@@ -222,16 +251,45 @@ fun LibraryShowGridItem(
                     }
                     
                     // Download indicator
-                    if (show.downloadStatus == LibraryDownloadStatus.COMPLETED) {
-                        Icon(
-                            painter = IconResources.Status.CheckCircle(),
-                            contentDescription = "Downloaded",
-                            modifier = Modifier.size(8.dp),
-                            tint = MaterialTheme.colorScheme.error
-                        )
-                        Spacer(modifier = Modifier.width(2.dp))
+                    when (show.downloadStatus) {
+                        LibraryDownloadStatus.COMPLETED -> {
+                            Icon(
+                                painter = IconResources.Status.CheckCircle(),
+                                contentDescription = "Downloaded",
+                                modifier = Modifier.size(8.dp),
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                            Spacer(modifier = Modifier.width(2.dp))
+                        }
+                        LibraryDownloadStatus.DOWNLOADING, LibraryDownloadStatus.PAUSED -> {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(8.dp),
+                                strokeWidth = 1.dp,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                            Spacer(modifier = Modifier.width(2.dp))
+                        }
+                        LibraryDownloadStatus.QUEUED -> {
+                            Icon(
+                                painter = IconResources.Content.ArrowCircleDown(),
+                                contentDescription = "Queued for download",
+                                modifier = Modifier.size(8.dp),
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            Spacer(modifier = Modifier.width(2.dp))
+                        }
+                        LibraryDownloadStatus.FAILED -> {
+                            Icon(
+                                painter = IconResources.Status.Error(),
+                                contentDescription = "Download failed",
+                                modifier = Modifier.size(8.dp),
+                                tint = MaterialTheme.colorScheme.error
+                            )
+                            Spacer(modifier = Modifier.width(2.dp))
+                        }
+                        else -> { /* NOT_DOWNLOADED, CANCELLED - no indicator */ }
                     }
-                    
+
                     Text(
                         text = show.date,
                         style = MaterialTheme.typography.labelSmall,

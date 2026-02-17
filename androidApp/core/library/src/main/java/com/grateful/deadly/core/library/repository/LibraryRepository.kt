@@ -4,10 +4,12 @@ import android.util.Log
 import com.grateful.deadly.core.database.dao.LibraryDao
 import com.grateful.deadly.core.database.entities.LibraryShowEntity
 import com.grateful.deadly.core.domain.repository.ShowRepository
+import com.grateful.deadly.core.media.download.MediaDownloadManager
 import com.grateful.deadly.core.model.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 import javax.inject.Inject
 import javax.inject.Singleton
 import com.grateful.deadly.core.model.AppDatabase
@@ -23,7 +25,8 @@ import com.grateful.deadly.core.model.AppDatabase
 @Singleton
 class LibraryRepository @Inject constructor(
     @AppDatabase private val libraryDao: LibraryDao,
-    private val showRepository: ShowRepository
+    private val showRepository: ShowRepository,
+    private val mediaDownloadManager: MediaDownloadManager
 ) {
     
     companion object {
@@ -34,27 +37,34 @@ class LibraryRepository @Inject constructor(
      * Get all library shows as reactive flow with complete show data
      */
     fun getLibraryShowsFlow(): Flow<List<LibraryShow>> {
-        Log.d(TAG, "getLibraryShowsFlow() - combining library data with show data")
-        
-        return libraryDao.getAllLibraryShowsFlow()
-            .combine(showRepository.getAllShowsFlow()) { libraryEntities, allShows ->
-                Log.d(TAG, "Combining ${libraryEntities.size} library entries with ${allShows.size} shows")
-                
-                // Create map of showId -> Show for efficient lookup
-                val showsMap = allShows.associateBy { it.id }
-                
-                // Convert to LibraryShows, filtering out shows that no longer exist
-                libraryEntities.mapNotNull { libraryEntity ->
-                    showsMap[libraryEntity.showId]?.let { show ->
-                        LibraryShow(
-                            show = show,
-                            addedToLibraryAt = libraryEntity.addedToLibraryAt,
-                            isPinned = libraryEntity.isPinned,
-                            downloadStatus = LibraryDownloadStatus.NOT_DOWNLOADED // TODO: Add download integration
-                        )
-                    }
+        Log.d(TAG, "getLibraryShowsFlow() - combining library data with show data and download changes")
+
+        // Combine with download change events so any download state change triggers re-evaluation
+        val downloadChanges = mediaDownloadManager.observeDownloadChanges()
+            .onStart { emit(Unit) }
+
+        return combine(
+            libraryDao.getAllLibraryShowsFlow(),
+            showRepository.getAllShowsFlow(),
+            downloadChanges
+        ) { libraryEntities, allShows, _ ->
+            Log.d(TAG, "Combining ${libraryEntities.size} library entries with ${allShows.size} shows")
+
+            // Create map of showId -> Show for efficient lookup
+            val showsMap = allShows.associateBy { it.id }
+
+            // Convert to LibraryShows, filtering out shows that no longer exist
+            libraryEntities.mapNotNull { libraryEntity ->
+                showsMap[libraryEntity.showId]?.let { show ->
+                    LibraryShow(
+                        show = show,
+                        addedToLibraryAt = libraryEntity.addedToLibraryAt,
+                        isPinned = libraryEntity.isPinned,
+                        downloadStatus = mediaDownloadManager.getShowDownloadStatus(show.id)
+                    )
                 }
             }
+        }
     }
     
     /**
@@ -164,15 +174,21 @@ class LibraryRepository @Inject constructor(
      * Get library statistics
      */
     fun getLibraryStatsFlow(): Flow<LibraryStats> {
-        return libraryDao.getLibraryShowCountFlow()
-            .combine(libraryDao.getPinnedShowCountFlow()) { totalShows, pinnedShows ->
-                LibraryStats(
-                    totalShows = totalShows,
-                    totalDownloaded = 0, // TODO: Add download integration
-                    totalStorageUsed = 0L, // TODO: Add storage calculation
-                    totalPinned = pinnedShows
-                )
-            }
+        val downloadChanges = mediaDownloadManager.observeDownloadChanges()
+            .onStart { emit(Unit) }
+
+        return combine(
+            libraryDao.getLibraryShowCountFlow(),
+            libraryDao.getPinnedShowCountFlow(),
+            downloadChanges
+        ) { totalShows, pinnedShows, _ ->
+            LibraryStats(
+                totalShows = totalShows,
+                totalDownloaded = mediaDownloadManager.getDownloadedShowCount(),
+                totalStorageUsed = mediaDownloadManager.getTotalStorageUsed(),
+                totalPinned = pinnedShows
+            )
+        }
     }
     
     /**

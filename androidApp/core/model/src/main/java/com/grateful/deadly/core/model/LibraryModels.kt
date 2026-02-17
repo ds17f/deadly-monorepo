@@ -80,6 +80,19 @@ enum class LibraryDownloadStatus {
 }
 
 /**
+ * Aggregated download progress for a show.
+ */
+data class ShowDownloadProgress(
+    val showId: String,
+    val status: LibraryDownloadStatus,
+    val overallProgress: Float, // 0.0-1.0
+    val downloadedBytes: Long,
+    val totalBytes: Long,
+    val tracksCompleted: Int,
+    val tracksTotal: Int
+)
+
+/**
  * Library statistics for the library service
  */
 @Serializable

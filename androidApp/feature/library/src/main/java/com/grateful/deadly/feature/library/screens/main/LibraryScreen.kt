@@ -1,6 +1,5 @@
 package com.grateful.deadly.feature.library.screens.main
 
-import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -15,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import com.grateful.deadly.core.design.resources.IconResources
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -46,7 +44,6 @@ fun LibraryScreen(
     onNavigateBack: () -> Unit = {},
     viewModel: LibraryViewModel = hiltViewModel()
 ) {
-    val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
 
     // UI State
@@ -158,11 +155,11 @@ fun LibraryScreen(
                 selectedShowForActions = null
             },
             onDownload = {
-                Toast.makeText(context, "Downloads are coming soon", Toast.LENGTH_SHORT).show()
+                viewModel.downloadShow(show.showId)
                 selectedShowForActions = null
             },
             onRemoveDownload = {
-                Toast.makeText(context, "Downloads are coming soon", Toast.LENGTH_SHORT).show()
+                viewModel.cancelDownload(show.showId)
                 selectedShowForActions = null
             },
             onPin = {

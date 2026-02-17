@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.api.playlist
 
 import com.grateful.deadly.core.model.*
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 
 /**
@@ -130,6 +131,11 @@ interface PlaylistService {
      */
     suspend fun getShowCollections(showId: String): List<DeadCollection>
     
+    /**
+     * Observe download progress for a show reactively
+     */
+    fun observeShowDownloadProgress(showId: String): Flow<ShowDownloadProgress>
+
     // === MediaController State Observation ===
     
     /**

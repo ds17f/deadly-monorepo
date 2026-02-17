@@ -3,6 +3,7 @@ package com.grateful.deadly.feature.player.screens.main.models
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.api.library.LibraryService
 import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
 import com.grateful.deadly.core.model.CurrentTrackInfo
@@ -18,7 +19,8 @@ import javax.inject.Inject
 @HiltViewModel
 class PlayerViewModel @Inject constructor(
     private val playerService: PlayerService,
-    private val panelContentService: PanelContentService
+    private val panelContentService: PanelContentService,
+    private val libraryService: LibraryService
 ) : ViewModel() {
 
     companion object {
@@ -250,6 +252,20 @@ class PlayerViewModel @Inject constructor(
         } catch (e: Exception) {
             Log.e(TAG, "Error getting debug metadata", e)
             mapOf("error" to "Failed to get debug metadata: ${e.message}")
+        }
+    }
+
+    /**
+     * Download the currently playing show
+     */
+    fun downloadCurrentShow() {
+        val showId = uiState.value.navigationInfo.showId ?: return
+        viewModelScope.launch {
+            try {
+                libraryService.downloadShow(showId)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error downloading show $showId", e)
+            }
         }
     }
 

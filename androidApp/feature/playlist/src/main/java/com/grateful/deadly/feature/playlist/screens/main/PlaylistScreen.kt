@@ -1,14 +1,12 @@
 package com.grateful.deadly.feature.playlist.screens.main
 
 import android.util.Log
-import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.debug.DebugActivator
@@ -48,7 +46,6 @@ fun PlaylistScreen(
 ) {
     Log.d("PlaylistScreen", "=== PLAYLIST SCREEN LOADED === recordingId: $recordingId, showId: $showId")
 
-    val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
     // Debug mode hardcoded to true for development
     val showDebugInfo = true
@@ -182,7 +179,7 @@ fun PlaylistScreen(
                                 isCurrentShowAndRecording = uiState.isCurrentShowAndRecording,
                                 showCollections = uiState.showCollections,
                                 onLibraryAction = viewModel::handleLibraryAction,
-                                onDownload = { Toast.makeText(context, "Downloads are coming soon", Toast.LENGTH_SHORT).show() },
+                                onDownload = { viewModel.downloadShow() },
                                 onShowSetlist = viewModel::showSetlist,
                                 onShowCollections = viewModel::showCollectionsSheet,
                                 onShowMenu = viewModel::showMenu,
@@ -326,6 +323,25 @@ fun PlaylistScreen(
         )
     }
     
+    // Remove Download Confirmation Dialog
+    if (uiState.showRemoveDownloadDialog) {
+        AlertDialog(
+            onDismissRequest = viewModel::dismissRemoveDownloadDialog,
+            title = { Text("Remove Download") },
+            text = { Text("Remove all downloaded files for this show? You can re-download them later.") },
+            confirmButton = {
+                TextButton(onClick = viewModel::confirmRemoveDownload) {
+                    Text("Remove")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = viewModel::dismissRemoveDownloadDialog) {
+                    Text("Cancel")
+                }
+            }
+        )
+    }
+
     // Setlist Modal
     if (uiState.showSetlistModal) {
         PlaylistSetlistBottomSheet(

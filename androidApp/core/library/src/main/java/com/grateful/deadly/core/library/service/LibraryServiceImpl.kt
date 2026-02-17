@@ -3,12 +3,14 @@ package com.grateful.deadly.core.library.service
 import android.util.Log
 import com.grateful.deadly.core.api.library.LibraryService
 import com.grateful.deadly.core.domain.repository.ShowRepository
+import com.grateful.deadly.core.media.download.MediaDownloadManager
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.library.repository.LibraryRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.SharingStarted
 import javax.inject.Inject
 import javax.inject.Named
@@ -31,6 +33,7 @@ class LibraryServiceImpl @Inject constructor(
     private val mediaControllerRepository: MediaControllerRepository,
     private val libraryRepository: LibraryRepository,
     private val shareService: ShareService,
+    private val mediaDownloadManager: MediaDownloadManager,
     @Named("LibraryApplicationScope") private val coroutineScope: CoroutineScope
 ) : LibraryService {
     
@@ -131,20 +134,34 @@ class LibraryServiceImpl @Inject constructor(
             )
     }
     
-    // TODO: Download integration - will implement when download service is available
     override suspend fun downloadShow(showId: String): Result<Unit> {
-        Log.d(TAG, "downloadShow('$showId') - TODO: download service integration")
-        return Result.success(Unit)
+        Log.d(TAG, "downloadShow('$showId')")
+        // Auto-add to library if not already present
+        if (!libraryRepository.isShowInLibrary(showId)) {
+            libraryRepository.addShowToLibrary(showId)
+        }
+        return mediaDownloadManager.downloadShow(showId)
     }
-    
+
     override suspend fun cancelShowDownloads(showId: String): Result<Unit> {
-        Log.d(TAG, "cancelShowDownloads('$showId') - TODO: download service integration")
-        return Result.success(Unit)
+        Log.d(TAG, "cancelShowDownloads('$showId')")
+        return try {
+            mediaDownloadManager.removeShowDownloads(showId)
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.e(TAG, "Error cancelling downloads for $showId", e)
+            Result.failure(e)
+        }
     }
-    
+
     override fun getDownloadStatus(showId: String): StateFlow<LibraryDownloadStatus> {
-        Log.d(TAG, "getDownloadStatus('$showId') - TODO: download service integration")
-        return kotlinx.coroutines.flow.MutableStateFlow(LibraryDownloadStatus.NOT_DOWNLOADED)
+        return mediaDownloadManager.observeShowDownloadProgress(showId)
+            .map { it.status }
+            .stateIn(
+                scope = coroutineScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = mediaDownloadManager.getShowDownloadStatus(showId)
+            )
     }
     
     // Share show using ShareService
