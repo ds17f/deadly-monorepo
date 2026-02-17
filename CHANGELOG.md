@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.0] - 2026-02-17
+
+### New Features
+* Add download infrastructure and wire reactive download progress to UI (e8225b5)
+
+### Bug Fixes
+* Resolve download UI reactivity — stable scroll, accurate progress, icon clearing (6965ca4)
+
+
 ## [2.1.1] - 2026-02-16
 
 ### Bug Fixes
@@ -9,8 +18,6 @@
 ### Other Changes
 * security: Remove debug Play Store auth workflow (3252f6d)
 * security: Add repo hardening — CODEOWNERS, workflow permissions, rulesets (45b413c)
-
-
 ## [2.1.0] - 2026-02-15
 
 ### New Features
