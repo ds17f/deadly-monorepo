@@ -1,5 +1,7 @@
 package com.grateful.deadly.core.media.service
 
+import android.app.PendingIntent
+import android.content.Intent
 import android.util.Log
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
@@ -109,8 +111,17 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             }
         })
 
+        // Create a PendingIntent so tapping the media notification opens the app
+        val sessionActivityIntent = packageManager.getLaunchIntentForPackage(packageName)
+            ?: Intent().setPackage(packageName)
+        val sessionActivityPendingIntent = PendingIntent.getActivity(
+            this, 0, sessionActivityIntent,
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+        )
+
         // Create MediaLibrarySession (callback in constructor, not via setter)
         mediaSession = MediaLibrarySession.Builder(this, exoPlayer, LibrarySessionCallback())
+            .setSessionActivity(sessionActivityPendingIntent)
             .setId("DeadlySession")
             .setBitmapLoader(WaveformFilteringBitmapLoader(this))
             .build()
