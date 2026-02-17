@@ -81,7 +81,7 @@ class PlaylistViewModel @Inject constructor(
                 }
         }
 
-        // Reactive track download status - refresh track isDownloaded when tracks complete
+        // Reactive track download status - refresh track icons on any download state change
         viewModelScope.launch {
             _baseUiState
                 .map { it.showData?.showId }
@@ -89,15 +89,13 @@ class PlaylistViewModel @Inject constructor(
                 .flatMapLatest { showId ->
                     if (showId != null) {
                         playlistService.observeShowDownloadProgress(showId)
-                            .map { it.tracksCompleted }
-                            .distinctUntilChanged()
                     } else {
-                        flowOf(0)
+                        flowOf(ShowDownloadProgress("", LibraryDownloadStatus.NOT_DOWNLOADED, 0f, 0L, 0L, 0, 0))
                     }
                 }
-                .collect { tracksCompleted ->
+                .collect { progress ->
                     if (_rawTrackData.value.isNotEmpty()) {
-                        Log.d(TAG, "Download status changed ($tracksCompleted completed) — refreshing track download status")
+                        Log.d(TAG, "Download status changed (${progress.status}, ${progress.tracksCompleted}/${progress.tracksTotal}) — refreshing track download status")
                         refreshTrackDownloadStatus()
                     }
                 }

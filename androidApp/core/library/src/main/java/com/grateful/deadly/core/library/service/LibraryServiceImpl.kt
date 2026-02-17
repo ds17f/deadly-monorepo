@@ -134,13 +134,13 @@ class LibraryServiceImpl @Inject constructor(
             )
     }
     
-    override suspend fun downloadShow(showId: String): Result<Unit> {
-        Log.d(TAG, "downloadShow('$showId')")
+    override suspend fun downloadShow(showId: String, recordingId: String?): Result<Unit> {
+        Log.d(TAG, "downloadShow('$showId', recording=$recordingId)")
         // Auto-add to library if not already present
         if (!libraryRepository.isShowInLibrary(showId)) {
             libraryRepository.addShowToLibrary(showId)
         }
-        return mediaDownloadManager.downloadShow(showId)
+        return mediaDownloadManager.downloadShow(showId, recordingId)
     }
 
     override suspend fun cancelShowDownloads(showId: String): Result<Unit> {

@@ -1,5 +1,6 @@
 package com.grateful.deadly.feature.downloads.screens.main
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -235,13 +236,10 @@ private fun ActiveDownloadItem(
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        ShowArtwork(
+        ArtworkWithBadge(
             recordingId = show.recordingId,
-            contentDescription = null,
-            modifier = Modifier
-                .size(56.dp)
-                .clip(RoundedCornerShape(8.dp)),
-            imageUrl = show.coverImageUrl
+            coverImageUrl = show.coverImageUrl,
+            isCompleted = false
         )
 
         Spacer(modifier = Modifier.width(12.dp))
@@ -304,13 +302,10 @@ private fun CompletedDownloadItem(
             .padding(horizontal = 16.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        ShowArtwork(
+        ArtworkWithBadge(
             recordingId = show.recordingId,
-            contentDescription = null,
-            modifier = Modifier
-                .size(56.dp)
-                .clip(RoundedCornerShape(8.dp)),
-            imageUrl = show.coverImageUrl
+            coverImageUrl = show.coverImageUrl,
+            isCompleted = true
         )
 
         Spacer(modifier = Modifier.width(12.dp))
@@ -350,6 +345,44 @@ private fun CompletedDownloadItem(
                 tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
+    }
+}
+
+@Composable
+private fun ArtworkWithBadge(
+    recordingId: String?,
+    coverImageUrl: String?,
+    isCompleted: Boolean
+) {
+    Box {
+        ShowArtwork(
+            recordingId = recordingId,
+            contentDescription = null,
+            modifier = Modifier
+                .size(56.dp)
+                .clip(RoundedCornerShape(8.dp)),
+            imageUrl = coverImageUrl
+        )
+        Icon(
+            painter = if (isCompleted) {
+                IconResources.Status.CheckCircle()
+            } else {
+                IconResources.Content.ArrowCircleDown()
+            },
+            contentDescription = if (isCompleted) "Downloaded" else "Downloading",
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .size(18.dp)
+                .background(
+                    color = MaterialTheme.colorScheme.surface,
+                    shape = RoundedCornerShape(50)
+                ),
+            tint = if (isCompleted) {
+                MaterialTheme.colorScheme.primary
+            } else {
+                MaterialTheme.colorScheme.onSurfaceVariant
+            }
+        )
     }
 }
 

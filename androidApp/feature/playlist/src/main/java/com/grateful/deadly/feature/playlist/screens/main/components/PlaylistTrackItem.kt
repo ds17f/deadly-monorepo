@@ -83,12 +83,19 @@ fun PlaylistTrackItem(
             )
         }
         
-        // Download indicator - only shown if track is downloaded
+        // Download indicator
         if (track.isDownloaded) {
             Icon(
                 painter = IconResources.Status.CheckCircle(),
                 contentDescription = "Downloaded",
                 tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.size(16.dp)
+            )
+        } else if (track.downloadProgress != null) {
+            Icon(
+                painter = IconResources.Content.ArrowCircleDown(),
+                contentDescription = "Downloading",
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(16.dp)
             )
         }
