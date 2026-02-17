@@ -231,18 +231,32 @@ class MediaDownloadManager @Inject constructor(
             )
         }
 
-        val totalBytes = downloads.sumOf { it.contentLength.coerceAtLeast(0) }
         val downloadedBytes = downloads.sumOf { it.bytesDownloaded }
+        val totalBytes = downloads.sumOf { it.contentLength.coerceAtLeast(0) }
         val tracksCompleted = downloads.count { it.state == Download.STATE_COMPLETED }
-        val overallProgress = if (totalBytes > 0) {
-            downloadedBytes.toFloat() / totalBytes.toFloat()
-        } else {
-            downloads.map { it.percentDownloaded / 100f }.average().toFloat()
+
+        // Always use per-track percentDownloaded average — avoids inflated progress
+        // when some tracks haven't reported contentLength yet
+        val overallProgress = downloads
+            .map { it.percentDownloaded / 100f }
+            .average()
+            .toFloat()
+
+        // Inline status from already-fetched downloads to avoid a second cursor scan
+        val states = downloads.map { it.state }
+        val status = when {
+            states.all { it == Download.STATE_COMPLETED } -> LibraryDownloadStatus.COMPLETED
+            states.any { it == Download.STATE_FAILED } -> LibraryDownloadStatus.FAILED
+            states.any { it == Download.STATE_DOWNLOADING } -> LibraryDownloadStatus.DOWNLOADING
+            states.any { it == Download.STATE_QUEUED } -> LibraryDownloadStatus.QUEUED
+            states.any { it == Download.STATE_STOPPED } -> LibraryDownloadStatus.PAUSED
+            states.any { it == Download.STATE_REMOVING } -> LibraryDownloadStatus.NOT_DOWNLOADED
+            else -> LibraryDownloadStatus.NOT_DOWNLOADED
         }
 
         return ShowDownloadProgress(
             showId = showId,
-            status = getShowDownloadStatus(showId),
+            status = status,
             overallProgress = overallProgress.coerceIn(0f, 1f),
             downloadedBytes = downloadedBytes,
             totalBytes = totalBytes,

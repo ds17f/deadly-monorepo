@@ -3,6 +3,7 @@ package com.grateful.deadly.feature.playlist.screens.main
 import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -101,7 +102,9 @@ fun PlaylistScreen(
         )
         
         // Main content - Spotify-style LazyColumn
+        val listState = rememberLazyListState()
         LazyColumn(
+            state = listState,
             modifier = Modifier.fillMaxSize()
         ) {
             when {
