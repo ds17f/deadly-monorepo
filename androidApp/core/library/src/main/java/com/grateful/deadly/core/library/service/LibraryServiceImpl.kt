@@ -154,6 +154,16 @@ class LibraryServiceImpl @Inject constructor(
         }
     }
 
+    override fun pauseShowDownloads(showId: String) {
+        Log.d(TAG, "pauseShowDownloads('$showId')")
+        mediaDownloadManager.pauseShowDownloads(showId)
+    }
+
+    override fun resumeShowDownloads(showId: String) {
+        Log.d(TAG, "resumeShowDownloads('$showId')")
+        mediaDownloadManager.resumeShowDownloads(showId)
+    }
+
     override fun getDownloadStatus(showId: String): StateFlow<LibraryDownloadStatus> {
         return mediaDownloadManager.observeShowDownloadProgress(showId)
             .map { it.status }

@@ -44,6 +44,7 @@ class DownloadsViewModel @Inject constructor(
                 val showIds = progressMap.keys.toList()
 
                 val activeDownloads = mutableListOf<DownloadedShowViewModel>()
+                val pausedDownloads = mutableListOf<DownloadedShowViewModel>()
                 val completedDownloads = mutableListOf<DownloadedShowViewModel>()
 
                 for (showId in showIds) {
@@ -69,7 +70,8 @@ class DownloadsViewModel @Inject constructor(
                         LibraryDownloadStatus.COMPLETED -> completedDownloads.add(viewModel)
                         LibraryDownloadStatus.DOWNLOADING,
                         LibraryDownloadStatus.QUEUED -> activeDownloads.add(viewModel)
-                        else -> completedDownloads.add(viewModel)
+                        LibraryDownloadStatus.PAUSED -> pausedDownloads.add(viewModel)
+                        else -> {} // FAILED/CANCELLED/NOT_DOWNLOADED — don't show
                     }
                 }
 
@@ -77,6 +79,7 @@ class DownloadsViewModel @Inject constructor(
                     isLoading = false,
                     totalStorageUsed = mediaDownloadManager.getTotalStorageUsed(),
                     activeDownloads = activeDownloads,
+                    pausedDownloads = pausedDownloads,
                     completedDownloads = completedDownloads
                 )
             }
@@ -85,6 +88,14 @@ class DownloadsViewModel @Inject constructor(
 
     fun cancelDownload(showId: String) {
         mediaDownloadManager.cancelShowDownloads(showId)
+    }
+
+    fun pauseDownload(showId: String) {
+        mediaDownloadManager.pauseShowDownloads(showId)
+    }
+
+    fun resumeDownload(showId: String) {
+        mediaDownloadManager.resumeShowDownloads(showId)
     }
 
     fun removeDownload(showId: String) {

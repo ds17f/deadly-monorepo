@@ -61,6 +61,16 @@ interface PlaylistService {
      * Download current show
      */
     suspend fun downloadShow()
+
+    /**
+     * Pause downloads for the current show
+     */
+    fun pauseShowDownload()
+
+    /**
+     * Resume downloads for the current show
+     */
+    fun resumeShowDownload()
     
     /**
      * Share current show

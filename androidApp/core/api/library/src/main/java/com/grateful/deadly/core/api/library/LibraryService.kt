@@ -71,6 +71,16 @@ interface LibraryService {
      * Cancel show downloads
      */
     suspend fun cancelShowDownloads(showId: String): Result<Unit>
+
+    /**
+     * Pause show downloads
+     */
+    fun pauseShowDownloads(showId: String)
+
+    /**
+     * Resume show downloads
+     */
+    fun resumeShowDownloads(showId: String)
     
     /**
      * Get download status for a show (reactive)
