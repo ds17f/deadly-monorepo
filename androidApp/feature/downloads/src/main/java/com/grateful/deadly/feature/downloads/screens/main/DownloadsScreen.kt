@@ -20,6 +20,7 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.DownloadedShowViewModel
 import com.grateful.deadly.core.model.DownloadsUiState
+import com.grateful.deadly.core.model.LibraryDownloadStatus
 import com.grateful.deadly.feature.downloads.screens.main.models.DownloadsViewModel
 
 @UnstableApi
@@ -71,6 +72,8 @@ fun DownloadsScreen(
                         onNavigateToPlaylist(show.showId, recordingId)
                     }
                 },
+                onPauseDownload = viewModel::pauseDownload,
+                onResumeDownload = viewModel::resumeDownload,
                 onCancelDownload = viewModel::cancelDownload,
                 onRemoveDownload = viewModel::removeDownload,
                 onRemoveAll = viewModel::showRemoveAllDialog
@@ -116,6 +119,8 @@ private fun EmptyDownloadsContent() {
 private fun DownloadsContent(
     uiState: DownloadsUiState,
     onShowClick: (DownloadedShowViewModel) -> Unit,
+    onPauseDownload: (String) -> Unit,
+    onResumeDownload: (String) -> Unit,
     onCancelDownload: (String) -> Unit,
     onRemoveDownload: (String) -> Unit,
     onRemoveAll: () -> Unit
@@ -147,6 +152,32 @@ private fun DownloadsContent(
                 ActiveDownloadItem(
                     show = show,
                     onClick = { onShowClick(show) },
+                    onPause = { onPauseDownload(show.showId) },
+                    onCancel = { onCancelDownload(show.showId) }
+                )
+            }
+
+            item {
+                HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
+            }
+        }
+
+        // Paused Downloads Section
+        if (uiState.hasPausedDownloads) {
+            item {
+                Text(
+                    text = "Paused",
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                )
+            }
+
+            items(uiState.pausedDownloads, key = { "paused-${it.showId}" }) { show ->
+                PausedDownloadItem(
+                    show = show,
+                    onClick = { onShowClick(show) },
+                    onResume = { onResumeDownload(show.showId) },
                     onCancel = { onCancelDownload(show.showId) }
                 )
             }
@@ -227,6 +258,7 @@ private fun DownloadsHeader(
 private fun ActiveDownloadItem(
     show: DownloadedShowViewModel,
     onClick: () -> Unit,
+    onPause: () -> Unit,
     onCancel: () -> Unit
 ) {
     Row(
@@ -239,7 +271,7 @@ private fun ActiveDownloadItem(
         ArtworkWithBadge(
             recordingId = show.recordingId,
             coverImageUrl = show.coverImageUrl,
-            isCompleted = false
+            status = show.status
         )
 
         Spacer(modifier = Modifier.width(12.dp))
@@ -277,7 +309,92 @@ private fun ActiveDownloadItem(
             }
         }
 
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(4.dp))
+
+        IconButton(onClick = onPause) {
+            Icon(
+                painter = IconResources.PlayerControls.Pause(),
+                contentDescription = "Pause download",
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+
+        IconButton(onClick = onCancel) {
+            Icon(
+                painter = IconResources.Navigation.Close(),
+                contentDescription = "Cancel download",
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+    }
+}
+
+@Composable
+private fun PausedDownloadItem(
+    show: DownloadedShowViewModel,
+    onClick: () -> Unit,
+    onResume: () -> Unit,
+    onCancel: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        ArtworkWithBadge(
+            recordingId = show.recordingId,
+            coverImageUrl = show.coverImageUrl,
+            status = show.status
+        )
+
+        Spacer(modifier = Modifier.width(12.dp))
+
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = show.displayDate,
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+            if (show.venue.isNotEmpty()) {
+                Text(
+                    text = show.venue,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            Spacer(modifier = Modifier.height(4.dp))
+            val progress = show.progress
+            if (progress != null) {
+                LinearProgressIndicator(
+                    progress = { progress.overallProgress },
+                    modifier = Modifier.fillMaxWidth(),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    trackColor = MaterialTheme.colorScheme.surfaceVariant,
+                )
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(
+                    text = "Paused — ${progress.tracksCompleted} of ${progress.tracksTotal} tracks",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.width(4.dp))
+
+        IconButton(onClick = onResume) {
+            Icon(
+                painter = IconResources.PlayerControls.Play(),
+                contentDescription = "Resume download",
+                tint = MaterialTheme.colorScheme.primary
+            )
+        }
 
         IconButton(onClick = onCancel) {
             Icon(
@@ -305,7 +422,7 @@ private fun CompletedDownloadItem(
         ArtworkWithBadge(
             recordingId = show.recordingId,
             coverImageUrl = show.coverImageUrl,
-            isCompleted = true
+            status = show.status
         )
 
         Spacer(modifier = Modifier.width(12.dp))
@@ -352,7 +469,7 @@ private fun CompletedDownloadItem(
 private fun ArtworkWithBadge(
     recordingId: String?,
     coverImageUrl: String?,
-    isCompleted: Boolean
+    status: LibraryDownloadStatus
 ) {
     Box {
         ShowArtwork(
@@ -363,13 +480,26 @@ private fun ArtworkWithBadge(
                 .clip(RoundedCornerShape(8.dp)),
             imageUrl = coverImageUrl
         )
+        val (badgeIcon, badgeDescription, badgeTint) = when (status) {
+            LibraryDownloadStatus.COMPLETED -> Triple(
+                IconResources.Status.CheckCircle(),
+                "Downloaded",
+                MaterialTheme.colorScheme.primary
+            )
+            LibraryDownloadStatus.PAUSED -> Triple(
+                IconResources.PlayerControls.Pause(),
+                "Paused",
+                MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            else -> Triple(
+                IconResources.Content.ArrowCircleDown(),
+                "Downloading",
+                MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
         Icon(
-            painter = if (isCompleted) {
-                IconResources.Status.CheckCircle()
-            } else {
-                IconResources.Content.ArrowCircleDown()
-            },
-            contentDescription = if (isCompleted) "Downloaded" else "Downloading",
+            painter = badgeIcon,
+            contentDescription = badgeDescription,
             modifier = Modifier
                 .align(Alignment.BottomEnd)
                 .size(18.dp)
@@ -377,11 +507,7 @@ private fun ArtworkWithBadge(
                     color = MaterialTheme.colorScheme.surface,
                     shape = RoundedCornerShape(50)
                 ),
-            tint = if (isCompleted) {
-                MaterialTheme.colorScheme.primary
-            } else {
-                MaterialTheme.colorScheme.onSurfaceVariant
-            }
+            tint = badgeTint
         )
     }
 }

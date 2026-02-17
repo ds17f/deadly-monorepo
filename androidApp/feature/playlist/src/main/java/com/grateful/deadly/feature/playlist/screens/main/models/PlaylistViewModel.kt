@@ -105,7 +105,8 @@ class PlaylistViewModel @Inject constructor(
     // Combined library + download state to keep main combine at 5 flows
     private data class LibraryAndDownloadState(
         val isInLibrary: Boolean = false,
-        val downloadProgress: Float? = null
+        val downloadProgress: Float? = null,
+        val downloadStatus: LibraryDownloadStatus? = null
     )
 
     // Reactive UI state that combines base state with MediaController state and library status
@@ -132,9 +133,16 @@ class PlaylistViewModel @Inject constructor(
                             LibraryDownloadStatus.FAILED -> null
                             LibraryDownloadStatus.CANCELLED -> null
                         }
+                        val mappedStatus = when (progress.status) {
+                            LibraryDownloadStatus.NOT_DOWNLOADED,
+                            LibraryDownloadStatus.FAILED,
+                            LibraryDownloadStatus.CANCELLED -> null
+                            else -> progress.status
+                        }
                         LibraryAndDownloadState(
                             isInLibrary = inLibrary,
-                            downloadProgress = mappedProgress
+                            downloadProgress = mappedProgress,
+                            downloadStatus = mappedStatus
                         )
                     }
                 } else {
@@ -171,7 +179,8 @@ class PlaylistViewModel @Inject constructor(
         // Update showData with current library and download status
         val updatedShowData = baseState.showData?.copy(
             isInLibrary = libraryAndDownload.isInLibrary,
-            downloadProgress = libraryAndDownload.downloadProgress
+            downloadProgress = libraryAndDownload.downloadProgress,
+            downloadStatus = libraryAndDownload.downloadStatus
         )
 
         baseState.copy(
@@ -392,20 +401,35 @@ class PlaylistViewModel @Inject constructor(
     }
     
     /**
-     * Download show — or prompt for removal if already downloaded
+     * Download show — state machine: start / pause / resume / remove
      */
     fun downloadShow() {
-        val downloadProgress = uiState.value.showData?.downloadProgress
-        if (downloadProgress != null && downloadProgress >= 1.0f) {
-            // Already downloaded — show removal confirmation
-            _baseUiState.value = _baseUiState.value.copy(showRemoveDownloadDialog = true)
-            return
-        }
-        viewModelScope.launch {
-            try {
-                playlistService.downloadShow()
-            } catch (e: Exception) {
-                Log.e(TAG, "Error downloading show", e)
+        val showData = uiState.value.showData ?: return
+        val status = showData.downloadStatus
+
+        when (status) {
+            LibraryDownloadStatus.COMPLETED -> {
+                // Already downloaded — show removal confirmation
+                _baseUiState.value = _baseUiState.value.copy(showRemoveDownloadDialog = true)
+            }
+            LibraryDownloadStatus.DOWNLOADING,
+            LibraryDownloadStatus.QUEUED -> {
+                // Active download — pause
+                playlistService.pauseShowDownload()
+            }
+            LibraryDownloadStatus.PAUSED -> {
+                // Paused — resume
+                playlistService.resumeShowDownload()
+            }
+            else -> {
+                // Not downloaded or failed — start download
+                viewModelScope.launch {
+                    try {
+                        playlistService.downloadShow()
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Error downloading show", e)
+                    }
+                }
             }
         }
     }

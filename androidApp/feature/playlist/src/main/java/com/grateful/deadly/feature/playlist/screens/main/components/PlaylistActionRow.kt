@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.LibraryAction
+import com.grateful.deadly.core.model.LibraryDownloadStatus
 import com.grateful.deadly.core.model.PlaylistShowViewModel
 
 /**
@@ -77,6 +78,7 @@ fun PlaylistActionRow(
                 modifier = Modifier.size(40.dp)
             ) {
                 val downloadProgress = showData.downloadProgress
+                val downloadStatus = showData.downloadStatus
                 when {
                     downloadProgress == null -> {
                         // Not downloaded
@@ -86,6 +88,26 @@ fun PlaylistActionRow(
                             tint = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.size(24.dp)
                         )
+                    }
+                    downloadStatus == LibraryDownloadStatus.PAUSED -> {
+                        // Paused - grey ring with play icon
+                        Box(
+                            contentAlignment = Alignment.Center,
+                            modifier = Modifier.size(24.dp)
+                        ) {
+                            CircularProgressIndicator(
+                                progress = { downloadProgress },
+                                modifier = Modifier.size(24.dp),
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                strokeWidth = 2.dp,
+                            )
+                            Icon(
+                                painter = IconResources.PlayerControls.Play(),
+                                contentDescription = "Paused — tap to resume",
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.size(12.dp)
+                            )
+                        }
                     }
                     downloadProgress < 1.0f -> {
                         // Downloading - show progress

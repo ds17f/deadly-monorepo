@@ -161,12 +161,14 @@ data class DownloadsUiState(
     val isLoading: Boolean = true,
     val totalStorageUsed: Long = 0L,
     val activeDownloads: List<DownloadedShowViewModel> = emptyList(),
+    val pausedDownloads: List<DownloadedShowViewModel> = emptyList(),
     val completedDownloads: List<DownloadedShowViewModel> = emptyList(),
     val showRemoveAllDialog: Boolean = false
 ) {
-    val totalDownloadCount: Int get() = activeDownloads.size + completedDownloads.size
+    val totalDownloadCount: Int get() = activeDownloads.size + pausedDownloads.size + completedDownloads.size
     val hasActiveDownloads: Boolean get() = activeDownloads.isNotEmpty()
-    val isEmpty: Boolean get() = activeDownloads.isEmpty() && completedDownloads.isEmpty()
+    val hasPausedDownloads: Boolean get() = pausedDownloads.isNotEmpty()
+    val isEmpty: Boolean get() = activeDownloads.isEmpty() && pausedDownloads.isEmpty() && completedDownloads.isEmpty()
 }
 
 /**

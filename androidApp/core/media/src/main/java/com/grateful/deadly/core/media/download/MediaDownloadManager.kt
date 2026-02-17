@@ -108,6 +108,44 @@ class MediaDownloadManager @Inject constructor(
     }
 
     /**
+     * Pause all downloads for a show by setting a non-zero stop reason.
+     */
+    fun pauseShowDownloads(showId: String) {
+        val downloads = getDownloadsForShow(showId)
+        for (download in downloads) {
+            if (download.state == Download.STATE_DOWNLOADING || download.state == Download.STATE_QUEUED) {
+                DownloadService.sendSetStopReason(
+                    context,
+                    DeadlyMediaDownloadService::class.java,
+                    download.request.id,
+                    /* stopReason = */ 1,
+                    false
+                )
+            }
+        }
+        Log.d(TAG, "Paused ${downloads.size} downloads for show $showId")
+    }
+
+    /**
+     * Resume all paused downloads for a show by clearing the stop reason.
+     */
+    fun resumeShowDownloads(showId: String) {
+        val downloads = getDownloadsForShow(showId)
+        for (download in downloads) {
+            if (download.state == Download.STATE_STOPPED) {
+                DownloadService.sendSetStopReason(
+                    context,
+                    DeadlyMediaDownloadService::class.java,
+                    download.request.id,
+                    Download.STOP_REASON_NONE,
+                    false
+                )
+            }
+        }
+        Log.d(TAG, "Resumed ${downloads.size} downloads for show $showId")
+    }
+
+    /**
      * Observe aggregated download progress for a show.
      */
     fun observeShowDownloadProgress(showId: String): Flow<ShowDownloadProgress> = callbackFlow {

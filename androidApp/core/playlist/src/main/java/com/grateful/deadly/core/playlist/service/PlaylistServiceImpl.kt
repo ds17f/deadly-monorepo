@@ -311,6 +311,18 @@ class PlaylistServiceImpl @Inject constructor(
         libraryService.downloadShow(show.id, recordingId)
     }
     
+    override fun pauseShowDownload() {
+        val show = currentShow ?: return
+        Log.d(TAG, "pauseShowDownload() for ${show.displayTitle}")
+        libraryService.pauseShowDownloads(show.id)
+    }
+
+    override fun resumeShowDownload() {
+        val show = currentShow ?: return
+        Log.d(TAG, "resumeShowDownload() for ${show.displayTitle}")
+        libraryService.resumeShowDownloads(show.id)
+    }
+
     override suspend fun shareShow() {
         val show = currentShow
         val recordingId = currentRecordingId
