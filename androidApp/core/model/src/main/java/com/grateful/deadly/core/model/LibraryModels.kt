@@ -140,6 +140,36 @@ data class LibraryShowViewModel(
 )
 
 /**
+ * UI-specific ViewModel for the Downloads screen
+ */
+data class DownloadedShowViewModel(
+    val showId: String,
+    val displayDate: String,
+    val venue: String,
+    val location: String,
+    val storageBytes: Long,
+    val status: LibraryDownloadStatus,
+    val progress: ShowDownloadProgress?,
+    val recordingId: String?,
+    val coverImageUrl: String?
+)
+
+/**
+ * UI state for the Downloads screen
+ */
+data class DownloadsUiState(
+    val isLoading: Boolean = true,
+    val totalStorageUsed: Long = 0L,
+    val activeDownloads: List<DownloadedShowViewModel> = emptyList(),
+    val completedDownloads: List<DownloadedShowViewModel> = emptyList(),
+    val showRemoveAllDialog: Boolean = false
+) {
+    val totalDownloadCount: Int get() = activeDownloads.size + completedDownloads.size
+    val hasActiveDownloads: Boolean get() = activeDownloads.isNotEmpty()
+    val isEmpty: Boolean get() = activeDownloads.isEmpty() && completedDownloads.isEmpty()
+}
+
+/**
  * Sort options for library display
  */
 enum class LibrarySortOption(val displayName: String) {

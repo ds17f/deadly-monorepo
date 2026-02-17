@@ -10,49 +10,28 @@ import com.grateful.deadly.core.design.scaffold.MiniPlayerConfig
 import com.grateful.deadly.core.design.scaffold.TopBarConfig
 import com.grateful.deadly.core.design.component.topbar.TopBarMode
 
-/**
- * LibraryBarConfiguration - Bar configuration for Library feature
- * 
- * Defines how the navigation bars should appear for Library screens.
- * Colocated with Library feature to keep related UI settings together.
- */
 object LibraryBarConfiguration {
-    
-    /**
-     * Configuration for main Library screen
-     * 
-     * Library title with search and add actions for library management
-     */
-    fun getLibraryBarConfig(): BarConfiguration = BarConfiguration(
+
+    fun getLibraryBarConfig(
+        onNavigateToDownloads: () -> Unit = {}
+    ): BarConfiguration = BarConfiguration(
         topBar = TopBarConfig(
             title = "Your Library",
             mode = TopBarMode.SOLID,
-            navigationIcon = null, // No back button in bottom nav context
-            actions = { LibraryTopBarActions() }
+            navigationIcon = null,
+            actions = { LibraryTopBarActions(onNavigateToDownloads = onNavigateToDownloads) }
         ),
         bottomBar = BottomBarConfig(visible = true),
-        miniPlayer = MiniPlayerConfig(visible = true) // Show MiniPlayer in library for music context
+        miniPlayer = MiniPlayerConfig(visible = true)
     )
 }
 
-/**
- * Top bar actions for main Library screen
- */
 @Composable
-private fun LibraryTopBarActions() {
-    // Search action
-    IconButton(onClick = { /* TODO: Implement library search */ }) {
+private fun LibraryTopBarActions(onNavigateToDownloads: () -> Unit) {
+    IconButton(onClick = onNavigateToDownloads) {
         Icon(
-            painter = IconResources.Content.Search(),
-            contentDescription = "Search Library"
-        )
-    }
-    
-    // Add action  
-    IconButton(onClick = { /* TODO: Implement add to library */ }) {
-        Icon(
-            painter = IconResources.Navigation.Add(),
-            contentDescription = "Add to Library"
+            painter = IconResources.Content.DownloadForOffline(),
+            contentDescription = "Downloads"
         )
     }
 }

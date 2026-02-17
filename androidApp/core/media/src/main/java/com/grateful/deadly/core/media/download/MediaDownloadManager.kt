@@ -217,6 +217,86 @@ class MediaDownloadManager @Inject constructor(
         return keys.any { it == uri }
     }
 
+    /**
+     * Get all show IDs that have any downloads (completed, in-progress, or queued).
+     */
+    fun getAllDownloadShowIds(): List<String> {
+        return getAllDownloads()
+            .mapNotNull { extractShowId(it) }
+            .distinct()
+    }
+
+    /**
+     * Extract the recording ID from a download's group data.
+     */
+    fun extractRecordingId(download: Download): String? {
+        val data = download.request.data
+        if (data != null && data.isNotEmpty()) {
+            val groupString = String(data)
+            val parts = groupString.split("|")
+            return parts.getOrNull(1)
+        }
+        return download.request.id.split("|").getOrNull(1)
+    }
+
+    /**
+     * Get the recording ID associated with downloads for a show.
+     */
+    fun getRecordingIdForShow(showId: String): String? {
+        return getDownloadsForShow(showId).firstOrNull()?.let { extractRecordingId(it) }
+    }
+
+    /**
+     * Observe all download activity across all shows for reactive UI updates.
+     * Emits a map of showId to ShowDownloadProgress on every change.
+     */
+    fun observeAllDownloads(): Flow<Map<String, ShowDownloadProgress>> = callbackFlow {
+        val listener = object : DownloadManager.Listener {
+            override fun onDownloadChanged(
+                downloadManager: DownloadManager,
+                download: Download,
+                finalException: Exception?
+            ) {
+                trySend(computeAllShowProgress())
+            }
+
+            override fun onDownloadRemoved(
+                downloadManager: DownloadManager,
+                download: Download
+            ) {
+                trySend(computeAllShowProgress())
+            }
+        }
+
+        downloadManager.addListener(listener)
+        trySend(computeAllShowProgress())
+        awaitClose { downloadManager.removeListener(listener) }
+    }.distinctUntilChanged()
+
+    /**
+     * Remove ALL downloads across all shows.
+     */
+    fun removeAllDownloads() {
+        val allDownloads = getAllDownloads()
+        for (download in allDownloads) {
+            DownloadService.sendRemoveDownload(
+                context,
+                DeadlyMediaDownloadService::class.java,
+                download.request.id,
+                false
+            )
+        }
+        Log.d(TAG, "Removed all ${allDownloads.size} downloads")
+    }
+
+    private fun computeAllShowProgress(): Map<String, ShowDownloadProgress> {
+        val allDownloads = getAllDownloads()
+        val showGroups = allDownloads.groupBy { extractShowId(it) }
+        return showGroups.mapNotNull { (showId, _) ->
+            showId?.let { it to computeShowProgress(it) }
+        }.toMap()
+    }
+
     private fun computeShowProgress(showId: String): ShowDownloadProgress {
         val downloads = getDownloadsForShow(showId)
         if (downloads.isEmpty()) {
