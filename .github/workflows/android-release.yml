@@ -162,6 +162,22 @@ jobs:
       id: version
       run: echo "version=${GITHUB_REF_NAME#android/v}" >> "$GITHUB_OUTPUT"
 
+    - name: Extract release notes from CHANGELOG
+      run: |
+        VERSION="${{ steps.version.outputs.version }}"
+        SERVER="${{ github.server_url }}"
+        REPO="${{ github.repository }}"
+        FOOTER=$'\n\nFull notes: '"${SERVER}/${REPO}/releases/tag/android/v${VERSION}"
+        MAX_NOTES=$(( 500 - ${#FOOTER} - 3 ))
+        RAW=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" CHANGELOG.md | sed '/^[[:space:]]*$/d')
+        if [ ${#RAW} -gt $MAX_NOTES ]; then
+          RAW="${RAW:0:$MAX_NOTES}..."
+        fi
+        NOTES="${RAW}${FOOTER}"
+        echo "RELEASE_NOTES<<EOF" >> "$GITHUB_ENV"
+        echo "$NOTES" >> "$GITHUB_ENV"
+        echo "EOF" >> "$GITHUB_ENV"
+
     - name: Upload to Play Store Internal Testing
       id: deploy
       run: |
