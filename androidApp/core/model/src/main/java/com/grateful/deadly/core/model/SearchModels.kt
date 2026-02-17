@@ -53,6 +53,19 @@ enum class SearchStatus {
     NO_RESULTS
 }
 
+enum class SearchSortOption(val displayName: String) {
+    RELEVANCE("Relevance"),
+    RATING("Rating"),
+    DATE_OF_SHOW("Show Date"),
+    VENUE("Venue"),
+    STATE("State")
+}
+
+enum class SearchSortDirection(val displayName: String) {
+    ASCENDING("Ascending"),
+    DESCENDING("Descending")
+}
+
 @Serializable
 data class SearchStats(
     val totalResults: Int,
