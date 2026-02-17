@@ -169,6 +169,7 @@ dependencies {
     implementation(project(":feature:library"))
     implementation(project(":feature:collections"))
     implementation(project(":feature:settings"))
+    implementation(project(":feature:downloads"))
 
     // Core Android
     implementation("androidx.core:core-ktx:1.12.0")

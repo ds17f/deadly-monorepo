@@ -10,6 +10,7 @@ import com.grateful.deadly.feature.settings.screens.main.SettingsBarConfiguratio
 import com.grateful.deadly.feature.library.screens.main.LibraryBarConfiguration
 import com.grateful.deadly.feature.collections.screens.main.CollectionsBarConfiguration
 import com.grateful.deadly.feature.collections.screens.details.CollectionDetailsBarConfiguration
+import com.grateful.deadly.feature.downloads.screens.main.DownloadsBarConfiguration
 
 /**
  * Central route mapping to feature bar configurations
@@ -18,7 +19,10 @@ import com.grateful.deadly.feature.collections.screens.details.CollectionDetails
  * keeping the actual configurations colocated with their features.
  */
 object NavigationBarConfig {
-    fun getBarConfig(route: String?): BarConfiguration = when {
+    fun getBarConfig(
+        route: String?,
+        onNavigateToDownloads: () -> Unit = {}
+    ): BarConfiguration = when {
         // Home routes
         route == "home" -> HomeBarConfiguration.getHomeBarConfig()
         
@@ -30,8 +34,13 @@ object NavigationBarConfig {
         route == "settings" -> SettingsBarConfiguration.getSettingsBarConfig()
         
         // Library routes
-        route == "library" -> LibraryBarConfiguration.getLibraryBarConfig()
+        route == "library" -> LibraryBarConfiguration.getLibraryBarConfig(
+            onNavigateToDownloads = onNavigateToDownloads
+        )
         
+        // Downloads routes
+        route == "downloads" -> DownloadsBarConfiguration.getDownloadsBarConfig()
+
         // Collections routes
         route == "collections" -> CollectionsBarConfiguration.getCollectionsBarConfig()
         

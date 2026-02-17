@@ -30,6 +30,7 @@ import com.grateful.deadly.feature.player.navigation.playerScreen
 import com.grateful.deadly.feature.miniplayer.screens.main.MiniPlayerScreen
 import com.grateful.deadly.feature.library.navigation.libraryNavigation
 import com.grateful.deadly.feature.collections.navigation.collectionsGraph
+import com.grateful.deadly.feature.downloads.navigation.downloadsNavigation
 /**
  * MainNavigation - Scalable navigation architecture
  *
@@ -50,6 +51,7 @@ import com.grateful.deadly.feature.collections.navigation.collectionsGraph
  * - Testable: Features accept navigation callbacks
  * - Clean: App module stays minimal and focused
  */
+@androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 @Composable
 fun MainNavigation() {
     val navController = rememberNavController()
@@ -57,7 +59,10 @@ fun MainNavigation() {
     val currentRoute = navBackStackEntry?.destination?.route
 
     // Get bar configuration based on current route
-    val barConfig = NavigationBarConfig.getBarConfig(currentRoute)
+    val barConfig = NavigationBarConfig.getBarConfig(
+        route = currentRoute,
+        onNavigateToDownloads = { navController.navigate("downloads") }
+    )
 
     AppScaffold(
         topBarConfig = barConfig.topBar,
@@ -104,6 +109,9 @@ fun MainNavigation() {
 
             // Library feature - user's saved content
             libraryNavigation(navController)
+
+            // Downloads feature - downloaded content management
+            downloadsNavigation(navController)
 
             // Collections feature - curated collections and series
             collectionsGraph(navController)
