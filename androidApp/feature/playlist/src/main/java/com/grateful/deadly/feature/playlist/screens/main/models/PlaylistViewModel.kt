@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
@@ -81,7 +82,7 @@ class PlaylistViewModel @Inject constructor(
                 }
         }
 
-        // Reactive track download status - refresh track icons on any download state change
+        // Reactive track download status - refresh track icons on download state change (debounced)
         viewModelScope.launch {
             _baseUiState
                 .map { it.showData?.showId }
@@ -93,9 +94,10 @@ class PlaylistViewModel @Inject constructor(
                         flowOf(ShowDownloadProgress("", LibraryDownloadStatus.NOT_DOWNLOADED, 0f, 0L, 0L, 0, 0))
                     }
                 }
+                .debounce(500)
                 .collect { progress ->
                     if (_rawTrackData.value.isNotEmpty()) {
-                        Log.d(TAG, "Download status changed (${progress.status}, ${progress.tracksCompleted}/${progress.tracksTotal}) — refreshing track download status")
+                        Log.d(TAG, "Download status changed (${progress.status}, ${progress.tracksCompleted}/${progress.tracksTotal}) — refreshing track download icons")
                         refreshTrackDownloadStatus()
                     }
                 }
@@ -1147,18 +1149,13 @@ class PlaylistViewModel @Inject constructor(
     }
     
     /**
-     * Lightweight refresh of track download status without clearing the list or showing spinner.
-     * Keeps the existing list visible and scroll position stable.
+     * Lightweight refresh of track download status without network calls.
+     * Updates isDownloaded / downloadProgress on existing tracks using local cache only.
      */
     private fun refreshTrackDownloadStatus() {
-        viewModelScope.launch {
-            try {
-                val trackData = playlistService.getTrackList()
-                _rawTrackData.value = trackData
-            } catch (e: Exception) {
-                Log.e(TAG, "Error refreshing track download status", e)
-            }
-        }
+        val current = _rawTrackData.value
+        if (current.isEmpty()) return
+        _rawTrackData.value = playlistService.refreshTrackDownloadFlags(current)
     }
 
     /**

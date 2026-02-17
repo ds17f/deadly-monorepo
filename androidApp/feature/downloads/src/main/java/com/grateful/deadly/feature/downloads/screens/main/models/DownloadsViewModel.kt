@@ -15,7 +15,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
+import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 
 @UnstableApi
@@ -33,57 +35,80 @@ class DownloadsViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(DownloadsUiState())
     val uiState: StateFlow<DownloadsUiState> = _uiState.asStateFlow()
 
+    // Caches to avoid DB queries on every download tick
+    private val showCache = ConcurrentHashMap<String, ShowMetadata>()
+
+    private data class ShowMetadata(
+        val displayDate: String,
+        val venue: String,
+        val location: String,
+        val recordingId: String?,
+        val coverImageUrl: String?
+    )
+
     init {
         observeDownloads()
     }
 
     private fun observeDownloads() {
         viewModelScope.launch {
-            mediaDownloadManager.observeAllDownloads().collect { progressMap ->
-                Log.d(TAG, "Download state changed: ${progressMap.size} shows")
-                val showIds = progressMap.keys.toList()
+            mediaDownloadManager.observeAllDownloads()
+                .debounce(300)
+                .collect { progressMap ->
+                    Log.d(TAG, "Download state changed: ${progressMap.size} shows")
 
-                val activeDownloads = mutableListOf<DownloadedShowViewModel>()
-                val pausedDownloads = mutableListOf<DownloadedShowViewModel>()
-                val completedDownloads = mutableListOf<DownloadedShowViewModel>()
+                    val activeDownloads = mutableListOf<DownloadedShowViewModel>()
+                    val pausedDownloads = mutableListOf<DownloadedShowViewModel>()
+                    val completedDownloads = mutableListOf<DownloadedShowViewModel>()
 
-                for (showId in showIds) {
-                    val progress = progressMap[showId] ?: continue
-                    val show = showRepository.getShowById(showId)
-                    val libraryEntity = libraryDao.getLibraryShowById(showId)
-                    val recordingId = libraryEntity?.downloadedRecordingId
-                        ?: mediaDownloadManager.getRecordingIdForShow(showId)
+                    for ((showId, progress) in progressMap) {
+                        val meta = showCache.getOrPut(showId) { loadShowMetadata(showId) }
 
-                    val viewModel = DownloadedShowViewModel(
-                        showId = showId,
-                        displayDate = show?.let { formatDisplayDate(it.date) } ?: showId,
-                        venue = show?.venue?.name ?: "",
-                        location = show?.location?.displayText ?: "",
-                        storageBytes = mediaDownloadManager.getShowStorageUsed(showId),
-                        status = progress.status,
-                        progress = progress,
-                        recordingId = recordingId,
-                        coverImageUrl = show?.coverImageUrl
-                    )
+                        val viewModel = DownloadedShowViewModel(
+                            showId = showId,
+                            displayDate = meta.displayDate,
+                            venue = meta.venue,
+                            location = meta.location,
+                            storageBytes = progress.downloadedBytes,
+                            status = progress.status,
+                            progress = progress,
+                            recordingId = meta.recordingId,
+                            coverImageUrl = meta.coverImageUrl
+                        )
 
-                    when (progress.status) {
-                        LibraryDownloadStatus.COMPLETED -> completedDownloads.add(viewModel)
-                        LibraryDownloadStatus.DOWNLOADING,
-                        LibraryDownloadStatus.QUEUED -> activeDownloads.add(viewModel)
-                        LibraryDownloadStatus.PAUSED -> pausedDownloads.add(viewModel)
-                        else -> {} // FAILED/CANCELLED/NOT_DOWNLOADED — don't show
+                        when (progress.status) {
+                            LibraryDownloadStatus.COMPLETED -> completedDownloads.add(viewModel)
+                            LibraryDownloadStatus.DOWNLOADING,
+                            LibraryDownloadStatus.QUEUED -> activeDownloads.add(viewModel)
+                            LibraryDownloadStatus.PAUSED -> pausedDownloads.add(viewModel)
+                            else -> {} // FAILED/CANCELLED/NOT_DOWNLOADED — don't show
+                        }
                     }
-                }
 
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    totalStorageUsed = mediaDownloadManager.getTotalStorageUsed(),
-                    activeDownloads = activeDownloads,
-                    pausedDownloads = pausedDownloads,
-                    completedDownloads = completedDownloads
-                )
-            }
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        totalStorageUsed = mediaDownloadManager.getTotalStorageUsed(),
+                        activeDownloads = activeDownloads,
+                        pausedDownloads = pausedDownloads,
+                        completedDownloads = completedDownloads
+                    )
+                }
         }
+    }
+
+    private suspend fun loadShowMetadata(showId: String): ShowMetadata {
+        val show = showRepository.getShowById(showId)
+        val libraryEntity = libraryDao.getLibraryShowById(showId)
+        val recordingId = libraryEntity?.downloadedRecordingId
+            ?: mediaDownloadManager.getRecordingIdForShow(showId)
+
+        return ShowMetadata(
+            displayDate = show?.let { formatDisplayDate(it.date) } ?: showId,
+            venue = show?.venue?.name ?: "",
+            location = show?.location?.displayText ?: "",
+            recordingId = recordingId,
+            coverImageUrl = show?.coverImageUrl
+        )
     }
 
     fun cancelDownload(showId: String) {
@@ -100,6 +125,7 @@ class DownloadsViewModel @Inject constructor(
 
     fun removeDownload(showId: String) {
         mediaDownloadManager.removeShowDownloads(showId)
+        showCache.remove(showId)
     }
 
     fun showRemoveAllDialog() {
@@ -112,6 +138,7 @@ class DownloadsViewModel @Inject constructor(
 
     fun removeAllDownloads() {
         mediaDownloadManager.removeAllDownloads()
+        showCache.clear()
         _uiState.value = _uiState.value.copy(showRemoveAllDialog = false)
     }
 
