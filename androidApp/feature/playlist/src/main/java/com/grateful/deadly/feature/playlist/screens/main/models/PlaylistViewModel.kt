@@ -21,6 +21,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.flow.SharingStarted
@@ -95,9 +96,9 @@ class PlaylistViewModel @Inject constructor(
                     }
                 }
                 .collect { tracksCompleted ->
-                    if (tracksCompleted > 0 && _rawTrackData.value.isNotEmpty()) {
-                        Log.d(TAG, "Download track completed ($tracksCompleted) — refreshing track list")
-                        loadTrackListAsync()
+                    if (_rawTrackData.value.isNotEmpty()) {
+                        Log.d(TAG, "Download status changed ($tracksCompleted completed) — refreshing track download status")
+                        refreshTrackDownloadStatus()
                     }
                 }
         }
@@ -422,7 +423,8 @@ class PlaylistViewModel @Inject constructor(
                 libraryService.cancelShowDownloads(showId)
                     .onSuccess {
                         Log.d(TAG, "Successfully removed downloads for show $showId")
-                        loadTrackListAsync()
+                        delay(500) // Let ExoPlayer async cache removal complete
+                        refreshTrackDownloadStatus()
                     }
                     .onFailure { error ->
                         Log.e(TAG, "Failed to remove downloads for show $showId", error)
@@ -491,7 +493,8 @@ class PlaylistViewModel @Inject constructor(
                             libraryService.removeFromLibrary(currentShow.showId)
                                 .onSuccess {
                                     Log.d(TAG, "Successfully removed show ${currentShow.showId} from library with downloads")
-                                    // UI will update automatically via reactive StateFlow
+                                    delay(500) // Let ExoPlayer async cache removal complete
+                                    refreshTrackDownloadStatus()
                                 }
                                 .onFailure { error ->
                                     Log.e(TAG, "Failed to remove show ${currentShow.showId} from library after canceling downloads", error)
@@ -1121,6 +1124,21 @@ class PlaylistViewModel @Inject constructor(
         _rawTrackData.value = updatedTracks
     }
     
+    /**
+     * Lightweight refresh of track download status without clearing the list or showing spinner.
+     * Keeps the existing list visible and scroll position stable.
+     */
+    private fun refreshTrackDownloadStatus() {
+        viewModelScope.launch {
+            try {
+                val trackData = playlistService.getTrackList()
+                _rawTrackData.value = trackData
+            } catch (e: Exception) {
+                Log.e(TAG, "Error refreshing track download status", e)
+            }
+        }
+    }
+
     /**
      * Load track list asynchronously with smart prefetch promotion
      * Shows loading spinner over track section only
