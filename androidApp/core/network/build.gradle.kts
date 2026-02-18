@@ -49,6 +49,9 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.56.1")
     ksp("com.google.dagger:hilt-compiler:2.56.1")
     
+    // Coroutines (for NetworkMonitor callbackFlow/stateIn)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
     testImplementation("junit:junit:4.13.2")
 }
 

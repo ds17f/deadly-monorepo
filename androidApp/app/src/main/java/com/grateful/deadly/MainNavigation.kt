@@ -1,9 +1,17 @@
 package com.grateful.deadly
 
 import android.util.Log
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -13,6 +21,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -54,9 +63,35 @@ import com.grateful.deadly.feature.downloads.navigation.downloadsNavigation
 @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 @Composable
 fun MainNavigation() {
+    val appViewModel: AppViewModel = hiltViewModel()
+    val isOffline by appViewModel.isOffline.collectAsState()
+
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
+
+    val snackbarHostState = remember { SnackbarHostState() }
+    val prevIsOffline = remember { mutableStateOf<Boolean?>(null) }
+
+    // Redirect to downloads and show snackbar on connectivity changes
+    LaunchedEffect(isOffline) {
+        // Show snackbar only on changes, not initial composition
+        if (prevIsOffline.value != null && prevIsOffline.value != isOffline) {
+            val msg = if (isOffline) "Offline — showing downloaded content" else "Back online"
+            snackbarHostState.showSnackbar(msg, duration = SnackbarDuration.Short)
+        }
+        prevIsOffline.value = isOffline
+
+        // Redirect to downloads when offline, unless already on a safe screen
+        if (isOffline) {
+            val route = navController.currentBackStackEntry?.destination?.route
+            val isSafe = route == "downloads" || route == "player" ||
+                         route == "splash" || route?.startsWith("playlist/") == true
+            if (!isSafe) {
+                navController.navigate("downloads") { launchSingleTop = true }
+            }
+        }
+    }
 
     // Get bar configuration based on current route
     val barConfig = NavigationBarConfig.getBarConfig(
@@ -94,47 +129,87 @@ fun MainNavigation() {
         },
         onNavigationClick = {
             navController.popBackStack()
-        }
+        },
+        snackbarHostState = snackbarHostState
     ) { paddingValues ->
-        NavHost(
-            navController = navController,
-            startDestination = "splash",
-            modifier = Modifier.padding(paddingValues)
-        ) {
-            // Splash feature - handles database initialization
-            splashGraph(navController)
+        Box(modifier = Modifier.fillMaxSize()) {
+            NavHost(
+                navController = navController,
+                startDestination = "splash",
+                modifier = Modifier.padding(paddingValues)
+            ) {
+                // Splash feature - handles database initialization
+                splashGraph(navController)
 
-            // Home feature - main hub screen
-            homeGraph(navController)
+                // Home feature - main hub screen
+                homeGraph(navController)
 
-            // Library feature - user's saved content
-            libraryNavigation(navController)
+                // Library feature - user's saved content
+                libraryNavigation(navController)
 
-            // Downloads feature - downloaded content management
-            downloadsNavigation(navController)
+                // Downloads feature - downloaded content management
+                downloadsNavigation(navController)
 
-            // Collections feature - curated collections and series
-            collectionsGraph(navController)
+                // Collections feature - curated collections and series
+                collectionsGraph(navController)
 
-            // Search feature - search and browse functionality
-            searchGraph(navController)
+                // Search feature - search and browse functionality
+                searchGraph(navController)
 
-            // Playlist feature - show and recording details
-            playlistGraph(navController)
+                // Playlist feature - show and recording details
+                playlistGraph(navController)
 
-            // Player feature - playback interface
-            playerScreen(
-                onNavigateBack = { navController.popBackStack() },
-                onNavigateToPlaylist = { showId, recordingId ->
-                    navController.navigateToPlaylist(showId, recordingId)
+                // Player feature - playback interface
+                playerScreen(
+                    onNavigateBack = { navController.popBackStack() },
+                    onNavigateToPlaylist = { showId, recordingId ->
+                        navController.navigateToPlaylist(showId, recordingId)
+                    }
+                )
+
+                // Settings feature - app configuration
+                composable("settings") {
+                    SettingsScreen()
                 }
-            )
+            }
 
-            // Settings feature - app configuration
-            composable("settings") {
-                SettingsScreen()
+            AnimatedVisibility(
+                visible = isOffline,
+                modifier = Modifier.align(Alignment.TopCenter),
+                enter = slideInVertically() + fadeIn(),
+                exit = slideOutVertically() + fadeOut()
+            ) {
+                OfflineBanner()
             }
         }
+    }
+}
+
+/**
+ * Slim banner shown at the top of the screen when the device is offline.
+ */
+@Composable
+private fun OfflineBanner() {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        Icon(
+            imageVector = Icons.Default.WifiOff,
+            contentDescription = null,
+            modifier = Modifier.size(14.dp),
+            tint = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.width(6.dp))
+        Text(
+            text = "Offline mode",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
     }
 }
 
@@ -184,7 +259,7 @@ private fun BottomNavItem(
     } else {
         MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
     }
-    
+
     Column(
         modifier = Modifier
             .clip(RoundedCornerShape(12.dp))
@@ -198,9 +273,9 @@ private fun BottomNavItem(
             tint = contentColor,
             modifier = Modifier.size(24.dp)
         )
-        
+
         Spacer(modifier = Modifier.height(4.dp))
-        
+
         Text(
             text = destination.title,
             color = contentColor,
@@ -211,4 +286,3 @@ private fun BottomNavItem(
         )
     }
 }
-

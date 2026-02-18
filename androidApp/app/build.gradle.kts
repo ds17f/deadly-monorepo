@@ -147,6 +147,7 @@ android {
 
 dependencies {
     // Core Dependencies
+    implementation(project(":core:network"))
     implementation(project(":core:design"))
     implementation(project(":core:media"))
     implementation(project(":core:player"))
