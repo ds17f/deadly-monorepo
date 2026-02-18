@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.4.0] - 2026-02-17
+
+### New Features
+* Add offline mode with network monitoring and offline-aware navigation (800a0de)
+
+
 ## [2.3.0] - 2026-02-17
 
 ### New Features
@@ -15,8 +21,6 @@
 
 ### Performance Improvements
 * Fix download-related UI bottlenecks across three hot paths (cc3c55b)
-
-
 ## [2.2.0] - 2026-02-17
 
 ### New Features
