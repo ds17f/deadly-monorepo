@@ -1,11 +1,21 @@
 # Changelog
 
+## [2.4.1] - 2026-02-18
+
+### Bug Fixes
+* persist grid/list display mode preference (f40dfe6)
+* remove black space above MiniPlayer and tighten padding (9d105a7)
+* restore playback state across app restarts and stop on task removal (67d1cff)
+* improve offline mode UX across nav and playlist screen (96ccf5c)
+
+### Other Changes
+* chore(android): remove debug UI panels and debug methods from services (e028dc0)
+
+
 ## [2.4.0] - 2026-02-17
 
 ### New Features
 * Add offline mode with network monitoring and offline-aware navigation (800a0de)
-
-
 ## [2.3.0] - 2026-02-17
 
 ### New Features
