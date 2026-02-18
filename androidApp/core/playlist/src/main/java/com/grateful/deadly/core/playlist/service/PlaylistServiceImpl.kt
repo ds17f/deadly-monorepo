@@ -8,6 +8,7 @@ import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import com.grateful.deadly.core.media.download.MediaDownloadManager
+import com.grateful.deadly.core.network.monitor.NetworkMonitor
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.state.MediaControllerStateUtil
 import com.grateful.deadly.core.player.service.ShareService
@@ -49,6 +50,7 @@ class PlaylistServiceImpl @Inject constructor(
     private val collectionsService: DeadCollectionsService,
     private val libraryService: LibraryService,
     private val mediaDownloadManager: MediaDownloadManager,
+    private val networkMonitor: NetworkMonitor,
     @Named("PlaylistApplicationScope") private val coroutineScope: CoroutineScope
 ) : PlaylistService {
     
@@ -63,19 +65,22 @@ class PlaylistServiceImpl @Inject constructor(
 
     companion object {
         private const val TAG = "PlaylistServiceImpl"
-        
+
         // Default show ID (Cornell '77) for fallback
         private const val DEFAULT_SHOW_ID = "1977-05-08"
-        
+
         // Prefetch priorities
         const val PREFETCH_NEXT = "next"
         const val PREFETCH_PREVIOUS = "previous"
-        
+
+        // Max shows to scan when looking for a downloaded neighbour while offline
+        private const val MAX_ADJACENT_SEARCH = 200
+
         // Default format priority for smart selection with fallback
         // Note: FLAC excluded due to ExoPlayer compatibility issues
         val DEFAULT_FORMAT_PRIORITY = listOf(
             "VBR MP3",      // Best balance for streaming
-            "MP3",          // Universal fallback  
+            "MP3",          // Universal fallback
             "Ogg Vorbis"    // Good quality, efficient
         )
     }
@@ -118,7 +123,11 @@ class PlaylistServiceImpl @Inject constructor(
     
     override suspend fun navigateToNextShow() {
         currentShow?.let { current ->
-            val nextShow = showRepository.getNextShowByDate(current.date)
+            val nextShow = if (networkMonitor.isOnline.value) {
+                showRepository.getNextShowByDate(current.date)
+            } else {
+                getNextDownloadedShow(current.date)
+            }
             if (nextShow != null) {
                 currentShow = nextShow
                 // Update recording ID to best recording for new show
@@ -130,10 +139,14 @@ class PlaylistServiceImpl @Inject constructor(
             }
         } ?: Log.w(TAG, "Cannot navigate: no current show loaded")
     }
-    
+
     override suspend fun navigateToPreviousShow() {
         currentShow?.let { current ->
-            val previousShow = showRepository.getPreviousShowByDate(current.date)
+            val previousShow = if (networkMonitor.isOnline.value) {
+                showRepository.getPreviousShowByDate(current.date)
+            } else {
+                getPreviousDownloadedShow(current.date)
+            }
             if (previousShow != null) {
                 currentShow = previousShow
                 // Update recording ID to best recording for new show
@@ -149,9 +162,17 @@ class PlaylistServiceImpl @Inject constructor(
     // === DOMAIN MODEL CONVERSION ===
     
     private suspend fun convertShowToViewModel(show: Show): PlaylistShowViewModel {
-        // Calculate navigation availability using database queries
-        val hasNext = showRepository.getNextShowByDate(show.date) != null
-        val hasPrevious = showRepository.getPreviousShowByDate(show.date) != null
+        // Calculate navigation availability; when offline, only count downloaded neighbours
+        val hasNext = if (networkMonitor.isOnline.value) {
+            showRepository.getNextShowByDate(show.date) != null
+        } else {
+            getNextDownloadedShow(show.date) != null
+        }
+        val hasPrevious = if (networkMonitor.isOnline.value) {
+            showRepository.getPreviousShowByDate(show.date) != null
+        } else {
+            getPreviousDownloadedShow(show.date) != null
+        }
         
         return PlaylistShowViewModel(
             showId = show.id,
@@ -596,7 +617,45 @@ class PlaylistServiceImpl @Inject constructor(
     }
 
     // === PRIVATE HELPER METHODS ===
-    
+
+    /** Show IDs that have been fully downloaded (all tracks completed). */
+    private fun getCompletedDownloadShowIds(): Set<String> =
+        mediaDownloadManager.getAllDownloadShowIds()
+            .filter { mediaDownloadManager.getShowDownloadStatus(it) == LibraryDownloadStatus.COMPLETED }
+            .toSet()
+
+    /**
+     * Walk forward chronologically from [currentDate] until a fully-downloaded
+     * show is found or [MAX_ADJACENT_SEARCH] shows have been checked.
+     */
+    private suspend fun getNextDownloadedShow(currentDate: String): Show? {
+        val ids = getCompletedDownloadShowIds()
+        if (ids.isEmpty()) return null
+        var date = currentDate
+        repeat(MAX_ADJACENT_SEARCH) {
+            val candidate = showRepository.getNextShowByDate(date) ?: return null
+            if (candidate.id in ids) return candidate
+            date = candidate.date
+        }
+        return null
+    }
+
+    /**
+     * Walk backward chronologically from [currentDate] until a fully-downloaded
+     * show is found or [MAX_ADJACENT_SEARCH] shows have been checked.
+     */
+    private suspend fun getPreviousDownloadedShow(currentDate: String): Show? {
+        val ids = getCompletedDownloadShowIds()
+        if (ids.isEmpty()) return null
+        var date = currentDate
+        repeat(MAX_ADJACENT_SEARCH) {
+            val candidate = showRepository.getPreviousShowByDate(date) ?: return null
+            if (candidate.id in ids) return candidate
+            date = candidate.date
+        }
+        return null
+    }
+
     /**
      * Convert Recording domain model to RecordingOptionViewModel for UI display
      */

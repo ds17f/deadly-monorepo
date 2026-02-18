@@ -99,19 +99,7 @@ class SplashService @Inject constructor(
     suspend fun initializeDatabase(): InitResult {
         return try {
             Log.d(TAG, "Starting Database initialization")
-            
-            // Test GitHub API integration
-            databaseManager.testGitHubIntegration()
-            
-            // Test database health checking
-            databaseManager.testDatabaseHealth()
-            
-            // Test file discovery
-            databaseManager.testFileDiscovery()
-            
-            // Test download functionality (optional - can be slow)
-            // databaseManager.testDownloadFunctionality()
-            
+
             val result = databaseManager.initializeDataIfNeeded()
             
             when (result) {

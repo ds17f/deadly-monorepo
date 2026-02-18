@@ -105,6 +105,7 @@ fun AppScaffold(
     miniPlayerConfig: MiniPlayerConfig? = null,
     miniPlayerContent: (@Composable () -> Unit)? = null,
     onNavigationClick: (() -> Unit)? = null,
+    snackbarHostState: SnackbarHostState? = null,
     content: @Composable (PaddingValues) -> Unit
 ) {
     // Use Box layout to properly layer MiniPlayer above bottom navigation
@@ -130,6 +131,9 @@ fun AppScaffold(
             },
             bottomBar = {
                 // Empty bottomBar - we'll render navigation and MiniPlayer separately below
+            },
+            snackbarHost = {
+                snackbarHostState?.let { SnackbarHost(it) }
             },
             contentWindowInsets = when (topBarConfig?.mode) {
                 TopBarMode.SOLID -> WindowInsets.systemBars
