@@ -52,12 +52,11 @@ fun MiniPlayerScreen(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .height(68.dp) // Reduced from 88dp
             .clickable {
                 viewModel.onTapToExpand()
                 onTapToExpand(uiState.showId) // Use showId for navigation
             },
-        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         shape = RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFF2D1B1B) // Custom dark red-brown for MiniPlayer
@@ -67,8 +66,7 @@ fun MiniPlayerScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f)
-                    .padding(10.dp),
+                    .padding(horizontal = 10.dp, vertical = 6.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 // Artwork thumbnail
