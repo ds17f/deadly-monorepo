@@ -148,6 +148,32 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         return mediaSession
     }
 
+    override fun onTaskRemoved(rootIntent: Intent?) {
+        // Save exact playback position before stopping (synchronous commit)
+        val currentItem = exoPlayer.currentMediaItem
+        if (currentItem != null) {
+            val extras = currentItem.mediaMetadata.extras
+            getSharedPreferences("last_played_track", MODE_PRIVATE).edit()
+                .putString("show_id", extras?.getString("showId"))
+                .putString("recording_id", extras?.getString("recordingId"))
+                .putInt("track_index", exoPlayer.currentMediaItemIndex)
+                .putLong("position_ms", exoPlayer.currentPosition)
+                .putString("track_title", currentItem.mediaMetadata.title?.toString())
+                .putString("track_filename", extras?.getString("filename"))
+                .putString("selected_format", extras?.getString("format"))
+                .putString("show_date", extras?.getString("showDate"))
+                .putString("venue", extras?.getString("venue"))
+                .putString("location", extras?.getString("location"))
+                .putLong("last_saved", System.currentTimeMillis())
+                .commit()
+            Log.d(TAG, "Saved playback position ${exoPlayer.currentPosition}ms before task removal")
+        }
+
+        exoPlayer.stop()
+        stopSelf()
+        super.onTaskRemoved(rootIntent)
+    }
+
     override fun onDestroy() {
         Log.d(TAG, "Service onDestroy()")
         mediaSession?.run {
