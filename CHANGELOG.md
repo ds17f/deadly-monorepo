@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0] - 2026-02-18
+
+### New Features
+* replace decade browse gradient overlays with curated decade photos (dd61dda)
+* persist recording preferences and handle download conflicts (065b615)
+
+
 ## [2.4.1] - 2026-02-18
 
 ### Bug Fixes
@@ -10,8 +17,6 @@
 
 ### Other Changes
 * chore(android): remove debug UI panels and debug methods from services (e028dc0)
-
-
 ## [2.4.0] - 2026-02-17
 
 ### New Features
