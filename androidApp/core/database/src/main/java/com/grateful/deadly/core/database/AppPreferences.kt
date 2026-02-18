@@ -28,6 +28,7 @@ class AppPreferences @Inject constructor(
 
     companion object {
         private const val KEY_SHOW_ONLY_RECORDED = "show_only_recorded_shows"
+        private const val KEY_LIBRARY_DISPLAY_MODE = "library_display_mode"
     }
 
     private val _showOnlyRecordedShows = MutableStateFlow(
@@ -40,5 +41,17 @@ class AppPreferences @Inject constructor(
     fun setShowOnlyRecordedShows(value: Boolean) {
         prefs.edit().putBoolean(KEY_SHOW_ONLY_RECORDED, value).apply()
         _showOnlyRecordedShows.value = value
+    }
+
+    private val _libraryDisplayMode = MutableStateFlow(
+        prefs.getString(KEY_LIBRARY_DISPLAY_MODE, "LIST") ?: "LIST"
+    )
+
+    /** Persisted grid/list display mode for the library screen ("LIST" or "GRID"). */
+    val libraryDisplayMode: StateFlow<String> = _libraryDisplayMode.asStateFlow()
+
+    fun setLibraryDisplayMode(mode: String) {
+        prefs.edit().putString(KEY_LIBRARY_DISPLAY_MODE, mode).apply()
+        _libraryDisplayMode.value = mode
     }
 }

@@ -50,7 +50,7 @@ fun LibraryScreen(
     var filterPath by remember { mutableStateOf(FilterPath()) }
     var sortBy by remember { mutableStateOf(LibrarySortOption.DATE_ADDED) }
     var sortDirection by remember { mutableStateOf(LibrarySortDirection.DESCENDING) }
-    var displayMode by remember { mutableStateOf(LibraryDisplayMode.LIST) }
+    val displayMode by viewModel.displayMode.collectAsState()
     var showAddBottomSheet by remember { mutableStateOf(false) }
     var showSortBottomSheet by remember { mutableStateOf(false) }
     var selectedShowForActions by remember { mutableStateOf<LibraryShowViewModel?>(null) }
@@ -74,7 +74,7 @@ fun LibraryScreen(
                 sortDirection = sortDirection,
                 displayMode = displayMode,
                 onSortSelectorClick = { showSortBottomSheet = true },
-                onDisplayModeChanged = { displayMode = it },
+                onDisplayModeChanged = { viewModel.setDisplayMode(it) },
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
             )
             

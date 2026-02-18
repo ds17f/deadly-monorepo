@@ -45,6 +45,7 @@ android {
 dependencies {
     // V2 dependencies
     implementation(project(":core:api:library"))
+    implementation(project(":core:database"))
     implementation(project(":core:library"))
     implementation(project(":core:model"))
     implementation(project(":core:design"))
