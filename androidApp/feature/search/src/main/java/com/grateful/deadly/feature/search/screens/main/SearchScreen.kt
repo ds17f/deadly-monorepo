@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -27,7 +28,7 @@ import com.grateful.deadly.feature.search.screens.main.models.SearchViewModel
 // Data classes for UI components
 data class DecadeBrowse(
     val title: String,
-    val gradient: List<Color>,
+    val drawableRes: Int,
     val era: String
 )
 
@@ -163,10 +164,10 @@ private fun SearchBrowseSection(
     onDecadeClick: (String) -> Unit
 ) {
     val decades = listOf(
-        DecadeBrowse("1960s", listOf(Color(0xFF1976D2), Color(0xFF42A5F5)), "196*"),
-        DecadeBrowse("1970s", listOf(Color(0xFF388E3C), Color(0xFF66BB6A)), "197*"),
-        DecadeBrowse("1980s", listOf(Color(0xFFD32F2F), Color(0xFFEF5350)), "198*"),
-        DecadeBrowse("1990s", listOf(Color(0xFF7B1FA2), Color(0xFFAB47BC)), "199*")
+        DecadeBrowse("1960s", com.grateful.deadly.core.design.R.drawable.decade_1960s, "196*"),
+        DecadeBrowse("1970s", com.grateful.deadly.core.design.R.drawable.decade_1970s, "197*"),
+        DecadeBrowse("1980s", com.grateful.deadly.core.design.R.drawable.decade_1980s, "198*"),
+        DecadeBrowse("1990s", com.grateful.deadly.core.design.R.drawable.decade_1990s, "199*")
     )
 
     Column(
@@ -214,41 +215,16 @@ private fun DecadeCard(
         modifier = modifier
             .fillMaxWidth()
             .height(80.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = Color.Transparent
-        )
+        shape = RoundedCornerShape(8.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.Transparent)
     ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(
-                    brush = Brush.horizontalGradient(decade.gradient),
-                    shape = RoundedCornerShape(8.dp)
-                )
-                .clip(RoundedCornerShape(8.dp))
-        ) {
-            // Background alt logo image (right justified)
-            Image(
-                painter = painterResource(com.grateful.deadly.core.design.R.drawable.alt_logo),
-                contentDescription = null,
-                modifier = Modifier
-                    .size(40.dp)
-                    .align(Alignment.BottomEnd)
-                    .padding(8.dp),
-                alpha = 0.3f
-            )
-            
-            // Decade text
-            Text(
-                text = decade.title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = Color.White,
-                modifier = Modifier
-                    .align(Alignment.BottomStart)
-                    .padding(12.dp)
-            )
-        }
+        Image(
+            painter = painterResource(decade.drawableRes),
+            contentDescription = decade.title,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
+            alignment = Alignment.BottomStart
+        )
     }
 }
 
