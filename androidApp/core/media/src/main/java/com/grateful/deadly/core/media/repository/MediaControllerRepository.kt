@@ -857,41 +857,6 @@ class MediaControllerRepository @Inject constructor(
     }
     
     /**
-     * Get debug information for troubleshooting
-     */
-    fun getDebugInfo(): String {
-        val controller = mediaController
-        return buildString {
-            appendLine("=== MediaControllerRepository Debug Info ===")
-            appendLine("ConnectionState: ${_connectionState.value}")
-            appendLine("MediaController: ${if (controller != null) "Connected" else "Null"}")
-            appendLine("PendingCommands: ${pendingCommands.size}")
-            
-            if (controller != null) {
-                try {
-                    appendLine("IsPlaying: ${controller.isPlaying}")
-                    appendLine("PlaybackState: ${controller.playbackState}")
-                    appendLine("CurrentPosition: ${controller.currentPosition}ms")
-                    appendLine("Duration: ${controller.duration}ms")
-                    appendLine("CurrentMediaItemIndex: ${controller.currentMediaItemIndex}")
-                    appendLine("MediaItemCount: ${controller.mediaItemCount}")
-                } catch (e: Exception) {
-                    appendLine("Error accessing controller state: ${e.message}")
-                }
-            }
-            
-            appendLine("StateFlow Values:")
-            appendLine("  isPlaying: ${_isPlaying.value}")
-            appendLine("  currentPosition: ${_currentPosition.value}ms")
-            appendLine("  duration: ${_duration.value}ms")
-            appendLine("  currentShowId: ${_currentShowId.value}")
-            appendLine("  currentRecordingId: ${_currentRecordingId.value}")
-            appendLine("  currentTrackIndex: ${_currentTrackIndex.value}")
-            appendLine("=== End Debug Info ===")
-        }
-    }
-    
-    /**
      * Release resources
      */
     fun release() {

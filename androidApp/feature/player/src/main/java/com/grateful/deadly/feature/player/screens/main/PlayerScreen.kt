@@ -16,11 +16,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.grateful.deadly.core.design.component.debug.DebugActivator
-import com.grateful.deadly.core.design.component.debug.DebugBottomSheet
-import com.grateful.deadly.core.design.component.debug.DebugData
-import com.grateful.deadly.core.design.component.debug.DebugSection
-import com.grateful.deadly.core.design.component.debug.DebugItem
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTopBar
 import com.grateful.deadly.feature.player.screens.main.components.PlayerCoverArt
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTrackInfoRow
@@ -37,14 +32,14 @@ import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
 
 /**
  * UI Color Generation Utilities for Recording-Based Gradients
- * 
+ *
  * These utilities generate consistent visual identities per recording
  * by hashing recordingId to select from the Grateful Dead color palette.
  */
 
 // Grateful Dead inspired color palette for gradients (from Theme.kt)
 private val DeadRed = Color(0xFFDC143C)      // Crimson red
-private val DeadGold = Color(0xFFFFD700)     // Golden yellow  
+private val DeadGold = Color(0xFFFFD700)     // Golden yellow
 private val DeadGreen = Color(0xFF228B22)    // Forest green
 private val DeadBlue = Color(0xFF4169E1)     // Royal blue
 private val DeadPurple = Color(0xFF8A2BE2)   // Blue violet
@@ -56,7 +51,7 @@ private val GradientColors = listOf(DeadGreen, DeadGold, DeadRed, DeadBlue, Dead
  */
 private fun recordingIdToColor(recordingId: String?): Color {
     if (recordingId.isNullOrEmpty()) return DeadRed
-    
+
     val hash = recordingId.hashCode()
     val index = kotlin.math.abs(hash) % GradientColors.size
     return GradientColors[index]
@@ -71,10 +66,10 @@ private fun recordingIdToColor(recordingId: String?): Color {
 private fun getRecordingColorStack(recordingId: String?): List<Color> {
     val baseColor = recordingIdToColor(recordingId)
     val background = MaterialTheme.colorScheme.background
-    
+
     return listOf(
         androidx.compose.ui.graphics.lerp(background, baseColor, 0.8f),  // Index 0: Strong blend
-        androidx.compose.ui.graphics.lerp(background, baseColor, 0.4f),  // Index 1: Medium blend  
+        androidx.compose.ui.graphics.lerp(background, baseColor, 0.4f),  // Index 1: Medium blend
         androidx.compose.ui.graphics.lerp(background, baseColor, 0.1f),  // Index 2: Faint blend
         background,                                                      // Index 3: Background
         background                                                       // Index 4: Background
@@ -88,7 +83,7 @@ private fun getRecordingColorStack(recordingId: String?): List<Color> {
 @Composable
 private fun createRecordingGradient(recordingId: String?): Brush {
     val colors = getRecordingColorStack(recordingId)
-    
+
     return Brush.verticalGradient(
         0f to colors[0],      // Strong color at top
         0.3f to colors[1],    // Medium color at 30%
@@ -100,7 +95,7 @@ private fun createRecordingGradient(recordingId: String?): Brush {
 
 /**
  * PlayerScreen - Clean player interface
- * 
+ *
  * Full-screen immersive player experience that fits within AppScaffold.
  * AppScaffold is configured to hide topBar, bottomBar, and miniPlayer for this route.
  */
@@ -118,107 +113,27 @@ fun PlayerScreen(
     // Collect UI state from ViewModel
     val uiState by viewModel.uiState.collectAsState()
     val panelState by viewModel.panelState.collectAsState()
-    
+
     val recordingId = uiState.navigationInfo.recordingId
-    
+
     // Scroll state for mini player detection
     val scrollState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
-    
+
     // Bottom sheet state
     var showTrackActionsBottomSheet by remember { mutableStateOf(false) }
     var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
-    
-    // Debug mode hardcoded to true for development
-    val showDebugInfo = true
-    
-    // Debug panel state - only when debug mode is enabled
-    var showDebugPanel by remember { mutableStateOf(false) }
-    
+
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
     val showMiniPlayer by remember {
         derivedStateOf {
-            scrollState.firstVisibleItemIndex > 0 || 
+            scrollState.firstVisibleItemIndex > 0 ||
             (scrollState.firstVisibleItemIndex == 0 && scrollState.firstVisibleItemScrollOffset > 1200)
         }
     }
-    
-    // Debug data collection - collect MediaMetadata info for inspection
-    var debugMetadata by remember { mutableStateOf<Map<String, String?>>(emptyMap()) }
-    val debugData = if (showDebugInfo) {
-        LaunchedEffect(uiState) {
-            debugMetadata = viewModel.getDebugMetadata()
-        }
-        
-        DebugData(
-            screenName = "PlayerScreen",
-            sections = listOf(
-                DebugSection(
-                    title = "Player State",
-                    items = listOf(
-                        DebugItem.BooleanValue("isPlaying", uiState.isPlaying),
-                        DebugItem.BooleanValue("isLoading", uiState.isLoading),
-                        DebugItem.BooleanValue("hasNext", uiState.hasNext),
-                        DebugItem.BooleanValue("hasPrevious", uiState.hasPrevious),
-                        DebugItem.KeyValue("currentPosition", uiState.progressDisplayInfo.currentPosition),
-                        DebugItem.KeyValue("totalDuration", uiState.progressDisplayInfo.totalDuration),
-                        DebugItem.NumericValue("progress", (uiState.progressDisplayInfo.progressPercentage * 100).toInt(), "%")
-                    )
-                ),
-                DebugSection(
-                    title = "Track Info (from UI State)",
-                    items = listOf(
-                        DebugItem.KeyValue("title", uiState.trackDisplayInfo.title),
-                        DebugItem.KeyValue("artist", uiState.trackDisplayInfo.artist),
-                        DebugItem.KeyValue("album", uiState.trackDisplayInfo.album),
-                        DebugItem.KeyValue("duration", uiState.trackDisplayInfo.duration),
-                        DebugItem.KeyValue("error", uiState.error ?: "none")
-                    )
-                ),
-                DebugSection(
-                    title = "MediaMetadata Core Fields",
-                    items = debugMetadata.filter { (key, _) ->
-                        listOf("title", "artist", "albumTitle", "albumArtist", "genre", "trackNumber",
-                               "totalTrackCount", "recordingYear", "releaseYear", "writer", "composer", 
-                               "conductor", "discNumber", "totalDiscCount").contains(key)
-                    }.map { (key, value) ->
-                        DebugItem.KeyValue(key, value ?: "null")
-                    }
-                ),
-                DebugSection(
-                    title = "Custom Extras (Grateful Dead Data)",
-                    items = debugMetadata.filter { (key, _) ->
-                        listOf("trackUrl", "recordingId", "showId", "showDate", "venue", "location", "filename").contains(key)
-                    }.map { (key, value) ->
-                        DebugItem.KeyValue(key, value ?: "null")
-                    }
-                ),
-                DebugSection(
-                    title = "Media URIs & IDs",
-                    items = debugMetadata.filter { (key, _) ->
-                        listOf("artworkUri", "extrasKeys").contains(key)
-                    }.map { (key, value) ->
-                        DebugItem.KeyValue(key, value ?: "null")
-                    }
-                ),
-                DebugSection(
-                    title = "All Other Fields",
-                    items = debugMetadata.filter { (key, _) ->
-                        !listOf("title", "artist", "albumTitle", "albumArtist", "genre", "trackNumber",
-                               "totalTrackCount", "recordingYear", "releaseYear", "writer", "composer",
-                               "conductor", "discNumber", "totalDiscCount", "trackUrl", "recordingId", 
-                               "showId", "showDate", "venue", "location", "filename", 
-                               "artworkUri", "extrasKeys").contains(key)
-                    }.map { (key, value) ->
-                        DebugItem.KeyValue(key, value ?: "null")
-                    }
-                )
-            ).filter { it.items.isNotEmpty() } // Only show sections that have data
-        )
-    } else { null }
-    
+
     Box(modifier = Modifier.fillMaxSize()) {
         // Scrollable content with gradient as part of the scrolling items
         LazyColumn(
@@ -249,7 +164,7 @@ fun PlayerScreen(
                             },
                             recordingId = recordingId,
                         )
-                        
+
                         // Large cover art section with generous vertical padding
                         PlayerCoverArt(
                             recordingId = uiState.trackDisplayInfo.recordingId,
@@ -259,7 +174,7 @@ fun PlayerScreen(
                                 .height(450.dp)
                                 .padding(horizontal = 24.dp)
                         )
-                        
+
                         // Track information with add to playlist button
                         PlayerTrackInfoRow(
                             trackTitle = uiState.trackDisplayInfo.title,
@@ -270,8 +185,8 @@ fun PlayerScreen(
                             },
                             modifier = Modifier.padding(horizontal = 24.dp)
                         )
-                        
-                        // Progress control section  
+
+                        // Progress control section
                         PlayerProgressControl(
                             currentTime = uiState.progressDisplayInfo.currentPosition,
                             totalTime = uiState.progressDisplayInfo.totalDuration,
@@ -279,7 +194,7 @@ fun PlayerScreen(
                             onSeek = viewModel::onSeek,
                             modifier = Modifier.padding(horizontal = 24.dp)
                         )
-                        
+
                         // Enhanced primary controls row
                         PlayerEnhancedControls(
                             isPlaying = uiState.isPlaying,
@@ -297,7 +212,7 @@ fun PlayerScreen(
                     }
                 }
             }
-            
+
             // Secondary controls row (updated for queue sheet)
             item {
                 PlayerSecondaryControls(
@@ -307,7 +222,7 @@ fun PlayerScreen(
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
                 )
             }
-            
+
             // Extended content as Material panels - let gradient show through
             item {
                 PlayerMaterialPanels(
@@ -315,13 +230,13 @@ fun PlayerScreen(
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp)
                 )
             }
-            
+
             // Bottom padding for last item
             item {
                 Spacer(modifier = Modifier.height(16.dp))
             }
         }
-        
+
         // Bottom Sheets
         if (showTrackActionsBottomSheet) {
             PlayerTrackActionsSheet(
@@ -335,19 +250,19 @@ fun PlayerScreen(
                 onDownload = { viewModel.downloadCurrentShow() }
             )
         }
-        
+
         if (showConnectBottomSheet) {
             PlayerConnectSheet(
                 onDismiss = { showConnectBottomSheet = false }
             )
         }
-        
+
         if (showQueueBottomSheet) {
             PlayerQueueSheet(
                 onDismiss = { showQueueBottomSheet = false }
             )
         }
-        
+
         // Mini Player overlay when scrolled
         if (showMiniPlayer) {
             PlayerMiniPlayer(
@@ -365,25 +280,5 @@ fun PlayerScreen(
                     .fillMaxWidth()
             )
         }
-        
-        // Debug activator button (bottom-right when debug enabled)
-        if (showDebugInfo && debugData != null) {
-            DebugActivator(
-                isVisible = true,
-                onClick = { showDebugPanel = true },
-                modifier = Modifier
-                    .align(Alignment.BottomEnd)
-                    .padding(16.dp)
-            )
-        }
-    }
-    
-    // Debug bottom sheet
-    if (showDebugPanel && debugData != null) {
-        DebugBottomSheet(
-            debugData = debugData,
-            isVisible = showDebugPanel,
-            onDismiss = { showDebugPanel = false }
-        )
     }
 }

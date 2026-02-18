@@ -69,11 +69,6 @@ interface PlayerService {
     fun formatPosition(positionMs: Long): String
     
     /**
-     * Get debug information about current MediaMetadata for inspection
-     */
-    suspend fun getDebugMetadata(): Map<String, String?>
-    
-    /**
      * Share currently playing track with current playback position
      */
     suspend fun shareCurrentTrack()

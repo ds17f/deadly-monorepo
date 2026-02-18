@@ -2,12 +2,10 @@ package com.grateful.deadly.feature.search.screens.main
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsFocusedAsState
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Search
@@ -20,19 +18,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import kotlin.random.Random
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.grateful.deadly.core.design.component.debug.DebugActivator
-import com.grateful.deadly.core.design.component.debug.DebugBottomSheet
-import com.grateful.deadly.core.design.component.debug.DebugData
-import com.grateful.deadly.core.design.component.debug.DebugSection
-import com.grateful.deadly.core.design.component.debug.DebugItem
 import com.grateful.deadly.feature.search.screens.main.models.SearchViewModel
-import com.grateful.deadly.core.model.SearchUiState
 
 // Data classes for UI components
 data class DecadeBrowse(
@@ -63,134 +53,54 @@ fun SearchScreen(
     viewModel: SearchViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val debounceDelayMs by viewModel.debounceDelayMs.collectAsState()
     val isRefreshing by viewModel.isRefreshing.collectAsState()
     val refreshCounter by viewModel.refreshCounter.collectAsState()
-    
-    // Debug panel state - hard-coded to true for debug
-    var showDebugPanel by remember { mutableStateOf(false) }
-    
-    // Simplified debug data
-    val debugData = collectSearchDebugData(
-        uiState = uiState,
-        initialEra = initialEra,
-        debounceDelayMs = debounceDelayMs,
-        onDebounceDelayChange = viewModel::updateDebounceDelay
-    )
-    
-    // Simple content layout with debug overlay like HomeScreen and SettingsScreen
-    Box(modifier = Modifier.fillMaxSize()) {
-        PullToRefreshBox(
-            isRefreshing = isRefreshing,
-            onRefresh = viewModel::refreshShortcuts,
-            modifier = Modifier.fillMaxSize()
+
+    PullToRefreshBox(
+        isRefreshing = isRefreshing,
+        onRefresh = viewModel::refreshShortcuts,
+        modifier = Modifier.fillMaxSize()
+    ) {
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(16.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                // Row 2: Search box
-                item {
-                    SearchSearchBox(
-                        searchQuery = uiState.searchQuery,
-                        onSearchQueryChange = viewModel::onSearchQueryChanged,
-                        onFocusReceived = { onNavigateToSearchResults("") },
-                        modifier = Modifier.padding(vertical = 8.dp)
-                    )
-                }
+            // Row 2: Search box
+            item {
+                SearchSearchBox(
+                    searchQuery = uiState.searchQuery,
+                    onSearchQueryChange = viewModel::onSearchQueryChanged,
+                    onFocusReceived = { onNavigateToSearchResults("") },
+                    modifier = Modifier.padding(vertical = 8.dp)
+                )
+            }
 
-                // Row 3 & 4: Browse by decades
-                item {
-                    SearchBrowseSection(
-                        onDecadeClick = { era -> onNavigateToSearchResults(era) }
-                    )
-                }
+            // Row 3 & 4: Browse by decades
+            item {
+                SearchBrowseSection(
+                    onDecadeClick = { era -> onNavigateToSearchResults(era) }
+                )
+            }
 
-                // Row 5 & 6: Discover section (3 random shortcuts)
-                item {
-                    SearchDiscoverSection(
-                        refreshCounter = refreshCounter,
-                        onDiscoverClick = { shortcut -> onNavigateToSearchResults(shortcut.searchQuery) }
-                    )
-                }
+            // Row 5 & 6: Discover section (3 random shortcuts)
+            item {
+                SearchDiscoverSection(
+                    refreshCounter = refreshCounter,
+                    onDiscoverClick = { shortcut -> onNavigateToSearchResults(shortcut.searchQuery) }
+                )
+            }
 
-                // Row 7 & 8: Browse All section
-                item {
-                    SearchBrowseAllSection(
-                        refreshCounter = refreshCounter,
-                        onBrowseAllClick = { shortcut -> onNavigateToSearchResults(shortcut.searchQuery) }
-                    )
-                }
+            // Row 7 & 8: Browse All section
+            item {
+                SearchBrowseAllSection(
+                    refreshCounter = refreshCounter,
+                    onBrowseAllClick = { shortcut -> onNavigateToSearchResults(shortcut.searchQuery) }
+                )
             }
         }
-
-        // Debug activator overlay (always enabled in debug)
-        DebugActivator(
-            isVisible = true,
-            onClick = { showDebugPanel = true },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(16.dp)
-        )
     }
-    
-    // Debug bottom sheet with search controls
-    SearchDebugBottomSheet(
-        debugData = debugData,
-        isVisible = showDebugPanel,
-        onDismiss = { showDebugPanel = false },
-        debounceDelayMs = debounceDelayMs,
-        onDebounceDelayChange = viewModel::updateDebounceDelay
-    )
-    
 }
-
-/**
- * Collect debug data for SearchScreen
- * Following the established Player debug data pattern
- */
-@Composable
-private fun collectSearchDebugData(
-    uiState: SearchUiState,
-    initialEra: String?,
-    debounceDelayMs: Long,
-    onDebounceDelayChange: (Long) -> Unit
-): DebugData {
-    return DebugData(
-        screenName = "SearchScreen",
-        sections = listOf(
-            DebugSection(
-                title = "Search State",
-                items = listOf(
-                    DebugItem.KeyValue("Is Loading", uiState.isLoading.toString()),
-                    DebugItem.KeyValue("Error State", uiState.error ?: "None"),
-                    DebugItem.KeyValue("Initial Era", initialEra ?: "None"),
-                    DebugItem.KeyValue("Feature Flag", "search enabled"),
-                    DebugItem.KeyValue("Scaffold Mode", "Pure Content (MainNavigation AppScaffold)")
-                )
-            ),
-            DebugSection(
-                title = "Search Settings",
-                items = listOf(
-                    DebugItem.NumericValue("Debounce Delay", debounceDelayMs, "ms"),
-                    DebugItem.KeyValue("Test Delay", "Tap buttons below to test different delays")
-                )
-            ),
-            DebugSection(
-                title = "Development Status",
-                items = listOf(
-                    DebugItem.KeyValue("Implementation", "Foundation Complete"),
-                    DebugItem.KeyValue("UI State", "Basic scaffold ready"),
-                    DebugItem.KeyValue("Navigation", "Feature flag routing active"),
-                    DebugItem.KeyValue("Next Phase", "UI-first development"),
-                    DebugItem.KeyValue("Navigation", "Integrated with MainNavigation scaffold system")
-                )
-            )
-        )
-    )
-}
-
 
 /**
  * Row 2: Search box with search icon and placeholder text
@@ -552,310 +462,6 @@ private fun BrowseAllCard(
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f)
             )
-        }
-    }
-}
-
-/**
- * Enhanced debug bottom sheet for SearchScreen with debounce controls
- */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun SearchDebugBottomSheet(
-    debugData: DebugData,
-    isVisible: Boolean,
-    onDismiss: () -> Unit,
-    debounceDelayMs: Long,
-    onDebounceDelayChange: (Long) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    if (!isVisible) return
-    
-    ModalBottomSheet(
-        onDismissRequest = onDismiss,
-        modifier = modifier,
-        containerColor = MaterialTheme.colorScheme.surface,
-        contentColor = MaterialTheme.colorScheme.onSurface,
-        dragHandle = {
-            // Custom drag handle with debug indicator
-            Surface(
-                modifier = Modifier
-                    .padding(vertical = 8.dp)
-                    .size(width = 32.dp, height = 4.dp),
-                shape = RoundedCornerShape(2.dp),
-                color = Color(0xFFFF5722) // Debug red color
-            ) {}
-        }
-    ) {
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp)
-                .padding(bottom = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            // Header
-            item {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column {
-                        Text(
-                            text = "🐛 Search Debug Panel",
-                            style = MaterialTheme.typography.headlineSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = Color(0xFFFF5722)
-                        )
-                        Text(
-                            text = "SearchScreen • ${debugData.getTotalItemCount()} items",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                }
-            }
-            
-            // Debounce delay slider control
-            item {
-                DebounceDelayControl(
-                    currentDelayMs = debounceDelayMs,
-                    onDelayChange = onDebounceDelayChange
-                )
-            }
-            
-            // Standard debug data sections
-            items(debugData.sections) { section ->
-                Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f)
-                    ),
-                    shape = RoundedCornerShape(8.dp)
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(12.dp)
-                    ) {
-                        Text(
-                            text = section.title,
-                            style = MaterialTheme.typography.titleSmall,
-                            fontWeight = FontWeight.Medium,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        
-                        section.items.forEach { item ->
-                            when (item) {
-                                is DebugItem.KeyValue -> {
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween
-                                    ) {
-                                        Text(
-                                            text = "${item.key}:",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            fontWeight = FontWeight.Medium,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                            modifier = Modifier.weight(0.4f)
-                                        )
-                                        Text(
-                                            text = item.value,
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = MaterialTheme.colorScheme.onSurface,
-                                            modifier = Modifier.weight(0.6f)
-                                        )
-                                    }
-                                }
-                                is DebugItem.NumericValue -> {
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween
-                                    ) {
-                                        Text(
-                                            text = "${item.key}:",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            fontWeight = FontWeight.Medium,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                            modifier = Modifier.weight(0.4f)
-                                        )
-                                        Text(
-                                            text = "${item.value}${item.unit}",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            fontFamily = FontFamily.Monospace,
-                                            color = MaterialTheme.colorScheme.onSurface,
-                                            modifier = Modifier.weight(0.6f)
-                                        )
-                                    }
-                                }
-                                is DebugItem.BooleanValue -> {
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween
-                                    ) {
-                                        Text(
-                                            text = "${item.key}:",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            fontWeight = FontWeight.Medium,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                            modifier = Modifier.weight(0.4f)
-                                        )
-                                        Text(
-                                            text = if (item.value) "✅ ${item.value}" else "❌ ${item.value}",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            fontFamily = FontFamily.Monospace,
-                                            color = MaterialTheme.colorScheme.onSurface,
-                                            modifier = Modifier.weight(0.6f)
-                                        )
-                                    }
-                                }
-                                is DebugItem.Multiline,
-                                is DebugItem.JsonData,
-                                is DebugItem.Error,
-                                is DebugItem.Timestamp -> {
-                                    // For other types, just show key-value as text
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween
-                                    ) {
-                                        Text(
-                                            text = item.toFormattedText(),
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = MaterialTheme.colorScheme.onSurface,
-                                            modifier = Modifier.fillMaxWidth()
-                                        )
-                                    }
-                                }
-                            }
-                            Spacer(modifier = Modifier.height(4.dp))
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/**
- * Debounce delay control with slider and preset buttons
- */
-@Composable
-private fun DebounceDelayControl(
-    currentDelayMs: Long,
-    onDelayChange: (Long) -> Unit
-) {
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(
-            containerColor = Color(0xFFFF5722).copy(alpha = 0.1f)
-        ),
-        shape = RoundedCornerShape(8.dp)
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp)
-        ) {
-            Text(
-                text = "⚡ Debounce Delay Control",
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = Color(0xFFFF5722)
-            )
-            
-            Spacer(modifier = Modifier.height(12.dp))
-            
-            // Current value display
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = "Current Delay:",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
-                Text(
-                    text = "${currentDelayMs}ms",
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Bold,
-                    fontFamily = FontFamily.Monospace,
-                    color = Color(0xFFFF5722)
-                )
-            }
-            
-            Spacer(modifier = Modifier.height(8.dp))
-            
-            // Slider
-            Slider(
-                value = currentDelayMs.toFloat(),
-                onValueChange = { onDelayChange(it.toLong()) },
-                valueRange = 0f..2000f,
-                steps = 19, // 100ms increments
-                colors = SliderDefaults.colors(
-                    thumbColor = Color(0xFFFF5722),
-                    activeTrackColor = Color(0xFFFF5722)
-                )
-            )
-            
-            // Range labels
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                Text(
-                    text = "0ms",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = "2000ms",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            
-            Spacer(modifier = Modifier.height(12.dp))
-            
-            // Preset buttons
-            Text(
-                text = "Quick Presets:",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            
-            Spacer(modifier = Modifier.height(8.dp))
-            
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                val presets = listOf(0L, 300L, 800L, 1000L)
-                presets.forEach { preset ->
-                    val isSelected = currentDelayMs == preset
-                    OutlinedButton(
-                        onClick = { onDelayChange(preset) },
-                        modifier = Modifier.weight(1f),
-                        colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = if (isSelected) Color(0xFFFF5722).copy(alpha = 0.2f) else Color.Transparent,
-                            contentColor = if (isSelected) Color(0xFFFF5722) else MaterialTheme.colorScheme.onSurface
-                        ),
-                        border = BorderStroke(
-                            1.dp, 
-                            if (isSelected) Color(0xFFFF5722) else MaterialTheme.colorScheme.outline
-                        )
-                    ) {
-                        Text(
-                            text = "${preset}ms",
-                            fontSize = 12.sp,
-                            fontFamily = FontFamily.Monospace
-                        )
-                    }
-                }
-            }
         }
     }
 }
