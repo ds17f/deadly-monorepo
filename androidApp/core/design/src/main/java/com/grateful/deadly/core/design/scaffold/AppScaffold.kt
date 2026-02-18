@@ -149,7 +149,7 @@ fun AppScaffold(
                     top = paddingValues.calculateTopPadding(),
                     start = paddingValues.calculateStartPadding(androidx.compose.ui.unit.LayoutDirection.Ltr),
                     end = paddingValues.calculateEndPadding(androidx.compose.ui.unit.LayoutDirection.Ltr),
-                    bottom = paddingValues.calculateBottomPadding() + extraBottomPadding
+                    bottom = extraBottomPadding
                 )
             )
         }
@@ -159,6 +159,7 @@ fun AppScaffold(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .onSizeChanged { size -> bottomOverlayHeightPx = size.height }
+                .navigationBarsPadding()
         ) {
             // MiniPlayer above bottom navigation (Spotify-style) - only if config allows
             if (shouldShowMiniPlayer) {
