@@ -81,9 +81,19 @@ interface LibraryDao {
     @Query("SELECT COUNT(*) FROM library_shows")
     fun getLibraryShowCountFlow(): Flow<Int>
     
+    // Recording preference
+    @Query("UPDATE library_shows SET preferredRecordingId = :recordingId WHERE showId = :showId")
+    suspend fun updatePreferredRecording(showId: String, recordingId: String?)
+
+    @Query("SELECT preferredRecordingId FROM library_shows WHERE showId = :showId")
+    suspend fun getPreferredRecordingId(showId: String): String?
+
     // Download tracking
     @Query("UPDATE library_shows SET downloadedRecordingId = :recordingId, downloadedFormat = :format WHERE showId = :showId")
     suspend fun updateDownloadedRecording(showId: String, recordingId: String?, format: String?)
+
+    @Query("SELECT downloadedRecordingId FROM library_shows WHERE showId = :showId")
+    suspend fun getDownloadedRecordingId(showId: String): String?
 
     // Bulk operations
     @Query("DELETE FROM library_shows")

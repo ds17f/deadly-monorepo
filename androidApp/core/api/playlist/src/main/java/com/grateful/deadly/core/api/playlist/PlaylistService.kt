@@ -127,6 +127,18 @@ interface PlaylistService {
      * Reset to the recommended recording for this show
      */
     suspend fun resetToRecommended()
+
+    /**
+     * Check if switching to [newRecordingId] would conflict with an existing download.
+     * Returns true if the show has a completed download for a different recording.
+     */
+    suspend fun hasDownloadConflict(showId: String, newRecordingId: String): Boolean
+
+    /**
+     * Confirm a recording switch after the user acknowledges the download conflict.
+     * Persists the new preferred recording and removes the old download.
+     */
+    suspend fun confirmRecordingChange(showId: String, recordingId: String)
     
     /**
      * Get the currently selected audio format for playback coordination

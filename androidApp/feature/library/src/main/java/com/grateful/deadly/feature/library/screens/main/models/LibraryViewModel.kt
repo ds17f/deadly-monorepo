@@ -200,14 +200,15 @@ class LibraryViewModel @Inject constructor(
     }
     
     /**
-     * Download show
+     * Download show using the preferred recording if one has been set
      */
     fun downloadShow(showId: String) {
         viewModelScope.launch {
             Log.d(TAG, "Downloading show '$showId'")
-            libraryService.downloadShow(showId)
+            val preferredRecordingId = libraryService.getPreferredRecordingId(showId)
+            libraryService.downloadShow(showId, preferredRecordingId)
                 .onSuccess {
-                    Log.d(TAG, "Successfully started download for show '$showId'")
+                    Log.d(TAG, "Successfully started download for show '$showId' (recording=${preferredRecordingId ?: "best"})")
                 }
                 .onFailure { error ->
                     Log.e(TAG, "Failed to download show '$showId'", error)

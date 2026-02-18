@@ -63,6 +63,26 @@ interface LibraryService {
     fun isShowPinned(showId: String): StateFlow<Boolean>
     
     /**
+     * Set the preferred recording for a library show
+     */
+    suspend fun setPreferredRecording(showId: String, recordingId: String?)
+
+    /**
+     * Get the preferred recording ID for a library show, or null if not set
+     */
+    suspend fun getPreferredRecordingId(showId: String): String?
+
+    /**
+     * Get the downloaded recording ID for a library show, or null if not downloaded
+     */
+    suspend fun getDownloadedRecordingId(showId: String): String?
+
+    /**
+     * Update which recording is tracked as downloaded for a show
+     */
+    suspend fun setDownloadedRecording(showId: String, recordingId: String?, format: String? = null)
+
+    /**
      * Download a show
      */
     suspend fun downloadShow(showId: String, recordingId: String? = null): Result<Unit>

@@ -851,35 +851,86 @@ class PlaylistViewModel @Inject constructor(
     }
     
     /**
-     * Set recording as default
+     * Set recording as default — persists the choice if show is in library,
+     * showing a confirmation dialog first if there is a download conflict.
      */
     fun setRecordingAsDefault(recordingId: String) {
         Log.d(TAG, "Set recording as default: $recordingId")
+        val showId = _baseUiState.value.showData?.showId ?: return
+        val isInLibrary = uiState.value.showData?.isInLibrary ?: false
         viewModelScope.launch {
             try {
+                // Update in-memory recording (for immediate track list refresh)
                 playlistService.setRecordingAsDefault(recordingId)
-                
+
                 // IMPORTANT: Update main show data with new currentRecordingId
                 val updatedShowData = _baseUiState.value.showData?.copy(
                     currentRecordingId = recordingId
                 )
-                
+
                 _baseUiState.value = _baseUiState.value.copy(
                     showData = updatedShowData,
-                    isTrackListLoading = false // Reset track loading state 
+                    isTrackListLoading = false
                 )
-                _rawTrackData.value = emptyList() // Clear tracks to trigger reload
-                
+                _rawTrackData.value = emptyList()
+
                 Log.d(TAG, "Recording set as default - refreshing tracks for: $recordingId")
-                
-                // Trigger track list reload with new recording
                 loadTrackListAsync()
-                
+
+                // Handle persistence for library shows
+                if (isInLibrary) {
+                    val hasConflict = playlistService.hasDownloadConflict(showId, recordingId)
+                    if (hasConflict) {
+                        Log.d(TAG, "Download conflict detected for $showId — showing confirmation dialog")
+                        _baseUiState.value = _baseUiState.value.copy(
+                            showDownloadConflictDialog = true,
+                            pendingRecordingId = recordingId
+                        )
+                    } else {
+                        libraryService.setPreferredRecording(showId, recordingId)
+                        Log.d(TAG, "Persisted preferred recording for $showId: $recordingId")
+                    }
+                }
+
                 Log.d(TAG, "Recording set as default successfully")
             } catch (e: Exception) {
                 Log.e(TAG, "Error setting recording as default", e)
             }
         }
+    }
+
+    /**
+     * Confirm switching to the pending recording despite a download conflict.
+     * Persists the new preference and removes the old download.
+     */
+    fun confirmRecordingChange() {
+        val showId = _baseUiState.value.showData?.showId ?: return
+        val recordingId = _baseUiState.value.pendingRecordingId ?: return
+        _baseUiState.value = _baseUiState.value.copy(
+            showDownloadConflictDialog = false,
+            pendingRecordingId = null
+        )
+        viewModelScope.launch {
+            try {
+                playlistService.confirmRecordingChange(showId, recordingId)
+                Log.d(TAG, "Recording change confirmed for $showId: $recordingId, old download removed")
+                delay(500) // Let ExoPlayer async cache removal complete
+                refreshTrackDownloadStatus()
+            } catch (e: Exception) {
+                Log.e(TAG, "Error confirming recording change", e)
+            }
+        }
+    }
+
+    /**
+     * Cancel the pending recording change — dismiss the conflict dialog without
+     * deleting the existing download or persisting the new preference.
+     */
+    fun dismissDownloadConflictDialog() {
+        _baseUiState.value = _baseUiState.value.copy(
+            showDownloadConflictDialog = false,
+            pendingRecordingId = null
+        )
     }
     
     /**

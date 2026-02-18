@@ -248,11 +248,15 @@ class MediaDownloadManager @Inject constructor(
     }
 
     /**
-     * Check if a specific track URI is cached (downloaded).
+     * Check if a specific track URI has been fully downloaded via the DownloadManager.
+     *
+     * Intentionally does NOT use cache.keys: ExoPlayer writes streamed content to the
+     * same cache during playback, so cache.keys returns true for recently played tracks
+     * too — giving a false "downloaded" signal for content that may be partial or evicted.
      */
     fun isTrackCached(uri: String): Boolean {
-        val keys = cache.keys
-        return keys.any { it == uri }
+        val download = getAllDownloads().find { it.request.uri.toString() == uri }
+        return download?.state == Download.STATE_COMPLETED
     }
 
     /**

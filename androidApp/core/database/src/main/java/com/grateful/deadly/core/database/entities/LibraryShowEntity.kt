@@ -37,6 +37,9 @@ data class LibraryShowEntity(
     val isPinned: Boolean = false,         // Pin status for prioritized display
     val libraryNotes: String? = null,      // User notes for this library item
     
+    // Recording preference
+    val preferredRecordingId: String? = null,    // User's preferred recording for this show
+
     // Download tracking
     val downloadedRecordingId: String? = null,  // Which recording was downloaded
     val downloadedFormat: String? = null,        // Audio format of the download

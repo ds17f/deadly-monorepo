@@ -134,13 +134,39 @@ class LibraryServiceImpl @Inject constructor(
             )
     }
     
+    override suspend fun setPreferredRecording(showId: String, recordingId: String?) {
+        Log.d(TAG, "setPreferredRecording('$showId', '$recordingId')")
+        libraryRepository.setPreferredRecording(showId, recordingId)
+    }
+
+    override suspend fun getPreferredRecordingId(showId: String): String? {
+        return libraryRepository.getPreferredRecordingId(showId)
+    }
+
+    override suspend fun getDownloadedRecordingId(showId: String): String? {
+        return libraryRepository.getDownloadedRecordingId(showId)
+    }
+
+    override suspend fun setDownloadedRecording(showId: String, recordingId: String?, format: String?) {
+        Log.d(TAG, "setDownloadedRecording('$showId', '$recordingId')")
+        libraryRepository.setDownloadedRecording(showId, recordingId, format)
+    }
+
     override suspend fun downloadShow(showId: String, recordingId: String?): Result<Unit> {
         Log.d(TAG, "downloadShow('$showId', recording=$recordingId)")
         // Auto-add to library if not already present
         if (!libraryRepository.isShowInLibrary(showId)) {
             libraryRepository.addShowToLibrary(showId)
         }
-        return mediaDownloadManager.downloadShow(showId, recordingId)
+        val result = mediaDownloadManager.downloadShow(showId, recordingId)
+        if (result.isSuccess) {
+            // Track which recording was downloaded so conflict detection works later
+            val resolvedId = recordingId ?: showRepository.getBestRecordingForShow(showId)?.identifier
+            if (resolvedId != null) {
+                libraryRepository.setDownloadedRecording(showId, resolvedId)
+            }
+        }
+        return result
     }
 
     override suspend fun cancelShowDownloads(showId: String): Result<Unit> {
