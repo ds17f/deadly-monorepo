@@ -9,6 +9,7 @@ import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.exception.FormatNotAvailableException
+import com.grateful.deadly.core.network.monitor.NetworkMonitor
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -40,8 +41,13 @@ class PlaylistViewModel @Inject constructor(
     private val playlistService: PlaylistService,
     private val mediaControllerRepository: MediaControllerRepository,
     private val libraryService: LibraryService,
-    private val recentShowsService: RecentShowsService
+    private val recentShowsService: RecentShowsService,
+    networkMonitor: NetworkMonitor
 ) : ViewModel() {
+
+    val isOffline: StateFlow<Boolean> = networkMonitor.isOnline
+        .map { !it }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
     
     companion object {
         private const val TAG = "PlaylistViewModel"

@@ -85,8 +85,7 @@ fun MainNavigation() {
         // Redirect to downloads when offline, unless already on a safe screen
         if (isOffline) {
             val route = navController.currentBackStackEntry?.destination?.route
-            val isSafe = route == "downloads" || route == "player" ||
-                         route == "splash" || route?.startsWith("playlist/") == true
+            val isSafe = route == "downloads" || route == "player" || route == "splash"
             if (!isSafe) {
                 navController.navigate("downloads") { launchSingleTop = true }
             }
@@ -107,10 +106,9 @@ fun MainNavigation() {
                 BottomNavigationBar(
                     currentRoute = currentRoute,
                     onNavigateToDestination = { route ->
-                        navController.navigate(route) {
-                            popUpTo(navController.graph.startDestinationId) {
-                                saveState = true
-                            }
+                        val target = if (isOffline && route != "downloads") "downloads" else route
+                        navController.navigate(target) {
+                            popUpTo(navController.graph.startDestinationId) { saveState = true }
                             launchSingleTop = true
                             restoreState = true
                         }
@@ -175,9 +173,11 @@ fun MainNavigation() {
 
             AnimatedVisibility(
                 visible = isOffline,
-                modifier = Modifier.align(Alignment.TopCenter),
-                enter = slideInVertically() + fadeIn(),
-                exit = slideOutVertically() + fadeOut()
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = paddingValues.calculateBottomPadding()),
+                enter = slideInVertically(initialOffsetY = { it }) + fadeIn(),
+                exit = slideOutVertically(targetOffsetY = { it }) + fadeOut()
             ) {
                 OfflineBanner()
             }
