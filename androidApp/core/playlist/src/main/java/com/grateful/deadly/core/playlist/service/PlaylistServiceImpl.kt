@@ -100,14 +100,20 @@ class PlaylistServiceImpl @Inject constructor(
         
         if (currentShow != null) {
             Log.d(TAG, "Loaded show: ${currentShow!!.displayTitle}")
-            
-            // Use provided recordingId (from Player navigation) or fall back to best recording
+
+            // Use provided recordingId (from Player navigation), then preferred, then best recording
             currentRecordingId = if (recordingId != null) {
                 Log.d(TAG, "Using provided recording from navigation: $recordingId")
                 recordingId
             } else {
-                Log.d(TAG, "No recordingId provided - using best recording: ${currentShow!!.bestRecordingId}")
-                currentShow!!.bestRecordingId
+                val preferredId = libraryService.getPreferredRecordingId(currentShow!!.id)
+                if (preferredId != null) {
+                    Log.d(TAG, "Using preferred recording from library: $preferredId")
+                    preferredId
+                } else {
+                    Log.d(TAG, "No preference set - using best recording: ${currentShow!!.bestRecordingId}")
+                    currentShow!!.bestRecordingId
+                }
             }
             
         } else {
@@ -130,10 +136,10 @@ class PlaylistServiceImpl @Inject constructor(
             }
             if (nextShow != null) {
                 currentShow = nextShow
-                // Update recording ID to best recording for new show
-                currentRecordingId = nextShow.bestRecordingId
+                val preferredId = libraryService.getPreferredRecordingId(nextShow.id)
+                currentRecordingId = preferredId ?: nextShow.bestRecordingId
                 Log.d(TAG, "Navigated to next show: ${nextShow.displayTitle}")
-                Log.d(TAG, "Set recording to best: ${nextShow.bestRecordingId}")
+                Log.d(TAG, "Set recording to: ${currentRecordingId} (preferred=$preferredId, best=${nextShow.bestRecordingId})")
             } else {
                 Log.d(TAG, "No next show available after ${current.date}")
             }
@@ -149,10 +155,10 @@ class PlaylistServiceImpl @Inject constructor(
             }
             if (previousShow != null) {
                 currentShow = previousShow
-                // Update recording ID to best recording for new show
-                currentRecordingId = previousShow.bestRecordingId
+                val preferredId = libraryService.getPreferredRecordingId(previousShow.id)
+                currentRecordingId = preferredId ?: previousShow.bestRecordingId
                 Log.d(TAG, "Navigated to previous show: ${previousShow.displayTitle}")
-                Log.d(TAG, "Set recording to best: ${previousShow.bestRecordingId}")
+                Log.d(TAG, "Set recording to: ${currentRecordingId} (preferred=$preferredId, best=${previousShow.bestRecordingId})")
             } else {
                 Log.d(TAG, "No previous show available before ${current.date}")
             }
@@ -544,24 +550,31 @@ class PlaylistServiceImpl @Inject constructor(
     }
     
     override suspend fun setRecordingAsDefault(recordingId: String) {
-        val show = currentShow
-        if (show == null) {
-            Log.w(TAG, "Cannot set recording as default: no current show loaded")
-            return
-        }
-        
-        Log.w(TAG, "setRecordingAsDefault($recordingId) for ${show.displayTitle} - NOT IMPLEMENTED")
-        Log.w(TAG, "User preferences system not available - recording defaults cannot be persisted")
-        Log.w(TAG, "Recording selection will work for current session only")
-        
-        // For now, just select the recording for the current session
-        // This provides immediate feedback to the user even though it won't persist
-        if (show.recordingIds.contains(recordingId)) {
-            currentRecordingId = recordingId
-            Log.d(TAG, "Recording selected for current session: $recordingId")
-        } else {
-            Log.w(TAG, "Recording $recordingId not found in show recording list")
-        }
+        Log.d(TAG, "setRecordingAsDefault($recordingId) - delegating to selectRecording")
+        selectRecording(recordingId)
+    }
+
+    override suspend fun hasDownloadConflict(showId: String, newRecordingId: String): Boolean {
+        val downloadStatus = mediaDownloadManager.getShowDownloadStatus(showId)
+        // Any active download state (completed, in-progress, queued, paused) counts as a conflict
+        // if it's for a different recording.
+        if (downloadStatus == LibraryDownloadStatus.NOT_DOWNLOADED ||
+            downloadStatus == LibraryDownloadStatus.FAILED ||
+            downloadStatus == LibraryDownloadStatus.CANCELLED) return false
+        // Read recording ID directly from download manager metadata — works for all downloads
+        // regardless of whether they predate the preferredRecordingId DB column.
+        val downloadedRecordingId = mediaDownloadManager.getRecordingIdForShow(showId) ?: return false
+        val conflict = downloadedRecordingId != newRecordingId
+        Log.d(TAG, "hasDownloadConflict($showId, $newRecordingId): status=$downloadStatus, downloaded=$downloadedRecordingId, conflict=$conflict")
+        return conflict
+    }
+
+    override suspend fun confirmRecordingChange(showId: String, recordingId: String) {
+        Log.d(TAG, "confirmRecordingChange($showId, $recordingId) - persisting preference and removing old download")
+        libraryService.setPreferredRecording(showId, recordingId)
+        mediaDownloadManager.removeShowDownloads(showId)
+        libraryService.setDownloadedRecording(showId, null)
+        Log.d(TAG, "Recording change confirmed: preference set, old download removed")
     }
     
     override suspend fun resetToRecommended() {

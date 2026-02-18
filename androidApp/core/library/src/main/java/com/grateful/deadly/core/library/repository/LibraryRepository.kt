@@ -192,6 +192,36 @@ class LibraryRepository @Inject constructor(
     }
     
     /**
+     * Set preferred recording for a library show
+     */
+    suspend fun setPreferredRecording(showId: String, recordingId: String?) {
+        Log.d(TAG, "setPreferredRecording('$showId', '$recordingId')")
+        libraryDao.updatePreferredRecording(showId, recordingId)
+    }
+
+    /**
+     * Get preferred recording ID for a library show
+     */
+    suspend fun getPreferredRecordingId(showId: String): String? {
+        return libraryDao.getPreferredRecordingId(showId)
+    }
+
+    /**
+     * Get downloaded recording ID for a library show
+     */
+    suspend fun getDownloadedRecordingId(showId: String): String? {
+        return libraryDao.getDownloadedRecordingId(showId)
+    }
+
+    /**
+     * Update the downloaded recording ID for a library show
+     */
+    suspend fun setDownloadedRecording(showId: String, recordingId: String?, format: String? = null) {
+        Log.d(TAG, "setDownloadedRecording('$showId', '$recordingId')")
+        libraryDao.updateDownloadedRecording(showId, recordingId, format)
+    }
+
+    /**
      * Clear entire library
      */
     suspend fun clearLibrary(): Result<Unit> {

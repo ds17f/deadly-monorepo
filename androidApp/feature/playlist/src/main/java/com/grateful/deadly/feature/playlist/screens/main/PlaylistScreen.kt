@@ -23,6 +23,7 @@ import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistMenu
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistRecordingSelectionSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistCollectionsSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistSetlistBottomSheet
+import com.grateful.deadly.core.model.LibraryDownloadStatus
 import com.grateful.deadly.feature.playlist.screens.main.models.PlaylistViewModel
 /**
  * PlaylistScreen - Clean playlist interface
@@ -298,6 +299,30 @@ fun PlaylistScreen(
         )
     }
     
+    // Recording Change + Download Conflict Dialog
+    if (uiState.showDownloadConflictDialog) {
+        val conflictMessage = when (uiState.showData?.downloadStatus) {
+            LibraryDownloadStatus.COMPLETED -> "This show is downloaded with a different recording. Switching will remove the download."
+            LibraryDownloadStatus.PAUSED -> "This show has a paused download for a different recording. Switching will remove it."
+            else -> "This show is being downloaded with a different recording. Switching will cancel and remove it."
+        }
+        AlertDialog(
+            onDismissRequest = viewModel::dismissDownloadConflictDialog,
+            title = { Text("Switch Recording?") },
+            text = { Text(conflictMessage) },
+            confirmButton = {
+                TextButton(onClick = viewModel::confirmRecordingChange) {
+                    Text("Switch Recording")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = viewModel::dismissDownloadConflictDialog) {
+                    Text("Cancel")
+                }
+            }
+        )
+    }
+
     // Remove Download Confirmation Dialog
     if (uiState.showRemoveDownloadDialog) {
         AlertDialog(

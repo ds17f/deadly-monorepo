@@ -36,4 +36,16 @@ object DatabaseMigrations {
             db.execSQL("ALTER TABLE library_shows ADD COLUMN downloadedFormat TEXT DEFAULT NULL")
         }
     }
+
+    /**
+     * v14 → v15: Add preferred recording ID to library_shows.
+     *
+     * Persists the user's preferred recording selection per show so it
+     * survives navigation and app restarts.
+     */
+    val MIGRATION_14_15 = object : Migration(14, 15) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("ALTER TABLE library_shows ADD COLUMN preferredRecordingId TEXT DEFAULT NULL")
+        }
+    }
 }
