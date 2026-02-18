@@ -4,12 +4,16 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.library.LibraryService
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.model.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Named
@@ -23,7 +27,8 @@ import javax.inject.Named
  */
 @HiltViewModel
 class LibraryViewModel @Inject constructor(
-    private val libraryService: LibraryService
+    private val libraryService: LibraryService,
+    private val appPreferences: AppPreferences
 ) : ViewModel() {
     
     companion object {
@@ -38,7 +43,19 @@ class LibraryViewModel @Inject constructor(
         )
     )
     val uiState: StateFlow<LibraryUiState> = _uiState.asStateFlow()
-    
+
+    val displayMode: StateFlow<LibraryDisplayMode> = appPreferences.libraryDisplayMode
+        .map { if (it == "GRID") LibraryDisplayMode.GRID else LibraryDisplayMode.LIST }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.Eagerly,
+            initialValue = if (appPreferences.libraryDisplayMode.value == "GRID") LibraryDisplayMode.GRID else LibraryDisplayMode.LIST
+        )
+
+    fun setDisplayMode(mode: LibraryDisplayMode) {
+        appPreferences.setLibraryDisplayMode(mode.name)
+    }
+
     init {
         Log.d(TAG, "LibraryViewModel initialized")
         loadLibrary()
