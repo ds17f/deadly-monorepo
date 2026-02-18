@@ -12,8 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.grateful.deadly.core.design.component.debug.DebugActivator
-import com.grateful.deadly.core.design.component.debug.DebugBottomSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistHeader
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistAlbumArt
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistShowInfo
@@ -26,10 +24,6 @@ import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistReco
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistCollectionsSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistSetlistBottomSheet
 import com.grateful.deadly.feature.playlist.screens.main.models.PlaylistViewModel
-import com.grateful.deadly.core.design.component.debug.DebugData
-import com.grateful.deadly.core.design.component.debug.DebugSection
-import com.grateful.deadly.core.design.component.debug.DebugItem
-
 /**
  * PlaylistScreen - Clean playlist interface
  * 
@@ -51,47 +45,10 @@ fun PlaylistScreen(
 
     val uiState by viewModel.uiState.collectAsState()
     val isOffline by viewModel.isOffline.collectAsState()
-    // Debug mode hardcoded to true for development
-    val showDebugInfo = true
-    
+
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
     LaunchedEffect(showId, recordingId) {
         viewModel.loadShow(showId, recordingId)
-    }
-    
-    // Debug panel state - only when debug mode is enabled
-    var showDebugPanel by remember { mutableStateOf(false) }
-    val debugData = if (showDebugInfo) {
-        DebugData(
-            screenName = "PlaylistScreen",
-            sections = listOf(
-                DebugSection(
-                    title = "Navigation Parameters",
-                    items = listOf(
-                        DebugItem.KeyValue("showId", showId ?: "null"),
-                        DebugItem.KeyValue("recordingId", recordingId ?: "null")
-                    )
-                ),
-                DebugSection(
-                    title = "UI State",
-                    items = listOf(
-                        DebugItem.BooleanValue("isLoading", uiState.isLoading),
-                        DebugItem.KeyValue("error", uiState.error ?: "none"),
-                        DebugItem.KeyValue("showData", if (uiState.showData != null) "loaded" else "null"),
-                        DebugItem.NumericValue("tracks", uiState.trackData.size, " tracks")
-                    )
-                ),
-                DebugSection(
-                    title = "Debug Info",
-                    items = listOf(
-                        DebugItem.Timestamp("Screen loaded", System.currentTimeMillis()),
-                        DebugItem.KeyValue("Architecture", "Compose")
-                    )
-                )
-            )
-        )
-    } else {
-        null
     }
     
     Box(modifier = Modifier.fillMaxSize()) {
@@ -284,27 +241,8 @@ fun PlaylistScreen(
             }
         }
         
-        // Debug activator button (bottom-right when debug enabled)
-        if (showDebugInfo && debugData != null) {
-            DebugActivator(
-                isVisible = true,
-                onClick = { showDebugPanel = true },
-                modifier = Modifier
-                    .align(Alignment.BottomEnd)
-                    .padding(16.dp)
-            )
-        }
     }
-    
-    // Debug bottom sheet
-    if (showDebugPanel && debugData != null) {
-        DebugBottomSheet(
-            debugData = debugData,
-            isVisible = showDebugPanel,
-            onDismiss = { showDebugPanel = false }
-        )
-    }
-    
+
     // Review Details Modal
     if (uiState.showReviewDetails) {
         PlaylistReviewDetailsSheet(

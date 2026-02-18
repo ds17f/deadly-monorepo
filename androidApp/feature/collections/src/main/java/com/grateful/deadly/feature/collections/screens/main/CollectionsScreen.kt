@@ -23,8 +23,6 @@ import com.grateful.deadly.core.design.component.LargeCollectionsCarousel
 import com.grateful.deadly.core.design.component.CarouselNavigationSlider
 import com.grateful.deadly.core.design.component.HierarchicalFilter
 import com.grateful.deadly.core.design.component.FilterTrees
-import com.grateful.deadly.core.design.component.debug.DebugActivator
-import com.grateful.deadly.core.design.component.debug.DebugBottomSheet
 import com.grateful.deadly.feature.collections.screens.main.models.CollectionsViewModel
 import com.grateful.deadly.feature.collections.screens.main.components.CollectionShowCard
 
@@ -54,9 +52,6 @@ fun CollectionsScreen(
     val selectedCollection by viewModel.selectedCollection.collectAsStateWithLifecycle()
     val selectedCollectionId by viewModel.selectedCollectionId.collectAsStateWithLifecycle()
     val selectedCollectionIndex by viewModel.selectedCollectionIndex.collectAsStateWithLifecycle()
-    
-    // Debug panel state
-    var showDebugPanel by remember { mutableStateOf(false) }
     
     // Scroll state for anchor linking
     val listState = rememberLazyListState()
@@ -254,53 +249,5 @@ fun CollectionsScreen(
             }
         }
         
-        // Debug activator
-        DebugActivator(
-            isVisible = true,
-            onClick = { showDebugPanel = true },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(16.dp)
-        )
     }
-    
-    // Debug bottom sheet
-    DebugBottomSheet(
-        debugData = collectCollectionsDebugData(uiState, featuredCollections),
-        isVisible = showDebugPanel,
-        onDismiss = { showDebugPanel = false }
-    )
-}
-
-
-/**
- * Collect debug data for Collections screen
- */
-private fun collectCollectionsDebugData(
-    uiState: com.grateful.deadly.feature.collections.screens.main.models.CollectionsUiState,
-    featuredCollections: List<com.grateful.deadly.core.model.DeadCollection>
-): com.grateful.deadly.core.design.component.debug.DebugData {
-    return com.grateful.deadly.core.design.component.debug.DebugData(
-        screenName = "Collections",
-        sections = listOf(
-            com.grateful.deadly.core.design.component.debug.DebugSection(
-                title = "UI State",
-                items = listOf(
-                    com.grateful.deadly.core.design.component.debug.DebugItem.KeyValue("Collections Count", featuredCollections.size.toString()),
-                    com.grateful.deadly.core.design.component.debug.DebugItem.KeyValue("Is Loading", uiState.isLoading.toString()),
-                    com.grateful.deadly.core.design.component.debug.DebugItem.KeyValue("Error", uiState.error ?: "None"),
-                    com.grateful.deadly.core.design.component.debug.DebugItem.KeyValue("Search Query", uiState.searchQuery.ifEmpty { "None" })
-                )
-            ),
-            com.grateful.deadly.core.design.component.debug.DebugSection(
-                title = "Featured Collections",
-                items = featuredCollections.map { collection ->
-                    com.grateful.deadly.core.design.component.debug.DebugItem.KeyValue(
-                        collection.name,
-                        "${collection.shows.size} shows, tags: ${collection.tags.joinToString(", ")}"
-                    )
-                }
-            )
-        )
-    )
 }

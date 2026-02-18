@@ -244,18 +244,6 @@ class PlayerViewModel @Inject constructor(
     }
 
     /**
-     * Get debug metadata for inspection panel
-     */
-    suspend fun getDebugMetadata(): Map<String, String?> {
-        return try {
-            playerService.getDebugMetadata()
-        } catch (e: Exception) {
-            Log.e(TAG, "Error getting debug metadata", e)
-            mapOf("error" to "Failed to get debug metadata: ${e.message}")
-        }
-    }
-
-    /**
      * Download the currently playing show
      */
     fun downloadCurrentShow() {

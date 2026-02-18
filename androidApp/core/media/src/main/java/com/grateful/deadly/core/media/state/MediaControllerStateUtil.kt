@@ -218,22 +218,4 @@ class MediaControllerStateUtil @Inject constructor(
         Log.d(TAG, "CurrentTrackInfo created successfully - Title: ${trackInfo.songTitle}, Recording: ${trackInfo.recordingId}, PlaybackState: ${trackInfo.playbackState}")
         return trackInfo
     }
-    
-    
-    /**
-     * Get debug information about current MediaController state
-     * 
-     * Provides detailed state information for troubleshooting state combination issues.
-     * Uses the MediaControllerRepository debug capabilities from Phase 0.
-     * 
-     * @return Debug information string
-     */
-    fun getDebugInfo(): String {
-        return buildString {
-            appendLine("=== MediaControllerStateUtil Debug Info ===")
-            appendLine("MediaControllerRepository Debug Info:")
-            appendLine(mediaControllerRepository.getDebugInfo())
-            appendLine("=== End MediaControllerStateUtil Debug Info ===")
-        }
-    }
 }

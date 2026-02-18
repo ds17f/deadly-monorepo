@@ -184,59 +184,6 @@ class PlayerServiceImpl @Inject constructor(
         return formatDuration(positionMs)
     }
     
-    override suspend fun getDebugMetadata(): Map<String, String?> {
-        val currentMetadata = mediaControllerRepository.currentTrack.value
-        val currentMediaItem = mediaControllerRepository.currentMediaItem.value
-        
-        return if (currentMediaItem != null && currentMetadata != null) {
-            mapOf(
-                // === MEDIA ITEM FIELDS ===
-                "🆔 MediaItem.mediaId" to (currentMediaItem.mediaId ?: "null"),
-                "🔗 MediaItem.playbackProperties.uri" to currentMediaItem.localConfiguration?.uri?.toString(),
-                "🏷️ MediaItem.playbackProperties.mimeType" to currentMediaItem.localConfiguration?.mimeType,
-                "📋 MediaItem.playbackProperties.tag" to currentMediaItem.localConfiguration?.tag?.toString(),
-                
-                // === MEDIA METADATA FIELDS ===
-                "title" to currentMetadata.title?.toString(),
-                "artist" to currentMetadata.artist?.toString(),
-                "albumTitle" to currentMetadata.albumTitle?.toString(),
-                "albumArtist" to currentMetadata.albumArtist?.toString(),
-                "genre" to currentMetadata.genre?.toString(),
-                "trackNumber" to currentMetadata.trackNumber?.toString(),
-                "totalTrackCount" to currentMetadata.totalTrackCount?.toString(),
-                "recordingYear" to currentMetadata.recordingYear?.toString(),
-                "releaseYear" to currentMetadata.releaseYear?.toString(),
-                "writer" to currentMetadata.writer?.toString(),
-                "composer" to currentMetadata.composer?.toString(),
-                "conductor" to currentMetadata.conductor?.toString(),
-                "discNumber" to currentMetadata.discNumber?.toString(),
-                "totalDiscCount" to currentMetadata.totalDiscCount?.toString(),
-                "artworkUri" to currentMetadata.artworkUri?.toString(),
-                
-                // === CUSTOM EXTRAS ===
-                "trackUrl" to currentMetadata.extras?.getString("trackUrl"),
-                "recordingId" to currentMetadata.extras?.getString("recordingId"),
-                "showId" to currentMetadata.extras?.getString("showId"),
-                "showDate" to currentMetadata.extras?.getString("showDate"),
-                "venue" to currentMetadata.extras?.getString("venue"),
-                "location" to currentMetadata.extras?.getString("location"),
-                "filename" to currentMetadata.extras?.getString("filename"),
-                "format" to currentMetadata.extras?.getString("format"),
-                "isHydrated" to currentMetadata.extras?.getBoolean("isHydrated", false)?.toString(),
-                "hydratedAt" to currentMetadata.extras?.getString("hydratedAt"),
-                
-                // === EXTRAS INSPECTION ===
-                "extrasKeys" to currentMetadata.extras?.keySet()?.joinToString(", ") { "[$it]" }
-            )
-        } else {
-            mapOf(
-                "status" to "No current MediaItem/MediaMetadata available",
-                "hasMediaItem" to (currentMediaItem != null).toString(),
-                "hasMediaMetadata" to (currentMetadata != null).toString()
-            )
-        }
-    }
-    
     override suspend fun shareCurrentTrack() {
         Log.d(TAG, "Sharing current track")
         try {
