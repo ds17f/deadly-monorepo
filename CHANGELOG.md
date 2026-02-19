@@ -1,12 +1,23 @@
 # Changelog
 
+## [2.6.0] - 2026-02-18
+
+### New Features
+* add QR code and share choice sheet components (543d547)
+* migrate GitHub Pages to web/ on share.thedeadly.app (c0059c5)
+* implement deep link sharing via thedeadly.app (ab9848d)
+
+### Bug Fixes
+* add debug package ID to assetlinks.json (b0409a2)
+* add real cert fingerprints to assetlinks.json and .nojekyll (26b252c)
+* read showDate/venue/location from metadata during auto-save (a57c6b7)
+
+
 ## [2.5.0] - 2026-02-18
 
 ### New Features
 * replace decade browse gradient overlays with curated decade photos (dd61dda)
 * persist recording preferences and handle download conflicts (065b615)
-
-
 ## [2.4.1] - 2026-02-18
 
 ### Bug Fixes
