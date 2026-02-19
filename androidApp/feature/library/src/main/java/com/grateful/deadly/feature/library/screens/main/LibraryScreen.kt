@@ -21,8 +21,7 @@ import com.grateful.deadly.core.design.component.HierarchicalFilter
 import com.grateful.deadly.core.design.component.FilterPath
 import com.grateful.deadly.core.design.component.FilterTrees
 import com.grateful.deadly.core.model.*
-import com.grateful.deadly.core.design.component.QrCodeSheet
-import com.grateful.deadly.core.design.component.ShareChoiceSheet
+import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.feature.library.screens.main.components.*
 import com.grateful.deadly.feature.library.screens.main.models.LibraryViewModel
 
@@ -56,7 +55,6 @@ fun LibraryScreen(
     var showAddBottomSheet by remember { mutableStateOf(false) }
     var showSortBottomSheet by remember { mutableStateOf(false) }
     var selectedShowForActions by remember { mutableStateOf<LibraryShowViewModel?>(null) }
-    var shareChoiceShow by remember { mutableStateOf<LibraryShowViewModel?>(null) }
     var qrCodeShow by remember { mutableStateOf<LibraryShowViewModel?>(null) }
     
     Column(
@@ -151,7 +149,11 @@ fun LibraryScreen(
             show = show,
             onDismiss = { selectedShowForActions = null },
             onShare = {
-                shareChoiceShow = show
+                viewModel.shareShow(show.showId)
+                selectedShowForActions = null
+            },
+            onShowQrCode = {
+                qrCodeShow = show
                 selectedShowForActions = null
             },
             onRemoveFromLibrary = {
@@ -177,29 +179,19 @@ fun LibraryScreen(
         )
     }
 
-    shareChoiceShow?.let { show ->
-        ShareChoiceSheet(
-            onShareViaApp = {
-                viewModel.shareShow(show.showId)
-            },
-            onShareQrCode = {
-                qrCodeShow = show
-                shareChoiceShow = null
-            },
-            onDismiss = { shareChoiceShow = null }
-        )
-    }
-
     qrCodeShow?.let { show ->
         val url = if (show.bestRecordingId != null) {
             "https://share.thedeadly.app/show/${show.showId}/recording/${show.bestRecordingId}"
         } else {
             "https://share.thedeadly.app/show/${show.showId}"
         }
-        QrCodeSheet(
+        QrCodeDisplay(
             url = url,
-            title = show.displayDate,
-            subtitle = show.venue,
+            showDate = show.displayDate,
+            venue = show.venue,
+            location = show.location,
+            recordingId = show.bestRecordingId,
+            coverImageUrl = show.coverImageUrl,
             onDismiss = { qrCodeShow = null }
         )
     }

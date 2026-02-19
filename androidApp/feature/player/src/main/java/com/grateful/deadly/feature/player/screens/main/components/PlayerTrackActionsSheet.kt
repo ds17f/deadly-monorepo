@@ -29,6 +29,7 @@ fun PlayerTrackActionsSheet(
     venue: String,
     onDismiss: () -> Unit,
     onShare: () -> Unit,
+    onShowQrCode: () -> Unit,
     onAddToPlaylist: () -> Unit,
     onDownload: () -> Unit,
     modifier: Modifier = Modifier
@@ -96,6 +97,15 @@ fun PlayerTrackActionsSheet(
             ShareMenuRow(
                 onClick = {
                     onShare()
+                    onDismiss()
+                }
+            )
+
+            ActionMenuRow(
+                text = "Show QR Code",
+                icon = IconResources.Content.QrCode(),
+                onClick = {
+                    onShowQrCode()
                     onDismiss()
                 }
             )
