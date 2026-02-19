@@ -57,7 +57,7 @@
     <h1>The Deadly</h1>
     <p class="subtitle">Listen to every Grateful Dead show, free.</p>
 
-    <a class="open-btn" href="javascript:window.location.reload()">Open in The Deadly App</a>
+    <a class="open-btn" id="open-app-btn" href="#">Open in The Deadly App</a>
 
     <p style="color:#aaa; margin-bottom:16px; font-size:0.9rem;">Don't have the app? Download it free:</p>
     <div class="badges">
@@ -86,6 +86,13 @@
       const openBtn = document.querySelector('.open-btn');
       openBtn.insertAdjacentElement('afterend', btn);
     }
+
+    // Build custom scheme URL: deadly://show/{showId}[/recording/{recordingId}]
+    const deepLinkUrl = 'deadly:/' + window.location.pathname;
+    document.getElementById('open-app-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location = deepLinkUrl;
+    });
   </script>
 </body>
 </html>
