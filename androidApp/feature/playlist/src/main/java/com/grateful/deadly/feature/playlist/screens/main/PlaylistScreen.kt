@@ -24,6 +24,8 @@ import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistReco
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistCollectionsSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistSetlistBottomSheet
 import com.grateful.deadly.core.model.LibraryDownloadStatus
+import com.grateful.deadly.core.design.component.QrCodeSheet
+import com.grateful.deadly.core.design.component.ShareChoiceSheet
 import com.grateful.deadly.feature.playlist.screens.main.models.PlaylistViewModel
 /**
  * PlaylistScreen - Clean playlist interface
@@ -45,6 +47,8 @@ fun PlaylistScreen(
     Log.d("PlaylistScreen", "=== PLAYLIST SCREEN LOADED === recordingId: $recordingId, showId: $showId")
 
     val uiState by viewModel.uiState.collectAsState()
+    var showShareChoice by remember { mutableStateOf(false) }
+    var showQrCode by remember { mutableStateOf(false) }
     val isOffline by viewModel.isOffline.collectAsState()
 
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
@@ -263,15 +267,42 @@ fun PlaylistScreen(
                 showDate = showData.displayDate,
                 venue = showData.venue,
                 location = showData.location,
-                onShareClick = { 
-                    viewModel.shareShow()
-                },
+                onShareClick = { showShareChoice = true },
                 onChooseRecordingClick = viewModel::chooseRecording,
                 onDismiss = viewModel::hideMenu
             )
         }
     }
-    
+
+    // Share Choice Sheet
+    if (showShareChoice) {
+        ShareChoiceSheet(
+            onShareViaApp = { viewModel.shareShow() },
+            onShareQrCode = {
+                showShareChoice = false
+                showQrCode = true
+            },
+            onDismiss = { showShareChoice = false }
+        )
+    }
+
+    // QR Code Sheet
+    if (showQrCode) {
+        uiState.showData?.let { showData ->
+            val url = if (showData.currentRecordingId != null) {
+                "https://share.thedeadly.app/show/${showData.showId}/recording/${showData.currentRecordingId}"
+            } else {
+                "https://share.thedeadly.app/show/${showData.showId}"
+            }
+            QrCodeSheet(
+                url = url,
+                title = showData.displayDate,
+                subtitle = showData.venue,
+                onDismiss = { showQrCode = false }
+            )
+        }
+    }
+
     // Recording Selection Modal
     if (uiState.recordingSelection.isVisible) {
         PlaylistRecordingSelectionSheet(

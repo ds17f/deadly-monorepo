@@ -28,6 +28,8 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerConnectS
 import com.grateful.deadly.feature.player.screens.main.components.PlayerQueueSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
 import com.grateful.deadly.feature.player.screens.main.components.RepeatMode
+import com.grateful.deadly.core.design.component.QrCodeSheet
+import com.grateful.deadly.core.design.component.ShareChoiceSheet
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
 
 /**
@@ -122,6 +124,8 @@ fun PlayerScreen(
 
     // Bottom sheet state
     var showTrackActionsBottomSheet by remember { mutableStateOf(false) }
+    var showShareChoice by remember { mutableStateOf(false) }
+    var showQrCode by remember { mutableStateOf(false) }
     var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
 
@@ -217,7 +221,7 @@ fun PlayerScreen(
             item {
                 PlayerSecondaryControls(
                     onConnectClick = { showConnectBottomSheet = true },
-                    onShareClick = { viewModel.onShareClicked() },
+                    onShareClick = { showShareChoice = true },
                     onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
                 )
@@ -245,10 +249,42 @@ fun PlayerScreen(
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,
                 onDismiss = { showTrackActionsBottomSheet = false },
-                onShare = { viewModel.onShareClicked() },
+                onShare = {
+                    showTrackActionsBottomSheet = false
+                    showShareChoice = true
+                },
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
                 onDownload = { viewModel.downloadCurrentShow() }
             )
+        }
+
+        if (showShareChoice) {
+            ShareChoiceSheet(
+                onShareViaApp = { viewModel.onShareClicked() },
+                onShareQrCode = {
+                    showShareChoice = false
+                    showQrCode = true
+                },
+                onDismiss = { showShareChoice = false }
+            )
+        }
+
+        if (showQrCode) {
+            val showId = uiState.navigationInfo.showId
+            val recordingId = uiState.navigationInfo.recordingId
+            if (showId != null) {
+                val url = if (recordingId != null) {
+                    "https://share.thedeadly.app/show/$showId/recording/$recordingId"
+                } else {
+                    "https://share.thedeadly.app/show/$showId"
+                }
+                QrCodeSheet(
+                    url = url,
+                    title = uiState.trackDisplayInfo.showDate,
+                    subtitle = uiState.trackDisplayInfo.venue,
+                    onDismiss = { showQrCode = false }
+                )
+            }
         }
 
         if (showConnectBottomSheet) {
