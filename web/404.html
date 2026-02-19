@@ -36,6 +36,19 @@
     }
     .badges { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .badges a img { height: 48px; }
+    .archive-btn {
+      display: block;
+      background: transparent;
+      color: #aaa;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 1px solid #444;
+      margin-bottom: 32px;
+    }
+    .archive-btn:hover { border-color: #888; color: #eee; }
   </style>
 </head>
 <body>
@@ -56,5 +69,23 @@
       </a>
     </div>
   </div>
+  <script>
+    const segments = window.location.pathname.split('/').filter(Boolean);
+    let recordingId = null;
+    if (segments[0] === 'show' && segments[2] === 'recording' && segments[3]) {
+      recordingId = decodeURIComponent(segments[3]);
+    }
+    if (recordingId) {
+      const archiveUrl = 'https://archive.org/details/' + recordingId;
+      const btn = document.createElement('a');
+      btn.className = 'archive-btn';
+      btn.href = archiveUrl;
+      btn.target = '_blank';
+      btn.rel = 'noopener noreferrer';
+      btn.textContent = 'Listen on Archive.org';
+      const openBtn = document.querySelector('.open-btn');
+      openBtn.insertAdjacentElement('afterend', btn);
+    }
+  </script>
 </body>
 </html>
