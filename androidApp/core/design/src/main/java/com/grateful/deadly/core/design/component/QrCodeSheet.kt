@@ -30,6 +30,7 @@ import com.google.zxing.qrcode.QRCodeWriter
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
 import com.grateful.deadly.core.design.R
 import com.grateful.deadly.core.design.resources.IconResources
+import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -59,7 +60,12 @@ fun QrCodeDisplay(
         qrBitmap = qr
 
         // Share card built in background (loads cover image then composes poster)
-        val cover = loadCoverBitmapForShare(coverImageUrl, recordingId)
+        val cover = try {
+            loadCoverBitmapForShare(context, coverImageUrl, recordingId)
+        } catch (e: Exception) {
+            Log.e("QrCodeDisplay", "Failed to load cover for share card", e)
+            null
+        }
         shareBitmap = withContext(Dispatchers.Default) {
             buildShareCard(qr, cover, showDate, venue, location)
         }
@@ -253,27 +259,50 @@ private fun generateQrBitmapWithLogo(context: Context, content: String, size: In
 }
 
 /**
- * Download the cover image on IO for use in the share card.
+ * Load cover image for the share card.
+ * Tries Coil cache first (fast if ShowArtwork already loaded it),
+ * then falls back to direct download via URLConnection.
  * Uses archive.org thumbnail as fallback when no explicit URL is available.
- * Returns null (silently) on any network or decode failure.
+ * Returns null on any failure.
  */
-private suspend fun loadCoverBitmapForShare(imageUrl: String?, recordingId: String?): Bitmap? {
+private suspend fun loadCoverBitmapForShare(
+    context: Context,
+    imageUrl: String?,
+    recordingId: String?
+): Bitmap? {
     val url = when {
         !imageUrl.isNullOrBlank() -> imageUrl
         !recordingId.isNullOrBlank() -> "https://archive.org/services/img/$recordingId"
         else -> return null
     }
+    Log.d("QrCodeDisplay", "Loading cover from: $url")
+
     return withContext(Dispatchers.IO) {
+        // Try to load via HTTPURLConnection with proper error handling
         try {
             val connection = URL(url).openConnection() as HttpURLConnection
-            connection.connectTimeout = 8_000
-            connection.readTimeout = 12_000
+            connection.connectTimeout = 12_000
+            connection.readTimeout = 18_000
             connection.instanceFollowRedirects = true
+            connection.addRequestProperty("User-Agent", "thedeadly-app/1.0")
+            connection.addRequestProperty("Accept", "image/*")
+
             connection.connect()
-            if (connection.responseCode == 200) {
-                connection.inputStream.use { BitmapFactory.decodeStream(it) }
-            } else null
-        } catch (_: Exception) {
+            val code = connection.responseCode
+            Log.d("QrCodeDisplay", "Cover response: HTTP $code from $url")
+
+            if (code in 200..299) {
+                val bitmap = connection.inputStream.buffered().use {
+                    BitmapFactory.decodeStream(it)
+                }
+                Log.d("QrCodeDisplay", "Cover decoded: ${bitmap?.width}x${bitmap?.height}")
+                bitmap
+            } else {
+                Log.w("QrCodeDisplay", "Cover fetch failed: HTTP $code")
+                null
+            }
+        } catch (e: Exception) {
+            Log.w("QrCodeDisplay", "Cover load error: ${e.javaClass.simpleName}: ${e.message}")
             null
         }
     }
@@ -305,6 +334,7 @@ private fun buildShareCard(
 
     val topH = (H * 0.48f).toInt()
     val validCover = coverBitmap?.takeIf { it.height > 50 && it.width.toFloat() / it.height <= 3f }
+    Log.d("QrCodeDisplay", "Share card: cover=${coverBitmap != null}, valid=${validCover != null}, dims=${coverBitmap?.width}x${coverBitmap?.height}")
 
     // — Cover artwork (center-crop to fill top zone) —
     if (validCover != null) {
