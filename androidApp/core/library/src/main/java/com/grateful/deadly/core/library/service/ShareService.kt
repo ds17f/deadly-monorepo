@@ -34,8 +34,8 @@ class ShareService @Inject constructor(
      * Build a formatted message for sharing a show
      */
     private fun buildShowShareMessage(show: Show, recording: Recording): String {
-        val url = "https://archive.org/details/${recording.identifier}"
-        
+        val url = "https://thedeadly.app/show/${show.id}/recording/${recording.identifier}"
+
         return buildString {
             appendLine("🌹⚡💀 Grateful Dead 💀⚡🌹")
             appendLine()
@@ -45,16 +45,16 @@ class ShareService @Inject constructor(
                 appendLine("🌎 ${show.venue.displayLocation}")
             }
             appendLine()
-            
+
             // Add recording info
             appendLine("🎧 Source: ${recording.sourceType.displayName}")
-            
+
             if (show.hasRating) {
                 appendLine("⭐ Rating: ${show.displayRating}")
             }
-            
+
             appendLine()
-            appendLine("🔗 Listen on Archive.org:")
+            appendLine("🔗 Listen in The Deadly app:")
             append(url)
         }
     }
