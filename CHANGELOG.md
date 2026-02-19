@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.7.0] - 2026-02-19
+
+### New Features
+* implement force online mode for offline detection override (14c68ba)
+* enhance QR share with full concert poster bitmap (aca8367)
+
+### Bug Fixes
+* skip changelog upload in promote lanes (4a1c38a)
+* replace upload key with Play Store signing key in assetlinks.json (7ef45e0)
+
+### Code Refactoring
+* replace QR sheet with full-screen display dialog and simplify share flow (34092bf)
+
+
 ## [2.6.0] - 2026-02-18
 
 ### New Features
@@ -11,8 +25,6 @@
 * add debug package ID to assetlinks.json (b0409a2)
 * add real cert fingerprints to assetlinks.json and .nojekyll (26b252c)
 * read showDate/venue/location from metadata during auto-save (a57c6b7)
-
-
 ## [2.5.0] - 2026-02-18
 
 ### New Features
