@@ -67,7 +67,7 @@ fun QrCodeDisplay(
             null
         }
         shareBitmap = withContext(Dispatchers.Default) {
-            buildShareCard(qr, cover, showDate, venue, location)
+            buildShareCard(context, qr, cover, showDate, venue, location)
         }
         cover?.recycle()
     }
@@ -310,14 +310,15 @@ private suspend fun loadCoverBitmapForShare(
 
 /**
  * Compose a 1080×1920 "concert poster" bitmap:
- *   • top half  — cover artwork (center-cropped) + gradient fade to dark
+ *   • top half  — cover artwork (center-cropped) or app logo + gradient fade to dark
  *   • bottom half — dark background, QR code with white quiet-zone padding,
  *                   optional location text, app branding
  *
  * Waveform spectrograms from archive.org (height ≤50 or aspect > 3:1) are
- * treated as "no artwork" so the poster stays clean.
+ * treated as "no artwork" and fall back to the app logo (same as ShowArtwork).
  */
 private fun buildShareCard(
+    context: Context,
     qrBitmap: Bitmap,
     coverBitmap: Bitmap?,
     showDate: String,
@@ -336,18 +337,30 @@ private fun buildShareCard(
     val validCover = coverBitmap?.takeIf { it.height > 50 && it.width.toFloat() / it.height <= 3f }
     Log.d("QrCodeDisplay", "Share card: cover=${coverBitmap != null}, valid=${validCover != null}, dims=${coverBitmap?.width}x${coverBitmap?.height}")
 
-    // — Cover artwork (center-crop to fill top zone) —
-    if (validCover != null) {
-        val coverAspect = validCover.width.toFloat() / validCover.height
-        val targetAspect = W.toFloat() / topH
-        val (sw, sh) = if (coverAspect > targetAspect) {
-            ((topH * coverAspect).toInt()) to topH
-        } else {
-            W to (W / coverAspect).toInt()
+    // — Cover artwork or app logo (center-crop to fill top zone) —
+    val artworkBitmap = if (validCover != null) validCover else null
+    val displayBitmap = artworkBitmap ?: run {
+        // Fall back to app logo (same as ShowArtwork display)
+        try {
+            BitmapFactory.decodeResource(context.resources, R.drawable.deadly_logo)
+        } catch (e: Exception) {
+            Log.w("QrCodeDisplay", "Failed to load logo fallback: ${e.message}")
+            null
         }
-        val scaled = Bitmap.createScaledBitmap(validCover, sw, sh, true)
+    }
+
+    if (displayBitmap != null) {
+        val aspect = displayBitmap.width.toFloat() / displayBitmap.height
+        val targetAspect = W.toFloat() / topH
+        val (sw, sh) = if (aspect > targetAspect) {
+            ((topH * aspect).toInt()) to topH
+        } else {
+            W to (W / aspect).toInt()
+        }
+        val scaled = Bitmap.createScaledBitmap(displayBitmap, sw, sh, true)
         canvas.drawBitmap(scaled, -((sw - W) / 2f), -((sh - topH) / 2f), null)
         scaled.recycle()
+        if (artworkBitmap == null) displayBitmap.recycle()  // Only recycle if we created it
     }
 
     // — Gradient scrim over artwork bottom —
