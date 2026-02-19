@@ -37,18 +37,16 @@ fun PlaylistMenuSheet(
             // Share option
             ShareMenuRow(
                 onClick = {
-                    // For now, just trigger the callback - sharing will be implemented in next iteration
-                    // when we have proper Show/Recording model conversion
                     onShareClick()
                     onDismiss()
                 }
             )
-            
+
             // Choose Recording option
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clickable { 
+                    .clickable {
                         onChooseRecordingClick()
                         onDismiss()
                     }
@@ -66,7 +64,7 @@ fun PlaylistMenuSheet(
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
-            
+
             // Bottom spacing
             Spacer(modifier = Modifier.height(16.dp))
         }

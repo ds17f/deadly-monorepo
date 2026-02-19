@@ -182,7 +182,7 @@ fun ShowActionsBottomSheet(
                     },
                     modifier = Modifier.clickable { onShare() }
                 )
-                
+
                 // Pin/Unpin
                 if (show.isPinned) {
                     ListItem(
