@@ -31,7 +31,7 @@ import com.grateful.deadly.navigation.BottomNavDestination
 import com.grateful.deadly.navigation.NavigationBarConfig
 import com.grateful.deadly.core.design.scaffold.AppScaffold
 import com.grateful.deadly.feature.home.navigation.homeGraph
-import com.grateful.deadly.feature.settings.SettingsScreen
+import com.grateful.deadly.feature.settings.navigation.settingsGraph
 import com.grateful.deadly.feature.splash.navigation.splashGraph
 import com.grateful.deadly.feature.search.navigation.searchGraph
 import com.grateful.deadly.feature.playlist.navigation.playlistGraph
@@ -188,10 +188,8 @@ fun MainNavigation(
                     }
                 )
 
-                // Settings feature - app configuration
-                composable("settings") {
-                    SettingsScreen()
-                }
+                // Settings feature - app configuration and about page
+                settingsGraph(navController)
             }
 
             AnimatedVisibility(

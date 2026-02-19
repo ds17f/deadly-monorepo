@@ -2,6 +2,7 @@ package com.grateful.deadly.feature.settings
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
@@ -13,6 +14,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import java.io.File
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.grateful.deadly.core.design.resources.IconResources
 
 /**
  * SettingsScreen - Settings interface
@@ -21,7 +23,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
  */
 @Composable
 fun SettingsScreen(
-    viewModel: SettingsViewModel = hiltViewModel()
+    viewModel: SettingsViewModel = hiltViewModel(),
+    onNavigateToAbout: () -> Unit = {}
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -111,6 +114,28 @@ fun SettingsScreen(
                         Switch(
                             checked = forceOnline,
                             onCheckedChange = { viewModel.toggleForceOnline() }
+                        )
+                    }
+                }
+            }
+
+            // About Section
+            item {
+                SettingsSection(title = "About") {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onNavigateToAbout() },
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Legal & About",
+                            style = MaterialTheme.typography.bodyLarge
+                        )
+                        Icon(
+                            painter = IconResources.Navigation.ChevronRight(),
+                            contentDescription = "Navigate to About"
                         )
                     }
                 }

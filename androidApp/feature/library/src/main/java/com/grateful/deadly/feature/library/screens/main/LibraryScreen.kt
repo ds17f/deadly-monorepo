@@ -96,7 +96,6 @@ fun LibraryScreen(
                 
                 uiState.shows.isEmpty() -> {
                     EmptyLibraryContent(
-                        onPopulateTestData = viewModel::populateTestData,
                         modifier = Modifier.weight(1f)
                     )
                 }
@@ -306,11 +305,10 @@ private fun ErrorContent(
 }
 
 /**
- * Empty library content with test data option
+ * Empty library content
  */
 @Composable
 private fun EmptyLibraryContent(
-    onPopulateTestData: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -323,24 +321,15 @@ private fun EmptyLibraryContent(
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold
         )
-        
+
         Spacer(modifier = Modifier.height(16.dp))
-        
+
         Text(
-            text = "Add some shows to get started. In development mode, use \"Populate Test Data\" to load realistic test data.",
+            text = "Import your library from a previous backup or add shows manually.",
             style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
-        
-        Spacer(modifier = Modifier.height(24.dp))
-        
-        Button(
-            onClick = onPopulateTestData,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Populate Test Data")
-        }
     }
 }
 
