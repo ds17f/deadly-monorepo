@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.1] - 2026-02-19
+
+### Bug Fixes
+* use deadly_logo fallback in QR share card when cover missing (c9ae037)
+* add detailed logging for QR share cover image loading (fef7c78)
+
+
 ## [2.7.0] - 2026-02-19
 
 ### New Features
@@ -12,8 +19,6 @@
 
 ### Code Refactoring
 * replace QR sheet with full-screen display dialog and simplify share flow (34092bf)
-
-
 ## [2.6.0] - 2026-02-18
 
 ### New Features
