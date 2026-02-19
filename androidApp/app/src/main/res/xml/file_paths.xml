@@ -2,4 +2,6 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Cache directory for APK downloads -->
     <cache-path name="apk_cache" path="updates/" />
+    <!-- Cache directory for QR code image sharing -->
+    <cache-path name="qr_images" path="qr/" />
 </paths>
