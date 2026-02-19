@@ -9,5 +9,15 @@
         "E6:77:F9:7A:FF:FE:77:06:C7:71:11:4C:20:48:78:B3:2B:13:1D:9D:BC:EA:6D:B8:4E:1B:43:BB:66:8B:57:22"
       ]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.grateful.deadly.debug",
+      "sha256_cert_fingerprints": [
+        "E6:77:F9:7A:FF:FE:77:06:C7:71:11:4C:20:48:78:B3:2B:13:1D:9D:BC:EA:6D:B8:4E:1B:43:BB:66:8B:57:22"
+      ]
+    }
   }
 ]
