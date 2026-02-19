@@ -201,7 +201,10 @@ class LastPlayedTrackService @Inject constructor(
                         positionMs = position,
                         trackTitle = trackMetadata.title?.toString() ?: "Unknown Track",
                         trackFilename = extractFilename(trackMetadata),
-                        selectedFormat = extractFormat(trackMetadata)
+                        selectedFormat = extractFormat(trackMetadata),
+                        showDate = trackMetadata.extras?.getString("showDate") ?: "1970-01-01",
+                        venue = trackMetadata.extras?.getString("venue"),
+                        location = trackMetadata.extras?.getString("location")
                     )
                 }
             }.collect { /* State saved above */ }
