@@ -27,8 +27,9 @@ jobs:
       uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
       with:
         ruby-version: '3.1'
-        bundler-cache: true
-        bundler-gemfile: androidApp/Gemfile
+
+    - name: Install fastlane
+      run: cd androidApp && bundle install
 
     - name: Grant execute permission for gradlew
       run: chmod +x androidApp/gradlew
@@ -140,8 +141,9 @@ jobs:
       uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
       with:
         ruby-version: '3.1'
-        bundler-cache: true
-        bundler-gemfile: androidApp/Gemfile
+
+    - name: Install fastlane
+      run: cd androidApp && bundle install
 
     - name: Download AAB artifact
       uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
