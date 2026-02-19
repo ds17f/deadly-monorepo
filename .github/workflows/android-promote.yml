@@ -31,10 +31,8 @@ jobs:
       uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
       with:
         ruby-version: '3.1'
-        bundler-cache: false
-
-    - name: Install fastlane
-      run: gem install fastlane
+        bundler-cache: true
+        bundler-gemfile: androidApp/Gemfile
 
     - name: Decode Play Store service account JSON
       run: |
@@ -69,12 +67,12 @@ jobs:
     - name: Promote to alpha
       id: promote
       if: inputs.stage == 'alpha'
-      run: cd androidApp && fastlane promote_internal_to_alpha
+      run: cd androidApp && bundle exec fastlane promote_internal_to_alpha
 
     - name: Promote to production
       id: promote-prod
       if: inputs.stage == 'production'
-      run: cd androidApp && fastlane promote_alpha_to_production
+      run: cd androidApp && bundle exec fastlane promote_alpha_to_production
 
     - name: Update release status (success)
       if: success()
