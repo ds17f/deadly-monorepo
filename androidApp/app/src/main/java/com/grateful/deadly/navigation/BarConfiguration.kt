@@ -7,6 +7,7 @@ import com.grateful.deadly.core.design.scaffold.MiniPlayerConfig
 import com.grateful.deadly.feature.home.screens.main.HomeBarConfiguration
 import com.grateful.deadly.feature.search.screens.main.SearchBarConfiguration
 import com.grateful.deadly.feature.settings.screens.main.SettingsBarConfiguration
+import com.grateful.deadly.feature.settings.screens.about.AboutBarConfiguration
 import com.grateful.deadly.feature.library.screens.main.LibraryBarConfiguration
 import com.grateful.deadly.feature.collections.screens.main.CollectionsBarConfiguration
 import com.grateful.deadly.feature.collections.screens.details.CollectionDetailsBarConfiguration
@@ -32,7 +33,8 @@ object NavigationBarConfig {
         
         // Settings routes
         route == "settings" -> SettingsBarConfiguration.getSettingsBarConfig()
-        
+        route == "about" -> AboutBarConfiguration.getAboutBarConfig()
+
         // Library routes
         route == "library" -> LibraryBarConfiguration.getLibraryBarConfig(
             onNavigateToDownloads = onNavigateToDownloads

@@ -1,12 +1,20 @@
 package com.grateful.deadly.feature.library.screens.main.models
 
+import android.content.Context
+import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.library.LibraryService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.migration.MigrationData
+import com.grateful.deadly.core.database.migration.MigrationImportService
+import com.grateful.deadly.core.database.migration.MigrationLibraryShow
+import com.grateful.deadly.core.database.migration.MigrationRecentShow
 import com.grateful.deadly.core.model.*
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -15,6 +23,11 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.Json
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -28,7 +41,9 @@ import javax.inject.Named
 @HiltViewModel
 class LibraryViewModel @Inject constructor(
     private val libraryService: LibraryService,
-    private val appPreferences: AppPreferences
+    private val appPreferences: AppPreferences,
+    private val migrationImportService: MigrationImportService,
+    @ApplicationContext private val context: Context
 ) : ViewModel() {
     
     companion object {
@@ -267,6 +282,86 @@ class LibraryViewModel @Inject constructor(
         }
     }
     
+    /**
+     * Import library from JSON file
+     */
+    fun importLibrary(uri: Uri, onComplete: (Result<String>) -> Unit) {
+        viewModelScope.launch {
+            Log.d(TAG, "Importing library from URI")
+            try {
+                val jsonString = withContext(Dispatchers.IO) {
+                    context.contentResolver.openInputStream(uri)?.use { input ->
+                        input.bufferedReader().readText()
+                    } ?: throw IllegalStateException("Could not open file")
+                }
+                val result = withContext(Dispatchers.IO) {
+                    migrationImportService.importFromJson(jsonString)
+                }
+                Log.d(TAG, "Library import completed: ${result.libraryImported} imported, ${result.skipped} skipped")
+                onComplete(Result.success("Imported ${result.libraryImported} shows"))
+            } catch (e: Exception) {
+                Log.e(TAG, "Library import failed", e)
+                onComplete(Result.failure(e))
+            }
+        }
+    }
+
+    /**
+     * Export library to JSON file
+     */
+    fun exportLibrary(onComplete: (Result<String>) -> Unit) {
+        viewModelScope.launch {
+            Log.d(TAG, "Exporting library")
+            try {
+                val currentShows = _uiState.value.shows
+
+                // Create migration data format
+                val libraryShows = currentShows.map { show ->
+                    MigrationLibraryShow(
+                        date = show.date,
+                        venue = show.venue,
+                        location = show.location,
+                        addedAt = show.addedToLibraryAt,
+                        preferredRecordingId = null
+                    )
+                }
+
+                val migrationData = MigrationData(
+                    version = 1,
+                    format = "deadly-migration",
+                    createdAt = System.currentTimeMillis(),
+                    appVersion = "2.7.1",
+                    library = libraryShows,
+                    recentPlays = emptyList(),
+                    lastPlayed = null
+                )
+
+                // Serialize to JSON
+                val json = Json { prettyPrint = true }
+                val jsonString = json.encodeToString(MigrationData.serializer(), migrationData)
+
+                // Write to Downloads folder
+                val downloadsDir = File("/storage/emulated/0/Download/")
+                if (!downloadsDir.exists()) {
+                    downloadsDir.mkdirs()
+                }
+
+                val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.US)
+                val dateString = dateFormat.format(Date())
+                val filename = "deadly-library-export-$dateString.json"
+                val exportFile = File(downloadsDir, filename)
+
+                exportFile.writeText(jsonString)
+
+                Log.d(TAG, "Library exported successfully to: ${exportFile.absolutePath}")
+                onComplete(Result.success(filename))
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to export library", e)
+                onComplete(Result.failure(e))
+            }
+        }
+    }
+
     /**
      * Retry loading library after error
      */
