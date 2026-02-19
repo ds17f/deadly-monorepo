@@ -49,7 +49,7 @@ For detailed information about:
 - Testing requirements and coverage targets
 - Contributing to the project
 
-**Please refer to the [full documentation](https://docs.thedeadly.app/)** or run the docs locally as described above.
+**Please refer to the [full documentation](docs/docs/index.md)** or run the docs locally as described above.
 
 ## Quick Links
 

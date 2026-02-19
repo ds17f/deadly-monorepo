@@ -45,7 +45,7 @@ class ShareService @Inject constructor(
      * Build a formatted message for sharing a show
      */
     private fun buildShowShareMessage(show: Show, recording: Recording): String {
-        val url = "https://thedeadly.app/show/${show.id}/recording/${recording.identifier}"
+        val url = "https://share.thedeadly.app/show/${show.id}/recording/${recording.identifier}"
 
         return buildString {
             appendLine("🌹⚡💀 Grateful Dead 💀⚡🌹")
@@ -79,7 +79,7 @@ class ShareService @Inject constructor(
         track: Track,
         currentPositionSeconds: Long?
     ): String {
-        val url = "https://thedeadly.app/show/${show.id}/recording/${recording.identifier}"
+        val url = "https://share.thedeadly.app/show/${show.id}/recording/${recording.identifier}"
 
         val trackTitle = track.title ?: track.name
 
