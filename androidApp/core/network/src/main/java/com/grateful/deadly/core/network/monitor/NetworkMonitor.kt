@@ -30,26 +30,23 @@ class NetworkMonitor @Inject constructor(
         context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
     val isOnline: StateFlow<Boolean> = callbackFlow {
+        val availableNetworks = mutableSetOf<Network>()
+
         val callback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: Network) {
-                trySend(true)
+                availableNetworks.add(network)
+                trySend(availableNetworks.isNotEmpty())
             }
 
             override fun onLost(network: Network) {
-                trySend(false)
+                availableNetworks.remove(network)
+                trySend(availableNetworks.isNotEmpty())
             }
         }
 
         val request = NetworkRequest.Builder()
             .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
             .build()
-
-        // Emit initial state before registering callback
-        val initiallyOnline = connectivityManager.activeNetwork?.let { network ->
-            connectivityManager.getNetworkCapabilities(network)
-                ?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) == true
-        } ?: false
-        trySend(initiallyOnline)
 
         connectivityManager.registerNetworkCallback(request, callback)
         awaitClose { connectivityManager.unregisterNetworkCallback(callback) }

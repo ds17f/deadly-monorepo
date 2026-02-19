@@ -29,6 +29,7 @@ class AppPreferences @Inject constructor(
     companion object {
         private const val KEY_SHOW_ONLY_RECORDED = "show_only_recorded_shows"
         private const val KEY_LIBRARY_DISPLAY_MODE = "library_display_mode"
+        private const val KEY_FORCE_ONLINE = "force_online"
     }
 
     private val _showOnlyRecordedShows = MutableStateFlow(
@@ -53,5 +54,17 @@ class AppPreferences @Inject constructor(
     fun setLibraryDisplayMode(mode: String) {
         prefs.edit().putString(KEY_LIBRARY_DISPLAY_MODE, mode).apply()
         _libraryDisplayMode.value = mode
+    }
+
+    private val _forceOnline = MutableStateFlow(
+        prefs.getBoolean(KEY_FORCE_ONLINE, false)
+    )
+
+    /** When true, overrides offline detection and treats the app as online. */
+    val forceOnline: StateFlow<Boolean> = _forceOnline.asStateFlow()
+
+    fun setForceOnline(value: Boolean) {
+        prefs.edit().putBoolean(KEY_FORCE_ONLINE, value).apply()
+        _forceOnline.value = value
     }
 }
