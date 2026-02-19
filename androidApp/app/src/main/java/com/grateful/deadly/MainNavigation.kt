@@ -1,5 +1,6 @@
 package com.grateful.deadly
 
+import android.net.Uri
 import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -62,7 +63,10 @@ import com.grateful.deadly.feature.downloads.navigation.downloadsNavigation
  */
 @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 @Composable
-fun MainNavigation() {
+fun MainNavigation(
+    deepLinkUri: Uri? = null,
+    onDeepLinkHandled: () -> Unit = {}
+) {
     val appViewModel: AppViewModel = hiltViewModel()
     val isOffline by appViewModel.isOffline.collectAsState()
 
@@ -90,6 +94,25 @@ fun MainNavigation() {
                 navController.navigate("downloads") { launchSingleTop = true }
             }
         }
+    }
+
+    // Handle incoming deep links once DB is initialized (home is the first post-splash route)
+    LaunchedEffect(currentRoute, deepLinkUri) {
+        val uri = deepLinkUri ?: return@LaunchedEffect
+        if (currentRoute != "home") return@LaunchedEffect
+        val segments = uri.pathSegments
+        when (segments.getOrNull(0)) {
+            "show" -> {
+                val showId = segments.getOrNull(1) ?: return@LaunchedEffect
+                val recordingId = segments.getOrNull(3) // /show/{id}/recording/{recId}
+                navController.navigateToPlaylist(showId, recordingId)
+            }
+            "collection" -> {
+                val collectionId = segments.getOrNull(1) ?: return@LaunchedEffect
+                navController.navigate("collections/$collectionId")
+            }
+        }
+        onDeepLinkHandled()
     }
 
     // Get bar configuration based on current route

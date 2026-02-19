@@ -5,7 +5,6 @@ import android.content.Intent
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.core.model.Recording
 import com.grateful.deadly.core.model.Track
-import com.grateful.deadly.core.player.util.ArchiveUrlUtil
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -46,8 +45,8 @@ class ShareService @Inject constructor(
      * Build a formatted message for sharing a show
      */
     private fun buildShowShareMessage(show: Show, recording: Recording): String {
-        val url = ArchiveUrlUtil.getRecordingUrl(recording)
-        
+        val url = "https://thedeadly.app/show/${show.id}/recording/${recording.identifier}"
+
         return buildString {
             appendLine("🌹⚡💀 Grateful Dead 💀⚡🌹")
             appendLine()
@@ -57,16 +56,16 @@ class ShareService @Inject constructor(
                 appendLine("🌎 ${show.venue.displayLocation}")
             }
             appendLine()
-            
+
             // Add recording info
             appendLine("🎧 Source: ${recording.sourceType.displayName}")
-            
+
             if (show.hasRating) {
                 appendLine("⭐ Rating: ${show.displayRating}")
             }
-            
+
             appendLine()
-            appendLine("🔗 Listen on Archive.org:")
+            appendLine("🔗 Listen in The Deadly app:")
             append(url)
         }
     }
@@ -75,19 +74,15 @@ class ShareService @Inject constructor(
      * Build a formatted message for sharing a track
      */
     private fun buildTrackShareMessage(
-        show: Show, 
-        recording: Recording, 
-        track: Track, 
+        show: Show,
+        recording: Recording,
+        track: Track,
         currentPositionSeconds: Long?
     ): String {
-        val url = if (currentPositionSeconds != null && currentPositionSeconds > 0) {
-            ArchiveUrlUtil.getTrackUrlWithTime(recording, track, currentPositionSeconds)
-        } else {
-            ArchiveUrlUtil.getTrackUrl(recording, track)
-        }
-        
+        val url = "https://thedeadly.app/show/${show.id}/recording/${recording.identifier}"
+
         val trackTitle = track.title ?: track.name
-        
+
         return buildString {
             appendLine("🌹⚡💀 Grateful Dead 💀⚡🌹")
             appendLine()
@@ -98,7 +93,7 @@ class ShareService @Inject constructor(
             if (show.venue.displayLocation.isNotEmpty()) {
                 appendLine("🌎 ${show.venue.displayLocation}")
             }
-            
+
             // Track info
             if (track.trackNumber != null) {
                 appendLine("🔢 Track ${track.trackNumber}")
@@ -106,24 +101,24 @@ class ShareService @Inject constructor(
             if (!track.duration.isNullOrBlank()) {
                 appendLine("⏱️ Duration: ${track.duration}")
             }
-            
+
             appendLine()
-            
+
             // Add recording info
             appendLine("🎧 Source: ${recording.sourceType.displayName}")
-            
+
             if (show.hasRating) {
                 appendLine("⭐ Rating: ${show.displayRating}")
             }
-            
+
             if (currentPositionSeconds != null && currentPositionSeconds > 0) {
                 val minutes = currentPositionSeconds / 60
                 val seconds = currentPositionSeconds % 60
                 appendLine("▶️ Starting at: ${minutes}:${seconds.toString().padStart(2, '0')}")
             }
-            
+
             appendLine()
-            appendLine("🔗 Listen on Archive.org:")
+            appendLine("🔗 Listen in The Deadly app:")
             append(url)
         }
     }
