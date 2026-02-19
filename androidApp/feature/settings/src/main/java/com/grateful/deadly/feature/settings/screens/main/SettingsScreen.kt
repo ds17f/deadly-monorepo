@@ -65,6 +65,7 @@ fun SettingsScreen(
             // Preferences Section
             item {
                 val showOnlyRecorded by viewModel.showOnlyRecordedShows.collectAsState()
+                val forceOnline by viewModel.forceOnline.collectAsState()
 
                 SettingsSection(title = "Preferences") {
                     Row(
@@ -86,6 +87,30 @@ fun SettingsScreen(
                         Switch(
                             checked = showOnlyRecorded,
                             onCheckedChange = { viewModel.toggleShowOnlyRecordedShows() }
+                        )
+                    }
+
+                    HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "Force online mode",
+                                style = MaterialTheme.typography.bodyLarge
+                            )
+                            Text(
+                                text = "Override offline detection — use when the app incorrectly shows as offline",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        Switch(
+                            checked = forceOnline,
+                            onCheckedChange = { viewModel.toggleForceOnline() }
                         )
                     }
                 }

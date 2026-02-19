@@ -48,6 +48,12 @@ class SettingsViewModel @Inject constructor(
         appPreferences.setShowOnlyRecordedShows(!appPreferences.showOnlyRecordedShows.value)
     }
 
+    val forceOnline: StateFlow<Boolean> = appPreferences.forceOnline
+
+    fun toggleForceOnline() {
+        appPreferences.setForceOnline(!appPreferences.forceOnline.value)
+    }
+
     fun onImportMigration(uri: Uri) {
         viewModelScope.launch {
             try {
