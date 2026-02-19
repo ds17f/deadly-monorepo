@@ -21,6 +21,7 @@ fun PlaylistMenuSheet(
     venue: String?,
     location: String?,
     onShareClick: () -> Unit,
+    onShowQrCode: () -> Unit,
     onChooseRecordingClick: () -> Unit,
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
@@ -41,6 +42,29 @@ fun PlaylistMenuSheet(
                     onDismiss()
                 }
             )
+
+            // Show QR Code option
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        onShowQrCode()
+                        onDismiss()
+                    }
+                    .padding(vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = IconResources.Content.QrCode(),
+                    contentDescription = "Show QR Code",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = "Show QR Code",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
 
             // Choose Recording option
             Row(

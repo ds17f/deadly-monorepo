@@ -135,6 +135,7 @@ fun ShowActionsBottomSheet(
     show: LibraryShowViewModel,
     onDismiss: () -> Unit,
     onShare: () -> Unit,
+    onShowQrCode: () -> Unit,
     onRemoveFromLibrary: () -> Unit,
     onDownload: () -> Unit,
     onRemoveDownload: () -> Unit,
@@ -181,6 +182,18 @@ fun ShowActionsBottomSheet(
                         )
                     },
                     modifier = Modifier.clickable { onShare() }
+                )
+
+                // Show QR Code
+                ListItem(
+                    headlineContent = { Text("Show QR Code") },
+                    leadingContent = {
+                        Icon(
+                            painter = IconResources.Content.QrCode(),
+                            contentDescription = null
+                        )
+                    },
+                    modifier = Modifier.clickable { onShowQrCode() }
                 )
 
                 // Pin/Unpin
