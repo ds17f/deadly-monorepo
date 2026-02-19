@@ -34,6 +34,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
 import java.io.FileOutputStream
+import java.net.HttpURLConnection
+import java.net.URL
 
 @Composable
 fun QrCodeDisplay(
@@ -46,12 +48,22 @@ fun QrCodeDisplay(
     onDismiss: () -> Unit
 ) {
     val context = LocalContext.current
-    var bitmap by remember { mutableStateOf<Bitmap?>(null) }
+    var qrBitmap by remember { mutableStateOf<Bitmap?>(null) }
+    var shareBitmap by remember { mutableStateOf<Bitmap?>(null) }
 
     LaunchedEffect(url) {
-        bitmap = withContext(Dispatchers.Default) {
+        // QR shown immediately
+        val qr = withContext(Dispatchers.Default) {
             generateQrBitmapWithLogo(context, url, 600)
         }
+        qrBitmap = qr
+
+        // Share card built in background (loads cover image then composes poster)
+        val cover = loadCoverBitmapForShare(coverImageUrl, recordingId)
+        shareBitmap = withContext(Dispatchers.Default) {
+            buildShareCard(qr, cover, showDate, venue, location)
+        }
+        cover?.recycle()
     }
 
     Dialog(
@@ -135,7 +147,7 @@ fun QrCodeDisplay(
                     verticalArrangement = Arrangement.SpaceBetween
                 ) {
                     // QR code centered at 300dp
-                    bitmap?.let { bmp ->
+                    qrBitmap?.let { bmp ->
                         Image(
                             bitmap = bmp.asImageBitmap(),
                             contentDescription = "QR Code",
@@ -160,9 +172,10 @@ fun QrCodeDisplay(
                         Spacer(modifier = Modifier.height(4.dp))
                     }
 
+                    // Share the full poster card once built, else fall back to the QR bitmap
                     FilledTonalButton(
-                        onClick = { bitmap?.let { shareQrBitmap(context, it) } },
-                        enabled = bitmap != null
+                        onClick = { (shareBitmap ?: qrBitmap)?.let { shareQrBitmap(context, it) } },
+                        enabled = qrBitmap != null
                     ) {
                         Icon(
                             painter = IconResources.Content.Share(),
@@ -237,6 +250,147 @@ private fun generateQrBitmapWithLogo(context: Context, content: String, size: In
     }
 
     return bitmap
+}
+
+/**
+ * Download the cover image on IO for use in the share card.
+ * Uses archive.org thumbnail as fallback when no explicit URL is available.
+ * Returns null (silently) on any network or decode failure.
+ */
+private suspend fun loadCoverBitmapForShare(imageUrl: String?, recordingId: String?): Bitmap? {
+    val url = when {
+        !imageUrl.isNullOrBlank() -> imageUrl
+        !recordingId.isNullOrBlank() -> "https://archive.org/services/img/$recordingId"
+        else -> return null
+    }
+    return withContext(Dispatchers.IO) {
+        try {
+            val connection = URL(url).openConnection() as HttpURLConnection
+            connection.connectTimeout = 8_000
+            connection.readTimeout = 12_000
+            connection.instanceFollowRedirects = true
+            connection.connect()
+            if (connection.responseCode == 200) {
+                connection.inputStream.use { BitmapFactory.decodeStream(it) }
+            } else null
+        } catch (_: Exception) {
+            null
+        }
+    }
+}
+
+/**
+ * Compose a 1080×1920 "concert poster" bitmap:
+ *   • top half  — cover artwork (center-cropped) + gradient fade to dark
+ *   • bottom half — dark background, QR code with white quiet-zone padding,
+ *                   optional location text, app branding
+ *
+ * Waveform spectrograms from archive.org (height ≤50 or aspect > 3:1) are
+ * treated as "no artwork" so the poster stays clean.
+ */
+private fun buildShareCard(
+    qrBitmap: Bitmap,
+    coverBitmap: Bitmap?,
+    showDate: String,
+    venue: String,
+    location: String
+): Bitmap {
+    val W = 1080
+    val H = 1920
+    val bg = 0xFF0D0D0D.toInt()
+    val result = Bitmap.createBitmap(W, H, Bitmap.Config.ARGB_8888)
+    val canvas = Canvas(result)
+
+    canvas.drawColor(bg)
+
+    val topH = (H * 0.48f).toInt()
+    val validCover = coverBitmap?.takeIf { it.height > 50 && it.width.toFloat() / it.height <= 3f }
+
+    // — Cover artwork (center-crop to fill top zone) —
+    if (validCover != null) {
+        val coverAspect = validCover.width.toFloat() / validCover.height
+        val targetAspect = W.toFloat() / topH
+        val (sw, sh) = if (coverAspect > targetAspect) {
+            ((topH * coverAspect).toInt()) to topH
+        } else {
+            W to (W / coverAspect).toInt()
+        }
+        val scaled = Bitmap.createScaledBitmap(validCover, sw, sh, true)
+        canvas.drawBitmap(scaled, -((sw - W) / 2f), -((sh - topH) / 2f), null)
+        scaled.recycle()
+    }
+
+    // — Gradient scrim over artwork bottom —
+    val gradPaint = Paint()
+    gradPaint.shader = android.graphics.LinearGradient(
+        0f, topH * 0.35f, 0f, topH.toFloat(),
+        intArrayOf(android.graphics.Color.TRANSPARENT, bg),
+        null, android.graphics.Shader.TileMode.CLAMP
+    )
+    canvas.drawRect(0f, 0f, W.toFloat(), topH.toFloat(), gradPaint)
+
+    // — Show date —
+    val datePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = android.graphics.Color.WHITE
+        textSize = 76f
+        typeface = android.graphics.Typeface.DEFAULT_BOLD
+    }
+    canvas.drawText(truncateText(showDate, datePaint, W - 120f), 60f, topH - 96f, datePaint)
+
+    // — Venue —
+    if (venue.isNotBlank()) {
+        val venuePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = 0xDDFFFFFF.toInt()
+            textSize = 50f
+        }
+        canvas.drawText(truncateText(venue, venuePaint, W - 120f), 60f, topH - 32f, venuePaint)
+    }
+
+    // — QR code (white quiet-zone padding + centered in bottom zone) —
+    val qrSize = (W * 0.62f).toInt()
+    val qrPad = 28
+    val qrLeft = (W - qrSize) / 2
+    val qrTop = topH + ((H - topH - qrSize) * 0.40f).toInt()
+
+    val qrBgPaint = Paint().apply { color = android.graphics.Color.WHITE }
+    canvas.drawRect(
+        (qrLeft - qrPad).toFloat(), (qrTop - qrPad).toFloat(),
+        (qrLeft + qrSize + qrPad).toFloat(), (qrTop + qrSize + qrPad).toFloat(),
+        qrBgPaint
+    )
+    val scaledQr = Bitmap.createScaledBitmap(qrBitmap, qrSize, qrSize, true)
+    canvas.drawBitmap(scaledQr, qrLeft.toFloat(), qrTop.toFloat(), null)
+    scaledQr.recycle()
+
+    // — Location —
+    if (location.isNotBlank()) {
+        val locPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = 0xAAFFFFFF.toInt()
+            textSize = 42f
+            textAlign = Paint.Align.CENTER
+        }
+        canvas.drawText(
+            truncateText(location, locPaint, (W - 80f)),
+            W / 2f, (qrTop + qrSize + qrPad + 64).toFloat(), locPaint
+        )
+    }
+
+    // — App branding —
+    val brandPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = 0x55FFFFFF.toInt()
+        textSize = 34f
+        textAlign = Paint.Align.CENTER
+    }
+    canvas.drawText("thedeadly.app", W / 2f, H - 56f, brandPaint)
+
+    return result
+}
+
+private fun truncateText(text: String, paint: Paint, maxWidth: Float): String {
+    if (paint.measureText(text) <= maxWidth) return text
+    var end = text.length
+    while (end > 0 && paint.measureText(text.substring(0, end) + "…") > maxWidth) end--
+    return text.substring(0, end) + "…"
 }
 
 private fun shareQrBitmap(context: Context, bitmap: Bitmap) {
