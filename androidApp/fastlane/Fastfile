@@ -177,14 +177,6 @@ platform :android do
 
   desc "Promote from Internal to Alpha"
   lane :promote_internal_to_alpha do
-    release_notes_text = ENV['RELEASE_NOTES'] || ''
-
-    unless release_notes_text.empty?
-      changelog_dir = "/tmp/fl_metadata/en-US/changelogs"
-      sh("mkdir -p '#{changelog_dir}'")
-      File.write("#{changelog_dir}/default.txt", release_notes_text)
-    end
-
     upload_to_play_store(
       track: 'internal',
       track_promote_to: 'alpha',
@@ -192,8 +184,7 @@ platform :android do
       skip_upload_metadata: true,
       skip_upload_images: true,
       skip_upload_screenshots: true,
-      skip_upload_changelogs: release_notes_text.empty?,
-      metadata_path: release_notes_text.empty? ? nil : "/tmp/fl_metadata"
+      skip_upload_changelogs: true
     )
 
     UI.success("✅ Promoted latest build from Internal to Alpha!")
@@ -227,14 +218,6 @@ platform :android do
 
   desc "Promote from Alpha to Production"
   lane :promote_alpha_to_production do
-    release_notes_text = ENV['RELEASE_NOTES'] || ''
-
-    unless release_notes_text.empty?
-      changelog_dir = "/tmp/fl_metadata/en-US/changelogs"
-      sh("mkdir -p '#{changelog_dir}'")
-      File.write("#{changelog_dir}/default.txt", release_notes_text)
-    end
-
     upload_to_play_store(
       track: 'alpha',
       track_promote_to: 'production',
@@ -242,8 +225,7 @@ platform :android do
       skip_upload_metadata: true,
       skip_upload_images: true,
       skip_upload_screenshots: true,
-      skip_upload_changelogs: release_notes_text.empty?,
-      metadata_path: release_notes_text.empty? ? nil : "/tmp/fl_metadata"
+      skip_upload_changelogs: true
     )
 
     UI.success("✅ Promoted latest build from Alpha to Production!")
