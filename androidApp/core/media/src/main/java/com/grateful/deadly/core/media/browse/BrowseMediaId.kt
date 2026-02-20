@@ -19,6 +19,7 @@ package com.grateful.deadly.core.media.browse
 object BrowseMediaId {
 
     const val ROOT = "[ROOT]"
+    const val RECENT_ROOT = "[RECENT_ROOT]"
     const val RECENT = "recent"
     const val LIBRARY = "library"
     const val TOP_RATED = "top_rated"

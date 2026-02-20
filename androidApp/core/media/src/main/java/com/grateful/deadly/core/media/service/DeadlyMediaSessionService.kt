@@ -2,6 +2,8 @@ package com.grateful.deadly.core.media.service
 
 import android.app.PendingIntent
 import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
 import android.util.Log
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
@@ -127,6 +129,75 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             .build()
 
         Log.d(TAG, "[MEDIA] DeadlyMediaSessionService onCreate completed")
+
+        // Restore last played session so AA reconnects see a loaded player
+        restoreLastPlayedSession()
+    }
+
+    private fun restoreLastPlayedSession() {
+        if (exoPlayer.mediaItemCount > 0) {
+            Log.d(TAG, "[RESTORE] Player already has items, skipping restore")
+            return
+        }
+
+        serviceScope.launch {
+            try {
+                val prefs = getSharedPreferences("last_played_track", MODE_PRIVATE)
+                val showId = prefs.getString("show_id", null) ?: return@launch
+                val recordingId = prefs.getString("recording_id", null) ?: return@launch
+                val format = prefs.getString("selected_format", null) ?: return@launch
+                val trackIndex = prefs.getInt("track_index", 0)
+                val positionMs = prefs.getLong("position_ms", 0L)
+
+                Log.d(TAG, "[RESTORE] Restoring: show=$showId rec=$recordingId fmt=$format idx=$trackIndex pos=${positionMs}ms")
+
+                val tracks = browseTreeProvider.resolveRecordingToPlayableTracks(showId, recordingId, format)
+                if (tracks.isEmpty()) {
+                    Log.w(TAG, "[RESTORE] No tracks resolved, falling back to browse tree")
+                    return@launch
+                }
+
+                val safeIndex = trackIndex.coerceIn(0, tracks.size - 1)
+                launch(Dispatchers.Main) {
+                    exoPlayer.setMediaItems(tracks, safeIndex, positionMs)
+                    exoPlayer.playWhenReady = false
+                    exoPlayer.prepare()
+                    Log.d(TAG, "[RESTORE] Session restored: ${tracks.size} tracks, index=$safeIndex, pos=${positionMs}ms")
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "[RESTORE] Failed to restore session", e)
+            }
+        }
+    }
+
+    private fun buildRecentMediaItem(): MediaItem? {
+        val prefs = getSharedPreferences("last_played_track", MODE_PRIVATE)
+        val showId = prefs.getString("show_id", null) ?: return null
+        val recordingId = prefs.getString("recording_id", null) ?: return null
+        val trackIndex = prefs.getInt("track_index", 0)
+        val trackTitle = prefs.getString("track_title", null) ?: return null
+        val format = prefs.getString("selected_format", null) ?: return null
+        val showDate = prefs.getString("show_date", null) ?: ""
+        val venue = prefs.getString("venue", null) ?: ""
+
+        val mediaId = BrowseMediaId.track(showId, recordingId, trackIndex)
+        return MediaItem.Builder()
+            .setMediaId(mediaId)
+            .setMediaMetadata(
+                MediaMetadata.Builder()
+                    .setTitle(trackTitle)
+                    .setArtist("$showDate - $venue")
+                    .setIsPlayable(true)
+                    .setIsBrowsable(false)
+                    .setMediaType(MediaMetadata.MEDIA_TYPE_MUSIC)
+                    .setExtras(Bundle().apply {
+                        putString("showId", showId)
+                        putString("recordingId", recordingId)
+                        putString("format", format)
+                    })
+                    .build()
+            )
+            .build()
     }
 
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaLibrarySession? {
@@ -253,11 +324,15 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             browser: MediaSession.ControllerInfo,
             params: LibraryParams?
         ): ListenableFuture<LibraryResult<MediaItem>> {
+            val isRecent = params?.isRecent ?: false
+            val mediaId = if (isRecent) BrowseMediaId.RECENT_ROOT else BrowseMediaId.ROOT
+            val title = if (isRecent) "Recent" else "Grateful Dead"
+
             val rootItem = MediaItem.Builder()
-                .setMediaId(BrowseMediaId.ROOT)
+                .setMediaId(mediaId)
                 .setMediaMetadata(
                     MediaMetadata.Builder()
-                        .setTitle("Grateful Dead")
+                        .setTitle(title)
                         .setIsPlayable(false)
                         .setIsBrowsable(true)
                         .setMediaType(MediaMetadata.MEDIA_TYPE_FOLDER_MIXED)
@@ -276,6 +351,12 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             params: LibraryParams?
         ): ListenableFuture<LibraryResult<ImmutableList<MediaItem>>> = serviceScope.future {
             try {
+                if (parentId == BrowseMediaId.RECENT_ROOT) {
+                    val recentItem = buildRecentMediaItem()
+                    val children = if (recentItem != null) listOf(recentItem) else emptyList()
+                    return@future LibraryResult.ofItemList(children, params)
+                }
+
                 val children = browseTreeProvider.getChildren(parentId, page, pageSize)
                 LibraryResult.ofItemList(children, params)
             } catch (e: Exception) {
@@ -368,9 +449,16 @@ class DeadlyMediaSessionService : MediaLibraryService() {
                     BrowseMediaId.isTrack(mediaId) -> {
                         val trackId = BrowseMediaId.parseTrack(mediaId)
                         if (trackId != null) {
-                            val tracks = browseTreeProvider.resolveShowToPlayableTracks(
-                                trackId.showId
-                            )
+                            val extraFormat = item.mediaMetadata.extras?.getString("format")
+                            val tracks = if (extraFormat != null) {
+                                browseTreeProvider.resolveRecordingToPlayableTracks(
+                                    trackId.showId, trackId.recordingId, extraFormat
+                                )
+                            } else {
+                                browseTreeProvider.resolveShowToPlayableTracks(
+                                    trackId.showId
+                                )
+                            }
                             if (tracks.isNotEmpty()) {
                                 MediaSession.MediaItemsWithStartPosition(
                                     tracks,

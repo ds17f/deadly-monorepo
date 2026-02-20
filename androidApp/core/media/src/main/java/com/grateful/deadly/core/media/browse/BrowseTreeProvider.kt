@@ -160,6 +160,22 @@ class BrowseTreeProvider @Inject constructor(
             }
     }
 
+    suspend fun resolveRecordingToPlayableTracks(
+        showId: String,
+        recordingId: String,
+        format: String
+    ): List<MediaItem> {
+        val show = showRepository.getShowById(showId) ?: return emptyList()
+        val allTracks = archiveService.getRecordingTracks(recordingId)
+            .getOrNull() ?: return emptyList()
+
+        return allTracks
+            .filter { it.format.equals(format, ignoreCase = true) }
+            .mapIndexed { index, track ->
+                buildTrackItem(show, recordingId, format, track, index)
+            }
+    }
+
     // -- MediaItem builders --------------------------------------------------
 
     private fun buildBrowsableItem(
