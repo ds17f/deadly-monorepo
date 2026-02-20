@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flow
@@ -250,19 +251,20 @@ class PlaylistViewModel @Inject constructor(
     
     /**
      * Load show data from the service
-     * 
+     *
      * @param showId The show ID to load
      * @param recordingId Optional specific recording ID from navigation (e.g., Player→Playlist)
+     * @param trackNumber Optional track number to auto-play after tracks load (e.g., from deep link)
      */
-    fun loadShow(showId: String?, recordingId: String? = null) {
-        Log.d(TAG, "Loading show: $showId, recordingId: $recordingId")
+    fun loadShow(showId: String?, recordingId: String? = null, trackNumber: Int? = null) {
+        Log.d(TAG, "Loading show: $showId, recordingId: $recordingId, trackNumber: $trackNumber")
         viewModelScope.launch {
             try {
                 _baseUiState.value = _baseUiState.value.copy(isLoading = true, error = null)
-                
+
                 // Load show in service (DB data) with optional recordingId
                 playlistService.loadShow(showId, recordingId)
-                
+
                 // Show DB data immediately
                 val showData = playlistService.getCurrentShowInfo()
                 _baseUiState.value = _baseUiState.value.copy(
@@ -270,14 +272,28 @@ class PlaylistViewModel @Inject constructor(
                     showData = showData,
                     currentTrackIndex = -1
                 )
-                
+
                 Log.d(TAG, "Show loaded successfully: ${showData?.displayDate} - showing DB data immediately")
-                
+
                 // Start track loading in background
                 loadTrackListAsync()
-                
+
+                // Auto-play specific track once tracks are available
+                if (trackNumber != null) {
+                    viewModelScope.launch {
+                        _rawTrackData.first { it.isNotEmpty() }
+                        val track = _rawTrackData.value.firstOrNull { it.number == trackNumber }
+                        if (track != null) {
+                            Log.d(TAG, "Auto-playing track $trackNumber from deep link: ${track.title}")
+                            playTrack(track)
+                        } else {
+                            Log.w(TAG, "Track $trackNumber not found in loaded tracks")
+                        }
+                    }
+                }
+
                 // Collections are loaded reactively via combine() flow
-                
+
             } catch (e: Exception) {
                 Log.e(TAG, "Error loading show", e)
                 _baseUiState.value = _baseUiState.value.copy(

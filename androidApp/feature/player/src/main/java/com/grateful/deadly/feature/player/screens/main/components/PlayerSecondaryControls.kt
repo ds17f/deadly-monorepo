@@ -15,6 +15,7 @@ import com.grateful.deadly.core.design.resources.IconResources
 fun PlayerSecondaryControls(
     onConnectClick: () -> Unit,
     onShareClick: () -> Unit,
+    onQrCodeClick: () -> Unit,
     onQueueClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -48,7 +49,19 @@ fun PlayerSecondaryControls(
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
-            
+
+            // QR Code
+            IconButton(
+                onClick = onQrCodeClick,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    painter = IconResources.Content.QrCode(),
+                    contentDescription = "QR Code",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
             // Queue
             IconButton(
                 onClick = onQueueClick,

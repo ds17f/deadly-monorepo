@@ -41,9 +41,10 @@ fun PlaylistScreen(
     onNavigateToCollection: (String, String) -> Unit = { _, _ -> }, // collectionId, showId
     recordingId: String? = null,
     showId: String? = null,
+    trackNumber: Int? = null,
     viewModel: PlaylistViewModel = hiltViewModel(),
 ) {
-    Log.d("PlaylistScreen", "=== PLAYLIST SCREEN LOADED === recordingId: $recordingId, showId: $showId")
+    Log.d("PlaylistScreen", "=== PLAYLIST SCREEN LOADED === recordingId: $recordingId, showId: $showId, trackNumber: $trackNumber")
 
     val uiState by viewModel.uiState.collectAsState()
     var showQrCode by remember { mutableStateOf(false) }
@@ -51,7 +52,7 @@ fun PlaylistScreen(
 
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
     LaunchedEffect(showId, recordingId) {
-        viewModel.loadShow(showId, recordingId)
+        viewModel.loadShow(showId, recordingId, trackNumber)
     }
     
     Box(modifier = Modifier.fillMaxSize()) {
@@ -97,7 +98,7 @@ fun PlaylistScreen(
                                     style = MaterialTheme.typography.bodyLarge,
                                     color = MaterialTheme.colorScheme.error
                                 )
-                                Button(onClick = { viewModel.loadShow(showId, recordingId) }) {
+                                Button(onClick = { viewModel.loadShow(showId, recordingId, trackNumber) }) {
                                     Text("Retry")
                                 }
                             }

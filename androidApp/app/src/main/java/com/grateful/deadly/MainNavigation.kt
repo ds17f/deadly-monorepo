@@ -96,20 +96,29 @@ fun MainNavigation(
         }
     }
 
-    // Handle incoming deep links once DB is initialized (home is the first post-splash route)
+    // Handle incoming deep links once DB is initialized (splash is the only pre-init route)
     LaunchedEffect(currentRoute, deepLinkUri) {
         val uri = deepLinkUri ?: return@LaunchedEffect
-        if (currentRoute != "home") return@LaunchedEffect
+        if (currentRoute == null || currentRoute == "splash") return@LaunchedEffect
         val segments = uri.pathSegments
         when (segments.getOrNull(0)) {
             "show" -> {
                 val showId = segments.getOrNull(1) ?: return@LaunchedEffect
                 val recordingId = segments.getOrNull(3) // /show/{id}/recording/{recId}
-                navController.navigateToPlaylist(showId, recordingId)
+                val trackNumber = if (segments.getOrNull(4) == "track") {
+                    segments.getOrNull(5)?.toIntOrNull()
+                } else null
+                navController.navigateToPlaylist(showId, recordingId, trackNumber) {
+                    popUpTo("home") { inclusive = false }
+                    launchSingleTop = true
+                }
             }
             "collection" -> {
                 val collectionId = segments.getOrNull(1) ?: return@LaunchedEffect
-                navController.navigate("collections/$collectionId")
+                navController.navigate("collections/$collectionId") {
+                    popUpTo("home") { inclusive = false }
+                    launchSingleTop = true
+                }
             }
         }
         onDeepLinkHandled()
@@ -184,7 +193,9 @@ fun MainNavigation(
                 playerScreen(
                     onNavigateBack = { navController.popBackStack() },
                     onNavigateToPlaylist = { showId, recordingId ->
-                        navController.navigateToPlaylist(showId, recordingId)
+                        navController.navigateToPlaylist(showId, recordingId) {
+                            popUpTo("player") { inclusive = true }
+                        }
                     }
                 )
 

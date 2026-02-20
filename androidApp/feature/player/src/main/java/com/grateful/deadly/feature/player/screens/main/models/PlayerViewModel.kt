@@ -74,7 +74,8 @@ class PlayerViewModel @Inject constructor(
             ),
             navigationInfo = NavigationInfo(
                 showId = trackInfo.showId,
-                recordingId = trackInfo.recordingId
+                recordingId = trackInfo.recordingId,
+                trackNumber = trackInfo.trackNumber
             ),
             progressDisplayInfo = ProgressDisplayInfo(
                 currentPosition = playerService.formatPosition(playbackStatus.currentPosition),
@@ -305,7 +306,8 @@ data class TrackDisplayInfo(
  */
 data class NavigationInfo(
     val showId: String?,
-    val recordingId: String?
+    val recordingId: String?,
+    val trackNumber: Int? = null
 )
 
 /**

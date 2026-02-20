@@ -220,6 +220,7 @@ fun PlayerScreen(
                 PlayerSecondaryControls(
                     onConnectClick = { showConnectBottomSheet = true },
                     onShareClick = { viewModel.onShareClicked() },
+                    onQrCodeClick = { showQrCode = true },
                     onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
                 )
@@ -259,7 +260,11 @@ fun PlayerScreen(
             val recordingId = uiState.navigationInfo.recordingId
             if (showId != null) {
                 val url = if (recordingId != null) {
-                    "https://share.thedeadly.app/show/$showId/recording/$recordingId"
+                    buildString {
+                        append("https://share.thedeadly.app/show/$showId/recording/$recordingId")
+                        val trackNumber = uiState.navigationInfo.trackNumber
+                        if (trackNumber != null) append("/track/$trackNumber")
+                    }
                 } else {
                     "https://share.thedeadly.app/show/$showId"
                 }
@@ -270,6 +275,7 @@ fun PlayerScreen(
                     location = "",
                     recordingId = uiState.navigationInfo.recordingId,
                     coverImageUrl = uiState.trackDisplayInfo.coverImageUrl,
+                    songTitle = uiState.trackDisplayInfo.title,
                     onDismiss = { showQrCode = false }
                 )
             }

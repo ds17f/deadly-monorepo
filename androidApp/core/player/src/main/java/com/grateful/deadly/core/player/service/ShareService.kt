@@ -79,7 +79,10 @@ class ShareService @Inject constructor(
         track: Track,
         currentPositionSeconds: Long?
     ): String {
-        val url = "https://share.thedeadly.app/show/${show.id}/recording/${recording.identifier}"
+        val url = buildString {
+            append("https://share.thedeadly.app/show/${show.id}/recording/${recording.identifier}")
+            if (track.trackNumber != null) append("/track/${track.trackNumber}")
+        }
 
         val trackTitle = track.title ?: track.name
 
