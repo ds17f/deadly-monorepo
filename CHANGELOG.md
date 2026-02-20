@@ -1,12 +1,28 @@
 # Changelog
 
+## [2.8.0] - 2026-02-20
+
+### New Features
+* add artwork and full metadata to AA recent item (f4c60d4)
+* restore last played session on Android Auto reconnect (674cb9c)
+* implement library export and import functionality (af90e93)
+* add Archive.org link on share pages when recording ID is present (855278f)
+
+### Bug Fixes
+* mitigate audio skip when scanning QR code / opening deep link (b73f276)
+* clean up deep link and player navigation back stack (70db741)
+* prevent cached QR code images in share intent (bc3a02f)
+* use custom URL scheme for "Open in App" button on share pages (696520a)
+
+### CI Changes
+* remove environment approval gate from promotion workflow (8dfd719)
+
+
 ## [2.7.1] - 2026-02-19
 
 ### Bug Fixes
 * use deadly_logo fallback in QR share card when cover missing (c9ae037)
 * add detailed logging for QR share cover image loading (fef7c78)
-
-
 ## [2.7.0] - 2026-02-19
 
 ### New Features
