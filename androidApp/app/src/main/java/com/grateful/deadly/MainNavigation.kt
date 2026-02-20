@@ -29,7 +29,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.grateful.deadly.navigation.BottomNavDestination
 import com.grateful.deadly.navigation.NavigationBarConfig
+import com.grateful.deadly.core.design.component.ShowArtwork
+import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.scaffold.AppScaffold
+import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.navigation.homeGraph
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
 import com.grateful.deadly.feature.splash.navigation.splashGraph
@@ -41,6 +44,19 @@ import com.grateful.deadly.feature.miniplayer.screens.main.MiniPlayerScreen
 import com.grateful.deadly.feature.library.navigation.libraryNavigation
 import com.grateful.deadly.feature.collections.navigation.collectionsGraph
 import com.grateful.deadly.feature.downloads.navigation.downloadsNavigation
+
+sealed interface PendingDeepLink {
+    data class ShowLink(
+        val showId: String,
+        val recordingId: String?,
+        val trackNumber: Int?,
+        val show: Show? = null
+    ) : PendingDeepLink
+
+    data class CollectionLink(
+        val collectionId: String
+    ) : PendingDeepLink
+}
 /**
  * MainNavigation - Scalable navigation architecture
  *
@@ -76,6 +92,7 @@ fun MainNavigation(
 
     val snackbarHostState = remember { SnackbarHostState() }
     val prevIsOffline = remember { mutableStateOf<Boolean?>(null) }
+    var pendingDeepLink by remember { mutableStateOf<PendingDeepLink?>(null) }
 
     // Redirect to downloads and show snackbar on connectivity changes
     LaunchedEffect(isOffline) {
@@ -104,24 +121,30 @@ fun MainNavigation(
         when (segments.getOrNull(0)) {
             "show" -> {
                 val showId = segments.getOrNull(1) ?: return@LaunchedEffect
-                val recordingId = segments.getOrNull(3) // /show/{id}/recording/{recId}
+                val recordingId = segments.getOrNull(3)
                 val trackNumber = if (segments.getOrNull(4) == "track") {
                     segments.getOrNull(5)?.toIntOrNull()
                 } else null
-                navController.navigateToPlaylist(showId, recordingId, trackNumber) {
-                    popUpTo("home") { inclusive = false }
-                    launchSingleTop = true
-                }
+                pendingDeepLink = PendingDeepLink.ShowLink(showId, recordingId, trackNumber)
             }
             "collection" -> {
                 val collectionId = segments.getOrNull(1) ?: return@LaunchedEffect
-                navController.navigate("collections/$collectionId") {
-                    popUpTo("home") { inclusive = false }
-                    launchSingleTop = true
-                }
+                pendingDeepLink = PendingDeepLink.CollectionLink(collectionId)
             }
         }
         onDeepLinkHandled()
+    }
+
+    // Load show metadata asynchronously so the deep link handler above doesn't block playback
+    LaunchedEffect(pendingDeepLink) {
+        val link = pendingDeepLink
+        if (link is PendingDeepLink.ShowLink && link.show == null) {
+            val show = appViewModel.getShow(link.showId)
+            // Only update if still the same pending link
+            if (pendingDeepLink == link) {
+                pendingDeepLink = link.copy(show = show)
+            }
+        }
     }
 
     // Get bar configuration based on current route
@@ -214,6 +237,31 @@ fun MainNavigation(
                 OfflineBanner()
             }
         }
+    }
+
+    pendingDeepLink?.let { deepLink ->
+        DeepLinkActionSheet(
+            deepLink = deepLink,
+            onPlayNow = { showId, recordingId, trackNumber ->
+                navController.navigateToPlaylist(showId, recordingId, trackNumber) {
+                    popUpTo("home") { inclusive = false }
+                    launchSingleTop = true
+                }
+                pendingDeepLink = null
+            },
+            onAddToLibrary = { showId ->
+                appViewModel.addToLibrary(showId)
+                pendingDeepLink = null
+            },
+            onViewCollection = { collectionId ->
+                navController.navigate("collections/$collectionId") {
+                    popUpTo("home") { inclusive = false }
+                    launchSingleTop = true
+                }
+                pendingDeepLink = null
+            },
+            onDismiss = { pendingDeepLink = null }
+        )
     }
 }
 
@@ -316,5 +364,159 @@ private fun BottomNavItem(
             textAlign = TextAlign.Center,
             maxLines = 1
         )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun DeepLinkActionSheet(
+    deepLink: PendingDeepLink,
+    onPlayNow: (showId: String, recordingId: String?, trackNumber: Int?) -> Unit,
+    onAddToLibrary: (showId: String) -> Unit,
+    onViewCollection: (collectionId: String) -> Unit,
+    onDismiss: () -> Unit
+) {
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+        ) {
+            when (deepLink) {
+                is PendingDeepLink.ShowLink -> {
+                    val show = deepLink.show
+
+                    // Header with artwork
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        ShowArtwork(
+                            recordingId = deepLink.recordingId ?: show?.bestRecordingId,
+                            contentDescription = null,
+                            modifier = Modifier
+                                .size(72.dp)
+                                .clip(RoundedCornerShape(8.dp)),
+                            imageUrl = show?.coverImageUrl
+                        )
+                        Spacer(modifier = Modifier.width(16.dp))
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = show?.date ?: deepLink.showId,
+                                style = MaterialTheme.typography.titleLarge,
+                                fontWeight = FontWeight.Bold
+                            )
+                            if (show != null) {
+                                Text(
+                                    text = show.venue.name,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                                Text(
+                                    text = show.location.displayText,
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+                    HorizontalDivider()
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    // Actions
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        ListItem(
+                            headlineContent = { Text("Play Now") },
+                            leadingContent = {
+                                Icon(
+                                    painter = IconResources.PlayerControls.Play(),
+                                    contentDescription = null
+                                )
+                            },
+                            modifier = Modifier.clickable {
+                                onPlayNow(deepLink.showId, deepLink.recordingId, deepLink.trackNumber)
+                            }
+                        )
+                        ListItem(
+                            headlineContent = { Text("Add Show to Library") },
+                            leadingContent = {
+                                Icon(
+                                    painter = IconResources.Content.LibraryAdd(),
+                                    contentDescription = null
+                                )
+                            },
+                            modifier = Modifier.clickable {
+                                onAddToLibrary(deepLink.showId)
+                            }
+                        )
+                        ListItem(
+                            headlineContent = { Text("Ignore") },
+                            leadingContent = {
+                                Icon(
+                                    painter = IconResources.Navigation.Close(),
+                                    contentDescription = null
+                                )
+                            },
+                            modifier = Modifier.clickable { onDismiss() }
+                        )
+                    }
+                }
+
+                is PendingDeepLink.CollectionLink -> {
+                    // Header
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            painter = IconResources.Navigation.Collections(),
+                            contentDescription = null,
+                            modifier = Modifier.size(48.dp),
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(modifier = Modifier.width(16.dp))
+                        Text(
+                            text = "Shared Collection",
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+                    HorizontalDivider()
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    // Actions
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        ListItem(
+                            headlineContent = { Text("View Collection") },
+                            leadingContent = {
+                                Icon(
+                                    painter = IconResources.Navigation.Collections(),
+                                    contentDescription = null
+                                )
+                            },
+                            modifier = Modifier.clickable {
+                                onViewCollection(deepLink.collectionId)
+                            }
+                        )
+                        ListItem(
+                            headlineContent = { Text("Ignore") },
+                            leadingContent = {
+                                Icon(
+                                    painter = IconResources.Navigation.Close(),
+                                    contentDescription = null
+                                )
+                            },
+                            modifier = Modifier.clickable { onDismiss() }
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+        }
     }
 }

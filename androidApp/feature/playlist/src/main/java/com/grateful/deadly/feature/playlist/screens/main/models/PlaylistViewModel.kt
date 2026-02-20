@@ -284,8 +284,8 @@ class PlaylistViewModel @Inject constructor(
                         _rawTrackData.first { it.isNotEmpty() }
                         val track = _rawTrackData.value.firstOrNull { it.number == trackNumber }
                         if (track != null) {
-                            Log.d(TAG, "Auto-playing track $trackNumber from deep link: ${track.title}")
-                            playTrack(track)
+                            Log.d(TAG, "Selecting track $trackNumber from deep link (no auto-play): ${track.title}")
+                            playTrack(track, autoPlay = false)
                         } else {
                             Log.w(TAG, "Track $trackNumber not found in loaded tracks")
                         }
@@ -1115,7 +1115,7 @@ class PlaylistViewModel @Inject constructor(
     /**
      * Play track
      */
-    fun playTrack(track: PlaylistTrackViewModel) {
+    fun playTrack(track: PlaylistTrackViewModel, autoPlay: Boolean = true) {
         viewModelScope.launch {
             try {
                 Log.d(TAG, "🕒🎵 [UI] PlaylistViewModel track selection: User clicked track ${track.title} at ${System.currentTimeMillis()}")
@@ -1184,7 +1184,8 @@ class PlaylistViewModel @Inject constructor(
                     showDate = showDate,
                     venue = venue,
                     location = location,
-                    coverImageUrl = showContext?.coverImageUrl
+                    coverImageUrl = showContext?.coverImageUrl,
+                    autoPlay = autoPlay
                 )
                 
                 // UI state will be updated via MediaController state observation

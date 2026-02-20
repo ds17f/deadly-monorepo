@@ -159,6 +159,9 @@ dependencies {
     implementation(project(":core:collections"))
     implementation(project(":core:api:recent"))
     implementation(project(":core:recent"))
+    implementation(project(":core:model"))
+    implementation(project(":core:domain"))
+    implementation(project(":core:api:library"))
 
     // Feature Dependencies
     implementation(project(":feature:splash"))

@@ -2,8 +2,13 @@ package com.grateful.deadly.core.media.service
 
 import android.app.PendingIntent
 import android.content.Intent
+import android.media.AudioFocusRequest
+import android.media.AudioManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
@@ -44,6 +49,8 @@ class DeadlyMediaSessionService : MediaLibraryService() {
 
     companion object {
         private const val TAG = "DeadlyMediaSessionService"
+        private const val TRANSIENT_LOSS_PAUSE_DELAY_MS = 1500L
+        private const val DUCK_VOLUME = 0.2f
     }
 
     @Inject
@@ -70,11 +77,79 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     // Search result cache for Android Auto browse
     private var cachedSearchResults: List<MediaItem> = emptyList()
 
+    // Audio focus management — we handle focus manually so that short
+    // transient losses (QR-scanner beeps) only duck rather than pause.
+    private lateinit var audioManager: AudioManager
+    private var hasAudioFocus = false
+    private var pausedByTransientLoss = false
+    private var duckingForTransientLoss = false
+    private val mainHandler = Handler(Looper.getMainLooper())
+
+    @Suppress("NewApi") // field is only used inside Build.VERSION checks
+    private var pendingFocusRequest: AudioFocusRequest? = null
+
+    private val transientLossPauseRunnable = Runnable {
+        if (duckingForTransientLoss && exoPlayer.isPlaying) {
+            Log.d(TAG, "[AUDIO_FOCUS] Transient loss exceeded ${TRANSIENT_LOSS_PAUSE_DELAY_MS}ms, pausing")
+            exoPlayer.volume = 1.0f
+            duckingForTransientLoss = false
+            pausedByTransientLoss = true
+            exoPlayer.pause()
+        }
+    }
+
+    private val audioFocusChangeListener = AudioManager.OnAudioFocusChangeListener { focusChange ->
+        when (focusChange) {
+            AudioManager.AUDIOFOCUS_GAIN -> {
+                Log.d(TAG, "[AUDIO_FOCUS] Gained")
+                mainHandler.removeCallbacks(transientLossPauseRunnable)
+                exoPlayer.volume = 1.0f
+                if (duckingForTransientLoss) {
+                    duckingForTransientLoss = false
+                    Log.d(TAG, "[AUDIO_FOCUS] Restored from duck (short transient)")
+                }
+                if (pausedByTransientLoss) {
+                    exoPlayer.play()
+                    pausedByTransientLoss = false
+                    Log.d(TAG, "[AUDIO_FOCUS] Resuming after transient pause")
+                }
+                hasAudioFocus = true
+            }
+            AudioManager.AUDIOFOCUS_LOSS -> {
+                Log.d(TAG, "[AUDIO_FOCUS] Permanent loss")
+                mainHandler.removeCallbacks(transientLossPauseRunnable)
+                duckingForTransientLoss = false
+                pausedByTransientLoss = false
+                hasAudioFocus = false
+                exoPlayer.volume = 1.0f
+                exoPlayer.pause()
+            }
+            AudioManager.AUDIOFOCUS_LOSS_TRANSIENT -> {
+                Log.d(TAG, "[AUDIO_FOCUS] Transient loss — ducking, will pause if sustained")
+                if (exoPlayer.isPlaying) {
+                    exoPlayer.volume = DUCK_VOLUME
+                    duckingForTransientLoss = true
+                    mainHandler.removeCallbacks(transientLossPauseRunnable)
+                    mainHandler.postDelayed(transientLossPauseRunnable, TRANSIENT_LOSS_PAUSE_DELAY_MS)
+                }
+            }
+            AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK -> {
+                Log.d(TAG, "[AUDIO_FOCUS] Transient loss (can duck)")
+                exoPlayer.volume = DUCK_VOLUME
+                duckingForTransientLoss = true
+            }
+        }
+    }
+
     override fun onCreate() {
         super.onCreate()
         Log.d(TAG, "[MEDIA] DeadlyMediaSessionService onCreate started")
 
-        // Initialize ExoPlayer with cache-aware data source for offline playback
+        audioManager = getSystemService(AUDIO_SERVICE) as AudioManager
+
+        // Initialize ExoPlayer with cache-aware data source for offline playback.
+        // handleAudioFocus = false: we manage focus ourselves so short transient
+        // losses (QR-scanner beeps) only duck instead of pausing.
         exoPlayer = ExoPlayer.Builder(this)
             .setMediaSourceFactory(DefaultMediaSourceFactory(cacheDataSourceFactory))
             .setAudioAttributes(
@@ -82,7 +157,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
                     .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC)
                     .setUsage(C.USAGE_MEDIA)
                     .build(),
-                true
+                false
             )
             .setHandleAudioBecomingNoisy(true)
             .build()
@@ -105,6 +180,9 @@ class DeadlyMediaSessionService : MediaLibraryService() {
 
             override fun onIsPlayingChanged(isPlaying: Boolean) {
                 Log.d(TAG, "[AUDIO] isPlaying=$isPlaying")
+                if (isPlaying && !hasAudioFocus) {
+                    requestAudioFocus()
+                }
             }
 
             override fun onPlayerError(error: androidx.media3.common.PlaybackException) {
@@ -215,10 +293,16 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaLibrarySession? {
         Log.d(TAG, "[MEDIA] Client requesting session: ${controllerInfo.packageName}")
 
-        // MediaSession will automatically restore queue/position
-        // Schedule metadata hydration after restoration completes
+        // Hydrate metadata only on session restore (app restart / AA reconnect).
+        // Do NOT hydrate if the player is already actively playing — calling
+        // setMediaItems on a live player causes an audible skip.
         serviceScope.launch {
             delay(2000) // Give MediaSession time to restore state
+            val isAlreadyPlaying = kotlinx.coroutines.withContext(Dispatchers.Main) { exoPlayer.isPlaying }
+            if (isAlreadyPlaying) {
+                Log.d(TAG, "[MEDIA] Skipping hydration — player already active")
+                return@launch
+            }
             Log.d(TAG, "[MEDIA] Triggering metadata hydration after restoration")
             try {
                 metadataHydratorService.hydrateCurrentQueue()
@@ -252,6 +336,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             Log.d(TAG, "Saved playback position ${exoPlayer.currentPosition}ms before task removal")
         }
 
+        abandonAudioFocus()
         exoPlayer.stop()
         stopSelf()
         super.onTaskRemoved(rootIntent)
@@ -259,12 +344,63 @@ class DeadlyMediaSessionService : MediaLibraryService() {
 
     override fun onDestroy() {
         Log.d(TAG, "Service onDestroy()")
+        abandonAudioFocus()
         mediaSession?.run {
             release()
             mediaSession = null
         }
         exoPlayer.release()
         super.onDestroy()
+    }
+
+    // ── Audio focus management ────────────────────────────────────────────
+
+    @Suppress("NewApi") // AudioFocusRequest usage is gated by Build.VERSION check
+    private fun requestAudioFocus() {
+        if (hasAudioFocus) return
+
+        val result = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val focusRequest = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
+                .setAudioAttributes(
+                    android.media.AudioAttributes.Builder()
+                        .setUsage(android.media.AudioAttributes.USAGE_MEDIA)
+                        .setContentType(android.media.AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .build()
+                )
+                .setOnAudioFocusChangeListener(audioFocusChangeListener, mainHandler)
+                .build()
+            pendingFocusRequest = focusRequest
+            audioManager.requestAudioFocus(focusRequest)
+        } else {
+            @Suppress("DEPRECATION")
+            audioManager.requestAudioFocus(
+                audioFocusChangeListener,
+                AudioManager.STREAM_MUSIC,
+                AudioManager.AUDIOFOCUS_GAIN
+            )
+        }
+
+        hasAudioFocus = (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED)
+        Log.d(TAG, "[AUDIO_FOCUS] Requested, granted=$hasAudioFocus")
+
+        if (!hasAudioFocus) {
+            exoPlayer.pause()
+        }
+    }
+
+    @Suppress("NewApi")
+    private fun abandonAudioFocus() {
+        mainHandler.removeCallbacks(transientLossPauseRunnable)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            pendingFocusRequest?.let { audioManager.abandonAudioFocusRequest(it) }
+            pendingFocusRequest = null
+        } else {
+            @Suppress("DEPRECATION")
+            audioManager.abandonAudioFocus(audioFocusChangeListener)
+        }
+        hasAudioFocus = false
+        duckingForTransientLoss = false
+        pausedByTransientLoss = false
     }
 
     // ── Error retry ─────────────────────────────────────────────────────
