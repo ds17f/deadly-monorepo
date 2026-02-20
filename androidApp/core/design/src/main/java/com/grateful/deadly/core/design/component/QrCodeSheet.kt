@@ -46,6 +46,7 @@ fun QrCodeDisplay(
     location: String,
     recordingId: String?,
     coverImageUrl: String?,
+    songTitle: String? = null,
     onDismiss: () -> Unit
 ) {
     val context = LocalContext.current
@@ -67,7 +68,7 @@ fun QrCodeDisplay(
             null
         }
         shareBitmap = withContext(Dispatchers.Default) {
-            buildShareCard(context, qr, cover, showDate, venue, location)
+            buildShareCard(context, qr, cover, showDate, venue, location, songTitle)
         }
         cover?.recycle()
     }
@@ -164,6 +165,18 @@ fun QrCodeDisplay(
                         contentAlignment = Alignment.Center
                     ) {
                         CircularProgressIndicator()
+                    }
+
+                    // Song title (shown when playing a specific track)
+                    if (!songTitle.isNullOrBlank()) {
+                        Text(
+                            text = "↳ $songTitle",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurface,
+                            textAlign = TextAlign.Center,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis
+                        )
                     }
 
                     // Location text (skipped when blank)
@@ -323,7 +336,8 @@ private fun buildShareCard(
     coverBitmap: Bitmap?,
     showDate: String,
     venue: String,
-    location: String
+    location: String,
+    songTitle: String? = null
 ): Bitmap {
     val W = 1080
     val H = 1920
@@ -389,6 +403,16 @@ private fun buildShareCard(
         canvas.drawText(truncateText(venue, venuePaint, W - 120f), 60f, topH - 32f, venuePaint)
     }
 
+    // — Song title (below venue, in the dark bottom zone) —
+    if (!songTitle.isNullOrBlank()) {
+        val songPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = 0xCCFFFFFF.toInt()
+            textSize = 44f
+            typeface = android.graphics.Typeface.create(android.graphics.Typeface.DEFAULT, android.graphics.Typeface.ITALIC)
+        }
+        canvas.drawText(truncateText("↳ $songTitle", songPaint, W - 120f), 60f, topH + 60f, songPaint)
+    }
+
     // — QR code (white quiet-zone padding + centered in bottom zone) —
     val qrSize = (W * 0.62f).toInt()
     val qrPad = 28
@@ -439,7 +463,8 @@ private fun truncateText(text: String, paint: Paint, maxWidth: Float): String {
 private fun shareQrBitmap(context: Context, bitmap: Bitmap) {
     val qrDir = File(context.cacheDir, "qr")
     qrDir.mkdirs()
-    val file = File(qrDir, "share_qr.png")
+    qrDir.listFiles()?.filter { it.name.startsWith("share_qr") }?.forEach { it.delete() }
+    val file = File(qrDir, "share_qr_${System.currentTimeMillis()}.png")
     FileOutputStream(file).use { out ->
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, out)
     }
