@@ -179,6 +179,14 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         val format = prefs.getString("selected_format", null) ?: return null
         val showDate = prefs.getString("show_date", null) ?: ""
         val venue = prefs.getString("venue", null) ?: ""
+        val location = prefs.getString("location", null) ?: ""
+
+        val subtitle = buildString {
+            append(showDate)
+            append(" - ")
+            append(venue)
+            if (location.isNotBlank()) append(" \u2022 $location")
+        }
 
         val mediaId = BrowseMediaId.track(showId, recordingId, trackIndex)
         return MediaItem.Builder()
@@ -186,7 +194,11 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             .setMediaMetadata(
                 MediaMetadata.Builder()
                     .setTitle(trackTitle)
-                    .setArtist("$showDate - $venue")
+                    .setArtist(subtitle)
+                    .setAlbumTitle(subtitle)
+                    .setArtworkUri(
+                        com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recordingId)
+                    )
                     .setIsPlayable(true)
                     .setIsBrowsable(false)
                     .setMediaType(MediaMetadata.MEDIA_TYPE_MUSIC)
