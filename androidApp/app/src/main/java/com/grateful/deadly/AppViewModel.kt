@@ -2,8 +2,11 @@ package com.grateful.deadly
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.api.library.LibraryService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.miniplayer.LastPlayedTrackService
+import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.core.network.monitor.NetworkMonitor
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
@@ -17,7 +20,9 @@ import javax.inject.Inject
 class AppViewModel @Inject constructor(
     networkMonitor: NetworkMonitor,
     appPreferences: AppPreferences,
-    private val lastPlayedTrackService: LastPlayedTrackService
+    private val lastPlayedTrackService: LastPlayedTrackService,
+    private val showRepository: ShowRepository,
+    private val libraryService: LibraryService
 ) : ViewModel() {
 
     val isOffline: StateFlow<Boolean> = combine(
@@ -31,5 +36,11 @@ class AppViewModel @Inject constructor(
         viewModelScope.launch {
             lastPlayedTrackService.restoreLastPlayedTrack()
         }
+    }
+
+    suspend fun getShow(showId: String): Show? = showRepository.getShowById(showId)
+
+    fun addToLibrary(showId: String) {
+        viewModelScope.launch { libraryService.addToLibrary(showId) }
     }
 }

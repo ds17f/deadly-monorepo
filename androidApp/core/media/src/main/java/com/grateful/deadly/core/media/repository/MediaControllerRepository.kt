@@ -831,21 +831,21 @@ class MediaControllerRepository @Inject constructor(
                 val controller = mediaController
                 if (controller != null && hydratedItems.isNotEmpty()) {
                     try {
+                        // Never call setMediaItems on a live player — it forces a prepare()
+                        // which causes an audible skip. Hydration is only for session restore.
+                        if (controller.isPlaying) {
+                            Log.d(TAG, "Skipping queue update — player is actively playing")
+                            return@executeWhenConnected
+                        }
+
                         val currentIndex = controller.currentMediaItemIndex
                         val currentPosition = controller.currentPosition
-                        val wasPlaying = controller.isPlaying
-                        
-                        // Update the queue with hydrated items
+
                         controller.setMediaItems(hydratedItems, currentIndex, currentPosition)
                         controller.prepare()
-                        
-                        // Restore playback state
-                        if (wasPlaying) {
-                            controller.play()
-                        }
-                        
+
                         Log.d(TAG, "Successfully updated queue with hydrated metadata")
-                        
+
                     } catch (e: Exception) {
                         Log.e(TAG, "Error updating queue with hydrated items", e)
                     }
