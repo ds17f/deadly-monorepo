@@ -1,4 +1,5 @@
 import SwiftUI
+import UniformTypeIdentifiers
 
 // MARK: - Season
 
@@ -46,6 +47,14 @@ struct LibraryScreen: View {
     @State private var activeSeasonFilter: Season?
     @State private var showingFilterSheet = false
 
+    // Import / Export state
+    @State private var showingLibraryFilePicker = false
+    @State private var libraryImportResult: LibraryImportResult?
+    @State private var libraryImportError: String?
+    @State private var showingLibraryImportAlert = false
+    @State private var libraryExportData: Data?
+    @State private var showingLibraryExportShare = false
+
     private var filteredShows: [Show] {
         service.shows.filter { show in
             guard let decade = activeDecadeFilter else { return true }
@@ -71,7 +80,7 @@ struct LibraryScreen: View {
                 ContentUnavailableView(
                     "No Shows Saved",
                     systemImage: "bookmark",
-                    description: Text("Browse shows to add them to your library.")
+                    description: Text("Import your library from the old app or browse shows to add them.")
                 )
             } else if filteredShows.isEmpty {
                 ContentUnavailableView(
@@ -98,6 +107,73 @@ struct LibraryScreen: View {
         }
         .onChange(of: sortDirection) { _, new in
             service.refresh(sortedBy: sortOption, direction: new)
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Menu {
+                    Button {
+                        showingLibraryFilePicker = true
+                    } label: {
+                        Label("Import Library", systemImage: "square.and.arrow.down")
+                    }
+                    Button {
+                        libraryExportData = try? container.libraryImportExportService.exportLibrary()
+                        if libraryExportData != nil { showingLibraryExportShare = true }
+                    } label: {
+                        Label("Export Library", systemImage: "square.and.arrow.up")
+                    }
+                    .disabled(service.shows.isEmpty)
+                } label: {
+                    Image(systemName: "ellipsis.circle")
+                }
+            }
+        }
+        .fileImporter(
+            isPresented: $showingLibraryFilePicker,
+            allowedContentTypes: [.json],
+            allowsMultipleSelection: false
+        ) { result in
+            switch result {
+            case .success(let urls):
+                guard let url = urls.first else { return }
+                guard url.startAccessingSecurityScopedResource() else {
+                    libraryImportError = "Could not access file."
+                    showingLibraryImportAlert = true
+                    return
+                }
+                defer { url.stopAccessingSecurityScopedResource() }
+                guard let data = try? Data(contentsOf: url) else {
+                    libraryImportError = "Could not read file."
+                    showingLibraryImportAlert = true
+                    return
+                }
+                do {
+                    libraryImportResult = try container.libraryImportExportService.importLibrary(from: data)
+                    libraryImportError = nil
+                    service.refresh(sortedBy: sortOption, direction: sortDirection)
+                } catch {
+                    libraryImportError = error.localizedDescription
+                    libraryImportResult = nil
+                }
+                showingLibraryImportAlert = true
+            case .failure(let error):
+                libraryImportError = error.localizedDescription
+                showingLibraryImportAlert = true
+            }
+        }
+        .alert("Library Import", isPresented: $showingLibraryImportAlert) {
+            Button("OK") {}
+        } message: {
+            if let result = libraryImportResult {
+                Text("Imported \(result.imported) shows.\n\(result.alreadyInLibrary) already in library.\n\(result.notFound) not found in database.")
+            } else {
+                Text(libraryImportError ?? "Unknown error.")
+            }
+        }
+        .sheet(isPresented: $showingLibraryExportShare) {
+            if let data = libraryExportData {
+                LibraryExportShareSheet(data: data, filename: container.libraryImportExportService.exportFilename())
+            }
         }
     }
 
