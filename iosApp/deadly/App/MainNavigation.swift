@@ -8,10 +8,12 @@ struct MainNavigation: View {
     @State private var homeStack = NavigationPath()
     @State private var lastPushedShowId: String?
     @State private var pendingShowNavigation: String?
+    @State private var selectedTab: AppTab = .home
+    @State private var searchResetToken = 0
 
     var body: some View {
-        TabView {
-            Tab("Home", systemImage: "house") {
+        TabView(selection: tabSelection) {
+            Tab("Home", systemImage: "house", value: .home) {
                 NavigationStack(path: $homeStack) {
                     HomeScreen()
                         .navigationDestination(for: String.self) { showId in
@@ -26,13 +28,16 @@ struct MainNavigation: View {
                 }
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
-            Tab("Search", systemImage: "magnifyingglass") {
+            Tab("Search", systemImage: "magnifyingglass", value: .search) {
                 NavigationStack {
-                    PlaceholderScreen(tab: .search)
+                    SearchScreen(resetToken: searchResetToken)
+                        .navigationDestination(for: String.self) { showId in
+                            ShowDetailScreen(showId: showId)
+                        }
                 }
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
-            Tab("Library", systemImage: "books.vertical") {
+            Tab("Library", systemImage: "books.vertical", value: .library) {
                 NavigationStack {
                     LibraryScreen()
                         .navigationDestination(for: String.self) { showId in
@@ -41,7 +46,7 @@ struct MainNavigation: View {
                 }
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
-            Tab("Collections", systemImage: "square.stack") {
+            Tab("Collections", systemImage: "square.stack", value: .collections) {
                 NavigationStack {
                     CollectionsScreen()
                         .navigationDestination(for: CollectionRoute.self) { route in
@@ -56,7 +61,7 @@ struct MainNavigation: View {
                 }
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
-            Tab("Settings", systemImage: "gearshape") {
+            Tab("Settings", systemImage: "gearshape", value: .settings) {
                 NavigationStack {
                     SettingsScreen()
                 }
@@ -86,11 +91,24 @@ struct MainNavigation: View {
             )
         }
     }
+
+    private var tabSelection: Binding<AppTab> {
+        Binding(
+            get: { selectedTab },
+            set: { newTab in
+                if newTab == .search && selectedTab == .search {
+                    // Re-tapped search — toggle back to browse
+                    searchResetToken += 1
+                }
+                selectedTab = newTab
+            }
+        )
+    }
 }
 
 // MARK: - Tab enum
 
-enum AppTab: String {
+enum AppTab: String, Hashable {
     case home, search, library, collections, settings
 
     var title: String { rawValue.capitalized }

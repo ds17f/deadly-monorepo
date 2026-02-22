@@ -8,7 +8,7 @@ final class AppContainer {
     let database: AppDatabase
     let dataImportService: DataImportService
     let showRepository: any ShowRepository
-    let searchService: any SearchService
+    let searchService: SearchServiceImpl
     let homeService: HomeServiceImpl
     let libraryService: LibraryServiceImpl
     let collectionsService: CollectionsServiceImpl
