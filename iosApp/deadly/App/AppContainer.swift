@@ -6,6 +6,7 @@ import SwiftAudioStreamEx
 @Observable
 final class AppContainer {
     let database: AppDatabase
+    let appPreferences: AppPreferences
     let dataImportService: DataImportService
     let showRepository: any ShowRepository
     let searchService: SearchServiceImpl
@@ -20,6 +21,8 @@ final class AppContainer {
         do {
             let db = try AppDatabase.makeDefault()
             database = db
+            let prefs = AppPreferences()
+            appPreferences = prefs
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),
@@ -32,13 +35,15 @@ final class AppContainer {
             )
             let showRepo = GRDBShowRepository(
                 showDAO: ShowDAO(database: db),
-                recordingDAO: RecordingDAO(database: db)
+                recordingDAO: RecordingDAO(database: db),
+                appPreferences: prefs
             )
             showRepository = showRepo
             searchService = SearchServiceImpl(
                 showSearchDAO: ShowSearchDAO(database: db),
                 showDAO: ShowDAO(database: db),
-                showRepository: showRepo
+                showRepository: showRepo,
+                appPreferences: prefs
             )
             homeService = HomeServiceImpl(
                 showRepository: showRepo,
@@ -62,6 +67,7 @@ final class AppContainer {
                 showRepository: showRepo,
                 archiveClient: URLSessionArchiveMetadataClient(),
                 recentShowDAO: RecentShowDAO(database: db),
+                libraryDAO: LibraryDAO(database: db),
                 streamPlayer: player
             )
             // PanelContentService is @MainActor; AppContainer.init is always called on

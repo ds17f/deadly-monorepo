@@ -15,7 +15,7 @@ struct CollectionsServiceTests {
         db = try AppDatabase.makeEmpty()
         let showDAO = ShowDAO(database: db)
         let recordingDAO = RecordingDAO(database: db)
-        let repo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO)
+        let repo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO, appPreferences: AppPreferences())
         collectionsDAO = CollectionsDAO(database: db)
         service = CollectionsServiceImpl(
             collectionsDAO: collectionsDAO,
@@ -49,7 +49,7 @@ struct CollectionsServiceTests {
             memberList: nil,
             showSequence: 1,
             recordingsRaw: nil,
-            recordingCount: 0,
+            recordingCount: 1,
             bestRecordingId: nil,
             averageRating: nil,
             totalReviews: 0,

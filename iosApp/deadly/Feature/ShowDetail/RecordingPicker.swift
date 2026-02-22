@@ -13,7 +13,7 @@ struct RecordingPicker: View {
             List(recordings) { recording in
                 Button {
                     Task {
-                        await playlistService.selectRecording(recording)
+                        await playlistService.setRecordingAsDefault(recording)
                     }
                     dismiss()
                 } label: {

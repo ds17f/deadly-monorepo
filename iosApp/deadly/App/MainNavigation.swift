@@ -138,6 +138,19 @@ struct SettingsScreen: View {
 
     var body: some View {
         List {
+            Section("Preferences") {
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.showOnlyRecordedShows },
+                    set: { container.appPreferences.showOnlyRecordedShows = $0 }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Hide shows without recordings")
+                        Text("Only show concerts that have audio recordings available")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
             Section("Database") {
                 if let v = dataVersion {
                     LabeledContent("Version", value: v)

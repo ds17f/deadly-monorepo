@@ -13,7 +13,8 @@ struct ShowRepositoryTests {
         db = try AppDatabase.makeEmpty()
         repo = GRDBShowRepository(
             showDAO: ShowDAO(database: db),
-            recordingDAO: RecordingDAO(database: db)
+            recordingDAO: RecordingDAO(database: db),
+            appPreferences: AppPreferences()
         )
     }
 
@@ -64,7 +65,7 @@ struct ShowRepositoryTests {
             memberList: nil,
             showSequence: 1,
             recordingsRaw: recordingsRaw,
-            recordingCount: 0,
+            recordingCount: 1,
             bestRecordingId: nil,
             averageRating: averageRating,
             totalReviews: totalReviews,

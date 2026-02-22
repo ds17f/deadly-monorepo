@@ -37,7 +37,7 @@ struct PlaylistServiceTests {
         db = try AppDatabase.makeEmpty()
         let showDAO = ShowDAO(database: db)
         let recordingDAO = RecordingDAO(database: db)
-        showRepo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO)
+        showRepo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO, appPreferences: AppPreferences())
         recentShowDAO = RecentShowDAO(database: db)
 
         stubClient = StubArchiveMetadataClient(tracks: [
@@ -52,6 +52,7 @@ struct PlaylistServiceTests {
             showRepository: showRepo,
             archiveClient: stubClient,
             recentShowDAO: recentShowDAO,
+            libraryDAO: LibraryDAO(database: db),
             streamPlayer: streamPlayer
         )
     }

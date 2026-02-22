@@ -14,7 +14,7 @@ struct LibraryServiceTests {
         db = try AppDatabase.makeEmpty()
         let showDAO = ShowDAO(database: db)
         let recordingDAO = RecordingDAO(database: db)
-        let repo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO)
+        let repo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO, appPreferences: AppPreferences())
         service = LibraryServiceImpl(
             database: db,
             libraryDAO: LibraryDAO(database: db),
@@ -55,7 +55,7 @@ struct LibraryServiceTests {
             memberList: nil,
             showSequence: 1,
             recordingsRaw: nil,
-            recordingCount: 0,
+            recordingCount: 1,
             bestRecordingId: nil,
             averageRating: averageRating,
             totalReviews: averageRating != nil ? 1 : 0,

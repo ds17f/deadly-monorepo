@@ -5,15 +5,17 @@ final class SearchServiceImpl: SearchService {
     private let showSearchDAO: ShowSearchDAO
     private let showDAO: ShowDAO
     private let showRepository: any ShowRepository
+    private let appPreferences: AppPreferences
 
     private(set) var results: [SearchResultShow] = []
     private(set) var isLoading = false
     private(set) var query = ""
 
-    nonisolated init(showSearchDAO: ShowSearchDAO, showDAO: ShowDAO, showRepository: any ShowRepository) {
+    nonisolated init(showSearchDAO: ShowSearchDAO, showDAO: ShowDAO, showRepository: any ShowRepository, appPreferences: AppPreferences) {
         self.showSearchDAO = showSearchDAO
         self.showDAO = showDAO
         self.showRepository = showRepository
+        self.appPreferences = appPreferences
     }
 
     // MARK: - SearchService
@@ -28,7 +30,7 @@ final class SearchServiceImpl: SearchService {
         isLoading = true
         defer { isLoading = false }
         do {
-            let shows: [Show]
+            var shows: [Show]
             if trimmed.count >= 3 {
                 let showIds = try showSearchDAO.search(trimmed + "*")
                 let fetched = try showRepository.getShowsByIds(showIds)
@@ -42,6 +44,9 @@ final class SearchServiceImpl: SearchService {
                 // Preserve date-ordered results from searchLike
                 let indexed = Dictionary(fetched.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
                 shows = ids.compactMap { indexed[$0] }
+            }
+            if appPreferences.showOnlyRecordedShows {
+                shows = shows.filter { $0.recordingCount > 0 }
             }
             let total = shows.count
             results = shows.enumerated().map { index, show in

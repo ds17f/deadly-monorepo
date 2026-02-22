@@ -13,17 +13,20 @@ final class PlaylistServiceImpl: PlaylistService {
     private let showRepository: any ShowRepository
     private let archiveClient: any ArchiveMetadataClient
     private let recentShowDAO: RecentShowDAO
+    private let libraryDAO: LibraryDAO
     let streamPlayer: StreamPlayer
 
     nonisolated init(
         showRepository: some ShowRepository,
         archiveClient: some ArchiveMetadataClient,
         recentShowDAO: RecentShowDAO,
+        libraryDAO: LibraryDAO,
         streamPlayer: StreamPlayer
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
         self.recentShowDAO = recentShowDAO
+        self.libraryDAO = libraryDAO
         self.streamPlayer = streamPlayer
     }
 
@@ -33,9 +36,11 @@ final class PlaylistServiceImpl: PlaylistService {
         do {
             let show = try showRepository.getShowById(showId)
             currentShow = show
-            // Use the precomputed bestRecordingId from the data pipeline first.
-            // Fall back to highest-rating DB query if it's missing or the recording isn't found.
-            if let bestId = show?.bestRecordingId {
+            // Check for user's preferred recording before falling back to best.
+            if let preferredId = try? libraryDAO.fetchPreferredRecordingId(showId),
+               let preferred = try? showRepository.getRecordingById(preferredId) {
+                currentRecording = preferred
+            } else if let bestId = show?.bestRecordingId {
                 currentRecording = try showRepository.getRecordingById(bestId)
             }
             if currentRecording == nil {
@@ -52,6 +57,12 @@ final class PlaylistServiceImpl: PlaylistService {
     func selectRecording(_ recording: Recording) async {
         currentRecording = recording
         await fetchTracks(recordingId: recording.identifier)
+    }
+
+    func setRecordingAsDefault(_ recording: Recording) async {
+        guard let showId = currentShow?.id else { return }
+        try? libraryDAO.updatePreferredRecording(showId, recordingId: recording.identifier)
+        await selectRecording(recording)
     }
 
     func playTrack(at index: Int) {
