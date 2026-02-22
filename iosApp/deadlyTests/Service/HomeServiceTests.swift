@@ -1,7 +1,54 @@
 import Foundation
 import Testing
 import GRDB
+import SwiftAudioStreamEx
 @testable import deadly
+
+/// Stub RecentShowsService that delegates to DAO for HomeService tests
+@MainActor
+final class TestRecentShowsService: RecentShowsService {
+    private let recentShowDAO: RecentShowDAO
+    private let showRepository: any ShowRepository
+
+    var recentShows: [Show] = []
+
+    var recentShowsStream: AsyncStream<[Show]> {
+        AsyncStream { continuation in
+            continuation.yield(self.recentShows)
+        }
+    }
+
+    init(recentShowDAO: RecentShowDAO, showRepository: any ShowRepository) {
+        self.recentShowDAO = recentShowDAO
+        self.showRepository = showRepository
+    }
+
+    func recordShowPlay(showId: String) {
+        let timestamp = Int64(Date().timeIntervalSince1970 * 1000)
+        try? recentShowDAO.upsert(showId: showId, timestamp: timestamp)
+    }
+
+    func getRecentShows(limit: Int) async -> [Show] {
+        do {
+            let records = try recentShowDAO.fetchRecent(limit: limit)
+            let showIds = records.map(\.showId)
+            let shows = try showRepository.getShowsByIds(showIds)
+            let showsById = Dictionary(shows.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+            return showIds.compactMap { showsById[$0] }
+        } catch {
+            return []
+        }
+    }
+
+    func isShowInRecent(showId: String) async -> Bool {
+        return (try? recentShowDAO.fetchById(showId)) != nil
+    }
+
+    func removeShow(showId: String) async {}
+    func clearRecentShows() async {}
+    func startObservingPlayback() {}
+    func stopObservingPlayback() {}
+}
 
 @MainActor
 @Suite("HomeService Tests")
@@ -15,10 +62,14 @@ struct HomeServiceTests {
         let showDAO = ShowDAO(database: db)
         let recordingDAO = RecordingDAO(database: db)
         let repo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO, appPreferences: AppPreferences())
+        let recentShowsService = TestRecentShowsService(
+            recentShowDAO: RecentShowDAO(database: db),
+            showRepository: repo
+        )
         service = HomeServiceImpl(
             showRepository: repo,
             collectionsDAO: CollectionsDAO(database: db),
-            recentShowDAO: RecentShowDAO(database: db)
+            recentShowsService: recentShowsService
         )
     }
 

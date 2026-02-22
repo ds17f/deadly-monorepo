@@ -4,7 +4,7 @@ import Foundation
 final class HomeServiceImpl: HomeService {
     private let showRepository: any ShowRepository
     private let collectionsDAO: CollectionsDAO
-    private let recentShowDAO: RecentShowDAO
+    private let recentShowsService: RecentShowsService
 
     private(set) var content = HomeContent()
     private(set) var isLoading = false
@@ -12,11 +12,11 @@ final class HomeServiceImpl: HomeService {
     nonisolated init(
         showRepository: any ShowRepository,
         collectionsDAO: CollectionsDAO,
-        recentShowDAO: RecentShowDAO
+        recentShowsService: RecentShowsService
     ) {
         self.showRepository = showRepository
         self.collectionsDAO = collectionsDAO
-        self.recentShowDAO = recentShowDAO
+        self.recentShowsService = recentShowsService
     }
 
     func refresh() async {
@@ -42,11 +42,7 @@ final class HomeServiceImpl: HomeService {
                 )
             }
 
-            let recentRecords = try recentShowDAO.fetchRecent(limit: 8)
-            let recentIds = recentRecords.map(\.showId)
-            let fetchedShows = try showRepository.getShowsByIds(recentIds)
-            let showsById = Dictionary(fetchedShows.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
-            let recentShows = recentIds.compactMap { showsById[$0] }
+            let recentShows = await recentShowsService.getRecentShows(limit: 8)
 
             content = HomeContent(
                 todayInHistory: todayShows,
