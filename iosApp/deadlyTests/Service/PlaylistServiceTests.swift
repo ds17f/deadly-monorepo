@@ -4,7 +4,7 @@ import GRDB
 import SwiftAudioStreamEx
 @testable import deadly
 
-// MARK: - Stub
+// MARK: - Stubs
 
 final class StubArchiveMetadataClient: ArchiveMetadataClient, @unchecked Sendable {
     var stubbedTracks: [ArchiveTrack]
@@ -20,6 +20,41 @@ final class StubArchiveMetadataClient: ArchiveMetadataClient, @unchecked Sendabl
     }
 }
 
+@MainActor
+final class StubRecentShowsService: RecentShowsService {
+    var recentShows: [Show] = []
+    var recordedShowIds: [String] = []
+
+    var recentShowsStream: AsyncStream<[Show]> {
+        AsyncStream { continuation in
+            continuation.yield(self.recentShows)
+        }
+    }
+
+    func recordShowPlay(showId: String) {
+        recordedShowIds.append(showId)
+    }
+
+    func getRecentShows(limit: Int) async -> [Show] {
+        return Array(recentShows.prefix(limit))
+    }
+
+    func isShowInRecent(showId: String) async -> Bool {
+        return recentShows.contains { $0.id == showId }
+    }
+
+    func removeShow(showId: String) async {
+        recentShows.removeAll { $0.id == showId }
+    }
+
+    func clearRecentShows() async {
+        recentShows.removeAll()
+    }
+
+    func startObservingPlayback() {}
+    func stopObservingPlayback() {}
+}
+
 // MARK: - Tests
 
 @MainActor
@@ -28,7 +63,7 @@ struct PlaylistServiceTests {
 
     let db: AppDatabase
     let showRepo: GRDBShowRepository
-    let recentShowDAO: RecentShowDAO
+    let stubRecentShowsService: StubRecentShowsService
     let stubClient: StubArchiveMetadataClient
     let streamPlayer: StreamPlayer
     let service: PlaylistServiceImpl
@@ -38,7 +73,7 @@ struct PlaylistServiceTests {
         let showDAO = ShowDAO(database: db)
         let recordingDAO = RecordingDAO(database: db)
         showRepo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO, appPreferences: AppPreferences())
-        recentShowDAO = RecentShowDAO(database: db)
+        stubRecentShowsService = StubRecentShowsService()
 
         stubClient = StubArchiveMetadataClient(tracks: [
             ArchiveTrack(name: "d1t01.mp3", title: "Song One",   trackNumber: 1, duration: "300", format: "VBR MP3", size: nil),
@@ -51,7 +86,7 @@ struct PlaylistServiceTests {
         service = PlaylistServiceImpl(
             showRepository: showRepo,
             archiveClient: stubClient,
-            recentShowDAO: recentShowDAO,
+            recentShowsService: stubRecentShowsService,
             libraryDAO: LibraryDAO(database: db),
             streamPlayer: streamPlayer
         )
@@ -154,8 +189,8 @@ struct PlaylistServiceTests {
         #expect(streamPlayer.currentTrack?.title == "Song Two")
     }
 
-    @Test("recordRecentPlay upserts into recent_shows")
-    func recordRecentPlayUpserts() async throws {
+    @Test("recordRecentPlay delegates to RecentShowsService")
+    func recordRecentPlayDelegates() async throws {
         let showId = "1977-05-08"
         let recordingId = "gd77-05-08.sbd.hicks.4982.sbeok.shnf"
         try insertShow(showId, bestRecordingId: recordingId)
@@ -164,8 +199,6 @@ struct PlaylistServiceTests {
         await service.loadShow(showId)
         service.recordRecentPlay()
 
-        let recent = try recentShowDAO.fetchById(showId)
-        #expect(recent != nil)
-        #expect(recent?.totalPlayCount == 1)
+        #expect(stubRecentShowsService.recordedShowIds.contains(showId))
     }
 }

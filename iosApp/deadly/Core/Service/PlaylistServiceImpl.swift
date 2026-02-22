@@ -12,20 +12,20 @@ final class PlaylistServiceImpl: PlaylistService {
 
     private let showRepository: any ShowRepository
     private let archiveClient: any ArchiveMetadataClient
-    private let recentShowDAO: RecentShowDAO
+    private let recentShowsService: RecentShowsService
     private let libraryDAO: LibraryDAO
     let streamPlayer: StreamPlayer
 
     nonisolated init(
         showRepository: some ShowRepository,
         archiveClient: some ArchiveMetadataClient,
-        recentShowDAO: RecentShowDAO,
+        recentShowsService: RecentShowsService,
         libraryDAO: LibraryDAO,
         streamPlayer: StreamPlayer
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
-        self.recentShowDAO = recentShowDAO
+        self.recentShowsService = recentShowsService
         self.libraryDAO = libraryDAO
         self.streamPlayer = streamPlayer
     }
@@ -93,8 +93,7 @@ final class PlaylistServiceImpl: PlaylistService {
 
     func recordRecentPlay() {
         guard let show = currentShow else { return }
-        let timestamp = Int64(Date().timeIntervalSince1970 * 1000)
-        try? recentShowDAO.upsert(showId: show.id, timestamp: timestamp)
+        recentShowsService.recordShowPlay(showId: show.id)
     }
 
     // MARK: - Private

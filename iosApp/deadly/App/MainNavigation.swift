@@ -26,6 +26,7 @@ struct MainNavigation: View {
                             }
                         }
                 }
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
             Tab("Search", systemImage: "magnifyingglass", value: .search) {
@@ -35,6 +36,7 @@ struct MainNavigation: View {
                             ShowDetailScreen(showId: showId)
                         }
                 }
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
             Tab("Library", systemImage: "books.vertical", value: .library) {
@@ -44,6 +46,7 @@ struct MainNavigation: View {
                             ShowDetailScreen(showId: showId)
                         }
                 }
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
             Tab("Collections", systemImage: "square.stack", value: .collections) {
@@ -59,12 +62,14 @@ struct MainNavigation: View {
                             ShowDetailScreen(showId: showId)
                         }
                 }
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
             Tab("Settings", systemImage: "gearshape", value: .settings) {
                 NavigationStack {
                     SettingsScreen()
                 }
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
         }

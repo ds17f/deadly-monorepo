@@ -16,6 +16,8 @@ final class AppContainer {
     let streamPlayer: StreamPlayer
     let playlistService: PlaylistServiceImpl
     let panelContentService: PanelContentService
+    let networkMonitor: NetworkMonitor
+    let recentShowsService: RecentShowsServiceImpl
 
     init() {
         do {
@@ -45,11 +47,6 @@ final class AppContainer {
                 showRepository: showRepo,
                 appPreferences: prefs
             )
-            homeService = HomeServiceImpl(
-                showRepository: showRepo,
-                collectionsDAO: CollectionsDAO(database: db),
-                recentShowDAO: RecentShowDAO(database: db)
-            )
             libraryService = LibraryServiceImpl(
                 database: db,
                 libraryDAO: LibraryDAO(database: db),
@@ -59,17 +56,36 @@ final class AppContainer {
                 collectionsDAO: CollectionsDAO(database: db),
                 showRepository: showRepo
             )
+
             // StreamPlayer is @MainActor; AppContainer is always created on the main
             // thread (from deadlyApp which is @MainActor), so assumeIsolated is safe.
             let player = MainActor.assumeIsolated { StreamPlayer() }
             streamPlayer = player
+
+            // RecentShowsService is @MainActor; wires up automatic play tracking via StreamPlayer
+            let recentService = MainActor.assumeIsolated {
+                RecentShowsServiceImpl(
+                    recentShowDAO: RecentShowDAO(database: db),
+                    showRepository: showRepo,
+                    streamPlayer: player
+                )
+            }
+            recentShowsService = recentService
+
+            // HomeService and PlaylistService depend on RecentShowsService
+            homeService = HomeServiceImpl(
+                showRepository: showRepo,
+                collectionsDAO: CollectionsDAO(database: db),
+                recentShowsService: recentService
+            )
             playlistService = PlaylistServiceImpl(
                 showRepository: showRepo,
                 archiveClient: URLSessionArchiveMetadataClient(),
-                recentShowDAO: RecentShowDAO(database: db),
+                recentShowsService: recentService,
                 libraryDAO: LibraryDAO(database: db),
                 streamPlayer: player
             )
+
             // PanelContentService is @MainActor; AppContainer.init is always called on
             // the main thread (from deadlyApp which is @MainActor), so assumeIsolated is safe.
             panelContentService = MainActor.assumeIsolated {
@@ -78,6 +94,14 @@ final class AppContainer {
                     wikipediaService: URLSessionWikipediaService()
                 )
             }
+
+            // NetworkMonitor is @MainActor
+            let monitor = MainActor.assumeIsolated { NetworkMonitor() }
+            networkMonitor = monitor
+            MainActor.assumeIsolated { monitor.start() }
+
+            // Start playback observation after all services are wired
+            MainActor.assumeIsolated { recentService.startObservingPlayback() }
         } catch {
             fatalError("Failed to open database: \(error)")
         }
