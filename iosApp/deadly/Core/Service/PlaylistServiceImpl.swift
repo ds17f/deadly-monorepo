@@ -60,14 +60,21 @@ final class PlaylistServiceImpl: PlaylistService {
         // Propagate the show's ticket art so mini player and full player can display it.
         let artworkURL = currentShow?.coverImageUrl.flatMap { URL(string: $0) }
         let albumTitle = currentShow.map { "\($0.venue.name) — \($0.date)" }
-        let trackItems = tracks.map { track in
+        let showId = currentShow?.id ?? ""
+        let recordingId = recording.identifier
+        let trackItems = tracks.enumerated().map { index, track in
             TrackItem(
-                url: track.streamURL(recordingId: recording.identifier),
+                url: track.streamURL(recordingId: recordingId),
                 title: track.title,
                 artist: "Grateful Dead",
                 albumTitle: albumTitle,
                 artworkURL: artworkURL,
-                duration: track.durationInterval
+                duration: track.durationInterval,
+                metadata: [
+                    "showId": showId,
+                    "recordingId": recordingId,
+                    "trackNumber": "\(index + 1)"
+                ]
             )
         }
         streamPlayer.loadQueue(trackItems, startingAt: index)

@@ -29,6 +29,9 @@ site/
 # Temp data for testing
 tmp-data/
 
+# iOS secrets — never commit the live file; use Secrets.swift.example as template
+iosApp/deadly/App/Secrets.swift
+
 # Claude Code local config
 .claude/
 # Pi local config
