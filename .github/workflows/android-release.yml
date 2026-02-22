@@ -48,6 +48,10 @@ jobs:
         keyPassword=${{ secrets.ANDROID_KEY_PASSWORD }}
         EOF
 
+    - name: Create local.properties with API keys
+      run: |
+        echo "genius.access.token=${{ secrets.GENIUS_ACCESS_TOKEN }}" > androidApp/local.properties
+
     - name: Build release APK
       run: cd androidApp && bundle exec fastlane build_release
 
