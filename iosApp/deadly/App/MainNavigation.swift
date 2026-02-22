@@ -5,11 +5,14 @@ import SwiftAudioStreamEx
 struct MainNavigation: View {
     @Environment(\.appContainer) private var container
     @State private var showFullPlayer = false
+    // Plain [String] instead of NavigationPath so we can inspect what's on the stack.
+    @State private var homeStack: [String] = []
+    @State private var pendingShowNavigation: String?
 
     var body: some View {
         TabView {
             Tab("Home", systemImage: "house") {
-                NavigationStack {
+                NavigationStack(path: $homeStack) {
                     HomeScreen()
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
@@ -42,10 +45,25 @@ struct MainNavigation: View {
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
         }
-        .fullScreenCover(isPresented: $showFullPlayer) {
+        .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {
+            if let showId = pendingShowNavigation {
+                homeStack.append(showId)
+                pendingShowNavigation = nil
+            }
+        }) {
             PlayerScreen(
                 streamPlayer: container.streamPlayer,
-                isPresented: $showFullPlayer
+                isPresented: $showFullPlayer,
+                onViewShow: { showId in
+                    if homeStack.last == showId {
+                        // Show is already the top of the home stack — just dismiss.
+                        showFullPlayer = false
+                    } else {
+                        // Show isn't behind us — dismiss and push it.
+                        pendingShowNavigation = showId
+                        showFullPlayer = false
+                    }
+                }
             )
         }
     }

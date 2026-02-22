@@ -12,6 +12,7 @@ final class AppContainer {
     let homeService: HomeServiceImpl
     let streamPlayer: StreamPlayer
     let playlistService: PlaylistServiceImpl
+    let panelContentService: PanelContentService
 
     init() {
         do {
@@ -52,6 +53,14 @@ final class AppContainer {
                 recentShowDAO: RecentShowDAO(database: db),
                 streamPlayer: player
             )
+            // PanelContentService is @MainActor; AppContainer.init is always called on
+            // the main thread (from deadlyApp which is @MainActor), so assumeIsolated is safe.
+            panelContentService = MainActor.assumeIsolated {
+                PanelContentService(
+                    geniusService: URLSessionGeniusService(accessToken: Secrets.geniusAccessToken),
+                    wikipediaService: URLSessionWikipediaService()
+                )
+            }
         } catch {
             fatalError("Failed to open database: \(error)")
         }
