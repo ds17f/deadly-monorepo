@@ -23,6 +23,12 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXBuildFile section */
+		AA11111100000003DEADBEEF /* SwiftAudioStreamEx in Frameworks */ = {isa = PBXBuildFile; productRef = AA11111100000002DEADBEEF /* SwiftAudioStreamEx */; };
+		DEAD000100000003DEADBEEF /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEAD000100000002DEADBEEF /* GRDB */; };
+		A1B2C3D400000003DEADBEEF /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A1B2C3D400000002DEADBEEF /* ZIPFoundation */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DB5773832E98961B0085783F /* deadly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deadly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5773912E98961C0085783F /* deadlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deadlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA11111100000003DEADBEEF /* SwiftAudioStreamEx in Frameworks */,
+				DEAD000100000003DEADBEEF /* GRDB in Frameworks */,
+				A1B2C3D400000003DEADBEEF /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,9 @@
 			);
 			name = deadly;
 			packageProductDependencies = (
+				AA11111100000002DEADBEEF /* SwiftAudioStreamEx */,
+				DEAD000100000002DEADBEEF /* GRDB */,
+				A1B2C3D400000002DEADBEEF /* ZIPFoundation */,
 			);
 			productName = deadly;
 			productReference = DB5773832E98961B0085783F /* deadly.app */;
@@ -197,6 +209,11 @@
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DB5773842E98961B0085783F /* Products */;
+			packageReferences = (
+				AA11111100000001DEADBEEF /* XCLocalSwiftPackageReference "Packages/SwiftAudioStreamEx" */,
+				DEAD000100000001DEADBEEF /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				A1B2C3D400000001DEADBEEF /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -391,12 +408,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = deadly/deadly.entitlements;
+				EXCLUDED_SOURCE_FILE_NAMES = "*.gitkeep";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U928S254LZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIBackgroundModes = audio;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -430,12 +449,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = deadly/deadly.entitlements;
+				EXCLUDED_SOURCE_FILE_NAMES = "*.gitkeep";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U928S254LZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIBackgroundModes = audio;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -593,6 +614,49 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEAD000100000001DEADBEEF /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		A1B2C3D400000001DEADBEEF /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AA11111100000001DEADBEEF /* XCLocalSwiftPackageReference "Packages/SwiftAudioStreamEx" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/SwiftAudioStreamEx;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA11111100000002DEADBEEF /* SwiftAudioStreamEx */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftAudioStreamEx;
+		};
+		DEAD000100000002DEADBEEF /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEAD000100000001DEADBEEF /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		A1B2C3D400000002DEADBEEF /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1B2C3D400000001DEADBEEF /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB57737B2E98961B0085783F /* Project object */;
 }
