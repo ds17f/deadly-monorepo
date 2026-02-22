@@ -11,6 +11,7 @@ final class AppContainer {
     let searchService: any SearchService
     let homeService: HomeServiceImpl
     let libraryService: LibraryServiceImpl
+    let collectionsService: CollectionsServiceImpl
     let streamPlayer: StreamPlayer
     let playlistService: PlaylistServiceImpl
     let panelContentService: PanelContentService
@@ -47,6 +48,10 @@ final class AppContainer {
             libraryService = LibraryServiceImpl(
                 database: db,
                 libraryDAO: LibraryDAO(database: db),
+                showRepository: showRepo
+            )
+            collectionsService = CollectionsServiceImpl(
+                collectionsDAO: CollectionsDAO(database: db),
                 showRepository: showRepo
             )
             // StreamPlayer is @MainActor; AppContainer is always created on the main
