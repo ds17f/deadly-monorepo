@@ -135,6 +135,12 @@ struct SettingsScreen: View {
     @Environment(\.appContainer) private var container
     @State private var showingImport = false
     @State private var dataVersion: String?
+    @State private var showingLibraryFilePicker = false
+    @State private var libraryExportData: Data?
+    @State private var libraryImportResult: LibraryImportResult?
+    @State private var libraryImportError: String?
+    @State private var showingLibraryImportAlert = false
+    @State private var showingLibraryExportShare = false
 
     var body: some View {
         List {
@@ -149,6 +155,15 @@ struct SettingsScreen: View {
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
+                }
+            }
+            Section("Library Migration") {
+                Button("Import Library from Old App") {
+                    showingLibraryFilePicker = true
+                }
+                Button("Export Library") {
+                    libraryExportData = try? container.libraryImportExportService.exportLibrary()
+                    if libraryExportData != nil { showingLibraryExportShare = true }
                 }
             }
             Section("Database") {
@@ -169,6 +184,52 @@ struct SettingsScreen: View {
             }
         }
         .navigationTitle("Settings")
+        .fileImporter(
+            isPresented: $showingLibraryFilePicker,
+            allowedContentTypes: [.json],
+            allowsMultipleSelection: false
+        ) { result in
+            switch result {
+            case .success(let urls):
+                guard let url = urls.first else { return }
+                guard url.startAccessingSecurityScopedResource() else {
+                    libraryImportError = "Could not access file."
+                    showingLibraryImportAlert = true
+                    return
+                }
+                defer { url.stopAccessingSecurityScopedResource() }
+                guard let data = try? Data(contentsOf: url) else {
+                    libraryImportError = "Could not read file."
+                    showingLibraryImportAlert = true
+                    return
+                }
+                do {
+                    libraryImportResult = try container.libraryImportExportService.importLibrary(from: data)
+                    libraryImportError = nil
+                } catch {
+                    libraryImportError = error.localizedDescription
+                    libraryImportResult = nil
+                }
+                showingLibraryImportAlert = true
+            case .failure(let error):
+                libraryImportError = error.localizedDescription
+                showingLibraryImportAlert = true
+            }
+        }
+        .alert("Library Import", isPresented: $showingLibraryImportAlert) {
+            Button("OK") {}
+        } message: {
+            if let result = libraryImportResult {
+                Text("Imported \(result.imported) shows.\n\(result.alreadyInLibrary) already in library.\n\(result.notFound) not found in database.")
+            } else {
+                Text(libraryImportError ?? "Unknown error.")
+            }
+        }
+        .sheet(isPresented: $showingLibraryExportShare) {
+            if let data = libraryExportData {
+                LibraryExportShareSheet(data: data, filename: container.libraryImportExportService.exportFilename())
+            }
+        }
         .fullScreenCover(isPresented: $showingImport) {
             DataImportScreen(isPresented: $showingImport, force: true)
                 .environment(\.appContainer, container)
@@ -189,6 +250,23 @@ struct SettingsScreen: View {
             }
         }
     }
+}
+
+// MARK: - LibraryExportShareSheet
+
+import UIKit
+
+private struct LibraryExportShareSheet: UIViewControllerRepresentable {
+    let data: Data
+    let filename: String
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
+        try? data.write(to: tempURL)
+        return UIActivityViewController(activityItems: [tempURL], applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
 #Preview {

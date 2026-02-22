@@ -8,6 +8,7 @@ final class AppContainer {
     let database: AppDatabase
     let appPreferences: AppPreferences
     let dataImportService: DataImportService
+    let libraryImportExportService: LibraryImportExportService
     let showRepository: any ShowRepository
     let searchService: SearchServiceImpl
     let homeService: HomeServiceImpl
@@ -54,6 +55,10 @@ final class AppContainer {
                 database: db,
                 libraryDAO: LibraryDAO(database: db),
                 showRepository: showRepo
+            )
+            libraryImportExportService = LibraryImportExportService(
+                libraryDAO: LibraryDAO(database: db),
+                showDAO: ShowDAO(database: db)
             )
             collectionsService = CollectionsServiceImpl(
                 collectionsDAO: CollectionsDAO(database: db),
