@@ -5,8 +5,8 @@ import SwiftAudioStreamEx
 struct MainNavigation: View {
     @Environment(\.appContainer) private var container
     @State private var showFullPlayer = false
-    // Plain [String] instead of NavigationPath so we can inspect what's on the stack.
-    @State private var homeStack: [String] = []
+    @State private var homeStack = NavigationPath()
+    @State private var lastPushedShowId: String?
     @State private var pendingShowNavigation: String?
 
     var body: some View {
@@ -16,6 +16,12 @@ struct MainNavigation: View {
                     HomeScreen()
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
+                        }
+                        .navigationDestination(for: CollectionRoute.self) { route in
+                            switch route {
+                            case .detail(let id):
+                                CollectionDetailScreen(collectionId: id)
+                            }
                         }
                 }
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
@@ -37,7 +43,16 @@ struct MainNavigation: View {
             }
             Tab("Collections", systemImage: "square.stack") {
                 NavigationStack {
-                    PlaceholderScreen(tab: .collections)
+                    CollectionsScreen()
+                        .navigationDestination(for: CollectionRoute.self) { route in
+                            switch route {
+                            case .detail(let id):
+                                CollectionDetailScreen(collectionId: id)
+                            }
+                        }
+                        .navigationDestination(for: String.self) { showId in
+                            ShowDetailScreen(showId: showId)
+                        }
                 }
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }
@@ -51,6 +66,7 @@ struct MainNavigation: View {
         .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {
             if let showId = pendingShowNavigation {
                 homeStack.append(showId)
+                lastPushedShowId = showId
                 pendingShowNavigation = nil
             }
         }) {
@@ -58,7 +74,7 @@ struct MainNavigation: View {
                 streamPlayer: container.streamPlayer,
                 isPresented: $showFullPlayer,
                 onViewShow: { showId in
-                    if homeStack.last == showId {
+                    if lastPushedShowId == showId {
                         // Show is already the top of the home stack — just dismiss.
                         showFullPlayer = false
                     } else {

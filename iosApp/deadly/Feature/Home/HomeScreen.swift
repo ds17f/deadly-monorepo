@@ -85,11 +85,14 @@ struct HomeScreen: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: DeadlySpacing.itemSpacing) {
                     ForEach(content.featuredCollections) { collection in
-                        ShowCarouselCard(
-                            imageRecordingId: nil,
-                            imageUrl: nil,
-                            lines: [collection.formattedName, collection.showCountText]
-                        )
+                        NavigationLink(value: CollectionRoute.detail(collection.id)) {
+                            ShowCarouselCard(
+                                imageRecordingId: nil,
+                                imageUrl: nil,
+                                lines: [collection.formattedName, collection.showCountText]
+                            )
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
             }
