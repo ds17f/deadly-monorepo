@@ -3,6 +3,11 @@ import Foundation
 struct GRDBShowRepository: ShowRepository {
     let showDAO: ShowDAO
     let recordingDAO: RecordingDAO
+    let appPreferences: AppPreferences
+
+    private func filterRecordingless(_ shows: [Show]) -> [Show] {
+        appPreferences.showOnlyRecordedShows ? shows.filter { $0.recordingCount > 0 } : shows
+    }
 
     // MARK: - Single show
 
@@ -17,7 +22,7 @@ struct GRDBShowRepository: ShowRepository {
     // MARK: - Browse
 
     func getAllShows() throws -> [Show] {
-        try showDAO.fetchAll().map(mapShow)
+        filterRecordingless(try showDAO.fetchAll().map(mapShow))
     }
 
     func getShowCount() throws -> Int {
@@ -27,49 +32,53 @@ struct GRDBShowRepository: ShowRepository {
     // MARK: - Date queries
 
     func getShowsByYear(_ year: Int) throws -> [Show] {
-        try showDAO.fetchByYear(year).map(mapShow)
+        filterRecordingless(try showDAO.fetchByYear(year).map(mapShow))
     }
 
     func getShowsByYearMonth(_ yearMonth: String) throws -> [Show] {
-        try showDAO.fetchByYearMonth(yearMonth).map(mapShow)
+        filterRecordingless(try showDAO.fetchByYearMonth(yearMonth).map(mapShow))
     }
 
     func getShowsByDate(_ date: String) throws -> [Show] {
-        try showDAO.fetchByDate(date).map(mapShow)
+        filterRecordingless(try showDAO.fetchByDate(date).map(mapShow))
     }
 
     func getShowsForDate(month: Int, day: Int) throws -> [Show] {
-        try showDAO.fetchOnThisDay(month: month, day: day).map(mapShow)
+        filterRecordingless(try showDAO.fetchOnThisDay(month: month, day: day).map(mapShow))
     }
 
     // MARK: - Location queries
 
     func getShowsByVenue(_ venueName: String) throws -> [Show] {
-        try showDAO.fetchByVenue(venueName).map(mapShow)
+        filterRecordingless(try showDAO.fetchByVenue(venueName).map(mapShow))
     }
 
     func getShowsByCity(_ city: String) throws -> [Show] {
-        try showDAO.fetchByCity(city).map(mapShow)
+        filterRecordingless(try showDAO.fetchByCity(city).map(mapShow))
     }
 
     func getShowsByState(_ state: String) throws -> [Show] {
-        try showDAO.fetchByState(state).map(mapShow)
+        filterRecordingless(try showDAO.fetchByState(state).map(mapShow))
     }
 
     // MARK: - Featured
 
     func getTopRatedShows(limit: Int) throws -> [Show] {
-        try showDAO.fetchTopRated(limit: limit).map(mapShow)
+        filterRecordingless(try showDAO.fetchTopRated(limit: limit).map(mapShow))
     }
 
     // MARK: - Chronological navigation
 
     func getNextShow(afterDate: String) throws -> Show? {
-        try showDAO.fetchNext(after: afterDate).map(mapShow)
+        // fetchNext/fetchPrevious return one row; filter may eliminate it, so walk forward if needed.
+        // Simple approach: filter the single candidate.
+        guard let show = try showDAO.fetchNext(after: afterDate).map(mapShow) else { return nil }
+        return filterRecordingless([show]).first
     }
 
     func getPreviousShow(beforeDate: String) throws -> Show? {
-        try showDAO.fetchPrevious(before: beforeDate).map(mapShow)
+        guard let show = try showDAO.fetchPrevious(before: beforeDate).map(mapShow) else { return nil }
+        return filterRecordingless([show]).first
     }
 
     // MARK: - Recording queries

@@ -15,11 +15,13 @@ struct SearchServiceTests {
         let showDAO = ShowDAO(database: db)
         let recordingDAO = RecordingDAO(database: db)
         let showSearchDAO = ShowSearchDAO(database: db)
-        let repo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO)
+        let prefs = AppPreferences()
+        let repo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO, appPreferences: prefs)
         service = SearchServiceImpl(
             showSearchDAO: showSearchDAO,
             showDAO: showDAO,
-            showRepository: repo
+            showRepository: repo,
+            appPreferences: prefs
         )
     }
 
@@ -59,7 +61,7 @@ struct SearchServiceTests {
             memberList: nil,
             showSequence: 1,
             recordingsRaw: nil,
-            recordingCount: 0,
+            recordingCount: 1,
             bestRecordingId: nil,
             averageRating: averageRating,
             totalReviews: totalReviews,
