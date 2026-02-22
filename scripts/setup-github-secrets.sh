@@ -54,15 +54,16 @@ if [ ! -d ".secrets" ]; then
     exit 1
 fi
 
-echo -e "${BLUE}ℹ️  This will upload 11 secrets to your GitHub repository${NC}"
+echo -e "${BLUE}ℹ️  This will upload 12 secrets to your GitHub repository${NC}"
 echo ""
 echo "Secrets to be uploaded:"
-echo "  Android (5):"
+echo "  Android (6):"
 echo "    - ANDROID_KEYSTORE_BASE64"
 echo "    - ANDROID_KEYSTORE_PASSWORD"
 echo "    - ANDROID_KEY_ALIAS"
 echo "    - ANDROID_KEY_PASSWORD"
 echo "    - PLAY_STORE_JSON_BASE64"
+echo "    - GENIUS_ACCESS_TOKEN"
 echo ""
 echo "  iOS (6):"
 echo "    - IOS_CERTIFICATE_BASE64"
@@ -108,6 +109,19 @@ if [ ! -f ".secrets/thedeadly-app-f48493c2a133.json" ]; then
 else
     echo -e "${GREEN}✓${NC} Uploading PLAY_STORE_JSON_BASE64..."
     base64_encode .secrets/thedeadly-app-f48493c2a133.json | gh secret set PLAY_STORE_JSON_BASE64
+fi
+
+# Genius API access token (for lyrics)
+if [ ! -f "androidApp/local.properties" ]; then
+    echo -e "${YELLOW}⚠️  Warning: androidApp/local.properties not found - skipping GENIUS_ACCESS_TOKEN${NC}"
+else
+    GENIUS_TOKEN=$(grep genius.access.token androidApp/local.properties | cut -d'=' -f2)
+    if [ -z "$GENIUS_TOKEN" ]; then
+        echo -e "${YELLOW}⚠️  Warning: genius.access.token not found in local.properties - skipping GENIUS_ACCESS_TOKEN${NC}"
+    else
+        echo -e "${GREEN}✓${NC} Uploading GENIUS_ACCESS_TOKEN..."
+        echo "$GENIUS_TOKEN" | gh secret set GENIUS_ACCESS_TOKEN
+    fi
 fi
 
 echo ""
