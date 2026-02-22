@@ -10,6 +10,7 @@ final class AppContainer {
     let showRepository: any ShowRepository
     let searchService: any SearchService
     let homeService: HomeServiceImpl
+    let libraryService: LibraryServiceImpl
     let streamPlayer: StreamPlayer
     let playlistService: PlaylistServiceImpl
     let panelContentService: PanelContentService
@@ -42,6 +43,11 @@ final class AppContainer {
                 showRepository: showRepo,
                 collectionsDAO: CollectionsDAO(database: db),
                 recentShowDAO: RecentShowDAO(database: db)
+            )
+            libraryService = LibraryServiceImpl(
+                database: db,
+                libraryDAO: LibraryDAO(database: db),
+                showRepository: showRepo
             )
             // StreamPlayer is @MainActor; AppContainer is always created on the main
             // thread (from deadlyApp which is @MainActor), so assumeIsolated is safe.

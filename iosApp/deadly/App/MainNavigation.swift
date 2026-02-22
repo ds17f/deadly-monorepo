@@ -28,7 +28,10 @@ struct MainNavigation: View {
             }
             Tab("Library", systemImage: "books.vertical") {
                 NavigationStack {
-                    PlaceholderScreen(tab: .library)
+                    LibraryScreen()
+                        .navigationDestination(for: String.self) { showId in
+                            ShowDetailScreen(showId: showId)
+                        }
                 }
                 .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
             }

@@ -10,6 +10,8 @@ struct ShowDetailScreen: View {
     private var streamPlayer: StreamPlayer { container.streamPlayer }
 
     @State private var showRecordingPicker = false
+    @State private var isInLibrary = false
+    @State private var showShareSheet = false
 
     var body: some View {
         Group {
@@ -24,7 +26,10 @@ struct ShowDetailScreen: View {
         }
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .task { await playlistService.loadShow(showId) }
+        .task {
+            await playlistService.loadShow(showId)
+            isInLibrary = (try? container.libraryService.isInLibrary(showId: showId)) ?? false
+        }
     }
 
     // MARK: - Show content
@@ -60,6 +65,40 @@ struct ShowDetailScreen: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)
+            }
+            .listRowBackground(Color.clear)
+            .listRowSeparator(.hidden)
+
+            // Action row
+            Section {
+                HStack(spacing: 8) {
+                    Button {
+                        if isInLibrary {
+                            try? container.libraryService.removeFromLibrary(showId: showId)
+                        } else {
+                            try? container.libraryService.addToLibrary(showId: showId)
+                        }
+                        isInLibrary.toggle()
+                    } label: {
+                        Image(systemName: isInLibrary ? "heart.fill" : "heart")
+                            .font(.title2)
+                            .foregroundStyle(isInLibrary ? DeadlyColors.primary : .secondary)
+                            .frame(width: 44, height: 44)
+                    }
+                    .buttonStyle(.plain)
+
+                    if let text = shareText(show: show) {
+                        ShareLink(item: text) {
+                            Image(systemName: "square.and.arrow.up")
+                                .font(.title2)
+                                .foregroundStyle(.secondary)
+                                .frame(width: 44, height: 44)
+                        }
+                        .buttonStyle(.plain)
+                    }
+
+                    Spacer()
+                }
             }
             .listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
@@ -143,5 +182,23 @@ struct ShowDetailScreen: View {
         guard let recording = playlistService.currentRecording,
               let currentURL = streamPlayer.currentTrack?.url else { return false }
         return currentURL == track.streamURL(recordingId: recording.identifier)
+    }
+
+    private func shareText(show: Show) -> String? {
+        guard let recording = playlistService.currentRecording else { return nil }
+        var lines: [String] = []
+        lines.append("🌹⚡💀 Grateful Dead 💀⚡🌹")
+        lines.append("")
+        lines.append("📅 \(show.date)")
+        lines.append("📍 \(show.venue.name)")
+        let loc = show.venue.displayLocation
+        if !loc.isEmpty { lines.append("🌎 \(loc)") }
+        lines.append("")
+        lines.append("🎧 Source: \(recording.sourceType.displayName)")
+        if show.hasRating { lines.append("⭐ Rating: \(show.displayRating)") }
+        lines.append("")
+        lines.append("🔗 Listen in The Deadly app:")
+        lines.append("https://share.thedeadly.app/show/\(show.id)/recording/\(recording.identifier)")
+        return lines.joined(separator: "\n")
     }
 }
