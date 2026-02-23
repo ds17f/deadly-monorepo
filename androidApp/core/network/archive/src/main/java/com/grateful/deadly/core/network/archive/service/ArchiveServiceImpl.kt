@@ -45,19 +45,25 @@ class ArchiveServiceImpl @Inject constructor(
       }
 
     override suspend fun getRecordingMetadata(recordingId: String): Result<RecordingMetadata> {
-        return try {
-            Log.d(TAG, "getRecordingMetadata($recordingId)")
+        Log.d(TAG, "getRecordingMetadata($recordingId)")
 
-            // Check filesystem cache first
-            val cacheFile = File(cacheDir, "$recordingId.metadata.json")
-            if (cacheFile.exists() && !isCacheExpired(cacheFile.lastModified())) {
-                Log.d(TAG, "Cache hit for metadata: $recordingId")
+        val cacheFile = File(cacheDir, "$recordingId.metadata.json")
+
+        // Check fresh filesystem cache first
+        if (cacheFile.exists() && !isCacheExpired(cacheFile.lastModified())) {
+            Log.d(TAG, "Cache hit for metadata: $recordingId")
+            return try {
                 val cached = json.decodeFromString<RecordingMetadata>(cacheFile.readText())
-                return Result.success(cached)
+                Result.success(cached)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error reading cached metadata for $recordingId", e)
+                Result.failure(e)
             }
+        }
 
-            // Cache miss - fetch from API
-            Log.d(TAG, "Cache miss for metadata: $recordingId, fetching from API")
+        // Cache miss or expired - try API
+        Log.d(TAG, "Cache miss for metadata: $recordingId, fetching from API")
+        try {
             val response = archiveApiService.getRecordingMetadata(recordingId)
 
             if (response.isSuccessful && response.body() != null) {
@@ -68,32 +74,49 @@ class ArchiveServiceImpl @Inject constructor(
                 cacheFile.writeText(json.encodeToString(metadata))
                 Log.d(TAG, "Cached metadata for: $recordingId")
 
-                Result.success(metadata)
+                return Result.success(metadata)
             } else {
                 Log.w(TAG, "API error for metadata: $recordingId - ${response.code()}")
-                Result.failure(Exception("API error: ${response.code()}"))
             }
-
         } catch (e: Exception) {
-            Log.e(TAG, "Error getting metadata for $recordingId", e)
-            Result.failure(e)
+            Log.e(TAG, "API call failed for metadata: $recordingId", e)
         }
+
+        // Fallback: serve expired cache if available
+        if (cacheFile.exists()) {
+            return try {
+                Log.w(TAG, "Serving expired cache for metadata: $recordingId (API unavailable)")
+                val cached = json.decodeFromString<RecordingMetadata>(cacheFile.readText())
+                Result.success(cached)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error reading expired cache for metadata: $recordingId", e)
+                Result.failure(e)
+            }
+        }
+
+        return Result.failure(Exception("No cached data and API unavailable for metadata: $recordingId"))
     }
 
     override suspend fun getRecordingTracks(recordingId: String): Result<List<Track>> {
-        return try {
-            Log.d(TAG, "getRecordingTracks($recordingId)")
+        Log.d(TAG, "getRecordingTracks($recordingId)")
 
-            // Check filesystem cache first
-            val cacheFile = File(cacheDir, "$recordingId.tracks.json")
-            if (cacheFile.exists() && !isCacheExpired(cacheFile.lastModified())) {
-                Log.d(TAG, "Cache hit for tracks: $recordingId")
+        val cacheFile = File(cacheDir, "$recordingId.tracks.json")
+
+        // Check fresh filesystem cache first
+        if (cacheFile.exists() && !isCacheExpired(cacheFile.lastModified())) {
+            Log.d(TAG, "Cache hit for tracks: $recordingId")
+            return try {
                 val cached = json.decodeFromString<List<Track>>(cacheFile.readText())
-                return Result.success(cached)
+                Result.success(cached)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error reading cached tracks for $recordingId", e)
+                Result.failure(e)
             }
+        }
 
-            // Cache miss - fetch from API
-            Log.d(TAG, "Cache miss for tracks: $recordingId, fetching from API")
+        // Cache miss or expired - try API
+        Log.d(TAG, "Cache miss for tracks: $recordingId, fetching from API")
+        try {
             val response = archiveApiService.getRecordingMetadata(recordingId)
 
             if (response.isSuccessful && response.body() != null) {
@@ -104,32 +127,49 @@ class ArchiveServiceImpl @Inject constructor(
                 cacheFile.writeText(json.encodeToString(tracks))
                 Log.d(TAG, "Cached ${tracks.size} tracks for: $recordingId")
 
-                Result.success(tracks)
+                return Result.success(tracks)
             } else {
                 Log.w(TAG, "API error for tracks: $recordingId - ${response.code()}")
-                Result.failure(Exception("API error: ${response.code()}"))
             }
-
         } catch (e: Exception) {
-            Log.e(TAG, "Error getting tracks for $recordingId", e)
-            Result.failure(e)
+            Log.e(TAG, "API call failed for tracks: $recordingId", e)
         }
+
+        // Fallback: serve expired cache if available
+        if (cacheFile.exists()) {
+            return try {
+                Log.w(TAG, "Serving expired cache for tracks: $recordingId (API unavailable)")
+                val cached = json.decodeFromString<List<Track>>(cacheFile.readText())
+                Result.success(cached)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error reading expired cache for tracks: $recordingId", e)
+                Result.failure(e)
+            }
+        }
+
+        return Result.failure(Exception("No cached data and API unavailable for tracks: $recordingId"))
     }
 
     override suspend fun getRecordingReviews(recordingId: String): Result<List<Review>> {
-        return try {
-            Log.d(TAG, "getRecordingReviews($recordingId)")
+        Log.d(TAG, "getRecordingReviews($recordingId)")
 
-            // Check filesystem cache first
-            val cacheFile = File(cacheDir, "$recordingId.reviews.json")
-            if (cacheFile.exists() && !isCacheExpired(cacheFile.lastModified())) {
-                Log.d(TAG, "Cache hit for reviews: $recordingId")
+        val cacheFile = File(cacheDir, "$recordingId.reviews.json")
+
+        // Check fresh filesystem cache first
+        if (cacheFile.exists() && !isCacheExpired(cacheFile.lastModified())) {
+            Log.d(TAG, "Cache hit for reviews: $recordingId")
+            return try {
                 val cached = json.decodeFromString<List<Review>>(cacheFile.readText())
-                return Result.success(cached)
+                Result.success(cached)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error reading cached reviews for $recordingId", e)
+                Result.failure(e)
             }
+        }
 
-            // Cache miss - fetch from API
-            Log.d(TAG, "Cache miss for reviews: $recordingId, fetching from API")
+        // Cache miss or expired - try API
+        Log.d(TAG, "Cache miss for reviews: $recordingId, fetching from API")
+        try {
             val response = archiveApiService.getRecordingMetadata(recordingId)
 
             if (response.isSuccessful && response.body() != null) {
@@ -140,16 +180,27 @@ class ArchiveServiceImpl @Inject constructor(
                 cacheFile.writeText(json.encodeToString(reviews))
                 Log.d(TAG, "Cached ${reviews.size} reviews for: $recordingId")
 
-                Result.success(reviews)
+                return Result.success(reviews)
             } else {
                 Log.w(TAG, "API error for reviews: $recordingId - ${response.code()}")
-                Result.failure(Exception("API error: ${response.code()}"))
             }
-
         } catch (e: Exception) {
-            Log.e(TAG, "Error getting reviews for $recordingId", e)
-            Result.failure(e)
+            Log.e(TAG, "API call failed for reviews: $recordingId", e)
         }
+
+        // Fallback: serve expired cache if available
+        if (cacheFile.exists()) {
+            return try {
+                Log.w(TAG, "Serving expired cache for reviews: $recordingId (API unavailable)")
+                val cached = json.decodeFromString<List<Review>>(cacheFile.readText())
+                Result.success(cached)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error reading expired cache for reviews: $recordingId", e)
+                Result.failure(e)
+            }
+        }
+
+        return Result.failure(Exception("No cached data and API unavailable for reviews: $recordingId"))
     }
 
     override suspend fun clearCache(recordingId: String): Result<Unit> {
