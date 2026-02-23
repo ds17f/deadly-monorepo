@@ -101,7 +101,7 @@ final class AppContainer {
             }
 
             // NetworkMonitor is @MainActor
-            let monitor = MainActor.assumeIsolated { NetworkMonitor() }
+            let monitor = MainActor.assumeIsolated { NetworkMonitor(appPreferences: prefs) }
             networkMonitor = monitor
             MainActor.assumeIsolated { monitor.start() }
 
