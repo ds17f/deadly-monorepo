@@ -52,15 +52,10 @@ struct ShowArtwork: View {
     }
 
     private var placeholder: some View {
-        RoundedRectangle(cornerRadius: cornerRadius)
-            .fill(DeadlyColors.darkSurface)
+        Image("deadly_logo_square")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
             .frame(width: size, height: size)
-            .overlay {
-                Image("deadly_logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(size * 0.15)
-                    .opacity(0.6)
-            }
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
     }
 }
