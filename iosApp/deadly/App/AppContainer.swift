@@ -19,6 +19,7 @@ final class AppContainer {
     let panelContentService: PanelContentService
     let networkMonitor: NetworkMonitor
     let recentShowsService: RecentShowsServiceImpl
+    let miniPlayerService: MiniPlayerServiceImpl
 
     init() {
         do {
@@ -66,6 +67,12 @@ final class AppContainer {
             // thread (from deadlyApp which is @MainActor), so assumeIsolated is safe.
             let player = MainActor.assumeIsolated { StreamPlayer() }
             streamPlayer = player
+
+            // MiniPlayerService is @MainActor; thin adapter over StreamPlayer for the mini player UI
+            let miniPlayer = MainActor.assumeIsolated {
+                MiniPlayerServiceImpl(streamPlayer: player)
+            }
+            miniPlayerService = miniPlayer
 
             // RecentShowsService is @MainActor; wires up automatic play tracking via StreamPlayer
             let recentService = MainActor.assumeIsolated {

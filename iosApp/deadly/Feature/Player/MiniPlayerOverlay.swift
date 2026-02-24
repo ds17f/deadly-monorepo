@@ -1,46 +1,36 @@
 import SwiftUI
-import SwiftAudioStreamEx
 
 extension View {
-    func miniPlayer(streamPlayer: StreamPlayer, showFullPlayer: Binding<Bool>) -> some View {
+    func miniPlayer(miniPlayerService: MiniPlayerServiceImpl, showFullPlayer: Binding<Bool>) -> some View {
         self.safeAreaInset(edge: .bottom) {
-            MiniPlayerOverlay(streamPlayer: streamPlayer, showFullPlayer: showFullPlayer)
+            MiniPlayerOverlay(service: miniPlayerService, showFullPlayer: showFullPlayer)
         }
     }
 }
 
 struct MiniPlayerOverlay: View {
-    let streamPlayer: StreamPlayer
+    let service: MiniPlayerServiceImpl
     @Binding var showFullPlayer: Bool
 
-    /// Extract the archive.org recording ID from a stream URL.
-    /// URL format: https://archive.org/download/{recordingId}/{filename}
-    private var artworkRecordingId: String? {
-        guard let url = streamPlayer.currentTrack?.url else { return nil }
-        let parts = url.pathComponents
-        guard parts.count >= 3, parts[1] == "download" else { return nil }
-        return parts[2]
-    }
-
     var body: some View {
-        if streamPlayer.playbackState.isActive {
+        if service.isVisible {
             HStack(spacing: 12) {
                 // Artwork — ticket art from show if available, archive.org img as fallback
                 ShowArtwork(
-                    recordingId: artworkRecordingId,
-                    imageUrl: streamPlayer.currentTrack?.artworkURL?.absoluteString,
+                    recordingId: service.artworkRecordingId,
+                    imageUrl: service.artworkURL,
                     size: 44,
                     cornerRadius: DeadlySize.artworkCornerRadius
                 )
 
                 // Track info
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(streamPlayer.currentTrack?.title ?? "")
+                    Text(service.trackTitle ?? "")
                         .font(.subheadline)
                         .fontWeight(.medium)
                         .lineLimit(1)
 
-                    Text(streamPlayer.currentTrack?.albumTitle ?? "")
+                    Text(service.albumTitle ?? "")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
@@ -50,23 +40,23 @@ struct MiniPlayerOverlay: View {
 
                 // Controls
                 Button {
-                    streamPlayer.togglePlayPause()
+                    service.togglePlayPause()
                 } label: {
-                    Image(systemName: streamPlayer.playbackState.isPlaying ? "pause.fill" : "play.fill")
+                    Image(systemName: service.isPlaying ? "pause.fill" : "play.fill")
                         .font(.title3)
                         .foregroundStyle(.primary)
                 }
                 .buttonStyle(.plain)
 
                 Button {
-                    streamPlayer.next()
+                    service.skipNext()
                 } label: {
                     Image(systemName: "forward.fill")
                         .font(.title3)
-                        .foregroundStyle(streamPlayer.queueState.hasNext ? .primary : .tertiary)
+                        .foregroundStyle(service.hasNext ? .primary : .tertiary)
                 }
                 .buttonStyle(.plain)
-                .disabled(!streamPlayer.queueState.hasNext)
+                .disabled(!service.hasNext)
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
@@ -79,7 +69,7 @@ struct MiniPlayerOverlay: View {
                 showFullPlayer = true
             }
             .transition(.move(edge: .bottom).combined(with: .opacity))
-            .animation(.spring(), value: streamPlayer.playbackState.isActive)
+            .animation(.spring(), value: service.isVisible)
         }
     }
 }
