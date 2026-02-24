@@ -26,8 +26,8 @@ struct MainNavigation: View {
                             }
                         }
                 }
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Search", systemImage: "magnifyingglass", value: .search) {
                 NavigationStack {
@@ -36,8 +36,8 @@ struct MainNavigation: View {
                             ShowDetailScreen(showId: showId)
                         }
                 }
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Library", systemImage: "books.vertical", value: .library) {
                 NavigationStack {
@@ -46,8 +46,8 @@ struct MainNavigation: View {
                             ShowDetailScreen(showId: showId)
                         }
                 }
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Collections", systemImage: "square.stack", value: .collections) {
                 NavigationStack {
@@ -62,15 +62,15 @@ struct MainNavigation: View {
                             ShowDetailScreen(showId: showId)
                         }
                 }
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Settings", systemImage: "gearshape", value: .settings) {
                 NavigationStack {
                     SettingsScreen()
                 }
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
         }
         .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {

@@ -2,9 +2,11 @@ import SwiftUI
 
 extension View {
     func miniPlayer(miniPlayerService: MiniPlayerServiceImpl, showFullPlayer: Binding<Bool>) -> some View {
-        self.safeAreaInset(edge: .bottom) {
-            MiniPlayerOverlay(service: miniPlayerService, showFullPlayer: showFullPlayer)
-        }
+        self
+            .contentMargins(.bottom, miniPlayerService.isVisible ? 80 : 0, for: .scrollContent)
+            .overlay(alignment: .bottom) {
+                MiniPlayerOverlay(service: miniPlayerService, showFullPlayer: showFullPlayer)
+            }
     }
 }
 
