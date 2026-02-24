@@ -109,6 +109,11 @@ struct LibraryScreen: View {
             service.refresh(sortedBy: sortOption, direction: new)
         }
         .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                NavigationLink(value: LibraryRoute.downloads) {
+                    Image(systemName: "arrow.down.circle")
+                }
+            }
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
                     Button {

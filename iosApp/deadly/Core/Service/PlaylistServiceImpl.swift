@@ -14,6 +14,7 @@ final class PlaylistServiceImpl: PlaylistService {
     private let archiveClient: any ArchiveMetadataClient
     private let recentShowsService: RecentShowsService
     private let libraryDAO: LibraryDAO
+    private let downloadService: DownloadService?
     let streamPlayer: StreamPlayer
 
     nonisolated init(
@@ -21,13 +22,15 @@ final class PlaylistServiceImpl: PlaylistService {
         archiveClient: some ArchiveMetadataClient,
         recentShowsService: RecentShowsService,
         libraryDAO: LibraryDAO,
-        streamPlayer: StreamPlayer
+        streamPlayer: StreamPlayer,
+        downloadService: DownloadService? = nil
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
         self.recentShowsService = recentShowsService
         self.libraryDAO = libraryDAO
         self.streamPlayer = streamPlayer
+        self.downloadService = downloadService
     }
 
     // MARK: - PlaylistService
@@ -73,9 +76,16 @@ final class PlaylistServiceImpl: PlaylistService {
         let albumTitle = currentShow.map { "\($0.venue.name) — \($0.date)" }
         let showId = currentShow?.id ?? ""
         let recordingId = recording.identifier
-        let trackItems = tracks.enumerated().map { index, track in
-            TrackItem(
-                url: track.streamURL(recordingId: recordingId),
+        let trackItems = tracks.enumerated().map { idx, track in
+            // Check for local downloaded file first
+            let url: URL
+            if let localURL = downloadService?.localURL(for: recordingId, trackFilename: track.name) {
+                url = localURL
+            } else {
+                url = track.streamURL(recordingId: recordingId)
+            }
+            return TrackItem(
+                url: url,
                 title: track.title,
                 artist: "Grateful Dead",
                 albumTitle: albumTitle,
@@ -84,7 +94,7 @@ final class PlaylistServiceImpl: PlaylistService {
                 metadata: [
                     "showId": showId,
                     "recordingId": recordingId,
-                    "trackNumber": "\(index + 1)"
+                    "trackNumber": "\(idx + 1)"
                 ]
             )
         }

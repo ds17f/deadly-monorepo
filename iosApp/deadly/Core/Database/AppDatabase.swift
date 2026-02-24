@@ -59,11 +59,14 @@ struct AppDatabase: @unchecked Sendable {
 
     private func migrate() throws {
         var migrator = DatabaseMigrator()
-        #if DEBUG
-        migrator.eraseDatabaseOnSchemaChange = true
-        #endif
+        // Note: eraseDatabaseOnSchemaChange is intentionally NOT set.
+        // Migrations should behave identically in debug and release builds
+        // to catch migration issues during development.
         migrator.registerMigration("v1-create-all-tables") { db in
             try AppDatabase.createSchema(db)
+        }
+        migrator.registerMigration("v2-download-tasks") { db in
+            try AppDatabase.createDownloadTasksTable(db)
         }
         try migrator.migrate(dbWriter)
     }
@@ -201,5 +204,26 @@ struct AppDatabase: @unchecked Sendable {
             t.column("totalFiles", .integer).notNull().defaults(to: 0)
             t.column("totalSizeBytes", .integer).notNull().defaults(to: 0)
         }
+    }
+
+    // MARK: - Download Tasks Table
+
+    private static func createDownloadTasksTable(_ db: Database) throws {
+        try db.create(table: "download_tasks", ifNotExists: true) { t in
+            t.column("identifier", .text).primaryKey()
+            t.column("showId", .text).notNull()
+            t.column("recordingId", .text).notNull()
+            t.column("trackFilename", .text).notNull()
+            t.column("remoteURL", .text).notNull()
+            t.column("state", .text).notNull()
+            t.column("bytesDownloaded", .integer).notNull().defaults(to: 0)
+            t.column("totalBytes", .integer).notNull().defaults(to: 0)
+            t.column("resumeData", .blob)
+            t.column("errorMessage", .text)
+            t.column("createdAt", .integer).notNull()
+            t.column("updatedAt", .integer).notNull()
+        }
+        try db.create(index: "idx_download_tasks_showId", on: "download_tasks", columns: ["showId"], ifNotExists: true)
+        try db.create(index: "idx_download_tasks_state", on: "download_tasks", columns: ["state"], ifNotExists: true)
     }
 }
