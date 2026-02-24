@@ -120,4 +120,35 @@ struct LibraryDAO: Sendable {
             try LibraryShowRecord.fetchCount(db)
         }
     }
+
+    // MARK: - Download tracking
+
+    func updateDownloadedRecording(_ showId: String, recordingId: String?, format: String?) throws {
+        try database.write { db in
+            try LibraryShowRecord
+                .filter(Column("showId") == showId)
+                .updateAll(db,
+                    Column("downloadedRecordingId").set(to: recordingId),
+                    Column("downloadedFormat").set(to: format)
+                )
+        }
+    }
+
+    func fetchDownloadedRecordingId(_ showId: String) throws -> String? {
+        try database.read { db in
+            try LibraryShowRecord.fetchOne(db, key: showId)?.downloadedRecordingId
+        }
+    }
+
+    func fetchShowsWithDownloads() throws -> [LibraryShowRecord] {
+        try database.read { db in
+            try LibraryShowRecord
+                .filter(Column("downloadedRecordingId") != nil)
+                .fetchAll(db)
+        }
+    }
+
+    func clearDownloadedRecording(_ showId: String) throws {
+        try updateDownloadedRecording(showId, recordingId: nil, format: nil)
+    }
 }

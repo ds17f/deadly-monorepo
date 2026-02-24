@@ -20,6 +20,7 @@ final class AppContainer {
     let networkMonitor: NetworkMonitor
     let recentShowsService: RecentShowsServiceImpl
     let miniPlayerService: MiniPlayerServiceImpl
+    let downloadService: DownloadServiceImpl
 
     init() {
         do {
@@ -84,18 +85,33 @@ final class AppContainer {
             }
             recentShowsService = recentService
 
-            // HomeService and PlaylistService depend on RecentShowsService
+            // HomeService depends on RecentShowsService
             homeService = HomeServiceImpl(
                 showRepository: showRepo,
                 collectionsDAO: CollectionsDAO(database: db),
                 recentShowsService: recentService
             )
+
+            // DownloadService is @MainActor; manage offline downloads
+            let downloadSvc = MainActor.assumeIsolated {
+                DownloadServiceImpl(
+                    archiveClient: URLSessionArchiveMetadataClient(),
+                    showRepository: showRepo,
+                    libraryDAO: LibraryDAO(database: db),
+                    downloadTaskDAO: DownloadTaskDAO(database: db),
+                    storageManager: DownloadStorageManager()
+                )
+            }
+            downloadService = downloadSvc
+
+            // PlaylistService depends on RecentShowsService and DownloadService
             playlistService = PlaylistServiceImpl(
                 showRepository: showRepo,
                 archiveClient: URLSessionArchiveMetadataClient(),
                 recentShowsService: recentService,
                 libraryDAO: LibraryDAO(database: db),
-                streamPlayer: player
+                streamPlayer: player,
+                downloadService: downloadSvc
             )
 
             // PanelContentService is @MainActor; AppContainer.init is always called on

@@ -45,6 +45,12 @@ struct MainNavigation: View {
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
                         }
+                        .navigationDestination(for: LibraryRoute.self) { route in
+                            switch route {
+                            case .downloads:
+                                DownloadsScreen()
+                            }
+                        }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
@@ -117,6 +123,12 @@ enum AppTab: String, Hashable {
     case home, search, library, collections, settings
 
     var title: String { rawValue.capitalized }
+}
+
+// MARK: - Library Routes
+
+enum LibraryRoute: Hashable {
+    case downloads
 }
 
 // MARK: - PlaceholderScreen
