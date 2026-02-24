@@ -8,10 +8,14 @@ struct ShowDetailScreen: View {
 
     private var playlistService: PlaylistServiceImpl { container.playlistService }
     private var streamPlayer: StreamPlayer { container.streamPlayer }
+    private var downloadService: DownloadServiceImpl { container.downloadService }
 
     @State private var showRecordingPicker = false
     @State private var isInLibrary = false
     @State private var showShareSheet = false
+    @State private var isDownloading = false
+    @State private var showRemoveDownloadAlert = false
+    @State private var showCancelDownloadAlert = false
 
     var body: some View {
         Group {
@@ -87,6 +91,8 @@ struct ShowDetailScreen: View {
                     }
                     .buttonStyle(.plain)
 
+                    downloadButton
+
                     if let text = shareText(show: show) {
                         ShareLink(item: text) {
                             Image(systemName: "square.and.arrow.up")
@@ -145,11 +151,13 @@ struct ShowDetailScreen: View {
                         .font(.caption)
                         .foregroundStyle(.red)
                 } else {
+                    let trackStates = downloadService.trackDownloadStates(for: showId)
                     ForEach(Array(playlistService.tracks.enumerated()), id: \.element.id) { index, track in
                         TrackListRow(
                             track: track,
                             index: index,
-                            isPlaying: isCurrentTrack(track)
+                            isPlaying: isCurrentTrack(track),
+                            downloadState: trackStates[track.name]
                         )
                         .contentShape(Rectangle())
                         .onTapGesture {
@@ -163,6 +171,22 @@ struct ShowDetailScreen: View {
         .listStyle(.plain)
         .sheet(isPresented: $showRecordingPicker) {
             RecordingPicker(show: show, playlistService: playlistService)
+        }
+        .alert("Remove Download?", isPresented: $showRemoveDownloadAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Remove", role: .destructive) {
+                downloadService.removeShow(showId)
+            }
+        } message: {
+            Text("This will delete the downloaded files for this show. You can download it again later.")
+        }
+        .alert("Cancel Download?", isPresented: $showCancelDownloadAlert) {
+            Button("Keep Downloading", role: .cancel) { }
+            Button("Cancel Download", role: .destructive) {
+                downloadService.cancelShow(showId)
+            }
+        } message: {
+            Text("This will stop the download and remove any partially downloaded files.")
         }
     }
 
@@ -182,6 +206,126 @@ struct ShowDetailScreen: View {
         guard let recording = playlistService.currentRecording,
               let currentURL = streamPlayer.currentTrack?.url else { return false }
         return currentURL == track.streamURL(recordingId: recording.identifier)
+    }
+
+    // MARK: - Download button
+
+    private var downloadStatus: LibraryDownloadStatus {
+        downloadService.downloadStatus(for: showId)
+    }
+
+    @ViewBuilder
+    private var downloadButton: some View {
+        let status = downloadStatus
+        Button {
+            handleDownloadAction(status: status)
+        } label: {
+            downloadIcon(for: status)
+                .font(.title2)
+                .foregroundStyle(downloadIconColor(for: status))
+                .frame(width: 44, height: 44)
+        }
+        .buttonStyle(.plain)
+        .disabled(isDownloading)
+        .contextMenu {
+            downloadContextMenu(for: status)
+        }
+    }
+
+    @ViewBuilder
+    private func downloadContextMenu(for status: LibraryDownloadStatus) -> some View {
+        switch status {
+        case .notDownloaded, .cancelled, .failed:
+            Button {
+                handleDownloadAction(status: status)
+            } label: {
+                Label("Download", systemImage: "arrow.down.circle")
+            }
+        case .queued, .downloading:
+            Button {
+                downloadService.pauseShow(showId)
+            } label: {
+                Label("Pause Download", systemImage: "pause.circle")
+            }
+            Button(role: .destructive) {
+                showCancelDownloadAlert = true
+            } label: {
+                Label("Cancel Download", systemImage: "xmark.circle")
+            }
+        case .paused:
+            Button {
+                downloadService.resumeShow(showId)
+            } label: {
+                Label("Resume Download", systemImage: "play.circle")
+            }
+            Button(role: .destructive) {
+                showCancelDownloadAlert = true
+            } label: {
+                Label("Cancel Download", systemImage: "xmark.circle")
+            }
+        case .completed:
+            Button(role: .destructive) {
+                showRemoveDownloadAlert = true
+            } label: {
+                Label("Remove Download", systemImage: "trash")
+            }
+        }
+    }
+
+    private func downloadIcon(for status: LibraryDownloadStatus) -> Image {
+        switch status {
+        case .notDownloaded, .cancelled, .failed:
+            return Image(systemName: "arrow.down.circle")
+        case .queued, .downloading:
+            return Image(systemName: "arrow.down.circle.fill")
+        case .paused:
+            return Image(systemName: "pause.circle.fill")
+        case .completed:
+            return Image(systemName: "checkmark.circle.fill")
+        }
+    }
+
+    private func downloadIconColor(for status: LibraryDownloadStatus) -> Color {
+        switch status {
+        case .notDownloaded, .cancelled:
+            return .secondary
+        case .queued, .downloading:
+            return DeadlyColors.primary
+        case .paused:
+            return .orange
+        case .completed:
+            return DeadlyColors.primary
+        case .failed:
+            return .red
+        }
+    }
+
+    private func handleDownloadAction(status: LibraryDownloadStatus) {
+        switch status {
+        case .notDownloaded, .cancelled, .failed:
+            isDownloading = true
+            Task {
+                do {
+                    // Auto-add to library when downloading
+                    if !isInLibrary {
+                        try? container.libraryService.addToLibrary(showId: showId)
+                        isInLibrary = true
+                    }
+                    try await downloadService.downloadShow(showId, recordingId: playlistService.currentRecording?.identifier)
+                } catch {
+                    // Error is handled by the service
+                }
+                isDownloading = false
+            }
+        case .queued, .downloading:
+            // Pause the download (tap again to resume, or long-press for cancel option)
+            downloadService.pauseShow(showId)
+        case .paused:
+            downloadService.resumeShow(showId)
+        case .completed:
+            // Show confirmation before removing
+            showRemoveDownloadAlert = true
+        }
     }
 
     private func shareText(show: Show) -> String? {
