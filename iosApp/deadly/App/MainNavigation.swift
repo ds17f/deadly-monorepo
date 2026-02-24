@@ -27,7 +27,7 @@ struct MainNavigation: View {
                         }
                 }
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
-                .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
+                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
             }
             Tab("Search", systemImage: "magnifyingglass", value: .search) {
                 NavigationStack {
@@ -37,7 +37,7 @@ struct MainNavigation: View {
                         }
                 }
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
-                .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
+                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
             }
             Tab("Library", systemImage: "books.vertical", value: .library) {
                 NavigationStack {
@@ -47,7 +47,7 @@ struct MainNavigation: View {
                         }
                 }
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
-                .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
+                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
             }
             Tab("Collections", systemImage: "square.stack", value: .collections) {
                 NavigationStack {
@@ -63,14 +63,14 @@ struct MainNavigation: View {
                         }
                 }
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
-                .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
+                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
             }
             Tab("Settings", systemImage: "gearshape", value: .settings) {
                 NavigationStack {
                     SettingsScreen()
                 }
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
-                .miniPlayer(streamPlayer: container.streamPlayer, showFullPlayer: $showFullPlayer)
+                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
             }
         }
         .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {

@@ -1,0 +1,62 @@
+import Foundation
+import SwiftAudioStreamEx
+
+/// Concrete implementation of `MiniPlayerService` backed by `StreamPlayer`.
+///
+/// All properties are computed — reads through to `streamPlayer` so that
+/// observation propagates automatically via `@Observable`.
+@Observable
+@MainActor
+final class MiniPlayerServiceImpl: MiniPlayerService {
+
+    private let streamPlayer: StreamPlayer
+
+    nonisolated init(streamPlayer: StreamPlayer) {
+        self.streamPlayer = streamPlayer
+    }
+
+    // MARK: - Computed state
+
+    var isVisible: Bool {
+        streamPlayer.playbackState.isActive
+    }
+
+    var trackTitle: String? {
+        streamPlayer.currentTrack?.title
+    }
+
+    var albumTitle: String? {
+        streamPlayer.currentTrack?.albumTitle
+    }
+
+    /// Extract the archive.org recording ID from the current track's stream URL.
+    /// URL format: https://archive.org/download/{recordingId}/{filename}
+    var artworkRecordingId: String? {
+        guard let url = streamPlayer.currentTrack?.url else { return nil }
+        let parts = url.pathComponents
+        guard parts.count >= 3, parts[1] == "download" else { return nil }
+        return parts[2]
+    }
+
+    var artworkURL: String? {
+        streamPlayer.currentTrack?.artworkURL?.absoluteString
+    }
+
+    var isPlaying: Bool {
+        streamPlayer.playbackState.isPlaying
+    }
+
+    var hasNext: Bool {
+        streamPlayer.queueState.hasNext
+    }
+
+    // MARK: - Actions
+
+    func togglePlayPause() {
+        streamPlayer.togglePlayPause()
+    }
+
+    func skipNext() {
+        streamPlayer.next()
+    }
+}
