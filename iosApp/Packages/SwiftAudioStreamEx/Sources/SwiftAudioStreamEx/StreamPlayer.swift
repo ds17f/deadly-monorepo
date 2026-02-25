@@ -30,6 +30,12 @@ public final class StreamPlayer {
     /// If playback position is past this threshold (seconds), "previous" restarts instead of going back.
     public var previousTrackThreshold: TimeInterval = 3.0
 
+    /// Set a fallback image (UIImage) to display in Now Playing when artwork is unavailable
+    /// or is detected as an auto-generated waveform spectrogram.
+    public func setFallbackArtwork(_ image: Any?) {
+        nowPlayingManager.setFallbackImage(image)
+    }
+
     // MARK: - Internal components
 
     private let engine: AudioStreamEngine
