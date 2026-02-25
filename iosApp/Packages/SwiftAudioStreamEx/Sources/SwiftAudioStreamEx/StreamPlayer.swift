@@ -261,8 +261,11 @@ public final class StreamPlayer {
         }
 
         sessionManager.onInterruptionEnded = { [weak self] shouldResume in
+            guard let self else { return }
+            // Re-activate audio session before resuming playback
+            self.sessionManager.reactivate()
             if shouldResume {
-                self?.play()
+                self.play()
             }
         }
 

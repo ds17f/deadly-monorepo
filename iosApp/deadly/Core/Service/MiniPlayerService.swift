@@ -33,6 +33,12 @@ protocol MiniPlayerService: AnyObject {
     /// Whether there is a next track available in the queue.
     var hasNext: Bool { get }
 
+    /// Whether playback is in an error state.
+    var hasError: Bool { get }
+
+    /// Error message if playback failed, nil otherwise.
+    var errorMessage: String? { get }
+
     /// Toggle between play and pause states.
     func togglePlayPause()
 

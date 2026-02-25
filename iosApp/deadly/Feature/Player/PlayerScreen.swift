@@ -7,7 +7,15 @@ struct PlayerScreen: View {
     var onViewShow: ((String) -> Void)? = nil
 
     @State private var sliderValue: Double?
+    @State private var showErrorAlert = false
     @Environment(\.appContainer) private var container
+
+    private var playbackError: StreamPlayerError? {
+        if case .error(let error) = streamPlayer.playbackState {
+            return error
+        }
+        return nil
+    }
 
     /// Extract the archive.org recording ID from a stream URL.
     /// URL format: https://archive.org/download/{recordingId}/{filename}
@@ -198,6 +206,25 @@ struct PlayerScreen: View {
             let show = container.playlistService.currentShow
             let title = streamPlayer.currentTrack?.title
             await container.panelContentService.loadContent(show: show, songTitle: title)
+        }
+        .onChange(of: playbackError) { _, newError in
+            if newError != nil {
+                showErrorAlert = true
+            }
+        }
+        .alert("Playback Error", isPresented: $showErrorAlert) {
+            Button("Retry") {
+                streamPlayer.play()
+            }
+            Button("Dismiss", role: .cancel) {
+                // Just dismiss
+            }
+        } message: {
+            if let error = playbackError {
+                Text(error.localizedDescription)
+            } else {
+                Text("An error occurred during playback. Please check your network connection and try again.")
+            }
         }
     }
 

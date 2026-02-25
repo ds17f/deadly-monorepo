@@ -19,13 +19,27 @@ final class AudioSessionManager {
         #if os(iOS)
         let session = AVAudioSession.sharedInstance()
         do {
-            try session.setCategory(.playback, mode: .default)
+            // Use .playback category with options for background audio
+            try session.setCategory(.playback, mode: .default, options: [])
             try session.setActive(true)
             logger.info("Audio session configured for playback")
         } catch {
             logger.error("Failed to configure audio session: \(error.localizedDescription)")
         }
         startObserving()
+        #endif
+    }
+
+    /// Re-activate the audio session (e.g., after interruption ends).
+    func reactivate() {
+        #if os(iOS)
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try session.setActive(true)
+            logger.info("Audio session reactivated")
+        } catch {
+            logger.error("Failed to reactivate audio session: \(error.localizedDescription)")
+        }
         #endif
     }
 
