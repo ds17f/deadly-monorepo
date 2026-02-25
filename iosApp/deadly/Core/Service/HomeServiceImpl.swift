@@ -49,6 +49,18 @@ final class HomeServiceImpl: HomeService {
                 featuredCollections: collections,
                 recentShows: recentShows
             )
+
+            // Prefetch artwork for Today In History carousel
+            let imageUrls = todayShows.compactMap { show -> URL? in
+                if let coverUrl = show.coverImageUrl, let url = URL(string: coverUrl) {
+                    return url
+                }
+                if let recordingId = show.bestRecordingId {
+                    return URL(string: "https://archive.org/services/img/\(recordingId)")
+                }
+                return nil
+            }
+            await ImageCache.shared.prefetch(urls: imageUrls)
         } catch {
             // Leave existing content on error
         }
