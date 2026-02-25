@@ -2,23 +2,73 @@ import Foundation
 
 protocol ArchiveMetadataClient: Sendable {
     func fetchTracks(recordingId: String) async throws -> [ArchiveTrack]
+    func clearCache(recordingId: String)
 }
 
-// MARK: - URLSession implementation
+// MARK: - URLSession implementation with disk caching
 
 struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
     private let session: URLSession
+    private let cacheExpiryHours: Int = 24
 
     init(session: URLSession = .shared) {
         self.session = session
     }
 
+    private var cacheDirectory: URL {
+        let cacheDir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        let archiveDir = cacheDir.appendingPathComponent("archive", isDirectory: true)
+        try? FileManager.default.createDirectory(at: archiveDir, withIntermediateDirectories: true)
+        return archiveDir
+    }
+
+    private func cacheFile(for recordingId: String) -> URL {
+        cacheDirectory.appendingPathComponent("\(recordingId).tracks.json")
+    }
+
+    private func isCacheExpired(_ modificationDate: Date) -> Bool {
+        let expiryInterval = TimeInterval(cacheExpiryHours * 60 * 60)
+        return Date().timeIntervalSince(modificationDate) > expiryInterval
+    }
+
     func fetchTracks(recordingId: String) async throws -> [ArchiveTrack] {
-        guard let url = URL(string: "https://archive.org/metadata/\(recordingId)") else {
-            throw URLError(.badURL)
+        let cache = cacheFile(for: recordingId)
+
+        // Check fresh cache first
+        if let attrs = try? FileManager.default.attributesOfItem(atPath: cache.path),
+           let modDate = attrs[.modificationDate] as? Date,
+           !isCacheExpired(modDate),
+           let data = try? Data(contentsOf: cache),
+           let tracks = try? JSONDecoder().decode([ArchiveTrack].self, from: data) {
+            return tracks
         }
-        let (data, _) = try await session.data(from: url)
-        return Self.parseTracks(from: data)
+
+        // Cache miss or expired - try network
+        do {
+            guard let url = URL(string: "https://archive.org/metadata/\(recordingId)") else {
+                throw URLError(.badURL)
+            }
+            let (data, _) = try await session.data(from: url)
+            let tracks = Self.parseTracks(from: data)
+
+            // Cache the result
+            if let encoded = try? JSONEncoder().encode(tracks) {
+                try? encoded.write(to: cache)
+            }
+
+            return tracks
+        } catch {
+            // Fallback: serve expired cache if available
+            if let data = try? Data(contentsOf: cache),
+               let tracks = try? JSONDecoder().decode([ArchiveTrack].self, from: data) {
+                return tracks
+            }
+            throw error
+        }
+    }
+
+    func clearCache(recordingId: String) {
+        try? FileManager.default.removeItem(at: cacheFile(for: recordingId))
     }
 
     // MARK: - Parsing (internal for testing)
