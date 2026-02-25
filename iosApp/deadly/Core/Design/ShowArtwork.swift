@@ -17,6 +17,7 @@ struct ShowArtwork: View {
     var cornerRadius: CGFloat = DeadlySize.carouselCornerRadius
 
     @State private var uiImage: UIImage?
+    @State private var loadAttempted = false
 
     private var resolvedUrl: URL? {
         if let imageUrl, let url = URL(string: imageUrl) {
@@ -42,12 +43,16 @@ struct ShowArtwork: View {
             }
         }
         .task(id: resolvedUrl?.absoluteString) {
+            loadAttempted = false
             uiImage = nil
-            guard let url = resolvedUrl,
-                  let (data, _) = try? await URLSession.shared.data(from: url),
-                  let img = UIImage(data: data),
-                  !isWaveform(img) else { return }
-            uiImage = img
+            guard let url = resolvedUrl else {
+                loadAttempted = true
+                return
+            }
+            if let cached = await ImageCache.shared.image(for: url), !isWaveform(cached) {
+                uiImage = cached
+            }
+            loadAttempted = true
         }
     }
 
