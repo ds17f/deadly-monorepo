@@ -9,6 +9,7 @@ struct ShowDetailScreen: View {
     private var playlistService: PlaylistServiceImpl { container.playlistService }
     private var streamPlayer: StreamPlayer { container.streamPlayer }
     private var downloadService: DownloadServiceImpl { container.downloadService }
+    private var networkMonitor: NetworkMonitor { container.networkMonitor }
 
     @State private var showRecordingPicker = false
     @State private var isInLibrary = false
@@ -170,6 +171,22 @@ struct ShowDetailScreen: View {
                         ProgressView("Loading tracks…")
                         Spacer()
                     }
+                    .listRowSeparator(.hidden)
+                } else if !networkMonitor.isConnected && downloadStatus != .completed {
+                    // Offline and show is not downloaded - show message
+                    VStack(spacing: 12) {
+                        Image(systemName: "wifi.slash")
+                            .font(.largeTitle)
+                            .foregroundStyle(.secondary)
+                        Text("Offline")
+                            .font(.headline)
+                        Text("Download this show to listen offline")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 24)
                     .listRowSeparator(.hidden)
                 } else if let error = playlistService.trackLoadError {
                     Text(error)
