@@ -1,7 +1,7 @@
 import Foundation
 
 /// A single track parsed from archive.org's metadata API for a recording.
-struct ArchiveTrack: Sendable, Equatable, Identifiable {
+struct ArchiveTrack: Sendable, Equatable, Identifiable, Codable {
     let name: String        // filename: "gd77-05-08eaton-d1t01.mp3"
     let title: String       // cleaned song title
     let trackNumber: Int
