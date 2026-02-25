@@ -18,7 +18,7 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     // MARK: - Computed state
 
     var isVisible: Bool {
-        streamPlayer.playbackState.isActive
+        streamPlayer.playbackState.isActive || hasError
     }
 
     var trackTitle: String? {
@@ -48,6 +48,20 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
 
     var hasNext: Bool {
         streamPlayer.queueState.hasNext
+    }
+
+    var hasError: Bool {
+        if case .error = streamPlayer.playbackState {
+            return true
+        }
+        return false
+    }
+
+    var errorMessage: String? {
+        if case .error(let error) = streamPlayer.playbackState {
+            return error.localizedDescription
+        }
+        return nil
     }
 
     // MARK: - Actions
