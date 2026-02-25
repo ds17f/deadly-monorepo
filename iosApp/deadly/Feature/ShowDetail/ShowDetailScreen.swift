@@ -104,6 +104,31 @@ struct ShowDetailScreen: View {
                     }
 
                     Spacer()
+
+                    // Prev/Next show navigation
+                    HStack(spacing: 0) {
+                        Button {
+                            Task { await playlistService.navigateToPreviousShow() }
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .font(.title2)
+                                .foregroundColor(playlistService.hasPreviousShow ? .secondary : .secondary.opacity(0.3))
+                                .frame(width: 44, height: 44)
+                        }
+                        .disabled(!playlistService.hasPreviousShow)
+                        .buttonStyle(.plain)
+
+                        Button {
+                            Task { await playlistService.navigateToNextShow() }
+                        } label: {
+                            Image(systemName: "chevron.right")
+                                .font(.title2)
+                                .foregroundColor(playlistService.hasNextShow ? .secondary : .secondary.opacity(0.3))
+                                .frame(width: 44, height: 44)
+                        }
+                        .disabled(!playlistService.hasNextShow)
+                        .buttonStyle(.plain)
+                    }
                 }
             }
             .listRowBackground(Color.clear)

@@ -70,15 +70,27 @@ struct GRDBShowRepository: ShowRepository {
     // MARK: - Chronological navigation
 
     func getNextShow(afterDate: String) throws -> Show? {
-        // fetchNext/fetchPrevious return one row; filter may eliminate it, so walk forward if needed.
-        // Simple approach: filter the single candidate.
-        guard let show = try showDAO.fetchNext(after: afterDate).map(mapShow) else { return nil }
-        return filterRecordingless([show]).first
+        // Keep searching forward until we find a show with recordings (if filtering is enabled)
+        var searchDate = afterDate
+        while let show = try showDAO.fetchNext(after: searchDate).map(mapShow) {
+            if filterRecordingless([show]).first != nil {
+                return show
+            }
+            searchDate = show.date
+        }
+        return nil
     }
 
     func getPreviousShow(beforeDate: String) throws -> Show? {
-        guard let show = try showDAO.fetchPrevious(before: beforeDate).map(mapShow) else { return nil }
-        return filterRecordingless([show]).first
+        // Keep searching backward until we find a show with recordings (if filtering is enabled)
+        var searchDate = beforeDate
+        while let show = try showDAO.fetchPrevious(before: searchDate).map(mapShow) {
+            if filterRecordingless([show]).first != nil {
+                return show
+            }
+            searchDate = show.date
+        }
+        return nil
     }
 
     // MARK: - Recording queries

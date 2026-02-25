@@ -33,6 +33,56 @@ final class PlaylistServiceImpl: PlaylistService {
         self.downloadService = downloadService
     }
 
+    // MARK: - Show Navigation
+
+    var hasNextShow: Bool {
+        guard let current = currentShow else { return false }
+        return (try? showRepository.getNextShow(afterDate: current.date)) != nil
+    }
+
+    var hasPreviousShow: Bool {
+        guard let current = currentShow else { return false }
+        return (try? showRepository.getPreviousShow(beforeDate: current.date)) != nil
+    }
+
+    func navigateToNextShow() async -> Bool {
+        guard let current = currentShow else { return false }
+        guard let nextShow = try? showRepository.getNextShow(afterDate: current.date) else { return false }
+
+        currentShow = nextShow
+        // Check for user's preferred recording before falling back to best
+        if let preferredId = try? libraryDAO.fetchPreferredRecordingId(nextShow.id),
+           let preferred = try? showRepository.getRecordingById(preferredId) {
+            currentRecording = preferred
+        } else {
+            currentRecording = try? showRepository.getBestRecordingForShow(nextShow.id)
+        }
+
+        if let recording = currentRecording {
+            await fetchTracks(recordingId: recording.identifier)
+        }
+        return true
+    }
+
+    func navigateToPreviousShow() async -> Bool {
+        guard let current = currentShow else { return false }
+        guard let previousShow = try? showRepository.getPreviousShow(beforeDate: current.date) else { return false }
+
+        currentShow = previousShow
+        // Check for user's preferred recording before falling back to best
+        if let preferredId = try? libraryDAO.fetchPreferredRecordingId(previousShow.id),
+           let preferred = try? showRepository.getRecordingById(preferredId) {
+            currentRecording = preferred
+        } else {
+            currentRecording = try? showRepository.getBestRecordingForShow(previousShow.id)
+        }
+
+        if let recording = currentRecording {
+            await fetchTracks(recordingId: recording.identifier)
+        }
+        return true
+    }
+
     // MARK: - PlaylistService
 
     func loadShow(_ showId: String) async {
