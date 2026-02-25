@@ -72,7 +72,14 @@ final class PlaylistServiceImpl: PlaylistService {
         guard index >= 0, index < tracks.count,
               let recording = currentRecording else { return }
         // Propagate the show's ticket art so mini player and full player can display it.
-        let artworkURL = currentShow?.coverImageUrl.flatMap { URL(string: $0) }
+        // Fall back to archive.org's auto-generated image for the recording.
+        let artworkURL: URL? = {
+            if let coverUrl = currentShow?.coverImageUrl, let url = URL(string: coverUrl) {
+                return url
+            }
+            // Fallback: archive.org provides an image service for any item
+            return URL(string: "https://archive.org/services/img/\(recording.identifier)")
+        }()
         let albumTitle = currentShow.map { "\($0.venue.name) — \($0.date)" }
         let showId = currentShow?.id ?? ""
         let recordingId = recording.identifier

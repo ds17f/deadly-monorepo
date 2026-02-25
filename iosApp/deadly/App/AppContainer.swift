@@ -1,6 +1,9 @@
 import AVFoundation
 import SwiftUI
 import SwiftAudioStreamEx
+#if canImport(UIKit)
+import UIKit
+#endif
 
 /// Manual DI container. Owns all service instances for the app lifetime.
 /// Inject via `.environment(\.appContainer, container)` at the root.
@@ -80,6 +83,15 @@ final class AppContainer {
             // thread (from deadlyApp which is @MainActor), so assumeIsolated is safe.
             let player = MainActor.assumeIsolated { StreamPlayer() }
             streamPlayer = player
+
+            // Set app logo as fallback for lock screen / Now Playing when artwork unavailable
+            #if os(iOS)
+            MainActor.assumeIsolated {
+                if let logoImage = UIImage(named: "deadly_logo_square") {
+                    player.setFallbackArtwork(logoImage)
+                }
+            }
+            #endif
 
             // MiniPlayerService is @MainActor; thin adapter over StreamPlayer for the mini player UI
             let miniPlayer = MainActor.assumeIsolated {
