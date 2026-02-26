@@ -69,7 +69,7 @@ struct PlayerScreen: View {
 
     var body: some View {
         ZStack {
-            DeadlyColors.darkBackground.ignoresSafeArea()
+            Color(.systemBackground).ignoresSafeArea()
 
             VStack(spacing: 0) {
                 // Sticky header — drag here to dismiss
@@ -103,13 +103,13 @@ struct PlayerScreen: View {
                             Text(streamPlayer.currentTrack?.title ?? "")
                                 .font(.title3)
                                 .fontWeight(.semibold)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(.primary)
                                 .lineLimit(2)
                                 .multilineTextAlignment(.center)
 
                             Text(streamPlayer.currentTrack?.albumTitle ?? "")
                                 .font(.subheadline)
-                                .foregroundStyle(.white.opacity(0.6))
+                                .foregroundStyle(.secondary)
                                 .lineLimit(1)
                         }
                         .padding(.horizontal, 24)
@@ -141,7 +141,7 @@ struct PlayerScreen: View {
                                 Text("-\(formatTime(streamPlayer.progress.remaining))")
                             }
                             .font(.caption)
-                            .foregroundStyle(.white.opacity(0.5))
+                            .foregroundStyle(.tertiary)
                             .padding(.horizontal, 28)
                         }
 
@@ -151,7 +151,7 @@ struct PlayerScreen: View {
                         if streamPlayer.queueState.totalTracks > 0 {
                             Text("Track \(streamPlayer.queueState.currentIndex + 1) of \(streamPlayer.queueState.totalTracks)")
                                 .font(.caption2)
-                                .foregroundStyle(.white.opacity(0.4))
+                                .foregroundStyle(.tertiary)
                         }
 
                         Spacer().frame(height: 28)
@@ -163,7 +163,7 @@ struct PlayerScreen: View {
                             } label: {
                                 Image(systemName: "backward.fill")
                                     .font(.title)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.primary)
                             }
 
                             Button {
@@ -181,7 +181,7 @@ struct PlayerScreen: View {
                                 Image(systemName: "forward.fill")
                                     .font(.title)
                                     .foregroundStyle(streamPlayer.queueState.hasNext
-                                                     ? .white : .white.opacity(0.3))
+                                                     ? .primary : .tertiary)
                             }
                             .disabled(!streamPlayer.queueState.hasNext)
                         }
@@ -201,7 +201,6 @@ struct PlayerScreen: View {
                 }
             }
         }
-        .preferredColorScheme(.dark)
         .task(id: streamPlayer.currentTrack?.id) {
             let show = container.playlistService.currentShow
             let title = streamPlayer.currentTrack?.title
@@ -237,7 +236,7 @@ struct PlayerScreen: View {
             } label: {
                 Image(systemName: "chevron.down")
                     .font(.title2)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.primary)
             }
             .buttonStyle(.plain)
 
@@ -246,12 +245,12 @@ struct PlayerScreen: View {
             VStack(spacing: 2) {
                 Text("Now Playing")
                     .font(.caption2)
-                    .foregroundStyle(.white.opacity(0.5))
+                    .foregroundStyle(.tertiary)
                     .textCase(.uppercase)
                 Text(streamPlayer.currentTrack?.albumTitle ?? "")
                     .font(.caption)
                     .fontWeight(.semibold)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.primary)
                     .lineLimit(1)
             }
 
@@ -275,10 +274,10 @@ struct PlayerScreen: View {
                     Label("Share", systemImage: "square.and.arrow.up")
                         .font(.subheadline)
                         .fontWeight(.medium)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.primary)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 10)
-                        .background(DeadlyColors.darkSurface)
+                        .background(Color(.secondarySystemBackground))
                         .clipShape(Capsule())
                 }
             }
@@ -290,10 +289,10 @@ struct PlayerScreen: View {
                     Label("View Show", systemImage: "calendar")
                         .font(.subheadline)
                         .fontWeight(.medium)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.primary)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 10)
-                        .background(DeadlyColors.darkSurface)
+                        .background(Color(.secondarySystemBackground))
                         .clipShape(Capsule())
                 }
                 .buttonStyle(.plain)
@@ -307,7 +306,7 @@ struct PlayerScreen: View {
         let panels = container.panelContentService
         if panels.isLoading {
             ProgressView()
-                .tint(.white.opacity(0.5))
+                .tint(.secondary)
                 .padding(.vertical, 16)
         } else {
             VStack(spacing: 16) {

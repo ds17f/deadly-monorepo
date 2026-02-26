@@ -164,7 +164,10 @@ final class PlaylistServiceImpl: PlaylistService {
                 metadata: [
                     "showId": showId,
                     "recordingId": recordingId,
-                    "trackNumber": "\(idx + 1)"
+                    "trackNumber": "\(idx + 1)",
+                    "showDate": currentShow?.date ?? "",
+                    "venue": currentShow?.venue.name ?? "",
+                    "location": currentShow?.location.displayText ?? ""
                 ]
             )
         }

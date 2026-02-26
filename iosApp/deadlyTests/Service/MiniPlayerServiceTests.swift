@@ -47,6 +47,55 @@ struct MiniPlayerServiceTests {
         duration: 180
     )
 
+    /// A track with full show metadata (date + venue).
+    private static let trackWithMetadata = TrackItem(
+        url: URL(string: "https://archive.org/download/gd1977-05-08.sbd/gd77-05-08d1t01.mp3")!,
+        title: "Scarlet Begonias",
+        artist: "Grateful Dead",
+        albumTitle: "Barton Hall — 1977-05-08",
+        duration: 300,
+        metadata: [
+            "showDate": "1977-05-08",
+            "venue": "Barton Hall",
+            "location": "Ithaca, NY"
+        ]
+    )
+
+    /// A track with only a date in metadata (no venue).
+    private static let trackDateOnly = TrackItem(
+        url: URL(string: "https://archive.org/download/gd1977-05-08.sbd/gd77-05-08d1t01.mp3")!,
+        title: "Scarlet Begonias",
+        artist: "Grateful Dead",
+        duration: 300,
+        metadata: ["showDate": "1977-05-08", "venue": "", "location": ""]
+    )
+
+    /// A track with only a venue in metadata (no date).
+    private static let trackVenueOnly = TrackItem(
+        url: URL(string: "https://archive.org/download/gd1977-05-08.sbd/gd77-05-08d1t01.mp3")!,
+        title: "Scarlet Begonias",
+        artist: "Grateful Dead",
+        duration: 300,
+        metadata: ["showDate": "", "venue": "Barton Hall", "location": ""]
+    )
+
+    /// A track with no venue but a location fallback.
+    private static let trackLocationFallback = TrackItem(
+        url: URL(string: "https://archive.org/download/gd1977-05-08.sbd/gd77-05-08d1t01.mp3")!,
+        title: "Scarlet Begonias",
+        artist: "Grateful Dead",
+        duration: 300,
+        metadata: ["showDate": "1977-05-08", "venue": "", "location": "Ithaca, NY"]
+    )
+
+    /// A track with no metadata at all.
+    private static let trackNoMetadata = TrackItem(
+        url: URL(string: "https://archive.org/download/gd1977-05-08.sbd/gd77-05-08d1t01.mp3")!,
+        title: "Scarlet Begonias",
+        artist: "Grateful Dead",
+        duration: 300
+    )
+
     // MARK: - isVisible
 
     /// When no queue is loaded and playback is idle, the mini player should not be visible.
@@ -219,5 +268,100 @@ struct MiniPlayerServiceTests {
         service.skipNext()
 
         #expect(streamPlayer.queueState.currentIndex == 0)
+    }
+
+    // MARK: - playbackProgress
+
+    /// playbackProgress should be 0.0 when nothing is playing.
+    @Test("playbackProgress returns 0 when idle")
+    func playbackProgressZeroWhenIdle() {
+        #expect(service.playbackProgress == 0.0)
+    }
+
+    /// playbackProgress reads through to the StreamPlayer's progress fraction.
+    @Test("playbackProgress reads through to StreamPlayer progress")
+    func playbackProgressReadsStreamPlayer() {
+        streamPlayer.loadQueue([Self.archiveTrack])
+
+        // StreamPlayer progress starts at zero when track first loads
+        #expect(service.playbackProgress >= 0.0)
+        #expect(service.playbackProgress <= 1.0)
+    }
+
+    // MARK: - displaySubtitle
+
+    /// displaySubtitle formats "date - venue" when both are present.
+    @Test("displaySubtitle shows date - venue when both present")
+    func displaySubtitleDateAndVenue() {
+        streamPlayer.loadQueue([Self.trackWithMetadata])
+
+        #expect(service.displaySubtitle == "1977-05-08 - Barton Hall")
+    }
+
+    /// displaySubtitle shows only the date when venue is empty.
+    @Test("displaySubtitle shows date only when venue is empty")
+    func displaySubtitleDateOnly() {
+        streamPlayer.loadQueue([Self.trackDateOnly])
+
+        #expect(service.displaySubtitle == "1977-05-08")
+    }
+
+    /// displaySubtitle shows only the venue when date is empty.
+    @Test("displaySubtitle shows venue only when date is empty")
+    func displaySubtitleVenueOnly() {
+        streamPlayer.loadQueue([Self.trackVenueOnly])
+
+        #expect(service.displaySubtitle == "Barton Hall")
+    }
+
+    /// displaySubtitle returns nil when no metadata is present.
+    @Test("displaySubtitle returns nil when no metadata present")
+    func displaySubtitleNilWhenNoMetadata() {
+        streamPlayer.loadQueue([Self.trackNoMetadata])
+
+        #expect(service.displaySubtitle == nil)
+    }
+
+    // MARK: - venue fallback
+
+    /// venue falls back to location when venue metadata is empty.
+    @Test("venue falls back to location when venue is empty")
+    func venueFallsBackToLocation() {
+        streamPlayer.loadQueue([Self.trackLocationFallback])
+
+        #expect(service.venue == "Ithaca, NY")
+        #expect(service.displaySubtitle == "1977-05-08 - Ithaca, NY")
+    }
+
+    // MARK: - showDate
+
+    /// showDate returns nil when no track is loaded.
+    @Test("showDate returns nil when idle")
+    func showDateNilWhenIdle() {
+        #expect(service.showDate == nil)
+    }
+
+    /// showDate reads through to track metadata.
+    @Test("showDate reads track metadata")
+    func showDateReadsMetadata() {
+        streamPlayer.loadQueue([Self.trackWithMetadata])
+
+        #expect(service.showDate == "1977-05-08")
+    }
+
+    // MARK: - venue
+
+    /// venue returns nil when no track is loaded.
+    @Test("venue returns nil when idle")
+    func venueNilWhenIdle() {
+        #expect(service.venue == nil)
+    }
+
+    /// venue reads through to track metadata.
+    @Test("venue reads track metadata")
+    func venueReadsMetadata() {
+        streamPlayer.loadQueue([Self.trackWithMetadata])
+
+        #expect(service.venue == "Barton Hall")
     }
 }

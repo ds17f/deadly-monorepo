@@ -9,16 +9,16 @@ struct InfoPanelCard: View {
         VStack(alignment: .leading, spacing: 12) {
             Text(title)
                 .font(.headline)
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
 
             Text(content)
                 .font(.subheadline)
-                .foregroundStyle(.white.opacity(0.8))
+                .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(16)
-        .background(DeadlyColors.darkSurface)
+        .background(Color(.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
     }
 }
@@ -31,7 +31,7 @@ struct CreditsPanelCard: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Band")
                 .font(.headline)
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
 
             VStack(alignment: .leading, spacing: 6) {
                 ForEach(members, id: \.name) { member in
@@ -44,13 +44,13 @@ struct CreditsPanelCard: View {
                         }
                     }
                     .font(.subheadline)
-                    .foregroundStyle(.white.opacity(0.8))
+                    .foregroundStyle(.secondary)
                 }
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(16)
-        .background(DeadlyColors.darkSurface)
+        .background(Color(.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
     }
 }

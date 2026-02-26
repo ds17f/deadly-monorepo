@@ -39,6 +39,18 @@ protocol MiniPlayerService: AnyObject {
     /// Error message if playback failed, nil otherwise.
     var errorMessage: String? { get }
 
+    /// Playback progress as a fraction from 0.0 to 1.0.
+    var playbackProgress: Double { get }
+
+    /// Show date from the currently playing track metadata.
+    var showDate: String? { get }
+
+    /// Venue name from the currently playing track metadata.
+    var venue: String? { get }
+
+    /// Formatted subtitle: "date - venue" matching Android format.
+    var displaySubtitle: String? { get }
+
     /// Toggle between play and pause states.
     func togglePlayPause()
 
