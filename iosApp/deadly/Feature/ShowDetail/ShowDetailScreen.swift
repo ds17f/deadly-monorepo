@@ -22,6 +22,7 @@ struct ShowDetailScreen: View {
     @State private var isDownloading = false
     @State private var showRemoveDownloadAlert = false
     @State private var showCancelDownloadAlert = false
+    @State private var showReviewSheet = false
 
     var body: some View {
         Group {
@@ -223,6 +224,9 @@ struct ShowDetailScreen: View {
         .sheet(isPresented: $showMenuSheet) {
             menuSheet(show)
         }
+        .sheet(isPresented: $showReviewSheet) {
+            ReviewDetailsSheet(show: show, playlistService: playlistService)
+        }
         .alert("Remove Download?", isPresented: $showRemoveDownloadAlert) {
             Button("Cancel", role: .cancel) { }
             Button("Remove", role: .destructive) {
@@ -255,7 +259,8 @@ struct ShowDetailScreen: View {
 
     private func ratingCard(_ show: Show) -> some View {
         Button {
-            // TODO: Phase 5 — show review details sheet
+            showReviewSheet = true
+            Task { await playlistService.loadReviews() }
         } label: {
             HStack {
                 HStack(spacing: 8) {

@@ -8,7 +8,9 @@ import SwiftAudioStreamEx
 
 final class StubArchiveMetadataClient: ArchiveMetadataClient, @unchecked Sendable {
     var stubbedTracks: [ArchiveTrack]
+    var stubbedReviews: [Review] = []
     var callCount = 0
+    var reviewCallCount = 0
 
     init(tracks: [ArchiveTrack] = []) {
         self.stubbedTracks = tracks
@@ -18,6 +20,13 @@ final class StubArchiveMetadataClient: ArchiveMetadataClient, @unchecked Sendabl
         callCount += 1
         return stubbedTracks
     }
+
+    func fetchReviews(recordingId: String) async throws -> [Review] {
+        reviewCallCount += 1
+        return stubbedReviews
+    }
+
+    func clearCache(recordingId: String) {}
 }
 
 @MainActor
@@ -200,5 +209,121 @@ struct PlaylistServiceTests {
         service.recordRecentPlay()
 
         #expect(stubRecentShowsService.recordedShowIds.contains(showId))
+    }
+
+    @Test("loadReviews populates reviews from stub")
+    func loadReviewsPopulates() async throws {
+        let showId = "1977-05-08"
+        let recordingId = "gd77-05-08.sbd.hicks.4982.sbeok.shnf"
+        try insertShow(showId, bestRecordingId: recordingId)
+        try insertRecording(identifier: recordingId, showId: showId)
+
+        stubClient.stubbedReviews = [
+            Review(reviewer: "deadhead1", title: "Great show", body: "Amazing performance", rating: 5, reviewDate: "2023-05-15 12:00:00"),
+            Review(reviewer: "deadhead2", title: nil, body: "Good stuff", rating: 4, reviewDate: nil),
+        ]
+
+        await service.loadShow(showId)
+        await service.loadReviews()
+
+        #expect(service.reviews.count == 2)
+        #expect(service.reviews[0].reviewer == "deadhead1")
+        #expect(service.reviews[1].rating == 4)
+        #expect(stubClient.reviewCallCount == 1)
+    }
+
+    @Test("selectRecording clears stale reviews")
+    func selectRecordingClearsReviews() async throws {
+        let showId = "1977-05-08"
+        let recordingId = "gd77-05-08.sbd.hicks.4982.sbeok.shnf"
+        try insertShow(showId, bestRecordingId: recordingId)
+        try insertRecording(identifier: recordingId, showId: showId)
+
+        stubClient.stubbedReviews = [
+            Review(reviewer: "user1", rating: 5),
+        ]
+
+        await service.loadShow(showId)
+        await service.loadReviews()
+        #expect(service.reviews.count == 1)
+
+        // Selecting the same recording should clear reviews
+        await service.selectRecording(service.currentRecording!)
+        #expect(service.reviews.isEmpty)
+    }
+}
+
+// MARK: - parseReviews Tests
+
+@Suite("ArchiveMetadataClient.parseReviews Tests")
+struct ParseReviewsTests {
+
+    @Test("parseReviews extracts valid reviews from JSON")
+    func parseValidReviews() throws {
+        let json: [String: Any] = [
+            "reviews": [
+                [
+                    "reviewer": "deadhead1",
+                    "reviewtitle": "Great show",
+                    "reviewbody": "Amazing performance",
+                    "stars": "5",
+                    "reviewdate": "2023-05-15 12:00:00"
+                ],
+                [
+                    "reviewer": "deadhead2",
+                    "reviewtitle": "Pretty good",
+                    "reviewbody": "Solid second set",
+                    "stars": 4,
+                    "reviewdate": "2023-06-01 10:00:00"
+                ]
+            ]
+        ]
+        let data = try JSONSerialization.data(withJSONObject: json)
+        let reviews = URLSessionArchiveMetadataClient.parseReviews(from: data)
+
+        #expect(reviews.count == 2)
+        #expect(reviews[0].reviewer == "deadhead1")
+        #expect(reviews[0].title == "Great show")
+        #expect(reviews[0].body == "Amazing performance")
+        #expect(reviews[0].rating == 5)
+        #expect(reviews[0].reviewDate == "2023-05-15 12:00:00")
+        #expect(reviews[1].rating == 4)
+    }
+
+    @Test("parseReviews returns empty when reviews key is missing")
+    func parseMissingReviewsKey() throws {
+        let json: [String: Any] = ["files": []]
+        let data = try JSONSerialization.data(withJSONObject: json)
+        let reviews = URLSessionArchiveMetadataClient.parseReviews(from: data)
+
+        #expect(reviews.isEmpty)
+    }
+
+    @Test("parseReviews handles partial data gracefully")
+    func parsePartialData() throws {
+        let json: [String: Any] = [
+            "reviews": [
+                ["reviewer": "user1"],
+                ["stars": "3", "reviewbody": "Decent show"]
+            ]
+        ]
+        let data = try JSONSerialization.data(withJSONObject: json)
+        let reviews = URLSessionArchiveMetadataClient.parseReviews(from: data)
+
+        #expect(reviews.count == 2)
+        #expect(reviews[0].reviewer == "user1")
+        #expect(reviews[0].rating == nil)
+        #expect(reviews[1].reviewer == nil)
+        #expect(reviews[1].rating == 3)
+        #expect(reviews[1].body == "Decent show")
+    }
+
+    @Test("parseReviews returns empty for empty reviews array")
+    func parseEmptyArray() throws {
+        let json: [String: Any] = ["reviews": []]
+        let data = try JSONSerialization.data(withJSONObject: json)
+        let reviews = URLSessionArchiveMetadataClient.parseReviews(from: data)
+
+        #expect(reviews.isEmpty)
     }
 }

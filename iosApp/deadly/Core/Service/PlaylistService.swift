@@ -8,6 +8,12 @@ protocol PlaylistService: AnyObject {
     var isLoadingTracks: Bool { get }
     var trackLoadError: String? { get }
 
+    // Reviews
+    var reviews: [Review] { get }
+    var isLoadingReviews: Bool { get }
+    var reviewsError: String? { get }
+    func loadReviews() async
+
     // Show navigation
     var hasNextShow: Bool { get }
     var hasPreviousShow: Bool { get }

@@ -2,6 +2,7 @@ import Foundation
 
 protocol ArchiveMetadataClient: Sendable {
     func fetchTracks(recordingId: String) async throws -> [ArchiveTrack]
+    func fetchReviews(recordingId: String) async throws -> [Review]
     func clearCache(recordingId: String)
 }
 
@@ -24,6 +25,10 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
 
     private func cacheFile(for recordingId: String) -> URL {
         cacheDirectory.appendingPathComponent("\(recordingId).tracks.json")
+    }
+
+    private func reviewsCacheFile(for recordingId: String) -> URL {
+        cacheDirectory.appendingPathComponent("\(recordingId).reviews.json")
     }
 
     private func isCacheExpired(_ modificationDate: Date) -> Bool {
@@ -67,8 +72,45 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
         }
     }
 
+    func fetchReviews(recordingId: String) async throws -> [Review] {
+        let cache = reviewsCacheFile(for: recordingId)
+
+        // Check fresh cache first
+        if let attrs = try? FileManager.default.attributesOfItem(atPath: cache.path),
+           let modDate = attrs[.modificationDate] as? Date,
+           !isCacheExpired(modDate),
+           let data = try? Data(contentsOf: cache),
+           let reviews = try? JSONDecoder().decode([Review].self, from: data) {
+            return reviews
+        }
+
+        // Cache miss or expired - try network
+        do {
+            guard let url = URL(string: "https://archive.org/metadata/\(recordingId)") else {
+                throw URLError(.badURL)
+            }
+            let (data, _) = try await session.data(from: url)
+            let reviews = Self.parseReviews(from: data)
+
+            // Cache the result
+            if let encoded = try? JSONEncoder().encode(reviews) {
+                try? encoded.write(to: cache)
+            }
+
+            return reviews
+        } catch {
+            // Fallback: serve expired cache if available
+            if let data = try? Data(contentsOf: cache),
+               let reviews = try? JSONDecoder().decode([Review].self, from: data) {
+                return reviews
+            }
+            throw error
+        }
+    }
+
     func clearCache(recordingId: String) {
         try? FileManager.default.removeItem(at: cacheFile(for: recordingId))
+        try? FileManager.default.removeItem(at: reviewsCacheFile(for: recordingId))
     }
 
     // MARK: - Parsing (internal for testing)
@@ -108,6 +150,28 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
         return tracks.sorted { a, b in
             if a.trackNumber != b.trackNumber { return a.trackNumber < b.trackNumber }
             return a.name < b.name
+        }
+    }
+
+    static func parseReviews(from data: Data) -> [Review] {
+        guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let reviews = json["reviews"] as? [[String: Any]] else {
+            return []
+        }
+
+        return reviews.compactMap { entry -> Review? in
+            let reviewer = stringField(entry["reviewer"])
+            let title = stringField(entry["reviewtitle"])
+            let body = stringField(entry["reviewbody"])
+            let reviewDate = stringField(entry["reviewdate"])
+            let rating: Int? = {
+                if let str = stringField(entry["stars"]) { return Int(str) }
+                if let num = entry["stars"] as? Int { return num }
+                if let num = entry["stars"] as? Double { return Int(num) }
+                return nil
+            }()
+            return Review(reviewer: reviewer, title: title, body: body,
+                          rating: rating, reviewDate: reviewDate)
         }
     }
 
