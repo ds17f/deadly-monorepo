@@ -212,7 +212,7 @@ struct SearchScreen: View {
                 Spacer()
             }
             .padding(12)
-            .background(DeadlyColors.darkSurface, in: RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
+            .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
         }
         .buttonStyle(.plain)
     }

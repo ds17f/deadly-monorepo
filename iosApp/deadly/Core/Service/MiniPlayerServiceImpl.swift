@@ -64,6 +64,34 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         return nil
     }
 
+    var playbackProgress: Double {
+        streamPlayer.progress.progress
+    }
+
+    var showDate: String? {
+        let d = streamPlayer.currentTrack?.metadata["showDate"]
+        return (d?.isEmpty == false) ? d : nil
+    }
+
+    var venue: String? {
+        let v = streamPlayer.currentTrack?.metadata["venue"]
+        if v?.isEmpty == false { return v }
+        let loc = streamPlayer.currentTrack?.metadata["location"]
+        return (loc?.isEmpty == false) ? loc : nil
+    }
+
+    var displaySubtitle: String? {
+        var result = ""
+        if let date = showDate {
+            result += date
+        }
+        if let v = venue {
+            if !result.isEmpty { result += " - " }
+            result += v
+        }
+        return result.isEmpty ? nil : result
+    }
+
     // MARK: - Actions
 
     func togglePlayPause() {
