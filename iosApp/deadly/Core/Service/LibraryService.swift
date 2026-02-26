@@ -10,7 +10,7 @@ final class LibraryServiceImpl {
     private let libraryDAO: LibraryDAO
     private let showRepository: any ShowRepository
 
-    private(set) var shows: [Show] = []
+    private(set) var shows: [LibraryShow] = []
     private(set) var isLoading = false
 
     nonisolated init(
@@ -66,6 +66,11 @@ final class LibraryServiceImpl {
         try libraryDAO.isInLibrary(showId)
     }
 
+    func togglePin(showId: String) throws {
+        guard let existing = try libraryDAO.fetchById(showId) else { return }
+        try libraryDAO.updatePinStatus(showId, isPinned: !existing.isPinned)
+    }
+
     // MARK: - Fetch
 
     func refresh(sortedBy option: LibrarySortOption = .dateAdded, direction: LibrarySortDirection = .descending) {
@@ -75,7 +80,17 @@ final class LibraryServiceImpl {
             let records = try libraryDAO.fetchAll()
             let ids = records.map(\.showId)
             let fetched = try showRepository.getShowsByIds(ids)
-            shows = sort(fetched, by: option, direction: direction)
+            let showMap = Dictionary(uniqueKeysWithValues: fetched.map { ($0.id, $0) })
+
+            let libraryShows: [LibraryShow] = records.compactMap { record in
+                guard let show = showMap[record.showId] else { return nil }
+                return LibraryShow(
+                    show: show,
+                    addedToLibraryAt: record.addedToLibraryAt,
+                    isPinned: record.isPinned
+                )
+            }
+            shows = sort(libraryShows, by: option, direction: direction)
         } catch {
             // Leave existing shows on error
         }
@@ -83,22 +98,24 @@ final class LibraryServiceImpl {
 
     // MARK: - Private
 
-    private func sort(_ shows: [Show], by option: LibrarySortOption, direction: LibrarySortDirection) -> [Show] {
+    private func sort(_ shows: [LibraryShow], by option: LibrarySortOption, direction: LibrarySortDirection) -> [LibraryShow] {
         let ascending = direction == .ascending
         return shows.sorted { a, b in
+            // Pinned always first, regardless of sort direction
+            if a.isPinned != b.isPinned {
+                return a.isPinned
+            }
             let result: Bool
             switch option {
             case .dateAdded:
-                let aVal = a.libraryAddedAt ?? 0
-                let bVal = b.libraryAddedAt ?? 0
-                result = aVal < bVal
+                result = a.addedToLibraryAt < b.addedToLibraryAt
             case .dateOfShow:
-                result = a.date < b.date
+                result = a.show.date < b.show.date
             case .venue:
-                result = a.venue.name.localizedCompare(b.venue.name) == .orderedAscending
+                result = a.show.venue.name.localizedCompare(b.show.venue.name) == .orderedAscending
             case .rating:
-                let aVal = a.averageRating ?? 0
-                let bVal = b.averageRating ?? 0
+                let aVal = a.show.averageRating ?? 0
+                let bVal = b.show.averageRating ?? 0
                 result = aVal < bVal
             }
             return ascending ? result : !result
