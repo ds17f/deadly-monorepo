@@ -44,11 +44,21 @@ struct ShowArtwork: View {
         }
         .task(id: resolvedUrl?.absoluteString) {
             loadAttempted = false
-            uiImage = nil
             guard let url = resolvedUrl else {
+                uiImage = nil
                 loadAttempted = true
                 return
             }
+
+            // Check memory cache synchronously first to avoid placeholder flash
+            if let memCached = ImageCache.shared.cachedImage(for: url), !isWaveform(memCached) {
+                uiImage = memCached
+                loadAttempted = true
+                return
+            }
+
+            // Not in memory - clear and load (may show placeholder briefly)
+            uiImage = nil
             if let cached = await ImageCache.shared.image(for: url), !isWaveform(cached) {
                 uiImage = cached
             }

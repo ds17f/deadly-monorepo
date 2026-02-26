@@ -61,6 +61,7 @@ final class PlaylistServiceImpl: PlaylistService {
         if let recording = currentRecording {
             await fetchTracks(recordingId: recording.identifier)
         }
+        prefetchAdjacentShowImages()
         return true
     }
 
@@ -80,6 +81,7 @@ final class PlaylistServiceImpl: PlaylistService {
         if let recording = currentRecording {
             await fetchTracks(recordingId: recording.identifier)
         }
+        prefetchAdjacentShowImages()
         return true
     }
 
@@ -102,6 +104,7 @@ final class PlaylistServiceImpl: PlaylistService {
             if let recording = currentRecording {
                 await fetchTracks(recordingId: recording.identifier)
             }
+            prefetchAdjacentShowImages()
         } catch {
             trackLoadError = error.localizedDescription
         }
@@ -175,5 +178,44 @@ final class PlaylistServiceImpl: PlaylistService {
             trackLoadError = error.localizedDescription
             tracks = []
         }
+    }
+
+    // MARK: - Image Prefetching
+
+    private func prefetchAdjacentShowImages() {
+        guard let current = currentShow else { return }
+
+        var urlsToPrefetch: [URL] = []
+
+        // Get next 2 shows
+        if let next1 = try? showRepository.getNextShow(afterDate: current.date) {
+            urlsToPrefetch.append(contentsOf: imageURLs(for: next1))
+            if let next2 = try? showRepository.getNextShow(afterDate: next1.date) {
+                urlsToPrefetch.append(contentsOf: imageURLs(for: next2))
+            }
+        }
+
+        // Get previous 2 shows
+        if let prev1 = try? showRepository.getPreviousShow(beforeDate: current.date) {
+            urlsToPrefetch.append(contentsOf: imageURLs(for: prev1))
+            if let prev2 = try? showRepository.getPreviousShow(beforeDate: prev1.date) {
+                urlsToPrefetch.append(contentsOf: imageURLs(for: prev2))
+            }
+        }
+
+        Task {
+            await ImageCache.shared.prefetch(urls: urlsToPrefetch)
+        }
+    }
+
+    private func imageURLs(for show: Show) -> [URL] {
+        if let coverUrl = show.coverImageUrl, let url = URL(string: coverUrl) {
+            return [url]
+        }
+        if let recordingId = show.bestRecordingId,
+           let url = URL(string: "https://archive.org/services/img/\(recordingId)") {
+            return [url]
+        }
+        return []
     }
 }
