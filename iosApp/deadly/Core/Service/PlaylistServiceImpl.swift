@@ -10,6 +10,10 @@ final class PlaylistServiceImpl: PlaylistService {
     private(set) var isLoadingTracks = false
     private(set) var trackLoadError: String?
 
+    private(set) var reviews: [Review] = []
+    private(set) var isLoadingReviews = false
+    private(set) var reviewsError: String?
+
     private let showRepository: any ShowRepository
     private let archiveClient: any ArchiveMetadataClient
     private let recentShowsService: RecentShowsService
@@ -50,6 +54,8 @@ final class PlaylistServiceImpl: PlaylistService {
         guard let nextShow = try? showRepository.getNextShow(afterDate: current.date) else { return false }
 
         currentShow = nextShow
+        reviews = []
+        reviewsError = nil
         // Check for user's preferred recording before falling back to best
         if let preferredId = try? libraryDAO.fetchPreferredRecordingId(nextShow.id),
            let preferred = try? showRepository.getRecordingById(preferredId) {
@@ -70,6 +76,8 @@ final class PlaylistServiceImpl: PlaylistService {
         guard let previousShow = try? showRepository.getPreviousShow(beforeDate: current.date) else { return false }
 
         currentShow = previousShow
+        reviews = []
+        reviewsError = nil
         // Check for user's preferred recording before falling back to best
         if let preferredId = try? libraryDAO.fetchPreferredRecordingId(previousShow.id),
            let preferred = try? showRepository.getRecordingById(preferredId) {
@@ -112,6 +120,8 @@ final class PlaylistServiceImpl: PlaylistService {
 
     func selectRecording(_ recording: Recording) async {
         currentRecording = recording
+        reviews = []
+        reviewsError = nil
         await fetchTracks(recordingId: recording.identifier)
     }
 
@@ -164,6 +174,19 @@ final class PlaylistServiceImpl: PlaylistService {
     func recordRecentPlay() {
         guard let show = currentShow else { return }
         recentShowsService.recordShowPlay(showId: show.id)
+    }
+
+    func loadReviews() async {
+        guard let recording = currentRecording else { return }
+        isLoadingReviews = true
+        reviewsError = nil
+        defer { isLoadingReviews = false }
+        do {
+            reviews = try await archiveClient.fetchReviews(recordingId: recording.identifier)
+        } catch {
+            reviewsError = error.localizedDescription
+            reviews = []
+        }
     }
 
     // MARK: - Private
