@@ -16,9 +16,9 @@ struct ShowDetailScreen: View {
         playlistService.currentShow?.id ?? showId
     }
 
+    @State private var showMenuSheet = false
     @State private var showRecordingPicker = false
     @State private var isInLibrary = false
-    @State private var showShareSheet = false
     @State private var isDownloading = false
     @State private var showRemoveDownloadAlert = false
     @State private var showCancelDownloadAlert = false
@@ -53,32 +53,56 @@ struct ShowDetailScreen: View {
         List {
             // Header
             Section {
-                VStack(alignment: .center, spacing: 12) {
+                VStack(spacing: 12) {
                     ShowArtwork(
                         recordingId: playlistService.currentRecording?.identifier,
                         imageUrl: show.coverImageUrl,
-                        size: 200,
-                        cornerRadius: DeadlySize.carouselCornerRadius
+                        size: 220,
+                        cornerRadius: DeadlySize.cardCornerRadius
                     )
+                    .frame(maxWidth: .infinity)
 
-                    Text(DateFormatting.formatShowDate(show.date))
-                        .font(.headline)
+                    HStack(alignment: .top) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(DateFormatting.formatShowDate(show.date))
+                                .font(.headline)
+                                .bold()
 
-                    Text(show.venue.name)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                            Text("\(show.venue.name), \(show.location.displayText)")
+                                .font(.body)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(3)
+                        }
 
-                    Text(show.location.displayText)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                        Spacer()
 
-                    if show.hasRating {
-                        Text(show.displayRating)
-                            .font(.caption)
-                            .foregroundStyle(DeadlyColors.secondary)
+                        HStack(spacing: 8) {
+                            Button {
+                                Task { await playlistService.navigateToPreviousShow() }
+                            } label: {
+                                Image(systemName: "chevron.left")
+                                    .font(.title2)
+                                    .foregroundColor(playlistService.hasPreviousShow ? .secondary : .secondary.opacity(0.3))
+                                    .frame(width: 40, height: 40)
+                            }
+                            .disabled(!playlistService.hasPreviousShow)
+                            .buttonStyle(.plain)
+
+                            Button {
+                                Task { await playlistService.navigateToNextShow() }
+                            } label: {
+                                Image(systemName: "chevron.right")
+                                    .font(.title2)
+                                    .foregroundColor(playlistService.hasNextShow ? .secondary : .secondary.opacity(0.3))
+                                    .frame(width: 40, height: 40)
+                            }
+                            .disabled(!playlistService.hasNextShow)
+                            .buttonStyle(.plain)
+                        }
                     }
+
+                    ratingCard(show)
                 }
-                .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)
             }
             .listRowBackground(Color.clear)
@@ -104,74 +128,46 @@ struct ShowDetailScreen: View {
 
                     downloadButton
 
-                    if let text = shareText(show: show) {
-                        ShareLink(item: text) {
-                            Image(systemName: "square.and.arrow.up")
-                                .font(.title2)
-                                .foregroundStyle(.secondary)
-                                .frame(width: 44, height: 44)
-                        }
-                        .buttonStyle(.plain)
+                    // Setlist button (placeholder)
+                    Button {
+                        // TODO: Phase 5 — show setlist sheet
+                    } label: {
+                        Image(systemName: "list.bullet.rectangle")
+                            .font(.title2)
+                            .foregroundStyle(.secondary)
+                            .frame(width: 44, height: 44)
                     }
+                    .buttonStyle(.plain)
+
+                    // Collections button (placeholder)
+                    Button {
+                        // TODO: Phase 5 — show collections sheet
+                    } label: {
+                        Image(systemName: "rectangle.stack")
+                            .font(.title2)
+                            .foregroundStyle(.secondary)
+                            .frame(width: 44, height: 44)
+                    }
+                    .buttonStyle(.plain)
+
+                    // Menu button
+                    Button {
+                        showMenuSheet = true
+                    } label: {
+                        Image(systemName: "ellipsis")
+                            .font(.title2)
+                            .foregroundStyle(.secondary)
+                            .frame(width: 44, height: 44)
+                    }
+                    .buttonStyle(.plain)
 
                     Spacer()
 
-                    // Prev/Next show navigation
-                    HStack(spacing: 0) {
-                        Button {
-                            Task { await playlistService.navigateToPreviousShow() }
-                        } label: {
-                            Image(systemName: "chevron.left")
-                                .font(.title2)
-                                .foregroundColor(playlistService.hasPreviousShow ? .secondary : .secondary.opacity(0.3))
-                                .frame(width: 44, height: 44)
-                        }
-                        .disabled(!playlistService.hasPreviousShow)
-                        .buttonStyle(.plain)
-
-                        Button {
-                            Task { await playlistService.navigateToNextShow() }
-                        } label: {
-                            Image(systemName: "chevron.right")
-                                .font(.title2)
-                                .foregroundColor(playlistService.hasNextShow ? .secondary : .secondary.opacity(0.3))
-                                .frame(width: 44, height: 44)
-                        }
-                        .disabled(!playlistService.hasNextShow)
-                        .buttonStyle(.plain)
-                    }
+                    playButton
                 }
             }
             .listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
-
-            // Recording bar
-            if let recording = playlistService.currentRecording {
-                Section {
-                    HStack {
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(recording.displayTitle)
-                                .font(.subheadline)
-
-                            if let taper = recording.taper {
-                                Text("Taper: \(taper)")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-
-                        Spacer()
-
-                        if show.hasMultipleRecordings {
-                            Button("Switch") {
-                                showRecordingPicker = true
-                            }
-                            .buttonStyle(.bordered)
-                            .controlSize(.small)
-                        }
-                    }
-                }
-            }
 
             // Track list
             Section("Tracks") {
@@ -224,6 +220,9 @@ struct ShowDetailScreen: View {
         .sheet(isPresented: $showRecordingPicker) {
             RecordingPicker(show: show, playlistService: playlistService)
         }
+        .sheet(isPresented: $showMenuSheet) {
+            menuSheet(show)
+        }
         .alert("Remove Download?", isPresented: $showRemoveDownloadAlert) {
             Button("Cancel", role: .cancel) { }
             Button("Remove", role: .destructive) {
@@ -250,6 +249,132 @@ struct ShowDetailScreen: View {
             systemImage: "exclamationmark.triangle",
             description: Text(playlistService.trackLoadError ?? "")
         )
+    }
+
+    // MARK: - Rating card
+
+    private func ratingCard(_ show: Show) -> some View {
+        Button {
+            // TODO: Phase 5 — show review details sheet
+        } label: {
+            HStack {
+                HStack(spacing: 8) {
+                    CompactStarRating(rating: show.averageRating)
+                    Text(show.hasRating
+                        ? String(format: "%.1f", show.averageRating!)
+                        : "N/A")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(show.hasRating ? .primary : .secondary)
+                }
+
+                Spacer()
+
+                HStack(spacing: 4) {
+                    Text(show.totalReviews > 0
+                        ? "(\(show.totalReviews))"
+                        : "No reviews")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(12)
+            .background(Color(.systemGray6).opacity(0.5))
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+        }
+        .buttonStyle(.plain)
+    }
+
+    // MARK: - Menu sheet
+
+    private func menuSheet(_ show: Show) -> some View {
+        NavigationStack {
+            List {
+                if let text = shareText(show: show) {
+                    ShareLink(item: text) {
+                        Label("Share", systemImage: "square.and.arrow.up")
+                    }
+                }
+
+                if show.hasMultipleRecordings {
+                    Button {
+                        showMenuSheet = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            showRecordingPicker = true
+                        }
+                    } label: {
+                        Label("Choose Recording", systemImage: "waveform.circle")
+                    }
+                }
+            }
+            .navigationTitle("Options")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Done") {
+                        showMenuSheet = false
+                    }
+                }
+            }
+        }
+        .presentationDetents([.medium])
+    }
+
+    // MARK: - Play button
+
+    private var playButton: some View {
+        Button {
+            handlePlayToggle()
+        } label: {
+            ZStack {
+                Circle()
+                    .fill(DeadlyColors.primary.opacity(0.1))
+                    .frame(width: 56, height: 56)
+
+                if isCurrentShowLoading {
+                    ProgressView()
+                        .tint(DeadlyColors.primary)
+                } else {
+                    Image(systemName: isCurrentShowPlaying ? "pause.circle.fill" : "play.circle.fill")
+                        .font(.system(size: 32))
+                        .foregroundStyle(DeadlyColors.primary)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+    }
+
+    private var isCurrentShowPlaying: Bool {
+        guard let currentTrackURL = streamPlayer.currentTrack?.url,
+              let recording = playlistService.currentRecording else { return false }
+        let isThisShow = playlistService.tracks.contains { track in
+            currentTrackURL == track.streamURL(recordingId: recording.identifier)
+        }
+        return isThisShow && streamPlayer.playbackState.isPlaying
+    }
+
+    private var isCurrentShowLoading: Bool {
+        guard let currentTrackURL = streamPlayer.currentTrack?.url,
+              let recording = playlistService.currentRecording else { return false }
+        let isThisShow = playlistService.tracks.contains { track in
+            currentTrackURL == track.streamURL(recordingId: recording.identifier)
+        }
+        let state = streamPlayer.playbackState
+        return isThisShow && (state == .loading || state == .buffering)
+    }
+
+    private func handlePlayToggle() {
+        if isCurrentShowPlaying {
+            streamPlayer.pause()
+        } else if isCurrentShowLoading {
+            // Do nothing while loading
+        } else {
+            playlistService.playTrack(at: 0)
+            playlistService.recordRecentPlay()
+        }
     }
 
     // MARK: - Helpers
