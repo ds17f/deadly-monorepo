@@ -45,7 +45,6 @@ struct LibraryScreen: View {
     @State private var displayMode: LibraryDisplayMode = .list
     @State private var activeDecadeFilter: Int?
     @State private var activeSeasonFilter: Season?
-    @State private var showingFilterSheet = false
 
     // Import / Export state
     @State private var showingLibraryFilePicker = false
@@ -55,13 +54,16 @@ struct LibraryScreen: View {
     @State private var libraryExportData: Data?
     @State private var showingLibraryExportShare = false
 
-    private var filteredShows: [Show] {
-        service.shows.filter { show in
+    // QR Code sheet state
+    @State private var qrCodeShow: LibraryShow?
+
+    private var filteredShows: [LibraryShow] {
+        service.shows.filter { libraryShow in
             guard let decade = activeDecadeFilter else { return true }
             let decadeRange = (decade...decade + 9)
-            guard decadeRange.contains(show.year) else { return false }
+            guard decadeRange.contains(libraryShow.show.year) else { return false }
             if let season = activeSeasonFilter {
-                let month = showMonth(show)
+                let month = showMonth(libraryShow)
                 return season.months.contains(month)
             }
             return true
@@ -70,7 +72,8 @@ struct LibraryScreen: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            headerBar
+            filterChips
+            sortAndDisplayControls
             Divider()
 
             if service.isLoading {
@@ -95,9 +98,11 @@ struct LibraryScreen: View {
                 }
             }
         }
-        .navigationTitle("Library")
-        .sheet(isPresented: $showingFilterSheet) {
-            filterSheet
+        .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            if let mode = LibraryDisplayMode(rawValue: container.appPreferences.libraryDisplayMode) {
+                displayMode = mode
+            }
         }
         .task {
             service.refresh(sortedBy: sortOption, direction: sortDirection)
@@ -110,12 +115,21 @@ struct LibraryScreen: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-                NavigationLink(value: LibraryRoute.downloads) {
-                    Image(systemName: "arrow.down.circle")
+                HStack(spacing: 8) {
+                    Image("deadly_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 28, height: 28)
+                    Text("Your Library")
+                        .font(.title3)
+                        .fontWeight(.bold)
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
+                    NavigationLink(value: LibraryRoute.downloads) {
+                        Label("Downloads", systemImage: "arrow.down.circle")
+                    }
                     Button {
                         showingLibraryFilePicker = true
                     } label: {
@@ -180,63 +194,120 @@ struct LibraryScreen: View {
                 LibraryExportShareSheet(data: data, filename: container.libraryImportExportService.exportFilename())
             }
         }
+        .sheet(item: $qrCodeShow) { libraryShow in
+            QRCodeView(show: libraryShow.show)
+        }
     }
 
-    // MARK: - Header bar
+    // MARK: - Filter chips
 
-    private var headerBar: some View {
-        HStack(spacing: 12) {
-            Text("\(service.shows.count) shows")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-
-            Spacer()
-
-            Menu {
-                ForEach(LibrarySortOption.allCases, id: \.self) { option in
-                    Button(sortOptionLabel(option)) {
-                        sortOption = option
+    private var filterChips: some View {
+        VStack(spacing: 4) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    ForEach(decades) { decade in
+                        chipButton(
+                            label: decade.label,
+                            isActive: activeDecadeFilter == decade.range.lowerBound
+                        ) {
+                            if activeDecadeFilter == decade.range.lowerBound {
+                                activeDecadeFilter = nil
+                                activeSeasonFilter = nil
+                            } else {
+                                activeDecadeFilter = decade.range.lowerBound
+                                activeSeasonFilter = nil
+                            }
+                        }
                     }
                 }
+                .padding(.horizontal, DeadlySpacing.screenPadding)
+            }
+
+            if activeDecadeFilter != nil {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(Season.allCases, id: \.self) { season in
+                            chipButton(
+                                label: season.rawValue,
+                                isActive: activeSeasonFilter == season
+                            ) {
+                                activeSeasonFilter = (activeSeasonFilter == season) ? nil : season
+                            }
+                        }
+                    }
+                    .padding(.horizontal, DeadlySpacing.screenPadding)
+                }
+            }
+        }
+        .padding(.vertical, 4)
+    }
+
+    private func chipButton(label: String, isActive: Bool, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(label)
+                .font(.caption)
+                .fontWeight(.medium)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(isActive ? DeadlyColors.primary : Color(.systemGray5))
+                .foregroundStyle(isActive ? .white : .primary)
+                .clipShape(Capsule())
+        }
+    }
+
+    // MARK: - Sort and display controls
+
+    private var sortAndDisplayControls: some View {
+        HStack {
+            Menu {
+                ForEach(LibrarySortOption.allCases, id: \.self) { option in
+                    Button(sortOptionLabel(option)) { sortOption = option }
+                }
             } label: {
-                Label(sortOptionLabel(sortOption), systemImage: "arrow.up.arrow.down")
-                    .font(.subheadline)
+                HStack(spacing: 6) {
+                    Image(systemName: "arrow.up.arrow.down")
+                    Text(sortOptionLabel(sortOption))
+                        .fontWeight(.medium)
+                }
+                .font(.body)
+                .frame(minHeight: 44)
             }
 
             Button {
                 sortDirection = sortDirection == .ascending ? .descending : .ascending
             } label: {
-                Image(systemName: sortDirection == .ascending ? "arrow.up" : "arrow.down")
+                Image(systemName: sortDirection == .ascending ? "chevron.up" : "chevron.down")
+                    .font(.subheadline)
+                    .frame(minWidth: 44, minHeight: 44)
             }
 
+            Spacer()
+
             Button {
-                displayMode = displayMode == .list ? .grid : .list
+                let newMode: LibraryDisplayMode = displayMode == .list ? .grid : .list
+                displayMode = newMode
+                container.appPreferences.libraryDisplayMode = newMode.rawValue
             } label: {
                 Image(systemName: displayMode == .list ? "square.grid.2x2" : "list.bullet")
-            }
-
-            Button {
-                showingFilterSheet = true
-            } label: {
-                Image(systemName: "line.3.horizontal.decrease.circle")
-                    .foregroundStyle(activeDecadeFilter != nil ? DeadlyColors.primary : .primary)
+                    .font(.body)
+                    .frame(minWidth: 44, minHeight: 44)
             }
         }
         .padding(.horizontal, DeadlySpacing.screenPadding)
-        .padding(.vertical, 8)
     }
 
     // MARK: - List view
 
     private var listView: some View {
         List {
-            ForEach(filteredShows) { show in
-                ShowRowView(show: show)
+            ForEach(filteredShows) { libraryShow in
+                ShowRowView(libraryShow: libraryShow)
+                    .contextMenu { libraryContextMenu(for: libraryShow) }
             }
             .onDelete { indexSet in
                 for index in indexSet {
-                    let show = filteredShows[index]
-                    try? service.removeFromLibrary(showId: show.id)
+                    let libraryShow = filteredShows[index]
+                    try? service.removeFromLibrary(showId: libraryShow.show.id)
                 }
                 service.refresh(sortedBy: sortOption, direction: sortDirection)
             }
@@ -246,18 +317,19 @@ struct LibraryScreen: View {
 
     // MARK: - Grid view
 
-    private let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    private let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
     private var gridView: some View {
         GeometryReader { geo in
-            let cardSize = (geo.size.width - DeadlySpacing.screenPadding * 2 - DeadlySpacing.gridSpacing) / 2
+            let cardSize = (geo.size.width - DeadlySpacing.screenPadding * 2 - DeadlySpacing.gridSpacing * 2) / 3
             ScrollView {
-                LazyVGrid(columns: columns, spacing: DeadlySpacing.gridSpacing) {
-                    ForEach(filteredShows) { show in
-                        NavigationLink(value: show.id) {
-                            gridCard(show, size: cardSize)
+                LazyVGrid(columns: columns, spacing: DeadlySpacing.itemSpacing) {
+                    ForEach(filteredShows) { libraryShow in
+                        NavigationLink(value: libraryShow.show.id) {
+                            gridCard(libraryShow, size: cardSize)
                         }
                         .buttonStyle(.plain)
+                        .contextMenu { libraryContextMenu(for: libraryShow) }
                     }
                 }
                 .padding(DeadlySpacing.screenPadding)
@@ -265,8 +337,10 @@ struct LibraryScreen: View {
         }
     }
 
-    private func gridCard(_ show: Show, size: CGFloat) -> some View {
-        ZStack(alignment: .bottomLeading) {
+    private func gridCard(_ libraryShow: LibraryShow, size: CGFloat) -> some View {
+        let show = libraryShow.show
+        let downloadStatus = container.downloadService.downloadStatus(for: show.id)
+        return VStack(alignment: .leading, spacing: 4) {
             ShowArtwork(
                 recordingId: show.bestRecordingId,
                 imageUrl: show.coverImageUrl,
@@ -275,61 +349,34 @@ struct LibraryScreen: View {
             )
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(DateFormatting.formatShowDate(show.date, style: .short))
-                    .font(.caption)
-                    .fontWeight(.semibold)
+                HStack(spacing: 2) {
+                    if libraryShow.isPinned {
+                        Image(systemName: "pin.fill")
+                            .font(.system(size: 8))
+                            .foregroundStyle(DeadlyColors.primary)
+                    }
+                    if downloadStatus == .completed {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 8))
+                            .foregroundStyle(DeadlyColors.primary)
+                    }
+                    Text(DateFormatting.formatShowDate(show.date, style: .short))
+                        .font(.caption2)
+                        .fontWeight(.semibold)
+                        .lineLimit(1)
+                }
+
                 Text(show.venue.name)
                     .font(.caption2)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+
+                Text(show.location.displayText)
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
                     .lineLimit(1)
             }
-            .foregroundStyle(.white)
-            .padding(6)
-            .background(.black.opacity(0.5))
-            .clipShape(RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
-            .padding(4)
-        }
-    }
-
-    // MARK: - Filter sheet
-
-    private var filterSheet: some View {
-        NavigationStack {
-            List {
-                Button("Clear Filters") {
-                    activeDecadeFilter = nil
-                    activeSeasonFilter = nil
-                }
-                .foregroundStyle(.red)
-
-                ForEach(decades) { decade in
-                    DisclosureGroup(decade.label) {
-                        ForEach(Season.allCases, id: \.self) { season in
-                            Button {
-                                activeDecadeFilter = decade.range.lowerBound
-                                activeSeasonFilter = season
-                                showingFilterSheet = false
-                            } label: {
-                                HStack {
-                                    Text(season.rawValue)
-                                    Spacer()
-                                    if activeDecadeFilter == decade.range.lowerBound && activeSeasonFilter == season {
-                                        Image(systemName: "checkmark")
-                                            .foregroundStyle(DeadlyColors.primary)
-                                    }
-                                }
-                            }
-                            .foregroundStyle(.primary)
-                        }
-                    }
-                }
-            }
-            .navigationTitle("Filter")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Done") { showingFilterSheet = false }
-                }
-            }
+            .padding(.horizontal, 2)
         }
     }
 
@@ -344,9 +391,110 @@ struct LibraryScreen: View {
         }
     }
 
-    private func showMonth(_ show: Show) -> Int {
-        let parts = show.date.split(separator: "-")
+    private func showMonth(_ libraryShow: LibraryShow) -> Int {
+        let parts = libraryShow.show.date.split(separator: "-")
         guard parts.count >= 2, let m = Int(parts[1]) else { return 0 }
         return m
+    }
+
+    // MARK: - Context menu
+
+    @ViewBuilder
+    private func libraryContextMenu(for libraryShow: LibraryShow) -> some View {
+        let showId = libraryShow.show.id
+        let show = libraryShow.show
+
+        // Share
+        ShareLink(item: shareText(for: show)) {
+            Label("Share", systemImage: "square.and.arrow.up")
+        }
+
+        // QR Code
+        Button {
+            qrCodeShow = libraryShow
+        } label: {
+            Label("Show QR Code", systemImage: "qrcode")
+        }
+
+        Divider()
+
+        // Pin / Unpin
+        Button {
+            try? service.togglePin(showId: showId)
+            service.refresh(sortedBy: sortOption, direction: sortDirection)
+        } label: {
+            Label(
+                libraryShow.isPinned ? "Unpin" : "Pin to Top",
+                systemImage: libraryShow.isPinned ? "pin.slash" : "pin"
+            )
+        }
+
+        Divider()
+
+        // Download actions (check live status from downloadService)
+        let downloadStatus = container.downloadService.downloadStatus(for: showId)
+        switch downloadStatus {
+        case .notDownloaded, .cancelled, .failed:
+            Button {
+                Task { try? await container.downloadService.downloadShow(showId, recordingId: nil) }
+            } label: {
+                Label("Download", systemImage: "arrow.down.circle")
+            }
+        case .queued, .downloading:
+            Button {
+                container.downloadService.pauseShow(showId)
+            } label: {
+                Label("Pause Download", systemImage: "pause.circle")
+            }
+            Button(role: .destructive) {
+                container.downloadService.cancelShow(showId)
+            } label: {
+                Label("Cancel Download", systemImage: "xmark.circle")
+            }
+        case .paused:
+            Button {
+                container.downloadService.resumeShow(showId)
+            } label: {
+                Label("Resume Download", systemImage: "play.circle")
+            }
+            Button(role: .destructive) {
+                container.downloadService.cancelShow(showId)
+            } label: {
+                Label("Cancel Download", systemImage: "xmark.circle")
+            }
+        case .completed:
+            Button(role: .destructive) {
+                container.downloadService.removeShow(showId)
+            } label: {
+                Label("Remove Download", systemImage: "trash")
+            }
+        }
+
+        Divider()
+
+        // Remove from Library
+        Button(role: .destructive) {
+            try? service.removeFromLibrary(showId: showId)
+            service.refresh(sortedBy: sortOption, direction: sortDirection)
+        } label: {
+            Label("Remove from Library", systemImage: "minus.circle")
+        }
+    }
+
+    private func shareText(for show: Show) -> String {
+        var lines: [String] = []
+        lines.append("🌹⚡💀 Grateful Dead 💀⚡🌹")
+        lines.append("")
+        lines.append("📅 \(show.date)")
+        lines.append("📍 \(show.venue.name)")
+        let loc = show.venue.displayLocation
+        if !loc.isEmpty { lines.append("🌎 \(loc)") }
+        if show.hasRating { lines.append("⭐ Rating: \(show.displayRating)") }
+        if let recordingId = show.bestRecordingId {
+            lines.append("")
+            lines.append("🔗 Listen in The Deadly app:")
+            lines.append("https://share.thedeadly.app/show/\(show.id)/recording/\(recordingId)")
+        }
+        return lines.joined(separator: "\n")
     }
 }

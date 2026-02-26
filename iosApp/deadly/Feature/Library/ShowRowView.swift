@@ -1,7 +1,20 @@
 import SwiftUI
 
 struct ShowRowView: View {
-    let show: Show
+    let libraryShow: LibraryShow
+
+    init(libraryShow: LibraryShow) {
+        self.libraryShow = libraryShow
+    }
+
+    init(show: Show) {
+        self.libraryShow = LibraryShow(
+            show: show,
+            addedToLibraryAt: show.libraryAddedAt ?? 0
+        )
+    }
+
+    private var show: Show { libraryShow.show }
 
     var body: some View {
         NavigationLink(value: show.id) {
@@ -14,10 +27,17 @@ struct ShowRowView: View {
                 )
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(DateFormatting.formatShowDate(show.date, style: .short))
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.primary)
+                    HStack(spacing: 4) {
+                        if libraryShow.isPinned {
+                            Image(systemName: "pin.fill")
+                                .font(.system(size: 10))
+                                .foregroundStyle(DeadlyColors.primary)
+                        }
+                        Text(DateFormatting.formatShowDate(show.date, style: .short))
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.primary)
+                    }
 
                     Text(show.venue.name)
                         .font(.caption)
@@ -29,8 +49,8 @@ struct ShowRowView: View {
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
 
-                    if let addedAt = show.libraryAddedAt {
-                        Text("Added \(relativeDate(from: addedAt))")
+                    if show.libraryAddedAt != nil {
+                        Text("Added \(relativeDate(from: libraryShow.addedToLibraryAt))")
                             .font(.caption2)
                             .foregroundStyle(.tertiary)
                     }
