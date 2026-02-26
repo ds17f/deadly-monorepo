@@ -160,6 +160,7 @@ struct DownloadTaskDAO: Sendable {
         try database.read { db in
             try DownloadTaskRecord
                 .filter(Column("showId") == showId)
+                .order(Column("createdAt").asc)
                 .fetchAll(db)
         }
     }

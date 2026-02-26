@@ -24,6 +24,12 @@ final class DownloadServiceImpl: DownloadService {
     /// Maps task identifier to download identifier.
     private var taskToIdentifier: [Int: String] = [:]
 
+    /// Maximum number of concurrent downloads per show.
+    private let maxConcurrentDownloads = 2
+
+    /// Per-show queue of records waiting to start, in track order.
+    private var pendingDownloads: [String: [DownloadTaskRecord]] = [:]
+
     nonisolated init(
         archiveClient: some ArchiveMetadataClient,
         showRepository: some ShowRepository,
@@ -179,10 +185,9 @@ final class DownloadServiceImpl: DownloadService {
             logger.error("Failed to update library record: \(error.localizedDescription)")
         }
 
-        // Start downloads
-        for record in records {
-            startDownloadTask(record)
-        }
+        // Enqueue downloads and start the first batch
+        pendingDownloads[showId] = records
+        startNextDownloads(for: showId)
 
         // Update progress
         updateProgress(for: showId)
@@ -190,6 +195,9 @@ final class DownloadServiceImpl: DownloadService {
 
     func pauseShow(_ showId: String) {
         logger.debug("Pausing downloads for show: \(showId)")
+
+        // Clear pending queue so queued tracks don't start after active ones are paused
+        pendingDownloads.removeValue(forKey: showId)
 
         urlSession.getTasksWithCompletionHandler { [weak self] _, _, downloadTasks in
             guard let self else { return }
@@ -214,6 +222,9 @@ final class DownloadServiceImpl: DownloadService {
 
     func cancelShow(_ showId: String) {
         logger.debug("Cancelling downloads for show: \(showId)")
+
+        // Clear pending queue
+        pendingDownloads.removeValue(forKey: showId)
 
         // Cancel active tasks
         urlSession.getTasksWithCompletionHandler { [weak self] _, _, downloadTasks in
@@ -263,6 +274,7 @@ final class DownloadServiceImpl: DownloadService {
 
         urlSession.invalidateAndCancel()
         taskToIdentifier.removeAll()
+        pendingDownloads.removeAll()
 
         do {
             try downloadTaskDAO.deleteAll()
@@ -326,12 +338,38 @@ final class DownloadServiceImpl: DownloadService {
         }
     }
 
+    private func startNextDownloads(for showId: String) {
+        // Count currently active downloads for this show
+        var activeCount = 0
+        for (_, identifier) in taskToIdentifier {
+            if let downloadId = DownloadIdentifier(from: identifier),
+               downloadId.showId == showId {
+                activeCount += 1
+            }
+        }
+
+        // Start pending downloads up to the concurrency limit
+        while activeCount < maxConcurrentDownloads,
+              var queue = pendingDownloads[showId],
+              !queue.isEmpty {
+            let record = queue.removeFirst()
+            pendingDownloads[showId] = queue
+            startDownloadTask(record)
+            activeCount += 1
+        }
+
+        // Clean up empty queue entry
+        if pendingDownloads[showId]?.isEmpty == true {
+            pendingDownloads.removeValue(forKey: showId)
+        }
+    }
+
     private func resumeShowDownloads(_ showId: String) {
         do {
             let tasks = try downloadTaskDAO.fetchForShow(showId)
-            for task in tasks where task.downloadState != .completed {
-                startDownloadTask(task)
-            }
+            let pending = tasks.filter { $0.downloadState != .completed }
+            pendingDownloads[showId] = pending
+            startNextDownloads(for: showId)
             updateProgress(for: showId)
         } catch {
             logger.error("Failed to resume downloads: \(error.localizedDescription)")
@@ -360,6 +398,7 @@ final class DownloadServiceImpl: DownloadService {
 
         taskToIdentifier[task.taskIdentifier] = nil
         updateProgress(for: identifier.showId)
+        startNextDownloads(for: identifier.showId)
     }
 
     private func handleProgress(task: URLSessionDownloadTask, bytesWritten: Int64, totalBytes: Int64) {
@@ -402,6 +441,7 @@ final class DownloadServiceImpl: DownloadService {
 
         taskToIdentifier[task.taskIdentifier] = nil
         updateProgress(for: identifier.showId)
+        startNextDownloads(for: identifier.showId)
     }
 
     private func handlePause(identifier: String, resumeData: Data?) {
