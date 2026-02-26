@@ -11,6 +11,11 @@ struct ShowDetailScreen: View {
     private var downloadService: DownloadServiceImpl { container.downloadService }
     private var networkMonitor: NetworkMonitor { container.networkMonitor }
 
+    /// Current show ID - uses the navigated show if available, falls back to initial showId
+    private var currentShowId: String {
+        playlistService.currentShow?.id ?? showId
+    }
+
     @State private var showRecordingPicker = false
     @State private var isInLibrary = false
     @State private var showShareSheet = false
@@ -34,6 +39,11 @@ struct ShowDetailScreen: View {
         .task {
             await playlistService.loadShow(showId)
             isInLibrary = (try? container.libraryService.isInLibrary(showId: showId)) ?? false
+        }
+        .onChange(of: playlistService.currentShow?.id) { _, newId in
+            if let newId {
+                isInLibrary = (try? container.libraryService.isInLibrary(showId: newId)) ?? false
+            }
         }
     }
 
@@ -79,9 +89,9 @@ struct ShowDetailScreen: View {
                 HStack(spacing: 8) {
                     Button {
                         if isInLibrary {
-                            try? container.libraryService.removeFromLibrary(showId: showId)
+                            try? container.libraryService.removeFromLibrary(showId: currentShowId)
                         } else {
-                            try? container.libraryService.addToLibrary(showId: showId)
+                            try? container.libraryService.addToLibrary(showId: currentShowId)
                         }
                         isInLibrary.toggle()
                     } label: {
@@ -193,7 +203,7 @@ struct ShowDetailScreen: View {
                         .font(.caption)
                         .foregroundStyle(.red)
                 } else {
-                    let trackStates = downloadService.trackDownloadStates(for: showId)
+                    let trackStates = downloadService.trackDownloadStates(for: currentShowId)
                     ForEach(Array(playlistService.tracks.enumerated()), id: \.element.id) { index, track in
                         TrackListRow(
                             track: track,
@@ -217,7 +227,7 @@ struct ShowDetailScreen: View {
         .alert("Remove Download?", isPresented: $showRemoveDownloadAlert) {
             Button("Cancel", role: .cancel) { }
             Button("Remove", role: .destructive) {
-                downloadService.removeShow(showId)
+                downloadService.removeShow(currentShowId)
             }
         } message: {
             Text("This will delete the downloaded files for this show. You can download it again later.")
@@ -225,7 +235,7 @@ struct ShowDetailScreen: View {
         .alert("Cancel Download?", isPresented: $showCancelDownloadAlert) {
             Button("Keep Downloading", role: .cancel) { }
             Button("Cancel Download", role: .destructive) {
-                downloadService.cancelShow(showId)
+                downloadService.cancelShow(currentShowId)
             }
         } message: {
             Text("This will stop the download and remove any partially downloaded files.")
@@ -253,7 +263,7 @@ struct ShowDetailScreen: View {
     // MARK: - Download button
 
     private var downloadStatus: LibraryDownloadStatus {
-        downloadService.downloadStatus(for: showId)
+        downloadService.downloadStatus(for: currentShowId)
     }
 
     @ViewBuilder
@@ -285,7 +295,7 @@ struct ShowDetailScreen: View {
             }
         case .queued, .downloading:
             Button {
-                downloadService.pauseShow(showId)
+                downloadService.pauseShow(currentShowId)
             } label: {
                 Label("Pause Download", systemImage: "pause.circle")
             }
@@ -296,7 +306,7 @@ struct ShowDetailScreen: View {
             }
         case .paused:
             Button {
-                downloadService.resumeShow(showId)
+                downloadService.resumeShow(currentShowId)
             } label: {
                 Label("Resume Download", systemImage: "play.circle")
             }
@@ -350,10 +360,10 @@ struct ShowDetailScreen: View {
                 do {
                     // Auto-add to library when downloading
                     if !isInLibrary {
-                        try? container.libraryService.addToLibrary(showId: showId)
+                        try? container.libraryService.addToLibrary(showId: currentShowId)
                         isInLibrary = true
                     }
-                    try await downloadService.downloadShow(showId, recordingId: playlistService.currentRecording?.identifier)
+                    try await downloadService.downloadShow(currentShowId, recordingId: playlistService.currentRecording?.identifier)
                 } catch {
                     // Error is handled by the service
                 }
@@ -361,9 +371,9 @@ struct ShowDetailScreen: View {
             }
         case .queued, .downloading:
             // Pause the download (tap again to resume, or long-press for cancel option)
-            downloadService.pauseShow(showId)
+            downloadService.pauseShow(currentShowId)
         case .paused:
-            downloadService.resumeShow(showId)
+            downloadService.resumeShow(currentShowId)
         case .completed:
             // Show confirmation before removing
             showRemoveDownloadAlert = true
