@@ -23,6 +23,7 @@ struct ShowDetailScreen: View {
     @State private var showRemoveDownloadAlert = false
     @State private var showCancelDownloadAlert = false
     @State private var showReviewSheet = false
+    @State private var showSetlistSheet = false
 
     var body: some View {
         Group {
@@ -129,9 +130,9 @@ struct ShowDetailScreen: View {
 
                     downloadButton
 
-                    // Setlist button (placeholder)
+                    // Setlist button
                     Button {
-                        // TODO: Phase 5 — show setlist sheet
+                        showSetlistSheet = true
                     } label: {
                         Image(systemName: "list.bullet.rectangle")
                             .font(.title2)
@@ -226,6 +227,9 @@ struct ShowDetailScreen: View {
         }
         .sheet(isPresented: $showReviewSheet) {
             ReviewDetailsSheet(show: show, playlistService: playlistService)
+        }
+        .sheet(isPresented: $showSetlistSheet) {
+            SetlistSheet(show: show)
         }
         .alert("Remove Download?", isPresented: $showRemoveDownloadAlert) {
             Button("Cancel", role: .cancel) { }
