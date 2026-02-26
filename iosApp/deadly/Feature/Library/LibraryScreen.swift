@@ -222,6 +222,7 @@ struct LibraryScreen: View {
                 }
                 .padding(.horizontal, DeadlySpacing.screenPadding)
             }
+            .fixedSize(horizontal: false, vertical: true)
 
             if activeDecadeFilter != nil {
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -237,9 +238,10 @@ struct LibraryScreen: View {
                     }
                     .padding(.horizontal, DeadlySpacing.screenPadding)
                 }
+                .fixedSize(horizontal: false, vertical: true)
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 2)
     }
 
     private func chipButton(label: String, isActive: Bool, action: @escaping () -> Void) -> some View {
