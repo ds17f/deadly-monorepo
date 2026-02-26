@@ -20,11 +20,17 @@ struct RecentShowCard: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
+                if show.recordingCount == 0 {
+                    Text("No recordings")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
         }
         .frame(height: DeadlySize.recentCardHeight)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(4)
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
+        .opacity(show.recordingCount == 0 ? 0.5 : 1.0)
     }
 }

@@ -4,6 +4,7 @@ struct ShowCarouselCard: View {
     let imageRecordingId: String?
     let imageUrl: String?
     let lines: [String]
+    var recordingCount: Int? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -20,8 +21,14 @@ struct ShowCarouselCard: View {
                         .fontWeight(.medium)
                         .lineLimit(1)
                 }
+                if let count = recordingCount, count == 0 {
+                    Text("No recordings")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
         }
         .frame(width: DeadlySize.carouselCard)
+        .opacity(recordingCount == 0 ? 0.5 : 1.0)
     }
 }

@@ -27,7 +27,20 @@ struct HomeScreen: View {
             }
             .padding(DeadlySpacing.screenPadding)
         }
-        .navigationTitle("Home")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                HStack(spacing: 8) {
+                    Image("deadly_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 28, height: 28)
+                    Text("Home")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                }
+            }
+        }
         .task { await homeService.refresh() }
     }
 
@@ -36,7 +49,8 @@ struct HomeScreen: View {
     private var recentShowsSection: some View {
         VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
             Text("Recently Played")
-                .font(.headline)
+                .font(.title2)
+                .fontWeight(.bold)
 
             LazyVGrid(
                 columns: [
@@ -58,7 +72,8 @@ struct HomeScreen: View {
     private func carouselSection(_ title: String, shows: [Show]) -> some View {
         VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
             Text(title)
-                .font(.headline)
+                .font(.title2)
+                .fontWeight(.bold)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: DeadlySpacing.itemSpacing) {
@@ -67,7 +82,8 @@ struct HomeScreen: View {
                             ShowCarouselCard(
                                 imageRecordingId: show.bestRecordingId,
                                 imageUrl: show.coverImageUrl,
-                                lines: [show.date, show.venue.name, show.location.displayText]
+                                lines: [show.date, show.venue.name, show.location.displayText],
+                                recordingCount: show.recordingCount
                             )
                         }
                         .buttonStyle(.plain)
@@ -80,7 +96,8 @@ struct HomeScreen: View {
     private var collectionsSection: some View {
         VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
             Text("Featured Collections")
-                .font(.headline)
+                .font(.title2)
+                .fontWeight(.bold)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: DeadlySpacing.itemSpacing) {
