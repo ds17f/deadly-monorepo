@@ -42,3 +42,9 @@ iosApp/deadly/App/Secrets.swift
 play-store-interal-testing-qr-code-39.png
 play-store-alpha-qr-code.png
 
+# Swift Package Manager build artifacts
+.build/
+
+# SQLite database files
+*.db
+
