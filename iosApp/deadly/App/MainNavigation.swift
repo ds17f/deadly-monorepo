@@ -84,9 +84,9 @@ struct MainNavigation: View {
         }
         .onChange(of: container.networkMonitor.isConnected) { _, isConnected in
             if !isConnected {
-                // When going offline, redirect to Library (unless already there or in Settings)
-                if selectedTab != .library && selectedTab != .settings {
-                    selectedTab = .library
+                // When going offline, navigate to Downloads (unless in Settings)
+                if selectedTab != .settings {
+                    navigateToDownloads()
                 }
             }
         }
@@ -119,20 +119,24 @@ struct MainNavigation: View {
             get: { selectedTab },
             set: { newTab in
                 // When offline, only allow Library and Settings
-                let target: AppTab
                 if isOffline && newTab != .library && newTab != .settings {
-                    target = .library
-                } else {
-                    target = newTab
+                    navigateToDownloads()
+                    return
                 }
 
-                if target == .search && selectedTab == .search {
+                if newTab == .search && selectedTab == .search {
                     // Re-tapped search — toggle back to browse
                     searchResetToken += 1
                 }
-                selectedTab = target
+                selectedTab = newTab
             }
         )
+    }
+
+    private func navigateToDownloads() {
+        libraryStack = NavigationPath()
+        libraryStack.append(LibraryRoute.downloads)
+        selectedTab = .library
     }
 }
 
