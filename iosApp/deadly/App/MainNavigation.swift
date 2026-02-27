@@ -10,6 +10,9 @@ struct MainNavigation: View {
     @State private var pendingShowNavigation: String?
     @State private var selectedTab: AppTab = .home
     @State private var searchResetToken = 0
+    @State private var libraryStack = NavigationPath()
+
+    private var isOffline: Bool { !container.networkMonitor.isConnected }
 
     var body: some View {
         TabView(selection: tabSelection) {
@@ -40,7 +43,7 @@ struct MainNavigation: View {
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Library", systemImage: "books.vertical", value: .library) {
-                NavigationStack {
+                NavigationStack(path: $libraryStack) {
                     LibraryScreen()
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
@@ -79,6 +82,14 @@ struct MainNavigation: View {
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
         }
+        .onChange(of: container.networkMonitor.isConnected) { _, isConnected in
+            if !isConnected {
+                // When going offline, redirect to Library (unless already there or in Settings)
+                if selectedTab != .library && selectedTab != .settings {
+                    selectedTab = .library
+                }
+            }
+        }
         .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {
             if let showId = pendingShowNavigation {
                 homeStack.append(showId)
@@ -107,11 +118,19 @@ struct MainNavigation: View {
         Binding(
             get: { selectedTab },
             set: { newTab in
-                if newTab == .search && selectedTab == .search {
+                // When offline, only allow Library and Settings
+                let target: AppTab
+                if isOffline && newTab != .library && newTab != .settings {
+                    target = .library
+                } else {
+                    target = newTab
+                }
+
+                if target == .search && selectedTab == .search {
                     // Re-tapped search — toggle back to browse
                     searchResetToken += 1
                 }
-                selectedTab = newTab
+                selectedTab = target
             }
         )
     }

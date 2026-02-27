@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Slim banner displayed below nav bar when network is unavailable.
+/// Slim banner displayed above the tab bar when network is unavailable.
 struct OfflineBanner: View {
     var body: some View {
         HStack(spacing: 6) {
@@ -18,15 +18,15 @@ struct OfflineBanner: View {
     }
 }
 
-/// View modifier that shows the offline banner below nav bar when not connected.
+/// View modifier that shows the offline banner above tab bar when not connected.
 struct OfflineBannerModifier: ViewModifier {
     let isConnected: Bool
 
     func body(content: Content) -> some View {
-        content.safeAreaInset(edge: .top, spacing: 0) {
+        content.safeAreaInset(edge: .bottom, spacing: 0) {
             if !isConnected {
                 OfflineBanner()
-                    .transition(.move(edge: .top).combined(with: .opacity))
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
         .animation(.easeInOut(duration: 0.3), value: isConnected)
@@ -34,7 +34,7 @@ struct OfflineBannerModifier: ViewModifier {
 }
 
 extension View {
-    /// Shows an offline banner at the top when `isConnected` is false.
+    /// Shows an offline banner at the bottom when `isConnected` is false.
     func offlineBanner(isConnected: Bool) -> some View {
         modifier(OfflineBannerModifier(isConnected: isConnected))
     }
