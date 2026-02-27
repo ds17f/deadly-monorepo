@@ -84,8 +84,17 @@ struct MainNavigation: View {
         }
         .onChange(of: container.networkMonitor.isConnected) { _, isConnected in
             if !isConnected {
-                // When going offline, navigate to Downloads (unless in Settings)
-                if selectedTab != .settings {
+                // When going offline, navigate to Downloads (unless in Settings or Player)
+                if selectedTab != .settings && !showFullPlayer {
+                    navigateToDownloads()
+                }
+            }
+        }
+        .onChange(of: selectedTab) { oldTab, newTab in
+            // When offline and user switches to a restricted tab, redirect to Downloads
+            if isOffline && newTab != .library && newTab != .settings {
+                // Use async to avoid modifying state during view update
+                DispatchQueue.main.async {
                     navigateToDownloads()
                 }
             }
@@ -95,6 +104,10 @@ struct MainNavigation: View {
                 homeStack.append(showId)
                 lastPushedShowId = showId
                 pendingShowNavigation = nil
+            }
+            // When dismissing player while offline, redirect to Downloads
+            if isOffline && selectedTab != .settings {
+                navigateToDownloads()
             }
         }) {
             PlayerScreen(
@@ -118,12 +131,6 @@ struct MainNavigation: View {
         Binding(
             get: { selectedTab },
             set: { newTab in
-                // When offline, only allow Library and Settings
-                if isOffline && newTab != .library && newTab != .settings {
-                    navigateToDownloads()
-                    return
-                }
-
                 if newTab == .search && selectedTab == .search {
                     // Re-tapped search — toggle back to browse
                     searchResetToken += 1
