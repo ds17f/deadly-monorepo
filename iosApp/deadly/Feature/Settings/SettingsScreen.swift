@@ -34,13 +34,13 @@ struct SettingsScreen: View {
 
             // MARK: - Cache Management
             Section {
-                Button("Clear Archive Cache") {
+                Button("Clear All Caches") {
                     showingClearCacheAlert = true
                 }
             } header: {
                 Text("Cache Management")
             } footer: {
-                Text("Deletes cached track lists and reviews. Data will be re-downloaded when needed.")
+                Text("Deletes cached images, track lists, and reviews. Data will be re-downloaded when needed.")
             }
 
             // MARK: - Data Management
@@ -145,23 +145,23 @@ struct SettingsScreen: View {
         }
 
         // MARK: - Clear Cache Confirmation
-        .alert("Clear Archive Cache", isPresented: $showingClearCacheAlert) {
+        .alert("Clear All Caches", isPresented: $showingClearCacheAlert) {
             Button("Clear", role: .destructive) {
-                clearCacheSuccess = clearArchiveCache()
+                clearCacheSuccess = clearAllCaches()
                 showingClearCacheResult = true
             }
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("This will delete all cached track lists and reviews. The data will be re-downloaded when needed.")
+            Text("This will delete all cached images, track lists, and reviews. The data will be re-downloaded when needed.")
         }
 
         // MARK: - Clear Cache Result
-        .alert(clearCacheSuccess ? "Cache Cleared" : "Clear Failed", isPresented: $showingClearCacheResult) {
+        .alert(clearCacheSuccess ? "Caches Cleared" : "Clear Failed", isPresented: $showingClearCacheResult) {
             Button("OK") {}
         } message: {
             Text(clearCacheSuccess
-                 ? "Archive cache has been cleared."
-                 : "Failed to clear cache.")
+                 ? "All caches have been cleared."
+                 : "Failed to clear some caches.")
         }
 
         // MARK: - Re-Import Confirmation
@@ -199,16 +199,34 @@ struct SettingsScreen: View {
 
     // MARK: - Cache Clearing
 
-    private func clearArchiveCache() -> Bool {
-        let cacheDir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
-        guard let archiveDir = cacheDir?.appendingPathComponent("archive") else { return false }
-        guard FileManager.default.fileExists(atPath: archiveDir.path) else { return true }
-        do {
-            try FileManager.default.removeItem(at: archiveDir)
-            return true
-        } catch {
+    private func clearAllCaches() -> Bool {
+        guard let cacheDir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
             return false
         }
+
+        var success = true
+
+        // Clear archive cache (track lists, reviews)
+        let archiveDir = cacheDir.appendingPathComponent("archive")
+        if FileManager.default.fileExists(atPath: archiveDir.path) {
+            do {
+                try FileManager.default.removeItem(at: archiveDir)
+            } catch {
+                success = false
+            }
+        }
+
+        // Clear image cache
+        let imagesDir = cacheDir.appendingPathComponent("images")
+        if FileManager.default.fileExists(atPath: imagesDir.path) {
+            do {
+                try FileManager.default.removeItem(at: imagesDir)
+            } catch {
+                success = false
+            }
+        }
+
+        return success
     }
 }
 

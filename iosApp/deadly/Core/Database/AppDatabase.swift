@@ -68,6 +68,21 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v2-download-tasks") { db in
             try AppDatabase.createDownloadTasksTable(db)
         }
+        migrator.registerMigration("v3-add-coverImageUrl") { db in
+            // Check which table name exists (shows vs Show) for compatibility
+            let tableExists = try Bool.fetchOne(db, sql: """
+                SELECT 1 FROM sqlite_master WHERE type='table' AND name='shows'
+            """) ?? false
+            let tableName = tableExists ? "shows" : "Show"
+
+            // Check if column already exists
+            let columns = try Row.fetchAll(db, sql: "PRAGMA table_info(\(tableName))")
+            let hasColumn = columns.contains { $0["name"] as? String == "coverImageUrl" }
+
+            if !hasColumn {
+                try db.execute(sql: "ALTER TABLE \(tableName) ADD COLUMN coverImageUrl TEXT")
+            }
+        }
         try migrator.migrate(dbWriter)
     }
 
