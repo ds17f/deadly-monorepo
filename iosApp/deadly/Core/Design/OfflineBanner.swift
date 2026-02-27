@@ -1,29 +1,29 @@
 import SwiftUI
 
-/// Slim banner displayed at top of content when network is unavailable.
-/// Animates in/out with slide and opacity transitions.
+/// Slim banner displayed below nav bar when network is unavailable.
 struct OfflineBanner: View {
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 6) {
             Image(systemName: "wifi.slash")
                 .font(.system(size: 14, weight: .medium))
-            Text("No internet connection")
-                .font(.subheadline)
+            Text("Offline")
+                .font(.caption)
                 .fontWeight(.medium)
         }
-        .foregroundStyle(.white)
+        .foregroundStyle(.secondary)
         .frame(maxWidth: .infinity)
-        .frame(height: 44)
-        .background(Color.orange.opacity(0.9))
+        .padding(.horizontal, 16)
+        .padding(.vertical, 6)
+        .background(Color(.secondarySystemBackground))
     }
 }
 
-/// View modifier that overlays the offline banner at the top when not connected.
+/// View modifier that shows the offline banner below nav bar when not connected.
 struct OfflineBannerModifier: ViewModifier {
     let isConnected: Bool
 
     func body(content: Content) -> some View {
-        content.overlay(alignment: .top) {
+        content.safeAreaInset(edge: .top, spacing: 0) {
             if !isConnected {
                 OfflineBanner()
                     .transition(.move(edge: .top).combined(with: .opacity))
