@@ -1,3 +1,4 @@
+import CryptoKit
 import UIKit
 
 actor ImageCache {
@@ -22,10 +23,9 @@ actor ImageCache {
     }
 
     private func cacheFile(for url: URL) -> URL {
-        // Use URL hash as filename to avoid path issues
-        let filename = url.absoluteString.data(using: .utf8)!.base64EncodedString()
-            .replacingOccurrences(of: "/", with: "_")
-            .prefix(64)  // Limit filename length
+        // Use SHA256 hash to avoid collisions from truncation
+        let hash = SHA256.hash(data: Data(url.absoluteString.utf8))
+        let filename = hash.compactMap { String(format: "%02x", $0) }.joined()
         return cacheDirectory.appendingPathComponent("\(filename).img")
     }
 
