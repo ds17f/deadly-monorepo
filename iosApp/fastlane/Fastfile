@@ -154,12 +154,14 @@ platform :ios do
 
     # Build and sign iOS app using xcodebuild directly with API key auth
     # This allows automatic signing to work in CI
-    build_dir = File.expand_path("../build", __dir__)
-    archive_path = "#{build_dir}/deadly.xcarchive"
+    project_dir = File.expand_path("..", __dir__)
+    project_path = File.join(project_dir, "deadly.xcodeproj")
+    build_dir = File.join(project_dir, "build")
+    archive_path = File.join(build_dir, "deadly.xcarchive")
 
     # Archive with automatic signing + API key authentication
     sh("xcodebuild archive " \
-       "-project deadly.xcodeproj " \
+       "-project '#{project_path}' " \
        "-scheme deadly " \
        "-configuration Release " \
        "-destination 'generic/platform=iOS' " \
