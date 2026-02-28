@@ -76,7 +76,7 @@ class SearchServiceStub @Inject constructor() : SearchService {
             date = "1972-05-03",
             year = 1972,
             band = "Grateful Dead",
-            venue = Venue("Olympia Theatre", "Paris", null, "France"),
+            venue = Venue("Olympia Theater", "Paris", null, "France"),
             location = Location("Paris, France", "Paris", null),
             setlist = null,
             lineup = null,

@@ -23,7 +23,7 @@ val allSearchShortcuts = listOf(
     SearchShortcut("Winterland", "San Francisco's legendary venue", "Winterland", 5),
     SearchShortcut("Red Rocks", "Morrison, Colorado", "Red Rocks", 5),
     SearchShortcut("MSG", "Madison Square Garden", "Madison Square Garden", 5),
-    SearchShortcut("Capitol Theatre", "Port Chester, New York", "Capitol Theatre", 5),
+    SearchShortcut("Capitol Theater", "Port Chester, New York", "Capitol Theater", 5),
     SearchShortcut("Barton Hall", "Cornell University, Ithaca", "Barton Hall", 5),
 
     // Cities (priority 5)

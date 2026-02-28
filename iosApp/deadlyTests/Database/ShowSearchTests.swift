@@ -63,7 +63,7 @@ struct ShowSearchTests {
     @Test("FTS4 MATCH returns multiple results")
     func fts4MultipleResults() throws {
         try insertSearchRecord(showId: "1977-05-08", searchText: "Barton Hall Ithaca NY 1977")
-        try insertSearchRecord(showId: "1977-01-17", searchText: "Paramount Theatre Oakland CA 1977")
+        try insertSearchRecord(showId: "1977-01-17", searchText: "Paramount Theater Oakland CA 1977")
         try insertSearchRecord(showId: "1972-08-27", searchText: "Old Renaissance Faire Grounds Veneta OR 1972")
 
         let results = try search("1977")
