@@ -153,6 +153,7 @@ platform :ios do
     )
 
     # Build and sign iOS app
+    # xcargs override automatic signing for CI builds
     gym(
       project: "deadly.xcodeproj",
       scheme: "deadly",
@@ -162,6 +163,7 @@ platform :ios do
       derived_data_path: "./build",
       output_directory: "./build",
       output_name: "deadly.ipa",
+      xcargs: "CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY='Apple Distribution' PROVISIONING_PROFILE_SPECIFIER='DeadlyApp_AppStore2' DEVELOPMENT_TEAM='U928S254LZ'",
       export_options: {
         method: "app-store-connect",
         signingStyle: "manual",
