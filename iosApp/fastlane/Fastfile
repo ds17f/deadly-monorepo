@@ -69,9 +69,11 @@ platform :ios do
       export_method: "app-store",
       derived_data_path: "./build",
       output_directory: "./build",
-      output_name: "Deadly.ipa",
+      output_name: "deadly.ipa",
       export_options: {
-        method: "app-store",
+        method: "app-store-connect",
+        signingStyle: "manual",
+        teamID: "U928S254LZ",
         provisioningProfiles: {
           "com.grateful.deadly" => "DeadlyApp_AppStore2"
         }
@@ -159,21 +161,32 @@ platform :ios do
       export_method: "app-store",
       derived_data_path: "./build",
       output_directory: "./build",
-      output_name: "Deadly.ipa",
+      output_name: "deadly.ipa",
       export_options: {
-        method: "app-store",
+        method: "app-store-connect",
+        signingStyle: "manual",
+        teamID: "U928S254LZ",
         provisioningProfiles: {
           "com.grateful.deadly" => "DeadlyApp_AppStore2"
         }
       }
     )
 
+    # Export archive to IPA (gym sometimes skips this)
+    archive_path = lane_context[SharedValues::XCODEBUILD_ARCHIVE]
+    export_plist = File.expand_path("ExportOptions.plist", __dir__)
+    build_dir = File.expand_path("../build", __dir__)
+    if archive_path && !File.exist?("#{build_dir}/deadly.ipa")
+      UI.message("📦 Exporting archive to IPA...")
+      sh("xcodebuild -exportArchive -archivePath '#{archive_path}' -exportPath '#{build_dir}' -exportOptionsPlist '#{export_plist}'")
+    end
+
     UI.success("✅ Release IPA built successfully!")
 
     upload_to_testflight(
       api_key: api_key,
       skip_waiting_for_build_processing: true,
-      ipa: "./build/Deadly.ipa"
+      ipa: "./build/deadly.ipa"
     )
 
     UI.success("✅ App uploaded to TestFlight!")
