@@ -152,36 +152,34 @@ platform :ios do
       in_house: false
     )
 
-    # Build and sign iOS app
-    # xcargs override automatic signing for CI builds
-    gym(
-      project: "deadly.xcodeproj",
-      scheme: "deadly",
-      configuration: "Release",
-      destination: "generic/platform=iOS",
-      export_method: "app-store",
-      derived_data_path: "./build",
-      output_directory: "./build",
-      output_name: "deadly.ipa",
-      xcargs: "-allowProvisioningUpdates CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY='Apple Distribution' DEVELOPMENT_TEAM='U928S254LZ'",
-      export_options: {
-        method: "app-store-connect",
-        signingStyle: "manual",
-        teamID: "U928S254LZ",
-        provisioningProfiles: {
-          "com.grateful.deadly" => "DeadlyApp_AppStore2"
-        }
-      }
-    )
-
-    # Export archive to IPA (gym sometimes skips this)
-    archive_path = lane_context[SharedValues::XCODEBUILD_ARCHIVE]
-    export_plist = File.expand_path("ExportOptions.plist", __dir__)
+    # Build and sign iOS app using xcodebuild directly with API key auth
+    # This allows automatic signing to work in CI
     build_dir = File.expand_path("../build", __dir__)
-    if archive_path && !File.exist?("#{build_dir}/deadly.ipa")
-      UI.message("📦 Exporting archive to IPA...")
-      sh("xcodebuild -exportArchive -archivePath '#{archive_path}' -exportPath '#{build_dir}' -exportOptionsPlist '#{export_plist}'")
-    end
+    archive_path = "#{build_dir}/deadly.xcarchive"
+
+    # Archive with automatic signing + API key authentication
+    sh("xcodebuild archive " \
+       "-project deadly.xcodeproj " \
+       "-scheme deadly " \
+       "-configuration Release " \
+       "-destination 'generic/platform=iOS' " \
+       "-archivePath '#{archive_path}' " \
+       "-derivedDataPath '#{build_dir}' " \
+       "-allowProvisioningUpdates " \
+       "-authenticationKeyPath '#{api_key_path}' " \
+       "-authenticationKeyID 'V862XWV7WB' " \
+       "-authenticationKeyIssuerID '9501cc7b-1a6c-4e4d-8c37-c04149a31886'")
+
+    # Export to IPA with manual signing
+    export_plist = File.expand_path("ExportOptions.plist", __dir__)
+    sh("xcodebuild -exportArchive " \
+       "-archivePath '#{archive_path}' " \
+       "-exportPath '#{build_dir}' " \
+       "-exportOptionsPlist '#{export_plist}' " \
+       "-allowProvisioningUpdates " \
+       "-authenticationKeyPath '#{api_key_path}' " \
+       "-authenticationKeyID 'V862XWV7WB' " \
+       "-authenticationKeyIssuerID '9501cc7b-1a6c-4e4d-8c37-c04149a31886'")
 
     UI.success("✅ Release IPA built successfully!")
 
