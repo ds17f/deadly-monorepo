@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open in The Deadly</title>
+  <title>The Deadly – Every Grateful Dead Show, Free</title>
+  <meta name="description" content="The Deadly is a free, open-source app for streaming every Grateful Dead concert from the Internet Archive. No account required. No data collected.">
+  <meta property="og:title" content="The Deadly – Every Grateful Dead Show, Free">
+  <meta property="og:description" content="Stream every Grateful Dead concert from the Internet Archive. Free, open-source, no account required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://share.thedeadly.app/">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -11,18 +16,32 @@
       background: #111;
       color: #eee;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
       min-height: 100vh;
       padding: 24px;
     }
-    .card {
+    main {
       max-width: 480px;
       width: 100%;
       text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 0;
     }
+    .logo { font-size: 2.5rem; margin-bottom: 8px; }
     h1 { font-size: 2rem; margin-bottom: 8px; }
-    .subtitle { color: #aaa; margin-bottom: 40px; font-size: 1rem; }
+    .subtitle { color: #aaa; margin-bottom: 16px; font-size: 1rem; }
+    .description {
+      color: #bbb;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      padding: 0 8px;
+    }
+    .description a { color: #aaa; }
     .open-btn {
       display: block;
       background: #c8102e;
@@ -34,27 +53,45 @@
       font-weight: 600;
       margin-bottom: 32px;
     }
-    .badges { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .badges a img { height: 48px; }
+    .open-btn:hover { background: #a50d26; }
+    .download-label { color: #aaa; margin-bottom: 40px; font-size: 0.9rem; }
+    .privacy-note { color: #666; font-size: 0.8rem; }
+    footer {
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+      padding: 20px 0 8px;
+      color: #555;
+      font-size: 0.8rem;
+      border-top: 1px solid #222;
+    }
+    footer a { color: #777; text-decoration: none; }
+    footer a:hover { color: #ccc; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🌹⚡💀</h1>
+  <main>
+    <p class="logo">🌹⚡💀</p>
     <h1>The Deadly</h1>
     <p class="subtitle">Listen to every Grateful Dead show, free.</p>
 
-    <a class="open-btn" href="javascript:window.location.reload()">Open in The Deadly App</a>
+    <p class="description">
+      The Deadly is a free, open-source app that streams every Grateful Dead concert
+      from the <a href="https://archive.org/details/GratefulDead" target="_blank" rel="noopener noreferrer">Internet Archive</a>.
+      No account. No sign-up. No ads.
+    </p>
 
-    <p style="color:#aaa; margin-bottom:16px; font-size:0.9rem;">Don't have the app? Download it free:</p>
-    <div class="badges">
-      <a href="https://apps.apple.com/app/the-deadly/id0000000000" target="_blank">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=com.grateful.deadly" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-      </a>
-    </div>
-  </div>
+    <a class="open-btn" href="deadly://">Open in The Deadly App</a>
+
+    <p class="download-label">App coming soon to iOS and Android.</p>
+
+    <p class="privacy-note">We do not collect, store, or sell any personal data.</p>
+  </main>
+
+  <footer>
+    <a href="https://github.com/ds17f/deadly-monorepo" target="_blank" rel="noopener noreferrer">Open source on GitHub</a>
+    &nbsp;&middot;&nbsp;
+    Grateful Dead recordings courtesy of the <a href="https://archive.org/details/GratefulDead" target="_blank" rel="noopener noreferrer">Internet Archive</a>
+  </footer>
 </body>
 </html>
