@@ -28,12 +28,6 @@ struct SearchResultRow: View {
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
-
-                    if result.matchType != .general {
-                        Text(result.matchType.displayName)
-                            .font(.caption2)
-                            .foregroundStyle(DeadlyColors.primary)
-                    }
                 }
 
                 Spacer()

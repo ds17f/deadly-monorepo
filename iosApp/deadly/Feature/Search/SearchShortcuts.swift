@@ -44,54 +44,62 @@ enum ShortcutCategory: String, CaseIterable {
 }
 
 let allSearchShortcuts: [SearchShortcut] = [
-    // Venues
-    SearchShortcut(title: "Fillmore West", subtitle: "San Francisco", searchQuery: "Fillmore West", priority: 1, category: .venue),
-    SearchShortcut(title: "Winterland", subtitle: "San Francisco", searchQuery: "Winterland", priority: 2, category: .venue),
-    SearchShortcut(title: "Madison Square Garden", subtitle: "New York", searchQuery: "Madison Square Garden", priority: 3, category: .venue),
-    SearchShortcut(title: "Red Rocks", subtitle: "Morrison, CO", searchQuery: "Red Rocks", priority: 4, category: .venue),
-    SearchShortcut(title: "The Capitol Theatre", subtitle: "Port Chester, NY", searchQuery: "Capitol Theatre", priority: 5, category: .venue),
-    SearchShortcut(title: "Barton Hall", subtitle: "Cornell University", searchQuery: "Barton Hall", priority: 6, category: .venue),
-    SearchShortcut(title: "Greek Theatre", subtitle: "Berkeley, CA", searchQuery: "Greek Theatre", priority: 7, category: .venue),
+    // Filters (priority 10) - these use FTS tags
+    SearchShortcut(title: "Top Rated", subtitle: "Highest rated recordings", searchQuery: "top-rated", priority: 10, category: .filter),
+    SearchShortcut(title: "Popular", subtitle: "Most reviewed shows", searchQuery: "popular", priority: 10, category: .filter),
+    SearchShortcut(title: "Soundboard", subtitle: "Direct from the board", searchQuery: "sbd", priority: 10, category: .filter),
+    SearchShortcut(title: "Audience", subtitle: "Taped from the crowd", searchQuery: "aud", priority: 10, category: .filter),
 
-    // Cities
-    SearchShortcut(title: "San Francisco", subtitle: "Bay Area shows", searchQuery: "San Francisco", priority: 1, category: .city),
-    SearchShortcut(title: "New York", subtitle: "East Coast hub", searchQuery: "New York", priority: 2, category: .city),
-    SearchShortcut(title: "Chicago", subtitle: "Midwest shows", searchQuery: "Chicago", priority: 3, category: .city),
-    SearchShortcut(title: "Philadelphia", subtitle: "Philly shows", searchQuery: "Philadelphia", priority: 4, category: .city),
+    // Venues (priority 5)
+    SearchShortcut(title: "Fillmore", subtitle: "Fillmore East & West", searchQuery: "Fillmore", priority: 5, category: .venue),
+    SearchShortcut(title: "Winterland", subtitle: "San Francisco", searchQuery: "Winterland", priority: 5, category: .venue),
+    SearchShortcut(title: "Red Rocks", subtitle: "Morrison, CO", searchQuery: "Red Rocks", priority: 5, category: .venue),
+    SearchShortcut(title: "MSG", subtitle: "Madison Square Garden", searchQuery: "Madison Square Garden", priority: 5, category: .venue),
+    SearchShortcut(title: "Capitol Theater", subtitle: "Port Chester, NY", searchQuery: "Capitol Theater", priority: 5, category: .venue),
+    SearchShortcut(title: "Barton Hall", subtitle: "Cornell University", searchQuery: "Barton Hall", priority: 5, category: .venue),
+
+    // Cities (priority 5)
+    SearchShortcut(title: "New York", subtitle: "The Big Apple", searchQuery: "New York", priority: 5, category: .city),
+    SearchShortcut(title: "San Francisco", subtitle: "Home turf", searchQuery: "San Francisco", priority: 5, category: .city),
+    SearchShortcut(title: "Chicago", subtitle: "The Windy City", searchQuery: "Chicago", priority: 5, category: .city),
+    SearchShortcut(title: "Philadelphia", subtitle: "City of Brotherly Love", searchQuery: "Philadelphia", priority: 5, category: .city),
     SearchShortcut(title: "Boston", subtitle: "New England shows", searchQuery: "Boston", priority: 5, category: .city),
+    SearchShortcut(title: "Los Angeles", subtitle: "SoCal shows", searchQuery: "Los Angeles", priority: 5, category: .city),
 
-    // Songs
-    SearchShortcut(title: "Dark Star", subtitle: "Cosmic jams", searchQuery: "Dark Star", priority: 1, category: .song),
-    SearchShortcut(title: "Scarlet > Fire", subtitle: "Classic pairing", searchQuery: "Scarlet Begonias", priority: 2, category: .song),
-    SearchShortcut(title: "Eyes of the World", subtitle: "Fan favorite", searchQuery: "Eyes of the World", priority: 3, category: .song),
-    SearchShortcut(title: "St. Stephen", subtitle: "Early classic", searchQuery: "St. Stephen", priority: 4, category: .song),
-    SearchShortcut(title: "Estimated Prophet", subtitle: "Late 70s staple", searchQuery: "Estimated Prophet", priority: 5, category: .song),
-    SearchShortcut(title: "China Cat > Rider", subtitle: "Iconic combo", searchQuery: "China Cat Sunflower", priority: 6, category: .song),
+    // Songs (priority 5)
+    SearchShortcut(title: "Dark Star", subtitle: "The quintessential jam", searchQuery: "Dark Star", priority: 5, category: .song),
+    SearchShortcut(title: "Scarlet > Fire", subtitle: "The classic combo", searchQuery: "Scarlet Begonias", priority: 5, category: .song),
+    SearchShortcut(title: "Wharf Rat", subtitle: "Ballad of August West", searchQuery: "Wharf Rat", priority: 5, category: .song),
+    SearchShortcut(title: "Truckin'", subtitle: "What a long strange trip", searchQuery: "Truckin", priority: 5, category: .song),
+    SearchShortcut(title: "Eyes of the World", subtitle: "Jazz-infused Garcia", searchQuery: "Eyes of the World", priority: 5, category: .song),
+    SearchShortcut(title: "Sugar Magnolia", subtitle: "Sunshine daydream", searchQuery: "Sugar Magnolia", priority: 5, category: .song),
 
-    // Members
-    SearchShortcut(title: "Pigpen Shows", subtitle: "Ron McKernan era", searchQuery: "Pigpen", priority: 1, category: .member),
-    SearchShortcut(title: "Brent Era", subtitle: "Brent Mydland years", searchQuery: "Brent", priority: 2, category: .member),
-    SearchShortcut(title: "Vince Era", subtitle: "Vince Welnick years", searchQuery: "Vince", priority: 3, category: .member),
-    SearchShortcut(title: "Keith & Donna", subtitle: "Godchaux era", searchQuery: "Keith", priority: 4, category: .member),
-
-    // Filters
-    SearchShortcut(title: "Acoustic Sets", subtitle: "Unplugged shows", searchQuery: "acoustic", priority: 1, category: .filter),
-    SearchShortcut(title: "Europe Tours", subtitle: "Overseas shows", searchQuery: "Europe", priority: 2, category: .filter),
-    SearchShortcut(title: "Festival Shows", subtitle: "Music festivals", searchQuery: "festival", priority: 3, category: .filter),
+    // Members (priority 3)
+    SearchShortcut(title: "Brent Era", subtitle: "Brent Mydland on keys", searchQuery: "Brent", priority: 3, category: .member),
+    SearchShortcut(title: "Pigpen Era", subtitle: "Blues and soul years", searchQuery: "Pigpen", priority: 3, category: .member),
+    SearchShortcut(title: "Keith Era", subtitle: "Keith Godchaux on piano", searchQuery: "Keith", priority: 3, category: .member),
 ]
 
 /// 3 discover cards, rotated every 4 hours via seeded shuffle.
-var discoverShortcuts: [SearchShortcut] {
-    rotatedSubset(of: allSearchShortcuts, count: 3)
+/// Pass refreshCounter to force re-roll on pull-to-refresh.
+func discoverShortcuts(refreshCounter: Int = 0) -> [SearchShortcut] {
+    rotatedSubset(of: allSearchShortcuts, count: 3, seedOffset: refreshCounter * 1000)
 }
 
-/// 8 browse cards, rotated every 4 hours via seeded shuffle.
-var browseShortcuts: [SearchShortcut] {
-    rotatedSubset(of: allSearchShortcuts, count: 8)
+/// 8 browse cards with priority >= 5, rotated every 4 hours via seeded shuffle.
+/// Pass refreshCounter to force re-roll on pull-to-refresh.
+/// Excludes items already shown in discoverShortcuts to avoid duplicates.
+func browseShortcuts(refreshCounter: Int = 0) -> [SearchShortcut] {
+    let discoverItems = discoverShortcuts(refreshCounter: refreshCounter)
+    let discoverTitles = Set(discoverItems.map(\.title))
+    let eligible = allSearchShortcuts.filter {
+        $0.priority >= 5 && !discoverTitles.contains($0.title)
+    }
+    return rotatedSubset(of: eligible, count: 8, seedOffset: 500 + refreshCounter * 1000)
 }
 
-private func rotatedSubset(of shortcuts: [SearchShortcut], count: Int) -> [SearchShortcut] {
-    let seed = Int(Date().timeIntervalSince1970 / (4 * 3600))
+private func rotatedSubset(of shortcuts: [SearchShortcut], count: Int, seedOffset: Int = 0) -> [SearchShortcut] {
+    let seed = Int(Date().timeIntervalSince1970 / (4 * 3600)) + seedOffset
     var rng = SeededRandomNumberGenerator(seed: UInt64(seed))
     var shuffled = shortcuts
     shuffled.shuffle(using: &rng)
@@ -102,7 +110,13 @@ private struct SeededRandomNumberGenerator: RandomNumberGenerator {
     private var state: UInt64
 
     init(seed: UInt64) {
-        state = seed
+        // Mix the seed using splitmix64 to ensure good bit distribution
+        var z = seed &+ 0x9e3779b97f4a7c15
+        z = (z ^ (z >> 30)) &* 0xbf58476d1ce4e5b9
+        z = (z ^ (z >> 27)) &* 0x94d049bb133111eb
+        state = z ^ (z >> 31)
+        // Ensure state is never 0 (xorshift produces only zeros from zero state)
+        if state == 0 { state = 1 }
     }
 
     mutating func next() -> UInt64 {
