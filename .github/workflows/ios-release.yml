@@ -35,8 +35,10 @@ jobs:
     - name: Decode provisioning profile
       run: |
         echo "${{ secrets.IOS_PROVISIONING_PROFILE_BASE64 }}" | base64 -d > .secrets/profile.mobileprovision
-        mkdir -p ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles
-        cp .secrets/profile.mobileprovision ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/
+        mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+        # Extract UUID from provisioning profile and use it as filename
+        PROFILE_UUID=$(/usr/libexec/PlistBuddy -c "Print UUID" /dev/stdin <<< $(/usr/bin/security cms -D -i .secrets/profile.mobileprovision))
+        cp .secrets/profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/${PROFILE_UUID}.mobileprovision
 
     - name: Import certificate to keychain
       run: |
