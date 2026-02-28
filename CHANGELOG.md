@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.9.1] - 2026-02-27
+
+### Bug Fixes
+* restrict app to iPhone only (729ba88)
+
+
 ## [2.9.0] - 2026-02-27
 
 ### New Features
@@ -51,8 +57,6 @@
 * micro: DEAD-157 offline navigation behavior and bottom banner (1dfb52c)
 * micro: use square logo for artwork placeholders (0582c6e)
 * micro: add iOS app icon with full-bleed red/blue lightning bolt (f8d6c37)
-
-
 ## [2.8.0] - 2026-02-20
 
 ### New Features
