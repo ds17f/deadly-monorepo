@@ -99,6 +99,9 @@ struct MainNavigation: View {
                 }
             }
         }
+        .onOpenURL { url in
+            handleDeepLink(url)
+        }
         .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {
             if let showId = pendingShowNavigation {
                 homeStack.append(showId)
@@ -144,6 +147,19 @@ struct MainNavigation: View {
         libraryStack = NavigationPath()
         libraryStack.append(LibraryRoute.downloads)
         selectedTab = .library
+    }
+
+    private func handleDeepLink(_ url: URL) {
+        guard let link = DeepLink.parse(url) else { return }
+        switch link {
+        case .show(let id, _):
+            showFullPlayer = false
+            selectedTab = .home
+            homeStack = NavigationPath()
+            homeStack.append(id)
+        case .collection:
+            selectedTab = .collections
+        }
     }
 }
 
