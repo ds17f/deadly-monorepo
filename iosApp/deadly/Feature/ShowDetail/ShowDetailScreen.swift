@@ -375,11 +375,19 @@ struct ShowDetailScreen: View {
         return isThisShow && (state == .loading || state == .buffering)
     }
 
+    private var isCurrentShowActive: Bool {
+        guard let currentTrackURL = streamPlayer.currentTrack?.url,
+              let recording = playlistService.currentRecording else { return false }
+        return playlistService.tracks.contains { track in
+            currentTrackURL == track.streamURL(recordingId: recording.identifier)
+        }
+    }
+
     private func handlePlayToggle() {
-        if isCurrentShowPlaying {
-            streamPlayer.pause()
-        } else if isCurrentShowLoading {
+        if isCurrentShowLoading {
             // Do nothing while loading
+        } else if isCurrentShowActive {
+            streamPlayer.togglePlayPause()
         } else {
             playlistService.playTrack(at: 0)
             playlistService.recordRecentPlay()
