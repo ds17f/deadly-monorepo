@@ -1,7 +1,7 @@
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
 .PHONY: android-release android-release-version android-release-dry-run android-install
 .PHONY: ios-release ios-release-version ios-release-dry-run
-.PHONY: setup-signing setup-github-secrets
+.PHONY: setup-signing setup-github-secrets setup-hooks
 .PHONY: android-build-release android-build-bundle android-deploy-testing
 .PHONY: android-promote-alpha android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
@@ -30,6 +30,7 @@ help:
 	@echo "  android-promote-production - Promote alpha build to production (triggers workflow)"
 	@echo ""
 	@echo "SIGNING & SECRETS:"
+	@echo "  setup-hooks          - Configure git to use .githooks/ (run once after clone)"
 	@echo "  setup-signing        - Generate keystore and .secrets/ setup"
 	@echo "  setup-github-secrets - Upload all secrets to GitHub repository"
 	@echo ""
@@ -129,6 +130,11 @@ ios-release-version:
 
 ios-release-dry-run:
 	@./scripts/release.sh --platform ios --dry-run
+
+setup-hooks:  ## Configure git to use .githooks/
+	git config core.hooksPath .githooks
+	chmod +x .githooks/commit-msg
+	@echo "✅ Git hooks configured — feat and fix commits now require platform scope"
 
 setup-signing:
 	@./scripts/setup-signing.sh
