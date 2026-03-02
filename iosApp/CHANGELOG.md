@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.12.0] - 2026-03-02
+
+### New Features
+* warn user before switching recordings with active downloads (d7b4cec)
+* allow navigation to show detail from active/paused downloads (29f6ed8)
+
+### Bug Fixes
+* prevent share dialog from closing immediately on detail screen (9256d07)
+
+### Code Refactoring
+* reorganize sections with new developer section (c19b36d)
+
+### Other Changes
+* chore(build): enforce platform-scoped commits and filter changelogs by platform (838d47d)
+
+
 ## [2.11.0] - 2026-03-01
 
 ### New Features
@@ -10,8 +26,6 @@
 * silence audio blip during playback restoration seek (8fe8078)
 * resume paused show instead of restarting from track 0 (a9a81d4)
 * make miniplayer full width by removing horizontal padding (b378f6e)
-
-
 ## [2.10.1] - 2026-03-01
 
 ### Other Changes
