@@ -269,6 +269,10 @@ final class DownloadServiceImpl: DownloadService {
         cancelShow(showId)
     }
 
+    func downloadedRecordingId(for showId: String) -> String? {
+        try? libraryDAO.fetchDownloadedRecordingId(showId)
+    }
+
     func removeAll() {
         logger.debug("Removing all downloads")
 

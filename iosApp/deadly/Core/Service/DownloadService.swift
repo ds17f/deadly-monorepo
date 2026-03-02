@@ -33,6 +33,10 @@ protocol DownloadService: AnyObject {
     /// Remove downloaded files for a show.
     func removeShow(_ showId: String)
 
+    /// Return the recording ID that is currently downloaded (or being downloaded) for a show.
+    /// Returns nil if the show has no active or completed download, or if the DB record is missing.
+    func downloadedRecordingId(for showId: String) -> String?
+
     /// Remove all downloaded files.
     func removeAll()
 
