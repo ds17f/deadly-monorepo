@@ -102,16 +102,18 @@ struct DownloadsScreen: View {
             if !activeDownloads.isEmpty {
                 Section("Downloading") {
                     ForEach(activeDownloads, id: \.0.id) { show, progress in
-                        ActiveDownloadRow(
-                            show: show,
-                            progress: progress,
-                            onPause: {
-                                downloadService.pauseShow(show.id)
-                            },
-                            onCancel: {
-                                downloadService.cancelShow(show.id)
-                            }
-                        )
+                        NavigationLink(value: show.id) {
+                            ActiveDownloadRow(
+                                show: show,
+                                progress: progress,
+                                onPause: {
+                                    downloadService.pauseShow(show.id)
+                                },
+                                onCancel: {
+                                    downloadService.cancelShow(show.id)
+                                }
+                            )
+                        }
                     }
                 }
             }
@@ -120,16 +122,18 @@ struct DownloadsScreen: View {
             if !pausedDownloads.isEmpty {
                 Section("Paused") {
                     ForEach(pausedDownloads, id: \.0.id) { show, progress in
-                        PausedDownloadRow(
-                            show: show,
-                            progress: progress,
-                            onResume: {
-                                downloadService.resumeShow(show.id)
-                            },
-                            onCancel: {
-                                downloadService.cancelShow(show.id)
-                            }
-                        )
+                        NavigationLink(value: show.id) {
+                            PausedDownloadRow(
+                                show: show,
+                                progress: progress,
+                                onResume: {
+                                    downloadService.resumeShow(show.id)
+                                },
+                                onCancel: {
+                                    downloadService.cancelShow(show.id)
+                                }
+                            )
+                        }
                     }
                 }
             }
