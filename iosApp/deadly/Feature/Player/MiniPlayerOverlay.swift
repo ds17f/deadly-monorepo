@@ -84,7 +84,6 @@ struct MiniPlayerOverlay: View {
             }
             .background(Color(.secondarySystemBackground))
             .clipShape(UnevenRoundedRectangle(topLeadingRadius: 12, topTrailingRadius: 12))
-            .padding(.horizontal, 12)
             .contentShape(Rectangle())
             .onTapGesture {
                 showFullPlayer = true
