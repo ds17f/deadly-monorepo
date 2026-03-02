@@ -412,6 +412,29 @@ private fun CompletedDownloadItem(
     onClick: () -> Unit,
     onRemove: () -> Unit
 ) {
+    var showDeleteConfirmation by remember { mutableStateOf(false) }
+
+    if (showDeleteConfirmation) {
+        AlertDialog(
+            onDismissRequest = { showDeleteConfirmation = false },
+            title = { Text("Remove Download") },
+            text = { Text("This will remove the show from ${show.displayDate} and free up ${formatStorageSize(show.storageBytes)} of storage. This cannot be undone.") },
+            confirmButton = {
+                TextButton(onClick = {
+                    showDeleteConfirmation = false
+                    onRemove()
+                }) {
+                    Text("Remove", color = MaterialTheme.colorScheme.error)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDeleteConfirmation = false }) {
+                    Text("Cancel")
+                }
+            }
+        )
+    }
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -455,7 +478,7 @@ private fun CompletedDownloadItem(
             )
         }
 
-        IconButton(onClick = onRemove) {
+        IconButton(onClick = { showDeleteConfirmation = true }) {
             Icon(
                 painter = IconResources.Content.Delete(),
                 contentDescription = "Remove download",

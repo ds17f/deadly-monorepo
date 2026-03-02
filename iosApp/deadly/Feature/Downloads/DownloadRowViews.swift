@@ -133,6 +133,8 @@ struct CompletedDownloadRow: View {
     let storageUsed: Int64
     let onRemove: () -> Void
 
+    @State private var showDeleteConfirmation = false
+
     var body: some View {
         HStack(spacing: 12) {
             ShowArtwork(
@@ -164,7 +166,7 @@ struct CompletedDownloadRow: View {
                 .foregroundStyle(DeadlyColors.primary)
 
             Button {
-                onRemove()
+                showDeleteConfirmation = true
             } label: {
                 Image(systemName: "trash")
                     .font(.body)
@@ -173,5 +175,11 @@ struct CompletedDownloadRow: View {
             .buttonStyle(.plain)
         }
         .padding(.vertical, 4)
+        .alert("Remove Download?", isPresented: $showDeleteConfirmation) {
+            Button("Remove", role: .destructive) { onRemove() }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This will remove the show from \(DateFormatting.formatShowDate(show.date, style: .short)) and free up \(ByteCountFormatter.string(fromByteCount: storageUsed, countStyle: .file)) of storage. This cannot be undone.")
+        }
     }
 }
