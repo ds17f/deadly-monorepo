@@ -91,6 +91,45 @@ Gradle properties:
 - Kotlin code style: `official`
 - Non-transitive R classes enabled
 
+## Commit Conventions
+
+Release notes are auto-generated from commit messages by `scripts/release.sh`. The script filters commits by platform scope to produce clean, platform-specific changelogs.
+
+### Required format for `feat` and `fix`
+
+```
+type(platform[/component]): description
+```
+
+The first token in the scope **must** be a valid platform identifier:
+
+| Identifier | Meaning |
+|------------|---------|
+| `ios`      | iOS app only |
+| `android`  | Android app only |
+| `web`      | Web app only |
+| `mobile`   | Both iOS and Android |
+| `all`      | All platforms |
+
+**Good:**
+```
+feat(ios/downloads): add confirmation dialog before deleting
+feat(android/player): use square icon for cover art
+fix(ios/ci): use xcodebuild directly with API key
+fix(mobile/playback): resume paused show instead of restarting
+feat(mobile/downloads): add sliding window download queue
+```
+
+**Bad — will be rejected by commit-msg hook:**
+```
+feat: no scope at all
+feat(downloads): missing platform prefix
+fix(ci): ambiguous — which platform's CI?
+feat(fart): not a valid platform
+```
+
+`chore`, `build`, `docs`, `test`, `refactor`, `ci` — no scope enforcement (bare `chore(build):` is fine), but if they affect a specific platform, follow the same pattern for clarity.
+
 ## Important Notes
 
 - **Security**: Never commit API keys. Use environment variables or `local.properties` (git-ignored)

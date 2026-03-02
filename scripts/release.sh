@@ -54,11 +54,13 @@ case "$PLATFORM" in
     VERSION_PROPS="androidApp/version.properties"
     CHANGELOG_FILE="androidApp/CHANGELOG.md"
     TAG_MATCH="android/v*"
+    EXCLUDE_PLATFORM="ios"
     ;;
   ios)
     VERSION_PROPS="iosApp/version.properties"
     CHANGELOG_FILE="iosApp/CHANGELOG.md"
     TAG_MATCH="ios/v*"
+    EXCLUDE_PLATFORM="android"
     ;;
   all)
     echo -e "${RED}❌ Error: --platform all is no longer supported.${NC}"
@@ -129,15 +131,21 @@ if [ "$VERSION_PROVIDED" = false ]; then
   echo "🔍 Analyzing commits since last tag to determine version bump..."
 
   # Check for breaking changes
-  BREAKING_CHANGES=$(git log ${FROM_REVISION} --pretty=format:"%s" | grep -E "^[a-z]+(\([^)]+\))?!:" || echo "")
+  BREAKING_CHANGES=$(git log ${FROM_REVISION} --pretty=format:"%s" \
+    | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+    | grep -E "^[a-z]+(\([^)]+\))?!:" || echo "")
   BREAKING_CHANGES_COUNT=$(echo "$BREAKING_CHANGES" | grep -v "^$" | wc -l | tr -d ' ')
 
   # Check for features
-  FEATURES=$(git log ${FROM_REVISION} --pretty=format:"%s" | grep -E "^feat(\([^)]+\))?:" || echo "")
+  FEATURES=$(git log ${FROM_REVISION} --pretty=format:"%s" \
+    | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+    | grep -E "^feat(\([^)]+\))?:" || echo "")
   FEATURES_COUNT=$(echo "$FEATURES" | grep -v "^$" | wc -l | tr -d ' ')
 
   # Check for fixes
-  FIXES=$(git log ${FROM_REVISION} --pretty=format:"%s" | grep -E "^fix(\([^)]+\))?:" || echo "")
+  FIXES=$(git log ${FROM_REVISION} --pretty=format:"%s" \
+    | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+    | grep -E "^fix(\([^)]+\))?:" || echo "")
   FIXES_COUNT=$(echo "$FIXES" | grep -v "^$" | wc -l | tr -d ' ')
 
   # Count total commits (handle case where single commit has no trailing newline)
@@ -214,13 +222,23 @@ cat > "$TEMP_CHANGELOG" << EOF
 EOF
 
 # Function to extract commits of a certain type
+# Args: type title [extra_exclude_pattern]
 extract_commits() {
   local type=$1
   local title=$2
+  local extra_exclude=${3:-}
   local commits
 
-  # Use fixed strings instead of regex to avoid grep errors
-  commits=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" | grep "^* ${type}" || true)
+  # Filter by type, then exclude opposite-platform commits
+  commits=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
+    | grep "^* ${type}" \
+    | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+    || true)
+
+  # Apply optional extra exclude pattern (e.g. to filter out ci-scoped commits)
+  if [ -n "$extra_exclude" ] && [ -n "$commits" ]; then
+    commits=$(echo "$commits" | grep -v "$extra_exclude" || true)
+  fi
 
   if [ -n "$commits" ]; then
     echo "### $title" >> "$TEMP_CHANGELOG"
@@ -237,17 +255,41 @@ extract_commits() {
 }
 
 # Extract different types of commits
-extract_commits "feat" "New Features"
-extract_commits "fix" "Bug Fixes"
+# feat and fix exclude ci-scoped commits — those go in CI Changes
+extract_commits "feat" "New Features" "([^)]*ci"
+extract_commits "fix" "Bug Fixes" "([^)]*ci"
 extract_commits "perf" "Performance Improvements"
 extract_commits "refactor" "Code Refactoring"
 extract_commits "docs" "Documentation Updates"
 extract_commits "test" "Tests"
 extract_commits "build" "Build System"
-extract_commits "ci" "CI Changes"
+
+# CI Changes: pure ci: type + feat/fix commits with ci in scope, both filtered by platform
+CI_FROM_TYPE=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
+  | grep "^* ci" \
+  | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+  || true)
+CI_FROM_FEAT_FIX=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
+  | grep -E "^\* (feat|fix)" \
+  | grep "([^)]*ci" \
+  | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+  || true)
+CI_COMMITS=$(printf "%s\n%s" "$CI_FROM_TYPE" "$CI_FROM_FEAT_FIX" | grep -v "^$" || true)
+if [ -n "$CI_COMMITS" ]; then
+  echo "### CI Changes" >> "$TEMP_CHANGELOG"
+  echo "$CI_COMMITS" | while IFS= read -r commit; do
+    clean_msg=$(echo "$commit" | sed "s/^\* [a-z]*[^:]*: //")
+    echo "* $clean_msg" >> "$TEMP_CHANGELOG"
+  done
+  echo "" >> "$TEMP_CHANGELOG"
+fi
 
 # Get miscellaneous commits (those not following conventional commit format)
-MISC_COMMITS=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" | grep -v "^* \(feat\|fix\|perf\|refactor\|docs\|test\|build\|ci\)" || true)
+# Exclude opposite-platform commits and release chore commits
+MISC_COMMITS=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
+  | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+  | grep -v "^* chore: release " \
+  | grep -v "^* \(feat\|fix\|perf\|refactor\|docs\|test\|build\|ci\)" || true)
 
 if [ -n "$MISC_COMMITS" ]; then
   echo "### Other Changes" >> "$TEMP_CHANGELOG"

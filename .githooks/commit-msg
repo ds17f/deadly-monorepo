@@ -1,0 +1,58 @@
+#!/bin/bash
+#
+# commit-msg hook — enforces conventional commit format with platform scope.
+#
+# For feat and fix commits, the scope must start with a valid platform identifier:
+#   ios | android | web | mobile | all
+#
+# Valid examples:
+#   feat(ios/downloads): add confirmation dialog
+#   fix(android/ci): fix signing in CI
+#   feat(mobile): cross-platform change
+#   fix(all/playback): resume from correct position
+#   chore(build): update gradle wrapper   ← no enforcement on chore/docs/test/etc.
+#
+# Activate with: git config core.hooksPath .githooks
+
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+# Strip comments and leading/trailing whitespace
+FIRST_LINE=$(echo "$COMMIT_MSG" | grep -v "^#" | head -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+
+# Skip merge commits, revert commits, and empty messages
+if [[ "$FIRST_LINE" =~ ^(Merge|Revert|Initial commit) ]]; then
+  exit 0
+fi
+
+# Parse the commit type and scope from "type(scope): description"
+TYPE=$(echo "$FIRST_LINE" | grep -oE "^[a-z]+" || true)
+SCOPE=$(echo "$FIRST_LINE" | grep -oP "(?<=\()[^)]*(?=\))" || true)
+
+VALID_PLATFORMS="ios|android|web|mobile|all"
+
+if [[ "$TYPE" =~ ^(feat|fix)$ ]]; then
+  if [[ -z "$SCOPE" ]]; then
+    echo "❌ '$TYPE' commits require a platform scope."
+    echo "   Format: $TYPE(platform[/component]): description"
+    echo "   Platforms: ios, android, web, mobile (ios+android), all"
+    echo ""
+    echo "   Examples:"
+    echo "     $TYPE(ios/downloads): add thing"
+    echo "     $TYPE(android/player): fix thing"
+    echo "     $TYPE(mobile): cross-platform change"
+    exit 1
+  fi
+
+  if ! [[ "$SCOPE" =~ ^(ios|android|web|mobile|all)(/.*)?$ ]]; then
+    echo "❌ Scope '($SCOPE)' must start with a platform identifier."
+    echo "   Valid platforms: ios, android, web, mobile, all"
+    echo "   With component: (ios/downloads), (mobile/player), (android/ci)"
+    echo ""
+    echo "   Got: $TYPE($SCOPE): ..."
+    echo "   Expected: $TYPE(platform[/component]): ..."
+    exit 1
+  fi
+fi
+
+exit 0
