@@ -1,11 +1,22 @@
 # Changelog
 
+## [2.10.0] - 2026-03-01
+
+### New Features
+* add deep link and Universal Link support for sharing (70b86d0)
+* add privacy manifest and CI workflow for App Store submission (0885934)
+
+### Bug Fixes
+* remove phishing heuristic triggers from share site (b870d2c)
+
+### Other Changes
+* chore(build): split version.properties and CHANGELOG per platform (c29844f)
+
+
 ## [2.9.1] - 2026-02-27
 
 ### Bug Fixes
 * restrict app to iPhone only (729ba88)
-
-
 ## [2.9.0] - 2026-02-27
 
 ### New Features
