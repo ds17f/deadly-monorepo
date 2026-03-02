@@ -24,7 +24,7 @@ class WaveformFilteringBitmapLoader(context: Context) : BitmapLoader {
 
     private val delegate = DataSourceBitmapLoader(context)
     private val logoBitmap: Bitmap by lazy {
-        BitmapFactory.decodeResource(context.resources, R.drawable.deadly_logo)
+        BitmapFactory.decodeResource(context.resources, R.drawable.deadly_logo_square)
     }
 
     override fun supportsMimeType(mimeType: String): Boolean =

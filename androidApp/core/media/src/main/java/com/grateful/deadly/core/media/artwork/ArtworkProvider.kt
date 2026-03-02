@@ -57,7 +57,7 @@ class ArtworkProvider : ContentProvider() {
             if (bitmap != null && isWaveform(bitmap)) {
                 Log.d(TAG, "Waveform detected for $recordingId (${bitmap.width}x${bitmap.height}), using logo")
                 // Write logo to cache
-                val logoBitmap = BitmapFactory.decodeResource(ctx.resources, R.drawable.deadly_logo)
+                val logoBitmap = BitmapFactory.decodeResource(ctx.resources, R.drawable.deadly_logo_square)
                 FileOutputStream(cachedFile).use { out ->
                     logoBitmap.compress(Bitmap.CompressFormat.PNG, 100, out)
                 }
@@ -71,7 +71,7 @@ class ArtworkProvider : ContentProvider() {
             Log.e(TAG, "Failed to load artwork for $recordingId", e)
             // On error, serve the logo
             try {
-                val logoBitmap = BitmapFactory.decodeResource(ctx.resources, R.drawable.deadly_logo)
+                val logoBitmap = BitmapFactory.decodeResource(ctx.resources, R.drawable.deadly_logo_square)
                 FileOutputStream(cachedFile).use { out ->
                     logoBitmap.compress(Bitmap.CompressFormat.PNG, 100, out)
                 }
