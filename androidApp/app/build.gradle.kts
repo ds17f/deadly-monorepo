@@ -1,8 +1,8 @@
 import java.util.Properties
 import java.io.ByteArrayOutputStream
 
-// Load version from version.properties (single source of truth for both Android and iOS)
-val versionPropsFile = rootProject.file("../version.properties")
+// Load version from version.properties (Android version)
+val versionPropsFile = rootProject.file("version.properties")
 val versionProps = Properties()
 if (versionPropsFile.exists()) {
     versionPropsFile.inputStream().use { versionProps.load(it) }

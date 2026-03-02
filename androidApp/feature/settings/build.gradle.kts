@@ -10,9 +10,9 @@ plugins {
     id("com.google.devtools.ksp")
 }
 
-// Load version properties from root project
+// Load version properties from Android root
 val versionProps = Properties().apply {
-    val versionFile = File(rootProject.rootDir.parentFile, "version.properties")
+    val versionFile = File(rootProject.rootDir, "version.properties")
     if (versionFile.exists()) {
         load(FileInputStream(versionFile))
     }

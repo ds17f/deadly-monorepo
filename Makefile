@@ -1,8 +1,9 @@
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
-.PHONY: release release-version release-dry-run ios-release release-all
+.PHONY: android-release android-release-version android-release-dry-run
+.PHONY: ios-release ios-release-version ios-release-dry-run
 .PHONY: setup-signing setup-github-secrets
 .PHONY: android-build-release android-build-bundle android-deploy-testing
-.PHONY: promote-alpha promote-production
+.PHONY: android-promote-alpha android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
 .PHONY: ios-remote-unlock ios-remote-sync ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
@@ -12,18 +13,23 @@ help:
 	@echo "Deadly Monorepo - Available Make Targets"
 	@echo "========================================"
 	@echo ""
-	@echo "RELEASE MANAGEMENT:"
-	@echo "  release              - Android release with auto-versioning (default)"
-	@echo "  release-version      - Android release with specific version (make release-version VERSION=1.2.3)"
-	@echo "  release-dry-run      - Preview android release without making changes"
-	@echo "  ios-release          - iOS release with auto-versioning"
-	@echo "  release-all          - Release both platforms with auto-versioning"
+	@echo "ANDROID RELEASE:"
+	@echo "  android-release          - Android release with auto-versioning"
+	@echo "  android-release-version  - Android release with specific version (make android-release-version VERSION=1.2.3)"
+	@echo "  android-release-dry-run  - Preview android release without making changes"
+	@echo ""
+	@echo "IOS RELEASE:"
+	@echo "  ios-release              - iOS release with auto-versioning"
+	@echo "  ios-release-version      - iOS release with specific version (make ios-release-version VERSION=1.2.3)"
+	@echo "  ios-release-dry-run      - Preview iOS release without making changes"
+	@echo ""
+	@echo "ANDROID PROMOTIONS:"
+	@echo "  android-promote-alpha      - Promote internal build to closed alpha (triggers workflow)"
+	@echo "  android-promote-production - Promote alpha build to production (triggers workflow)"
+	@echo ""
+	@echo "SIGNING & SECRETS:"
 	@echo "  setup-signing        - Generate keystore and .secrets/ setup"
 	@echo "  setup-github-secrets - Upload all secrets to GitHub repository"
-	@echo ""
-	@echo "PROMOTIONS:"
-	@echo "  promote-alpha        - Promote internal build to closed alpha (triggers workflow)"
-	@echo "  promote-production   - Promote alpha build to production (triggers workflow)"
 	@echo ""
 	@echo "ANDROID FASTLANE:"
 	@echo "  android-build-release - Build signed Android release APK"
@@ -94,25 +100,33 @@ docs-pr: docs-clean docs-build
 # RELEASE MANAGEMENT
 # =============================================================================
 
-release:
+android-release:
 	@./scripts/release.sh --platform android
 
-release-version:
+android-release-version:
 	@if [ -z "$(VERSION)" ]; then \
 		echo "Error: VERSION not specified"; \
-		echo "Usage: make release-version VERSION=1.2.3"; \
+		echo "Usage: make android-release-version VERSION=1.2.3"; \
 		exit 1; \
 	fi
 	@./scripts/release.sh --platform android $(VERSION)
 
-release-dry-run:
+android-release-dry-run:
 	@./scripts/release.sh --platform android --dry-run
 
 ios-release:
 	@./scripts/release.sh --platform ios
 
-release-all:
-	@./scripts/release.sh --platform all
+ios-release-version:
+	@if [ -z "$(VERSION)" ]; then \
+		echo "Error: VERSION not specified"; \
+		echo "Usage: make ios-release-version VERSION=1.2.3"; \
+		exit 1; \
+	fi
+	@./scripts/release.sh --platform ios $(VERSION)
+
+ios-release-dry-run:
+	@./scripts/release.sh --platform ios --dry-run
 
 setup-signing:
 	@./scripts/setup-signing.sh
@@ -124,13 +138,13 @@ setup-github-secrets:
 # ANDROID FASTLANE
 # =============================================================================
 
-promote-alpha:
+android-promote-alpha:
 	gh workflow run android-promote.yml -f stage=alpha \
-		-f version=$(shell grep VERSION_NAME version.properties | cut -d= -f2)
+		-f version=$(shell grep VERSION_NAME androidApp/version.properties | cut -d= -f2)
 
-promote-production:
+android-promote-production:
 	gh workflow run android-promote.yml -f stage=production \
-		-f version=$(shell grep VERSION_NAME version.properties | cut -d= -f2)
+		-f version=$(shell grep VERSION_NAME androidApp/version.properties | cut -d= -f2)
 
 android-build-release:
 	@echo "Building Android release APK..."
