@@ -84,6 +84,11 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         player.stop()
     }
 
+    var volume: Float {
+        get { player.volume }
+        set { player.volume = newValue }
+    }
+
     // MARK: - Queue management
 
     /// Resolves all redirects upfront, then plays track at `index` and queues all remaining

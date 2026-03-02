@@ -79,14 +79,19 @@ final class PlaybackRestorationService {
         }
 
         guard streamPlayer.playbackState == .playing else {
-            logger.warning("Timed out waiting for playback, skipping pause+seek")
+            logger.warning("Timed out waiting for playback, skipping seek")
             return
         }
 
-        streamPlayer.pause()
+        // Mute, seek while playing (so the HTTP range request fires on an active
+        // connection), wait for seek to land, then unmute and pause.
         if seekPosition > 0 {
+            streamPlayer.volume = 0
             streamPlayer.seek(to: seekPosition)
+            try? await Task.sleep(for: .milliseconds(300))
+            streamPlayer.volume = 1
         }
+        streamPlayer.pause()
         logger.info("Restored at track \(trackIndex), position \(seekPosition, format: .fixed(precision: 1))s — paused")
     }
 
