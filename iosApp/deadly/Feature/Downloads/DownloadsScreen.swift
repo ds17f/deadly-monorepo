@@ -5,6 +5,7 @@ struct DownloadsScreen: View {
     private var downloadService: DownloadServiceImpl { container.downloadService }
 
     @State private var showDeleteAllConfirmation = false
+    @State private var showToDelete: Show? = nil
 
     private var activeDownloads: [(Show, ShowDownloadProgress)] {
         downloadService.allProgress.compactMap { showId, progress in
@@ -64,6 +65,22 @@ struct DownloadsScreen: View {
             Button("Cancel", role: .cancel) {}
         } message: {
             Text("This will delete all downloaded shows and free up \(ByteCountFormatter.string(fromByteCount: totalStorageUsed, countStyle: .file)) of storage.")
+        }
+        .alert("Remove Download?", isPresented: Binding(
+            get: { showToDelete != nil },
+            set: { if !$0 { showToDelete = nil } }
+        )) {
+            Button("Remove", role: .destructive) {
+                if let show = showToDelete {
+                    downloadService.removeShow(show.id)
+                    showToDelete = nil
+                }
+            }
+            Button("Cancel", role: .cancel) { showToDelete = nil }
+        } message: {
+            if let show = showToDelete {
+                Text("This will remove the show from \(DateFormatting.formatShowDate(show.date, style: .short)) and free up \(ByteCountFormatter.string(fromByteCount: downloadService.showStorageUsed(show.id), countStyle: .file)) of storage. This cannot be undone.")
+            }
         }
     }
 
@@ -132,9 +149,8 @@ struct DownloadsScreen: View {
                         }
                     }
                     .onDelete { indexSet in
-                        for index in indexSet {
-                            let show = completedDownloads[index]
-                            downloadService.removeShow(show.id)
+                        if let index = indexSet.first {
+                            showToDelete = completedDownloads[index]
                         }
                     }
                 }
