@@ -1,5 +1,5 @@
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
-.PHONY: android-release android-release-version android-release-dry-run
+.PHONY: android-release android-release-version android-release-dry-run android-install
 .PHONY: ios-release ios-release-version ios-release-dry-run
 .PHONY: setup-signing setup-github-secrets
 .PHONY: android-build-release android-build-bundle android-deploy-testing
@@ -22,6 +22,8 @@ help:
 	@echo "  ios-release              - iOS release with auto-versioning"
 	@echo "  ios-release-version      - iOS release with specific version (make ios-release-version VERSION=1.2.3)"
 	@echo "  ios-release-dry-run      - Preview iOS release without making changes"
+	@echo ""
+	@echo "  android-install          - Build debug + install to connected Android device (USB)"
 	@echo ""
 	@echo "ANDROID PROMOTIONS:"
 	@echo "  android-promote-alpha      - Promote internal build to closed alpha (triggers workflow)"
@@ -137,6 +139,9 @@ setup-github-secrets:
 # =============================================================================
 # ANDROID FASTLANE
 # =============================================================================
+
+android-install:
+	cd androidApp && ./gradlew installDebug
 
 android-promote-alpha:
 	gh workflow run android-promote.yml -f stage=alpha \
