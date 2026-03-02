@@ -17,6 +17,7 @@ struct ShowDetailScreen: View {
     }
 
     @State private var showMenuSheet = false
+    @State private var showShareSheet = false
     @State private var showRecordingPicker = false
     @State private var isInLibrary = false
     @State private var isDownloading = false
@@ -231,6 +232,11 @@ struct ShowDetailScreen: View {
         .sheet(isPresented: $showSetlistSheet) {
             SetlistSheet(show: show)
         }
+        .sheet(isPresented: $showShareSheet) {
+            if let text = shareText(show: show) {
+                ShareActivityView(text: text)
+            }
+        }
         .alert("Remove Download?", isPresented: $showRemoveDownloadAlert) {
             Button("Cancel", role: .cancel) { }
             Button("Remove", role: .destructive) {
@@ -302,8 +308,13 @@ struct ShowDetailScreen: View {
     private func menuSheet(_ show: Show) -> some View {
         NavigationStack {
             List {
-                if let text = shareText(show: show) {
-                    ShareLink(item: text) {
+                if shareText(show: show) != nil {
+                    Button {
+                        showMenuSheet = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            showShareSheet = true
+                        }
+                    } label: {
                         Label("Share", systemImage: "square.and.arrow.up")
                     }
                 }
@@ -522,6 +533,8 @@ struct ShowDetailScreen: View {
         }
     }
 
+    // MARK: - Share
+
     private func shareText(show: Show) -> String? {
         guard let recording = playlistService.currentRecording else { return nil }
         var lines: [String] = []
@@ -539,4 +552,14 @@ struct ShowDetailScreen: View {
         lines.append("https://share.thedeadly.app/show/\(show.id)/recording/\(recording.identifier)")
         return lines.joined(separator: "\n")
     }
+}
+
+private struct ShareActivityView: UIViewControllerRepresentable {
+    let text: String
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: [text], applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
