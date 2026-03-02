@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.10.1] - 2026-03-01
+
+### Other Changes
+* chore(ios): declare non-exempt encryption status in Info.plist (5e56329)
+
+
 ## [2.10.0] - 2026-03-01
 
 ### New Features
@@ -11,8 +17,6 @@
 
 ### Other Changes
 * chore(build): split version.properties and CHANGELOG per platform (c29844f)
-
-
 ## [2.9.1] - 2026-02-27
 
 ### Bug Fixes
