@@ -1,11 +1,41 @@
 # Changelog
 
+## [2.10.0] - 2026-03-01
+
+### New Features
+* persist and restore playback position across app termination (858193b)
+* add confirmation dialog before deleting downloads (8b2d825)
+* use square icon for cover art placeholders (369920f)
+* add deep link and Universal Link support for sharing (70b86d0)
+* add privacy manifest and CI workflow for App Store submission (0885934)
+
+### Bug Fixes
+* silence audio blip during playback restoration seek (8fe8078)
+* resume paused show instead of restarting from track 0 (a9a81d4)
+* make miniplayer full width by removing horizontal padding (b378f6e)
+* remove phishing heuristic triggers from share site (b870d2c)
+* restrict app to iPhone only (729ba88)
+* use absolute paths in xcodebuild commands (d43ec8b)
+* use xcodebuild directly with API key for automatic signing (9a49c89)
+* remove PROVISIONING_PROFILE_SPECIFIER to avoid SPM conflicts (af8601d)
+* add xcargs to override automatic signing in CI (bc38941)
+* install provisioning profile to correct directory (ca690ef)
+* update iOS release workflow for macOS 15 and Ruby 3.3 (c2482b4)
+
+### Other Changes
+* chore: release ios version 2.11.0 (fec7463)
+* chore(build): add android-install make target for debug APK installation (230b6fa)
+* chore: release ios version 2.10.1 (fe75db0)
+* chore(ios): declare non-exempt encryption status in Info.plist (5e56329)
+* chore: release ios version 2.10.0 (4d46944)
+* chore(build): split version.properties and CHANGELOG per platform (c29844f)
+* chore: release version 2.9.1 (57013d4)
+
+
 ## [2.9.1] - 2026-02-27
 
 ### Bug Fixes
 * restrict app to iPhone only (729ba88)
-
-
 ## [2.9.0] - 2026-02-27
 
 ### New Features
