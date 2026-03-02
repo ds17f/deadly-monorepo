@@ -9,6 +9,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -31,115 +32,117 @@ fun SettingsScreen(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
-            // Migration Import Section
-            item {
-                SettingsSection(title = "Migration") {
-                    ImportMigrationButton(
-                        viewModel = viewModel,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                }
-            }
+        // Preferences Section
+        item {
+            val showOnlyRecorded by viewModel.showOnlyRecordedShows.collectAsState()
 
-            // Cache Management Section
-            item {
-                SettingsSection(title = "Cache Management") {
-                    ClearArchiveCacheButton(modifier = Modifier.fillMaxWidth())
-                }
-            }
-            
-            // Data Management Section
-            item {
-                SettingsSection(title = "Data Management") {
-                    DeleteDataZipButton(
-                        onDeleteDataZip = viewModel::onDeleteDataZip,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                    
-                    Spacer(modifier = Modifier.height(8.dp))
-                    
-                    DeleteDatabaseFilesButton(
-                        onDeleteDatabaseFiles = viewModel::onDeleteDatabaseFiles,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                }
-            }
-            
-            // Preferences Section
-            item {
-                val showOnlyRecorded by viewModel.showOnlyRecordedShows.collectAsState()
-                val forceOnline by viewModel.forceOnline.collectAsState()
-
-                SettingsSection(title = "Preferences") {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = "Hide shows without recordings",
-                                style = MaterialTheme.typography.bodyLarge
-                            )
-                            Text(
-                                text = "Only show concerts that have audio recordings available",
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                        Switch(
-                            checked = showOnlyRecorded,
-                            onCheckedChange = { viewModel.toggleShowOnlyRecordedShows() }
-                        )
-                    }
-
-                    HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
-
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = "Force online mode",
-                                style = MaterialTheme.typography.bodyLarge
-                            )
-                            Text(
-                                text = "Override offline detection — use when the app incorrectly shows as offline",
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                        Switch(
-                            checked = forceOnline,
-                            onCheckedChange = { viewModel.toggleForceOnline() }
-                        )
-                    }
-                }
-            }
-
-            // About Section
-            item {
-                SettingsSection(title = "About") {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { onNavigateToAbout() },
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
+            SettingsSection(title = "Preferences") {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
                         Text(
-                            text = "Legal & About",
+                            text = "Hide shows without recordings",
                             style = MaterialTheme.typography.bodyLarge
                         )
-                        Icon(
-                            painter = IconResources.Navigation.ChevronRight(),
-                            contentDescription = "Navigate to About"
+                        Text(
+                            text = "Only show concerts that have audio recordings available",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
+                    Switch(
+                        checked = showOnlyRecorded,
+                        onCheckedChange = { viewModel.toggleShowOnlyRecordedShows() }
+                    )
                 }
             }
+        }
+
+        // Library Section
+        item {
+            SettingsSection(title = "Library") {
+                ImportMigrationButton(
+                    viewModel = viewModel,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        }
+
+        // About Section
+        item {
+            SettingsSection(title = "About") {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onNavigateToAbout() },
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "Legal & About",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = "Navigate to About"
+                    )
+                }
+            }
+        }
+
+        // Developer Section
+        item {
+            val forceOnline by viewModel.forceOnline.collectAsState()
+
+            SettingsSection(
+                title = "Developer",
+                titleColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                footer = "Advanced tools for debugging and data recovery."
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = "Force online mode",
+                            style = MaterialTheme.typography.bodyLarge
+                        )
+                        Text(
+                            text = "Override offline detection — use when the app incorrectly shows as offline",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    Switch(
+                        checked = forceOnline,
+                        onCheckedChange = { viewModel.toggleForceOnline() }
+                    )
+                }
+
+                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+
+                ClearArchiveCacheButton(modifier = Modifier.fillMaxWidth())
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                DeleteDataZipButton(
+                    onDeleteDataZip = viewModel::onDeleteDataZip,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                DeleteDatabaseFilesButton(
+                    onDeleteDatabaseFiles = viewModel::onDeleteDatabaseFiles,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        }
     }
 }
 
@@ -150,26 +153,39 @@ fun SettingsScreen(
 private fun SettingsSection(
     title: String,
     modifier: Modifier = Modifier,
+    titleColor: Color = Color.Unspecified,
+    footer: String? = null,
     content: @Composable ColumnScope.() -> Unit
 ) {
-    Card(
-        modifier = modifier.fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+    Column(modifier = modifier.fillMaxWidth()) {
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
         ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    color = if (titleColor == Color.Unspecified) MaterialTheme.colorScheme.onSurface else titleColor
+                )
+
+                content()
+            }
+        }
+
+        if (footer != null) {
             Text(
-                text = title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.onSurface
+                text = footer,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(start = 16.dp, top = 4.dp, end = 16.dp)
             )
-            
-            content()
         }
     }
 }
@@ -183,22 +199,22 @@ private fun ClearArchiveCacheButton(
 ) {
     val context = LocalContext.current
     var showConfirmDialog by remember { mutableStateOf(false) }
-    
+
     OutlinedButton(
         onClick = { showConfirmDialog = true },
         modifier = modifier,
         colors = ButtonDefaults.outlinedButtonColors(
-            contentColor = MaterialTheme.colorScheme.secondary
+            contentColor = MaterialTheme.colorScheme.primary
         )
     ) {
         Text("Clear Archive Cache")
     }
-    
+
     if (showConfirmDialog) {
         AlertDialog(
             onDismissRequest = { showConfirmDialog = false },
             title = { Text("Clear Archive Cache") },
-            text = { 
+            text = {
                 Text("This will delete all cached track lists and reviews. The data will be re-downloaded when needed.")
             },
             confirmButton = {
@@ -208,7 +224,7 @@ private fun ClearArchiveCacheButton(
                         clearArchiveCache(context)
                     },
                     colors = ButtonDefaults.textButtonColors(
-                        contentColor = MaterialTheme.colorScheme.secondary
+                        contentColor = MaterialTheme.colorScheme.primary
                     )
                 ) {
                     Text("Clear")
@@ -246,7 +262,7 @@ private fun DeleteDataZipButton(
     var showConfirmDialog by remember { mutableStateOf(false) }
     var showCompletionDialog by remember { mutableStateOf(false) }
     var deletionSuccess by remember { mutableStateOf(false) }
-    
+
     OutlinedButton(
         onClick = { showConfirmDialog = true },
         modifier = modifier,
@@ -254,19 +270,19 @@ private fun DeleteDataZipButton(
             contentColor = MaterialTheme.colorScheme.error
         ),
         border = androidx.compose.foundation.BorderStroke(
-            1.dp, 
+            1.dp,
             MaterialTheme.colorScheme.error
         )
     ) {
         Text("Delete Data.zip")
     }
-    
+
     if (showConfirmDialog) {
         AlertDialog(
             onDismissRequest = { showConfirmDialog = false },
             title = { Text("Delete Data.zip File") },
-            text = { 
-                Text("This will delete the data.zip file from the files directory. The app will need to re-download show data when needed. Continue?") 
+            text = {
+                Text("This will delete the data.zip file from the files directory. The app will need to re-download show data when needed. Continue?")
             },
             confirmButton = {
                 TextButton(
@@ -291,16 +307,16 @@ private fun DeleteDataZipButton(
             }
         )
     }
-    
+
     if (showCompletionDialog) {
         AlertDialog(
             onDismissRequest = { showCompletionDialog = false },
-            title = { 
-                Text(if (deletionSuccess) "Data.zip Deleted" else "Deletion Failed") 
+            title = {
+                Text(if (deletionSuccess) "Data.zip Deleted" else "Deletion Failed")
             },
-            text = { 
+            text = {
                 Text(
-                    if (deletionSuccess) "The data.zip file has been successfully deleted." 
+                    if (deletionSuccess) "The data.zip file has been successfully deleted."
                     else "Failed to delete the data.zip file. It may not exist or be in use."
                 )
             },
@@ -408,7 +424,7 @@ private fun DeleteDatabaseFilesButton(
     var showConfirmDialog by remember { mutableStateOf(false) }
     var showCompletionDialog by remember { mutableStateOf(false) }
     var deletionSuccess by remember { mutableStateOf(false) }
-    
+
     OutlinedButton(
         onClick = { showConfirmDialog = true },
         modifier = modifier,
@@ -416,19 +432,19 @@ private fun DeleteDatabaseFilesButton(
             contentColor = MaterialTheme.colorScheme.error
         ),
         border = androidx.compose.foundation.BorderStroke(
-            1.dp, 
+            1.dp,
             MaterialTheme.colorScheme.error
         )
     ) {
         Text("Delete Database Files")
     }
-    
+
     if (showConfirmDialog) {
         AlertDialog(
             onDismissRequest = { showConfirmDialog = false },
             title = { Text("Delete Database Files") },
-            text = { 
-                Text("This will delete all deadly_db* files from the databases directory. All stored shows, favorites, and app data will be lost. Continue?") 
+            text = {
+                Text("This will delete all deadly_db* files from the databases directory. All stored shows, favorites, and app data will be lost. Continue?")
             },
             confirmButton = {
                 TextButton(
@@ -453,16 +469,16 @@ private fun DeleteDatabaseFilesButton(
             }
         )
     }
-    
+
     if (showCompletionDialog) {
         AlertDialog(
             onDismissRequest = { showCompletionDialog = false },
-            title = { 
-                Text(if (deletionSuccess) "Database Files Deleted" else "Deletion Failed") 
+            title = {
+                Text(if (deletionSuccess) "Database Files Deleted" else "Deletion Failed")
             },
-            text = { 
+            text = {
                 Text(
-                    if (deletionSuccess) "The database files have been successfully deleted. The app will create fresh data on next use." 
+                    if (deletionSuccess) "The database files have been successfully deleted. The app will create fresh data on next use."
                     else "Failed to delete some or all database files. They may be in use by the app."
                 )
             },

@@ -21,41 +21,6 @@ struct SettingsScreen: View {
 
     var body: some View {
         List {
-            // MARK: - Migration
-            Section("Migration") {
-                Button("Import Library from Old App") {
-                    showingLibraryFilePicker = true
-                }
-                Button("Export Library") {
-                    libraryExportData = try? container.libraryImportExportService.exportLibrary()
-                    if libraryExportData != nil { showingLibraryExportShare = true }
-                }
-            }
-
-            // MARK: - Cache Management
-            Section {
-                Button("Clear All Caches") {
-                    showingClearCacheAlert = true
-                }
-            } header: {
-                Text("Cache Management")
-            } footer: {
-                Text("Deletes cached images, track lists, and reviews. Data will be re-downloaded when needed.")
-            }
-
-            // MARK: - Data Management
-            Section("Data Management") {
-                if let v = dataVersion {
-                    LabeledContent("Database Version", value: v)
-                } else {
-                    LabeledContent("Database Version", value: "No data")
-                }
-                Button("Force Re-Import") {
-                    showingReimportConfirm = true
-                }
-                .foregroundStyle(.red)
-            }
-
             // MARK: - Preferences
             Section("Preferences") {
                 Toggle(isOn: Binding(
@@ -69,7 +34,28 @@ struct SettingsScreen: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+            }
 
+            // MARK: - Library
+            Section("Library") {
+                Button("Import Library from Old App") {
+                    showingLibraryFilePicker = true
+                }
+                Button("Export Library") {
+                    libraryExportData = try? container.libraryImportExportService.exportLibrary()
+                    if libraryExportData != nil { showingLibraryExportShare = true }
+                }
+            }
+
+            // MARK: - About
+            Section("About") {
+                NavigationLink("Legal & About") {
+                    AboutView()
+                }
+            }
+
+            // MARK: - Developer
+            Section {
                 Toggle(isOn: Binding(
                     get: { container.appPreferences.forceOnline },
                     set: { container.appPreferences.forceOnline = $0 }
@@ -81,13 +67,26 @@ struct SettingsScreen: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }
 
-            // MARK: - About
-            Section("About") {
-                NavigationLink("Legal & About") {
-                    AboutView()
+                Button("Clear All Caches") {
+                    showingClearCacheAlert = true
                 }
+
+                if let v = dataVersion {
+                    LabeledContent("Database Version", value: v)
+                } else {
+                    LabeledContent("Database Version", value: "No data")
+                }
+
+                Button("Force Re-Import") {
+                    showingReimportConfirm = true
+                }
+                .foregroundStyle(.red)
+            } header: {
+                Text("Developer")
+                    .foregroundStyle(.secondary)
+            } footer: {
+                Text("Advanced tools for debugging and data recovery.")
             }
         }
         .navigationTitle("Settings")
