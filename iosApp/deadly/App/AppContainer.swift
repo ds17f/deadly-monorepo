@@ -25,6 +25,7 @@ final class AppContainer {
     let recentShowsService: RecentShowsServiceImpl
     let miniPlayerService: MiniPlayerServiceImpl
     let downloadService: DownloadServiceImpl
+    let playbackRestorationService: PlaybackRestorationService
 
     init() {
         // Configure audio session for background playback at app launch
@@ -129,7 +130,7 @@ final class AppContainer {
             downloadService = downloadSvc
 
             // PlaylistService depends on RecentShowsService and DownloadService
-            playlistService = PlaylistServiceImpl(
+            let playlistSvc = PlaylistServiceImpl(
                 showRepository: showRepo,
                 archiveClient: URLSessionArchiveMetadataClient(),
                 recentShowsService: recentService,
@@ -137,6 +138,18 @@ final class AppContainer {
                 streamPlayer: player,
                 downloadService: downloadSvc
             )
+            playlistService = playlistSvc
+
+            // PlaybackRestorationService — persists and restores playback position across kills
+            let restorationSvc = MainActor.assumeIsolated {
+                PlaybackRestorationService(
+                    store: LastPlayedTrackStore(),
+                    streamPlayer: player,
+                    playlistService: playlistSvc
+                )
+            }
+            playbackRestorationService = restorationSvc
+            MainActor.assumeIsolated { restorationSvc.startMonitoring() }
 
             // PanelContentService is @MainActor; AppContainer.init is always called on
             // the main thread (from deadlyApp which is @MainActor), so assumeIsolated is safe.

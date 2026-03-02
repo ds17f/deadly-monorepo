@@ -23,6 +23,7 @@ struct deadlyApp: App {
     @UIApplicationDelegateAdaptor(DeadlyAppDelegate.self) private var appDelegate
     @State private var container = AppContainer()
     @State private var showingImport = false
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
@@ -37,12 +38,21 @@ struct deadlyApp: App {
                     appDelegate.container = container
 
                     // Show the import screen if the DB has no data yet.
-                    if (try? container.database.read { db in
+                    let hasData = ((try? container.database.read { db in
                         try Int.fetchOne(db, sql: "SELECT COUNT(*) FROM data_version") ?? 0
-                    }) == 0 {
+                    }) ?? 0) > 0
+                    if !hasData {
                         showingImport = true
+                    } else {
+                        // Restore last playback position if the app was killed mid-playback.
+                        await container.playbackRestorationService.restoreIfAvailable()
                     }
                 }
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .background {
+                container.playbackRestorationService.saveNow()
+            }
         }
     }
 }
