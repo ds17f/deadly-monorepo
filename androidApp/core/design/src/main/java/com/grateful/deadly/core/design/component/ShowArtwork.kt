@@ -120,7 +120,7 @@ fun ShowArtwork(
 @Composable
 private fun DefaultArtworkPlaceholder() {
     Image(
-        painter = painterResource(R.drawable.deadly_logo),
+        painter = painterResource(R.drawable.deadly_logo_square),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier.fillMaxSize()
