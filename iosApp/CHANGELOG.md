@@ -1,11 +1,25 @@
 # Changelog
 
+## [2.11.0] - 2026-03-01
+
+### New Features
+* persist and restore playback position across app termination (858193b)
+* add confirmation dialog before deleting downloads (8b2d825)
+* use square icon for cover art placeholders (369920f)
+
+### Bug Fixes
+* silence audio blip during playback restoration seek (8fe8078)
+* resume paused show instead of restarting from track 0 (a9a81d4)
+* make miniplayer full width by removing horizontal padding (b378f6e)
+
+### Other Changes
+* chore(build): add android-install make target for debug APK installation (230b6fa)
+
+
 ## [2.10.1] - 2026-03-01
 
 ### Other Changes
 * chore(ios): declare non-exempt encryption status in Info.plist (5e56329)
-
-
 ## [2.10.0] - 2026-03-01
 
 ### New Features
