@@ -1,20 +1,22 @@
 #!/bin/bash
 # Update the rollout status table in a GitHub release body.
 #
-# Usage: ./scripts/update-release-status.sh <version> <stage> <status>
-#   version: e.g. 2.1.0
-#   stage:   "Internal Testing" | "Closed Alpha" | "Production"
-#   status:  "deployed" | "failed"
+# Usage: ./scripts/update-release-status.sh <platform> <version> <stage> <status>
+#   platform: "android" | "ios"
+#   version:  e.g. 2.1.0
+#   stage:    "Internal Testing" | "Closed Alpha" | "Production" | "TestFlight" | "App Store"
+#   status:   "deployed" | "failed"
 #
 # Requires: gh CLI authenticated with contents:write permission
 # Set GH_TOKEN env var in CI, or use `gh auth login` locally.
 
 set -euo pipefail
 
-VERSION="${1:?Usage: $0 <version> <stage> <status>}"
-STAGE="${2:?Usage: $0 <version> <stage> <status>}"
-STATUS="${3:?Usage: $0 <version> <stage> <status>}"
-TAG="android/v${VERSION}"
+PLATFORM="${1:?Usage: $0 <platform> <version> <stage> <status>}"
+VERSION="${2:?Usage: $0 <platform> <version> <stage> <status>}"
+STAGE="${3:?Usage: $0 <platform> <version> <stage> <status>}"
+STATUS="${4:?Usage: $0 <platform> <version> <stage> <status>}"
+TAG="${PLATFORM}/v${VERSION}"
 TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
 
 case "$STATUS" in

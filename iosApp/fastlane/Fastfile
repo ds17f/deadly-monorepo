@@ -10,8 +10,8 @@ platform :ios do
   desc "Update iOS version from version.properties"
   private_lane :update_version_from_properties do
     # Fastlane changes to Fastfile directory (iosApp/fastlane/)
-    # version.properties is two levels up at monorepo root
-    version_props = File.read("../../version.properties")
+    # version.properties is one level up in iosApp/
+    version_props = File.read("../version.properties")
     version_name = version_props.match(/VERSION_NAME=(.+)/)[1].strip
     version_code = version_props.match(/VERSION_CODE=(.+)/)[1].strip
 

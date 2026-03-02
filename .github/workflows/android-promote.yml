@@ -54,7 +54,7 @@ jobs:
         REPO="${{ github.repository }}"
         FOOTER=$'\n\nFull notes: '"${SERVER}/${REPO}/releases/tag/android/v${VERSION}"
         MAX_NOTES=$(( 500 - ${#FOOTER} - 3 ))
-        RAW=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" CHANGELOG.md | sed '/^[[:space:]]*$/d')
+        RAW=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" androidApp/CHANGELOG.md | sed '/^[[:space:]]*$/d')
         if [ ${#RAW} -gt $MAX_NOTES ]; then
           RAW="${RAW:0:$MAX_NOTES}..."
         fi
@@ -79,7 +79,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         chmod +x scripts/update-release-status.sh
-        ./scripts/update-release-status.sh "${{ inputs.version }}" "${{ steps.stage.outputs.display_name }}" deployed
+        ./scripts/update-release-status.sh android "${{ inputs.version }}" "${{ steps.stage.outputs.display_name }}" deployed
 
     - name: Update release status (failure)
       if: failure() && (steps.promote.outcome == 'failure' || steps.promote-prod.outcome == 'failure')
@@ -87,7 +87,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         chmod +x scripts/update-release-status.sh
-        ./scripts/update-release-status.sh "${{ inputs.version }}" "${{ steps.stage.outputs.display_name }}" failed
+        ./scripts/update-release-status.sh android "${{ inputs.version }}" "${{ steps.stage.outputs.display_name }}" failed
 
     - name: Clean up secrets
       if: always()

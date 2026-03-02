@@ -106,7 +106,7 @@ jobs:
       id: changelog
       run: |
         VERSION="${{ steps.version.outputs.version }}"
-        NOTES=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" CHANGELOG.md)
+        NOTES=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" androidApp/CHANGELOG.md)
         echo "$NOTES" > /tmp/changelog-section.md
 
     - name: Build release body
@@ -171,7 +171,7 @@ jobs:
         REPO="${{ github.repository }}"
         FOOTER=$'\n\nFull notes: '"${SERVER}/${REPO}/releases/tag/android/v${VERSION}"
         MAX_NOTES=$(( 500 - ${#FOOTER} - 3 ))
-        RAW=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" CHANGELOG.md | sed '/^[[:space:]]*$/d')
+        RAW=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" androidApp/CHANGELOG.md | sed '/^[[:space:]]*$/d')
         if [ ${#RAW} -gt $MAX_NOTES ]; then
           RAW="${RAW:0:$MAX_NOTES}..."
         fi
@@ -192,7 +192,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         chmod +x scripts/update-release-status.sh
-        ./scripts/update-release-status.sh "${{ steps.version.outputs.version }}" "Internal Testing" deployed
+        ./scripts/update-release-status.sh android "${{ steps.version.outputs.version }}" "Internal Testing" deployed
 
     - name: Update release status (failure)
       if: failure() && steps.deploy.outcome == 'failure'
@@ -200,7 +200,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         chmod +x scripts/update-release-status.sh
-        ./scripts/update-release-status.sh "${{ steps.version.outputs.version }}" "Internal Testing" failed
+        ./scripts/update-release-status.sh android "${{ steps.version.outputs.version }}" "Internal Testing" failed
 
     - name: Clean up secrets
       if: always()
