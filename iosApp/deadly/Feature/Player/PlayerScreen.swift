@@ -8,6 +8,7 @@ struct PlayerScreen: View {
 
     @State private var sliderValue: Double?
     @State private var showErrorAlert = false
+    @State private var showQRShare = false
     @Environment(\.appContainer) private var container
 
     private var playbackError: StreamPlayerError? {
@@ -211,6 +212,21 @@ struct PlayerScreen: View {
                 showErrorAlert = true
             }
         }
+        .sheet(isPresented: $showQRShare) {
+            if let show = container.playlistService.currentShow,
+               let recording = container.playlistService.currentRecording {
+                QRShareSheet(
+                    showId: show.id,
+                    recordingId: recording.identifier,
+                    showDate: DateFormatting.formatShowDate(show.date),
+                    venue: show.venue.name,
+                    location: show.venue.displayLocation,
+                    coverImageUrl: streamPlayer.currentTrack?.artworkURL?.absoluteString,
+                    trackNumber: currentTrackNumber,
+                    songTitle: streamPlayer.currentTrack?.title
+                )
+            }
+        }
         .alert("Playback Error", isPresented: $showErrorAlert) {
             Button("Retry") {
                 streamPlayer.play()
@@ -280,6 +296,22 @@ struct PlayerScreen: View {
                         .background(Color(.secondarySystemBackground))
                         .clipShape(Capsule())
                 }
+            }
+
+            if currentShowId != nil {
+                Button {
+                    showQRShare = true
+                } label: {
+                    Label("QR Share", systemImage: "qrcode")
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                        .foregroundStyle(.primary)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .background(Color(.secondarySystemBackground))
+                        .clipShape(Capsule())
+                }
+                .buttonStyle(.plain)
             }
 
             if let showId = currentShowId, !showId.isEmpty {
