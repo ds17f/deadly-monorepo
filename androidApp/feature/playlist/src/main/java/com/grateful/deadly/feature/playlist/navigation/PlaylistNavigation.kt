@@ -11,8 +11,8 @@ import com.grateful.deadly.feature.playlist.screens.main.PlaylistScreen
 /**
  * Playlist navigation route constants
  */
-const val PLAYLIST_SHOW_ROUTE = "playlist/{showId}"
-const val PLAYLIST_RECORDING_ROUTE = "playlist/{showId}/{recordingId}?trackNumber={trackNumber}"
+const val PLAYLIST_SHOW_ROUTE = "playlist/{showId}?autoPlay={autoPlay}"
+const val PLAYLIST_RECORDING_ROUTE = "playlist/{showId}/{recordingId}?trackNumber={trackNumber}&autoPlay={autoPlay}"
 
 /**
  * Extension function for NavController to navigate to Playlist
@@ -20,17 +20,19 @@ const val PLAYLIST_RECORDING_ROUTE = "playlist/{showId}/{recordingId}?trackNumbe
  * @param showId The show ID to display
  * @param recordingId Optional specific recording ID. If null, show logic decides which recording to display
  * @param trackNumber Optional track number to auto-play after the playlist loads
+ * @param autoPlay Whether to start playback automatically (e.g., from "Play Now" deep link action)
  */
 fun NavController.navigateToPlaylist(
     showId: String,
     recordingId: String? = null,
     trackNumber: Int? = null,
+    autoPlay: Boolean = false,
     builder: NavOptionsBuilder.() -> Unit = {}
 ) {
     val route = when {
-        recordingId != null && trackNumber != null -> "playlist/$showId/$recordingId?trackNumber=$trackNumber"
-        recordingId != null -> "playlist/$showId/$recordingId"
-        else -> "playlist/$showId"
+        recordingId != null && trackNumber != null -> "playlist/$showId/$recordingId?trackNumber=$trackNumber&autoPlay=$autoPlay"
+        recordingId != null -> "playlist/$showId/$recordingId?autoPlay=$autoPlay"
+        else -> "playlist/$showId?autoPlay=$autoPlay"
     }
     navigate(route, builder)
 }
@@ -44,19 +46,24 @@ fun NavController.navigateToPlaylist(
  * - playlist/{showId}/{recordingId} - Display specific recording, with optional trackNumber query param
  */
 fun NavGraphBuilder.playlistGraph(navController: NavController) {
-    // Specific recording route - playlist/{showId}/{recordingId}?trackNumber={trackNumber}
+    // Specific recording route - playlist/{showId}/{recordingId}?trackNumber={trackNumber}&autoPlay={autoPlay}
     composable(
         route = PLAYLIST_RECORDING_ROUTE,
         arguments = listOf(
             navArgument("trackNumber") {
                 type = NavType.IntType
                 defaultValue = -1
+            },
+            navArgument("autoPlay") {
+                type = NavType.BoolType
+                defaultValue = false
             }
         )
     ) { backStackEntry ->
         val showId = backStackEntry.arguments?.getString("showId") ?: ""
         val recordingId = backStackEntry.arguments?.getString("recordingId") ?: ""
         val trackNumber = backStackEntry.arguments?.getInt("trackNumber").takeIf { it != -1 }
+        val autoPlay = backStackEntry.arguments?.getBoolean("autoPlay") ?: false
 
         PlaylistScreen(
             onNavigateBack = {
@@ -74,13 +81,23 @@ fun NavGraphBuilder.playlistGraph(navController: NavController) {
             },
             showId = showId,
             recordingId = recordingId,
-            trackNumber = trackNumber
+            trackNumber = trackNumber,
+            autoPlay = autoPlay
         )
     }
 
-    // Show-only route - playlist/{showId} (show decides recording)
-    composable(PLAYLIST_SHOW_ROUTE) { backStackEntry ->
+    // Show-only route - playlist/{showId}?autoPlay={autoPlay} (show decides recording)
+    composable(
+        route = PLAYLIST_SHOW_ROUTE,
+        arguments = listOf(
+            navArgument("autoPlay") {
+                type = NavType.BoolType
+                defaultValue = false
+            }
+        )
+    ) { backStackEntry ->
         val showId = backStackEntry.arguments?.getString("showId") ?: ""
+        val autoPlay = backStackEntry.arguments?.getBoolean("autoPlay") ?: false
 
         PlaylistScreen(
             onNavigateBack = {
@@ -97,7 +114,8 @@ fun NavGraphBuilder.playlistGraph(navController: NavController) {
                 navController.navigate("collectionDetail/$collectionId/$showId")
             },
             showId = showId,
-            recordingId = null // Let show logic decide
+            recordingId = null, // Let show logic decide
+            autoPlay = autoPlay
         )
     }
 }

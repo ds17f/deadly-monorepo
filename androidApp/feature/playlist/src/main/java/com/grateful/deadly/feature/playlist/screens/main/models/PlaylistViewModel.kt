@@ -255,9 +255,10 @@ class PlaylistViewModel @Inject constructor(
      * @param showId The show ID to load
      * @param recordingId Optional specific recording ID from navigation (e.g., Player→Playlist)
      * @param trackNumber Optional track number to auto-play after tracks load (e.g., from deep link)
+     * @param autoPlay Whether to start playback automatically (e.g., from "Play Now" deep link action)
      */
-    fun loadShow(showId: String?, recordingId: String? = null, trackNumber: Int? = null) {
-        Log.d(TAG, "Loading show: $showId, recordingId: $recordingId, trackNumber: $trackNumber")
+    fun loadShow(showId: String?, recordingId: String? = null, trackNumber: Int? = null, autoPlay: Boolean = false) {
+        Log.d(TAG, "Loading show: $showId, recordingId: $recordingId, trackNumber: $trackNumber, autoPlay: $autoPlay")
         viewModelScope.launch {
             try {
                 _baseUiState.value = _baseUiState.value.copy(isLoading = true, error = null)
@@ -278,16 +279,26 @@ class PlaylistViewModel @Inject constructor(
                 // Start track loading in background
                 loadTrackListAsync()
 
-                // Auto-play specific track once tracks are available
+                // Auto-select or auto-play specific track once tracks are available
                 if (trackNumber != null) {
                     viewModelScope.launch {
                         _rawTrackData.first { it.isNotEmpty() }
                         val track = _rawTrackData.value.firstOrNull { it.number == trackNumber }
                         if (track != null) {
-                            Log.d(TAG, "Selecting track $trackNumber from deep link (no auto-play): ${track.title}")
-                            playTrack(track, autoPlay = false)
+                            Log.d(TAG, "Selecting track $trackNumber from deep link (autoPlay=$autoPlay): ${track.title}")
+                            playTrack(track, autoPlay = autoPlay)
                         } else {
                             Log.w(TAG, "Track $trackNumber not found in loaded tracks")
+                        }
+                    }
+                } else if (autoPlay) {
+                    // No specific track requested — auto-play track 1
+                    viewModelScope.launch {
+                        _rawTrackData.first { it.isNotEmpty() }
+                        val firstTrack = _rawTrackData.value.firstOrNull()
+                        if (firstTrack != null) {
+                            Log.d(TAG, "Auto-playing first track from deep link: ${firstTrack.title}")
+                            playTrack(firstTrack, autoPlay = true)
                         }
                     }
                 }

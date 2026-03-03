@@ -42,6 +42,7 @@ fun PlaylistScreen(
     recordingId: String? = null,
     showId: String? = null,
     trackNumber: Int? = null,
+    autoPlay: Boolean = false,
     viewModel: PlaylistViewModel = hiltViewModel(),
 ) {
     Log.d("PlaylistScreen", "=== PLAYLIST SCREEN LOADED === recordingId: $recordingId, showId: $showId, trackNumber: $trackNumber")
@@ -52,7 +53,7 @@ fun PlaylistScreen(
 
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
     LaunchedEffect(showId, recordingId) {
-        viewModel.loadShow(showId, recordingId, trackNumber)
+        viewModel.loadShow(showId, recordingId, trackNumber, autoPlay)
     }
     
     Box(modifier = Modifier.fillMaxSize()) {

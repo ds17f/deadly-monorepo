@@ -243,7 +243,14 @@ fun MainNavigation(
         DeepLinkActionSheet(
             deepLink = deepLink,
             onPlayNow = { showId, recordingId, trackNumber ->
-                navController.navigateToPlaylist(showId, recordingId, trackNumber) {
+                navController.navigateToPlaylist(showId, recordingId, trackNumber, autoPlay = true) {
+                    popUpTo("home") { inclusive = false }
+                    launchSingleTop = true
+                }
+                pendingDeepLink = null
+            },
+            onGoToShow = { showId ->
+                navController.navigateToPlaylist(showId) {
                     popUpTo("home") { inclusive = false }
                     launchSingleTop = true
                 }
@@ -372,6 +379,7 @@ private fun BottomNavItem(
 private fun DeepLinkActionSheet(
     deepLink: PendingDeepLink,
     onPlayNow: (showId: String, recordingId: String?, trackNumber: Int?) -> Unit,
+    onGoToShow: (showId: String) -> Unit,
     onAddToLibrary: (showId: String) -> Unit,
     onViewCollection: (collectionId: String) -> Unit,
     onDismiss: () -> Unit
@@ -437,6 +445,18 @@ private fun DeepLinkActionSheet(
                             },
                             modifier = Modifier.clickable {
                                 onPlayNow(deepLink.showId, deepLink.recordingId, deepLink.trackNumber)
+                            }
+                        )
+                        ListItem(
+                            headlineContent = { Text("Go to Show") },
+                            leadingContent = {
+                                Icon(
+                                    painter = IconResources.Content.PlaylistPlay(),
+                                    contentDescription = null
+                                )
+                            },
+                            modifier = Modifier.clickable {
+                                onGoToShow(deepLink.showId)
                             }
                         )
                         ListItem(
