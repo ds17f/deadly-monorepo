@@ -6,11 +6,14 @@ struct MainNavigation: View {
     @Environment(\.appContainer) private var container
     @State private var showFullPlayer = false
     @State private var homeStack = NavigationPath()
+    @State private var searchStack = NavigationPath()
+    @State private var libraryStack = NavigationPath()
+    @State private var collectionsStack = NavigationPath()
     @State private var pendingShowNavigation: String?
     @State private var pendingDeepLink: DeepLink?
     @State private var selectedTab: AppTab = .home
+    @State private var playerSourceTab: AppTab = .home
     @State private var searchResetToken = 0
-    @State private var libraryStack = NavigationPath()
 
     private var isOffline: Bool { !container.networkMonitor.isConnected }
 
@@ -33,7 +36,7 @@ struct MainNavigation: View {
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Search", systemImage: "magnifyingglass", value: .search) {
-                NavigationStack {
+                NavigationStack(path: $searchStack) {
                     SearchScreen(resetToken: searchResetToken)
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
@@ -59,7 +62,7 @@ struct MainNavigation: View {
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Collections", systemImage: "square.stack", value: .collections) {
-                NavigationStack {
+                NavigationStack(path: $collectionsStack) {
                     CollectionsScreen()
                         .navigationDestination(for: CollectionRoute.self) { route in
                             switch route {
@@ -81,6 +84,9 @@ struct MainNavigation: View {
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
+        }
+        .onChange(of: showFullPlayer) { _, isPresented in
+            if isPresented { playerSourceTab = selectedTab }
         }
         .onChange(of: container.networkMonitor.isConnected) { _, isConnected in
             if !isConnected {
@@ -147,9 +153,7 @@ struct MainNavigation: View {
             if let showId = pendingShowNavigation {
                 pendingShowNavigation = nil
                 DispatchQueue.main.async {
-                    selectedTab = .home
-                    homeStack = NavigationPath()
-                    homeStack.append(showId)
+                    navigateToShow(showId: showId, on: playerSourceTab)
                 }
             }
             // When dismissing player while offline, redirect to Downloads
@@ -193,6 +197,31 @@ struct MainNavigation: View {
         libraryStack = NavigationPath()
         libraryStack.append(LibraryRoute.downloads)
         selectedTab = .library
+    }
+
+    private func navigateToShow(showId: String, on tab: AppTab) {
+        switch tab {
+        case .home:
+            homeStack = NavigationPath()
+            homeStack.append(showId)
+            selectedTab = .home
+        case .search:
+            searchStack = NavigationPath()
+            searchStack.append(showId)
+            selectedTab = .search
+        case .library:
+            libraryStack = NavigationPath()
+            libraryStack.append(showId)
+            selectedTab = .library
+        case .collections:
+            collectionsStack = NavigationPath()
+            collectionsStack.append(showId)
+            selectedTab = .collections
+        case .settings:
+            homeStack = NavigationPath()
+            homeStack.append(showId)
+            selectedTab = .home
+        }
     }
 
     private func handleDeepLink(_ url: URL) {
