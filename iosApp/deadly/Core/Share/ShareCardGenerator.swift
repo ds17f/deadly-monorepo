@@ -27,8 +27,20 @@ enum ShareCardGenerator {
             qrImage.draw(in: CGRect(origin: .zero, size: CGSize(width: size, height: size)))
 
             if let logo = UIImage(named: "deadly_logo") {
-                let logoSize = size * 0.22
+                let circleSize = size * 0.22
+                let logoSize = size * 0.18
                 let center = CGPoint(x: size / 2, y: size / 2)
+
+                // White circle behind logo to mask QR modules
+                let circleRadius = circleSize / 2
+                UIColor.white.setFill()
+                UIBezierPath(ovalIn: CGRect(
+                    x: center.x - circleRadius,
+                    y: center.y - circleRadius,
+                    width: circleRadius * 2,
+                    height: circleRadius * 2
+                )).fill()
+
                 logo.draw(in: CGRect(
                     x: center.x - logoSize / 2,
                     y: center.y - logoSize / 2,
