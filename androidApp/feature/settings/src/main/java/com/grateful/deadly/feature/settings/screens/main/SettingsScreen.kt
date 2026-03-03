@@ -15,33 +15,22 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import java.io.File
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.feature.settings.BuildConfig
-import kotlinx.coroutines.delay
 
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
     onNavigateToLegal: () -> Unit = {},
-    onNavigateToMission: () -> Unit = {}
+    onNavigateToMission: () -> Unit = {},
+    onNavigateToDeveloper: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val showOnlyRecorded by viewModel.showOnlyRecordedShows.collectAsState()
-    val forceOnline by viewModel.forceOnline.collectAsState()
-    val devMode by viewModel.devMode.collectAsState()
     val version = BuildConfig.VERSION_NAME
 
-    var tapCount by remember { mutableIntStateOf(0) }
     var showReleaseNotesDialog by remember { mutableStateOf(false) }
-
-    LaunchedEffect(tapCount) {
-        if (tapCount > 0) {
-            delay(2000)
-            tapCount = 0
-        }
-    }
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
 
@@ -76,13 +65,6 @@ fun SettingsScreen(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clickable {
-                        tapCount++
-                        if (tapCount >= 5) {
-                            tapCount = 0
-                            viewModel.setDevMode(true)
-                        }
-                    }
                     .padding(vertical = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -95,7 +77,7 @@ fun SettingsScreen(
                 )
                 Text(
                     text = "Version $version",
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.clickable(onClick = { showReleaseNotesDialog = true })
@@ -150,53 +132,21 @@ fun SettingsScreen(
             )
         }
 
-        item { HorizontalDivider() }
-
-        // ── DEVELOPER (hidden until unlocked) ────────────────────────
-        if (devMode) {
-            item {
-                SectionHeader(
-                    title = "Developer",
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
-            item {
-                PreferenceToggleRow(
-                    title = "Force online mode",
-                    subtitle = "Override offline detection when the app incorrectly shows as offline",
-                    checked = forceOnline,
-                    onCheckedChange = { viewModel.toggleForceOnline() }
-                )
-            }
-
-            item { ClearArchiveCacheRow() }
-
-            item {
-                DeleteDataZipRow(onDeleteDataZip = viewModel::onDeleteDataZip)
-            }
-
-            item {
-                DeleteDatabaseFilesRow(onDeleteDatabaseFiles = viewModel::onDeleteDatabaseFiles)
-            }
-
-            item {
-                PreferenceRow(
-                    title = "Disable Dev Mode",
-                    titleColor = MaterialTheme.colorScheme.error,
-                    onClick = { viewModel.setDevMode(false) }
-                )
-            }
-
-            item {
-                Text(
-                    text = "Advanced tools for debugging and data recovery.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
-                )
-            }
+        item {
+            PreferenceRow(
+                title = "Developer",
+                onClick = onNavigateToDeveloper,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
         }
+
+        item { HorizontalDivider() }
     }
 
     if (showReleaseNotesDialog) {
@@ -260,7 +210,7 @@ private fun PreferenceRow(
             if (subtitle != null) {
                 Text(
                     text = subtitle,
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
@@ -294,121 +244,13 @@ private fun PreferenceToggleRow(
             if (subtitle != null) {
                 Text(
                     text = subtitle,
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }
         Spacer(modifier = Modifier.width(8.dp))
         Switch(checked = checked, onCheckedChange = onCheckedChange)
-    }
-}
-
-// ── Developer action rows ─────────────────────────────────────────────────────
-
-@Composable
-private fun ClearArchiveCacheRow() {
-    val context = LocalContext.current
-    var showDialog by remember { mutableStateOf(false) }
-
-    PreferenceRow(title = "Clear Archive Cache", onClick = { showDialog = true })
-
-    if (showDialog) {
-        AlertDialog(
-            onDismissRequest = { showDialog = false },
-            title = { Text("Clear Archive Cache") },
-            text = { Text("This will delete all cached track lists and reviews. The data will be re-downloaded when needed.") },
-            confirmButton = {
-                TextButton(onClick = {
-                    showDialog = false
-                    try {
-                        val dir = File(context.cacheDir, "archive")
-                        if (dir.exists()) dir.deleteRecursively()
-                    } catch (_: Exception) {}
-                }) { Text("Clear") }
-            },
-            dismissButton = {
-                TextButton(onClick = { showDialog = false }) { Text("Cancel") }
-            }
-        )
-    }
-}
-
-@Composable
-private fun DeleteDataZipRow(onDeleteDataZip: (onComplete: (Boolean) -> Unit) -> Unit) {
-    var showConfirm by remember { mutableStateOf(false) }
-    var showResult by remember { mutableStateOf(false) }
-    var success by remember { mutableStateOf(false) }
-
-    PreferenceRow(
-        title = "Delete Data.zip",
-        titleColor = MaterialTheme.colorScheme.error,
-        onClick = { showConfirm = true }
-    )
-
-    if (showConfirm) {
-        AlertDialog(
-            onDismissRequest = { showConfirm = false },
-            title = { Text("Delete Data.zip File") },
-            text = { Text("The app will need to re-download show data. Continue?") },
-            confirmButton = {
-                TextButton(onClick = {
-                    showConfirm = false
-                    onDeleteDataZip { s -> success = s; showResult = true }
-                }, colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)) {
-                    Text("Delete")
-                }
-            },
-            dismissButton = { TextButton(onClick = { showConfirm = false }) { Text("Cancel") } }
-        )
-    }
-
-    if (showResult) {
-        AlertDialog(
-            onDismissRequest = { showResult = false },
-            title = { Text(if (success) "Deleted" else "Failed") },
-            text = { Text(if (success) "Data.zip has been deleted." else "Failed to delete Data.zip.") },
-            confirmButton = { TextButton(onClick = { showResult = false }) { Text("OK") } }
-        )
-    }
-}
-
-@Composable
-private fun DeleteDatabaseFilesRow(onDeleteDatabaseFiles: (onComplete: (Boolean) -> Unit) -> Unit) {
-    var showConfirm by remember { mutableStateOf(false) }
-    var showResult by remember { mutableStateOf(false) }
-    var success by remember { mutableStateOf(false) }
-
-    PreferenceRow(
-        title = "Delete Database Files",
-        titleColor = MaterialTheme.colorScheme.error,
-        onClick = { showConfirm = true }
-    )
-
-    if (showConfirm) {
-        AlertDialog(
-            onDismissRequest = { showConfirm = false },
-            title = { Text("Delete Database Files") },
-            text = { Text("All stored shows, favorites, and app data will be lost. Continue?") },
-            confirmButton = {
-                TextButton(onClick = {
-                    showConfirm = false
-                    onDeleteDatabaseFiles { s -> success = s; showResult = true }
-                }, colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)) {
-                    Text("Delete")
-                }
-            },
-            dismissButton = { TextButton(onClick = { showConfirm = false }) { Text("Cancel") } }
-        )
-    }
-
-    if (showResult) {
-        AlertDialog(
-            onDismissRequest = { showResult = false },
-            title = { Text(if (success) "Deleted" else "Failed") },
-            text = { Text(if (success) "Database files deleted. Fresh data will be created on next use." else "Failed to delete some database files.") },
-            confirmButton = { TextButton(onClick = { showResult = false }) { Text("OK") } }
-        )
     }
 }
 

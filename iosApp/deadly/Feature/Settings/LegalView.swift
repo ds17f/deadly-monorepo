@@ -8,7 +8,7 @@ struct LegalView: View {
                     Text("This app streams live recordings from the Internet Archive, a non-profit digital library that hosts recordings in accordance with the Grateful Dead's long-standing non-commercial taping tradition and current rights-holder policies.")
                     Text("This app is independent and not affiliated with the band, its members, or its management.")
                 }
-                .font(.subheadline)
+                .font(.body)
             }
 
             Section("The Band's Taping & Sharing Tradition") {
@@ -24,7 +24,7 @@ struct LegalView: View {
                     Link("WIRED: Everyone Is Grateful Again",
                          destination: URL(string: "https://www.wired.com/2005/12/everyone-is-grateful-again/")!)
                 }
-                .font(.subheadline)
+                .font(.body)
             }
 
             Section("Internet Archive Collection Policy") {
@@ -34,7 +34,7 @@ struct LegalView: View {
                     Link("Grateful Dead Collection Help Page",
                          destination: URL(string: "https://archivesupport.zendesk.com/hc/en-us/articles/360004715891-The-Grateful-Dead-Collection")!)
                 }
-                .font(.subheadline)
+                .font(.body)
             }
 
             Section("How This App Handles Streaming") {
@@ -57,17 +57,17 @@ struct LegalView: View {
 
                     Text("Users are responsible for complying with applicable copyright and Archive usage policies.")
                 }
-                .font(.subheadline)
+                .font(.body)
             }
 
             Section("Official Commercial Releases") {
                 Text("Commercially released recordings — studio albums, official live releases, box sets, and similar material — are protected by copyright and should be accessed through authorized services.")
-                    .font(.subheadline)
+                    .font(.body)
             }
 
             Section("Respect for Artists & Rights Holders") {
                 Text("This app exists to support listening, exploration, and historical appreciation of the Grateful Dead's live performances — in the spirit of their taping tradition — while respecting modern copyright law and the policies of the Internet Archive and rights holders.")
-                    .font(.subheadline)
+                    .font(.body)
             }
         }
         .navigationTitle("Legal & Policies")
@@ -90,6 +90,6 @@ struct BulletRow: View {
                 .foregroundStyle(.secondary)
             Text(text)
         }
-        .font(.subheadline)
+        .font(.body)
     }
 }
