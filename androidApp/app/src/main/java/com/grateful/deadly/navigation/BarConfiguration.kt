@@ -8,6 +8,7 @@ import com.grateful.deadly.feature.home.screens.main.HomeBarConfiguration
 import com.grateful.deadly.feature.search.screens.main.SearchBarConfiguration
 import com.grateful.deadly.feature.settings.screens.main.SettingsBarConfiguration
 import com.grateful.deadly.feature.settings.screens.legal.LegalBarConfiguration
+import com.grateful.deadly.feature.settings.screens.mission.MissionBarConfiguration
 import com.grateful.deadly.feature.library.screens.main.LibraryBarConfiguration
 import com.grateful.deadly.feature.collections.screens.main.CollectionsBarConfiguration
 import com.grateful.deadly.feature.collections.screens.details.CollectionDetailsBarConfiguration
@@ -34,6 +35,7 @@ object NavigationBarConfig {
         // Settings routes
         route == "settings" -> SettingsBarConfiguration.getSettingsBarConfig()
         route == "legal" -> LegalBarConfiguration.getLegalBarConfig()
+        route == "mission" -> MissionBarConfiguration.getMissionBarConfig()
 
         // Library routes
         route == "library" -> LibraryBarConfiguration.getLibraryBarConfig(
