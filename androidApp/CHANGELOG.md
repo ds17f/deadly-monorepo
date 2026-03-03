@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.11.0] - 2026-03-03
+
+### New Features
+* add "Go to Show" action + fix "Play Now" auto-play (25c5c53)
+
+### Code Refactoring
+* redesign Our Mission and Legal screens as article-style layouts (973db65)
+* simplify About section and direct version to release notes (204908d)
+* add permanent developer panel and increase typography sizes (8a312e4)
+* adopt platform-idiomatic layouts for Android and iOS (d38f2ac)
+* redesign with dev mode, legal screen, and release notes (3f4ed3b)
+* reorganize sections with new developer section (c19b36d)
+
+### Other Changes
+* chore(build): enforce platform-scoped commits and filter changelogs by platform (838d47d)
+
+
 ## [2.10.0] - 2026-03-01
 
 ### New Features
@@ -9,8 +26,6 @@
 ### Build System
 * add android-install make target for debug APK installation (230b6fa)
 * split version.properties and CHANGELOG per platform (c29844f)
-
-
 ## [2.9.1] - 2026-02-27
 
 ### Bug Fixes
