@@ -23,11 +23,10 @@ enum ShareCardGenerator {
         let qrImage = UIImage(cgImage: cgImage)
 
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size))
-        return renderer.image { _ in
+        return renderer.image { ctx in
             qrImage.draw(in: CGRect(origin: .zero, size: CGSize(width: size, height: size)))
 
             let circleRadius = size * 0.11
-            let logoSize = size * 0.18
             let center = CGPoint(x: size / 2, y: size / 2)
 
             let circleRect = CGRect(
@@ -40,12 +39,10 @@ enum ShareCardGenerator {
             UIBezierPath(ovalIn: circleRect).fill()
 
             if let logo = UIImage(named: "deadly_logo_square") {
-                logo.draw(in: CGRect(
-                    x: center.x - logoSize / 2,
-                    y: center.y - logoSize / 2,
-                    width: logoSize,
-                    height: logoSize
-                ))
+                ctx.cgContext.saveGState()
+                UIBezierPath(ovalIn: circleRect).addClip()
+                logo.draw(in: circleRect)
+                ctx.cgContext.restoreGState()
             }
         }
     }
