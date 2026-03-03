@@ -141,10 +141,12 @@ struct MainNavigation: View {
         }
         .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {
             if let showId = pendingShowNavigation {
-                selectedTab = .home
-                homeStack = NavigationPath()
-                homeStack.append(showId)
                 pendingShowNavigation = nil
+                DispatchQueue.main.async {
+                    selectedTab = .home
+                    homeStack = NavigationPath()
+                    homeStack.append(showId)
+                }
             }
             // When dismissing player while offline, redirect to Downloads
             if isOffline && selectedTab != .settings {
