@@ -102,6 +102,10 @@ struct MainNavigation: View {
         .onOpenURL { url in
             handleDeepLink(url)
         }
+        .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { activity in
+            guard let url = activity.webpageURL else { return }
+            handleDeepLink(url)
+        }
         .sheet(item: $pendingDeepLink) { link in
             DeepLinkActionSheet(
                 deepLink: link,
