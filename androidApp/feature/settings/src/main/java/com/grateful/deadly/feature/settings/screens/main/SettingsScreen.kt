@@ -12,8 +12,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.resources.IconResources
@@ -29,8 +27,6 @@ fun SettingsScreen(
     val context = LocalContext.current
     val showOnlyRecorded by viewModel.showOnlyRecordedShows.collectAsState()
     val version = BuildConfig.VERSION_NAME
-
-    var showReleaseNotesDialog by remember { mutableStateOf(false) }
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
 
@@ -60,29 +56,21 @@ fun SettingsScreen(
         // ── ABOUT ────────────────────────────────────────────────────
         item { SectionHeader("About") }
 
-        // App name — 5-tap easter egg
         item {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 16.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(
-                    text = "Deadly",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.primary,
-                    textAlign = TextAlign.Center
-                )
-                Text(
-                    text = "Version $version",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.clickable(onClick = { showReleaseNotesDialog = true })
-                )
-            }
+            PreferenceRow(
+                title = "Version $version",
+                onClick = {
+                    val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
+                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                },
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
         }
 
         item {
@@ -149,23 +137,6 @@ fun SettingsScreen(
         item { HorizontalDivider() }
     }
 
-    if (showReleaseNotesDialog) {
-        AlertDialog(
-            onDismissRequest = { showReleaseNotesDialog = false },
-            title = { Text("Release Notes") },
-            text = { Text("View release notes for v$version?") },
-            confirmButton = {
-                TextButton(onClick = {
-                    showReleaseNotesDialog = false
-                    val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
-                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                }) { Text("View") }
-            },
-            dismissButton = {
-                TextButton(onClick = { showReleaseNotesDialog = false }) { Text("Cancel") }
-            }
-        )
-    }
 }
 
 // ── Section header ────────────────────────────────────────────────────────────
