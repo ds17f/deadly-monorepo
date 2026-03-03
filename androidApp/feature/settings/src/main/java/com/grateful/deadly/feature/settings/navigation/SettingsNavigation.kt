@@ -4,6 +4,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.grateful.deadly.feature.settings.SettingsScreen
+import com.grateful.deadly.feature.settings.screens.developer.DeveloperScreen
 import com.grateful.deadly.feature.settings.screens.legal.LegalScreen
 import com.grateful.deadly.feature.settings.screens.mission.MissionScreen
 
@@ -13,6 +14,7 @@ import com.grateful.deadly.feature.settings.screens.mission.MissionScreen
 const val SETTINGS_ROUTE = "settings"
 const val LEGAL_ROUTE = "legal"
 const val MISSION_ROUTE = "mission"
+const val DEVELOPER_ROUTE = "developer"
 
 /**
  * Extension function for NavController to navigate to Settings
@@ -27,13 +29,23 @@ fun NavController.navigateToSettings() {
 fun NavGraphBuilder.settingsScreen(
     onNavigateBack: () -> Unit,
     onNavigateToLegal: () -> Unit,
-    onNavigateToMission: () -> Unit
+    onNavigateToMission: () -> Unit,
+    onNavigateToDeveloper: () -> Unit
 ) {
     composable(route = SETTINGS_ROUTE) {
         SettingsScreen(
             onNavigateToLegal = onNavigateToLegal,
-            onNavigateToMission = onNavigateToMission
+            onNavigateToMission = onNavigateToMission,
+            onNavigateToDeveloper = onNavigateToDeveloper
         )
+    }
+}
+
+fun NavGraphBuilder.developerScreen(
+    onNavigateBack: () -> Unit
+) {
+    composable(route = DEVELOPER_ROUTE) {
+        DeveloperScreen()
     }
 }
 
@@ -66,7 +78,8 @@ fun NavGraphBuilder.settingsGraph(navController: NavController) {
     settingsScreen(
         onNavigateBack = { navController.popBackStack() },
         onNavigateToLegal = { navController.navigate(LEGAL_ROUTE) },
-        onNavigateToMission = { navController.navigate(MISSION_ROUTE) }
+        onNavigateToMission = { navController.navigate(MISSION_ROUTE) },
+        onNavigateToDeveloper = { navController.navigate(DEVELOPER_ROUTE) }
     )
 
     legalScreen(
@@ -74,6 +87,10 @@ fun NavGraphBuilder.settingsGraph(navController: NavController) {
     )
 
     missionScreen(
+        onNavigateBack = { navController.popBackStack() }
+    )
+
+    developerScreen(
         onNavigateBack = { navController.popBackStack() }
     )
 }

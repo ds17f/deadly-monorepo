@@ -30,7 +30,6 @@ class AppPreferences @Inject constructor(
         private const val KEY_SHOW_ONLY_RECORDED = "show_only_recorded_shows"
         private const val KEY_LIBRARY_DISPLAY_MODE = "library_display_mode"
         private const val KEY_FORCE_ONLINE = "force_online"
-        private const val KEY_DEV_MODE = "dev_mode"
     }
 
     private val _showOnlyRecordedShows = MutableStateFlow(
@@ -69,15 +68,4 @@ class AppPreferences @Inject constructor(
         _forceOnline.value = value
     }
 
-    private val _devMode = MutableStateFlow(
-        prefs.getBoolean(KEY_DEV_MODE, false)
-    )
-
-    /** When true, the Developer section is visible in Settings. */
-    val devMode: StateFlow<Boolean> = _devMode.asStateFlow()
-
-    fun setDevMode(value: Boolean) {
-        prefs.edit().putBoolean(KEY_DEV_MODE, value).apply()
-        _devMode.value = value
-    }
 }

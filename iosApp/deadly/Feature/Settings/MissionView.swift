@@ -9,7 +9,7 @@ struct MissionView: View {
                 Text("This app is completely open source. Anyone can inspect the code, contribute improvements, or build upon it.")
                 Text("No money is made from streaming music through this app. It exists because one Deadhead wanted a modern way to listen to his favorite band.")
             }
-            .font(.subheadline)
+            .font(.body)
         }
         .navigationTitle("Our Mission")
         .navigationBarTitleDisplayMode(.inline)
