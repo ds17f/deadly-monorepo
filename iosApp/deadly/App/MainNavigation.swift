@@ -158,6 +158,14 @@ struct MainNavigation: View {
                 isPresented: $showFullPlayer,
                 onViewShow: { showId in
                     pendingShowNavigation = showId
+                    Task {
+                        await container.playlistService.loadShow(showId)
+                        if let rid = container.streamPlayer.currentTrack?.metadata["recordingId"],
+                           rid != container.playlistService.currentRecording?.identifier,
+                           let rec = try? container.showRepository.getRecordingById(rid) {
+                            await container.playlistService.selectRecording(rec)
+                        }
+                    }
                     showFullPlayer = false
                 }
             )
