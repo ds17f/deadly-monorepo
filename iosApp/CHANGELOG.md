@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.13.0] - 2026-03-03
+
+### New Features
+* action sheet on link open + player icon row (2ffd91f)
+* add branded QR code share card (22e58c8)
+
+### Bug Fixes
+* return to source tab when navigating from now playing (7301bae)
+* add white padding ring around QR logo, matching android (cb9370d)
+* handle universal links via NSUserActivity (a3bb615)
+* navigate to playing show, not browsed show (43c84f7)
+* defer navigation after fullscreen cover dismisses (38f0d97)
+* always navigate to show from player header (b8aac2f)
+* use round circle logo in QR center, matching android (a039c25)
+* clip QR logo overlay to circle (5704e9d)
+* show loading state immediately on track tap (cb2a737)
+
+### Code Refactoring
+* redesign Our Mission and Legal screens as article-style layouts (973db65)
+* simplify About section and direct version to release notes (204908d)
+* add permanent developer panel and increase typography sizes (8a312e4)
+* adopt platform-idiomatic layouts for Android and iOS (d38f2ac)
+* redesign with dev mode, legal screen, and release notes (3f4ed3b)
+
+
 ## [2.12.0] - 2026-03-02
 
 ### New Features
@@ -14,8 +39,6 @@
 
 ### Other Changes
 * chore(build): enforce platform-scoped commits and filter changelogs by platform (838d47d)
-
-
 ## [2.11.0] - 2026-03-01
 
 ### New Features
