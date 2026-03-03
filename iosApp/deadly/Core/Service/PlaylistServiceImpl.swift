@@ -134,6 +134,12 @@ final class PlaylistServiceImpl: PlaylistService {
     func playTrack(at index: Int) {
         guard index >= 0, index < tracks.count,
               let recording = currentRecording else { return }
+        // If the player already has this recording's queue loaded, skip directly to the index
+        // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
+        if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
+            streamPlayer.skipTo(index: index)
+            return
+        }
         // Propagate the show's ticket art so mini player and full player can display it.
         // Fall back to archive.org's auto-generated image for the recording.
         let artworkURL: URL? = {

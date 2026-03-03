@@ -87,6 +87,13 @@ public final class StreamPlayer {
         }
         let startIndex = min(max(index, 0), tracks.count - 1)
 
+        // Stop current playback immediately so the UI feels responsive before redirect resolution.
+        engine.stop()
+        if autoPlay {
+            playbackState = .loading
+        }
+        progress = .zero
+
         self.tracks = tracks
         self.currentTrack = tracks[startIndex]
         updateQueueState(index: startIndex)
@@ -96,10 +103,6 @@ public final class StreamPlayer {
 
         let urls = tracks.map(\.url)
         engine.loadQueue(urls: urls, startingAt: startIndex)
-
-        if autoPlay {
-            playbackState = .loading
-        }
 
         updateNowPlaying()
         nowPlayingManager.loadArtwork(from: currentTrack?.artworkURL)

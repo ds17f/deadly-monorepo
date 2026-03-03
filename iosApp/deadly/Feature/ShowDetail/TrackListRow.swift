@@ -4,12 +4,16 @@ struct TrackListRow: View {
     let track: ArchiveTrack
     let index: Int
     let isPlaying: Bool
+    var isLoading: Bool = false
     var downloadState: TrackDownloadState?
 
     var body: some View {
         HStack(spacing: 12) {
             Group {
-                if isPlaying {
+                if isLoading {
+                    ProgressView()
+                        .scaleEffect(0.7)
+                } else if isPlaying {
                     Image(systemName: "speaker.wave.2.fill")
                         .foregroundStyle(DeadlyColors.primary)
                 } else {
