@@ -106,7 +106,7 @@ fun MainNavigation(
         // Redirect to downloads when offline, unless already on a safe screen
         if (isOffline) {
             val route = navController.currentBackStackEntry?.destination?.route
-            val isSafe = route == "downloads" || route == "player" || route == "splash" || route == "settings"
+            val isSafe = route == "downloads" || route == "player" || route == "splash" || route == "settings" || route == "legal"
             if (!isSafe) {
                 navController.navigate("downloads") { launchSingleTop = true }
             }
