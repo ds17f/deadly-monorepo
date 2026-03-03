@@ -56,55 +56,44 @@ struct SettingsScreen: View {
             }
 
             // MARK: - About
-            Section("About") {
+            Section {
                 // App name — 5-tap easter egg to unlock dev mode
-                VStack(spacing: 4) {
-                    Text("Deadly")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundStyle(.primary)
-                        .onTapGesture {
-                            appNameTapCount += 1
-                            appNameTapTask?.cancel()
-                            if appNameTapCount >= 5 {
+                Text("Deadly")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .onTapGesture {
+                        appNameTapCount += 1
+                        appNameTapTask?.cancel()
+                        if appNameTapCount >= 5 {
+                            appNameTapCount = 0
+                            container.appPreferences.devMode = true
+                        } else {
+                            appNameTapTask = Task {
+                                try? await Task.sleep(for: .seconds(2))
                                 appNameTapCount = 0
-                                container.appPreferences.devMode = true
-                            } else {
-                                appNameTapTask = Task {
-                                    try? await Task.sleep(for: .seconds(2))
-                                    appNameTapCount = 0
-                                }
                             }
                         }
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
-                .listRowBackground(Color.clear)
+                    }
 
                 // Version — tap to view release notes
-                Text("Version \(appVersion)")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .listRowBackground(Color.clear)
-                    .onTapGesture { showingReleaseNotesAlert = true }
-
-                // Support the Archive
-                Text("The Internet Archive is the backbone of this app. Their infrastructure hosts and streams every recording you hear. Please consider donating directly to help cover their hosting and bandwidth costs.")
-                    .font(.subheadline)
-
-                Link("Donate to Internet Archive",
-                     destination: URL(string: "https://archive.org/donate/")!)
-                    .font(.subheadline.weight(.medium))
-
-                // Our Mission
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("We built this app for one simple reason: we want to encourage Deadheads — old and new — to engage with, enjoy, and share the music of the Grateful Dead.")
-                    Text("The goal is to make listening to live shows as easy and enjoyable as possible in a modern streaming experience.")
-                    Text("This app is completely open source. No money is made from streaming music through this app.")
+                Button {
+                    showingReleaseNotesAlert = true
+                } label: {
+                    LabeledContent("Version", value: appVersion)
                 }
-                .font(.subheadline)
+                .foregroundStyle(.primary)
+            } header: {
+                Text("About")
+            }
 
-                // Legal & Policies
+            Section {
+                Link(destination: URL(string: "https://archive.org/donate/")!) {
+                    Label("Donate to Internet Archive", systemImage: "heart")
+                }
+                NavigationLink("Our Mission") {
+                    MissionView()
+                }
                 NavigationLink("Legal & Policies") {
                     LegalView()
                 }
@@ -129,11 +118,7 @@ struct SettingsScreen: View {
                         showingClearCacheAlert = true
                     }
 
-                    if let v = dataVersion {
-                        LabeledContent("Database Version", value: v)
-                    } else {
-                        LabeledContent("Database Version", value: "No data")
-                    }
+                    LabeledContent("Database Version", value: dataVersion ?? "No data")
 
                     Button("Force Re-Import") {
                         showingReimportConfirm = true
