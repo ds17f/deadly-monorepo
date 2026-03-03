@@ -18,6 +18,7 @@ struct ShowDetailScreen: View {
 
     @State private var showMenuSheet = false
     @State private var showShareSheet = false
+    @State private var showQRShareSheet = false
     @State private var showRecordingPicker = false
     @State private var isInLibrary = false
     @State private var isDownloading = false
@@ -237,6 +238,20 @@ struct ShowDetailScreen: View {
                 ShareActivityView(text: text)
             }
         }
+        .sheet(isPresented: $showQRShareSheet) {
+            if let recording = playlistService.currentRecording {
+                QRShareSheet(
+                    showId: currentShowId,
+                    recordingId: recording.identifier,
+                    showDate: DateFormatting.formatShowDate(show.date),
+                    venue: show.venue.name,
+                    location: show.venue.displayLocation,
+                    coverImageUrl: show.coverImageUrl,
+                    trackNumber: nil,
+                    songTitle: nil
+                )
+            }
+        }
         .alert("Remove Download?", isPresented: $showRemoveDownloadAlert) {
             Button("Cancel", role: .cancel) { }
             Button("Remove", role: .destructive) {
@@ -316,6 +331,17 @@ struct ShowDetailScreen: View {
                         }
                     } label: {
                         Label("Share", systemImage: "square.and.arrow.up")
+                    }
+                }
+
+                if playlistService.currentRecording != nil {
+                    Button {
+                        showMenuSheet = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            showQRShareSheet = true
+                        }
+                    } label: {
+                        Label("Share QR Code", systemImage: "qrcode")
                     }
                 }
 
