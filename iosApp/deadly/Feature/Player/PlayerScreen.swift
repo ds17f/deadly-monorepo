@@ -258,17 +258,23 @@ struct PlayerScreen: View {
 
             Spacer()
 
-            VStack(spacing: 2) {
-                Text("Now Playing")
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
-                    .textCase(.uppercase)
-                Text(streamPlayer.currentTrack?.albumTitle ?? "")
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.primary)
-                    .lineLimit(1)
+            Button {
+                if let showId = currentShowId { onViewShow?(showId) }
+            } label: {
+                VStack(spacing: 2) {
+                    Text("Now Playing")
+                        .font(.caption2)
+                        .foregroundStyle(.tertiary)
+                        .textCase(.uppercase)
+                    Text(streamPlayer.currentTrack?.albumTitle ?? "")
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.primary)
+                        .lineLimit(1)
+                }
             }
+            .buttonStyle(.plain)
+            .disabled(currentShowId == nil)
 
             Spacer()
 
@@ -284,51 +290,32 @@ struct PlayerScreen: View {
 
     @ViewBuilder
     private var actionButtons: some View {
-        HStack(spacing: 20) {
+        HStack {
+            Spacer()
+
             if let text = shareText {
                 ShareLink(item: text) {
-                    Label("Share", systemImage: "square.and.arrow.up")
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundStyle(.primary)
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 10)
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(Capsule())
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.title2)
+                        .foregroundStyle(.secondary)
+                        .frame(width: 44, height: 44)
                 }
             }
 
-            if currentShowId != nil {
-                Button {
-                    showQRShare = true
-                } label: {
-                    Label("QR Share", systemImage: "qrcode")
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundStyle(.primary)
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 10)
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(Capsule())
-                }
-                .buttonStyle(.plain)
-            }
+            Spacer()
 
-            if let showId = currentShowId, !showId.isEmpty {
-                Button {
-                    onViewShow?(showId)
-                } label: {
-                    Label("View Show", systemImage: "calendar")
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundStyle(.primary)
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 10)
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(Capsule())
-                }
-                .buttonStyle(.plain)
+            Button {
+                showQRShare = true
+            } label: {
+                Image(systemName: "qrcode")
+                    .font(.title2)
+                    .foregroundStyle(.secondary)
+                    .frame(width: 44, height: 44)
             }
+            .buttonStyle(.plain)
+            .disabled(currentShowId == nil)
+
+            Spacer()
         }
         .padding(.horizontal, 24)
     }

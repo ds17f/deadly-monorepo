@@ -8,6 +8,7 @@ struct MainNavigation: View {
     @State private var homeStack = NavigationPath()
     @State private var lastPushedShowId: String?
     @State private var pendingShowNavigation: String?
+    @State private var pendingDeepLink: DeepLink?
     @State private var selectedTab: AppTab = .home
     @State private var searchResetToken = 0
     @State private var libraryStack = NavigationPath()
@@ -102,6 +103,43 @@ struct MainNavigation: View {
         .onOpenURL { url in
             handleDeepLink(url)
         }
+        .sheet(item: $pendingDeepLink) { link in
+            DeepLinkActionSheet(
+                deepLink: link,
+                onPlayNow: {
+                    pendingDeepLink = nil
+                    guard case .show(let showId, let recordingId, let trackNumber) = link else { return }
+                    Task {
+                        await container.playlistService.loadShow(showId)
+                        if let rid = recordingId,
+                           container.playlistService.currentRecording?.identifier != rid,
+                           let rec = try? container.showRepository.getRecordingById(rid) {
+                            await container.playlistService.selectRecording(rec)
+                        }
+                        let idx = trackNumber.map { max(0, $0 - 1) } ?? 0
+                        container.playlistService.playTrack(at: idx)
+                        container.playlistService.recordRecentPlay()
+                        showFullPlayer = true
+                    }
+                },
+                onGoToShow: {
+                    pendingDeepLink = nil
+                    guard case .show(let showId, _, _) = link else { return }
+                    showFullPlayer = false
+                    selectedTab = .home
+                    homeStack = NavigationPath()
+                    homeStack.append(showId)
+                },
+                onAddToLibrary: {
+                    pendingDeepLink = nil
+                    guard case .show(let showId, _, _) = link else { return }
+                    try? container.libraryService.addToLibrary(showId: showId)
+                },
+                onIgnore: {
+                    pendingDeepLink = nil
+                }
+            )
+        }
         .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {
             if let showId = pendingShowNavigation {
                 homeStack.append(showId)
@@ -152,11 +190,8 @@ struct MainNavigation: View {
     private func handleDeepLink(_ url: URL) {
         guard let link = DeepLink.parse(url) else { return }
         switch link {
-        case .show(let id, _):
-            showFullPlayer = false
-            selectedTab = .home
-            homeStack = NavigationPath()
-            homeStack.append(id)
+        case .show:
+            pendingDeepLink = link
         case .collection:
             selectedTab = .collections
         }
