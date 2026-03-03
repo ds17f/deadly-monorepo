@@ -13,8 +13,6 @@ struct SettingsScreen: View {
     @State private var libraryImportError: String?
     @State private var showingLibraryImportAlert = false
     @State private var showingLibraryExportShare = false
-    @State private var showingReleaseNotesAlert = false
-
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
     }
@@ -48,22 +46,14 @@ struct SettingsScreen: View {
             }
 
             // MARK: - About
-            Section {
-                // App name
-                Text("Deadly")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .center)
-
-                // Version — tap to view release notes
+            Section("About") {
                 Button {
-                    showingReleaseNotesAlert = true
+                    let urlString = "https://github.com/ds17f/deadly-monorepo/releases/tag/ios%2Fv\(appVersion)"
+                    if let url = URL(string: urlString) { openURL(url) }
                 } label: {
                     LabeledContent("Version", value: appVersion)
                 }
                 .foregroundStyle(.primary)
-            } header: {
-                Text("About")
             }
 
             Section {
@@ -83,19 +73,6 @@ struct SettingsScreen: View {
 
         }
         .navigationTitle("Settings")
-
-        // MARK: - Release Notes Alert
-        .alert("Release Notes", isPresented: $showingReleaseNotesAlert) {
-            Button("View") {
-                let urlString = "https://github.com/ds17f/deadly-monorepo/releases/tag/ios%2Fv\(appVersion)"
-                if let url = URL(string: urlString) {
-                    openURL(url)
-                }
-            }
-            Button("Cancel", role: .cancel) {}
-        } message: {
-            Text("View release notes for v\(appVersion)?")
-        }
 
         // MARK: - Library File Picker
         .fileImporter(
