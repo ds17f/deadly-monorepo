@@ -54,6 +54,12 @@ class SettingsViewModel @Inject constructor(
         appPreferences.setForceOnline(!appPreferences.forceOnline.value)
     }
 
+    val devMode: StateFlow<Boolean> = appPreferences.devMode
+
+    fun setDevMode(value: Boolean) {
+        appPreferences.setDevMode(value)
+    }
+
     fun onImportMigration(uri: Uri) {
         viewModelScope.launch {
             try {

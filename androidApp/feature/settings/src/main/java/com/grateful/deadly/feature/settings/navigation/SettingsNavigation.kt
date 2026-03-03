@@ -4,13 +4,13 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.grateful.deadly.feature.settings.SettingsScreen
-import com.grateful.deadly.feature.settings.screens.about.AboutScreen
+import com.grateful.deadly.feature.settings.screens.legal.LegalScreen
 
 /**
  * Settings navigation route constants
  */
 const val SETTINGS_ROUTE = "settings"
-const val ABOUT_ROUTE = "about"
+const val LEGAL_ROUTE = "legal"
 
 /**
  * Extension function for NavController to navigate to Settings
@@ -21,27 +21,24 @@ fun NavController.navigateToSettings() {
 
 /**
  * Add Settings destination to NavGraphBuilder
- *
- * Following navigation patterns where screens accept
- * navigation callbacks rather than NavController directly.
  */
 fun NavGraphBuilder.settingsScreen(
     onNavigateBack: () -> Unit,
-    onNavigateToAbout: () -> Unit
+    onNavigateToLegal: () -> Unit
 ) {
     composable(route = SETTINGS_ROUTE) {
-        SettingsScreen(onNavigateToAbout = onNavigateToAbout)
+        SettingsScreen(onNavigateToLegal = onNavigateToLegal)
     }
 }
 
 /**
- * Add About destination to NavGraphBuilder
+ * Add Legal destination to NavGraphBuilder
  */
-fun NavGraphBuilder.aboutScreen(
+fun NavGraphBuilder.legalScreen(
     onNavigateBack: () -> Unit
 ) {
-    composable(route = ABOUT_ROUTE) {
-        AboutScreen()
+    composable(route = LEGAL_ROUTE) {
+        LegalScreen()
     }
 }
 
@@ -50,17 +47,11 @@ fun NavGraphBuilder.aboutScreen(
  */
 fun NavGraphBuilder.settingsGraph(navController: NavController) {
     settingsScreen(
-        onNavigateBack = {
-            navController.popBackStack()
-        },
-        onNavigateToAbout = {
-            navController.navigate(ABOUT_ROUTE)
-        }
+        onNavigateBack = { navController.popBackStack() },
+        onNavigateToLegal = { navController.navigate(LEGAL_ROUTE) }
     )
 
-    aboutScreen(
-        onNavigateBack = {
-            navController.popBackStack()
-        }
+    legalScreen(
+        onNavigateBack = { navController.popBackStack() }
     )
 }

@@ -6,6 +6,7 @@ import UniformTypeIdentifiers
 
 struct SettingsScreen: View {
     @Environment(\.appContainer) private var container
+    @Environment(\.openURL) private var openURL
     @State private var showingImport = false
     @State private var dataVersion: String?
     @State private var showingLibraryFilePicker = false
@@ -18,6 +19,13 @@ struct SettingsScreen: View {
     @State private var showingClearCacheResult = false
     @State private var clearCacheSuccess = false
     @State private var showingReimportConfirm = false
+    @State private var showingReleaseNotesAlert = false
+    @State private var appNameTapCount = 0
+    @State private var appNameTapTask: Task<Void, Never>?
+
+    private var appVersion: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
+    }
 
     var body: some View {
         List {
@@ -49,47 +57,115 @@ struct SettingsScreen: View {
 
             // MARK: - About
             Section("About") {
-                NavigationLink("Legal & About") {
-                    AboutView()
+                // App name — 5-tap easter egg to unlock dev mode
+                VStack(spacing: 4) {
+                    Text("Deadly")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.primary)
+                        .onTapGesture {
+                            appNameTapCount += 1
+                            appNameTapTask?.cancel()
+                            if appNameTapCount >= 5 {
+                                appNameTapCount = 0
+                                container.appPreferences.devMode = true
+                            } else {
+                                appNameTapTask = Task {
+                                    try? await Task.sleep(for: .seconds(2))
+                                    appNameTapCount = 0
+                                }
+                            }
+                        }
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .listRowBackground(Color.clear)
+
+                // Version — tap to view release notes
+                Text("Version \(appVersion)")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .listRowBackground(Color.clear)
+                    .onTapGesture { showingReleaseNotesAlert = true }
+
+                // Support the Archive
+                Text("The Internet Archive is the backbone of this app. Their infrastructure hosts and streams every recording you hear. Please consider donating directly to help cover their hosting and bandwidth costs.")
+                    .font(.subheadline)
+
+                Link("Donate to Internet Archive",
+                     destination: URL(string: "https://archive.org/donate/")!)
+                    .font(.subheadline.weight(.medium))
+
+                // Our Mission
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("We built this app for one simple reason: we want to encourage Deadheads — old and new — to engage with, enjoy, and share the music of the Grateful Dead.")
+                    Text("The goal is to make listening to live shows as easy and enjoyable as possible in a modern streaming experience.")
+                    Text("This app is completely open source. No money is made from streaming music through this app.")
+                }
+                .font(.subheadline)
+
+                // Legal & Policies
+                NavigationLink("Legal & Policies") {
+                    LegalView()
                 }
             }
 
-            // MARK: - Developer
-            Section {
-                Toggle(isOn: Binding(
-                    get: { container.appPreferences.forceOnline },
-                    set: { container.appPreferences.forceOnline = $0 }
-                )) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Force online mode")
-                        Text("Override offline detection when the app incorrectly shows as offline")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+            // MARK: - Developer (hidden until dev mode unlocked)
+            if container.appPreferences.devMode {
+                Section {
+                    Toggle(isOn: Binding(
+                        get: { container.appPreferences.forceOnline },
+                        set: { container.appPreferences.forceOnline = $0 }
+                    )) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Force online mode")
+                            Text("Override offline detection when the app incorrectly shows as offline")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
                     }
-                }
 
-                Button("Clear All Caches") {
-                    showingClearCacheAlert = true
-                }
+                    Button("Clear All Caches") {
+                        showingClearCacheAlert = true
+                    }
 
-                if let v = dataVersion {
-                    LabeledContent("Database Version", value: v)
-                } else {
-                    LabeledContent("Database Version", value: "No data")
-                }
+                    if let v = dataVersion {
+                        LabeledContent("Database Version", value: v)
+                    } else {
+                        LabeledContent("Database Version", value: "No data")
+                    }
 
-                Button("Force Re-Import") {
-                    showingReimportConfirm = true
+                    Button("Force Re-Import") {
+                        showingReimportConfirm = true
+                    }
+                    .foregroundStyle(.red)
+
+                    Button("Disable Dev Mode") {
+                        container.appPreferences.devMode = false
+                    }
+                    .foregroundStyle(.red)
+                } header: {
+                    Text("Developer")
+                        .foregroundStyle(.secondary)
+                } footer: {
+                    Text("Advanced tools for debugging and data recovery.")
                 }
-                .foregroundStyle(.red)
-            } header: {
-                Text("Developer")
-                    .foregroundStyle(.secondary)
-            } footer: {
-                Text("Advanced tools for debugging and data recovery.")
             }
         }
         .navigationTitle("Settings")
+
+        // MARK: - Release Notes Alert
+        .alert("Release Notes", isPresented: $showingReleaseNotesAlert) {
+            Button("View") {
+                let urlString = "https://github.com/ds17f/deadly-monorepo/releases/tag/ios%2Fv\(appVersion)"
+                if let url = URL(string: urlString) {
+                    openURL(url)
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("View release notes for v\(appVersion)?")
+        }
 
         // MARK: - Library File Picker
         .fileImporter(
@@ -205,7 +281,6 @@ struct SettingsScreen: View {
 
         var success = true
 
-        // Clear archive cache (track lists, reviews)
         let archiveDir = cacheDir.appendingPathComponent("archive")
         if FileManager.default.fileExists(atPath: archiveDir.path) {
             do {
@@ -215,7 +290,6 @@ struct SettingsScreen: View {
             }
         }
 
-        // Clear image cache
         let imagesDir = cacheDir.appendingPathComponent("images")
         if FileManager.default.fileExists(atPath: imagesDir.path) {
             do {

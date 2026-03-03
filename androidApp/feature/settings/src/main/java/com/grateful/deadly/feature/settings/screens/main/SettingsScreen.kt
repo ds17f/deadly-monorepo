@@ -1,5 +1,7 @@
 package com.grateful.deadly.feature.settings
 
+import android.content.Intent
+import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
@@ -16,17 +18,16 @@ import androidx.compose.ui.unit.dp
 import java.io.File
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.resources.IconResources
+import com.grateful.deadly.feature.settings.BuildConfig
+import kotlinx.coroutines.delay
 
-/**
- * SettingsScreen - Settings interface
- *
- * Scaffold-free content designed for use within MainNavigation's AppScaffold.
- */
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
-    onNavigateToAbout: () -> Unit = {}
+    onNavigateToLegal: () -> Unit = {}
 ) {
+    val context = LocalContext.current
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp),
@@ -73,74 +74,194 @@ fun SettingsScreen(
 
         // About Section
         item {
-            SettingsSection(title = "About") {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onNavigateToAbout() },
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "Legal & About",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = "Navigate to About"
-                    )
+            val version = BuildConfig.VERSION_NAME
+            var tapCount by remember { mutableIntStateOf(0) }
+            var showReleaseNotesDialog by remember { mutableStateOf(false) }
+            val devMode by viewModel.devMode.collectAsState()
+
+            LaunchedEffect(tapCount) {
+                if (tapCount > 0) {
+                    delay(2000)
+                    tapCount = 0
                 }
             }
-        }
 
-        // Developer Section
-        item {
-            val forceOnline by viewModel.forceOnline.collectAsState()
+            SettingsSection(title = "About") {
+                // App name — 5-tap easter egg
+                Text(
+                    text = "Deadly",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable {
+                            tapCount++
+                            if (tapCount >= 5) {
+                                tapCount = 0
+                                viewModel.setDevMode(true)
+                            }
+                        }
+                        .padding(vertical = 4.dp),
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                )
 
-            SettingsSection(
-                title = "Developer",
-                titleColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                footer = "Advanced tools for debugging and data recovery."
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
+                // Version — tap for release notes
+                Text(
+                    text = "Version $version",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { showReleaseNotesDialog = true },
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                )
+
+                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+
+                // Support the Archive
+                Text(
+                    text = "The Internet Archive is the backbone of this app. Their infrastructure hosts and streams every recording you hear. Please consider donating directly to help cover their hosting and bandwidth costs.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Button(
+                    onClick = {
+                        context.startActivity(
+                            Intent(Intent.ACTION_VIEW, Uri.parse("https://archive.org/donate/"))
+                        )
+                    },
+                    modifier = Modifier.fillMaxWidth()
                 ) {
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = "Force online mode",
-                            style = MaterialTheme.typography.bodyLarge
-                        )
-                        Text(
-                            text = "Override offline detection — use when the app incorrectly shows as offline",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                    Switch(
-                        checked = forceOnline,
-                        onCheckedChange = { viewModel.toggleForceOnline() }
-                    )
+                    Text("Donate to Internet Archive")
                 }
 
                 HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
 
-                ClearArchiveCacheButton(modifier = Modifier.fillMaxWidth())
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                DeleteDataZipButton(
-                    onDeleteDataZip = viewModel::onDeleteDataZip,
-                    modifier = Modifier.fillMaxWidth()
+                // Our Mission
+                Text(
+                    text = "We built this app for one simple reason: we want to encourage Deadheads — old and new — to engage with, enjoy, and share the music of the Grateful Dead.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Text(
+                    text = "The goal is to make listening to live shows as easy and enjoyable as possible in a modern streaming experience.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Text(
+                    text = "This app is completely open source. No money is made from streaming music through this app.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface
                 )
 
-                Spacer(modifier = Modifier.height(8.dp))
+                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
 
-                DeleteDatabaseFilesButton(
-                    onDeleteDatabaseFiles = viewModel::onDeleteDatabaseFiles,
-                    modifier = Modifier.fillMaxWidth()
+                // Legal & Policies
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onNavigateToLegal() },
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "Legal & Policies",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = "Navigate to Legal"
+                    )
+                }
+            }
+
+            if (showReleaseNotesDialog) {
+                AlertDialog(
+                    onDismissRequest = { showReleaseNotesDialog = false },
+                    title = { Text("Release Notes") },
+                    text = { Text("View release notes for v$version?") },
+                    confirmButton = {
+                        TextButton(onClick = {
+                            showReleaseNotesDialog = false
+                            val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                        }) {
+                            Text("View")
+                        }
+                    },
+                    dismissButton = {
+                        TextButton(onClick = { showReleaseNotesDialog = false }) {
+                            Text("Cancel")
+                        }
+                    }
                 )
+            }
+        }
+
+        // Developer Section (hidden until dev mode unlocked)
+        item {
+            val devMode by viewModel.devMode.collectAsState()
+            val forceOnline by viewModel.forceOnline.collectAsState()
+
+            if (devMode) {
+                SettingsSection(
+                    title = "Developer",
+                    titleColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                    footer = "Advanced tools for debugging and data recovery."
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "Force online mode",
+                                style = MaterialTheme.typography.bodyLarge
+                            )
+                            Text(
+                                text = "Override offline detection — use when the app incorrectly shows as offline",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        Switch(
+                            checked = forceOnline,
+                            onCheckedChange = { viewModel.toggleForceOnline() }
+                        )
+                    }
+
+                    HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+
+                    ClearArchiveCacheButton(modifier = Modifier.fillMaxWidth())
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    DeleteDataZipButton(
+                        onDeleteDataZip = viewModel::onDeleteDataZip,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    DeleteDatabaseFilesButton(
+                        onDeleteDatabaseFiles = viewModel::onDeleteDatabaseFiles,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+
+                    Text(
+                        text = "Disable Dev Mode",
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.error,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { viewModel.setDevMode(false) }
+                            .padding(vertical = 4.dp)
+                    )
+                }
             }
         }
     }
@@ -241,7 +362,6 @@ private fun ClearArchiveCacheButton(
 
 private fun clearArchiveCache(context: android.content.Context) {
     try {
-        // Clear the archive cache directory
         val cacheDir = File(context.cacheDir, "archive")
         if (cacheDir.exists()) {
             cacheDir.deleteRecursively()

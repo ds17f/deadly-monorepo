@@ -1,4 +1,4 @@
-package com.grateful.deadly.feature.settings.screens.about
+package com.grateful.deadly.feature.settings.screens.legal
 
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
@@ -9,11 +9,11 @@ import com.grateful.deadly.core.design.scaffold.MiniPlayerConfig
 import com.grateful.deadly.core.design.scaffold.TopBarConfig
 import com.grateful.deadly.core.design.component.topbar.TopBarMode
 
-object AboutBarConfiguration {
+object LegalBarConfiguration {
 
-    fun getAboutBarConfig(): BarConfiguration = BarConfiguration(
+    fun getLegalBarConfig(): BarConfiguration = BarConfiguration(
         topBar = TopBarConfig(
-            title = "About",
+            title = "Legal & Policies",
             mode = TopBarMode.SOLID,
             navigationIcon = { BackIcon() }
         ),
