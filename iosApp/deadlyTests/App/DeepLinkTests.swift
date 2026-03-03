@@ -9,12 +9,17 @@ struct DeepLinkTests {
 
     @Test func customSchemeShowWithRecording() {
         let url = URL(string: "deadly://show/1977-05-08/recording/gd77-05-08.xxx")!
-        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: "gd77-05-08.xxx"))
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: "gd77-05-08.xxx", trackNumber: nil))
     }
 
     @Test func customSchemeShowWithoutRecording() {
         let url = URL(string: "deadly://show/1977-05-08")!
-        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: nil))
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: nil, trackNumber: nil))
+    }
+
+    @Test func customSchemeShowWithTrack() {
+        let url = URL(string: "deadly://show/1977-05-08/recording/gd77-05-08.xxx/track/3")!
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: "gd77-05-08.xxx", trackNumber: 3))
     }
 
     @Test func customSchemeCollection() {
@@ -31,12 +36,17 @@ struct DeepLinkTests {
 
     @Test func universalLinkShowWithRecording() {
         let url = URL(string: "https://share.thedeadly.app/show/1977-05-08/recording/gd77-05-08.xxx")!
-        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: "gd77-05-08.xxx"))
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: "gd77-05-08.xxx", trackNumber: nil))
     }
 
     @Test func universalLinkShowWithoutRecording() {
         let url = URL(string: "https://share.thedeadly.app/show/1977-05-08")!
-        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: nil))
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: nil, trackNumber: nil))
+    }
+
+    @Test func universalLinkShowWithTrack() {
+        let url = URL(string: "https://share.thedeadly.app/show/1977-05-08/recording/gd77-05-08.xxx/track/3")!
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: "gd77-05-08.xxx", trackNumber: 3))
     }
 
     @Test func universalLinkCollection() {
@@ -48,7 +58,8 @@ struct DeepLinkTests {
         let url = URL(string: "https://share.thedeadly.app/show/1981-03-28-gruga-halle-essen-germany/recording/gd81-03-28.fm.hanno.3306.sbefail.shnf")!
         #expect(DeepLink.parse(url) == .show(
             id: "1981-03-28-gruga-halle-essen-germany",
-            recordingId: "gd81-03-28.fm.hanno.3306.sbefail.shnf"
+            recordingId: "gd81-03-28.fm.hanno.3306.sbefail.shnf",
+            trackNumber: nil
         ))
     }
 
