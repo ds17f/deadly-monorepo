@@ -6,7 +6,6 @@ struct MainNavigation: View {
     @Environment(\.appContainer) private var container
     @State private var showFullPlayer = false
     @State private var homeStack = NavigationPath()
-    @State private var lastPushedShowId: String?
     @State private var pendingShowNavigation: String?
     @State private var pendingDeepLink: DeepLink?
     @State private var selectedTab: AppTab = .home
@@ -142,8 +141,9 @@ struct MainNavigation: View {
         }
         .fullScreenCover(isPresented: $showFullPlayer, onDismiss: {
             if let showId = pendingShowNavigation {
+                selectedTab = .home
+                homeStack = NavigationPath()
                 homeStack.append(showId)
-                lastPushedShowId = showId
                 pendingShowNavigation = nil
             }
             // When dismissing player while offline, redirect to Downloads
@@ -155,14 +155,8 @@ struct MainNavigation: View {
                 streamPlayer: container.streamPlayer,
                 isPresented: $showFullPlayer,
                 onViewShow: { showId in
-                    if lastPushedShowId == showId {
-                        // Show is already the top of the home stack — just dismiss.
-                        showFullPlayer = false
-                    } else {
-                        // Show isn't behind us — dismiss and push it.
-                        pendingShowNavigation = showId
-                        showFullPlayer = false
-                    }
+                    pendingShowNavigation = showId
+                    showFullPlayer = false
                 }
             )
         }
