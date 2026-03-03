@@ -208,7 +208,8 @@ struct ShowDetailScreen: View {
                         TrackListRow(
                             track: track,
                             index: index,
-                            isPlaying: isCurrentTrack(track),
+                            isPlaying: isCurrentTrack(track) && streamPlayer.playbackState.isPlaying,
+                            isLoading: isCurrentTrack(track) && (streamPlayer.playbackState == .loading || streamPlayer.playbackState == .buffering),
                             downloadState: trackStates[track.name]
                         )
                         .contentShape(Rectangle())
