@@ -267,8 +267,7 @@ fun PlaylistScreen(
                 showDate = showData.displayDate,
                 venue = showData.venue,
                 location = showData.location,
-                onShareClick = { viewModel.shareShow() },
-                onShowQrCode = { showQrCode = true },
+                onShareClick = { showQrCode = true },
                 onChooseRecordingClick = viewModel::chooseRecording,
                 onDismiss = viewModel::hideMenu
             )

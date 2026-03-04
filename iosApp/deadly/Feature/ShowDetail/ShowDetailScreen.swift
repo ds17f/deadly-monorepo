@@ -17,7 +17,6 @@ struct ShowDetailScreen: View {
     }
 
     @State private var showMenuSheet = false
-    @State private var showShareSheet = false
     @State private var showQRShareSheet = false
     @State private var showRecordingPicker = false
     @State private var isInLibrary = false
@@ -234,11 +233,6 @@ struct ShowDetailScreen: View {
         .sheet(isPresented: $showSetlistSheet) {
             SetlistSheet(show: show)
         }
-        .sheet(isPresented: $showShareSheet) {
-            if let text = shareText(show: show) {
-                ShareActivityView(text: text)
-            }
-        }
         .sheet(isPresented: $showQRShareSheet) {
             if let recording = playlistService.currentRecording {
                 QRShareSheet(
@@ -324,17 +318,6 @@ struct ShowDetailScreen: View {
     private func menuSheet(_ show: Show) -> some View {
         NavigationStack {
             List {
-                if shareText(show: show) != nil {
-                    Button {
-                        showMenuSheet = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            showShareSheet = true
-                        }
-                    } label: {
-                        Label("Share", systemImage: "square.and.arrow.up")
-                    }
-                }
-
                 if playlistService.currentRecording != nil {
                     Button {
                         showMenuSheet = false
@@ -342,7 +325,7 @@ struct ShowDetailScreen: View {
                             showQRShareSheet = true
                         }
                     } label: {
-                        Label("Share QR Code", systemImage: "qrcode")
+                        Label("Share", systemImage: "square.and.arrow.up")
                     }
                 }
 
@@ -560,33 +543,4 @@ struct ShowDetailScreen: View {
         }
     }
 
-    // MARK: - Share
-
-    private func shareText(show: Show) -> String? {
-        guard let recording = playlistService.currentRecording else { return nil }
-        var lines: [String] = []
-        lines.append("🌹⚡💀 Grateful Dead 💀⚡🌹")
-        lines.append("")
-        lines.append("📅 \(show.date)")
-        lines.append("📍 \(show.venue.name)")
-        let loc = show.venue.displayLocation
-        if !loc.isEmpty { lines.append("🌎 \(loc)") }
-        lines.append("")
-        lines.append("🎧 Source: \(recording.sourceType.displayName)")
-        if show.hasRating { lines.append("⭐ Rating: \(show.displayRating)") }
-        lines.append("")
-        lines.append("🔗 Listen in The Deadly app:")
-        lines.append("https://share.thedeadly.app/show/\(show.id)/recording/\(recording.identifier)")
-        return lines.joined(separator: "\n")
-    }
-}
-
-private struct ShareActivityView: UIViewControllerRepresentable {
-    let text: String
-
-    func makeUIViewController(context: Context) -> UIActivityViewController {
-        UIActivityViewController(activityItems: [text], applicationActivities: nil)
-    }
-
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }

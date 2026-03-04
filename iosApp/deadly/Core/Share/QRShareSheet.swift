@@ -1,3 +1,4 @@
+import LinkPresentation
 import SwiftUI
 
 struct QRShareSheet: View {
@@ -77,11 +78,21 @@ struct QRShareSheet: View {
             .task { await generate() }
             .sheet(isPresented: $isSharing) {
                 if let image = shareCard ?? qrImage {
-                    ActivityView(items: [image])
+                    ActivityView(items: shareItems(image))
                 }
             }
         }
         .presentationDetents([.large])
+    }
+
+    // MARK: - Sharing
+
+    private func shareItems(_ image: UIImage) -> [Any] {
+        let title = [showDate, venue].filter { !$0.isEmpty }.joined(separator: " — ")
+        return [
+            ShareImageSource(image: image, url: URL(string: shareUrl), title: title),
+            ShareURLSource(urlString: shareUrl)
+        ]
     }
 
     // MARK: - Generation
@@ -135,6 +146,52 @@ struct QRShareSheet: View {
         config.timeoutIntervalForResource = 18
         let (data, _) = try await URLSession(configuration: config).data(from: url)
         return UIImage(data: data)
+    }
+}
+
+// MARK: - UIActivityItemSource Providers
+
+private final class ShareImageSource: NSObject, UIActivityItemSource {
+    let image: UIImage
+    let url: URL?
+    let title: String
+
+    init(image: UIImage, url: URL?, title: String) {
+        self.image = image
+        self.url = url
+        self.title = title
+    }
+
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        image
+    }
+
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        image
+    }
+
+    func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
+        let metadata = LPLinkMetadata()
+        metadata.title = title
+        metadata.url = url
+        metadata.imageProvider = NSItemProvider(object: image)
+        return metadata
+    }
+}
+
+private final class ShareURLSource: NSObject, UIActivityItemSource {
+    let urlString: String
+
+    init(urlString: String) {
+        self.urlString = urlString
+    }
+
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        urlString
+    }
+
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        urlString
     }
 }
 

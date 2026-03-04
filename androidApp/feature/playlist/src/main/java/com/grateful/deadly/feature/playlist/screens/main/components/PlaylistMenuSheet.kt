@@ -8,7 +8,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
-import com.grateful.deadly.core.design.component.ShareMenuRow
 
 /**
  * Playlist menu bottom sheet that appears when triple dot menu is tapped.
@@ -21,7 +20,6 @@ fun PlaylistMenuSheet(
     venue: String?,
     location: String?,
     onShareClick: () -> Unit,
-    onShowQrCode: () -> Unit,
     onChooseRecordingClick: () -> Unit,
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
@@ -36,32 +34,24 @@ fun PlaylistMenuSheet(
                 .padding(16.dp)
         ) {
             // Share option
-            ShareMenuRow(
-                onClick = {
-                    onShareClick()
-                    onDismiss()
-                }
-            )
-
-            // Show QR Code option
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable {
-                        onShowQrCode()
+                        onShareClick()
                         onDismiss()
                     }
                     .padding(vertical = 16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Icon(
-                    painter = IconResources.Content.QrCode(),
-                    contentDescription = "Show QR Code",
+                    painter = IconResources.Content.Share(),
+                    contentDescription = "Share",
                     modifier = Modifier.size(24.dp)
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
-                    text = "Show QR Code",
+                    text = "Share",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }

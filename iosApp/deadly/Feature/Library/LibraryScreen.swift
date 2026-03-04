@@ -195,7 +195,17 @@ struct LibraryScreen: View {
             }
         }
         .sheet(item: $qrCodeShow) { libraryShow in
-            QRCodeView(show: libraryShow.show)
+            let show = libraryShow.show
+            QRShareSheet(
+                showId: show.id,
+                recordingId: show.bestRecordingId,
+                showDate: DateFormatting.formatShowDate(show.date),
+                venue: show.venue.name,
+                location: show.venue.displayLocation,
+                coverImageUrl: show.coverImageUrl,
+                trackNumber: nil,
+                songTitle: nil
+            )
         }
     }
 
@@ -407,15 +417,10 @@ struct LibraryScreen: View {
         let show = libraryShow.show
 
         // Share
-        ShareLink(item: shareText(for: show)) {
-            Label("Share", systemImage: "square.and.arrow.up")
-        }
-
-        // QR Code
         Button {
             qrCodeShow = libraryShow
         } label: {
-            Label("Show QR Code", systemImage: "qrcode")
+            Label("Share", systemImage: "square.and.arrow.up")
         }
 
         Divider()
@@ -483,20 +488,5 @@ struct LibraryScreen: View {
         }
     }
 
-    private func shareText(for show: Show) -> String {
-        var lines: [String] = []
-        lines.append("🌹⚡💀 Grateful Dead 💀⚡🌹")
-        lines.append("")
-        lines.append("📅 \(show.date)")
-        lines.append("📍 \(show.venue.name)")
-        let loc = show.venue.displayLocation
-        if !loc.isEmpty { lines.append("🌎 \(loc)") }
-        if show.hasRating { lines.append("⭐ Rating: \(show.displayRating)") }
-        if let recordingId = show.bestRecordingId {
-            lines.append("")
-            lines.append("🔗 Listen in The Deadly app:")
-            lines.append("https://share.thedeadly.app/show/\(show.id)/recording/\(recordingId)")
-        }
-        return lines.joined(separator: "\n")
-    }
+
 }

@@ -39,35 +39,6 @@ struct PlayerScreen: View {
         streamPlayer.currentTrack?.metadata["trackNumber"]
     }
 
-    private var shareText: String? {
-        guard let show = container.playlistService.currentShow,
-              let recording = container.playlistService.currentRecording else { return nil }
-
-        let showId = show.id
-        let recordingId = recording.identifier
-        var url = "https://share.thedeadly.app/show/\(showId)/recording/\(recordingId)"
-        if let trackNum = currentTrackNumber { url += "/track/\(trackNum)" }
-
-        let trackTitle = streamPlayer.currentTrack?.title
-
-        var lines: [String] = []
-        lines.append("🌹⚡💀 Grateful Dead 💀⚡🌹")
-        lines.append("")
-        if let title = trackTitle { lines.append("🎵 \(title)") ; lines.append("") }
-        lines.append("📅 \(show.date)")
-        lines.append("📍 \(show.venue.name)")
-        let loc = show.venue.displayLocation
-        if !loc.isEmpty { lines.append("🌎 \(loc)") }
-        lines.append("")
-        lines.append("🎧 Source: \(recording.sourceType.displayName)")
-        if show.hasRating { lines.append("⭐ Rating: \(show.displayRating)") }
-        lines.append("")
-        lines.append("🔗 Listen in The Deadly app:")
-        lines.append(url)
-
-        return lines.joined(separator: "\n")
-    }
-
     var body: some View {
         ZStack {
             Color(.systemBackground).ignoresSafeArea()
@@ -293,21 +264,10 @@ struct PlayerScreen: View {
         HStack {
             Spacer()
 
-            if let text = shareText {
-                ShareLink(item: text) {
-                    Image(systemName: "square.and.arrow.up")
-                        .font(.title2)
-                        .foregroundStyle(.secondary)
-                        .frame(width: 44, height: 44)
-                }
-            }
-
-            Spacer()
-
             Button {
                 showQRShare = true
             } label: {
-                Image(systemName: "qrcode")
+                Image(systemName: "square.and.arrow.up")
                     .font(.title2)
                     .foregroundStyle(.secondary)
                     .frame(width: 44, height: 44)

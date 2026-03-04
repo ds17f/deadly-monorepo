@@ -147,10 +147,6 @@ fun LibraryScreen(
         ShowActionsBottomSheet(
             show = show,
             onDismiss = { selectedShowForActions = null },
-            onShare = {
-                viewModel.shareShow(show.showId)
-                selectedShowForActions = null
-            },
             onShowQrCode = {
                 qrCodeShow = show
                 selectedShowForActions = null
