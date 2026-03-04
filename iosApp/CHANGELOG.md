@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.14.0] - 2026-03-03
+
+### New Features
+* unify share UX with QR card as single action (48bea44)
+
+
 ## [2.13.0] - 2026-03-03
 
 ### New Features
@@ -23,8 +29,6 @@
 * add permanent developer panel and increase typography sizes (8a312e4)
 * adopt platform-idiomatic layouts for Android and iOS (d38f2ac)
 * redesign with dev mode, legal screen, and release notes (3f4ed3b)
-
-
 ## [2.12.0] - 2026-03-02
 
 ### New Features
