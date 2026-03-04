@@ -14,7 +14,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
-import com.grateful.deadly.core.design.component.ShareMenuRow
 
 /**
  * Track Actions Bottom Sheet for Player
@@ -29,7 +28,6 @@ fun PlayerTrackActionsSheet(
     venue: String,
     onDismiss: () -> Unit,
     onShare: () -> Unit,
-    onShowQrCode: () -> Unit,
     onAddToPlaylist: () -> Unit,
     onDownload: () -> Unit,
     modifier: Modifier = Modifier
@@ -94,18 +92,11 @@ fun PlayerTrackActionsSheet(
             HorizontalDivider()
             
             // Action buttons using standard patterns
-            ShareMenuRow(
+            ActionMenuRow(
+                text = "Share",
+                icon = IconResources.Content.Share(),
                 onClick = {
                     onShare()
-                    onDismiss()
-                }
-            )
-
-            ActionMenuRow(
-                text = "Show QR Code",
-                icon = IconResources.Content.QrCode(),
-                onClick = {
-                    onShowQrCode()
                     onDismiss()
                 }
             )

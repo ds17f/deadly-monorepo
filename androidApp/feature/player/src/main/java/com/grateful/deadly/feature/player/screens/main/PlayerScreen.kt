@@ -219,8 +219,7 @@ fun PlayerScreen(
             item {
                 PlayerSecondaryControls(
                     onConnectClick = { showConnectBottomSheet = true },
-                    onShareClick = { viewModel.onShareClicked() },
-                    onQrCodeClick = { showQrCode = true },
+                    onShareClick = { showQrCode = true },
                     onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
                 )
@@ -248,8 +247,7 @@ fun PlayerScreen(
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,
                 onDismiss = { showTrackActionsBottomSheet = false },
-                onShare = { viewModel.onShareClicked() },
-                onShowQrCode = { showQrCode = true },
+                onShare = { showQrCode = true },
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
                 onDownload = { viewModel.downloadCurrentShow() }
             )

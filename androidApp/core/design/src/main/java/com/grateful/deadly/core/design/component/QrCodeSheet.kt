@@ -193,7 +193,7 @@ fun QrCodeDisplay(
 
                     // Share the full poster card once built, else fall back to the QR bitmap
                     FilledTonalButton(
-                        onClick = { (shareBitmap ?: qrBitmap)?.let { shareQrBitmap(context, it) } },
+                        onClick = { (shareBitmap ?: qrBitmap)?.let { shareQrBitmap(context, it, url) } },
                         enabled = qrBitmap != null
                     ) {
                         Icon(
@@ -202,7 +202,7 @@ fun QrCodeDisplay(
                             modifier = Modifier.size(18.dp)
                         )
                         Spacer(modifier = Modifier.width(8.dp))
-                        Text("Share QR Code")
+                        Text("Share")
                     }
                 }
             }
@@ -460,7 +460,7 @@ private fun truncateText(text: String, paint: Paint, maxWidth: Float): String {
     return text.substring(0, end) + "…"
 }
 
-private fun shareQrBitmap(context: Context, bitmap: Bitmap) {
+private fun shareQrBitmap(context: Context, bitmap: Bitmap, url: String) {
     val qrDir = File(context.cacheDir, "qr")
     qrDir.mkdirs()
     qrDir.listFiles()?.filter { it.name.startsWith("share_qr") }?.forEach { it.delete() }
@@ -476,7 +476,8 @@ private fun shareQrBitmap(context: Context, bitmap: Bitmap) {
     val intent = Intent(Intent.ACTION_SEND).apply {
         type = "image/png"
         putExtra(Intent.EXTRA_STREAM, uri)
+        putExtra(Intent.EXTRA_TEXT, url)
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
     }
-    context.startActivity(Intent.createChooser(intent, "Share QR Code"))
+    context.startActivity(Intent.createChooser(intent, "Share"))
 }
