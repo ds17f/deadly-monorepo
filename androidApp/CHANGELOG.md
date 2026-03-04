@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.12.0] - 2026-03-03
+
+### New Features
+* unify share UX with QR card as single action (48bea44)
+
+
 ## [2.11.0] - 2026-03-03
 
 ### New Features
@@ -15,8 +21,6 @@
 
 ### Other Changes
 * chore(build): enforce platform-scoped commits and filter changelogs by platform (838d47d)
-
-
 ## [2.10.0] - 2026-03-01
 
 ### New Features
