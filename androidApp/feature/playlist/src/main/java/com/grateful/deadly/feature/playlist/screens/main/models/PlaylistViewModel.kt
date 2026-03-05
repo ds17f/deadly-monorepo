@@ -166,49 +166,63 @@ class PlaylistViewModel @Inject constructor(
         val downloadStatus: LibraryDownloadStatus? = null
     )
 
+    // Inner combine result to work around Kotlin's 5-flow combine limit
+    private data class CorePlaylistState(
+        val baseState: PlaylistUiState,
+        val rawTracks: List<PlaylistTrackViewModel>,
+        val isPlaying: Boolean,
+        val currentTrackInfo: CurrentTrackInfo?,
+        val libraryAndDownload: LibraryAndDownloadState
+    )
+
     // Reactive UI state that combines base state with MediaController state and library status
     val uiState: StateFlow<PlaylistUiState> = combine(
-        _baseUiState,
-        _rawTrackData,
-        playlistService.isPlaying,
-        playlistService.currentTrackInfo,
-        _baseUiState
-            .map { baseState -> baseState.showData?.showId }
-            .distinctUntilChanged()
-            .flatMapLatest { showId ->
-                if (showId != null) {
-                    combine(
-                        libraryService.isShowInLibrary(showId),
-                        playlistService.observeShowDownloadProgress(showId)
-                    ) { inLibrary, progress ->
-                        val mappedProgress = when (progress.status) {
-                            LibraryDownloadStatus.NOT_DOWNLOADED -> null
-                            LibraryDownloadStatus.QUEUED -> 0.0f
-                            LibraryDownloadStatus.DOWNLOADING -> progress.overallProgress
-                            LibraryDownloadStatus.COMPLETED -> 1.0f
-                            LibraryDownloadStatus.PAUSED -> progress.overallProgress
-                            LibraryDownloadStatus.FAILED -> null
-                            LibraryDownloadStatus.CANCELLED -> null
+        combine(
+            _baseUiState,
+            _rawTrackData,
+            playlistService.isPlaying,
+            playlistService.currentTrackInfo,
+            _baseUiState
+                .map { baseState -> baseState.showData?.showId }
+                .distinctUntilChanged()
+                .flatMapLatest { showId ->
+                    if (showId != null) {
+                        combine(
+                            libraryService.isShowInLibrary(showId),
+                            playlistService.observeShowDownloadProgress(showId)
+                        ) { inLibrary, progress ->
+                            val mappedProgress = when (progress.status) {
+                                LibraryDownloadStatus.NOT_DOWNLOADED -> null
+                                LibraryDownloadStatus.QUEUED -> 0.0f
+                                LibraryDownloadStatus.DOWNLOADING -> progress.overallProgress
+                                LibraryDownloadStatus.COMPLETED -> 1.0f
+                                LibraryDownloadStatus.PAUSED -> progress.overallProgress
+                                LibraryDownloadStatus.FAILED -> null
+                                LibraryDownloadStatus.CANCELLED -> null
+                            }
+                            val mappedStatus = when (progress.status) {
+                                LibraryDownloadStatus.NOT_DOWNLOADED,
+                                LibraryDownloadStatus.FAILED,
+                                LibraryDownloadStatus.CANCELLED -> null
+                                else -> progress.status
+                            }
+                            LibraryAndDownloadState(
+                                isInLibrary = inLibrary,
+                                downloadProgress = mappedProgress,
+                                downloadStatus = mappedStatus
+                            )
                         }
-                        val mappedStatus = when (progress.status) {
-                            LibraryDownloadStatus.NOT_DOWNLOADED,
-                            LibraryDownloadStatus.FAILED,
-                            LibraryDownloadStatus.CANCELLED -> null
-                            else -> progress.status
-                        }
-                        LibraryAndDownloadState(
-                            isInLibrary = inLibrary,
-                            downloadProgress = mappedProgress,
-                            downloadStatus = mappedStatus
-                        )
+                    } else {
+                        flowOf(LibraryAndDownloadState())
                     }
-                } else {
-                    flowOf(LibraryAndDownloadState())
                 }
-            }
-    ) { baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload ->
-
-        val thumbsUp = _thumbsUpTitles.value
+        ) { baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload ->
+            CorePlaylistState(baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload)
+        },
+        _thumbsUpTitles,
+        _hasUserReview
+    ) { core, thumbsUp, hasUserReview ->
+        val (baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload) = core
 
         // Update track data with current playing state
         val updatedTracks = rawTracks.map { track ->
@@ -249,7 +263,7 @@ class PlaylistViewModel @Inject constructor(
             isCurrentShowAndRecording = isCurrentShowAndRecording,
             mediaLoading = currentTrackInfo?.playbackState?.isLoading ?: false,
             showData = updatedShowData,
-            hasUserReview = _hasUserReview.value
+            hasUserReview = hasUserReview
         )
     }.stateIn(
         scope = viewModelScope,
