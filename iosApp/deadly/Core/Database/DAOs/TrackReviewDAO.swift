@@ -58,7 +58,6 @@ struct TrackReviewDAO: Sendable {
         ValueObservation.tracking { db in
             let titles = try TrackReviewRecord
                 .filter(Column("showId") == showId && Column("thumbs") == 1)
-                .select(Column("trackTitle"))
                 .fetchAll(db)
                 .map(\.trackTitle)
             return Set(titles)
