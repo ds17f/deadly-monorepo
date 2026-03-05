@@ -25,6 +25,7 @@ import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistColl
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistSetlistBottomSheet
 import com.grateful.deadly.core.model.LibraryDownloadStatus
 import com.grateful.deadly.core.design.component.QrCodeDisplay
+import com.grateful.deadly.core.design.component.ShowReviewSheet
 import com.grateful.deadly.feature.playlist.screens.main.models.PlaylistViewModel
 /**
  * PlaylistScreen - Clean playlist interface
@@ -50,6 +51,9 @@ fun PlaylistScreen(
     val uiState by viewModel.uiState.collectAsState()
     var showQrCode by remember { mutableStateOf(false) }
     val isOffline by viewModel.isOffline.collectAsState()
+    val showWriteReview by viewModel.showWriteReview.collectAsState()
+    val userReview by viewModel.userReview.collectAsState()
+    val reviewLineup by viewModel.reviewLineup.collectAsState()
 
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
     LaunchedEffect(showId, recordingId) {
@@ -131,6 +135,7 @@ fun PlaylistScreen(
                         item {
                             PlaylistInteractiveRating(
                                 showData = showData,
+                                hasUserReview = uiState.hasUserReview,
                                 onShowReviews = viewModel::showReviews,
                                 modifier = Modifier
                                     .fillMaxWidth()
@@ -256,8 +261,30 @@ fun PlaylistScreen(
             ratingDistribution = uiState.ratingDistribution,
             isLoading = uiState.reviewsLoading,
             errorMessage = uiState.reviewsError,
+            userReview = userReview.takeIf { it.hasContent },
+            onWriteReview = { viewModel.loadUserReview() },
             onDismiss = viewModel::hideReviewDetails
         )
+    }
+
+    // Write Review Sheet
+    if (showWriteReview) {
+        uiState.showData?.let { showData ->
+            ShowReviewSheet(
+                showDate = showData.displayDate,
+                venue = showData.venue,
+                location = showData.location,
+                review = userReview,
+                lineupMembers = reviewLineup,
+                currentRecordingId = showData.currentRecordingId,
+                bestRecordingId = null,
+                onSave = { notes, rating, recQuality, playQuality, standouts ->
+                    viewModel.saveUserReview(notes, rating, recQuality, playQuality, standouts)
+                },
+                onDelete = { viewModel.deleteUserReview() },
+                onDismiss = { viewModel.hideWriteReview() }
+            )
+        }
     }
     
     // Menu Bottom Sheet

@@ -12,6 +12,8 @@ struct LibraryShowRecord: Codable, Sendable, Equatable, FetchableRecord, Mutable
     var preferredRecordingId: String?
     var downloadedRecordingId: String?
     var downloadedFormat: String?
+    var recordingQuality: Int?
+    var playingQuality: Int?
     var customRating: Double?
     var lastAccessedAt: Int64?
     var tags: String?

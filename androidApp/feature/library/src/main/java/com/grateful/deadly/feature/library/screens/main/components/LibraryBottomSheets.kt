@@ -135,6 +135,7 @@ fun ShowActionsBottomSheet(
     show: LibraryShowViewModel,
     onDismiss: () -> Unit,
     onShowQrCode: () -> Unit,
+    onReviewShow: () -> Unit,
     onRemoveFromLibrary: () -> Unit,
     onDownload: () -> Unit,
     onRemoveDownload: () -> Unit,
@@ -171,6 +172,18 @@ fun ShowActionsBottomSheet(
             // Actions
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 
+                // Review
+                ListItem(
+                    headlineContent = { Text(if (show.hasReview) "Edit Review" else "Add Review") },
+                    leadingContent = {
+                        Icon(
+                            painter = if (show.hasReview) IconResources.Content.Star() else IconResources.Content.StarBorder(),
+                            contentDescription = null
+                        )
+                    },
+                    modifier = Modifier.clickable { onReviewShow() }
+                )
+
                 // Share
                 ListItem(
                     headlineContent = { Text("Share") },

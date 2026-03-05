@@ -8,6 +8,7 @@ import GRDB
 final class LibraryServiceImpl {
     private let database: AppDatabase
     private let libraryDAO: LibraryDAO
+    private let showReviewDAO: ShowReviewDAO
     private let showRepository: any ShowRepository
 
     private(set) var shows: [LibraryShow] = []
@@ -16,10 +17,12 @@ final class LibraryServiceImpl {
     nonisolated init(
         database: AppDatabase,
         libraryDAO: LibraryDAO,
+        showReviewDAO: ShowReviewDAO,
         showRepository: any ShowRepository
     ) {
         self.database = database
         self.libraryDAO = libraryDAO
+        self.showReviewDAO = showReviewDAO
         self.showRepository = showRepository
     }
 
@@ -82,12 +85,21 @@ final class LibraryServiceImpl {
             let fetched = try showRepository.getShowsByIds(ids)
             let showMap = Dictionary(uniqueKeysWithValues: fetched.map { ($0.id, $0) })
 
+            // Fetch review data from show_reviews table
+            let reviewRecords = try showReviewDAO.fetchByShowIds(ids)
+            let reviewMap = Dictionary(uniqueKeysWithValues: reviewRecords.map { ($0.showId, $0) })
+
             let libraryShows: [LibraryShow] = records.compactMap { record in
                 guard let show = showMap[record.showId] else { return nil }
+                let review = reviewMap[record.showId]
                 return LibraryShow(
                     show: show,
                     addedToLibraryAt: record.addedToLibraryAt,
-                    isPinned: record.isPinned
+                    isPinned: record.isPinned,
+                    libraryNotes: review?.notes,
+                    customRating: review?.customRating,
+                    recordingQuality: review?.recordingQuality,
+                    playingQuality: review?.playingQuality
                 )
             }
             shows = sort(libraryShows, by: option, direction: direction)

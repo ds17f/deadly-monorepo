@@ -33,6 +33,11 @@ struct ShowRowView: View {
                                 .font(.system(size: 10))
                                 .foregroundStyle(DeadlyColors.primary)
                         }
+                        if libraryShow.hasNotes {
+                            Image(systemName: "note.text")
+                                .font(.system(size: 10))
+                                .foregroundStyle(.tertiary)
+                        }
                         Text(DateFormatting.formatShowDate(show.date, style: .short))
                             .font(.subheadline)
                             .fontWeight(.semibold)

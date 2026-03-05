@@ -9,6 +9,7 @@ struct PlayerScreen: View {
     @State private var sliderValue: Double?
     @State private var showErrorAlert = false
     @State private var showQRShare = false
+    @State private var currentThumbsState: Int?
     @Environment(\.appContainer) private var container
 
     private var playbackError: StreamPlayerError? {
@@ -177,6 +178,7 @@ struct PlayerScreen: View {
             let show = container.playlistService.currentShow
             let title = streamPlayer.currentTrack?.title
             await container.panelContentService.loadContent(show: show, songTitle: title)
+            loadTrackReviewState()
         }
         .onChange(of: playbackError) { _, newError in
             if newError != nil {
@@ -261,9 +263,22 @@ struct PlayerScreen: View {
 
     @ViewBuilder
     private var actionButtons: some View {
-        HStack {
+        HStack(spacing: 32) {
             Spacer()
 
+            // Favorite
+            Button {
+                toggleThumbsRating(1)
+            } label: {
+                Image(systemName: currentThumbsState == 1 ? "heart.fill" : "heart")
+                    .font(.title2)
+                    .foregroundStyle(currentThumbsState == 1 ? DeadlyColors.primary : .secondary)
+                    .frame(width: 44, height: 44)
+            }
+            .buttonStyle(.plain)
+            .disabled(currentShowId == nil)
+
+            // Share
             Button {
                 showQRShare = true
             } label: {
@@ -278,6 +293,32 @@ struct PlayerScreen: View {
             Spacer()
         }
         .padding(.horizontal, 24)
+    }
+
+    private func toggleThumbsRating(_ thumbs: Int) {
+        guard let showId = currentShowId,
+              let trackTitle = streamPlayer.currentTrack?.title else { return }
+        let newThumbs = currentThumbsState == thumbs ? nil : thumbs
+        currentThumbsState = newThumbs
+        try? container.reviewService.upsertTrackReview(
+            showId: showId,
+            trackTitle: trackTitle,
+            trackNumber: currentTrackNumber.flatMap { Int($0) },
+            recordingId: currentRecordingId,
+            thumbs: newThumbs
+        )
+    }
+
+    private func loadTrackReviewState() {
+        guard let showId = currentShowId,
+              let trackTitle = streamPlayer.currentTrack?.title else {
+            currentThumbsState = nil
+            return
+        }
+        let review = try? container.reviewService.getTrackReview(
+            showId: showId, trackTitle: trackTitle, recordingId: currentRecordingId
+        )
+        currentThumbsState = review?.thumbs
     }
 
     @ViewBuilder

@@ -12,6 +12,9 @@ import com.grateful.deadly.core.database.entities.DataVersionEntity
 import com.grateful.deadly.core.database.entities.LibraryShowEntity
 import com.grateful.deadly.core.database.entities.RecentShowEntity
 import com.grateful.deadly.core.database.entities.DeadCollectionEntity
+import com.grateful.deadly.core.database.entities.TrackReviewEntity
+import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
+import com.grateful.deadly.core.database.entities.ShowReviewEntity
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import com.grateful.deadly.core.database.dao.RecordingDao
@@ -19,6 +22,9 @@ import com.grateful.deadly.core.database.dao.DataVersionDao
 import com.grateful.deadly.core.database.dao.LibraryDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.CollectionsDao
+import com.grateful.deadly.core.database.dao.TrackReviewDao
+import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
+import com.grateful.deadly.core.database.dao.ShowReviewDao
 
 @Database(
     entities = [
@@ -28,9 +34,12 @@ import com.grateful.deadly.core.database.dao.CollectionsDao
         DataVersionEntity::class,
         LibraryShowEntity::class,
         RecentShowEntity::class,
-        DeadCollectionEntity::class
+        DeadCollectionEntity::class,
+        TrackReviewEntity::class,
+        ShowPlayerTagEntity::class,
+        ShowReviewEntity::class
     ],
-    version = 15,
+    version = 17,
     exportSchema = false
 )
 abstract class DeadlyDatabase : RoomDatabase() {
@@ -42,6 +51,9 @@ abstract class DeadlyDatabase : RoomDatabase() {
     abstract fun libraryDao(): LibraryDao
     abstract fun recentShowDao(): RecentShowDao
     abstract fun collectionsDao(): CollectionsDao
+    abstract fun trackReviewDao(): TrackReviewDao
+    abstract fun showPlayerTagDao(): ShowPlayerTagDao
+    abstract fun showReviewDao(): ShowReviewDao
     
     companion object {
         const val DATABASE_NAME = "deadly_db"
@@ -52,7 +64,7 @@ abstract class DeadlyDatabase : RoomDatabase() {
                 DeadlyDatabase::class.java,
                 DATABASE_NAME
             )
-            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14, DatabaseMigrations.MIGRATION_14_15)
+            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14, DatabaseMigrations.MIGRATION_14_15, DatabaseMigrations.MIGRATION_15_16, DatabaseMigrations.MIGRATION_16_17)
             .fallbackToDestructiveMigration() // Safety net for fresh installs or skipped versions
             .build()
         }

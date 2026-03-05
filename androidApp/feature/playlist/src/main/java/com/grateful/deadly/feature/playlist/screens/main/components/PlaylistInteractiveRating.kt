@@ -23,6 +23,7 @@ import com.grateful.deadly.core.model.PlaylistShowViewModel
 @Composable
 fun PlaylistInteractiveRating(
     showData: PlaylistShowViewModel,
+    hasUserReview: Boolean = false,
     onShowReviews: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -74,6 +75,15 @@ fun PlaylistInteractiveRating(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {
+                if (hasUserReview) {
+                    Icon(
+                        painter = IconResources.Content.StickyNote(),
+                        contentDescription = "Your review",
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(16.dp)
+                    )
+                }
+
                 val reviewCount = showData.reviewCount
                 Text(
                     text = if (reviewCount > 0) {
@@ -84,7 +94,7 @@ fun PlaylistInteractiveRating(
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
-                
+
                 Icon(
                     painter = IconResources.Navigation.ChevronRight(),
                     contentDescription = "View reviews",

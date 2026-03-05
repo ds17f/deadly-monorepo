@@ -6,6 +6,7 @@ struct TrackListRow: View {
     let isPlaying: Bool
     var isLoading: Bool = false
     var downloadState: TrackDownloadState?
+    var isThumbsUp: Bool = false
 
     var body: some View {
         HStack(spacing: 12) {
@@ -29,6 +30,14 @@ struct TrackListRow: View {
                 .lineLimit(1)
 
             Spacer()
+
+            // Thumbs-up indicator
+            if isThumbsUp {
+                Image(systemName: "heart.fill")
+                    .font(.system(size: 10))
+                    .foregroundStyle(.tint)
+                    .padding(.trailing, 2)
+            }
 
             // Download state indicator
             if let state = downloadState {

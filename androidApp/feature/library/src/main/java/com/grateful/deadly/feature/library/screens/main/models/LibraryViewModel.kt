@@ -6,12 +6,16 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.library.LibraryService
+import com.grateful.deadly.core.api.library.ReviewService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.migration.MigrationData
 import com.grateful.deadly.core.database.migration.MigrationImportService
 import com.grateful.deadly.core.database.migration.MigrationLibraryShow
 import com.grateful.deadly.core.database.migration.MigrationRecentShow
+import com.grateful.deadly.core.database.migration.MigrationTrackReview
+import com.grateful.deadly.core.database.migration.MigrationPlayerTag
 import com.grateful.deadly.core.model.*
+import com.grateful.deadly.core.model.ShowReview
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -41,6 +45,7 @@ import javax.inject.Named
 @HiltViewModel
 class LibraryViewModel @Inject constructor(
     private val libraryService: LibraryService,
+    private val reviewService: ReviewService,
     private val appPreferences: AppPreferences,
     private val migrationImportService: MigrationImportService,
     @ApplicationContext private val context: Context
@@ -306,6 +311,46 @@ class LibraryViewModel @Inject constructor(
         }
     }
 
+    // Review support
+
+    private val _currentReview = MutableStateFlow(ShowReview(showId = ""))
+    val currentReview: StateFlow<ShowReview> = _currentReview.asStateFlow()
+
+    fun loadReview(showId: String) {
+        viewModelScope.launch {
+            _currentReview.value = reviewService.getShowReview(showId) ?: ShowReview(showId = showId)
+        }
+    }
+
+    fun saveReview(
+        showId: String,
+        notes: String?,
+        rating: Float?,
+        recordingQuality: Int?,
+        playingQuality: Int?,
+        standoutPlayers: List<String>
+    ) {
+        viewModelScope.launch {
+            reviewService.updateShowNotes(showId, notes)
+            reviewService.updateShowRating(showId, rating)
+            reviewService.updateRecordingQuality(showId, recordingQuality)
+            reviewService.updatePlayingQuality(showId, playingQuality)
+
+            // Sync standout player tags
+            val existingTags = reviewService.getPlayerTags(showId)
+            val existingNames = existingTags.map { it.playerName }.toSet()
+
+            // Remove players no longer selected
+            for (name in existingNames - standoutPlayers.toSet()) {
+                reviewService.removePlayerTag(showId, name)
+            }
+            // Add newly selected players
+            for (name in standoutPlayers.toSet() - existingNames) {
+                reviewService.upsertPlayerTag(showId, name, isStandout = true)
+            }
+        }
+    }
+
     /**
      * Export library to JSON file
      */
@@ -322,18 +367,51 @@ class LibraryViewModel @Inject constructor(
                         venue = show.venue,
                         location = show.location,
                         addedAt = show.addedToLibraryAt,
-                        preferredRecordingId = null
+                        preferredRecordingId = null,
+                        notes = if (show.hasReview) null else null, // notes exported separately via reviews
+                        customRating = show.customRating,
+                        recordingQuality = null,
+                        playingQuality = null
                     )
                 }
 
+                // Collect track reviews and player tags for all shows
+                val allTrackReviews = mutableListOf<MigrationTrackReview>()
+                val allPlayerTags = mutableListOf<MigrationPlayerTag>()
+                for (show in currentShows) {
+                    val review = reviewService.getShowReview(show.showId)
+                    review?.trackReviews?.forEach { tr ->
+                        allTrackReviews.add(MigrationTrackReview(
+                            showDate = show.date,
+                            trackTitle = tr.trackTitle,
+                            trackNumber = tr.trackNumber,
+                            recordingId = tr.recordingId,
+                            thumbs = tr.thumbs,
+                            starRating = tr.starRating,
+                            notes = tr.notes
+                        ))
+                    }
+                    review?.playerTags?.forEach { pt ->
+                        allPlayerTags.add(MigrationPlayerTag(
+                            showDate = show.date,
+                            playerName = pt.playerName,
+                            instruments = pt.instruments,
+                            isStandout = pt.isStandout,
+                            notes = pt.notes
+                        ))
+                    }
+                }
+
                 val migrationData = MigrationData(
-                    version = 1,
+                    version = 2,
                     format = "deadly-migration",
                     createdAt = System.currentTimeMillis(),
-                    appVersion = "2.7.1",
+                    appVersion = "2.14.0",
                     library = libraryShows,
                     recentPlays = emptyList(),
-                    lastPlayed = null
+                    lastPlayed = null,
+                    trackReviews = allTrackReviews.ifEmpty { null },
+                    playerTags = allPlayerTags.ifEmpty { null }
                 )
 
                 // Serialize to JSON
@@ -394,7 +472,11 @@ class LibraryViewModel @Inject constructor(
             libraryStatusDescription = libraryShow.libraryStatusDescription,
             bestRecordingId = libraryShow.show.bestRecordingId,
             coverImageUrl = libraryShow.show.coverImageUrl,
-            recordingCount = libraryShow.recordingCount
+            recordingCount = libraryShow.recordingCount,
+            hasReview = libraryShow.hasReview,
+            hasNotes = libraryShow.hasNotes,
+            customRating = libraryShow.customRating,
+            lineupMembers = libraryShow.show.lineup?.members?.map { it.name } ?: emptyList()
         )
     }
 }

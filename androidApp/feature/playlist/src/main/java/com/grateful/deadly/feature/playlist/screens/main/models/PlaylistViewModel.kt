@@ -1389,6 +1389,16 @@ class PlaylistViewModel @Inject constructor(
         _showWriteReview.value = false
     }
 
+    fun deleteUserReview() {
+        val showId = _baseUiState.value.showData?.showId ?: return
+        viewModelScope.launch {
+            reviewService.deleteShowReview(showId)
+            _hasUserReview.value = false
+            _userReview.value = ShowReview(showId = showId)
+            _showWriteReview.value = false
+        }
+    }
+
     fun saveUserReview(
         notes: String?,
         rating: Float?,

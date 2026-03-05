@@ -150,7 +150,8 @@ fun MainNavigation(
     // Get bar configuration based on current route
     val barConfig = NavigationBarConfig.getBarConfig(
         route = currentRoute,
-        onNavigateToDownloads = { navController.navigate("downloads") }
+        onNavigateToDownloads = { navController.navigate("downloads") },
+        onNavigateToFavorites = { navController.navigate("library/favorites") }
     )
 
     AppScaffold(

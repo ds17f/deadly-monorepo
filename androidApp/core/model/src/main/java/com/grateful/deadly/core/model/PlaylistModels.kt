@@ -57,7 +57,8 @@ data class PlaylistTrackViewModel(
     val isDownloaded: Boolean = false,
     val downloadProgress: Float? = null, // null = not downloaded, 0.0-1.0 = downloading
     val isCurrentTrack: Boolean = false,
-    val isPlaying: Boolean = false
+    val isPlaying: Boolean = false,
+    val isThumbsUp: Boolean = false
 )
 
 /**
@@ -135,6 +136,8 @@ data class PlaylistUiState(
     val reviews: List<PlaylistReview> = emptyList(),
     val ratingDistribution: Map<Int, Int> = emptyMap(),
     val reviewsError: String? = null,
+    // User review state
+    val hasUserReview: Boolean = false,
     // Menu state
     val showMenu: Boolean = false,
     // Recording selection modal state

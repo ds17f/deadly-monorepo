@@ -83,6 +83,18 @@ fun PlaylistTrackItem(
             )
         }
         
+        // Thumbs-up indicator
+        if (track.isThumbsUp) {
+            Icon(
+                painter = IconResources.Content.Favorite(),
+                contentDescription = "Favorite",
+                tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier
+                    .size(16.dp)
+                    .padding(end = 4.dp)
+            )
+        }
+
         // Download indicator
         if (track.isDownloaded) {
             Icon(

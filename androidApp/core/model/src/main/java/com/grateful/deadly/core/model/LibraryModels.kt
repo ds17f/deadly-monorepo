@@ -14,7 +14,11 @@ data class LibraryShow(
     val show: Show,
     val addedToLibraryAt: Long,
     val isPinned: Boolean = false,
-    val downloadStatus: LibraryDownloadStatus = LibraryDownloadStatus.NOT_DOWNLOADED
+    val downloadStatus: LibraryDownloadStatus = LibraryDownloadStatus.NOT_DOWNLOADED,
+    val libraryNotes: String? = null,
+    val customRating: Float? = null,
+    val recordingQuality: Int? = null,
+    val playingQuality: Int? = null
 ) {
     val showId: String get() = show.id
     val date: String get() = show.date
@@ -29,6 +33,9 @@ data class LibraryShow(
     val totalReviews: Int get() = show.totalReviews
     val isInLibrary: Boolean get() = true
     
+    val hasNotes: Boolean get() = !libraryNotes.isNullOrBlank()
+    val hasReview: Boolean get() = customRating != null || recordingQuality != null || playingQuality != null || hasNotes
+
     val isPinnedAndDownloaded: Boolean get() = isPinned && downloadStatus == LibraryDownloadStatus.COMPLETED
     val libraryAge: Long get() = System.currentTimeMillis() - addedToLibraryAt
     val isDownloaded: Boolean get() = downloadStatus == LibraryDownloadStatus.COMPLETED
@@ -136,7 +143,11 @@ data class LibraryShowViewModel(
     val libraryStatusDescription: String,
     val bestRecordingId: String? = null,
     val coverImageUrl: String? = null,
-    val recordingCount: Int = 0
+    val recordingCount: Int = 0,
+    val hasReview: Boolean = false,
+    val hasNotes: Boolean = false,
+    val customRating: Float? = null,
+    val lineupMembers: List<String> = emptyList()
 )
 
 /**

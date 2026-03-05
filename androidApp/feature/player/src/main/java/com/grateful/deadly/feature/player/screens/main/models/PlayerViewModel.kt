@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.library.LibraryService
+import com.grateful.deadly.core.api.library.ReviewService
 import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
 import com.grateful.deadly.core.model.CurrentTrackInfo
@@ -20,7 +21,8 @@ import javax.inject.Inject
 class PlayerViewModel @Inject constructor(
     private val playerService: PlayerService,
     private val panelContentService: PanelContentService,
-    private val libraryService: LibraryService
+    private val libraryService: LibraryService,
+    private val reviewService: ReviewService
 ) : ViewModel() {
 
     companion object {
@@ -139,6 +141,7 @@ class PlayerViewModel @Inject constructor(
                         lastLoadedShowId = trackInfo.showId
                         lastLoadedSongTitle = trackInfo.songTitle
                         loadPanelContent(trackInfo, showChanged, songChanged)
+                        loadTrackReviewState(trackInfo)
                     }
                 }
         }
@@ -174,6 +177,19 @@ class PlayerViewModel @Inject constructor(
                 lyrics = lyrics,
                 isLoading = false
             )
+        }
+    }
+
+    private fun loadTrackReviewState(trackInfo: CurrentTrackInfo) {
+        val showId = trackInfo.showId ?: return
+        viewModelScope.launch {
+            try {
+                val review = reviewService.getTrackReview(showId, trackInfo.songTitle, trackInfo.recordingId)
+                _currentTrackThumbsState.value = review?.thumbs
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading track review state", e)
+                _currentTrackThumbsState.value = null
+            }
         }
     }
 
@@ -254,6 +270,36 @@ class PlayerViewModel @Inject constructor(
                 libraryService.downloadShow(showId)
             } catch (e: Exception) {
                 Log.e(TAG, "Error downloading show $showId", e)
+            }
+        }
+    }
+
+    // Track review state
+
+    private val _currentTrackThumbsState = MutableStateFlow<Int?>(null)
+    val currentTrackThumbsState: StateFlow<Int?> = _currentTrackThumbsState.asStateFlow()
+
+    /**
+     * Rate current track with thumbs up (1) or thumbs down (-1).
+     * Toggling the same value removes the rating.
+     */
+    fun rateCurrentTrack(thumbs: Int) {
+        val trackInfo = playerService.currentTrackInfo.value ?: return
+        val showId = trackInfo.showId ?: return
+        viewModelScope.launch {
+            val current = _currentTrackThumbsState.value
+            val newThumbs = if (current == thumbs) null else thumbs
+            _currentTrackThumbsState.value = newThumbs
+            try {
+                reviewService.upsertTrackReview(
+                    showId = showId,
+                    trackTitle = trackInfo.songTitle,
+                    trackNumber = trackInfo.trackNumber,
+                    recordingId = trackInfo.recordingId,
+                    thumbs = newThumbs
+                )
+            } catch (e: Exception) {
+                Log.e(TAG, "Error rating track", e)
             }
         }
     }

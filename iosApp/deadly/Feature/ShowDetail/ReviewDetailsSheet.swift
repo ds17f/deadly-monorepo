@@ -3,6 +3,8 @@ import SwiftUI
 struct ReviewDetailsSheet: View {
     let show: Show
     let playlistService: PlaylistServiceImpl
+    var userReview: ShowReview? = nil
+    var onWriteReview: (() -> Void)? = nil
 
     @Environment(\.dismiss) private var dismiss
 
@@ -12,6 +14,22 @@ struct ReviewDetailsSheet: View {
                 VStack(alignment: .leading, spacing: 16) {
                     headerSection
                     ratingSummaryCard
+                    if let review = userReview, review.hasContent {
+                        userReviewSummary(review)
+                    }
+                    if let onWriteReview {
+                        let hasReview = userReview?.hasContent == true
+                        Button {
+                            dismiss()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                onWriteReview()
+                            }
+                        } label: {
+                            Text(hasReview ? "Edit Review" : "Write Review")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                     reviewsSection
                 }
                 .padding()
@@ -87,6 +105,46 @@ struct ReviewDetailsSheet: View {
                 .foregroundStyle(.secondary)
                 .frame(width: 20, alignment: .trailing)
         }
+    }
+
+    // MARK: - User Review Summary
+
+    private func userReviewSummary(_ review: ShowReview) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Your Review")
+                .font(.subheadline)
+                .fontWeight(.bold)
+
+            if let rating = review.overallRating {
+                HStack(spacing: 8) {
+                    CompactStarRating(rating: Float(rating), starSize: 14)
+                    Text(String(format: "%.1f", rating))
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                }
+            }
+
+            if let notes = review.notes, !notes.isEmpty {
+                Text(notes)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(3)
+            }
+
+            let qualityParts: [String] = [
+                review.recordingQuality.map { "Rec: \($0)/5" },
+                review.playingQuality.map { "Play: \($0)/5" }
+            ].compactMap { $0 }
+            if !qualityParts.isEmpty {
+                Text(qualityParts.joined(separator: "  "))
+                    .font(.caption)
+                    .foregroundStyle(.tertiary)
+            }
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.accentColor.opacity(0.1))
+        .clipShape(RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
     }
 
     // MARK: - Reviews Section

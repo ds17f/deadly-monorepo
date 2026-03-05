@@ -114,6 +114,7 @@ fun PlayerScreen(
     // Collect UI state from ViewModel
     val uiState by viewModel.uiState.collectAsState()
     val panelState by viewModel.panelState.collectAsState()
+    val currentThumbsState by viewModel.currentTrackThumbsState.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -126,7 +127,6 @@ fun PlayerScreen(
     var showQrCode by remember { mutableStateOf(false) }
     var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
-
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
     val showMiniPlayer by remember {
@@ -218,7 +218,9 @@ fun PlayerScreen(
             // Secondary controls row (updated for queue sheet)
             item {
                 PlayerSecondaryControls(
+                    isThumbsUp = currentThumbsState == 1,
                     onConnectClick = { showConnectBottomSheet = true },
+                    onThumbsUpClick = { viewModel.rateCurrentTrack(1) },
                     onShareClick = { showQrCode = true },
                     onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
@@ -246,10 +248,12 @@ fun PlayerScreen(
                 trackTitle = uiState.trackDisplayInfo.title,
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,
+                currentThumbsState = currentThumbsState,
                 onDismiss = { showTrackActionsBottomSheet = false },
                 onShare = { showQrCode = true },
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
-                onDownload = { viewModel.downloadCurrentShow() }
+                onDownload = { viewModel.downloadCurrentShow() },
+                onThumbsUp = { viewModel.rateCurrentTrack(1) },
             )
         }
 

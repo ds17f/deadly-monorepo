@@ -44,6 +44,10 @@ data class LibraryShowEntity(
     val downloadedRecordingId: String? = null,  // Which recording was downloaded
     val downloadedFormat: String? = null,        // Audio format of the download
 
+    // Review fields
+    val recordingQuality: Int? = null,     // 1-5 rating of recording quality
+    val playingQuality: Int? = null,       // 1-5 rating of playing/performance quality
+
     // Future expansion fields
     val customRating: Float? = null,       // User's personal rating override
     val lastAccessedAt: Long? = null,      // Track when user last viewed/played

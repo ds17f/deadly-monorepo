@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import com.grateful.deadly.feature.library.screens.favorites.FavoritesScreen
 import com.grateful.deadly.feature.library.screens.main.LibraryScreen
 
 /**
@@ -16,6 +17,7 @@ import com.grateful.deadly.feature.library.screens.main.LibraryScreen
 // Library route constants
 object LibraryRoutes {
     const val LIBRARY_MAIN = "library"
+    const val FAVORITES = "library/favorites"
 }
 
 /**
@@ -30,6 +32,20 @@ fun NavGraphBuilder.libraryNavigation(navController: NavController) {
             },
             onNavigateToPlayer = { recordingId ->
                 navController.navigate("player/$recordingId")
+            },
+            onNavigateToFavorites = {
+                navController.navigate(LibraryRoutes.FAVORITES)
+            },
+            onNavigateBack = {
+                navController.popBackStack()
+            }
+        )
+    }
+
+    composable(route = LibraryRoutes.FAVORITES) {
+        FavoritesScreen(
+            onNavigateToShow = { showId ->
+                navController.navigate("playlist/$showId")
             },
             onNavigateBack = {
                 navController.popBackStack()

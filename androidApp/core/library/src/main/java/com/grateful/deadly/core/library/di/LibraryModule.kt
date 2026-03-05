@@ -1,7 +1,9 @@
 package com.grateful.deadly.core.library.di
 
 import com.grateful.deadly.core.api.library.LibraryService
+import com.grateful.deadly.core.api.library.ReviewService
 import com.grateful.deadly.core.library.service.LibraryServiceImpl
+import com.grateful.deadly.core.library.service.ReviewServiceImpl
 import com.grateful.deadly.core.library.repository.LibraryRepository
 import dagger.Binds
 import dagger.Module
@@ -26,10 +28,16 @@ import javax.inject.Singleton
 abstract class LibraryModule {
 
     @Binds
-    @Singleton  
+    @Singleton
     abstract fun bindLibraryService(
         impl: LibraryServiceImpl
     ): LibraryService
+
+    @Binds
+    @Singleton
+    abstract fun bindReviewService(
+        impl: ReviewServiceImpl
+    ): ReviewService
     
     companion object {
         

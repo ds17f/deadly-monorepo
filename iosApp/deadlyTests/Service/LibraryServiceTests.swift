@@ -18,6 +18,7 @@ struct LibraryServiceTests {
         service = LibraryServiceImpl(
             database: db,
             libraryDAO: LibraryDAO(database: db),
+            showReviewDAO: ShowReviewDAO(database: db),
             showRepository: repo
         )
     }
