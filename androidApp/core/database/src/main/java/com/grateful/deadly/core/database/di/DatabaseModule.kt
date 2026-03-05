@@ -16,6 +16,9 @@ import com.grateful.deadly.core.database.dao.DataVersionDao
 import com.grateful.deadly.core.database.dao.LibraryDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.CollectionsDao
+import com.grateful.deadly.core.database.dao.TrackReviewDao
+import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
+import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.repository.ShowRepositoryImpl
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import kotlinx.serialization.json.Json
@@ -72,7 +75,25 @@ object DatabaseModule {
     fun provideCollectionsDao(database: DeadlyDatabase): CollectionsDao {
         return database.collectionsDao()
     }
-    
+
+    @Provides
+    @AppDatabase
+    fun provideTrackReviewDao(database: DeadlyDatabase): TrackReviewDao {
+        return database.trackReviewDao()
+    }
+
+    @Provides
+    @AppDatabase
+    fun provideShowPlayerTagDao(database: DeadlyDatabase): ShowPlayerTagDao {
+        return database.showPlayerTagDao()
+    }
+
+    @Provides
+    @AppDatabase
+    fun provideShowReviewDao(database: DeadlyDatabase): ShowReviewDao {
+        return database.showReviewDao()
+    }
+
     // Services are automatically provided by @Singleton @Inject constructor:
     // - DataImportService
     // - ShowMappers (uses Json from core:network module)

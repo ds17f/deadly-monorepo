@@ -13,7 +13,9 @@ import com.grateful.deadly.core.design.resources.IconResources
  */
 @Composable
 fun PlayerSecondaryControls(
+    isThumbsUp: Boolean,
     onConnectClick: () -> Unit,
+    onThumbsUpClick: () -> Unit,
     onShareClick: () -> Unit,
     onQueueClick: () -> Unit,
     modifier: Modifier = Modifier
@@ -37,6 +39,18 @@ fun PlayerSecondaryControls(
         
         // Right section
         Row {
+            // Thumbs Up
+            IconButton(
+                onClick = onThumbsUpClick,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    painter = if (isThumbsUp) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
+                    contentDescription = if (isThumbsUp) "Favorite (active)" else "Favorite",
+                    tint = if (isThumbsUp) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
             // Share
             IconButton(
                 onClick = onShareClick,

@@ -15,6 +15,7 @@ import com.grateful.deadly.core.design.component.CompactStarRating
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.PlaylistReview
 import com.grateful.deadly.core.model.PlaylistShowViewModel
+import com.grateful.deadly.core.model.ShowReview
 
 /**
  * PlaylistReviewDetailsSheet - Review details modal
@@ -30,6 +31,8 @@ fun PlaylistReviewDetailsSheet(
     ratingDistribution: Map<Int, Int>,
     isLoading: Boolean = false,
     errorMessage: String? = null,
+    userReview: ShowReview? = null,
+    onWriteReview: (() -> Unit)? = null,
     onDismiss: () -> Unit
 ) {
     ModalBottomSheet(
@@ -72,7 +75,30 @@ fun PlaylistReviewDetailsSheet(
                     )
                 }
             }
-            
+
+            // User review summary
+            if (userReview != null && userReview.hasContent) {
+                item {
+                    UserReviewSummaryCard(review = userReview)
+                }
+            }
+
+            // Write / Edit Review button
+            if (onWriteReview != null) {
+                item {
+                    val hasReview = userReview?.hasContent == true
+                    FilledTonalButton(
+                        onClick = {
+                            onWriteReview()
+                            onDismiss()
+                        },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(if (hasReview) "Edit Review" else "Write Review")
+                    }
+                }
+            }
+
             // Reviews section
             item {
                 Text(
@@ -325,6 +351,76 @@ private fun ReviewItemCard(
                     text = review.reviewText,
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurface
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Summary card for the user's own review
+ */
+@Composable
+private fun UserReviewSummaryCard(review: ShowReview) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.tertiaryContainer
+        ),
+        shape = RoundedCornerShape(8.dp)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            Text(
+                text = "Your Review",
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onTertiaryContainer
+            )
+
+            review.overallRating?.let { rating ->
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    CompactStarRating(
+                        rating = rating,
+                        confidence = null,
+                        starSize = IconResources.Size.SMALL
+                    )
+                    Text(
+                        text = String.format("%.1f", rating),
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.Medium,
+                        color = MaterialTheme.colorScheme.onTertiaryContainer
+                    )
+                }
+            }
+
+            review.notes?.let { notes ->
+                if (notes.isNotBlank()) {
+                    Text(
+                        text = notes,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onTertiaryContainer,
+                        maxLines = 3,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+
+            val qualityParts = mutableListOf<String>()
+            review.recordingQuality?.let { qualityParts.add("Rec: $it/5") }
+            review.playingQuality?.let { qualityParts.add("Play: $it/5") }
+            if (qualityParts.isNotEmpty()) {
+                Text(
+                    text = qualityParts.joinToString("  "),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.7f)
                 )
             }
         }

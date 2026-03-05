@@ -26,7 +26,6 @@ struct ShowDetailScreen: View {
     @State private var showReviewSheet = false
     @State private var showSetlistSheet = false
     @State private var showWriteReviewSheet = false
-    @State private var writeReviewState = ShowReview(showId: "")
     @State private var thumbsUpTracks: Set<String> = []
     @State private var userReview: ShowReview?
 
@@ -246,19 +245,17 @@ struct ShowDetailScreen: View {
         }
         .sheet(isPresented: $showReviewSheet) {
             ReviewDetailsSheet(show: show, playlistService: playlistService, userReview: userReview) {
-                if let showId = playlistService.currentShow?.id {
-                    writeReviewState = (try? container.reviewService.getShowReview(showId)) ?? ShowReview(showId: showId)
-                }
                 showWriteReviewSheet = true
             }
         }
         .sheet(isPresented: $showWriteReviewSheet) {
             if let show = playlistService.currentShow {
+                let freshReview = (try? container.reviewService.getShowReview(show.id)) ?? ShowReview(showId: show.id)
                 ShowReviewSheet(
                     showDate: DateFormatting.formatShowDate(show.date),
                     venue: show.venue.name,
                     location: show.location.displayText,
-                    review: writeReviewState,
+                    review: freshReview,
                     lineupMembers: show.lineup?.members.map(\.name) ?? [],
                     currentRecordingId: playlistService.currentRecording?.identifier,
                     bestRecordingId: show.bestRecordingId
@@ -281,6 +278,10 @@ struct ShowDetailScreen: View {
                     // Refresh user review state
                     let updatedReview = try? container.reviewService.getShowReview(showId)
                     userReview = updatedReview?.hasContent == true ? updatedReview : nil
+                } onDelete: {
+                    let showId = show.id
+                    try? container.reviewService.deleteShowReview(showId)
+                    userReview = nil
                 }
             }
         }
@@ -351,7 +352,7 @@ struct ShowDetailScreen: View {
 
                 HStack(spacing: 4) {
                     if userReview != nil {
-                        Image(systemName: "heart.fill")
+                        Image(systemName: "square.and.pencil")
                             .font(.system(size: 12))
                             .foregroundStyle(DeadlyColors.primary)
                     }

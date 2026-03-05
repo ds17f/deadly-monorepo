@@ -313,7 +313,16 @@ object IconResources {
         
         @Composable
         fun ArrowCircleDown() = customIcon(R.drawable.ic_arrow_circle_down)
-        
+
+        @Composable
+        fun StickyNote() = vectorIcon(Icons.Filled.Edit)
+
+        @Composable
+        fun RateReview() = vectorIcon(Icons.Filled.Star)
+
+        @Composable
+        fun ThumbUp() = vectorIcon(Icons.Filled.ThumbUp)
+
     }
 
     /**

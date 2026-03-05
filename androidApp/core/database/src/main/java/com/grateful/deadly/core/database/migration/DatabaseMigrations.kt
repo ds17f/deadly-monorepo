@@ -48,4 +48,91 @@ object DatabaseMigrations {
             db.execSQL("ALTER TABLE library_shows ADD COLUMN preferredRecordingId TEXT DEFAULT NULL")
         }
     }
+
+    /**
+     * v15 → v16: Add review system tables and columns.
+     *
+     * - Adds recordingQuality and playingQuality columns to library_shows
+     * - Creates track_reviews table for per-track ratings and notes
+     * - Creates show_player_tags table for tagging standout musicians
+     */
+    val MIGRATION_15_16 = object : Migration(15, 16) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            // New columns on library_shows
+            db.execSQL("ALTER TABLE library_shows ADD COLUMN recordingQuality INTEGER DEFAULT NULL")
+            db.execSQL("ALTER TABLE library_shows ADD COLUMN playingQuality INTEGER DEFAULT NULL")
+
+            // Track reviews table
+            db.execSQL("""
+                CREATE TABLE IF NOT EXISTS track_reviews (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                    showId TEXT NOT NULL,
+                    trackTitle TEXT NOT NULL,
+                    trackNumber INTEGER,
+                    recordingId TEXT,
+                    thumbs INTEGER,
+                    starRating INTEGER,
+                    notes TEXT,
+                    createdAt INTEGER NOT NULL,
+                    updatedAt INTEGER NOT NULL,
+                    FOREIGN KEY (showId) REFERENCES shows(showId) ON DELETE CASCADE
+                )
+            """.trimIndent())
+            db.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS index_track_reviews_showId_trackTitle_recordingId ON track_reviews(showId, trackTitle, recordingId)")
+            db.execSQL("CREATE INDEX IF NOT EXISTS index_track_reviews_showId ON track_reviews(showId)")
+
+            // Show player tags table
+            db.execSQL("""
+                CREATE TABLE IF NOT EXISTS show_player_tags (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                    showId TEXT NOT NULL,
+                    playerName TEXT NOT NULL,
+                    instruments TEXT,
+                    isStandout INTEGER NOT NULL DEFAULT 1,
+                    notes TEXT,
+                    createdAt INTEGER NOT NULL,
+                    FOREIGN KEY (showId) REFERENCES shows(showId) ON DELETE CASCADE
+                )
+            """.trimIndent())
+            db.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS index_show_player_tags_showId_playerName ON show_player_tags(showId, playerName)")
+            db.execSQL("CREATE INDEX IF NOT EXISTS index_show_player_tags_showId ON show_player_tags(showId)")
+            db.execSQL("CREATE INDEX IF NOT EXISTS index_show_player_tags_playerName ON show_player_tags(playerName)")
+        }
+    }
+
+    /**
+     * v16 → v17: Decouple show reviews from library_shows.
+     *
+     * Creates a standalone show_reviews table referencing shows(showId) with CASCADE delete.
+     * Migrates existing review data from library_shows columns. Old columns remain on
+     * library_shows (SQLite doesn't support DROP COLUMN easily) but are no longer read/written.
+     */
+    val MIGRATION_16_17 = object : Migration(16, 17) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("""
+                CREATE TABLE IF NOT EXISTS show_reviews (
+                    showId TEXT PRIMARY KEY NOT NULL,
+                    notes TEXT,
+                    customRating REAL,
+                    recordingQuality INTEGER,
+                    playingQuality INTEGER,
+                    reviewedRecordingId TEXT,
+                    createdAt INTEGER NOT NULL,
+                    updatedAt INTEGER NOT NULL,
+                    FOREIGN KEY (showId) REFERENCES shows(showId) ON DELETE CASCADE
+                )
+            """.trimIndent())
+
+            // Migrate existing review data from library_shows
+            db.execSQL("""
+                INSERT OR IGNORE INTO show_reviews (showId, notes, customRating, recordingQuality, playingQuality, createdAt, updatedAt)
+                SELECT showId, libraryNotes, customRating, recordingQuality, playingQuality,
+                       CAST(strftime('%s','now') AS INTEGER) * 1000,
+                       CAST(strftime('%s','now') AS INTEGER) * 1000
+                FROM library_shows
+                WHERE libraryNotes IS NOT NULL OR customRating IS NOT NULL
+                   OR recordingQuality IS NOT NULL OR playingQuality IS NOT NULL
+            """.trimIndent())
+        }
+    }
 }

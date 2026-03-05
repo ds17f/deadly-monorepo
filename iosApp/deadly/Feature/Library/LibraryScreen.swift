@@ -57,6 +57,9 @@ struct LibraryScreen: View {
     // QR Code sheet state
     @State private var qrCodeShow: LibraryShow?
 
+    // Review sheet state
+    @State private var reviewTargetShow: LibraryShow?
+
     private var filteredShows: [LibraryShow] {
         service.shows.filter { libraryShow in
             guard let decade = activeDecadeFilter else { return true }
@@ -127,6 +130,9 @@ struct LibraryScreen: View {
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
+                    NavigationLink(value: LibraryRoute.favorites) {
+                        Label("Favorite Performances", systemImage: "hand.thumbsup")
+                    }
                     NavigationLink(value: LibraryRoute.downloads) {
                         Label("Downloads", systemImage: "arrow.down.circle")
                     }
@@ -206,6 +212,39 @@ struct LibraryScreen: View {
                 trackNumber: nil,
                 songTitle: nil
             )
+        }
+        .sheet(item: $reviewTargetShow) { libraryShow in
+            let show = libraryShow.show
+            let freshReview = (try? container.reviewService.getShowReview(show.id)) ?? ShowReview(showId: show.id)
+            ShowReviewSheet(
+                showDate: DateFormatting.formatShowDate(show.date),
+                venue: show.venue.name,
+                location: show.location.displayText,
+                review: freshReview,
+                lineupMembers: show.lineup?.members.map(\.name) ?? []
+            ) { notes, rating, recQuality, playQuality, standouts in
+                let showId = show.id
+                try? container.reviewService.updateShowNotes(showId, notes: notes)
+                try? container.reviewService.updateShowRating(showId, rating: rating)
+                try? container.reviewService.updateRecordingQuality(showId, quality: recQuality)
+                try? container.reviewService.updatePlayingQuality(showId, quality: playQuality)
+
+                let existingTags = (try? container.reviewService.getPlayerTags(showId)) ?? []
+                let existingNames = Set(existingTags.map(\.playerName))
+                let newNames = Set(standouts)
+                for name in existingNames.subtracting(newNames) {
+                    try? container.reviewService.removePlayerTag(showId: showId, playerName: name)
+                }
+                for name in newNames.subtracting(existingNames) {
+                    try? container.reviewService.upsertPlayerTag(showId: showId, playerName: name)
+                }
+
+                service.refresh(sortedBy: sortOption, direction: sortDirection)
+            } onDelete: {
+                let showId = show.id
+                try? container.reviewService.deleteShowReview(showId)
+                service.refresh(sortedBy: sortOption, direction: sortDirection)
+            }
         }
     }
 
@@ -372,6 +411,11 @@ struct LibraryScreen: View {
                             .font(.system(size: 8))
                             .foregroundStyle(DeadlyColors.primary)
                     }
+                    if libraryShow.hasNotes {
+                        Image(systemName: "note.text")
+                            .font(.system(size: 8))
+                            .foregroundStyle(.tertiary)
+                    }
                     Text(DateFormatting.formatShowDate(show.date, style: .short))
                         .font(.caption2)
                         .fontWeight(.semibold)
@@ -415,6 +459,16 @@ struct LibraryScreen: View {
     private func libraryContextMenu(for libraryShow: LibraryShow) -> some View {
         let showId = libraryShow.show.id
         let show = libraryShow.show
+
+        // Review
+        Button {
+            reviewTargetShow = libraryShow
+        } label: {
+            Label(
+                libraryShow.hasReview ? "Edit Review" : "Add Review",
+                systemImage: libraryShow.hasReview ? "star.fill" : "star"
+            )
+        }
 
         // Share
         Button {

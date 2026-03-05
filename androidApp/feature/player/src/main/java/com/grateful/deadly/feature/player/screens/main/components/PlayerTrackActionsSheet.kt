@@ -26,10 +26,12 @@ fun PlayerTrackActionsSheet(
     trackTitle: String,
     showDate: String,
     venue: String,
+    currentThumbsState: Int?,
     onDismiss: () -> Unit,
     onShare: () -> Unit,
     onAddToPlaylist: () -> Unit,
     onDownload: () -> Unit,
+    onThumbsUp: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     ModalBottomSheet(
@@ -118,12 +120,12 @@ fun PlayerTrackActionsSheet(
                     onDismiss()
                 }
             )
-            
+
             ActionMenuRow(
-                text = "More Options",
-                icon = IconResources.Navigation.MoreVertical(),
+                text = if (currentThumbsState == 1) "Favorited" else "Favorite",
+                icon = if (currentThumbsState == 1) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
                 onClick = {
-                    // TODO: Implement more options
+                    onThumbsUp()
                     onDismiss()
                 }
             )

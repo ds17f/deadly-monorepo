@@ -126,6 +126,17 @@ fun LibraryShowListItem(
                         else -> { /* NOT_DOWNLOADED, CANCELLED - no indicator */ }
                     }
 
+                    // Notes indicator
+                    if (show.hasNotes) {
+                        Icon(
+                            painter = IconResources.Content.StickyNote(),
+                            contentDescription = "Has notes",
+                            modifier = Modifier.size(12.dp),
+                            tint = MaterialTheme.colorScheme.tertiary
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                    }
+
                     Text(
                         text = "${show.displayDate} • ${show.location}",
                         style = MaterialTheme.typography.bodyMedium,
@@ -288,6 +299,17 @@ fun LibraryShowGridItem(
                             Spacer(modifier = Modifier.width(2.dp))
                         }
                         else -> { /* NOT_DOWNLOADED, CANCELLED - no indicator */ }
+                    }
+
+                    // Notes indicator
+                    if (show.hasNotes) {
+                        Icon(
+                            painter = IconResources.Content.StickyNote(),
+                            contentDescription = "Has notes",
+                            modifier = Modifier.size(8.dp),
+                            tint = MaterialTheme.colorScheme.tertiary
+                        )
+                        Spacer(modifier = Modifier.width(2.dp))
                     }
 
                     Text(

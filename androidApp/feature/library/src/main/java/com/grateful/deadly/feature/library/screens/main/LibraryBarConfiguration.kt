@@ -24,7 +24,8 @@ import com.grateful.deadly.feature.library.screens.main.models.LibraryViewModel
 object LibraryBarConfiguration {
 
     fun getLibraryBarConfig(
-        onNavigateToDownloads: () -> Unit = {}
+        onNavigateToDownloads: () -> Unit = {},
+        onNavigateToFavorites: () -> Unit = {}
     ): BarConfiguration = BarConfiguration(
         topBar = TopBarConfig(
             title = "Your Library",
@@ -32,7 +33,8 @@ object LibraryBarConfiguration {
             navigationIcon = null,
             actions = {
                 LibraryTopBarActions(
-                    onNavigateToDownloads = onNavigateToDownloads
+                    onNavigateToDownloads = onNavigateToDownloads,
+                    onNavigateToFavorites = onNavigateToFavorites
                 )
             }
         ),
@@ -44,6 +46,7 @@ object LibraryBarConfiguration {
 @Composable
 private fun LibraryTopBarActions(
     onNavigateToDownloads: () -> Unit,
+    onNavigateToFavorites: () -> Unit = {},
     viewModel: LibraryViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
@@ -82,6 +85,13 @@ private fun LibraryTopBarActions(
         expanded = showMenu.value,
         onDismissRequest = { showMenu.value = false }
     ) {
+        DropdownMenuItem(
+            text = { Text("Favorite Performances") },
+            onClick = {
+                showMenu.value = false
+                onNavigateToFavorites()
+            }
+        )
         DropdownMenuItem(
             text = { Text("Manage Downloads") },
             onClick = {

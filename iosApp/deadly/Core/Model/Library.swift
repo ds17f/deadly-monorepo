@@ -15,14 +15,26 @@ struct LibraryShow: Codable, Sendable, Equatable, Identifiable {
     let addedToLibraryAt: Int64
     let isPinned: Bool
     let downloadStatus: LibraryDownloadStatus
+    let libraryNotes: String?
+    let customRating: Double?
+    let recordingQuality: Int?
+    let playingQuality: Int?
 
     init(show: Show, addedToLibraryAt: Int64,
          isPinned: Bool = false,
-         downloadStatus: LibraryDownloadStatus = .notDownloaded) {
+         downloadStatus: LibraryDownloadStatus = .notDownloaded,
+         libraryNotes: String? = nil,
+         customRating: Double? = nil,
+         recordingQuality: Int? = nil,
+         playingQuality: Int? = nil) {
         self.show = show
         self.addedToLibraryAt = addedToLibraryAt
         self.isPinned = isPinned
         self.downloadStatus = downloadStatus
+        self.libraryNotes = libraryNotes
+        self.customRating = customRating
+        self.recordingQuality = recordingQuality
+        self.playingQuality = playingQuality
     }
 
     var id: String { show.id }
@@ -38,6 +50,9 @@ struct LibraryShow: Codable, Sendable, Equatable, Identifiable {
     var averageRating: Float? { show.averageRating }
     var totalReviews: Int { show.totalReviews }
     var isInLibrary: Bool { true }
+
+    var hasNotes: Bool { libraryNotes != nil && !libraryNotes!.isEmpty }
+    var hasReview: Bool { customRating != nil || recordingQuality != nil || playingQuality != nil || hasNotes }
 
     var isPinnedAndDownloaded: Bool { isPinned && downloadStatus == .completed }
     var libraryAge: Int64 { Int64(Date().timeIntervalSince1970 * 1000) - addedToLibraryAt }

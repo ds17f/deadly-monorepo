@@ -135,6 +135,14 @@ struct ReviewService: Sendable {
         }
     }
 
+    // MARK: - Delete
+
+    func deleteShowReview(_ showId: String) throws {
+        try showPlayerTagDAO.removeForShow(showId)
+        try trackReviewDAO.deleteForShow(showId)
+        try showReviewDAO.deleteByShowId(showId)
+    }
+
     // MARK: - Private
 
     private func ensureShowReviewExists(_ showId: String) throws {

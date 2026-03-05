@@ -97,6 +97,40 @@ struct LibraryDAO: Sendable {
         }
     }
 
+    // MARK: - Review fields
+
+    func updateNotes(_ showId: String, notes: String?) throws {
+        try database.write { db in
+            try LibraryShowRecord
+                .filter(Column("showId") == showId)
+                .updateAll(db, Column("libraryNotes").set(to: notes))
+        }
+    }
+
+    func updateCustomRating(_ showId: String, rating: Double?) throws {
+        try database.write { db in
+            try LibraryShowRecord
+                .filter(Column("showId") == showId)
+                .updateAll(db, Column("customRating").set(to: rating))
+        }
+    }
+
+    func updateRecordingQuality(_ showId: String, quality: Int?) throws {
+        try database.write { db in
+            try LibraryShowRecord
+                .filter(Column("showId") == showId)
+                .updateAll(db, Column("recordingQuality").set(to: quality))
+        }
+    }
+
+    func updatePlayingQuality(_ showId: String, quality: Int?) throws {
+        try database.write { db in
+            try LibraryShowRecord
+                .filter(Column("showId") == showId)
+                .updateAll(db, Column("playingQuality").set(to: quality))
+        }
+    }
+
     // MARK: - Management
 
     func clearAll() throws {

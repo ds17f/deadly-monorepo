@@ -2,6 +2,7 @@ package com.grateful.deadly.core.library.repository
 
 import android.util.Log
 import com.grateful.deadly.core.database.dao.LibraryDao
+import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.entities.LibraryShowEntity
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.download.MediaDownloadManager
@@ -25,6 +26,7 @@ import com.grateful.deadly.core.model.AppDatabase
 @Singleton
 class LibraryRepository @Inject constructor(
     @AppDatabase private val libraryDao: LibraryDao,
+    @AppDatabase private val showReviewDao: ShowReviewDao,
     private val showRepository: ShowRepository,
     private val mediaDownloadManager: MediaDownloadManager
 ) {
@@ -53,14 +55,25 @@ class LibraryRepository @Inject constructor(
             // Create map of showId -> Show for efficient lookup
             val showsMap = allShows.associateBy { it.id }
 
+            // Fetch review data for all library shows
+            val showIds = libraryEntities.map { it.showId }
+            val reviewsMap = if (showIds.isNotEmpty()) {
+                showReviewDao.getByShowIds(showIds).associateBy { it.showId }
+            } else emptyMap()
+
             // Convert to LibraryShows, filtering out shows that no longer exist
             libraryEntities.mapNotNull { libraryEntity ->
                 showsMap[libraryEntity.showId]?.let { show ->
+                    val review = reviewsMap[libraryEntity.showId]
                     LibraryShow(
                         show = show,
                         addedToLibraryAt = libraryEntity.addedToLibraryAt,
                         isPinned = libraryEntity.isPinned,
-                        downloadStatus = mediaDownloadManager.getShowDownloadStatus(show.id)
+                        downloadStatus = mediaDownloadManager.getShowDownloadStatus(show.id),
+                        libraryNotes = review?.notes,
+                        customRating = review?.customRating,
+                        recordingQuality = review?.recordingQuality,
+                        playingQuality = review?.playingQuality
                     )
                 }
             }

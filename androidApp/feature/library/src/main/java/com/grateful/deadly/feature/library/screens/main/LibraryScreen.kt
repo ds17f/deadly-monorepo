@@ -22,6 +22,8 @@ import com.grateful.deadly.core.design.component.FilterPath
 import com.grateful.deadly.core.design.component.FilterTrees
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.design.component.QrCodeDisplay
+import com.grateful.deadly.core.design.component.ShowReviewSheet
+import com.grateful.deadly.core.model.ShowReview
 import com.grateful.deadly.feature.library.screens.main.components.*
 import com.grateful.deadly.feature.library.screens.main.models.LibraryViewModel
 
@@ -42,6 +44,7 @@ import com.grateful.deadly.feature.library.screens.main.models.LibraryViewModel
 fun LibraryScreen(
     onNavigateToShow: (String) -> Unit = {},
     onNavigateToPlayer: (String) -> Unit = {},
+    onNavigateToFavorites: () -> Unit = {},
     onNavigateBack: () -> Unit = {},
     viewModel: LibraryViewModel = hiltViewModel()
 ) {
@@ -56,6 +59,8 @@ fun LibraryScreen(
     var showSortBottomSheet by remember { mutableStateOf(false) }
     var selectedShowForActions by remember { mutableStateOf<LibraryShowViewModel?>(null) }
     var qrCodeShow by remember { mutableStateOf<LibraryShowViewModel?>(null) }
+    var reviewShowTarget by remember { mutableStateOf<LibraryShowViewModel?>(null) }
+    val reviewState by viewModel.currentReview.collectAsState()
     
     Column(
         modifier = Modifier.fillMaxSize()
@@ -151,6 +156,11 @@ fun LibraryScreen(
                 qrCodeShow = show
                 selectedShowForActions = null
             },
+            onReviewShow = {
+                viewModel.loadReview(show.showId)
+                reviewShowTarget = show
+                selectedShowForActions = null
+            },
             onRemoveFromLibrary = {
                 viewModel.removeFromLibrary(show.showId)
                 selectedShowForActions = null
@@ -171,6 +181,20 @@ fun LibraryScreen(
                 viewModel.unpinShow(show.showId)
                 selectedShowForActions = null
             }
+        )
+    }
+
+    reviewShowTarget?.let { show ->
+        ShowReviewSheet(
+            showDate = show.displayDate,
+            venue = show.venue,
+            location = show.location,
+            review = reviewState,
+            lineupMembers = show.lineupMembers,
+            onSave = { notes, rating, recQuality, playQuality, standouts ->
+                viewModel.saveReview(show.showId, notes, rating, recQuality, playQuality, standouts)
+            },
+            onDismiss = { reviewShowTarget = null }
         )
     }
 

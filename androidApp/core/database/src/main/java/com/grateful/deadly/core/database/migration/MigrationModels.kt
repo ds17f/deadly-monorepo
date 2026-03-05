@@ -15,7 +15,10 @@ data class MigrationData(
     val appVersion: String,
     val library: List<MigrationLibraryShow>,
     val recentPlays: List<MigrationRecentShow>,
-    val lastPlayed: MigrationLastPlayed? = null
+    val lastPlayed: MigrationLastPlayed? = null,
+    val reviews: List<MigrationShowReview>? = null,
+    val trackReviews: List<MigrationTrackReview>? = null,
+    val playerTags: List<MigrationPlayerTag>? = null
 )
 
 @Serializable
@@ -24,7 +27,11 @@ data class MigrationLibraryShow(
     val venue: String? = null,
     val location: String? = null,
     val addedAt: Long,
-    val preferredRecordingId: String? = null
+    val preferredRecordingId: String? = null,
+    val notes: String? = null,
+    val customRating: Float? = null,
+    val recordingQuality: Int? = null,
+    val playingQuality: Int? = null
 )
 
 @Serializable
@@ -46,6 +53,35 @@ data class MigrationLastPlayed(
     val positionMs: Long,
     val trackTitle: String,
     val trackFilename: String
+)
+
+@Serializable
+data class MigrationShowReview(
+    val showDate: String,
+    val notes: String? = null,
+    val customRating: Float? = null,
+    val recordingQuality: Int? = null,
+    val playingQuality: Int? = null
+)
+
+@Serializable
+data class MigrationTrackReview(
+    val showDate: String,
+    val trackTitle: String,
+    val trackNumber: Int? = null,
+    val recordingId: String? = null,
+    val thumbs: Int? = null,
+    val starRating: Int? = null,
+    val notes: String? = null
+)
+
+@Serializable
+data class MigrationPlayerTag(
+    val showDate: String,
+    val playerName: String,
+    val instruments: String? = null,
+    val isStandout: Boolean = true,
+    val notes: String? = null
 )
 
 data class MigrationResult(

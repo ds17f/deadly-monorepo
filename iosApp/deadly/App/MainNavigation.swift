@@ -55,6 +55,8 @@ struct MainNavigation: View {
                             switch route {
                             case .downloads:
                                 DownloadsScreen()
+                            case .favorites:
+                                FavoritesScreen()
                             }
                         }
                 }
@@ -247,6 +249,7 @@ enum AppTab: String, Hashable {
 
 enum LibraryRoute: Hashable {
     case downloads
+    case favorites
 }
 
 // MARK: - PlaceholderScreen

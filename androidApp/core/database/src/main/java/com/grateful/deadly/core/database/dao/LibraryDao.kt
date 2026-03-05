@@ -70,6 +70,15 @@ interface LibraryDao {
     
     @Query("UPDATE library_shows SET libraryNotes = :notes WHERE showId = :showId")
     suspend fun updateLibraryNotes(showId: String, notes: String?)
+
+    @Query("UPDATE library_shows SET customRating = :rating WHERE showId = :showId")
+    suspend fun updateCustomRating(showId: String, rating: Float?)
+
+    @Query("UPDATE library_shows SET recordingQuality = :quality WHERE showId = :showId")
+    suspend fun updateRecordingQuality(showId: String, quality: Int?)
+
+    @Query("UPDATE library_shows SET playingQuality = :quality WHERE showId = :showId")
+    suspend fun updatePlayingQuality(showId: String, quality: Int?)
     
     // Statistics
     @Query("SELECT COUNT(*) FROM library_shows")

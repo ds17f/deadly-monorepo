@@ -4,9 +4,13 @@ import android.util.Log
 import com.grateful.deadly.core.database.dao.LibraryDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.ShowDao
+import com.grateful.deadly.core.database.dao.TrackReviewDao
+import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.entities.LibraryShowEntity
 import com.grateful.deadly.core.database.entities.RecentShowEntity
 import com.grateful.deadly.core.database.entities.ShowEntity
+import com.grateful.deadly.core.database.entities.TrackReviewEntity
+import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
 import com.grateful.deadly.core.model.AppDatabase
 import kotlinx.serialization.json.Json
 import javax.inject.Inject
@@ -16,7 +20,9 @@ import javax.inject.Singleton
 class MigrationImportService @Inject constructor(
     @AppDatabase private val showDao: ShowDao,
     @AppDatabase private val libraryDao: LibraryDao,
-    @AppDatabase private val recentShowDao: RecentShowDao
+    @AppDatabase private val recentShowDao: RecentShowDao,
+    @AppDatabase private val trackReviewDao: TrackReviewDao,
+    @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao
 ) {
 
     companion object {
@@ -45,6 +51,8 @@ class MigrationImportService @Inject constructor(
         val errors = mutableListOf<String>()
 
         // Import library shows
+        // Track date→showId mapping for review import
+        val dateToShowId = mutableMapOf<String, String>()
         for (item in data.library) {
             try {
                 val show = findShow(item.date, item.venue)
@@ -52,9 +60,14 @@ class MigrationImportService @Inject constructor(
                     libraryDao.addToLibrary(
                         LibraryShowEntity(
                             showId = show.showId,
-                            addedToLibraryAt = item.addedAt
+                            addedToLibraryAt = item.addedAt,
+                            customRating = item.customRating,
+                            recordingQuality = item.recordingQuality,
+                            playingQuality = item.playingQuality,
+                            libraryNotes = item.notes
                         )
                     )
+                    dateToShowId[item.date] = show.showId
                     libraryImported++
                     Log.d(TAG, "Imported library show: ${item.date} → ${show.showId}")
                 } else {
@@ -64,6 +77,52 @@ class MigrationImportService @Inject constructor(
             } catch (e: Exception) {
                 errors.add("Library ${item.date}: ${e.message}")
                 Log.e(TAG, "Error importing library show ${item.date}", e)
+            }
+        }
+
+        // Import track reviews
+        data.trackReviews?.forEach { tr ->
+            try {
+                val showId = dateToShowId[tr.showDate]
+                if (showId != null) {
+                    val now = System.currentTimeMillis()
+                    trackReviewDao.upsert(
+                        TrackReviewEntity(
+                            showId = showId,
+                            trackTitle = tr.trackTitle,
+                            trackNumber = tr.trackNumber,
+                            recordingId = tr.recordingId,
+                            thumbs = tr.thumbs,
+                            starRating = tr.starRating,
+                            notes = tr.notes,
+                            createdAt = now,
+                            updatedAt = now
+                        )
+                    )
+                }
+            } catch (e: Exception) {
+                errors.add("TrackReview ${tr.showDate}/${tr.trackTitle}: ${e.message}")
+            }
+        }
+
+        // Import player tags
+        data.playerTags?.forEach { pt ->
+            try {
+                val showId = dateToShowId[pt.showDate]
+                if (showId != null) {
+                    showPlayerTagDao.upsert(
+                        ShowPlayerTagEntity(
+                            showId = showId,
+                            playerName = pt.playerName,
+                            instruments = pt.instruments,
+                            isStandout = pt.isStandout,
+                            notes = pt.notes,
+                            createdAt = System.currentTimeMillis()
+                        )
+                    )
+                }
+            } catch (e: Exception) {
+                errors.add("PlayerTag ${pt.showDate}/${pt.playerName}: ${e.message}")
             }
         }
 
