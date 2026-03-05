@@ -5,8 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.api.library.LibraryService
+import com.grateful.deadly.core.api.library.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.model.*
+import com.grateful.deadly.core.model.ShowReview
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.exception.FormatNotAvailableException
 import com.grateful.deadly.core.network.monitor.NetworkMonitor
@@ -43,6 +45,7 @@ class PlaylistViewModel @Inject constructor(
     private val mediaControllerRepository: MediaControllerRepository,
     private val libraryService: LibraryService,
     private val recentShowsService: RecentShowsService,
+    private val reviewService: ReviewService,
     networkMonitor: NetworkMonitor
 ) : ViewModel() {
 
@@ -59,6 +62,20 @@ class PlaylistViewModel @Inject constructor(
     private val _baseUiState = MutableStateFlow(PlaylistUiState())
     private val _rawTrackData = MutableStateFlow<List<PlaylistTrackViewModel>>(emptyList())
     
+    // Thumbs-up track titles for the current show
+    private val _thumbsUpTitles = MutableStateFlow<Set<String>>(emptySet())
+
+    // Whether the user has written a review for the current show
+    private val _hasUserReview = MutableStateFlow(false)
+
+    // Show review state
+    private val _userReview = MutableStateFlow(ShowReview(showId = ""))
+    val userReview: StateFlow<ShowReview> = _userReview.asStateFlow()
+    private val _reviewLineup = MutableStateFlow<List<String>>(emptyList())
+    val reviewLineup: StateFlow<List<String>> = _reviewLineup.asStateFlow()
+    private val _showWriteReview = MutableStateFlow(false)
+    val showWriteReview: StateFlow<Boolean> = _showWriteReview.asStateFlow()
+
     init {
         // Reactive collections loading - watch for showId changes and update collections
         viewModelScope.launch {
@@ -85,6 +102,37 @@ class PlaylistViewModel @Inject constructor(
                             showCollections = emptyList(),
                             collectionsLoading = false
                         )
+                    }
+                }
+        }
+
+        // Reactive thumbs-up loading - watch track reviews for the current show
+        viewModelScope.launch {
+            _baseUiState
+                .map { it.showData?.showId }
+                .distinctUntilChanged()
+                .flatMapLatest { showId ->
+                    if (showId != null) reviewService.getTrackReviewsFlow(showId)
+                    else flowOf(emptyList())
+                }
+                .collect { reviews ->
+                    _thumbsUpTitles.value = reviews.filter { it.isThumbsUp }.map { it.trackTitle }.toSet()
+                }
+        }
+
+        // Reactive user review loading - watch for showId changes
+        viewModelScope.launch {
+            _baseUiState
+                .map { it.showData?.showId }
+                .distinctUntilChanged()
+                .collect { showId ->
+                    if (showId != null) {
+                        val review = reviewService.getShowReview(showId) ?: ShowReview(showId = showId)
+                        _userReview.value = review
+                        _hasUserReview.value = review.hasContent
+                    } else {
+                        _userReview.value = ShowReview(showId = "")
+                        _hasUserReview.value = false
                     }
                 }
         }
@@ -160,12 +208,15 @@ class PlaylistViewModel @Inject constructor(
             }
     ) { baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload ->
 
+        val thumbsUp = _thumbsUpTitles.value
+
         // Update track data with current playing state
         val updatedTracks = rawTracks.map { track ->
             val isCurrentTrack = isTrackCurrentlyPlaying(track, currentTrackInfo)
             track.copy(
                 isCurrentTrack = isCurrentTrack,
-                isPlaying = isCurrentTrack && isPlaying
+                isPlaying = isCurrentTrack && isPlaying,
+                isThumbsUp = track.title in thumbsUp
             )
         }
 
@@ -197,7 +248,8 @@ class PlaylistViewModel @Inject constructor(
             isPlaying = isPlaying,
             isCurrentShowAndRecording = isCurrentShowAndRecording,
             mediaLoading = currentTrackInfo?.playbackState?.isLoading ?: false,
-            showData = updatedShowData
+            showData = updatedShowData,
+            hasUserReview = _hasUserReview.value
         )
     }.stateIn(
         scope = viewModelScope,
@@ -1308,5 +1360,47 @@ class PlaylistViewModel @Inject constructor(
         // Prefetching is now handled internally by the service
         // No explicit prefetch calls needed in ViewModel
         Log.d(TAG, "Prefetch started internally for adjacent shows")
+    }
+
+    fun loadUserReview() {
+        val showId = _baseUiState.value.showData?.showId ?: return
+        viewModelScope.launch {
+            _userReview.value = reviewService.getShowReview(showId) ?: ShowReview(showId = showId)
+            _reviewLineup.value = emptyList() // Lineup not available from PlaylistService in this module
+            _showWriteReview.value = true
+        }
+    }
+
+    fun hideWriteReview() {
+        _showWriteReview.value = false
+    }
+
+    fun saveUserReview(
+        notes: String?,
+        rating: Float?,
+        recordingQuality: Int?,
+        playingQuality: Int?,
+        standoutPlayers: List<String>
+    ) {
+        val showId = _baseUiState.value.showData?.showId ?: return
+        val recordingId = _baseUiState.value.showData?.currentRecordingId
+        viewModelScope.launch {
+            reviewService.updateShowNotes(showId, notes)
+            reviewService.updateShowRating(showId, rating)
+            reviewService.updateRecordingQuality(showId, recordingQuality, recordingId)
+            reviewService.updatePlayingQuality(showId, playingQuality)
+
+            val existingTags = reviewService.getPlayerTags(showId)
+            val existingNames = existingTags.map { it.playerName }.toSet()
+            for (name in existingNames - standoutPlayers.toSet()) {
+                reviewService.removePlayerTag(showId, name)
+            }
+            for (name in standoutPlayers.toSet() - existingNames) {
+                reviewService.upsertPlayerTag(showId, name, isStandout = true)
+            }
+
+            _hasUserReview.value = true
+            _showWriteReview.value = false
+        }
     }
 }
