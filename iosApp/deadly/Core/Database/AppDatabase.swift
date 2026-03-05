@@ -55,6 +55,12 @@ struct AppDatabase: @unchecked Sendable {
         try dbWriter.write(block)
     }
 
+    func observe<Reducer: ValueReducer>(
+        _ observation: ValueObservation<Reducer>
+    ) -> AsyncValueObservation<Reducer.Value> where Reducer.Value: Equatable & Sendable {
+        observation.values(in: dbWriter, bufferingPolicy: .bufferingNewest(1))
+    }
+
     // MARK: - Migration
 
     private func migrate() throws {
@@ -82,6 +88,12 @@ struct AppDatabase: @unchecked Sendable {
             if !hasColumn {
                 try db.execute(sql: "ALTER TABLE \(tableName) ADD COLUMN coverImageUrl TEXT")
             }
+        }
+        migrator.registerMigration("v4-reviews") { db in
+            try AppDatabase.createReviewsTables(db)
+        }
+        migrator.registerMigration("v5-show-reviews-table") { db in
+            try AppDatabase.createShowReviewsTable(db)
         }
         try migrator.migrate(dbWriter)
     }
@@ -240,5 +252,78 @@ struct AppDatabase: @unchecked Sendable {
         }
         try db.create(index: "idx_download_tasks_showId", on: "download_tasks", columns: ["showId"], ifNotExists: true)
         try db.create(index: "idx_download_tasks_state", on: "download_tasks", columns: ["state"], ifNotExists: true)
+    }
+
+    // MARK: - Reviews Tables
+
+    private static func createReviewsTables(_ db: Database) throws {
+        // Add review columns to library_shows
+        let columns = try Row.fetchAll(db, sql: "PRAGMA table_info(library_shows)")
+        let columnNames = Set(columns.compactMap { $0["name"] as? String })
+        if !columnNames.contains("recordingQuality") {
+            try db.execute(sql: "ALTER TABLE library_shows ADD COLUMN recordingQuality INTEGER")
+        }
+        if !columnNames.contains("playingQuality") {
+            try db.execute(sql: "ALTER TABLE library_shows ADD COLUMN playingQuality INTEGER")
+        }
+
+        // track_reviews
+        try db.create(table: "track_reviews", ifNotExists: true) { t in
+            t.autoIncrementedPrimaryKey("id")
+            t.column("showId", .text).notNull()
+                .references("shows", column: "showId", onDelete: .cascade)
+            t.column("trackTitle", .text).notNull()
+            t.column("trackNumber", .integer)
+            t.column("recordingId", .text)
+            t.column("thumbs", .integer)
+            t.column("starRating", .integer)
+            t.column("notes", .text)
+            t.column("createdAt", .integer).notNull()
+            t.column("updatedAt", .integer).notNull()
+            t.uniqueKey(["showId", "trackTitle", "recordingId"])
+        }
+        try db.create(index: "idx_track_reviews_showId", on: "track_reviews", columns: ["showId"], ifNotExists: true)
+
+        // show_player_tags
+        try db.create(table: "show_player_tags", ifNotExists: true) { t in
+            t.autoIncrementedPrimaryKey("id")
+            t.column("showId", .text).notNull()
+                .references("shows", column: "showId", onDelete: .cascade)
+            t.column("playerName", .text).notNull()
+            t.column("instruments", .text)
+            t.column("isStandout", .boolean).notNull().defaults(to: true)
+            t.column("notes", .text)
+            t.column("createdAt", .integer).notNull()
+            t.uniqueKey(["showId", "playerName"])
+        }
+        try db.create(index: "idx_show_player_tags_showId", on: "show_player_tags", columns: ["showId"], ifNotExists: true)
+        try db.create(index: "idx_show_player_tags_playerName", on: "show_player_tags", columns: ["playerName"], ifNotExists: true)
+    }
+
+    // MARK: - Show Reviews Table
+
+    private static func createShowReviewsTable(_ db: Database) throws {
+        try db.create(table: "show_reviews", ifNotExists: true) { t in
+            t.column("showId", .text).primaryKey()
+                .references("shows", column: "showId", onDelete: .cascade)
+            t.column("notes", .text)
+            t.column("customRating", .double)
+            t.column("recordingQuality", .integer)
+            t.column("playingQuality", .integer)
+            t.column("reviewedRecordingId", .text)
+            t.column("createdAt", .integer).notNull()
+            t.column("updatedAt", .integer).notNull()
+        }
+
+        // Migrate existing review data from library_shows
+        try db.execute(sql: """
+            INSERT OR IGNORE INTO show_reviews (showId, notes, customRating, recordingQuality, playingQuality, createdAt, updatedAt)
+            SELECT showId, libraryNotes, customRating, recordingQuality, playingQuality,
+                   CAST(strftime('%s','now') AS INTEGER) * 1000,
+                   CAST(strftime('%s','now') AS INTEGER) * 1000
+            FROM library_shows
+            WHERE libraryNotes IS NOT NULL OR customRating IS NOT NULL
+               OR recordingQuality IS NOT NULL OR playingQuality IS NOT NULL
+        """)
     }
 }

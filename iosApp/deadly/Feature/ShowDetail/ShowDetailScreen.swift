@@ -25,6 +25,10 @@ struct ShowDetailScreen: View {
     @State private var showCancelDownloadAlert = false
     @State private var showReviewSheet = false
     @State private var showSetlistSheet = false
+    @State private var showWriteReviewSheet = false
+    @State private var writeReviewState = ShowReview(showId: "")
+    @State private var thumbsUpTracks: Set<String> = []
+    @State private var userReview: ShowReview?
 
     var body: some View {
         Group {
@@ -42,10 +46,22 @@ struct ShowDetailScreen: View {
         .task {
             await playlistService.loadShow(showId)
             isInLibrary = (try? container.libraryService.isInLibrary(showId: showId)) ?? false
+            let review = try? container.reviewService.getShowReview(showId)
+            userReview = review?.hasContent == true ? review : nil
+        }
+        .task(id: playlistService.currentShow?.id ?? showId) {
+            let activeShowId = playlistService.currentShow?.id ?? showId
+            do {
+                for try await titles in container.reviewService.observeThumbsUpTitles(showId: activeShowId) {
+                    thumbsUpTracks = titles
+                }
+            } catch {}
         }
         .onChange(of: playlistService.currentShow?.id) { _, newId in
             if let newId {
                 isInLibrary = (try? container.libraryService.isInLibrary(showId: newId)) ?? false
+                let review = try? container.reviewService.getShowReview(newId)
+                userReview = review?.hasContent == true ? review : nil
             }
         }
     }
@@ -209,7 +225,8 @@ struct ShowDetailScreen: View {
                             index: index,
                             isPlaying: isCurrentTrack(track) && streamPlayer.playbackState.isPlaying,
                             isLoading: isCurrentTrack(track) && (streamPlayer.playbackState == .loading || streamPlayer.playbackState == .buffering),
-                            downloadState: trackStates[track.name]
+                            downloadState: trackStates[track.name],
+                            isThumbsUp: thumbsUpTracks.contains(track.title)
                         )
                         .contentShape(Rectangle())
                         .onTapGesture {
@@ -228,7 +245,44 @@ struct ShowDetailScreen: View {
             menuSheet(show)
         }
         .sheet(isPresented: $showReviewSheet) {
-            ReviewDetailsSheet(show: show, playlistService: playlistService)
+            ReviewDetailsSheet(show: show, playlistService: playlistService, userReview: userReview) {
+                if let showId = playlistService.currentShow?.id {
+                    writeReviewState = (try? container.reviewService.getShowReview(showId)) ?? ShowReview(showId: showId)
+                }
+                showWriteReviewSheet = true
+            }
+        }
+        .sheet(isPresented: $showWriteReviewSheet) {
+            if let show = playlistService.currentShow {
+                ShowReviewSheet(
+                    showDate: DateFormatting.formatShowDate(show.date),
+                    venue: show.venue.name,
+                    location: show.location.displayText,
+                    review: writeReviewState,
+                    lineupMembers: show.lineup?.members.map(\.name) ?? [],
+                    currentRecordingId: playlistService.currentRecording?.identifier,
+                    bestRecordingId: show.bestRecordingId
+                ) { notes, rating, recQuality, playQuality, standouts in
+                    let showId = show.id
+                    let recordingId = playlistService.currentRecording?.identifier
+                    try? container.reviewService.updateShowNotes(showId, notes: notes)
+                    try? container.reviewService.updateShowRating(showId, rating: rating)
+                    try? container.reviewService.updateRecordingQuality(showId, quality: recQuality, recordingId: recordingId)
+                    try? container.reviewService.updatePlayingQuality(showId, quality: playQuality)
+                    let existingTags = (try? container.reviewService.getPlayerTags(showId)) ?? []
+                    let existingNames = Set(existingTags.map(\.playerName))
+                    let newNames = Set(standouts)
+                    for name in existingNames.subtracting(newNames) {
+                        try? container.reviewService.removePlayerTag(showId: showId, playerName: name)
+                    }
+                    for name in newNames.subtracting(existingNames) {
+                        try? container.reviewService.upsertPlayerTag(showId: showId, playerName: name)
+                    }
+                    // Refresh user review state
+                    let updatedReview = try? container.reviewService.getShowReview(showId)
+                    userReview = updatedReview?.hasContent == true ? updatedReview : nil
+                }
+            }
         }
         .sheet(isPresented: $showSetlistSheet) {
             SetlistSheet(show: show)
@@ -296,6 +350,11 @@ struct ShowDetailScreen: View {
                 Spacer()
 
                 HStack(spacing: 4) {
+                    if userReview != nil {
+                        Image(systemName: "heart.fill")
+                            .font(.system(size: 12))
+                            .foregroundStyle(DeadlyColors.primary)
+                    }
                     Text(show.totalReviews > 0
                         ? "(\(show.totalReviews))"
                         : "No reviews")
