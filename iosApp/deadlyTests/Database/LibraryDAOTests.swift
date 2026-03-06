@@ -143,16 +143,17 @@ struct LibraryDAOTests {
         #expect(try dao.fetchById("1977-05-08")?.isPinned == false)
     }
 
-    // MARK: - Preferred recording
+    // MARK: - Recording preference (via RecordingPreferenceDAO)
 
-    @Test("updatePreferredRecording sets and clears recording id")
-    func updatePreferredRecording() throws {
+    @Test("RecordingPreferenceDAO upsert and fetch round-trip")
+    func recordingPreference() throws {
         try insertShow("1977-05-08")
-        try dao.add(makeLibraryShow(showId: "1977-05-08"))
-        try dao.updatePreferredRecording("1977-05-08", recordingId: "gd77-05-08.sbd")
-        #expect(try dao.fetchPreferredRecordingId("1977-05-08") == "gd77-05-08.sbd")
-        try dao.updatePreferredRecording("1977-05-08", recordingId: nil)
-        #expect(try dao.fetchPreferredRecordingId("1977-05-08") == nil)
+        let prefDAO = RecordingPreferenceDAO(database: db)
+        let now = Int64(Date().timeIntervalSince1970 * 1000)
+        try prefDAO.upsert(RecordingPreferenceRecord(showId: "1977-05-08", recordingId: "gd77-05-08.sbd", updatedAt: now))
+        #expect(try prefDAO.fetchRecordingId("1977-05-08") == "gd77-05-08.sbd")
+        try prefDAO.delete("1977-05-08")
+        #expect(try prefDAO.fetchRecordingId("1977-05-08") == nil)
     }
 
     // MARK: - Cascade delete

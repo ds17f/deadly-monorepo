@@ -96,3 +96,58 @@ struct LibraryImportResult {
     let alreadyInLibrary: Int
     let notFound: Int
 }
+
+// MARK: - v3 Export Format
+
+struct BackupExportV3: Codable {
+    let version: Int
+    let exportedAt: Int64
+    let app: String
+    let favorites: FavoritesExport
+    let reviews: [ReviewExportEntry]
+    let recordingPreferences: [RecordingPreferenceExportEntry]
+}
+
+struct FavoritesExport: Codable {
+    let shows: [FavoriteShowEntry]
+    let tracks: [FavoriteTrackEntry]
+}
+
+struct FavoriteShowEntry: Codable {
+    let showId: String
+    let addedAt: Int64
+    let isPinned: Bool
+    let lastAccessedAt: Int64?
+    let tags: [String]?
+}
+
+struct FavoriteTrackEntry: Codable {
+    let showId: String
+    let trackTitle: String
+    let trackNumber: Int?
+    let recordingId: String?
+}
+
+struct ReviewExportEntry: Codable {
+    let showId: String
+    let notes: String?
+    let overallRating: Double?
+    let recordingQuality: Int?
+    let playingQuality: Int?
+    let reviewedRecordingId: String?
+    let playerTags: [PlayerTagExportEntry]?
+}
+
+struct RecordingPreferenceExportEntry: Codable {
+    let showId: String
+    let recordingId: String
+}
+
+struct BackupImportResult {
+    let favoritesImported: Int
+    let favoritesSkipped: Int
+    let reviewsImported: Int
+    let tracksImported: Int
+    let preferencesImported: Int
+    let notFound: Int
+}

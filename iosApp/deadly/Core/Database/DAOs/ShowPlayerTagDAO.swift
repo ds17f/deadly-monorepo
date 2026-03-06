@@ -38,6 +38,12 @@ struct ShowPlayerTagDAO: Sendable {
         }
     }
 
+    func fetchAll() throws -> [ShowPlayerTagRecord] {
+        try database.read { db in
+            try ShowPlayerTagRecord.fetchAll(db)
+        }
+    }
+
     func fetchAllStandoutPlayerNames() throws -> [String] {
         try database.read { db in
             try String.fetchAll(db, sql: """

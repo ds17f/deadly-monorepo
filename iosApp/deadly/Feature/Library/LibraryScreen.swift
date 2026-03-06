@@ -48,7 +48,7 @@ struct LibraryScreen: View {
 
     // Import / Export state
     @State private var showingLibraryFilePicker = false
-    @State private var libraryImportResult: LibraryImportResult?
+    @State private var libraryImportResult: BackupImportResult?
     @State private var libraryImportError: String?
     @State private var showingLibraryImportAlert = false
     @State private var libraryExportData: Data?
@@ -190,7 +190,7 @@ struct LibraryScreen: View {
             Button("OK") {}
         } message: {
             if let result = libraryImportResult {
-                Text("Imported \(result.imported) shows.\n\(result.alreadyInLibrary) already in library.\n\(result.notFound) not found in database.")
+                Text("Imported \(result.favoritesImported) favorites, \(result.reviewsImported) reviews, \(result.preferencesImported) prefs.\n\(result.favoritesSkipped) already in library.\n\(result.notFound) not found.")
             } else {
                 Text(libraryImportError ?? "Unknown error.")
             }

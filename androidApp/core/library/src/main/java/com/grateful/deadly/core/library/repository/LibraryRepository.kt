@@ -2,8 +2,10 @@ package com.grateful.deadly.core.library.repository
 
 import android.util.Log
 import com.grateful.deadly.core.database.dao.LibraryDao
+import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.entities.LibraryShowEntity
+import com.grateful.deadly.core.database.entities.RecordingPreferenceEntity
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.download.MediaDownloadManager
 import com.grateful.deadly.core.model.*
@@ -27,6 +29,7 @@ import com.grateful.deadly.core.model.AppDatabase
 class LibraryRepository @Inject constructor(
     @AppDatabase private val libraryDao: LibraryDao,
     @AppDatabase private val showReviewDao: ShowReviewDao,
+    @AppDatabase private val recordingPreferenceDao: RecordingPreferenceDao,
     private val showRepository: ShowRepository,
     private val mediaDownloadManager: MediaDownloadManager
 ) {
@@ -205,18 +208,28 @@ class LibraryRepository @Inject constructor(
     }
     
     /**
-     * Set preferred recording for a library show
+     * Set preferred recording for a show (independent of library membership)
      */
     suspend fun setPreferredRecording(showId: String, recordingId: String?) {
         Log.d(TAG, "setPreferredRecording('$showId', '$recordingId')")
-        libraryDao.updatePreferredRecording(showId, recordingId)
+        if (recordingId != null) {
+            recordingPreferenceDao.upsert(
+                RecordingPreferenceEntity(
+                    showId = showId,
+                    recordingId = recordingId,
+                    updatedAt = System.currentTimeMillis()
+                )
+            )
+        } else {
+            recordingPreferenceDao.delete(showId)
+        }
     }
 
     /**
-     * Get preferred recording ID for a library show
+     * Get preferred recording ID for a show
      */
     suspend fun getPreferredRecordingId(showId: String): String? {
-        return libraryDao.getPreferredRecordingId(showId)
+        return recordingPreferenceDao.getRecordingId(showId)
     }
 
     /**

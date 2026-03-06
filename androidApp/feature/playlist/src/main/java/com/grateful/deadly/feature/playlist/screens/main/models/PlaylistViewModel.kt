@@ -944,13 +944,12 @@ class PlaylistViewModel @Inject constructor(
     }
     
     /**
-     * Set recording as default — persists the choice if show is in library,
-     * showing a confirmation dialog first if there is a download conflict.
+     * Set recording as default — always persists the preference (independent of library membership).
+     * Shows a confirmation dialog first if there is a download conflict for library shows.
      */
     fun setRecordingAsDefault(recordingId: String) {
         Log.d(TAG, "Set recording as default: $recordingId")
         val showId = _baseUiState.value.showData?.showId ?: return
-        val isInLibrary = uiState.value.showData?.isInLibrary ?: false
         viewModelScope.launch {
             try {
                 // Update in-memory recording (for immediate track list refresh)
@@ -970,7 +969,12 @@ class PlaylistViewModel @Inject constructor(
                 Log.d(TAG, "Recording set as default - refreshing tracks for: $recordingId")
                 loadTrackListAsync()
 
-                // Handle persistence for library shows
+                // Always persist recording preference (independent of library)
+                libraryService.setPreferredRecording(showId, recordingId)
+                Log.d(TAG, "Persisted preferred recording for $showId: $recordingId")
+
+                // Download conflict check only applies to library shows
+                val isInLibrary = uiState.value.showData?.isInLibrary ?: false
                 if (isInLibrary) {
                     val hasConflict = playlistService.hasDownloadConflict(showId, recordingId)
                     if (hasConflict) {
@@ -979,9 +983,6 @@ class PlaylistViewModel @Inject constructor(
                             showDownloadConflictDialog = true,
                             pendingRecordingId = recordingId
                         )
-                    } else {
-                        libraryService.setPreferredRecording(showId, recordingId)
-                        Log.d(TAG, "Persisted preferred recording for $showId: $recordingId")
                     }
                 }
 

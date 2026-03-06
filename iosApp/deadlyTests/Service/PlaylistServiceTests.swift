@@ -96,7 +96,7 @@ struct PlaylistServiceTests {
             showRepository: showRepo,
             archiveClient: stubClient,
             recentShowsService: stubRecentShowsService,
-            libraryDAO: LibraryDAO(database: db),
+            recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
             streamPlayer: streamPlayer
         )
     }
