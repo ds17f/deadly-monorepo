@@ -463,7 +463,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         }
     }
 
-    // ── Library session callback (browse tree + search) ─────────────────
+    // ── Media library session callback (browse tree + search) ─────────────────
 
     private inner class LibrarySessionCallback : MediaLibrarySession.Callback {
 

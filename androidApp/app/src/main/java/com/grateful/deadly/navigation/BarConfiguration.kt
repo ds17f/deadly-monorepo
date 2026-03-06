@@ -10,7 +10,7 @@ import com.grateful.deadly.feature.settings.screens.main.SettingsBarConfiguratio
 import com.grateful.deadly.feature.settings.screens.legal.LegalBarConfiguration
 import com.grateful.deadly.feature.settings.screens.developer.DeveloperBarConfiguration
 import com.grateful.deadly.feature.settings.screens.mission.MissionBarConfiguration
-import com.grateful.deadly.feature.library.screens.main.LibraryBarConfiguration
+import com.grateful.deadly.feature.favorites.screens.main.FavoritesBarConfiguration
 import com.grateful.deadly.feature.collections.screens.main.CollectionsBarConfiguration
 import com.grateful.deadly.feature.collections.screens.details.CollectionDetailsBarConfiguration
 import com.grateful.deadly.feature.downloads.screens.main.DownloadsBarConfiguration
@@ -25,7 +25,6 @@ object NavigationBarConfig {
     fun getBarConfig(
         route: String?,
         onNavigateToDownloads: () -> Unit = {},
-        onNavigateToFavorites: () -> Unit = {}
     ): BarConfiguration = when {
         // Home routes
         route == "home" -> HomeBarConfiguration.getHomeBarConfig()
@@ -40,10 +39,9 @@ object NavigationBarConfig {
         route == "mission" -> MissionBarConfiguration.getMissionBarConfig()
         route == "developer" -> DeveloperBarConfiguration.getDeveloperBarConfig()
 
-        // Library routes
-        route == "library" -> LibraryBarConfiguration.getLibraryBarConfig(
-            onNavigateToDownloads = onNavigateToDownloads,
-            onNavigateToFavorites = onNavigateToFavorites
+        // Favorites routes
+        route == "library" -> FavoritesBarConfiguration.getFavoritesBarConfig(
+            onNavigateToDownloads = onNavigateToDownloads
         )
         
         // Downloads routes

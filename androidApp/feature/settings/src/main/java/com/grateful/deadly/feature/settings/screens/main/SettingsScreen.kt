@@ -45,7 +45,7 @@ fun SettingsScreen(
         item { HorizontalDivider() }
 
         // ── LIBRARY ──────────────────────────────────────────────────
-        item { SectionHeader("Library") }
+        item { SectionHeader("Favorites") }
 
         item {
             ImportMigrationButton(viewModel = viewModel)
@@ -236,7 +236,7 @@ private fun ImportMigrationButton(viewModel: SettingsViewModel) {
     ) { uri -> if (uri != null) viewModel.onImportMigration(uri) }
 
     PreferenceRow(
-        title = if (importState is SettingsViewModel.MigrationImportState.Importing) "Importing…" else "Import Library from Old App",
+        title = if (importState is SettingsViewModel.MigrationImportState.Importing) "Importing…" else "Import Favorites from Old App",
         subtitle = "Import your library and play history from the old Dead Archive app",
         onClick = {
             if (importState !is SettingsViewModel.MigrationImportState.Importing) {
@@ -253,7 +253,7 @@ private fun ImportMigrationButton(viewModel: SettingsViewModel) {
                 title = { Text("Import Complete") },
                 text = {
                     Text(buildString {
-                        append("Imported ${r.libraryImported} library shows and ${r.recentImported} recent plays.")
+                        append("Imported ${r.favoritesImported} favorite shows and ${r.recentImported} recent plays.")
                         if (r.skipped > 0) append("\n${r.skipped} shows could not be matched.")
                         if (r.errors.isNotEmpty()) append("\n${r.errors.size} errors occurred.")
                     })

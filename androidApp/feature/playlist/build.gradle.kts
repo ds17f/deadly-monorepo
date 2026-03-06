@@ -45,7 +45,7 @@ android {
 dependencies {
     // V2 dependencies
     implementation(project(":core:api:playlist"))
-    implementation(project(":core:api:library"))
+    implementation(project(":core:api:favorites"))
     implementation(project(":core:api:recent"))
     implementation(project(":core:playlist"))
     implementation(project(":core:model"))

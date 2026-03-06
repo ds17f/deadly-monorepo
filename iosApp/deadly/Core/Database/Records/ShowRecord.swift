@@ -29,8 +29,8 @@ struct ShowRecord: Codable, Sendable, Equatable, FetchableRecord, MutablePersist
     var bestRecordingId: String?
     var averageRating: Double?
     var totalReviews: Int
-    var isInLibrary: Bool
-    var libraryAddedAt: Int64?
+    var isFavorite: Bool
+    var favoritedAt: Int64?
     var coverImageUrl: String?
     var createdAt: Int64
     var updatedAt: Int64

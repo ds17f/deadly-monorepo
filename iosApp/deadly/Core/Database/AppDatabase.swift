@@ -98,6 +98,9 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v6-recording-preferences") { db in
             try AppDatabase.createRecordingPreferencesTable(db)
         }
+        migrator.registerMigration("v7-rename-library-to-favorites") { db in
+            try AppDatabase.renameLibraryToFavorites(db)
+        }
         try migrator.migrate(dbWriter)
     }
 
@@ -321,6 +324,16 @@ struct AppDatabase: @unchecked Sendable {
             FROM library_shows
             WHERE preferredRecordingId IS NOT NULL
         """)
+    }
+
+    // MARK: - Rename Library to Favorites
+
+    private static func renameLibraryToFavorites(_ db: Database) throws {
+        try db.execute(sql: "ALTER TABLE library_shows RENAME TO favorite_shows")
+        try db.execute(sql: "ALTER TABLE shows RENAME COLUMN isInLibrary TO isFavorite")
+        try db.execute(sql: "ALTER TABLE shows RENAME COLUMN libraryAddedAt TO favoritedAt")
+        try db.execute(sql: "ALTER TABLE favorite_shows RENAME COLUMN addedToLibraryAt TO addedToFavoritesAt")
+        try db.execute(sql: "ALTER TABLE favorite_shows RENAME COLUMN libraryNotes TO notes")
     }
 
     // MARK: - Show Reviews Table

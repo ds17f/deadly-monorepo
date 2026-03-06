@@ -33,8 +33,8 @@ data class Show(
     val coverImageUrl: String? = null,
 
     // User state
-    val isInLibrary: Boolean,
-    val libraryAddedAt: Long?
+    val isFavorite: Boolean,
+    val favoritedAt: Long?
 ) {
     /**
      * Display title for the show

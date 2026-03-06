@@ -7,15 +7,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
-import com.grateful.deadly.core.model.LibraryAction
-import com.grateful.deadly.core.model.LibraryDownloadStatus
+import com.grateful.deadly.core.model.FavoritesAction
+import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.model.PlaylistShowViewModel
 
 /**
  * PlaylistActionRow - Action buttons row
  * 
  * Action buttons layout integrated with service architecture.
- * Left side: Grouped action buttons (Library, Download, Setlist, Menu)
+ * Left side: Grouped action buttons (Favorites, Download, Setlist, Menu)
  * Right side: Large play/pause button
  */
 @Composable
@@ -25,7 +25,7 @@ fun PlaylistActionRow(
     isLoading: Boolean,
     isCurrentShowAndRecording: Boolean,
     showCollections: List<com.grateful.deadly.core.model.DeadCollection>,
-    onLibraryAction: (LibraryAction) -> Unit,
+    onFavoritesAction: (FavoritesAction) -> Unit,
     onDownload: () -> Unit,
     onShowSetlist: () -> Unit,
     onShowCollections: () -> Unit,
@@ -45,25 +45,25 @@ fun PlaylistActionRow(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Library button
+            // Favorites button
             IconButton(
                 onClick = { 
-                    if (showData.isInLibrary) {
-                        onLibraryAction(LibraryAction.REMOVE_FROM_LIBRARY)
+                    if (showData.isFavorite) {
+                        onFavoritesAction(FavoritesAction.REMOVE_FROM_FAVORITES)
                     } else {
-                        onLibraryAction(LibraryAction.ADD_TO_LIBRARY)
+                        onFavoritesAction(FavoritesAction.ADD_TO_FAVORITES)
                     }
                 },
                 modifier = Modifier.size(40.dp)
             ) {
                 Icon(
-                    painter = if (showData.isInLibrary) {
-                        IconResources.Content.LibraryAddCheck()
+                    painter = if (showData.isFavorite) {
+                        IconResources.Content.Favorite()
                     } else {
-                        IconResources.Content.LibraryAdd()
+                        IconResources.Content.FavoriteBorder()
                     },
-                    contentDescription = if (showData.isInLibrary) "Remove from Library" else "Add to Library",
-                    tint = if (showData.isInLibrary) {
+                    contentDescription = if (showData.isFavorite) "Remove from Favorites" else "Add to Favorites",
+                    tint = if (showData.isFavorite) {
                         MaterialTheme.colorScheme.primary
                     } else {
                         MaterialTheme.colorScheme.onSurfaceVariant
@@ -89,7 +89,7 @@ fun PlaylistActionRow(
                             modifier = Modifier.size(24.dp)
                         )
                     }
-                    downloadStatus == LibraryDownloadStatus.PAUSED -> {
+                    downloadStatus == FavoritesDownloadStatus.PAUSED -> {
                         // Paused - grey ring with play icon
                         Box(
                             contentAlignment = Alignment.Center,

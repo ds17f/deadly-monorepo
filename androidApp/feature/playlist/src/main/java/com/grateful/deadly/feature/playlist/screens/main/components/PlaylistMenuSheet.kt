@@ -68,7 +68,7 @@ fun PlaylistMenuSheet(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Icon(
-                    painter = IconResources.Content.LibraryMusic(),
+                    painter = IconResources.Content.Favorite(),
                     contentDescription = "Choose Recording",
                     modifier = Modifier.size(24.dp)
                 )

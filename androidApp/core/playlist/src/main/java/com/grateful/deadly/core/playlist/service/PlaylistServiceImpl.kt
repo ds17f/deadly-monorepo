@@ -1,7 +1,7 @@
 package com.grateful.deadly.core.playlist.service
 
 import android.util.Log
-import com.grateful.deadly.core.api.library.LibraryService
+import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.api.collections.DeadCollectionsService
 import com.grateful.deadly.core.domain.repository.ShowRepository
@@ -38,7 +38,7 @@ import javax.inject.Singleton
  * ✅ Real reviews from Archive.org API
  * ✅ Direct delegation to MediaControllerRepository for playback commands
  * ✅ Direct delegation to MediaControllerStateUtil for rich state objects
- * 🔲 Stubbed: Library/download integrations (marked with TODOs)
+ * 🔲 Stubbed: Favorites/download integrations (marked with TODOs)
  */
 @Singleton
 class PlaylistServiceImpl @Inject constructor(
@@ -48,7 +48,7 @@ class PlaylistServiceImpl @Inject constructor(
     private val mediaControllerStateUtil: MediaControllerStateUtil,
     private val shareService: ShareService,
     private val collectionsService: DeadCollectionsService,
-    private val libraryService: LibraryService,
+    private val favoritesService: FavoritesService,
     private val mediaDownloadManager: MediaDownloadManager,
     private val networkMonitor: NetworkMonitor,
     @Named("PlaylistApplicationScope") private val coroutineScope: CoroutineScope
@@ -106,9 +106,9 @@ class PlaylistServiceImpl @Inject constructor(
                 Log.d(TAG, "Using provided recording from navigation: $recordingId")
                 recordingId
             } else {
-                val preferredId = libraryService.getPreferredRecordingId(currentShow!!.id)
+                val preferredId = favoritesService.getPreferredRecordingId(currentShow!!.id)
                 if (preferredId != null) {
-                    Log.d(TAG, "Using preferred recording from library: $preferredId")
+                    Log.d(TAG, "Using preferred recording from favorites: $preferredId")
                     preferredId
                 } else {
                     Log.d(TAG, "No preference set - using best recording: ${currentShow!!.bestRecordingId}")
@@ -136,7 +136,7 @@ class PlaylistServiceImpl @Inject constructor(
             }
             if (nextShow != null) {
                 currentShow = nextShow
-                val preferredId = libraryService.getPreferredRecordingId(nextShow.id)
+                val preferredId = favoritesService.getPreferredRecordingId(nextShow.id)
                 currentRecordingId = preferredId ?: nextShow.bestRecordingId
                 Log.d(TAG, "Navigated to next show: ${nextShow.displayTitle}")
                 Log.d(TAG, "Set recording to: ${currentRecordingId} (preferred=$preferredId, best=${nextShow.bestRecordingId})")
@@ -155,7 +155,7 @@ class PlaylistServiceImpl @Inject constructor(
             }
             if (previousShow != null) {
                 currentShow = previousShow
-                val preferredId = libraryService.getPreferredRecordingId(previousShow.id)
+                val preferredId = favoritesService.getPreferredRecordingId(previousShow.id)
                 currentRecordingId = preferredId ?: previousShow.bestRecordingId
                 Log.d(TAG, "Navigated to previous show: ${previousShow.displayTitle}")
                 Log.d(TAG, "Set recording to: ${currentRecordingId} (preferred=$preferredId, best=${previousShow.bestRecordingId})")
@@ -192,7 +192,7 @@ class PlaylistServiceImpl @Inject constructor(
             trackCount = show.recordingCount, // Use recording count as proxy for now
             hasNextShow = hasNext,
             hasPreviousShow = hasPrevious,
-            isInLibrary = show.isInLibrary,
+            isFavorite = show.isFavorite,
             downloadProgress = null, // TODO: Integrate with download service
             coverImageUrl = show.coverImageUrl,
             recordingCount = show.recordingCount
@@ -323,31 +323,31 @@ class PlaylistServiceImpl @Inject constructor(
         // TODO: Integrate with media service when available
     }
     
-    override suspend fun addToLibrary() {
+    override suspend fun addToFavorites() {
         currentShow?.let { show ->
-            Log.d(TAG, "addToLibrary() for ${show.displayTitle} - TODO: Integrate with library service")
+            Log.d(TAG, "addToFavorites() for ${show.displayTitle} - TODO: Integrate with favorites service")
         }
-        // TODO: Integrate with library service when available
-        // TODO: Update show.isInLibrary and persist to database
+        // TODO: Integrate with favorites service when available
+        // TODO: Update show.isFavorite and persist to database
     }
     
     override suspend fun downloadShow() {
         val show = currentShow ?: return
         val recordingId = currentRecordingId
         Log.d(TAG, "downloadShow() for ${show.displayTitle}, recording=$recordingId")
-        libraryService.downloadShow(show.id, recordingId)
+        favoritesService.downloadShow(show.id, recordingId)
     }
     
     override fun pauseShowDownload() {
         val show = currentShow ?: return
         Log.d(TAG, "pauseShowDownload() for ${show.displayTitle}")
-        libraryService.pauseShowDownloads(show.id)
+        favoritesService.pauseShowDownloads(show.id)
     }
 
     override fun resumeShowDownload() {
         val show = currentShow ?: return
         Log.d(TAG, "resumeShowDownload() for ${show.displayTitle}")
-        libraryService.resumeShowDownloads(show.id)
+        favoritesService.resumeShowDownloads(show.id)
     }
 
     override suspend fun shareShow() {
@@ -558,9 +558,9 @@ class PlaylistServiceImpl @Inject constructor(
         val downloadStatus = mediaDownloadManager.getShowDownloadStatus(showId)
         // Any active download state (completed, in-progress, queued, paused) counts as a conflict
         // if it's for a different recording.
-        if (downloadStatus == LibraryDownloadStatus.NOT_DOWNLOADED ||
-            downloadStatus == LibraryDownloadStatus.FAILED ||
-            downloadStatus == LibraryDownloadStatus.CANCELLED) return false
+        if (downloadStatus == FavoritesDownloadStatus.NOT_DOWNLOADED ||
+            downloadStatus == FavoritesDownloadStatus.FAILED ||
+            downloadStatus == FavoritesDownloadStatus.CANCELLED) return false
         // Read recording ID directly from download manager metadata — works for all downloads
         // regardless of whether they predate the preferredRecordingId DB column.
         val downloadedRecordingId = mediaDownloadManager.getRecordingIdForShow(showId) ?: return false
@@ -571,9 +571,9 @@ class PlaylistServiceImpl @Inject constructor(
 
     override suspend fun confirmRecordingChange(showId: String, recordingId: String) {
         Log.d(TAG, "confirmRecordingChange($showId, $recordingId) - persisting preference and removing old download")
-        libraryService.setPreferredRecording(showId, recordingId)
+        favoritesService.setPreferredRecording(showId, recordingId)
         mediaDownloadManager.removeShowDownloads(showId)
-        libraryService.setDownloadedRecording(showId, null)
+        favoritesService.setDownloadedRecording(showId, null)
         Log.d(TAG, "Recording change confirmed: preference set, old download removed")
     }
     
@@ -634,7 +634,7 @@ class PlaylistServiceImpl @Inject constructor(
     /** Show IDs that have been fully downloaded (all tracks completed). */
     private fun getCompletedDownloadShowIds(): Set<String> =
         mediaDownloadManager.getAllDownloadShowIds()
-            .filter { mediaDownloadManager.getShowDownloadStatus(it) == LibraryDownloadStatus.COMPLETED }
+            .filter { mediaDownloadManager.getShowDownloadStatus(it) == FavoritesDownloadStatus.COMPLETED }
             .toSet()
 
     /**

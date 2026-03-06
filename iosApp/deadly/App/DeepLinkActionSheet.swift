@@ -4,7 +4,7 @@ struct DeepLinkActionSheet: View {
     let deepLink: DeepLink
     let onPlayNow: () -> Void
     let onGoToShow: () -> Void
-    let onAddToLibrary: () -> Void
+    let onAddToFavorites: () -> Void
     let onIgnore: () -> Void
 
     @State private var show: Show?
@@ -81,8 +81,8 @@ struct DeepLinkActionSheet: View {
                     Button(action: onGoToShow) {
                         Label("Go to Show", systemImage: "music.note.list")
                     }
-                    Button(action: onAddToLibrary) {
-                        Label("Add to Library", systemImage: "heart")
+                    Button(action: onAddToFavorites) {
+                        Label("Add to Favorites", systemImage: "heart")
                     }
                     Button(role: .destructive, action: onIgnore) {
                         Label("Ignore", systemImage: "xmark")

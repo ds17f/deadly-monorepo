@@ -65,8 +65,8 @@ struct SearchServiceTests {
             bestRecordingId: nil,
             averageRating: averageRating,
             totalReviews: totalReviews,
-            isInLibrary: false,
-            libraryAddedAt: nil,
+            isFavorite: false,
+            favoritedAt: nil,
             coverImageUrl: nil,
             createdAt: now,
             updatedAt: now

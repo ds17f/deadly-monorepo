@@ -161,7 +161,7 @@ dependencies {
     implementation(project(":core:recent"))
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
-    implementation(project(":core:api:library"))
+    implementation(project(":core:api:favorites"))
 
     // Feature Dependencies
     implementation(project(":feature:splash"))
@@ -170,7 +170,7 @@ dependencies {
     implementation(project(":feature:playlist"))
     implementation(project(":feature:player"))
     implementation(project(":feature:miniplayer"))
-    implementation(project(":feature:library"))
+    implementation(project(":feature:favorites"))
     implementation(project(":feature:collections"))
     implementation(project(":feature:settings"))
     implementation(project(":feature:downloads"))

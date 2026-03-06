@@ -7,7 +7,7 @@ protocol DownloadService: AnyObject {
     var allProgress: [String: ShowDownloadProgress] { get }
 
     /// Get the download status for a show.
-    func downloadStatus(for showId: String) -> LibraryDownloadStatus
+    func downloadStatus(for showId: String) -> FavoritesDownloadStatus
 
     /// Check if a track is downloaded.
     func isTrackDownloaded(recordingId: String, trackFilename: String) -> Bool

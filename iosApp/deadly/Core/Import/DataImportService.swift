@@ -13,7 +13,7 @@ struct DataImportService: Sendable {
     let collectionsDAO: CollectionsDAO
     let showSearchDAO: ShowSearchDAO
     let dataVersionDAO: DataVersionDAO
-    let libraryDAO: LibraryDAO
+    let favoritesDAO: FavoritesDAO
 
     private static let batchSize = 500
 
@@ -85,8 +85,8 @@ struct DataImportService: Sendable {
         }
         emit(ImportProgress(phase: .readingShows, processed: showFiles.count, total: showFiles.count, message: "Parsed \(showsMap.count) shows"))
 
-        // 5. PRESERVE library (CASCADE on shows FK will delete library_shows on clear)
-        let savedLibrary = (try? libraryDAO.fetchAll()) ?? []
+        // 5. PRESERVE favorites (CASCADE on shows FK will delete favorite_shows on clear)
+        let savedFavorites = (try? favoritesDAO.fetchAll()) ?? []
 
         // 6. CLEAR existing data
         try showSearchDAO.clearAll()
@@ -181,11 +181,11 @@ struct DataImportService: Sendable {
         )
         try dataVersionDAO.upsert(versionRecord)
 
-        // Restore library entries (filter to shows that still exist after re-import)
-        if !savedLibrary.isEmpty {
+        // Restore favorites entries (filter to shows that still exist after re-import)
+        if !savedFavorites.isEmpty {
             let existingIds = Set((try? showDAO.fetchAll().map(\.showId)) ?? [])
-            let toRestore = savedLibrary.filter { existingIds.contains($0.showId) }
-            try? libraryDAO.addAll(toRestore)
+            let toRestore = savedFavorites.filter { existingIds.contains($0.showId) }
+            try? favoritesDAO.addAll(toRestore)
         }
 
         emit(ImportProgress(

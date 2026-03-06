@@ -13,7 +13,7 @@ data class MigrationData(
     val format: String = "deadly-migration",
     val createdAt: Long,
     val appVersion: String,
-    val library: List<MigrationLibraryShow>,
+    val library: List<MigrationFavoriteShow>,
     val recentPlays: List<MigrationRecentShow>,
     val lastPlayed: MigrationLastPlayed? = null,
     val reviews: List<MigrationShowReview>? = null,
@@ -22,7 +22,7 @@ data class MigrationData(
 )
 
 @Serializable
-data class MigrationLibraryShow(
+data class MigrationFavoriteShow(
     val date: String,
     val venue: String? = null,
     val location: String? = null,
@@ -85,7 +85,7 @@ data class MigrationPlayerTag(
 )
 
 data class MigrationResult(
-    val libraryImported: Int,
+    val favoritesImported: Int,
     val recentImported: Int,
     val skipped: Int,
     val errors: List<String>

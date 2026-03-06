@@ -2,7 +2,7 @@ package com.grateful.deadly
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.grateful.deadly.core.api.library.LibraryService
+import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.miniplayer.LastPlayedTrackService
@@ -22,7 +22,7 @@ class AppViewModel @Inject constructor(
     appPreferences: AppPreferences,
     private val lastPlayedTrackService: LastPlayedTrackService,
     private val showRepository: ShowRepository,
-    private val libraryService: LibraryService
+    private val favoritesService: FavoritesService
 ) : ViewModel() {
 
     val isOffline: StateFlow<Boolean> = combine(
@@ -40,7 +40,7 @@ class AppViewModel @Inject constructor(
 
     suspend fun getShow(showId: String): Show? = showRepository.getShowById(showId)
 
-    fun addToLibrary(showId: String) {
-        viewModelScope.launch { libraryService.addToLibrary(showId) }
+    fun addToFavorites(showId: String) {
+        viewModelScope.launch { favoritesService.addToFavorites(showId) }
     }
 }

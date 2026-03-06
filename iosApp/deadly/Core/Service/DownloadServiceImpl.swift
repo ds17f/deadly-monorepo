@@ -14,7 +14,7 @@ final class DownloadServiceImpl: DownloadService {
 
     private let archiveClient: any ArchiveMetadataClient
     private let showRepository: any ShowRepository
-    private let libraryDAO: LibraryDAO
+    private let favoritesDAO: FavoritesDAO
     private let downloadTaskDAO: DownloadTaskDAO
     private let storageManager: DownloadStorageManager
 
@@ -33,13 +33,13 @@ final class DownloadServiceImpl: DownloadService {
     nonisolated init(
         archiveClient: some ArchiveMetadataClient,
         showRepository: some ShowRepository,
-        libraryDAO: LibraryDAO,
+        favoritesDAO: FavoritesDAO,
         downloadTaskDAO: DownloadTaskDAO,
         storageManager: DownloadStorageManager
     ) {
         self.archiveClient = archiveClient
         self.showRepository = showRepository
-        self.libraryDAO = libraryDAO
+        self.favoritesDAO = favoritesDAO
         self.downloadTaskDAO = downloadTaskDAO
         self.storageManager = storageManager
 
@@ -105,7 +105,7 @@ final class DownloadServiceImpl: DownloadService {
 
     // MARK: - DownloadService
 
-    func downloadStatus(for showId: String) -> LibraryDownloadStatus {
+    func downloadStatus(for showId: String) -> FavoritesDownloadStatus {
         allProgress[showId]?.status ?? .notDownloaded
     }
 
@@ -178,11 +178,11 @@ final class DownloadServiceImpl: DownloadService {
         // Persist to database
         try downloadTaskDAO.insertAll(records)
 
-        // Update library record
+        // Update favorites record
         do {
-            try libraryDAO.updateDownloadedRecording(showId, recordingId: resolvedRecordingId, format: format)
+            try favoritesDAO.updateDownloadedRecording(showId, recordingId: resolvedRecordingId, format: format)
         } catch {
-            logger.error("Failed to update library record: \(error.localizedDescription)")
+            logger.error("Failed to update favorites record: \(error.localizedDescription)")
         }
 
         // Enqueue downloads and start the first batch
@@ -253,11 +253,11 @@ final class DownloadServiceImpl: DownloadService {
             logger.error("Failed to delete files for show: \(error.localizedDescription)")
         }
 
-        // Clear library download info
+        // Clear favorites download info
         do {
-            try libraryDAO.clearDownloadedRecording(showId)
+            try favoritesDAO.clearDownloadedRecording(showId)
         } catch {
-            logger.error("Failed to clear library download info: \(error.localizedDescription)")
+            logger.error("Failed to clear favorites download info: \(error.localizedDescription)")
         }
 
         // Update progress
@@ -270,7 +270,7 @@ final class DownloadServiceImpl: DownloadService {
     }
 
     func downloadedRecordingId(for showId: String) -> String? {
-        try? libraryDAO.fetchDownloadedRecordingId(showId)
+        try? favoritesDAO.fetchDownloadedRecordingId(showId)
     }
 
     func removeAll() {
@@ -293,9 +293,9 @@ final class DownloadServiceImpl: DownloadService {
 
         for showId in allProgress.keys {
             do {
-                try libraryDAO.clearDownloadedRecording(showId)
+                try favoritesDAO.clearDownloadedRecording(showId)
             } catch {
-                logger.error("Failed to clear library record for \(showId): \(error.localizedDescription)")
+                logger.error("Failed to clear favorites record for \(showId): \(error.localizedDescription)")
             }
         }
 
@@ -492,7 +492,7 @@ final class DownloadServiceImpl: DownloadService {
         let overallProgress: Float = tasks.isEmpty ? 0 : Float(tracksCompleted) / Float(tasks.count)
 
         let states = tasks.map { $0.downloadState }
-        let status: LibraryDownloadStatus
+        let status: FavoritesDownloadStatus
         if states.allSatisfy({ $0 == .completed }) {
             status = .completed
         } else if states.contains(.failed) {

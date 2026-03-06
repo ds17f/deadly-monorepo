@@ -28,8 +28,10 @@ class AppPreferences @Inject constructor(
 
     companion object {
         private const val KEY_SHOW_ONLY_RECORDED = "show_only_recorded_shows"
-        private const val KEY_LIBRARY_DISPLAY_MODE = "library_display_mode"
+        private const val KEY_FAVORITES_DISPLAY_MODE = "favorites_display_mode"
         private const val KEY_FORCE_ONLINE = "force_online"
+        // Legacy key kept for migration read-back
+        private const val KEY_LIBRARY_DISPLAY_MODE_LEGACY = "library_display_mode"
     }
 
     private val _showOnlyRecordedShows = MutableStateFlow(
@@ -44,16 +46,18 @@ class AppPreferences @Inject constructor(
         _showOnlyRecordedShows.value = value
     }
 
-    private val _libraryDisplayMode = MutableStateFlow(
-        prefs.getString(KEY_LIBRARY_DISPLAY_MODE, "LIST") ?: "LIST"
+    private val _favoritesDisplayMode = MutableStateFlow(
+        prefs.getString(KEY_FAVORITES_DISPLAY_MODE, null)
+            ?: prefs.getString(KEY_LIBRARY_DISPLAY_MODE_LEGACY, null)
+            ?: "LIST"
     )
 
-    /** Persisted grid/list display mode for the library screen ("LIST" or "GRID"). */
-    val libraryDisplayMode: StateFlow<String> = _libraryDisplayMode.asStateFlow()
+    /** Persisted grid/list display mode for the favorites screen ("LIST" or "GRID"). */
+    val favoritesDisplayMode: StateFlow<String> = _favoritesDisplayMode.asStateFlow()
 
-    fun setLibraryDisplayMode(mode: String) {
-        prefs.edit().putString(KEY_LIBRARY_DISPLAY_MODE, mode).apply()
-        _libraryDisplayMode.value = mode
+    fun setFavoritesDisplayMode(mode: String) {
+        prefs.edit().putString(KEY_FAVORITES_DISPLAY_MODE, mode).apply()
+        _favoritesDisplayMode.value = mode
     }
 
     private val _forceOnline = MutableStateFlow(

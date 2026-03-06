@@ -66,8 +66,8 @@ class SearchServiceStub @Inject constructor() : SearchService {
             recordingCount = 1,
             averageRating = 4.8f,
             totalReviews = 245,
-            isInLibrary = false,
-            libraryAddedAt = null
+            isFavorite = false,
+            favoritedAt = null
         ),
         
         // Europe '72 Classic
@@ -85,8 +85,8 @@ class SearchServiceStub @Inject constructor() : SearchService {
             recordingCount = 1,
             averageRating = 4.6f,
             totalReviews = 189,
-            isInLibrary = false,
-            libraryAddedAt = null
+            isFavorite = false,
+            favoritedAt = null
         ),
         
         // Woodstock 1969
@@ -104,8 +104,8 @@ class SearchServiceStub @Inject constructor() : SearchService {
             recordingCount = 1,
             averageRating = 4.2f,
             totalReviews = 156,
-            isInLibrary = false,
-            libraryAddedAt = null
+            isFavorite = false,
+            favoritedAt = null
         ),
         
         // Dick's Picks era
@@ -123,8 +123,8 @@ class SearchServiceStub @Inject constructor() : SearchService {
             recordingCount = 1,
             averageRating = 4.7f,
             totalReviews = 203,
-            isInLibrary = false,
-            libraryAddedAt = null
+            isFavorite = false,
+            favoritedAt = null
         ),
         
         // 1990s era
@@ -142,8 +142,8 @@ class SearchServiceStub @Inject constructor() : SearchService {
             recordingCount = 1,
             averageRating = 4.1f,
             totalReviews = 298,
-            isInLibrary = false,
-            libraryAddedAt = null
+            isFavorite = false,
+            favoritedAt = null
         ),
         
         // Fillmore East classics
@@ -161,8 +161,8 @@ class SearchServiceStub @Inject constructor() : SearchService {
             recordingCount = 1,
             averageRating = 4.5f,
             totalReviews = 167,
-            isInLibrary = false,
-            libraryAddedAt = null
+            isFavorite = false,
+            favoritedAt = null
         ),
         
         // Fillmore West
@@ -180,8 +180,8 @@ class SearchServiceStub @Inject constructor() : SearchService {
             recordingCount = 1,
             averageRating = 4.3f,
             totalReviews = 134,
-            isInLibrary = false,
-            libraryAddedAt = null
+            isFavorite = false,
+            favoritedAt = null
         ),
         
         // More 1977 shows
@@ -199,8 +199,8 @@ class SearchServiceStub @Inject constructor() : SearchService {
             recordingCount = 1,
             averageRating = 4.4f,
             totalReviews = 178,
-            isInLibrary = false,
-            libraryAddedAt = null
+            isFavorite = false,
+            favoritedAt = null
         )
     )
     

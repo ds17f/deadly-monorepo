@@ -414,7 +414,7 @@ object FilterTrees {
     
     /**
      * Build simple home filter tree starting with "All"
-     * Future expansion ready for "Recent", "Popular", "Your Library", etc.
+     * Future expansion ready for "Recent", "Popular", "Favorites", etc.
      */
     fun buildHomeFiltersTree(): List<FilterNode> {
         return listOf(
@@ -427,7 +427,7 @@ object FilterTrees {
                 //     FilterNode("recent_month", "This Month")
                 // )),
                 // FilterNode("popular", "Popular"),
-                // FilterNode("your_library", "Your Library")
+                // FilterNode("your_library", "Favorites")
             )
         )
     }

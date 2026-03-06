@@ -39,8 +39,8 @@ struct ShowImporter {
             bestRecordingId: data.bestRecording,
             averageRating: data.avgRating > 0 ? data.avgRating : nil,
             totalReviews: totalReviews,
-            isInLibrary: false,
-            libraryAddedAt: nil,
+            isFavorite: false,
+            favoritedAt: nil,
             coverImageUrl: coverImageUrl,
             createdAt: now,
             updatedAt: now

@@ -1,13 +1,13 @@
 package com.grateful.deadly.core.database.service
 
 import android.util.Log
-import com.grateful.deadly.core.database.dao.LibraryDao
+import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.dao.TrackReviewDao
-import com.grateful.deadly.core.database.entities.LibraryShowEntity
+import com.grateful.deadly.core.database.entities.FavoriteShowEntity
 import com.grateful.deadly.core.database.entities.RecordingPreferenceEntity
 import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
 import com.grateful.deadly.core.database.entities.ShowReviewEntity
@@ -21,7 +21,7 @@ import javax.inject.Singleton
 
 @Singleton
 class BackupImportExportService @Inject constructor(
-    @AppDatabase private val libraryDao: LibraryDao,
+    @AppDatabase private val favoritesDao: FavoritesDao,
     @AppDatabase private val showDao: ShowDao,
     @AppDatabase private val showReviewDao: ShowReviewDao,
     @AppDatabase private val trackReviewDao: TrackReviewDao,
@@ -41,11 +41,11 @@ class BackupImportExportService @Inject constructor(
     // MARK: - Export (v3)
 
     suspend fun export(): String {
-        val libraryShows = libraryDao.getAllLibraryShows()
-        val favoriteShows = libraryShows.map { entity ->
+        val favoriteShowEntities = favoritesDao.getAllFavoriteShows()
+        val favoriteShows = favoriteShowEntities.map { entity ->
             FavoriteShowEntry(
                 showId = entity.showId,
-                addedAt = entity.addedToLibraryAt,
+                addedAt = entity.addedToFavoritesAt,
                 isPinned = entity.isPinned,
                 lastAccessedAt = entity.lastAccessedAt,
                 tags = entity.tags?.split(",")?.map { it.trim() }?.filter { it.isNotEmpty() }
@@ -121,7 +121,7 @@ class BackupImportExportService @Inject constructor(
                 // Legacy migration format — delegate to existing service
                 val result = migrationImportService.importFromJson(jsonString)
                 BackupImportResult(
-                    favoritesImported = result.libraryImported,
+                    favoritesImported = result.favoritesImported,
                     favoritesSkipped = result.skipped,
                     reviewsImported = 0,
                     tracksImported = 0,
@@ -156,15 +156,15 @@ class BackupImportExportService @Inject constructor(
                 notFound++
                 continue
             }
-            if (libraryDao.isShowInLibrary(fav.showId)) {
+            if (favoritesDao.isShowFavorite(fav.showId)) {
                 favoritesSkipped++
                 continue
             }
             try {
-                libraryDao.addToLibrary(
-                    LibraryShowEntity(
+                favoritesDao.addToFavorites(
+                    FavoriteShowEntity(
                         showId = fav.showId,
-                        addedToLibraryAt = fav.addedAt,
+                        addedToFavoritesAt = fav.addedAt,
                         isPinned = fav.isPinned,
                         lastAccessedAt = fav.lastAccessedAt,
                         tags = fav.tags?.joinToString(",")

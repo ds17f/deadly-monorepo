@@ -57,9 +57,9 @@ data class ShowEntity(
     val averageRating: Float?,
     val totalReviews: Int = 0,
     
-    // Library status (for future use)
-    val isInLibrary: Boolean = false,
-    val libraryAddedAt: Long?,
+    // Favorite status
+    val isFavorite: Boolean = false,
+    val favoritedAt: Long?,
     
     // Cover art (resolved from ticket/photo images during import)
     val coverImageUrl: String? = null,

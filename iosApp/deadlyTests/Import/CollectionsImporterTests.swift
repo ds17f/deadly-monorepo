@@ -21,7 +21,7 @@ struct CollectionsImporterTests {
             country: "USA", locationRaw: nil, setlistStatus: nil, setlistRaw: nil,
             songList: nil, lineupStatus: nil, lineupRaw: nil, memberList: nil,
             showSequence: 1, recordingsRaw: nil, recordingCount: 0, bestRecordingId: nil,
-            averageRating: nil, totalReviews: 0, isInLibrary: false, libraryAddedAt: nil,
+            averageRating: nil, totalReviews: 0, isFavorite: false, favoritedAt: nil,
             coverImageUrl: nil, createdAt: now, updatedAt: now
         )
         try ShowDAO(database: db).insert(record)

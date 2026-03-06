@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
  * and Result types for proper error handling. Designed through UI-first
  * development where service requirements are discovered by building UI.
  * 
- * Following established patterns from LibraryService and DownloadService.
+ * Following established patterns from FavoritesService and DownloadService.
  */
 interface SearchService {
     

@@ -77,7 +77,7 @@ struct ShowImporterTests {
         #expect(record.totalReviews == 105)
         #expect(record.recordingCount == 3)
         #expect(record.bestRecordingId == "gd77-05-08.sbd.hicks.4982.sbeok.shnf")
-        #expect(record.isInLibrary == false)
+        #expect(record.isFavorite == false)
         #expect(record.createdAt == 1000)
         #expect(record.updatedAt == 1000)
     }

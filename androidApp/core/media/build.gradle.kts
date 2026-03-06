@@ -40,7 +40,7 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":core:api:recent"))
     implementation(project(":core:api:collections"))
-    implementation(project(":core:api:library"))
+    implementation(project(":core:api:favorites"))
     implementation(project(":core:api:search"))
     
     implementation("androidx.core:core-ktx:1.12.0")

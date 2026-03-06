@@ -9,7 +9,7 @@ import androidx.media3.exoplayer.offline.DownloadManager
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import com.grateful.deadly.core.domain.repository.ShowRepository
-import com.grateful.deadly.core.model.LibraryDownloadStatus
+import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.model.ShowDownloadProgress
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -204,20 +204,20 @@ class MediaDownloadManager @Inject constructor(
     /**
      * Get the current download status for a show.
      */
-    fun getShowDownloadStatus(showId: String): LibraryDownloadStatus {
+    fun getShowDownloadStatus(showId: String): FavoritesDownloadStatus {
         val downloads = getDownloadsForShow(showId)
-        if (downloads.isEmpty()) return LibraryDownloadStatus.NOT_DOWNLOADED
+        if (downloads.isEmpty()) return FavoritesDownloadStatus.NOT_DOWNLOADED
 
         val states = downloads.map { it.state }
 
         return when {
-            states.all { it == Download.STATE_COMPLETED } -> LibraryDownloadStatus.COMPLETED
-            states.any { it == Download.STATE_FAILED } -> LibraryDownloadStatus.FAILED
-            states.any { it == Download.STATE_DOWNLOADING } -> LibraryDownloadStatus.DOWNLOADING
-            states.any { it == Download.STATE_QUEUED } -> LibraryDownloadStatus.QUEUED
-            states.any { it == Download.STATE_STOPPED } -> LibraryDownloadStatus.PAUSED
-            states.any { it == Download.STATE_REMOVING } -> LibraryDownloadStatus.NOT_DOWNLOADED
-            else -> LibraryDownloadStatus.NOT_DOWNLOADED
+            states.all { it == Download.STATE_COMPLETED } -> FavoritesDownloadStatus.COMPLETED
+            states.any { it == Download.STATE_FAILED } -> FavoritesDownloadStatus.FAILED
+            states.any { it == Download.STATE_DOWNLOADING } -> FavoritesDownloadStatus.DOWNLOADING
+            states.any { it == Download.STATE_QUEUED } -> FavoritesDownloadStatus.QUEUED
+            states.any { it == Download.STATE_STOPPED } -> FavoritesDownloadStatus.PAUSED
+            states.any { it == Download.STATE_REMOVING } -> FavoritesDownloadStatus.NOT_DOWNLOADED
+            else -> FavoritesDownloadStatus.NOT_DOWNLOADED
         }
     }
 
@@ -356,7 +356,7 @@ class MediaDownloadManager @Inject constructor(
         if (downloads.isEmpty()) {
             return ShowDownloadProgress(
                 showId = showId,
-                status = LibraryDownloadStatus.NOT_DOWNLOADED,
+                status = FavoritesDownloadStatus.NOT_DOWNLOADED,
                 overallProgress = 0f,
                 downloadedBytes = 0L,
                 totalBytes = 0L,
@@ -376,13 +376,13 @@ class MediaDownloadManager @Inject constructor(
 
         val states = downloads.map { it.state }
         val status = when {
-            states.all { it == Download.STATE_COMPLETED } -> LibraryDownloadStatus.COMPLETED
-            states.any { it == Download.STATE_FAILED } -> LibraryDownloadStatus.FAILED
-            states.any { it == Download.STATE_DOWNLOADING } -> LibraryDownloadStatus.DOWNLOADING
-            states.any { it == Download.STATE_QUEUED } -> LibraryDownloadStatus.QUEUED
-            states.any { it == Download.STATE_STOPPED } -> LibraryDownloadStatus.PAUSED
-            states.any { it == Download.STATE_REMOVING } -> LibraryDownloadStatus.NOT_DOWNLOADED
-            else -> LibraryDownloadStatus.NOT_DOWNLOADED
+            states.all { it == Download.STATE_COMPLETED } -> FavoritesDownloadStatus.COMPLETED
+            states.any { it == Download.STATE_FAILED } -> FavoritesDownloadStatus.FAILED
+            states.any { it == Download.STATE_DOWNLOADING } -> FavoritesDownloadStatus.DOWNLOADING
+            states.any { it == Download.STATE_QUEUED } -> FavoritesDownloadStatus.QUEUED
+            states.any { it == Download.STATE_STOPPED } -> FavoritesDownloadStatus.PAUSED
+            states.any { it == Download.STATE_REMOVING } -> FavoritesDownloadStatus.NOT_DOWNLOADED
+            else -> FavoritesDownloadStatus.NOT_DOWNLOADED
         }
 
         return ShowDownloadProgress(

@@ -58,8 +58,8 @@ struct RecentShowsServiceTests {
             bestRecordingId: nil,
             averageRating: nil,
             totalReviews: 0,
-            isInLibrary: false,
-            libraryAddedAt: nil,
+            isFavorite: false,
+            favoritedAt: nil,
             coverImageUrl: nil,
             createdAt: now,
             updatedAt: now

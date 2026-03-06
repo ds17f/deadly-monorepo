@@ -4,8 +4,8 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.playlist.PlaylistService
-import com.grateful.deadly.core.api.library.LibraryService
-import com.grateful.deadly.core.api.library.ReviewService
+import com.grateful.deadly.core.api.favorites.FavoritesService
+import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.ShowReview
@@ -43,7 +43,7 @@ import javax.inject.Named
 class PlaylistViewModel @Inject constructor(
     private val playlistService: PlaylistService,
     private val mediaControllerRepository: MediaControllerRepository,
-    private val libraryService: LibraryService,
+    private val favoritesService: FavoritesService,
     private val recentShowsService: RecentShowsService,
     private val reviewService: ReviewService,
     networkMonitor: NetworkMonitor
@@ -146,7 +146,7 @@ class PlaylistViewModel @Inject constructor(
                     if (showId != null) {
                         playlistService.observeShowDownloadProgress(showId)
                     } else {
-                        flowOf(ShowDownloadProgress("", LibraryDownloadStatus.NOT_DOWNLOADED, 0f, 0L, 0L, 0, 0))
+                        flowOf(ShowDownloadProgress("", FavoritesDownloadStatus.NOT_DOWNLOADED, 0f, 0L, 0L, 0, 0))
                     }
                 }
                 .debounce(500)
@@ -160,10 +160,10 @@ class PlaylistViewModel @Inject constructor(
     }
     
     // Combined library + download state to keep main combine at 5 flows
-    private data class LibraryAndDownloadState(
-        val isInLibrary: Boolean = false,
+    private data class FavoriteAndDownloadState(
+        val isFavorite: Boolean = false,
         val downloadProgress: Float? = null,
-        val downloadStatus: LibraryDownloadStatus? = null
+        val downloadStatus: FavoritesDownloadStatus? = null
     )
 
     // Inner combine result to work around Kotlin's 5-flow combine limit
@@ -172,7 +172,7 @@ class PlaylistViewModel @Inject constructor(
         val rawTracks: List<PlaylistTrackViewModel>,
         val isPlaying: Boolean,
         val currentTrackInfo: CurrentTrackInfo?,
-        val libraryAndDownload: LibraryAndDownloadState
+        val favoriteAndDownload: FavoriteAndDownloadState
     )
 
     // Reactive UI state that combines base state with MediaController state and library status
@@ -188,41 +188,41 @@ class PlaylistViewModel @Inject constructor(
                 .flatMapLatest { showId ->
                     if (showId != null) {
                         combine(
-                            libraryService.isShowInLibrary(showId),
+                            favoritesService.isShowFavorite(showId),
                             playlistService.observeShowDownloadProgress(showId)
-                        ) { inLibrary, progress ->
+                        ) { inFavorites, progress ->
                             val mappedProgress = when (progress.status) {
-                                LibraryDownloadStatus.NOT_DOWNLOADED -> null
-                                LibraryDownloadStatus.QUEUED -> 0.0f
-                                LibraryDownloadStatus.DOWNLOADING -> progress.overallProgress
-                                LibraryDownloadStatus.COMPLETED -> 1.0f
-                                LibraryDownloadStatus.PAUSED -> progress.overallProgress
-                                LibraryDownloadStatus.FAILED -> null
-                                LibraryDownloadStatus.CANCELLED -> null
+                                FavoritesDownloadStatus.NOT_DOWNLOADED -> null
+                                FavoritesDownloadStatus.QUEUED -> 0.0f
+                                FavoritesDownloadStatus.DOWNLOADING -> progress.overallProgress
+                                FavoritesDownloadStatus.COMPLETED -> 1.0f
+                                FavoritesDownloadStatus.PAUSED -> progress.overallProgress
+                                FavoritesDownloadStatus.FAILED -> null
+                                FavoritesDownloadStatus.CANCELLED -> null
                             }
                             val mappedStatus = when (progress.status) {
-                                LibraryDownloadStatus.NOT_DOWNLOADED,
-                                LibraryDownloadStatus.FAILED,
-                                LibraryDownloadStatus.CANCELLED -> null
+                                FavoritesDownloadStatus.NOT_DOWNLOADED,
+                                FavoritesDownloadStatus.FAILED,
+                                FavoritesDownloadStatus.CANCELLED -> null
                                 else -> progress.status
                             }
-                            LibraryAndDownloadState(
-                                isInLibrary = inLibrary,
+                            FavoriteAndDownloadState(
+                                isFavorite = inFavorites,
                                 downloadProgress = mappedProgress,
                                 downloadStatus = mappedStatus
                             )
                         }
                     } else {
-                        flowOf(LibraryAndDownloadState())
+                        flowOf(FavoriteAndDownloadState())
                     }
                 }
-        ) { baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload ->
-            CorePlaylistState(baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload)
+        ) { baseState, rawTracks, isPlaying, currentTrackInfo, favoriteAndDownload ->
+            CorePlaylistState(baseState, rawTracks, isPlaying, currentTrackInfo, favoriteAndDownload)
         },
         _thumbsUpTitles,
         _hasUserReview
     ) { core, thumbsUp, hasUserReview ->
-        val (baseState, rawTracks, isPlaying, currentTrackInfo, libraryAndDownload) = core
+        val (baseState, rawTracks, isPlaying, currentTrackInfo, favoriteAndDownload) = core
 
         // Update track data with current playing state
         val updatedTracks = rawTracks.map { track ->
@@ -248,13 +248,13 @@ class PlaylistViewModel @Inject constructor(
         Log.v(TAG, "Play button logic: playlistShow='$playlistShowId' vs mediaShow='$mediaShowId'")
         Log.v(TAG, "Play button logic: playlistRecording='$playlistRecordingId' vs mediaRecording='$mediaRecordingId'")
         Log.v(TAG, "Play button logic: isCurrentShowAndRecording=$isCurrentShowAndRecording, isPlaying=$isPlaying")
-        Log.v(TAG, "Library status: showId='$playlistShowId', isInLibrary=${libraryAndDownload.isInLibrary}")
+        Log.v(TAG, "Favorites status: showId='$playlistShowId', isFavorite=${favoriteAndDownload.isFavorite}")
 
         // Update showData with current library and download status
         val updatedShowData = baseState.showData?.copy(
-            isInLibrary = libraryAndDownload.isInLibrary,
-            downloadProgress = libraryAndDownload.downloadProgress,
-            downloadStatus = libraryAndDownload.downloadStatus
+            isFavorite = favoriteAndDownload.isFavorite,
+            downloadProgress = favoriteAndDownload.downloadProgress,
+            downloadStatus = favoriteAndDownload.downloadStatus
         )
 
         baseState.copy(
@@ -479,12 +479,12 @@ class PlaylistViewModel @Inject constructor(
     /**
      * Add to library
      */
-    fun addToLibrary() {
+    fun addToFavorites() {
         viewModelScope.launch {
             try {
                 val currentShow = _baseUiState.value.showData
                 if (currentShow?.showId != null) {
-                    libraryService.addToLibrary(currentShow.showId)
+                    favoritesService.addToFavorites(currentShow.showId)
                         .onSuccess {
                             Log.d(TAG, "Successfully added show ${currentShow.showId} to library")
                             // UI will update automatically via reactive StateFlow
@@ -509,16 +509,16 @@ class PlaylistViewModel @Inject constructor(
         val status = showData.downloadStatus
 
         when (status) {
-            LibraryDownloadStatus.COMPLETED -> {
+            FavoritesDownloadStatus.COMPLETED -> {
                 // Already downloaded — show removal confirmation
                 _baseUiState.value = _baseUiState.value.copy(showRemoveDownloadDialog = true)
             }
-            LibraryDownloadStatus.DOWNLOADING,
-            LibraryDownloadStatus.QUEUED -> {
+            FavoritesDownloadStatus.DOWNLOADING,
+            FavoritesDownloadStatus.QUEUED -> {
                 // Active download — pause
                 playlistService.pauseShowDownload()
             }
-            LibraryDownloadStatus.PAUSED -> {
+            FavoritesDownloadStatus.PAUSED -> {
                 // Paused — resume
                 playlistService.resumeShowDownload()
             }
@@ -543,7 +543,7 @@ class PlaylistViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val showId = _baseUiState.value.showData?.showId ?: return@launch
-                libraryService.cancelShowDownloads(showId)
+                favoritesService.cancelShowDownloads(showId)
                     .onSuccess {
                         Log.d(TAG, "Successfully removed downloads for show $showId")
                         delay(500) // Let ExoPlayer async cache removal complete
@@ -566,25 +566,25 @@ class PlaylistViewModel @Inject constructor(
     }
 
     /**
-     * Handle library actions from LibraryButton
+     * Handle favorites actions
      */
-    fun handleLibraryAction(action: LibraryAction) {
+    fun handleFavoritesAction(action: FavoritesAction) {
         when (action) {
-            LibraryAction.ADD_TO_LIBRARY -> addToLibrary()
-            LibraryAction.REMOVE_FROM_LIBRARY -> removeFromLibrary()
-            LibraryAction.REMOVE_WITH_DOWNLOADS -> removeFromLibraryWithDownloads()
+            FavoritesAction.ADD_TO_FAVORITES -> addToFavorites()
+            FavoritesAction.REMOVE_FROM_FAVORITES -> removeFromFavorites()
+            FavoritesAction.REMOVE_WITH_DOWNLOADS -> removeFromFavoritesWithDownloads()
         }
     }
     
     /**
      * Remove from library
      */
-    private fun removeFromLibrary() {
+    private fun removeFromFavorites() {
         viewModelScope.launch {
             try {
                 val currentShow = _baseUiState.value.showData
                 if (currentShow?.showId != null) {
-                    libraryService.removeFromLibrary(currentShow.showId)
+                    favoritesService.removeFromFavorites(currentShow.showId)
                         .onSuccess {
                             Log.d(TAG, "Successfully removed show ${currentShow.showId} from library")
                             // UI will update automatically via reactive StateFlow
@@ -604,16 +604,16 @@ class PlaylistViewModel @Inject constructor(
     /**
      * Remove from library with downloads
      */
-    private fun removeFromLibraryWithDownloads() {
+    private fun removeFromFavoritesWithDownloads() {
         viewModelScope.launch {
             try {
                 val currentShow = _baseUiState.value.showData
                 if (currentShow?.showId != null) {
                     // First cancel any downloads for this show
-                    libraryService.cancelShowDownloads(currentShow.showId)
+                    favoritesService.cancelShowDownloads(currentShow.showId)
                         .onSuccess {
                             // Then remove from library
-                            libraryService.removeFromLibrary(currentShow.showId)
+                            favoritesService.removeFromFavorites(currentShow.showId)
                                 .onSuccess {
                                     Log.d(TAG, "Successfully removed show ${currentShow.showId} from library with downloads")
                                     delay(500) // Let ExoPlayer async cache removal complete
@@ -970,12 +970,12 @@ class PlaylistViewModel @Inject constructor(
                 loadTrackListAsync()
 
                 // Always persist recording preference (independent of library)
-                libraryService.setPreferredRecording(showId, recordingId)
+                favoritesService.setPreferredRecording(showId, recordingId)
                 Log.d(TAG, "Persisted preferred recording for $showId: $recordingId")
 
                 // Download conflict check only applies to library shows
-                val isInLibrary = uiState.value.showData?.isInLibrary ?: false
-                if (isInLibrary) {
+                val isFavorite = uiState.value.showData?.isFavorite ?: false
+                if (isFavorite) {
                     val hasConflict = playlistService.hasDownloadConflict(showId, recordingId)
                     if (hasConflict) {
                         Log.d(TAG, "Download conflict detected for $showId — showing confirmation dialog")

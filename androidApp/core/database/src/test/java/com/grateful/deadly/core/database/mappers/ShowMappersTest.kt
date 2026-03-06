@@ -69,8 +69,8 @@ class ShowMappersTest {
         averageRating = 4.5f,
         totalReviews = 100,
         coverImageUrl = coverImageUrl,
-        isInLibrary = true,
-        libraryAddedAt = 1000L,
+        isFavorite = true,
+        favoritedAt = 1000L,
         createdAt = 2000L,
         updatedAt = 3000L
     )
@@ -108,8 +108,8 @@ class ShowMappersTest {
         assertEquals(entity.averageRating, result.averageRating)
         assertEquals(entity.totalReviews, result.totalReviews)
         assertEquals(entity.coverImageUrl, result.coverImageUrl)
-        assertEquals(entity.isInLibrary, result.isInLibrary)
-        assertEquals(entity.libraryAddedAt, result.libraryAddedAt)
+        assertEquals(entity.isFavorite, result.isFavorite)
+        assertEquals(entity.favoritedAt, result.favoritedAt)
     }
     
     @Test

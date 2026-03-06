@@ -53,8 +53,8 @@ struct ShowDAOTests {
             bestRecordingId: nil,
             averageRating: averageRating,
             totalReviews: 0,
-            isInLibrary: false,
-            libraryAddedAt: nil,
+            isFavorite: false,
+            favoritedAt: nil,
             coverImageUrl: nil,
             createdAt: now,
             updatedAt: now

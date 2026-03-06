@@ -47,8 +47,8 @@ class ShowMappers @Inject constructor(
             recordingCount = entity.recordingCount,
             averageRating = entity.averageRating,
             totalReviews = entity.totalReviews,
-            isInLibrary = entity.isInLibrary,
-            libraryAddedAt = entity.libraryAddedAt
+            isFavorite = entity.isFavorite,
+            favoritedAt = entity.favoritedAt
         )
     }
     
