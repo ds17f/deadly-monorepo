@@ -81,22 +81,6 @@ struct LibraryDAO: Sendable {
         }
     }
 
-    // MARK: - Recording preference
-
-    func updatePreferredRecording(_ showId: String, recordingId: String?) throws {
-        try database.write { db in
-            try LibraryShowRecord
-                .filter(Column("showId") == showId)
-                .updateAll(db, Column("preferredRecordingId").set(to: recordingId))
-        }
-    }
-
-    func fetchPreferredRecordingId(_ showId: String) throws -> String? {
-        try database.read { db in
-            try LibraryShowRecord.fetchOne(db, key: showId)?.preferredRecordingId
-        }
-    }
-
     // MARK: - Review fields
 
     func updateNotes(_ showId: String, notes: String?) throws {

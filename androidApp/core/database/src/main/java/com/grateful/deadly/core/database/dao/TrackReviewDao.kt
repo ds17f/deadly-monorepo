@@ -36,4 +36,7 @@ interface TrackReviewDao {
 
     @Query("SELECT * FROM track_reviews WHERE thumbs = 1 ORDER BY updatedAt DESC")
     suspend fun getThumbsUpTracks(): List<TrackReviewEntity>
+
+    @Query("SELECT * FROM track_reviews")
+    suspend fun getAll(): List<TrackReviewEntity>
 }

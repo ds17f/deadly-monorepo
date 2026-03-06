@@ -135,4 +135,33 @@ object DatabaseMigrations {
             """.trimIndent())
         }
     }
+
+    /**
+     * v17 → v18: Decouple recording preferences from library_shows.
+     *
+     * Creates a standalone recording_preferences table so recording overrides
+     * work for any show, not just library shows. Migrates existing data from
+     * library_shows.preferredRecordingId. The old column remains as dead weight.
+     */
+    val MIGRATION_17_18 = object : Migration(17, 18) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("""
+                CREATE TABLE IF NOT EXISTS recording_preferences (
+                    showId TEXT PRIMARY KEY NOT NULL,
+                    recordingId TEXT NOT NULL,
+                    updatedAt INTEGER NOT NULL,
+                    FOREIGN KEY (showId) REFERENCES shows(showId) ON DELETE CASCADE
+                )
+            """.trimIndent())
+
+            // Migrate existing preferred recordings from library_shows
+            db.execSQL("""
+                INSERT OR IGNORE INTO recording_preferences (showId, recordingId, updatedAt)
+                SELECT showId, preferredRecordingId,
+                       CAST(strftime('%s','now') AS INTEGER) * 1000
+                FROM library_shows
+                WHERE preferredRecordingId IS NOT NULL
+            """.trimIndent())
+        }
+    }
 }

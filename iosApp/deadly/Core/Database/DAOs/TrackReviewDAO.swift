@@ -43,6 +43,12 @@ struct TrackReviewDAO: Sendable {
         }
     }
 
+    func fetchAll() throws -> [TrackReviewRecord] {
+        try database.read { db in
+            try TrackReviewRecord.fetchAll(db)
+        }
+    }
+
     func fetchThumbsUp() throws -> [TrackReviewRecord] {
         try database.read { db in
             try TrackReviewRecord

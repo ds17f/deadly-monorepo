@@ -8,12 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.library.LibraryService
 import com.grateful.deadly.core.api.library.ReviewService
 import com.grateful.deadly.core.database.AppPreferences
-import com.grateful.deadly.core.database.migration.MigrationData
-import com.grateful.deadly.core.database.migration.MigrationImportService
-import com.grateful.deadly.core.database.migration.MigrationLibraryShow
-import com.grateful.deadly.core.database.migration.MigrationRecentShow
-import com.grateful.deadly.core.database.migration.MigrationTrackReview
-import com.grateful.deadly.core.database.migration.MigrationPlayerTag
+import com.grateful.deadly.core.database.service.BackupImportExportService
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.ShowReview
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -28,12 +23,10 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlinx.serialization.json.Json
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
-import javax.inject.Named
 
 /**
  * LibraryViewModel - ViewModel for library management
@@ -47,7 +40,7 @@ class LibraryViewModel @Inject constructor(
     private val libraryService: LibraryService,
     private val reviewService: ReviewService,
     private val appPreferences: AppPreferences,
-    private val migrationImportService: MigrationImportService,
+    private val backupImportExportService: BackupImportExportService,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
     
@@ -288,11 +281,11 @@ class LibraryViewModel @Inject constructor(
     }
     
     /**
-     * Import library from JSON file
+     * Import backup from JSON file (supports v3 and legacy migration formats)
      */
     fun importLibrary(uri: Uri, onComplete: (Result<String>) -> Unit) {
         viewModelScope.launch {
-            Log.d(TAG, "Importing library from URI")
+            Log.d(TAG, "Importing backup from URI")
             try {
                 val jsonString = withContext(Dispatchers.IO) {
                     context.contentResolver.openInputStream(uri)?.use { input ->
@@ -300,12 +293,18 @@ class LibraryViewModel @Inject constructor(
                     } ?: throw IllegalStateException("Could not open file")
                 }
                 val result = withContext(Dispatchers.IO) {
-                    migrationImportService.importFromJson(jsonString)
+                    backupImportExportService.importBackup(jsonString)
                 }
-                Log.d(TAG, "Library import completed: ${result.libraryImported} imported, ${result.skipped} skipped")
-                onComplete(Result.success("Imported ${result.libraryImported} shows"))
+                Log.d(TAG, "Backup import completed: ${result.favoritesImported} favorites, ${result.reviewsImported} reviews, ${result.preferencesImported} prefs")
+                val summary = buildString {
+                    append("Imported ${result.favoritesImported} favorites")
+                    if (result.reviewsImported > 0) append(", ${result.reviewsImported} reviews")
+                    if (result.tracksImported > 0) append(", ${result.tracksImported} tracks")
+                    if (result.preferencesImported > 0) append(", ${result.preferencesImported} recording prefs")
+                }
+                onComplete(Result.success(summary))
             } catch (e: Exception) {
-                Log.e(TAG, "Library import failed", e)
+                Log.e(TAG, "Backup import failed", e)
                 onComplete(Result.failure(e))
             }
         }
@@ -352,71 +351,15 @@ class LibraryViewModel @Inject constructor(
     }
 
     /**
-     * Export library to JSON file
+     * Export backup to JSON file (v3 format)
      */
     fun exportLibrary(onComplete: (Result<String>) -> Unit) {
         viewModelScope.launch {
-            Log.d(TAG, "Exporting library")
+            Log.d(TAG, "Exporting backup (v3)")
             try {
-                val currentShows = _uiState.value.shows
-
-                // Create migration data format
-                val libraryShows = currentShows.map { show ->
-                    MigrationLibraryShow(
-                        date = show.date,
-                        venue = show.venue,
-                        location = show.location,
-                        addedAt = show.addedToLibraryAt,
-                        preferredRecordingId = null,
-                        notes = if (show.hasReview) null else null, // notes exported separately via reviews
-                        customRating = show.customRating,
-                        recordingQuality = null,
-                        playingQuality = null
-                    )
+                val jsonString = withContext(Dispatchers.IO) {
+                    backupImportExportService.export()
                 }
-
-                // Collect track reviews and player tags for all shows
-                val allTrackReviews = mutableListOf<MigrationTrackReview>()
-                val allPlayerTags = mutableListOf<MigrationPlayerTag>()
-                for (show in currentShows) {
-                    val review = reviewService.getShowReview(show.showId)
-                    review?.trackReviews?.forEach { tr ->
-                        allTrackReviews.add(MigrationTrackReview(
-                            showDate = show.date,
-                            trackTitle = tr.trackTitle,
-                            trackNumber = tr.trackNumber,
-                            recordingId = tr.recordingId,
-                            thumbs = tr.thumbs,
-                            starRating = tr.starRating,
-                            notes = tr.notes
-                        ))
-                    }
-                    review?.playerTags?.forEach { pt ->
-                        allPlayerTags.add(MigrationPlayerTag(
-                            showDate = show.date,
-                            playerName = pt.playerName,
-                            instruments = pt.instruments,
-                            isStandout = pt.isStandout,
-                            notes = pt.notes
-                        ))
-                    }
-                }
-
-                val migrationData = MigrationData(
-                    version = 2,
-                    format = "deadly-migration",
-                    createdAt = System.currentTimeMillis(),
-                    appVersion = "2.14.0",
-                    library = libraryShows,
-                    recentPlays = emptyList(),
-                    lastPlayed = null,
-                    trackReviews = allTrackReviews.ifEmpty { null },
-                    playerTags = allPlayerTags.ifEmpty { null }
-                )
-
-                // Serialize to JSON
-                val json = Json { prettyPrint = true }
-                val jsonString = json.encodeToString(MigrationData.serializer(), migrationData)
 
                 // Write to Downloads folder
                 val downloadsDir = File("/storage/emulated/0/Download/")
@@ -426,15 +369,17 @@ class LibraryViewModel @Inject constructor(
 
                 val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.US)
                 val dateString = dateFormat.format(Date())
-                val filename = "deadly-library-export-$dateString.json"
+                val filename = "the-deadly-backup-$dateString.json"
                 val exportFile = File(downloadsDir, filename)
 
-                exportFile.writeText(jsonString)
+                withContext(Dispatchers.IO) {
+                    exportFile.writeText(jsonString)
+                }
 
-                Log.d(TAG, "Library exported successfully to: ${exportFile.absolutePath}")
+                Log.d(TAG, "Backup exported successfully to: ${exportFile.absolutePath}")
                 onComplete(Result.success(filename))
             } catch (e: Exception) {
-                Log.e(TAG, "Failed to export library", e)
+                Log.e(TAG, "Failed to export backup", e)
                 onComplete(Result.failure(e))
             }
         }

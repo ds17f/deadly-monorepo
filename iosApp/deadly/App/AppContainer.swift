@@ -78,7 +78,8 @@ final class AppContainer {
                 showDAO: ShowDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
                 trackReviewDAO: TrackReviewDAO(database: db),
-                playerTagDAO: ShowPlayerTagDAO(database: db)
+                playerTagDAO: ShowPlayerTagDAO(database: db),
+                recordingPreferenceDAO: RecordingPreferenceDAO(database: db)
             )
             reviewService = ReviewService(
                 showReviewDAO: ShowReviewDAO(database: db),
@@ -145,7 +146,7 @@ final class AppContainer {
                 showRepository: showRepo,
                 archiveClient: URLSessionArchiveMetadataClient(),
                 recentShowsService: recentService,
-                libraryDAO: LibraryDAO(database: db),
+                recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
                 streamPlayer: player,
                 downloadService: downloadSvc
             )

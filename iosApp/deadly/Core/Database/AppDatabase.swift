@@ -95,6 +95,9 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v5-show-reviews-table") { db in
             try AppDatabase.createShowReviewsTable(db)
         }
+        migrator.registerMigration("v6-recording-preferences") { db in
+            try AppDatabase.createRecordingPreferencesTable(db)
+        }
         try migrator.migrate(dbWriter)
     }
 
@@ -298,6 +301,26 @@ struct AppDatabase: @unchecked Sendable {
         }
         try db.create(index: "idx_show_player_tags_showId", on: "show_player_tags", columns: ["showId"], ifNotExists: true)
         try db.create(index: "idx_show_player_tags_playerName", on: "show_player_tags", columns: ["playerName"], ifNotExists: true)
+    }
+
+    // MARK: - Recording Preferences Table
+
+    private static func createRecordingPreferencesTable(_ db: Database) throws {
+        try db.create(table: "recording_preferences", ifNotExists: true) { t in
+            t.column("showId", .text).primaryKey()
+                .references("shows", column: "showId", onDelete: .cascade)
+            t.column("recordingId", .text).notNull()
+            t.column("updatedAt", .integer).notNull()
+        }
+
+        // Migrate existing preferred recordings from library_shows
+        try db.execute(sql: """
+            INSERT OR IGNORE INTO recording_preferences (showId, recordingId, updatedAt)
+            SELECT showId, preferredRecordingId,
+                   CAST(strftime('%s','now') AS INTEGER) * 1000
+            FROM library_shows
+            WHERE preferredRecordingId IS NOT NULL
+        """)
     }
 
     // MARK: - Show Reviews Table

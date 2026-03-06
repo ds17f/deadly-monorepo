@@ -17,7 +17,7 @@ final class PlaylistServiceImpl: PlaylistService {
     private let showRepository: any ShowRepository
     private let archiveClient: any ArchiveMetadataClient
     private let recentShowsService: RecentShowsService
-    private let libraryDAO: LibraryDAO
+    private let recordingPreferenceDAO: RecordingPreferenceDAO
     private let downloadService: DownloadService?
     let streamPlayer: StreamPlayer
 
@@ -25,14 +25,14 @@ final class PlaylistServiceImpl: PlaylistService {
         showRepository: some ShowRepository,
         archiveClient: some ArchiveMetadataClient,
         recentShowsService: RecentShowsService,
-        libraryDAO: LibraryDAO,
+        recordingPreferenceDAO: RecordingPreferenceDAO,
         streamPlayer: StreamPlayer,
         downloadService: DownloadService? = nil
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
         self.recentShowsService = recentShowsService
-        self.libraryDAO = libraryDAO
+        self.recordingPreferenceDAO = recordingPreferenceDAO
         self.streamPlayer = streamPlayer
         self.downloadService = downloadService
     }
@@ -57,7 +57,7 @@ final class PlaylistServiceImpl: PlaylistService {
         reviews = []
         reviewsError = nil
         // Check for user's preferred recording before falling back to best
-        if let preferredId = try? libraryDAO.fetchPreferredRecordingId(nextShow.id),
+        if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(nextShow.id),
            let preferred = try? showRepository.getRecordingById(preferredId) {
             currentRecording = preferred
         } else {
@@ -79,7 +79,7 @@ final class PlaylistServiceImpl: PlaylistService {
         reviews = []
         reviewsError = nil
         // Check for user's preferred recording before falling back to best
-        if let preferredId = try? libraryDAO.fetchPreferredRecordingId(previousShow.id),
+        if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(previousShow.id),
            let preferred = try? showRepository.getRecordingById(preferredId) {
             currentRecording = preferred
         } else {
@@ -100,7 +100,7 @@ final class PlaylistServiceImpl: PlaylistService {
             let show = try showRepository.getShowById(showId)
             currentShow = show
             // Check for user's preferred recording before falling back to best.
-            if let preferredId = try? libraryDAO.fetchPreferredRecordingId(showId),
+            if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(showId),
                let preferred = try? showRepository.getRecordingById(preferredId) {
                 currentRecording = preferred
             } else if let bestId = show?.bestRecordingId {
@@ -127,7 +127,10 @@ final class PlaylistServiceImpl: PlaylistService {
 
     func setRecordingAsDefault(_ recording: Recording) async {
         guard let showId = currentShow?.id else { return }
-        try? libraryDAO.updatePreferredRecording(showId, recordingId: recording.identifier)
+        let now = Int64(Date().timeIntervalSince1970 * 1000)
+        try? recordingPreferenceDAO.upsert(RecordingPreferenceRecord(
+            showId: showId, recordingId: recording.identifier, updatedAt: now
+        ))
         await selectRecording(recording)
     }
 

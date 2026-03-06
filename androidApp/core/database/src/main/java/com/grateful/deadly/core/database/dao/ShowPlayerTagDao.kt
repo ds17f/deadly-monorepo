@@ -33,4 +33,7 @@ interface ShowPlayerTagDao {
 
     @Query("SELECT DISTINCT playerName FROM show_player_tags WHERE isStandout = 1 ORDER BY playerName ASC")
     suspend fun getAllStandoutPlayerNames(): List<String>
+
+    @Query("SELECT * FROM show_player_tags")
+    suspend fun getAll(): List<ShowPlayerTagEntity>
 }
