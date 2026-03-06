@@ -438,30 +438,24 @@ struct ShowDetailScreen: View {
     }
 
     private var isCurrentShowPlaying: Bool {
-        guard let currentTrackURL = streamPlayer.currentTrack?.url,
+        guard let currentTrack = streamPlayer.currentTrack,
               let recording = playlistService.currentRecording else { return false }
-        let isThisShow = playlistService.tracks.contains { track in
-            currentTrackURL == track.streamURL(recordingId: recording.identifier)
-        }
+        let isThisShow = currentTrack.metadata["recordingId"] == recording.identifier
         return isThisShow && streamPlayer.playbackState.isPlaying
     }
 
     private var isCurrentShowLoading: Bool {
-        guard let currentTrackURL = streamPlayer.currentTrack?.url,
+        guard let currentTrack = streamPlayer.currentTrack,
               let recording = playlistService.currentRecording else { return false }
-        let isThisShow = playlistService.tracks.contains { track in
-            currentTrackURL == track.streamURL(recordingId: recording.identifier)
-        }
+        let isThisShow = currentTrack.metadata["recordingId"] == recording.identifier
         let state = streamPlayer.playbackState
         return isThisShow && (state == .loading || state == .buffering)
     }
 
     private var isCurrentShowActive: Bool {
-        guard let currentTrackURL = streamPlayer.currentTrack?.url,
+        guard let currentTrack = streamPlayer.currentTrack,
               let recording = playlistService.currentRecording else { return false }
-        return playlistService.tracks.contains { track in
-            currentTrackURL == track.streamURL(recordingId: recording.identifier)
-        }
+        return currentTrack.metadata["recordingId"] == recording.identifier
     }
 
     private func handlePlayToggle() {
@@ -479,8 +473,9 @@ struct ShowDetailScreen: View {
 
     private func isCurrentTrack(_ track: ArchiveTrack) -> Bool {
         guard let recording = playlistService.currentRecording,
-              let currentURL = streamPlayer.currentTrack?.url else { return false }
-        return currentURL == track.streamURL(recordingId: recording.identifier)
+              let currentTrack = streamPlayer.currentTrack else { return false }
+        return currentTrack.metadata["recordingId"] == recording.identifier
+            && currentTrack.title == track.title
     }
 
     // MARK: - Download button
