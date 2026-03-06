@@ -29,7 +29,12 @@ struct deadlyApp: App {
         WindowGroup {
             MainNavigation()
                 .environment(\.appContainer, container)
-                .fullScreenCover(isPresented: $showingImport) {
+                .fullScreenCover(isPresented: $showingImport, onDismiss: {
+                    Task {
+                        await container.homeService.refresh()
+                        await container.playbackRestorationService.restoreIfAvailable()
+                    }
+                }) {
                     DataImportScreen(isPresented: $showingImport)
                         .environment(\.appContainer, container)
                 }
