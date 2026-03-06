@@ -34,14 +34,21 @@ struct SettingsScreen: View {
                 }
             }
 
-            // MARK: - Favorites
-            Section("Favorites") {
-                Button("Import Favorites from Old App") {
-                    showingFilePicker = true
+            // MARK: - Favorites & Data
+            Section("Favorites & Data") {
+                NavigationLink(value: SettingsRoute.downloads) {
+                    Label("Manage Downloads", systemImage: "arrow.down.circle")
                 }
-                Button("Export Favorites") {
+                Button {
+                    showingFilePicker = true
+                } label: {
+                    Label("Import Favorites", systemImage: "square.and.arrow.down")
+                }
+                Button {
                     exportData = try? container.favoritesImportExportService.exportFavorites()
                     if exportData != nil { showingExportShare = true }
+                } label: {
+                    Label("Export Favorites", systemImage: "square.and.arrow.up")
                 }
             }
 

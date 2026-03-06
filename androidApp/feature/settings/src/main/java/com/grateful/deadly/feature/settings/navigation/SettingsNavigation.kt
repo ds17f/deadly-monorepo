@@ -28,12 +28,14 @@ fun NavController.navigateToSettings() {
  */
 fun NavGraphBuilder.settingsScreen(
     onNavigateBack: () -> Unit,
+    onNavigateToDownloads: () -> Unit,
     onNavigateToLegal: () -> Unit,
     onNavigateToMission: () -> Unit,
     onNavigateToDeveloper: () -> Unit
 ) {
     composable(route = SETTINGS_ROUTE) {
         SettingsScreen(
+            onNavigateToDownloads = onNavigateToDownloads,
             onNavigateToLegal = onNavigateToLegal,
             onNavigateToMission = onNavigateToMission,
             onNavigateToDeveloper = onNavigateToDeveloper
@@ -77,6 +79,7 @@ fun NavGraphBuilder.missionScreen(
 fun NavGraphBuilder.settingsGraph(navController: NavController) {
     settingsScreen(
         onNavigateBack = { navController.popBackStack() },
+        onNavigateToDownloads = { navController.navigate("downloads") },
         onNavigateToLegal = { navController.navigate(LEGAL_ROUTE) },
         onNavigateToMission = { navController.navigate(MISSION_ROUTE) },
         onNavigateToDeveloper = { navController.navigate(DEVELOPER_ROUTE) }

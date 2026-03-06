@@ -2,6 +2,7 @@ package com.grateful.deadly.feature.settings
 
 import android.content.Intent
 import android.net.Uri
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
@@ -20,6 +21,7 @@ import com.grateful.deadly.feature.settings.BuildConfig
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
+    onNavigateToDownloads: () -> Unit = {},
     onNavigateToLegal: () -> Unit = {},
     onNavigateToMission: () -> Unit = {},
     onNavigateToDeveloper: () -> Unit = {}
@@ -44,8 +46,26 @@ fun SettingsScreen(
 
         item { HorizontalDivider() }
 
-        // ── LIBRARY ──────────────────────────────────────────────────
-        item { SectionHeader("Favorites") }
+        // ── FAVORITES & DATA ────────────────────────────────────────
+        item { SectionHeader("Favorites & Data") }
+
+        item {
+            PreferenceRow(
+                title = "Manage Downloads",
+                onClick = onNavigateToDownloads,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+
+        item {
+            BackupImportExportButtons(viewModel = viewModel)
+        }
 
         item {
             ImportMigrationButton(viewModel = viewModel)
@@ -222,6 +242,48 @@ private fun PreferenceToggleRow(
         }
         Spacer(modifier = Modifier.width(8.dp))
         Switch(checked = checked, onCheckedChange = onCheckedChange)
+    }
+}
+
+// ── Backup import/export ──────────────────────────────────────────────────────
+
+@Composable
+private fun BackupImportExportButtons(viewModel: SettingsViewModel) {
+    val context = LocalContext.current
+
+    val safLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        if (uri != null) {
+            viewModel.importFavorites(uri) { result ->
+                result.onSuccess { message ->
+                    Toast.makeText(context, "Favorites imported: $message", Toast.LENGTH_SHORT).show()
+                }.onFailure { error ->
+                    Toast.makeText(context, "Import failed: ${error.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    Column {
+        PreferenceRow(
+            title = "Import Favorites",
+            subtitle = "Import from a backup file",
+            onClick = { safLauncher.launch(arrayOf("application/json")) }
+        )
+        PreferenceRow(
+            title = "Export Favorites",
+            subtitle = "Export to Downloads folder",
+            onClick = {
+                viewModel.exportFavorites { result ->
+                    result.onSuccess { filename ->
+                        Toast.makeText(context, "Exported to $filename", Toast.LENGTH_SHORT).show()
+                    }.onFailure { error ->
+                        Toast.makeText(context, "Export failed: ${error.message}", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        )
     }
 }
 

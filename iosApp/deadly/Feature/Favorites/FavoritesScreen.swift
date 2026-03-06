@@ -1,5 +1,4 @@
 import SwiftUI
-import UniformTypeIdentifiers
 
 // MARK: - Season
 
@@ -48,14 +47,6 @@ struct FavoritesScreen: View {
     @State private var activeDecadeFilter: Int?
     @State private var activeSeasonFilter: Season?
     @State private var showFullPlayer = false
-
-    // Import / Export state
-    @State private var showingFilePicker = false
-    @State private var importResult: BackupImportResult?
-    @State private var importError: String?
-    @State private var showingImportAlert = false
-    @State private var exportData: Data?
-    @State private var showingExportShare = false
 
     // QR Code sheet state
     @State private var qrCodeShow: FavoriteShow?
@@ -143,74 +134,6 @@ struct FavoritesScreen: View {
                         .font(.title3)
                         .fontWeight(.bold)
                 }
-            }
-            ToolbarItem(placement: .topBarTrailing) {
-                Menu {
-                    NavigationLink(value: FavoritesRoute.downloads) {
-                        Label("Downloads", systemImage: "arrow.down.circle")
-                    }
-                    Button {
-                        showingFilePicker = true
-                    } label: {
-                        Label("Import Favorites", systemImage: "square.and.arrow.down")
-                    }
-                    Button {
-                        exportData = try? container.favoritesImportExportService.exportFavorites()
-                        if exportData != nil { showingExportShare = true }
-                    } label: {
-                        Label("Export Favorites", systemImage: "square.and.arrow.up")
-                    }
-                    .disabled(service.shows.isEmpty)
-                } label: {
-                    Image(systemName: "ellipsis.circle")
-                }
-            }
-        }
-        .fileImporter(
-            isPresented: $showingFilePicker,
-            allowedContentTypes: [.json],
-            allowsMultipleSelection: false
-        ) { result in
-            switch result {
-            case .success(let urls):
-                guard let url = urls.first else { return }
-                guard url.startAccessingSecurityScopedResource() else {
-                    importError = "Could not access file."
-                    showingImportAlert = true
-                    return
-                }
-                defer { url.stopAccessingSecurityScopedResource() }
-                guard let data = try? Data(contentsOf: url) else {
-                    importError = "Could not read file."
-                    showingImportAlert = true
-                    return
-                }
-                do {
-                    importResult = try container.favoritesImportExportService.importFavorites(from: data)
-                    importError = nil
-                    service.refresh(sortedBy: sortOption, direction: sortDirection)
-                } catch {
-                    importError = error.localizedDescription
-                    importResult = nil
-                }
-                showingImportAlert = true
-            case .failure(let error):
-                importError = error.localizedDescription
-                showingImportAlert = true
-            }
-        }
-        .alert("Favorites Import", isPresented: $showingImportAlert) {
-            Button("OK") {}
-        } message: {
-            if let result = importResult {
-                Text("Imported \(result.favoritesImported) favorites, \(result.reviewsImported) reviews, \(result.preferencesImported) prefs.\n\(result.favoritesSkipped) already favorited.\n\(result.notFound) not found.")
-            } else {
-                Text(importError ?? "Unknown error.")
-            }
-        }
-        .sheet(isPresented: $showingExportShare) {
-            if let data = exportData {
-                FavoritesExportShareSheet(data: data, filename: container.favoritesImportExportService.exportFilename())
             }
         }
         .sheet(item: $qrCodeShow) { favoriteShow in
