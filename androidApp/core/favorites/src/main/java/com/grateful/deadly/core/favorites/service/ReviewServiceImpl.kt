@@ -158,11 +158,11 @@ class ReviewServiceImpl @Inject constructor(
         showPlayerTagDao.removeTag(showId, playerName)
     }
 
-    override suspend fun getThumbsUpTracks(): List<FavoriteTrack> {
-        val thumbsUpEntities = trackReviewDao.getThumbsUpTracks()
-        val showIds = thumbsUpEntities.map { it.showId }.distinct()
+    override suspend fun getFavoriteTracks(): List<FavoriteTrack> {
+        val favoriteEntities = trackReviewDao.getFavoriteTracks()
+        val showIds = favoriteEntities.map { it.showId }.distinct()
         val shows = showDao.getShowsByIds(showIds).associateBy { it.showId }
-        return thumbsUpEntities.mapNotNull { entity ->
+        return favoriteEntities.mapNotNull { entity ->
             val show = shows[entity.showId] ?: return@mapNotNull null
             FavoriteTrack(
                 showId = entity.showId,
@@ -170,7 +170,8 @@ class ReviewServiceImpl @Inject constructor(
                 venue = show.venueName,
                 trackTitle = entity.trackTitle,
                 trackNumber = entity.trackNumber,
-                recordingId = entity.recordingId
+                recordingId = entity.recordingId,
+                addedAt = entity.updatedAt
             )
         }
     }

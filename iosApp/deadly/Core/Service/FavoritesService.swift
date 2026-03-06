@@ -10,20 +10,24 @@ final class FavoritesServiceImpl {
     private let favoritesDAO: FavoritesDAO
     private let showReviewDAO: ShowReviewDAO
     private let showRepository: any ShowRepository
+    private let reviewService: ReviewService
 
     private(set) var shows: [FavoriteShow] = []
+    private(set) var songs: [FavoriteTrack] = []
     private(set) var isLoading = false
 
     nonisolated init(
         database: AppDatabase,
         favoritesDAO: FavoritesDAO,
         showReviewDAO: ShowReviewDAO,
-        showRepository: any ShowRepository
+        showRepository: any ShowRepository,
+        reviewService: ReviewService
     ) {
         self.database = database
         self.favoritesDAO = favoritesDAO
         self.showReviewDAO = showReviewDAO
         self.showRepository = showRepository
+        self.reviewService = reviewService
     }
 
     // MARK: - Mutations
@@ -105,6 +109,33 @@ final class FavoritesServiceImpl {
             shows = sort(favoriteShows, by: option, direction: direction)
         } catch {
             // Leave existing shows on error
+        }
+    }
+
+    // MARK: - Songs
+
+    func refreshSongs(sortedBy option: FavoritesSongSortOption = .dateAdded, direction: FavoritesSortDirection = .descending) {
+        do {
+            let tracks = try reviewService.getFavoriteTracks()
+            songs = sortSongs(tracks, by: option, direction: direction)
+        } catch {
+            // Leave existing songs on error
+        }
+    }
+
+    private func sortSongs(_ tracks: [FavoriteTrack], by option: FavoritesSongSortOption, direction: FavoritesSortDirection) -> [FavoriteTrack] {
+        let ascending = direction == .ascending
+        return tracks.sorted { a, b in
+            let result: Bool
+            switch option {
+            case .songTitle:
+                result = a.trackTitle.localizedCompare(b.trackTitle) == .orderedAscending
+            case .showDate:
+                result = a.showDate < b.showDate
+            case .dateAdded:
+                result = a.addedAt < b.addedAt
+            }
+            return ascending ? result : !result
         }
     }
 

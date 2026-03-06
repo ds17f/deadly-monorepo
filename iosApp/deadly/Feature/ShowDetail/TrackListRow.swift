@@ -6,7 +6,7 @@ struct TrackListRow: View {
     let isPlaying: Bool
     var isLoading: Bool = false
     var downloadState: TrackDownloadState?
-    var isThumbsUp: Bool = false
+    var isFavorite: Bool = false
 
     var body: some View {
         HStack(spacing: 12) {
@@ -31,8 +31,8 @@ struct TrackListRow: View {
 
             Spacer()
 
-            // Thumbs-up indicator
-            if isThumbsUp {
+            // Favorite indicator
+            if isFavorite {
                 Image(systemName: "heart.fill")
                     .font(.system(size: 10))
                     .foregroundStyle(.tint)

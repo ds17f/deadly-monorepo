@@ -218,9 +218,9 @@ fun PlayerScreen(
             // Secondary controls row (updated for queue sheet)
             item {
                 PlayerSecondaryControls(
-                    isThumbsUp = currentThumbsState == 1,
+                    isFavorite = currentThumbsState == 1,
                     onConnectClick = { showConnectBottomSheet = true },
-                    onThumbsUpClick = { viewModel.rateCurrentTrack(1) },
+                    onFavoriteClick = { viewModel.rateCurrentTrack(1) },
                     onShareClick = { showQrCode = true },
                     onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
@@ -253,7 +253,7 @@ fun PlayerScreen(
                 onShare = { showQrCode = true },
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
                 onDownload = { viewModel.downloadCurrentShow() },
-                onThumbsUp = { viewModel.rateCurrentTrack(1) },
+                onFavorite = { viewModel.rateCurrentTrack(1) },
             )
         }
 

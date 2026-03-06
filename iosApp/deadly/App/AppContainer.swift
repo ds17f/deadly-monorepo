@@ -67,11 +67,19 @@ final class AppContainer {
                 showRepository: showRepo,
                 appPreferences: prefs
             )
+            let revService = ReviewService(
+                showReviewDAO: ShowReviewDAO(database: db),
+                trackReviewDAO: TrackReviewDAO(database: db),
+                showPlayerTagDAO: ShowPlayerTagDAO(database: db),
+                showDAO: ShowDAO(database: db)
+            )
+            reviewService = revService
             favoritesService = FavoritesServiceImpl(
                 database: db,
                 favoritesDAO: FavoritesDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
-                showRepository: showRepo
+                showRepository: showRepo,
+                reviewService: revService
             )
             favoritesImportExportService = FavoritesImportExportService(
                 favoritesDAO: FavoritesDAO(database: db),
@@ -80,12 +88,6 @@ final class AppContainer {
                 trackReviewDAO: TrackReviewDAO(database: db),
                 playerTagDAO: ShowPlayerTagDAO(database: db),
                 recordingPreferenceDAO: RecordingPreferenceDAO(database: db)
-            )
-            reviewService = ReviewService(
-                showReviewDAO: ShowReviewDAO(database: db),
-                trackReviewDAO: TrackReviewDAO(database: db),
-                showPlayerTagDAO: ShowPlayerTagDAO(database: db),
-                showDAO: ShowDAO(database: db)
             )
             collectionsService = CollectionsServiceImpl(
                 collectionsDAO: CollectionsDAO(database: db),

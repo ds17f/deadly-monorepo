@@ -108,7 +108,7 @@ struct DataImportServiceTests {
             collectionsDAO: CollectionsDAO(database: db),
             showSearchDAO: ShowSearchDAO(database: db),
             dataVersionDAO: DataVersionDAO(database: db),
-            libraryDAO: FavoritesDAO(database: db)
+            favoritesDAO: FavoritesDAO(database: db)
         )
     }
 

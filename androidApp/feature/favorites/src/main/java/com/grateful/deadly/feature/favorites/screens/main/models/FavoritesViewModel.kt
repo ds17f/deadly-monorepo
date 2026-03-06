@@ -10,6 +10,7 @@ import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.service.BackupImportExportService
 import com.grateful.deadly.core.model.*
+import com.grateful.deadly.core.model.FavoriteTrack
 import com.grateful.deadly.core.model.ShowReview
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -57,6 +58,12 @@ class FavoritesViewModel @Inject constructor(
     )
     val uiState: StateFlow<FavoritesUiState> = _uiState.asStateFlow()
 
+    private val _favoriteSongs = MutableStateFlow<List<FavoriteTrack>>(emptyList())
+    val favoriteSongs: StateFlow<List<FavoriteTrack>> = _favoriteSongs.asStateFlow()
+
+    private val _songsLoading = MutableStateFlow(false)
+    val songsLoading: StateFlow<Boolean> = _songsLoading.asStateFlow()
+
     val displayMode: StateFlow<FavoritesDisplayMode> = appPreferences.favoritesDisplayMode
         .map { if (it == "GRID") FavoritesDisplayMode.GRID else FavoritesDisplayMode.LIST }
         .stateIn(
@@ -72,6 +79,7 @@ class FavoritesViewModel @Inject constructor(
     init {
         Log.d(TAG, "FavoritesViewModel initialized")
         loadFavorites()
+        loadFavoriteSongs()
     }
 
     /**
@@ -125,6 +133,29 @@ class FavoritesViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /**
+     * Load favorite songs (tracks with thumbs == 1)
+     */
+    private fun loadFavoriteSongs() {
+        viewModelScope.launch {
+            _songsLoading.value = true
+            try {
+                _favoriteSongs.value = reviewService.getFavoriteTracks()
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to load favorite songs", e)
+            } finally {
+                _songsLoading.value = false
+            }
+        }
+    }
+
+    /**
+     * Reload favorite songs (e.g. after tab switch)
+     */
+    fun refreshFavoriteSongs() {
+        loadFavoriteSongs()
     }
 
     /**

@@ -52,9 +52,9 @@ class BackupImportExportService @Inject constructor(
             )
         }
 
-        // Thumbs-up tracks
-        val thumbsUpTracks = trackReviewDao.getThumbsUpTracks()
-        val favoriteTracks = thumbsUpTracks.map { track ->
+        // Favorite tracks
+        val favoriteTrackEntities = trackReviewDao.getFavoriteTracks()
+        val favoriteTracks = favoriteTrackEntities.map { track ->
             FavoriteTrackEntry(
                 showId = track.showId,
                 trackTitle = track.trackTitle,

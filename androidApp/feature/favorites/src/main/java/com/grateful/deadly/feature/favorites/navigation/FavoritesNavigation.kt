@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import com.grateful.deadly.feature.favorites.screens.favorites.FavoritesScreen as FavoriteTracksScreen
 import com.grateful.deadly.feature.favorites.screens.main.FavoritesScreen
 
 /**
@@ -17,7 +16,6 @@ import com.grateful.deadly.feature.favorites.screens.main.FavoritesScreen
 // Route constants (string values kept for deep link backward compat)
 object FavoritesRoutes {
     const val FAVORITES_MAIN = "library"
-    const val FAVORITE_TRACKS = "library/favorites"
 }
 
 /**
@@ -33,20 +31,20 @@ fun NavGraphBuilder.favoritesNavigation(navController: NavController) {
             onNavigateToPlayer = { recordingId ->
                 navController.navigate("player/$recordingId")
             },
-            onNavigateToFavorites = {
-                navController.navigate(FavoritesRoutes.FAVORITE_TRACKS)
+            onNavigateToPlaylist = { showId, recordingId, trackNumber, autoPlay ->
+                val route = when {
+                    recordingId != null && trackNumber != null ->
+                        "playlist/$showId/$recordingId?trackNumber=$trackNumber&autoPlay=$autoPlay"
+                    recordingId != null ->
+                        "playlist/$showId/$recordingId?autoPlay=$autoPlay"
+                    trackNumber != null ->
+                        "playlist/$showId?autoPlay=$autoPlay"
+                    else ->
+                        "playlist/$showId?autoPlay=$autoPlay"
+                }
+                navController.navigate(route)
             },
-            onNavigateBack = {
-                navController.popBackStack()
-            }
-        )
-    }
-
-    composable(route = FavoritesRoutes.FAVORITE_TRACKS) {
-        FavoriteTracksScreen(
-            onNavigateToShow = { showId ->
-                navController.navigate("playlist/$showId")
-            },
+            onNavigateToFavorites = { },
             onNavigateBack = {
                 navController.popBackStack()
             }

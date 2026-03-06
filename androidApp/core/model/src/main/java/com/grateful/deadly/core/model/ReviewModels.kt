@@ -34,7 +34,7 @@ data class TrackReview(
     val starRating: Int? = null,   // 1-5
     val notes: String? = null
 ) {
-    val isThumbsUp: Boolean get() = thumbs == 1
+    val isFavorite: Boolean get() = thumbs == 1
     val isThumbsDown: Boolean get() = thumbs == -1
     val hasRating: Boolean get() = thumbs != null || starRating != null
 }
@@ -49,7 +49,8 @@ data class FavoriteTrack(
     val venue: String,
     val trackTitle: String,
     val trackNumber: Int?,
-    val recordingId: String?
+    val recordingId: String?,
+    val addedAt: Long = 0
 )
 
 /**
