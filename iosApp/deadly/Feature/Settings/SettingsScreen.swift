@@ -7,12 +7,12 @@ import UniformTypeIdentifiers
 struct SettingsScreen: View {
     @Environment(\.appContainer) private var container
     @Environment(\.openURL) private var openURL
-    @State private var showingLibraryFilePicker = false
-    @State private var libraryExportData: Data?
-    @State private var libraryImportResult: BackupImportResult?
-    @State private var libraryImportError: String?
-    @State private var showingLibraryImportAlert = false
-    @State private var showingLibraryExportShare = false
+    @State private var showingFilePicker = false
+    @State private var exportData: Data?
+    @State private var importResult: BackupImportResult?
+    @State private var importError: String?
+    @State private var showingImportAlert = false
+    @State private var showingExportShare = false
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
     }
@@ -34,14 +34,14 @@ struct SettingsScreen: View {
                 }
             }
 
-            // MARK: - Library
-            Section("Library") {
-                Button("Import Library from Old App") {
-                    showingLibraryFilePicker = true
+            // MARK: - Favorites
+            Section("Favorites") {
+                Button("Import Favorites from Old App") {
+                    showingFilePicker = true
                 }
-                Button("Export Library") {
-                    libraryExportData = try? container.libraryImportExportService.exportLibrary()
-                    if libraryExportData != nil { showingLibraryExportShare = true }
+                Button("Export Favorites") {
+                    exportData = try? container.favoritesImportExportService.exportFavorites()
+                    if exportData != nil { showingExportShare = true }
                 }
             }
 
@@ -74,9 +74,9 @@ struct SettingsScreen: View {
         }
         .navigationTitle("Settings")
 
-        // MARK: - Library File Picker
+        // MARK: - Favorites File Picker
         .fileImporter(
-            isPresented: $showingLibraryFilePicker,
+            isPresented: $showingFilePicker,
             allowedContentTypes: [.json],
             allowsMultipleSelection: false
         ) { result in
@@ -84,54 +84,54 @@ struct SettingsScreen: View {
             case .success(let urls):
                 guard let url = urls.first else { return }
                 guard url.startAccessingSecurityScopedResource() else {
-                    libraryImportError = "Could not access file."
-                    showingLibraryImportAlert = true
+                    importError = "Could not access file."
+                    showingImportAlert = true
                     return
                 }
                 defer { url.stopAccessingSecurityScopedResource() }
                 guard let data = try? Data(contentsOf: url) else {
-                    libraryImportError = "Could not read file."
-                    showingLibraryImportAlert = true
+                    importError = "Could not read file."
+                    showingImportAlert = true
                     return
                 }
                 do {
-                    libraryImportResult = try container.libraryImportExportService.importLibrary(from: data)
-                    libraryImportError = nil
+                    importResult = try container.favoritesImportExportService.importFavorites(from: data)
+                    importError = nil
                 } catch {
-                    libraryImportError = error.localizedDescription
-                    libraryImportResult = nil
+                    importError = error.localizedDescription
+                    importResult = nil
                 }
-                showingLibraryImportAlert = true
+                showingImportAlert = true
             case .failure(let error):
-                libraryImportError = error.localizedDescription
-                showingLibraryImportAlert = true
+                importError = error.localizedDescription
+                showingImportAlert = true
             }
         }
 
-        // MARK: - Library Import Alert
-        .alert("Library Import", isPresented: $showingLibraryImportAlert) {
+        // MARK: - Favorites Import Alert
+        .alert("Favorites Import", isPresented: $showingImportAlert) {
             Button("OK") {}
         } message: {
-            if let result = libraryImportResult {
-                Text("Imported \(result.favoritesImported) favorites, \(result.reviewsImported) reviews, \(result.preferencesImported) prefs.\n\(result.favoritesSkipped) already in library.\n\(result.notFound) not found.")
+            if let result = importResult {
+                Text("Imported \(result.favoritesImported) favorites, \(result.reviewsImported) reviews, \(result.preferencesImported) prefs.\n\(result.favoritesSkipped) already favorited.\n\(result.notFound) not found.")
             } else {
-                Text(libraryImportError ?? "Unknown error.")
+                Text(importError ?? "Unknown error.")
             }
         }
 
-        // MARK: - Library Export Share Sheet
-        .sheet(isPresented: $showingLibraryExportShare) {
-            if let data = libraryExportData {
-                LibraryExportShareSheet(data: data, filename: container.libraryImportExportService.exportFilename())
+        // MARK: - Favorites Export Share Sheet
+        .sheet(isPresented: $showingExportShare) {
+            if let data = exportData {
+                FavoritesExportShareSheet(data: data, filename: container.favoritesImportExportService.exportFilename())
             }
         }
 
     }
 }
 
-// MARK: - LibraryExportShareSheet
+// MARK: - FavoritesExportShareSheet
 
-struct LibraryExportShareSheet: UIViewControllerRepresentable {
+struct FavoritesExportShareSheet: UIViewControllerRepresentable {
     let data: Data
     let filename: String
 

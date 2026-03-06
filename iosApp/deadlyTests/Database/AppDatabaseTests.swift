@@ -25,7 +25,7 @@ struct AppDatabaseTests {
             #expect(tables.contains("recordings"))
             #expect(tables.contains("show_search"))
             #expect(tables.contains("dead_collections"))
-            #expect(tables.contains("library_shows"))
+            #expect(tables.contains("favorite_shows"))
             #expect(tables.contains("recent_shows"))
             #expect(tables.contains("data_version"))
         }
@@ -49,7 +49,7 @@ struct AppDatabaseTests {
             #expect(columns.contains("country"))
             #expect(columns.contains("recordingCount"))
             #expect(columns.contains("averageRating"))
-            #expect(columns.contains("isInLibrary"))
+            #expect(columns.contains("isFavorite"))
             #expect(columns.contains("createdAt"))
             #expect(columns.contains("updatedAt"))
         }
@@ -93,11 +93,11 @@ struct AppDatabaseTests {
     }
 
     @Test("library_shows table has expected columns")
-    func libraryShowsColumns() throws {
+    func favoriteShowsColumns() throws {
         try db.read { database in
-            let columns = try database.columns(in: "library_shows").map(\.name)
+            let columns = try database.columns(in: "favorite_shows").map(\.name)
             #expect(columns.contains("showId"))
-            #expect(columns.contains("addedToLibraryAt"))
+            #expect(columns.contains("addedToFavoritesAt"))
             #expect(columns.contains("isPinned"))
             #expect(columns.contains("preferredRecordingId"))
             #expect(columns.contains("downloadedRecordingId"))
@@ -157,8 +157,8 @@ struct AppDatabaseTests {
             bestRecordingId: nil,
             averageRating: nil,
             totalReviews: 0,
-            isInLibrary: false,
-            libraryAddedAt: nil,
+            isFavorite: false,
+            favoritedAt: nil,
             coverImageUrl: nil,
             createdAt: now,
             updatedAt: now
@@ -205,8 +205,8 @@ struct AppDatabaseTests {
                 bestRecordingId: "rec-sbd",
                 averageRating: 4.5,
                 totalReviews: 10,
-                isInLibrary: false,
-                libraryAddedAt: nil,
+                isFavorite: false,
+                favoritedAt: nil,
                 coverImageUrl: nil,
                 createdAt: now,
                 updatedAt: now
@@ -246,7 +246,7 @@ struct AppDatabaseTests {
     }
 
     @Test("Deleting a show cascades to library_shows")
-    func cascadeDeleteLibraryShows() throws {
+    func cascadeDeleteFavoriteShows() throws {
         let now = Int64(Date().timeIntervalSince1970 * 1000)
         try db.write { database in
             var show = ShowRecord(
@@ -274,19 +274,19 @@ struct AppDatabaseTests {
                 bestRecordingId: nil,
                 averageRating: nil,
                 totalReviews: 0,
-                isInLibrary: true,
-                libraryAddedAt: now,
+                isFavorite: true,
+                favoritedAt: now,
                 coverImageUrl: nil,
                 createdAt: now,
                 updatedAt: now
             )
             try show.insert(database)
 
-            var libraryShow = LibraryShowRecord(
+            var favoriteShow = FavoriteShowRecord(
                 showId: "lib-cascade-show",
-                addedToLibraryAt: now,
+                addedToFavoritesAt: now,
                 isPinned: false,
-                libraryNotes: nil,
+                notes: nil,
                 preferredRecordingId: nil,
                 downloadedRecordingId: nil,
                 downloadedFormat: nil,
@@ -294,11 +294,11 @@ struct AppDatabaseTests {
                 lastAccessedAt: nil,
                 tags: nil
             )
-            try libraryShow.insert(database)
+            try favoriteShow.insert(database)
 
             try ShowRecord.deleteOne(database, key: "lib-cascade-show")
 
-            let count = try LibraryShowRecord.fetchCount(database)
+            let count = try FavoriteShowRecord.fetchCount(database)
             #expect(count == 0)
         }
     }

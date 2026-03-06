@@ -41,7 +41,7 @@ import com.grateful.deadly.feature.playlist.navigation.playlistGraph
 import com.grateful.deadly.feature.playlist.navigation.navigateToPlaylist
 import com.grateful.deadly.feature.player.navigation.playerScreen
 import com.grateful.deadly.feature.miniplayer.screens.main.MiniPlayerScreen
-import com.grateful.deadly.feature.library.navigation.libraryNavigation
+import com.grateful.deadly.feature.favorites.navigation.favoritesNavigation
 import com.grateful.deadly.feature.collections.navigation.collectionsGraph
 import com.grateful.deadly.feature.downloads.navigation.downloadsNavigation
 
@@ -151,7 +151,6 @@ fun MainNavigation(
     val barConfig = NavigationBarConfig.getBarConfig(
         route = currentRoute,
         onNavigateToDownloads = { navController.navigate("downloads") },
-        onNavigateToFavorites = { navController.navigate("library/favorites") }
     )
 
     AppScaffold(
@@ -198,8 +197,8 @@ fun MainNavigation(
                 // Home feature - main hub screen
                 homeGraph(navController)
 
-                // Library feature - user's saved content
-                libraryNavigation(navController)
+                // Favorites feature - user's saved content
+                favoritesNavigation(navController)
 
                 // Downloads feature - downloaded content management
                 downloadsNavigation(navController)
@@ -257,8 +256,8 @@ fun MainNavigation(
                 }
                 pendingDeepLink = null
             },
-            onAddToLibrary = { showId ->
-                appViewModel.addToLibrary(showId)
+            onAddToFavorites = { showId ->
+                appViewModel.addToFavorites(showId)
                 pendingDeepLink = null
             },
             onViewCollection = { collectionId ->
@@ -381,7 +380,7 @@ private fun DeepLinkActionSheet(
     deepLink: PendingDeepLink,
     onPlayNow: (showId: String, recordingId: String?, trackNumber: Int?) -> Unit,
     onGoToShow: (showId: String) -> Unit,
-    onAddToLibrary: (showId: String) -> Unit,
+    onAddToFavorites: (showId: String) -> Unit,
     onViewCollection: (collectionId: String) -> Unit,
     onDismiss: () -> Unit
 ) {
@@ -461,15 +460,15 @@ private fun DeepLinkActionSheet(
                             }
                         )
                         ListItem(
-                            headlineContent = { Text("Add Show to Library") },
+                            headlineContent = { Text("Add Show to Favorites") },
                             leadingContent = {
                                 Icon(
-                                    painter = IconResources.Content.LibraryAdd(),
+                                    painter = IconResources.Content.Favorite(),
                                     contentDescription = null
                                 )
                             },
                             modifier = Modifier.clickable {
-                                onAddToLibrary(deepLink.showId)
+                                onAddToFavorites(deepLink.showId)
                             }
                         )
                         ListItem(

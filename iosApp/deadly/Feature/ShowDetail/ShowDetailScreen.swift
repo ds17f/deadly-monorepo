@@ -19,7 +19,7 @@ struct ShowDetailScreen: View {
     @State private var showMenuSheet = false
     @State private var showQRShareSheet = false
     @State private var showRecordingPicker = false
-    @State private var isInLibrary = false
+    @State private var isFavorite = false
     @State private var isDownloading = false
     @State private var showRemoveDownloadAlert = false
     @State private var showCancelDownloadAlert = false
@@ -44,7 +44,7 @@ struct ShowDetailScreen: View {
         .navigationBarTitleDisplayMode(.inline)
         .task {
             await playlistService.loadShow(showId)
-            isInLibrary = (try? container.libraryService.isInLibrary(showId: showId)) ?? false
+            isFavorite = (try? container.favoritesService.isFavorite(showId: showId)) ?? false
             let review = try? container.reviewService.getShowReview(showId)
             userReview = review?.hasContent == true ? review : nil
         }
@@ -58,7 +58,7 @@ struct ShowDetailScreen: View {
         }
         .onChange(of: playlistService.currentShow?.id) { _, newId in
             if let newId {
-                isInLibrary = (try? container.libraryService.isInLibrary(showId: newId)) ?? false
+                isFavorite = (try? container.favoritesService.isFavorite(showId: newId)) ?? false
                 let review = try? container.reviewService.getShowReview(newId)
                 userReview = review?.hasContent == true ? review : nil
             }
@@ -130,16 +130,16 @@ struct ShowDetailScreen: View {
             Section {
                 HStack(spacing: 8) {
                     Button {
-                        if isInLibrary {
-                            try? container.libraryService.removeFromLibrary(showId: currentShowId)
+                        if isFavorite {
+                            try? container.favoritesService.removeFromFavorites(showId: currentShowId)
                         } else {
-                            try? container.libraryService.addToLibrary(showId: currentShowId)
+                            try? container.favoritesService.addToFavorites(showId: currentShowId)
                         }
-                        isInLibrary.toggle()
+                        isFavorite.toggle()
                     } label: {
-                        Image(systemName: isInLibrary ? "heart.fill" : "heart")
+                        Image(systemName: isFavorite ? "heart.fill" : "heart")
                             .font(.title2)
-                            .foregroundStyle(isInLibrary ? DeadlyColors.primary : .secondary)
+                            .foregroundStyle(isFavorite ? DeadlyColors.primary : .secondary)
                             .frame(width: 44, height: 44)
                     }
                     .buttonStyle(.plain)
@@ -485,7 +485,7 @@ struct ShowDetailScreen: View {
 
     // MARK: - Download button
 
-    private var downloadStatus: LibraryDownloadStatus {
+    private var downloadStatus: FavoritesDownloadStatus {
         downloadService.downloadStatus(for: currentShowId)
     }
 
@@ -508,7 +508,7 @@ struct ShowDetailScreen: View {
     }
 
     @ViewBuilder
-    private func downloadContextMenu(for status: LibraryDownloadStatus) -> some View {
+    private func downloadContextMenu(for status: FavoritesDownloadStatus) -> some View {
         switch status {
         case .notDownloaded, .cancelled, .failed:
             Button {
@@ -547,7 +547,7 @@ struct ShowDetailScreen: View {
         }
     }
 
-    private func downloadIcon(for status: LibraryDownloadStatus) -> Image {
+    private func downloadIcon(for status: FavoritesDownloadStatus) -> Image {
         switch status {
         case .notDownloaded, .cancelled, .failed:
             return Image(systemName: "arrow.down.circle")
@@ -560,7 +560,7 @@ struct ShowDetailScreen: View {
         }
     }
 
-    private func downloadIconColor(for status: LibraryDownloadStatus) -> Color {
+    private func downloadIconColor(for status: FavoritesDownloadStatus) -> Color {
         switch status {
         case .notDownloaded, .cancelled:
             return .secondary
@@ -575,16 +575,16 @@ struct ShowDetailScreen: View {
         }
     }
 
-    private func handleDownloadAction(status: LibraryDownloadStatus) {
+    private func handleDownloadAction(status: FavoritesDownloadStatus) {
         switch status {
         case .notDownloaded, .cancelled, .failed:
             isDownloading = true
             Task {
                 do {
-                    // Auto-add to library when downloading
-                    if !isInLibrary {
-                        try? container.libraryService.addToLibrary(showId: currentShowId)
-                        isInLibrary = true
+                    // Auto-add to favorites when downloading
+                    if !isFavorite {
+                        try? container.favoritesService.addToFavorites(showId: currentShowId)
+                        isFavorite = true
                     }
                     try await downloadService.downloadShow(currentShowId, recordingId: playlistService.currentRecording?.identifier)
                 } catch {

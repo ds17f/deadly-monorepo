@@ -9,7 +9,7 @@ import com.grateful.deadly.core.database.entities.ShowEntity
 import com.grateful.deadly.core.database.entities.ShowSearchEntity
 import com.grateful.deadly.core.database.entities.RecordingEntity
 import com.grateful.deadly.core.database.entities.DataVersionEntity
-import com.grateful.deadly.core.database.entities.LibraryShowEntity
+import com.grateful.deadly.core.database.entities.FavoriteShowEntity
 import com.grateful.deadly.core.database.entities.RecentShowEntity
 import com.grateful.deadly.core.database.entities.DeadCollectionEntity
 import com.grateful.deadly.core.database.entities.TrackReviewEntity
@@ -20,7 +20,7 @@ import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import com.grateful.deadly.core.database.dao.RecordingDao
 import com.grateful.deadly.core.database.dao.DataVersionDao
-import com.grateful.deadly.core.database.dao.LibraryDao
+import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.CollectionsDao
 import com.grateful.deadly.core.database.dao.TrackReviewDao
@@ -34,7 +34,7 @@ import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
         ShowSearchEntity::class,
         RecordingEntity::class,
         DataVersionEntity::class,
-        LibraryShowEntity::class,
+        FavoriteShowEntity::class,
         RecentShowEntity::class,
         DeadCollectionEntity::class,
         TrackReviewEntity::class,
@@ -42,7 +42,7 @@ import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
         ShowReviewEntity::class,
         RecordingPreferenceEntity::class
     ],
-    version = 18,
+    version = 19,
     exportSchema = false
 )
 abstract class DeadlyDatabase : RoomDatabase() {
@@ -51,7 +51,7 @@ abstract class DeadlyDatabase : RoomDatabase() {
     abstract fun showSearchDao(): ShowSearchDao
     abstract fun recordingDao(): RecordingDao
     abstract fun dataVersionDao(): DataVersionDao
-    abstract fun libraryDao(): LibraryDao
+    abstract fun favoritesDao(): FavoritesDao
     abstract fun recentShowDao(): RecentShowDao
     abstract fun collectionsDao(): CollectionsDao
     abstract fun trackReviewDao(): TrackReviewDao
@@ -68,7 +68,7 @@ abstract class DeadlyDatabase : RoomDatabase() {
                 DeadlyDatabase::class.java,
                 DATABASE_NAME
             )
-            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14, DatabaseMigrations.MIGRATION_14_15, DatabaseMigrations.MIGRATION_15_16, DatabaseMigrations.MIGRATION_16_17, DatabaseMigrations.MIGRATION_17_18)
+            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14, DatabaseMigrations.MIGRATION_14_15, DatabaseMigrations.MIGRATION_15_16, DatabaseMigrations.MIGRATION_16_17, DatabaseMigrations.MIGRATION_17_18, DatabaseMigrations.MIGRATION_18_19)
             .fallbackToDestructiveMigration() // Safety net for fresh installs or skipped versions
             .build()
         }

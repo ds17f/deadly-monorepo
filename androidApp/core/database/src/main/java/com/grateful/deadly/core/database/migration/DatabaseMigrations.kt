@@ -164,4 +164,21 @@ object DatabaseMigrations {
             """.trimIndent())
         }
     }
+
+    /**
+     * v18 → v19: Rename library_shows to favorite_shows.
+     *
+     * Renames the table and columns to reflect the "Favorites" terminology
+     * used throughout the UI. SQLite supports ALTER TABLE RENAME and
+     * RENAME COLUMN since 3.25.
+     */
+    val MIGRATION_18_19 = object : Migration(18, 19) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("ALTER TABLE library_shows RENAME TO favorite_shows")
+            db.execSQL("ALTER TABLE shows RENAME COLUMN isInLibrary TO isFavorite")
+            db.execSQL("ALTER TABLE shows RENAME COLUMN libraryAddedAt TO favoritedAt")
+            db.execSQL("ALTER TABLE favorite_shows RENAME COLUMN addedToLibraryAt TO addedToFavoritesAt")
+            db.execSQL("ALTER TABLE favorite_shows RENAME COLUMN libraryNotes TO notes")
+        }
+    }
 }

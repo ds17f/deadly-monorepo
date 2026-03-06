@@ -129,8 +129,8 @@ class HomeServiceImpl @Inject constructor(
                 recordingCount = 1,
                 averageRating = 4.8f,
                 totalReviews = 245,
-                isInLibrary = false,
-                libraryAddedAt = null
+                isFavorite = false,
+                favoritedAt = null
             ),
             Show(
                 id = "gd1970-05-08-history",
@@ -146,8 +146,8 @@ class HomeServiceImpl @Inject constructor(
                 recordingCount = 1,
                 averageRating = 4.0f,
                 totalReviews = 87,
-                isInLibrary = false,
-                libraryAddedAt = null
+                isFavorite = false,
+                favoritedAt = null
             ),
             Show(
                 id = "gd1972-05-08-history",
@@ -163,8 +163,8 @@ class HomeServiceImpl @Inject constructor(
                 recordingCount = 1,
                 averageRating = 4.3f,
                 totalReviews = 156,
-                isInLibrary = true,
-                libraryAddedAt = System.currentTimeMillis() - 604800000 // 7 days ago
+                isFavorite = true,
+                favoritedAt = System.currentTimeMillis() - 604800000 // 7 days ago
             )
         )
     }

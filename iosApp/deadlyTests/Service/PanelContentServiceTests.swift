@@ -41,8 +41,8 @@ private func makeShow(id: String = "gd1977-05-08", withLineup: Bool = false) -> 
         averageRating: nil,
         totalReviews: 0,
         coverImageUrl: nil,
-        isInLibrary: false,
-        libraryAddedAt: nil
+        isFavorite: false,
+        favoritedAt: nil
     )
 }
 

@@ -143,8 +143,8 @@ struct GRDBShowRepository: ShowRepository {
             averageRating: record.averageRating.map { Float($0) },
             totalReviews: record.totalReviews,
             coverImageUrl: record.coverImageUrl,
-            isInLibrary: record.isInLibrary,
-            libraryAddedAt: record.libraryAddedAt
+            isFavorite: record.isFavorite,
+            favoritedAt: record.favoritedAt
         )
     }
 

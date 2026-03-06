@@ -13,7 +13,7 @@ import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import com.grateful.deadly.core.database.dao.RecordingDao
 import com.grateful.deadly.core.database.dao.DataVersionDao
-import com.grateful.deadly.core.database.dao.LibraryDao
+import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.CollectionsDao
 import com.grateful.deadly.core.database.dao.TrackReviewDao
@@ -61,8 +61,8 @@ object DatabaseModule {
     
     @Provides
     @AppDatabase
-    fun provideLibraryDao(database: DeadlyDatabase): LibraryDao {
-        return database.libraryDao()
+    fun provideFavoritesDao(database: DeadlyDatabase): FavoritesDao {
+        return database.favoritesDao()
     }
     
     @Provides

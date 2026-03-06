@@ -20,7 +20,7 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.DownloadedShowViewModel
 import com.grateful.deadly.core.model.DownloadsUiState
-import com.grateful.deadly.core.model.LibraryDownloadStatus
+import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.feature.downloads.screens.main.models.DownloadsViewModel
 
 @UnstableApi
@@ -492,7 +492,7 @@ private fun CompletedDownloadItem(
 private fun ArtworkWithBadge(
     recordingId: String?,
     coverImageUrl: String?,
-    status: LibraryDownloadStatus
+    status: FavoritesDownloadStatus
 ) {
     Box {
         ShowArtwork(
@@ -504,12 +504,12 @@ private fun ArtworkWithBadge(
             imageUrl = coverImageUrl
         )
         val (badgeIcon, badgeDescription, badgeTint) = when (status) {
-            LibraryDownloadStatus.COMPLETED -> Triple(
+            FavoritesDownloadStatus.COMPLETED -> Triple(
                 IconResources.Status.CheckCircle(),
                 "Downloaded",
                 MaterialTheme.colorScheme.primary
             )
-            LibraryDownloadStatus.PAUSED -> Triple(
+            FavoritesDownloadStatus.PAUSED -> Triple(
                 IconResources.PlayerControls.Pause(),
                 "Paused",
                 MaterialTheme.colorScheme.onSurfaceVariant

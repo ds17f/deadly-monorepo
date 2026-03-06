@@ -108,7 +108,7 @@ struct DataImportServiceTests {
             collectionsDAO: CollectionsDAO(database: db),
             showSearchDAO: ShowSearchDAO(database: db),
             dataVersionDAO: DataVersionDAO(database: db),
-            libraryDAO: LibraryDAO(database: db)
+            libraryDAO: FavoritesDAO(database: db)
         )
     }
 
@@ -203,8 +203,8 @@ struct DataImportServiceTests {
         #expect(try ShowDAO(database: db).fetchCount() == 0)
     }
 
-    @Test("Library entries are preserved across re-import")
-    func testLibraryPreservation() async throws {
+    @Test("Favorite entries are preserved across re-import")
+    func testFavoritesPreservation() async throws {
         let fixtures = try Fixtures()
         defer { fixtures.cleanup() }
 
@@ -222,13 +222,13 @@ struct DataImportServiceTests {
         for await _ in service1.run(force: true) {}
 
         // Add a library entry
-        let libraryDAO = LibraryDAO(database: db)
+        let libraryDAO = FavoritesDAO(database: db)
         let now = Int64(Date().timeIntervalSince1970 * 1000)
-        try libraryDAO.add(LibraryShowRecord(
+        try libraryDAO.add(FavoriteShowRecord(
             showId: "gd1977-05-08",
-            addedToLibraryAt: now,
+            addedToFavoritesAt: now,
             isPinned: false,
-            libraryNotes: nil,
+            notes: nil,
             preferredRecordingId: nil,
             downloadedRecordingId: nil,
             downloadedFormat: nil,
@@ -242,7 +242,7 @@ struct DataImportServiceTests {
         let service2 = makeService(fixtures: fixtures, db: db)
         for await _ in service2.run(force: true) {}
 
-        // Library should be restored
+        // Favorites should be restored
         #expect(try libraryDAO.fetchCount() == 1)
     }
 

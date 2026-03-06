@@ -23,7 +23,7 @@ import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistMenu
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistRecordingSelectionSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistCollectionsSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistSetlistBottomSheet
-import com.grateful.deadly.core.model.LibraryDownloadStatus
+import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShowReviewSheet
 import com.grateful.deadly.feature.playlist.screens.main.models.PlaylistViewModel
@@ -151,7 +151,7 @@ fun PlaylistScreen(
                                 isLoading = uiState.mediaLoading,
                                 isCurrentShowAndRecording = uiState.isCurrentShowAndRecording,
                                 showCollections = uiState.showCollections,
-                                onLibraryAction = viewModel::handleLibraryAction,
+                                onFavoritesAction = viewModel::handleFavoritesAction,
                                 onDownload = { viewModel.downloadShow() },
                                 onShowSetlist = viewModel::showSetlist,
                                 onShowCollections = viewModel::showCollectionsSheet,
@@ -351,8 +351,8 @@ fun PlaylistScreen(
     // Recording Change + Download Conflict Dialog
     if (uiState.showDownloadConflictDialog) {
         val conflictMessage = when (uiState.showData?.downloadStatus) {
-            LibraryDownloadStatus.COMPLETED -> "This show is downloaded with a different recording. Switching will remove the download."
-            LibraryDownloadStatus.PAUSED -> "This show has a paused download for a different recording. Switching will remove it."
+            FavoritesDownloadStatus.COMPLETED -> "This show is downloaded with a different recording. Switching will remove the download."
+            FavoritesDownloadStatus.PAUSED -> "This show has a paused download for a different recording. Switching will remove it."
             else -> "This show is being downloaded with a different recording. Switching will cancel and remove it."
         }
         AlertDialog(

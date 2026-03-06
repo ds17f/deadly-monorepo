@@ -46,7 +46,7 @@ dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:design"))
     implementation(project(":core:api:player"))
-    implementation(project(":core:api:library"))
+    implementation(project(":core:api:favorites"))
     
     // Compose BOM
     implementation(platform("androidx.compose:compose-bom:2025.08.00"))

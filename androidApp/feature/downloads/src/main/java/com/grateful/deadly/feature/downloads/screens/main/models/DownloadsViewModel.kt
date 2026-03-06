@@ -4,13 +4,13 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.media3.common.util.UnstableApi
-import com.grateful.deadly.core.database.dao.LibraryDao
+import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.download.MediaDownloadManager
 import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.model.DownloadedShowViewModel
 import com.grateful.deadly.core.model.DownloadsUiState
-import com.grateful.deadly.core.model.LibraryDownloadStatus
+import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -25,7 +25,7 @@ import javax.inject.Inject
 class DownloadsViewModel @Inject constructor(
     private val mediaDownloadManager: MediaDownloadManager,
     private val showRepository: ShowRepository,
-    @AppDatabase private val libraryDao: LibraryDao
+    @AppDatabase private val favoritesDao: FavoritesDao
 ) : ViewModel() {
 
     companion object {
@@ -77,10 +77,10 @@ class DownloadsViewModel @Inject constructor(
                         )
 
                         when (progress.status) {
-                            LibraryDownloadStatus.COMPLETED -> completedDownloads.add(viewModel)
-                            LibraryDownloadStatus.DOWNLOADING,
-                            LibraryDownloadStatus.QUEUED -> activeDownloads.add(viewModel)
-                            LibraryDownloadStatus.PAUSED -> pausedDownloads.add(viewModel)
+                            FavoritesDownloadStatus.COMPLETED -> completedDownloads.add(viewModel)
+                            FavoritesDownloadStatus.DOWNLOADING,
+                            FavoritesDownloadStatus.QUEUED -> activeDownloads.add(viewModel)
+                            FavoritesDownloadStatus.PAUSED -> pausedDownloads.add(viewModel)
                             else -> {} // FAILED/CANCELLED/NOT_DOWNLOADED — don't show
                         }
                     }
@@ -98,8 +98,8 @@ class DownloadsViewModel @Inject constructor(
 
     private suspend fun loadShowMetadata(showId: String): ShowMetadata {
         val show = showRepository.getShowById(showId)
-        val libraryEntity = libraryDao.getLibraryShowById(showId)
-        val recordingId = libraryEntity?.downloadedRecordingId
+        val favoriteEntity = favoritesDao.getFavoriteShowById(showId)
+        val recordingId = favoriteEntity?.downloadedRecordingId
             ?: mediaDownloadManager.getRecordingIdForShow(showId)
 
         return ShowMetadata(

@@ -50,8 +50,8 @@ struct Show: Codable, Sendable, Equatable, Identifiable {
     let coverImageUrl: String?
 
     // User state
-    let isInLibrary: Bool
-    let libraryAddedAt: Int64?
+    let isFavorite: Bool
+    let favoritedAt: Int64?
 
     var displayTitle: String { "\(venue.name) - \(date)" }
     var hasRating: Bool { averageRating.map { $0 > 0 } ?? false }

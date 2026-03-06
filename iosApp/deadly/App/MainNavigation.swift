@@ -7,7 +7,7 @@ struct MainNavigation: View {
     @State private var showFullPlayer = false
     @State private var homeStack = NavigationPath()
     @State private var searchStack = NavigationPath()
-    @State private var libraryStack = NavigationPath()
+    @State private var favoritesStack = NavigationPath()
     @State private var collectionsStack = NavigationPath()
     @State private var pendingShowNavigation: String?
     @State private var pendingDeepLink: DeepLink?
@@ -45,18 +45,16 @@ struct MainNavigation: View {
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
-            Tab("Library", systemImage: "books.vertical", value: .library) {
-                NavigationStack(path: $libraryStack) {
-                    LibraryScreen()
+            Tab("Favorites", systemImage: "heart.fill", value: .favorites) {
+                NavigationStack(path: $favoritesStack) {
+                    FavoritesScreen()
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
                         }
-                        .navigationDestination(for: LibraryRoute.self) { route in
+                        .navigationDestination(for: FavoritesRoute.self) { route in
                             switch route {
                             case .downloads:
                                 DownloadsScreen()
-                            case .favorites:
-                                FavoritesScreen()
                             }
                         }
                 }
@@ -100,7 +98,7 @@ struct MainNavigation: View {
         }
         .onChange(of: selectedTab) { oldTab, newTab in
             // When offline and user switches to a restricted tab, redirect to Downloads
-            if isOffline && newTab != .library && newTab != .settings {
+            if isOffline && newTab != .favorites && newTab != .settings {
                 // Use async to avoid modifying state during view update
                 DispatchQueue.main.async {
                     navigateToDownloads()
@@ -141,10 +139,10 @@ struct MainNavigation: View {
                     homeStack = NavigationPath()
                     homeStack.append(showId)
                 },
-                onAddToLibrary: {
+                onAddToFavorites: {
                     pendingDeepLink = nil
                     guard case .show(let showId, _, _) = link else { return }
-                    try? container.libraryService.addToLibrary(showId: showId)
+                    try? container.favoritesService.addToFavorites(showId: showId)
                 },
                 onIgnore: {
                     pendingDeepLink = nil
@@ -196,9 +194,9 @@ struct MainNavigation: View {
     }
 
     private func navigateToDownloads() {
-        libraryStack = NavigationPath()
-        libraryStack.append(LibraryRoute.downloads)
-        selectedTab = .library
+        favoritesStack = NavigationPath()
+        favoritesStack.append(FavoritesRoute.downloads)
+        selectedTab = .favorites
     }
 
     private func navigateToShow(showId: String, on tab: AppTab) {
@@ -211,10 +209,10 @@ struct MainNavigation: View {
             searchStack = NavigationPath()
             searchStack.append(showId)
             selectedTab = .search
-        case .library:
-            libraryStack = NavigationPath()
-            libraryStack.append(showId)
-            selectedTab = .library
+        case .favorites:
+            favoritesStack = NavigationPath()
+            favoritesStack.append(showId)
+            selectedTab = .favorites
         case .collections:
             collectionsStack = NavigationPath()
             collectionsStack.append(showId)
@@ -240,16 +238,15 @@ struct MainNavigation: View {
 // MARK: - Tab enum
 
 enum AppTab: String, Hashable {
-    case home, search, library, collections, settings
+    case home, search, favorites, collections, settings
 
     var title: String { rawValue.capitalized }
 }
 
-// MARK: - Library Routes
+// MARK: - Favorites Routes
 
-enum LibraryRoute: Hashable {
+enum FavoritesRoute: Hashable {
     case downloads
-    case favorites
 }
 
 // MARK: - PlaceholderScreen

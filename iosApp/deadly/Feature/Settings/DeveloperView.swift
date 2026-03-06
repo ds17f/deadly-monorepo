@@ -65,7 +65,7 @@ struct DeveloperView: View {
             }
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("This will re-download and re-import all show data. Your library will be preserved.")
+            Text("This will re-download and re-import all show data. Your favorites will be preserved.")
         }
 
         .fullScreenCover(isPresented: $showingImport) {

@@ -6,7 +6,7 @@ import android.util.Log
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import com.grateful.deadly.core.api.collections.DeadCollectionsService
-import com.grateful.deadly.core.api.library.LibraryService
+import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.domain.repository.ShowRepository
@@ -25,7 +25,7 @@ class BrowseTreeProvider @Inject constructor(
     private val showRepository: ShowRepository,
     private val recentShowsService: RecentShowsService,
     private val collectionsService: DeadCollectionsService,
-    private val libraryService: LibraryService,
+    private val favoritesService: FavoritesService,
     private val searchService: SearchService,
     private val archiveService: ArchiveService
 ) {
@@ -38,7 +38,7 @@ class BrowseTreeProvider @Inject constructor(
 
     fun getRootItems(): List<MediaItem> = listOf(
         buildBrowsableItem(BrowseMediaId.RECENT, "Recent", "Recently played shows"),
-        buildBrowsableItem(BrowseMediaId.LIBRARY, "Library", "Shows you've saved"),
+        buildBrowsableItem(BrowseMediaId.LIBRARY, "Favorites", "Shows you've saved"),
         buildBrowsableItem(BrowseMediaId.TODAY, "TIGDH", "Today in Grateful Dead History"),
         buildBrowsableItem(BrowseMediaId.YEARS, "Browse by Year", "1965\u20131995"),
         buildBrowsableItem(BrowseMediaId.TOP_RATED, "Top Rated", "Highest rated shows"),
@@ -51,11 +51,11 @@ class BrowseTreeProvider @Inject constructor(
                 recentShowsService.getRecentShows(20).map(::buildShowItem)
             }
             parentId == BrowseMediaId.LIBRARY -> {
-                val shows = if (libraryService.getCurrentShows().value.isNotEmpty()) {
-                    libraryService.getCurrentShows().value
+                val shows = if (favoritesService.getCurrentShows().value.isNotEmpty()) {
+                    favoritesService.getCurrentShows().value
                 } else {
                     withTimeoutOrNull(3_000L) {
-                        libraryService.getCurrentShows().first { it.isNotEmpty() }
+                        favoritesService.getCurrentShows().first { it.isNotEmpty() }
                     } ?: emptyList()
                 }
                 shows.map { buildShowItem(it.show) }
@@ -106,7 +106,7 @@ class BrowseTreeProvider @Inject constructor(
         mediaId == BrowseMediaId.RECENT ->
             buildBrowsableItem(BrowseMediaId.RECENT, "Recent", "Recently played shows")
         mediaId == BrowseMediaId.LIBRARY ->
-            buildBrowsableItem(BrowseMediaId.LIBRARY, "Library", "Shows you've saved")
+            buildBrowsableItem(BrowseMediaId.LIBRARY, "Favorites", "Shows you've saved")
         mediaId == BrowseMediaId.TOP_RATED ->
             buildBrowsableItem(BrowseMediaId.TOP_RATED, "Top Rated", "Highest rated shows")
         mediaId == BrowseMediaId.TODAY ->

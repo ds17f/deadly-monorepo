@@ -3,7 +3,7 @@ package com.grateful.deadly.core.database.service
 import android.util.Log
 import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.DataVersionDao
-import com.grateful.deadly.core.database.dao.LibraryDao
+import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import com.grateful.deadly.core.database.dao.RecordingDao
@@ -122,7 +122,7 @@ class DataImportService @Inject constructor(
     @AppDatabase private val showSearchDao: ShowSearchDao,
     @AppDatabase private val recordingDao: RecordingDao,
     @AppDatabase private val dataVersionDao: DataVersionDao,
-    @AppDatabase private val libraryDao: LibraryDao,
+    @AppDatabase private val favoritesDao: FavoritesDao,
     private val collectionsImportService: CollectionsImportService
 ) {
     
@@ -152,10 +152,10 @@ class DataImportService @Inject constructor(
             
             progressCallback?.invoke(ImportProgress("READING_FILES", 0, showFiles.size + recordingFiles.size, "Preparing data files..."))
             
-            // Preserve library entries (CASCADE FK on shows would delete them)
-            val savedLibrary = libraryDao.getAllLibraryShows()
-            if (savedLibrary.isNotEmpty()) {
-                Log.i(TAG, "Preserving ${savedLibrary.size} library entries across re-import")
+            // Preserve favorite entries (CASCADE FK on shows would delete them)
+            val savedFavorites = favoritesDao.getAllFavoriteShows()
+            if (savedFavorites.isNotEmpty()) {
+                Log.i(TAG, "Preserving ${savedFavorites.size} favorite entries across re-import")
             }
 
             // Clear existing data
@@ -366,10 +366,10 @@ class DataImportService @Inject constructor(
                 )
             )
             
-            // Restore library entries that were preserved before clearing
-            if (savedLibrary.isNotEmpty()) {
-                libraryDao.addMultipleToLibrary(savedLibrary)
-                Log.i(TAG, "Restored ${savedLibrary.size} library entries after re-import")
+            // Restore favorite entries that were preserved before clearing
+            if (savedFavorites.isNotEmpty()) {
+                favoritesDao.addMultipleToFavorites(savedFavorites)
+                Log.i(TAG, "Restored ${savedFavorites.size} favorite entries after re-import")
             }
 
             progressCallback?.invoke(ImportProgress("COMPLETED", importedShows + importedRecordings, importedShows + importedRecordings, "Import completed successfully"))
@@ -488,8 +488,8 @@ class DataImportService @Inject constructor(
             averageRating = averageRating, // From show data
             totalReviews = totalReviews, // Approximated from source types
             coverImageUrl = resolveCoverImageUrl(showData),
-            isInLibrary = false,
-            libraryAddedAt = null,
+            isFavorite = false,
+            favoritedAt = null,
             createdAt = currentTime,
             updatedAt = currentTime
         )

@@ -1,12 +1,12 @@
 package com.grateful.deadly.core.database.migration
 
 import android.util.Log
-import com.grateful.deadly.core.database.dao.LibraryDao
+import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.TrackReviewDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
-import com.grateful.deadly.core.database.entities.LibraryShowEntity
+import com.grateful.deadly.core.database.entities.FavoriteShowEntity
 import com.grateful.deadly.core.database.entities.RecentShowEntity
 import com.grateful.deadly.core.database.entities.ShowEntity
 import com.grateful.deadly.core.database.entities.TrackReviewEntity
@@ -19,7 +19,7 @@ import javax.inject.Singleton
 @Singleton
 class MigrationImportService @Inject constructor(
     @AppDatabase private val showDao: ShowDao,
-    @AppDatabase private val libraryDao: LibraryDao,
+    @AppDatabase private val favoritesDao: FavoritesDao,
     @AppDatabase private val recentShowDao: RecentShowDao,
     @AppDatabase private val trackReviewDao: TrackReviewDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao
@@ -43,40 +43,40 @@ class MigrationImportService @Inject constructor(
             return MigrationResult(0, 0, 0, listOf("Invalid file format: ${data.format}"))
         }
 
-        Log.d(TAG, "Importing migration v${data.version} from ${data.appVersion}: ${data.library.size} library, ${data.recentPlays.size} recent")
+        Log.d(TAG, "Importing migration v${data.version} from ${data.appVersion}: ${data.library.size} favorites, ${data.recentPlays.size} recent")
 
-        var libraryImported = 0
+        var favoritesImported = 0
         var recentImported = 0
         var skipped = 0
         val errors = mutableListOf<String>()
 
-        // Import library shows
+        // Import favorite shows
         // Track date→showId mapping for review import
         val dateToShowId = mutableMapOf<String, String>()
         for (item in data.library) {
             try {
                 val show = findShow(item.date, item.venue)
                 if (show != null) {
-                    libraryDao.addToLibrary(
-                        LibraryShowEntity(
+                    favoritesDao.addToFavorites(
+                        FavoriteShowEntity(
                             showId = show.showId,
-                            addedToLibraryAt = item.addedAt,
+                            addedToFavoritesAt = item.addedAt,
                             customRating = item.customRating,
                             recordingQuality = item.recordingQuality,
                             playingQuality = item.playingQuality,
-                            libraryNotes = item.notes
+                            notes = item.notes
                         )
                     )
                     dateToShowId[item.date] = show.showId
-                    libraryImported++
-                    Log.d(TAG, "Imported library show: ${item.date} → ${show.showId}")
+                    favoritesImported++
+                    Log.d(TAG, "Imported favorite show: ${item.date} → ${show.showId}")
                 } else {
                     skipped++
-                    Log.w(TAG, "No match for library show: ${item.date} ${item.venue}")
+                    Log.w(TAG, "No match for favorite show: ${item.date} ${item.venue}")
                 }
             } catch (e: Exception) {
-                errors.add("Library ${item.date}: ${e.message}")
-                Log.e(TAG, "Error importing library show ${item.date}", e)
+                errors.add("Favorite ${item.date}: ${e.message}")
+                Log.e(TAG, "Error importing favorite show ${item.date}", e)
             }
         }
 
@@ -161,8 +161,8 @@ class MigrationImportService @Inject constructor(
             }
         }
 
-        Log.d(TAG, "Import complete: $libraryImported library, $recentImported recent, $skipped skipped, ${errors.size} errors")
-        return MigrationResult(libraryImported, recentImported, skipped, errors)
+        Log.d(TAG, "Import complete: $favoritesImported favorites, $recentImported recent, $skipped skipped, ${errors.size} errors")
+        return MigrationResult(favoritesImported, recentImported, skipped, errors)
     }
 
     /**

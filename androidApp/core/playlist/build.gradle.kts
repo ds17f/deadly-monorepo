@@ -40,7 +40,7 @@ dependencies {
     // V2 dependencies
     implementation(project(":core:network"))
     implementation(project(":core:api:playlist"))
-    implementation(project(":core:api:library"))
+    implementation(project(":core:api:favorites"))
     implementation(project(":core:api:collections"))
     implementation(project(":core:collections"))
     implementation(project(":core:model"))

@@ -7,11 +7,11 @@ import kotlinx.serialization.Serializable
  */
 
 /**
- * Actions available for library button interactions
+ * Actions available for favorites button interactions
  */
-enum class LibraryAction {
-    ADD_TO_LIBRARY,
-    REMOVE_FROM_LIBRARY,
+enum class FavoritesAction {
+    ADD_TO_FAVORITES,
+    REMOVE_FROM_FAVORITES,
     REMOVE_WITH_DOWNLOADS
 }
 
@@ -34,9 +34,9 @@ data class PlaylistShowViewModel(
     val trackCount: Int,
     val hasNextShow: Boolean,
     val hasPreviousShow: Boolean,
-    val isInLibrary: Boolean = false,
+    val isFavorite: Boolean = false,
     val downloadProgress: Float? = null, // null = not downloaded, 0.0-1.0 = downloading, 1.0 = complete
-    val downloadStatus: LibraryDownloadStatus? = null,
+    val downloadStatus: FavoritesDownloadStatus? = null,
     val coverImageUrl: String? = null,
     val recordingCount: Int = 0
 )

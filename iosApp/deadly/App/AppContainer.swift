@@ -12,12 +12,12 @@ final class AppContainer {
     let database: AppDatabase
     let appPreferences: AppPreferences
     let dataImportService: DataImportService
-    let libraryImportExportService: LibraryImportExportService
+    let favoritesImportExportService: FavoritesImportExportService
     let reviewService: ReviewService
     let showRepository: any ShowRepository
     let searchService: SearchServiceImpl
     let homeService: HomeServiceImpl
-    let libraryService: LibraryServiceImpl
+    let favoritesService: FavoritesServiceImpl
     let collectionsService: CollectionsServiceImpl
     let streamPlayer: StreamPlayer
     let playlistService: PlaylistServiceImpl
@@ -53,7 +53,7 @@ final class AppContainer {
                 collectionsDAO: CollectionsDAO(database: db),
                 showSearchDAO: ShowSearchDAO(database: db),
                 dataVersionDAO: DataVersionDAO(database: db),
-                libraryDAO: LibraryDAO(database: db)
+                favoritesDAO: FavoritesDAO(database: db)
             )
             let showRepo = GRDBShowRepository(
                 showDAO: ShowDAO(database: db),
@@ -67,14 +67,14 @@ final class AppContainer {
                 showRepository: showRepo,
                 appPreferences: prefs
             )
-            libraryService = LibraryServiceImpl(
+            favoritesService = FavoritesServiceImpl(
                 database: db,
-                libraryDAO: LibraryDAO(database: db),
+                favoritesDAO: FavoritesDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
                 showRepository: showRepo
             )
-            libraryImportExportService = LibraryImportExportService(
-                libraryDAO: LibraryDAO(database: db),
+            favoritesImportExportService = FavoritesImportExportService(
+                favoritesDAO: FavoritesDAO(database: db),
                 showDAO: ShowDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
                 trackReviewDAO: TrackReviewDAO(database: db),
@@ -134,7 +134,7 @@ final class AppContainer {
                 DownloadServiceImpl(
                     archiveClient: URLSessionArchiveMetadataClient(),
                     showRepository: showRepo,
-                    libraryDAO: LibraryDAO(database: db),
+                    favoritesDAO: FavoritesDAO(database: db),
                     downloadTaskDAO: DownloadTaskDAO(database: db),
                     storageManager: DownloadStorageManager()
                 )

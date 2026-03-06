@@ -221,10 +221,10 @@ object TopBarDefaults {
     }
     
     /**
-     * Search and Add actions for LibraryScreen
+     * Search and Add actions for FavoritesScreen
      */
     @Composable
-    fun LibraryActions(
+    fun FavoritesActions(
         onSearchClick: () -> Unit,
         onAddClick: () -> Unit
     ): @Composable RowScope.() -> Unit = {
@@ -238,7 +238,7 @@ object TopBarDefaults {
         IconButton(onClick = onAddClick) {
             Icon(
                 painter = IconResources.Navigation.Add(),
-                contentDescription = "Add to Library",
+                contentDescription = "Add to Favorites",
                 tint = MaterialTheme.colorScheme.onSurface
             )
         }

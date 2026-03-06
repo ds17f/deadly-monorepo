@@ -53,9 +53,9 @@ interface PlaylistService {
     suspend fun navigateToPreviousShow()
     
     /**
-     * Add current show to library
+     * Add current show to favorites
      */
-    suspend fun addToLibrary()
+    suspend fun addToFavorites()
     
     /**
      * Download current show
