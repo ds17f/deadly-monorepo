@@ -80,6 +80,12 @@ struct MainNavigation: View {
             Tab("Settings", systemImage: "gearshape", value: .settings) {
                 NavigationStack {
                     SettingsScreen()
+                        .navigationDestination(for: SettingsRoute.self) { route in
+                            switch route {
+                            case .downloads:
+                                DownloadsScreen()
+                            }
+                        }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
@@ -246,6 +252,12 @@ enum AppTab: String, Hashable {
 // MARK: - Favorites Routes
 
 enum FavoritesRoute: Hashable {
+    case downloads
+}
+
+// MARK: - Settings Routes
+
+enum SettingsRoute: Hashable {
     case downloads
 }
 

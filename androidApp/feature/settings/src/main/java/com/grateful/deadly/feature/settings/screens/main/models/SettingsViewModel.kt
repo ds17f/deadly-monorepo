@@ -8,12 +8,16 @@ import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.migration.MigrationImportService
 import com.grateful.deadly.core.database.migration.MigrationResult
+import com.grateful.deadly.core.database.service.BackupImportExportService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 import kotlinx.coroutines.withContext
 import java.io.File
 import javax.inject.Inject
@@ -24,6 +28,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
     private val migrationImportService: MigrationImportService,
+    private val backupImportExportService: BackupImportExportService,
     private val appPreferences: AppPreferences,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
@@ -105,6 +110,57 @@ class SettingsViewModel @Inject constructor(
         }
     }
     
+    fun importFavorites(uri: Uri, onComplete: (Result<String>) -> Unit) {
+        viewModelScope.launch {
+            try {
+                val jsonString = withContext(Dispatchers.IO) {
+                    context.contentResolver.openInputStream(uri)?.use { input ->
+                        input.bufferedReader().readText()
+                    } ?: throw IllegalStateException("Could not open file")
+                }
+                val result = withContext(Dispatchers.IO) {
+                    backupImportExportService.importBackup(jsonString)
+                }
+                val summary = buildString {
+                    append("Imported ${result.favoritesImported} favorites")
+                    if (result.reviewsImported > 0) append(", ${result.reviewsImported} reviews")
+                    if (result.tracksImported > 0) append(", ${result.tracksImported} tracks")
+                    if (result.preferencesImported > 0) append(", ${result.preferencesImported} recording prefs")
+                }
+                onComplete(Result.success(summary))
+            } catch (e: Exception) {
+                Log.e(TAG, "Backup import failed", e)
+                onComplete(Result.failure(e))
+            }
+        }
+    }
+
+    fun exportFavorites(onComplete: (Result<String>) -> Unit) {
+        viewModelScope.launch {
+            try {
+                val jsonString = withContext(Dispatchers.IO) {
+                    backupImportExportService.export()
+                }
+                val downloadsDir = File("/storage/emulated/0/Download/")
+                if (!downloadsDir.exists()) {
+                    downloadsDir.mkdirs()
+                }
+                val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.US)
+                val dateString = dateFormat.format(Date())
+                val filename = "the-deadly-backup-$dateString.json"
+                val exportFile = File(downloadsDir, filename)
+                withContext(Dispatchers.IO) {
+                    exportFile.writeText(jsonString)
+                }
+                Log.d(TAG, "Backup exported to: ${exportFile.absolutePath}")
+                onComplete(Result.success(filename))
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to export backup", e)
+                onComplete(Result.failure(e))
+            }
+        }
+    }
+
     /**
      * Delete all deady_db* files from the databases directory
      * 
