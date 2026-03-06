@@ -83,8 +83,8 @@ fun PlaylistTrackItem(
             )
         }
         
-        // Thumbs-up indicator
-        if (track.isThumbsUp) {
+        // Favorite indicator
+        if (track.isFavorite) {
             Icon(
                 painter = IconResources.Content.Favorite(),
                 contentDescription = "Favorite",

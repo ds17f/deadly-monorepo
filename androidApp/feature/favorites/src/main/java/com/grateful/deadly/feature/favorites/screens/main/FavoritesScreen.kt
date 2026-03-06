@@ -31,32 +31,40 @@ import com.grateful.deadly.feature.favorites.screens.main.models.FavoritesViewMo
  * Favorites Screen - Main favorites interface
  *
  * Features:
- * - Hierarchical decade/season filtering
+ * - Shows/Songs tab switching
+ * - Hierarchical decade/season filtering (applies to both tabs)
  * - Advanced sorting with pin priority
- * - List/grid display modes
+ * - List/grid display modes (shows only)
  * - Favorites management actions
  * - Real-time download status integration
  *
  * Note: Scaffold-free content designed for use within MainNavigation's AppScaffold.
  * TopBar configuration handled by FavoritesBarConfiguration.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FavoritesScreen(
     onNavigateToShow: (String) -> Unit = {},
     onNavigateToPlayer: (String) -> Unit = {},
+    onNavigateToPlaylist: (showId: String, recordingId: String?, trackNumber: Int?, autoPlay: Boolean) -> Unit = { _, _, _, _ -> },
     onNavigateToFavorites: () -> Unit = {},
     onNavigateBack: () -> Unit = {},
     viewModel: FavoritesViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val favoriteSongs by viewModel.favoriteSongs.collectAsState()
+    val songsLoading by viewModel.songsLoading.collectAsState()
 
     // UI State
+    var selectedTab by remember { mutableStateOf(FavoritesTab.SHOWS) }
     var filterPath by remember { mutableStateOf(FilterPath()) }
     var sortBy by remember { mutableStateOf(FavoritesSortOption.DATE_ADDED) }
+    var songSortBy by remember { mutableStateOf(FavoritesSongSortOption.DATE_ADDED) }
     var sortDirection by remember { mutableStateOf(FavoritesSortDirection.DESCENDING) }
     val displayMode by viewModel.displayMode.collectAsState()
     var showAddBottomSheet by remember { mutableStateOf(false) }
     var showSortBottomSheet by remember { mutableStateOf(false) }
+    var showSongSortBottomSheet by remember { mutableStateOf(false) }
     var selectedShowForActions by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
     var qrCodeShow by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
     var reviewShowTarget by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
@@ -75,56 +83,76 @@ fun FavoritesScreen(
                     .padding(horizontal = 16.dp, vertical = 8.dp)
             )
 
+            // Tab Picker
+            SingleChoiceSegmentedButtonRow(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 4.dp)
+            ) {
+                FavoritesTab.entries.forEachIndexed { index, tab ->
+                    SegmentedButton(
+                        selected = selectedTab == tab,
+                        onClick = { selectedTab = tab },
+                        shape = SegmentedButtonDefaults.itemShape(
+                            index = index,
+                            count = FavoritesTab.entries.size
+                        )
+                    ) {
+                        Text(tab.displayName)
+                    }
+                }
+            }
+
             // Sort Controls and Display Toggle
-            SortAndDisplayControls(
-                sortBy = sortBy,
-                sortDirection = sortDirection,
-                displayMode = displayMode,
-                onSortSelectorClick = { showSortBottomSheet = true },
-                onDisplayModeChanged = { viewModel.setDisplayMode(it) },
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
-            )
+            if (selectedTab == FavoritesTab.SHOWS) {
+                SortAndDisplayControls(
+                    sortBy = sortBy,
+                    sortDirection = sortDirection,
+                    displayMode = displayMode,
+                    onSortSelectorClick = { showSortBottomSheet = true },
+                    onDisplayModeChanged = { viewModel.setDisplayMode(it) },
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                )
+            } else {
+                SongSortControls(
+                    sortBy = songSortBy,
+                    sortDirection = sortDirection,
+                    onSortSelectorClick = { showSongSortBottomSheet = true },
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                )
+            }
 
             // Main Content
-            when {
-                uiState.isLoading -> {
-                    LoadingContent(modifier = Modifier.weight(1f))
-                }
-
-                uiState.error != null -> {
-                    ErrorContent(
-                        message = uiState.error!!,
-                        onRetry = viewModel::retry,
-                        modifier = Modifier.weight(1f)
-                    )
-                }
-
-                uiState.shows.isEmpty() -> {
-                    EmptyFavoritesContent(
-                        modifier = Modifier.weight(1f)
-                    )
-                }
-
-                else -> {
-                    // Apply filtering and sorting
-                    val filteredAndSortedShows = remember(uiState.shows, filterPath, sortBy, sortDirection) {
-                        applyFiltersAndSorting(
-                            shows = uiState.shows,
-                            filterPath = filterPath,
-                            sortBy = sortBy,
-                            sortDirection = sortDirection
+            if (selectedTab == FavoritesTab.SHOWS) {
+                ShowsTabContent(
+                    uiState = uiState,
+                    filterPath = filterPath,
+                    sortBy = sortBy,
+                    sortDirection = sortDirection,
+                    displayMode = displayMode,
+                    onShowClick = onNavigateToShow,
+                    onPlayClick = onNavigateToPlayer,
+                    onShowLongPress = { show -> selectedShowForActions = show },
+                    onRetry = viewModel::retry,
+                    modifier = Modifier.weight(1f)
+                )
+            } else {
+                SongsTabContent(
+                    songs = favoriteSongs,
+                    isLoading = songsLoading,
+                    filterPath = filterPath,
+                    sortBy = songSortBy,
+                    sortDirection = sortDirection,
+                    onSongClick = { track ->
+                        onNavigateToPlaylist(
+                            track.showId,
+                            track.recordingId,
+                            track.trackNumber,
+                            true
                         )
-                    }
-
-                    FavoritesContent(
-                        shows = filteredAndSortedShows,
-                        displayMode = displayMode,
-                        onShowClick = onNavigateToShow,
-                        onPlayClick = onNavigateToPlayer,
-                        onShowLongPress = { show -> selectedShowForActions = show },
-                        modifier = Modifier.weight(1f)
-                    )
-                }
+                    },
+                    modifier = Modifier.weight(1f)
+                )
             }
         }
 
@@ -145,6 +173,19 @@ fun FavoritesScreen(
                 showSortBottomSheet = false
             },
             onDismiss = { showSortBottomSheet = false }
+        )
+    }
+
+    if (showSongSortBottomSheet) {
+        SongSortOptionsBottomSheet(
+            currentSortOption = songSortBy,
+            currentSortDirection = sortDirection,
+            onSortOptionSelected = { option, direction ->
+                songSortBy = option
+                sortDirection = direction
+                showSongSortBottomSheet = false
+            },
+            onDismiss = { showSongSortBottomSheet = false }
         )
     }
 
@@ -213,6 +254,239 @@ fun FavoritesScreen(
             coverImageUrl = show.coverImageUrl,
             onDismiss = { qrCodeShow = null }
         )
+    }
+}
+
+/**
+ * Shows tab content
+ */
+@Composable
+private fun ShowsTabContent(
+    uiState: FavoritesUiState,
+    filterPath: FilterPath,
+    sortBy: FavoritesSortOption,
+    sortDirection: FavoritesSortDirection,
+    displayMode: FavoritesDisplayMode,
+    onShowClick: (String) -> Unit,
+    onPlayClick: (String) -> Unit,
+    onShowLongPress: (FavoriteShowViewModel) -> Unit,
+    onRetry: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    when {
+        uiState.isLoading -> {
+            LoadingContent(modifier = modifier)
+        }
+        uiState.error != null -> {
+            ErrorContent(
+                message = uiState.error!!,
+                onRetry = onRetry,
+                modifier = modifier
+            )
+        }
+        uiState.shows.isEmpty() -> {
+            EmptyContent(
+                title = "No Favorite Shows",
+                message = "Import your favorites from a previous backup or add shows manually.",
+                modifier = modifier
+            )
+        }
+        else -> {
+            val filteredAndSortedShows = remember(uiState.shows, filterPath, sortBy, sortDirection) {
+                applyFiltersAndSorting(
+                    shows = uiState.shows,
+                    filterPath = filterPath,
+                    sortBy = sortBy,
+                    sortDirection = sortDirection
+                )
+            }
+
+            if (filteredAndSortedShows.isEmpty()) {
+                EmptyContent(
+                    title = "No Matching Shows",
+                    message = "Try adjusting the filter.",
+                    modifier = modifier
+                )
+            } else {
+                FavoritesContent(
+                    shows = filteredAndSortedShows,
+                    displayMode = displayMode,
+                    onShowClick = onShowClick,
+                    onPlayClick = onPlayClick,
+                    onShowLongPress = onShowLongPress,
+                    modifier = modifier
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Songs tab content
+ */
+@Composable
+private fun SongsTabContent(
+    songs: List<FavoriteTrack>,
+    isLoading: Boolean,
+    filterPath: FilterPath,
+    sortBy: FavoritesSongSortOption,
+    sortDirection: FavoritesSortDirection,
+    onSongClick: (FavoriteTrack) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    when {
+        isLoading -> {
+            LoadingContent(modifier = modifier)
+        }
+        songs.isEmpty() -> {
+            EmptyContent(
+                title = "No Favorite Songs",
+                message = "Favorite songs while listening to build your collection.",
+                modifier = modifier
+            )
+        }
+        else -> {
+            val filteredAndSortedSongs = remember(songs, filterPath, sortBy, sortDirection) {
+                applyFiltersAndSortingSongs(
+                    songs = songs,
+                    filterPath = filterPath,
+                    sortBy = sortBy,
+                    sortDirection = sortDirection
+                )
+            }
+
+            if (filteredAndSortedSongs.isEmpty()) {
+                EmptyContent(
+                    title = "No Matching Songs",
+                    message = "Try adjusting the filter.",
+                    modifier = modifier
+                )
+            } else {
+                LazyColumn(
+                    modifier = modifier,
+                    contentPadding = PaddingValues(vertical = 8.dp),
+                    verticalArrangement = Arrangement.spacedBy(0.dp)
+                ) {
+                    items(filteredAndSortedSongs, key = { "${it.showId}_${it.trackTitle}_${it.recordingId}" }) { track ->
+                        FavoriteSongListItem(
+                            track = track,
+                            onClick = { onSongClick(track) }
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Song sort controls (no display mode toggle)
+ */
+@Composable
+private fun SongSortControls(
+    sortBy: FavoritesSongSortOption,
+    sortDirection: FavoritesSortDirection,
+    onSortSelectorClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.Start,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        TextButton(onClick = onSortSelectorClick) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    painter = IconResources.Navigation.SwapVert(),
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp)
+                )
+                Spacer(modifier = Modifier.width(4.dp))
+                Text(text = sortBy.displayName)
+                Spacer(modifier = Modifier.width(4.dp))
+                Icon(
+                    painter = if (sortDirection == FavoritesSortDirection.ASCENDING) {
+                        IconResources.Navigation.KeyboardArrowUp()
+                    } else {
+                        IconResources.Navigation.KeyboardArrowDown()
+                    },
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp)
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Song sort options bottom sheet
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SongSortOptionsBottomSheet(
+    currentSortOption: FavoritesSongSortOption,
+    currentSortDirection: FavoritesSortDirection,
+    onSortOptionSelected: (FavoritesSongSortOption, FavoritesSortDirection) -> Unit,
+    onDismiss: () -> Unit
+) {
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+        ) {
+            Text(
+                text = "Sort By",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+            FavoritesSongSortOption.entries.forEach { option ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = currentSortOption == option,
+                        onClick = {
+                            onSortOptionSelected(option, currentSortDirection)
+                        }
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(text = option.displayName)
+                }
+            }
+
+            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+
+            Text(
+                text = "Direction",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            FavoritesSortDirection.entries.forEach { direction ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = currentSortDirection == direction,
+                        onClick = {
+                            onSortOptionSelected(currentSortOption, direction)
+                        }
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(text = direction.displayName)
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+        }
     }
 }
 
@@ -325,10 +599,12 @@ private fun ErrorContent(
 }
 
 /**
- * Empty favorites content
+ * Empty content (used for both tabs)
  */
 @Composable
-private fun EmptyFavoritesContent(
+private fun EmptyContent(
+    title: String,
+    message: String,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -337,7 +613,7 @@ private fun EmptyFavoritesContent(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Your Favorites are Empty",
+            text = title,
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold
         )
@@ -345,7 +621,7 @@ private fun EmptyFavoritesContent(
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(
-            text = "Import your favorites from a previous backup or add shows manually.",
+            text = message,
             style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -403,6 +679,34 @@ private fun applyFiltersAndSorting(
 }
 
 /**
+ * Apply filtering and sorting to songs
+ */
+private fun applyFiltersAndSortingSongs(
+    songs: List<FavoriteTrack>,
+    filterPath: FilterPath,
+    sortBy: FavoritesSongSortOption,
+    sortDirection: FavoritesSortDirection
+): List<FavoriteTrack> {
+    val filtered = if (filterPath.isEmpty) {
+        songs
+    } else {
+        applyHierarchicalFilteringSongs(songs, filterPath)
+    }
+
+    val comparator: Comparator<FavoriteTrack> = when (sortBy) {
+        FavoritesSongSortOption.SONG_TITLE -> compareBy { it.trackTitle }
+        FavoritesSongSortOption.SHOW_DATE -> compareBy { it.showDate }
+        FavoritesSongSortOption.DATE_ADDED -> compareBy { it.addedAt }
+    }
+
+    return if (sortDirection == FavoritesSortDirection.ASCENDING) {
+        filtered.sortedWith(comparator)
+    } else {
+        filtered.sortedWith(comparator.reversed())
+    }
+}
+
+/**
  * Apply hierarchical filtering based on decade and season
  */
 private fun applyHierarchicalFiltering(
@@ -447,6 +751,42 @@ private fun applyHierarchicalFiltering(
     } else {
         shows
     }
+}
+
+/**
+ * Apply hierarchical filtering to songs based on their show date
+ */
+private fun applyHierarchicalFilteringSongs(
+    songs: List<FavoriteTrack>,
+    filterPath: FilterPath
+): List<FavoriteTrack> {
+    val selectedDecadeNode = filterPath.nodes.firstOrNull()
+    val selectedSeasonNode = filterPath.nodes.getOrNull(1)
+
+    return if (selectedDecadeNode != null) {
+        songs.filter { track ->
+            val year = track.showDate.substring(0, 4).toIntOrNull() ?: 0
+            val decadeMatches = when (selectedDecadeNode.id) {
+                "60s" -> year in 1960..1969
+                "70s" -> year in 1970..1979
+                "80s" -> year in 1980..1989
+                "90s" -> year in 1990..1999
+                else -> true
+            }
+            if (decadeMatches && selectedSeasonNode != null) {
+                val month = extractMonthFromDate(track.showDate)
+                if (month != null) {
+                    when (selectedSeasonNode.id.substringAfter("_")) {
+                        "spring" -> month in 3..5
+                        "summer" -> month in 6..8
+                        "fall" -> month in 9..11
+                        "winter" -> month == 12 || month in 1..2
+                        else -> true
+                    }
+                } else true
+            } else decadeMatches
+        }
+    } else songs
 }
 
 /**

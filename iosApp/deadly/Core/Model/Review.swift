@@ -41,7 +41,7 @@ struct TrackReview: Codable, Sendable, Equatable, Identifiable {
     var notes: String?
 
     var id: String { "\(trackTitle)|\(recordingId ?? "")" }
-    var isThumbsUp: Bool { thumbs == 1 }
+    var isFavorite: Bool { thumbs == 1 }
     var isThumbsDown: Bool { thumbs == -1 }
     var hasRating: Bool { thumbs != nil || starRating != nil }
 }
@@ -54,6 +54,7 @@ struct FavoriteTrack: Identifiable, Sendable {
     let trackTitle: String
     let trackNumber: Int?
     let recordingId: String?
+    let addedAt: Int64
 
     var id: String { "\(showId)|\(trackTitle)|\(recordingId ?? "")" }
 }

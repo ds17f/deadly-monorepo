@@ -58,7 +58,7 @@ data class PlaylistTrackViewModel(
     val downloadProgress: Float? = null, // null = not downloaded, 0.0-1.0 = downloading
     val isCurrentTrack: Boolean = false,
     val isPlaying: Boolean = false,
-    val isThumbsUp: Boolean = false
+    val isFavorite: Boolean = false
 )
 
 /**

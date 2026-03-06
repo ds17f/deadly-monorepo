@@ -15,11 +15,18 @@ struct FavoritesServiceTests {
         let showDAO = ShowDAO(database: db)
         let recordingDAO = RecordingDAO(database: db)
         let repo = GRDBShowRepository(showDAO: showDAO, recordingDAO: recordingDAO, appPreferences: AppPreferences())
+        let reviewSvc = ReviewService(
+            showReviewDAO: ShowReviewDAO(database: db),
+            trackReviewDAO: TrackReviewDAO(database: db),
+            showPlayerTagDAO: ShowPlayerTagDAO(database: db),
+            showDAO: showDAO
+        )
         service = FavoritesServiceImpl(
             database: db,
             favoritesDAO: FavoritesDAO(database: db),
             showReviewDAO: ShowReviewDAO(database: db),
-            showRepository: repo
+            showRepository: repo,
+            reviewService: reviewSvc
         )
     }
 

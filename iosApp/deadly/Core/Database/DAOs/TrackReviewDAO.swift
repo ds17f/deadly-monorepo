@@ -49,7 +49,7 @@ struct TrackReviewDAO: Sendable {
         }
     }
 
-    func fetchThumbsUp() throws -> [TrackReviewRecord] {
+    func fetchFavorites() throws -> [TrackReviewRecord] {
         try database.read { db in
             try TrackReviewRecord
                 .filter(Column("thumbs") == 1)
@@ -60,7 +60,7 @@ struct TrackReviewDAO: Sendable {
 
     // MARK: - Observation
 
-    func observeThumbsUpTitles(showId: String) -> ValueObservation<ValueReducers.Fetch<Set<String>>> {
+    func observeFavoriteTitles(showId: String) -> ValueObservation<ValueReducers.Fetch<Set<String>>> {
         ValueObservation.tracking { db in
             let titles = try TrackReviewRecord
                 .filter(Column("showId") == showId && Column("thumbs") == 1)

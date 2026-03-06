@@ -31,7 +31,7 @@ fun PlayerTrackActionsSheet(
     onShare: () -> Unit,
     onAddToPlaylist: () -> Unit,
     onDownload: () -> Unit,
-    onThumbsUp: () -> Unit,
+    onFavorite: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     ModalBottomSheet(
@@ -125,7 +125,7 @@ fun PlayerTrackActionsSheet(
                 text = if (currentThumbsState == 1) "Favorited" else "Favorite",
                 icon = if (currentThumbsState == 1) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
                 onClick = {
-                    onThumbsUp()
+                    onFavorite()
                     onDismiss()
                 }
             )

@@ -26,7 +26,7 @@ struct ShowDetailScreen: View {
     @State private var showReviewSheet = false
     @State private var showSetlistSheet = false
     @State private var showWriteReviewSheet = false
-    @State private var thumbsUpTracks: Set<String> = []
+    @State private var favoriteTracks: Set<String> = []
     @State private var userReview: ShowReview?
 
     var body: some View {
@@ -51,8 +51,8 @@ struct ShowDetailScreen: View {
         .task(id: playlistService.currentShow?.id ?? showId) {
             let activeShowId = playlistService.currentShow?.id ?? showId
             do {
-                for try await titles in container.reviewService.observeThumbsUpTitles(showId: activeShowId) {
-                    thumbsUpTracks = titles
+                for try await titles in container.reviewService.observeFavoriteTitles(showId: activeShowId) {
+                    favoriteTracks = titles
                 }
             } catch {}
         }
@@ -225,7 +225,7 @@ struct ShowDetailScreen: View {
                             isPlaying: isCurrentTrack(track) && streamPlayer.playbackState.isPlaying,
                             isLoading: isCurrentTrack(track) && (streamPlayer.playbackState == .loading || streamPlayer.playbackState == .buffering),
                             downloadState: trackStates[track.name],
-                            isThumbsUp: thumbsUpTracks.contains(track.title)
+                            isFavorite: favoriteTracks.contains(track.title)
                         )
                         .contentShape(Rectangle())
                         .onTapGesture {

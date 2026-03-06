@@ -35,7 +35,7 @@ interface TrackReviewDao {
     suspend fun getReviewCountForShow(showId: String): Int
 
     @Query("SELECT * FROM track_reviews WHERE thumbs = 1 ORDER BY updatedAt DESC")
-    suspend fun getThumbsUpTracks(): List<TrackReviewEntity>
+    suspend fun getFavoriteTracks(): List<TrackReviewEntity>
 
     @Query("SELECT * FROM track_reviews")
     suspend fun getAll(): List<TrackReviewEntity>

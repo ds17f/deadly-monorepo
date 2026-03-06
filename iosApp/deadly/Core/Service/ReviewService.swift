@@ -59,8 +59,8 @@ struct ReviewService: Sendable {
         try trackReviewDAO.fetchForShow(showId).map { $0.toDomain() }
     }
 
-    func observeThumbsUpTitles(showId: String) -> AsyncValueObservation<Set<String>> {
-        trackReviewDAO.database.observe(trackReviewDAO.observeThumbsUpTitles(showId: showId))
+    func observeFavoriteTitles(showId: String) -> AsyncValueObservation<Set<String>> {
+        trackReviewDAO.database.observe(trackReviewDAO.observeFavoriteTitles(showId: showId))
     }
 
     func getTrackReview(showId: String, trackTitle: String, recordingId: String?) throws -> TrackReview? {
@@ -117,8 +117,8 @@ struct ReviewService: Sendable {
 
     // MARK: - Favorites
 
-    func getThumbsUpTracks() throws -> [FavoriteTrack] {
-        let records = try trackReviewDAO.fetchThumbsUp()
+    func getFavoriteTracks() throws -> [FavoriteTrack] {
+        let records = try trackReviewDAO.fetchFavorites()
         let showIds = Array(Set(records.map { $0.showId }))
         let shows = try showDAO.fetchByIds(showIds)
         let showMap = Dictionary(uniqueKeysWithValues: shows.map { ($0.showId, $0) })
@@ -130,7 +130,8 @@ struct ReviewService: Sendable {
                 venue: show.venueName,
                 trackTitle: record.trackTitle,
                 trackNumber: record.trackNumber,
-                recordingId: record.recordingId
+                recordingId: record.recordingId,
+                addedAt: record.updatedAt
             )
         }
     }

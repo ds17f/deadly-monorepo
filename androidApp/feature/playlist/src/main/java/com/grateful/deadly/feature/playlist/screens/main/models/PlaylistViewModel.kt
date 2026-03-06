@@ -63,7 +63,7 @@ class PlaylistViewModel @Inject constructor(
     private val _rawTrackData = MutableStateFlow<List<PlaylistTrackViewModel>>(emptyList())
     
     // Thumbs-up track titles for the current show
-    private val _thumbsUpTitles = MutableStateFlow<Set<String>>(emptySet())
+    private val _favoriteTitles = MutableStateFlow<Set<String>>(emptySet())
 
     // Whether the user has written a review for the current show
     private val _hasUserReview = MutableStateFlow(false)
@@ -106,7 +106,7 @@ class PlaylistViewModel @Inject constructor(
                 }
         }
 
-        // Reactive thumbs-up loading - watch track reviews for the current show
+        // Reactive favorite track loading - watch track reviews for the current show
         viewModelScope.launch {
             _baseUiState
                 .map { it.showData?.showId }
@@ -116,7 +116,7 @@ class PlaylistViewModel @Inject constructor(
                     else flowOf(emptyList())
                 }
                 .collect { reviews ->
-                    _thumbsUpTitles.value = reviews.filter { it.isThumbsUp }.map { it.trackTitle }.toSet()
+                    _favoriteTitles.value = reviews.filter { it.isFavorite }.map { it.trackTitle }.toSet()
                 }
         }
 
@@ -219,9 +219,9 @@ class PlaylistViewModel @Inject constructor(
         ) { baseState, rawTracks, isPlaying, currentTrackInfo, favoriteAndDownload ->
             CorePlaylistState(baseState, rawTracks, isPlaying, currentTrackInfo, favoriteAndDownload)
         },
-        _thumbsUpTitles,
+        _favoriteTitles,
         _hasUserReview
-    ) { core, thumbsUp, hasUserReview ->
+    ) { core, favorites, hasUserReview ->
         val (baseState, rawTracks, isPlaying, currentTrackInfo, favoriteAndDownload) = core
 
         // Update track data with current playing state
@@ -230,7 +230,7 @@ class PlaylistViewModel @Inject constructor(
             track.copy(
                 isCurrentTrack = isCurrentTrack,
                 isPlaying = isCurrentTrack && isPlaying,
-                isThumbsUp = track.title in thumbsUp
+                isFavorite = track.title in favorites
             )
         }
 

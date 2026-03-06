@@ -135,3 +135,22 @@ enum FavoritesDisplayMode: String, Codable, Sendable, Equatable, CaseIterable {
         }
     }
 }
+
+enum FavoritesTab: String, CaseIterable {
+    case shows = "Shows"
+    case songs = "Songs"
+}
+
+enum FavoritesSongSortOption: String, CaseIterable {
+    case songTitle = "SONG_TITLE"
+    case showDate = "SHOW_DATE"
+    case dateAdded = "DATE_ADDED"
+
+    var displayName: String {
+        switch self {
+        case .songTitle: return "Song Title"
+        case .showDate: return "Show Date"
+        case .dateAdded: return "Date Added"
+        }
+    }
+}

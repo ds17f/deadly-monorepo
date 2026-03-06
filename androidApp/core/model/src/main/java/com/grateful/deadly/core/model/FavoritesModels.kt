@@ -207,3 +207,20 @@ enum class FavoritesDisplayMode {
     LIST,
     GRID
 }
+
+/**
+ * Tab selection for favorites screen
+ */
+enum class FavoritesTab(val displayName: String) {
+    SHOWS("Shows"),
+    SONGS("Songs")
+}
+
+/**
+ * Sort options for favorite songs
+ */
+enum class FavoritesSongSortOption(val displayName: String) {
+    SONG_TITLE("Song Title"),
+    SHOW_DATE("Show Date"),
+    DATE_ADDED("Date Added")
+}

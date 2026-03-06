@@ -40,11 +40,14 @@ struct FavoritesScreen: View {
     @Environment(\.appContainer) private var container
     private var service: FavoritesServiceImpl { container.favoritesService }
 
+    @State private var selectedTab: FavoritesTab = .shows
     @State private var sortOption: FavoritesSortOption = .dateAdded
     @State private var sortDirection: FavoritesSortDirection = .descending
+    @State private var songSortOption: FavoritesSongSortOption = .dateAdded
     @State private var displayMode: FavoritesDisplayMode = .list
     @State private var activeDecadeFilter: Int?
     @State private var activeSeasonFilter: Season?
+    @State private var showFullPlayer = false
 
     // Import / Export state
     @State private var showingFilePicker = false
@@ -73,32 +76,31 @@ struct FavoritesScreen: View {
         }
     }
 
+    private var filteredSongs: [FavoriteTrack] {
+        service.songs.filter { track in
+            guard let decade = activeDecadeFilter else { return true }
+            let decadeRange = (decade...decade + 9)
+            let parts = track.showDate.split(separator: "-")
+            guard let year = parts.first.flatMap({ Int($0) }), decadeRange.contains(year) else { return false }
+            if let season = activeSeasonFilter {
+                guard parts.count >= 2, let month = Int(parts[1]) else { return true }
+                return season.months.contains(month)
+            }
+            return true
+        }
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             filterChips
+            tabPicker
             sortAndDisplayControls
             Divider()
 
-            if service.isLoading {
-                ProgressView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-            } else if service.shows.isEmpty {
-                ContentUnavailableView(
-                    "No Favorite Shows",
-                    systemImage: "heart",
-                    description: Text("Import your favorites from the old app or browse shows to add them.")
-                )
-            } else if filteredShows.isEmpty {
-                ContentUnavailableView(
-                    "No Matching Shows",
-                    systemImage: "line.3.horizontal.decrease.circle",
-                    description: Text("Try adjusting the filter.")
-                )
+            if selectedTab == .shows {
+                showsContent
             } else {
-                switch displayMode {
-                case .list: listView
-                case .grid: gridView
-                }
+                songsContent
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -109,12 +111,26 @@ struct FavoritesScreen: View {
         }
         .task {
             service.refresh(sortedBy: sortOption, direction: sortDirection)
+            service.refreshSongs(sortedBy: songSortOption, direction: sortDirection)
         }
         .onChange(of: sortOption) { _, new in
             service.refresh(sortedBy: new, direction: sortDirection)
         }
+        .onChange(of: songSortOption) { _, new in
+            service.refreshSongs(sortedBy: new, direction: sortDirection)
+        }
         .onChange(of: sortDirection) { _, new in
-            service.refresh(sortedBy: sortOption, direction: new)
+            if selectedTab == .shows {
+                service.refresh(sortedBy: sortOption, direction: new)
+            } else {
+                service.refreshSongs(sortedBy: songSortOption, direction: new)
+            }
+        }
+        .fullScreenCover(isPresented: $showFullPlayer) {
+            PlayerScreen(
+                streamPlayer: container.streamPlayer,
+                isPresented: $showFullPlayer
+            )
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -245,6 +261,91 @@ struct FavoritesScreen: View {
         }
     }
 
+    // MARK: - Tab picker
+
+    private var tabPicker: some View {
+        Picker("", selection: $selectedTab) {
+            ForEach(FavoritesTab.allCases, id: \.self) { tab in
+                Text(tab.rawValue).tag(tab)
+            }
+        }
+        .pickerStyle(.segmented)
+        .padding(.horizontal, DeadlySpacing.screenPadding)
+        .padding(.vertical, 4)
+    }
+
+    // MARK: - Shows content
+
+    @ViewBuilder
+    private var showsContent: some View {
+        if service.isLoading {
+            ProgressView()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        } else if service.shows.isEmpty {
+            ContentUnavailableView(
+                "No Favorite Shows",
+                systemImage: "heart",
+                description: Text("Import your favorites or browse shows to add them.")
+            )
+        } else if filteredShows.isEmpty {
+            ContentUnavailableView(
+                "No Matching Shows",
+                systemImage: "line.3.horizontal.decrease.circle",
+                description: Text("Try adjusting the filter.")
+            )
+        } else {
+            switch displayMode {
+            case .list: listView
+            case .grid: gridView
+            }
+        }
+    }
+
+    // MARK: - Songs content
+
+    @ViewBuilder
+    private var songsContent: some View {
+        if service.songs.isEmpty {
+            ContentUnavailableView(
+                "No Favorite Songs",
+                systemImage: "heart",
+                description: Text("Favorite songs while listening to build your collection.")
+            )
+        } else if filteredSongs.isEmpty {
+            ContentUnavailableView(
+                "No Matching Songs",
+                systemImage: "line.3.horizontal.decrease.circle",
+                description: Text("Try adjusting the filter.")
+            )
+        } else {
+            List {
+                ForEach(filteredSongs) { track in
+                    Button {
+                        playSong(track)
+                    } label: {
+                        SongRowView(track: track)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .listStyle(.plain)
+        }
+    }
+
+    private func playSong(_ track: FavoriteTrack) {
+        Task {
+            await container.playlistService.loadShow(track.showId)
+            if let rid = track.recordingId,
+               let rec = try? container.showRepository.getRecordingById(rid) {
+                await container.playlistService.selectRecording(rec)
+            }
+            let idx = track.trackNumber.map { max(0, $0 - 1) } ?? 0
+            container.playlistService.playTrack(at: idx)
+            container.playlistService.recordRecentPlay()
+            showFullPlayer = true
+        }
+    }
+
     // MARK: - Filter chips
 
     private var filterChips: some View {
@@ -307,18 +408,34 @@ struct FavoritesScreen: View {
 
     private var sortAndDisplayControls: some View {
         HStack {
-            Menu {
-                ForEach(FavoritesSortOption.allCases, id: \.self) { option in
-                    Button(sortOptionLabel(option)) { sortOption = option }
+            if selectedTab == .shows {
+                Menu {
+                    ForEach(FavoritesSortOption.allCases, id: \.self) { option in
+                        Button(sortOptionLabel(option)) { sortOption = option }
+                    }
+                } label: {
+                    HStack(spacing: 6) {
+                        Image(systemName: "arrow.up.arrow.down")
+                        Text(sortOptionLabel(sortOption))
+                            .fontWeight(.medium)
+                    }
+                    .font(.body)
+                    .frame(minHeight: 44)
                 }
-            } label: {
-                HStack(spacing: 6) {
-                    Image(systemName: "arrow.up.arrow.down")
-                    Text(sortOptionLabel(sortOption))
-                        .fontWeight(.medium)
+            } else {
+                Menu {
+                    ForEach(FavoritesSongSortOption.allCases, id: \.self) { option in
+                        Button(option.displayName) { songSortOption = option }
+                    }
+                } label: {
+                    HStack(spacing: 6) {
+                        Image(systemName: "arrow.up.arrow.down")
+                        Text(songSortOption.displayName)
+                            .fontWeight(.medium)
+                    }
+                    .font(.body)
+                    .frame(minHeight: 44)
                 }
-                .font(.body)
-                .frame(minHeight: 44)
             }
 
             Button {
@@ -331,14 +448,16 @@ struct FavoritesScreen: View {
 
             Spacer()
 
-            Button {
-                let newMode: FavoritesDisplayMode = displayMode == .list ? .grid : .list
-                displayMode = newMode
-                container.appPreferences.favoritesDisplayMode = newMode.rawValue
-            } label: {
-                Image(systemName: displayMode == .list ? "square.grid.2x2" : "list.bullet")
-                    .font(.body)
-                    .frame(minWidth: 44, minHeight: 44)
+            if selectedTab == .shows {
+                Button {
+                    let newMode: FavoritesDisplayMode = displayMode == .list ? .grid : .list
+                    displayMode = newMode
+                    container.appPreferences.favoritesDisplayMode = newMode.rawValue
+                } label: {
+                    Image(systemName: displayMode == .list ? "square.grid.2x2" : "list.bullet")
+                        .font(.body)
+                        .frame(minWidth: 44, minHeight: 44)
+                }
             }
         }
         .padding(.horizontal, DeadlySpacing.screenPadding)

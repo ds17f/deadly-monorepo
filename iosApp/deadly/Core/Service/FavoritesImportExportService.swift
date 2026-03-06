@@ -32,9 +32,9 @@ struct FavoritesImportExportService {
             )
         }
 
-        // Favorites: thumbs-up tracks
-        let thumbsUpTracks = try trackReviewDAO.fetchThumbsUp()
-        let favoriteTracks = thumbsUpTracks.map { track in
+        // Favorite tracks
+        let favoriteTrackRecords = try trackReviewDAO.fetchFavorites()
+        let favoriteTracks = favoriteTrackRecords.map { track in
             FavoriteTrackEntry(
                 showId: track.showId,
                 trackTitle: track.trackTitle,

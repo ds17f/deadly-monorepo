@@ -53,7 +53,7 @@ interface ReviewService {
 
     suspend fun removePlayerTag(showId: String, playerName: String)
 
-    suspend fun getThumbsUpTracks(): List<FavoriteTrack>
+    suspend fun getFavoriteTracks(): List<FavoriteTrack>
 
     suspend fun deleteShowReview(showId: String)
 }
