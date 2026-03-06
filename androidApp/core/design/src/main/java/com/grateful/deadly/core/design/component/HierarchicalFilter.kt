@@ -99,9 +99,11 @@ fun HierarchicalFilter(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         //contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
-        // Clear button - always show first
+        // "All" chip - always visible, highlighted when nothing selected
         item {
-            FilterClearButton(
+            FilterOptionChip(
+                node = FilterNode(id = "all", label = "All"),
+                isSelected = selectedPath.isEmpty,
                 onClick = { onSelectionChanged(FilterPath()) }
             )
         }
@@ -168,33 +170,6 @@ fun HierarchicalFilter(
             }
         }
     }
-}
-
-/**
- * Clear button (X) for resetting filter selection - styled like other filter chips
- */
-@Composable
-private fun FilterClearButton(
-    onClick: () -> Unit
-) {
-    FilterChip(
-        onClick = onClick,
-        label = { 
-            Text(
-                text = "✕",
-                style = MaterialTheme.typography.labelMedium
-            )
-        },
-        selected = false,
-        colors = FilterChipDefaults.filterChipColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-            labelColor = MaterialTheme.colorScheme.onSurfaceVariant
-        ),
-        border = FilterChipDefaults.filterChipBorder(
-            enabled = true,
-            selected = false
-        )
-    )
 }
 
 /**

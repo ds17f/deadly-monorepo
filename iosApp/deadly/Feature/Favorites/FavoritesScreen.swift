@@ -349,59 +349,69 @@ struct FavoritesScreen: View {
     // MARK: - Filter chips
 
     private var filterChips: some View {
-        VStack(spacing: 4) {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    ForEach(decades) { decade in
-                        chipButton(
-                            label: decade.label,
-                            isActive: activeDecadeFilter == decade.range.lowerBound
-                        ) {
-                            if activeDecadeFilter == decade.range.lowerBound {
-                                activeDecadeFilter = nil
-                                activeSeasonFilter = nil
-                            } else {
-                                activeDecadeFilter = decade.range.lowerBound
-                                activeSeasonFilter = nil
-                            }
-                        }
-                    }
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 6) {
+                // "All" chip — always visible, highlighted when no filter active
+                chipButton(label: "All", isActive: activeDecadeFilter == nil) {
+                    activeDecadeFilter = nil
+                    activeSeasonFilter = nil
                 }
-                .padding(.horizontal, DeadlySpacing.screenPadding)
-            }
-            .fixedSize(horizontal: false, vertical: true)
 
-            if activeDecadeFilter != nil {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 8) {
-                        ForEach(Season.allCases, id: \.self) { season in
-                            chipButton(
-                                label: season.rawValue,
-                                isActive: activeSeasonFilter == season
-                            ) {
-                                activeSeasonFilter = (activeSeasonFilter == season) ? nil : season
-                            }
+                if let decade = activeDecadeFilter,
+                   let season = activeSeasonFilter,
+                   let decadeLabel = decades.first(where: { $0.range.lowerBound == decade })?.label {
+                    // Both selected: single combined chip
+                    chipButton(
+                        label: "\(decadeLabel) · \(season.rawValue)",
+                        isActive: true
+                    ) {
+                        activeSeasonFilter = nil
+                    }
+                } else if let decade = activeDecadeFilter {
+                    // Decade selected: show selected decade + season chips
+                    if let d = decades.first(where: { $0.range.lowerBound == decade }) {
+                        chipButton(label: d.label, isActive: true) {
+                            activeDecadeFilter = nil
+                            activeSeasonFilter = nil
                         }
                     }
-                    .padding(.horizontal, DeadlySpacing.screenPadding)
+
+                    ForEach(Season.allCases, id: \.self) { season in
+                        chipButton(
+                            label: season.rawValue,
+                            isActive: false
+                        ) {
+                            activeSeasonFilter = season
+                        }
+                    }
+                } else {
+                    // No selection: show all decade chips
+                    ForEach(decades) { decade in
+                        chipButton(label: decade.label, isActive: false) {
+                            activeDecadeFilter = decade.range.lowerBound
+                        }
+                    }
                 }
-                .fixedSize(horizontal: false, vertical: true)
             }
+            .padding(.horizontal, DeadlySpacing.screenPadding)
         }
-        .padding(.vertical, 2)
+        .contentMargins(.bottom, 0, for: .scrollContent)
+        .fixedSize(horizontal: false, vertical: true)
+        .padding(.vertical, 8)
     }
 
     private func chipButton(label: String, isActive: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(label)
-                .font(.caption)
+                .font(.subheadline)
                 .fontWeight(.medium)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
                 .background(isActive ? DeadlyColors.primary : Color(.systemGray5))
                 .foregroundStyle(isActive ? .white : .primary)
                 .clipShape(Capsule())
         }
+        .buttonStyle(.plain)
     }
 
     // MARK: - Sort and display controls
