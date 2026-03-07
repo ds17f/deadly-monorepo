@@ -75,12 +75,14 @@ fun PlaylistInteractiveRating(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-                Icon(
-                    painter = IconResources.Content.StickyNote(),
-                    contentDescription = if (hasUserReview) "Your review" else "No review",
-                    tint = if (hasUserReview) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(16.dp)
-                )
+                if (hasUserReview) {
+                    Icon(
+                        painter = IconResources.Content.StickyNote(),
+                        contentDescription = "Your review",
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(16.dp)
+                    )
+                }
 
                 val reviewCount = showData.reviewCount
                 Text(
