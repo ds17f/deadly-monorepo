@@ -25,6 +25,11 @@ interface PlaylistService {
      * Get current show information as ViewModel
      */
     suspend fun getCurrentShowInfo(): PlaylistShowViewModel?
+
+    /**
+     * Get lineup member names for the current show (for review dialog)
+     */
+    fun getCurrentShowLineup(): List<String>
     
     /**
      * Get track list for current show as ViewModels

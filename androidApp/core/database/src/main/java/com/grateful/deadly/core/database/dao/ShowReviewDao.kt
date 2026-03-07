@@ -20,6 +20,9 @@ interface ShowReviewDao {
     fun getByShowIdFlow(showId: String): Flow<ShowReviewEntity?>
 
     @Query("SELECT * FROM show_reviews")
+    fun getAllFlow(): Flow<List<ShowReviewEntity>>
+
+    @Query("SELECT * FROM show_reviews")
     suspend fun getAll(): List<ShowReviewEntity>
 
     @Query("SELECT * FROM show_reviews WHERE showId IN (:showIds)")

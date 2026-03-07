@@ -450,7 +450,6 @@ class FavoritesViewModel @Inject constructor(
             coverImageUrl = favoriteShow.show.coverImageUrl,
             recordingCount = favoriteShow.recordingCount,
             hasReview = favoriteShow.hasReview,
-            hasNotes = favoriteShow.hasNotes,
             customRating = favoriteShow.customRating,
             lineupMembers = favoriteShow.show.lineup?.members?.map { it.name } ?: emptyList()
         )

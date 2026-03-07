@@ -51,8 +51,7 @@ struct FavoriteShow: Codable, Sendable, Equatable, Identifiable {
     var totalReviews: Int { show.totalReviews }
     var isFavorite: Bool { true }
 
-    var hasNotes: Bool { notes != nil && !notes!.isEmpty }
-    var hasReview: Bool { customRating != nil || recordingQuality != nil || playingQuality != nil || hasNotes }
+    var hasReview: Bool { customRating != nil || recordingQuality != nil || playingQuality != nil || (notes != nil && !notes!.isEmpty) }
 
     var isPinnedAndDownloaded: Bool { isPinned && downloadStatus == .completed }
     var favoriteAge: Int64 { Int64(Date().timeIntervalSince1970 * 1000) - addedToFavoritesAt }

@@ -460,10 +460,10 @@ struct FavoritesScreen: View {
                             .font(.system(size: 8))
                             .foregroundStyle(DeadlyColors.primary)
                     }
-                    if favoriteShow.hasNotes {
-                        Image(systemName: "note.text")
+                    if favoriteShow.hasReview {
+                        Image(systemName: "star.fill")
                             .font(.system(size: 8))
-                            .foregroundStyle(.tertiary)
+                            .foregroundStyle(DeadlyColors.secondary)
                     }
                     Text(DateFormatting.formatShowDate(show.date, style: .short))
                         .font(.caption2)

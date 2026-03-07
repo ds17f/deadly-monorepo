@@ -33,8 +33,7 @@ data class FavoriteShow(
     val totalReviews: Int get() = show.totalReviews
     val isFavorite: Boolean get() = true
 
-    val hasNotes: Boolean get() = !notes.isNullOrBlank()
-    val hasReview: Boolean get() = customRating != null || recordingQuality != null || playingQuality != null || hasNotes
+    val hasReview: Boolean get() = customRating != null || recordingQuality != null || playingQuality != null || !notes.isNullOrBlank()
 
     val isPinnedAndDownloaded: Boolean get() = isPinned && downloadStatus == FavoritesDownloadStatus.COMPLETED
     val favoriteAge: Long get() = System.currentTimeMillis() - addedToFavoritesAt
@@ -145,7 +144,6 @@ data class FavoriteShowViewModel(
     val coverImageUrl: String? = null,
     val recordingCount: Int = 0,
     val hasReview: Boolean = false,
-    val hasNotes: Boolean = false,
     val customRating: Float? = null,
     val lineupMembers: List<String> = emptyList()
 )
