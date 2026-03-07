@@ -125,7 +125,8 @@ fun AppScaffold(
                         actions = config.actions?.let { actions ->
                             { actions() }
                         } ?: {},
-                        onNavigationClick = onNavigationClick
+                        onNavigationClick = onNavigationClick,
+                        onLogoClick = config.onLogoClick
                     )
                 }
             },

@@ -5,6 +5,7 @@ import UniformTypeIdentifiers
 // MARK: - SettingsScreen
 
 struct SettingsScreen: View {
+    var onNavigateToDownloads: (() -> Void)? = nil
     @Environment(\.appContainer) private var container
     @Environment(\.openURL) private var openURL
     @State private var showingFilePicker = false
@@ -35,8 +36,14 @@ struct SettingsScreen: View {
 
             // MARK: - Favorites & Data
             Section("Favorites & Data") {
-                NavigationLink(value: SettingsRoute.downloads) {
-                    Label("Manage Downloads", systemImage: "arrow.down.circle")
+                if let onNavigateToDownloads {
+                    Button { onNavigateToDownloads() } label: {
+                        Label("Manage Downloads", systemImage: "arrow.down.circle")
+                    }
+                } else {
+                    NavigationLink(value: SettingsRoute.downloads) {
+                        Label("Manage Downloads", systemImage: "arrow.down.circle")
+                    }
                 }
                 Button {
                     showingFilePicker = true

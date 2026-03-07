@@ -7,12 +7,13 @@ import com.grateful.deadly.core.design.resources.IconResources
 /**
  * Bottom navigation destinations
  *
- * Defines the 5 main tabs in the bottom navigation:
+ * Defines the 4 main tabs in the bottom navigation:
  * - Home: Main hub for browsing and discovery
  * - Search: Search and browse functionality
  * - Favorites: User's saved shows
  * - Collections: Curated collections and series
- * - Settings: App configuration and preferences
+ *
+ * Settings is accessed via the drawer (gear icon in top bar).
  */
 sealed class BottomNavDestination(
     val route: String,
@@ -48,14 +49,7 @@ sealed class BottomNavDestination(
         unselectedIcon = { IconResources.Navigation.Collections() }
     )
 
-    data object Settings : BottomNavDestination(
-        route = "settings",
-        title = "Settings",
-        selectedIcon = { IconResources.Navigation.Settings() },
-        unselectedIcon = { IconResources.Navigation.SettingsOutlined() }
-    )
-
     companion object {
-        val destinations = listOf(Home, Search, Favorites, Collections, Settings)
+        val destinations = listOf(Home, Search, Favorites, Collections)
     }
 }

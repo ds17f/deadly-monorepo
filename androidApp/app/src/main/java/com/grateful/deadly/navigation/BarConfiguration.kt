@@ -24,6 +24,7 @@ import com.grateful.deadly.feature.downloads.screens.main.DownloadsBarConfigurat
 object NavigationBarConfig {
     fun getBarConfig(
         route: String?,
+        isOffline: Boolean = false,
     ): BarConfiguration = when {
         // Home routes
         route == "home" -> HomeBarConfiguration.getHomeBarConfig()
@@ -42,7 +43,7 @@ object NavigationBarConfig {
         route == "library" -> FavoritesBarConfiguration.getFavoritesBarConfig()
         
         // Downloads routes
-        route == "downloads" -> DownloadsBarConfiguration.getDownloadsBarConfig()
+        route == "downloads" -> DownloadsBarConfiguration.getDownloadsBarConfig(isOffline)
 
         // Collections routes
         route == "collections" -> CollectionsBarConfiguration.getCollectionsBarConfig()

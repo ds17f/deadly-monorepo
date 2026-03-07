@@ -14,6 +14,7 @@ struct MainNavigation: View {
     @State private var selectedTab: AppTab = .home
     @State private var playerSourceTab: AppTab = .home
     @State private var searchResetToken = 0
+    @State private var showingSettings = false
 
     private var isOffline: Bool { !container.networkMonitor.isConnected }
 
@@ -22,6 +23,7 @@ struct MainNavigation: View {
             Tab("Home", systemImage: "house", value: .home) {
                 NavigationStack(path: $homeStack) {
                     HomeScreen()
+                        .settingsLogoButton($showingSettings, title: "Home")
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
                         }
@@ -38,6 +40,7 @@ struct MainNavigation: View {
             Tab("Search", systemImage: "magnifyingglass", value: .search) {
                 NavigationStack(path: $searchStack) {
                     SearchScreen(resetToken: searchResetToken)
+                        .settingsLogoButton($showingSettings, title: "Search")
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
                         }
@@ -48,6 +51,7 @@ struct MainNavigation: View {
             Tab("Favorites", systemImage: "heart.fill", value: .favorites) {
                 NavigationStack(path: $favoritesStack) {
                     FavoritesScreen()
+                        .settingsLogoButton($showingSettings, title: "Favorites")
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
                         }
@@ -64,6 +68,7 @@ struct MainNavigation: View {
             Tab("Collections", systemImage: "square.stack", value: .collections) {
                 NavigationStack(path: $collectionsStack) {
                     CollectionsScreen()
+                        .settingsLogoButton($showingSettings, title: "Collections")
                         .navigationDestination(for: CollectionRoute.self) { route in
                             switch route {
                             case .detail(let id):
@@ -77,19 +82,12 @@ struct MainNavigation: View {
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
-            Tab("Settings", systemImage: "gearshape", value: .settings) {
-                NavigationStack {
-                    SettingsScreen()
-                        .navigationDestination(for: SettingsRoute.self) { route in
-                            switch route {
-                            case .downloads:
-                                DownloadsScreen()
-                            }
-                        }
-                }
-                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
-            }
+        }
+        .overlay {
+            SettingsDrawer(isOpen: $showingSettings, onNavigateToDownloads: {
+                showingSettings = false
+                navigateToDownloads()
+            })
         }
         .onChange(of: showFullPlayer) { _, isPresented in
             if isPresented { playerSourceTab = selectedTab }
@@ -97,14 +95,14 @@ struct MainNavigation: View {
         .onChange(of: container.networkMonitor.isConnected) { _, isConnected in
             if !isConnected {
                 // When going offline, navigate to Downloads (unless in Settings or Player)
-                if selectedTab != .settings && !showFullPlayer {
+                if !showFullPlayer {
                     navigateToDownloads()
                 }
             }
         }
         .onChange(of: selectedTab) { oldTab, newTab in
             // When offline and user switches to a restricted tab, redirect to Downloads
-            if isOffline && newTab != .favorites && newTab != .settings {
+            if isOffline && newTab != .favorites {
                 // Use async to avoid modifying state during view update
                 DispatchQueue.main.async {
                     navigateToDownloads()
@@ -163,7 +161,7 @@ struct MainNavigation: View {
                 }
             }
             // When dismissing player while offline, redirect to Downloads
-            if isOffline && selectedTab != .settings {
+            if isOffline {
                 navigateToDownloads()
             }
         }) {
@@ -223,10 +221,6 @@ struct MainNavigation: View {
             collectionsStack = NavigationPath()
             collectionsStack.append(showId)
             selectedTab = .collections
-        case .settings:
-            homeStack = NavigationPath()
-            homeStack.append(showId)
-            selectedTab = .home
         }
     }
 
@@ -244,7 +238,7 @@ struct MainNavigation: View {
 // MARK: - Tab enum
 
 enum AppTab: String, Hashable {
-    case home, search, favorites, collections, settings
+    case home, search, favorites, collections
 
     var title: String { rawValue.capitalized }
 }
@@ -273,6 +267,75 @@ struct PlaceholderScreen: View {
             description: Text("Coming soon")
         )
         .navigationTitle(tab.title)
+    }
+}
+
+// MARK: - Settings Logo Button
+
+private extension View {
+    func settingsLogoButton(_ showingSettings: Binding<Bool>, title: String) -> some View {
+        self.navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { showingSettings.wrappedValue = true } label: {
+                        HStack(spacing: 8) {
+                            Image("deadly_logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 28, height: 28)
+                            Text(title)
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .foregroundStyle(.primary)
+                        }
+                    }
+                }
+            }
+    }
+}
+
+// MARK: - Settings Drawer
+
+private struct SettingsDrawer: View {
+    @Binding var isOpen: Bool
+    var onNavigateToDownloads: () -> Void
+    @GestureState private var dragOffset: CGFloat = 0
+
+    var body: some View {
+        ZStack(alignment: .leading) {
+            if isOpen {
+                Color.black.opacity(0.3)
+                    .ignoresSafeArea()
+                    .onTapGesture { isOpen = false }
+                    .transition(.opacity)
+
+                NavigationStack {
+                    SettingsScreen(onNavigateToDownloads: onNavigateToDownloads)
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                Button("Done") { isOpen = false }
+                            }
+                        }
+                }
+                .frame(width: UIScreen.main.bounds.width * 0.82)
+                .offset(x: min(0, dragOffset))
+                .gesture(
+                    DragGesture()
+                        .updating($dragOffset) { value, state, _ in
+                            if value.translation.width < 0 {
+                                state = value.translation.width
+                            }
+                        }
+                        .onEnded { value in
+                            if value.translation.width < -80 {
+                                isOpen = false
+                            }
+                        }
+                )
+                .transition(.move(edge: .leading))
+            }
+        }
+        .animation(.easeInOut(duration: 0.25), value: isOpen)
     }
 }
 

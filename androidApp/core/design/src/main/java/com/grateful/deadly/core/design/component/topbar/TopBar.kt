@@ -2,6 +2,7 @@ package com.grateful.deadly.core.design.component.topbar
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -59,6 +60,7 @@ fun TopBar(
     navigationIcon: @Composable (() -> Unit)? = null,
     actions: @Composable (RowScope.() -> Unit) = {},
     onNavigationClick: (() -> Unit)? = null,
+    onLogoClick: (() -> Unit)? = null,
     backgroundColor: Color = MaterialTheme.colorScheme.surface,
     contentColor: Color = MaterialTheme.colorScheme.onSurface
 ) {
@@ -84,12 +86,13 @@ fun TopBar(
                     navigationIcon = navigationIcon,
                     actions = actions,
                     onNavigationClick = onNavigationClick,
+                    onLogoClick = onLogoClick,
                     contentColor = contentColor,
                     modifier = Modifier.padding(horizontal = 4.dp)
                 )
             }
         }
-        
+
         TopBarMode.IMMERSIVE -> {
             // IMMERSIVE mode: Edge-to-edge with gradient scrim
             Box(
@@ -128,6 +131,7 @@ fun TopBar(
                         navigationIcon = navigationIcon,
                         actions = actions,
                         onNavigationClick = onNavigationClick,
+                        onLogoClick = onLogoClick,
                         contentColor = Color.White, // High contrast for immersive mode
                         modifier = Modifier.padding(horizontal = 4.dp)
                     )
@@ -147,6 +151,7 @@ private fun TopBarContent(
     navigationIcon: @Composable (() -> Unit)?,
     actions: @Composable (RowScope.() -> Unit),
     onNavigationClick: (() -> Unit)?,
+    onLogoClick: (() -> Unit)?,
     contentColor: Color,
     modifier: Modifier = Modifier
 ) {
@@ -172,7 +177,9 @@ private fun TopBarContent(
         Image(
             painter = painterResource(R.drawable.lightning_bolt_logo),
             contentDescription = "Deadly",
-            modifier = Modifier.size(32.dp)
+            modifier = Modifier
+                .size(32.dp)
+                .then(if (onLogoClick != null) Modifier.clickable { onLogoClick() } else Modifier)
         )
         
         Spacer(modifier = Modifier.width(12.dp))

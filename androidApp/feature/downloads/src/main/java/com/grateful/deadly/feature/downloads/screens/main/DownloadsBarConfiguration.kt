@@ -11,11 +11,11 @@ import com.grateful.deadly.core.design.component.topbar.TopBarMode
 
 object DownloadsBarConfiguration {
 
-    fun getDownloadsBarConfig(): BarConfiguration = BarConfiguration(
+    fun getDownloadsBarConfig(isOffline: Boolean = false): BarConfiguration = BarConfiguration(
         topBar = TopBarConfig(
             title = "Downloads",
             mode = TopBarMode.SOLID,
-            navigationIcon = { BackIcon() },
+            navigationIcon = if (!isOffline) {{ BackIcon() }} else null,
             actions = null
         ),
         bottomBar = BottomBarConfig(visible = true),
