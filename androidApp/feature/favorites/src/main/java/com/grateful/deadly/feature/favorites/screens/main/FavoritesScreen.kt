@@ -103,6 +103,22 @@ fun FavoritesScreen(
                 }
             }
 
+            // Compute counts for display
+            val showsCount = remember(uiState.shows, filterPath, sortBy, sortDirection) {
+                if (filterPath.isEmpty) {
+                    uiState.shows.size
+                } else {
+                    applyFiltersAndSorting(uiState.shows, filterPath, sortBy, sortDirection).size
+                }
+            }
+            val songsCount = remember(favoriteSongs, filterPath, songSortBy, sortDirection) {
+                if (filterPath.isEmpty) {
+                    favoriteSongs.size
+                } else {
+                    applyFiltersAndSortingSongs(favoriteSongs, filterPath, songSortBy, sortDirection).size
+                }
+            }
+
             // Sort Controls and Display Toggle
             if (selectedTab == FavoritesTab.SHOWS) {
                 SortAndDisplayControls(
@@ -111,6 +127,7 @@ fun FavoritesScreen(
                     displayMode = displayMode,
                     onSortSelectorClick = { showSortBottomSheet = true },
                     onDisplayModeChanged = { viewModel.setDisplayMode(it) },
+                    count = showsCount,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
                 )
             } else {
@@ -118,6 +135,7 @@ fun FavoritesScreen(
                     sortBy = songSortBy,
                     sortDirection = sortDirection,
                     onSortSelectorClick = { showSongSortBottomSheet = true },
+                    count = songsCount,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
                 )
             }
@@ -387,6 +405,7 @@ private fun SongSortControls(
     sortBy: FavoritesSongSortOption,
     sortDirection: FavoritesSortDirection,
     onSortSelectorClick: () -> Unit,
+    count: Int,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -415,6 +434,14 @@ private fun SongSortControls(
                 )
             }
         }
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        Text(
+            text = "($count)",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
     }
 }
 

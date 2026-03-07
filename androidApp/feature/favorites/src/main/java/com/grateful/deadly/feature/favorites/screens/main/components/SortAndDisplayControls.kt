@@ -25,11 +25,12 @@ fun SortAndDisplayControls(
     displayMode: FavoritesDisplayMode,
     onSortSelectorClick: () -> Unit,
     onDisplayModeChanged: (FavoritesDisplayMode) -> Unit,
+    count: Int,
     modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
+        horizontalArrangement = Arrangement.Start,
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Sort selector button
@@ -38,7 +39,16 @@ fun SortAndDisplayControls(
             sortDirection = sortDirection,
             onClick = onSortSelectorClick
         )
-        
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        Text(
+            text = "($count)",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(end = 4.dp)
+        )
+
         // Display mode toggle
         IconButton(
             onClick = {
