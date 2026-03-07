@@ -381,6 +381,10 @@ struct FavoritesScreen: View {
 
             Spacer()
 
+            Text("(\(selectedTab == .shows ? filteredShows.count : filteredSongs.count))")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+
             if selectedTab == .shows {
                 Button {
                     let newMode: FavoritesDisplayMode = displayMode == .list ? .grid : .list
