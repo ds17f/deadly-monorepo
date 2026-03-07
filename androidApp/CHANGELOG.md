@@ -1,11 +1,24 @@
 # Changelog
 
+## [2.13.0] - 2026-03-06
+
+### New Features
+* move favorites menu to settings screen (3761cfe)
+* add Shows/Songs tabs with favorite tracks browsing (0a39753)
+* rename library to favorites across iOS and Android (0f715ba)
+* decouple recording preferences from library, add v3 backup format (b6f5252)
+* add review system with ratings, favorites, and delete support (eeb8fd6)
+
+### Bug Fixes
+* compact hierarchical filter chips with "All" chip (7c91513)
+* make favorite heart update reactively (6c9afc9)
+* initialize review StateFlows before init block (d61c911)
+
+
 ## [2.12.0] - 2026-03-03
 
 ### New Features
 * unify share UX with QR card as single action (48bea44)
-
-
 ## [2.11.0] - 2026-03-03
 
 ### New Features
