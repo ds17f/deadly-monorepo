@@ -126,7 +126,11 @@ class PlaylistServiceImpl @Inject constructor(
             convertShowToViewModel(show)
         }
     }
-    
+
+    override fun getCurrentShowLineup(): List<String> {
+        return currentShow?.lineup?.members?.map { it.name } ?: emptyList()
+    }
+
     override suspend fun navigateToNextShow() {
         currentShow?.let { current ->
             val nextShow = if (networkMonitor.isOnline.value) {

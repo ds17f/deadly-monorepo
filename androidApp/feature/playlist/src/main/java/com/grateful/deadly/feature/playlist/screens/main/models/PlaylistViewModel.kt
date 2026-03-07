@@ -1381,7 +1381,7 @@ class PlaylistViewModel @Inject constructor(
         val showId = _baseUiState.value.showData?.showId ?: return
         viewModelScope.launch {
             _userReview.value = reviewService.getShowReview(showId) ?: ShowReview(showId = showId)
-            _reviewLineup.value = emptyList() // Lineup not available from PlaylistService in this module
+            _reviewLineup.value = playlistService.getCurrentShowLineup()
             _showWriteReview.value = true
         }
     }

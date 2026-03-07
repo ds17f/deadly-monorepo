@@ -51,18 +51,14 @@ class FavoritesRepository @Inject constructor(
         return combine(
             favoritesDao.getAllFavoriteShowsFlow(),
             showRepository.getAllShowsFlow(),
-            downloadChanges
-        ) { favoriteEntities, allShows, _ ->
+            downloadChanges,
+            showReviewDao.getAllFlow()
+        ) { favoriteEntities, allShows, _, allReviews ->
             Log.d(TAG, "Combining ${favoriteEntities.size} favorite entries with ${allShows.size} shows")
 
             // Create map of showId -> Show for efficient lookup
             val showsMap = allShows.associateBy { it.id }
-
-            // Fetch review data for all favorite shows
-            val showIds = favoriteEntities.map { it.showId }
-            val reviewsMap = if (showIds.isNotEmpty()) {
-                showReviewDao.getByShowIds(showIds).associateBy { it.showId }
-            } else emptyMap()
+            val reviewsMap = allReviews.associateBy { it.showId }
 
             // Convert to FavoriteShows, filtering out shows that no longer exist
             favoriteEntities.mapNotNull { favoriteEntity ->

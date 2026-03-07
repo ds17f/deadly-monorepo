@@ -33,10 +33,10 @@ struct ShowRowView: View {
                                 .font(.system(size: 10))
                                 .foregroundStyle(DeadlyColors.primary)
                         }
-                        if favoriteShow.hasNotes {
-                            Image(systemName: "note.text")
+                        if favoriteShow.hasReview {
+                            Image(systemName: "star.fill")
                                 .font(.system(size: 10))
-                                .foregroundStyle(.tertiary)
+                                .foregroundStyle(DeadlyColors.secondary)
                         }
                         Text(DateFormatting.formatShowDate(show.date, style: .short))
                             .font(.subheadline)

@@ -126,13 +126,13 @@ fun FavoriteShowListItem(
                         else -> { /* NOT_DOWNLOADED, CANCELLED - no indicator */ }
                     }
 
-                    // Notes indicator
-                    if (show.hasNotes) {
+                    // Review indicator
+                    if (show.hasReview) {
                         Icon(
-                            painter = IconResources.Content.StickyNote(),
-                            contentDescription = "Has notes",
+                            painter = IconResources.Content.Star(),
+                            contentDescription = "Has review",
                             modifier = Modifier.size(12.dp),
-                            tint = MaterialTheme.colorScheme.tertiary
+                            tint = MaterialTheme.colorScheme.secondary
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                     }
@@ -301,13 +301,13 @@ fun FavoriteShowGridItem(
                         else -> { /* NOT_DOWNLOADED, CANCELLED - no indicator */ }
                     }
 
-                    // Notes indicator
-                    if (show.hasNotes) {
+                    // Review indicator
+                    if (show.hasReview) {
                         Icon(
-                            painter = IconResources.Content.StickyNote(),
-                            contentDescription = "Has notes",
+                            painter = IconResources.Content.Star(),
+                            contentDescription = "Has review",
                             modifier = Modifier.size(8.dp),
-                            tint = MaterialTheme.colorScheme.tertiary
+                            tint = MaterialTheme.colorScheme.secondary
                         )
                         Spacer(modifier = Modifier.width(2.dp))
                     }
