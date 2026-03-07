@@ -47,6 +47,9 @@ struct DownloadsScreen: View {
             }
         }
         .navigationTitle("Downloads")
+        .navigationDestination(for: String.self) { showId in
+            ShowDetailScreen(showId: showId)
+        }
         .toolbar {
             if hasAnyDownloads {
                 ToolbarItem(placement: .topBarTrailing) {

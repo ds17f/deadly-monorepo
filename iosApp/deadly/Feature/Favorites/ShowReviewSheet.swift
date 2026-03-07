@@ -90,8 +90,8 @@ struct ShowReviewSheet: View {
                                         .font(.callout)
                                         .padding(.horizontal, 12)
                                         .padding(.vertical, 6)
-                                        .background(selected ? Color.accentColor.opacity(0.2) : Color.secondary.opacity(0.1))
-                                        .foregroundStyle(selected ? Color.accentColor : .primary)
+                                        .background(selected ? DeadlyColors.primary.opacity(0.2) : Color.secondary.opacity(0.1))
+                                        .foregroundStyle(selected ? DeadlyColors.primary : .primary)
                                         .clipShape(Capsule())
                                 }
                                 .buttonStyle(.plain)
@@ -162,7 +162,7 @@ private struct StarRatingRow: View {
             HStack(spacing: 4) {
                 ForEach(1...5, id: \.self) { star in
                     Image(systemName: star <= rating ? "star.fill" : "star")
-                        .foregroundStyle(star <= rating ? .yellow : .secondary)
+                        .foregroundStyle(star <= rating ? DeadlyColors.secondary : .secondary)
                         .onTapGesture {
                             rating = rating == star ? 0 : star
                         }

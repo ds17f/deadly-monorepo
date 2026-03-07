@@ -37,8 +37,8 @@ enum ShortcutCategory: String, CaseIterable {
         case .filter: return DeadlyColors.primary
         case .venue: return DeadlyColors.secondary
         case .city: return DeadlyColors.tertiary
-        case .song: return .purple
-        case .member: return .orange
+        case .song: return DeadlyColors.primary
+        case .member: return DeadlyColors.tertiary
         }
     }
 }

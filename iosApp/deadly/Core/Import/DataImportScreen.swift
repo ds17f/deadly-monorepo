@@ -120,7 +120,7 @@ struct DataImportScreen: View {
                 .font(.system(size: 42, weight: .bold, design: .rounded))
                 .foregroundStyle(
                     LinearGradient(
-                        colors: [.red, .blue],
+                        colors: [DeadlyColors.primary, DeadlyColors.tertiary],
                         startPoint: .leading,
                         endPoint: .trailing
                     )
