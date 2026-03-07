@@ -141,7 +141,7 @@ class PlayerViewModel @Inject constructor(
                         lastLoadedShowId = trackInfo.showId
                         lastLoadedSongTitle = trackInfo.songTitle
                         loadPanelContent(trackInfo, showChanged, songChanged)
-                        loadTrackReviewState(trackInfo)
+                        observeFavoriteState(trackInfo)
                     }
                 }
         }
@@ -180,15 +180,20 @@ class PlayerViewModel @Inject constructor(
         }
     }
 
-    private fun loadTrackReviewState(trackInfo: CurrentTrackInfo) {
+    private var favoriteStateJob: kotlinx.coroutines.Job? = null
+
+    private fun observeFavoriteState(trackInfo: CurrentTrackInfo) {
         val showId = trackInfo.showId ?: return
-        viewModelScope.launch {
+        favoriteStateJob?.cancel()
+        favoriteStateJob = viewModelScope.launch {
             try {
-                val review = reviewService.getTrackReview(showId, trackInfo.songTitle, trackInfo.recordingId)
-                _currentTrackThumbsState.value = review?.thumbs
+                reviewService.isSongFavoriteFlow(showId, trackInfo.songTitle, trackInfo.recordingId)
+                    .collect { isFav ->
+                        _isCurrentTrackFavorite.value = isFav
+                    }
             } catch (e: Exception) {
-                Log.e(TAG, "Error loading track review state", e)
-                _currentTrackThumbsState.value = null
+                Log.e(TAG, "Error observing favorite state", e)
+                _isCurrentTrackFavorite.value = false
             }
         }
     }
@@ -274,32 +279,27 @@ class PlayerViewModel @Inject constructor(
         }
     }
 
-    // Track review state
+    // Favorite song state
 
-    private val _currentTrackThumbsState = MutableStateFlow<Int?>(null)
-    val currentTrackThumbsState: StateFlow<Int?> = _currentTrackThumbsState.asStateFlow()
+    private val _isCurrentTrackFavorite = MutableStateFlow(false)
+    val isCurrentTrackFavorite: StateFlow<Boolean> = _isCurrentTrackFavorite.asStateFlow()
 
     /**
-     * Rate current track with thumbs up (1) or thumbs down (-1).
-     * Toggling the same value removes the rating.
+     * Toggle favorite state of the currently playing track.
      */
-    fun rateCurrentTrack(thumbs: Int) {
+    fun toggleCurrentTrackFavorite() {
         val trackInfo = playerService.currentTrackInfo.value ?: return
         val showId = trackInfo.showId ?: return
         viewModelScope.launch {
-            val current = _currentTrackThumbsState.value
-            val newThumbs = if (current == thumbs) null else thumbs
-            _currentTrackThumbsState.value = newThumbs
             try {
-                reviewService.upsertTrackReview(
+                reviewService.toggleFavoriteSong(
                     showId = showId,
                     trackTitle = trackInfo.songTitle,
                     trackNumber = trackInfo.trackNumber,
-                    recordingId = trackInfo.recordingId,
-                    thumbs = newThumbs
+                    recordingId = trackInfo.recordingId
                 )
             } catch (e: Exception) {
-                Log.e(TAG, "Error rating track", e)
+                Log.e(TAG, "Error toggling favorite", e)
             }
         }
     }

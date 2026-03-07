@@ -6,7 +6,7 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "track_reviews",
+    tableName = "favorite_songs",
     foreignKeys = [
         ForeignKey(
             entity = ShowEntity::class,
@@ -20,16 +20,12 @@ import androidx.room.PrimaryKey
         Index(value = ["showId", "trackTitle", "recordingId"], unique = true)
     ]
 )
-data class TrackReviewEntity(
+data class FavoriteSongEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     val showId: String,
     val trackTitle: String,
     val trackNumber: Int? = null,
     val recordingId: String? = null,
-    val thumbs: Int? = null,           // 1=up, -1=down, null=unrated
-    val starRating: Int? = null,       // 1-5
-    val notes: String? = null,
-    val createdAt: Long,
-    val updatedAt: Long
+    val createdAt: Long
 )

@@ -9,7 +9,7 @@ struct PlayerScreen: View {
     @State private var sliderValue: Double?
     @State private var showErrorAlert = false
     @State private var showQRShare = false
-    @State private var currentThumbsState: Int?
+    @State private var isCurrentTrackFavorite = false
     @Environment(\.appContainer) private var container
 
     private var playbackError: StreamPlayerError? {
@@ -178,7 +178,7 @@ struct PlayerScreen: View {
             let show = container.playlistService.currentShow
             let title = streamPlayer.currentTrack?.title
             await container.panelContentService.loadContent(show: show, songTitle: title)
-            loadTrackReviewState()
+            loadFavoriteState()
         }
         .onChange(of: playbackError) { _, newError in
             if newError != nil {
@@ -268,11 +268,11 @@ struct PlayerScreen: View {
 
             // Favorite
             Button {
-                toggleThumbsRating(1)
+                toggleFavoriteSong()
             } label: {
-                Image(systemName: currentThumbsState == 1 ? "heart.fill" : "heart")
+                Image(systemName: isCurrentTrackFavorite ? "heart.fill" : "heart")
                     .font(.title2)
-                    .foregroundStyle(currentThumbsState == 1 ? DeadlyColors.primary : .secondary)
+                    .foregroundStyle(isCurrentTrackFavorite ? DeadlyColors.primary : .secondary)
                     .frame(width: 44, height: 44)
             }
             .buttonStyle(.plain)
@@ -295,30 +295,27 @@ struct PlayerScreen: View {
         .padding(.horizontal, 24)
     }
 
-    private func toggleThumbsRating(_ thumbs: Int) {
+    private func toggleFavoriteSong() {
         guard let showId = currentShowId,
               let trackTitle = streamPlayer.currentTrack?.title else { return }
-        let newThumbs = currentThumbsState == thumbs ? nil : thumbs
-        currentThumbsState = newThumbs
-        try? container.reviewService.upsertTrackReview(
+        try? container.reviewService.toggleFavoriteSong(
             showId: showId,
             trackTitle: trackTitle,
             trackNumber: currentTrackNumber.flatMap { Int($0) },
-            recordingId: currentRecordingId,
-            thumbs: newThumbs
+            recordingId: currentRecordingId
         )
+        isCurrentTrackFavorite.toggle()
     }
 
-    private func loadTrackReviewState() {
+    private func loadFavoriteState() {
         guard let showId = currentShowId,
               let trackTitle = streamPlayer.currentTrack?.title else {
-            currentThumbsState = nil
+            isCurrentTrackFavorite = false
             return
         }
-        let review = try? container.reviewService.getTrackReview(
+        isCurrentTrackFavorite = (try? container.reviewService.isSongFavorite(
             showId: showId, trackTitle: trackTitle, recordingId: currentRecordingId
-        )
-        currentThumbsState = review?.thumbs
+        )) ?? false
     }
 
     @ViewBuilder

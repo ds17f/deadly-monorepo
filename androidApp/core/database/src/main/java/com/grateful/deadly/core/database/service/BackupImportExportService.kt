@@ -6,12 +6,12 @@ import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
-import com.grateful.deadly.core.database.dao.TrackReviewDao
+import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.entities.FavoriteShowEntity
+import com.grateful.deadly.core.database.entities.FavoriteSongEntity
 import com.grateful.deadly.core.database.entities.RecordingPreferenceEntity
 import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
 import com.grateful.deadly.core.database.entities.ShowReviewEntity
-import com.grateful.deadly.core.database.entities.TrackReviewEntity
 import com.grateful.deadly.core.database.migration.MigrationData
 import com.grateful.deadly.core.database.migration.MigrationImportService
 import com.grateful.deadly.core.model.AppDatabase
@@ -24,7 +24,7 @@ class BackupImportExportService @Inject constructor(
     @AppDatabase private val favoritesDao: FavoritesDao,
     @AppDatabase private val showDao: ShowDao,
     @AppDatabase private val showReviewDao: ShowReviewDao,
-    @AppDatabase private val trackReviewDao: TrackReviewDao,
+    @AppDatabase private val favoriteSongDao: FavoriteSongDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     @AppDatabase private val recordingPreferenceDao: RecordingPreferenceDao,
     private val migrationImportService: MigrationImportService
@@ -53,13 +53,13 @@ class BackupImportExportService @Inject constructor(
         }
 
         // Favorite tracks
-        val favoriteTrackEntities = trackReviewDao.getFavoriteTracks()
-        val favoriteTracks = favoriteTrackEntities.map { track ->
+        val favoriteTrackEntities = favoriteSongDao.getAllFavorites()
+        val favoriteTracks = favoriteTrackEntities.map { entity ->
             FavoriteTrackEntry(
-                showId = track.showId,
-                trackTitle = track.trackTitle,
-                trackNumber = track.trackNumber,
-                recordingId = track.recordingId
+                showId = entity.showId,
+                trackTitle = entity.trackTitle,
+                trackNumber = entity.trackNumber,
+                recordingId = entity.recordingId
             )
         }
 
@@ -176,29 +176,21 @@ class BackupImportExportService @Inject constructor(
             }
         }
 
-        // Import favorite tracks (ensure thumbs=1 review exists)
+        // Import favorite tracks
         for (track in export.favorites.tracks) {
             val showExists = showDao.getShowById(track.showId) != null
             if (!showExists) continue
             try {
-                val existing = trackReviewDao.getReview(track.showId, track.trackTitle, track.recordingId)
-                if (existing == null || existing.thumbs != 1) {
-                    trackReviewDao.upsert(
-                        TrackReviewEntity(
-                            id = existing?.id ?: 0,
-                            showId = track.showId,
-                            trackTitle = track.trackTitle,
-                            trackNumber = track.trackNumber,
-                            recordingId = track.recordingId,
-                            thumbs = 1,
-                            starRating = existing?.starRating,
-                            notes = existing?.notes,
-                            createdAt = existing?.createdAt ?: now,
-                            updatedAt = now
-                        )
+                favoriteSongDao.insert(
+                    FavoriteSongEntity(
+                        showId = track.showId,
+                        trackTitle = track.trackTitle,
+                        trackNumber = track.trackNumber,
+                        recordingId = track.recordingId,
+                        createdAt = now
                     )
-                    tracksImported++
-                }
+                )
+                tracksImported++
             } catch (e: Exception) {
                 Log.e(TAG, "Error importing favorite track ${track.trackTitle}", e)
             }

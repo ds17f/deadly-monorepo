@@ -114,7 +114,7 @@ fun PlayerScreen(
     // Collect UI state from ViewModel
     val uiState by viewModel.uiState.collectAsState()
     val panelState by viewModel.panelState.collectAsState()
-    val currentThumbsState by viewModel.currentTrackThumbsState.collectAsState()
+    val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -218,9 +218,9 @@ fun PlayerScreen(
             // Secondary controls row (updated for queue sheet)
             item {
                 PlayerSecondaryControls(
-                    isFavorite = currentThumbsState == 1,
+                    isFavorite = isCurrentTrackFavorite,
                     onConnectClick = { showConnectBottomSheet = true },
-                    onFavoriteClick = { viewModel.rateCurrentTrack(1) },
+                    onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
                     onShareClick = { showQrCode = true },
                     onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
@@ -248,12 +248,12 @@ fun PlayerScreen(
                 trackTitle = uiState.trackDisplayInfo.title,
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,
-                currentThumbsState = currentThumbsState,
+                isFavorite = isCurrentTrackFavorite,
                 onDismiss = { showTrackActionsBottomSheet = false },
                 onShare = { showQrCode = true },
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
                 onDownload = { viewModel.downloadCurrentShow() },
-                onFavorite = { viewModel.rateCurrentTrack(1) },
+                onFavorite = { viewModel.toggleCurrentTrackFavorite() },
             )
         }
 

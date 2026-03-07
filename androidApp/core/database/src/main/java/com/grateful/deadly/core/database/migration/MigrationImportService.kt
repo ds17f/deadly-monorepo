@@ -4,12 +4,12 @@ import android.util.Log
 import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.ShowDao
-import com.grateful.deadly.core.database.dao.TrackReviewDao
+import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.entities.FavoriteShowEntity
+import com.grateful.deadly.core.database.entities.FavoriteSongEntity
 import com.grateful.deadly.core.database.entities.RecentShowEntity
 import com.grateful.deadly.core.database.entities.ShowEntity
-import com.grateful.deadly.core.database.entities.TrackReviewEntity
 import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
 import com.grateful.deadly.core.model.AppDatabase
 import kotlinx.serialization.json.Json
@@ -21,7 +21,7 @@ class MigrationImportService @Inject constructor(
     @AppDatabase private val showDao: ShowDao,
     @AppDatabase private val favoritesDao: FavoritesDao,
     @AppDatabase private val recentShowDao: RecentShowDao,
-    @AppDatabase private val trackReviewDao: TrackReviewDao,
+    @AppDatabase private val favoriteSongDao: FavoriteSongDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao
 ) {
 
@@ -80,28 +80,23 @@ class MigrationImportService @Inject constructor(
             }
         }
 
-        // Import track reviews
+        // Import favorite songs (only thumbs == 1 entries)
         data.trackReviews?.forEach { tr ->
             try {
                 val showId = dateToShowId[tr.showDate]
-                if (showId != null) {
-                    val now = System.currentTimeMillis()
-                    trackReviewDao.upsert(
-                        TrackReviewEntity(
+                if (showId != null && tr.thumbs == 1) {
+                    favoriteSongDao.insert(
+                        FavoriteSongEntity(
                             showId = showId,
                             trackTitle = tr.trackTitle,
                             trackNumber = tr.trackNumber,
                             recordingId = tr.recordingId,
-                            thumbs = tr.thumbs,
-                            starRating = tr.starRating,
-                            notes = tr.notes,
-                            createdAt = now,
-                            updatedAt = now
+                            createdAt = System.currentTimeMillis()
                         )
                     )
                 }
             } catch (e: Exception) {
-                errors.add("TrackReview ${tr.showDate}/${tr.trackTitle}: ${e.message}")
+                errors.add("FavoriteSong ${tr.showDate}/${tr.trackTitle}: ${e.message}")
             }
         }
 

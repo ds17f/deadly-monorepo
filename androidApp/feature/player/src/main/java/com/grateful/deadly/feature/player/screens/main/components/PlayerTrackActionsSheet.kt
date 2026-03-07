@@ -26,7 +26,7 @@ fun PlayerTrackActionsSheet(
     trackTitle: String,
     showDate: String,
     venue: String,
-    currentThumbsState: Int?,
+    isFavorite: Boolean,
     onDismiss: () -> Unit,
     onShare: () -> Unit,
     onAddToPlaylist: () -> Unit,
@@ -122,8 +122,8 @@ fun PlayerTrackActionsSheet(
             )
 
             ActionMenuRow(
-                text = if (currentThumbsState == 1) "Favorited" else "Favorite",
-                icon = if (currentThumbsState == 1) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
+                text = if (isFavorite) "Favorited" else "Favorite",
+                icon = if (isFavorite) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
                 onClick = {
                     onFavorite()
                     onDismiss()

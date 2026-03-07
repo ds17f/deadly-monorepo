@@ -1,18 +1,17 @@
 package com.grateful.deadly.core.favorites.service
 
 import com.grateful.deadly.core.api.favorites.ReviewService
+import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
-import com.grateful.deadly.core.database.dao.TrackReviewDao
+import com.grateful.deadly.core.database.entities.FavoriteSongEntity
 import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
 import com.grateful.deadly.core.database.entities.ShowReviewEntity
-import com.grateful.deadly.core.database.entities.TrackReviewEntity
 import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.model.FavoriteTrack
 import com.grateful.deadly.core.model.PlayerTag
 import com.grateful.deadly.core.model.ShowReview
-import com.grateful.deadly.core.model.TrackReview
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
@@ -22,18 +21,16 @@ import javax.inject.Singleton
 @Singleton
 class ReviewServiceImpl @Inject constructor(
     @AppDatabase private val showReviewDao: ShowReviewDao,
-    @AppDatabase private val trackReviewDao: TrackReviewDao,
+    @AppDatabase private val favoriteSongDao: FavoriteSongDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     @AppDatabase private val showDao: ShowDao
 ) : ReviewService {
 
     override suspend fun getShowReview(showId: String): ShowReview? {
         val reviewEntity = showReviewDao.getByShowId(showId)
-        val trackReviews = trackReviewDao.getReviewsForShow(showId).map { it.toDomain() }
         val playerTags = showPlayerTagDao.getTagsForShow(showId).map { it.toDomain() }
 
-        // Return null only if there's no data at all
-        if (reviewEntity == null && trackReviews.isEmpty() && playerTags.isEmpty()) return null
+        if (reviewEntity == null && playerTags.isEmpty()) return null
 
         return ShowReview(
             showId = showId,
@@ -42,7 +39,6 @@ class ReviewServiceImpl @Inject constructor(
             recordingQuality = reviewEntity?.recordingQuality,
             playingQuality = reviewEntity?.playingQuality,
             reviewedRecordingId = reviewEntity?.reviewedRecordingId,
-            trackReviews = trackReviews,
             playerTags = playerTags
         )
     }
@@ -50,9 +46,8 @@ class ReviewServiceImpl @Inject constructor(
     override fun getShowReviewFlow(showId: String): Flow<ShowReview> {
         return combine(
             showReviewDao.getByShowIdFlow(showId),
-            trackReviewDao.getReviewsForShowFlow(showId),
             showPlayerTagDao.getTagsForShowFlow(showId)
-        ) { reviewEntity, trackEntities, tagEntities ->
+        ) { reviewEntity, tagEntities ->
             ShowReview(
                 showId = showId,
                 notes = reviewEntity?.notes,
@@ -60,7 +55,6 @@ class ReviewServiceImpl @Inject constructor(
                 recordingQuality = reviewEntity?.recordingQuality,
                 playingQuality = reviewEntity?.playingQuality,
                 reviewedRecordingId = reviewEntity?.reviewedRecordingId,
-                trackReviews = trackEntities.map { it.toDomain() },
                 playerTags = tagEntities.map { it.toDomain() }
             )
         }
@@ -86,48 +80,34 @@ class ReviewServiceImpl @Inject constructor(
         showReviewDao.updatePlayingQuality(showId, quality)
     }
 
-    override suspend fun getTrackReviews(showId: String): List<TrackReview> {
-        return trackReviewDao.getReviewsForShow(showId).map { it.toDomain() }
-    }
-
-    override fun getTrackReviewsFlow(showId: String): Flow<List<TrackReview>> {
-        return trackReviewDao.getReviewsForShowFlow(showId).map { entities ->
-            entities.map { it.toDomain() }
-        }
-    }
-
-    override suspend fun getTrackReview(showId: String, trackTitle: String, recordingId: String?): TrackReview? {
-        return trackReviewDao.getReview(showId, trackTitle, recordingId)?.toDomain()
-    }
-
-    override fun getTrackReviewFlow(showId: String, trackTitle: String, recordingId: String?): Flow<TrackReview?> {
-        return trackReviewDao.getReviewFlow(showId, trackTitle, recordingId).map { it?.toDomain() }
-    }
-
-    override suspend fun upsertTrackReview(
+    override suspend fun toggleFavoriteSong(
         showId: String,
         trackTitle: String,
         trackNumber: Int?,
-        recordingId: String?,
-        thumbs: Int?,
-        starRating: Int?,
-        notes: String?
+        recordingId: String?
     ) {
-        val now = System.currentTimeMillis()
-        val existing = trackReviewDao.getReview(showId, trackTitle, recordingId)
-        val entity = TrackReviewEntity(
-            id = existing?.id ?: 0,
-            showId = showId,
-            trackTitle = trackTitle,
-            trackNumber = trackNumber,
-            recordingId = recordingId,
-            thumbs = thumbs,
-            starRating = starRating,
-            notes = notes,
-            createdAt = existing?.createdAt ?: now,
-            updatedAt = now
-        )
-        trackReviewDao.upsert(entity)
+        val isFav = favoriteSongDao.isFavorite(showId, trackTitle, recordingId)
+        if (isFav) {
+            favoriteSongDao.delete(showId, trackTitle, recordingId)
+        } else {
+            favoriteSongDao.insert(
+                FavoriteSongEntity(
+                    showId = showId,
+                    trackTitle = trackTitle,
+                    trackNumber = trackNumber,
+                    recordingId = recordingId,
+                    createdAt = System.currentTimeMillis()
+                )
+            )
+        }
+    }
+
+    override fun isSongFavoriteFlow(showId: String, trackTitle: String, recordingId: String?): Flow<Boolean> {
+        return favoriteSongDao.isFavoriteFlow(showId, trackTitle, recordingId)
+    }
+
+    override fun getFavoriteSongTitlesFlow(showId: String): Flow<Set<String>> {
+        return favoriteSongDao.getFavoriteTitlesForShowFlow(showId).map { it.toSet() }
     }
 
     override suspend fun getPlayerTags(showId: String): List<PlayerTag> {
@@ -159,7 +139,7 @@ class ReviewServiceImpl @Inject constructor(
     }
 
     override suspend fun getFavoriteTracks(): List<FavoriteTrack> {
-        val favoriteEntities = trackReviewDao.getFavoriteTracks()
+        val favoriteEntities = favoriteSongDao.getAllFavorites()
         val showIds = favoriteEntities.map { it.showId }.distinct()
         val shows = showDao.getShowsByIds(showIds).associateBy { it.showId }
         return favoriteEntities.mapNotNull { entity ->
@@ -171,18 +151,17 @@ class ReviewServiceImpl @Inject constructor(
                 trackTitle = entity.trackTitle,
                 trackNumber = entity.trackNumber,
                 recordingId = entity.recordingId,
-                addedAt = entity.updatedAt
+                addedAt = entity.createdAt
             )
         }
     }
 
     override suspend fun deleteShowReview(showId: String) {
         showPlayerTagDao.removeTagsForShow(showId)
-        trackReviewDao.deleteReviewsForShow(showId)
+        favoriteSongDao.deleteForShow(showId)
         showReviewDao.deleteByShowId(showId)
     }
 
-    // Ensure a show_reviews row exists so UPDATE queries work
     private suspend fun ensureShowReviewExists(showId: String) {
         if (showReviewDao.getByShowId(showId) == null) {
             val now = System.currentTimeMillis()
@@ -193,17 +172,6 @@ class ReviewServiceImpl @Inject constructor(
             ))
         }
     }
-
-    // Entity → Domain mappers
-
-    private fun TrackReviewEntity.toDomain() = TrackReview(
-        trackTitle = trackTitle,
-        trackNumber = trackNumber,
-        recordingId = recordingId,
-        thumbs = thumbs,
-        starRating = starRating,
-        notes = notes
-    )
 
     private fun ShowPlayerTagEntity.toDomain() = PlayerTag(
         playerName = playerName,
