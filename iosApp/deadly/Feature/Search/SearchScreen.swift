@@ -38,7 +38,6 @@ struct SearchScreen: View {
                 browseView
             }
         }
-        .navigationTitle("Search")
         .searchable(
             text: $searchText,
             isPresented: $isSearchPresented,

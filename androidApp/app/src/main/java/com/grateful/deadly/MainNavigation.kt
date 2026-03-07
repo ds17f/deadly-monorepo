@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.WifiOff
+import androidx.activity.compose.BackHandler
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -34,7 +35,9 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.scaffold.AppScaffold
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.navigation.homeGraph
+import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
+import kotlinx.coroutines.launch
 import com.grateful.deadly.feature.splash.navigation.splashGraph
 import com.grateful.deadly.feature.search.navigation.searchGraph
 import com.grateful.deadly.feature.playlist.navigation.playlistGraph
@@ -90,6 +93,8 @@ fun MainNavigation(
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
 
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
     val prevIsOffline = remember { mutableStateOf<Boolean?>(null) }
     var pendingDeepLink by remember { mutableStateOf<PendingDeepLink?>(null) }
@@ -106,7 +111,7 @@ fun MainNavigation(
         // Redirect to downloads when offline, unless already on a safe screen
         if (isOffline) {
             val route = navController.currentBackStackEntry?.destination?.route
-            val isSafe = route == "downloads" || route == "player" || route == "splash" || route == "settings" || route == "legal" || route == "mission" || route == "developer"
+            val isSafe = route == "downloads" || route == "player" || route == "splash" || route == "legal" || route == "mission" || route == "developer"
             if (!isSafe) {
                 navController.navigate("downloads") { launchSingleTop = true }
             }
@@ -150,17 +155,53 @@ fun MainNavigation(
     // Get bar configuration based on current route
     val barConfig = NavigationBarConfig.getBarConfig(
         route = currentRoute,
+        isOffline = isOffline,
     )
 
+    // Augment top bar with logo click to open drawer
+    val augmentedTopBar = barConfig.topBar?.copy(
+        onLogoClick = { scope.launch { drawerState.open() } }
+    )
+
+    BackHandler(enabled = drawerState.isOpen) {
+        scope.launch { drawerState.close() }
+    }
+
+    ModalNavigationDrawer(
+        drawerState = drawerState,
+        gesturesEnabled = drawerState.isOpen,
+        drawerContent = {
+            ModalDrawerSheet {
+                SettingsScreen(
+                    onNavigateToDownloads = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("downloads")
+                    },
+                    onNavigateToLegal = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("legal")
+                    },
+                    onNavigateToMission = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("mission")
+                    },
+                    onNavigateToDeveloper = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("developer")
+                    }
+                )
+            }
+        }
+    ) {
     AppScaffold(
-        topBarConfig = barConfig.topBar,
+        topBarConfig = augmentedTopBar,
         bottomBarConfig = barConfig.bottomBar,
         bottomNavigationContent = if (barConfig.bottomBar?.visible == true) {
             {
                 BottomNavigationBar(
                     currentRoute = currentRoute,
                     onNavigateToDestination = { route ->
-                        val target = if (isOffline && route != "downloads" && route != "settings") "downloads" else route
+                        val target = if (isOffline && route != "downloads") "downloads" else route
                         navController.navigate(target) {
                             popUpTo(navController.graph.startDestinationId) { saveState = true }
                             launchSingleTop = true
@@ -237,6 +278,7 @@ fun MainNavigation(
             }
         }
     }
+    } // ModalNavigationDrawer
 
     pendingDeepLink?.let { deepLink ->
         DeepLinkActionSheet(

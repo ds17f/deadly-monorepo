@@ -36,7 +36,6 @@ struct CollectionsScreen: View {
                 collectionsList
             }
         }
-        .navigationTitle("Collections")
         .searchable(text: $searchText, prompt: "Search collections")
         .task { service.loadAll() }
         .onChange(of: searchText) { _, query in

@@ -123,19 +123,6 @@ struct FavoritesScreen: View {
                 isPresented: $showFullPlayer
             )
         }
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                HStack(spacing: 8) {
-                    Image("deadly_logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 28, height: 28)
-                    Text("Favorites")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                }
-            }
-        }
         .sheet(item: $qrCodeShow) { favoriteShow in
             let show = favoriteShow.show
             QRShareSheet(

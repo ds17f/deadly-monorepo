@@ -47,6 +47,7 @@ struct DownloadsScreen: View {
             }
         }
         .navigationTitle("Downloads")
+        .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(for: String.self) { showId in
             ShowDetailScreen(showId: showId)
         }

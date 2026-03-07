@@ -28,19 +28,6 @@ struct HomeScreen: View {
             .padding(DeadlySpacing.screenPadding)
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                HStack(spacing: 8) {
-                    Image("deadly_logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 28, height: 28)
-                    Text("Home")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                }
-            }
-        }
         .task { await homeService.refresh() }
     }
 

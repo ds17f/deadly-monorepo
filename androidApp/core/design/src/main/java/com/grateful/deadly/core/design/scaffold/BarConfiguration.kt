@@ -22,7 +22,8 @@ data class TopBarConfig(
     val title: String,
     val mode: TopBarMode = TopBarMode.SOLID,
     val actions: (@Composable () -> Unit)? = null,
-    val navigationIcon: (@Composable () -> Unit)? = null
+    val navigationIcon: (@Composable () -> Unit)? = null,
+    val onLogoClick: (() -> Unit)? = null
 )
 
 /**
