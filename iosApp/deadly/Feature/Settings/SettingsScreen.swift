@@ -8,11 +8,10 @@ struct SettingsScreen: View {
     @Environment(\.appContainer) private var container
     @Environment(\.openURL) private var openURL
     @State private var showingFilePicker = false
-    @State private var exportData: Data?
+    @State private var exportItem: ExportItem?
     @State private var importResult: BackupImportResult?
     @State private var importError: String?
     @State private var showingImportAlert = false
-    @State private var showingExportShare = false
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
     }
@@ -45,8 +44,9 @@ struct SettingsScreen: View {
                     Label("Import Favorites", systemImage: "square.and.arrow.down")
                 }
                 Button {
-                    exportData = try? container.favoritesImportExportService.exportFavorites()
-                    if exportData != nil { showingExportShare = true }
+                    if let data = try? container.favoritesImportExportService.exportFavorites() {
+                        exportItem = ExportItem(data: data, filename: container.favoritesImportExportService.exportFilename())
+                    }
                 } label: {
                     Label("Export Favorites", systemImage: "square.and.arrow.up")
                 }
@@ -127,13 +127,19 @@ struct SettingsScreen: View {
         }
 
         // MARK: - Favorites Export Share Sheet
-        .sheet(isPresented: $showingExportShare) {
-            if let data = exportData {
-                FavoritesExportShareSheet(data: data, filename: container.favoritesImportExportService.exportFilename())
-            }
+        .sheet(item: $exportItem) { item in
+            FavoritesExportShareSheet(data: item.data, filename: item.filename)
         }
 
     }
+}
+
+// MARK: - ExportItem
+
+private struct ExportItem: Identifiable {
+    let id = UUID()
+    let data: Data
+    let filename: String
 }
 
 // MARK: - FavoritesExportShareSheet
