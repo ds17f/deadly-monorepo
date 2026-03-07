@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.16.0] - 2026-03-07
+
+### New Features
+* Adds tap logo for settings-panel (062ef7a)
+* add show/song counts to sort controls row (0b929d2)
+
+### Bug Fixes
+* eliminate race condition in export favorites sheet (8960a51)
+* make review icon reactive, use star indicator, populate lineup (6ad93a8)
+* align color scheme — crimson/gold/green palette, fix downloads nav (a473cd3)
+* always show review state indicator with color coding (d14fe8e)
+
+### Code Refactoring
+* replace track_reviews with favorite_songs table (dc8e34e)
+
+### CI Changes
+* use manual signing in deploy_testflight to stop cert proliferation (d7cb4f5)
+
+### Other Changes
+* Revert "fix(mobile/ui): always show review state indicator with color coding" (4622c79)
+
+
 ## [2.15.0] - 2026-03-06
 
 ### New Features
@@ -15,8 +37,6 @@
 * show playing state for downloaded shows in detail screen (5917e15)
 * show favorite hearts on track list (737dca5)
 * make favorite heart update reactively via GRDB observation (75bdd5d)
-
-
 ## [2.14.0] - 2026-03-03
 
 ### New Features
