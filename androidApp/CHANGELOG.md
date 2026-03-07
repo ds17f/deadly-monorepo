@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.13.1] - 2026-03-06
+
+### Bug Fixes
+* always show review state indicator with color coding (d14fe8e)
+
+### Other Changes
+* Revert "fix(mobile/ui): always show review state indicator with color coding" (4622c79)
+
+
 ## [2.13.0] - 2026-03-06
 
 ### New Features
@@ -13,8 +22,6 @@
 * compact hierarchical filter chips with "All" chip (7c91513)
 * make favorite heart update reactively (6c9afc9)
 * initialize review StateFlows before init block (d61c911)
-
-
 ## [2.12.0] - 2026-03-03
 
 ### New Features
