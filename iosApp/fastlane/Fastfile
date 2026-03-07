@@ -143,7 +143,6 @@ platform :ios do
     update_version_from_properties
 
     # Configure App Store Connect API key
-    # Use absolute path to API key file
     api_key_path = File.expand_path("../../.secrets/AuthKey_V862XWV7WB.p8", __dir__)
     api_key = app_store_connect_api_key(
       key_id: "V862XWV7WB",
@@ -152,36 +151,30 @@ platform :ios do
       in_house: false
     )
 
-    # Build and sign iOS app using xcodebuild directly with API key auth
-    # This allows automatic signing to work in CI
-    project_dir = File.expand_path("..", __dir__)
-    project_path = File.join(project_dir, "deadly.xcodeproj")
-    build_dir = File.join(project_dir, "build")
-    archive_path = File.join(build_dir, "deadly.xcarchive")
-
-    # Archive with automatic signing + API key authentication
-    sh("xcodebuild archive " \
-       "-project '#{project_path}' " \
-       "-scheme deadly " \
-       "-configuration Release " \
-       "-destination 'generic/platform=iOS' " \
-       "-archivePath '#{archive_path}' " \
-       "-derivedDataPath '#{build_dir}' " \
-       "-allowProvisioningUpdates " \
-       "-authenticationKeyPath '#{api_key_path}' " \
-       "-authenticationKeyID 'V862XWV7WB' " \
-       "-authenticationKeyIssuerID '9501cc7b-1a6c-4e4d-8c37-c04149a31886'")
-
-    # Export to IPA with manual signing
-    export_plist = File.expand_path("ExportOptions.plist", __dir__)
-    sh("xcodebuild -exportArchive " \
-       "-archivePath '#{archive_path}' " \
-       "-exportPath '#{build_dir}' " \
-       "-exportOptionsPlist '#{export_plist}' " \
-       "-allowProvisioningUpdates " \
-       "-authenticationKeyPath '#{api_key_path}' " \
-       "-authenticationKeyID 'V862XWV7WB' " \
-       "-authenticationKeyIssuerID '9501cc7b-1a6c-4e4d-8c37-c04149a31886'")
+    # Build and sign with manual signing to use the cert imported into the
+    # CI keychain. This prevents xcodebuild from auto-creating new certificates
+    # in the Apple Developer portal on every ephemeral CI run.
+    gym(
+      project: "deadly.xcodeproj",
+      scheme: "deadly",
+      configuration: "Release",
+      destination: "generic/platform=iOS",
+      export_method: "app-store",
+      derived_data_path: "./build",
+      output_directory: "./build",
+      output_name: "deadly.ipa",
+      xcargs: "CODE_SIGN_STYLE='Manual' " \
+              "PROVISIONING_PROFILE_SPECIFIER='DeadlyApp_AppStore2' " \
+              "DEVELOPMENT_TEAM='U928S254LZ'",
+      export_options: {
+        method: "app-store-connect",
+        signingStyle: "manual",
+        teamID: "U928S254LZ",
+        provisioningProfiles: {
+          "com.grateful.deadly" => "DeadlyApp_AppStore2"
+        }
+      }
+    )
 
     UI.success("✅ Release IPA built successfully!")
 
