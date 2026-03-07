@@ -3,13 +3,13 @@ import GRDB
 
 struct ReviewService: Sendable {
     private let showReviewDAO: ShowReviewDAO
-    private let trackReviewDAO: TrackReviewDAO
+    private let favoriteSongDAO: FavoriteSongDAO
     private let showPlayerTagDAO: ShowPlayerTagDAO
     private let showDAO: ShowDAO
 
-    init(showReviewDAO: ShowReviewDAO, trackReviewDAO: TrackReviewDAO, showPlayerTagDAO: ShowPlayerTagDAO, showDAO: ShowDAO) {
+    init(showReviewDAO: ShowReviewDAO, favoriteSongDAO: FavoriteSongDAO, showPlayerTagDAO: ShowPlayerTagDAO, showDAO: ShowDAO) {
         self.showReviewDAO = showReviewDAO
-        self.trackReviewDAO = trackReviewDAO
+        self.favoriteSongDAO = favoriteSongDAO
         self.showPlayerTagDAO = showPlayerTagDAO
         self.showDAO = showDAO
     }
@@ -18,7 +18,6 @@ struct ReviewService: Sendable {
 
     func getShowReview(_ showId: String) throws -> ShowReview {
         let reviewRecord = try showReviewDAO.fetchByShowId(showId)
-        let trackRecords = try trackReviewDAO.fetchForShow(showId)
         let tagRecords = try showPlayerTagDAO.fetchForShow(showId)
 
         return ShowReview(
@@ -28,7 +27,6 @@ struct ReviewService: Sendable {
             recordingQuality: reviewRecord?.recordingQuality,
             playingQuality: reviewRecord?.playingQuality,
             reviewedRecordingId: reviewRecord?.reviewedRecordingId,
-            trackReviews: trackRecords.map { $0.toDomain() },
             playerTags: tagRecords.map { $0.toDomain() }
         )
     }
@@ -53,39 +51,37 @@ struct ReviewService: Sendable {
         try showReviewDAO.updatePlayingQuality(showId, quality: quality)
     }
 
-    // MARK: - Track reviews
+    // MARK: - Favorite songs
 
-    func getTrackReviews(_ showId: String) throws -> [TrackReview] {
-        try trackReviewDAO.fetchForShow(showId).map { $0.toDomain() }
+    func toggleFavoriteSong(
+        showId: String, trackTitle: String, trackNumber: Int? = nil, recordingId: String? = nil
+    ) throws {
+        let isFav = try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+        if isFav {
+            try favoriteSongDAO.delete(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+        } else {
+            let record = FavoriteSongRecord(
+                id: nil,
+                showId: showId,
+                trackTitle: trackTitle,
+                trackNumber: trackNumber,
+                recordingId: recordingId,
+                createdAt: Int64(Date().timeIntervalSince1970 * 1000)
+            )
+            try favoriteSongDAO.insert(record)
+        }
+    }
+
+    func isSongFavorite(showId: String, trackTitle: String, recordingId: String?) throws -> Bool {
+        try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
     }
 
     func observeFavoriteTitles(showId: String) -> AsyncValueObservation<Set<String>> {
-        trackReviewDAO.database.observe(trackReviewDAO.observeFavoriteTitles(showId: showId))
+        favoriteSongDAO.database.observe(favoriteSongDAO.observeFavoriteTitles(showId: showId))
     }
 
-    func getTrackReview(showId: String, trackTitle: String, recordingId: String?) throws -> TrackReview? {
-        try trackReviewDAO.fetch(showId: showId, trackTitle: trackTitle, recordingId: recordingId)?.toDomain()
-    }
-
-    func upsertTrackReview(
-        showId: String, trackTitle: String, trackNumber: Int? = nil,
-        recordingId: String? = nil, thumbs: Int? = nil, starRating: Int? = nil, notes: String? = nil
-    ) throws {
-        let now = Int64(Date().timeIntervalSince1970 * 1000)
-        let existing = try trackReviewDAO.fetch(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
-        let record = TrackReviewRecord(
-            id: existing?.id,
-            showId: showId,
-            trackTitle: trackTitle,
-            trackNumber: trackNumber,
-            recordingId: recordingId,
-            thumbs: thumbs,
-            starRating: starRating,
-            notes: notes,
-            createdAt: existing?.createdAt ?? now,
-            updatedAt: now
-        )
-        try trackReviewDAO.upsert(record)
+    func observeIsSongFavorite(showId: String, trackTitle: String, recordingId: String?) -> AsyncValueObservation<Bool> {
+        favoriteSongDAO.database.observe(favoriteSongDAO.observeIsFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId))
     }
 
     // MARK: - Player tags
@@ -118,7 +114,7 @@ struct ReviewService: Sendable {
     // MARK: - Favorites
 
     func getFavoriteTracks() throws -> [FavoriteTrack] {
-        let records = try trackReviewDAO.fetchFavorites()
+        let records = try favoriteSongDAO.fetchAll()
         let showIds = Array(Set(records.map { $0.showId }))
         let shows = try showDAO.fetchByIds(showIds)
         let showMap = Dictionary(uniqueKeysWithValues: shows.map { ($0.showId, $0) })
@@ -131,7 +127,7 @@ struct ReviewService: Sendable {
                 trackTitle: record.trackTitle,
                 trackNumber: record.trackNumber,
                 recordingId: record.recordingId,
-                addedAt: record.updatedAt
+                addedAt: record.createdAt
             )
         }
     }
@@ -140,7 +136,7 @@ struct ReviewService: Sendable {
 
     func deleteShowReview(_ showId: String) throws {
         try showPlayerTagDAO.removeForShow(showId)
-        try trackReviewDAO.deleteForShow(showId)
+        try favoriteSongDAO.deleteForShow(showId)
         try showReviewDAO.deleteByShowId(showId)
     }
 
@@ -159,19 +155,6 @@ struct ReviewService: Sendable {
 }
 
 // MARK: - Record → Domain mapping
-
-private extension TrackReviewRecord {
-    func toDomain() -> TrackReview {
-        TrackReview(
-            trackTitle: trackTitle,
-            trackNumber: trackNumber,
-            recordingId: recordingId,
-            thumbs: thumbs,
-            starRating: starRating,
-            notes: notes
-        )
-    }
-}
 
 private extension ShowPlayerTagRecord {
     func toDomain() -> PlayerTag {

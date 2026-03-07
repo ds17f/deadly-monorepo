@@ -101,6 +101,9 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v7-rename-library-to-favorites") { db in
             try AppDatabase.renameLibraryToFavorites(db)
         }
+        migrator.registerMigration("v8-favorite-songs") { db in
+            try AppDatabase.replaceTrackReviewsWithFavoriteSongs(db)
+        }
         try migrator.migrate(dbWriter)
     }
 
@@ -334,6 +337,32 @@ struct AppDatabase: @unchecked Sendable {
         try db.execute(sql: "ALTER TABLE shows RENAME COLUMN libraryAddedAt TO favoritedAt")
         try db.execute(sql: "ALTER TABLE favorite_shows RENAME COLUMN addedToLibraryAt TO addedToFavoritesAt")
         try db.execute(sql: "ALTER TABLE favorite_shows RENAME COLUMN libraryNotes TO notes")
+    }
+
+    // MARK: - Replace track_reviews with favorite_songs
+
+    private static func replaceTrackReviewsWithFavoriteSongs(_ db: Database) throws {
+        try db.create(table: "favorite_songs") { t in
+            t.autoIncrementedPrimaryKey("id")
+            t.column("showId", .text).notNull()
+                .references("shows", column: "showId", onDelete: .cascade)
+            t.column("trackTitle", .text).notNull()
+            t.column("trackNumber", .integer)
+            t.column("recordingId", .text)
+            t.column("createdAt", .integer).notNull()
+            t.uniqueKey(["showId", "trackTitle", "recordingId"])
+        }
+        try db.create(index: "idx_favorite_songs_showId", on: "favorite_songs", columns: ["showId"])
+
+        // Migrate favorited tracks (thumbs = 1)
+        try db.execute(sql: """
+            INSERT OR IGNORE INTO favorite_songs (showId, trackTitle, trackNumber, recordingId, createdAt)
+            SELECT showId, trackTitle, trackNumber, recordingId, updatedAt
+            FROM track_reviews
+            WHERE thumbs = 1
+        """)
+
+        try db.drop(table: "track_reviews")
     }
 
     // MARK: - Show Reviews Table

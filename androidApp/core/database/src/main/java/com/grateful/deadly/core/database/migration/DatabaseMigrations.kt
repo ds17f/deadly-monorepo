@@ -181,4 +181,39 @@ object DatabaseMigrations {
             db.execSQL("ALTER TABLE favorite_shows RENAME COLUMN libraryNotes TO notes")
         }
     }
+
+    /**
+     * v19 → v20: Replace track_reviews with favorite_songs.
+     *
+     * The track_reviews table was over-engineered for a simple favoriting use case.
+     * Creates a clean favorite_songs table (row exists = favorited), migrates
+     * thumbs=1 rows, and drops the old table.
+     */
+    val MIGRATION_19_20 = object : Migration(19, 20) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("""
+                CREATE TABLE IF NOT EXISTS favorite_songs (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                    showId TEXT NOT NULL,
+                    trackTitle TEXT NOT NULL,
+                    trackNumber INTEGER,
+                    recordingId TEXT,
+                    createdAt INTEGER NOT NULL,
+                    FOREIGN KEY (showId) REFERENCES shows(showId) ON DELETE CASCADE
+                )
+            """.trimIndent())
+            db.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS index_favorite_songs_showId_trackTitle_recordingId ON favorite_songs(showId, trackTitle, recordingId)")
+            db.execSQL("CREATE INDEX IF NOT EXISTS index_favorite_songs_showId ON favorite_songs(showId)")
+
+            // Migrate favorited tracks (thumbs = 1)
+            db.execSQL("""
+                INSERT OR IGNORE INTO favorite_songs (showId, trackTitle, trackNumber, recordingId, createdAt)
+                SELECT showId, trackTitle, trackNumber, recordingId, updatedAt
+                FROM track_reviews
+                WHERE thumbs = 1
+            """.trimIndent())
+
+            db.execSQL("DROP TABLE IF EXISTS track_reviews")
+        }
+    }
 }

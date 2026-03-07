@@ -3,11 +3,10 @@ package com.grateful.deadly.core.api.favorites
 import com.grateful.deadly.core.model.FavoriteTrack
 import com.grateful.deadly.core.model.PlayerTag
 import com.grateful.deadly.core.model.ShowReview
-import com.grateful.deadly.core.model.TrackReview
 import kotlinx.coroutines.flow.Flow
 
 /**
- * Service interface for show and track review operations.
+ * Service interface for show review and song favorite operations.
  */
 interface ReviewService {
 
@@ -23,23 +22,16 @@ interface ReviewService {
 
     suspend fun updatePlayingQuality(showId: String, quality: Int?)
 
-    suspend fun getTrackReviews(showId: String): List<TrackReview>
-
-    fun getTrackReviewsFlow(showId: String): Flow<List<TrackReview>>
-
-    suspend fun getTrackReview(showId: String, trackTitle: String, recordingId: String?): TrackReview?
-
-    fun getTrackReviewFlow(showId: String, trackTitle: String, recordingId: String?): Flow<TrackReview?>
-
-    suspend fun upsertTrackReview(
+    suspend fun toggleFavoriteSong(
         showId: String,
         trackTitle: String,
         trackNumber: Int? = null,
-        recordingId: String? = null,
-        thumbs: Int? = null,
-        starRating: Int? = null,
-        notes: String? = null
+        recordingId: String? = null
     )
+
+    fun isSongFavoriteFlow(showId: String, trackTitle: String, recordingId: String?): Flow<Boolean>
+
+    fun getFavoriteSongTitlesFlow(showId: String): Flow<Set<String>>
 
     suspend fun getPlayerTags(showId: String): List<PlayerTag>
 

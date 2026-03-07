@@ -106,17 +106,17 @@ class PlaylistViewModel @Inject constructor(
                 }
         }
 
-        // Reactive favorite track loading - watch track reviews for the current show
+        // Reactive favorite track loading - watch favorite songs for the current show
         viewModelScope.launch {
             _baseUiState
                 .map { it.showData?.showId }
                 .distinctUntilChanged()
                 .flatMapLatest { showId ->
-                    if (showId != null) reviewService.getTrackReviewsFlow(showId)
-                    else flowOf(emptyList())
+                    if (showId != null) reviewService.getFavoriteSongTitlesFlow(showId)
+                    else flowOf(emptySet())
                 }
-                .collect { reviews ->
-                    _favoriteTitles.value = reviews.filter { it.isFavorite }.map { it.trackTitle }.toSet()
+                .collect { titles ->
+                    _favoriteTitles.value = titles
                 }
         }
 
@@ -1424,7 +1424,9 @@ class PlaylistViewModel @Inject constructor(
                 reviewService.upsertPlayerTag(showId, name, isStandout = true)
             }
 
-            _hasUserReview.value = true
+            val saved = reviewService.getShowReview(showId)
+            _hasUserReview.value = saved?.hasContent == true
+            _userReview.value = saved ?: ShowReview(showId = showId)
             _showWriteReview.value = false
         }
     }

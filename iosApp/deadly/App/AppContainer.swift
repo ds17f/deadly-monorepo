@@ -69,7 +69,7 @@ final class AppContainer {
             )
             let revService = ReviewService(
                 showReviewDAO: ShowReviewDAO(database: db),
-                trackReviewDAO: TrackReviewDAO(database: db),
+                favoriteSongDAO: FavoriteSongDAO(database: db),
                 showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                 showDAO: ShowDAO(database: db)
             )
@@ -85,7 +85,7 @@ final class AppContainer {
                 favoritesDAO: FavoritesDAO(database: db),
                 showDAO: ShowDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
-                trackReviewDAO: TrackReviewDAO(database: db),
+                favoriteSongDAO: FavoriteSongDAO(database: db),
                 playerTagDAO: ShowPlayerTagDAO(database: db),
                 recordingPreferenceDAO: RecordingPreferenceDAO(database: db)
             )

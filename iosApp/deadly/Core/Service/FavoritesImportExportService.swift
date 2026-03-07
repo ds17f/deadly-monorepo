@@ -4,15 +4,15 @@ struct FavoritesImportExportService {
     private let favoritesDAO: FavoritesDAO
     private let showDAO: ShowDAO
     private let showReviewDAO: ShowReviewDAO
-    private let trackReviewDAO: TrackReviewDAO
+    private let favoriteSongDAO: FavoriteSongDAO
     private let playerTagDAO: ShowPlayerTagDAO
     private let recordingPreferenceDAO: RecordingPreferenceDAO
 
-    init(favoritesDAO: FavoritesDAO, showDAO: ShowDAO, showReviewDAO: ShowReviewDAO, trackReviewDAO: TrackReviewDAO, playerTagDAO: ShowPlayerTagDAO, recordingPreferenceDAO: RecordingPreferenceDAO) {
+    init(favoritesDAO: FavoritesDAO, showDAO: ShowDAO, showReviewDAO: ShowReviewDAO, favoriteSongDAO: FavoriteSongDAO, playerTagDAO: ShowPlayerTagDAO, recordingPreferenceDAO: RecordingPreferenceDAO) {
         self.favoritesDAO = favoritesDAO
         self.showDAO = showDAO
         self.showReviewDAO = showReviewDAO
-        self.trackReviewDAO = trackReviewDAO
+        self.favoriteSongDAO = favoriteSongDAO
         self.playerTagDAO = playerTagDAO
         self.recordingPreferenceDAO = recordingPreferenceDAO
     }
@@ -33,13 +33,13 @@ struct FavoritesImportExportService {
         }
 
         // Favorite tracks
-        let favoriteTrackRecords = try trackReviewDAO.fetchFavorites()
-        let favoriteTracks = favoriteTrackRecords.map { track in
+        let favoriteTrackRecords = try favoriteSongDAO.fetchAll()
+        let favoriteTracks = favoriteTrackRecords.map { record in
             FavoriteTrackEntry(
-                showId: track.showId,
-                trackTitle: track.trackTitle,
-                trackNumber: track.trackNumber,
-                recordingId: track.recordingId
+                showId: record.showId,
+                trackTitle: record.trackTitle,
+                trackNumber: record.trackNumber,
+                recordingId: record.recordingId
             )
         }
 
@@ -154,28 +154,19 @@ struct FavoritesImportExportService {
             favoritesImported += 1
         }
 
-        // Import favorite tracks (ensure thumbs=1 review exists)
+        // Import favorite tracks
         for track in export.favorites.tracks {
             guard (try? showDAO.fetchById(track.showId)) != nil else { continue }
-            let existing = try? trackReviewDAO.fetch(
-                showId: track.showId, trackTitle: track.trackTitle, recordingId: track.recordingId
+            let record = FavoriteSongRecord(
+                id: nil,
+                showId: track.showId,
+                trackTitle: track.trackTitle,
+                trackNumber: track.trackNumber,
+                recordingId: track.recordingId,
+                createdAt: now
             )
-            if existing == nil || existing?.thumbs != 1 {
-                let reviewRecord = TrackReviewRecord(
-                    id: existing?.id,
-                    showId: track.showId,
-                    trackTitle: track.trackTitle,
-                    trackNumber: track.trackNumber,
-                    recordingId: track.recordingId,
-                    thumbs: 1,
-                    starRating: existing?.starRating,
-                    notes: existing?.notes,
-                    createdAt: existing?.createdAt ?? now,
-                    updatedAt: now
-                )
-                try? trackReviewDAO.upsert(reviewRecord)
-                tracksImported += 1
-            }
+            try? favoriteSongDAO.insert(record)
+            tracksImported += 1
         }
 
         // Import reviews (upsert)
@@ -285,21 +276,17 @@ struct FavoritesImportExportService {
             }
 
             if let trackReviews = entry.trackReviews {
-                for tr in trackReviews {
+                for tr in trackReviews where tr.thumbs == 1 {
                     let now = Int64(Date().timeIntervalSince1970 * 1000)
-                    let reviewRecord = TrackReviewRecord(
+                    let record = FavoriteSongRecord(
                         id: nil,
                         showId: entry.showId,
                         trackTitle: tr.trackTitle,
                         trackNumber: tr.trackNumber,
                         recordingId: tr.recordingId,
-                        thumbs: tr.thumbs,
-                        starRating: tr.starRating,
-                        notes: tr.notes,
-                        createdAt: now,
-                        updatedAt: now
+                        createdAt: now
                     )
-                    try? trackReviewDAO.upsert(reviewRecord)
+                    try? favoriteSongDAO.insert(record)
                 }
             }
 
