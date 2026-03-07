@@ -35,7 +35,7 @@ struct TrackListRow: View {
             if isFavorite {
                 Image(systemName: "heart.fill")
                     .font(.system(size: 10))
-                    .foregroundStyle(.tint)
+                    .foregroundStyle(DeadlyColors.primary)
                     .padding(.trailing, 2)
             }
 
@@ -65,7 +65,7 @@ struct TrackListRow: View {
         case .completed:
             Image(systemName: "checkmark.circle.fill")
                 .font(.caption)
-                .foregroundStyle(.green)
+                .foregroundStyle(DeadlyColors.primary)
         case .failed:
             Image(systemName: "exclamationmark.circle")
                 .font(.caption)

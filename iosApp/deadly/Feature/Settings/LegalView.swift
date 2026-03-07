@@ -71,9 +71,9 @@ private struct ArticleSection<Content: View>: View {
         VStack(alignment: .leading, spacing: 12) {
             Text(title)
                 .font(.headline)
-                .foregroundStyle(.tint)
+                .foregroundStyle(DeadlyColors.primary)
             Rectangle()
-                .fill(Color.accentColor.opacity(0.25))
+                .fill(DeadlyColors.primary.opacity(0.25))
                 .frame(height: 1)
             VStack(alignment: .leading, spacing: 10) {
                 content
@@ -104,7 +104,7 @@ private struct ArticleLink: View {
                 Image(systemName: "arrow.up.right")
                     .font(.caption)
             }
-            .foregroundStyle(.tint)
+            .foregroundStyle(DeadlyColors.primary)
         }
     }
 }

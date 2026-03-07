@@ -28,6 +28,7 @@ struct deadlyApp: App {
     var body: some Scene {
         WindowGroup {
             MainNavigation()
+                .tint(DeadlyColors.primary)
                 .environment(\.appContainer, container)
                 .fullScreenCover(isPresented: $showingImport, onDismiss: {
                     Task {

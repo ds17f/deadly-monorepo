@@ -3,6 +3,7 @@ import SwiftUI
 struct CompactStarRating: View {
     let rating: Float?
     var starSize: CGFloat = 14
+    var color: Color? = nil
 
     var body: some View {
         HStack(spacing: 2) {
@@ -17,7 +18,8 @@ struct CompactStarRating: View {
     }
 
     private var starColor: Color {
-        rating != nil ? DeadlyColors.secondary : Color(.systemGray3)
+        if let color { return color }
+        return rating != nil ? DeadlyColors.secondary : Color(.systemGray3)
     }
 
     private func starImage(for index: Int) -> Image {

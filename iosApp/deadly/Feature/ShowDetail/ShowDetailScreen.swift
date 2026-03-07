@@ -339,7 +339,10 @@ struct ShowDetailScreen: View {
         } label: {
             HStack {
                 HStack(spacing: 8) {
-                    CompactStarRating(rating: show.averageRating)
+                    CompactStarRating(
+                        rating: show.averageRating,
+                        color: userReview != nil ? DeadlyColors.secondary : DeadlyColors.primary
+                    )
                     Text(show.hasRating
                         ? String(format: "%.1f", show.averageRating!)
                         : "N/A")
@@ -354,7 +357,7 @@ struct ShowDetailScreen: View {
                     if userReview != nil {
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 12))
-                            .foregroundStyle(DeadlyColors.primary)
+                            .foregroundStyle(DeadlyColors.secondary)
                     }
                     Text(show.totalReviews > 0
                         ? "(\(show.totalReviews))"

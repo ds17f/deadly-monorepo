@@ -143,7 +143,7 @@ struct ReviewDetailsSheet: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.accentColor.opacity(0.1))
+        .background(DeadlyColors.primary.opacity(0.1))
         .clipShape(RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
     }
 

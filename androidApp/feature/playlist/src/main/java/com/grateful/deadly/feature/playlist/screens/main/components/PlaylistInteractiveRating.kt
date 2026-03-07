@@ -51,7 +51,8 @@ fun PlaylistInteractiveRating(
                 CompactStarRating(
                     rating = if (showData.rating > 0) showData.rating else null,
                     confidence = null, // Confidence not yet implemented
-                    starSize = IconResources.Size.MEDIUM
+                    starSize = IconResources.Size.MEDIUM,
+                    starColor = if (hasUserReview) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary
                 )
                 
                 Text(
@@ -79,7 +80,7 @@ fun PlaylistInteractiveRating(
                     Icon(
                         painter = IconResources.Content.StickyNote(),
                         contentDescription = "Your review",
-                        tint = MaterialTheme.colorScheme.primary,
+                        tint = MaterialTheme.colorScheme.secondary,
                         modifier = Modifier.size(16.dp)
                     )
                 }
