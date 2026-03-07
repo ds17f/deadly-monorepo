@@ -351,11 +351,9 @@ struct ShowDetailScreen: View {
                 Spacer()
 
                 HStack(spacing: 4) {
-                    if userReview != nil {
-                        Image(systemName: "square.and.pencil")
-                            .font(.system(size: 12))
-                            .foregroundStyle(DeadlyColors.primary)
-                    }
+                    Image(systemName: "square.and.pencil")
+                        .font(.system(size: 12))
+                        .foregroundStyle(userReview != nil ? DeadlyColors.reviewDone : DeadlyColors.reviewNotDone)
                     Text(show.totalReviews > 0
                         ? "(\(show.totalReviews))"
                         : "No reviews")
