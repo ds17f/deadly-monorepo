@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.14.0] - 2026-03-07
+
+### New Features
+* Adds tap logo for settings-panel (062ef7a)
+* add show/song counts to sort controls row (0b929d2)
+
+### Bug Fixes
+* make review icon reactive, use star indicator, populate lineup (6ad93a8)
+* align color scheme — crimson/gold/green palette, fix downloads nav (a473cd3)
+* always show review state indicator with color coding (d14fe8e)
+
+### Code Refactoring
+* replace track_reviews with favorite_songs table (dc8e34e)
+
+### Other Changes
+* Revert "fix(mobile/ui): always show review state indicator with color coding" (4622c79)
+
+
 ## [2.13.1] - 2026-03-06
 
 ### Bug Fixes
@@ -7,8 +25,6 @@
 
 ### Other Changes
 * Revert "fix(mobile/ui): always show review state indicator with color coding" (4622c79)
-
-
 ## [2.13.0] - 2026-03-06
 
 ### New Features
