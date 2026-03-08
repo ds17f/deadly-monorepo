@@ -62,7 +62,7 @@ struct SettingsScreen: View {
             // MARK: - About
             Section("About") {
                 Button {
-                    let urlString = "https://github.com/ds17f/deadly-monorepo/releases/tag/ios%2Fv\(appVersion)"
+                    let urlString = "https://github.com/ds17f/deadly-monorepo/releases/tag/ios/v\(appVersion)"
                     if let url = URL(string: urlString) { openURL(url) }
                 } label: {
                     LabeledContent("Version", value: appVersion)

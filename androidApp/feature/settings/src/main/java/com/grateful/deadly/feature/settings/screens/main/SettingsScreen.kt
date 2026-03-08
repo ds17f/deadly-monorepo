@@ -80,7 +80,7 @@ fun SettingsScreen(
             PreferenceRow(
                 title = "Version $version",
                 onClick = {
-                    val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
+                    val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android/v$version"
                     context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                 },
                 trailing = {
