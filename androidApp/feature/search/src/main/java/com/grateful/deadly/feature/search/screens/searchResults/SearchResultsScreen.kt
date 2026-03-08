@@ -58,8 +58,8 @@ fun SearchResultsScreen(
     val uiState by viewModel.uiState.collectAsState()
 
     // Sort state (local to composable, resets on new search session)
-    var sortBy by remember { mutableStateOf(SearchSortOption.RELEVANCE) }
-    var sortDirection by remember { mutableStateOf(SearchSortDirection.DESCENDING) }
+    var sortBy by remember { mutableStateOf(SearchSortOption.DATE_OF_SHOW) }
+    var sortDirection by remember { mutableStateOf(SearchSortDirection.ASCENDING) }
 
     // Apply sorting to results
     val sortedResults = remember(uiState.searchResults, sortBy, sortDirection) {
