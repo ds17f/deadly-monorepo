@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ShowRowView: View {
+    @Environment(\.appContainer) private var container
     let favoriteShow: FavoriteShow
 
     init(favoriteShow: FavoriteShow) {
@@ -33,11 +34,16 @@ struct ShowRowView: View {
                                 .font(.system(size: 10))
                                 .foregroundStyle(DeadlyColors.primary)
                         }
-                        if favoriteShow.hasReview {
-                            Image(systemName: "star.fill")
-                                .font(.system(size: 10))
-                                .foregroundStyle(DeadlyColors.secondary)
-                        }
+                        if container.downloadService.downloadStatus(for: show.id) == .completed {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 10))
+                            .foregroundStyle(DeadlyColors.primary)
+                    }
+                    if favoriteShow.hasReview {
+                        Image(systemName: "star.fill")
+                            .font(.system(size: 10))
+                            .foregroundStyle(DeadlyColors.secondary)
+                    }
                         Text(DateFormatting.formatShowDate(show.date, style: .short))
                             .font(.subheadline)
                             .fontWeight(.semibold)

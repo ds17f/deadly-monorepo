@@ -326,7 +326,7 @@ struct FavoritesImportExportService {
 
 private struct VersionPeek: Decodable {
     var version: Int = 0
-    var favorites: AnyCodable? = nil
+    private var favorites: AnyCodable? = nil
 
     private struct AnyCodable: Decodable {}
 
