@@ -6,6 +6,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -151,12 +152,48 @@ fun SearchResultsScreen(
                     )
                 }
 
-                item {
-                    SearchResultsSection(
-                        searchResults = sortedResults,
-                        searchStatus = uiState.searchStatus,
-                        onShowSelected = onNavigateToShow
-                    )
+                // Status messages
+                when (uiState.searchStatus) {
+                    SearchStatus.SEARCHING -> item {
+                        Text(
+                            text = "Searching...",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(vertical = 24.dp)
+                        )
+                    }
+                    SearchStatus.NO_RESULTS -> item {
+                        Text(
+                            text = "No results found",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(vertical = 24.dp)
+                        )
+                    }
+                    SearchStatus.ERROR -> item {
+                        Text(
+                            text = "Search failed. Please try again.",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.padding(vertical = 24.dp)
+                        )
+                    }
+                    SearchStatus.SUCCESS -> {
+                        // Virtualized — only visible items are composed
+                        items(
+                            items = sortedResults,
+                            key = { it.show.id }
+                        ) { result ->
+                            SearchResultCard(
+                                searchResult = result,
+                                onShowSelected = onNavigateToShow,
+                                onShowLongPress = { show ->
+                                    // TODO: Implement show actions bottom sheet
+                                }
+                            )
+                        }
+                    }
+                    SearchStatus.IDLE -> { }
                 }
             }
         }
