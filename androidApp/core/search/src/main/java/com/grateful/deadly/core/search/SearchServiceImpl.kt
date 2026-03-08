@@ -4,10 +4,10 @@ import android.util.Log
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.api.search.SearchFilter
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.dao.ShowSearchDao
+import com.grateful.deadly.core.database.mappers.ShowMappers
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.AppDatabase
-import com.grateful.deadly.core.domain.repository.ShowRepository
-import com.grateful.deadly.core.database.dao.ShowSearchDao
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -24,8 +24,8 @@ import javax.inject.Singleton
  */
 @Singleton
 class SearchServiceImpl @Inject constructor(
-    private val showRepository: ShowRepository,
     @AppDatabase private val showSearchDao: ShowSearchDao,
+    private val showMappers: ShowMappers,
     private val appPreferences: AppPreferences
 ) : SearchService {
     
@@ -64,15 +64,10 @@ class SearchServiceImpl @Inject constructor(
         
         try {
             val startTime = System.currentTimeMillis()
-            
-            // FTS5 search for show IDs (BM25 ranking preserved in order)
-            val showIds = showSearchDao.searchShows(query)
-            Log.d(TAG, "FTS5 search returned ${showIds.size} show IDs")
-            
-            // Get domain shows for all IDs (repository handles entity-to-domain conversion)
-            val allShows = showIds.mapNotNull { showId ->
-                showRepository.getShowById(showId)
-            }
+
+            // Single FTS+JOIN query with column projection — skips 3MB of JSON blob I/O
+            val summaries = showSearchDao.searchShowsWithSummary(query)
+            val allShows = showMappers.summariesToDomain(summaries)
 
             // Filter out recordingless shows when preference is enabled
             val shows = if (appPreferences.showOnlyRecordedShows.value) {
@@ -81,11 +76,12 @@ class SearchServiceImpl @Inject constructor(
                 allShows
             }
 
-            Log.d(TAG, "Retrieved ${allShows.size} full shows, ${shows.size} after recording filter")
-            
-            // Convert to SearchResultShow preserving FTS5 ranking
+            Log.d(TAG, "FTS+JOIN returned ${allShows.size} shows, ${shows.size} after filter in ${System.currentTimeMillis() - startTime}ms")
+
+            // Convert to SearchResultShow preserving FTS ranking
+            val resultCount = shows.size.coerceAtLeast(1)
             val results = shows.mapIndexed { index: Int, show ->
-                val ftsRankScore = 1.0f - (index.toFloat() / showIds.size.coerceAtLeast(1))
+                val ftsRankScore = 1.0f - (index.toFloat() / resultCount)
                 val matchType = determineMatchType(show, query)
                 
                 SearchResultShow(
