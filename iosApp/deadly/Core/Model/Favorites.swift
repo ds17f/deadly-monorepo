@@ -100,6 +100,7 @@ enum FavoritesSortOption: String, Codable, Sendable, Equatable, CaseIterable {
     case dateAdded = "DATE_ADDED"
     case venue = "VENUE"
     case rating = "RATING"
+    case hasReview = "HAS_REVIEW"
 
     var displayName: String {
         switch self {
@@ -107,6 +108,7 @@ enum FavoritesSortOption: String, Codable, Sendable, Equatable, CaseIterable {
         case .dateAdded: return "Date Added"
         case .venue: return "Venue"
         case .rating: return "Rating"
+        case .hasReview: return "Has Review"
         }
     }
 }
