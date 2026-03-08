@@ -9,12 +9,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.Job
 import javax.inject.Inject
 
 /**
@@ -45,7 +43,6 @@ class SearchViewModel @Inject constructor(
     
     // Debounced search query flow
     private val _searchQueryFlow = MutableStateFlow("")
-    private var searchJob: Job? = null
     
     // Pull-to-refresh state
     private val _refreshCounter = MutableStateFlow(0)
@@ -54,10 +51,6 @@ class SearchViewModel @Inject constructor(
     private val _isRefreshing = MutableStateFlow(false)
     val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
 
-    // Configurable debounce delay
-    private val _debounceDelayMs = MutableStateFlow(800L)
-    val debounceDelayMs: StateFlow<Long> = _debounceDelayMs.asStateFlow()
-    
     init {
         Log.d(TAG, "SearchViewModel initialized with SearchService")
         loadInitialState()
@@ -96,50 +89,16 @@ class SearchViewModel @Inject constructor(
      */
     private fun setupDebouncedSearch() {
         viewModelScope.launch {
-            // Combine search query with debounce delay to recreate flow when delay changes
-            combine(_searchQueryFlow, _debounceDelayMs) { query, delay ->
-                query to delay
-            }.collect { (query, delay) ->
-                // Cancel any existing debounce collection
-                searchJob?.cancel()
-                
-                // Start new debounced collection with updated delay
-                searchJob = viewModelScope.launch {
-                    _searchQueryFlow
-                        .debounce(delay) // Use configurable delay
-                        .distinctUntilChanged() // Only trigger if query actually changed
-                        .collect { debouncedQuery ->
-                            performDebouncedSearch(debouncedQuery)
-                        }
+            _searchQueryFlow
+                .debounce(300L)
+                .distinctUntilChanged()
+                .collect { query ->
+                    Log.d(TAG, "Performing debounced search for: '$query'")
+                    searchService.updateSearchQuery(query)
+                    if (query.length >= 3) {
+                        searchService.addRecentSearch(query)
+                    }
                 }
-            }
-        }
-    }
-    
-    /**
-     * Perform the actual search after debounce delay
-     */
-    private suspend fun performDebouncedSearch(query: String) {
-        Log.d(TAG, "Performing debounced search for: '$query'")
-        
-        try {
-            // Cancel any previous search job
-            searchJob?.cancel()
-            
-            // Start new search job
-            searchJob = viewModelScope.launch {
-                // Trigger search in service (this will update currentQuery and perform search)
-                searchService.updateSearchQuery(query)
-                
-                // Add to recent searches only if it's a meaningful query (3+ chars)
-                // and only after the search has been "committed" by the delay
-                if (query.length >= 3) {
-                    searchService.addRecentSearch(query)
-                    Log.d(TAG, "Added '$query' to recent searches")
-                }
-            }
-        } catch (e: Exception) {
-            Log.e(TAG, "Failed to perform debounced search for '$query'", e)
         }
     }
     
@@ -220,14 +179,6 @@ class SearchViewModel @Inject constructor(
     }
 
     /**
-     * Update the debounce delay for search queries
-     */
-    fun updateDebounceDelay(delayMs: Long) {
-        Log.d(TAG, "Updating debounce delay to ${delayMs}ms")
-        _debounceDelayMs.value = delayMs.coerceIn(0L, 2000L) // Clamp between 0-2000ms
-    }
-    
-    /**
      * Observe service flows and update UI state
      */
     private fun observeServiceFlows() {
@@ -275,8 +226,5 @@ class SearchViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         Log.d(TAG, "SearchViewModel cleared")
-        
-        // Cancel any pending search jobs
-        searchJob?.cancel()
     }
 }
