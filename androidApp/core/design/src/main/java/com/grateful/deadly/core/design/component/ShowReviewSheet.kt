@@ -6,7 +6,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.ShowReview
 
@@ -34,11 +38,11 @@ fun ShowReviewSheet(
     onDelete: (() -> Unit)? = null,
     onDismiss: () -> Unit
 ) {
-    var notes by remember(review) { mutableStateOf(review.notes ?: "") }
-    var overallRating by remember(review) { mutableStateOf(review.overallRating?.toInt() ?: 0) }
-    var recordingQuality by remember(review) { mutableStateOf(review.recordingQuality ?: 0) }
-    var playingQuality by remember(review) { mutableStateOf(review.playingQuality ?: 0) }
-    var standoutPlayers by remember(review) {
+    var notes by remember(review.showId, review.reviewedRecordingId) { mutableStateOf(review.notes ?: "") }
+    var overallRating by remember(review.showId, review.reviewedRecordingId) { mutableStateOf(review.overallRating?.toInt() ?: 0) }
+    var recordingQuality by remember(review.showId, review.reviewedRecordingId) { mutableStateOf(review.recordingQuality ?: 0) }
+    var playingQuality by remember(review.showId, review.reviewedRecordingId) { mutableStateOf(review.playingQuality ?: 0) }
+    var standoutPlayers by remember(review.showId, review.reviewedRecordingId) {
         mutableStateOf(review.playerTags.filter { it.isStandout }.map { it.playerName }.toSet())
     }
     var showDeleteConfirmation by remember { mutableStateOf(false) }
@@ -47,6 +51,8 @@ fun ShowReviewSheet(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
+                .imePadding()
+                .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp)
                 .padding(bottom = 24.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -123,7 +129,8 @@ fun ShowReviewSheet(
                 label = { Text("Notes") },
                 modifier = Modifier.fillMaxWidth(),
                 minLines = 3,
-                maxLines = 6
+                maxLines = 6,
+                keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences)
             )
 
             // Save
