@@ -7,7 +7,7 @@ struct SearchScreen: View {
     var resetToken: Int = 0
 
     @State private var searchText = ""
-    @State private var isSearchPresented = false
+    @FocusState private var isSearchFieldFocused: Bool
     @State private var searchTask: Task<Void, Never>?
 
     @State private var sortOption: SearchSortOption = .relevance
@@ -22,7 +22,7 @@ struct SearchScreen: View {
 
     /// Show results when the search bar is active or an era is selected.
     private var showingResults: Bool {
-        eraOverride != nil || isSearchPresented
+        eraOverride != nil || isSearchFieldFocused || !searchText.isEmpty
     }
 
     private var displayResults: [SearchResultShow] {
@@ -31,36 +31,27 @@ struct SearchScreen: View {
     }
 
     var body: some View {
-        Group {
+        VStack(spacing: 0) {
+            searchBar
             if showingResults {
                 resultsView
             } else {
                 browseView
             }
         }
-        .searchable(
-            text: $searchText,
-            isPresented: $isSearchPresented,
-            prompt: "What do you want to listen to?"
-        )
-        .onSubmit(of: .search) {
-            searchTask?.cancel()
-            eraOverride = nil
-            eraLabel = nil
-            Task { await searchService.search(query: searchText) }
-        }
+        .toolbar(showingResults ? .hidden : .visible, for: .navigationBar)
+        .animation(.easeInOut(duration: 0.2), value: showingResults)
         .onChange(of: resetToken) { _, _ in
             // Tab re-tapped — return to browse
             searchTask?.cancel()
             searchText = ""
-            isSearchPresented = false
+            isSearchFieldFocused = false
             searchService.clearResults()
             eraOverride = nil
             eraLabel = nil
         }
-        .onChange(of: isSearchPresented) { _, isActive in
-            if !isActive {
-                // "Cancel" tapped — return to browse
+        .onChange(of: isSearchFieldFocused) { _, isFocused in
+            if !isFocused && searchText.isEmpty {
                 searchTask?.cancel()
                 searchService.clearResults()
                 eraOverride = nil
@@ -87,6 +78,53 @@ struct SearchScreen: View {
         }
     }
 
+    // MARK: - Search bar
+
+    private var searchBar: some View {
+        HStack(spacing: 10) {
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundStyle(.secondary)
+                TextField("What do you want to listen to?", text: $searchText)
+                    .textFieldStyle(.plain)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
+                    .submitLabel(.search)
+                    .focused($isSearchFieldFocused)
+                    .onSubmit {
+                        searchTask?.cancel()
+                        eraOverride = nil
+                        eraLabel = nil
+                        Task { await searchService.search(query: searchText) }
+                    }
+                if !searchText.isEmpty {
+                    Button {
+                        searchText = ""
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+            .padding(10)
+            .background(Color(.systemGray5), in: RoundedRectangle(cornerRadius: 12))
+
+            if showingResults {
+                Button("Cancel") {
+                    searchText = ""
+                    isSearchFieldFocused = false
+                    searchTask?.cancel()
+                    searchService.clearResults()
+                    eraOverride = nil
+                    eraLabel = nil
+                }
+                .foregroundStyle(.primary)
+            }
+        }
+        .padding(.horizontal, DeadlySpacing.screenPadding)
+        .padding(.top, DeadlySpacing.screenPadding)
+    }
+
     // MARK: - Browse view
 
     private var browseView: some View {
@@ -96,7 +134,8 @@ struct SearchScreen: View {
                 discoverSection
                 browseAllSection
             }
-            .padding(.vertical, DeadlySpacing.screenPadding)
+            .padding(.top, DeadlySpacing.screenPadding)
+            .padding(.bottom, DeadlySpacing.screenPadding)
         }
         .refreshable {
             refreshCounter += 1
@@ -151,7 +190,7 @@ struct SearchScreen: View {
                 SearchResultShow(show: $0, relevanceScore: 1.0, matchType: .year, hasDownloads: false, highlightedFields: [])
             }
             eraLabel = decade
-            isSearchPresented = true
+            isSearchFieldFocused = true
         } catch {
             // silently fail
         }
@@ -328,7 +367,7 @@ struct SearchScreen: View {
     private func activateSearch(query: String) {
         searchTask?.cancel()
         searchText = query
-        isSearchPresented = true
+        isSearchFieldFocused = true
         Task { await searchService.search(query: query) }
     }
 

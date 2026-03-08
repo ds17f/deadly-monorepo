@@ -13,10 +13,17 @@ struct CollectionsScreen: View {
     private var service: CollectionsServiceImpl { container.collectionsService }
 
     @State private var searchText = ""
+    @FocusState private var isSearchFieldFocused: Bool
     @State private var activeTag: String?
+
+    private var isSearchActive: Bool {
+        isSearchFieldFocused || !searchText.isEmpty
+    }
 
     var body: some View {
         VStack(spacing: 0) {
+            searchBar
+
             if !service.allTags.isEmpty {
                 tagFilterBar
             }
@@ -36,7 +43,8 @@ struct CollectionsScreen: View {
                 collectionsList
             }
         }
-        .searchable(text: $searchText, prompt: "Search collections")
+        .toolbar(isSearchActive ? .hidden : .visible, for: .navigationBar)
+        .animation(.easeInOut(duration: 0.2), value: isSearchActive)
         .task { service.loadAll() }
         .onChange(of: searchText) { _, query in
             if query.isEmpty {
@@ -49,6 +57,43 @@ struct CollectionsScreen: View {
                 service.search(query)
             }
         }
+    }
+
+    // MARK: - Search bar
+
+    private var searchBar: some View {
+        HStack(spacing: 10) {
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundStyle(.secondary)
+                TextField("Search collections", text: $searchText)
+                    .textFieldStyle(.plain)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
+                    .submitLabel(.search)
+                    .focused($isSearchFieldFocused)
+                if !searchText.isEmpty {
+                    Button {
+                        searchText = ""
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+            .padding(10)
+            .background(Color(.systemGray5), in: RoundedRectangle(cornerRadius: 12))
+
+            if isSearchActive {
+                Button("Cancel") {
+                    searchText = ""
+                    isSearchFieldFocused = false
+                }
+                .foregroundStyle(.primary)
+            }
+        }
+        .padding(.horizontal, DeadlySpacing.screenPadding)
+        .padding(.top, DeadlySpacing.screenPadding)
     }
 
     // MARK: - Tag filter bar
