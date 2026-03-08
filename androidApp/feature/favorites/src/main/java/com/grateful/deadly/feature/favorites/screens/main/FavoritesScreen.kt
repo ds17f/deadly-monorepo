@@ -702,6 +702,13 @@ private fun applyFiltersAndSorting(
                 filteredShows.sortedWith(compareBy<FavoriteShowViewModel> { !it.isPinned }.thenByDescending { it.rating ?: 0f })
             }
         }
+        FavoritesSortOption.HAS_REVIEW -> {
+            if (sortDirection == FavoritesSortDirection.ASCENDING) {
+                filteredShows.sortedWith(compareBy<FavoriteShowViewModel> { !it.isPinned }.thenBy { it.hasReview })
+            } else {
+                filteredShows.sortedWith(compareBy<FavoriteShowViewModel> { !it.isPinned }.thenByDescending { it.hasReview })
+            }
+        }
     }
 }
 

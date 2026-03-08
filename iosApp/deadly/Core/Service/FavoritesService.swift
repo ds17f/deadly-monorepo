@@ -160,6 +160,8 @@ final class FavoritesServiceImpl {
                 let aVal = a.show.averageRating ?? 0
                 let bVal = b.show.averageRating ?? 0
                 result = aVal < bVal
+            case .hasReview:
+                result = !a.hasReview && b.hasReview
             }
             return ascending ? result : !result
         }

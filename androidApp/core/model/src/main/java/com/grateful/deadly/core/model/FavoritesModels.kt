@@ -187,7 +187,8 @@ enum class FavoritesSortOption(val displayName: String) {
     DATE_OF_SHOW("Show Date"),
     DATE_ADDED("Date Added"),
     VENUE("Venue"),
-    RATING("Rating")
+    RATING("Rating"),
+    HAS_REVIEW("Has Review")
 }
 
 /**

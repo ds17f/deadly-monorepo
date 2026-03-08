@@ -484,6 +484,7 @@ struct FavoritesScreen: View {
         case .dateOfShow: return "Show Date"
         case .venue:      return "Venue"
         case .rating:     return "Rating"
+        case .hasReview:  return "Has Review"
         }
     }
 
