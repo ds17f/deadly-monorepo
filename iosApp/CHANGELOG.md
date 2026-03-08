@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.17.0] - 2026-03-08
+
+### New Features
+* add "Has Review" sort option to favorites list (0be528d)
+* default results to sort by show date ascending (cbf7949)
+* replace .searchable() with custom search bar (019ef40)
+
+### Bug Fixes
+* show download icon on downloaded shows in list view (7ccb26f)
+* include version field in backup JSON export (2ec2569)
+* remove tag filter chips causing phantom gap (0f814e2)
+
+### CI Changes
+* move PROVISIONING_PROFILE_SPECIFIER to project target settings (b2cb14b)
+* add CODE_SIGN_IDENTITY to gym xcargs for distribution builds (1a02efb)
+
+
 ## [2.16.0] - 2026-03-07
 
 ### New Features
@@ -20,8 +37,6 @@
 
 ### Other Changes
 * Revert "fix(mobile/ui): always show review state indicator with color coding" (4622c79)
-
-
 ## [2.15.0] - 2026-03-06
 
 ### New Features
