@@ -45,7 +45,7 @@ help:
 	@echo ""
 	@echo "IOS LOCAL BUILD (macOS):"
 	@echo "  ios-build            - Build debug for simulator"
-	@echo "  ios-sim              - Build + run on iPhone 16 simulator"
+	@echo "  ios-sim              - Build + run on iPhone 17 simulator"
 	@echo "  ios-device           - Build + install to connected device"
 	@echo "  ios-test             - Run tests on simulator"
 	@echo "  ios-resolve          - Resolve SPM package dependencies"
@@ -56,7 +56,7 @@ help:
 	@echo "  ios-remote-sync      - Rsync working tree to Mac"
 	@echo "  ios-remote-build     - Sync + build debug on Mac simulator"
 	@echo "  ios-remote-install   - Sync + build + install to connected device"
-	@echo "  ios-remote-sim       - Sync + build + run on iPhone 16 simulator"
+	@echo "  ios-remote-sim       - Sync + build + run on iPhone 17 simulator"
 	@echo "  ios-remote-test      - Sync + run tests on Mac simulator"
 	@echo "  ios-remote-resolve   - Sync + resolve SPM package dependencies"
 	@echo ""
@@ -225,19 +225,19 @@ ios-remote-install:
 	@echo "Installing to device..."
 	@ssh $(REMOTE_HOST) 'DEVICE_ID=$$(xcrun devicectl list devices 2>/dev/null | grep -oE "[0-9A-F]{8}-([0-9A-F]{4}-){3}[0-9A-F]{12}" | head -1) && APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "generic/platform=iOS" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun devicectl device install app --device "$$DEVICE_ID" "$$APP_PATH" 2>&1'
 
-# Sync + build + launch on iPhone 16 simulator
+# Sync + build + launch on iPhone 17 simulator
 ios-remote-sim:
 	@$(MAKE) ios-remote-sync
 	@echo "Building for simulator on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 16' build 2>&1 | tail -20"
+	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17' build 2>&1 | tail -20"
 	@echo "Launching on simulator..."
-	@ssh $(REMOTE_HOST) 'APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "platform=iOS Simulator,name=iPhone 16" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun simctl boot "iPhone 16" 2>/dev/null; xcrun simctl install booted "$$APP_PATH" && xcrun simctl launch booted com.grateful.deadly && open -a Simulator'
+	@ssh $(REMOTE_HOST) 'APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "platform=iOS Simulator,name=iPhone 17" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun simctl boot "iPhone 17" 2>/dev/null; xcrun simctl install booted "$$APP_PATH" && xcrun simctl launch booted com.grateful.deadly && open -a Simulator'
 
 # Sync + run tests on Mac simulator
 ios-remote-test:
 	@$(MAKE) ios-remote-sync
 	@echo "Running tests on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild test -project deadly.xcodeproj -scheme deadly -destination 'platform=iOS Simulator,name=iPhone 16' 2>&1 | tail -40"
+	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild test -project deadly.xcodeproj -scheme deadly -destination 'platform=iOS Simulator,name=iPhone 17' 2>&1 | tail -40"
 
 # Resolve SPM packages on Mac (needed after adding new dependencies)
 ios-remote-resolve:
@@ -252,7 +252,7 @@ ios-remote-resolve:
 IOS_DIR     := iosApp
 IOS_PROJECT := $(IOS_DIR)/deadly.xcodeproj
 IOS_SCHEME  := deadly
-SIM_DEST    := platform=iOS Simulator,name=iPhone 16
+SIM_DEST    := platform=iOS Simulator,name=iPhone 17
 BUNDLE_ID   := com.grateful.deadly
 
 # Lightweight xcodebuild filter: prints Compiling/Linking/Signing lines as
@@ -275,7 +275,7 @@ ios-build:
 		-destination 'generic/platform=iOS Simulator' \
 		build 2>&1 | $(XC_FILTER)
 
-# Build + run on iPhone 16 simulator
+# Build + run on iPhone 17 simulator
 ios-sim:
 	@echo "Building for simulator..."
 	@cd $(IOS_DIR) && xcodebuild \
@@ -293,7 +293,7 @@ ios-sim:
 		-destination '$(SIM_DEST)' \
 		-showBuildSettings 2>/dev/null \
 		| grep " BUILT_PRODUCTS_DIR" | head -1 | awk '{print $$3}')/deadly.app \
-	&& xcrun simctl boot "iPhone 16" 2>/dev/null; \
+	&& xcrun simctl boot "iPhone 17" 2>/dev/null; \
 	xcrun simctl install booted "$$APP_PATH" \
 	&& xcrun simctl launch booted $(BUNDLE_ID) \
 	&& open -a Simulator

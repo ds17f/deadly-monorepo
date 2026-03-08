@@ -133,7 +133,7 @@ platform :ios do
     run_tests(
       project: "deadly.xcodeproj",
       scheme: "deadly",
-      destination: "platform=iOS Simulator,name=iPhone 16"
+      destination: "platform=iOS Simulator,name=iPhone 17"
     )
   end
 
