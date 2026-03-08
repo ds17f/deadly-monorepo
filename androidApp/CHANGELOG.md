@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.15.0] - 2026-03-08
+
+### New Features
+* add "Has Review" sort option to favorites list (0be528d)
+* default results to sort by show date ascending (cbf7949)
+
+### Bug Fixes
+* reduce debounce from 800ms to 300ms matching iOS (cbf1e6d)
+* virtualize LazyColumn search results for instant rendering (c164cd6)
+* include version field in backup JSON export (2ec2569)
+* fix keyboard issues in review bottom sheet (0acc407)
+
+### Performance Improvements
+* add ShowSummary projection to skip 3MB of JSON blob I/O (5095eb1)
+
+### Code Refactoring
+* flatten sort options UI into two-section layout (cd868ae)
+
+
 ## [2.14.0] - 2026-03-07
 
 ### New Features
@@ -16,8 +35,6 @@
 
 ### Other Changes
 * Revert "fix(mobile/ui): always show review state indicator with color coding" (4622c79)
-
-
 ## [2.13.1] - 2026-03-06
 
 ### Bug Fixes
