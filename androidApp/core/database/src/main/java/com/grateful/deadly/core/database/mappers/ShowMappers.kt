@@ -2,6 +2,7 @@ package com.grateful.deadly.core.database.mappers
 
 import android.util.Log
 import com.grateful.deadly.core.database.entities.ShowEntity
+import com.grateful.deadly.core.database.entities.ShowSummary
 import com.grateful.deadly.core.database.entities.RecordingEntity
 import com.grateful.deadly.core.model.*
 import kotlinx.serialization.json.Json
@@ -55,9 +56,42 @@ class ShowMappers @Inject constructor(
     /**
      * Convert list of ShowEntity to list of Show domain models
      */
-    fun entitiesToDomain(entities: List<ShowEntity>): List<Show> = 
+    fun entitiesToDomain(entities: List<ShowEntity>): List<Show> =
         entities.map { entityToDomain(it) }
-    
+
+    /**
+     * Convert ShowSummary projection to Show domain model.
+     * No JSON parsing — all fields map directly.
+     */
+    fun summaryToDomain(summary: ShowSummary): Show {
+        return Show(
+            id = summary.showId,
+            date = summary.date,
+            year = summary.year,
+            band = summary.band,
+            venue = Venue(
+                name = summary.venueName,
+                city = summary.city,
+                state = summary.state,
+                country = summary.country
+            ),
+            location = Location.fromRaw(summary.locationRaw, summary.city, summary.state),
+            setlist = null,
+            lineup = null,
+            recordingIds = emptyList(),
+            bestRecordingId = summary.bestRecordingId,
+            coverImageUrl = summary.coverImageUrl,
+            recordingCount = summary.recordingCount,
+            averageRating = summary.averageRating,
+            totalReviews = summary.totalReviews,
+            isFavorite = summary.isFavorite,
+            favoritedAt = summary.favoritedAt
+        )
+    }
+
+    fun summariesToDomain(summaries: List<ShowSummary>): List<Show> =
+        summaries.map { summaryToDomain(it) }
+
     /**
      * Convert RecordingEntity to Recording domain model
      */

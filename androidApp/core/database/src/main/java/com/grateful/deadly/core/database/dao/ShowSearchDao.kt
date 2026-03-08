@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.grateful.deadly.core.database.entities.ShowSearchEntity
+import com.grateful.deadly.core.database.entities.ShowSummary
 import kotlinx.coroutines.flow.Flow
 
 /**
@@ -66,4 +67,19 @@ interface ShowSearchDao {
      */
     @Query("DELETE FROM show_search WHERE showId = :showId")
     suspend fun removeShowFromIndex(showId: String)
+
+    /**
+     * Combined FTS+JOIN query returning lightweight ShowSummary projections.
+     * Eliminates the two-query roundtrip (FTS IDs -> batch fetch) and avoids
+     * reading large JSON blob columns (setlistRaw, lineupRaw, recordingsRaw).
+     */
+    @Query("""
+        SELECT s.showId, s.date, s.year, s.band, s.venueName, s.city, s.state, s.country,
+               s.locationRaw, s.recordingCount, s.bestRecordingId, s.coverImageUrl,
+               s.averageRating, s.totalReviews, s.isFavorite, s.favoritedAt
+        FROM show_search ss
+        JOIN shows s ON ss.showId = s.showId
+        WHERE ss.show_search MATCH :query
+    """)
+    suspend fun searchShowsWithSummary(query: String): List<ShowSummary>
 }
