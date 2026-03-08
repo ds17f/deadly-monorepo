@@ -71,9 +71,13 @@ data class BackupImportResult(
 
 /**
  * Minimal structure for peeking at the version field of any JSON backup.
+ * [favorites] is checked to detect v3 exports that are missing the version field.
  */
 @Serializable
 internal data class VersionPeek(
     val version: Int = 0,
-    val format: String? = null
-)
+    val format: String? = null,
+    val favorites: kotlinx.serialization.json.JsonObject? = null
+) {
+    val isV3: Boolean get() = version >= 3 || favorites != null
+}

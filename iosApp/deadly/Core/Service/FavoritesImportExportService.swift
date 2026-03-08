@@ -99,7 +99,7 @@ struct FavoritesImportExportService {
         // Peek at version to decide format
         let versionPeek = try JSONDecoder().decode(VersionPeek.self, from: data)
 
-        if versionPeek.version >= 3 {
+        if versionPeek.isV3 {
             return try importV3(from: data)
         } else {
             // v1/v2 legacy format
@@ -325,7 +325,13 @@ struct FavoritesImportExportService {
 // MARK: - Helpers
 
 private struct VersionPeek: Decodable {
-    let version: Int
+    var version: Int = 0
+    var favorites: AnyCodable? = nil
+
+    private struct AnyCodable: Decodable {}
+
+    /// True if this looks like a v3 export (has `favorites` key or version >= 3)
+    var isV3: Bool { version >= 3 || favorites != nil }
 }
 
 // MARK: - Errors

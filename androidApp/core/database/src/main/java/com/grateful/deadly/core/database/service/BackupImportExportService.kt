@@ -36,6 +36,7 @@ class BackupImportExportService @Inject constructor(
     private val json = Json {
         prettyPrint = true
         ignoreUnknownKeys = true
+        encodeDefaults = true
     }
 
     // MARK: - Export (v3)
@@ -116,7 +117,7 @@ class BackupImportExportService @Inject constructor(
         }
 
         return when {
-            peek.version >= 3 -> importV3(jsonString)
+            peek.isV3 -> importV3(jsonString)
             peek.format == "deadly-migration" -> {
                 // Legacy migration format — delegate to existing service
                 val result = migrationImportService.importFromJson(jsonString)
