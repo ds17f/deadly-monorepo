@@ -10,8 +10,8 @@ struct SearchScreen: View {
     @FocusState private var isSearchFieldFocused: Bool
     @State private var searchTask: Task<Void, Never>?
 
-    @State private var sortOption: SearchSortOption = .relevance
-    @State private var sortDirection: SearchSortDirection = .descending
+    @State private var sortOption: SearchSortOption = .dateOfShow
+    @State private var sortDirection: SearchSortDirection = .ascending
 
     @State private var eraOverride: [SearchResultShow]?
     @State private var eraLabel: String?
