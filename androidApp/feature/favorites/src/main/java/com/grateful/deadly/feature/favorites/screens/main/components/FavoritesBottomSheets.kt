@@ -70,54 +70,61 @@ fun SortOptionsBottomSheet(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+                .padding(16.dp)
         ) {
             Text(
-                text = "Sort favorites by",
+                text = "Sort By",
                 style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+            FavoritesSortOption.entries.forEach { option ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable {
+                            onSortOptionSelected(option, currentSortDirection)
+                        }
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = currentSortOption == option,
+                        onClick = {
+                            onSortOptionSelected(option, currentSortDirection)
+                        }
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(text = option.displayName)
+                }
+            }
+
+            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+
+            Text(
+                text = "Direction",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
-
-            // Sort options
-            FavoritesSortOption.values().forEach { option ->
-                Column {
-                    // Sort option header
-                    Text(
-                        text = option.displayName,
-                        style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.Medium,
-                        modifier = Modifier.padding(vertical = 8.dp)
-                    )
-
-                    // Direction options
-                    FavoritesSortDirection.values().forEach { direction ->
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    onSortOptionSelected(option, direction)
-                                }
-                                .padding(vertical = 8.dp, horizontal = 16.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            RadioButton(
-                                selected = currentSortOption == option && currentSortDirection == direction,
-                                onClick = {
-                                    onSortOptionSelected(option, direction)
-                                }
-                            )
-                            Spacer(modifier = Modifier.width(12.dp))
-                            Text(
-                                text = direction.displayName,
-                                style = MaterialTheme.typography.bodyMedium
-                            )
+            FavoritesSortDirection.entries.forEach { direction ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable {
+                            onSortOptionSelected(currentSortOption, direction)
                         }
-                    }
-
-                    if (option != FavoritesSortOption.values().last()) {
-                        HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
-                    }
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = currentSortDirection == direction,
+                        onClick = {
+                            onSortOptionSelected(currentSortOption, direction)
+                        }
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(text = direction.displayName)
                 }
             }
 
