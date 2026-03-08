@@ -100,12 +100,31 @@ struct FavoritesImportResult {
 // MARK: - v3 Export Format
 
 struct BackupExportV3: Codable {
-    let version: Int
+    var version: Int = 3
     let exportedAt: Int64
     let app: String
     let favorites: FavoritesExport
     let reviews: [ReviewExportEntry]
     let recordingPreferences: [RecordingPreferenceExportEntry]
+
+    init(version: Int = 3, exportedAt: Int64, app: String, favorites: FavoritesExport, reviews: [ReviewExportEntry], recordingPreferences: [RecordingPreferenceExportEntry]) {
+        self.version = version
+        self.exportedAt = exportedAt
+        self.app = app
+        self.favorites = favorites
+        self.reviews = reviews
+        self.recordingPreferences = recordingPreferences
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        version = try container.decodeIfPresent(Int.self, forKey: .version) ?? 3
+        exportedAt = try container.decode(Int64.self, forKey: .exportedAt)
+        app = try container.decode(String.self, forKey: .app)
+        favorites = try container.decode(FavoritesExport.self, forKey: .favorites)
+        reviews = try container.decode([ReviewExportEntry].self, forKey: .reviews)
+        recordingPreferences = try container.decode([RecordingPreferenceExportEntry].self, forKey: .recordingPreferences)
+    }
 }
 
 struct FavoritesExport: Codable {
