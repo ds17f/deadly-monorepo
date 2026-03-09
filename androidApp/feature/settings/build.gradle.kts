@@ -63,6 +63,7 @@ dependencies {
     // Core Dependencies
     implementation(project(":core:design"))
     implementation(project(":core:database"))
+    implementation(project(":core:media"))
     implementation(project(":core:model"))
     
     // Android & Compose

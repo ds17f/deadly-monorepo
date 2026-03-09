@@ -21,6 +21,7 @@ fun PlaylistMenuSheet(
     location: String?,
     onShareClick: () -> Unit,
     onChooseRecordingClick: () -> Unit,
+    onEqualizerClick: () -> Unit,
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -75,6 +76,29 @@ fun PlaylistMenuSheet(
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
                     text = "Choose Recording",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            // Equalizer option
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        onEqualizerClick()
+                        onDismiss()
+                    }
+                    .padding(vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = IconResources.PlayerControls.Equalizer(),
+                    contentDescription = "Equalizer",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = "Equalizer",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }

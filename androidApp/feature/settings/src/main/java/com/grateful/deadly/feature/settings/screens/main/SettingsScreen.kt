@@ -22,6 +22,7 @@ import com.grateful.deadly.feature.settings.BuildConfig
 fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
     onNavigateToDownloads: () -> Unit = {},
+    onNavigateToEqualizer: () -> Unit = {},
     onNavigateToLegal: () -> Unit = {},
     onNavigateToMission: () -> Unit = {},
     onNavigateToDeveloper: () -> Unit = {}
@@ -41,6 +42,26 @@ fun SettingsScreen(
                 subtitle = "Show concerts even if they have no audio recordings available",
                 checked = includeShowsWithoutRecordings,
                 onCheckedChange = { viewModel.toggleIncludeShowsWithoutRecordings() }
+            )
+        }
+
+        item { HorizontalDivider() }
+
+        // ── AUDIO ────────────────────────────────────────────────────
+        item { SectionHeader("Audio") }
+
+        item {
+            PreferenceRow(
+                title = "Equalizer",
+                subtitle = "Adjust audio profile and presets",
+                onClick = onNavigateToEqualizer,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
             )
         }
 
