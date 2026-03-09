@@ -19,6 +19,7 @@ struct ShowDetailScreen: View {
     @State private var showMenuSheet = false
     @State private var showQRShareSheet = false
     @State private var showRecordingPicker = false
+    @State private var showEqualizerSheet = false
     @State private var isFavorite = false
     @State private var isDownloading = false
     @State private var showRemoveDownloadAlert = false
@@ -288,6 +289,10 @@ struct ShowDetailScreen: View {
         .sheet(isPresented: $showSetlistSheet) {
             SetlistSheet(show: show)
         }
+        .sheet(isPresented: $showEqualizerSheet) {
+            EqualizerSheet()
+                .presentationDetents([.medium, .large])
+        }
         .sheet(isPresented: $showQRShareSheet) {
             if let recording = playlistService.currentRecording {
                 QRShareSheet(
@@ -401,6 +406,15 @@ struct ShowDetailScreen: View {
                     } label: {
                         Label("Choose Recording", systemImage: "waveform.circle")
                     }
+                }
+
+                Button {
+                    showMenuSheet = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        showEqualizerSheet = true
+                    }
+                } label: {
+                    Label("Equalizer", systemImage: "slider.vertical.3")
                 }
             }
             .navigationTitle("Options")

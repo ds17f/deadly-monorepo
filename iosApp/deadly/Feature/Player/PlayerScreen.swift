@@ -9,6 +9,7 @@ struct PlayerScreen: View {
     @State private var sliderValue: Double?
     @State private var showErrorAlert = false
     @State private var showQRShare = false
+    @State private var showEqualizerSheet = false
     @State private var isCurrentTrackFavorite = false
     @Environment(\.appContainer) private var container
 
@@ -185,6 +186,10 @@ struct PlayerScreen: View {
                 showErrorAlert = true
             }
         }
+        .sheet(isPresented: $showEqualizerSheet) {
+            EqualizerSheet()
+                .presentationDetents([.medium, .large])
+        }
         .sheet(isPresented: $showQRShare) {
             if let show = container.playlistService.currentShow,
                let recording = container.playlistService.currentRecording {
@@ -277,6 +282,17 @@ struct PlayerScreen: View {
             }
             .buttonStyle(.plain)
             .disabled(currentShowId == nil)
+
+            // Equalizer
+            Button {
+                showEqualizerSheet = true
+            } label: {
+                Image(systemName: "slider.vertical.3")
+                    .font(.title2)
+                    .foregroundStyle(.secondary)
+                    .frame(width: 44, height: 44)
+            }
+            .buttonStyle(.plain)
 
             // Share
             Button {

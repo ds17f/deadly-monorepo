@@ -27,6 +27,7 @@ final class AppContainer {
     let miniPlayerService: MiniPlayerServiceImpl
     let archiveClient: URLSessionArchiveMetadataClient
     let downloadService: DownloadServiceImpl
+    let equalizerService: EqualizerService
     let playbackRestorationService: PlaybackRestorationService
 
     init() {
@@ -108,6 +109,11 @@ final class AppContainer {
                 }
             }
             #endif
+
+            // EqualizerService is @MainActor; attaches AVAudioUnitEQ to the player's audio engine
+            equalizerService = MainActor.assumeIsolated {
+                EqualizerService(streamPlayer: player, preferences: prefs)
+            }
 
             // MiniPlayerService is @MainActor; thin adapter over StreamPlayer for the mini player UI
             let miniPlayer = MainActor.assumeIsolated {

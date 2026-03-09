@@ -1,3 +1,4 @@
+import AVFoundation
 import Foundation
 import os
 
@@ -40,6 +41,16 @@ public final class StreamPlayer {
     /// or is detected as an auto-generated waveform spectrogram.
     public func setFallbackArtwork(_ image: Any?) {
         nowPlayingManager.setFallbackImage(image)
+    }
+
+    /// Attach an AVAudioNode to the player's audio engine processing chain.
+    public func attachAudioNode(_ node: AVAudioNode) {
+        engine.attachAudioNode(node)
+    }
+
+    /// Detach a previously attached AVAudioNode from the player's audio engine.
+    public func detachAudioNode(_ node: AVAudioNode) {
+        engine.detachAudioNode(node)
     }
 
     // MARK: - Internal components

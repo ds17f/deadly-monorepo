@@ -15,6 +15,7 @@ struct MainNavigation: View {
     @State private var playerSourceTab: AppTab = .home
     @State private var searchResetToken = 0
     @State private var showingSettings = false
+    @State private var showingEqualizer = false
 
     private var isOffline: Bool { !container.networkMonitor.isConnected }
 
@@ -87,7 +88,14 @@ struct MainNavigation: View {
             SettingsDrawer(isOpen: $showingSettings, onNavigateToDownloads: {
                 showingSettings = false
                 navigateToDownloads()
+            }, onNavigateToEqualizer: {
+                showingSettings = false
+                showingEqualizer = true
             })
+        }
+        .sheet(isPresented: $showingEqualizer) {
+            EqualizerSheet()
+                .presentationDetents([.medium, .large])
         }
         .onChange(of: showFullPlayer) { _, isPresented in
             if isPresented { playerSourceTab = selectedTab }
@@ -299,6 +307,7 @@ private extension View {
 private struct SettingsDrawer: View {
     @Binding var isOpen: Bool
     var onNavigateToDownloads: () -> Void
+    var onNavigateToEqualizer: () -> Void
     @GestureState private var dragOffset: CGFloat = 0
 
     var body: some View {
@@ -310,7 +319,7 @@ private struct SettingsDrawer: View {
                     .transition(.opacity)
 
                 NavigationStack {
-                    SettingsScreen(onNavigateToDownloads: onNavigateToDownloads)
+                    SettingsScreen(onNavigateToDownloads: onNavigateToDownloads, onNavigateToEqualizer: onNavigateToEqualizer)
                         .toolbar {
                             ToolbarItem(placement: .topBarTrailing) {
                                 Button("Done") { isOpen = false }
