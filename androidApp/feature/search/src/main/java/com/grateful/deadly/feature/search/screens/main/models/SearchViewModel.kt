@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.model.*
+import com.grateful.deadly.core.network.archive.service.ArchiveService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -29,10 +30,18 @@ import javax.inject.Inject
  * UI-first development where building UI components will discover the
  * exact service interface requirements.
  */
+sealed interface ReviewsState {
+    data object Idle : ReviewsState
+    data object Loading : ReviewsState
+    data class Success(val reviews: List<Review>) : ReviewsState
+    data class Error(val message: String) : ReviewsState
+}
+
 @HiltViewModel
 class SearchViewModel @Inject constructor(
     private val searchService: SearchService,
-    private val favoritesService: FavoritesService
+    private val favoritesService: FavoritesService,
+    private val archiveService: ArchiveService
 ) : ViewModel() {
     
     companion object {
@@ -234,6 +243,27 @@ class SearchViewModel @Inject constructor(
     }
 
     fun isShowFavorite(showId: String): StateFlow<Boolean> = favoritesService.isShowFavorite(showId)
+
+    // Reviews state
+    private val _reviewsState = MutableStateFlow<ReviewsState>(ReviewsState.Idle)
+    val reviewsState: StateFlow<ReviewsState> = _reviewsState.asStateFlow()
+
+    fun loadReviews(recordingId: String) {
+        _reviewsState.value = ReviewsState.Loading
+        viewModelScope.launch {
+            archiveService.getRecordingReviews(recordingId)
+                .onSuccess { reviews ->
+                    _reviewsState.value = ReviewsState.Success(reviews)
+                }
+                .onFailure { error ->
+                    _reviewsState.value = ReviewsState.Error(error.message ?: "Failed to load reviews")
+                }
+        }
+    }
+
+    fun clearReviews() {
+        _reviewsState.value = ReviewsState.Idle
+    }
 
     override fun onCleared() {
         super.onCleared()

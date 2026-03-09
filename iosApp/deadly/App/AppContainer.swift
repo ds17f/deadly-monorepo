@@ -25,6 +25,7 @@ final class AppContainer {
     let networkMonitor: NetworkMonitor
     let recentShowsService: RecentShowsServiceImpl
     let miniPlayerService: MiniPlayerServiceImpl
+    let archiveClient: URLSessionArchiveMetadataClient
     let downloadService: DownloadServiceImpl
     let playbackRestorationService: PlaybackRestorationService
 
@@ -131,10 +132,13 @@ final class AppContainer {
                 recentShowsService: recentService
             )
 
+            let archive = URLSessionArchiveMetadataClient()
+            archiveClient = archive
+
             // DownloadService is @MainActor; manage offline downloads
             let downloadSvc = MainActor.assumeIsolated {
                 DownloadServiceImpl(
-                    archiveClient: URLSessionArchiveMetadataClient(),
+                    archiveClient: archive,
                     showRepository: showRepo,
                     favoritesDAO: FavoritesDAO(database: db),
                     downloadTaskDAO: DownloadTaskDAO(database: db),
@@ -146,7 +150,7 @@ final class AppContainer {
             // PlaylistService depends on RecentShowsService and DownloadService
             let playlistSvc = PlaylistServiceImpl(
                 showRepository: showRepo,
-                archiveClient: URLSessionArchiveMetadataClient(),
+                archiveClient: archive,
                 recentShowsService: recentService,
                 recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
                 streamPlayer: player,
