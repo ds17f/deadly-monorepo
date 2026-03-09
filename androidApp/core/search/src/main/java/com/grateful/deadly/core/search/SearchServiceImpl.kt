@@ -144,6 +144,45 @@ class SearchServiceImpl @Inject constructor(
     override suspend fun getSuggestions(partialQuery: String): Result<List<SuggestedSearch>> {
         return Result.success(emptyList())
     }
+
+    override suspend fun loadAllShows(): Result<Unit> {
+        Log.d(TAG, "loadAllShows() called")
+        _searchStatus.value = SearchStatus.SEARCHING
+
+        return try {
+            val startTime = System.currentTimeMillis()
+            val summaries = showSearchDao.getAllShowSummaries()
+            val allShows = showMappers.summariesToDomain(summaries)
+
+            val shows = if (!appPreferences.includeShowsWithoutRecordings.value) {
+                allShows.filter { it.recordingCount > 0 }
+            } else {
+                allShows
+            }
+
+            val results = shows.map { show ->
+                SearchResultShow(
+                    show = show,
+                    relevanceScore = 1.0f,
+                    matchType = SearchMatchType.YEAR,
+                    hasDownloads = false
+                )
+            }
+
+            val duration = System.currentTimeMillis() - startTime
+            _currentQuery.value = ""
+            _searchResults.value = results
+            _searchStats.value = SearchStats(results.size, duration)
+            _searchStatus.value = if (results.isEmpty()) SearchStatus.NO_RESULTS else SearchStatus.SUCCESS
+
+            Log.d(TAG, "Loaded ${results.size} shows in ${duration}ms")
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to load all shows", e)
+            _searchStatus.value = SearchStatus.ERROR
+            Result.failure(e)
+        }
+    }
     
     private fun determineMatchType(show: Show, query: String): SearchMatchType {
         val queryLower = query.lowercase()

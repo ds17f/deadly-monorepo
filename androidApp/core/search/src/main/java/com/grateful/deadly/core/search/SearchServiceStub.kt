@@ -329,6 +329,22 @@ class SearchServiceStub @Inject constructor() : SearchService {
         return Result.success(suggestions)
     }
     
+    override suspend fun loadAllShows(): Result<Unit> {
+        Log.d(TAG, "STUB: loadAllShows() called")
+        _currentQuery.value = ""
+        _searchResults.value = mockShows.map { show ->
+            SearchResultShow(
+                show = show,
+                relevanceScore = 1.0f,
+                matchType = SearchMatchType.YEAR,
+                hasDownloads = false
+            )
+        }
+        _searchStats.value = SearchStats(mockShows.size, 0)
+        _searchStatus.value = SearchStatus.SUCCESS
+        return Result.success(Unit)
+    }
+
     override suspend fun populateTestData(): Result<Unit> {
         Log.d(TAG, "STUB: populateTestData() called")
         

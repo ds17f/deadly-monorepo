@@ -126,9 +126,8 @@ fun SearchResultsScreen(
     LaunchedEffect(initialQuery) {
         if (initialQuery.isNotEmpty()) {
             if (initialEraLabel != null) {
-                // Translate "era:70s" -> "197*" for FTS search
-                val digit = initialEraLabel.first()
-                viewModel.onSearchQueryChanged("19${digit}*")
+                // Load all shows — chips handle the decade filtering
+                viewModel.loadAllShows()
             } else {
                 viewModel.onSearchQueryChanged(initialQuery)
             }
@@ -179,7 +178,7 @@ fun SearchResultsScreen(
         )
 
         // Pinned results header with title, count, and sort control
-        if (uiState.searchQuery.isNotEmpty() &&
+        if ((uiState.searchQuery.isNotEmpty() || uiState.searchResults.isNotEmpty()) &&
             uiState.searchStatus == SearchStatus.SUCCESS &&
             uiState.searchResults.isNotEmpty()
         ) {
@@ -230,9 +229,7 @@ fun SearchResultsScreen(
                 onSelectionChanged = { newPath ->
                     filterPath = newPath
                     if (isEraBrowse && newPath.isEmpty) {
-                        // "All" tapped during era browse — widen search to all decades
                         isEraBrowse = false
-                        viewModel.onSearchQueryChanged("196* OR 197* OR 198* OR 199*")
                     }
                 },
                 modifier = Modifier.padding(horizontal = 16.dp)
@@ -245,8 +242,8 @@ fun SearchResultsScreen(
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            if (uiState.searchQuery.isEmpty()) {
-                // Show recent searches when no query
+            if (uiState.searchQuery.isEmpty() && uiState.searchResults.isEmpty()) {
+                // Show recent searches when no query and no results
                 item {
                     RecentSearchesSection(
                         recentSearches = uiState.recentSearches,

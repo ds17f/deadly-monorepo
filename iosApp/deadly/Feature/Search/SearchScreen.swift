@@ -193,21 +193,14 @@ struct SearchScreen: View {
     }
 
     private func loadEra(_ decade: String) {
-        do {
-            let shows = try searchService.searchByEra(decade)
-            searchText = ""
-            searchTask?.cancel()
-            eraOverride = shows.map {
-                SearchResultShow(show: $0, relevanceScore: 1.0, matchType: .year, hasDownloads: false, highlightedFields: [])
-            }
-            eraLabel = decade
-            // Pre-select the decade chip so the user can drill down
-            let tree = FilterNode.decadeCascadeTree()
-            if let node = tree.first(where: { $0.id == decade }) {
-                filterPath = FilterPath(nodes: [node])
-            }
-        } catch {
-            // silently fail
+        searchText = ""
+        searchTask?.cancel()
+        // Load all shows upfront — chips handle the decade filtering
+        loadAllEras()
+        eraLabel = decade
+        let tree = FilterNode.decadeCascadeTree()
+        if let node = tree.first(where: { $0.id == decade }) {
+            filterPath = FilterPath(nodes: [node])
         }
     }
 
@@ -353,16 +346,7 @@ struct SearchScreen: View {
                 if eraOverride != nil || !searchService.results.isEmpty {
                     HierarchicalFilterChips(
                         filterTree: FilterNode.decadeCascadeTree(),
-                        selectedPath: Binding(
-                            get: { filterPath },
-                            set: { newPath in
-                                filterPath = newPath
-                                if newPath.isEmpty && eraOverride != nil {
-                                    // Reload all eras so "All" shows everything
-                                    loadAllEras()
-                                }
-                            }
-                        )
+                        selectedPath: $filterPath
                     )
                     .padding(.vertical, 4)
                 }

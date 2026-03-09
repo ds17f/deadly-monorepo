@@ -149,6 +149,16 @@ class SearchViewModel @Inject constructor(
     }
     
     /**
+     * Load all shows for era browsing (no search query needed).
+     * Filter chips handle the decade filtering client-side.
+     */
+    fun loadAllShows() {
+        viewModelScope.launch {
+            searchService.loadAllShows()
+        }
+    }
+
+    /**
      * Clear search query and results
      */
     fun onClearSearch() {

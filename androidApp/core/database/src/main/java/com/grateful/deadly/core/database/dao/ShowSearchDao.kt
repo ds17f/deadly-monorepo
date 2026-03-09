@@ -82,4 +82,17 @@ interface ShowSearchDao {
         WHERE ss.show_search MATCH :query
     """)
     suspend fun searchShowsWithSummary(query: String): List<ShowSummary>
+
+    /**
+     * Return all show summaries (lightweight projection, no FTS).
+     * Used for era browsing where filter chips handle the decade filtering.
+     */
+    @Query("""
+        SELECT s.showId, s.date, s.year, s.band, s.venueName, s.city, s.state, s.country,
+               s.locationRaw, s.recordingCount, s.bestRecordingId, s.coverImageUrl,
+               s.averageRating, s.totalReviews, s.isFavorite, s.favoritedAt
+        FROM shows s
+        ORDER BY s.date ASC
+    """)
+    suspend fun getAllShowSummaries(): List<ShowSummary>
 }
