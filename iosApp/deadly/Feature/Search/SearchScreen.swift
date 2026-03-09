@@ -353,7 +353,15 @@ struct SearchScreen: View {
                 if eraOverride != nil || !searchService.results.isEmpty {
                     HierarchicalFilterChips(
                         filterTree: FilterNode.decadeCascadeTree(),
-                        selectedPath: $filterPath
+                        selectedPath: Binding(
+                            get: { filterPath },
+                            set: { newPath in
+                                filterPath = newPath
+                                if newPath.isEmpty && eraOverride != nil {
+                                    clearEra()
+                                }
+                            }
+                        )
                     )
                     .padding(.vertical, 4)
                 }
