@@ -286,7 +286,7 @@ private extension View {
                             Text(title)
                                 .font(.title3)
                                 .fontWeight(.bold)
-                                .foregroundStyle(.primary)
+                                .foregroundColor(.white)
                         }
                     }
                 }
