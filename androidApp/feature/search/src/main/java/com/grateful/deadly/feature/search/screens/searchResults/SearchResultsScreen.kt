@@ -61,6 +61,7 @@ fun SearchResultsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     // Sort state (local to composable, resets on new search session)
     var sortBy by remember { mutableStateOf(SearchSortOption.DATE_OF_SHOW) }
@@ -210,6 +211,7 @@ fun SearchResultsScreen(
                                 searchResult = result,
                                 onShowSelected = onNavigateToShow,
                                 onShowLongPress = { showId ->
+                                    keyboardController?.hide()
                                     selectedShowForActions = sortedResults.find { it.show.id == showId }
                                 }
                             )
