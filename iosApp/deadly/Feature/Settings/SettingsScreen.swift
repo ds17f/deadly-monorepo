@@ -35,12 +35,12 @@ struct SettingsScreen: View {
             // MARK: - Preferences
             Section("Preferences") {
                 Toggle(isOn: Binding(
-                    get: { container.appPreferences.showOnlyRecordedShows },
-                    set: { container.appPreferences.showOnlyRecordedShows = $0 }
+                    get: { container.appPreferences.includeShowsWithoutRecordings },
+                    set: { container.appPreferences.includeShowsWithoutRecordings = $0 }
                 )) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Hide shows without recordings")
-                        Text("Only show concerts that have audio recordings available")
+                        Text("Include shows without recordings")
+                        Text("Show concerts even if they have no audio recordings available")
                             .font(.callout)
                             .foregroundStyle(.secondary)
                     }

@@ -31,7 +31,7 @@ class ShowRepositoryImpl @Inject constructor(
 ) : ShowRepository {
 
     private val hideRecordingless: Boolean
-        get() = appPreferences.showOnlyRecordedShows.value
+        get() = !appPreferences.includeShowsWithoutRecordings.value
 
     private fun filterByRecordings(shows: List<Show>): List<Show> {
         return if (hideRecordingless) shows.filter { it.recordingCount > 0 } else shows

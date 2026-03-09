@@ -2,13 +2,13 @@ import Foundation
 
 @Observable
 final class AppPreferences {
-    private static let showOnlyRecordedKey = "show_only_recorded_shows"
+    private static let includeShowsWithoutRecordingsKey = "include_shows_without_recordings"
     private static let forceOnlineKey = "force_online"
     private static let favoritesDisplayModeKey = "favorites_display_mode"
     private static let legacyLibraryDisplayModeKey = "library_display_mode"
 
-    var showOnlyRecordedShows: Bool {
-        didSet { UserDefaults.standard.set(showOnlyRecordedShows, forKey: Self.showOnlyRecordedKey) }
+    var includeShowsWithoutRecordings: Bool {
+        didSet { UserDefaults.standard.set(includeShowsWithoutRecordings, forKey: Self.includeShowsWithoutRecordingsKey) }
     }
 
     var forceOnline: Bool {
@@ -21,11 +21,11 @@ final class AppPreferences {
 
     init() {
         UserDefaults.standard.register(defaults: [
-            Self.showOnlyRecordedKey: true,
+            Self.includeShowsWithoutRecordingsKey: false,
             Self.forceOnlineKey: false,
             Self.favoritesDisplayModeKey: "LIST",
         ])
-        showOnlyRecordedShows = UserDefaults.standard.bool(forKey: Self.showOnlyRecordedKey)
+        includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
         // Read new key first, fall back to legacy key for migration
         favoritesDisplayMode = UserDefaults.standard.string(forKey: Self.favoritesDisplayModeKey)

@@ -6,7 +6,7 @@ struct GRDBShowRepository: ShowRepository {
     let appPreferences: AppPreferences
 
     private func filterRecordingless(_ shows: [Show]) -> [Show] {
-        appPreferences.showOnlyRecordedShows ? shows.filter { $0.recordingCount > 0 } : shows
+        !appPreferences.includeShowsWithoutRecordings ? shows.filter { $0.recordingCount > 0 } : shows
     }
 
     // MARK: - Single show

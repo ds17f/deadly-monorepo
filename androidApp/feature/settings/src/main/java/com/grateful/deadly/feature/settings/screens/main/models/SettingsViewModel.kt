@@ -47,10 +47,10 @@ class SettingsViewModel @Inject constructor(
     private val _migrationImportState = MutableStateFlow<MigrationImportState>(MigrationImportState.Idle)
     val migrationImportState: StateFlow<MigrationImportState> = _migrationImportState
 
-    val showOnlyRecordedShows: StateFlow<Boolean> = appPreferences.showOnlyRecordedShows
+    val includeShowsWithoutRecordings: StateFlow<Boolean> = appPreferences.includeShowsWithoutRecordings
 
-    fun toggleShowOnlyRecordedShows() {
-        appPreferences.setShowOnlyRecordedShows(!appPreferences.showOnlyRecordedShows.value)
+    fun toggleIncludeShowsWithoutRecordings() {
+        appPreferences.setIncludeShowsWithoutRecordings(!appPreferences.includeShowsWithoutRecordings.value)
     }
 
     val forceOnline: StateFlow<Boolean> = appPreferences.forceOnline
