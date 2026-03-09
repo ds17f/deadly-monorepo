@@ -13,6 +13,19 @@ struct SettingsScreen: View {
     @State private var importResult: BackupImportResult?
     @State private var importError: String?
     @State private var showingImportAlert = false
+    private func settingsRow(_ title: String, systemImage: String) -> some View {
+        HStack {
+            Image(systemName: systemImage)
+                .foregroundStyle(DeadlyColors.primary)
+            Text(title)
+                .foregroundStyle(.primary)
+            Spacer()
+            Image(systemName: "chevron.right")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+    }
+
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
     }
@@ -38,8 +51,9 @@ struct SettingsScreen: View {
             Section("Favorites & Data") {
                 if let onNavigateToDownloads {
                     Button { onNavigateToDownloads() } label: {
-                        Label("Manage Downloads", systemImage: "arrow.down.circle")
+                        settingsRow("Manage Downloads", systemImage: "arrow.down.circle")
                     }
+                    .foregroundStyle(.primary)
                 } else {
                     NavigationLink(value: SettingsRoute.downloads) {
                         Label("Manage Downloads", systemImage: "arrow.down.circle")
@@ -48,15 +62,17 @@ struct SettingsScreen: View {
                 Button {
                     showingFilePicker = true
                 } label: {
-                    Label("Import Favorites", systemImage: "square.and.arrow.down")
+                    settingsRow("Import Favorites", systemImage: "square.and.arrow.down")
                 }
+                .foregroundStyle(.primary)
                 Button {
                     if let data = try? container.favoritesImportExportService.exportFavorites() {
                         exportItem = ExportItem(data: data, filename: container.favoritesImportExportService.exportFilename())
                     }
                 } label: {
-                    Label("Export Favorites", systemImage: "square.and.arrow.up")
+                    settingsRow("Export Favorites", systemImage: "square.and.arrow.up")
                 }
+                .foregroundStyle(.primary)
             }
 
             // MARK: - About
@@ -72,8 +88,9 @@ struct SettingsScreen: View {
 
             Section {
                 Link(destination: URL(string: "https://archive.org/donate/")!) {
-                    Label("Donate to Internet Archive", systemImage: "heart")
+                    settingsRow("Donate to Internet Archive", systemImage: "heart")
                 }
+                .foregroundStyle(.primary)
                 NavigationLink("Our Mission") {
                     MissionView()
                 }
