@@ -6,6 +6,7 @@ import UniformTypeIdentifiers
 
 struct SettingsScreen: View {
     var onNavigateToDownloads: (() -> Void)? = nil
+    var onNavigateToEqualizer: (() -> Void)? = nil
     @Environment(\.appContainer) private var container
     @Environment(\.openURL) private var openURL
     @State private var showingFilePicker = false
@@ -43,6 +44,22 @@ struct SettingsScreen: View {
                         Text("Show concerts even if they have no audio recordings available")
                             .font(.callout)
                             .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
+            // MARK: - Audio
+            Section("Audio") {
+                if let onNavigateToEqualizer {
+                    Button { onNavigateToEqualizer() } label: {
+                        settingsRow("Equalizer", systemImage: "slider.vertical.3")
+                    }
+                    .foregroundStyle(.primary)
+                } else {
+                    NavigationLink {
+                        EqualizerView()
+                    } label: {
+                        Label("Equalizer", systemImage: "slider.vertical.3")
                     }
                 }
             }

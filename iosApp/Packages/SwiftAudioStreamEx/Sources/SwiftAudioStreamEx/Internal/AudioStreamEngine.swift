@@ -84,6 +84,16 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         player.stop()
     }
 
+    func attachAudioNode(_ node: AVAudioNode) {
+        logger.info("attaching audio node: \(type(of: node))")
+        player.attach(node: node)
+    }
+
+    func detachAudioNode(_ node: AVAudioNode) {
+        logger.info("detaching audio node: \(type(of: node))")
+        player.detach(node: node)
+    }
+
     var volume: Float {
         get { player.volume }
         set { player.volume = newValue }

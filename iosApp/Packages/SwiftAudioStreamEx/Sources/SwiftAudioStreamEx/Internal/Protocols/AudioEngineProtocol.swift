@@ -1,3 +1,4 @@
+import AVFoundation
 import Foundation
 
 /// Internal protocol for the audio engine, enabling testability and engine swappability.
@@ -8,6 +9,9 @@ protocol AudioEngineProtocol: AnyObject {
     func pause()
     func seek(to time: TimeInterval)
     func stop()
+
+    func attachAudioNode(_ node: AVAudioNode)
+    func detachAudioNode(_ node: AVAudioNode)
 
     var onStateChange: ((PlaybackState) -> Void)? { get set }
     var onTrackComplete: (() -> Void)? { get set }
