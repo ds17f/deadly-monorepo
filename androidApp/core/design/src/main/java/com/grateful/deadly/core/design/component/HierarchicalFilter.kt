@@ -29,7 +29,9 @@ data class FilterNode(
     val id: String,
     val label: String,
     val children: List<FilterNode> = emptyList()
-)
+) {
+    val isLeaf: Boolean get() = children.isEmpty()
+}
 
 /**
  * Represents the current filter selection path
@@ -39,35 +41,31 @@ data class FilterPath(
 ) {
     val isNotEmpty: Boolean get() = nodes.isNotEmpty()
     val isEmpty: Boolean get() = nodes.isEmpty()
-    
+
     /**
-     * Get display text for the full path (e.g., "[70s] Spring")
+     * Get display text for the full path (e.g., "[70s] Early 70s | 1977")
      */
     fun getDisplayText(): String {
-        return if (nodes.size >= 2) {
-            "[${nodes[0].label}] ${nodes[1].label}"
-        } else if (nodes.size == 1) {
-            nodes[0].label
-        } else {
-            ""
+        return when (nodes.size) {
+            0 -> ""
+            1 -> nodes[0].label
+            else -> "[${nodes[0].label}] " + nodes.drop(1).joinToString(" | ") { it.label }
         }
     }
-    
+
     /**
-     * Get combined ID for the full path (e.g., "70s_summer")
+     * Get combined ID for the full path (e.g., "70s_early_1977")
      */
     fun getCombinedId(): String = nodes.joinToString("_") { it.id }
 }
 
 /**
  * Spotify-style hierarchical filter component
- * 
- * Features:
- * - Hierarchical navigation through filter tree
- * - Clear button to reset selection
- * - Combined display of selected path with visual separator
- * - Reusable across different screens with different filter trees
- * 
+ *
+ * Supports N-level deep hierarchies. At each level:
+ * - If a selected node has children, show it highlighted + its children as options
+ * - If a selected node is a leaf, show a combined chip for the full path
+ *
  * @param filterTree The root nodes of the filter hierarchy
  * @param selectedPath The current filter selection path
  * @param onSelectionChanged Callback when filter selection changes
@@ -80,24 +78,9 @@ fun HierarchicalFilter(
     onSelectionChanged: (FilterPath) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    // Current level being displayed (root or children of selected parent)
-    val currentLevel = remember(selectedPath) {
-        if (selectedPath.isEmpty) {
-            filterTree
-        } else {
-            // Show children of the last selected node if we haven't completed the selection
-            if (selectedPath.nodes.size == 1) {
-                selectedPath.nodes.lastOrNull()?.children ?: emptyList()
-            } else {
-                emptyList()
-            }
-        }
-    }
-    
     LazyRow(
         modifier = modifier,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
-        //contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
         // "All" chip - always visible, highlighted when nothing selected
         item {
@@ -107,63 +90,55 @@ fun HierarchicalFilter(
                 onClick = { onSelectionChanged(FilterPath()) }
             )
         }
-        
-        // Show either the combined selection or individual options
+
         when {
-            // Complete selection (2 levels) - show as single combined chip
-            selectedPath.nodes.size >= 2 -> {
-                item {
-                    CombinedSelectionChip(
-                        path = selectedPath,
-                        onClick = { 
-                            // Navigate back one level
-                            val newPath = FilterPath(selectedPath.nodes.dropLast(1))
-                            onSelectionChanged(newPath)
-                        }
-                    )
-                }
-            }
-            
-            // Partial selection (1 level) - show selected + options, with selected highlighted
-            selectedPath.nodes.size == 1 -> {
-                val selectedNode = selectedPath.nodes.first()
-                
-                // Show selected node as highlighted
-                item {
-                    FilterOptionChip(
-                        node = selectedNode,
-                        isSelected = true,
-                        onClick = {
-                            // Navigate back to root
-                            onSelectionChanged(FilterPath())
-                        }
-                    )
-                }
-                
-                // Show child options
-                items(currentLevel) { node ->
-                    FilterOptionChip(
-                        node = node,
-                        isSelected = false,
-                        onClick = {
-                            // Add this node to the path
-                            val newPath = FilterPath(selectedPath.nodes + node)
-                            onSelectionChanged(newPath)
-                        }
-                    )
-                }
-            }
-            
-            // No selection - show root level options
-            else -> {
+            selectedPath.isEmpty -> {
+                // No selection — show root level options
                 items(filterTree) { node ->
                     FilterOptionChip(
                         node = node,
                         isSelected = false,
                         onClick = {
-                            // Start new path with this node
-                            val newPath = FilterPath(listOf(node))
-                            onSelectionChanged(newPath)
+                            onSelectionChanged(FilterPath(listOf(node)))
+                        }
+                    )
+                }
+            }
+
+            selectedPath.nodes.last().isLeaf -> {
+                // Deepest node is a leaf — show combined chip
+                item {
+                    CombinedSelectionChip(
+                        path = selectedPath,
+                        onClick = {
+                            // Navigate back one level
+                            onSelectionChanged(FilterPath(selectedPath.nodes.dropLast(1)))
+                        }
+                    )
+                }
+            }
+
+            else -> {
+                // Deepest node has children — show it highlighted + its children
+                val deepestNode = selectedPath.nodes.last()
+
+                item {
+                    FilterOptionChip(
+                        node = deepestNode,
+                        isSelected = true,
+                        onClick = {
+                            // Navigate back one level
+                            onSelectionChanged(FilterPath(selectedPath.nodes.dropLast(1)))
+                        }
+                    )
+                }
+
+                items(deepestNode.children) { child ->
+                    FilterOptionChip(
+                        node = child,
+                        isSelected = false,
+                        onClick = {
+                            onSelectionChanged(FilterPath(selectedPath.nodes + child))
                         }
                     )
                 }
@@ -173,8 +148,8 @@ fun HierarchicalFilter(
 }
 
 /**
- * Combined selection chip that looks like one chip but shows visual separator
- * between the first and second selections (e.g., "70s] Spring")
+ * Combined selection chip showing the full path with visual separators
+ * between each segment (e.g., "70s | Early 70s | 1977")
  */
 @Composable
 private fun CombinedSelectionChip(
@@ -182,79 +157,63 @@ private fun CombinedSelectionChip(
     onClick: () -> Unit
 ) {
     if (path.nodes.size < 2) return
-    
-    val firstNode = path.nodes[0]
-    val secondNode = path.nodes[1]
-    
-    // Spacing configuration - adjust these values to fine-tune the appearance
-    val firstTextStartPadding = 0.dp
-    val firstTextEndPadding = 6.dp
+
+    // Spacing configuration
     val separatorWidth = 16.dp
     val separatorHeight = 32.dp
     val separatorHorizontalPadding = 6.dp
-    val secondTextStartPadding = 4.dp
-    val secondTextEndPadding = 0.dp
-    
+
     FilterChip(
         onClick = onClick,
-        label = { 
+        label = {
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // First part (e.g., "70s")
-                Text(
-                    text = firstNode.label,
-                    fontWeight = FontWeight.Medium,
-                    color = Color.White,
-                    modifier = Modifier.padding(start = firstTextStartPadding, end = firstTextEndPadding)
-                )
-                
-                // Visual separator that looks like the right edge of a FilterChip
-                Box(
-                    modifier = Modifier
-                        .width(separatorWidth)
-                        .height(separatorHeight)
-                        .padding(horizontal = separatorHorizontalPadding)
-                        .drawBehind {
-                            val strokeWidth = 1.dp.toPx()
-                            val cornerRadius = 8.dp.toPx() // FilterChip corner radius  
-                            val centerX = size.width / 2
-                            
-                            // Draw the right edge of a rounded rectangle (chip border)
-                            // This creates a curved line that curves outward (right) like a chip edge
-                            drawPath(
-                                path = androidx.compose.ui.graphics.Path().apply {
-                                    // Start at top left, curve outward to the right
-                                    moveTo(centerX - cornerRadius, 0f)
-                                    cubicTo(
-                                        centerX - cornerRadius * 0.448f, 0f,  // Adjusted control point
-                                        centerX - cornerRadius * 0.1f, cornerRadius * 0.448f,  // Better curve
-                                        centerX - cornerRadius * 0.1f, cornerRadius
+                path.nodes.forEachIndexed { index, node ->
+                    Text(
+                        text = node.label,
+                        fontWeight = FontWeight.Medium,
+                        color = Color.White,
+                        modifier = Modifier.padding(
+                            start = if (index == 0) 0.dp else 4.dp,
+                            end = if (index == path.nodes.lastIndex) 0.dp else 6.dp
+                        )
+                    )
+
+                    if (index < path.nodes.lastIndex) {
+                        // Visual separator
+                        Box(
+                            modifier = Modifier
+                                .width(separatorWidth)
+                                .height(separatorHeight)
+                                .padding(horizontal = separatorHorizontalPadding)
+                                .drawBehind {
+                                    val strokeWidth = 1.dp.toPx()
+                                    val cornerRadius = 8.dp.toPx()
+                                    val centerX = size.width / 2
+
+                                    drawPath(
+                                        path = androidx.compose.ui.graphics.Path().apply {
+                                            moveTo(centerX - cornerRadius, 0f)
+                                            cubicTo(
+                                                centerX - cornerRadius * 0.448f, 0f,
+                                                centerX - cornerRadius * 0.1f, cornerRadius * 0.448f,
+                                                centerX - cornerRadius * 0.1f, cornerRadius
+                                            )
+                                            lineTo(centerX - cornerRadius * 0.1f, size.height - cornerRadius)
+                                            cubicTo(
+                                                centerX - cornerRadius * 0.1f, size.height - cornerRadius * 0.448f,
+                                                centerX - cornerRadius * 0.448f, size.height,
+                                                centerX - cornerRadius, size.height
+                                            )
+                                        },
+                                        color = Color.Black,
+                                        style = androidx.compose.ui.graphics.drawscope.Stroke(width = strokeWidth)
                                     )
-                                    
-                                    // Straight line down the right side
-                                    lineTo(centerX - cornerRadius * 0.1f, size.height - cornerRadius)
-                                    
-                                    // Curve outward at bottom
-                                    cubicTo(
-                                        centerX - cornerRadius * 0.1f, size.height - cornerRadius * 0.448f,  // Better curve
-                                        centerX - cornerRadius * 0.448f, size.height,  // Adjusted control point
-                                        centerX - cornerRadius, size.height
-                                    )
-                                },
-                                color = Color.Black,
-                                style = androidx.compose.ui.graphics.drawscope.Stroke(width = strokeWidth)
-                            )
-                        }
-                )
-                
-                // Second part (e.g., "Spring")
-                Text(
-                    text = secondNode.label,
-                    fontWeight = FontWeight.Medium,
-                    color = Color.White,
-                    modifier = Modifier.padding(start = secondTextStartPadding, end = secondTextEndPadding)
-                )
+                                }
+                        )
+                    }
+                }
             }
         },
         selected = true,
@@ -303,7 +262,71 @@ private fun FilterOptionChip(
  * Utility functions for building common filter trees
  */
 object FilterTrees {
-    
+
+    /**
+     * Build decade cascade tree for search results filtering.
+     * Decades with fewer years (60s, 90s) go straight to individual years.
+     * Full decades (70s, 80s) have an Early/Late intermediate level.
+     */
+    fun buildDecadeCascadeTree(): List<FilterNode> {
+        return listOf(
+            FilterNode(
+                id = "60s",
+                label = "60s",
+                children = (1965..1969).map { year ->
+                    FilterNode(id = year.toString(), label = year.toString())
+                }
+            ),
+            FilterNode(
+                id = "70s",
+                label = "70s",
+                children = listOf(
+                    FilterNode(
+                        id = "early_70s",
+                        label = "Early 70s",
+                        children = (1970..1974).map { year ->
+                            FilterNode(id = year.toString(), label = year.toString())
+                        }
+                    ),
+                    FilterNode(
+                        id = "late_70s",
+                        label = "Late 70s",
+                        children = (1975..1979).map { year ->
+                            FilterNode(id = year.toString(), label = year.toString())
+                        }
+                    )
+                )
+            ),
+            FilterNode(
+                id = "80s",
+                label = "80s",
+                children = listOf(
+                    FilterNode(
+                        id = "early_80s",
+                        label = "Early 80s",
+                        children = (1980..1984).map { year ->
+                            FilterNode(id = year.toString(), label = year.toString())
+                        }
+                    ),
+                    FilterNode(
+                        id = "late_80s",
+                        label = "Late 80s",
+                        children = (1985..1989).map { year ->
+                            FilterNode(id = year.toString(), label = year.toString())
+                        }
+                    )
+                )
+            ),
+            FilterNode(
+                id = "90s",
+                label = "90s",
+                children = (1990..1995).map { year ->
+                    FilterNode(id = year.toString(), label = year.toString())
+                }
+            )
+        )
+    }
+
     /**
      * Build Grateful Dead era/tour filter tree for library
      */
@@ -320,7 +343,7 @@ object FilterTrees {
                 )
             ),
             FilterNode(
-                id = "70s", 
+                id = "70s",
                 label = "70s",
                 children = listOf(
                     FilterNode("70s_spring", "Spring"),
@@ -331,7 +354,7 @@ object FilterTrees {
             ),
             FilterNode(
                 id = "80s",
-                label = "80s", 
+                label = "80s",
                 children = listOf(
                     FilterNode("80s_spring", "Spring"),
                     FilterNode("80s_summer", "Summer"),
@@ -351,7 +374,7 @@ object FilterTrees {
             )
         )
     }
-    
+
     /**
      * Build venue/location filter tree for browse
      */
@@ -386,7 +409,7 @@ object FilterTrees {
             )
         )
     }
-    
+
     /**
      * Build simple home filter tree starting with "All"
      * Future expansion ready for "Recent", "Popular", "Favorites", etc.
@@ -396,20 +419,12 @@ object FilterTrees {
             FilterNode(
                 id = "all",
                 label = "All"
-                // Future expansion:
-                // FilterNode("recent", "Recent", children = listOf(
-                //     FilterNode("recent_week", "This Week"),
-                //     FilterNode("recent_month", "This Month")
-                // )),
-                // FilterNode("popular", "Popular"),
-                // FilterNode("your_library", "Favorites")
             )
         )
     }
-    
+
     /**
      * Build collections filter tree with Official/Guests/Eras structure
-     * Official has sub-categories, Guests and Eras are single-level
      */
     fun buildCollectionsTagsTree(): List<FilterNode> {
         return listOf(
@@ -429,12 +444,10 @@ object FilterTrees {
             FilterNode(
                 id = "guest",
                 label = "Guests"
-                // No children - selecting "Guests" shows all guest collections
             ),
             FilterNode(
                 id = "era",
                 label = "Eras"
-                // No children - selecting "Eras" shows all era collections
             )
         )
     }
