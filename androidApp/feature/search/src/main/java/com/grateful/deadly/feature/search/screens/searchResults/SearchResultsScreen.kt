@@ -68,6 +68,13 @@ fun SearchResultsScreen(
     val context = LocalContext.current
     val keyboardController = LocalSoftwareKeyboardController.current
 
+    // Era browse detection — "era:70s" from decade buttons
+    val eraMatch = remember(initialQuery) {
+        Regex("""^era:(\d0s)$""").find(initialQuery)
+    }
+    val eraLabel = remember(eraMatch) { eraMatch?.groupValues?.get(1) }
+    val isEraBrowse = eraLabel != null
+
     // Sort state (local to composable, resets on new search session)
     var sortBy by remember { mutableStateOf(SearchSortOption.DATE_OF_SHOW) }
     var sortDirection by remember { mutableStateOf(SearchSortDirection.ASCENDING) }
@@ -77,13 +84,13 @@ fun SearchResultsScreen(
     val decadeTree = remember { FilterTrees.buildDecadeCascadeTree() }
 
     // Reset filter when search results change (new query)
-    // If the query is a decade pattern (e.g. "197*"), auto-select that decade chip
+    // For era browse, auto-select the matching decade chip
     LaunchedEffect(uiState.searchResults) {
-        val decadeNode = decadeNodeForQuery(uiState.searchQuery, decadeTree)
-        filterPath = if (decadeNode != null) {
-            FilterPath(listOf(decadeNode))
+        if (isEraBrowse) {
+            val node = decadeTree.firstOrNull { it.id == eraLabel }
+            filterPath = if (node != null) FilterPath(listOf(node)) else FilterPath()
         } else {
-            FilterPath()
+            filterPath = FilterPath()
         }
     }
 
@@ -117,7 +124,13 @@ fun SearchResultsScreen(
     // Pre-fill search when navigating from browse buttons
     LaunchedEffect(initialQuery) {
         if (initialQuery.isNotEmpty()) {
-            viewModel.onSearchQueryChanged(initialQuery)
+            if (isEraBrowse) {
+                // Translate "era:70s" -> "197*" for FTS search
+                val digit = eraLabel!!.first()
+                viewModel.onSearchQueryChanged("19${digit}*")
+            } else {
+                viewModel.onSearchQueryChanged(initialQuery)
+            }
         }
     }
 
@@ -159,7 +172,7 @@ fun SearchResultsScreen(
     ) {
         // Fixed top bar with back arrow and search input (like Spotify)
         SearchResultsTopBar(
-            searchQuery = uiState.searchQuery,
+            searchQuery = if (isEraBrowse) "" else uiState.searchQuery,
             onSearchQueryChange = viewModel::onSearchQueryChanged,
             onNavigateBack = onNavigateBack
         )
@@ -179,10 +192,13 @@ fun SearchResultsScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = if (filterPath.isNotEmpty) {
-                        "Search Results (${sortedResults.size} of ${uiState.searchStats.totalResults})"
-                    } else {
-                        "Search Results (${uiState.searchStats.totalResults})"
+                    text = when {
+                        isEraBrowse && filterPath.nodes.size <= 1 ->
+                            "${uiState.searchStats.totalResults} ${eraLabel} shows"
+                        filterPath.isNotEmpty ->
+                            "Search Results (${sortedResults.size} of ${uiState.searchStats.totalResults})"
+                        else ->
+                            "Search Results (${uiState.searchStats.totalResults})"
                     },
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
@@ -210,7 +226,13 @@ fun SearchResultsScreen(
             HierarchicalFilter(
                 filterTree = decadeTree,
                 selectedPath = filterPath,
-                onSelectionChanged = { filterPath = it },
+                onSelectionChanged = { newPath ->
+                    filterPath = newPath
+                    if (isEraBrowse && newPath.isEmpty) {
+                        // "All" tapped during era browse — widen search to all decades
+                        viewModel.onSearchQueryChanged("196* OR 197* OR 198* OR 199*")
+                    }
+                },
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
         }
@@ -754,16 +776,6 @@ private fun SearchSortBottomSheet(
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
-}
-
-/**
- * Detect decade browse patterns like "196*" and return the matching FilterNode.
- */
-private fun decadeNodeForQuery(query: String, tree: List<FilterNode>): FilterNode? {
-    val match = Regex("""^19(\d)\*$""").find(query.trim()) ?: return null
-    val decadeDigit = match.groupValues[1]
-    val decadeId = "${decadeDigit}0s"
-    return tree.firstOrNull { it.id == decadeId }
 }
 
 /**

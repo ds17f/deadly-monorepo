@@ -164,10 +164,10 @@ private fun SearchBrowseSection(
     onDecadeClick: (String) -> Unit
 ) {
     val decades = listOf(
-        DecadeBrowse("1960s", com.grateful.deadly.core.design.R.drawable.decade_1960s, "196*"),
-        DecadeBrowse("1970s", com.grateful.deadly.core.design.R.drawable.decade_1970s, "197*"),
-        DecadeBrowse("1980s", com.grateful.deadly.core.design.R.drawable.decade_1980s, "198*"),
-        DecadeBrowse("1990s", com.grateful.deadly.core.design.R.drawable.decade_1990s, "199*")
+        DecadeBrowse("1960s", com.grateful.deadly.core.design.R.drawable.decade_1960s, "era:60s"),
+        DecadeBrowse("1970s", com.grateful.deadly.core.design.R.drawable.decade_1970s, "era:70s"),
+        DecadeBrowse("1980s", com.grateful.deadly.core.design.R.drawable.decade_1980s, "era:80s"),
+        DecadeBrowse("1990s", com.grateful.deadly.core.design.R.drawable.decade_1990s, "era:90s")
     )
 
     Column(
