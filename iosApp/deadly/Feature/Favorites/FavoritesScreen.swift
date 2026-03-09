@@ -86,6 +86,7 @@ struct FavoritesScreen: View {
             filterChips
             tabPicker
             sortAndDisplayControls
+                .padding(.bottom, 8)
             Divider()
 
             if selectedTab == .shows {

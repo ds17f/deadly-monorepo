@@ -83,7 +83,7 @@ struct CollectionsScreen: View {
             }
         }
         .padding(.horizontal, DeadlySpacing.screenPadding)
-        .padding(.top, DeadlySpacing.screenPadding)
+        .padding(.vertical, DeadlySpacing.screenPadding)
     }
 
     // MARK: - List
