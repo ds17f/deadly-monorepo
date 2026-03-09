@@ -3,6 +3,7 @@ package com.grateful.deadly.feature.search.screens.main.models
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.model.*
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -30,7 +31,8 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class SearchViewModel @Inject constructor(
-    private val searchService: SearchService
+    private val searchService: SearchService,
+    private val favoritesService: FavoritesService
 ) : ViewModel() {
     
     companion object {
@@ -223,6 +225,16 @@ class SearchViewModel @Inject constructor(
         }
     }
     
+    fun addToFavorites(showId: String) {
+        viewModelScope.launch { favoritesService.addToFavorites(showId) }
+    }
+
+    fun removeFromFavorites(showId: String) {
+        viewModelScope.launch { favoritesService.removeFromFavorites(showId) }
+    }
+
+    fun isShowFavorite(showId: String): StateFlow<Boolean> = favoritesService.isShowFavorite(showId)
+
     override fun onCleared() {
         super.onCleared()
         Log.d(TAG, "SearchViewModel cleared")

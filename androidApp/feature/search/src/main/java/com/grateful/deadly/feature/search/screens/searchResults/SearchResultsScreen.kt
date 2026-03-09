@@ -37,6 +37,10 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.feature.search.screens.main.models.SearchViewModel
 import com.grateful.deadly.core.model.*
+import android.widget.Toast
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalHapticFeedback
 
 /**
  * SearchResultsScreen - Full-screen search interface
@@ -56,6 +60,7 @@ fun SearchResultsScreen(
     viewModel: SearchViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
 
     // Sort state (local to composable, resets on new search session)
     var sortBy by remember { mutableStateOf(SearchSortOption.DATE_OF_SHOW) }
@@ -66,11 +71,28 @@ fun SearchResultsScreen(
         applySorting(uiState.searchResults, sortBy, sortDirection)
     }
 
+    // Show actions bottom sheet state
+    var selectedShowForActions by remember { mutableStateOf<SearchResultShow?>(null) }
+
     // Pre-fill search when navigating from browse buttons
     LaunchedEffect(initialQuery) {
         if (initialQuery.isNotEmpty()) {
             viewModel.onSearchQueryChanged(initialQuery)
         }
+    }
+
+    // Show actions bottom sheet
+    selectedShowForActions?.let { result ->
+        SearchShowActionsSheet(
+            searchResult = result,
+            viewModel = viewModel,
+            onDismiss = { selectedShowForActions = null },
+            onFavoriteToggled = { added ->
+                val msg = if (added) "Added to Favorites" else "Removed from Favorites"
+                Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+                selectedShowForActions = null
+            }
+        )
     }
 
     Column(
@@ -187,8 +209,8 @@ fun SearchResultsScreen(
                             SearchResultCard(
                                 searchResult = result,
                                 onShowSelected = onNavigateToShow,
-                                onShowLongPress = { show ->
-                                    // TODO: Implement show actions bottom sheet
+                                onShowLongPress = { showId ->
+                                    selectedShowForActions = sortedResults.find { it.show.id == showId }
                                 }
                             )
                         }
