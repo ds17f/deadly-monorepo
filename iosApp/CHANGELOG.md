@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.18.0] - 2026-03-08
+
+### New Features
+* add "See Reviews" to search result long-press menu (b9ac4e7)
+* add long-press to toggle favorites on search results (a131165)
+* reverse toggle to "Include shows without recordings" (c39559f)
+
+### Bug Fixes
+* white text with crimson icons and chevrons on action rows (138a6db)
+* use white text for nav bar title instead of tint color (2b2e7d2)
+* force opaque tab bar via UIKit appearance proxy (4cc9f13)
+* opaque nav bar and header padding for Xcode 26 build (1208792)
+* use unencoded slash in GitHub release URLs (8f74215)
+* disable Liquid Glass via UIDesignRequiresCompatibility (bc441ea)
+* update simulator destination from iPhone 16 to iPhone 17 for Xcode 26 (7a9172c)
+
+### CI Changes
+* update GitHub Actions runners from macos-15 to macos-26 (b4059aa)
+
+
 ## [2.17.0] - 2026-03-08
 
 ### New Features
@@ -15,8 +35,6 @@
 ### CI Changes
 * move PROVISIONING_PROFILE_SPECIFIER to project target settings (b2cb14b)
 * add CODE_SIGN_IDENTITY to gym xcargs for distribution builds (1a02efb)
-
-
 ## [2.16.0] - 2026-03-07
 
 ### New Features
