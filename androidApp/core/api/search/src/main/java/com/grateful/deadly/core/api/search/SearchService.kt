@@ -97,6 +97,12 @@ interface SearchService {
      * @return Result with list of suggested searches
      */
     suspend fun getSuggestions(partialQuery: String): Result<List<SuggestedSearch>>
+
+    /**
+     * Load all shows into search results (no query needed).
+     * Used for era browsing where filter chips handle the filtering.
+     */
+    suspend fun loadAllShows(): Result<Unit>
     
     /**
      * Populate search service with test data for UI development.
