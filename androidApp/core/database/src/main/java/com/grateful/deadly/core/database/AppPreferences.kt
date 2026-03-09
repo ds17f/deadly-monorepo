@@ -27,23 +27,23 @@ class AppPreferences @Inject constructor(
         context.getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
 
     companion object {
-        private const val KEY_SHOW_ONLY_RECORDED = "show_only_recorded_shows"
+        private const val KEY_INCLUDE_SHOWS_WITHOUT_RECORDINGS = "include_shows_without_recordings"
         private const val KEY_FAVORITES_DISPLAY_MODE = "favorites_display_mode"
         private const val KEY_FORCE_ONLINE = "force_online"
         // Legacy key kept for migration read-back
         private const val KEY_LIBRARY_DISPLAY_MODE_LEGACY = "library_display_mode"
     }
 
-    private val _showOnlyRecordedShows = MutableStateFlow(
-        prefs.getBoolean(KEY_SHOW_ONLY_RECORDED, true)
+    private val _includeShowsWithoutRecordings = MutableStateFlow(
+        prefs.getBoolean(KEY_INCLUDE_SHOWS_WITHOUT_RECORDINGS, false)
     )
 
-    /** When true, shows with recordingCount == 0 are hidden from browse/search/nav. */
-    val showOnlyRecordedShows: StateFlow<Boolean> = _showOnlyRecordedShows.asStateFlow()
+    /** When true, shows with recordingCount == 0 are included in browse/search/nav. */
+    val includeShowsWithoutRecordings: StateFlow<Boolean> = _includeShowsWithoutRecordings.asStateFlow()
 
-    fun setShowOnlyRecordedShows(value: Boolean) {
-        prefs.edit().putBoolean(KEY_SHOW_ONLY_RECORDED, value).apply()
-        _showOnlyRecordedShows.value = value
+    fun setIncludeShowsWithoutRecordings(value: Boolean) {
+        prefs.edit().putBoolean(KEY_INCLUDE_SHOWS_WITHOUT_RECORDINGS, value).apply()
+        _includeShowsWithoutRecordings.value = value
     }
 
     private val _favoritesDisplayMode = MutableStateFlow(

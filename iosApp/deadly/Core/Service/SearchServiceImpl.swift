@@ -45,7 +45,7 @@ final class SearchServiceImpl: SearchService {
                 let indexed = Dictionary(fetched.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
                 shows = ids.compactMap { indexed[$0] }
             }
-            if appPreferences.showOnlyRecordedShows {
+            if !appPreferences.includeShowsWithoutRecordings {
                 shows = shows.filter { $0.recordingCount > 0 }
             }
             let total = shows.count

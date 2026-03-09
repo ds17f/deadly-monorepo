@@ -27,7 +27,7 @@ fun SettingsScreen(
     onNavigateToDeveloper: () -> Unit = {}
 ) {
     val context = LocalContext.current
-    val showOnlyRecorded by viewModel.showOnlyRecordedShows.collectAsState()
+    val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
     val version = BuildConfig.VERSION_NAME
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -37,10 +37,10 @@ fun SettingsScreen(
 
         item {
             PreferenceToggleRow(
-                title = "Hide shows without recordings",
-                subtitle = "Only show concerts that have audio recordings available",
-                checked = showOnlyRecorded,
-                onCheckedChange = { viewModel.toggleShowOnlyRecordedShows() }
+                title = "Include shows without recordings",
+                subtitle = "Show concerts even if they have no audio recordings available",
+                checked = includeShowsWithoutRecordings,
+                onCheckedChange = { viewModel.toggleIncludeShowsWithoutRecordings() }
             )
         }
 

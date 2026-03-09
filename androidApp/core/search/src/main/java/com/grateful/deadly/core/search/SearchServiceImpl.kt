@@ -69,8 +69,8 @@ class SearchServiceImpl @Inject constructor(
             val summaries = showSearchDao.searchShowsWithSummary(query)
             val allShows = showMappers.summariesToDomain(summaries)
 
-            // Filter out recordingless shows when preference is enabled
-            val shows = if (appPreferences.showOnlyRecordedShows.value) {
+            // Filter out recordingless shows when preference is not enabled
+            val shows = if (!appPreferences.includeShowsWithoutRecordings.value) {
                 allShows.filter { it.recordingCount > 0 }
             } else {
                 allShows
