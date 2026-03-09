@@ -153,6 +153,9 @@ object IconResources {
         
         @Composable
         fun MusicNote() = customIcon(R.drawable.ic_music_note)
+
+        @Composable
+        fun Equalizer() = customIcon(R.drawable.ic_equalizer)
         
         @Composable
         fun PlayCircleFilled() = customIcon(R.drawable.ic_play_circle_filled)

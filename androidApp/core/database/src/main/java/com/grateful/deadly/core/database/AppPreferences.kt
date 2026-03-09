@@ -32,6 +32,10 @@ class AppPreferences @Inject constructor(
         private const val KEY_FORCE_ONLINE = "force_online"
         // Legacy key kept for migration read-back
         private const val KEY_LIBRARY_DISPLAY_MODE_LEGACY = "library_display_mode"
+        // Equalizer
+        private const val KEY_EQ_ENABLED = "eq_enabled"
+        private const val KEY_EQ_PRESET = "eq_preset"
+        private const val KEY_EQ_BAND_LEVELS = "eq_band_levels"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -70,6 +74,42 @@ class AppPreferences @Inject constructor(
     fun setForceOnline(value: Boolean) {
         prefs.edit().putBoolean(KEY_FORCE_ONLINE, value).apply()
         _forceOnline.value = value
+    }
+
+    // ── Equalizer ────────────────────────────────────────────────────────
+
+    private val _eqEnabled = MutableStateFlow(
+        prefs.getBoolean(KEY_EQ_ENABLED, false)
+    )
+
+    val eqEnabled: StateFlow<Boolean> = _eqEnabled.asStateFlow()
+
+    fun setEqEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_EQ_ENABLED, value).apply()
+        _eqEnabled.value = value
+    }
+
+    private val _eqPreset = MutableStateFlow(
+        prefs.getString(KEY_EQ_PRESET, null)
+    )
+
+    val eqPreset: StateFlow<String?> = _eqPreset.asStateFlow()
+
+    fun setEqPreset(value: String?) {
+        prefs.edit().putString(KEY_EQ_PRESET, value).apply()
+        _eqPreset.value = value
+    }
+
+    private val _eqBandLevels = MutableStateFlow(
+        prefs.getString(KEY_EQ_BAND_LEVELS, null)
+    )
+
+    /** Comma-separated band gains in dB (e.g. "0,0,0,0,0,0,0,0,0,0"). */
+    val eqBandLevels: StateFlow<String?> = _eqBandLevels.asStateFlow()
+
+    fun setEqBandLevels(value: String?) {
+        prefs.edit().putString(KEY_EQ_BAND_LEVELS, value).apply()
+        _eqBandLevels.value = value
     }
 
 }

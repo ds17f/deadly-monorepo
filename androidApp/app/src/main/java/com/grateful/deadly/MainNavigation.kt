@@ -177,6 +177,10 @@ fun MainNavigation(
                         scope.launch { drawerState.close() }
                         navController.navigate("downloads")
                     },
+                    onNavigateToEqualizer = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("equalizer")
+                    },
                     onNavigateToLegal = {
                         scope.launch { drawerState.close() }
                         navController.navigate("legal")

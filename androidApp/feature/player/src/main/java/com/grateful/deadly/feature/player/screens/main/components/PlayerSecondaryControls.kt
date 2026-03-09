@@ -15,6 +15,7 @@ import com.grateful.deadly.core.design.resources.IconResources
 fun PlayerSecondaryControls(
     isFavorite: Boolean,
     onConnectClick: () -> Unit,
+    onEqualizerClick: () -> Unit,
     onFavoriteClick: () -> Unit,
     onShareClick: () -> Unit,
     onQueueClick: () -> Unit,
@@ -25,18 +26,33 @@ fun PlayerSecondaryControls(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Connections (left)
-        IconButton(
-            onClick = onConnectClick,
-            modifier = Modifier.size(40.dp)
-        ) {
-            Icon(
-                painter = IconResources.Content.Cast(),
-                contentDescription = "Connect",
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+        // Left section
+        Row {
+            // Connections
+            IconButton(
+                onClick = onConnectClick,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    painter = IconResources.Content.Cast(),
+                    contentDescription = "Connect",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
+            // Equalizer
+            IconButton(
+                onClick = onEqualizerClick,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    painter = IconResources.PlayerControls.Equalizer(),
+                    contentDescription = "Equalizer",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
         }
-        
+
         // Right section
         Row {
             // Thumbs Up

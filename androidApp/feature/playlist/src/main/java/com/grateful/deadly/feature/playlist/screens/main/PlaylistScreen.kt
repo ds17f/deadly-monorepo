@@ -23,6 +23,7 @@ import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistMenu
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistRecordingSelectionSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistCollectionsSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistSetlistBottomSheet
+import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistEqualizerSheet
 import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShowReviewSheet
@@ -49,7 +50,9 @@ fun PlaylistScreen(
     Log.d("PlaylistScreen", "=== PLAYLIST SCREEN LOADED === recordingId: $recordingId, showId: $showId, trackNumber: $trackNumber")
 
     val uiState by viewModel.uiState.collectAsState()
+    val equalizerState by viewModel.equalizerState.collectAsState()
     var showQrCode by remember { mutableStateOf(false) }
+    var showEqualizerSheet by remember { mutableStateOf(false) }
     val isOffline by viewModel.isOffline.collectAsState()
     val showWriteReview by viewModel.showWriteReview.collectAsState()
     val userReview by viewModel.userReview.collectAsState()
@@ -296,6 +299,7 @@ fun PlaylistScreen(
                 location = showData.location,
                 onShareClick = { showQrCode = true },
                 onChooseRecordingClick = viewModel::chooseRecording,
+                onEqualizerClick = { showEqualizerSheet = true },
                 onDismiss = viewModel::hideMenu
             )
         }
@@ -398,6 +402,18 @@ fun PlaylistScreen(
             isLoading = uiState.setlistLoading,
             errorMessage = uiState.setlistError,
             onDismiss = viewModel::hideSetlistModal
+        )
+    }
+
+    // Equalizer Sheet
+    if (showEqualizerSheet) {
+        PlaylistEqualizerSheet(
+            state = equalizerState,
+            onDismiss = { showEqualizerSheet = false },
+            onToggleEnabled = viewModel::setEqualizerEnabled,
+            onPresetSelected = viewModel::selectEqualizerPreset,
+            onBandLevelChanged = viewModel::setEqualizerBandLevel,
+            onReset = viewModel::resetEqualizer
         )
     }
 }

@@ -27,6 +27,7 @@ import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 import com.grateful.deadly.core.media.browse.BrowseMediaId
 import com.grateful.deadly.core.media.browse.BrowseTreeProvider
+import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -61,6 +62,9 @@ class DeadlyMediaSessionService : MediaLibraryService() {
 
     @Inject
     lateinit var cacheDataSourceFactory: CacheDataSource.Factory
+
+    @Inject
+    lateinit var equalizerRepository: EqualizerRepository
 
     private lateinit var exoPlayer: ExoPlayer
     private var mediaSession: MediaLibrarySession? = null
@@ -161,6 +165,9 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             )
             .setHandleAudioBecomingNoisy(true)
             .build()
+
+        // Initialize equalizer with ExoPlayer's audio session
+        equalizerRepository.onAudioSessionReady(exoPlayer.audioSessionId)
 
         // Add player listeners
         exoPlayer.addListener(object : Player.Listener {
@@ -345,6 +352,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     override fun onDestroy() {
         Log.d(TAG, "Service onDestroy()")
         abandonAudioFocus()
+        equalizerRepository.release()
         mediaSession?.run {
             release()
             mediaSession = null

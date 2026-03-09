@@ -9,6 +9,8 @@ import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.ShowReview
+import com.grateful.deadly.core.media.equalizer.EqualizerRepository
+import com.grateful.deadly.core.media.equalizer.EqualizerState
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.exception.FormatNotAvailableException
 import com.grateful.deadly.core.network.monitor.NetworkMonitor
@@ -46,6 +48,7 @@ class PlaylistViewModel @Inject constructor(
     private val favoritesService: FavoritesService,
     private val recentShowsService: RecentShowsService,
     private val reviewService: ReviewService,
+    private val equalizerRepository: EqualizerRepository,
     networkMonitor: NetworkMonitor
 ) : ViewModel() {
 
@@ -1429,5 +1432,25 @@ class PlaylistViewModel @Inject constructor(
             _userReview.value = saved ?: ShowReview(showId = showId)
             _showWriteReview.value = false
         }
+    }
+
+    // ── Equalizer ────────────────────────────────────────────────────────
+
+    val equalizerState: StateFlow<EqualizerState> = equalizerRepository.state
+
+    fun setEqualizerEnabled(enabled: Boolean) {
+        equalizerRepository.setEnabled(enabled)
+    }
+
+    fun setEqualizerBandLevel(index: Int, gainDb: Float) {
+        equalizerRepository.setBandLevel(index, gainDb)
+    }
+
+    fun selectEqualizerPreset(preset: String) {
+        equalizerRepository.selectPreset(preset)
+    }
+
+    fun resetEqualizer() {
+        equalizerRepository.resetToFlat()
     }
 }

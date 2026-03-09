@@ -36,6 +36,7 @@ android {
 dependencies {
     // V2 Core dependencies
     implementation(project(":core:model"))
+    implementation(project(":core:database"))
     implementation(project(":core:network:archive"))
     implementation(project(":core:domain"))
     implementation(project(":core:api:recent"))

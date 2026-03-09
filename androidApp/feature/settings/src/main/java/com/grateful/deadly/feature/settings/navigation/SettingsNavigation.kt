@@ -5,6 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.screens.developer.DeveloperScreen
+import com.grateful.deadly.feature.settings.screens.equalizer.EqualizerScreen
 import com.grateful.deadly.feature.settings.screens.legal.LegalScreen
 import com.grateful.deadly.feature.settings.screens.mission.MissionScreen
 
@@ -12,6 +13,7 @@ import com.grateful.deadly.feature.settings.screens.mission.MissionScreen
  * Settings navigation route constants
  */
 const val SETTINGS_ROUTE = "settings"
+const val EQUALIZER_ROUTE = "equalizer"
 const val LEGAL_ROUTE = "legal"
 const val MISSION_ROUTE = "mission"
 const val DEVELOPER_ROUTE = "developer"
@@ -29,6 +31,7 @@ fun NavController.navigateToSettings() {
 fun NavGraphBuilder.settingsScreen(
     onNavigateBack: () -> Unit,
     onNavigateToDownloads: () -> Unit,
+    onNavigateToEqualizer: () -> Unit,
     onNavigateToLegal: () -> Unit,
     onNavigateToMission: () -> Unit,
     onNavigateToDeveloper: () -> Unit
@@ -36,10 +39,19 @@ fun NavGraphBuilder.settingsScreen(
     composable(route = SETTINGS_ROUTE) {
         SettingsScreen(
             onNavigateToDownloads = onNavigateToDownloads,
+            onNavigateToEqualizer = onNavigateToEqualizer,
             onNavigateToLegal = onNavigateToLegal,
             onNavigateToMission = onNavigateToMission,
             onNavigateToDeveloper = onNavigateToDeveloper
         )
+    }
+}
+
+fun NavGraphBuilder.equalizerScreen(
+    onNavigateBack: () -> Unit
+) {
+    composable(route = EQUALIZER_ROUTE) {
+        EqualizerScreen()
     }
 }
 
@@ -80,9 +92,14 @@ fun NavGraphBuilder.settingsGraph(navController: NavController) {
     settingsScreen(
         onNavigateBack = { navController.popBackStack() },
         onNavigateToDownloads = { navController.navigate("downloads") },
+        onNavigateToEqualizer = { navController.navigate(EQUALIZER_ROUTE) },
         onNavigateToLegal = { navController.navigate(LEGAL_ROUTE) },
         onNavigateToMission = { navController.navigate(MISSION_ROUTE) },
         onNavigateToDeveloper = { navController.navigate(DEVELOPER_ROUTE) }
+    )
+
+    equalizerScreen(
+        onNavigateBack = { navController.popBackStack() }
     )
 
     legalScreen(

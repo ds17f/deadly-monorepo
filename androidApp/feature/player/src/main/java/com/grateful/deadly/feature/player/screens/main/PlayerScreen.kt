@@ -26,6 +26,7 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerMaterial
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTrackActionsSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerConnectSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerQueueSheet
+import com.grateful.deadly.feature.player.screens.main.components.PlayerEqualizerSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
 import com.grateful.deadly.feature.player.screens.main.components.RepeatMode
 import com.grateful.deadly.core.design.component.QrCodeDisplay
@@ -115,6 +116,7 @@ fun PlayerScreen(
     val uiState by viewModel.uiState.collectAsState()
     val panelState by viewModel.panelState.collectAsState()
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
+    val equalizerState by viewModel.equalizerState.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -126,6 +128,7 @@ fun PlayerScreen(
     var showTrackActionsBottomSheet by remember { mutableStateOf(false) }
     var showQrCode by remember { mutableStateOf(false) }
     var showConnectBottomSheet by remember { mutableStateOf(false) }
+    var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
@@ -220,6 +223,7 @@ fun PlayerScreen(
                 PlayerSecondaryControls(
                     isFavorite = isCurrentTrackFavorite,
                     onConnectClick = { showConnectBottomSheet = true },
+                    onEqualizerClick = { showEqualizerBottomSheet = true },
                     onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
                     onShareClick = { showQrCode = true },
                     onQueueClick = { showQueueBottomSheet = true },
@@ -286,6 +290,17 @@ fun PlayerScreen(
         if (showConnectBottomSheet) {
             PlayerConnectSheet(
                 onDismiss = { showConnectBottomSheet = false }
+            )
+        }
+
+        if (showEqualizerBottomSheet) {
+            PlayerEqualizerSheet(
+                state = equalizerState,
+                onDismiss = { showEqualizerBottomSheet = false },
+                onToggleEnabled = viewModel::setEqualizerEnabled,
+                onPresetSelected = viewModel::selectEqualizerPreset,
+                onBandLevelChanged = viewModel::setEqualizerBandLevel,
+                onReset = viewModel::resetEqualizer
             )
         }
 

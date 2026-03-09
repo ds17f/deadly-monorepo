@@ -7,6 +7,7 @@ import com.grateful.deadly.core.design.scaffold.MiniPlayerConfig
 import com.grateful.deadly.feature.home.screens.main.HomeBarConfiguration
 import com.grateful.deadly.feature.search.screens.main.SearchBarConfiguration
 import com.grateful.deadly.feature.settings.screens.main.SettingsBarConfiguration
+import com.grateful.deadly.feature.settings.screens.equalizer.EqualizerBarConfiguration
 import com.grateful.deadly.feature.settings.screens.legal.LegalBarConfiguration
 import com.grateful.deadly.feature.settings.screens.developer.DeveloperBarConfiguration
 import com.grateful.deadly.feature.settings.screens.mission.MissionBarConfiguration
@@ -35,6 +36,7 @@ object NavigationBarConfig {
         
         // Settings routes
         route == "settings" -> SettingsBarConfiguration.getSettingsBarConfig()
+        route == "equalizer" -> EqualizerBarConfiguration.getEqualizerBarConfig()
         route == "legal" -> LegalBarConfiguration.getLegalBarConfig()
         route == "mission" -> MissionBarConfiguration.getMissionBarConfig()
         route == "developer" -> DeveloperBarConfiguration.getDeveloperBarConfig()

@@ -7,6 +7,8 @@ import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
+import com.grateful.deadly.core.media.equalizer.EqualizerRepository
+import com.grateful.deadly.core.media.equalizer.EqualizerState
 import com.grateful.deadly.core.model.CurrentTrackInfo
 import com.grateful.deadly.core.model.LineupMember
 import com.grateful.deadly.core.model.PlaybackStatus
@@ -22,7 +24,8 @@ class PlayerViewModel @Inject constructor(
     private val playerService: PlayerService,
     private val panelContentService: PanelContentService,
     private val favoritesService: FavoritesService,
-    private val reviewService: ReviewService
+    private val reviewService: ReviewService,
+    private val equalizerRepository: EqualizerRepository
 ) : ViewModel() {
 
     companion object {
@@ -316,6 +319,26 @@ class PlayerViewModel @Inject constructor(
                 Log.e(TAG, "Error sharing track", e)
             }
         }
+    }
+
+    // ── Equalizer ────────────────────────────────────────────────────────
+
+    val equalizerState: StateFlow<EqualizerState> = equalizerRepository.state
+
+    fun setEqualizerEnabled(enabled: Boolean) {
+        equalizerRepository.setEnabled(enabled)
+    }
+
+    fun setEqualizerBandLevel(index: Int, gainDb: Float) {
+        equalizerRepository.setBandLevel(index, gainDb)
+    }
+
+    fun selectEqualizerPreset(preset: String) {
+        equalizerRepository.selectPreset(preset)
+    }
+
+    fun resetEqualizer() {
+        equalizerRepository.resetToFlat()
     }
 }
 
