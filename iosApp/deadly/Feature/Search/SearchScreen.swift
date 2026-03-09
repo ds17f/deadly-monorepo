@@ -358,7 +358,8 @@ struct SearchScreen: View {
                             set: { newPath in
                                 filterPath = newPath
                                 if newPath.isEmpty && eraOverride != nil {
-                                    clearEra()
+                                    // Reload all eras so "All" shows everything
+                                    loadAllEras()
                                 }
                             }
                         )
@@ -392,6 +393,19 @@ struct SearchScreen: View {
         eraOverride = nil
         eraLabel = nil
         filterPath = FilterPath()
+    }
+
+    private func loadAllEras() {
+        var all: [SearchResultShow] = []
+        for decade in ["60s", "70s", "80s", "90s"] {
+            if let shows = try? searchService.searchByEra(decade) {
+                all.append(contentsOf: shows.map {
+                    SearchResultShow(show: $0, relevanceScore: 1.0, matchType: .year, hasDownloads: false, highlightedFields: [])
+                })
+            }
+        }
+        eraOverride = all
+        eraLabel = nil
     }
 
     /// Activates search UI and immediately runs search (skips debounce)
