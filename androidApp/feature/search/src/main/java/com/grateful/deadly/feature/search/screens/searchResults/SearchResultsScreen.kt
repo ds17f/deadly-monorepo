@@ -72,8 +72,9 @@ fun SearchResultsScreen(
     val eraMatch = remember(initialQuery) {
         Regex("""^era:(\d0s)$""").find(initialQuery)
     }
-    val eraLabel = remember(eraMatch) { eraMatch?.groupValues?.get(1) }
-    val isEraBrowse = eraLabel != null
+    val initialEraLabel = remember(eraMatch) { eraMatch?.groupValues?.get(1) }
+    var isEraBrowse by remember { mutableStateOf(initialEraLabel != null) }
+    val eraLabel = if (isEraBrowse) initialEraLabel else null
 
     // Sort state (local to composable, resets on new search session)
     var sortBy by remember { mutableStateOf(SearchSortOption.DATE_OF_SHOW) }
@@ -124,9 +125,9 @@ fun SearchResultsScreen(
     // Pre-fill search when navigating from browse buttons
     LaunchedEffect(initialQuery) {
         if (initialQuery.isNotEmpty()) {
-            if (isEraBrowse) {
+            if (initialEraLabel != null) {
                 // Translate "era:70s" -> "197*" for FTS search
-                val digit = eraLabel!!.first()
+                val digit = initialEraLabel.first()
                 viewModel.onSearchQueryChanged("19${digit}*")
             } else {
                 viewModel.onSearchQueryChanged(initialQuery)
@@ -230,6 +231,7 @@ fun SearchResultsScreen(
                     filterPath = newPath
                     if (isEraBrowse && newPath.isEmpty) {
                         // "All" tapped during era browse — widen search to all decades
+                        isEraBrowse = false
                         viewModel.onSearchQueryChanged("196* OR 197* OR 198* OR 199*")
                     }
                 },
