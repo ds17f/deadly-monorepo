@@ -17,7 +17,8 @@ fun SearchShowActionsSheet(
     searchResult: SearchResultShow,
     viewModel: SearchViewModel,
     onDismiss: () -> Unit,
-    onFavoriteToggled: (added: Boolean) -> Unit
+    onFavoriteToggled: (added: Boolean) -> Unit,
+    onSeeReviews: () -> Unit = {}
 ) {
     val show = searchResult.show
     val isFavorite by viewModel.isShowFavorite(show.id).collectAsState()
@@ -75,6 +76,22 @@ fun SearchShowActionsSheet(
                     modifier = Modifier.clickable {
                         viewModel.addToFavorites(show.id)
                         onFavoriteToggled(true)
+                    }
+                )
+            }
+
+            // See Reviews (only if recording exists)
+            if (show.bestRecordingId != null) {
+                ListItem(
+                    headlineContent = { Text("See Reviews") },
+                    leadingContent = {
+                        Icon(
+                            painter = IconResources.Content.RateReview(),
+                            contentDescription = null
+                        )
+                    },
+                    modifier = Modifier.clickable {
+                        onSeeReviews()
                     }
                 )
             }

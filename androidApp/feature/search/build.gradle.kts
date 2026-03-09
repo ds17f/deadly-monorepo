@@ -49,6 +49,7 @@ dependencies {
     implementation(project(":core:search"))
     implementation(project(":core:model"))
     implementation(project(":core:design"))
+    implementation(project(":core:network:archive"))
 
 
     // Compose BOM

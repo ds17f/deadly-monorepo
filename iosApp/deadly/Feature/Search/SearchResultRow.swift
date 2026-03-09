@@ -4,6 +4,7 @@ struct SearchResultRow: View {
     let result: SearchResultShow
     @Environment(\.appContainer) private var container
     @State private var isFavorite = false
+    @State private var showReviews = false
 
     var body: some View {
         NavigationLink(value: result.show.id) {
@@ -44,6 +45,9 @@ struct SearchResultRow: View {
             .padding(.vertical, 2)
         }
         .contextMenu { favoriteContextMenu }
+        .sheet(isPresented: $showReviews) {
+            SearchReviewsSheet(show: result.show, archiveClient: container.archiveClient)
+        }
         .task { isFavorite = (try? container.favoritesService.isFavorite(showId: result.show.id)) ?? false }
     }
 
@@ -63,6 +67,14 @@ struct SearchResultRow: View {
                 isFavorite ? "Remove from Favorites" : "Add to Favorites",
                 systemImage: isFavorite ? "heart.slash" : "heart"
             )
+        }
+
+        if result.show.bestRecordingId != nil {
+            Button {
+                showReviews = true
+            } label: {
+                Label("See Reviews", systemImage: "star.bubble")
+            }
         }
     }
 }

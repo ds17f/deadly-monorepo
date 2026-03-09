@@ -37,6 +37,7 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.feature.search.screens.main.models.SearchViewModel
 import com.grateful.deadly.core.model.*
+import com.grateful.deadly.feature.search.screens.main.models.ReviewsState
 import android.widget.Toast
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
@@ -75,6 +76,10 @@ fun SearchResultsScreen(
     // Show actions bottom sheet state
     var selectedShowForActions by remember { mutableStateOf<SearchResultShow?>(null) }
 
+    // Reviews bottom sheet state
+    var showReviewsForShow by remember { mutableStateOf<SearchResultShow?>(null) }
+    val reviewsState by viewModel.reviewsState.collectAsState()
+
     // Pre-fill search when navigating from browse buttons
     LaunchedEffect(initialQuery) {
         if (initialQuery.isNotEmpty()) {
@@ -92,6 +97,23 @@ fun SearchResultsScreen(
                 val msg = if (added) "Added to Favorites" else "Removed from Favorites"
                 Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
                 selectedShowForActions = null
+            },
+            onSeeReviews = {
+                showReviewsForShow = result
+                result.show.bestRecordingId?.let { viewModel.loadReviews(it) }
+                selectedShowForActions = null
+            }
+        )
+    }
+
+    // Reviews bottom sheet
+    showReviewsForShow?.let { result ->
+        SearchReviewsSheet(
+            searchResult = result,
+            reviewsState = reviewsState,
+            onDismiss = {
+                showReviewsForShow = null
+                viewModel.clearReviews()
             }
         )
     }
