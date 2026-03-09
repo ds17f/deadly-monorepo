@@ -34,6 +34,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.ShowArtwork
+import com.grateful.deadly.core.design.component.FilterPath
+import com.grateful.deadly.core.design.component.FilterTrees
+import com.grateful.deadly.core.design.component.HierarchicalFilter
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.feature.search.screens.main.models.SearchViewModel
 import com.grateful.deadly.core.model.*
@@ -68,9 +71,33 @@ fun SearchResultsScreen(
     var sortBy by remember { mutableStateOf(SearchSortOption.DATE_OF_SHOW) }
     var sortDirection by remember { mutableStateOf(SearchSortDirection.ASCENDING) }
 
-    // Apply sorting to results
-    val sortedResults = remember(uiState.searchResults, sortBy, sortDirection) {
-        applySorting(uiState.searchResults, sortBy, sortDirection)
+    // Decade filter state
+    var filterPath by remember { mutableStateOf(FilterPath()) }
+    val decadeTree = remember { FilterTrees.buildDecadeCascadeTree() }
+
+    // Reset filter when search results change (new query)
+    LaunchedEffect(uiState.searchResults) {
+        filterPath = FilterPath()
+    }
+
+    // Apply filtering then sorting to results
+    val sortedResults = remember(uiState.searchResults, sortBy, sortDirection, filterPath) {
+        val filtered = if (filterPath.isNotEmpty) {
+            val range = yearRangeForPath(filterPath)
+            if (range != null) {
+                uiState.searchResults.filter { it.show.year in range }
+            } else {
+                uiState.searchResults
+            }
+        } else {
+            uiState.searchResults
+        }
+        // When filter is active, force date ascending sort
+        if (filterPath.isNotEmpty) {
+            applySorting(filtered, SearchSortOption.DATE_OF_SHOW, SearchSortDirection.ASCENDING)
+        } else {
+            applySorting(filtered, sortBy, sortDirection)
+        }
     }
 
     // Show actions bottom sheet state
@@ -145,7 +172,11 @@ fun SearchResultsScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Search Results (${uiState.searchStats.totalResults})",
+                    text = if (filterPath.isNotEmpty) {
+                        "Search Results (${sortedResults.size} of ${uiState.searchStats.totalResults})"
+                    } else {
+                        "Search Results (${uiState.searchStats.totalResults})"
+                    },
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
@@ -168,6 +199,13 @@ fun SearchResultsScreen(
                     onDismiss = { showSortSheet = false }
                 )
             }
+
+            HierarchicalFilter(
+                filterTree = decadeTree,
+                selectedPath = filterPath,
+                onSelectionChanged = { filterPath = it },
+                modifier = Modifier.padding(horizontal = 16.dp)
+            )
         }
 
         // Search content that scrolls underneath the fixed header
@@ -708,6 +746,31 @@ private fun SearchSortBottomSheet(
 
             Spacer(modifier = Modifier.height(16.dp))
         }
+    }
+}
+
+/**
+ * Map a filter path to a year range for filtering search results.
+ */
+private fun yearRangeForPath(path: FilterPath): IntRange? {
+    if (path.isEmpty) return null
+
+    // Check the deepest node first — if it's a specific year, use it
+    val deepest = path.nodes.last()
+    deepest.id.toIntOrNull()?.let { year -> return year..year }
+
+    // Half-decade nodes
+    return when (deepest.id) {
+        "early_70s" -> 1970..1974
+        "late_70s" -> 1975..1979
+        "early_80s" -> 1980..1984
+        "late_80s" -> 1985..1989
+        // Decade-level nodes
+        "60s" -> 1965..1969
+        "70s" -> 1970..1979
+        "80s" -> 1980..1989
+        "90s" -> 1990..1995
+        else -> null
     }
 }
 

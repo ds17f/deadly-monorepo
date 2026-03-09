@@ -16,6 +16,8 @@ struct SearchScreen: View {
     @State private var eraOverride: [SearchResultShow]?
     @State private var eraLabel: String?
 
+    @State private var filterPath = FilterPath()
+
     @State private var topRated: [Show] = []
     @State private var randomShow: Show?
     @State private var refreshCounter = 0
@@ -27,7 +29,17 @@ struct SearchScreen: View {
 
     private var displayResults: [SearchResultShow] {
         let base = eraOverride ?? searchService.results
-        return sortResults(base)
+        let filtered: [SearchResultShow]
+        if filterPath.isNotEmpty, let range = yearRange(for: filterPath) {
+            filtered = base.filter { range.contains($0.show.year) }
+        } else {
+            filtered = base
+        }
+        if filterPath.isNotEmpty {
+            // Force date ascending when a decade filter is active
+            return filtered.sorted { $0.show.date < $1.show.date }
+        }
+        return sortResults(filtered)
     }
 
     var body: some View {
@@ -49,6 +61,7 @@ struct SearchScreen: View {
             searchService.clearResults()
             eraOverride = nil
             eraLabel = nil
+            filterPath = FilterPath()
         }
         .onChange(of: isSearchFieldFocused) { _, isFocused in
             if !isFocused && searchText.isEmpty {
@@ -56,11 +69,13 @@ struct SearchScreen: View {
                 searchService.clearResults()
                 eraOverride = nil
                 eraLabel = nil
+                filterPath = FilterPath()
             }
         }
         .onChange(of: searchText) { _, newValue in
             eraOverride = nil
             eraLabel = nil
+            filterPath = FilterPath()
             if newValue.isEmpty {
                 searchService.clearResults()
                 return
@@ -180,17 +195,17 @@ struct SearchScreen: View {
     private func loadEra(_ decade: String) {
         do {
             let shows = try searchService.searchByEra(decade)
-            // Convert "70s" -> "197*" for search display
-            let yearPrefix = "19" + decade.prefix(1) + "*"
-            // Set searchText first (triggers onChange which clears era state)
-            searchText = yearPrefix
+            searchText = ""
             searchTask?.cancel()
-            // Now set era state after the clear
             eraOverride = shows.map {
                 SearchResultShow(show: $0, relevanceScore: 1.0, matchType: .year, hasDownloads: false, highlightedFields: [])
             }
             eraLabel = decade
-            isSearchFieldFocused = true
+            // Pre-select the decade chip so the user can drill down
+            let tree = FilterNode.decadeCascadeTree()
+            if let node = tree.first(where: { $0.id == decade }) {
+                filterPath = FilterPath(nodes: [node])
+            }
         } catch {
             // silently fail
         }
@@ -335,6 +350,13 @@ struct SearchScreen: View {
         VStack(spacing: 0) {
             if !displayResults.isEmpty || eraOverride != nil {
                 resultsHeader
+                if eraOverride != nil || !searchService.results.isEmpty {
+                    HierarchicalFilterChips(
+                        filterTree: FilterNode.decadeCascadeTree(),
+                        selectedPath: $filterPath
+                    )
+                    .padding(.vertical, 4)
+                }
                 Divider()
             }
 
@@ -361,6 +383,7 @@ struct SearchScreen: View {
     private func clearEra() {
         eraOverride = nil
         eraLabel = nil
+        filterPath = FilterPath()
     }
 
     /// Activates search UI and immediately runs search (skips debounce)
@@ -383,6 +406,11 @@ struct SearchScreen: View {
 
             if let eraLabel {
                 Text("\(displayResults.count) \(eraLabel) shows")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            } else if filterPath.isNotEmpty {
+                let total = searchService.results.count
+                Text("\(displayResults.count) of \(total) results")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             } else {
@@ -417,6 +445,25 @@ struct SearchScreen: View {
     }
 
     // MARK: - Sorting
+
+    private func yearRange(for path: FilterPath) -> ClosedRange<Int>? {
+        guard let deepest = path.nodes.last else { return nil }
+
+        // Specific year
+        if let year = Int(deepest.id) { return year...year }
+
+        switch deepest.id {
+        case "early_70s": return 1970...1974
+        case "late_70s":  return 1975...1979
+        case "early_80s": return 1980...1984
+        case "late_80s":  return 1985...1989
+        case "60s":       return 1965...1969
+        case "70s":       return 1970...1979
+        case "80s":       return 1980...1989
+        case "90s":       return 1990...1995
+        default:          return nil
+        }
+    }
 
     private func sortResults(_ results: [SearchResultShow]) -> [SearchResultShow] {
         results.sorted { a, b in
