@@ -34,6 +34,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.ShowArtwork
+import com.grateful.deadly.core.design.component.FilterNode
 import com.grateful.deadly.core.design.component.FilterPath
 import com.grateful.deadly.core.design.component.FilterTrees
 import com.grateful.deadly.core.design.component.HierarchicalFilter
@@ -76,8 +77,14 @@ fun SearchResultsScreen(
     val decadeTree = remember { FilterTrees.buildDecadeCascadeTree() }
 
     // Reset filter when search results change (new query)
+    // If the query is a decade pattern (e.g. "197*"), auto-select that decade chip
     LaunchedEffect(uiState.searchResults) {
-        filterPath = FilterPath()
+        val decadeNode = decadeNodeForQuery(uiState.searchQuery, decadeTree)
+        filterPath = if (decadeNode != null) {
+            FilterPath(listOf(decadeNode))
+        } else {
+            FilterPath()
+        }
     }
 
     // Apply filtering then sorting to results
@@ -747,6 +754,16 @@ private fun SearchSortBottomSheet(
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
+}
+
+/**
+ * Detect decade browse patterns like "196*" and return the matching FilterNode.
+ */
+private fun decadeNodeForQuery(query: String, tree: List<FilterNode>): FilterNode? {
+    val match = Regex("""^19(\d)\*$""").find(query.trim()) ?: return null
+    val decadeDigit = match.groupValues[1]
+    val decadeId = "${decadeDigit}0s"
+    return tree.firstOrNull { it.id == decadeId }
 }
 
 /**
