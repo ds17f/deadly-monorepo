@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.16.0] - 2026-03-08
+
+### New Features
+* add "See Reviews" to search result long-press menu (b9ac4e7)
+* add long-press to toggle favorites on search results (a131165)
+* reverse toggle to "Include shows without recordings" (c39559f)
+
+### Bug Fixes
+* dismiss keyboard before showing favorites bottom sheet (2186260)
+* prevent review sheet from floating off bottom edge (9552aba)
+* use unencoded slash in GitHub release URLs (8f74215)
+
+
 ## [2.15.0] - 2026-03-08
 
 ### New Features
@@ -17,8 +30,6 @@
 
 ### Code Refactoring
 * flatten sort options UI into two-section layout (cd868ae)
-
-
 ## [2.14.0] - 2026-03-07
 
 ### New Features
