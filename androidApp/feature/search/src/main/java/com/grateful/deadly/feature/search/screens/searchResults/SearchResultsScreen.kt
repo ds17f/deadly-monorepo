@@ -68,9 +68,9 @@ fun SearchResultsScreen(
     val context = LocalContext.current
     val keyboardController = LocalSoftwareKeyboardController.current
 
-    // Era browse detection — "era:70s" from decade buttons
+    // Era browse detection — "era_70s" from decade buttons
     val eraMatch = remember(initialQuery) {
-        Regex("""^era:(\d0s)$""").find(initialQuery)
+        Regex("""^era_(\d0s)$""").find(initialQuery)
     }
     val initialEraLabel = remember(eraMatch) { eraMatch?.groupValues?.get(1) }
     var isEraBrowse by remember { mutableStateOf(initialEraLabel != null) }
@@ -193,12 +193,10 @@ fun SearchResultsScreen(
             ) {
                 Text(
                     text = when {
-                        isEraBrowse && filterPath.nodes.size <= 1 ->
-                            "${uiState.searchStats.totalResults} ${eraLabel} shows"
                         filterPath.isNotEmpty ->
-                            "Search Results (${sortedResults.size} of ${uiState.searchStats.totalResults})"
+                            "${sortedResults.size} of ${uiState.searchStats.totalResults} shows"
                         else ->
-                            "Search Results (${uiState.searchStats.totalResults})"
+                            "${uiState.searchStats.totalResults} shows"
                     },
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
