@@ -64,7 +64,10 @@ struct SearchScreen: View {
             filterPath = FilterPath()
         }
         .onChange(of: isSearchFieldFocused) { _, isFocused in
-            if !isFocused && searchText.isEmpty {
+            if isFocused && searchText.isEmpty && eraOverride == nil {
+                // Show all shows by default when focusing with no query
+                loadAllEras()
+            } else if !isFocused && searchText.isEmpty && eraOverride == nil {
                 searchTask?.cancel()
                 searchService.clearResults()
                 eraOverride = nil
@@ -78,6 +81,10 @@ struct SearchScreen: View {
             filterPath = FilterPath()
             if newValue.isEmpty {
                 searchService.clearResults()
+                if isSearchFieldFocused {
+                    // Cleared search text while focused — show all shows again
+                    loadAllEras()
+                }
                 return
             }
             searchTask?.cancel()
@@ -106,6 +113,14 @@ struct SearchScreen: View {
                     .textInputAutocapitalization(.never)
                     .submitLabel(.search)
                     .focused($isSearchFieldFocused)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") {
+                                isSearchFieldFocused = false
+                            }
+                        }
+                    }
                     .onSubmit {
                         searchTask?.cancel()
                         eraOverride = nil
@@ -341,6 +356,7 @@ struct SearchScreen: View {
 
     private var resultsView: some View {
         VStack(spacing: 0) {
+            // Fixed header — always visible, never scrolls
             if !displayResults.isEmpty || eraOverride != nil {
                 resultsHeader
                 if eraOverride != nil || !searchService.results.isEmpty {
@@ -348,11 +364,12 @@ struct SearchScreen: View {
                         filterTree: FilterNode.decadeCascadeTree(),
                         selectedPath: $filterPath
                     )
-                    .padding(.vertical, 4)
+                    .padding(.bottom, 8)
                 }
                 Divider()
             }
 
+            // Scrollable content
             if searchService.isLoading {
                 ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -365,10 +382,19 @@ struct SearchScreen: View {
                     description: Text("Find shows by date, venue, city, or song.")
                 )
             } else {
-                List(displayResults) { result in
-                    SearchResultRow(result: result)
+                ScrollView {
+                    LazyVStack(spacing: 0) {
+                        ForEach(displayResults) { result in
+                            SearchResultRow(result: result)
+                                .padding(.horizontal, DeadlySpacing.screenPadding)
+                                .padding(.vertical, 6)
+                            Divider()
+                                .padding(.leading, DeadlySpacing.screenPadding)
+                        }
+                    }
                 }
-                .listStyle(.plain)
+                .scrollDismissesKeyboard(.immediately)
+                .ignoresSafeArea(.container, edges: .top)
             }
         }
     }

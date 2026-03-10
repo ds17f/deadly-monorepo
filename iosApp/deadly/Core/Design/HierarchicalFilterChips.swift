@@ -111,6 +111,8 @@ struct HierarchicalFilterChips: View {
             }
             .padding(.horizontal, DeadlySpacing.screenPadding)
         }
+        .contentMargins(.bottom, 0, for: .scrollContent)
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     // MARK: - Chip views
