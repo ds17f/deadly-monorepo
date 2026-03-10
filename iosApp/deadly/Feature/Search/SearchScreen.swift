@@ -410,17 +410,13 @@ struct SearchScreen: View {
                 }
             }
 
-            if let eraLabel {
-                Text("\(displayResults.count) \(eraLabel) shows")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-            } else if filterPath.isNotEmpty {
-                let total = searchService.results.count
-                Text("\(displayResults.count) of \(total) results")
+            if filterPath.isNotEmpty {
+                let total = (eraOverride ?? searchService.results).count
+                Text("\(displayResults.count) of \(total) shows")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             } else {
-                Text("\(displayResults.count) results")
+                Text("\(displayResults.count) shows")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

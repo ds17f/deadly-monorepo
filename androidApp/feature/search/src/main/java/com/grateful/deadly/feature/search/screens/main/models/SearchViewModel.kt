@@ -154,6 +154,9 @@ class SearchViewModel @Inject constructor(
      */
     fun loadAllShows() {
         viewModelScope.launch {
+            // Wait past the 300ms debounce window so the initial empty-query
+            // clear fires first, then we load all shows on top of it.
+            delay(350)
             searchService.loadAllShows()
         }
     }
