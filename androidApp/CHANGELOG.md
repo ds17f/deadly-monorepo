@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.17.0] - 2026-03-09
+
+### New Features
+* add graphic equalizer with presets (eaab0eb)
+
+
 ## [2.16.0] - 2026-03-08
 
 ### New Features
@@ -11,8 +17,6 @@
 * dismiss keyboard before showing favorites bottom sheet (2186260)
 * prevent review sheet from floating off bottom edge (9552aba)
 * use unencoded slash in GitHub release URLs (8f74215)
-
-
 ## [2.15.0] - 2026-03-08
 
 ### New Features
