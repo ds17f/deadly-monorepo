@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.19.0] - 2026-03-09
+
+### New Features
+* add graphic equalizer with presets (9427c0c)
+
+
 ## [2.18.0] - 2026-03-08
 
 ### New Features
@@ -18,8 +24,6 @@
 
 ### CI Changes
 * update GitHub Actions runners from macos-15 to macos-26 (b4059aa)
-
-
 ## [2.17.0] - 2026-03-08
 
 ### New Features
