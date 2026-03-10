@@ -123,14 +123,16 @@ fun SearchResultsScreen(
     val reviewsState by viewModel.reviewsState.collectAsState()
 
     // Pre-fill search when navigating from browse buttons
+    // Empty query = show all shows by default (same as "All" chip)
     LaunchedEffect(initialQuery) {
-        if (initialQuery.isNotEmpty()) {
-            if (initialEraLabel != null) {
-                // Load all shows — chips handle the decade filtering
-                viewModel.loadAllShows()
-            } else {
-                viewModel.onSearchQueryChanged(initialQuery)
-            }
+        if (initialEraLabel != null) {
+            // Era browse — load all shows, chips handle decade filtering
+            viewModel.loadAllShows()
+        } else if (initialQuery.isNotEmpty()) {
+            viewModel.onSearchQueryChanged(initialQuery)
+        } else {
+            // No query — show all shows by default
+            viewModel.loadAllShows()
         }
     }
 
