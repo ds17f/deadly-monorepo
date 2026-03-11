@@ -18,6 +18,8 @@
         android:maxSdkVersion="32" />
     <!-- For Android 13+ (API 33+) -->
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <!-- Audio visualizer requires capture access -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:name=".DeadlyApplication"

@@ -36,6 +36,8 @@ class AppPreferences @Inject constructor(
         private const val KEY_EQ_ENABLED = "eq_enabled"
         private const val KEY_EQ_PRESET = "eq_preset"
         private const val KEY_EQ_BAND_LEVELS = "eq_band_levels"
+        // Visualizer
+        private const val KEY_VISUALIZER_ENABLED = "visualizer_enabled"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -110,6 +112,19 @@ class AppPreferences @Inject constructor(
     fun setEqBandLevels(value: String?) {
         prefs.edit().putString(KEY_EQ_BAND_LEVELS, value).apply()
         _eqBandLevels.value = value
+    }
+
+    // ── Visualizer ────────────────────────────────────────────────────────
+
+    private val _visualizerEnabled = MutableStateFlow(
+        prefs.getBoolean(KEY_VISUALIZER_ENABLED, false)
+    )
+
+    val visualizerEnabled: StateFlow<Boolean> = _visualizerEnabled.asStateFlow()
+
+    fun setVisualizerEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_VISUALIZER_ENABLED, value).apply()
+        _visualizerEnabled.value = value
     }
 
 }

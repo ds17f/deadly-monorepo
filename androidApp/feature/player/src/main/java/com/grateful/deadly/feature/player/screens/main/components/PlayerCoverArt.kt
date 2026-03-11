@@ -17,6 +17,8 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 fun PlayerCoverArt(
     recordingId: String?,
     imageUrl: String? = null,
+    visualizerEnabled: Boolean = false,
+    fftMagnitudes: FloatArray = FloatArray(0),
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -32,12 +34,20 @@ fun PlayerCoverArt(
                 containerColor = MaterialTheme.colorScheme.primaryContainer
             )
         ) {
-            ShowArtwork(
-                recordingId = recordingId,
-                imageUrl = imageUrl,
-                contentDescription = "Album Art",
-                modifier = Modifier.fillMaxSize()
-            )
+            Box {
+                ShowArtwork(
+                    recordingId = recordingId,
+                    imageUrl = imageUrl,
+                    contentDescription = "Album Art",
+                    modifier = Modifier.fillMaxSize()
+                )
+                if (visualizerEnabled && fftMagnitudes.isNotEmpty()) {
+                    PlayerVisualizer(
+                        fftMagnitudes = fftMagnitudes,
+                        modifier = Modifier.fillMaxSize()
+                    )
+                }
+            }
         }
     }
 }

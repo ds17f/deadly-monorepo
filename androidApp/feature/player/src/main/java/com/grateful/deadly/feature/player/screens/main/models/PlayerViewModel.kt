@@ -9,6 +9,8 @@ import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
+import com.grateful.deadly.core.media.visualizer.VisualizerRepository
+import com.grateful.deadly.core.media.visualizer.VisualizerState
 import com.grateful.deadly.core.model.CurrentTrackInfo
 import com.grateful.deadly.core.model.LineupMember
 import com.grateful.deadly.core.model.PlaybackStatus
@@ -25,7 +27,8 @@ class PlayerViewModel @Inject constructor(
     private val panelContentService: PanelContentService,
     private val favoritesService: FavoritesService,
     private val reviewService: ReviewService,
-    private val equalizerRepository: EqualizerRepository
+    private val equalizerRepository: EqualizerRepository,
+    private val visualizerRepository: VisualizerRepository
 ) : ViewModel() {
 
     companion object {
@@ -339,6 +342,14 @@ class PlayerViewModel @Inject constructor(
 
     fun resetEqualizer() {
         equalizerRepository.resetToFlat()
+    }
+
+    // ── Visualizer ───────────────────────────────────────────────────────
+
+    val visualizerState: StateFlow<VisualizerState> = visualizerRepository.state
+
+    fun setVisualizerEnabled(enabled: Boolean) {
+        visualizerRepository.setEnabled(enabled)
     }
 }
 

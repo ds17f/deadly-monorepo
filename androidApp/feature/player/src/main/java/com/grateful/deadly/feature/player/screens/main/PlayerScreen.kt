@@ -1,7 +1,10 @@
 package com.grateful.deadly.feature.player.screens.main
 
+import android.Manifest
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -28,6 +31,7 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerConnectS
 import com.grateful.deadly.feature.player.screens.main.components.PlayerQueueSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerEqualizerSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
+import com.grateful.deadly.feature.player.screens.main.components.PlayerVisualizer
 import com.grateful.deadly.feature.player.screens.main.components.RepeatMode
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
@@ -117,6 +121,7 @@ fun PlayerScreen(
     val panelState by viewModel.panelState.collectAsState()
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
+    val visualizerState by viewModel.visualizerState.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -130,6 +135,17 @@ fun PlayerScreen(
     var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
+
+    // Runtime permission for audio visualizer (RECORD_AUDIO is a dangerous permission)
+    val recordAudioPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) {
+            viewModel.setVisualizerEnabled(true)
+        } else {
+            Toast.makeText(context, "Microphone permission is required for the visualizer", Toast.LENGTH_SHORT).show()
+        }
+    }
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
     val showMiniPlayer by remember {
@@ -174,6 +190,8 @@ fun PlayerScreen(
                         PlayerCoverArt(
                             recordingId = uiState.trackDisplayInfo.recordingId,
                             imageUrl = uiState.trackDisplayInfo.coverImageUrl,
+                            visualizerEnabled = visualizerState.enabled,
+                            fftMagnitudes = visualizerState.fftMagnitudes,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .height(450.dp)
@@ -222,8 +240,16 @@ fun PlayerScreen(
             item {
                 PlayerSecondaryControls(
                     isFavorite = isCurrentTrackFavorite,
+                    isVisualizerEnabled = visualizerState.enabled,
                     onConnectClick = { showConnectBottomSheet = true },
                     onEqualizerClick = { showEqualizerBottomSheet = true },
+                    onVisualizerClick = {
+                        if (visualizerState.enabled) {
+                            viewModel.setVisualizerEnabled(false)
+                        } else {
+                            recordAudioPermissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
+                        }
+                    },
                     onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
                     onShareClick = { showQrCode = true },
                     onQueueClick = { showQueueBottomSheet = true },

@@ -14,8 +14,10 @@ import com.grateful.deadly.core.design.resources.IconResources
 @Composable
 fun PlayerSecondaryControls(
     isFavorite: Boolean,
+    isVisualizerEnabled: Boolean,
     onConnectClick: () -> Unit,
     onEqualizerClick: () -> Unit,
+    onVisualizerClick: () -> Unit,
     onFavoriteClick: () -> Unit,
     onShareClick: () -> Unit,
     onQueueClick: () -> Unit,
@@ -49,6 +51,18 @@ fun PlayerSecondaryControls(
                     painter = IconResources.PlayerControls.Equalizer(),
                     contentDescription = "Equalizer",
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
+            // Visualizer
+            IconButton(
+                onClick = onVisualizerClick,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    painter = IconResources.PlayerControls.Visualizer(),
+                    contentDescription = if (isVisualizerEnabled) "Visualizer (on)" else "Visualizer",
+                    tint = if (isVisualizerEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }
