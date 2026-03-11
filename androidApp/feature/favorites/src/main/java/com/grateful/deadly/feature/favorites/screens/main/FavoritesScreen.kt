@@ -80,14 +80,14 @@ fun FavoritesScreen(
                 onSelectionChanged = { filterPath = it },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
+                    .padding(horizontal = 8.dp, vertical = 8.dp)
             )
 
             // Tab Picker
             SingleChoiceSegmentedButtonRow(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                    .padding(horizontal = 8.dp, vertical = 4.dp)
             ) {
                 FavoritesTab.entries.forEachIndexed { index, tab ->
                     SegmentedButton(
@@ -128,7 +128,7 @@ fun FavoritesScreen(
                     onSortSelectorClick = { showSortBottomSheet = true },
                     onDisplayModeChanged = { viewModel.setDisplayMode(it) },
                     count = showsCount,
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
                 )
             } else {
                 SongSortControls(
@@ -136,7 +136,7 @@ fun FavoritesScreen(
                     sortDirection = sortDirection,
                     onSortSelectorClick = { showSongSortBottomSheet = true },
                     count = songsCount,
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
                 )
             }
 

@@ -186,10 +186,22 @@ fun SearchResultsScreen(
         ) {
             var showSortSheet by remember { mutableStateOf(false) }
 
+            HierarchicalFilter(
+                filterTree = decadeTree,
+                selectedPath = filterPath,
+                onSelectionChanged = { newPath ->
+                    filterPath = newPath
+                    if (isEraBrowse && newPath.isEmpty) {
+                        isEraBrowse = false
+                    }
+                },
+                modifier = Modifier.padding(start = 8.dp, end = 8.dp, top = 10.dp, bottom = 0.dp)
+            )
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                    .padding(start = 8.dp, end = 8.dp, top = 0.dp, bottom = 0.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -222,18 +234,6 @@ fun SearchResultsScreen(
                     onDismiss = { showSortSheet = false }
                 )
             }
-
-            HierarchicalFilter(
-                filterTree = decadeTree,
-                selectedPath = filterPath,
-                onSelectionChanged = { newPath ->
-                    filterPath = newPath
-                    if (isEraBrowse && newPath.isEmpty) {
-                        isEraBrowse = false
-                    }
-                },
-                modifier = Modifier.padding(horizontal = 16.dp)
-            )
         }
 
         // Search content that scrolls underneath the fixed header

@@ -94,7 +94,7 @@ fun CollectionsScreen(
         LazyColumn(
             state = listState,
             modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(16.dp),
+            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             // Hierarchical Filter for collections - at the very top
@@ -172,7 +172,7 @@ fun CollectionsScreen(
                     Text(
                         text = headerText,
                         style = MaterialTheme.typography.headlineSmall,
-                        modifier = Modifier.padding(bottom = 8.dp)
+                        modifier = Modifier.padding(start = 8.dp, bottom = 8.dp)
                     )
                 }
                 
@@ -213,14 +213,15 @@ fun CollectionsScreen(
                         Text(
                             text = "Shows (${collection.shows.size})",
                             style = MaterialTheme.typography.headlineSmall,
-                            modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
+                            modifier = Modifier.padding(start = 8.dp, top = 16.dp, bottom = 8.dp)
                         )
                     }
                     
                     items(collection.shows) { show ->
                         CollectionShowCard(
                             show = show,
-                            onClick = { onNavigateToShow(show.id) }
+                            onClick = { onNavigateToShow(show.id) },
+                            modifier = Modifier.padding(horizontal = 8.dp)
                         )
                     }
                 } else {
@@ -228,7 +229,7 @@ fun CollectionsScreen(
                         Card(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(top = 16.dp)
+                                .padding(start = 8.dp, end = 8.dp, top = 16.dp)
                         ) {
                             Column(
                                 modifier = Modifier
