@@ -358,7 +358,6 @@ struct SearchScreen: View {
         VStack(spacing: 0) {
             // Fixed header — always visible, never scrolls
             if !displayResults.isEmpty || eraOverride != nil {
-                resultsHeader
                 if eraOverride != nil || !searchService.results.isEmpty {
                     HierarchicalFilterChips(
                         filterTree: FilterNode.decadeCascadeTree(),
@@ -366,6 +365,7 @@ struct SearchScreen: View {
                     )
                     .padding(.bottom, 8)
                 }
+                resultsHeader
                 Divider()
             }
 
