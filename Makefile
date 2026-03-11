@@ -6,6 +6,9 @@
 .PHONY: android-promote-alpha android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
 .PHONY: ios-remote-unlock ios-remote-sync ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
+.PHONY: android-remote-sync android-remote-build android-remote-install
+.PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
+.PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
 
 # Default target shows all available commands
@@ -24,6 +27,7 @@ help:
 	@echo "  ios-release-dry-run      - Preview iOS release without making changes"
 	@echo ""
 	@echo "  android-install          - Build debug + install to connected Android device (USB)"
+	@echo "  android-auto-dhu         - Launch Android Auto Desktop Head Unit"
 	@echo ""
 	@echo "ANDROID PROMOTIONS:"
 	@echo "  android-promote-alpha      - Promote internal build to closed alpha (triggers workflow)"
@@ -50,6 +54,16 @@ help:
 	@echo "  ios-test             - Run tests on simulator"
 	@echo "  ios-resolve          - Resolve SPM package dependencies"
 	@echo "  ios-log              - Stream app logs from simulator via os_log"
+	@echo ""
+	@echo "ANDROID REMOTE BUILD (Linux → Mac):"
+	@echo "  android-remote-sync        - Rsync working tree to Mac"
+	@echo "  android-remote-build       - Sync + build debug APK on Mac"
+	@echo "  android-remote-install     - Sync + build + install to connected Android device"
+	@echo "  android-remote-emulator    - Start Android emulator on Mac"
+	@echo "  android-remote-emu-list    - List available AVDs on Mac"
+	@echo "  android-remote-emu-stop    - Stop all running emulators on Mac"
+	@echo "  android-remote-run-emulator - Start emulator + build + install + launch on Mac"
+	@echo "  android-remote-auto-dhu   - Launch Android Auto DHU on Mac"
 	@echo ""
 	@echo "IOS REMOTE BUILD (Linux → Mac):"
 	@echo "  ios-remote-unlock    - Unlock Mac keychain for SSH code signing (once per reboot)"
@@ -149,6 +163,11 @@ setup-github-secrets:
 android-install:
 	cd androidApp && ./gradlew installDebug
 
+# Launch Android Auto Desktop Head Unit (requires emulator/device with head unit server running)
+android-auto-dhu:
+	adb forward tcp:5277 tcp:5277
+	$(ANDROID_HOME)/extras/google/auto/desktop-head-unit
+
 android-promote-alpha:
 	gh workflow run android-promote.yml -f stage=alpha \
 		-f version=$(shell grep VERSION_NAME androidApp/version.properties | cut -d= -f2)
@@ -185,9 +204,10 @@ ios-deploy-testflight:
 # IOS REMOTE BUILD (Linux → Mac)
 # =============================================================================
 
-REMOTE_HOST ?= dsilbergleithcu@worklaptop.local
-REMOTE_PATH ?= ~/Developer/ai/deadly-monorepo
-REMOTE_IOS  ?= $(REMOTE_PATH)/iosApp
+REMOTE_HOST    ?= dsilbergleithcu@worklaptop.local
+REMOTE_PATH    ?= ~/Developer/ai/deadly-monorepo
+REMOTE_IOS     ?= $(REMOTE_PATH)/iosApp
+REMOTE_ANDROID ?= $(REMOTE_PATH)/androidApp
 
 # Sync working tree to Mac (rsync, excludes build artifacts)
 ios-remote-sync:
@@ -244,6 +264,63 @@ ios-remote-resolve:
 	@$(MAKE) ios-remote-sync
 	@echo "Resolving packages on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -resolvePackageDependencies -project deadly.xcodeproj 2>&1 | tail -20"
+
+# =============================================================================
+# ANDROID REMOTE BUILD (Linux → Mac)
+# =============================================================================
+
+android-remote-sync:
+	@echo "Syncing to $(REMOTE_HOST):$(REMOTE_PATH)..."
+	@rsync -avz --delete \
+		--exclude='.git' \
+		--exclude='.claude' \
+		--exclude='PLANS' \
+		--exclude='androidApp/app/build' \
+		--exclude='androidApp/**/build' \
+		--exclude='androidApp/.gradle' \
+		--exclude='iosApp/build' \
+		--exclude='iosApp/**/build' \
+		--exclude='iosApp/**/.build' \
+		--exclude='node_modules' \
+		--exclude='.secrets' \
+		./ $(REMOTE_HOST):$(REMOTE_PATH)/
+
+android-remote-build:
+	@$(MAKE) android-remote-sync
+	@echo "Building on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew assembleDebug 2>&1 | tail -20"
+
+android-remote-install:
+	@$(MAKE) android-remote-sync
+	@echo "Building + installing on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew installDebug 2>&1 | tail -20"
+
+android-remote-emulator:
+	@echo "Starting emulator on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "cd $(REMOTE_ANDROID) && make emu-start"
+
+android-remote-emu-list:
+	@ssh $(REMOTE_HOST) "cd $(REMOTE_ANDROID) && make emu-list"
+
+android-remote-emu-stop:
+	@echo "Stopping emulators on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "cd $(REMOTE_ANDROID) && make emu-stop"
+
+android-remote-run-emulator:
+	@$(MAKE) android-remote-sync
+	@echo "Starting emulator workflow on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && export PATH=\$$PATH:\$$ANDROID_HOME/platform-tools:\$$ANDROID_HOME/emulator && cd $(REMOTE_ANDROID) && \
+		if adb devices 2>/dev/null | grep -q 'emulator.*device\$$'; then \
+			echo 'Reusing running emulator...'; \
+			./gradlew installDebug && adb shell am start -n com.grateful.deadly.debug/com.grateful.deadly.MainActivity; \
+		else \
+			make run-emulator; \
+		fi"
+
+# Launch Android Auto DHU on Mac (forwards port from device and starts DHU)
+android-remote-auto-dhu:
+	@echo "Launching Android Auto DHU on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && export PATH=\$$PATH:\$$ANDROID_HOME/platform-tools && adb forward tcp:5277 tcp:5277 && \$$ANDROID_HOME/extras/google/auto/desktop-head-unit"
 
 # =============================================================================
 # IOS LOCAL BUILD (macOS)

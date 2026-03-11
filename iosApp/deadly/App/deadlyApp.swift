@@ -1,14 +1,18 @@
+import Intents
 import SwiftUI
 import UIKit
 
-/// App Delegate to handle background URL session events.
+/// App Delegate to handle background URL session events, CarPlay scene routing, and Siri intents.
 class DeadlyAppDelegate: NSObject, UIApplicationDelegate {
-    var container: AppContainer?
+    static private(set) var shared: DeadlyAppDelegate!
+    lazy var container = AppContainer()
 
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
+        DeadlyAppDelegate.shared = self
+
         // Force opaque nav bar so scroll content doesn't show through
         let navAppearance = UINavigationBarAppearance()
         navAppearance.configureWithOpaqueBackground()
@@ -26,6 +30,20 @@ class DeadlyAppDelegate: NSObject, UIApplicationDelegate {
 
     func application(
         _ application: UIApplication,
+        configurationForConnecting connectingSceneSession: UISceneSession,
+        options: UIScene.ConnectionOptions
+    ) -> UISceneConfiguration {
+        if connectingSceneSession.role == .carTemplateApplication {
+            let config = UISceneConfiguration(name: "CarPlay", sessionRole: .carTemplateApplication)
+            config.delegateClass = CarPlaySceneDelegate.self
+            return config
+        }
+        let config = UISceneConfiguration(name: "Default", sessionRole: connectingSceneSession.role)
+        return config
+    }
+
+    func application(
+        _ application: UIApplication,
         handleEventsForBackgroundURLSession identifier: String,
         completionHandler: @escaping () -> Void
     ) {
@@ -33,16 +51,24 @@ class DeadlyAppDelegate: NSObject, UIApplicationDelegate {
             completionHandler()
             return
         }
-        container?.downloadService.handleBackgroundSessionCompletion(completionHandler)
+        container.downloadService.handleBackgroundSessionCompletion(completionHandler)
+    }
+
+    func application(_ application: UIApplication, handlerFor intent: INIntent) -> Any? {
+        if intent is INPlayMediaIntent {
+            return DeadlyMediaIntentHandler(container: container)
+        }
+        return nil
     }
 }
 
 @main
 struct deadlyApp: App {
     @UIApplicationDelegateAdaptor(DeadlyAppDelegate.self) private var appDelegate
-    @State private var container = AppContainer()
     @State private var showingImport = false
     @Environment(\.scenePhase) private var scenePhase
+
+    private var container: AppContainer { appDelegate.container }
 
     var body: some Scene {
         WindowGroup {
@@ -59,9 +85,6 @@ struct deadlyApp: App {
                         .environment(\.appContainer, container)
                 }
                 .task {
-                    // Wire app delegate to container for background session handling
-                    appDelegate.container = container
-
                     // Show the import screen if the DB has no data yet.
                     let hasData = ((try? container.database.read { db in
                         try Int.fetchOne(db, sql: "SELECT COUNT(*) FROM data_version") ?? 0

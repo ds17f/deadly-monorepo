@@ -6,6 +6,8 @@ package com.grateful.deadly.core.media.browse
  * [ROOT]
  * ├── recent              → Recently Played
  * ├── library             → My Library
+ * │   ├── library_shows   → Favorite Shows
+ * │   └── library_songs   → Favorite Songs
  * ├── top_rated           → Top Rated Shows
  * ├── today               → Today in Dead History
  * ├── collections         → Collections list
@@ -22,15 +24,33 @@ object BrowseMediaId {
     const val RECENT_ROOT = "[RECENT_ROOT]"
     const val RECENT = "recent"
     const val LIBRARY = "library"
+    const val LIBRARY_SHOWS = "library_shows"
+    const val LIBRARY_SONGS = "library_songs"
     const val TOP_RATED = "top_rated"
     const val TODAY = "today"
     const val COLLECTIONS = "collections"
     const val YEARS = "years"
 
+    private const val FAVORITE_SONG_PREFIX = "favsong/"
+
     private const val COLLECTION_PREFIX = "collection/"
     private const val YEAR_PREFIX = "year/"
     private const val SHOW_PREFIX = "show/"
     private const val TRACK_PREFIX = "track/"
+
+    fun favoriteSong(showId: String, recordingId: String, trackNumber: Int): String =
+        "$FAVORITE_SONG_PREFIX$showId/$recordingId/$trackNumber"
+
+    fun isFavoriteSong(mediaId: String): Boolean = mediaId.startsWith(FAVORITE_SONG_PREFIX)
+
+    data class FavoriteSongId(val showId: String, val recordingId: String, val trackNumber: Int)
+
+    fun parseFavoriteSong(mediaId: String): FavoriteSongId? {
+        val parts = mediaId.removePrefix(FAVORITE_SONG_PREFIX).split("/")
+        if (parts.size != 3) return null
+        val trackNumber = parts[2].toIntOrNull() ?: return null
+        return FavoriteSongId(parts[0], parts[1], trackNumber)
+    }
 
     fun collection(id: String): String = "$COLLECTION_PREFIX$id"
     fun year(year: Int): String = "$YEAR_PREFIX$year"

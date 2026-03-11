@@ -20,6 +20,7 @@ interface ShowRepository {
     fun getAllShowsFlow(): Flow<List<Show>>
     suspend fun getShowsByYear(year: Int): List<Show>
     suspend fun getShowsByYearMonth(yearMonth: String): List<Show>
+    suspend fun getShowsByDate(date: String): List<Show>
     suspend fun getShowsByVenue(venueName: String): List<Show>
     suspend fun getShowsByCity(city: String): List<Show>
     suspend fun getShowsByState(state: String): List<Show>

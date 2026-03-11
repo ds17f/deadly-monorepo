@@ -67,6 +67,10 @@ class ShowRepositoryImpl @Inject constructor(
         return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsByYearMonth(yearMonth)))
     }
 
+    override suspend fun getShowsByDate(date: String): List<Show> {
+        return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsByDate(date)))
+    }
+
     override suspend fun getShowsByVenue(venueName: String): List<Show> {
         return filterByRecordings(showMappers.entitiesToDomain(showDao.getShowsByVenue(venueName)))
     }
