@@ -602,6 +602,37 @@ class DeadlyMediaSessionService : MediaLibraryService() {
                             )
                         }
                     }
+                    BrowseMediaId.isFavoriteSong(mediaId) -> {
+                        val favSong = BrowseMediaId.parseFavoriteSong(mediaId)
+                        if (favSong != null) {
+                            val tracks = if (favSong.recordingId.isNotBlank()) {
+                                browseTreeProvider.resolveRecordingToPlayableTracks(
+                                    favSong.showId, favSong.recordingId,
+                                    item.mediaMetadata.extras?.getString("format") ?: "VBR MP3"
+                                ).ifEmpty {
+                                    browseTreeProvider.resolveShowToPlayableTracks(favSong.showId)
+                                }
+                            } else {
+                                browseTreeProvider.resolveShowToPlayableTracks(favSong.showId)
+                            }
+                            if (tracks.isNotEmpty()) {
+                                val matchIndex = tracks.indexOfFirst { t ->
+                                    t.mediaMetadata.trackNumber == favSong.trackNumber
+                                }.coerceAtLeast(0)
+                                MediaSession.MediaItemsWithStartPosition(
+                                    tracks, matchIndex, startPositionMs
+                                )
+                            } else {
+                                MediaSession.MediaItemsWithStartPosition(
+                                    mediaItems, startIndex, startPositionMs
+                                )
+                            }
+                        } else {
+                            MediaSession.MediaItemsWithStartPosition(
+                                mediaItems, startIndex, startPositionMs
+                            )
+                        }
+                    }
                     BrowseMediaId.isTrack(mediaId) -> {
                         val trackId = BrowseMediaId.parseTrack(mediaId)
                         if (trackId != null) {

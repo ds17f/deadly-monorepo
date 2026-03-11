@@ -7,10 +7,12 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import com.grateful.deadly.core.api.collections.DeadCollectionsService
 import com.grateful.deadly.core.api.favorites.FavoritesService
+import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.DeadCollection
+import com.grateful.deadly.core.model.FavoriteTrack
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.core.model.Track
 import com.grateful.deadly.core.network.archive.service.ArchiveService
@@ -26,6 +28,7 @@ class BrowseTreeProvider @Inject constructor(
     private val recentShowsService: RecentShowsService,
     private val collectionsService: DeadCollectionsService,
     private val favoritesService: FavoritesService,
+    private val reviewService: ReviewService,
     private val searchService: SearchService,
     private val archiveService: ArchiveService
 ) {
@@ -50,7 +53,11 @@ class BrowseTreeProvider @Inject constructor(
             parentId == BrowseMediaId.RECENT -> {
                 recentShowsService.getRecentShows(20).map(::buildShowItem)
             }
-            parentId == BrowseMediaId.LIBRARY -> {
+            parentId == BrowseMediaId.LIBRARY -> listOf(
+                buildBrowsableItem(BrowseMediaId.LIBRARY_SHOWS, "Shows", "Favorite shows"),
+                buildBrowsableItem(BrowseMediaId.LIBRARY_SONGS, "Songs", "Favorite songs")
+            )
+            parentId == BrowseMediaId.LIBRARY_SHOWS -> {
                 val shows = if (favoritesService.getCurrentShows().value.isNotEmpty()) {
                     favoritesService.getCurrentShows().value
                 } else {
@@ -59,6 +66,9 @@ class BrowseTreeProvider @Inject constructor(
                     } ?: emptyList()
                 }
                 shows.map { buildShowItem(it.show) }
+            }
+            parentId == BrowseMediaId.LIBRARY_SONGS -> {
+                reviewService.getFavoriteTracks().map(::buildFavoriteSongItem)
             }
             parentId == BrowseMediaId.TOP_RATED -> {
                 showRepository.getTopRatedShows(50).map(::buildShowItem)
@@ -107,6 +117,10 @@ class BrowseTreeProvider @Inject constructor(
             buildBrowsableItem(BrowseMediaId.RECENT, "Recent", "Recently played shows")
         mediaId == BrowseMediaId.LIBRARY ->
             buildBrowsableItem(BrowseMediaId.LIBRARY, "Favorites", "Shows you've saved")
+        mediaId == BrowseMediaId.LIBRARY_SHOWS ->
+            buildBrowsableItem(BrowseMediaId.LIBRARY_SHOWS, "Shows", "Favorite shows")
+        mediaId == BrowseMediaId.LIBRARY_SONGS ->
+            buildBrowsableItem(BrowseMediaId.LIBRARY_SONGS, "Songs", "Favorite songs")
         mediaId == BrowseMediaId.TOP_RATED ->
             buildBrowsableItem(BrowseMediaId.TOP_RATED, "Top Rated", "Highest rated shows")
         mediaId == BrowseMediaId.TODAY ->
@@ -131,7 +145,15 @@ class BrowseTreeProvider @Inject constructor(
     }
 
     suspend fun search(query: String): List<MediaItem> {
-        searchService.updateSearchQuery(query)
+        // Try date parse first for voice queries like "5/8/77"
+        val dateMatch = parseDateQuery(query)
+        if (dateMatch != null) {
+            val shows = showRepository.getShowsByDate(dateMatch)
+            if (shows.isNotEmpty()) return shows.map(::buildShowItem)
+        }
+
+        // Fall through to existing FTS5 search
+        searchService.updateSearchQuery(normalizeSearchQuery(query))
         return withTimeoutOrNull(5_000L) {
             searchService.searchResults
                 .first { it.isNotEmpty() }
@@ -293,6 +315,112 @@ class BrowseTreeProvider @Inject constructor(
                     .build()
             )
             .build()
+    }
+
+    private fun buildFavoriteSongItem(track: FavoriteTrack): MediaItem {
+        val mediaId = BrowseMediaId.favoriteSong(
+            track.showId,
+            track.recordingId ?: "",
+            track.trackNumber ?: 0
+        )
+        return MediaItem.Builder()
+            .setMediaId(mediaId)
+            .setMediaMetadata(
+                MediaMetadata.Builder()
+                    .setTitle(track.trackTitle)
+                    .setArtist("${formatShowDate(track.showDate)} \u2014 ${track.venue}")
+                    .setAlbumTitle("${formatShowDate(track.showDate)} \u2014 ${track.venue}")
+                    .setIsPlayable(true)
+                    .setIsBrowsable(false)
+                    .setMediaType(MediaMetadata.MEDIA_TYPE_MUSIC)
+                    .setExtras(Bundle().apply {
+                        putString("showId", track.showId)
+                        track.recordingId?.let { putString("recordingId", it) }
+                        putString("showDate", track.showDate)
+                        putString("venue", track.venue)
+                    })
+                    .build()
+            )
+            .build()
+    }
+
+    // -- Voice search helpers ------------------------------------------------
+
+    private val venueAliases = mapOf(
+        "msg" to "Madison Square Garden",
+        "the garden" to "Madison Square Garden",
+        "the fillmore" to "Fillmore",
+        "fillmore east" to "Fillmore East",
+        "fillmore west" to "Fillmore West",
+        "red rocks" to "Red Rocks Amphitheatre",
+        "winterland" to "Winterland",
+        "barton hall" to "Barton Hall",
+    )
+
+    private fun normalizeSearchQuery(query: String): String {
+        val lower = query.trim().lowercase()
+        return venueAliases[lower] ?: query
+    }
+
+    /**
+     * Attempts to parse date formats commonly spoken via voice assistants:
+     * "5/8/77", "5-8-77", "5/8/1977", "May 8 1977", etc.
+     * Returns ISO date "YYYY-MM-DD" or null.
+     */
+    private fun parseDateQuery(query: String): String? {
+        val trimmed = query.trim()
+
+        // M/D/YY or M/D/YYYY
+        tryParseSeparatedDate(trimmed, "/")?.let { return it }
+        // M-D-YY or M-D-YYYY (only if first part is 1-2 digits, to avoid YYYY-MM-DD confusion)
+        val dashParts = trimmed.split("-")
+        if (dashParts.size == 3 && dashParts[0].length <= 2) {
+            tryParseSeparatedDate(trimmed, "-")?.let { return it }
+        }
+
+        // "Month D YYYY" or "Month D, YYYY"
+        tryParseWrittenDate(trimmed)?.let { return it }
+
+        return null
+    }
+
+    private fun tryParseSeparatedDate(input: String, separator: String): String? {
+        val parts = input.split(separator)
+        if (parts.size != 3) return null
+        val month = parts[0].toIntOrNull() ?: return null
+        val day = parts[1].toIntOrNull() ?: return null
+        val yearRaw = parts[2].toIntOrNull() ?: return null
+        val year = expandYear(yearRaw) ?: return null
+        if (month !in 1..12 || day !in 1..31) return null
+        return "%04d-%02d-%02d".format(year, month, day)
+    }
+
+    private val monthNames = mapOf(
+        "january" to 1, "february" to 2, "march" to 3, "april" to 4,
+        "may" to 5, "june" to 6, "july" to 7, "august" to 8,
+        "september" to 9, "october" to 10, "november" to 11, "december" to 12,
+        "jan" to 1, "feb" to 2, "mar" to 3, "apr" to 4,
+        "jun" to 6, "jul" to 7, "aug" to 8,
+        "sep" to 9, "oct" to 10, "nov" to 11, "dec" to 12,
+    )
+
+    private fun tryParseWrittenDate(input: String): String? {
+        val cleaned = input.replace(",", "")
+        val parts = cleaned.split(" ").filter { it.isNotBlank() }
+        if (parts.size != 3) return null
+        val month = monthNames[parts[0].lowercase()] ?: return null
+        val day = parts[1].toIntOrNull() ?: return null
+        val yearRaw = parts[2].toIntOrNull() ?: return null
+        val year = expandYear(yearRaw) ?: return null
+        if (month !in 1..12 || day !in 1..31) return null
+        return "%04d-%02d-%02d".format(year, month, day)
+    }
+
+    private fun expandYear(raw: Int): Int? = when {
+        raw in 1900..2100 -> raw
+        raw in 65..99 -> 1900 + raw
+        raw in 0..5 -> 2000 + raw
+        else -> null
     }
 
     private fun formatShowDate(dateString: String): String = try {
