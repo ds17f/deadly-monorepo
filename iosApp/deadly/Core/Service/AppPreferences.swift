@@ -9,6 +9,7 @@ final class AppPreferences {
     private static let eqEnabledKey = "eq_enabled"
     private static let eqPresetKey = "eq_preset"
     private static let eqBandGainsKey = "eq_band_gains"
+    private static let shareAttachImageKey = "share_attach_image"
 
     var includeShowsWithoutRecordings: Bool {
         didSet { UserDefaults.standard.set(includeShowsWithoutRecordings, forKey: Self.includeShowsWithoutRecordingsKey) }
@@ -30,6 +31,10 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(eqPreset, forKey: Self.eqPresetKey) }
     }
 
+    var shareAttachImage: Bool {
+        didSet { UserDefaults.standard.set(shareAttachImage, forKey: Self.shareAttachImageKey) }
+    }
+
     var eqBandGains: [Float] {
         didSet {
             let strings = eqBandGains.map { String($0) }
@@ -44,6 +49,7 @@ final class AppPreferences {
             Self.favoritesDisplayModeKey: "LIST",
             Self.eqEnabledKey: false,
             Self.eqPresetKey: "flat",
+            Self.shareAttachImageKey: false,
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
@@ -51,6 +57,7 @@ final class AppPreferences {
         favoritesDisplayMode = UserDefaults.standard.string(forKey: Self.favoritesDisplayModeKey)
             ?? UserDefaults.standard.string(forKey: Self.legacyLibraryDisplayModeKey)
             ?? "LIST"
+        shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
         eqEnabled = UserDefaults.standard.bool(forKey: Self.eqEnabledKey)
         eqPreset = UserDefaults.standard.string(forKey: Self.eqPresetKey) ?? "flat"
 

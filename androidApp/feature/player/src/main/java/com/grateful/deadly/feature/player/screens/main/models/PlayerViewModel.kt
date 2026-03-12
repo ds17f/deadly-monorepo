@@ -1,12 +1,20 @@
 package com.grateful.deadly.feature.player.screens.main.models
 
+import android.content.Context
+import android.content.Intent
+import android.graphics.Bitmap
 import android.util.Log
+import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
+import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.design.component.buildShareCard
+import com.grateful.deadly.core.design.component.loadCoverBitmapForShare
+import com.grateful.deadly.core.design.component.generateQrBitmapWithLogo
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
 import com.grateful.deadly.core.model.CurrentTrackInfo
@@ -14,9 +22,14 @@ import com.grateful.deadly.core.model.LineupMember
 import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.QueueInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.File
+import java.io.FileOutputStream
 import javax.inject.Inject
 
 @HiltViewModel
@@ -25,7 +38,9 @@ class PlayerViewModel @Inject constructor(
     private val panelContentService: PanelContentService,
     private val favoritesService: FavoritesService,
     private val reviewService: ReviewService,
-    private val equalizerRepository: EqualizerRepository
+    private val equalizerRepository: EqualizerRepository,
+    val appPreferences: AppPreferences,
+    @ApplicationContext private val appContext: Context
 ) : ViewModel() {
 
     companion object {
@@ -317,6 +332,88 @@ class PlayerViewModel @Inject constructor(
                 playerService.shareCurrentTrack()
             } catch (e: Exception) {
                 Log.e(TAG, "Error sharing track", e)
+            }
+        }
+    }
+
+    /**
+     * Share current track as a text message (optionally with image)
+     */
+    fun shareAsMessage(attachImage: Boolean) {
+        val trackInfo = playerService.currentTrackInfo.value ?: return
+        val showId = trackInfo.showId
+        val recordingId = trackInfo.recordingId
+
+        viewModelScope.launch {
+            try {
+                val url = buildString {
+                    append("https://share.thedeadly.app/show/$showId/recording/$recordingId")
+                    if (trackInfo.trackNumber != null) append("/track/${trackInfo.trackNumber}")
+                }
+
+                val message = buildString {
+                    appendLine("Grateful Dead")
+                    appendLine()
+                    appendLine(trackInfo.songTitle)
+                    appendLine()
+                    appendLine(trackInfo.showDate)
+                    if (!trackInfo.venue.isNullOrBlank()) appendLine(trackInfo.venue)
+                    if (!trackInfo.location.isNullOrBlank()) appendLine(trackInfo.location)
+                    appendLine()
+                    appendLine("Listen in The Deadly app:")
+                    append(url)
+                }
+
+                val imageBitmap: Bitmap? = if (attachImage) {
+                    try {
+                        val cover = loadCoverBitmapForShare(appContext, trackInfo.coverImageUrl, recordingId)
+                        val qr = withContext(Dispatchers.Default) {
+                            generateQrBitmapWithLogo(appContext, url, 600)
+                        }
+                        val card = withContext(Dispatchers.Default) {
+                            buildShareCard(appContext, qr, cover, trackInfo.showDate, trackInfo.venue ?: "", trackInfo.location ?: "", trackInfo.songTitle)
+                        }
+                        cover?.recycle()
+                        qr.recycle()
+                        card
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Failed to build share card", e)
+                        null
+                    }
+                } else null
+
+                if (imageBitmap != null) {
+                    val shareDir = File(appContext.cacheDir, "share_images")
+                    shareDir.mkdirs()
+                    shareDir.listFiles()?.filter { it.name.startsWith("share_") }?.forEach { it.delete() }
+                    val file = File(shareDir, "share_${System.currentTimeMillis()}.png")
+                    withContext(Dispatchers.IO) {
+                        FileOutputStream(file).use { out ->
+                            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, out)
+                        }
+                    }
+                    val uri = FileProvider.getUriForFile(appContext, "${appContext.packageName}.fileprovider", file)
+                    val intent = Intent(Intent.ACTION_SEND).apply {
+                        type = "image/png"
+                        putExtra(Intent.EXTRA_STREAM, uri)
+                        putExtra(Intent.EXTRA_TEXT, message)
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    }
+                    appContext.startActivity(Intent.createChooser(intent, "Share via").apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    })
+                } else {
+                    val intent = Intent(Intent.ACTION_SEND).apply {
+                        type = "text/plain"
+                        putExtra(Intent.EXTRA_TEXT, message)
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    }
+                    appContext.startActivity(Intent.createChooser(intent, "Share via").apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    })
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error sharing as message", e)
             }
         }
     }

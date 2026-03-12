@@ -28,6 +28,7 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerEqualize
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
 import com.grateful.deadly.feature.player.screens.main.components.RepeatMode
 import com.grateful.deadly.core.design.component.QrCodeDisplay
+import com.grateful.deadly.core.design.component.ShareChooserSheet
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
 
 /**
@@ -62,9 +63,11 @@ fun PlayerScreen(
     // Bottom sheet state
     var showTrackActionsBottomSheet by remember { mutableStateOf(false) }
     var showQrCode by remember { mutableStateOf(false) }
+    var showShareChooser by remember { mutableStateOf(false) }
     var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
+    val attachImage by viewModel.appPreferences.shareAttachImage.collectAsState()
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
     val showMiniPlayer by remember {
@@ -159,7 +162,7 @@ fun PlayerScreen(
                     onConnectClick = { showConnectBottomSheet = true },
                     onEqualizerClick = { showEqualizerBottomSheet = true },
                     onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
-                    onShareClick = { showQrCode = true },
+                    onShareClick = { showShareChooser = true },
                     onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
                 )
@@ -188,10 +191,26 @@ fun PlayerScreen(
                 venue = uiState.trackDisplayInfo.venue,
                 isFavorite = isCurrentTrackFavorite,
                 onDismiss = { showTrackActionsBottomSheet = false },
-                onShare = { showQrCode = true },
+                onShare = { showShareChooser = true },
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
                 onDownload = { viewModel.downloadCurrentShow() },
                 onFavorite = { viewModel.toggleCurrentTrackFavorite() },
+            )
+        }
+
+        if (showShareChooser) {
+            ShareChooserSheet(
+                attachImage = attachImage,
+                onAttachImageChanged = { viewModel.appPreferences.setShareAttachImage(it) },
+                onMessageShare = {
+                    showShareChooser = false
+                    viewModel.shareAsMessage(attachImage)
+                },
+                onQrShare = {
+                    showShareChooser = false
+                    showQrCode = true
+                },
+                onDismiss = { showShareChooser = false }
             )
         }
 

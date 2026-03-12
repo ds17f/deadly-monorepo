@@ -9,6 +9,8 @@ struct PlayerScreen: View {
     @State private var sliderValue: Double?
     @State private var showErrorAlert = false
     @State private var showQRShare = false
+    @State private var showShareChooser = false
+    @State private var showMessageShare = false
     @State private var showEqualizerSheet = false
     @State private var isCurrentTrackFavorite = false
     @Environment(\.appContainer) private var container
@@ -190,6 +192,43 @@ struct PlayerScreen: View {
             EqualizerSheet()
                 .presentationDetents([.medium, .large])
         }
+        .sheet(isPresented: $showShareChooser) {
+            ShareChooserSheet(
+                attachImage: Binding(
+                    get: { container.appPreferences.shareAttachImage },
+                    set: { container.appPreferences.shareAttachImage = $0 }
+                ),
+                onMessageShare: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        showMessageShare = true
+                    }
+                },
+                onQrShare: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        showQRShare = true
+                    }
+                }
+            )
+        }
+        .sheet(isPresented: $showMessageShare) {
+            if let show = container.playlistService.currentShow,
+               let recording = container.playlistService.currentRecording {
+                let url = buildShareUrl(showId: show.id, recordingId: recording.identifier, trackNumber: currentTrackNumber)
+                let text = MessageShareService.buildShareMessage(
+                    showDate: DateFormatting.formatShowDate(show.date),
+                    venue: show.venue.name,
+                    location: show.venue.displayLocation,
+                    songTitle: streamPlayer.currentTrack?.title,
+                    shareUrl: url
+                )
+                let items = MessageShareService.shareItems(
+                    text: text,
+                    image: container.appPreferences.shareAttachImage ? buildMessageImage(show: show, recording: recording) : nil,
+                    url: URL(string: url)
+                )
+                ShareActivityView(items: items)
+            }
+        }
         .sheet(isPresented: $showQRShare) {
             if let show = container.playlistService.currentShow,
                let recording = container.playlistService.currentRecording {
@@ -296,7 +335,7 @@ struct PlayerScreen: View {
 
             // Share
             Button {
-                showQRShare = true
+                showShareChooser = true
             } label: {
                 Image(systemName: "square.and.arrow.up")
                     .font(.title2)
@@ -363,4 +402,36 @@ struct PlayerScreen: View {
         let secs = Int(seconds) % 60
         return String(format: "%d:%02d", mins, secs)
     }
+
+    private func buildShareUrl(showId: String, recordingId: String?, trackNumber: String?) -> String {
+        var url = "https://share.thedeadly.app/show/\(showId)"
+        if let rid = recordingId { url += "/recording/\(rid)" }
+        if let track = trackNumber { url += "/track/\(track)" }
+        return url
+    }
+
+    private func buildMessageImage(show: Show, recording: Recording) -> UIImage? {
+        let url = buildShareUrl(showId: show.id, recordingId: recording.identifier, trackNumber: currentTrackNumber)
+        guard let qr = ShareCardGenerator.generateQRCodeWithLogo(url: url, size: 600) else { return nil }
+        return ShareCardGenerator.buildShareCard(
+            qrImage: qr,
+            coverImage: nil,
+            showDate: DateFormatting.formatShowDate(show.date),
+            venue: show.venue.name,
+            location: show.venue.displayLocation,
+            songTitle: streamPlayer.currentTrack?.title
+        )
+    }
+}
+
+// MARK: - Share Activity View
+
+struct ShareActivityView: UIViewControllerRepresentable {
+    let items: [Any]
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: items, applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }

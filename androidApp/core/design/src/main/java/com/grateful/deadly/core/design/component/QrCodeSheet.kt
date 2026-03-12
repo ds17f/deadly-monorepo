@@ -225,7 +225,7 @@ fun QrCodeDisplay(
     }
 }
 
-private fun generateQrBitmapWithLogo(context: Context, content: String, size: Int): Bitmap {
+fun generateQrBitmapWithLogo(context: Context, content: String, size: Int): Bitmap {
     val hints = mapOf(EncodeHintType.ERROR_CORRECTION to ErrorCorrectionLevel.H)
     val writer = QRCodeWriter()
     val bitMatrix = writer.encode(content, BarcodeFormat.QR_CODE, size, size, hints)
@@ -278,7 +278,7 @@ private fun generateQrBitmapWithLogo(context: Context, content: String, size: In
  * Uses archive.org thumbnail as fallback when no explicit URL is available.
  * Returns null on any failure.
  */
-private suspend fun loadCoverBitmapForShare(
+suspend fun loadCoverBitmapForShare(
     context: Context,
     imageUrl: String?,
     recordingId: String?
@@ -330,7 +330,7 @@ private suspend fun loadCoverBitmapForShare(
  * Waveform spectrograms from archive.org (height ≤50 or aspect > 3:1) are
  * treated as "no artwork" and fall back to the app logo (same as ShowArtwork).
  */
-private fun buildShareCard(
+fun buildShareCard(
     context: Context,
     qrBitmap: Bitmap,
     coverBitmap: Bitmap?,
@@ -460,7 +460,7 @@ private fun truncateText(text: String, paint: Paint, maxWidth: Float): String {
     return text.substring(0, end) + "…"
 }
 
-private fun shareQrBitmap(context: Context, bitmap: Bitmap, url: String) {
+internal fun shareQrBitmap(context: Context, bitmap: Bitmap, url: String) {
     val qrDir = File(context.cacheDir, "qr")
     qrDir.mkdirs()
     qrDir.listFiles()?.filter { it.name.startsWith("share_qr") }?.forEach { it.delete() }
