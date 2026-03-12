@@ -11,8 +11,6 @@ import androidx.compose.runtime.*
 import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -31,69 +29,6 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlay
 import com.grateful.deadly.feature.player.screens.main.components.RepeatMode
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
-
-/**
- * UI Color Generation Utilities for Recording-Based Gradients
- *
- * These utilities generate consistent visual identities per recording
- * by hashing recordingId to select from the Grateful Dead color palette.
- */
-
-// Grateful Dead inspired color palette for gradients (from Theme.kt)
-private val DeadRed = Color(0xFFDC143C)      // Crimson red
-private val DeadGold = Color(0xFFFFD700)     // Golden yellow
-private val DeadGreen = Color(0xFF228B22)    // Forest green
-private val DeadBlue = Color(0xFF4169E1)     // Royal blue
-private val DeadPurple = Color(0xFF8A2BE2)   // Blue violet
-
-private val GradientColors = listOf(DeadGreen, DeadGold, DeadRed, DeadBlue, DeadPurple)
-
-/**
- * Convert recordingId to a consistent base color using hash function
- */
-private fun recordingIdToColor(recordingId: String?): Color {
-    if (recordingId.isNullOrEmpty()) return DeadRed
-
-    val hash = recordingId.hashCode()
-    val index = kotlin.math.abs(hash) % GradientColors.size
-    return GradientColors[index]
-}
-
-/**
- * Get the complete color stack for a recording
- * Returns list of solid colors that can be used by different components consistently
- * Uses color blending instead of alpha transparency for better UI visibility
- */
-@Composable
-private fun getRecordingColorStack(recordingId: String?): List<Color> {
-    val baseColor = recordingIdToColor(recordingId)
-    val background = MaterialTheme.colorScheme.background
-
-    return listOf(
-        androidx.compose.ui.graphics.lerp(background, baseColor, 0.8f),  // Index 0: Strong blend
-        androidx.compose.ui.graphics.lerp(background, baseColor, 0.4f),  // Index 1: Medium blend
-        androidx.compose.ui.graphics.lerp(background, baseColor, 0.1f),  // Index 2: Faint blend
-        background,                                                      // Index 3: Background
-        background                                                       // Index 4: Background
-    )
-}
-
-/**
- * Create a beautiful vertical gradient brush for the given recordingId
- * Uses alpha transparency to maintain readability and Material3 compatibility
- */
-@Composable
-private fun createRecordingGradient(recordingId: String?): Brush {
-    val colors = getRecordingColorStack(recordingId)
-
-    return Brush.verticalGradient(
-        0f to colors[0],      // Strong color at top
-        0.3f to colors[1],    // Medium color at 30%
-        0.6f to colors[2],    // Faint color at 60%
-        0.8f to colors[3],    // Background at 80%
-        1f to colors[4]       // Full background at bottom
-    )
-}
 
 /**
  * PlayerScreen - Clean player interface
@@ -146,12 +81,11 @@ fun PlayerScreen(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(0.dp)
         ) {
-            // Gradient section containing top navigation, cover art, track info, progress, and controls
             item {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(createRecordingGradient(recordingId))
+                        .background(MaterialTheme.colorScheme.background)
                 ) {
                     Column {
                         // Top navigation bar
@@ -314,7 +248,6 @@ fun PlayerScreen(
         if (showMiniPlayer) {
             PlayerMiniPlayer(
                 uiState = uiState,
-                recordingId = recordingId,
                 onPlayPause = viewModel::onPlayPauseClicked,
                 onTapToExpand = {
                     // Use a coroutine scope to handle the scroll
