@@ -22,6 +22,7 @@ import com.grateful.deadly.core.design.component.FilterPath
 import com.grateful.deadly.core.design.component.FilterTrees
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.design.component.QrCodeDisplay
+import com.grateful.deadly.core.design.component.ShareChooserSheet
 import com.grateful.deadly.core.design.component.ShowReviewSheet
 import com.grateful.deadly.core.model.ShowReview
 import com.grateful.deadly.feature.favorites.screens.main.components.*
@@ -67,7 +68,9 @@ fun FavoritesScreen(
     var showSongSortBottomSheet by remember { mutableStateOf(false) }
     var selectedShowForActions by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
     var qrCodeShow by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
+    var shareChooserShow by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
     var reviewShowTarget by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
+    val attachImage by viewModel.appPreferences.shareAttachImage.collectAsState()
     val reviewState by viewModel.currentReview.collectAsState()
 
     Column(
@@ -212,7 +215,7 @@ fun FavoritesScreen(
             show = show,
             onDismiss = { selectedShowForActions = null },
             onShowQrCode = {
-                qrCodeShow = show
+                shareChooserShow = show
                 selectedShowForActions = null
             },
             onReviewShow = {
@@ -254,6 +257,24 @@ fun FavoritesScreen(
                 viewModel.saveReview(show.showId, notes, rating, recQuality, playQuality, standouts)
             },
             onDismiss = { reviewShowTarget = null }
+        )
+    }
+
+    shareChooserShow?.let { show ->
+        ShareChooserSheet(
+            attachImage = attachImage,
+            onAttachImageChanged = { viewModel.appPreferences.setShareAttachImage(it) },
+            onMessageShare = {
+                val target = show
+                shareChooserShow = null
+                viewModel.shareAsMessage(target, attachImage)
+            },
+            onQrShare = {
+                val target = show
+                shareChooserShow = null
+                qrCodeShow = target
+            },
+            onDismiss = { shareChooserShow = null }
         )
     }
 

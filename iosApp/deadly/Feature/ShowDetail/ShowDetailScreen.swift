@@ -18,6 +18,8 @@ struct ShowDetailScreen: View {
 
     @State private var showMenuSheet = false
     @State private var showQRShareSheet = false
+    @State private var showShareChooser = false
+    @State private var showMessageShare = false
     @State private var showRecordingPicker = false
     @State private var showEqualizerSheet = false
     @State private var isFavorite = false
@@ -293,6 +295,47 @@ struct ShowDetailScreen: View {
             EqualizerSheet()
                 .presentationDetents([.medium, .large])
         }
+        .sheet(isPresented: $showShareChooser) {
+            ShareChooserSheet(
+                attachImage: Binding(
+                    get: { container.appPreferences.shareAttachImage },
+                    set: { container.appPreferences.shareAttachImage = $0 }
+                ),
+                onMessageShare: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        showMessageShare = true
+                    }
+                },
+                onQrShare: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        showQRShareSheet = true
+                    }
+                }
+            )
+        }
+        .sheet(isPresented: $showMessageShare) {
+            if let recording = playlistService.currentRecording {
+                let url = "https://share.thedeadly.app/show/\(currentShowId)/recording/\(recording.identifier)"
+                let text = MessageShareService.buildShareMessage(
+                    showDate: DateFormatting.formatShowDate(show.date),
+                    venue: show.venue.name,
+                    location: show.venue.displayLocation,
+                    shareUrl: url
+                )
+                let image: UIImage? = container.appPreferences.shareAttachImage ? {
+                    guard let qr = ShareCardGenerator.generateQRCodeWithLogo(url: url, size: 600) else { return nil }
+                    return ShareCardGenerator.buildShareCard(
+                        qrImage: qr,
+                        coverImage: nil,
+                        showDate: DateFormatting.formatShowDate(show.date),
+                        venue: show.venue.name,
+                        location: show.venue.displayLocation
+                    )
+                }() : nil
+                let items = MessageShareService.shareItems(text: text, image: image, url: URL(string: url))
+                ShareActivityView(items: items)
+            }
+        }
         .sheet(isPresented: $showQRShareSheet) {
             if let recording = playlistService.currentRecording {
                 QRShareSheet(
@@ -390,7 +433,7 @@ struct ShowDetailScreen: View {
                     Button {
                         showMenuSheet = false
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            showQRShareSheet = true
+                            showShareChooser = true
                         }
                     } label: {
                         Label("Share", systemImage: "square.and.arrow.up")

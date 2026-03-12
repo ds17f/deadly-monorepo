@@ -36,6 +36,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_EQ_ENABLED = "eq_enabled"
         private const val KEY_EQ_PRESET = "eq_preset"
         private const val KEY_EQ_BAND_LEVELS = "eq_band_levels"
+        private const val KEY_SHARE_ATTACH_IMAGE = "share_attach_image"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -110,6 +111,20 @@ class AppPreferences @Inject constructor(
     fun setEqBandLevels(value: String?) {
         prefs.edit().putString(KEY_EQ_BAND_LEVELS, value).apply()
         _eqBandLevels.value = value
+    }
+
+    // ── Share ─────────────────────────────────────────────────────────────
+
+    private val _shareAttachImage = MutableStateFlow(
+        prefs.getBoolean(KEY_SHARE_ATTACH_IMAGE, false)
+    )
+
+    /** When true, the "Message" share option includes a share card image. */
+    val shareAttachImage: StateFlow<Boolean> = _shareAttachImage.asStateFlow()
+
+    fun setShareAttachImage(value: Boolean) {
+        prefs.edit().putBoolean(KEY_SHARE_ATTACH_IMAGE, value).apply()
+        _shareAttachImage.value = value
     }
 
 }

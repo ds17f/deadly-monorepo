@@ -48,8 +48,10 @@ struct FavoritesScreen: View {
     @State private var activeSeasonFilter: Season?
     @State private var showFullPlayer = false
 
-    // QR Code sheet state
+    // Share sheet state
     @State private var qrCodeShow: FavoriteShow?
+    @State private var shareChooserShow: FavoriteShow?
+    @State private var messageShareShow: FavoriteShow?
 
     // Review sheet state
     @State private var reviewTargetShow: FavoriteShow?
@@ -123,6 +125,52 @@ struct FavoritesScreen: View {
                 streamPlayer: container.streamPlayer,
                 isPresented: $showFullPlayer
             )
+        }
+        .sheet(item: $shareChooserShow) { favoriteShow in
+            ShareChooserSheet(
+                attachImage: Binding(
+                    get: { container.appPreferences.shareAttachImage },
+                    set: { container.appPreferences.shareAttachImage = $0 }
+                ),
+                onMessageShare: {
+                    let target = favoriteShow
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        messageShareShow = target
+                    }
+                },
+                onQrShare: {
+                    let target = favoriteShow
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        qrCodeShow = target
+                    }
+                }
+            )
+        }
+        .sheet(item: $messageShareShow) { favoriteShow in
+            let show = favoriteShow.show
+            let url: String = {
+                var u = "https://share.thedeadly.app/show/\(show.id)"
+                if let rid = show.bestRecordingId { u += "/recording/\(rid)" }
+                return u
+            }()
+            let text = MessageShareService.buildShareMessage(
+                showDate: DateFormatting.formatShowDate(show.date),
+                venue: show.venue.name,
+                location: show.venue.displayLocation,
+                shareUrl: url
+            )
+            let image: UIImage? = container.appPreferences.shareAttachImage ? {
+                guard let qr = ShareCardGenerator.generateQRCodeWithLogo(url: url, size: 600) else { return nil }
+                return ShareCardGenerator.buildShareCard(
+                    qrImage: qr,
+                    coverImage: nil,
+                    showDate: DateFormatting.formatShowDate(show.date),
+                    venue: show.venue.name,
+                    location: show.venue.displayLocation
+                )
+            }() : nil
+            let items = MessageShareService.shareItems(text: text, image: image, url: URL(string: url))
+            ShareActivityView(items: items)
         }
         .sheet(item: $qrCodeShow) { favoriteShow in
             let show = favoriteShow.show
@@ -514,7 +562,7 @@ struct FavoritesScreen: View {
 
         // Share
         Button {
-            qrCodeShow = favoriteShow
+            shareChooserShow = favoriteShow
         } label: {
             Label("Share", systemImage: "square.and.arrow.up")
         }

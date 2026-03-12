@@ -43,6 +43,9 @@ android {
 }
 
 dependencies {
+    // AndroidX Core
+    implementation("androidx.core:core-ktx:1.12.0")
+
     // V2 dependencies
     implementation(project(":core:api:playlist"))
     implementation(project(":core:api:favorites"))
@@ -52,6 +55,7 @@ dependencies {
     implementation(project(":core:design"))
     implementation(project(":core:media"))
     implementation(project(":core:network"))
+    implementation(project(":core:database"))
 
     // Compose BOM
     implementation(platform("androidx.compose:compose-bom:2025.08.00"))

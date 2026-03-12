@@ -43,6 +43,9 @@ android {
 }
 
 dependencies {
+    // AndroidX Core
+    implementation("androidx.core:core-ktx:1.12.0")
+
     // V2 dependencies
     implementation(project(":core:api:favorites"))
     implementation(project(":core:database"))
