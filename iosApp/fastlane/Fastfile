@@ -181,7 +181,8 @@ platform :ios do
     upload_to_testflight(
       api_key: api_key,
       skip_waiting_for_build_processing: true,
-      ipa: "./build/deadly.ipa"
+      ipa: "./build/deadly.ipa",
+      changelog: (ENV['RELEASE_NOTES'] || '').strip
     )
 
     UI.success("✅ App uploaded to TestFlight!")

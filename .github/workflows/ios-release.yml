@@ -61,6 +61,21 @@ jobs:
         }
         SWIFT
 
+    - name: Extract version from tag
+      id: version
+      run: echo "version=${GITHUB_REF_NAME#ios/v}" >> "$GITHUB_OUTPUT"
+
+    - name: Extract release notes from CHANGELOG
+      run: |
+        VERSION="${{ steps.version.outputs.version }}"
+        RAW=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" iosApp/CHANGELOG.md | sed '/^[[:space:]]*$/d')
+        if [ ${#RAW} -gt 4000 ]; then
+          RAW="${RAW:0:3997}..."
+        fi
+        echo "RELEASE_NOTES<<EOF" >> "$GITHUB_ENV"
+        echo "$RAW" >> "$GITHUB_ENV"
+        echo "EOF" >> "$GITHUB_ENV"
+
     - name: Build and deploy to TestFlight with fastlane
       run: |
         cd iosApp
