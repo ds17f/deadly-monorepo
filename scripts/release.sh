@@ -342,6 +342,9 @@ if [ "$DRY_RUN" = true ]; then
   echo -e "${YELLOW}🧪 DRY RUN: Would update the following files:${NC}"
   echo "  - $VERSION_PROPS"
   echo "  - $CHANGELOG_FILE"
+  if [ "$PLATFORM" = "ios" ]; then
+    echo "  - iosApp/deadly.xcodeproj/project.pbxproj (MARKETING_VERSION + CURRENT_PROJECT_VERSION)"
+  fi
   echo -e "${YELLOW}🧪 DRY RUN: Would create tag: ${TAG}${NC}"
   echo -e "${YELLOW}🧪 DRY RUN: Would create commit with message:${NC}"
   echo "  chore: release ${PLATFORM} version $VERSION"
@@ -373,9 +376,26 @@ else
 
   echo -e "${GREEN}✅ Updated $VERSION_PROPS to version $VERSION (code: $NEW_CODE)${NC}"
 
+  # Sync Xcode project version for iOS releases
+  if [ "$PLATFORM" = "ios" ]; then
+    PBXPROJ="iosApp/deadly.xcodeproj/project.pbxproj"
+    echo "📝 Syncing Xcode project version..."
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+      sed -i '' "s/MARKETING_VERSION = [^;]*;/MARKETING_VERSION = $VERSION;/g" "$PBXPROJ"
+      sed -i '' "s/CURRENT_PROJECT_VERSION = [^;]*;/CURRENT_PROJECT_VERSION = $NEW_CODE;/g" "$PBXPROJ"
+    else
+      sed -i "s/MARKETING_VERSION = [^;]*;/MARKETING_VERSION = $VERSION;/g" "$PBXPROJ"
+      sed -i "s/CURRENT_PROJECT_VERSION = [^;]*;/CURRENT_PROJECT_VERSION = $NEW_CODE;/g" "$PBXPROJ"
+    fi
+    echo -e "${GREEN}✅ Synced $PBXPROJ${NC}"
+  fi
+
   # Commit changes with changelog details
   echo "📦 Committing version changes..."
   git add "$VERSION_PROPS" "$CHANGELOG_FILE"
+  if [ "$PLATFORM" = "ios" ]; then
+    git add "$PBXPROJ"
+  fi
 
   # Create commit message with changelog summary
   COMMIT_MESSAGE="chore: release ${PLATFORM} version $VERSION
@@ -407,7 +427,11 @@ if [ "$DRY_RUN" = true ]; then
   echo -e "${YELLOW}🧪 DRY RUN SUMMARY:${NC}"
   echo "  • Version to release: $VERSION (code: $NEW_CODE)"
   echo "  • Tag to create: ${TAG}"
-  echo "  • Files to change: $VERSION_PROPS, $CHANGELOG_FILE"
+  if [ "$PLATFORM" = "ios" ]; then
+    echo "  • Files to change: $VERSION_PROPS, $CHANGELOG_FILE, iosApp/deadly.xcodeproj/project.pbxproj"
+  else
+    echo "  • Files to change: $VERSION_PROPS, $CHANGELOG_FILE"
+  fi
   echo "  • Commit message: chore: release ${PLATFORM} version $VERSION (code: $NEW_CODE)"
   echo ""
   echo -e "${GREEN}✅ Dry run complete. No changes were made.${NC}"
