@@ -9,6 +9,7 @@ on:
         type: choice
         options:
           - alpha
+          - beta
           - production
       version:
         description: 'Version to promote (e.g. 2.1.0)'
@@ -43,6 +44,8 @@ jobs:
       run: |
         if [ "${{ inputs.stage }}" = "alpha" ]; then
           echo "display_name=Closed Alpha" >> "$GITHUB_OUTPUT"
+        elif [ "${{ inputs.stage }}" = "beta" ]; then
+          echo "display_name=Open Testing" >> "$GITHUB_OUTPUT"
         else
           echo "display_name=Production" >> "$GITHUB_OUTPUT"
         fi
@@ -63,6 +66,11 @@ jobs:
       if: inputs.stage == 'alpha'
       run: cd androidApp && bundle exec fastlane promote_internal_to_alpha
 
+    - name: Promote to open testing (beta)
+      id: promote-beta
+      if: inputs.stage == 'beta'
+      run: cd androidApp && bundle exec fastlane promote_internal_to_beta
+
     - name: Promote to production
       id: promote-prod
       if: inputs.stage == 'production'
@@ -77,7 +85,7 @@ jobs:
         ./scripts/update-release-status.sh android "${{ inputs.version }}" "${{ steps.stage.outputs.display_name }}" deployed
 
     - name: Update release status (failure)
-      if: failure() && (steps.promote.outcome == 'failure' || steps.promote-prod.outcome == 'failure')
+      if: failure() && (steps.promote.outcome == 'failure' || steps.promote-beta.outcome == 'failure' || steps.promote-prod.outcome == 'failure')
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
