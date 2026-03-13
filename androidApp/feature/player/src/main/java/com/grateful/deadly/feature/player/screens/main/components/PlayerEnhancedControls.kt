@@ -8,11 +8,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
 
-// Temporary enum for repeat mode (will be moved to proper model later)
-enum class RepeatMode {
-    NONE, ALL, ONE
-}
-
 /**
  * Enhanced primary controls with larger buttons and proper layout
  */
@@ -20,39 +15,17 @@ enum class RepeatMode {
 fun PlayerEnhancedControls(
     isPlaying: Boolean,
     isLoading: Boolean,
-    shuffleEnabled: Boolean,
-    repeatMode: RepeatMode,
     hasNext: Boolean,
     onPlayPause: () -> Unit,
     onPrevious: () -> Unit,
     onNext: () -> Unit,
-    onShuffleToggle: () -> Unit,
-    onRepeatModeChange: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
     ) {
-        // Shuffle - Far left
-        IconButton(
-            onClick = onShuffleToggle,
-            modifier = Modifier.size(40.dp)
-        ) {
-            Icon(
-                painter = IconResources.PlayerControls.Shuffle(),
-                contentDescription = "Shuffle",
-                tint = if (shuffleEnabled) {
-                    MaterialTheme.colorScheme.primary
-                } else {
-                    MaterialTheme.colorScheme.onSurfaceVariant
-                }
-            )
-        }
-        
-        // Spacer to push center controls
-        Spacer(modifier = Modifier.weight(1f))
-        
         // Previous - Larger (always enabled)
         IconButton(
             onClick = onPrevious,
@@ -65,9 +38,9 @@ fun PlayerEnhancedControls(
                 tint = MaterialTheme.colorScheme.onSurface
             )
         }
-        
+
         Spacer(modifier = Modifier.width(16.dp))
-        
+
         // Play/Pause - Large circular FAB-style button with loading state
         FloatingActionButton(
             onClick = onPlayPause,
@@ -93,9 +66,9 @@ fun PlayerEnhancedControls(
                 )
             }
         }
-        
+
         Spacer(modifier = Modifier.width(16.dp))
-        
+
         // Next - Larger
         IconButton(
             onClick = onNext,
@@ -110,27 +83,6 @@ fun PlayerEnhancedControls(
                     MaterialTheme.colorScheme.onSurface
                 } else {
                     MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
-                }
-            )
-        }
-        
-        // Spacer to push repeat to far right
-        Spacer(modifier = Modifier.weight(1f))
-        
-        // Repeat - Far right
-        IconButton(
-            onClick = onRepeatModeChange,
-            modifier = Modifier.size(40.dp)
-        ) {
-            Icon(
-                painter = when (repeatMode) {
-                    RepeatMode.ONE -> IconResources.PlayerControls.RepeatOne()
-                    else -> IconResources.PlayerControls.Repeat()
-                },
-                contentDescription = "Repeat mode",
-                tint = when (repeatMode) {
-                    RepeatMode.NONE -> MaterialTheme.colorScheme.onSurfaceVariant
-                    RepeatMode.ALL, RepeatMode.ONE -> MaterialTheme.colorScheme.primary
                 }
             )
         }

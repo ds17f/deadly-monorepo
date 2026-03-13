@@ -26,7 +26,7 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerConnectS
 import com.grateful.deadly.feature.player.screens.main.components.PlayerQueueSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerEqualizerSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
-import com.grateful.deadly.feature.player.screens.main.components.RepeatMode
+
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShareChooserSheet
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
@@ -141,14 +141,10 @@ fun PlayerScreen(
                         PlayerEnhancedControls(
                             isPlaying = uiState.isPlaying,
                             isLoading = uiState.isLoading,
-                            shuffleEnabled = false, // TODO: Make dynamic
-                            repeatMode = RepeatMode.NONE, // TODO: Make dynamic
                             hasNext = uiState.hasNext,
                             onPlayPause = viewModel::onPlayPauseClicked,
                             onPrevious = viewModel::onPreviousClicked,
                             onNext = viewModel::onNextClicked,
-                            onShuffleToggle = { Toast.makeText(context, "Shuffle is coming soon", Toast.LENGTH_SHORT).show() },
-                            onRepeatModeChange = { Toast.makeText(context, "Repeat is coming soon", Toast.LENGTH_SHORT).show() },
                             modifier = Modifier.padding(horizontal = 24.dp)
                         )
                     }
