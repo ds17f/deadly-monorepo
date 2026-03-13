@@ -24,6 +24,7 @@ import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistReco
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistCollectionsSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistSetlistBottomSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistEqualizerSheet
+import com.grateful.deadly.core.model.FavoritesAction
 import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShareChooserSheet
@@ -300,6 +301,17 @@ fun PlaylistScreen(
                 showDate = showData.displayDate,
                 venue = showData.venue,
                 location = showData.location,
+                isFavorite = showData.isFavorite,
+                onFavoritesClick = {
+                    if (showData.isFavorite) {
+                        viewModel.handleFavoritesAction(FavoritesAction.REMOVE_FROM_FAVORITES)
+                    } else {
+                        viewModel.handleFavoritesAction(FavoritesAction.ADD_TO_FAVORITES)
+                    }
+                },
+                onDownloadClick = { viewModel.downloadShow() },
+                onSetlistClick = viewModel::showSetlist,
+                onCollectionsClick = viewModel::showCollectionsSheet,
                 onShareClick = { showShareChooser = true },
                 onChooseRecordingClick = viewModel::chooseRecording,
                 onEqualizerClick = { showEqualizerSheet = true },

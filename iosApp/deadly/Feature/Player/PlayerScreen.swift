@@ -12,6 +12,7 @@ struct PlayerScreen: View {
     @State private var showShareChooser = false
     @State private var showMessageShare = false
     @State private var showEqualizerSheet = false
+    @State private var showPlayerMenuSheet = false
     @State private var isCurrentTrackFavorite = false
     @Environment(\.appContainer) private var container
 
@@ -192,6 +193,9 @@ struct PlayerScreen: View {
             EqualizerSheet()
                 .presentationDetents([.medium, .large])
         }
+        .sheet(isPresented: $showPlayerMenuSheet) {
+            playerMenuSheet
+        }
         .sheet(isPresented: $showShareChooser) {
             ShareChooserSheet(
                 attachImage: Binding(
@@ -295,10 +299,14 @@ struct PlayerScreen: View {
 
             Spacer()
 
-            // Invisible spacer to balance the chevron
-            Image(systemName: "chevron.down")
-                .font(.title2)
-                .foregroundStyle(.clear)
+            Button {
+                showPlayerMenuSheet = true
+            } label: {
+                Image(systemName: "ellipsis")
+                    .font(.title2)
+                    .foregroundStyle(.primary)
+            }
+            .buttonStyle(.plain)
         }
         .padding(.horizontal, 20)
         .padding(.top, 16)
@@ -348,6 +356,53 @@ struct PlayerScreen: View {
             Spacer()
         }
         .padding(.horizontal, 24)
+    }
+
+    private var playerMenuSheet: some View {
+        NavigationStack {
+            List {
+                Section {
+                    Button {
+                        toggleFavoriteSong()
+                        showPlayerMenuSheet = false
+                    } label: {
+                        Label(
+                            isCurrentTrackFavorite ? "Favorited" : "Favorite",
+                            systemImage: isCurrentTrackFavorite ? "heart.fill" : "heart"
+                        )
+                    }
+
+                    Button {
+                        showPlayerMenuSheet = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            showEqualizerSheet = true
+                        }
+                    } label: {
+                        Label("Equalizer", systemImage: "slider.vertical.3")
+                    }
+
+                    Button {
+                        showPlayerMenuSheet = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            showShareChooser = true
+                        }
+                    } label: {
+                        Label("Share", systemImage: "square.and.arrow.up")
+                    }
+                }
+            }
+            .tint(.primary)
+            .navigationTitle("Options")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Done") {
+                        showPlayerMenuSheet = false
+                    }
+                }
+            }
+        }
+        .presentationDetents([.medium])
     }
 
     private func toggleFavoriteSong() {

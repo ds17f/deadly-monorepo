@@ -19,6 +19,11 @@ fun PlaylistMenuSheet(
     showDate: String?,
     venue: String?,
     location: String?,
+    isFavorite: Boolean,
+    onFavoritesClick: () -> Unit,
+    onDownloadClick: () -> Unit,
+    onSetlistClick: () -> Unit,
+    onCollectionsClick: () -> Unit,
     onShareClick: () -> Unit,
     onChooseRecordingClick: () -> Unit,
     onEqualizerClick: () -> Unit,
@@ -34,6 +39,100 @@ fun PlaylistMenuSheet(
                 .fillMaxWidth()
                 .padding(16.dp)
         ) {
+            // Favorites option
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        onFavoritesClick()
+                        onDismiss()
+                    }
+                    .padding(vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = if (isFavorite) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
+                    contentDescription = if (isFavorite) "Remove from Favorites" else "Add to Favorites",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = if (isFavorite) "Remove from Favorites" else "Add to Favorites",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            // Download option
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        onDownloadClick()
+                        onDismiss()
+                    }
+                    .padding(vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = IconResources.Content.FileDownload(),
+                    contentDescription = "Download",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = "Download",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            // Setlist option
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        onSetlistClick()
+                        onDismiss()
+                    }
+                    .padding(vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = IconResources.Content.FormatListBulleted(),
+                    contentDescription = "Setlist",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = "Setlist",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            // Collections option
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        onCollectionsClick()
+                        onDismiss()
+                    }
+                    .padding(vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = IconResources.Navigation.Collections(),
+                    contentDescription = "Collections",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = "Collections",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+
             // Share option
             Row(
                 modifier = Modifier
