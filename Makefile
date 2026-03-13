@@ -3,7 +3,7 @@
 .PHONY: ios-release ios-release-version ios-release-dry-run
 .PHONY: setup-signing setup-github-secrets setup-hooks
 .PHONY: android-build-release android-build-bundle android-deploy-testing
-.PHONY: android-promote-alpha android-promote-production
+.PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
 .PHONY: ios-remote-unlock ios-remote-sync ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
 .PHONY: android-remote-sync android-remote-build android-remote-install
@@ -31,6 +31,7 @@ help:
 	@echo ""
 	@echo "ANDROID PROMOTIONS:"
 	@echo "  android-promote-alpha      - Promote internal build to closed alpha (triggers workflow)"
+	@echo "  android-promote-beta       - Promote internal build to open testing (triggers workflow)"
 	@echo "  android-promote-production - Promote alpha build to production (triggers workflow)"
 	@echo ""
 	@echo "SIGNING & SECRETS:"
@@ -170,6 +171,10 @@ android-auto-dhu:
 
 android-promote-alpha:
 	gh workflow run android-promote.yml -f stage=alpha \
+		-f version=$(shell grep VERSION_NAME androidApp/version.properties | cut -d= -f2)
+
+android-promote-beta:
+	gh workflow run android-promote.yml -f stage=beta \
 		-f version=$(shell grep VERSION_NAME androidApp/version.properties | cut -d= -f2)
 
 android-promote-production:

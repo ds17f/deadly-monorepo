@@ -231,6 +231,35 @@ platform :android do
     UI.success("✅ AAB uploaded to Play Store Internal Testing!")
   end
 
+  desc "Promote from Internal to Open Testing (Beta)"
+  lane :promote_internal_to_beta do
+    release_notes_text = (ENV['RELEASE_NOTES'] || '').strip
+    has_notes = !release_notes_text.empty?
+
+    version_codes = google_play_track_version_codes(track: 'internal')
+    vc = version_codes.max
+
+    if has_notes && vc
+      changelog_dir = "/tmp/fl_metadata/en-US/changelogs"
+      sh("mkdir -p '#{changelog_dir}'")
+      File.write("#{changelog_dir}/#{vc}.txt", release_notes_text)
+    end
+
+    upload_to_play_store(
+      track: 'internal',
+      track_promote_to: 'beta',
+      version_code: vc,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      skip_upload_changelogs: !has_notes,
+      metadata_path: has_notes ? "/tmp/fl_metadata" : nil
+    )
+
+    UI.success("✅ Promoted latest build from Internal to Open Testing (Beta)!")
+  end
+
   desc "Promote from Alpha to Production"
   lane :promote_alpha_to_production do
     release_notes_text = (ENV['RELEASE_NOTES'] || '').strip
