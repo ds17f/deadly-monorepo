@@ -53,19 +53,10 @@
       margin-bottom: 32px;
     }
     .open-btn:hover { background: #a50d26; }
-    .store-btn {
-      display: block;
-      background: transparent;
-      color: #aaa;
-      text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 500;
-      border: 1px solid #444;
-      margin-bottom: 32px;
-    }
-    .store-btn:hover { border-color: #888; color: #eee; }
+    .store-badges { margin-bottom: 12px; }
+    .store-badges a { display: inline-block; }
+    .store-badges img { height: 60px; }
+    .coming-soon { color: #666; font-size: 0.85rem; margin-bottom: 32px; }
     .privacy-note { color: #666; font-size: 0.8rem; }
     footer {
       width: 100%;
@@ -94,7 +85,12 @@
 
     <a class="open-btn" href="deadly://">Open in The Deadly App</a>
 
-    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.grateful.deadly" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+    <div class="store-badges">
+      <a href="https://play.google.com/store/apps/details?id=com.grateful.deadly" target="_blank" rel="noopener noreferrer">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="60">
+      </a>
+    </div>
+    <p class="coming-soon">iOS coming soon.</p>
 
     <p class="privacy-note">We do not collect, store, or sell any personal data.</p>
   </main>
