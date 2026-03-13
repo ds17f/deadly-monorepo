@@ -429,37 +429,73 @@ struct ShowDetailScreen: View {
     private func menuSheet(_ show: Show) -> some View {
         NavigationStack {
             List {
-                if playlistService.currentRecording != nil {
+                Section {
+                    Button {
+                        if isFavorite {
+                            try? container.favoritesService.removeFromFavorites(showId: currentShowId)
+                        } else {
+                            try? container.favoritesService.addToFavorites(showId: currentShowId)
+                        }
+                        isFavorite.toggle()
+                        showMenuSheet = false
+                    } label: {
+                        Label(
+                            isFavorite ? "Remove from Favorites" : "Add to Favorites",
+                            systemImage: isFavorite ? "heart.fill" : "heart"
+                        )
+                    }
+
                     Button {
                         showMenuSheet = false
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            showShareChooser = true
+                            showSetlistSheet = true
                         }
                     } label: {
-                        Label("Share", systemImage: "square.and.arrow.up")
+                        Label("Setlist", systemImage: "list.bullet.rectangle")
+                    }
+
+                    Button {
+                        // TODO: Phase 5 — show collections sheet
+                        showMenuSheet = false
+                    } label: {
+                        Label("Collections", systemImage: "rectangle.stack")
                     }
                 }
 
-                if show.hasMultipleRecordings {
+                Section {
+                    if playlistService.currentRecording != nil {
+                        Button {
+                            showMenuSheet = false
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                showShareChooser = true
+                            }
+                        } label: {
+                            Label("Share", systemImage: "square.and.arrow.up")
+                        }
+                    }
+
+                    if show.hasMultipleRecordings {
+                        Button {
+                            showMenuSheet = false
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                showRecordingPicker = true
+                            }
+                        } label: {
+                            Label("Choose Recording", systemImage: "waveform.circle")
+                        }
+                    }
+
                     Button {
                         showMenuSheet = false
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            showRecordingPicker = true
+                            showEqualizerSheet = true
                         }
                     } label: {
-                        Label("Choose Recording", systemImage: "waveform.circle")
+                        Label("Equalizer", systemImage: "slider.vertical.3")
                     }
-                }
-
-                Button {
-                    showMenuSheet = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                        showEqualizerSheet = true
-                    }
-                } label: {
-                    Label("Equalizer", systemImage: "slider.vertical.3")
                 }
             }
+            .tint(.primary)
             .navigationTitle("Options")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

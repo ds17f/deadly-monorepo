@@ -191,6 +191,9 @@ fun PlayerScreen(
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
                 onDownload = { viewModel.downloadCurrentShow() },
                 onFavorite = { viewModel.toggleCurrentTrackFavorite() },
+                onEqualizer = { showEqualizerBottomSheet = true },
+                onConnect = { showConnectBottomSheet = true },
+                onQueue = { showQueueBottomSheet = true },
             )
         }
 

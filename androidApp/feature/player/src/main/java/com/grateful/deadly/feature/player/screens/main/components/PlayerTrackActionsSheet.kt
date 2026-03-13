@@ -32,6 +32,9 @@ fun PlayerTrackActionsSheet(
     onAddToPlaylist: () -> Unit,
     onDownload: () -> Unit,
     onFavorite: () -> Unit,
+    onEqualizer: () -> Unit,
+    onConnect: () -> Unit,
+    onQueue: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     ModalBottomSheet(
@@ -129,7 +132,36 @@ fun PlayerTrackActionsSheet(
                     onDismiss()
                 }
             )
-            
+
+            HorizontalDivider()
+
+            ActionMenuRow(
+                text = "Equalizer",
+                icon = IconResources.PlayerControls.Equalizer(),
+                onClick = {
+                    onEqualizer()
+                    onDismiss()
+                }
+            )
+
+            ActionMenuRow(
+                text = "Connect",
+                icon = IconResources.Content.Cast(),
+                onClick = {
+                    onConnect()
+                    onDismiss()
+                }
+            )
+
+            ActionMenuRow(
+                text = "Queue",
+                icon = IconResources.PlayerControls.Queue(),
+                onClick = {
+                    onQueue()
+                    onDismiss()
+                }
+            )
+
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
