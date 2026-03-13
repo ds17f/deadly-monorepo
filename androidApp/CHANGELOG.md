@@ -1,11 +1,34 @@
 # Changelog
 
+## [2.18.0] - 2026-03-13
+
+### New Features
+* add privacy policy section to legal screen (315aa81)
+* add privacy policy page and footer links (bacf52b)
+* add missing actions to player and playlist menu sheets (5b2aa97)
+* add long-press detail popovers, fix font scaling, and improve accessibility (84009a6)
+* add share chooser with message and image sharing (415be97)
+* add CarPlay, Android Auto browse enhancements, and DHU targets (ddf03d1)
+* move filter chips above count/sort row (a2494a2)
+* era browse loads all shows, chips filter client-side (02f5d94)
+* era browse uses filter chips instead of "19X*" (7582640)
+* auto-select decade chip for era browse queries (e5d6451)
+* add decade filter chips to search results (08f6b0f)
+
+### Bug Fixes
+* remove shuffle and repeat controls from player (92fc041)
+* remove recording-based gradients, use Material3 backgrounds (d12bf9e)
+* fix decade buttons and header count display (5480fcb)
+* "All" chip clears era browse state properly (1e869fc)
+
+### CI Changes
+* fix empty release notes across all platforms (d69bc21)
+
+
 ## [2.17.0] - 2026-03-09
 
 ### New Features
 * add graphic equalizer with presets (eaab0eb)
-
-
 ## [2.16.0] - 2026-03-08
 
 ### New Features
