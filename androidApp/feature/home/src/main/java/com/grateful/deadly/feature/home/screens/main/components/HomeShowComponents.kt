@@ -14,6 +14,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -34,8 +36,8 @@ fun RecentShowsGrid(
 ) {
     val displayShows = shows.take(8) // Maximum 8 shows for 2x4 grid
     val rowCount = (displayShows.size + 1) / 2 // Calculate rows needed (ceiling division)
-    val gridHeight = (rowCount * 64 + (rowCount - 1) * 4).dp // rows × card height + spacing
-    
+    val gridHeight = (rowCount * 80 + (rowCount - 1) * 4).dp // rows × card height + spacing
+
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
             text = "Recently Played",
@@ -43,11 +45,11 @@ fun RecentShowsGrid(
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 12.dp)
         )
-        
+
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             modifier = Modifier
-                .height(gridHeight) // Dynamic height based on content
+                .height(gridHeight) // Fixed height required — nested in LazyColumn
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(4.dp),
@@ -80,7 +82,8 @@ fun RecentShowCard(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .height(64.dp)
+            .heightIn(min = 64.dp)
+            .semantics(mergeDescendants = true) {}
             .combinedClickable(
                 onClick = onShowClick,
                 onLongClick = onShowLongPress
@@ -101,7 +104,7 @@ fun RecentShowCard(
             // Album cover
             ShowArtwork(
                 recordingId = show.bestRecordingId,
-                contentDescription = null,
+                contentDescription = "Show artwork for ${show.date}",
                 modifier = Modifier
                     .size(56.dp)
                     .clip(RoundedCornerShape(6.dp)),

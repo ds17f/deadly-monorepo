@@ -1,5 +1,7 @@
 package com.grateful.deadly.feature.collections.screens.main.components
 
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -7,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -21,10 +24,12 @@ import com.grateful.deadly.core.model.Show
  * - Location
  * - Recording count (if available)
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun CollectionShowCard(
     show: Show,
     onClick: () -> Unit,
+    onLongPress: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val hasRecordings = show.recordingCount > 0
@@ -32,8 +37,12 @@ fun CollectionShowCard(
     Card(
         modifier = modifier
             .fillMaxWidth()
+            .semantics(mergeDescendants = true) {}
+            .combinedClickable(
+                onClick = onClick,
+                onLongClick = onLongPress
+            )
             .then(if (!hasRecordings) Modifier.alpha(0.5f) else Modifier),
-        onClick = onClick,
         shape = RoundedCornerShape(8.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface

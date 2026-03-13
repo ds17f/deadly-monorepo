@@ -13,6 +13,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -40,6 +41,7 @@ fun FavoriteShowListItem(
     Card(
         modifier = modifier
             .fillMaxWidth()
+            .semantics(mergeDescendants = true) {}
             .combinedClickable(
                 onClick = onClick,
                 onLongClick = onLongPress
@@ -58,7 +60,7 @@ fun FavoriteShowListItem(
             // Album cover
             ShowArtwork(
                 recordingId = show.bestRecordingId,
-                contentDescription = null,
+                contentDescription = "Show artwork for ${show.displayDate}",
                 modifier = Modifier
                     .size(60.dp)
                     .clip(RoundedCornerShape(8.dp)),
@@ -215,6 +217,7 @@ fun FavoriteShowGridItem(
 
     Card(
         modifier = modifier
+            .semantics(mergeDescendants = true) {}
             .combinedClickable(
                 onClick = onClick,
                 onLongClick = onLongPress
@@ -230,7 +233,7 @@ fun FavoriteShowGridItem(
             // Album cover - square aspect ratio
             ShowArtwork(
                 recordingId = show.bestRecordingId,
-                contentDescription = null,
+                contentDescription = "Show artwork for ${show.displayDate}",
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(1f)

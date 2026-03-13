@@ -93,6 +93,7 @@ struct CollectionsScreen: View {
             NavigationLink(value: CollectionRoute.detail(collection.id)) {
                 CollectionRowView(collection: collection)
             }
+            .buttonStyle(.plain)
         }
         .listStyle(.plain)
     }

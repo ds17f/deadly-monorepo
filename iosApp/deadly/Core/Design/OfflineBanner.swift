@@ -5,7 +5,7 @@ struct OfflineBanner: View {
     var body: some View {
         HStack(spacing: 6) {
             Image(systemName: "wifi.slash")
-                .font(.system(size: 14, weight: .medium))
+                .font(.subheadline).fontWeight(.medium)
             Text("Offline")
                 .font(.caption)
                 .fontWeight(.medium)

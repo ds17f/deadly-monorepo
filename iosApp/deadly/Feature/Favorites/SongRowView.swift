@@ -6,7 +6,7 @@ struct SongRowView: View {
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: "heart.fill")
-                .font(.system(size: 14))
+                .font(.subheadline)
                 .foregroundStyle(DeadlyColors.primary)
                 .frame(width: 20)
 

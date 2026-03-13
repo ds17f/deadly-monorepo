@@ -27,10 +27,11 @@ struct RecentShowCard: View {
                 }
             }
         }
-        .frame(height: DeadlySize.recentCardHeight)
+        .frame(minHeight: DeadlySize.recentCardHeight)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(4)
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
         .opacity(show.recordingCount == 0 ? 0.5 : 1.0)
+        .accessibilityElement(children: .combine)
     }
 }
