@@ -404,7 +404,7 @@ struct ShowDetailScreen: View {
                 HStack(spacing: 4) {
                     if userReview != nil {
                         Image(systemName: "square.and.pencil")
-                            .font(.system(size: 12))
+                            .font(.caption)
                             .foregroundStyle(DeadlyColors.secondary)
                     }
                     Text(show.totalReviews > 0
@@ -489,7 +489,7 @@ struct ShowDetailScreen: View {
                         .tint(DeadlyColors.primary)
                 } else {
                     Image(systemName: isCurrentShowPlaying ? "pause.circle.fill" : "play.circle.fill")
-                        .font(.system(size: 32))
+                        .font(.largeTitle)
                         .foregroundStyle(DeadlyColors.primary)
                 }
             }

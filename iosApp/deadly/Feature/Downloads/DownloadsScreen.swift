@@ -118,6 +118,7 @@ struct DownloadsScreen: View {
                                 }
                             )
                         }
+                        .buttonStyle(.plain)
                     }
                 }
             }
@@ -138,6 +139,7 @@ struct DownloadsScreen: View {
                                 }
                             )
                         }
+                        .buttonStyle(.plain)
                     }
                 }
             }
@@ -155,6 +157,7 @@ struct DownloadsScreen: View {
                                 }
                             )
                         }
+                        .buttonStyle(.plain)
                     }
                     .onDelete { indexSet in
                         if let index = indexSet.first {

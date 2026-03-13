@@ -30,5 +30,6 @@ struct ShowCarouselCard: View {
         }
         .frame(width: DeadlySize.carouselCard)
         .opacity(recordingCount == 0 ? 0.5 : 1.0)
+        .accessibilityElement(children: .combine)
     }
 }

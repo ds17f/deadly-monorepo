@@ -31,17 +31,17 @@ struct ShowRowView: View {
                     HStack(spacing: 4) {
                         if favoriteShow.isPinned {
                             Image(systemName: "pin.fill")
-                                .font(.system(size: 10))
+                                .font(.caption2)
                                 .foregroundStyle(DeadlyColors.primary)
                         }
                         if container.downloadService.downloadStatus(for: show.id) == .completed {
                         Image(systemName: "checkmark.circle.fill")
-                            .font(.system(size: 10))
+                            .font(.caption2)
                             .foregroundStyle(DeadlyColors.primary)
                     }
                     if favoriteShow.hasReview {
                         Image(systemName: "star.fill")
-                            .font(.system(size: 10))
+                            .font(.caption2)
                             .foregroundStyle(DeadlyColors.secondary)
                     }
                         Text(DateFormatting.formatShowDate(show.date, style: .short))
@@ -77,7 +77,9 @@ struct ShowRowView: View {
                 }
             }
             .padding(.vertical, 2)
+        .accessibilityElement(children: .combine)
         }
+        .buttonStyle(.plain)
     }
 
     private func relativeDate(from milliseconds: Int64) -> String {

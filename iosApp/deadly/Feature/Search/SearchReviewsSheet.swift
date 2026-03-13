@@ -65,7 +65,7 @@ struct SearchReviewsSheet: View {
                     Text(show.hasRating
                          ? String(format: "%.1f", show.averageRating!)
                          : "N/A")
-                        .font(.system(size: 48, weight: .bold))
+                        .font(.largeTitle).fontWeight(.bold)
                     CompactStarRating(rating: show.averageRating, starSize: 20)
                     Text("\(reviews.count) ratings")
                         .font(.caption)
@@ -95,7 +95,7 @@ struct SearchReviewsSheet: View {
                 .font(.caption2)
                 .frame(width: 12, alignment: .trailing)
             Image(systemName: "star.fill")
-                .font(.system(size: 8))
+                .font(.caption2)
                 .foregroundStyle(DeadlyColors.secondary)
             ProgressView(value: fraction)
                 .tint(DeadlyColors.secondary)

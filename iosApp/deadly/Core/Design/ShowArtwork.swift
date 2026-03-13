@@ -15,6 +15,7 @@ struct ShowArtwork: View {
     let imageUrl: String?
     var size: CGFloat = DeadlySize.carouselCard
     var cornerRadius: CGFloat = DeadlySize.carouselCornerRadius
+    var accessibilityDescription: String = "Show artwork"
 
     @State private var uiImage: UIImage?
     @State private var loadAttempted = false
@@ -42,6 +43,7 @@ struct ShowArtwork: View {
                 placeholder
             }
         }
+        .accessibilityLabel(accessibilityDescription)
         .task(id: resolvedUrl?.absoluteString) {
             loadAttempted = false
             guard let url = resolvedUrl else {

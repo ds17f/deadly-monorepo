@@ -7,6 +7,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.grateful.deadly.core.design.component.ShowDetailBottomSheet
+import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.screens.main.components.HorizontalCollection
 import com.grateful.deadly.feature.home.screens.main.components.HorizontalCollectionItem
 import com.grateful.deadly.feature.home.screens.main.components.CollectionItemType
@@ -32,6 +34,17 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    var detailShow by remember { mutableStateOf<Show?>(null) }
+
+    detailShow?.let { show ->
+        ShowDetailBottomSheet(
+            date = show.date,
+            venue = show.venue.name,
+            location = show.location.displayText,
+            rating = if (show.hasRating) show.displayRating else null,
+            onDismiss = { detailShow = null }
+        )
+    }
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -45,7 +58,7 @@ fun HomeScreen(
                     shows = uiState.homeContent.recentShows,
                     onShowClick = onNavigateToShow,
                     onShowLongPress = { show ->
-                        // TODO: Implement context menu
+                        detailShow = show
                     }
                 )
             }

@@ -51,6 +51,18 @@ struct HomeScreen: View {
                         RecentShowCard(show: show)
                     }
                     .buttonStyle(.plain)
+                    .contextMenu {
+                        NavigationLink(value: show.id) {
+                            Label("View Show", systemImage: "eye")
+                        }
+                    } preview: {
+                        ShowDetailPopover(
+                            date: show.date,
+                            venue: show.venue.name,
+                            location: show.location.displayText,
+                            rating: show.hasRating ? show.displayRating : nil
+                        )
+                    }
                 }
             }
         }
@@ -74,6 +86,18 @@ struct HomeScreen: View {
                             )
                         }
                         .buttonStyle(.plain)
+                        .contextMenu {
+                            NavigationLink(value: show.id) {
+                                Label("View Show", systemImage: "eye")
+                            }
+                        } preview: {
+                            ShowDetailPopover(
+                                date: show.date,
+                                venue: show.venue.name,
+                                location: show.location.displayText,
+                                rating: show.hasRating ? show.displayRating : nil
+                            )
+                        }
                     }
                 }
             }

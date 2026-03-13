@@ -442,7 +442,16 @@ struct FavoritesScreen: View {
         List {
             ForEach(filteredShows) { favoriteShow in
                 ShowRowView(favoriteShow: favoriteShow)
-                    .contextMenu { contextMenu(for: favoriteShow) }
+                    .contextMenu {
+                        contextMenu(for: favoriteShow)
+                    } preview: {
+                        ShowDetailPopover(
+                            date: favoriteShow.show.date,
+                            venue: favoriteShow.show.venue.name,
+                            location: favoriteShow.show.location.displayText,
+                            rating: favoriteShow.show.hasRating ? favoriteShow.show.displayRating : nil
+                        )
+                    }
             }
             .onDelete { indexSet in
                 for index in indexSet {
@@ -469,7 +478,16 @@ struct FavoritesScreen: View {
                             gridCard(favoriteShow, size: cardSize)
                         }
                         .buttonStyle(.plain)
-                        .contextMenu { contextMenu(for: favoriteShow) }
+                        .contextMenu {
+                            contextMenu(for: favoriteShow)
+                        } preview: {
+                            ShowDetailPopover(
+                                date: favoriteShow.show.date,
+                                venue: favoriteShow.show.venue.name,
+                                location: favoriteShow.show.location.displayText,
+                                rating: favoriteShow.show.hasRating ? favoriteShow.show.displayRating : nil
+                            )
+                        }
                     }
                 }
                 .padding(DeadlySpacing.screenPadding)
@@ -492,17 +510,17 @@ struct FavoritesScreen: View {
                 HStack(spacing: 2) {
                     if favoriteShow.isPinned {
                         Image(systemName: "pin.fill")
-                            .font(.system(size: 8))
+                            .font(.caption2)
                             .foregroundStyle(DeadlyColors.primary)
                     }
                     if downloadStatus == .completed {
                         Image(systemName: "checkmark.circle.fill")
-                            .font(.system(size: 8))
+                            .font(.caption2)
                             .foregroundStyle(DeadlyColors.primary)
                     }
                     if favoriteShow.hasReview {
                         Image(systemName: "star.fill")
-                            .font(.system(size: 8))
+                            .font(.caption2)
                             .foregroundStyle(DeadlyColors.secondary)
                     }
                     Text(DateFormatting.formatShowDate(show.date, style: .short))

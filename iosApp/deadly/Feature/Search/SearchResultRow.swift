@@ -43,8 +43,19 @@ struct SearchResultRow: View {
                 }
             }
             .padding(.vertical, 2)
+            .accessibilityElement(children: .combine)
         }
-        .contextMenu { favoriteContextMenu }
+        .buttonStyle(.plain)
+        .contextMenu {
+            favoriteContextMenu
+        } preview: {
+            ShowDetailPopover(
+                date: result.show.date,
+                venue: result.show.venue.name,
+                location: result.show.location.displayText,
+                rating: result.show.hasRating ? result.show.displayRating : nil
+            )
+        }
         .sheet(isPresented: $showReviews) {
             SearchReviewsSheet(show: result.show, archiveClient: container.archiveClient)
         }

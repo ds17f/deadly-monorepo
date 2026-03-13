@@ -34,7 +34,7 @@ struct TrackListRow: View {
             // Favorite indicator
             if isFavorite {
                 Image(systemName: "heart.fill")
-                    .font(.system(size: 10))
+                    .font(.caption2)
                     .foregroundStyle(DeadlyColors.primary)
                     .padding(.trailing, 2)
             }
