@@ -47,6 +47,12 @@ struct LegalView: View {
                 ArticleSection("Respect for Artists & Rights Holders") {
                     Text("This app exists to support listening, exploration, and historical appreciation of the Grateful Dead's live performances — in the spirit of their taping tradition — while respecting modern copyright law and the policies of the Internet Archive and rights holders.")
                 }
+
+                ArticleSection("Privacy Policy") {
+                    Text("We do not collect any personal information or data. This app operates without collecting, storing, or transmitting any personal data, usage analytics, or device information.")
+                    ArticleLink("Read Full Privacy Policy",
+                                url: "https://share.thedeadly.app/privacy")
+                }
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 24)

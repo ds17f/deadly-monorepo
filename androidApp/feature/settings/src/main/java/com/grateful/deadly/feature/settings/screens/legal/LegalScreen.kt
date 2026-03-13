@@ -91,6 +91,16 @@ fun LegalScreen() {
                 ArticleParagraph("This app exists to support listening, exploration, and historical appreciation of the Grateful Dead's live performances — in the spirit of their taping tradition — while respecting modern copyright law and the policies of the Internet Archive and rights holders.")
             }
         }
+
+        item {
+            ArticleSection(title = "Privacy Policy") {
+                ArticleParagraph("We do not collect any personal information or data. This app operates without collecting, storing, or transmitting any personal data, usage analytics, or device information.")
+                ArticleLink(
+                    label = "Read Full Privacy Policy",
+                    onClick = { openUrl("https://share.thedeadly.app/privacy") }
+                )
+            }
+        }
     }
 }
 
