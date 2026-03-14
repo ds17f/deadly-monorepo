@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.19.0] - 2026-03-13
+
+### New Features
+* open legal links in Chrome Custom Tabs instead of external browser (dadb1df)
+* replace text store links with Google Play badge images (903e5fe)
+* replace coming soon text with Google Play Store link (c3ba97f)
+
+### CI Changes
+* add beta (open testing) promotion stage (065e241)
+
+
 ## [2.18.0] - 2026-03-13
 
 ### New Features
@@ -23,8 +34,6 @@
 
 ### CI Changes
 * fix empty release notes across all platforms (d69bc21)
-
-
 ## [2.17.0] - 2026-03-09
 
 ### New Features
