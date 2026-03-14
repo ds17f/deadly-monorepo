@@ -85,6 +85,9 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     ksp("com.google.dagger:hilt-compiler:2.56.1")
     
+    // Browser (Custom Tabs)
+    implementation("androidx.browser:browser:1.8.0")
+
     // Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
