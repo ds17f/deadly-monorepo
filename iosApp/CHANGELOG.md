@@ -1,11 +1,39 @@
 # Changelog
 
+## [2.20.0] - 2026-03-13
+
+### New Features
+* replace text store links with Google Play badge images (903e5fe)
+* replace coming soon text with Google Play Store link (c3ba97f)
+* add privacy policy section to legal screen (315aa81)
+* add privacy policy page and footer links (bacf52b)
+* add missing actions to player and playlist menu sheets (5b2aa97)
+* add long-press detail popovers, fix font scaling, and improve accessibility (84009a6)
+* add share chooser with message and image sharing (415be97)
+* add CarPlay, Android Auto browse enhancements, and DHU targets (ddf03d1)
+* move filter chips above count/sort row (a2494a2)
+* era browse loads all shows, chips filter client-side (02f5d94)
+* add decade filter chips to search results (08f6b0f)
+
+### Bug Fixes
+* remove CarPlay config and add INIntentsSupported for Siri (8604f00)
+* remove carplay-audio entitlement to unblock release (0c7c686)
+* remove 40px gap under filter chips (ebc2cfe)
+* fix decade buttons and header count display (5480fcb)
+* "All" chip loads all decades instead of leaving results (84bb476)
+* tapping "All" chip clears era browse (baf10e1)
+
+### CI Changes
+* fix empty release notes across all platforms (d69bc21)
+
+### Other Changes
+* Revert "chore: release ios version 2.20.0" (e6475e9)
+
+
 ## [2.19.0] - 2026-03-09
 
 ### New Features
 * add graphic equalizer with presets (9427c0c)
-
-
 ## [2.18.0] - 2026-03-08
 
 ### New Features
