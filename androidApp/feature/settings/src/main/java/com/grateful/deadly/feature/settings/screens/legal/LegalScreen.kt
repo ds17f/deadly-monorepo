@@ -1,7 +1,7 @@
 package com.grateful.deadly.feature.settings.screens.legal
 
-import android.content.Intent
 import android.net.Uri
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
@@ -17,7 +17,7 @@ fun LegalScreen() {
     val context = LocalContext.current
 
     fun openUrl(url: String) {
-        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+        CustomTabsIntent.Builder().build().launchUrl(context, Uri.parse(url))
     }
 
     LazyColumn(
