@@ -37,6 +37,7 @@ private func makeShow(id: String = "gd1977-05-08", withLineup: Bool = false) -> 
         lineup: lineup,
         recordingIds: [],
         bestRecordingId: nil,
+        bestSourceType: .unknown,
         recordingCount: 1,
         averageRating: nil,
         totalReviews: 0,

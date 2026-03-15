@@ -14,6 +14,7 @@ import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.DeadCollection
 import com.grateful.deadly.core.model.FavoriteTrack
 import com.grateful.deadly.core.model.Show
+import com.grateful.deadly.core.model.RecordingSourceType
 import com.grateful.deadly.core.model.Track
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import kotlinx.coroutines.flow.first
@@ -225,6 +226,9 @@ class BrowseTreeProvider @Inject constructor(
             }
             show.averageRating?.let {
                 append(" \u2022 ${"%.1f".format(it)}\u2605")
+            }
+            if (show.bestSourceType != RecordingSourceType.UNKNOWN) {
+                append(" \u2022 ${show.bestSourceType.displayName}")
             }
         }
         return MediaItem.Builder()

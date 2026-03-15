@@ -106,14 +106,16 @@ struct BackupExportV3: Codable {
     let favorites: FavoritesExport
     let reviews: [ReviewExportEntry]
     let recordingPreferences: [RecordingPreferenceExportEntry]
+    let settings: SettingsExport?
 
-    init(version: Int = 3, exportedAt: Int64, app: String, favorites: FavoritesExport, reviews: [ReviewExportEntry], recordingPreferences: [RecordingPreferenceExportEntry]) {
+    init(version: Int = 3, exportedAt: Int64, app: String, favorites: FavoritesExport, reviews: [ReviewExportEntry], recordingPreferences: [RecordingPreferenceExportEntry], settings: SettingsExport? = nil) {
         self.version = version
         self.exportedAt = exportedAt
         self.app = app
         self.favorites = favorites
         self.reviews = reviews
         self.recordingPreferences = recordingPreferences
+        self.settings = settings
     }
 
     init(from decoder: Decoder) throws {
@@ -124,7 +126,19 @@ struct BackupExportV3: Codable {
         favorites = try container.decode(FavoritesExport.self, forKey: .favorites)
         reviews = try container.decode([ReviewExportEntry].self, forKey: .reviews)
         recordingPreferences = try container.decode([RecordingPreferenceExportEntry].self, forKey: .recordingPreferences)
+        settings = try container.decodeIfPresent(SettingsExport.self, forKey: .settings)
     }
+}
+
+struct SettingsExport: Codable {
+    let includeShowsWithoutRecordings: Bool?
+    let favoritesDisplayMode: String?
+    let forceOnline: Bool?
+    let sourceBadgeStyle: String?
+    let shareAttachImage: Bool?
+    let eqEnabled: Bool?
+    let eqPreset: String?
+    let eqBandLevels: String?
 }
 
 struct FavoritesExport: Codable {

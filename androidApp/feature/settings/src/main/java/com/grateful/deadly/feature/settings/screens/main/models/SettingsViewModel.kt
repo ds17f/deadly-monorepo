@@ -53,6 +53,12 @@ class SettingsViewModel @Inject constructor(
         appPreferences.setIncludeShowsWithoutRecordings(!appPreferences.includeShowsWithoutRecordings.value)
     }
 
+    val sourceBadgeStyle: StateFlow<String> = appPreferences.sourceBadgeStyle
+
+    fun setSourceBadgeStyle(value: String) {
+        appPreferences.setSourceBadgeStyle(value)
+    }
+
     val forceOnline: StateFlow<Boolean> = appPreferences.forceOnline
 
     fun toggleForceOnline() {

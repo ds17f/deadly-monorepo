@@ -75,7 +75,7 @@ interface ShowSearchDao {
      */
     @Query("""
         SELECT s.showId, s.date, s.year, s.band, s.venueName, s.city, s.state, s.country,
-               s.locationRaw, s.recordingCount, s.bestRecordingId, s.coverImageUrl,
+               s.locationRaw, s.recordingCount, s.bestRecordingId, s.bestSourceType, s.coverImageUrl,
                s.averageRating, s.totalReviews, s.isFavorite, s.favoritedAt
         FROM show_search ss
         JOIN shows s ON ss.showId = s.showId
@@ -89,7 +89,7 @@ interface ShowSearchDao {
      */
     @Query("""
         SELECT s.showId, s.date, s.year, s.band, s.venueName, s.city, s.state, s.country,
-               s.locationRaw, s.recordingCount, s.bestRecordingId, s.coverImageUrl,
+               s.locationRaw, s.recordingCount, s.bestRecordingId, s.bestSourceType, s.coverImageUrl,
                s.averageRating, s.totalReviews, s.isFavorite, s.favoritedAt
         FROM shows s
         ORDER BY s.date ASC

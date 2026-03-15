@@ -89,7 +89,8 @@ final class AppContainer {
                 showReviewDAO: ShowReviewDAO(database: db),
                 favoriteSongDAO: FavoriteSongDAO(database: db),
                 playerTagDAO: ShowPlayerTagDAO(database: db),
-                recordingPreferenceDAO: RecordingPreferenceDAO(database: db)
+                recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
+                appPreferences: appPreferences
             )
             collectionsService = CollectionsServiceImpl(
                 collectionsDAO: CollectionsDAO(database: db),

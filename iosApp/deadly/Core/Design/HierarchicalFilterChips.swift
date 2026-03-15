@@ -15,6 +15,15 @@ struct FilterNode: Equatable {
         self.children = children
     }
 
+    static func sourceTypeTree() -> [FilterNode] {
+        [
+            FilterNode(id: "SBD", label: "SBD"),
+            FilterNode(id: "FM", label: "FM"),
+            FilterNode(id: "MATRIX", label: "Matrix"),
+            FilterNode(id: "AUD", label: "AUD"),
+        ]
+    }
+
     static func decadeCascadeTree() -> [FilterNode] {
         [
             FilterNode(

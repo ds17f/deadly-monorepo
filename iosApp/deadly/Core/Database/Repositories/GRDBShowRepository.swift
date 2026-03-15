@@ -139,6 +139,7 @@ struct GRDBShowRepository: ShowRepository {
             lineup: Lineup.parse(json: record.lineupRaw, status: record.lineupStatus),
             recordingIds: recordingIds,
             bestRecordingId: record.bestRecordingId,
+            bestSourceType: RecordingSourceType.fromString(record.bestSourceType),
             recordingCount: record.recordingCount,
             averageRating: record.averageRating.map { Float($0) },
             totalReviews: record.totalReviews,

@@ -104,6 +104,27 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v8-favorite-songs") { db in
             try AppDatabase.replaceTrackReviewsWithFavoriteSongs(db)
         }
+        migrator.registerMigration("v9-best-source-type") { db in
+            try db.execute(sql: "ALTER TABLE shows ADD COLUMN bestSourceType TEXT")
+        }
+        migrator.registerMigration("v10-backfill-best-source-type") { db in
+            try db.execute(sql: """
+                UPDATE shows
+                SET bestSourceType = (
+                    SELECT CASE
+                        WHEN SUM(CASE WHEN r.source_type = 'SBD' THEN 1 ELSE 0 END) > 0 THEN 'SBD'
+                        WHEN SUM(CASE WHEN r.source_type = 'FM' THEN 1 ELSE 0 END) > 0 THEN 'FM'
+                        WHEN SUM(CASE WHEN r.source_type = 'MATRIX' THEN 1 ELSE 0 END) > 0 THEN 'MATRIX'
+                        WHEN SUM(CASE WHEN r.source_type = 'REMASTER' THEN 1 ELSE 0 END) > 0 THEN 'REMASTER'
+                        WHEN SUM(CASE WHEN r.source_type = 'AUD' THEN 1 ELSE 0 END) > 0 THEN 'AUD'
+                        ELSE NULL
+                    END
+                    FROM recordings r
+                    WHERE r.show_id = shows.showId
+                )
+                WHERE bestSourceType IS NULL
+            """)
+        }
         try migrator.migrate(dbWriter)
     }
 

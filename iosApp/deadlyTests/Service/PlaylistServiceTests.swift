@@ -129,6 +129,7 @@ struct PlaylistServiceTests {
             recordingsRaw: nil,
             recordingCount: bestRecordingId != nil ? 1 : 0,
             bestRecordingId: bestRecordingId,
+            bestSourceType: nil,
             averageRating: nil,
             totalReviews: 0,
             isFavorite: false,

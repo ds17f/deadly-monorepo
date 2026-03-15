@@ -3,7 +3,10 @@ package com.grateful.deadly.core.database.service
 import android.content.Context
 import android.util.Log
 import com.grateful.deadly.core.model.AppDatabase
+import com.grateful.deadly.core.model.RecordingSourceType
+import com.grateful.deadly.core.model.ShowArtworkService
 import com.grateful.deadly.core.database.dao.DataVersionDao
+import com.grateful.deadly.core.database.dao.RecordingDao
 import com.grateful.deadly.core.network.github.service.GitHubDataService
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
@@ -20,6 +23,7 @@ import javax.inject.Singleton
 class DatabaseManager @Inject constructor(
     @ApplicationContext private val context: Context,
     @AppDatabase private val dataVersionDao: DataVersionDao,
+    @AppDatabase private val recordingDao: RecordingDao,
     private val dataImportService: DataImportService,
     private val gitHubDataService: GitHubDataService,
     private val databaseHealthService: DatabaseHealthService,
@@ -83,6 +87,7 @@ class DatabaseManager @Inject constructor(
                 }
 
                 Log.i(TAG, "Data already initialized")
+                populateShowArtworkService()
                 // Get actual counts from database
                 val healthInfo = databaseHealthService.getDatabaseCounts()
                 return DatabaseImportResult.Success(healthInfo.showCount, healthInfo.recordingCount)
@@ -211,6 +216,7 @@ class DatabaseManager @Inject constructor(
                             if (importResult.success) {
                                 _progress.value = DatabaseProgress(phase = "COMPLETED", currentItem = "Import completed successfully")
                                 Log.i(TAG, "✅ Data import completed: ${importResult.importedShows} shows, ${importResult.importedRecordings} recordings")
+                                populateShowArtworkService()
                                 DatabaseImportResult.Success(importResult.importedShows, importResult.importedRecordings)
                             } else {
                                 DatabaseImportResult.Error("Data import failed: ${importResult.message}")
@@ -295,6 +301,7 @@ class DatabaseManager @Inject constructor(
                                 is RestoreResult.Success -> {
                                     _progress.value = DatabaseProgress(phase = "COMPLETED", currentItem = "Restore completed successfully")
                                     Log.i(TAG, "✅ Database restore completed: ${restoreResult.showCount} shows, ${restoreResult.recordingCount} recordings")
+                                    populateShowArtworkService()
                                     DatabaseImportResult.Success(restoreResult.showCount, restoreResult.recordingCount)
                                 }
                                 is RestoreResult.Error -> {
@@ -315,6 +322,18 @@ class DatabaseManager @Inject constructor(
         }
     }
     
+    private suspend fun populateShowArtworkService() {
+        try {
+            val rows = recordingDao.getAllSourceTypes()
+            ShowArtworkService.populate(rows.associate {
+                it.identifier to RecordingSourceType.fromString(it.sourceType)
+            })
+            Log.i(TAG, "ShowArtworkService populated with ${rows.size} source types")
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to populate ShowArtworkService", e)
+        }
+    }
+
     private fun isDataVersionStale(currentVersion: String?): Boolean {
         if (currentVersion.isNullOrBlank()) return true
         return compareVersions(currentVersion, REQUIRED_DATA_VERSION) < 0

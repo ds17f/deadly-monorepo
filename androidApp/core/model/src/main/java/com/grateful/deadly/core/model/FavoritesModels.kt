@@ -141,6 +141,7 @@ data class FavoriteShowViewModel(
     val isDownloading: Boolean,
     val statusDescription: String,
     val bestRecordingId: String? = null,
+    val bestSourceType: RecordingSourceType = RecordingSourceType.UNKNOWN,
     val coverImageUrl: String? = null,
     val recordingCount: Int = 0,
     val hasReview: Boolean = false,

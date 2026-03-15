@@ -531,6 +531,7 @@ class FavoritesViewModel @Inject constructor(
             isDownloading = favoriteShow.isDownloading,
             statusDescription = favoriteShow.statusDescription,
             bestRecordingId = favoriteShow.show.bestRecordingId,
+            bestSourceType = favoriteShow.show.bestSourceType,
             coverImageUrl = favoriteShow.show.coverImageUrl,
             recordingCount = favoriteShow.recordingCount,
             hasReview = favoriteShow.hasReview,

@@ -16,9 +16,12 @@ struct ShowArtwork: View {
     var size: CGFloat = DeadlySize.carouselCard
     var cornerRadius: CGFloat = DeadlySize.carouselCornerRadius
     var accessibilityDescription: String = "Show artwork"
-
     @State private var uiImage: UIImage?
     @State private var loadAttempted = false
+
+    private var resolvedSourceType: RecordingSourceType? {
+        recordingId.flatMap { ShowArtworkService.shared.sourceType(for: $0) }
+    }
 
     private var resolvedUrl: URL? {
         if let imageUrl, let url = URL(string: imageUrl) {
@@ -41,6 +44,35 @@ struct ShowArtwork: View {
                     .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             } else {
                 placeholder
+            }
+        }
+        .overlay(alignment: .bottomTrailing) {
+            if let resolvedSourceType, resolvedSourceType != .unknown {
+                switch ShowArtworkService.shared.badgeStyle {
+                case .none:
+                    EmptyView()
+                case .short, .long:
+                    let label = ShowArtworkService.shared.badgeStyle == .short
+                        ? resolvedSourceType.badgeLabel
+                        : resolvedSourceType.displayName
+                    Text(label)
+                        .font(.caption2)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 4)
+                        .padding(.vertical, 2)
+                        .background(.black.opacity(0.6), in: RoundedRectangle(cornerRadius: 4))
+                        .padding(3)
+                case .icon:
+                    if let sfSymbol = resolvedSourceType.sfSymbolName {
+                        Image(systemName: sfSymbol)
+                            .font(.system(size: 8, weight: .bold))
+                            .foregroundStyle(.white)
+                            .frame(width: 16, height: 16)
+                            .background(.black.opacity(0.6), in: Circle())
+                            .padding(3)
+                    }
+                }
             }
         }
         .accessibilityLabel(accessibilityDescription)

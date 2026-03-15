@@ -54,6 +54,7 @@ data class ShowEntity(
     val recordingsRaw: String?,       // JSON array string of recording IDs ["rec1", "rec2"]
     val recordingCount: Int = 0,
     val bestRecordingId: String?,
+    val bestSourceType: String? = null,
     val averageRating: Float?,
     val totalReviews: Int = 0,
     

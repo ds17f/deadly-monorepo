@@ -40,6 +40,7 @@ struct Show: Codable, Sendable, Equatable, Identifiable {
     // Recording references
     let recordingIds: [String]
     let bestRecordingId: String?
+    let bestSourceType: RecordingSourceType
 
     // Show-level stats (precomputed from recordings)
     let recordingCount: Int

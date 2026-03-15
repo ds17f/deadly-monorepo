@@ -1,5 +1,25 @@
 import Foundation
 
+enum SourceBadgeStyle: String, CaseIterable, Sendable {
+    case none = "NONE"
+    case short = "SHORT"
+    case long = "LONG"
+    case icon = "ICON"
+
+    var label: String {
+        switch self {
+        case .none: return "None"
+        case .short: return "Short"
+        case .long: return "Long"
+        case .icon: return "Icon"
+        }
+    }
+
+    static func fromString(_ value: String?) -> SourceBadgeStyle {
+        allCases.first { $0.rawValue.caseInsensitiveCompare(value ?? "") == .orderedSame } ?? .long
+    }
+}
+
 enum RecordingSourceType: String, Codable, Sendable, Equatable, CaseIterable {
     case soundboard = "SOUNDBOARD"
     case audience = "AUDIENCE"
@@ -16,6 +36,28 @@ enum RecordingSourceType: String, Codable, Sendable, Equatable, CaseIterable {
         case .matrix: return "Matrix"
         case .remaster: return "Remaster"
         case .unknown: return "Unknown"
+        }
+    }
+
+    var badgeLabel: String {
+        switch self {
+        case .soundboard: return "S"
+        case .audience: return "A"
+        case .fm: return "FM"
+        case .matrix: return "M"
+        case .remaster: return "R"
+        case .unknown: return ""
+        }
+    }
+
+    var sfSymbolName: String? {
+        switch self {
+        case .soundboard: return "slider.horizontal.3"
+        case .audience: return "recordingtape"
+        case .fm: return "radio"
+        case .matrix: return "waveform.path"
+        case .remaster: return "wand.and.stars"
+        case .unknown: return nil
         }
     }
 

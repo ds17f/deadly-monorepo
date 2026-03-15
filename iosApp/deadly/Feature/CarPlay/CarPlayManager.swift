@@ -263,6 +263,10 @@ final class CarPlayManager {
             .filter { !$0.isEmpty }
             .joined(separator: " \u{2022} ")
         let item = CPListItem(text: formatShowDate(show.date), detailText: subtitle, image: placeholderImage)
+        if let sfSymbol = show.bestSourceType.sfSymbolName {
+            let config = UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)
+            item.setAccessoryImage(UIImage(systemName: sfSymbol, withConfiguration: config))
+        }
         item.handler = { [weak self] _, completion in
             self?.showTracks(for: show.id)
             completion()

@@ -46,6 +46,25 @@ struct SettingsScreen: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Source type badge")
+                    Picker("Source type badge", selection: Binding(
+                        get: { SourceBadgeStyle.fromString(container.appPreferences.sourceBadgeStyle) },
+                        set: {
+                            container.appPreferences.sourceBadgeStyle = $0.rawValue
+                            ShowArtworkService.shared.badgeStyle = $0
+                        }
+                    )) {
+                        ForEach(SourceBadgeStyle.allCases, id: \.self) { style in
+                            Text(style.label).tag(style)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    Text("Label style on artwork thumbnails")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             // MARK: - Audio

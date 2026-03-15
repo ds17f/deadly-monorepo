@@ -23,7 +23,8 @@ data class Show(
     // Recording references
     val recordingIds: List<String>,
     val bestRecordingId: String?,
-    
+    val bestSourceType: RecordingSourceType = RecordingSourceType.UNKNOWN,
+
     // Show-level stats (precomputed from recordings)
     val recordingCount: Int,
     val averageRating: Float?,

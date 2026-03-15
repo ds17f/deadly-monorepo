@@ -77,6 +77,9 @@ struct deadlyApp: App {
                 .environment(\.appContainer, container)
                 .fullScreenCover(isPresented: $showingImport, onDismiss: {
                     Task {
+                        if let sourceTypes = try? RecordingDAO(database: container.database).fetchAllSourceTypes() {
+                            ShowArtworkService.shared.populate(sourceTypes)
+                        }
                         await container.homeService.refresh()
                         await container.playbackRestorationService.restoreIfAvailable()
                     }
@@ -92,6 +95,11 @@ struct deadlyApp: App {
                     if !hasData {
                         showingImport = true
                     } else {
+                        // Populate source type badge service from database
+                        if let sourceTypes = try? RecordingDAO(database: container.database).fetchAllSourceTypes() {
+                            ShowArtworkService.shared.populate(sourceTypes)
+                        }
+                        ShowArtworkService.shared.badgeStyle = SourceBadgeStyle.fromString(container.appPreferences.sourceBadgeStyle)
                         // Restore last playback position if the app was killed mid-playback.
                         await container.playbackRestorationService.restoreIfAvailable()
                     }

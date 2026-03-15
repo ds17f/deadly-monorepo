@@ -456,7 +456,11 @@ class DataImportService @Inject constructor(
         val recordingCount = showData.recordingCount
         val averageRating = showData.avgRating.toFloat()
         val bestRecordingId = showData.bestRecording
-        
+
+        // Resolve best available source type by quality ranking
+        val sourceTypeRank = listOf("SBD", "FM", "MATRIX", "REMASTER", "AUD")
+        val bestSourceType = sourceTypeRank.firstOrNull { showData.sourceTypes.containsKey(it) }
+
         // Calculate total reviews from high + low ratings across all recordings
         val totalReviews = showData.totalHighRatings + showData.totalLowRatings
         
@@ -485,6 +489,7 @@ class DataImportService @Inject constructor(
             recordingsRaw = if (showData.recordings.isNotEmpty()) Json.encodeToString(showData.recordings) else null, // JSON array of recording IDs
             recordingCount = recordingCount, // From show data
             bestRecordingId = bestRecordingId, // From show data
+            bestSourceType = bestSourceType, // Best available source quality (SBD > FM > Matrix > Remaster > AUD)
             averageRating = averageRating, // From show data
             totalReviews = totalReviews, // Approximated from source types
             coverImageUrl = resolveCoverImageUrl(showData),

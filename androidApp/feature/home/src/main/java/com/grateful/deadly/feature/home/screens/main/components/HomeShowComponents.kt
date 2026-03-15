@@ -20,6 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.component.ShowArtwork
+
 import com.grateful.deadly.core.model.Show
 
 /**
@@ -118,7 +119,6 @@ fun RecentShowCard(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.spacedBy(2.dp)
             ) {
-                // Date
                 Text(
                     text = show.date,
                     style = MaterialTheme.typography.bodyMedium,

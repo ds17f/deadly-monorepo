@@ -27,6 +27,7 @@ struct ShowRecord: Codable, Sendable, Equatable, FetchableRecord, MutablePersist
     var recordingsRaw: String?
     var recordingCount: Int
     var bestRecordingId: String?
+    var bestSourceType: String?
     var averageRating: Double?
     var totalReviews: Int
     var isFavorite: Bool

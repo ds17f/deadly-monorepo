@@ -56,6 +56,7 @@ struct RecentShowsServiceTests {
             recordingsRaw: nil,
             recordingCount: 0,
             bestRecordingId: nil,
+            bestSourceType: nil,
             averageRating: nil,
             totalReviews: 0,
             isFavorite: false,
