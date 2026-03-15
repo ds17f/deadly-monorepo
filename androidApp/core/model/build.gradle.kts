@@ -38,9 +38,13 @@ dependencies {
 
     // Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
-    
+
     // Javax inject for Hilt qualifiers
     implementation("javax.inject:javax.inject:1")
+
+    // Compose runtime (mutableStateOf for observable singletons)
+    implementation(platform("androidx.compose:compose-bom:2025.08.00"))
+    implementation("androidx.compose.runtime:runtime")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

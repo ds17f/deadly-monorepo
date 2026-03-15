@@ -42,7 +42,7 @@ import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
         ShowReviewEntity::class,
         RecordingPreferenceEntity::class
     ],
-    version = 20,
+    version = 22,
     exportSchema = false
 )
 abstract class DeadlyDatabase : RoomDatabase() {
@@ -68,7 +68,7 @@ abstract class DeadlyDatabase : RoomDatabase() {
                 DeadlyDatabase::class.java,
                 DATABASE_NAME
             )
-            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14, DatabaseMigrations.MIGRATION_14_15, DatabaseMigrations.MIGRATION_15_16, DatabaseMigrations.MIGRATION_16_17, DatabaseMigrations.MIGRATION_17_18, DatabaseMigrations.MIGRATION_18_19, DatabaseMigrations.MIGRATION_19_20)
+            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14, DatabaseMigrations.MIGRATION_14_15, DatabaseMigrations.MIGRATION_15_16, DatabaseMigrations.MIGRATION_16_17, DatabaseMigrations.MIGRATION_17_18, DatabaseMigrations.MIGRATION_18_19, DatabaseMigrations.MIGRATION_19_20, DatabaseMigrations.MIGRATION_20_21, DatabaseMigrations.MIGRATION_21_22)
             .fallbackToDestructiveMigration() // Safety net for fresh installs or skipped versions
             .build()
         }

@@ -65,6 +65,7 @@ struct FavoritesServiceTests {
             recordingsRaw: nil,
             recordingCount: 1,
             bestRecordingId: nil,
+            bestSourceType: nil,
             averageRating: averageRating,
             totalReviews: averageRating != nil ? 1 : 0,
             isFavorite: false,

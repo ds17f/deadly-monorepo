@@ -7,14 +7,16 @@ struct FavoritesImportExportService {
     private let favoriteSongDAO: FavoriteSongDAO
     private let playerTagDAO: ShowPlayerTagDAO
     private let recordingPreferenceDAO: RecordingPreferenceDAO
+    private let appPreferences: AppPreferences
 
-    init(favoritesDAO: FavoritesDAO, showDAO: ShowDAO, showReviewDAO: ShowReviewDAO, favoriteSongDAO: FavoriteSongDAO, playerTagDAO: ShowPlayerTagDAO, recordingPreferenceDAO: RecordingPreferenceDAO) {
+    init(favoritesDAO: FavoritesDAO, showDAO: ShowDAO, showReviewDAO: ShowReviewDAO, favoriteSongDAO: FavoriteSongDAO, playerTagDAO: ShowPlayerTagDAO, recordingPreferenceDAO: RecordingPreferenceDAO, appPreferences: AppPreferences) {
         self.favoritesDAO = favoritesDAO
         self.showDAO = showDAO
         self.showReviewDAO = showReviewDAO
         self.favoriteSongDAO = favoriteSongDAO
         self.playerTagDAO = playerTagDAO
         self.recordingPreferenceDAO = recordingPreferenceDAO
+        self.appPreferences = appPreferences
     }
 
     // MARK: - Export (v3)
@@ -74,13 +76,25 @@ struct FavoritesImportExportService {
             RecordingPreferenceExportEntry(showId: pref.showId, recordingId: pref.recordingId)
         }
 
+        let settingsExport = SettingsExport(
+            includeShowsWithoutRecordings: appPreferences.includeShowsWithoutRecordings,
+            favoritesDisplayMode: appPreferences.favoritesDisplayMode,
+            forceOnline: appPreferences.forceOnline,
+            sourceBadgeStyle: appPreferences.sourceBadgeStyle,
+            shareAttachImage: appPreferences.shareAttachImage,
+            eqEnabled: appPreferences.eqEnabled,
+            eqPreset: appPreferences.eqPreset,
+            eqBandLevels: appPreferences.eqBandGains.map { String($0) }.joined(separator: ",")
+        )
+
         let export = BackupExportV3(
             version: 3,
             exportedAt: Int64(Date().timeIntervalSince1970 * 1000),
             app: "deadly-ios",
             favorites: FavoritesExport(shows: favoriteShows, tracks: favoriteTracks),
             reviews: reviewEntries,
-            recordingPreferences: prefEntries
+            recordingPreferences: prefEntries,
+            settings: settingsExport
         )
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
@@ -212,6 +226,24 @@ struct FavoritesImportExportService {
             )
             try? recordingPreferenceDAO.upsert(prefRecord)
             preferencesImported += 1
+        }
+
+        // Import settings
+        if let s = export.settings {
+            if let v = s.includeShowsWithoutRecordings { appPreferences.includeShowsWithoutRecordings = v }
+            if let v = s.favoritesDisplayMode { appPreferences.favoritesDisplayMode = v }
+            if let v = s.forceOnline { appPreferences.forceOnline = v }
+            if let v = s.sourceBadgeStyle {
+                appPreferences.sourceBadgeStyle = v
+                ShowArtworkService.shared.badgeStyle = SourceBadgeStyle.fromString(v)
+            }
+            if let v = s.shareAttachImage { appPreferences.shareAttachImage = v }
+            if let v = s.eqEnabled { appPreferences.eqEnabled = v }
+            if let v = s.eqPreset { appPreferences.eqPreset = v }
+            if let v = s.eqBandLevels {
+                let gains = v.split(separator: ",").compactMap { Float($0) }
+                if !gains.isEmpty { appPreferences.eqBandGains = gains }
+            }
         }
 
         return BackupImportResult(

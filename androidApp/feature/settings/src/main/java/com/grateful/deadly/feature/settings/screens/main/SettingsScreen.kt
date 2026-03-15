@@ -16,6 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.resources.IconResources
+import com.grateful.deadly.core.model.SourceBadgeStyle
 import com.grateful.deadly.feature.settings.BuildConfig
 
 @Composable
@@ -29,6 +30,7 @@ fun SettingsScreen(
 ) {
     val context = LocalContext.current
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
+    val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val version = BuildConfig.VERSION_NAME
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -42,6 +44,13 @@ fun SettingsScreen(
                 subtitle = "Show concerts even if they have no audio recordings available",
                 checked = includeShowsWithoutRecordings,
                 onCheckedChange = { viewModel.toggleIncludeShowsWithoutRecordings() }
+            )
+        }
+
+        item {
+            SourceBadgeStyleRow(
+                currentStyle = SourceBadgeStyle.fromString(sourceBadgeStyle),
+                onStyleSelected = { viewModel.setSourceBadgeStyle(it.name) }
             )
         }
 
@@ -357,5 +366,41 @@ private fun ImportMigrationButton(viewModel: SettingsViewModel) {
             )
         }
         else -> {}
+    }
+}
+
+// ── Source badge style selector ──────────────────────────────────────────────
+
+@Composable
+private fun SourceBadgeStyleRow(
+    currentStyle: SourceBadgeStyle,
+    onStyleSelected: (SourceBadgeStyle) -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Source type badge", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "Label style on artwork thumbnails",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            SourceBadgeStyle.entries.forEachIndexed { index, style ->
+                SegmentedButton(
+                    selected = currentStyle == style,
+                    onClick = { onStyleSelected(style) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = SourceBadgeStyle.entries.size
+                    )
+                ) {
+                    Text(style.label)
+                }
+            }
+        }
     }
 }

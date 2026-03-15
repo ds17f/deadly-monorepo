@@ -67,6 +67,7 @@ struct ShowRepositoryTests {
             recordingsRaw: recordingsRaw,
             recordingCount: 1,
             bestRecordingId: nil,
+            bestSourceType: nil,
             averageRating: averageRating,
             totalReviews: totalReviews,
             isFavorite: false,

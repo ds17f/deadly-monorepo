@@ -20,7 +20,7 @@ struct CollectionsImporterTests {
             band: "GD", url: nil, venueName: venue, city: nil, state: nil,
             country: "USA", locationRaw: nil, setlistStatus: nil, setlistRaw: nil,
             songList: nil, lineupStatus: nil, lineupRaw: nil, memberList: nil,
-            showSequence: 1, recordingsRaw: nil, recordingCount: 0, bestRecordingId: nil,
+            showSequence: 1, recordingsRaw: nil, recordingCount: 0, bestRecordingId: nil, bestSourceType: nil,
             averageRating: nil, totalReviews: 0, isFavorite: false, favoritedAt: nil,
             coverImageUrl: nil, createdAt: now, updatedAt: now
         )

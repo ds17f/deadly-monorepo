@@ -20,6 +20,7 @@ data class ShowSummary(
     val locationRaw: String?,
     val recordingCount: Int,
     val bestRecordingId: String?,
+    val bestSourceType: String? = null,
     val coverImageUrl: String?,
     val averageRating: Float?,
     val totalReviews: Int,

@@ -411,6 +411,16 @@ object FilterTrees {
     }
 
     /**
+     * Build flat source type filter tree (SBD, AUD, FM, Matrix).
+     */
+    fun buildSourceTypeTree(): List<FilterNode> = listOf(
+        FilterNode("SBD", "SBD"),
+        FilterNode("FM", "FM"),
+        FilterNode("MATRIX", "Matrix"),
+        FilterNode("AUD", "AUD")
+    )
+
+    /**
      * Build simple home filter tree starting with "All"
      * Future expansion ready for "Recent", "Popular", "Favorites", etc.
      */

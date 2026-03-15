@@ -57,6 +57,12 @@ interface RecordingDao {
     ): List<RecordingEntity>
     
     /**
+     * Get all recording identifiers with their source types for populating ShowArtworkService.
+     */
+    @Query("SELECT identifier, source_type FROM recordings WHERE source_type IS NOT NULL")
+    suspend fun getAllSourceTypes(): List<RecordingSourceTypeRow>
+
+    /**
      * Get recording statistics for analysis and debugging.
      */
     @Query("""
@@ -72,6 +78,11 @@ interface RecordingDao {
     """)
     suspend fun getRecordingStatisticsBySourceType(): List<RecordingStatistics>
 }
+
+data class RecordingSourceTypeRow(
+    val identifier: String,
+    @ColumnInfo(name = "source_type") val sourceType: String
+)
 
 // Simplified data class for statistics
 data class RecordingStatistics(

@@ -34,6 +34,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.ShowArtwork
+
 import com.grateful.deadly.core.design.component.FilterNode
 import com.grateful.deadly.core.design.component.FilterPath
 import com.grateful.deadly.core.design.component.FilterTrees
@@ -84,6 +85,10 @@ fun SearchResultsScreen(
     var filterPath by remember { mutableStateOf(FilterPath()) }
     val decadeTree = remember { FilterTrees.buildDecadeCascadeTree() }
 
+    // Source type filter state
+    var sourceFilterPath by remember { mutableStateOf(FilterPath()) }
+    val sourceTypeTree = remember { FilterTrees.buildSourceTypeTree() }
+
     // Reset filter when search results change (new query)
     // For era browse, auto-select the matching decade chip
     LaunchedEffect(uiState.searchResults) {
@@ -93,11 +98,12 @@ fun SearchResultsScreen(
         } else {
             filterPath = FilterPath()
         }
+        sourceFilterPath = FilterPath()
     }
 
     // Apply filtering then sorting to results
-    val sortedResults = remember(uiState.searchResults, sortBy, sortDirection, filterPath) {
-        val filtered = if (filterPath.isNotEmpty) {
+    val sortedResults = remember(uiState.searchResults, sortBy, sortDirection, filterPath, sourceFilterPath) {
+        var filtered = if (filterPath.isNotEmpty) {
             val range = yearRangeForPath(filterPath)
             if (range != null) {
                 uiState.searchResults.filter { it.show.year in range }
@@ -106,6 +112,12 @@ fun SearchResultsScreen(
             }
         } else {
             uiState.searchResults
+        }
+        // Apply source type filter
+        if (sourceFilterPath.isNotEmpty) {
+            val sourceId = sourceFilterPath.nodes.last().id
+            val sourceEnum = RecordingSourceType.fromString(sourceId)
+            filtered = filtered.filter { it.show.bestSourceType == sourceEnum }
         }
         // When filter is active, force date ascending sort
         if (filterPath.isNotEmpty) {
@@ -196,6 +208,13 @@ fun SearchResultsScreen(
                     }
                 },
                 modifier = Modifier.padding(start = 8.dp, end = 8.dp, top = 10.dp, bottom = 0.dp)
+            )
+
+            HierarchicalFilter(
+                filterTree = sourceTypeTree,
+                selectedPath = sourceFilterPath,
+                onSelectionChanged = { newPath -> sourceFilterPath = newPath },
+                modifier = Modifier.padding(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 0.dp)
             )
 
             Row(
@@ -597,7 +616,7 @@ private fun SearchResultCard(
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                     }
-                    
+
                     // Date and location line
                     Text(
                         text = "${searchResult.show.date} • ${searchResult.show.location.displayText}",

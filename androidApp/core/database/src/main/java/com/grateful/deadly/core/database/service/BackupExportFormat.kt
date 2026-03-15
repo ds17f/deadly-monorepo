@@ -9,7 +9,20 @@ data class BackupExportV3(
     val app: String,
     val favorites: FavoritesExport,
     val reviews: List<ReviewExportEntry>,
-    val recordingPreferences: List<RecordingPreferenceExportEntry>
+    val recordingPreferences: List<RecordingPreferenceExportEntry>,
+    val settings: SettingsExport? = null
+)
+
+@Serializable
+data class SettingsExport(
+    val includeShowsWithoutRecordings: Boolean? = null,
+    val favoritesDisplayMode: String? = null,
+    val forceOnline: Boolean? = null,
+    val sourceBadgeStyle: String? = null,
+    val shareAttachImage: Boolean? = null,
+    val eqEnabled: Boolean? = null,
+    val eqPreset: String? = null,
+    val eqBandLevels: String? = null
 )
 
 @Serializable

@@ -9,6 +9,7 @@ import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.entities.FavoriteShowEntity
 import com.grateful.deadly.core.database.entities.FavoriteSongEntity
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.entities.RecordingPreferenceEntity
 import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
 import com.grateful.deadly.core.database.entities.ShowReviewEntity
@@ -27,7 +28,8 @@ class BackupImportExportService @Inject constructor(
     @AppDatabase private val favoriteSongDao: FavoriteSongDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     @AppDatabase private val recordingPreferenceDao: RecordingPreferenceDao,
-    private val migrationImportService: MigrationImportService
+    private val migrationImportService: MigrationImportService,
+    private val appPreferences: AppPreferences
 ) {
     companion object {
         private const val TAG = "BackupImportExportSvc"
@@ -95,12 +97,24 @@ class BackupImportExportService @Inject constructor(
             RecordingPreferenceExportEntry(showId = pref.showId, recordingId = pref.recordingId)
         }
 
+        val settingsExport = SettingsExport(
+            includeShowsWithoutRecordings = appPreferences.includeShowsWithoutRecordings.value,
+            favoritesDisplayMode = appPreferences.favoritesDisplayMode.value,
+            forceOnline = appPreferences.forceOnline.value,
+            sourceBadgeStyle = appPreferences.sourceBadgeStyle.value,
+            shareAttachImage = appPreferences.shareAttachImage.value,
+            eqEnabled = appPreferences.eqEnabled.value,
+            eqPreset = appPreferences.eqPreset.value,
+            eqBandLevels = appPreferences.eqBandLevels.value
+        )
+
         val export = BackupExportV3(
             exportedAt = System.currentTimeMillis(),
             app = "deadly-android",
             favorites = FavoritesExport(shows = favoriteShows, tracks = favoriteTracks),
             reviews = reviewEntries,
-            recordingPreferences = prefEntries
+            recordingPreferences = prefEntries,
+            settings = settingsExport
         )
 
         return json.encodeToString(BackupExportV3.serializer(), export)
@@ -249,6 +263,18 @@ class BackupImportExportService @Inject constructor(
             } catch (e: Exception) {
                 Log.e(TAG, "Error importing recording preference for ${pref.showId}", e)
             }
+        }
+
+        // Import settings
+        export.settings?.let { s ->
+            s.includeShowsWithoutRecordings?.let { appPreferences.setIncludeShowsWithoutRecordings(it) }
+            s.favoritesDisplayMode?.let { appPreferences.setFavoritesDisplayMode(it) }
+            s.forceOnline?.let { appPreferences.setForceOnline(it) }
+            s.sourceBadgeStyle?.let { appPreferences.setSourceBadgeStyle(it) }
+            s.shareAttachImage?.let { appPreferences.setShareAttachImage(it) }
+            s.eqEnabled?.let { appPreferences.setEqEnabled(it) }
+            s.eqPreset?.let { appPreferences.setEqPreset(it) }
+            s.eqBandLevels?.let { appPreferences.setEqBandLevels(it) }
         }
 
         Log.d(TAG, "v3 import complete: $favoritesImported fav, $reviewsImported reviews, $tracksImported tracks, $preferencesImported prefs, $notFound not found")

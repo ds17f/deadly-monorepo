@@ -47,14 +47,26 @@ data class Recording(
 /**
  * Recording source types with safe string parsing
  */
+enum class SourceBadgeStyle(val label: String) {
+    NONE("None"),
+    SHORT("Short"),
+    LONG("Long"),
+    ICON("Icon");
+
+    companion object {
+        fun fromString(value: String?): SourceBadgeStyle =
+            entries.firstOrNull { it.name.equals(value, ignoreCase = true) } ?: LONG
+    }
+}
+
 @Serializable
-enum class RecordingSourceType(val displayName: String) {
-    SOUNDBOARD("SBD"),
-    AUDIENCE("AUD"), 
-    FM("FM"),
-    MATRIX("Matrix"),
-    REMASTER("Remaster"),
-    UNKNOWN("Unknown");
+enum class RecordingSourceType(val displayName: String, val badgeLabel: String) {
+    SOUNDBOARD("SBD", "S"),
+    AUDIENCE("AUD", "A"),
+    FM("FM", "FM"),
+    MATRIX("Matrix", "M"),
+    REMASTER("Remaster", "R"),
+    UNKNOWN("Unknown", "");
     
     companion object {
         /**

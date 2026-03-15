@@ -17,6 +17,7 @@ struct SearchScreen: View {
     @State private var eraLabel: String?
 
     @State private var filterPath = FilterPath()
+    @State private var sourceFilterPath = FilterPath()
 
     @State private var topRated: [Show] = []
     @State private var randomShow: Show?
@@ -29,17 +30,33 @@ struct SearchScreen: View {
 
     private var displayResults: [SearchResultShow] {
         let base = eraOverride ?? searchService.results
-        let filtered: [SearchResultShow]
+        var filtered: [SearchResultShow]
         if filterPath.isNotEmpty, let range = yearRange(for: filterPath) {
             filtered = base.filter { range.contains($0.show.year) }
         } else {
             filtered = base
+        }
+        // Apply source type filter
+        if sourceFilterPath.isNotEmpty, let sourceNode = sourceFilterPath.nodes.last {
+            filtered = filtered.filter {
+                sourceTypeMatches($0.show.bestSourceType, filterId: sourceNode.id)
+            }
         }
         if filterPath.isNotEmpty {
             // Force date ascending when a decade filter is active
             return filtered.sorted { $0.show.date < $1.show.date }
         }
         return sortResults(filtered)
+    }
+
+    private func sourceTypeMatches(_ sourceType: RecordingSourceType, filterId: String) -> Bool {
+        switch filterId {
+        case "SBD": return sourceType == .soundboard
+        case "AUD": return sourceType == .audience
+        case "FM": return sourceType == .fm
+        case "MATRIX": return sourceType == .matrix
+        default: return false
+        }
     }
 
     var body: some View {
@@ -62,6 +79,7 @@ struct SearchScreen: View {
             eraOverride = nil
             eraLabel = nil
             filterPath = FilterPath()
+            sourceFilterPath = FilterPath()
         }
         .onChange(of: isSearchFieldFocused) { _, isFocused in
             if isFocused && searchText.isEmpty && eraOverride == nil {
@@ -73,6 +91,7 @@ struct SearchScreen: View {
                 eraOverride = nil
                 eraLabel = nil
                 filterPath = FilterPath()
+                sourceFilterPath = FilterPath()
             }
         }
         .onChange(of: searchText) { _, newValue in
@@ -363,6 +382,11 @@ struct SearchScreen: View {
                         filterTree: FilterNode.decadeCascadeTree(),
                         selectedPath: $filterPath
                     )
+                    .padding(.bottom, 4)
+                    HierarchicalFilterChips(
+                        filterTree: FilterNode.sourceTypeTree(),
+                        selectedPath: $sourceFilterPath
+                    )
                     .padding(.bottom, 8)
                 }
                 resultsHeader
@@ -403,6 +427,7 @@ struct SearchScreen: View {
         eraOverride = nil
         eraLabel = nil
         filterPath = FilterPath()
+        sourceFilterPath = FilterPath()
     }
 
     private func loadAllEras() {

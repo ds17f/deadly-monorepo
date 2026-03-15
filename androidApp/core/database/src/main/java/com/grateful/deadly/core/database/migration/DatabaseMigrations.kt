@@ -189,6 +189,48 @@ object DatabaseMigrations {
      * Creates a clean favorite_songs table (row exists = favorited), migrates
      * thumbs=1 rows, and drops the old table.
      */
+    /**
+     * v20 → v21: Add best source type to shows table.
+     *
+     * Stores the best available recording source type (SBD, AUD, FM, etc.)
+     * so listing cards can display a source quality indicator without
+     * looking up individual recordings.
+     */
+    val MIGRATION_20_21 = object : Migration(20, 21) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("ALTER TABLE shows ADD COLUMN bestSourceType TEXT DEFAULT NULL")
+        }
+    }
+
+    /**
+     * v21 → v22: Backfill bestSourceType from recordings table.
+     *
+     * v21 added the column as NULL. Existing rows stayed NULL (→ UNKNOWN in UI).
+     * This migration derives the best source type from each show's recordings
+     * using the same priority ranking as import-time logic.
+     * WHERE bestSourceType IS NULL makes it idempotent.
+     */
+    val MIGRATION_21_22 = object : Migration(21, 22) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("""
+                UPDATE shows
+                SET bestSourceType = (
+                    SELECT CASE
+                        WHEN SUM(CASE WHEN r.source_type = 'SBD' THEN 1 ELSE 0 END) > 0 THEN 'SBD'
+                        WHEN SUM(CASE WHEN r.source_type = 'FM' THEN 1 ELSE 0 END) > 0 THEN 'FM'
+                        WHEN SUM(CASE WHEN r.source_type = 'MATRIX' THEN 1 ELSE 0 END) > 0 THEN 'MATRIX'
+                        WHEN SUM(CASE WHEN r.source_type = 'REMASTER' THEN 1 ELSE 0 END) > 0 THEN 'REMASTER'
+                        WHEN SUM(CASE WHEN r.source_type = 'AUD' THEN 1 ELSE 0 END) > 0 THEN 'AUD'
+                        ELSE NULL
+                    END
+                    FROM recordings r
+                    WHERE r.show_id = shows.showId
+                )
+                WHERE bestSourceType IS NULL
+            """.trimIndent())
+        }
+    }
+
     val MIGRATION_19_20 = object : Migration(19, 20) {
         override fun migrate(db: SupportSQLiteDatabase) {
             db.execSQL("""

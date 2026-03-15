@@ -10,6 +10,7 @@ final class AppPreferences {
     private static let eqPresetKey = "eq_preset"
     private static let eqBandGainsKey = "eq_band_gains"
     private static let shareAttachImageKey = "share_attach_image"
+    private static let sourceBadgeStyleKey = "source_badge_style"
 
     var includeShowsWithoutRecordings: Bool {
         didSet { UserDefaults.standard.set(includeShowsWithoutRecordings, forKey: Self.includeShowsWithoutRecordingsKey) }
@@ -35,6 +36,10 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(shareAttachImage, forKey: Self.shareAttachImageKey) }
     }
 
+    var sourceBadgeStyle: String {
+        didSet { UserDefaults.standard.set(sourceBadgeStyle, forKey: Self.sourceBadgeStyleKey) }
+    }
+
     var eqBandGains: [Float] {
         didSet {
             let strings = eqBandGains.map { String($0) }
@@ -50,6 +55,7 @@ final class AppPreferences {
             Self.eqEnabledKey: false,
             Self.eqPresetKey: "flat",
             Self.shareAttachImageKey: false,
+            Self.sourceBadgeStyleKey: "LONG",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
@@ -58,6 +64,7 @@ final class AppPreferences {
             ?? UserDefaults.standard.string(forKey: Self.legacyLibraryDisplayModeKey)
             ?? "LIST"
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
+        sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         eqEnabled = UserDefaults.standard.bool(forKey: Self.eqEnabledKey)
         eqPreset = UserDefaults.standard.string(forKey: Self.eqPresetKey) ?? "flat"
 

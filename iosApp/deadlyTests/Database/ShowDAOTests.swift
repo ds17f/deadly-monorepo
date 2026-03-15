@@ -51,6 +51,7 @@ struct ShowDAOTests {
             recordingsRaw: nil,
             recordingCount: 0,
             bestRecordingId: nil,
+            bestSourceType: nil,
             averageRating: averageRating,
             totalReviews: 0,
             isFavorite: false,

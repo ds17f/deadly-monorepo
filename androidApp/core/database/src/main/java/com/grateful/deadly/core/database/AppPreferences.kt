@@ -10,6 +10,8 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import com.grateful.deadly.core.model.ShowArtworkService
+import com.grateful.deadly.core.model.SourceBadgeStyle
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -37,6 +39,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_EQ_PRESET = "eq_preset"
         private const val KEY_EQ_BAND_LEVELS = "eq_band_levels"
         private const val KEY_SHARE_ATTACH_IMAGE = "share_attach_image"
+        private const val KEY_SOURCE_BADGE_STYLE = "source_badge_style"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -125,6 +128,23 @@ class AppPreferences @Inject constructor(
     fun setShareAttachImage(value: Boolean) {
         prefs.edit().putBoolean(KEY_SHARE_ATTACH_IMAGE, value).apply()
         _shareAttachImage.value = value
+    }
+
+    // ── Source Badge ──────────────────────────────────────────────────────
+
+    private val _sourceBadgeStyle = MutableStateFlow(
+        (prefs.getString(KEY_SOURCE_BADGE_STYLE, null) ?: "LONG").also {
+            ShowArtworkService.badgeStyle = SourceBadgeStyle.fromString(it)
+        }
+    )
+
+    /** Badge style on artwork thumbnails: SHORT (S/A), LONG (SBD/AUD), or ICON. */
+    val sourceBadgeStyle: StateFlow<String> = _sourceBadgeStyle.asStateFlow()
+
+    fun setSourceBadgeStyle(value: String) {
+        prefs.edit().putString(KEY_SOURCE_BADGE_STYLE, value).apply()
+        _sourceBadgeStyle.value = value
+        ShowArtworkService.badgeStyle = SourceBadgeStyle.fromString(value)
     }
 
 }

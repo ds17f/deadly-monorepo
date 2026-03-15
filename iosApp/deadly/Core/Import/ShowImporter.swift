@@ -14,6 +14,10 @@ struct ShowImporter {
         let recordingsRaw = encodeStringArray(data.recordings)
         let totalReviews = data.totalHighRatings + data.totalLowRatings
 
+        // Resolve best available source type by quality ranking
+        let sourceTypeRank = ["SBD", "FM", "MATRIX", "REMASTER", "AUD"]
+        let bestSourceType = sourceTypeRank.first { data.sourceTypes.keys.contains($0) }
+
         return ShowRecord(
             showId: data.showId,
             date: data.date,
@@ -37,6 +41,7 @@ struct ShowImporter {
             recordingsRaw: recordingsRaw,
             recordingCount: data.recordingCount,
             bestRecordingId: data.bestRecording,
+            bestSourceType: bestSourceType,
             averageRating: data.avgRating > 0 ? data.avgRating : nil,
             totalReviews: totalReviews,
             isFavorite: false,

@@ -71,6 +71,21 @@ struct RecordingDAO: Sendable {
         }
     }
 
+    // MARK: - Source Types
+
+    func fetchAllSourceTypes() throws -> [String: RecordingSourceType] {
+        try database.read { db in
+            let rows = try Row.fetchAll(db, sql: """
+                SELECT identifier, source_type FROM recordings WHERE source_type IS NOT NULL
+            """)
+            var result: [String: RecordingSourceType] = [:]
+            for row in rows {
+                result[row["identifier"]] = RecordingSourceType.fromString(row["source_type"])
+            }
+            return result
+        }
+    }
+
     // MARK: - Management
 
     func deleteForShow(_ showId: String) throws {

@@ -18,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.component.ShowArtwork
+
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.FavoriteShowViewModel
 import com.grateful.deadly.core.model.FavoritesDownloadStatus

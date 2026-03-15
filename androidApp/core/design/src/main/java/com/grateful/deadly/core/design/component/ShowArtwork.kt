@@ -16,6 +16,20 @@ import coil3.compose.AsyncImagePainter
 import coil3.compose.SubcomposeAsyncImage
 import coil3.compose.SubcomposeAsyncImageContent
 import com.grateful.deadly.core.design.R
+import com.grateful.deadly.core.model.RecordingSourceType
+import com.grateful.deadly.core.model.ShowArtworkService
+import com.grateful.deadly.core.model.SourceBadgeStyle
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.padding
 
 /**
  * Constructs an Archive.org thumbnail URL for a given recording identifier.
@@ -52,6 +66,77 @@ private fun isWaveformThumbnail(state: AsyncImagePainter.State.Success): Boolean
  */
 @Composable
 fun ShowArtwork(
+    recordingId: String?,
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    imageUrl: String? = null,
+    placeholderContent: @Composable (() -> Unit)? = null
+) {
+    val resolvedSourceType = recordingId?.let { ShowArtworkService.sourceType(it) }
+
+    Box(modifier = modifier) {
+        ShowArtworkContent(
+            recordingId = recordingId,
+            contentDescription = contentDescription,
+            modifier = Modifier.fillMaxSize(),
+            imageUrl = imageUrl,
+            placeholderContent = placeholderContent
+        )
+
+        if (resolvedSourceType != null && resolvedSourceType != RecordingSourceType.UNKNOWN) {
+            val style = ShowArtworkService.badgeStyle
+            when (style) {
+                SourceBadgeStyle.NONE -> { /* badge disabled */ }
+                SourceBadgeStyle.SHORT, SourceBadgeStyle.LONG -> {
+                    val label = if (style == SourceBadgeStyle.SHORT) resolvedSourceType.badgeLabel else resolvedSourceType.displayName
+                    Box(
+                        modifier = Modifier
+                            .align(Alignment.BottomEnd)
+                            .padding(3.dp)
+                            .background(Color.Black.copy(alpha = 0.6f), RoundedCornerShape(4.dp))
+                            .padding(horizontal = 4.dp, vertical = 2.dp)
+                    ) {
+                        Text(
+                            text = label,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = Color.White,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
+                SourceBadgeStyle.ICON -> {
+                    val iconRes = when (resolvedSourceType) {
+                        RecordingSourceType.SOUNDBOARD -> R.drawable.ic_equalizer
+                        RecordingSourceType.AUDIENCE -> R.drawable.ic_mic
+                        RecordingSourceType.FM -> R.drawable.ic_radio
+                        RecordingSourceType.MATRIX -> R.drawable.ic_merge
+                        RecordingSourceType.REMASTER -> R.drawable.ic_auto_fix
+                        else -> null
+                    }
+                    if (iconRes != null) {
+                        Box(
+                            modifier = Modifier
+                                .align(Alignment.BottomEnd)
+                                .padding(3.dp)
+                                .background(Color.Black.copy(alpha = 0.6f), CircleShape)
+                                .padding(3.dp)
+                        ) {
+                            Icon(
+                                painter = painterResource(iconRes),
+                                contentDescription = resolvedSourceType.displayName,
+                                modifier = Modifier.size(10.dp),
+                                tint = Color.White
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun ShowArtworkContent(
     recordingId: String?,
     contentDescription: String?,
     modifier: Modifier = Modifier,
