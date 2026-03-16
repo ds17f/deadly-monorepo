@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-deadly-red: #DC143C;
+  --color-deadly-blue: #4A90D9;
+  --color-deadly-bg: #121212;
+  --color-deadly-surface: #1E1E1E;
+  --color-deadly-accent: #c8102e;
+  --color-deadly-highlight: #4A90D9;
+  --color-deadly-heading: #4A90D9;
+  --color-deadly-star: #FFD700;
+  --color-deadly-title: #DC143C;
+}
+
+body {
+  background: #121212;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
