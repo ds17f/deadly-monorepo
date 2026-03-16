@@ -1,0 +1,91 @@
+{
+  "summary": "Excellent soundboard capture of a solid Summer ’93 show highlighted by Looks Like Rain, The Other One and Loser",
+  "review": "The recording is a crystal‑clear soundboard mix that lets the ferocious summer‑’93 tone shine through.  Musically the concert delivers strong, consistent playing with standout moments on Looks Like Rain, The Other One, Loser and an unusual acoustic burst from Bob on the electric set, though vocal slips and a weak Vince tune keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Recording quality is praised as excellent; show quality is generally strong with many highlighted songs despite a few minor performance flaws, yielding an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix praised by multiple reviewers; no drop‑outs or major noise issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "The Other One",
+      "Loser",
+      "Cassidy>Deal",
+      "Broken Arrow"
+    ],
+    "poor_songs": [
+      "Samba",
+      "Truckin'"
+    ],
+    "setlist_flow": "Typical Summer ’93 set – a solid first set with occasional vocal slips, followed by a second half that shines on LLR and The Other One; overall pacing is tight and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone described as ferocious and magical (especially during the Sting guest spot), though one reviewer blames his drug habit for the era’s decline.",
+    "Phil": "",
+    "Bob": "Bob’s vocal slip on Truckin' lyrics noted; praised for stepping into an acoustic role on Looks Like Rain during the electric set.",
+    "Keys": "Vince’s contributions split – ‘Samba’ called awful while ‘Way to Go Home’ earned praise. Keith and Brent are mentioned fondly in tributes.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy>Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Way to Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T14:08:52.371443+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-13.sbd.miller.105491.flac16"
+}

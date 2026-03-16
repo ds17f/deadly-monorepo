@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent audience (AUD) tape of a memorable Shea’s Theatre show, highlighted by a soaring Dark Star/Estimated Prophet/Other One sequence and a standout Peggy‑O solo.",
+  "review": "The recording is an audience capture that sounds remarkably clear – you can pick out each instrument with minimal crowd bleed. Musically the night shines in the second set where Estimated Prophet flows into a telepathic Other One and a deep Dark Star, capped by a gorgeous Peggy‑O solo; the first set is solid but uneven, with a few weaker moments like Bertha and a sleepy start. Overall listeners rave about the venue’s ambience and the band’s chemistry despite Donna’s absence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70 %) award 4–5 stars and praise both the sound quality and key performances; only a handful of low‑star or critical comments are present, yielding an overall strong positive impression."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced audience tape with distinct instrument separation and minimal crowd noise; occasional remarks about quiet vocals or slight mix quirks but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Estimated Prophet",
+      "The Other One",
+      "Peggy-O",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Sugaree (some reviewers found it sleepy)"
+    ],
+    "setlist_flow": "First set is solid but a bit uneven; the second set delivers dynamic contrast, with seamless transitions Estimated Prophet → Other One → Dark Star → Not Fade Away and an uplifting close."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – early in the show he sounds tired/half‑asleep, but awakens for a blistering Jack Straw, a phenomenal Peggy‑O solo, and a brilliant Dark Star.",
+    "Phil": "Bass sometimes low in the mix; one reviewer notes Phil drinking Heinekens all night, otherwise no major criticism.",
+    "Bob": "Weir’s contributions described as modest – occasional slide work that some found meek, but generally not a focus of praise or critique.",
+    "Keys": "Keith (or Brent) praised for being “on fire” and delivering strong keyboard textures; occasional comment about quiet vocals.",
+    "Drums": "Bill & Mickey receive both criticism for lack of variance in one review and high praise for a poetic, 20‑minute drum segment in another."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:46:07.121616+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-20.naks.moore.12575.sbeok.shnf"
+}

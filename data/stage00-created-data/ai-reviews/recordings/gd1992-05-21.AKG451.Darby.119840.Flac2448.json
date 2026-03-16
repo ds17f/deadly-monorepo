@@ -1,0 +1,39 @@
+{
+  "summary": "Great audio with a Bobby‑heavy mix and a chilling STOM! highlight makes this show memorable despite limited detail on recording source.",
+  "review": "The reviewer praises the sound quality, noting a great mix that leans heavily on Bob Weir’s presence—a pleasant change that enhances the listening experience. The performance is highlighted by an electrifying “STOM!” moment that gave them chills, and they express a nostalgic wish for more Truckin’. Overall the show is viewed positively with solid recording quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show 4 stars, praises the audio and a standout jam, leading to an overall high rating but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the audio as great with a Bobby‑heavy mix; no specific source type mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "STOM!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No explicit comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "STOM!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:37:58.784657+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-21.AKG451.Darby.119840.Flac2448"
+}

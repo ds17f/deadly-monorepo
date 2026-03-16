@@ -1,0 +1,81 @@
+{
+  "summary": "Mediocre soundboard with noticeable pitch problems; the show is an average mid‑'80s gig with a standout Peggy‑O and solid Drums but overall uneven performance.",
+  "review": "The Miller SBD transfer suffers from pitch inconsistencies and generally mediocre sound, though it has been pitch‑corrected compared to earlier versions. Musically the concert offers a few highlights – Jerry’s half‑step work on Peggy‑O and an inspired Drums segment – but is hampered by equipment glitches, Healy’s interruptions, and several lackluster numbers, resulting in an overall average 1985 performance.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "medium",
+    "rationale": "Both reviewers give very low scores and cite pitch/recording problems and uneven playing; limited data (two reviews) leads to a modest confidence level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch runs too fast or slow in some sections, overall mediocre clarity; the Miller SBD source has been pitch‑corrected but still not as good as the Chappell matrix version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Helena",
+      "Keep on Growing",
+      "Playing in the Band",
+      "Truckin'",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "The first set starts slow and warm‑up, with a strong Peggy‑O but several missteps (Jer losing his thread, equipment issues). The second set is interrupted by Healy’s antics, making Playing in the Band feel disjointed; Drums shines, yet the overall pacing feels uneven and typical of an average 1985 show."
+  },
+  "band_member_comments": {
+    "Jerry": "His half‑step phrasing on Peggy‑O is praised, but he loses his thread a few times and equipment problems affect his soloing.",
+    "Phil": "Possibly suggested launching the first Keep on Growing; no strong performance comments otherwise.",
+    "Bob": "Voice starts to slip on Sugar Magnolia; reportedly disliked Healy’s interjections during Playing in the Band.",
+    "Keys": "Brent (keyboards) is absent for part of Drums, leading to a brief drums‑and‑keys jam before he leaves again.",
+    "Drums": "The Drums segment is highlighted as great and freaky, despite tempo/pitch issues elsewhere."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Helena": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Keep on Growing": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:36:38.309251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-14.135615.sbd-new.miller.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Fan‑sourced audience tape with a bit of wind noise captures a vibrant 1993 run; the second set ignites with rare gems like High Time, Cumberland and a fiery Cassidy → Uncle John’s medley.",
+  "review": "The recording is an audience (FOB) capture that suffers from some wind‑related hiss but remains open, lively and very listenable. Musically the show is praised for its historic, unstructured set list and an explosive second set highlighted by rare performances of High Time, Cumberland, Shakedown and a standout Cassidy → Uncle John’s → Cassidy sequence. Jerry Garcia’s vocals and guitar are described as crystal‑clear while Phil Lesh delivers monster‑level bass tones.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers give 5‑star ratings, consistently praising the show’s second set and noting only minor recording wind noise; combined show excellence and decent audio yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FOB audience tape with noticeable wind effects that add some hiss, but the mix is open, vital and generally clear enough for an enjoyable listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Cumberland",
+      "Shakedown",
+      "Cassidy > Uncle John's Band > Cassidy",
+      "Gloria",
+      "Picasso Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An unusually unstructured set list for the era; first set deemed weaker by some listeners, while the second set is described as fiery, historic and packed with rare, high‑energy moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are rich and clear; guitar tone is in top form after a year off.",
+    "Phil": "Lesh is called a 'monster' with some of his best tone and playing in years.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy > Uncle John's Band > Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gloria": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:21:13.036353+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-27.109587.sankens.fob.bernstein.flac16"
+}

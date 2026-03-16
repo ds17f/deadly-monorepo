@@ -1,0 +1,70 @@
+{
+  "summary": "Good‑quality audience recording that captures a thunder‑stormed Vegas show highlighted by a soaring “Ramble on Rose” and strong second‑set energy.",
+  "review": "The audience tape is surprisingly clear for an AUD source, with Garcia’s guitar sitting front‑and‑center and the mix letting Phil and Mickey shine during the Fire intro. The performance is remembered for its electrifying start – “Ramble on Rose” – and a high‑energy second set featuring “Scarlet > Fire”, “Black‑Throated Wind” and an inspiring “Uncle John’s Band”. Weather drama (lightning, rain) adds mythic color but doesn’t detract from the overall solid show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5), repeated praise for both the music and the surprisingly good AUD sound, with only minor mixed comments about synth balance and a few recording imperfections."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note “very good sound for an AUD”, clear guitar presence, occasional synth‑midi bleed, but overall listenable with no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble on Rose",
+      "Scarlet > Fire",
+      "Black-Throated Wind",
+      "Uncle John’s Band",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [
+      "Fire"
+    ],
+    "setlist_flow": "The show kicked off with an exuberant “Ramble on Rose”, setting a high‑energy tone. The first set stayed solid, while the second set built momentum with a long “Scarlet > Fire” and a spacious “Black-Throated Wind”. Weather interruptions added drama but the band kept the flow tight, ending on a warm “Uncle John’s Band” vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is highlighted as especially prevalent and bouncy; a string broke during “Fire” but he recovered quickly.",
+    "Phil": "Phil’s bass dominates the mix during the Fire intro and is praised for its presence throughout the set.",
+    "Bob": "",
+    "Keys": "Vince’s synthesizer is noted as less intrusive on this night, avoiding the usual synth‑wash that can mask Jerry’s guitar.",
+    "Drums": "Mickey’s drumming is described as very present, filling space when Garcia repaired his string and resonating powerfully during kettle‑drum tuning."
+  },
+  "song_mentions": {
+    "Ramble on Rose": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Uncle John’s Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T12:27:06.889312+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-14.aud.fink.17812.sbeok.shnf"
+}

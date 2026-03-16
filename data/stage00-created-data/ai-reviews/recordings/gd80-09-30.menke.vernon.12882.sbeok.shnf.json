@@ -1,0 +1,69 @@
+{
+  "summary": "Audience tape with decent clarity captures a stellar acoustic‑electric show highlighted by Peggy‑O, Bird Song and a soaring Brokedown Palace.",
+  "review": "The performance is widely praised – the acoustic sets are described as “golden” with standout renditions of Peggy‑O, Bird Song, Rosalie McFall and Beat It On Down the Line, and the electric second half delivers a memorable Brokedown Palace.  Recording quality is mixed: several listeners say it rivals soundboards with crisp snap, while others find the mix too low or drowned out by crowd noise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show very highly (average ~4.7) and note good to excellent performance, while recording opinions split between strong and weak, yielding an overall weighted rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners report crisp snap and clarity that rivals some soundboards, but others note low volume, thin signal strength and crowd noise that can drown the band, especially early in the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Bird Song",
+      "Rosalie McFall",
+      "Brokedown Palace",
+      "Beat It On Down the Line",
+      "Monkey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic first set praised as golden, followed by an electric second set that is solid though not consistently soaring; crowd noise fades later in the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rosalie McFall": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Monkey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:49:04.455741+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-30.menke.vernon.12882.sbeok.shnf"
+}

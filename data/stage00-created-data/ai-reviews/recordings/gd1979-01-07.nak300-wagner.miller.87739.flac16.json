@@ -1,0 +1,44 @@
+{
+  "summary": "Solid audience recording of the Dead's first Madison Square Garden show – energetic and memorable, but plagued by PA failures toward the end.",
+  "review": "The performance captures the excitement of the band's inaugural MSG gig, with fans recalling a high‑energy atmosphere and strong renditions like “Good Lovin’.” The FLAC audience source is generally clear and listenable after post‑processing, though reviewers note serious PA problems that caused loud feedback during “Black Peter” and required EQ work on the latter part of the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑4 stars, praising the performance while acknowledging recording issues; weighting the strong musical impression (≈4.2) against fair technical quality (≈3.5) yields an overall 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear FLAC audience recording, but PA blew out mid‑set causing loud feedback on “Black Peter.” Reviewers mention occasional mids‑frequency harshness and the need for EQ to tame jangle, though post‑processing has made the end more listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First ever MSG performance was high‑energy and memorable; the band kept momentum until PA problems interrupted the middle of “Black Peter,” which detracted from an otherwise solid flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:32:41.365927+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-07.nak300-wagner.miller.87739.flac16"
+}

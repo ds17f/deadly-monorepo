@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent soundboard capture of the 1988 Chicago show with a stellar Scarlet‑Fire opener, soaring The Other One and crisp drums‑to‑Space, despite a few mixed moments.",
+  "review": "The Miller soundboard source delivers crystal‑clear audio that lets listeners hear every nuance of this 1988 Rosemont performance. Highlights include an outer‑space‑level Scarlet>Fire opener, a powerhouse second set driven by The Other One and an inspired drums‑to‑Space segment, while a few reviewers note a rough Louie Louie jam and the inevitable wear in Jerry’s voice.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.56/5; most comments praise both the musical performance and the high‑quality soundboard recording, with only occasional minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller collection soundboard is described as crisp, clear and well‑balanced; reviewers note great room ambience and no significant dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "The Other One",
+      "Dear Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "Louie Louie"
+    ],
+    "setlist_flow": "A thrilling Scarlet>Fire opener sets an outer‑space tone, the first set stays solid, and the second set builds high energy with a tight drums‑to‑Space segment and a memorable The Other One, though a few covers (e.g., Louie Louie) feel uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is praised as powerful and determined; some note his voice sounds aged but still expressive.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum/space segment is highlighted as inspired and a high point of the performance."
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Louie Louie": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-16T08:58:42.694419+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-15.sbd.miller.92263.sbeok.flac16"
+}

@@ -1,0 +1,83 @@
+{
+  "summary": "High‑quality soundboard capture of a fiery 7/27/74 Roanoke show with standout US Blues→Promised Land and a smoking China>Rider, despite occasional tape‑speed quirks.",
+  "review": "The recording is a clean soundboard mix with excellent stereo separation and clear vocals; a few listeners note it sounds slightly fast but the overall fidelity is solid. Musically the band delivers an energetic summer‑’74 performance – Jerry’s lead work shines, Phil bounces on bass, Keith’s keys sparkle, and Bill drives the groove – highlighted by US Blues→Promised Land, China>Rider, Playing in the Band and a superb Brokedown Palace. The lack of Donna is noted but does not diminish the show’s high‑octane vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of 28 reviews rate the show 4–5 stars, praising both performance and soundboard quality; a few note speed issues but they are minor compared with the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp stereo separation, strong vocals and instrument definition. Some listeners perceive a slight tape‑speed increase; no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "US Blues > Promised Land",
+      "China Cat Sunflower > I Know You Rider",
+      "Playing in the Band",
+      "Brokedown Palace",
+      "Half-Step > IMHBTR"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set feels like two first‑sets merged, with a driving early energy that never wanes. The band trades tight pairings (China>Rider, US Blues>Promised) and a high‑energy second set despite Donna’s reduced presence."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for outstanding lead guitar tone and solos; even when noted as ‘lower’ it still cuts through the mix.",
+    "Phil": "Described as “bouncy” and solid on bass, providing a strong rhythmic foundation throughout.",
+    "Bob": "Vocals are called strong and “sweet”; Bobby’s singing is highlighted on several tracks (e.g., Row Jimmy).",
+    "Keys": "Keith’s keyboard work gets special mention for tasteful tapping, jazzy fills, and driving the US Blues jam.",
+    "Drums": "Bill Kreutzmann is noted as “on fire” and a key driver of the Playing in the Band improvisation."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "US Blues > Promised Land": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half-Step > IMHBTR": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:04:57.599622+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-07-27.sbd.kaplan.2420.sbeok.shnf"
+}

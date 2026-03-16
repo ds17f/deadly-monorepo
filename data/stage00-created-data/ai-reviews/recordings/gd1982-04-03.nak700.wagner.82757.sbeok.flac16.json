@@ -1,0 +1,51 @@
+{
+  "summary": "A mixed‑quality show with psychedelic undertones; the recording is uneven but sounds good after EQ, highlighted by a rare Scope jam and an uptempo Eyes of the World.",
+  "review": "The performance swings between sloppy, lazy passages and intense psychedelic moments, featuring a unique rendition of the Scope and a particularly energetic Eyes of the World that fans praise. The source is uneven, requiring EQ to sound decent, which leaves the overall listening experience mixed despite strong musical highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Two reviews show divergent opinions: one notes recording unevenness and a mediocre performance (3★), the other praises rare song choices and strong playing (4★). Combined with modest technical issues, the rating falls in the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers mention uneven levels and difficulty achieving an even recording; EQ improves the sound considerably, but the raw source is not consistently clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scope",
+      "Eyes of the World",
+      "NFA"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid set with notable high points, but interspersed with lazy, sloppy sections that affect pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scope": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:10:22.136453+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-03.nak700.wagner.82757.sbeok.flac16"
+}

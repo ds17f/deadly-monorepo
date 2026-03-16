@@ -1,0 +1,104 @@
+{
+  "summary": "Clear matrix‑like audience recording captures a rain‑soaked 1990 show with stellar Touch of Grey, Dark Star and Cassidy performances.",
+  "review": "Fans rave about this 1990 concert as one of the era’s high points – the rain‑filled night produced a monster Touch of Grey, an extended two‑verse Dark Star, and a top‑10 rendition of Cassidy.  The source isn’t a pure soundboard but the mix is surprisingly clear; audience chatter is audible yet doesn’t detract from the music.  Overall the performance and its energetic jams outweigh any recording‑type ambiguity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic reviews highlight many standout songs and a strong performance; recording is described as clear despite source uncertainty, leading to a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners hear the crowd and taper chatter clearly, suggesting an audience‑mixed (matrix) feed; overall clarity is good and instruments are well balanced, though source type remains ambiguous."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Dark Star",
+      "Cassidy",
+      "Victim",
+      "Foolish Heart",
+      "Stagger Lee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rain‑soaked atmosphere fueled long jams; first set praised for overall flow, pre‑drums and a 24‑minute Dark Star provided a dramatic second‑set climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone was prominent (Healy turned up Jerry in the mix) and highlighted throughout the show.",
+    "Phil": "Bass is especially strong and audible; fans note Phil’s performance as a highlight.",
+    "Bob": "",
+    "Keys": "Brent's synth work praised, including a quirky coffee‑theme jam; keyboards were protected from rain with plastic liners.",
+    "Drums": "Pre‑drums segment and the continuous Dark Star showcase energetic drumming."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Just A Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:17:39.164527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-12.sbd.unknown.17688.sbeok.shnf"
+}

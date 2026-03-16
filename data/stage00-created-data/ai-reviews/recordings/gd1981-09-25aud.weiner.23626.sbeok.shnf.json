@@ -1,0 +1,31 @@
+{
+  "summary": "Warm, well‑rounded audience recording of a solid 1981 show with good overall performance.",
+  "review": "Both reviewers describe the concert as a good show captured on a nicely balanced audience tape. The sound is warm and live‑sounding, though one reviewer notes MD5 checksum failures on the Bird Song track which kept the rating at three stars despite the pleasant listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised as good and recording quality is described as warm and well‑rounded; minor technical checksum issue prevents a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Well‑rounded, warm live sound; however MD5 verification fails for the Bird Song track (d1t07), indicating possible file integrity issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers found the performance solid and cohesive, with no specific pacing complaints."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T14:48:19.892407+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-25aud.weiner.23626.sbeok.shnf"
+}

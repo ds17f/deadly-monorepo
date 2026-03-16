@@ -1,0 +1,66 @@
+{
+  "summary": "Uneven first set, but second set shines with Garcia’s fire and a fun encore",
+  "blurb": "The show starts tentative but picks up dramatically in the second set, delivering powerful solos and tight group interplay. Jerry regains his classic tone for a soaring run through songs like \"He's Gone\" and \"Stella Blue,\" and the night closes with an upbeat \"I Fought The Law\" encore.",
+  "review": "February 25, 1994 at the Oakland‑Alameda County Coliseum was a mixed bag that rewards listeners who can overlook its rough edges. The first set feels loose – Jerry sounds half‑present on numbers like \"Jack Straw\" and \"Peggy-O,\" and the band wanders through the early material without much spark. By the second set, however, the Dead find their groove: \"Victim Or The Crime\" rolls straight into a rollicking \"Iko Iko,\" and the classic sequence of \"Truckin' > Spoonful > He's Gone\" builds to an inspired drum duet and expansive Space. Jerry’s guitar suddenly ignites, delivering crisp, soaring solos on \"The Last Time\" and a heartfelt rendition of \"Stella Blue.\" The set closes with a jubilant \"Sugar Magnolia,\" leading into a lively “I Fought The Law” encore that leaves the audience smiling. While the available recordings are only fair in fidelity – most being distant audience tapes or unmarked sources – the Ladner audience capture (gd94-02-25.aud.ladner.15096.sbeok.shnf) provides the clearest window onto this late‑night resurgence, making it the go‑to version for fans wanting to hear the second‑set revival despite some tape hiss.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Three recordings describe the show as mixed and one as positive; no consistent high praise across multiple sources, so only a neutral sentiment adjustment is applied.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-02-25.aud.ladner.15096.sbeok.shnf",
+    "reason": "Offers the most complete capture with a decent mix; highlights the strong second set and memorable \"I Fought The Law\" encore despite fair audio quality."
+  },
+  "key_highlights": [
+    "Second‑set momentum builds from \"Victim Or The Crime\" through an inspired \"He's Gone\" and soaring \"Stella Blue\".",
+    "Jerry’s playing transforms from restrained in the first set to fiery, especially on the post‑space ballad.",
+    "\"I Fought The Law\" encore provides a fun, high‑energy close."
+  ],
+  "song_highlights": [
+    "Victim Or The Crime",
+    "He's Gone",
+    "Stella Blue",
+    "Sugar Magnolia",
+    "I Fought The Law"
+  ],
+  "band_performance": {
+    "Jerry": "Starts the night sounding half‑present but regains classic tone and delivers powerful, soaring solos in the second set.",
+    "Phil": "",
+    "Bob": "",
+    "Vince": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-18T19:15:45.128324+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Victim Or The Crime",
+      "Iko Iko"
+    ],
+    [
+      "Way To Go Home",
+      "Truckin'",
+      "Spoonful",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "I Fought The Law"
+    ]
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience (AUD) recording of a tight Dead show highlighted by a monster second set featuring Terrapin Station, The Other One and St Stephen.",
+  "review": "The crowd‑sourced tape is clear and full of enthusiastic hoots, delivering the feeling of being right in the venue.  Musically the band is on fire – the second set rolls from a powerful Close Encounter into an instantly‑launching St Stephen, with Terrapin Station, The Other One and Tennessee Jed standing out as classics.  Jerry’s guitar work and Phil’s bass lines receive particular praise, while the overall mix is praised as great despite a few reviewers noting it could use a slight EQ tweak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high ratings (mostly 5‑star) and enthusiastic comments about both performance and sound quality; show is described as outstanding, recording as clear and enjoyable."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp audience mix with plenty of crowd hoots, no distracting bickering; a few reviewers suggest minor EQ tweaks but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "The Other One",
+      "St. Stephen",
+      "Tennessee Jed",
+      "Close Encounter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is the highlight – seamless transitions from Close Encounter into a straight‑into St Stephen, tight band interplay and high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring solos, especially in Close Encounter and The Other One; tone described as perfect and constantly reaching higher peaks.",
+    "Phil": "Noted for mapping out the trail during the St. Stephen solo and providing a solid bass foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Described as tight; drum passages (Terrapin > drums, end‑of‑drums segment) highlighted as spectacular."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Close Encounter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T08:46:05.914563+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-22.sony.dauria.2014.sbefail.shnf"
+}

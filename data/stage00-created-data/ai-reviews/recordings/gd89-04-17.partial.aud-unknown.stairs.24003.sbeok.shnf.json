@@ -1,0 +1,63 @@
+{
+  "summary": "Fair‑sounding audience (aud) source captures a solid 1989 Dead show with standout Samson, Space and a rocking Wharf Rat > No Fixed Address.",
+  "review": "The concert is praised for its consistent playing typical of the strong 1989 era, highlighted by a punchy \"Samson\", an inspiring free‑form space, and a powerful \"Wharf Rat > No Fixed Address\" close. The audience recording is usable but suffers from hot levels and occasional sound‑quality issues, leaving listeners wishing for a proper soundboard source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and cite solid performance with several standout moments, while noting mixed to fair audio quality; weighted average yields a ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hot levels in spots and overall disappointment compared to an alternate source; decent clarity but no soundboard, some crowd noise on alternatives."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson",
+      "Space",
+      "Wharf Rat > No Fixed Address",
+      "Far From Me",
+      "Victim"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, consistent set with a strong start and a second‑set that builds through Samson, an exploratory space segment, and closes on a rocking Wharf Rat > NFA."
+  },
+  "band_member_comments": {
+    "Jerry": "Switched to a Strat for the show, providing great space and fresh tonal color.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent went berserk, hammering away at the keyboards during the space segment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat > No Fixed Address": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:56:44.380807+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-17.partial.aud-unknown.stairs.24003.sbeok.shnf"
+}

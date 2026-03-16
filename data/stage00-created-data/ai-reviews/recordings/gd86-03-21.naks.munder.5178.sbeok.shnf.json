@@ -1,0 +1,62 @@
+{
+  "summary": "Audience recording with fair sound captures a solid show – Stella Blue shines while some sections (Miracle, UJB) are muddy or weak.",
+  "review": "The tape offers an audience‑sourced mix that is generally clear but suffers from mud and wonkiness around the Dark Side → Miracle transition and occasional drum/spatial flaws. Musically the performance is decent; highlights include a standout Stella Blue and spirited improvisations, though the opening of set 2 and Uncle John’s Band fall short.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is moderately positive (good moments vs a few weak spots) while recording quality is only fair due to mud and occasional drop‑outs; the weighted average yields ~3.6."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Generally decent clarity, but noticeable mud on the Dark Side → Miracle segment, wonky sections during Miracle and Stella Blue, and occasional drum/spatial flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Miracle",
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "The second set opens messily (UJB weak, vocal lapses), but the band recovers with high‑energy jams and a strong Stella Blue, giving the show an overall buoyant feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob's histrionics during 'Mags' were noted but did not overwhelm the performance.",
+    "Keys": "",
+    "Drums": "Flaws noted during drums and space sections, especially around Miracle."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:15:33.466914+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-21.naks.munder.5178.sbeok.shnf"
+}

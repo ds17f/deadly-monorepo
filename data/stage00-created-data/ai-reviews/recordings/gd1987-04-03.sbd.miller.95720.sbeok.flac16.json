@@ -1,0 +1,39 @@
+{
+  "summary": "A hissy matrix SBD with mixed audio opinions but a memorable Spanish‑flavored ending to Crazy Fingers.",
+  "review": "The recording is a soundboard‑plus‑audience (matrix) source that some listeners find noisy and hissy, while others appreciate the added crowd energy and bass. Musically the only specific highlight mentioned is a quick Spanish flair at the end of \"Crazy Fingers,\" suggesting a fun moment in the performance despite limited commentary on the overall show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviewers are split on recording quality (2‑5 stars) and give only a single positive song comment, leading to an average rating that reflects decent but not outstanding show and fair technical quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Described as hissy with noticeable audience mic bleed; some reviewers note it lacks the clarity of pure soundboard sources, while others like the added crowd cheer and perceived extra bass."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set pacing; reviewers focus mainly on a single song highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:55:24.132306+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-03.sbd.miller.95720.sbeok.flac16"
+}

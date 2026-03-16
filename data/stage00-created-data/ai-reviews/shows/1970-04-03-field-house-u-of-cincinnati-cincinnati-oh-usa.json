@@ -1,0 +1,87 @@
+{
+  "summary": "Acoustic gems, tight jams; Black Peter & The Other One shine",
+  "blurb": "Features a rare acoustic set with Friend Of The Devil, Deep Elem Blues and Wake Up Little Susie, followed by electric fire on Black Peter, Good Lovin' and The Other One into Turn On Your Lovelight. Jerry’s vocals and guitar are standout throughout, while Pigpen adds soulful grit. Overall a solid 1970 performance captured well on soundboard.",
+  "review": "On April 3 1970 at the Field House, University of Cincinnati, the Dead delivered a unique blend of acoustic intimacy and electric intensity. The first half opens with the classic Casey Jones → China Cat Sunflower > I Know You Rider sandwich before slipping into an unexpected acoustic mini‑set that includes Friend Of The Devil, Deep Elem Blues, Candyman and a sweet rendition of Wake Up Little Susie on Martin guitar. Jerry’s lyric improvisation shines on the folk numbers, and Pigpen’s soulful harmonica adds extra fire to Good Lovin'. The second half builds momentum with Black Peter and a powerful turn into The Other One that flows seamlessly into Turn On Your Lovelight, while the dual drummers keep a tight groove throughout. Across multiple soundboard sources the show is praised for its balanced flow, standout performances, and only minor technical quirks, making it one of the more memorable early‑70s outings.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive sentiment across five of six recordings, with consistent praise for the acoustic set, Black Peter, The Other One, and Pigpen’s fire. No negative comments were recorded, and multiple sources highlight the same standout songs, justifying a high positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-04-03.sbd.farnsworth.3862.sbeok.shnf",
+    "reason": "High‑quality soundboard capture with clean track splits, minimal pitch drift and the most complete representation of both acoustic and electric portions."
+  },
+  "key_highlights": [
+    "Rare acoustic mini‑set featuring Friend Of The Devil, Deep Elem Blues, Candyman and Wake Up Little Susie.",
+    "Stellar performances of Black Peter and The Other One flowing into Turn On Your Lovelight.",
+    "Pigpen’s soulful harmonica on Good Lovin' adds extra grit to the electric set.",
+    "Clean drum presentation on Good Lovin' and tight dual‑drum interplay throughout."
+  ],
+  "song_highlights": [
+    "Casey Jones",
+    "Friend Of The Devil",
+    "Deep Elem Blues",
+    "Candyman",
+    "Wake Up Little Susie",
+    "Black Peter",
+    "Good Lovin'",
+    "Turn On Your Lovelight",
+    "The Other One",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers lyric‑rich improvisation on Friend Of The Devil and sweet, confident vocals on Deep Elem Blues, Candyman and Black Peter; his acoustic guitar work adds warmth to the early set.",
+    "Phil": "Provides a solid, lock‑step bass foundation that meshes tightly with Jerry’s phrasing, especially during the electric numbers.",
+    "Bob": "Rhythm guitar supports Pigpen’s harmonica on Good Lovin' and adds tasteful fills throughout; his presence is noted in the acoustic moments as well.",
+    "Brent": "",
+    "Mickey": "Drums are presented cleanly—especially the uninterrupted Good Lovin' segment—and lock tightly with Bill, driving the high‑energy second half.",
+    "Billy": "Keeps a tight groove alongside Mickey, contributing to the overall rhythmic cohesion and power during The Other One and Turn On Your Lovelight."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-19T18:00:59.755749+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Casey Jones"
+    ],
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "Deep Elem Blues"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Wake Up Little Susie",
+      "Black Peter",
+      "Uncle John's Band"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Not Fade Away",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Cosmic Charlie"
+    ]
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality audience recording of a magical desert show highlighted by a stellar Sugar Magnolia and Miracle",
+  "review": "Fans rave that this desert performance is one of the most magical they’ve heard, ranking it among their top five shows. The audience (AUD) tape isn’t pristine but exceeds expectations for an AUD source, delivering clear moments like the eclipse chatter. Standout numbers such as Sugar Magnolia and the Miracle shine, making the show worth a listen despite modest sound fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance (top‑five, magical) combined with a decent audience recording that is better than typical AUD tapes."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Not studio‑clear; some muddiness and occasional background chatter, but clearer than most audience tapes and captures fun eclipse conversation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall flow described as perfect and energetic; reviewers note a high‑energy vibe throughout the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:10:09.476487+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-09-15.aud.dauria.4160.sbeok.shnf"
+}

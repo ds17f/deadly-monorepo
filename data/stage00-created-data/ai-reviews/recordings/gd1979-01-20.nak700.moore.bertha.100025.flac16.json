@@ -1,0 +1,87 @@
+{
+  "summary": "Crystal‑clear audience tape captures a mellow 1979 show with a stellar Peggy‑O and an electrifying Other One > Dark Star jam, despite a shaky first set.",
+  "review": "The recording is frequently praised as one of the best AUD tapes – crisp, full‑bodied and surprisingly balanced for a crowd source.  Musically the night is uneven: the first set suffers from rushed tempos and weak vocals (notably on Promised Land and Stagger Lee), while the second half shines with Peggy‑O, an inspiring Other One > Dark Star sequence, Jack Straw and a powerful It’s All Over Now.  Overall the tape delivers a rewarding listening experience, especially for fans who love the late‑’70s era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (≈80%) give five stars and extol both the recording fidelity and key performances; a few critical notes on the first set lower the show rating modestly, resulting in an overall strong but not perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear, lush and well‑balanced with a warm color and full low‑end.  Reviewers note a tiny loss of top‑end sparkle and an early volume dip on the first song, but overall the tape is described as one of the best audience recordings available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "The Other One > Dark Star",
+      "Jack Straw",
+      "It's All Over Now",
+      "Not Fade Away",
+      "Loser"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Stagger Lee"
+    ],
+    "setlist_flow": "First set is described as unfocused, rushed and with weak vocal performances; the band regroups after intermission, delivering a relaxed, high‑energy second set that includes several highlight jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and vocals are repeatedly praised for sweetness and clarity, though one reviewer notes an off‑tempo intro and generally weak vocals early in the show.",
+    "Phil": "Lesh’s bass is highlighted as full‑force and a key driver of The Other One jam; reviewers appreciate its prominence compared to typical 1979 SBD recordings.",
+    "Bob": "Bob Weir receives mixed feedback – strong on It’s All Over Now and other covers, but his vocals are called weak on Promised Land and some early numbers.",
+    "Keys": "Keyboards are largely absent from the mix; reviewers comment that Keith and Donna are barely audible or missing entirely, giving the night a quasi‑quintet feel.",
+    "Drums": "The drum solos and subsequent percussive jam (marimba‑type) are praised for their power and groove."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Other One > Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:48:59.093671+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-20.nak700.moore.bertha.100025.flac16"
+}

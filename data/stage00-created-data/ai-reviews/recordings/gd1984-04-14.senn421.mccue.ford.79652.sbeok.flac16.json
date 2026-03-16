@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording captured a stellar second‑set with standout “Baby Blue” and other highlights, thanks to a close‑to‑stage taper.",
+  "review": "Both reviewers rave about the tape’s clarity – they were within ~25 feet of the stage amid a “graveyard of mics,” delivering an excellent audience capture. The show is praised for its second‑set highlights, especially Jerry’s unforgettable “Baby Blue” vocal, plus strong moments on “Stranger,” the “Intro into Touch,” and a fresh take on “Throwing Stones.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 5‑star ratings, highlighting superb tape quality and an outstanding performance; limited number of reviews lowers confidence slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Taper was ~25 ft from the stage with many mics in use, resulting in a clear, well‑balanced capture despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Baby Blue",
+      "Stranger",
+      "Intro into Touch",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set singled out as a high point, with multiple memorable moments and strong energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for delivering the best belting of “Baby Blue” ever heard.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Intro into Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:39:57.691286+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-14.senn421.mccue.ford.79652.sbeok.flac16"
+}

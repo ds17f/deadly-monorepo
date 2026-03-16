@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent matrix recording with crystal‑clear Garcia tone, capturing a tight Europe ’72 performance highlighted by a blazing Dark Star → Sugar Magnolia transition and standout Mr. Charlie.",
+  "review": "The Dusborne matrix capture delivers commercial‑release quality sound – crisp separation of Pigpen’s organ on the left and Keith’s piano on the right, with Garcia’s tone shimmering over the audience blend. Musically the show is a textbook Europe ’72 set: tight playing throughout, a superb Dark Star that flows into Sugar Magnolia (and even a Caution), plus an inspired Mr. Charlie. All reviewers rate it five stars and recommend it to any fan of this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All six detailed reviews are 5‑star, praising both the performance (tight playing, standout songs) and the recording (excellent matrix mix). The consensus is strongly positive, giving a near‑perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clean mix with clear instrument separation (organ left, piano right), Garcia’s tone described as \"amazing\", audience bleed adds warmth without muddiness. No reported drop‑outs or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Sugar Magnolia",
+      "Mr. Charlie",
+      "Caution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical Europe ’72 set – tight playing from all members, seamless transitions especially Dark Star into Sugar Magnolia, and a lively pig‑tune segment featuring Pigpen."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is highlighted as amazing; he is in fine form throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano is clearly audible on the right channel; Pigpen’s organ is prominent and well‑balanced.",
+    "Drums": "Bill Kreutzmann praised as a workhorse laying down the beat (Mickey absent)."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:47:37.047168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-29.126010.mtx.dusborne.flac16"
+}

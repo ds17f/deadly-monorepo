@@ -1,0 +1,83 @@
+{
+  "summary": "Good soundboard capture of a high‑energy 12/12/78 show, highlighted by a smoking Half Step → Franklin’s opener, stellar Franklin’s Tower and vibrant Looks Like Rain.",
+  "review": "The recording is a decent soundboard source – not as pristine as the famed Winterland tapes but clear enough to enjoy the band’s lively performance.  Fans rave about the opening Half‑Step > Franklin’s sequence, the soaring Franklin’s Tower, the soulful Looks Like Rain and an electrifying Eyes of the World, while Jerry Garcia’s fiery lead work and Keith’s electric‑piano textures draw particular praise.  Overall the show feels tight, high‑energy and memorable despite a few comments about cheesy drum patterns early in the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "22 reviews with an average of 4.18 ★, overwhelmingly positive language about both performance and recording; only a single low‑star outlier. The weighted blend of strong show quality (≈70%) and solid soundboard capture (≈30%) yields a rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally decent sound‑board mix; clearer than many audience tapes but not as clean as the Winterland recordings. Some reviewers note slight muddiness or lack of polish, yet overall the audio is listenable and captures the band’s dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step > Franklin's Tower",
+      "Franklin's Tower",
+      "Looks Like Rain",
+      "Eyes of the World",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens with a hot Half‑Step > Franklin’s that sets an upbeat tone, rolls through solid first‑set material and a soulful Looks Like Rain, then builds to a high‑energy second set highlighted by Eyes of the World and strong closers.  Fans note consistent momentum and a “catch‑fire” feeling midway through the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly praised for his fiery lead work, sweet licks, big grin and overall high energy throughout the night.",
+    "Phil": "Phil’s bass is described as ‘steaming along’ and providing a solid foundation that pushes Garcia forward.",
+    "Bob": "Bob Weir is noted as having fun on stage; vocal contributions get occasional shout‑outs (e.g., Good Lovin').",
+    "Keys": "Keith is lauded for his electric‑piano texture (‘bangin’, ‘really bangin’), though a few comments mention him sounding a bit ‘off’ later in the set.",
+    "Drums": "Early‑set drumming is called steady and occasionally “cheesy,” while later passages receive praise for high‑energy, tight playing."
+  },
+  "song_mentions": {
+    "Half Step > Franklin's Tower": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rio Grande": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T17:08:57.017782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-12.sbd-patched.cotsman.19895.sbeok.shnf"
+}

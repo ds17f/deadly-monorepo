@@ -1,0 +1,39 @@
+{
+  "summary": "Good matrix recording of a special show highlighted by an outstanding Sugaree performance.",
+  "review": "The consensus among reviewers is that this bootleg captures a memorable Dead night, with the Sugaree singled out as a five‑star moment. The matrix source provides a decent, listenable sound without major flaws, though details on mix quality are sparse. Overall the show is viewed positively despite one reviewer feeling it isn’t quite as \"on\" as other classic performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (average ~4.5) and describe the recording as decent, yielding a weighted average of about 4.3. Four reviews give enough data for moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the recording is decent and worth posting; no specific problems like drop‑outs or muddiness are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally praised for special moments, though one reviewer felt the night wasn’t as tight as other classic shows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:41:43.832175+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-01.sick-bits-15.matrix.chappell.31946.flac16"
+}

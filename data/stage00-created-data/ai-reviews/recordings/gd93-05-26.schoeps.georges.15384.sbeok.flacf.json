@@ -1,0 +1,68 @@
+{
+  "summary": "Crisp audience recording captures a thrilling Playin' in the Band set and stand‑out tracks like Broken Arrow, though a tracking glitch mars one long segment.",
+  "review": "The show is praised for its high energy, especially the psychedelic second‑set Playin' in the Band that stretches over 30 minutes, plus memorable moments on Broken Arrow, Deal and Crazy Fingers. The front‑of‑house/audience tape is described as punchy, clear and well balanced with excellent drum presence, but listeners note a tracking error that cuts the drums‑>space‑>Corinna sequence. Overall the performance outweighs the technical hiccup.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars highlighting a superb performance and high‑quality audio; only one low‑star review points out a tracking issue, so the weighted average remains strong."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very punchy and crisp front‑of‑house (FOB) capture with little crowd noise, wide dynamic range and drums (Mickey & Bill) well represented. The main flaw is a tracking error on the long Playin' > Space > Corinna segment that cuts out mid‑song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Broken Arrow",
+      "Deal",
+      "Crazy Fingers",
+      "Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens strong and includes a beautiful HCS moment; second set erupts into a psychedelic, chaotic but exhilarating Playin' stretch that many reviewers cite as the highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Modulates the Playin' melody up a whole step three times – a rare treat – and delivers an awesome, trippy solo throughout.",
+    "Phil": "His bass work on Crazy Fingers is described as ‘crazy fingers’, adding to the song’s intensity.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart and Bill Kreutzmann are especially well represented; drums drive the long Playin' segment."
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Corinna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:12:19.779034+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-26.schoeps.georges.15384.sbeok.flacf"
+}

@@ -1,0 +1,71 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a high‑energy 1984 show, highlighted by scorching Help > Slipknot! > Franklin’s, soulful Wharf Rat and the debut Gimme Some Lovin’.",
+  "review": "The recording is an excellent soundboard tape that presents the band with surprising clarity – even the occasional vocal filter on Brent’s organ is audible but not distracting.  Musically the night is a standout: a fiery Help‑Slip‑Franklin’s sequence, a soulful Wharf Rat, the first-ever Gimme Some Lovin’ sung by Phil, and a thunderous Bertha > Good Lovin' finish make it one of the year’s best shows despite a few miscues in the Slipknot section.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 detailed reviews overwhelmingly praise both performance and sound quality; occasional minor issues do not outweigh the strong positives, yielding a high‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear board mix with great instrument separation.  Minor complaints about Brent's voice sounding filtered and a few slip‑ups in the Help > Slipknot! segment, but overall balanced and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot! > Franklin's Tower",
+      "Wharf Rat",
+      "Gimme Some Lovin'",
+      "Loser",
+      "Bertha > Good Lovin'",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Help > Slipknot! (miscues)"
+    ],
+    "setlist_flow": "A short but punchy first set packed with Smoke>Spoonful>Iko and a hot Jack Straw, followed by an explosive second set where Help‑Slip‑Franklin’s rides the wave into a soaring Bertha‑Good Lovin' finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as ragged or shaky at times but guitar work praised as ripping and energetic; occasional “duel” with Bob highlighted.",
+    "Phil": "First lead vocal on Gimme Some Lovin', aggressive intro noted, and generally engaged throughout the show.",
+    "Bob": "Forgot some lyrics to El Paso, voice described as scraggly or filtered, but his banter added humor and sparked a memorable guitar duel.",
+    "Keys": "Brent Hammond’s organ praised for pop‑metal harmonies, spooky fills on Wharf Rat and Good Lovin', though one reviewer noted a strange filter on his voice.",
+    "Drums": "Mickey Hart’s space/drum segment lauded, especially the vibraphone textures; overall percussion considered solid."
+  },
+  "song_mentions": {
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Wharf Rat": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Loser": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-14T23:53:53.449491+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-11-02.sbd.connor.10172.sbeok.shnf"
+}

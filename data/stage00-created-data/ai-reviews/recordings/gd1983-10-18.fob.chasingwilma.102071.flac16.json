@@ -1,0 +1,63 @@
+{
+  "summary": "A high‑energy 1983 show with scorching Jack Straw, smoldering Althea and a rousing Sugar Magnolia, captured in an unknown‑source recording that fans love.",
+  "review": "Reviewers rave about the first set’s intensity – from a blazing Jack Straw opener through soaring Althea – and praise the second set’s Estimated Prophet launch into Space, a powerful Black Peter, and a smoking Sugar Magnolia. No specific complaints about the audio are noted, suggesting the recording is at least listenable, while the performance itself is described as one of the band’s best‑loved outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Both reviews are strongly positive (5 and 4 stars) and focus on outstanding musical moments with no recorded audio issues, indicating a high‑quality show and an acceptable recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not comment on sound clarity or mix; the absence of complaints implies the audio is at least satisfactory for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Althea",
+      "Estimated Prophet",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as hot and intense, while the second set picks up after Estimated Prophet and maintains that first‑set energy through Space, Black Peter and a rousing Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone ('Jerry juice') and vocals on Black Peter are highlighted as exceptional; reviewers note his intense focus during the performance.",
+    "Phil": "Praised for being 'right on top of the action' throughout the show.",
+    "Bob": "Mentioned alongside Phil as responding to everything thrown at them, indicating solid rhythm guitar work.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T13:09:26.974392+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-18.fob.chasingwilma.102071.flac16"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "Matrix‑derived tape with generally good sound captures a scorching July 4th show where the Scarlet→Fire sequence and Loose Lucy ignite an unforgettable second set.",
+  "review": "The recording, sourced from matrix mics, is clear enough to enjoy despite occasional guard chatter and brief drop‑outs.  The performance shines most on the second half – the scarlet‑to‑fire jam, a fiery Loose Lucy, and a soaring Stella Blue – while the heat‑soaked first set feels a bit flat but still delivers solid energy.  Overall fans regard it as one of the season’s highlights, even if some note Jerry’s mix being buried at times.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviewers (4‑5 stars) praise the show’s energy and key jams, while recording comments are mostly positive with minor technical complaints; weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear matrix mix with occasional guard mic bleed and brief static/drop‑outs; overall listenable and captures band dynamics well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Loose Lucy",
+      "Stella Blue",
+      "US Blues",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set suffers from heat‑induced fatigue and a few front‑loaded choices, but the second set erupts with sustained energy, especially the Scarlet→Fire jam and strong closers."
+  },
+  "band_member_comments": {
+    "Jerry": "Often noted wiping his neck in the heat; some say his mix was buried on Fire, others praise his tone and improvisational spark.",
+    "Phil": "Mentioned only in passing (\"Phil Zone\" vibe); no specific performance comments.",
+    "Bob": "Sparse remarks – a few critics note limited vocal presence, while others are silent on his playing.",
+    "Keys": "Brent Mydland receives abundant praise for being \"smoking\", driving the band and delivering powerful keyboards throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Loose Lucy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "US Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:31:33.960263+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-04.sbd.miller.26351.sbeok.shnf"
+}

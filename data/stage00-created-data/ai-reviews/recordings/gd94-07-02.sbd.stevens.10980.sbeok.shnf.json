@@ -1,0 +1,76 @@
+{
+  "summary": "Crisp mid‑94 soundboard captures a mixed show – acoustic Jerry shines on Desolation Row and Stella Blue while the overall performance swings between strong jams and a sub‑par second set.",
+  "review": "The recording is a solid mid‑1994 sound‑board capture with clear, crisp mix that lets the band’s tight rhythm section shine. Fans rave about highlights like Desolation Row, Stella Blue, the Music→Sugaree→Music sandwich and a fiery Help/Slip sequence, but several reviewers note Jerry’s uneven presence and a second set that never quite reaches its potential.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (crisp, soundboard), but show performance receives both strong and weak reactions, resulting in an overall middling rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix typical of mid‑94 SBD releases; reviewers mention solid sound despite short track gaps. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Stella Blue",
+      "Sugaree",
+      "Music Never Stopped",
+      "Friend of the Devil",
+      "Help Slip"
+    ],
+    "poor_songs": [
+      "Shoe Fits"
+    ],
+    "setlist_flow": "First set praised for long jams and a sweet Music→Sugaree→Music sandwich. Second set is described as uneven – marathon drum/space section and a lackluster Shoe Fits, but still contains high‑energy moments like Help/Slip."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some call his acoustic work ‘at his best’ and praise his vocal delivery, while others say he was barely present or had flubs.",
+    "Phil": "Positive notes on Phil’s bass blending beautifully with Jerry and Vince; highlighted for a driving bass line into the Music Never Stopped jam.",
+    "Bob": "Weir is mentioned pulling double duty and being ‘upset’ about an encore, but overall his playing is seen as solid.",
+    "Keys": "Vince (keyboards) receives praise for blending with Jerry and Phil during acoustic sections.",
+    "Drums": "Bill and Mickey are described as tight and great; a 32‑minute drum/space marathon is highlighted as a notable second‑set feature."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help Slip": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:02:11.629027+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-02.sbd.stevens.10980.sbeok.shnf"
+}

@@ -1,0 +1,95 @@
+{
+  "summary": "A mixed‑quality matrix recording that still captures a legendary ’69 set – pedal‑steel Hard to Handle, monster Dupree’s and an epic Alligator jam shine through.",
+  "review": "Despite hissy sections and occasional drop‑outs the tape delivers one of the most exciting 1969 performances, highlighted by Jerry’s steel‑guitar on Hard to Handle, a thunderous Dupree’s, and a soaring Alligator jam that leads into a powerful set. The drum mix is praised as outstanding, while the recording’s quirks keep it from being pristine but never diminish the show’s historic energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and cite multiple standout songs, while recording complaints are consistent but not severe enough to outweigh the musical excellence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Early board tape with hiss on quiet passages; first ~1:50 of drums is audience‑mic mono, then switches to stereo soundboard. Drop‑outs and clipping on Lovelight are noted, but drum mix and overall balance are praised for the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Dupree's",
+      "Alligator",
+      "Dire Wolf",
+      "High Time"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "First half builds strong energy, highlighted by the long jam after Alligator and Jerry’s pedal‑steel on Hard to Handle. The second set keeps momentum with a monster Dupree's and a soaring High Time, though recording glitches dampen the later Lovelight portion."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly praised for his pedal‑steel work on Hard to Handle (and Dire Wolf) and for delivering melodic, joy‑filled leads throughout.",
+    "Phil": "Phil’s occasional vocal contributions—especially on Momma Tried—are highlighted as a pleasant surprise; fans note they miss his singing in later years.",
+    "Bob": "Bob Weir’s opening jokes are called “priceless,” adding humor to the set.",
+    "Keys": "Pigpen’s organ/blues soul gets glowing remarks, described as crunchy and vital to the early‑Dead sound.",
+    "Drums": "The drum mix is lauded as “fantastic” and “killer board mix for drums,” with the post‑drums jam noted as a strong highlight."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alligator": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Momma Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:18:12.585042+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-07-11.sbd.hanno.4644.sbeok.shnf"
+}

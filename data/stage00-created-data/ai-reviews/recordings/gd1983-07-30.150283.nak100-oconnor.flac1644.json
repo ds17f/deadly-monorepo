@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality audience recording of a pleasant California coast show with a standout jam after China Doll.",
+  "review": "The audience source captures the concert with surprisingly clear and lively sound, making it one of the better crowd recordings out there. The performance is described as nice overall, with particular praise for the post‑China Doll jam that adds an extra spark to the set. While the show isn’t hailed as legendary, it offers a solid listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "A single detailed 4‑star review highlights good musical performance and high‑quality audience recording; balanced weighting yields an overall rating of about four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the audio is high quality for an audience source, indicating clear pickup and minimal muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly with a memorable jam following China Doll, contributing to the overall pleasant vibe of the coast‑side concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:33:13.888052+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-07-30.150283.nak100-oconnor.flac1644"
+}

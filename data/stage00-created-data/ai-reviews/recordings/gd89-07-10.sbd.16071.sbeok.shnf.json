@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard capture of an iconic rain‑soaked Giants Stadium show with a stellar second set (Music Never Stopped, Stranger, Sugar Magnolia) and solid Jerry guitar work despite some hiss.",
+  "review": "The performance is remembered for the wild weather sync – lightning striking during Music Never Stopped, a soaring Stranger opener and a post‑UJB jam that many fans call divine.  The SBD is generally clear but a bit hissy and occasionally muffled; still it conveys the crowd’s excitement and the band’s tight second‑set groove.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, most giving 4–5 stars and praising the musical moments; recording issues are noted but do not dominate the experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with occasional hiss and a few analog‑style noise artifacts; no major drop‑outs, captures lightning cracks and crowd reactions well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped",
+      "Stranger",
+      "Sugar Magnolia",
+      "Upright John (Uncle John's Band) – post‑UJB jam",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Franklin's Tower (some out‑of‑tune moments)",
+      "Just a Little Light / Foolish Heart (mixed reception)"
+    ],
+    "setlist_flow": "First set described as solid but rain‑interrupted; second set erupts with the weather, delivering an electrifying Music Never Stopped and extended jams that many reviewers cite as the highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for intense tone, sweet licks, and crystal‑clear lead lines even in the rain.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent highlighted on the Just a Little Light/Foolish Heart segment; overall keyboards praised for adding spice with the Neville Brothers.",
+    "Drums": "Mickey’s drumming described as massive, tight and driving especially on the second‑set jams."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Upright John (Uncle John's Band)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Just a Little Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Post-UJB Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T21:00:26.476219+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-07-10.sbd.16071.sbeok.shnf"
+}

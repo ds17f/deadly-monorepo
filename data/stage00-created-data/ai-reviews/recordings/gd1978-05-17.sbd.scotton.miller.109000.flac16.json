@@ -1,0 +1,63 @@
+{
+  "summary": "High‑quality soundboard recording of a solid spring ’78 show highlighted by a blazing Half‑Step → Franklin’s Tower opener and an inspired Lazy Lightning → Supplication jam.",
+  "review": "The four fan reviews agree that the May 17, 1978 Uptown Theater concert sounds great – a clean soundboard source with a warm, “drippy” ’78 vibe. Musically the show is praised for its energetic opening Half‑Step → Franklin’s Tower, the monster Lazy Lightning → Supplication stretch and the marathon Dancin’ → Drums → Terrapin sequence, while a few note Jerry’s occasional vocal slip on Franklin’s verses.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑5 stars and highlighted strong performances with only minor vocal hiccups; recording is described as great soundboard quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently praised for clear, warm sound; no major drop‑outs or balance problems mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step > Franklin's Tower",
+      "Lazy Lightning > Supplication",
+      "Dancin' > Drumz > Terrapin > Not Fade Away > Around"
+    ],
+    "poor_songs": [
+      "Franklin's Tower (vocals)"
+    ],
+    "setlist_flow": "Tight opening pair (Half‑Step/Franklin’s) followed by a classic second set that builds through Me & My Uncle → Big River, long Dancin’ jam, extended drums/space segment and closes with Terrapin, NFA, A&A and a Werewolves encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally strong guitar work; noted to struggle a bit with the Franklin's verses but delivers solid slide leads in the encore.",
+    "Phil": "His bass is steady; briefly heard screaming at the start of the space segment, adding excitement.",
+    "Bob": "Double‑dose of Weir on Me and My Uncle → Big River and a prominent slide part during Werewolves.",
+    "Keys": "Keith contributes melodic fills on Tennessee Jed and adds to the overall 'drippy' 1978 sound.",
+    "Drums": "Mickey and Bill receive birthday shout‑outs; a lengthy ~15 min drum jam feeds into the space segment."
+  },
+  "song_mentions": {
+    "Half Step > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin' > Drumz > Terrapin > Not Fade Away > Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Werewolves": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:08:40.010406+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-17.sbd.scotton.miller.109000.flac16"
+}

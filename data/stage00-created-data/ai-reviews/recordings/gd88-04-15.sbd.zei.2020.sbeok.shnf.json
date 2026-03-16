@@ -1,0 +1,105 @@
+{
+  "summary": "A clean soundboard capture of a late‑summer ’88 Rosemont show highlighted by the rare Scarlet > Fire opener and a blazing second set.",
+  "review": "The recording is a solid soundboard source that sounds clear, with only a slight high‑end muting noted by a few listeners.  Musically the concert shines – the unusual Scarlet Begonias → Fire on the Mountain opener, tight Terrapin, soaring Candyman and a punchy Mr. Fantasy/Hey Jude reprise make it one of the stronger shows of the run.  Reviewers repeatedly praise Jerry’s inventive solo work, Brent’s electric piano textures and the dual‑drummer birthday vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews lean heavily positive for both performance and audio; the show is consistently described as standout while the recording is noted as good‑to‑excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the sound \"very good\" or \"great audio\"; a few mention it sounds a bit muted in the high end or not as powerful as pre‑FM tapes, but overall the mix is clean and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias → Fire on the Mountain",
+      "Candyman",
+      "Terrapin Station",
+      "Mr. Fantasy / Hey Jude reprise",
+      "Deal",
+      "Cumberland",
+      "Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with the rare Scarlet‑>Fire combo, then rolls through a solid first half (Walkin' Blues, Candyman, Louie Louie) before launching into an energetic second set that peaks with Terrapin, Miracle and the Mr. Fantasy/Hey Jude medley."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for inventive solos (Scarlet inverted solo, crazy haircut moment), strong lead guitar throughout, and a triumphant pick‑hand raise during \"Knockin'.\"",
+    "Phil": "Noted for a powerful low end; several reviewers comment on the loudness of his bass in this show.",
+    "Bob": "",
+    "Keys": "Brent’s “electrical magical piano” is highlighted, especially on Fire and the Fantasy/Hey Jude sequence.",
+    "Drums": "Both Bill and Mickey are celebrated for their birthday celebration, tight drumming and space segment; the drums/space transition is described as a \"deer hooves\" texture."
+  },
+  "song_mentions": {
+    "Scarlet Begonias → Fire on the Mountain": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Candyman": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Louie Louie": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Cumberland": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Deal": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Mr. Fantasy / Hey Jude reprise": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Heaven's Door": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T08:57:11.856352+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-15.sbd.zei.2020.sbeok.shnf"
+}

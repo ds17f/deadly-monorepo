@@ -1,0 +1,106 @@
+{
+  "summary": "Excellent soundboard recording of a solid 1972 American University show with standout Bird Song, Truckin' and The Other One.",
+  "review": "The gd72‑09‑30.sbd capture delivers crystal‑clear stereo separation, with Pigpen’s organ high in the mix and Keith’s keyboards a bit buried. Musically the concert is a quintessential early‑’70s Dead outing – Bird Song shines, Truckin' rolls, The Other One stretches out, and the first set is peppered with Big River, Sugar Magnolia and a smoking China Cat → I Know You Rider. The second set mellows a bit but still offers memorable moments like Casey Jones and Black‑Throated Wind.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 reviews consistently praise both performance and recording; the show is solid/great (≈4.2) and the soundboard source is described as excellent (≈4.7), yielding a weighted average around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear stereo separation; Pigpen’s organ and guitar sit prominently on the right, Jerry’s vocals come through strong, but Keith's keyboards are low in the mix (only audible a couple of times). Overall fidelity is high with minimal noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Truckin'",
+      "The Other One",
+      "Sugar Magnolia",
+      "Big River",
+      "China Cat Sunflower > I Know You Rider",
+      "Casey Jones",
+      "Black Throated Wind"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and energetic, highlighted by Bird Song and a strong China>Rider transition; the second set eases into a mellow vibe with solid Truckin' and The Other One, though it ebbs slightly in momentum before closing."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals on Casey Jones are praised as among his best; guitar work is syncopated early and gets louder later in the set.",
+    "Phil": "Bass is described as \"ON\" and solid, though a few reviewers note it sits a bit low in the mix.",
+    "Bob": "Rhythm guitar unusually loud and clear for this era; his early‑70s vocal contributions are noted positively.",
+    "Keys": "Keith's keyboard parts are largely buried—only clearly heard twice—but overall the mix is still enjoyable.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T04:39:30.578450+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-30.sbd.unknown.5681.sbeok.shnf"
+}

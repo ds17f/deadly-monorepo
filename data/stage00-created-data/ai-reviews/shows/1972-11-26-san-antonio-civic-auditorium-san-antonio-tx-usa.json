@@ -1,0 +1,82 @@
+{
+  "summary": "High‑energy ’72 set with soaring Dark Star > Me & Bobby and jazzy Playin’ In The Band",
+  "blurb": "The concert erupts with youthful vigor, highlighted by a marathon Dark Star that segues into Me And Bobby McGee and a jazzy Playing In The Band. Jerry builds momentum late in the first set while Phil delivers a standout solo on Dark Star; Keith’s keyboards sparkle throughout. Strong renditions of Bird Song, Box of Rain, Jack Straw and Brokedown Palace round out a memorable performance.",
+  "review": "San Antonio Civic Auditorium on November 26, 1972 captured the Dead at a pivotal moment of high‑octane improvisation. The first set rolls through classics like The Promised Land, Deal and an exuberant Around & Around before launching into a luminous Bird Song that sets the tone for the night. The second half is where the magic truly unfolds – a soaring Dark Star that stretches into Me And Bobby McGee showcases Jerry’s late‑set surge and Phil’s tasteful solo, while Keith’s jazzy voicings lift Playing In The Band to new heights. Jack Straw lands tight, Brokedown Palace glides in with an uplifting vibe, and the encore of Sugar Magnolia through Goin’ Down The Road Feeling Bad keeps the energy humming. Across all available soundboard sources the performance is praised for its youthful fire and seamless segues despite some early‑set audio quirks, making this show a must‑listen for fans seeking that classic ’72 spark.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings are explicitly positive, praising the soaring Dark Star > Me & Bobby segue, high‑energy first set and jazzy Playing In The Band; a third recording is mixed but still highlights strong performance despite early sound issues. Consistent commendations across multiple sources justify a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1972-11-26.127478.sbd.restore.droncit.flac16",
+    "reason": "Restored soundboard delivers good clarity, captures the high‑energy performance and key jams (Dark Star, Playin' In The Band) with only minor muffling artifacts."
+  },
+  "key_highlights": [
+    "Soaring Dark Star > Me And Bobby McGee segue that defines the second set.",
+    "Jazzy Playing In The Band showcasing Keith’s keyboard brilliance.",
+    "Tight Jack Straw and uplifting Brokedown Palace lift the latter half of the show.",
+    "High‑energy first set with standout Bird Song, Box of Rain and Around & Around."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Me And Bobby McGee",
+    "Bird Song",
+    "Box of Rain",
+    "Around & Around",
+    "Casey Jones",
+    "Big River",
+    "Playing In The Band",
+    "Jack Straw",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Picks up steam late in the first set and dives into maelstrom‑like improvisations during Dark Star and other jams.",
+    "Phil": "Delivers a tasteful solo on Dark Star, provides a walking bass line on Casey Jones, and his tone shines with a slight EQ boost.",
+    "Bob": "Tears into Around & Around with enthusiasm, adding extra drive to the rocking numbers.",
+    "Keith": "Jazzy playing shines on Playing In The Band, adding bright textures throughout the set.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-22T02:24:22.521281+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Me And Bobby McGee"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Around & Around"
+    ],
+    [
+      "Casey Jones"
+    ],
+    [
+      "Big River"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

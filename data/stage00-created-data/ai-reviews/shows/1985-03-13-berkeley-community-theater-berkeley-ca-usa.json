@@ -1,0 +1,73 @@
+{
+  "summary": "High-energy Music→Franklin's Tower→Estimated sequence with tight set",
+  "blurb": "The concert launches into a scorching Music → Franklin’s Tower → Estimated Prophet suite that stays on fire through Jack Straw and New Minglewood Blues. Jerry serves up smoking, jazzy wah‑wah solos while Brent’s pop‑bright keyboards add texture. The rhythm section is solid, though Phil’s bass sits low in the mix.",
+  "review": "On March 13, 1985 at Berkeley Community Theater the Dead delivered a high‑octane show that still feels fresh. From the opening “Jack Straw” through an energetic first set, the band kept the momentum rolling into a second‑set centerpiece – a blistering run of “The Music Never Stopped → Franklin’s Tower → Estimated Prophet” that never let up. Jerry Garcia’s guitar was described as \"smoking\" and full of jazzy wah‑wah flourishes, while Brent Mydland’s clavinet/keyboard work added a pop‑piercing vibrancy that helped define the night’s texture. Bob Weir’s vocals were powerful despite some distracting effects, and the dual drummers kept a tight groove, even featuring an interesting percussion guest (Hamza El Din) on the drum break. Phil Lesh held down a steady bass line, though several listeners wished it had more punch in the mix. Highlights also include “Jack Straw,” “New Minglewood Blues,” and a lively encore of “Brokedown Palace.” The show’s energy is captured best by the soundboard recording (gd85-03-13.sbd.barbella.9961.sbeok.shnf), which offers clear, crisp audio despite a slightly flat cassette‑level dynamic range.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 22,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings (soundboard, matrix, and one audience) are positive, praising the high‑energy performance and standout Music→Franklin's Tower→Estimated sequence; two recordings are mixed but contain no negative criticism of playing. The consistent praise across multiple sources justifies a moderate‑high positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-03-13.sbd.barbella.9961.sbeok.shnf",
+    "reason": "Clear soundboard capture with crisp audio that highlights the high‑energy performance and key Music→Franklin's Tower→Estimated sequence."
+  },
+  "key_highlights": [
+    "Blazing Music → Franklin’s Tower → Estimated Prophet suite that drives the second set.",
+    "Jerry’s smoking, jazzy wah‑wah guitar solos throughout the show.",
+    "Brent’s vibrant clavinet/keyboard adds a pop‑bright texture to the jams.",
+    "Tight rhythm section with an extra percussion flavor from guest Hamza El Din."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "New Minglewood Blues",
+    "The Music Never Stopped",
+    "Franklin's Tower",
+    "Estimated Prophet",
+    "Spoonful*",
+    "Black Peter",
+    "Man Smart, Woman Smarter*",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers smoking, jazzy wah‑wah guitar work; vocals solid with occasional lyric flubs.",
+    "Phil": "Steady bass foundation but lacks dynamic punch and sits low in the mix.",
+    "Bob": "Powerful vocal delivery, though some listeners note distracting vocal effects.",
+    "Brent": "Poppy, vibrant clavinet/keyboard presence that shapes the show’s texture; organ sometimes masked by harp in audience recordings.",
+    "Mickey": "Drumming tight and supportive; noted for an interesting percussion addition (Hamza El Din).",
+    "Billy": "Solid drumming partner; maintains a firm groove alongside Mickey."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-15T01:19:56.883414+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "The Music Never Stopped",
+      "Franklin's Tower",
+      "Estimated Prophet",
+      "Spoonful*",
+      "Drums**",
+      "Ollin Arageed**",
+      "Man Smart, Woman Smarter*",
+      "Black Peter",
+      "Good Lovin'"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "A gritty audience tape that still delivers a blistering Alligator‑Drums‑Feedback run and a killer Caution, making it a must‑hear despite the mud.",
+  "review": "Even though the recording is muddy, rough and suffers from occasional clipping, the performance shines. Reviewers rave about an incendiary Alligator followed by mind‑bending Drums, a smoking Feedback climax and one of the best Cautions ever heard, all captured on Jorma’s on‑stage audience tape. The show epitomises the wild, high‑energy spring‑summer ’68 period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise the musical performance strongly; recording quality is consistently described as muddy but acceptable, pulling the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Grungy, rough and muddy with oversaturation from on‑stage mics; low hiss for a ’68 AUD, occasional clipping (Pigpen vocal barely audible), but overall clearer than many other 1968 audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator",
+      "Drums",
+      "Feedback",
+      "Caution",
+      "Jam",
+      "Mountain Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Short but high‑energy set with fluid transitions; the Alligator → Drums → Jam → Alligator reprise sequence and the Caution/Feedback climax are highlighted as exemplary of the band's peak spring‑summer ’68 improvisational flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"pure electricity\" on the Alligator after Drums; his guitar work is intense and incendiary.",
+    "Phil": "Mentioned only in a joking quote about dropping 8 kHz EQ, no performance comment.",
+    "Bob": "Noted for a profane rant after Feedback (\"Fuck the proletariat!\") and for “going off on the proles” backstage.",
+    "Keys": "Pigpen’s organ is described as screaming and bashing keys during Drums; his vocal is sometimes buried by clipping.",
+    "Drums": "The drum segment is repeatedly called mind‑bending and a highlight of the show."
+  },
+  "song_mentions": {
+    "Alligator": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Drums": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feedback": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Caution": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mountain Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:18:51.169586+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-05-18.aud.jools.18216.sbeok.shnf"
+}

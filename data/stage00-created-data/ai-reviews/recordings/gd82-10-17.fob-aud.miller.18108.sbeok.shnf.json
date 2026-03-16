@@ -1,0 +1,81 @@
+{
+  "summary": "A high‑energy 1982 Santa Fe Downs show recorded on a solid audience tape, highlighted by scorching Throwing Stones and an unforgettable Other One.",
+  "review": "The concert is repeatedly described as one of the best shows of ’82 – an epic first set followed by a second set that many fans call “even better,” with standout moments like Throw & Stones, The Other One, Althea and a special Brent‑added verse in Never Trust A Woman.  The audience recording is praised for its lively vibe and overall clarity despite occasional glitches (notably a cut in Althea), making it a very listenable document of a classic Dead night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 5‑star, lauding both the performance and the tape’s sound; only a few unrelated low scores appear.  The show is consistently called exceptional while the recording is described as good with minor technical flaws."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively audience mix; reviewers note a crisp feel, but mention occasional tech glitches—a noticeable cut/gap in Althea and some minor drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones",
+      "The Other One",
+      "Althea",
+      "Let It Grow",
+      "Good Lovin'",
+      "Never Trust a Woman (special Santa Fe verse)",
+      "China Doll",
+      "Mississippi‑Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans rave about an epic first set and a second set that kept the energy soaring, with seamless transitions after the drums and a string of high‑impact numbers that felt like two shows in one."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong vocals (“Jerry magic”), scorching guitar tone (smoke boiling off his axe) and a particularly great first verse of Half Step.",
+    "Phil": "Described as roaring into The Other One, driving the band into a frenzy with powerful bass work.",
+    "Bob": "",
+    "Keys": "Brent Mydland gets kudos for a special Santa Fe verse in Never Trust A Woman and tasteful slide embellishments throughout the set.",
+    "Drums": "The after‑drums segment is highlighted as a highlight, with Bill (and Mickey) providing a dynamic launch into the second‑set marathon."
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Never Trust a Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi‑Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:11:25.683237+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-10-17.fob-aud.miller.18108.sbeok.shnf"
+}

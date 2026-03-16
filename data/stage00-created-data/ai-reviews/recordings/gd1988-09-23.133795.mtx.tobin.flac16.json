@@ -1,0 +1,31 @@
+{
+  "summary": "Recording quality unknown and the performance is considered a letdown by reviewers.",
+  "review": "The sole review rates this show as mediocre (3 ★) and describes it as another disappointing entry in what appears to be a weak run of concerts. No details are given about the audio source or sound quality, so the recording’s technical merit remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rating review mentions a general disappointment with the show and provides no information on recording quality, leading to a low confidence, below‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source; cannot assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer indicates the concert is part of a sub‑par run of shows but gives no specifics on set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T14:24:50.667651+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-23.133795.mtx.tobin.flac16"
+}

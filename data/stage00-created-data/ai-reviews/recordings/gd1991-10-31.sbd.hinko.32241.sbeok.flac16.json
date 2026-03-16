@@ -1,0 +1,64 @@
+{
+  "summary": "Decent matrix recording captures a solid Halloween set with an energetic Help>Slip>Franklins opener and a sprawling Dark Star > Drums > Space marathon.",
+  "review": "The show is historically charged—Halloween ’91 in California—with a respectable first set and a second half that swings between highlights like the opening Help‑Slip‑Franklin’s, an expansive 41‑minute Dark Star > Drums > Space, and a strong Werewolves of London, but also suffers from uneven moments such as a bland Scarlet and a tired late‑set. The hinko‑32241 matrix source delivers clearer sound than comparable SBDs, though some sections feel dry or muddy, making the overall listening experience good but not pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is average with a few standout jams (≈3/5) while recording quality is slightly above average (≈3.5/5). Weighted combination (70% show, 30% recording) yields about 3.2 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix blend offers clearer presence than the comparable SBD; dry sound on \"Fire\" is better‑charged, overall decent clarity with occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Dark Star > Drums > Space",
+      "Werewolves of London"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias",
+      "Truckin'"
+    ],
+    "setlist_flow": "The set opens strong with a blazing Help‑Slip‑Franklin’s, the first set sits at an average C+, while the second set alternates between high‑energy moments (long Dark Star jam, Werewolves of London) and weaker spots (bland Scarlet, tiring late‑show stretch), giving the Halloween show an uneven but historically interesting pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar work holds the show together, especially during the long Dark Star jam, though later parts feel a bit tired.",
+    "Phil": "Phil Lesh is on overdrive in the first set, adding vigor to an otherwise average set.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby provides solid keyboard work; this was his last west‑coast show and he’s noted as sounding good.",
+    "Drums": "Mickey Hart drives the drums and stays through Space, contributing big‑bell textures."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star > Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves of London": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:41:10.501265+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-10-31.sbd.hinko.32241.sbeok.flac16"
+}

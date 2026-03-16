@@ -1,0 +1,95 @@
+{
+  "summary": "A high‑quality soundboard capture of the Greek Theatre’s mellow September ’81 afternoon, highlighted by killer jams like Jack Straw > Bertha, Terrapin Station, Never Trust A Woman and a rolling Sweet Sugar Magnolia/Satisfaction sequence.",
+  "review": "This SBD source finally gives the 13‑Sept‑1981 Greek show the clarity it deserves – the mix is clean overall, though Garcia’s guitar can sit a bit low at times. Musically the concert shines with an easy‑going first set and an epic second set packed with standout moments (Cold Rain > Samson, LS > ST, Terrapin Station, Never Trust A Woman, The Wheel, Miracle, GDTRFB, Sugar Magnolia and Satisfaction).",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic 5‑star reviews praise the performance; recording is praised as the best source despite minor mix quirks, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "New SBD source fixes previous tinny, washed‑out issues; overall clear and balanced but Garcia’s guitar is occasionally buried. A few reviewers note occasional crowd noise (rain‑like) and minor mix quirks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Bertha",
+      "Cold Rain > Samson",
+      "Lost Sailor > Saint of Circumstance",
+      "Terrapin Station",
+      "Never Trust A Woman",
+      "The Wheel",
+      "Miracle",
+      "Goin' Down the Road Feels Bad",
+      "Sugar Magnolia",
+      "Satisfaction"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "Mellow, sun‑lit first set builds into a high‑energy second set with seamless transitions and extended jams; the show feels like a relaxed afternoon that erupts into classic Dead fireworks."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery slide work and strong vocals, though his guitar can be low in the mix and his voice sounded slightly off on some tracks.",
+    "Phil": "Earlier version washed out; on this night Phil was briefly “limping” but recovered to crush Never Trust A Woman.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) took charge after Terrapin, launching into Never Trust A Woman and adding vibrant textures throughout the set.",
+    "Drums": "Mickey’s beam‑drum work on ‘The Greek’ segment is highlighted as a powerful atmospheric moment."
+  },
+  "song_mentions": {
+    "Jack Straw > Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain > Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Never Trust A Woman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feels Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T14:34:48.910434+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-13.sbd.miller.32576.sbeok.flac16"
+}

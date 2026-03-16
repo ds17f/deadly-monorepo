@@ -1,0 +1,92 @@
+{
+  "summary": "Soundboard capture of the August 4 1971 prison gig – solid show with standout “Hard to Handle” and Phil’s funky bass, but hampered by occasional bass distortion.",
+  "review": "The performance is a classic early‑’71 Dead set: high energy, strong Pigpen numbers and an especially fiery “Hard to Handle”.  Phil’s bass is front‑and‑center and many reviewers rave about his “fat‑n‑funky” tone, though the tape suffers from intermittent bass distortion and a faint buzz in the latter half.  Overall the show is praised for tight playing and memorable moments despite limited jams due to the prison setting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (20+) give 4‑5 stars, highlighting strong musical performance and only moderate technical flaws; weighting 70 % show quality + 30 % recording quality yields a rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear front‑mix, especially on Phil’s bass and Jerry’s guitar.  Notable issues: intermittent bass distortion (Big Boss Man, Sugaree), a low‑mid buzz in the second half, occasional drop‑outs but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "China Cat Sunflower > Rider",
+      "Me & My Uncle",
+      "Next Time You See Me",
+      "Truckin'",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Big Boss Man",
+      "Playin'"
+    ],
+    "setlist_flow": "Short, high‑energy prison set with tight playing and limited jams (venue constraints).  First half feels tighter; second half loses a bit of momentum but still delivers strong Pigpen moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp, melodic lead on China Cat Sunflower and overall excellent tone.",
+    "Phil": "Front‑and‑center bass praised as “fat‑n‑funky” and a highlight of the show; however, reviewers note frequent distortion/bass blow‑outs.",
+    "Bob": "Noted for high vocal peaks (Loser), enthusiastic Yellow Dog Story, and his jokes that add character to the set.",
+    "Keys": "No keyboards heard – reviewers point out the absence of Keith or Donna at this date.",
+    "Drums": "Bill (drummer) keeps a solid, steady groove; no major complaints about drumming."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "China Cat Sunflower > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:03:45.870680+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-04.sbd.miller.95308.sbeok.flac16"
+}

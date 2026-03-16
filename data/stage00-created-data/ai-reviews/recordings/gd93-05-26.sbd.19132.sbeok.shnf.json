@@ -1,0 +1,39 @@
+{
+  "summary": "Fair‑quality soundboard tape that still shines thanks to a melodic drum showcase and a scorching Playing in the Band jam.",
+  "review": "The performance is praised for its powerful drumming and an especially fiery Playing in the Band, with several fans calling it one of the best modern era jams. Recording quality is noted as sub‑par – the tape isn’t crisp and the encore is incomplete – but the musical moments compensate enough to make the set worth listening to.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong show comments (especially drums and Playing in the Band) boost the rating, while multiple notes about poor tape quality lower it; overall weighted average lands just above 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Sound quality described as not the best; tape has noticeable limitations and the encore is only partially captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set highlighted by a drum‑centric vibe and an extended, evolving jam on Playing in the Band that builds intensity throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboard tone is mentioned as not to the reviewer's liking.",
+    "Drums": "Multiple reviewers call the drum work melodic, standout and a major highlight of the show."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:12:57.363600+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-26.sbd.19132.sbeok.shnf"
+}

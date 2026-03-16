@@ -1,0 +1,116 @@
+{
+  "summary": "Excellent soundboard capture of the legendary Feb 28 1973 show, highlighted by a monster second set (The Other One, Truckin', Eyes of the World, Morning Dew) and crystal‑clear audio.",
+  "review": "The recording is an SBD source that most reviewers describe as crisp, balanced and often “A+” quality, with only minor EQ quirks. Musically the concert is praised for its cohesive energy, especially the soaring The Other One jam, the long Truckin’ > The Other One > Eyes of the World > Morning Dew sequence and the powerful second‑set transitions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks for both performance (standout jams, tight set flow) and sound quality (A+ SBD). Only a few average or negative comments appear, so the combined weighted score is well above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Generally crystal‑clear with great balance; some reviewers note it isn’t the sharpest SBD ever and suggest a slight EQ tweak (lower Phil’s bass), plus an occasional pitch issue on Promised Land. Overall regarded as superior to other available sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Truckin'",
+      "Eyes of the World",
+      "Morning Dew",
+      "China Cat Sunflower > I Know You Rider",
+      "Row Jimmy",
+      "He's Gone",
+      "El Paso",
+      "Sugaree",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "All We Been Young (and) Good‑Looking (AWBYG)",
+      "Promised Land (slightly flubbed in one source)"
+    ],
+    "setlist_flow": "Reviewers describe the concert as tightly knit from the first note, with energy building through a tight first set and exploding into an epic second set. Seamless segues (e.g., China>Rider, Truckin'>The Other One>Eyes>Dew) keep momentum high, delivering a cohesive, uplifting experience."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead guitar solo on Cold Rain & Snow is called “perfect”; backing vocals on Promised Land and strong lead vocal work throughout receive praise.",
+    "Phil": "Intro to The Other One noted as loud/strong; his bass‑drum bombs drive the jam; harmonies on Row Jimmy highlighted as stellar.",
+    "Bob": "",
+    "Keys": "Keith’s performance on El Paso singled out as “pretty much perfect”; overall keyboard balance praised though one reviewer suggests a slight mix adjustment (lower Phil).",
+    "Drums": "Bass & drums section described as short but interesting; drum work is solid and supportive throughout the jams."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:54:42.713217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-02-28.sbd.weiner.15386.sbeok.shnf"
+}

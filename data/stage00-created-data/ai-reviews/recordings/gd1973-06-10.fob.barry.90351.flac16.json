@@ -1,0 +1,77 @@
+{
+  "summary": "An extraordinary audience tape that captures the legendary RFK Stadium sound, delivering a soaring Dark Star and unforgettable jams like Morning Dew and Playing‑in‑the‑Band.",
+  "review": "The Monte‑Barry AUD recording is widely praised as a benchmark for live‑sound fidelity – a single‑point stereo cassette mic placed in‑field perfectly caught the Wall of Sound’s ambience, with only occasional clipping. The performance itself is hailed as one of the band’s peaks, highlighted by an epic Dark Star, soaring Morning Dew, and marathon jams that showcase Phil’s bass wizardry and Jerry’s immaculate guitar tone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic reviews (mostly 4–5 stars) praise both the atmospheric audience recording and the exceptional musical performance, with only a single mild criticism of Dark Star."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Single‑point stereo cassette mic (Sony TC‑110) placed at an in‑field FOB captured the Wall of Sound’s spatial delay and stadium echo; reviewers note crispness, depth, and ‘X factor’ despite occasional chatter, clapping and a brief clip."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "Playing In The Band",
+      "Here Comes Sunshine",
+      "Eyes of the World",
+      "Looks Like Rain",
+      "Birdsong"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "A marathon 4‑5 hour set that ebbed and flowed through soaring jams, fireworks‑lit climaxes and deep atmospheric moments; the show’s pacing is described as ‘straospheric’ and a perfect showcase of late‑summer Dead energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his tone, interplay with Phil, and overall guitar work – called ‘perfect’, ‘astounding’, and a key part of the show’s magic.",
+    "Phil": "Consistently highlighted as being “on fire”, delivering massive bass solos that dominate Dark Star, Playing In The Band and other jams; described as ‘top of his game’ and ‘tearing it up’.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:37:16.051222+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-10.fob.barry.90351.flac16"
+}

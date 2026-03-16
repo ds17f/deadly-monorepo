@@ -1,0 +1,80 @@
+{
+  "summary": "Thrilling Fillmore West close with soaring jams and surprise encore",
+  "blurb": "Features a powerhouse set highlighted by Good Lovin', Cryptical > Drums > The Other One suite and a surprise Johnny B. Goode encore. Jerry’s lead work shines, Phil’s bass drives the groove, and Pigpen’s organ and vocals stand out. Recording quality ranges from crystal‑clear soundboard to excellent FM matrix.",
+  "review": "July 2, 1971 at the Fillmore West closed out a historic night with the kind of energy that still makes Deadheads grin. The first set rolls through classic rockers – Bertha, China Cat Sunflower > I Know You Rider and a raucous Hard To Handle – before launching into a blistering Good Lovin' where Garcia’s guitar is practically on fire and Pigpen’s harmonica wails. The second half is the real highlight: Cryptical Envelopment segues seamlessly into Bill Kreutzmann’s fireworks‑filled Drums and then erupts into an expansive The Other One that showcases Brent’s organ (Pig Pen’s organ) in full view, while Phil’s bass thunders on Loser. After a solid run of bluesy numbers the band caps the night with an unexpected Johnny B. Goode encore that feels like a gift to the audience. Across the six available sources the show is praised for its tight jams and standout moments, despite early‑set tuning hiccups noted on a few recordings. The best listening experience comes from the restored soundboard (gd1971-07-02.136638.pre-fm-GEMS.flac16), which captures every nuance of that thrilling close.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 43,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Five of six recordings are clearly positive, praising the jam flow, standout songs and band chemistry; one mixed review notes early tuning issues but still calls the performance exciting. The overwhelming positive language (\"thrilling\", \"monster Good Lovin' jams\", \"crystal‑clear\", \"blazing\") drives a strong sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1971-07-02.136638.pre-fm-GEMS.flac16",
+    "reason": "Restored soundboard with excellent clarity; captures the surprise Johnny B. Goode encore and overall show energy without audible flaws."
+  },
+  "key_highlights": [
+    "Unexpected Johnny B. Goode encore adds a thrilling close",
+    "Cryptical > Drums > The Other One suite delivers monster jams",
+    "Good Lovin' showcases soaring Garcia leads and Pigpen vocals",
+    "Crystal‑clear soundboard and FM matrix recordings preserve the performance"
+  ],
+  "song_highlights": [
+    "Johnny B. Goode",
+    "Good Lovin'",
+    "Cryptical Envelopment",
+    "Drums",
+    "The Other One",
+    "Hard To Handle",
+    "Deal",
+    "Mama Tried",
+    "Big Boss Man",
+    "Loser"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers blazing lead work, especially on Good Lovin', Deal and the encore; a few early‑set tuning hiccups are noted but overall his tone is praised as soaring.",
+    "Phil": "Lesh’s bass provides superb resonance and drives the groove, highlighted on Loser and throughout the jam sections; early off‑key moments are mentioned but he recovers strongly.",
+    "Bob": "Weir’s rhythm guitar and vocals are clearly mixed in, with strong delivery on Deal and other numbers; a brief vocal sync issue appears early on Playing In The Band but otherwise solid.",
+    "Brent": "Pigpen’s organ (the “Pig’s organ”) is prominent and never buried, adding weight to Hard To Handle, Big Boss Man and the jam sections; his vocals shine on Good Lovin' and other blues numbers.",
+    "Mickey": "",
+    "Billy": "Kreutzmann’s drumming is described as fireworks during the Cryptical > Drums transition, propelling the The Other One suite with high‑energy bursts."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-20T06:45:25.177454+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Johnny B. Goode"
+    ],
+    [
+      "Good Lovin'"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One"
+    ],
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Deal"
+    ],
+    [
+      "Mama Tried"
+    ],
+    [
+      "Big Boss Man"
+    ],
+    [
+      "Loser"
+    ]
+  ]
+}

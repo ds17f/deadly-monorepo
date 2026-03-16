@@ -1,0 +1,117 @@
+{
+  "summary": "Good soundboard capture of a lively ’88 show featuring a psychedelic Other One and standout Brent organ work.",
+  "review": "The recording is a clean digital SBD source that delivers the band’s 1988 energy without major drop‑outs.  Fans rave about the wild, psych‑delirious The Other One and the soaring organ on Rooster, while a few songs (Box of Rain, Cumberland Blues) are called out as weaker moments.  Overall the second set flows nicely through spacey jams into an excellent Knockin’ finale.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and note a solid soundboard recording; occasional criticisms are outweighed by strong positive comments, yielding an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Digital PCM SBD master; clear and balanced with no major drop‑outs, though some listeners comment on unusual spatial/phasing effects that add character."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Rooster",
+      "Knockin' on Heaven's Door",
+      "Space",
+      "Lovelite"
+    ],
+    "poor_songs": [
+      "Box of Rain",
+      "Cumberland Blues",
+      "Wharf"
+    ],
+    "setlist_flow": "The first set opens with solid classics (Box of Rain, Hell in a Bucket, Touch of Grey).  The second set builds momentum with Louie/Truckin' into an intense jam sequence—Drums → Space—and peaks with the soaring Other One and Rooster before closing on a high‑energy Knockin'."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar work is highlighted on the wild, psychedelic Other One; several reviewers note his tone and improvisational fire.",
+    "Phil": "Phil’s bass gets mixed feedback—some feel it could have been more prominent, while others appreciate its steady foundation.",
+    "Bob": "Bob Weir’s vocals are praised on ‘Throwing’ (Stones), adding energy to the set.",
+    "Keys": "Brent Mydland’s organ is a major highlight, especially on Rooster and during the space‑filled jams; fans specifically call out his playing as superb.",
+    "Drums": "Bill Kreutzmann’s drumming drives the transition into an intense Space segment and is noted for its tight, propulsive feel."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T09:30:26.554401+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-05-01.sbd.jerugim.2206.sbefail.shnf"
+}

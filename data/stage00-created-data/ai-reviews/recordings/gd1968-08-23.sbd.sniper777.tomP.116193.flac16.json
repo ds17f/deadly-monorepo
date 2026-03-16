@@ -1,0 +1,73 @@
+{
+  "summary": "Excellent soundboard capture of a stellar 1968 Shrine show, highlighted by a smoking Dark Star/Eleven sequence and an all‑time great Alligator jam.",
+  "review": "Fans rave about the crystal‑clear, headphone‑friendly soundboard mix, noting only a brief cut in The Eleven. Musically the concert is praised as a peak‑time performance with Dark Star, The Eleven and an unforgettable Alligator>Caution jam standing out, while Jerry’s tone and Phil’s adventurous bass work receive special mention.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive fan commentary (10 × 5‑star, 2 × 4‑star) praises both the recording fidelity and the musical highlights; only minor criticisms (a cut in The Eleven) keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, headphone‑friendly mix with clear instrument separation. A small edit/cut is noted in The Eleven, but overall the tape sounds clean and well‑mastered."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Alligator",
+      "Death Don't Have No Mercy",
+      "William Tell"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The middle of the show shines with a Dark Star → St. Stephen → The Eleven sequence and a powerful Alligator>Caution jam, giving the concert an energetic arc that fans describe as ‘peak time.’"
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as perfect; overall playing called phenomenal.",
+    "Phil": "His bass jump‑starts the Alligator jam (a few bars early) and drives the adventurous jams.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Alligator": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feedback": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "William Tell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:00:38.002412+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-08-23.sbd.sniper777.tomP.116193.flac16"
+}

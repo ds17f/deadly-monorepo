@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed review noting a solid show with a standout Brokedown Palace, but a sound mix that keeps Garcia too low",
+  "review": "The concert is praised as a \"mighty fine run\" and highlighted by a closing Brokedown Palace, yet the recording suffers from an unbalanced mix that pushes Garcia’s guitar down. While the performance itself feels enjoyable for a Sunday afternoon set, the technical shortcomings keep it from being fully satisfying.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one review; positive remarks about the show offset by a notable mix problem, leading to an average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Garcia's guitar is reported as too low in the mix, indicating balance issues; no other clarity or noise comments provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a relaxed Sunday afternoon run with a satisfying closing number."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is noted as too low in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:37:17.111079+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-13.148723.sbd.walker.scotton.miller.clugston.flac1648"
+}

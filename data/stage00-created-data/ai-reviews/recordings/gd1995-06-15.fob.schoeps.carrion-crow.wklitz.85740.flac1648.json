@@ -1,0 +1,39 @@
+{
+  "summary": "Brief but positive note suggests an appreciated Truckin' performance, though recording source and quality are unknown.",
+  "review": "The lone comment simply thanks the uploader and invokes \"keep on truckin',\" indicating a favorable impression of the show or at least the song. No details are given about the audio fidelity, mix, or overall set, leaving both recording and performance quality largely indeterminate.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one very short review with no star rating; sentiment appears positive but there is insufficient information to judge musical or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed remarks about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:52:33.777812+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-15.fob.schoeps.carrion-crow.wklitz.85740.flac1648"
+}

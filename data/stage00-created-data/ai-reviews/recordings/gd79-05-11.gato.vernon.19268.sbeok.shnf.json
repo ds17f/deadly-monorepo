@@ -1,0 +1,39 @@
+{
+  "summary": "Clear audience‑sourced tape that sounds better than the Billerica master and captures a sublime Black Peter performance.",
+  "review": "The three 4‑star reviews all praise the audio, noting it sounds superior to another well‑known Billerica recording. The show itself is highlighted for an especially moving rendition of \"Black Peter,\" with no complaints about any part of the set. Overall the recording is listenable and the performance memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Consistent 4‑star ratings, clear positive comments on both sound quality and a standout song; limited but uniform feedback yields a solid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers say the tape's sound is better than the other Billerica master, indicating clear and pleasant audio despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No negative remarks; reviewers enjoyed the show overall and singled out Black Peter as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:42:24.731498+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-11.gato.vernon.19268.sbeok.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Fair‑quality audience tape that immerses you in the concert vibe, highlighted by Ripple, Dire Wolf and a scorching Scarlet > Fire transition.",
+  "review": "The recording is an audience capture with noticeable crowd chatter and occasional mic moves that make some sections uneven, but it still conveys the live atmosphere many fans love. Musically the show shines – the acoustic opening, Jerry Garcia’s soaring guitar work and standout numbers like Ripple, Dire Wolf and a hot Scarlet > Fire segue make it a classic Dead night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (many 4‑5 star comments) while noting the audience‑recording’s technical limitations; overall average rating is high enough to place it in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Low‑generation tape with microphones moved between songs, resulting in inconsistent levels and prominent crowd noise; sound is crisp at times but overall uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Dire Wolf",
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong acoustic first set followed by an energetic electric second half; 26‑song marathon delivers solid versions and a memorable Scarlet > Fire transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about Jerry's guitar tone, describing his notes as golden, floating and 'ripple' inducing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:04:46.004118+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-22.sony.wiley.8479.sbefail.shnf"
+}

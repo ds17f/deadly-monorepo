@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard recording of a 1994 show that shines thanks to an epic Morning Dew and solid overall performance despite brief tech hiccups.",
+  "review": "The show is widely celebrated for its soaring second‑set, highlighted by one of the most powerful Morning Dew performances of the ’90s, plus strong renditions of Jack Straw, The Other One, Deal and Sampson.  The soundboard source is clear enough to capture Jerry’s fiery guitar work and Phil’s “bomb” bass lines, even though a brief technical glitch forced a short on‑stage break.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (over 20) are highly positive about the music and praise the recording quality; only a few low‑star outliers exist, giving an overall strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear; reviewers note “outstanding quality” and “fabulous download”. One mention of a loud pop during the tech break, but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "The Other One",
+      "Jack Straw",
+      "Sampson & Delilah",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Candyman"
+    ],
+    "setlist_flow": "First set builds energy with a tight Jack‑Straw opener, while the second set delivers a marathon Sampson and a breathtaking Morning Dew after a brief technical pause; overall pacing is described as “ripping from start to finish”."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar tone and powerful vocals on Dew; despite a momentary tech failure he returned strong, even walking off briefly.",
+    "Phil": "Repeatedly lauded for his “bombs”, driving bass lines on Jack Straw, The Other One and the Dew; described as the band’s driver seat that kept everything tight.",
+    "Bob": "Vocals noted as solid on several numbers; a few slip‑ups in Candyman are mentioned but overall good presence.",
+    "Keys": "Vince (keyboard) kept soft ambience during the tech break and contributed to the overall texture; no major complaints.",
+    "Drums": "Bill’s drumming highlighted as “spellbinding” especially in the space after Sampson and during the Other One/Space sections."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 20,
+      "negative_mentions": 0,
+      "total_mentions": 20
+    },
+    "Jack Straw": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "The Other One": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sampson & Delilah": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-18T20:42:49.064896+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-27.sbd.miller.20926.sbeok.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent matrix recording of a high‑energy 5/7/77 show with standout Half‑Step, Big River and Wharf Rat performances.",
+  "review": "The matrix blend delivers crystal‑clear soundboard detail plus just enough audience ambience to make the night feel alive. Fans rave about the unstoppable energy of set 1 culminating in the Minglewood → Half‑Step → Big River sequence and a sublime second set highlighted by a soaring Wharf Rat, while Jerry’s guitar work and Phil’s bass are repeatedly praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All reviews award five stars and consistently praise both the musical performance and the matrix recording quality, indicating an exceptional show with excellent sound."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix combines clear SBD (soundboard) fidelity with enough audience ambience; reviewers call it crisp, outstanding and the best‑ever sound quality for this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step",
+      "Big River",
+      "Minglewood",
+      "Tennessee Jed",
+      "Bertha",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 1 builds a powerful crescendo ending with the Minglewood → Half‑Step → Big River → Tennessee Jed sequence; the second set is described as sublime from opening notes to the closing Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his lead guitar improvisations and ability to move the audience; called unmatched.",
+    "Phil": "Described as a beast throughout the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T23:08:24.639998+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-07.124619.mtx.dusborne.flac16"
+}

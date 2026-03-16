@@ -1,0 +1,77 @@
+{
+  "summary": "Pristine soundboard capture of a historic July 16 1966 Fillmore show, highlighted by stellar performances of In‑the‑Pines, Cream Puff War and Viola Lee Blues.",
+  "review": "The recording is universally praised for its crystal‑clear mix and faithful Charlie Miller transfer, delivering an almost flawless listening experience despite a few missing intros. Musically the set shines with early‑Dead classics – Know You Rider, In the Pines, Cream Puff War, Viola Lee Blues and Pain in My Heart – that showcase Jerry’s soaring guitar, Pigpen’s organ/blues power and a tight rhythm section.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over twenty enthusiastic 5‑star reviews praise both the performance and the pristine soundboard recording; only minor cuts are noted, yielding an almost perfect combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Pristine, crisp mix from Charlie Miller’s transfer; full‑band balance and clear instrument separation. Only the opening/closing tunes are truncated in a few tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "In The Pines",
+      "Cream Puff War",
+      "Viola Lee Blues",
+      "Pain in My Heart",
+      "Know You Rider",
+      "Standing on the Corner",
+      "Sittin' on Top of the World"
+    ],
+    "poor_songs": [
+      "Cardboard Cowboy"
+    ],
+    "setlist_flow": "The set flows like a snapshot of summer‑of‑love 1966, moving from folk/blues standards to early originals. Reviewers note its historic significance and tight, exploratory playing throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his brilliant guitar tone, inventive chord work and lead vocals on Cream Puff War.",
+    "Phil": "Mentioned as “great” by a reviewer; bass provides solid foundation.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ/harmonica praised as raw, powerful blues front‑man (some note occasional shrillness).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "In The Pines": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cream Puff War": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Pain in My Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Corner": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cardboard Cowboy": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T05:18:26.416571+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-07-16.sbd.miller.89555.sbeok.flac16"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "High‑energy spring ’91 show with standout Truckin’ > Smokestack, Watchtower and Foolish Heart; soundboard source is generally crisp despite occasional static glitches.",
+  "review": "The April 3, 1991 Atlanta concert captures a vibrant performance – the second set brims with energy and features double‑Jerry gems like Foolish > Crazy, while the first set delivers classics such as Truckin’ > Smokestack Lightning and a soaring Watchtower. The SBD recording is mostly clear and “top‑notch,” though a few listeners note static during TMNS and a brief glitch on GSET; these blemishes don’t detract from overall listenability.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9 out of 11) rate the show 4‑5 stars and praise both performance and recording; only one review is strongly negative about audio quality, so the weighted average lands in the strong‑good range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp SBD with clear vocals and instruments. Minor issues: static during \"The Music Never Stopped\" (TMNS), a brief glitch on GSET, occasional cloudiness noted by one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin' > Smokestack Lightning",
+      "Watchtower",
+      "Foolish Heart",
+      "Brown-Eyed Women",
+      "Music Never Stopped",
+      "Sugar Magnolia",
+      "Foolish > Crazy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid and lengthy; second set especially energetic with tight transitions and a double‑Jerry highlight (Foolish > Crazy). Overall flow described as “interesting” and “well‑executed.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for perfect tone, soaring vocals and the \"double Jerry gem\" of Foolish>Crazy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Great keys noted; Brent (Bobby) praised alongside Vince, Billy and Mickey for being in tune and delivering generous spirit.",
+    "Drums": "Billy & Mickey mentioned as tight and in‑tune throughout the show."
+  },
+  "song_mentions": {
+    "Truckin' > Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish > Crazy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T18:08:07.798599+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-03.sbd.gardner.4735.sbeok.shnf"
+}

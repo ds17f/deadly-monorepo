@@ -1,0 +1,68 @@
+{
+  "summary": "Audience recording with mixed technical fidelity captures a smoky 1980 show highlighted by Truckin', Terrapin Station jam and Feel Like a Stranger",
+  "review": "The performance is remembered as a classic early‑80s Dead outing – long first set, strong second half, killer Truckin' and an inspired Terrapin Station jam that lead into a soaring Feel Like a Stranger. The audio is an audience capture that many fans describe as sounding great, but several note missing bass, occasional fades and clipped intros, giving the recording a fair‑to‑good quality overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average ~4 ★) while the recording quality is split between high praise and notable flaws (average ~3 ★). Weighted combination yields a rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crisp, lively ambience praised by several listeners; however bass is often missing, some tracks fade out early or lose their first seconds, and a few songs have clipped intros. Crowd noise is present but generally not distracting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Terrapin Station",
+      "Feel Like a Stranger",
+      "Althea",
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A marathon first set (13 tunes) that builds momentum, with the second set delivering stronger playing and memorable jams; fans note the show got better toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Switched verses with Bob during I Know You Rider.",
+    "Phil": "",
+    "Bob": "Switched verses with Jerry during I Know You Rider.",
+    "Keys": "Brent (or Healy) added sound‑effects gunshots to fit a storyline in the middle of the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:07:02.152778+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-05.senn421.jeffm.4663.sbeok.shnf"
+}

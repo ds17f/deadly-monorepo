@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a mellow June ’76 comeback show that shines on Crazy Fingers, Help>Slip, Scarlet Begonias and a gritty Dancin’ performance.",
+  "review": "The recording is a clean, studio‑like soundboard tape with no reported flaws. Musically the band delivers a relaxed yet exploratory set – Jerry’s inspired playing, Keith’s genius keyboards, and standout jams on Crazy Fingers, Help>Slip, Scarlet Begonias, Let It Grow and an especially gritty Dancin’. Reviewers uniformly praise the performance as one of the band’s finest early‑summer ’76 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviews are 4–5 stars, highlighting exceptional playing and a flawless recording; the weighted average yields a rating in the 4.5‑4.7 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No specific technical complaints; reviewers describe the tape as studio‑like and crystal clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Scarlet Begonias",
+      "Let It Grow",
+      "Dancin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A mellow, exploratory set that flows smoothly with extended jams (Scarlet, Help>Slip) and finishes on a gritty, funky Dancin' that many reviewers call a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as inspired; his tone on Dancin' is gritty and dirty, sounding amazing.",
+    "Phil": "Called \"just right\" in the overall mix of the band.",
+    "Bob": "Also noted as \"just right\" alongside Phil.",
+    "Keys": "Keith is praised for being in full genius mode; Donna’s vocals are said to be on point.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:05:54.934285+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-03.123607.sbd.miller.flac16"
+}

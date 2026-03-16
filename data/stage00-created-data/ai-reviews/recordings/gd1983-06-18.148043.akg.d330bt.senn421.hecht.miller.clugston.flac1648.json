@@ -1,0 +1,82 @@
+{
+  "summary": "A problematic audience tape with channel swaps, clipping and dropouts, yet it delivers a high‑energy Deal and a memorable Morning Dew.",
+  "review": "The show suffers from flubby playing and numerous technical flaws in the AUD sources—channel reversals, clipped beginnings and a noisy, echoey mix—but a few moments shine through, notably an exciting Deal jam, a superb Scarlet Begonias, and arguably the year’s best Morning Dew. Overall the recording is hard to enjoy, reflected in the low rating.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "One detailed review highlights both poor sound quality and uneven performance, leading to a combined low score (≈2.3) despite a few standout songs."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Channels swapped on first set, clipped Althea intro, extensive dropouts and chewed tape from the second set onward, echoey venue acoustics, high noise floor and reduced dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Scarlet Begonias",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Althea",
+      "Hellina",
+      "Throwing Stones",
+      "Touch of Grey",
+      "Dough Knees"
+    ],
+    "setlist_flow": "An uptempo, two‑hour second set with a long jam sequence; overall the performance feels sloppy and flubby, but occasional high‑energy peaks keep it from being a total loss."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia plays better than usual, leading the Deal jam and generally staying on point, though his vocals slip on Touch of Grey.",
+    "Phil": "Phil Lesh struggles throughout—loses place in Jack Straw, has vocal issues, muffles lyrics and contributes to a generally uneven performance.",
+    "Bob": "",
+    "Keys": "Brent (Keith) adds quirky riffs in Scarlet Begonias and thematic bits in Fire on the Mountain, but overall keyboard work is inconsistent.",
+    "Drums": "The Drums>Space segment is weak, with modest improvement during the Playing in the Band reprise."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hellina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:26:56.198585+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-18.148043.akg.d330bt.senn421.hecht.miller.clugston.flac1648"
+}

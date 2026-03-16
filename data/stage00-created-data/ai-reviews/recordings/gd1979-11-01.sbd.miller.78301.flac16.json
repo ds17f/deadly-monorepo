@@ -1,0 +1,44 @@
+{
+  "summary": "Stellar soundboard capture of an all‑time great show highlighted by a mind‑blowing Scarlet > Fire transition",
+  "review": "Fans rave about this recording, calling it “exceptional” and urging listeners to crank the volume. The standout moment is the seamless, out‑there segue from Scarlet Begonias into Fire on the Mountain, which several reviewers rank among the top ten performances ever. The soundboard source is generally clear, though a few note occasional holes in the board.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews award 5 stars and praise both the performance (especially the Scarlet‑Fire transition) and the recording, with only minor mention of board glitches."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix; a couple of reviewers hint at occasional holes/dropouts in the board but nothing that detracts from enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows brilliantly, highlighted by an extraordinary seven‑minute Scarlet > Fire segue that fans describe as “out there” and one of the best ever."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-26T00:35:03.438824+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-01.sbd.miller.78301.flac16"
+}

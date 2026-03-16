@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive feedback on audio or performance; reviewer notes incorrect date",
+  "review": "The sole review merely points out a metadata error with a humorous tone and provides no insight into the concert’s musical or recording quality. It offers no comments on soundboard source, mix clarity, or individual performances.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief, negative-star review focusing on a date error; there is no information about the show’s musical merit or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix balance, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T16:06:12.178001+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-20.148476.neumann.km84i.hecht.miller.clugston.flac1648"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality soundboard capture of a mesmerizing show highlighted by emotional performances of Cold Rain & Snow and Morning Dew.",
+  "review": "The recording is praised as the most complete soundboard source available, with only minor anomalies such as a patch at the end. Musically the concert keeps listeners engaged from start to finish, featuring Jerry’s soaring guitar on Cold Rain & Snow and a “cranking” Morning Dew, while set 2 is described as terrific.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (standout songs, consistent energy) combined with a generally good soundboard recording; minor technical quirks keep the rating just below top‑tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most complete SBD to date, clear overall but contains a patch at the end and some minor anomalies; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert maintains interest throughout, with an especially terrific second set that keeps the audience engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotional, on‑point playing highlighted on Cold Rain & Snow and Morning Dew.",
+    "Phil": "",
+    "Bob": "Strong rhythm guitar/vocals noted as 'on' throughout the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T22:08:49.030535+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-12.132814.sbd.flac16"
+}

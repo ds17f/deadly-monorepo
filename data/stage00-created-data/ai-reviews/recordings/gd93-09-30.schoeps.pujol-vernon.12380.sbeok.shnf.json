@@ -1,0 +1,44 @@
+{
+  "summary": "Unknown‑source recording offers a solid show highlighted by a standout Broken Arrow performance.",
+  "review": "Both reviewers praise the concert, especially the rendition of \"Broken Arrow\" and note Phil Lesh's strong playing on that tune. No comments were made about the audio source or its fidelity, so the technical quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Two moderately detailed reviews are uniformly positive about the music (average 3.5 stars) but give no information on recording quality, leading to a good‑ish overall rating with medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention any aspects of sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No details on set structure or pacing were provided in the reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil is noted as playing well on \"Broken Arrow\".",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Arrow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:12:39.862980+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-30.schoeps.pujol-vernon.12380.sbeok.shnf"
+}

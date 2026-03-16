@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard restoration yields good overall audio (early tracks a bit fast/muddy, later tracks clear) and a hot second half featuring Easy Wind, Dire Wolf, Uncle John's Band intro and a stellar jam sequence.",
+  "review": "The recording shows noticeable improvement after the cleanup – the first fifteen minutes sound a little rushed and thin, but the last ten tracks are crisp and well‑balanced. Musically the show shines with scorching renditions of Easy Wind and Dire Wolf, a killer Uncle John's Band intro, an epic The Eleven → Death Don't jam and a powerful Cryp­tical > Drums > The Other One > Cryptical sequence.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (many standout songs) outweighs modest recording inconsistencies in the early portion, resulting in a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early tracks sound fast and a bit muddy; later tracks are clean after restoration. Overall listening experience is good thanks to the cleanup work."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Wind",
+      "Dire Wolf",
+      "Uncle John's Band (guitar intro)",
+      "Anthem of the Sun",
+      "The Eleven",
+      "Death Don't Have No Mercy",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First half feels a little rushed and sonically thin, but the second half builds momentum with hot renditions and an extended jam that keeps the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar intro to Uncle John's Band highlighted as a sweet moment; overall guitar work praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Anthem of the Sun": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:45:09.377982+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-01-16.131910.sbd.droncit-restore-7111.flac16"
+}

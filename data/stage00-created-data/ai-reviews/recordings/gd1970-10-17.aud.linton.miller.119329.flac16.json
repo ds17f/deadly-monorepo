@@ -1,0 +1,82 @@
+{
+  "summary": "A rare 1970 audience tape delivers a legendary Dark Star and strong set despite cuts and modest sound quality.",
+  "review": "This AUD recording captures a historic Cleveland show with a monster Dark Star, fiery Other One, and standout moments like China Cat Sunflower→I Know You Rider, Good Lovin' and St. Stephen. The performance is praised for its energy, sharp Garcia licks and a rare Phil bass solo, while the tape suffers from typical 1970 audience‑recording flaws – occasional dropouts, missing sections of Truckin' and Cryptical Envelopment, and uneven fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight exceptional musical moments (especially Dark Star) and give high star ratings, while acknowledging the tape’s audience‑recording limitations; the balance yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Typical 1970 AUD tape – generally acceptable clarity but with noticeable cuts, dropouts and limited frequency response; some songs (e.g., Dark Star) come through clearly while others suffer from missing sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "China Cat Sunflower > I Know You Rider",
+      "Good Lovin'",
+      "St. Stephen",
+      "Goin' Down the Road Feeling Bad"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Cryptical Envelopment"
+    ],
+    "setlist_flow": "First set opens strong with China>Rider and a fiery Other One, while the second set builds around an expansive Dark Star that leads into superb St. Stephen and a historic Goin' Down the Road; cuts interrupt several tunes but overall pacing remains engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is repeatedly praised – beautiful chords, sharp licks, ascending riff and overall stellar lead work.",
+    "Phil": "A rare bass solo is highlighted as a highlight of the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:46:48.976141+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-17.aud.linton.miller.119329.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Fair‑quality audience tape of a legendary ’67 set – Golden Road, New Potato Caboose, Alligator and He Was A Friend of Mine all shine despite muddy vocals and bass‑heavy mix.",
+  "review": "The performance is hailed as a rare glimpse of the early Dead’s high‑energy chemistry: a blistering Alligator, a jam‑filled New Potato Caboose, an exuberant Golden Road and a scorching fragment of He Was A Friend of Mine.  The recording is only marginally clear – bass‑saturated and occasionally muddy – but for a 1967 audience source it remains listenable and beloved by fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the musical performance (average ~4.6) while noting only modest technical limitations (average ~3.0); weighted average yields a strong 4.2 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Bass is over‑saturated, vocals can be muddy and overall clarity is marginal, but the mix lets most instruments be heard and captures the era’s ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator",
+      "New Potato Caboose",
+      "Golden Road (To Unlimited Devotion)",
+      "He Was A Friend of Mine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short four‑song set that flows tightly: He Was A Friend of Mine → Golden Road → New Potato Caboose → Alligator, punctuated by wildly funny LSD‑fuelled banter."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is repeatedly called brilliant, especially on the opening solo of He Was A Friend of Mine.",
+    "Phil": "Bass lines are described as “hot” and “on fire,” notably during Alligator and New Potato.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ is praised for its whizzing, swirling presence throughout the set.",
+    "Drums": "Bill/Kreutzmann drumming is noted as solid; some reviewers debate which drummer is present but agree the percussion drives the performance."
+  },
+  "song_mentions": {
+    "Alligator": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Golden Road (To Unlimited Devotion)": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "He Was A Friend of Mine": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    }
+  },
+  "processed_date": "2025-09-24T06:00:16.169792+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd67-05-05.sbs.yerys.1595.sbeok.shnf"
+}

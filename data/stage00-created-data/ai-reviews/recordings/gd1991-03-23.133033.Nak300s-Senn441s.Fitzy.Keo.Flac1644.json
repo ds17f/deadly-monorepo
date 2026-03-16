@@ -1,0 +1,58 @@
+{
+  "summary": "Hot opening with Jack Straw, dreamy drums, stellar Morning Dew and a gorgeous Knockin' encore – recording source unknown but enjoyable.",
+  "review": "The show bursts out energetic with a fiery Jack Straw, features dreamy drumming and expansive space that culminates in one of the best‑heard renditions of Morning Dew. The encore Knockin' on Heaven's Door is praised as gorgeous, while One More Saturday Night fell a bit flat for the reviewer. No details are given about the recording source or fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Strong musical performance highlighted by multiple standout songs; no information on recording quality, so rating leans on show quality alone."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Morning Dew",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [
+      "One More Saturday Night"
+    ],
+    "setlist_flow": "The concert kicks off hot with Jack Straw, moves through dreamy drumming and space, reaches an emotional peak with Morning Dew, and closes with a gorgeous Knockin' encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:01:25.625815+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-23.133033.Nak300s-Senn441s.Fitzy.Keo.Flac1644"
+}

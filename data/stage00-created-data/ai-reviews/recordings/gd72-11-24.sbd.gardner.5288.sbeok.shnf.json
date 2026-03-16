@@ -1,0 +1,82 @@
+{
+  "summary": "Sharp, fire‑filled show with standout Black Throated Wind and Box of Rain, captured on a generally good soundboard despite occasional mix mud.",
+  "review": "The performance is described as professional and intense, with the whole band on fire—Jerry delivering monstrous leads, Phil laying down nice bass, and Bob adding sprightly fills. The soundboard source is mostly clear but shows a few hiccups (muddy sections in \"Don't Ease\" and \"El Paso\") that don’t outweigh the overall quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance as exceptional while noting only minor recording imperfections; weighted average of show (≈4.5) and recording (≈4.0) yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture with a few mix hiccups on \"Don't Ease Me In\" and \"El Paso\"; described as slightly muddy but still very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Throated Wind",
+      "Box of Rain",
+      "Truckin'",
+      "Ramble On",
+      "Sugar Mag"
+    ],
+    "poor_songs": [
+      "China Cat",
+      "The New Faster Automatic",
+      "Deal"
+    ],
+    "setlist_flow": "First set noted for its oomph; second set builds intensity with fiery playing and strong transitions, reflecting a professional post‑Europe era show."
+  },
+  "band_member_comments": {
+    "Jerry": "Monstrous leads praised throughout; occasional monitor glitch on \"Deal\" and a string break that affected the NFA solo, but overall fire‑filled performance on his '57 Alligator Strat.",
+    "Phil": "Nice bass highlighted by reviewers.",
+    "Bob": "Sprightly guitar fills on Box of Rain noted; end‑solo on China Cat considered disappointing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Mag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The New Faster Automatic": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:16:16.241503+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-11-24.sbd.gardner.5288.sbeok.shnf"
+}

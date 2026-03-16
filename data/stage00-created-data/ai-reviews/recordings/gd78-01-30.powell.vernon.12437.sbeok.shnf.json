@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality audience tape with echo, featuring a scorching Lazy Lightnin' > Supplication and a ripping Franklin’s Tower toward the end.",
+  "review": "The recording is an audience source that sounds decent despite some echo and a slightly muffled mix, making it perfectly listenable for most fans. Musically the show shines on the high‑energy Lazy Lightnin' > Supplication sequence and a strong Franklin’s Tower near the close, though a few listeners note the typical 1978 “laziness” that can dull the overall vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show quality is praised for standout songs and Jerry’s lead work, while recording is only average (audience with echo). The mix of positive and critical comments yields a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Echo present and occasional muffiness, but overall clear enough to be enjoyable; sound could be a little better according to reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin' > Supplication",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show starts a bit subdued (noted as \"BE Women\"), then builds momentum with high‑energy numbers, peaking with the Lazy Lightnin' > Supplication and closing strong with Franklin’s Tower."
+  },
+  "band_member_comments": {
+    "Jerry": "Scorching lead guitar on Lazy Lightnin' > Supplication; takes over during the supplication segment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:51:16.627638+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-30.powell.vernon.12437.sbeok.shnf"
+}

@@ -1,0 +1,93 @@
+{
+  "summary": "Crisp soundboard capture of a magical Boston Garden night with a soaring Dark Star and a stellar second set.",
+  "review": "Fans rave about this September‑1991 Boston Garden show, calling the second set “magic” and highlighting Dark Star, Good Lovin’, Box of Rain and a teasy St. Stephen as standout moments. The SBD recording is generally described as crisp and excellent, with only occasional vocal flutter or mixed feelings about Bruce Hornsby’s accordion on Brokedown Palace.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4‑5 stars and praise both the performance (especially the second set) and the sound quality; a few lower scores note minor vocal or mix issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the recording crisp and excellent; one notes occasional vocal flutter and another mentions the Hornsby accordion sounding jarring on Brokedown Palace, but overall the mix is clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "Good Lovin'",
+      "St. Stephen (tease)",
+      "Box of Rain",
+      "Eyes",
+      "Attics",
+      "Jack Straw",
+      "Candyman",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is solid, but the second set is consistently described as magical, with Dark Star and a series of tight jams that keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his soaring guitar tone, strong finish on Dark Star, and seamless interaction with Bruce Hornsby’s keyboards.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby receives abundant praise for his piano work; a few reviewers find his accordion on Brokedown Palace jarring but overall his playing is highlighted as a key strength.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen (tease)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T02:06:51.749634+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-26.sbd.fishman.21242.sbeok.shnf"
+}

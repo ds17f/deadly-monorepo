@@ -1,0 +1,88 @@
+{
+  "summary": "Terrapin medley shines; tight jams and fiery guitar throughout",
+  "blurb": "The show delivers a scorching Terrapin Station suite, a blistering Hey Pocky Way/Row Jimmy combo, and an electric second encore that kept the crowd roaring. Jerry's lead work is on fire while Brent provides classic keyboard textures, making this one of ’87’s most consistent performances.",
+  "review": "On November 7 1987 at the Henry J. Kaiser Convention Center in Oakland, the Dead turned in a high‑octane set that still feels fresh for anyone digging late‑’80s magic. The first half opens with a crisp Hey Pocky Way that segues into a punchy Jack Straw and an “ultimate” Row Jimmy solo – a moment reviewers called “flawless.”  A mellow, cosmic second set builds through Uncle John’s Band → Playing In The Band → Terrapin Station, where Jerry’s fiery guitar and Brent’s matching intensity create one of the era’s most celebrated medleys.  Drums and Space flow into an uplifting I Need A Miracle, then Black Peter, Throwing Stones and a rollicking Not Fade Away that rolls straight into a rare second encore: Knockin’ On Heaven’s Door followed by a marathon One More Saturday Night after a standing‑ovation crowd chant.  Across the board the band sounds tight, with Jerry shredding on Jack Straw, Phil delivering a heartfelt Box of Rain vocal, Brent laying down classic B3 organ on Black Peter, and Mickey & Billy driving the jams with thunderous power – occasional lazy spots on Cassidy are the only blemish noted.\n\nThe soundboard recordings vary, but the Gardner SBD (gd87-11-07.sbd.gardner.9242.sbeok.shnf) captures it in “awesome” crystal‑clear detail, making it the definitive version for both casual listening and deep‑dive analysis.  Whether you’re after the Terrapin medley, the Row Jimmy fireworks, or the unforgettable second encore, this show stands out as one of 1987’s most consistent and exciting performances.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 29,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Four recordings are positive and three mixed, with no consistent negative criticism. Reviewers repeatedly praise the Terrapin medley, Hey Pocky Way/Row Jimmy combo, Jack Straw, and the second encore, indicating strong overall sentiment. Mixed notes focus on recording quirks or isolated drumming lapses, not performance quality, justifying a moderate‑high positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd87-11-07.sbd.gardner.9242.sbeok.shnf",
+    "reason": "Excellent soundboard capture with crisp, well‑balanced mix and no dropouts; praised for highlighting the Terrapin medley and second encore."
+  },
+  "key_highlights": [
+    "Terrapin Station suite (Uncle John's Band → Playing In The Band → Terrapin) bursts with intensity.",
+    "Hey Pocky Way into Row Jimmy delivers an “ultimate” solo that’s repeatedly called flawless.",
+    "Jack Straw shredding and Dupree's Diamond Blues bring high‑energy rock moments.",
+    "Second encore featuring Knockin' On Heaven's Door and a 32‑minute standing ovation for One More Saturday Night."
+  ],
+  "song_highlights": [
+    "Hey Pocky Way",
+    "Jack Straw",
+    "Row Jimmy",
+    "Dupree's Diamond Blues",
+    "Box of Rain",
+    "Uncle John's Band",
+    "Playing In The Band",
+    "Terrapin Station",
+    "Black Peter",
+    "Throwing Stones",
+    "Not Fade Away",
+    "Knockin' On Heaven's Door",
+    "One More Saturday Night"
+  ],
+  "band_performance": {
+    "Jerry": "Fiery guitar work and strong vocals throughout, highlighted by an \"ultimate\" Row Jimmy solo, shredding on Jack Straw, and powerful delivery on Black Peter; overall in fine form despite one mixed comment on One More Saturday Night.",
+    "Phil": "Solid bass foundation with a standout vocal moment on Box of Rain; provides steady groove that underpins the band's high energy.",
+    "Bob": "Reliable rhythm guitar support and solid backup during the Space segment, contributing to the tight overall sound.",
+    "Brent": "Classic Brent‑era keyboards: matches Jerry’s intensity on Terrapin Station, delivers superb B3 organ on Black Peter, rich textures across jams, and a notable pitch‑shifter effect on Hey Pocky Way.",
+    "Mickey": "Drums drive the second set with thunderous power, especially during the 3:30 peak; occasional lapses noted on Cassidy but generally strong.",
+    "Billy": "Provides meaty, driving force throughout the jams; complements Mickey’s playing and helps sustain the show’s high‑octane momentum."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-16T05:09:26.002664+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hey Pocky Way",
+      "Jack Straw"
+    ],
+    [
+      "Row Jimmy"
+    ],
+    [
+      "Dupree's Diamond Blues"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Black Peter",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Not Fade Away",
+      "Knockin' On Heaven's Door"
+    ],
+    [
+      "One More Saturday Night"
+    ]
+  ]
+}

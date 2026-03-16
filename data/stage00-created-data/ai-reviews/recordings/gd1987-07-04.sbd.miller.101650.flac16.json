@@ -1,0 +1,59 @@
+{
+  "summary": "Good‑quality soundboard capture of a hot July 4th stadium show, highlighted by an incendiary Watchtower solo and a monster Hell‑in‑a‑Bucket performance.",
+  "review": "The Miller SBD tape delivers a clean, well‑balanced mix that benefits from a little EQ but sounds solid throughout. Musically the concert shines despite sweltering crowds – Jerry’s guitar (including rare lap‑steel work) and Brent’s keyboards dominate, with All Along the Watchtower and Hell in a Bucket repeatedly called out as standouts. The set flows as a single long marathon geared to Dylan fans, but the Dead keep the energy high with focused first‑set jams and a powerful second half.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Across >15 reviews the musical performance is praised (average ~4 ★) while the recording is generally regarded as good (~3½ ★). Weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean, relatively crisp mix with a fat low end; some reviewers note audience ambience and recommend EQ boost. No major dropouts, but Dylan’s vocals can be muffled."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "All Along the Watchtower",
+      "Hell in a Bucket",
+      "West L.A. Fadeaway",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "One long stadium set built around the Dylan collaboration; first half tight and fast‑paced, second half (with Dylan) retains energy despite heat, delivering several memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is repeatedly praised – soaring solo on Watchtower, rare lap‑steel/ pedal‑steel moments, and a fiery Hell in a Bucket.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards shine (lap‑steel, “Tons of Steel” vibe) and he adds fire to West L.A. Fadeaway.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "All Along the Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:58:51.902479+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-04.sbd.miller.101650.flac16"
+}

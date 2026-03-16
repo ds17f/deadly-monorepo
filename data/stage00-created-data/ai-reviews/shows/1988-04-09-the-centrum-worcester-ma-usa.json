@@ -1,0 +1,72 @@
+{
+  "summary": "High-energy Worcester show with BBM punch and solid second set",
+  "blurb": "The show opens with a fiery Big Boss Man and rides a high‑energy wave through Candyman, Hell In A Bucket and Terrapin Station. Jerry’s vocals and guitar are on point while Brent’s keyboards shine, though the first set loses a bit of momentum after the strong opening. The second set stays fire‑filled, highlighted by Space and Throwing Stones.",
+  "review": "April 9, 1988 at The Centrum in Worcester delivered a punchy, high‑octane Dead performance that still rings fresh for fans. The band kicked off with an explosive \"Big Boss Man\" that set the tone for a night of tight playing and spirited singing. Jerry’s voice was described as soulful and “on” throughout, especially on the second‑set numbers, while Brent’s keyboard textures kept the groove rolling. Highlights include the thunderous \"Hell In A Bucket,\" a soaring \"Terrapin Station\" segue into a mellow yet solid drum/Space pairing, and an uplifting finish with \"Throwing Stones.\" Though some listeners note a dip in momentum after the opening burst and point to a handful of weaker cuts (e.g., \"Far From Me,\" \"Mexicali Blues\"), the overall vibe remains fire‑filled and memorable. Phil’s bass work anchors the set even if he steps out during the encore, and both Mickey and Bill provide steady, tasteful drumming that supports the band’s dynamic flow.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the performance and sound quality; one is mixed, noting uneven moments but still highlighting strong songs. The overall consensus leans strongly positive with only modest criticism, warranting a moderate +1.2 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1988-04-09.156454.prefm.lamarre.miller.t.flac1644",
+    "reason": "Excellent soundboard source with a stellar, sweet‑sounding mix; clear and well‑balanced capture of the entire show."
+  },
+  "key_highlights": [
+    "Fire‑filled opening with \"Big Boss Man\" and high‑energy first set",
+    "\"Hell In A Bucket\" delivers a powerful BBM punch",
+    "Brent’s keyboard work shines throughout, especially on \"Terrapin Station\" and \"Space\"",
+    "Strong second‑set momentum culminating in an uplifting \"Throwing Stones\""
+  ],
+  "song_highlights": [
+    "Big Boss Man",
+    "Candyman",
+    "Hell In A Bucket",
+    "Terrapin Station",
+    "Space",
+    "Throwing Stones"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals and guitar are described as soulful, upbeat, clean and \"on\", especially in the second set where his solo work shines.",
+    "Phil": "Provides a solid bass foundation throughout; noted only for being absent during the encore, leaving a brief missing bass moment.",
+    "Bob": "Delivers strong vocal performances despite a minor BBM mishap, keeping the energy high.",
+    "Brent": "Keyboard work is highlighted as great and consistently supportive across the entire show.",
+    "Mickey": "Drumming is solid and tasteful; the drum segment is short but effective.",
+    "Billy": "Provides steady, mellow percussion that underpins the jam sections without any serious complaints."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-16T08:30:39.159648+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Big Boss Man",
+      "Walkin' Blues"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Hell In A Bucket",
+      "Iko Iko"
+    ],
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Goin' Down The Road Feeling Bad",
+      "I Need A Miracle",
+      "Dear Mr. Fantasy",
+      "Hey Jude Finale",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

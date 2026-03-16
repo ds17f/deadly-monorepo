@@ -1,0 +1,63 @@
+{
+  "summary": "Clear audience taping captures a high‑energy 1985 show with a Touch opener and a standout Dear Mr. Fantasy → The Other One → Wharf Rat sequence.",
+  "review": "The recording, made from the audience taper section, is surprisingly clear – even a sudden balloon pop comes through without drowning the music. Fans rave about the strong opening set (Touch, Tons of Steel) and a second‑set stretch that rolls from Dear Mr. Fantasy into The Other One and Wharf Rat, making this concert one many cite as their “bus‑getting” moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews are consistently enthusiastic about the performance (70% weight) and note a clean audience capture with no major audio flaws (30% weight), yielding an overall rating above four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to hear a sudden balloon pop from the monitor; no reported drop‑outs or muffling, but no explicit soundboard confirmation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "Tons of Steel",
+      "Dear Mr. Fantasy",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid opener with Touch and high‑energy material, followed by a second‑set flow that builds nicely through Dear Mr. Fantasy → The Other One → Wharf Rat; encore praised for avoiding the usual Day‑Job routine."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tons of Steel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:57:39.305632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-14.senn421.mccue.ford.32621.sbeok.shnf"
+}

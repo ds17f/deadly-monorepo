@@ -1,0 +1,31 @@
+{
+  "summary": "Well‑recorded show with a solid performance despite Jerry and Brent sounding a bit tired",
+  "review": "The reviewer rates the concert 4 stars, praising the overall quality and noting that it was recorded nicely. While Jerry Garcia and keyboardist Brent Mydland seemed slightly fatigued, the show is still considered very good by the fan.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show 4/5 and calls the recording \"well recorded,\" leading to a combined rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer explicitly says the concert was well recorded, indicating clear sound despite no specific source details."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; overall performance described as very good even though a couple of members sounded tired."
+  },
+  "band_member_comments": {
+    "Jerry": "Seems a bit fatigued according to the reviewer",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent appears slightly tired",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T19:38:42.747210+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-03.aud.Holtz-Taggart.Naks.115108.flac16"
+}

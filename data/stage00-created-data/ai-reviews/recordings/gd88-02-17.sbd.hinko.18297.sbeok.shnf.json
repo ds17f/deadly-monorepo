@@ -1,0 +1,111 @@
+{
+  "summary": "Superb soundboard capture of an uneven February 1988 Oakland show highlighted by a spookily bluesy Red Rooster and an intense Estimated Prophet.",
+  "review": "The recording is a crystal‑clear soundboard tape that barely shows any cassette generation loss, making it highly listenable. Musically the band is in good form, with Brent Mydland stealing the spotlight on Red Rooster and Estimated Prophet, while the second set delivers strong moments like Bertha, Truckin' and Sugar, though some songs feel flat or uninspired.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Recording quality is excellent (≈4.8/5) while show performance is mixed (≈3.2/5); weighted combination yields ~3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Superb soundboard tape; cassette‑generation artifacts are virtually inaudible, resulting in clear, balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Red Rooster",
+      "Estimated Prophet",
+      "Bertha",
+      "Man Smart (Woman Smarter)",
+      "Truckin'",
+      "Sugar",
+      "Breakdown"
+    ],
+    "poor_songs": [
+      "Desolation Row",
+      "Cumberland Blues",
+      "All Over Now",
+      "Box of Rain",
+      "Black Peter"
+    ],
+    "setlist_flow": "The show opens with an unexpected Desolation Row followed by solid early numbers, then a bluesy Red Rooster and a powerful Estimated Prophet. The second set builds momentum with Bertha, tight drums/space, and a confident Truckin', but occasional dips (e.g., All Over Now, Black Peter) keep the overall flow uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "No specific praise; reviewer noted a desire for more Jerry ballads in the second set.",
+    "Phil": "Box of Rain is described as merely passable, with no strong commendation of Phil's bass work.",
+    "Bob": "Brent (\"Bobby\") shines on Red Rooster and Estimated Prophet, delivering bluesy keyboards and vocal intensity.",
+    "Keys": "Brent’s keyboard performance highlighted as a highlight of the night.",
+    "Drums": "Drums are praised for being ambient, dreamy, and tight, with an especially strong Drums/Space segment."
+  },
+  "song_mentions": {
+    "Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Breakdown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:20:23.532677+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-02-17.sbd.hinko.18297.sbeok.shnf"
+}

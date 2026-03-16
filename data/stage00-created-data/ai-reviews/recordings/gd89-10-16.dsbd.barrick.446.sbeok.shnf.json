@@ -1,0 +1,94 @@
+{
+  "summary": "Great soundboard recording (though a bit muffled at times) of an electrifying 10‑16‑89 show with standout Dark Star, Help>Slip>Franklin’s and a jam‑packed second set.",
+  "review": "The SBD capture of the 10/16/89 Meadowlands gig is generally clear and balanced, even if a few listeners note occasional muffling. Musically it shines – the first set is tight and song‑rich while the second set rolls nonstop with monster Dark Star, Help>Slip>Franklin’s, Attics, Playin’ reprises and a fiery Let It Grow→Deal sequence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the performance (many 5‑star) with only a handful noting poor sound; weighted average of show (≈4.7) and recording (≈3.5) yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the SBD as clear, with Brent’s keys audible and better than the CD release. A few note muffled sections or occasional drop‑outs, but overall the mix is balanced and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Help > Slip > Franklin's Tower",
+      "Attics",
+      "Playin' (reprise)",
+      "Let It Grow > Deal",
+      "Picasso Moon",
+      "Half Step",
+      "Stranger"
+    ],
+    "poor_songs": [
+      "Uncle John's Business",
+      "Drums > Space"
+    ],
+    "setlist_flow": "First set is tight and song‑rich (Picasso Moon → Half Step → Stranger, etc.), second set flows without breaks, building a continuous jam marathon that peaks with Dark Star and the Help>Slip>Franklin’s sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone on Dark Star is praised as “chilling” and his improvisational attack/echo delay work is highlighted.",
+    "Phil": "Bass is noted as solid groove‑wise, though some CD mixes make Phil sound light; the SBD restores his presence.",
+    "Bob": "Weir’s birthday show is celebrated – pink polo shirt, vocal fills on Let It Grow>Deal, and overall energetic rhythm work.",
+    "Keys": "Brent Mydland’s keyboards are described as clear in the dub, comfortable with the band, and a key part of the new‑face era.",
+    "Drums": "Bill Kreutzmann’s drumming gets mixed notes – “Drums>Space” called uninspired by one reviewer, but overall the rhythm section is praised for staying tight through the nonstop second set."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Attics": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow > Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Picasso Moon": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stranger": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Uncle John's Business": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:30:04.680219+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-16.dsbd.barrick.446.sbeok.shnf"
+}

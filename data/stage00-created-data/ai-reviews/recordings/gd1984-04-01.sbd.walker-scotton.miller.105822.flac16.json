@@ -1,0 +1,100 @@
+{
+  "summary": "A‑plus soundboard recording of a classic spring‑84 show, highlighted by a smoking Help > Slip > Franklin’s and tight, energetic playing throughout.",
+  "review": "The SBD capture is crystal‑clear with no hiss and the famed Spring ’84 laser organ effects front‑and‑center. Musically the concert delivers a consistently high‑energy first set and a second set packed with standouts – Help>Slip>Franklin’s, Terrapin Station, Cassidy and a near‑perfect Big River – only Touch of Grey feels a bit sloppy after a long night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All but one review praise both the performance and the sound quality; recording is described as excellent, and the show receives multiple glowing remarks about setlist flow and individual songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Well‑balanced mix with no discernible hiss; laser organ effects crisp and prominent; overall A+ sound throughout the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Friend of the Devil",
+      "Mama Tried > Mexicali",
+      "Big River",
+      "Cassidy",
+      "Terrapin Station",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Samson & Delilah (drum segment)",
+      "The Dew (Dark Star jam)",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "First set is described as consistent and fun with high early energy; second set maintains momentum with strong transitions, a soaring Help>Slip>Frank sequence and powerful jams, though the long night leaves Touch of Grey a little sloppy."
+  },
+  "band_member_comments": {
+    "Jerry": "Creative, energetic playing with laser‑effect tones; occasional low spot on Esau but overall dominant throughout the set.",
+    "Phil": "Rollerblading bass lines on Esau and powerful support during The Dew and other jams.",
+    "Bob": "Aggressive, swirling solos that add extra fire to Terrapin Station, The Dew and the outro jam.",
+    "Keys": "Brent’s spring‑84 laser organ is front‑and‑center, inventive and at times turned up high (especially on Esau), adding a distinctive texture.",
+    "Drums": "Strong percussion highlighted by the Samson & Delilah drum beat and solid drive on the jams."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried > Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:04:01.996901+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-01.sbd.walker-scotton.miller.105822.flac16"
+}

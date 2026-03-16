@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard capture of the final night of Oakland ’95, featuring a standout Estimated Prophet and an explosive second set with David Murray.",
+  "review": "The recording is a clean soundboard mix that lets Vince’s piano, the tight rhythm section and especially the drums shine. Musically the show is solid throughout, with a rare opening Let the Good Times Roll and a wildly hot second half after saxophonist David Murray joins, culminating in an unforgettable NFA/Estimated Prophet stretch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the ensemble playing and recording quality; one gives a perfect 4‑star sound rating while the other rates the show overall at 3 stars, yielding an overall strong but not flawless score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and balanced mix with straight piano tone, tight rhythm section, and drums that sound better than ever; no major drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let the Good Times Roll",
+      "Estimated Prophet",
+      "NFA"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief, tight first set with solid ensemble work and a rare opening Let the Good Times Roll; the second set starts a bit combobulated but gains momentum after David Murray’s sax entrance, building to an incendiary NFA/Estimated Prophet climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is noted as sounding better than in Winter ’94, especially on the later jams.",
+    "Phil": "",
+    "Bob": "Weir adds a unique acoustic‑guitar three‑song sequence that feels like an impromptu acoustic set.",
+    "Keys": "Vince’s straight piano sound is highlighted as giving the band a classy, full texture.",
+    "Drums": "The drums are described as sounding better than ever on this recording."
+  },
+  "song_mentions": {
+    "Let the Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:29:00.061019+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-26.144290.sbd.miller.clugston.flac1644"
+}

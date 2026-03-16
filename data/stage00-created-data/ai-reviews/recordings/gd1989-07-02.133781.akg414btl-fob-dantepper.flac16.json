@@ -1,0 +1,72 @@
+{
+  "summary": "Crystal‑clear FOH capture of the 1989 stadium opener, highlighted by a blistering Playin' In the Band → Uranium Jam and an unforgettable Dear Mr. Fantasy → Hey Jude sequence.",
+  "review": "The recording is praised for its upfront, crisp sound that perfectly captures the energy of the first night of the Dead’s 1989 stadium tour. The show itself is described as a high‑octane performance with standout moments like Playin' In The Band into Uranium Jam, the epic Dear Mr. Fantasy → Hey Jude reprise, and soaring versions of Eyes of the World and Crazy Fingers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All five reviewers rave about both the musical performance and the audio fidelity; the show is deemed exceptional and the recording excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Dan Tepper’s XY LD‑mic front‑of‑house capture is described as crisp, upfront and perfectly dialed in for a stadium setting; no dropouts or major issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' In The Band → Uranium Jam",
+      "Dear Mr. Fantasy → Hey Jude Reprise",
+      "Eyes of the World",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a seamless, high‑energy flow from the opening Playin' In the Band into UJB and through a magical Fantasy/Hey Jude segment, keeping the crowd fully engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his bandleader presence, enthusiastic leads, and the iconic \"How y'all doing\" intro (even though one reviewer missed it).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s heavy B‑3 organ work is highlighted, especially during the Fantasy → Hey Jude moment where his eyes were “bugging out”.",
+    "Drums": "A Hendrix‑style drum riff on Eyes of the World is specifically called out as a highlight."
+  },
+  "song_mentions": {
+    "Playin' In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uranium Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude Reprise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:07:16.456703+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-02.133781.akg414btl-fob-dantepper.flac16"
+}

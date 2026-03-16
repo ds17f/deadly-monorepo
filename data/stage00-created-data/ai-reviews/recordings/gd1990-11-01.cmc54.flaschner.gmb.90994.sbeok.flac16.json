@@ -1,0 +1,65 @@
+{
+  "summary": "Mixed show with a weak first set but a sweet Hornsby‑led Dark Star and solid second‑set jams; recording quality not discussed.",
+  "review": "The reviewer rates the first set around a 2, calling it lifeless and full of dated Weir tunes, while the second set is praised for tighter playing, a standout Dark Star piano reprise by Hornsby, and overall “gravy” after Wharf Rat. No comments are made about the audio source or fidelity, so the technical quality remains unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it gives a 4‑star overall rating despite many negatives about the first set, indicating a generally positive impression of the show but no data on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not mention soundboard, audience bleed, clarity, or any audio issues; therefore recording quality cannot be assessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Standing on the Moon",
+      "Valley Road",
+      "Maggie's Farm",
+      "First set (dated Weir tunes)"
+    ],
+    "setlist_flow": "First set is described as lifeless and plodding, while the second set is tighter with strong jams (Werewolves of London, Dark Star piano reprise) and a generally generous flow that improves the overall impression."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is called a ‘sing‑along wheeze and cough’ lacking energy; later the reviewer asks for more backing vocals from Jerry on Wharf Rat.",
+    "Phil": "Phil’s contribution is barely audible, only noted on Maggie's Farm where it sounds plodding.",
+    "Bob": "",
+    "Keys": "Hornsby’s piano on Dark Star is praised as ‘very sweet’ and the reviewer wishes he’d take a lead role; backing vocals are described as sketchy.",
+    "Drums": "Casey Jones (drumming) was noted as “cool,” indicating a positive view of the drum work."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Valley Road": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:43:25.676966+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-11-01.cmc54.flaschner.gmb.90994.sbeok.flac16"
+}

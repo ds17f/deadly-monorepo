@@ -1,0 +1,57 @@
+{
+  "summary": "Fair‑quality audience tape of a classic 1970 New York show, highlighted by stellar Deep Elem Blues, Morning Dew and an soaring Attics of My Life despite the rough sound.",
+  "review": "The performance shines with deep blues numbers like Deep Elem Blues and Morning Dew, plus a gorgeous rendition of Attics of My Life that many reviewers call one of the best ever. Recording quality is uneven – some tracks are listenable while others are described as wretched or muddy – but the musical moments still make it worthwhile for collectors.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is praised by many reviewers (standout songs, strong performances) while recording quality is repeatedly criticized as poor or variable; weighting show (70%) and recording (30%) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews describe the tape as an old audience (AUD) source with \"mudeled 10th generation board\" quality, often wretched or muddy, varying greatly between tracks; some listeners find it listenable on portions but overall the sound is uneven and noisy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deep Elem Blues",
+      "Morning Dew",
+      "Attics of My Life",
+      "Walkin' The Dog"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical early‑70s New York set that swings through blues, folk and tight harmonies; reviewers note strong flow despite the recording issues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for jackhammer‑like bass work on Deep Elem Blues (\"Phil was the leader instrumentally\").",
+    "Bob": "Noted for a great second guitar contribution from young Robert Weir on Deep Elem Blues.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deep Elem Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Attics of My Life": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Walkin' The Dog": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T01:10:10.239413+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-09.aud.hanno.7591.sbeok.shnf"
+}

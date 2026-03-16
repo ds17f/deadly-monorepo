@@ -1,0 +1,39 @@
+{
+  "summary": "Strong German show with fresh first‑time songs and solid playing; soundboard source presumed good quality",
+  "review": "Both reviewers praise the Hamburg performance as a keeper, noting it featured several songs debuting on this tour and delivering tighter playing than the comparable Essen show. The recording is identified as an SBD (soundboard) source, which suggests clear and balanced audio despite no explicit comments about sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two positive reviews (5★ and 4★) highlight an excellent set with fresh material, while the SBD source implies decent audio; limited data yields a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity or mix; based on file naming (.sbd) the recording is likely a clean soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note the show introduced several first‑time tour songs and maintained better playing than the Essen gig, making it one of the stronger German dates."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:04:02.069620+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-24.sbd.unknown.84961.sbeok.flac16"
+}

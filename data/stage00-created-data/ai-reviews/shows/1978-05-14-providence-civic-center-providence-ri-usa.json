@@ -1,0 +1,20 @@
+{
+  "summary": "Show processed with limited analysis due to technical issues",
+  "review": "This show was processed but encountered technical difficulties during AI analysis. Please refer to individual recording reviews for detailed insights.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 0.0,
+    "confidence": "low"
+  },
+  "best_recording": {
+    "identifier": "gd1978-05-14.sbd.miller.108996.flac16",
+    "reason": "First available recording (fallback selection)"
+  },
+  "key_highlights": [
+    "Analysis incomplete due to technical issues"
+  ],
+  "processed_recordings": 4,
+  "processed_date": "2025-09-25T12:58:26.784277+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed"
+}

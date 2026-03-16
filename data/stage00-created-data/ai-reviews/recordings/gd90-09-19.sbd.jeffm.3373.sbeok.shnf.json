@@ -1,0 +1,61 @@
+{
+  "summary": "Soundboard source with fair, somewhat muffled audio captures a fiery set highlighted by a smoking Help‑Slip‑Franklin’s and an unforgettable Let It Grow transition.",
+  "review": "The show is praised for its passionate first‑set numbers like Jack Straw and Big River, but the second set steals the spotlight with a blazing Help > Slip > Franklin's sequence and one of the most inspired Let It Grow transitions ever heard. Recording quality is mixed – listeners note a muffled, less clear mix that still lets the performance shine for fans who value the music above fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised with several standout moments; recording issues are noted by multiple reviewers, pulling the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Audio is noticeably muffled and lacking clarity; some reviewers rate it as poor while others call it acceptable. No major drop‑outs reported, but the mix is not as clean as other SBD releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Let It Grow",
+      "Goin' Down The Road Feeling Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for passion and tight playing; second set shines with seamless transitions, especially the legendary Let It Grow segue."
+  },
+  "band_member_comments": {
+    "Jerry": "Reverently mentioned in a tribute but no specific performance comments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby fills in nicely on keyboards, compensating for Brent's absence; Brent is missed by fans.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Goin' Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:50:14.400813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-19.sbd.jeffm.3373.sbeok.shnf"
+}

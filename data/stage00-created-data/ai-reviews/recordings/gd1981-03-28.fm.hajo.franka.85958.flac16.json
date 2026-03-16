@@ -1,0 +1,69 @@
+{
+  "summary": "A solid FM broadcast captures an ’81 show that shines on a marathon Althea and a soaring He’s Gone > The Other One sequence.",
+  "review": "Fans rave about the musical firepower of this 1981 performance – Garcia “means business,” Althea stretches out for ten minutes, and the He’s Gone → The Other One stretch is described as superb.  The FM feed is praised as generally clear and well‑balanced, with no major sound flaws reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance highlighted by several standout songs; recording is a good FM feed with clear sound but not described as exceptional."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "FM broadcast mix noted as generally clear and well‑balanced; reviewers mention “good sound overall” and no significant dropouts or mud."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Shakedown Street",
+      "He's Gone",
+      "The Other One",
+      "Wharf Rat",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds momentum with a monster Shakedown Street and tight playing; second set stays high until the later half where fatigue shows, but a Pete Townshend cameo revives the band and the He’s Gone → The Other One sequence delivers a peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia “means business” and takes no prisoners – highlighted as a driving force of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:20:14.284271+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-28.fm.hajo.franka.85958.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Great audience‑sourced recording with crisp sound and standout Scarlet Begonias → Fire on the Mountain and Estimated Prophet → Eyes of the World sequences.",
+  "review": "Listeners rave about this 1979 show, highlighting a superb performance that shines on the seamless Scarlet > Fire and the inspiring Estimated > Eyes segues. The audience recording, captured with a Sony ECM‑250 mic and mastered by Charlie Miller, is praised for its clear, satisfying sound that rivals many SBD tapes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews are highly positive (3×5‑star, 1×4‑star) and specifically commend both the musical performance and the audio quality, indicating an excellent show with a good‑to‑excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp sound thanks to Charlie Miller's mastering; audience mic capture is described as comparable to SBD quality with no noted dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Estimated Prophet > Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly, with a strong finish ('bitter end') and memorable transitions that keep listeners engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet > Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:22:53.266550+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-10.sonyecm250.walker-scotton.miller.fix.97354.sbeok.flac16"
+}

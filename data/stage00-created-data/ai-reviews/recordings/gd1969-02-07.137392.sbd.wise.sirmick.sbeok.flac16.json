@@ -1,0 +1,45 @@
+{
+  "summary": "Crisp soundboard capture of the fiery 1969 Pittsburgh show, highlighted by a soaring Dark Star and hard‑charging St. Stephen.",
+  "review": "All four reviewers rave about this early‑'69 Pittsburgh performance, calling it an intense psychedelic dawn with burning energy. The recording is praised for its clarity and punch, while the music shines especially on Dark Star and St. Stephen, delivering a well‑jammed early set and a cohesive late show that tied together Anthem of the Sun material.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently five‑star reviews emphasize both superb soundboard quality and an outstanding performance, with no criticism noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as crisp, burning, and full of intensity; no drop‑outs or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early show described as well‑jammed and spacey, while the later show tied together Anthem of the Sun material into a cohesive, family‑like experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for delivering a delicate yet thundering Dark Star and credited with inventing a memorable word.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T11:09:14.228912+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-02-07.137392.sbd.wise.sirmick.sbeok.flac16"
+}

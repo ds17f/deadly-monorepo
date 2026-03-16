@@ -1,0 +1,63 @@
+{
+  "summary": "Fair audience‑recorded tape of a chaotic early‑1979 show that still delivers highlights like Eyes and the Lazy Lightning → Supplication sequence.",
+  "review": "The recording is an uneven audience capture – often distant and cell‑phone‑like, but it manages to convey several strong musical moments.  The concert itself was plagued by onstage drama (Keith/Donna incident, equipment failures) yet features standout performances such as Jerry’s soaring solo on Eyes and a tight Lazy Lightning → Supplication pair.  Overall the show is mixed, with flashes of brilliance amid a generally rough evening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality averages around fair‑to‑good (few praised moments vs many negative comments) and recording quality is judged fair due to distant, audience‑type capture; combined weighted rating yields ~2.8."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers describe the audio as sounding like a cell‑phone recording, far away and muffled; occasional clarity but overall limited fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Lazy Lightning > Supplication",
+      "Jack-a-Roe",
+      "Looks Like Rain",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is uneven – onstage mishaps and a chaotic atmosphere disrupt the flow, but isolated peaks (Eyes solo, tight late‑set sequences) provide memorable highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an inspired solo on Eyes (“skims the stone”) and strong interplay with Billy.",
+    "Phil": "",
+    "Bob": "Mentioned equipment failure – threw a guitar, monitor problems.",
+    "Keys": "Keith’s on‑stage stumble with Donna (balloon incident) noted; overall keyboard work not specifically discussed.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:13:18.240860+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-14.nak300.wiley-miller.18460.sbeok.shnf"
+}

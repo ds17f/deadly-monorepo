@@ -1,0 +1,66 @@
+{
+  "summary": "Fluid segues, Dark Star highlight, uneven guitar tone",
+  "blurb": "The Boston Garden show flows through strong transitions from Uncle John's Band into the drum and Space sections, with a soaring Dark Star and tight Watchtower/Standing On The Moon pairing. Jerry’s vocals and guitar work are solid, though Bob’s tone is muddy on some mixes. Overall the performance is mixed but contains several high‑point moments.",
+  "review": "On September 27, 1994 the Dead delivered a night that swings between inspired improvisation and occasional rough edges. Highlights include an expansive Dark Star that lifts the second set into a soaring climax, a seamless All Along The Watchtower → Standing On The Moon segue, and the ever‑reliable Uncle John's Band that launches into a powerful drum/Space sequence. Jerry Garcia’s voice stays strong throughout, especially on I Know You Rider, while his guitar solo helps “right the ship” after a shaky China Cat Sunflower transition. Phil Lesh locks in a deep groove during the extended Space leading into Watchtower, and Mickey Hart’s drumming adds a solid backbone to the climax of Uncle John's Band. The show is marred by a consistently criticized Bob Weir guitar tone on several recordings, which can make parts feel “digital‑pedal” distorted, but the overall setlist—featuring Feel Like A Stranger, China Cat Sunflower > I Know You Rider, and a rousing Johnny B. Goode encore—offers plenty for completists and casual fans alike.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Four recordings are mixed and one is positive; no consistent negative criticism of the performance itself, only occasional recording issues. The presence of multiple praised moments (Dark Star, Watchtower, Uncle John's Band) yields a modest positive sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-09-27.aud.unknown.georges.10182.shnf",
+    "reason": "Excellent audience capture with clear, pleasing sound that overcomes typical SBD mix issues; provides the most enjoyable listening experience despite being an audience source."
+  },
+  "key_highlights": [
+    "Expansive Dark Star that lifts the second set",
+    "All Along The Watchtower → Standing On The Moon seamless segue",
+    "Uncle John's Band into drum/Space sequence",
+    "Strong vocal and guitar work on I Know You Rider"
+  ],
+  "song_highlights": [
+    "Feel Like A Stranger",
+    "Uncle John's Band",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "All Along The Watchtower",
+    "Standing On The Moon"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers strong vocals and solid guitar work, especially on I Know You Rider; his solo helps recover momentum after a shaky China Cat Sunflower.",
+    "Phil": "Provides a deep, steady bass foundation; shines during the extended Space that leads into Watchtower.",
+    "Bob": "Guitar tone is muddy and distorted in several mixes, making parts difficult to hear; otherwise contributes typical rhythm work.",
+    "Brent": "",
+    "Mickey": "Drums are tight, particularly the pre‑drum section leading out of Uncle John's Band, adding power to the finale.",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-19T01:43:16.629505+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "Way To Go Home",
+      "Corinna",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "All Along The Watchtower",
+      "Standing On The Moon"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ]
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Soundboard recording that’s generally listenable despite occasional distortion, capturing a high‑energy early‑’70 show highlighted by a stellar Good Lovin’, Mason’s Children, Dark Star and The Eleven.",
+  "review": "The tape delivers an exciting early‑1970 performance with standout moments on Good Lovin', Mason's Children, High Time, Dark Star, St. Stephen → The Eleven and Lovelight. While the soundboard source is mostly clear, reviewers note some distortion, a half‑step pitch slowdown and occasional mediocre balance, but the music outweighs these flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (strong jams, many highlighted songs) while noting only moderate recording imperfections; weighted average of relevant star ratings is ~3.9, nudged up by strong show quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable soundboard source; occasional distortion, a noted half‑step pitch slowdown, and some mediocre balance in places, but no deal‑breaker dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Mason's Children",
+      "High Time",
+      "Dark Star",
+      "St. Stephen",
+      "The Eleven",
+      "Lovelight",
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑'70 set with tight transitions, strong first‑set energy and a second‑set that builds into powerful jams (Dark Star → The Eleven) and a memorable Lovelight finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised especially during Dark Star and The Eleven; his solo on Hard To Handle is noted as brief but effective.",
+    "Phil": "",
+    "Bob": "Bob Weir adds a short solo on the 1970 version of Hard To Handle; his vocal contributions are generally well‑received.",
+    "Keys": "The Hammond organ has an unusual 1967‑style tone, possibly from a church instrument, giving the show a distinct “funky” texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mason's Children": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:51:49.076823+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-17.sbd.clugston.2220.sbeok.shnf"
+}

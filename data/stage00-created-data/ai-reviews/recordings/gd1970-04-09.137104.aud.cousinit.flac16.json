@@ -1,0 +1,31 @@
+{
+  "summary": "Powerful electric performance shines, but tape warble drags down the acoustic set and overall recording quality.",
+  "review": "The show delivers a strong, high‑energy electric set that many reviewers describe as powerful, yet the acoustic portion suffers from noticeable tape warble. The source is an analog tape capture – clear enough for the electric songs but imperfect overall, leading to mixed feelings about listenability.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (high rating from one reviewer) while recording quality is criticized for tape warble (low rating from another). Weighted average yields a solid but not outstanding score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Tape warble noticeable in acoustic set; overall sound acceptable for electric portion but marred by tape imperfections."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Electric set praised for power and clarity; acoustic segment detracted by recording issues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T18:03:54.840217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-04-09.137104.aud.cousinit.flac16"
+}

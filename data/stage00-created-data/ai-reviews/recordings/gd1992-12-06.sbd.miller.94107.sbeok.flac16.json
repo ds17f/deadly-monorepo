@@ -1,0 +1,93 @@
+{
+  "summary": "Excellent soundboard capture of a 1992 show brimming with a stellar Here Comes Sunshine and other standout classics.",
+  "review": "The recording is praised for its clean, high‑fidelity soundboard mix, with only occasional glitches and vocal hiccups. Musically the concert is regarded as one of the stronger late‑era shows, highlighted by a superb Here Comes Sunshine, Althea, Masterpiece, China Doll and a gorgeous Brokedown Palace encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising both the performance and the soundboard quality; only one low rating cites sloppiness, so the weighted average leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as clean, crisp, and high‑fidelity; a few reviewers note minor glitches and Bobby’s throat issues but overall the mix is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Althea",
+      "Masterpiece",
+      "China Doll",
+      "Brokedown Palace",
+      "Samson & Delilah",
+      "Crazy Fingers",
+      "Maggie's Farm",
+      "Deal",
+      "Upright Jam Bundle > Playin' reprise"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is packed with classics and strong openings; second set maintains momentum with a memorable encore, delivering a balanced, high‑energy show."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s playing was happy, healthy, and adventurous (MIDI reed experiments), contributing to the overall joy of the night.",
+    "Phil": "Phil is praised for taking a verse on Maggie's Farm and generally sounding solid.",
+    "Bob": "Bobby’s voice shows signs of throat trouble later in the set, but his guitar tone remains strong; some mention occasional vocal cuts.",
+    "Keys": "Vince’s piano/organ tones are described as organic and tasteful, avoiding overly synth‑y patches.",
+    "Drums": "Mickey’s conga work adds a tribal feel; drums overall are solid and keep the groove."
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Upright Jam Bundle > Playin' reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:41:26.095935+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-06.sbd.miller.94107.sbeok.flac16"
+}

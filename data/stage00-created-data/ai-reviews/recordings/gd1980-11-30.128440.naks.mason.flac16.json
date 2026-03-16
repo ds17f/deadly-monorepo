@@ -1,0 +1,57 @@
+{
+  "summary": "Top‑notch audience tape captures a stellar set with an extended Scarlet Begonias → Fire on the Mountain jam, thunderous drums and a high‑energy ’Round & ’Round → Johnny B. Goode finale.",
+  "review": "The Mason B. Taylor audience recording is praised as top‑notch, delivering clear sound and especially powerful drum presence. Musically the show shines with a soaring Scarlet Begonias > Fire on the Mountain stretch, a relaxed ‘Wheel out of Space’ jam, an electrifying ’Round & ’Round > Johnny B. Goode closing, and a perfect Uncle John’s Band encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one 4‑star review; it highlights strong musical performance and good audience recording quality, leading to an overall four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience (AUD) tape described as top‑notch with clear instrument separation and thunderous drums; no major flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "The Wheel out of Space",
+      "'Round & 'Round > Johnny B. Goode",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set flows smoothly from an extended Scarlet jam into a relaxed Wheel piece, builds energy with ’Round & ’Round > JBG, and caps off the night with a classic Uncle John’s Band encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums described as thunderous and a highlight of the performance."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel out of Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "'Round & 'Round > Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:32:58.601687+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-30.128440.naks.mason.flac16"
+}

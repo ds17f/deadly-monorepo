@@ -1,0 +1,31 @@
+{
+  "summary": "Mislabeled audience recording plagued by heavy crowd noise; musical performance details unavailable",
+  "review": "The sole reviewer condemns this tape as a mislabeled audience capture, noting that the mix is dominated by crowd chatter rather than a clean soundboard feed. No comments are made about the band's playing or specific songs, and the low one‑star rating reflects overall disappointment with the recording quality.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review giving a 1‑star rating; reviewer focuses on poor, crowd‑heavy recording and provides no positive show details."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Heavy crowd microphone bleed; not a true soundboard source, resulting in muffled instrument clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T14:24:33.780178+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-23.133794.upd-sbd.tobin.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Mixed feedback – one listener says the tape is too slow while another praises it as sounding incredible; no specific musical highlights were mentioned.",
+  "review": "The two reviews offer contrasting views: a reviewer complains that the recording plays back at a sluggish speed and needs to be sped up, whereas another enthusiast declares the audio spectacular and among the best uploads of those shows. No particular songs or performance moments are called out, so the musical content remains uncharacterized beyond general praise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Only two reviews with divergent opinions; one rates it 0 stars due to speed issues, the other gives 4 stars for overall sound quality. The lack of detailed musical commentary limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer notes the recording sounds too slow and needs speeding up; another describes it as sounding incredible, suggesting decent clarity despite the speed problem."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or song flow were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T19:11:51.155972+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-27.senn.hubbard.bandrofcheck.81509.sbefail.flac16"
+}

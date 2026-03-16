@@ -1,0 +1,71 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a legendary free‑park show highlighted by a smoking Help > Slipknot > Franklin’s sequence and fiery Truckin’ jams.",
+  "review": "The fink‑9392 SBD is praised for its crisp, well‑balanced mix that lets the band’s 1975 magic shine.  The performance is lauded for its immediate energy – no warm‑up songs, a soaring Help > Slipknot > Franklin’s run, a blistering Truckin’ jam and strong TLEO – while a handful of reviewers note a weak Help intro or sloppy lyrics on Truckin’.  Overall the show is regarded as one of the era’s gems.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 80% of reviews are 4‑5 stars and repeatedly praise both the performance and the soundboard quality; only a few dissenting comments keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, clear and well‑balanced; minor notes of slight softness or occasional drop‑outs but no serious flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Truckin'",
+      "They Love Each Other (TLEO)",
+      "Big River",
+      "King Solomon's Marbles / Stronger Than Dirt"
+    ],
+    "poor_songs": [
+      "Help on the Way (weak lead‑in noted by a single reviewer)",
+      "Truckin' (lyrics slippage mentioned by one reviewer)"
+    ],
+    "setlist_flow": "The set jumps straight into a tight, lyrical opening and stays high‑energy throughout; fans note the lack of typical warm‑up numbers gives the show an immediate, “lucid” feel that builds to powerful jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring lead guitar tone, especially on Franklin's Tower and the Help>Slipknot sequence; a few critics felt his Help intro was weak.",
+    "Phil": "Bass highlighted as funky, high in the mix and “incredible” by several listeners.",
+    "Bob": "Vocals described as tight; occasional mention of solid rhythm guitar work.",
+    "Keys": "Keith's Fender Rhodes praised for tasty comping; Matthew Kelly’s harmonica noted on a few tracks.",
+    "Drums": "Bill and Mickey’s dual‑drum texture especially praised during the Truckin’ jam."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 18,
+      "negative_mentions": 1,
+      "total_mentions": 19
+    },
+    "Truckin'": {
+      "positive_mentions": 14,
+      "negative_mentions": 2,
+      "total_mentions": 16
+    },
+    "They Love Each Other": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Big River": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "King Solomon's Marbles": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Stronger Than Dirt": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-23T02:43:50.153004+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd75-09-28.sbd.fink.9392.sbeok.shnf"
+}

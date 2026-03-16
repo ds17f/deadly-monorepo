@@ -1,0 +1,61 @@
+{
+  "summary": "Great audience‑sourced Oade tape of a legendary Greek Theatre show with stellar Morning Dew, China Doll and Keep On Growing performances",
+  "review": "Fans rave about the spirited playing despite Jerry’s ragged voice, highlighting an unforgettable Morning Dew, a favorite China Doll and a soaring Keep On Growing. The Oade audience recording is praised as clear and vibrant, making this historic Greek Theatre concert a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (average 4.7) and overwhelmingly positive comments about both the musical performance and the Oade audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the Oade tape \"great\" and \"very good\", noting it captures the show clearly with a treat‑like sound, no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "China Doll",
+      "Keep On Growing"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is remembered for its high energy and seamless transitions, especially the second‑set opener Morning Dew and the post‑China Doll jam with Brent’s keyboards."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as ragged or dismal but extremely spirited; his solo on the middle of the show is called \"ripping\" and melodic in ways few versions capture.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s little jam after China Doll is highlighted, showing vibrant keyboard work.",
+    "Drums": "Mickey’s \"Bobby\" sample gets a laugh; drummers’ post‑China Doll jam praised."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Keep On Growing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:34:27.591813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-14.oade.sacks.4978.sbeok.shnf"
+}

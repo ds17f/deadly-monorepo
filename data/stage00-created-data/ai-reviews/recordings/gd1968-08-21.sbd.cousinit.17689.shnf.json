@@ -1,0 +1,76 @@
+{
+  "summary": "High‑quality soundboard capture of an outstanding 8/21/68 show highlighted by a soaring Dark Star, a killer St. Stephen → Eleven sequence and an all‑time great Alligator.",
+  "review": "The performance is widely praised for its explosive second set – Dark Star, St. Stephen > Eleven, Death Don't Have No Mercy and a fiery Lovelight – with tight playing from Jerry, Phil and Pigpen. The soundboard source is clear and well‑mic'd (organ especially) though a few reviewers note a slightly flatter high end and some editing quirks. Overall the show is considered one of the peak “golden age” Dead concerts of 1968.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star, praising both musical performance and recording quality; only one low rating cites editing issues. Weighted average and detailed commentary support a strong positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Well‑mic'd organ and clear mix, though some listeners note a slightly flatter sound with reduced high frequencies. Minor editing complaints (mis‑labelled \"Drums\" track) are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen > Eleven",
+      "Death Don't Have No Mercy",
+      "Lovelight",
+      "Alligator",
+      "Schoolgirl"
+    ],
+    "poor_songs": [
+      "Midnight Hour"
+    ],
+    "setlist_flow": "Two‑set show; first set solid with Cryptical>Other One and Schoolgirl, second set a highlight of Live Dead material (Dark Star > St. Stephen > Eleven > Death Don't Have No Mercy) delivering the concert’s peak energy."
+  },
+  "band_member_comments": {
+    "Jerry": "On fire on Lovelight, strong guitar‑organ interplay with Phil on Dark Star, vocal low in Cryptical reprise, adds Goodnight theme near end.",
+    "Phil": "Weaves a psychic bass‑guitar dance with Jerry during Dark Star; solid foundation throughout the set.",
+    "Bob": "",
+    "Keys": "Tom Constanten’s memorable six‑note organ figure in Dark Star is frequently referenced; Pigpen’s Hammond organ work on Schoolgirl and Alligator receives high praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen > Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alligator": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Schoolgirl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:47:51.704557+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-08-21.sbd.cousinit.17689.shnf"
+}

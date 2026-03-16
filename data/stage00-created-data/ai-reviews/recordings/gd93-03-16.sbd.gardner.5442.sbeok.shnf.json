@@ -1,0 +1,79 @@
+{
+  "summary": "Soundboard recording with occasional crackle captures a high‑energy 1993 show highlighted by a blazing Jack Straw and soaring So Many Roads.",
+  "review": "The performance is widely praised – Jerry’s vocals were on point, the band was “on” all night, and songs like Jack Straw, So Many Roads, Scarlet→Fire and Uncle John’s Band are repeatedly called outstanding.  The SBD source is a bit crackly and misses some audience ambience, but listeners still find it listenable and recommend an audience tape for the full experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑5 stars and highlighted strong musical moments; recording issues (crackle, occasional dropouts) are noted but do not dominate the overall impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Crackles, pops and brief digital dropout are mentioned by several reviewers; audience ambience is thin in the SBD mix, but the overall sound remains clear enough to enjoy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "So Many Roads",
+      "Scarlet > Fire",
+      "Uncle John's Band",
+      "Sugar Magnolia",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as high‑energy with a strong first set of ballads and an especially fiery second set; transitions (e.g., Scarlet→Fire) are praised and the band’s tight interplay keeps the momentum flowing."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals nailed, guitar tone raging, fluid solos, deeply immersed in songs like So Many Roads and Jack Straw.",
+    "Phil": "Pumped throughout, notable bass solo after UJB, strong jams and “Phil bombs” highlighted.",
+    "Bob": "",
+    "Keys": "Vince’s keyboards are steady and tasteful, providing support without being overbearing; row‑Jimmy midi synth noted in a few spots.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are prominently heard, especially on Cassidy and during the driving jams."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "So Many Roads": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T10:27:06.213344+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-16.sbd.gardner.5442.sbeok.shnf"
+}

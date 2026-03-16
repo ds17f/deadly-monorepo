@@ -1,0 +1,31 @@
+{
+  "summary": "No concrete information on recording quality or musical performance; review consists of a poem with minimal show commentary",
+  "review": "The sole review offers a poetic piece rather than substantive feedback on the concert or audio, mentioning only that it was \"a great show\" but providing no details about soundboard source, clarity, setlist, or band performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only one review with no relevant details on music or recording quality; sentiment is ambiguous, leading to a cautious low rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not discuss audio clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T10:24:42.296875+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-01.134978.dts.tobin.flac16"
+}

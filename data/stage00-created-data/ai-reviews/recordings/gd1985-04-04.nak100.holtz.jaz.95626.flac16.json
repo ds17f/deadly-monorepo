@@ -1,0 +1,70 @@
+{
+  "summary": "Recording source unknown, and the show suffers from a lack of jams despite a few fiery moments on \"He's Gone\" and \"Samson\".",
+  "review": "The reviewer finds this concert disappointing, noting virtually no improvisational space aside from brief moments in \"He's Gone\" and \"Samson\" which are described as played with fire. While \"Crazy Fingers\" and the Wheel get modest praise, the Black Peter > Around and Around sequence is called out as a low point, resulting in an overall mixed‑to‑negative impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; strong criticism of the performance outweighs lack of recording comments, leading to a below‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer commentary on audio clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Samson",
+      "Crazy Fingers",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "Black Peter",
+      "Around and Around"
+    ],
+    "setlist_flow": "High energy but severely lacking in improvisational jams; transitions feel flat, making the overall flow disappointing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:04:54.151142+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-04.nak100.holtz.jaz.95626.flac16"
+}

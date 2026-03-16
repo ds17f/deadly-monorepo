@@ -1,0 +1,68 @@
+{
+  "summary": "Crisp soundboard capture of a solid 1993 show highlighted by an epic 25‑minute Terrapin and strong Eyes of the World, though the performance divides opinion.",
+  "review": "The recording is a well‑balanced soundboard feed that most listeners find crisp and clear, with vocals coming through nicely. Musically the night shines in the second set – a soaring 25‑minute Terrapin Station and an expansive Eyes of the World – but some fans feel the first set is merely adequate and a few moments (e.g., Eternity) fall flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the soundboard quality and the standout Terrapin/Eyes jams, but a minority criticize the mix and certain song performances, leading to an overall moderate‑to‑positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally described as crisp, clear and well balanced; vocals are audible. A few reviewers note occasional muffling or a ‘toy‑like’ feel, but the consensus is that the board feed is superior to audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Eyes of the World",
+      "Dire Wolf"
+    ],
+    "poor_songs": [
+      "Eternity"
+    ],
+    "setlist_flow": "First set considered unremarkable by several fans, while the second set delivers long, flowing jams (notably Terrapin and Eyes) that define the night’s appeal."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his new ‘lightning‑bolt’ acoustic‑sounding electric tone, especially on Sugaree and throughout the show; vocals are strong.",
+    "Phil": "Noted for clear, bubbling bass work that shines in the mix.",
+    "Bob": "",
+    "Keys": "Vince’s synth occasionally overpowers the texture; some wish for more piano or B3.",
+    "Drums": "Generally described as crisp with a bongo‑like quality, though one reviewer felt the drums were off‑beat during Eyes of the World."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:05:48.875739+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-29.dsbd.miller.28800.sbeok.flacf"
+}

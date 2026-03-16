@@ -1,0 +1,74 @@
+{
+  "summary": "Crystal‑clear audience tape of a tight late‑80s show with standout Bird Song, Foolish Heart and The Other One; superb sound and firing band.",
+  "review": "The recording is an audience (AUD) capture that many reviewers say sounds as clean as a board, with excellent instrument separation and just a few muffled spots.  Musically the concert is tight from start to finish – Bird Song, Foolish Heart, The Other One, Dew and Hell in a Bucket get special praise, and guest David Hidalgo adds a tasty flavor.  Overall it’s regarded as one of the best late‑80s Dead shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance and audio quality across >5 detailed reviews; recording is described as superb and the show as tightly played with multiple standout moments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear, punchy sound with great instrument separation; occasional crowd chatter and a few muffled spots but overall comparable to a board or matrix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Foolish Heart",
+      "The Other One",
+      "Dew",
+      "Hell in a Bucket",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Even, tight set with a classic ’88 repertoire; the first set builds to a powerful Bird Song finale and the second set revolves around an expansive The Other One, keeping momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for killing it all night; his birthday show is called a monster performance.",
+    "Phil": "Bass shines through, prominent and bright in the mix; many note how well his low end comes across.",
+    "Bob": "Weir’s rhythm guitar is described as “on point” and complementary to Jerry’s lead work.",
+    "Keys": "Brent (keyboard) is ever‑present and taking charge; guest guitarist David Hidalgo adds tasty licks on a few tunes.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Start Your Engines": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T12:23:21.856130+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-31.akg.thompson.motb.85999.sbeok.flac16"
+}

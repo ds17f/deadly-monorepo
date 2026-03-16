@@ -1,0 +1,57 @@
+{
+  "summary": "Boomy audience recording that captures a mixed‑quality show, highlighted by a soaring Victim and the epic New Speedway Boogie in an otherwise uneven set.",
+  "review": "The recording is an audience tape from the Oakland Arena that suffers from typical boomy, muffled acoustics and fails to convey all of the band’s nuances. Musically the concert is uneven – a weak first set followed by a spectacular second half where the Victim’s drum intro and a fifteen‑minute New Speedway Boogie steal the show, with occasional jams after Terrapin and a memorable spin on The Other One.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "high",
+    "rationale": "Most reviewers note poor to fair sound quality but consistently praise the second‑set performances, especially Victim and New Speedway Boogie; the weighted average lands in the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Typical Oakland Arena audience tape – boomy low end, some muffling, and lack of clarity that doesn’t fully capture the band’s nuances. Reviewers describe it as \"crappy\" or \"not quite as good\" but still able to convey the concert atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim",
+      "New Speedway Boogie",
+      "Terrapin (jam after)",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as shaky and uninspired, while the second set shines with a powerful Victim intro and an extended New Speedway Boogie; overall the concert feels uneven but the latter half is highly praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned playing somewhat better than previous night; his tone gets nods in positive comments about the second set.",
+    "Phil": "Highlighted during the post‑Terrapin jam where Phil and the drums “get it on” before some members walk off stage.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Victim’s drum intro is repeatedly praised; reviewers note a new, powerful drumming style in ’95 that makes the Victim shine."
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:20:23.594785+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-02-25.aud.5494.sbeok.shnf"
+}

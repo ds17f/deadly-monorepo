@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent FM audience capture with a top‑three SOTM and blazing Jerry solo; recording is clear despite occasional broadcast noise.",
+  "review": "The show is hailed as one of the best ever, highlighted by an unforgettable SOTM that lands in the top three and a raging final solo from Jerry. Recorded off a hotel‑room VCR tuned to the FM broadcast, the audio is surprisingly clean with only a faint high‑pitch hiss from the original transmission.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are enthusiastic (4–5 stars) and praise both the performance (especially SOTM and Jerry's solo) and the surprisingly good FM/VCR capture, with only minor noise issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "VCR‑captured FM broadcast from a hotel room; generally clear and listenable but includes a faint high‑pitch noise inherent to the original broadcast."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "SOTM"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as a blues‑heavy, fun jam with great band chemistry; overall pacing and energy are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Final solo described as 'ragin'' and one of the best ever.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "SOTM": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T15:39:04.220761+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-21.fm.albright.87555.flac16"
+}

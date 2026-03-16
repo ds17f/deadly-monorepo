@@ -1,0 +1,88 @@
+{
+  "summary": "Exceptionally vivid 1981 spring show with scorching Scarlet > Fire and To Lay Me Down, captured on an outstanding audience recording.",
+  "review": "The performance is widely praised for its high energy, tight playing and memorable moments – especially the blistering Scarlet > Fire on the Mountain, Lazy Lightning > Supplication, and a heartfelt To Lay Me Down.  The audience source is described as “killer” and “exceptionally good,” with a well‑balanced mix that lets the music dominate while still conveying the crowd atmosphere.  Minor gripes (a slow El Paso and an odd encore) do not detract from the overall brilliance of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Eight detailed reviews, average 4.5 stars, consistently high praise for both performance and audio quality; weighting favours strong show with excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptionally clear audience capture; vocals reduced enough for instrument clarity; crowd audible but music dominates; well‑mixed with crisp instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire on the Mountain",
+      "Lazy Lightning > Supplication",
+      "To Lay Me Down",
+      "China Doll",
+      "Good Lovin'",
+      "Wheel",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "El Paso",
+      "Statisfaction"
+    ],
+    "setlist_flow": "First set tight and energetic; second set fires up with standout jams and emotional peaks, especially the To Lay Me Down sequence.  Overall pacing keeps momentum high despite a slower start."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is called vivid, energetic and ‘lucid’, with crisp fire solos that many reviewers singled out as highlights.",
+    "Phil": "Phil’s bass riffs and bombs are noted throughout, adding drive to the jams.",
+    "Bob": "",
+    "Keys": "Brent Mydland (and Bobby Cochran) deliver standout keyboard/CC Rider solos that reviewers describe as “sick” and a major highlight.",
+    "Drums": "Mickey Hart’s drumming is solid; noted for staying tight, though he stormed off after the encore."
+  },
+  "song_mentions": {
+    "Scarlet > Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Doll": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Statisfaction": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:32:24.809396+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-11.aud.unknown.4142.sbefail.shnf"
+}

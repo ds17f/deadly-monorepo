@@ -1,0 +1,57 @@
+{
+  "summary": "Mixed audio quality – some find it muffled, others enjoy a boomy yet clear audience recording – but the show shines with a powerful Jack Straw opener and standout second‑set gems like China>Rider, Estimated Prophet and Box of Rain.",
+  "review": "The performance is widely praised for its tight playing, especially Jerry’s gorgeous solo, an excellent China Cat Sunflower → I Know You Rider sequence, a spot‑on Estimated Prophet, and a moving Box of Rain encore. Audio opinions diverge: one reviewer calls the recording very muffled, while two others describe it as a solid late‑model audience tape with a bit of boom in vocals and drums but overall clarity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Two strong positive reviews (4 stars) highlight an excellent show; one negative review (1 star) focuses on poor sound quality. Weighted toward the musical performance, the overall rating is just under 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer reports very muffled sound; others note a slightly boomy vocal/drum mix but appreciate clear instrumentation and rich low‑end. Overall the audience tape is considered listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "China>Rider",
+      "Estimated Prophet",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opens strong with a fiery Jack Straw, maintains momentum through the first set, and delivers a second‑set highlight featuring China Cat Sunflower → I Know You Rider, an on‑point Estimated Prophet, and a heartfelt Box of Rain encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo is described as gorgeous and reminiscent of the Alpine ’89 version.",
+    "Phil": "Mentioned indirectly via his selection of this solo for his \"Fallout from the Phil Zone\" album.",
+    "Bob": "Weir’s vocal performance is praised as cheesy in a way that fits the band perfectly.",
+    "Keys": "",
+    "Drums": "Some reviewers note a slightly boomy drum sound but overall it balances with the mix."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China>Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T20:04:40.774163+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-06.naks.jamphan.11604.sbeok.shnf"
+}

@@ -1,0 +1,97 @@
+{
+  "summary": "Excellent soundboard capture of an energetic 1981 show with standout performances of Jack Straw, Let It Grow, Shakedown Street into Samson and a soaring Sugar Magnolia.",
+  "review": "The recording is a high‑quality SBD that delivers crisp clarity throughout the set. Fans rave about the solid first set and the second‑set fireworks – from a textbook Let It Grow to an explosive Shakedown > Samson jam, culminating in a blazing Sugar Magnolia. The band’s relaxed vibe, Phil’s surprise vocal mic on U.S. Blues and stellar jams make this a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive (5, 4, 5 stars) and highlight both superb soundboard quality and a high‑energy performance with many standout songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great SBD surface praised as crisp and clear; no dropout or muffling issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Let It Grow",
+      "Shakedown Street > Samson",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, moving first set leads into an explosive second set with seamless transitions and extended jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Mellow, reflective playing early on; later adds the GDTRFB outro and a brief Bid You Goodnight instrumental.",
+    "Phil": "Microphone was set up for backup vocals during U.S. Blues, prompting a huge crowd reaction (“Phil’s SINGING”).",
+    "Bob": "Bob Weir delivers a drawl‑styled vocal on several numbers and contributes the Not Fade Away coda.",
+    "Keys": "Keyboards add colorful textures (harp/piccolo/recorder) during space and the heavy drum segment.",
+    "Drums": "The drums are described as heavy, trippy and pandemonium‑filled with “big boy” playing."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:15:19.141372+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-08.sbd.miller.28300.sbeok.shnf"
+}

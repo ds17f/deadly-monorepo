@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent matrix recording captures a scorching second set with incendiary Scarlet > Fire, soaring Morning Dew and an epic Playin' in the Band.",
+  "review": "The source is praised for its superb levels, low crowd bleed and crystal‑clear mix, making it arguably the best available tape of this June 18 1983 show.  The second set shines – Scarlet > Fire burns, Morning Dew is called the most soulful ever, and a 19‑minute Playin' in the Band rides through dark, stormy territory with tight band interplay.  The first set is noted as merely adequate with a few flubs, but overall the performance and recording earn unanimous acclaim.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All seven reviews are 5‑star (except one non‑musical low rating) and emphasize both a stellar performance and an excellent source; minor first‑set issues do not detract from the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Great levels, minimal up‑close crowd noise compared to other audience tapes, clear and balanced mix; praised as the best source for the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Morning Dew",
+      "The Wheel",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A rainy afternoon gave way to a thunder‑laden second set that flows seamlessly from Scarlet > Fire into The Wheel and culminates with an emotionally charged Morning Dew; the 18‑minute Playin' in the Band showcases deep improvisational chemistry."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals loud and powerful, especially on the second set.",
+    "Phil": "Bass 'bombing' with a strong presence throughout.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums strong and driving, highlighted during The Wheel."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:16:57.114826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-18.set2.senn441.silberman.miller.103293.flac16"
+}

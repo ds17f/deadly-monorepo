@@ -1,0 +1,39 @@
+{
+  "summary": "A wildly chaotic concert captured on a solid tape; fans note the energetic atmosphere and a decent recording despite limited technical detail.",
+  "review": "The show is remembered for its pandemonium – ticketless fans flooding the venue and a tambourine‑passing moment during Cassidy – giving it an unforgettable, wild vibe. The tape itself is praised as “great,” suggesting a listenable sound even though no specific recording details are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "One reviewer gave a high rating (4 stars) praising the tape, while another gave a zero‑star rating with no clear criticism; limited data leads to an average score around the midpoint."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on soundboard or audience source; one reviewer calls it a “great tape,” implying acceptable clarity and mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight the chaotic, high‑energy atmosphere—especially the crowded second set—but give little detail on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:24:34.134339+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-10.141082.sbd.miller.clugston.flac1644"
+}

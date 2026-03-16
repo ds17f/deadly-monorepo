@@ -1,0 +1,31 @@
+{
+  "summary": "No musical details provided; reviewer questions the recording equipment accuracy.",
+  "review": "The sole review focuses solely on technical inaccuracies regarding the Sony SBM‑1 and Panasonic SV‑255, suggesting the recorded source may be mislabeled. No comments are made about the sound quality, performance, or setlist, resulting in an overall negative impression based on the 0‑star rating.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating; reviewer critiques equipment claims but provides no positive information, leading to a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer disputes the presence of Sony SBM‑1 in 1990 and notes Panasonic SV‑255 lacks digital input, indicating possible mislabeling or equipment mismatch."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T13:55:19.238192+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-20.144552.cmc4.flac1648"
+}

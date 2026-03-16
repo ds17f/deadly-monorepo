@@ -1,0 +1,73 @@
+{
+  "summary": "Solid soundboard recording with occasional glitches; the 1991 show dazzles thanks to a marathon Eyes > Foolish, a soaring Might As Well and electric crowd energy.",
+  "review": "Fans rave about this spring‑91 performance – the first set kicks off with a monster Stranger and Rooster while the second set delivers a legendary 30‑minute Eyes > Foolish and a perfect Might As Well finish. The soundboard source is generally clear and well‑balanced, though several reviewers note drop‑outs and other anomalies that keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance (many 4‑5 star reviews) combined with generally good but glitch‑prone soundboard recording yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear mix and solid balance, but multiple reviewers report drop‑outs, noise spikes and missing encore segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Foolish",
+      "Might As Well",
+      "Stranger",
+      "Rooster",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with tight performances; second set rolls into a marathon Eyes > Foolish and closes powerfully with Might As Well, keeping the crowd hyped throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as being in an especially good mood, delivering powerhouse guitar work on Eyes > Foolish and driving the band’s energy.",
+    "Phil": "Phil's bass playing isn’t singled out except for a slip‑up during the missing encore where he “screwed it up.”",
+    "Bob": "Bob shares a brief onstage chat with Jerry before Might As Well and contributes solid vocal work throughout.",
+    "Keys": "Vince’s keyboards receive mixed feedback – some find his playing cheesy, but many highlight how his energetic parts lift the Eyes > Foolish and Might As Well sections.",
+    "Drums": "The drumming is praised as “hot” with a strong drum‑and‑space segment that adds excitement to the set."
+  },
+  "song_mentions": {
+    "Eyes > Foolish": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Might As Well": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Encore": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:42:33.424187+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-20.sbd.oconnor.11272.sbeok.shnf"
+}

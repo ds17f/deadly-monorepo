@@ -1,0 +1,93 @@
+{
+  "summary": "Fair‑quality soundboard recording hampered by cassette‑style hiss, but a legendary May ’77 show featuring blistering Estimated→Eyes, epic St Stephen/Iko, and one of the best “Dancin’” performances ever.",
+  "review": "The performance is consistently praised – Jerry’s wah‑laden solos on Estimated and Eyes, a soaring St Stephen into Iko Iko, and a monster Dancin' that many call career‑defining.  The soundboard source suffers from noticeable hiss, occasional dropouts and an uneven mix in the opening tracks, making the listening experience only fair despite the show’s brilliance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is repeatedly described as exceptional (≈4.5‑5 stars) while recording quality is consistently called poor/fair (≈2.5 stars); weighted average yields ~4.0."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cassette‑style hiss and occasional dropouts; early songs have low levels, overall mix is uneven but the recording remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "Eyes",
+      "St. Stephen",
+      "Iko Iko",
+      "Dancin'",
+      "Sugar Magnolia",
+      "Uncle John's"
+    ],
+    "poor_songs": [
+      "Ship of Fools (cut)",
+      "Row Jimmy (slide work)"
+    ],
+    "setlist_flow": "Strong first set with a tight Estimated→Eyes transition, followed by an otherworldly second set where St Stephen morphs into Iko and the band drops back into a stellar Not Fade Away/Dancin' sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his wah‑filled, possessed solos on Estimated and Eyes and for leading the epic St Stephen/Iko jam.",
+    "Phil": "Noted for deep, thumping bass lines that drive into Iko; highlighted as a highlight of the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T01:05:09.303717+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-15.sbd.gorinsky.7008.sbeok.shnf"
+}

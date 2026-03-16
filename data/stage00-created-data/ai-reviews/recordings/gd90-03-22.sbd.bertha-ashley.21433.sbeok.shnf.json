@@ -1,0 +1,70 @@
+{
+  "summary": "Matrix‑sourced recording with solid stadium ambience; the show dazzles with a blistering Scarlet>Fire, soaring West LA, and an inspired Believe It or Not.",
+  "review": "The matrix soundboard capture is generally clear, with a pleasant “deep echo” that conveys the arena vibe despite occasional high/low‑end muddiness. Musically the concert is a spring‑90 highlight – the second set smokes, driven by a jaw‑dropping Scarlet Begonias → Fire on the Mountain, a powerhouse West LA, and a heartfelt Believe It or Not, while the band’s tight rhythm section keeps everything locked in.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (majority 4‑5 stars) praise both performance and recording; show quality clearly outweighs minor technical complaints, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix from the original 32‑track source; praised for ambience and clarity, but several reviewers note reduced high/low‑end richness, occasional muddiness and lack of true SBD fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias -> Fire On The Mountain",
+      "West L.A.",
+      "Believe It or Not",
+      "Truckin'",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Hey Jude"
+    ],
+    "setlist_flow": "First set solid but considered average for the period; second set ignites with a fast‑paced Scarlet>Fire and stays tight, delivering high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery guitar tone, strong lead vocals (especially on Believe It or Not) and effective midi effects; one reviewer notes his mic was off on several songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work described as swirling and “in‑the‑zone,” with vocal leads on Scarlet>Fire highlighted; his Hey Jude performance is widely criticized for forgotten lyrics and sloppy delivery.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive repeated praise for tight, powerful drumming that adds depth and a resonant stadium echo."
+  },
+  "song_mentions": {
+    "Scarlet Begonias -> Fire On The Mountain": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "West L.A.": {
+      "positive_mentions": 10,
+      "negative_mentions": 1,
+      "total_mentions": 11
+    },
+    "Believe It or Not": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Truckin'": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 5,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-17T04:36:25.164737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-22.sbd.bertha-ashley.21433.sbeok.shnf"
+}

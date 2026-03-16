@@ -1,0 +1,94 @@
+{
+  "summary": "Crisp UltraMatrix soundboard capture of a hot Summer ’87 set with standout Jack Straw, Althea and Cassidy performances.",
+  "review": "The show is praised as one of the best from the Dylan‑paired summer ’87 run, delivering tight, high‑energy renditions of Jack Straw, Sugaree, New Minglewood Blues, Althea, Brother Esau, Push Comes to Shove, Cassidy and a soaring I Know You Rider/China Cat sequence. The UltraMatrix SBD source is generally clear and balanced, though reviewers note it could benefit from a low‑end and high‑end EQ boost.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviews are favorable (4–5 stars) and highlight strong musical performance with only minor recording tweaks needed, leading to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "UltraMatrix SBD is crisp and clear but requires some EQ (boost low & high frequencies). No major dropouts; overall balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Sugaree",
+      "New Minglewood Blues",
+      "Althea",
+      "Brother Esau",
+      "Push Comes to Shove",
+      "Cassidy",
+      "I Know You Rider",
+      "China Cat"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "A hot, over‑2‑hour first set that flows tightly like the rest of summer ’87, with strong transitions and a high‑energy feel that carried into the Dylan pairing."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as “roaring” on New Minglewood Blues and delivering crisp guitar work on Althea.",
+    "Phil": "Adds the best parts to Terrapin and lifts Touch of Grey; praised for his bass contributions throughout.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Solid GOGD feel; generic Drums>Space segment noted as tight."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:51:38.800868+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-10.149955.UltraMatrix.sbd.cm.miller.flac16"
+}

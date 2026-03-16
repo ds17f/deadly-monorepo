@@ -1,0 +1,89 @@
+{
+  "summary": "Excellent soundboard recording of a wildly divisive 1986 Philadelphia show, with fans raving about “Feel Like a Stranger” and “Scarlet Begonias” while others decry sloppy playing.",
+  "review": "The SBD capture is praised as crisp and phenomenal, delivering a clear picture of the concert. Musically the performance splits opinion – some describe it as an electrifying night with standout moments on “Feel Like a Stranger,” “Scarlet Begonias,” “Touch of Grey,” and “Black Peter,” while others condemn the set for weak jams, missed cues and a noticeable decline in Jerry’s playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (excellent soundboard), but show quality scores vary from high praise to strong criticism, yielding a mid‑range overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the SBD \"phenomenal,\" \"crisp,\" and \"great sound quality.\" No specific technical flaws are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Scarlet Begonias",
+      "Touch of Grey",
+      "Looks Like Rain",
+      "Throwing Stones",
+      "Brokedown Palace",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "L.L.R.",
+      "Tom Thumb's Blues",
+      "Peter > Throwing Stones > Lovelight"
+    ],
+    "setlist_flow": "Fans note a strong ebb and flow with high‑energy peaks (Scarlet > Touch > LLR) and emotional moments, but several reviewers criticize sloppy transitions, minimal jamming and a general loss of intensity compared to earlier ’80 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his vocal presence on songs like Scarlet Begonias and Brokedown Palace, yet other fans lament a noticeable decline in guitar tone and overall playing during this period.",
+    "Phil": "",
+    "Bob": "His powerful, “howling” vocals are highlighted as a high point, though one critic bemoaned the lack of Jerry’s leads, leaving only Bob's vocal presence.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.L.R.": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T13:46:54.096582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-25.sbd.braverman-munder.9880.sbeok.shnf"
+}

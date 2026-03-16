@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear audience recording captures an electrifying show highlighted by a goosebump‑inducing Morning Dew and vibrant Birdsong/Hell in a Bucket.",
+  "review": "All three reviewers rave about the AUD source, calling it crystal clear with deep bass and vivid crowd ambience. The performance shines on Jerry’s soaring vocals in the final jam of “Morning Dew,” an energetic “Hell in a Bucket,” and a superb rendition of “Birdsong.” The show is described as epic and life‑changing, making this a must‑listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance (standout songs, electrifying crowd) and the audience recording quality (crystal‑clear, deep bass), with no negative feedback."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Vocals and guitar described as crystal clear; Phil’s bass unusually deep; crowd ambience captured perfectly; no mention of distortion or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Birdsong",
+      "Hell in a Bucket"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight the second set and Jerry’s songs, noting an especially powerful final jam; overall flow described as epic and life‑changing."
+  },
+  "band_member_comments": {
+    "Jerry": "Last vocals before the final jam on “Morning Dew” gave massive goosebumps; guitar tone praised as crystal clear.",
+    "Phil": "Bass described as deeper than any other recording, dropping bombs during “Morning Dew.”",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:49:39.451898+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-18.nak300.gidley.116004.flac2448"
+}

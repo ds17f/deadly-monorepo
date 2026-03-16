@@ -1,0 +1,87 @@
+{
+  "summary": "Exceptional audience recording that captures a soaring performance with standout renditions of El Paso, Jack‑A‑Roe, Franklin’s Tower and a rare Ramble on Rose.",
+  "review": "The MOTB‑upgraded audience tape is crystal clear, placing every exchange between Phil, Bob and Jerry front‑and‑center and delivering the spacious feel of being in the Cleveland hall.  Musically the show shines – the band rides high on El Paso, Jack‑A‑Roe, Franklin’s Tower and a magical second‑set Ramble on Rose, with China Doll and The Shakedown adding extra sparkle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All five reviews are 5‑star, praising both the superb audience recording quality and the high‑energy performance with multiple highlighted songs; the consensus is overwhelmingly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "High‑resolution 24‑bit MOTB transfer, clear separation of instruments and vocals, superb ambience; reviewers note “crisp,” “vastly superior sound quality,” and that the location/gear combo captures the concert hall feel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "El Paso",
+      "Jack-A-Roe",
+      "Franklin's Tower",
+      "The Shakedown",
+      "Promised Land",
+      "Ramble on Rose",
+      "Playing in the Band",
+      "China Doll",
+      "Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set flows into a rare second‑set Ramble on Rose, with seamless segues (Playing → China Doll → Playing reprise → Wheel) that keep the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s tone and phrasing – “Tiger” guitar work, high note on Franklin’s Tower, and overall fine playing.",
+    "Phil": "Exchanges between Phil and the rest of the band are described as crystal clear, underscoring his bass presence.",
+    "Bob": "Bob is praised for adding extra fire on Promised Land and generally keeping the groove tight.",
+    "Keys": "",
+    "Drums": "The drums receive special mention; reviewers note the Rhythm Devils segment will please any drum‑centric fan."
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:28:41.074810+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-02.nak700.wagner.motb.0058.89129.flac24"
+}

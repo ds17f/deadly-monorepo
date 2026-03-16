@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture with solid clarity (bass a bit low) and a stellar second set highlighted by Terrapin, Cold Rain & Snow, Dew, Bertha and an incendiary Dark Star.",
+  "review": "The Miller‑fixed soundboard source delivers clear, punchy audio that outshines the usual muffled board recordings, though Phil’s bass sits slightly low. Musically the show shines – Jerry is in peak form and the second set rolls from Terrapin into Dew and a blazing Dark Star, with standout renditions of Cold Rain & Snow, Going Down, Bertha and more.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Four detailed 4‑5 star reviews praise both the performance (standout jams, peak playing) and the recording quality; only minor bass level issue noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, solid sound unlike typical muffled boards; Phil’s bass a little low but overall crisp mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Cold Rain and Snow",
+      "Going Down the Road Feeling Bad",
+      "Dew",
+      "Bertha",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set flows powerfully from Terrapin into Dew and a soaring Dark Star, with spoken bits (Joan Baez scare, Kesey gong) adding historic flavor."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as in peak form, jaw‑dropping solos throughout.",
+    "Phil": "Bass noted as slightly low across the source tapes.",
+    "Bob": "Weir’s vocal interplay with Joan Baez is mentioned; otherwise no specific comments.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:57:48.613028+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-31.sbd.fix.walker-scotton.miller.96106.sbeok.flac16"
+}

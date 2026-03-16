@@ -1,0 +1,63 @@
+{
+  "summary": "Laid‑back, blues‑heavy Memphis show with strong performances (Take Me to the River, When I Paint My Masterpiece, Watchtower → Standing on the Moon) captured in an unknown‑source recording of fair quality.",
+  "review": "The concert is praised for its relaxed vibe and memorable moments – notably the first‑ever Dead rendition of “Take Me to the River,” a powerful “When I Paint My Masterpiece,” and a seamless Watchtower → Standing on the Moon pairing that grew out of an inspired Space jam. Recording details are sparse, but listeners found the audio adequate enough to enjoy the performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is highlighted as good to great by one detailed review; recording quality is not discussed, leading to a moderate overall rating with medium confidence due to only two reviews."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound clarity or mix; reviewers focus solely on performance, implying the audio is at least listenable but not notably high‑fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Take Me to the River",
+      "When I Paint My Masterpiece",
+      "Watchtower",
+      "Standing on the Moon",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, blues‑inflected first set followed by a spacious second set where an exploratory Drums/Space segues into a well‑executed Watchtower → Standing on the Moon combo, creating a cohesive and memorable flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (keyboardist) teases ‘The Wheel’ during Space, contributing to the improvisational peak.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Take Me to the River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "When I Paint My Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:35:36.559214+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-01.141254.FOB-mk4.ebel.flac1644"
+}

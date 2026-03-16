@@ -1,0 +1,45 @@
+{
+  "summary": "Audience recording catches a scorching performance highlighted by a smoking Jack Straw and a killer Weather Report Suite jam, but occasional skips and repeats keep it from perfection.",
+  "review": "The show is widely praised as a hot night with an especially fiery Jack Straw and a memorable jam after the Weather Report Suite where Jerry Garcia and Bruce Hornsby really lock in. The Schoeps audience tape sounds clear and full of energy, yet listeners note repeated glitches and mis‑tracks during the Jack Straw segment that prevent a flawless listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance (standout songs, high energy) combined with generally good but imperfect audience recording yields a rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear front‑filled mix with strong crowd ambience; however, skips, glitches and repeated sections during Jack Straw due to source disk scratches are reported. The Schoeps mic capture is smoother in the low end and less harsh on highs than comparable B&K FOB copies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Weather Report Suite"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set ends strong; the second‑set jam after Weather Report Suite is highlighted as a gem, with Jerry and Bruce’s interplay noted as a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is described as hot and tightly gelled with Bruce during the Jack Straw peak and the Weather Report Suite jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby receives praise for his keyboard work and chemistry with Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:58:05.336514+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-19.schoeps-fob.wiley.11664.sbeok.shnf"
+}

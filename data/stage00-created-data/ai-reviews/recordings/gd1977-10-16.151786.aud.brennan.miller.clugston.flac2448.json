@@ -1,0 +1,45 @@
+{
+  "summary": "Surprisingly good audience recording with crystal‑clear band sound, featuring a 17‑minute-plus Sugaree and a fine 20‑minute Scarlet > Fire sequence.",
+  "review": "The audience tape is surprisingly clear – high notes and vocals are sharp while the low end drops out early in the first set. Despite occasional chatter between songs, the music comes through vividly, delivering a monster Sugaree and an extended Scarlet > Fire that make this full‑show release worth the download.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single 4‑star review praises both performance (standout songs) and recording quality, though notes some low‑frequency weakness; overall rating reflects a good show with a good but not flawless audience tape."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crystal‑clear band sound when songs start; high notes sharp, vocals precise. Low notes and drums weak in first set, occasional noisy audience chatter between tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set suffers a bit from thin low end, but the full show shines thanks to an expansive Sugaree and a powerful second‑set segue of Scarlet > Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:23:40.551212+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-16.151786.aud.brennan.miller.clugston.flac2448"
+}

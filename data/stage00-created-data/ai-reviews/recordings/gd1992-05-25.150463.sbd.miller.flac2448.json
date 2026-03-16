@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown with modest audio quality, but the second set is praised as great.",
+  "review": "The sole fan review highlights a strong second set, noting that \"Vinny tears it up\" and giving the performance an enthusiastic nod. No specific comments are made about the recording’s sound source or fidelity, leaving the technical quality ambiguous.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one brief review; it praises the second set but gives no detail on audio quality, so rating leans modestly positive with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source; cannot assess technical quality beyond assuming average."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer specifically calls out a great second set, implying the latter half of the concert is the highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T05:49:49.164968+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-25.150463.sbd.miller.flac2448"
+}

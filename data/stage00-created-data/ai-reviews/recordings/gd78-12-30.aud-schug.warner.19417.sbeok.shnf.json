@@ -1,0 +1,80 @@
+{
+  "summary": "Great audience recording of a high‑energy ’78 show – stellar St. Stephen and Ollin Arranged performances with solid sound quality.",
+  "review": "The tape captures an electric late‑1978 concert that many fans remember as a turning point, highlighted by a soaring St. Stephen, a blistering Scarlet→Fire sequence, and what several reviewers call the best ever Ollin Arranged.  The audience source is surprisingly clear and well‑balanced, delivering enough crowd ambience to feel live while keeping the music crisp.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.46/5 with a strong consensus of positive comments about both performance and recording; many 5‑star reviews underline the show’s standout moments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners repeatedly note that the audience mix is clear, captures crowd excitement and retains good instrument separation.  No major drop‑outs or muffling are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Scarlet > Fire",
+      "Ollin Arranged",
+      "Promised Land",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Playin' > Shakedown Street"
+    ],
+    "setlist_flow": "The first set builds nicely and is praised for Keith's keyboard work; the second set ramps up with a unique Scarlet→Fire surge, an extended Playin’/Shakedown/Drums segment, and a powerful closing stretch that many describe as ‘blazing’."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Promised Land is called “insane” and he recovers magnificently; also praised for a legendary Tennessee Jed chord.",
+    "Phil": "",
+    "Bob": "Weir’s vocal moments are highlighted as magical when the three voices blend, especially on ‘One More Saturday Night’.",
+    "Keys": "Keith (the keyboardist) shines in the first set, with a notable break on “TLEO” and strong overall presence despite documented issues of the era.",
+    "Drums": "Mickey Hart and Bill Kreutzmann receive acclaim for their interplay, especially during space jams and the extended Playin’/Shakedown/Drums section."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' > Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ollin Arranged": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T18:13:14.277688+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-30.aud-schug.warner.19417.sbeok.shnf"
+}

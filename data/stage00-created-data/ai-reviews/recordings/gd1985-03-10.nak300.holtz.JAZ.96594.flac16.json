@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording captures an underrated city show with a notable Smokestack Lightnin' / Mind Left Body jam.",
+  "review": "All four reviewers praise the sound quality, calling it clear and excellent despite being an audience (AUD) source. The performance is described as underrated and great, with particular interest in the Mind Left Body jam that appears within Smokestack Lightnin'. No major flaws are reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently high reviewer stars (4‑5) and uniformly positive comments about both the show and the audio give a strong overall impression, though only four reviews limit confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp sound praised by multiple reviewers; one note that the Mind Left Body jam within Smokestack Lightnin' could use its own track but no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightnin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight the show as underrated and enjoyable, indicating a solid flow with no reported pacing problems."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mind Left Body": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:06:07.692056+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-10.nak300.holtz.JAZ.96594.flac16"
+}

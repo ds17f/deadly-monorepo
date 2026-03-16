@@ -1,0 +1,58 @@
+{
+  "summary": "Decent audience tape of a flat late‑80s set, highlighted by a lively Louie Louie jam but hampered by overall lackluster improvisation.",
+  "review": "The recording is an audience source with clear sound and low crowd noise, making it easy to follow the performance. Musically the show feels average – Jerry was in good spirits and Brent showed more confidence on keys, yet many fans found the set thin, citing weak improvisation and a disappointing Stones > Not Fade Away ending. Louie Louie and the closing jam of Might As Well stand out as the few bright spots.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is generally viewed as flat to poor (average ~2.8/5) while recording quality is decent (~4/5). Weighted combination yields a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape with decent clarity and minimal crowd noise; no major drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Louie Louie",
+      "Might As Well"
+    ],
+    "poor_songs": [
+      "Push Comes to Shove",
+      "Stone's > Not Fade Away"
+    ],
+    "setlist_flow": "Set feels uneven – a few energetic moments (Louie Louie, ending jam) are offset by a general lack of improvisation and a weak closing sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Appears upbeat and healthy, contributing positively to the vibe.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent shows more confidence onstage, stepping out of his shell.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Louie Louie": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stone's > Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:07:21.591632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-05.nak300.carpenter.andrewf.90054.sbeok.flac16"
+}

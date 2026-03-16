@@ -1,0 +1,88 @@
+{
+  "summary": "Soundboard recording of the June‑1991 Denver stadium show is generally clear and listenable, highlighted by a memorable Dark Star tease in Wharf Rat, strong Eyes of the World and an electric Picasso Moon.",
+  "review": "The Miller SBD transfer captures the band’s late‑summer ’91 energy with good clarity – most reviewers praise its “impeccable” or “great” sound, though a few note occasional mix quirks. Musically the set is praised for the Dark Star tease embedded in Wharf Rat, an inspired Eyes of the World, a fiery Iko Iko and a surprisingly effective Picasso Moon; a handful of heads felt some moments (e.g., Crazy Fingers on Picasso) fell flat. Overall the performance is viewed as solid but not iconic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 4‑5 stars for performance and sound, but a notable minority give 2‑3 stars citing weak spots and recording hiccups; weighting musical merit (70 %) over technical quality (30 %) yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most comments describe the transfer as crisp, clear and “impeccable”; a few mention occasional mix balance issues (keyboard density, occasional drop‑outs) but nothing that makes it unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Eyes of the World",
+      "Iko Iko",
+      "Picasso Moon",
+      "Crazy Fingers",
+      "Miracle",
+      "Box"
+    ],
+    "poor_songs": [
+      "Crazy Fingers (on Picasso)",
+      "Saint (some felt lackluster)"
+    ],
+    "setlist_flow": "The first set is described as solid with a few high‑energy moments; the second set shines thanks to an extended Eyes of the World, a compelling Picasso Moon/​Crazy Fingers jam and the memorable Dark Star tease inside Wharf Rat, giving the show a strong second‑half momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his “look on Mickey’s face” while Jerry teases Dark Star; his guitar tone is praised as perfect in several posts.",
+    "Phil": "Comments range from Phil possibly kicking a speaker to him delivering a “frenetic bass pattern” that drives the second set and a solid Box encore.",
+    "Bob": "Keyboardists (Bruce/Floyd/Vince) are called “ham‑handed”, “dense” and at times fighting for bandwidth; still deemed good enough by most listeners.",
+    "Keys": "Both keyboard players receive criticism for being too thick/dense, but also credit for contributing to the jam dynamics on Picasso Moon and Crazy Fingers.",
+    "Drums": "Mickey’s facial expression is highlighted repeatedly; reviewers describe a “wave” of drum volume and overall powerful drumming throughout."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Dark Star tease": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Iko Iko": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Picasso Moon": {
+      "positive_mentions": 7,
+      "negative_mentions": 2,
+      "total_mentions": 9
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Miracle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-17T22:44:57.373860+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-28.sbd.miller.11706.sbeok.shnf"
+}

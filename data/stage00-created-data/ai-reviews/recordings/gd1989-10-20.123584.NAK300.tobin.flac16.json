@@ -1,0 +1,31 @@
+{
+  "summary": "High‑quality audience recording captures a very good Dead show from Oct 20 1989.",
+  "review": "The reviewer rates the concert as \"very good, if not great\" and notes that the audience (AUD) capture is surprisingly clear—so clear they don’t even need a matrix mix. While no specific songs are highlighted, the overall tone is positive about both the performance and the sound quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; it praises both the show (very good) and the audience recording (very nice), leading to an estimated combined rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience capture described as very nice and clear enough that a matrix mix isn’t needed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Show is characterized as solid and enjoyable, sandwiched between two legendary performances."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T01:11:50.985218+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-20.123584.NAK300.tobin.flac16"
+}

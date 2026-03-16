@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality matrix recording with clean keyboards and bass, a slightly thin mix on Jerry’s guitar, and a strong show highlighted by a soaring Watchtower.",
+  "review": "The tape sounds like a patched SBD/Matrix blend – the keyboards (Brent) and Phil’s bass come through clear, the drums have extra low‑end punch, but Jerry’s guitar can feel a bit light. Despite the occasional two‑dimensional feel, fans rave about the performance, especially the powerful Watchtower intro and Jerry’s “wolf‑like” playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Six reviews give an average of ~3.8 stars; most praise the musical performance while noting only minor recording quirks, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clean sound for keyboards and bass, audience bleed audible, slightly thin (2‑D) mix on Jerry’s guitar, more drum/bass presence than typical SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers focus on the first set’s ambiguous start and praise the overall energy; no major pacing complaints were noted."
+  },
+  "band_member_comments": {
+    "Jerry": "A few reviewers note his guitar is a bit light in the mix, but others describe him as a \"wolf\" delivering powerful playing.",
+    "Phil": "His bass is described as clean and prominent; one reviewer highlights an amazing Phil bomb at the end jam.",
+    "Bob": "Keyboard work (Brent) is praised for clarity; audience chant “Playin Bob!” shows strong crowd interaction.",
+    "Keys": "Brent’s keys are noted as clean and well‑balanced in the recording.",
+    "Drums": "The drum track has extra bass/low‑end punch, giving a fuller feel than typical SBD recordings."
+  },
+  "song_mentions": {
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:34:16.970234+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-08-11.sbd.miller.14944.sbeok.shnf"
+}

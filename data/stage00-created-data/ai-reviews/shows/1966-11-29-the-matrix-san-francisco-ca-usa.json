@@ -1,0 +1,81 @@
+{
+  "summary": "Rare early‑Dead set with blues gems and Pigpen’s Big Boy Pete",
+  "blurb": "The Matrix show delivers a loose, high‑energy blend of blues, folk and early psychedelic R&B. Standout moments include the vocal trade on Big Boy Pete and tight renditions of Me And My Uncle, The Same Thing and Viola Lee Blues.",
+  "review": "Recorded at San Francisco’s iconic Matrix on November 29 1966, this early Dead outing captures the band still shaping their sound. Pigpen steals the spotlight with a raucous Big Boy Pete, trading verses with Jerry and Bob in a rare vocal showdown that reviewers describe as a high point. The first set rolls through a treasure trove of early material – Me And My Uncle, The Same Thing, Stealin', Early Morning Rain and a gritty Viola Lee Blues – while the third set builds a spirited closing jam with Down So Long, Lindy and I Just Want To Make Love To You. Jerry’s guitar flashes brilliance but occasionally lapses into repetitive licks; Bill’s bebop‑flavored drumming keeps the momentum alive, and Phil holds down a solid bass line even as he steps up for lead vocals when Jerry battles a cold. Overall the performance is vibrant and historically fascinating, making it a must‑listen for fans of the Dead’s formative years despite some recording quirks.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 23,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings are clearly positive, praising the set’s energy and standout songs; two are mixed but do not contain strong negative criticism of the performance itself. The overall tone is upbeat with consistent highlights across sources, justifying a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1966-11-29.sbd.graham-perlstein.106497.flac16",
+    "reason": "Soundboard source with the clearest overall balance; despite minor drop‑outs it captures the full band sound better than other tapes."
+  },
+  "key_highlights": [
+    "Pigpen‑led Big Boy Pete featuring a vocal trade with Jerry and Bob.",
+    "Early‑Dead blues/folk blend highlighted by Me And My Uncle, The Same Thing and Viola Lee Blues.",
+    "High‑energy closing jam on Down So Long and Lindy.",
+    "Bill’s bebop‑style drumming adds extra swing to the set."
+  ],
+  "song_highlights": [
+    "Me And My Uncle",
+    "The Same Thing",
+    "Big Boy Pete",
+    "Early Morning Rain",
+    "Viola Lee Blues",
+    "Down So Long",
+    "There's Something On Your Mind",
+    "Lindy",
+    "I Just Want To Make Love To You"
+  ],
+  "band_performance": {
+    "Jerry": "Shows flashes of brilliance with strong guitar work, though occasional repetitive licks appear; also trades verses on Big Boy Pete and steps back to let Phil sing when ill.",
+    "Phil": "Provides a solid bass foundation and steps up for lead vocals during Jerry’s cold, keeping the set grounded.",
+    "Bob": "Delivers energetic rhythm guitar and shines in the vocal trade on Big Boy Pete; some tape‑related recordings note uneven rhythm but overall performance is strong.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "",
+    "Keys": "Pigpen’s vocals and harmonica drive the standout Big Boy Pete, adding a gritty blues feel to the show."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-26T06:06:11.131681+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Me And My Uncle"
+    ],
+    [
+      "The Same Thing"
+    ],
+    [
+      "Big Boy Pete"
+    ],
+    [
+      "Early Morning Rain"
+    ],
+    [
+      "Viola Lee Blues"
+    ],
+    [
+      "Down So Long"
+    ],
+    [
+      "There's Something On Your Mind"
+    ],
+    [
+      "Lindy"
+    ],
+    [
+      "I Just Want To Make Love To You"
+    ]
+  ]
+}

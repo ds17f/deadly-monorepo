@@ -1,0 +1,55 @@
+{
+  "summary": "Excellent soundboard capture of a historic show featuring the long‑awaited St. Stephen and a powerhouse second set with Bertha",
+  "review": "The recording is a clean soundboard source that even picks up on stage banter, delivering crystal‑clear vocals and instruments. Fans rave about the rare appearance of St. Stephen after the Drums, the incendiary second‑set Bertha and its ensuing jam, and Jerry’s adventurous playing throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic reviews praise both the musical performance (rare St. Stephen, strong second set) and the high‑quality soundboard recording; no significant criticisms were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear mix with stage voices audible; no dropout or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rare return of St. Stephen after Drums creates a historic moment, followed by an explosive second set highlighted by Bertha and a unique jam; overall the band sounds psyched and tightly locked."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his cosmic improvisation in the early space segment and wild second‑guitar work on Wang Dang Doodle.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums section, including an extended jam with guest percussionist Airto Moreira, is highlighted as epic."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:19:25.006559+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-11.sbd.harrell.14525.shnf"
+}

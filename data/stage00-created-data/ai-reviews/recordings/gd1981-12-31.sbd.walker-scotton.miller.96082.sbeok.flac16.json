@@ -1,0 +1,57 @@
+{
+  "summary": "A high‑energy show with Joan Baez guests and stellar Jerry work, captured on a modest‑quality recording that’s been cleaned up.",
+  "review": "Reviewers rave about the excitement of Joan Baez joining the Dead for “Bobby McGee” and “It’s All Over Now, Baby Blue,” plus a ripping Big Boss Man and an unforgettable Shakedown Street opener. Jerry Garcia’s playing is repeatedly described as “fantastic” and “playing his brains out.” The tape isn’t pristine – listeners note it’s not the clearest but consider it clean enough after post‑processing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Three enthusiastic 5‑star reviews praise the performance and deem the recording listenable after cleaning; only minor, consistent comments about clarity keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Not the clearest source; reviewers mention some muddiness but also note that the cleaned‑up version sounds surprisingly clean, with overall acceptable balance for an audience‑type capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boss Man",
+      "Shakedown Street",
+      "Bobby McGee (Joan Baez version)",
+      "It’s All Over Now, Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opener (Shakedown) sets the tone; mid‑set features guest Joan Baez highlights; the show closes with an energetic jam reminiscent of early‑‘70 performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being ‘stoked,’ delivering fantastic tone and playing his brains out.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby McGee (Joan Baez version)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It’s All Over Now, Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:59:30.309897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-31.sbd.walker-scotton.miller.96082.sbeok.flac16"
+}

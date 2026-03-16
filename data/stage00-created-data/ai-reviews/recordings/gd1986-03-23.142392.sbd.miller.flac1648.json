@@ -1,0 +1,80 @@
+{
+  "summary": "High‑quality soundboard capture of a solid mid‑80s show with scorching Deal and an intense Comes a Time.",
+  "review": "The Miller SBD delivers a clean, well‑balanced board mix that lets Jerry’s guitar cut through even during the more experimental moments. Musically the concert is a mixed bag – highlights include a fiery Deal, a smoking Cassidy and a rare, powerful Comes a Time, while Samson, He's Gone and Spoonful fall flat for many listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Two enthusiastic 5‑star reviews praise the long‑awaited soundboard release, while a detailed 3‑star review points out uneven performance; overall rating reflects strong recording quality and generally good show with some weak spots."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Solid mid‑80s board mix, clear on Jerry’s lead lines, occasional odd high‑note sustain that may be keyboard or drum effect, but no major dropouts or mud."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Cassidy",
+      "Comes a Time"
+    ],
+    "poor_songs": [
+      "Samson",
+      "He's Gone",
+      "Spoonful"
+    ],
+    "setlist_flow": "First set improves on repeat listens, second set opens with an average but solid Shakedown then dips with Samson before recovering with strong Deal and the rare Comes a Time. Overall a respectable mid‑80s performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Repetitive downward pattern on Samson noted as boring, but tasty licks elsewhere; his tone stays clear throughout the board recording and he signals Other One promptly.",
+    "Phil": "",
+    "Bob": "Bob’s spoken intro before Day Job sounds like a pre‑Easter “Jesus rap,” adding quirky commentary to the set.",
+    "Keys": "Brent’s eerie, sustained high notes create an Enó‑esque texture, possibly from keyboard effects blended with drums.",
+    "Drums": "Mickey contributes strange sustained high‑note sounds that blend with Brent’s keyboards, giving parts of the show an otherworldly feel."
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:28:46.202149+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-23.142392.sbd.miller.flac1648"
+}

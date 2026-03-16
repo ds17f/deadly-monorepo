@@ -1,0 +1,56 @@
+{
+  "summary": "Soundboard Set 2 delivers A‑plus Jerry vocals and a standout Playing In The Band, solid Truckin', plus a beautiful Broken Down despite an abrupt cut.",
+  "review": "The set showcases a killer Playing In The Band that the reviewer would pick over Dark Star, a solid Truckin' and a beautifully performed Broken Down even though it ends with a needle‑pulling glitch. Jerry’s vocals are praised as A+, and the overall vibe of the setlist is described as “pretty cool.” Recording quality isn’t specifically critiqued beyond the cut on Broken Down, suggesting a generally good soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single detailed 5‑star review highlights strong musical performance and decent recording; limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit sound quality complaints except an abrupt cut ending on Broken Down, implying a generally clean board capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "Truckin'",
+      "Broken Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Cool setlist; reviewer prefers Playing In The Band over Dark Star and notes the set’s overall strength."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals rated A+ throughout the set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:53:22.362798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-26.sbd-set2.clugston.3117.shnf"
+}

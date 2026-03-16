@@ -1,0 +1,31 @@
+{
+  "summary": "Recording has an inverted‑channel problem that makes the mix unusable; no musical details are provided.",
+  "review": "The sole reviewer flags a serious technical flaw – the left/right channels are swapped, resulting in phase issues – and points to a fixed version hosted elsewhere. No comments on the performance itself are given, so the show’s musical quality cannot be assessed from this feedback.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.3,
+    "confidence": "low",
+    "rationale": "Only one review, rating of 0 stars and a clear complaint about a major recording defect; no positive musical information to raise the score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Inverted channel (left/right swapped) causing phase problems; a corrected version is available via a separate archive.org link."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T04:47:06.897287+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-22.141931.FOB.Schoeps.Mattes.Miller.Noel.t-flac1648"
+}

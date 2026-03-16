@@ -1,0 +1,70 @@
+{
+  "summary": "High‑quality soundboard upgrade captures a hot second set highlighted by China Cat > Rider and a fierce Samson, with only minor mix hiccups.",
+  "review": "The Miller‑mastered SBD source sounds crisp and benefits from pitch‑correction, though there’s a brief moment where Jerry disappears from the mix. Musically the show shines in the second set – China Cat Sunflower > I Know You Rider, Playing in the Band, Samson and Franklin’s Tower are praised as standout moments, while Sugar Magnolia and U.S. Blues fall flat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews are overwhelmingly positive about the performance (70% weight) with a few minor recording mix issues (30% weight), yielding an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Pitch‑corrected Miller SBD upgrade is clear and balanced; a brief mix glitch mutes Jerry on Mississippi Half‑Step, but overall the sound is crisp with corrected track issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Playing in the Band",
+      "Samson and Delilah",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "First set is described as average, while the second set is hotter and more cohesive, making this concert one of the tour’s top‑five shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Mix issue mutes him briefly on Mississippi Half‑Step; otherwise his guitar work is praised for relentless energy and strong leads on China Cat and Samson.",
+    "Phil": "His bass provides an “X‑factor” journeyscape during Playing in the Band, comparable to the 11/1 show vibe.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The 1979‑style drum segment is highlighted as great."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:22:59.548532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-28.134396.sbd.miller.flac16"
+}

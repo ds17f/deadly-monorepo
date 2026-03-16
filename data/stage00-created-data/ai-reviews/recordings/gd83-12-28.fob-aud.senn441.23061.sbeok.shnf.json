@@ -1,0 +1,57 @@
+{
+  "summary": "Energetic ’83 Loser show captured on an audience recording with standout Mexicali, Wheel > Truckin' and a ripping Minglewood, though Phil's bass is buried in the mix.",
+  "review": "The performance is praised for its high energy, superb versions of Mexicali and the Wheel > Truckin' transition, plus an incendiary Minglewood that showcases both Jerry and Bob. The audience (FOB) source delivers a punchy, up‑close feel, but the mix leaves Phil’s bass under‑represented, making it a good‑but‑not‑perfect recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about the musical performance and energy (70% weight) with generally favorable remarks on the audience recording quality (30% weight) lead to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent FOB audience capture with clear energy and ‘muscle’; mix is solid but Phil’s bass is low‑mid buried, making the sound a bit uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mexicali",
+      "Wheel > Truckin'",
+      "Minglewood",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy flow with tight transitions; the show feels punchy and up‑close, keeping momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Shredding highlighted on Minglewood; strong guitar work noted.",
+    "Phil": "Bass is not as audible as desired; mixed low in the recording.",
+    "Bob": "Bobby Weir praised for shredding alongside Jerry during Minglewood.",
+    "Keys": "Brent Mydland receives special mention for unique contributions and keyboard work.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel > Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:17:22.236696+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-12-28.fob-aud.senn441.23061.sbeok.shnf"
+}

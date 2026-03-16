@@ -1,0 +1,45 @@
+{
+  "summary": "Ultra‑matrix capture delivers a lively, well‑balanced sound that lets the energetic 9/12/88 performance shine, with Jerry’s heartfelt vocals on “Goodbye Momma & Poppa” and “Wish I Was a Headlight.”",
+  "review": "The ultra‑matrix source provides a richer, more natural feel than a dry soundboard, preserving the band’s live energy while keeping the mix clear. The show is praised for its infectious vibe – everyone was dancing – and Jerry’s vocals, though occasionally winded, still delivered strong performances on “Goodbye Momma & Poppa” and “Wish I Was a Headlight.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review highlights a solid performance and a good ultra‑matrix recording; the balance of show quality (70%) and recording quality (30%) yields an overall rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Ultra‑Matrix sounds more like the live mix than a dry soundboard; vocals are described as a bit dry with occasional chipmunk effect, but overall clarity and balance are praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Goodbye Momma & Poppa",
+      "Wish I Was a Headlight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert kept the crowd moving, with each song feeding into the next; unique acoustics at each venue added to the show’s distinct ‘thumbprint’ feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals sounded winded at times but he gave it his all on key songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Occasional chipmunk‑like vocalizer from Healy noted, suggesting a quirky keyboard/voice effect.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Goodbye Momma & Poppa": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wish I Was a Headlight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:05:27.305746+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-05.165828.UltraMatrix.sbd.cm.miller.t-flac1644"
+}

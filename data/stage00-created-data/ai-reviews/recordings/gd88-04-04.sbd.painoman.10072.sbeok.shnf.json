@@ -1,0 +1,90 @@
+{
+  "summary": "Good soundboard recording of a strong show highlighted by a stellar Looks Like Rain and high‑energy second set, though Jerry’s cold dulls the vocals.",
+  "review": "The audience enjoys an energetic performance with a standout Looks Like Rain, ripping Johnny B. Goode, a memorable Cassidy and a fun Good Lovin → Dear Mr. Fantasy → Hey Jude finale.  The soundboard source is clear and above‑average (some note it isn’t as crisp as late‑70s tapes) but the show is marred by Jerry’s cold‑affected vocals, which several reviewers cite as the only real drawback.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical flow and highlight songs, giving the show a solid 4‑star feel, while recording quality is consistently described as good to excellent; vocal issues pull the average down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sound quality called good/above average and even excellent by one reviewer; not as crisp as classic ’76‑’78 tapes but clear, no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Johnny B. Goode",
+      "Cassidy",
+      "Fantasy",
+      "Hey Jude Finale"
+    ],
+    "poor_songs": [
+      "Good Lovin"
+    ],
+    "setlist_flow": "First set builds with mellow Alabama and a rousing Johnny B. Goode; second set launches with Touch of Grey, moves through Good Lovin → Dear Mr Fantasy → Hey Jude finale, keeping high energy despite Jerry’s cold.  Some reviewers note awkward sound‑effect transitions but overall the pacing is strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice was hoarse from a cold, making vocals sound weak, but his guitar work remained passionate and powerful.",
+    "Phil": "",
+    "Bob": "Bobby’s vocal contributions were solid though occasionally off‑key; he also took lead on Good Lovin in one show.",
+    "Keys": "Brent’s organ solo on Never Trust was praised, and he even sang lead on Good Lovin, adding lively energy.",
+    "Drums": "The drums were well‑pronounced and provided a solid backbone."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Never Trust": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude Finale": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:58:55.457947+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-04.sbd.painoman.10072.sbeok.shnf"
+}

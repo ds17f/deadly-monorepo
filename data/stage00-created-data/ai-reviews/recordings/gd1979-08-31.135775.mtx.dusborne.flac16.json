@@ -1,0 +1,45 @@
+{
+  "summary": "A solid 1979 show featuring a fresh Althea and a funky rendition of The Greatest Story Ever Told, captured in clear matrix sound.",
+  "review": "Both reviewers find the performance enjoyable – the first notes a newly‑debuted, bouncy Althea and crystal‑clear vocals, while the second praises a funkier take on The Greatest Story Ever Told and overall solid playing. The recording is a matrix mix that sounds good with clear vocal detail, though not described as flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings and highlighted strong musical moments with decent but not exceptional recording quality; limited review count yields moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Vocals described as crystal clear, overall sound ‘pretty good’; no major flaws mentioned, but also not called pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "The Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as solid and enjoyable throughout, with no major dips – a good‑going show rather than a landmark performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:44:28.872156+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-31.135775.mtx.dusborne.flac16"
+}

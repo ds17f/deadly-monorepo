@@ -1,0 +1,101 @@
+{
+  "summary": "Soundboard recording with solid, clear mix showcases a mixed‑bag show – jazzy Terrapin Station jam and strong Sugaree stand out while Tennessee and Scarlet fall flat.",
+  "review": "The Miller‑Walker‑Scotton soundboard capture is praised for its clarity and full band presence, thanks to Charlie’s work. Musically the concert swings between highlights like a jazzy Terrapin Station extension, a smooth Wang Dang Doodle and a silky Lovelite, but suffers from weaker moments such as a tepid Tennessee and clumsy Scarlet. Overall listeners find it enjoyable despite occasional vocal slips and uneven song choices.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 3‑5 stars, praising the sound quality and several standout songs while noting noticeable performance lapses; the blend yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the sound \"fantastic\", \"clear\" and credit Charlie Miller for the mix; no major dropouts or audience bleed reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Sugaree",
+      "Wang Dang Doodle",
+      "Lovelite"
+    ],
+    "poor_songs": [
+      "Tennessee",
+      "Scarlet",
+      "Hell"
+    ],
+    "setlist_flow": "The first set opens with a quirky technical intro and settles into comfortable territory, while the second set meanders through mixed energy—some high‑points (Lovelite, Stella’s) offset by sluggish pacing on several numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as weak/meek in places but also praised for subtle inflections on Sugaree; occasional lyrical flubs noted.",
+    "Phil": "Mentioned for a jazzy jam into the drums and, less positively, for erratic clamping during tuning segments.",
+    "Bob": "Noted as reduced in volume but still thumping the rhythm section effectively.",
+    "Keys": "Brent’s keyboard work highlighted as orchestral/jazzy, adding depth to the Terrapin Station jam and other sections.",
+    "Drums": "Two strong drum slams noted; Drums/Space segment considered acceptable filler."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hell": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:17:38.532818+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-02-06.sbd.miller-walker-scotton.26330.sbeok.shnf"
+}

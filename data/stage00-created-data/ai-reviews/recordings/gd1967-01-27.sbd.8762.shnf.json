@@ -1,0 +1,45 @@
+{
+  "summary": "Audience recording plagued by chipmunk‑fast pitch, but the performance shines on intense Viola Lee Blues and a raw Cold Rain and Snow",
+  "review": "The tape is an audience capture that runs way too fast, making vocals sound high‑pitched and burying Phil’s bass, though it can be slowed down with software. Musically the show is praised for its frantic, urgent jams – especially Viola Lee Blues – and a solid rendition of Cold Rain and Snow, despite the setlist being out of order.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Many reviewers love the performance (several 5‑star entries) but the majority criticize the recording quality; weighting show (70 %) and recording (30 %) yields a mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Speeded‑up, chipmunk‑like vocals; pitch too high; bass lost; overall muddy and unlistenable without pitch correction, though some note it is clearer than other sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set list is reported as wrong or butchered; song order does not match known chronology, causing confusion about the actual date."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice sounds chipmunk‑fast but is recognizable after pitch correction; praised for raw, primal playing.",
+    "Phil": "Deep bass gets lost due to speed issue; no specific performance praise beyond that.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T05:36:45.693719+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-01-27.sbd.8762.shnf"
+}

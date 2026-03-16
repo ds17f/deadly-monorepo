@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience (AUD) recording captures a mixed‑quality 1995 show highlighted by an emotional So Many Roads performance.",
+  "review": "The Schoeps‑mic audience tape is described as very good and immersive, giving the sense of being in the venue. The musical performance is viewed as uneven – Jerry Garcia is said to be off his game, yet the rendition of \"So Many Roads\" moves listeners emotionally. Overall the show elicits both disappointment and heartfelt appreciation.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is generally praised (good), while show quality receives mixed feedback (some negative remarks about balance, but strong positive reaction to \"So Many Roads\"). Weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the tape is \"very good\" and makes you feel like you're there; no specific dropouts or distortion mentioned. The comment about preferring SBDs suggests this is an audience (AUD) capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as unbalanced without Jerry fully in the mix, but emotional peaks—especially the closing \"So Many Roads\"—provide memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer says Jerry wasn't firing on all cylinders, yet his playing on \"So Many Roads\" is praised for its emotional impact.",
+    "Phil": "Mentioned playing an Unbroken Chain solo in the spring ’95 double encore.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T12:43:09.735903+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-09.schoeps.wklitz.95445.flac16"
+}

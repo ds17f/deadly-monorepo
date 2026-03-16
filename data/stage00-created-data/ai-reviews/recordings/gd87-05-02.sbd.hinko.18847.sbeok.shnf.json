@@ -1,0 +1,88 @@
+{
+  "summary": "Clear soundboard recording of a lively ’87 show with standout Dew, Jack Straw and a scorching China > Rider sequence.",
+  "review": "The performance is generally praised for its energy and several high‑points – the Dew, an inspired Jack Straw, a powerful China→Rider medley and strong renditions of Rooster, Stagger Lee and Truckin’. The soundboard source is clean but a bit bright on the highs and occasionally tinny, with some wind‑related noise noted. Overall the show is well‑received despite a few weaker moments (Stagger Lee’s bite, Push and the drums).",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Four detailed reviews give an average of 4 stars; most comments highlight strong musical moments while noting only modest recording quirks, leading to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD overall, though highs are sometimes overly bright and the mix can sound tinny; occasional wind noise on an audience tape is mentioned but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dew",
+      "Jack Straw",
+      "Rooster",
+      "China > Rider",
+      "Truckin'",
+      "Stagger Lee"
+    ],
+    "poor_songs": [
+      "Stagger Lee",
+      "Push",
+      "Drums"
+    ],
+    "setlist_flow": "First set is mellow and a bit over‑familiar, while the second set builds energy with strong China→Rider, an extended Space, and a climactic Dew that lifts the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly praised – especially his work on Wish I Was a Headlight, the Dew, and a victorious solo on Push.",
+    "Phil": "",
+    "Bob": "Bob’s vocal delivery is noted as “crooning” and generally solid during the Lovelight section.",
+    "Keys": "Brent’s playing gets a brief mention with a suggestion to keep his tune away from ‘Far From Me’, indicating mixed feelings about the keyboards.",
+    "Drums": "The drum segment is described as “blah” by one reviewer, suggesting it was less engaging than usual."
+  },
+  "song_mentions": {
+    "Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Push": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wish I Was a Headlight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:10:18.470995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-05-02.sbd.hinko.18847.sbeok.shnf"
+}

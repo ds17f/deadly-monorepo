@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard capture of a solid ’89 show, with a standout Loser and a blazing China Cat Sunflower → The Rider transition.",
+  "review": "The recording is a clean soundboard tape that many reviewers praise as “incredible” and well‑balanced. Musically the concert delivers several highlights – an “spectacular” Loser, a superb China Cat Sunflower into The Rider segue, plus strong performances of Good Times and Box of Rain – though a few note it isn’t a career‑defining night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers are enthusiastic about both the performance (standout songs, strong transitions) and the recording quality; only one review calls it merely “good but not special,” yielding a slightly mixed overall sentiment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced soundboard tape with no reported dropouts or major issues; reviewers repeatedly commend the mix and mastering by Charlie Miller."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "China Cat Sunflower",
+      "The Rider",
+      "Good Times",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid flow with a particularly praised China>Rider transition; the show builds nicely from Good Times opening to a memorable Box of Rain encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is noted as a bit strained on this tour.",
+    "Phil": "Phil’s bass work on the encore (Box of Rain) is highlighted as a key moment that pushes the show over the edge.",
+    "Bob": "",
+    "Keys": "Brent Mydland steps up nicely, delivering an impressive organ solo that fans loved.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:59:49.331208+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-08.sbd.walker-scotton.miller.83510.sbeok.flac16"
+}

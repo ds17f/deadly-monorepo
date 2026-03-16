@@ -1,0 +1,81 @@
+{
+  "summary": "A surprisingly clear 1968 audience tape that captures a hot show highlighted by Dark Star, the China Cat/Eleven sandwich and rare Born‑Cross‑Eyed moments despite typical AUD grain.",
+  "review": "This recording delivers an energetic 1968 performance with standout jams – Dark Star, The Other One, China Cat into Eleven, Spanish Jam and a rare Born‑Cross‑Eyed – all delivered with the raw intimacy of an audience tape.  While the sound isn’t studio‑grade, reviewers repeatedly note it is remarkably clear for its era, with only occasional muffiness and a muted Pigpen keyboard in spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "19 reviews overwhelmingly rate the show 4‑5 stars; musical performance is praised heavily while recording quality, though not perfect, is considered good to very good for a 1968 AUD source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Surprisingly clear AUD tape for 1968; occasional murky sections and source‑switch around 2:34, muted Pigpen keyboards in parts, but overall listenable with decent instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "China Cat",
+      "Eleven",
+      "Spanish Jam",
+      "Born Cross‑Eyed"
+    ],
+    "poor_songs": [
+      "Lovelight (later part runs out of steam / split awkwardly)"
+    ],
+    "setlist_flow": "Typical late‑’68 flow with long, exploratory jams; the China Cat → Eleven sandwich is a highlight despite a rough transition, and the rare Born‑Cross‑Eyed/Spanish Jam combo adds historic value."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his distinctive solo style (different from ’66), strong Dark Star improvisations, and lively banter that gets the audience involved.",
+    "Phil": "",
+    "Bob": "Comments range from praise of his vocal energy on Dancin' in the Streets to criticism of his drunken state during that number; also mention that his keyboard is muted for part of the tape.",
+    "Keys": "Pigpen’s organ/keyboard is reported as muted in sections, a common issue with early AUD recordings; otherwise keyboards sit well in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Born Cross‑Eyed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:11:32.022555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-03-30.aud.cotsman.14912.sbeok.shnf"
+}

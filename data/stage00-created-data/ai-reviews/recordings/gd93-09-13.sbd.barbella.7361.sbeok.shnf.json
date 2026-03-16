@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard capture of a high‑energy show with standout Dark Star/Scarlet Begonias jams, but a weak Fought the Law encore and mixed feelings about Jerry’s MIDI “acoustic” tone.",
+  "review": "The performance is praised for its lively first set and a second‑set that bursts into memorable Dark Star, Scarlet Begonias and Terrapin Station moments, though the final encore of Fought the Law feels stale. The SBD recording is generally clear with a crisp mix, but listeners note an unusual MIDI‑derived acoustic guitar tone on Jerry and a slightly compressed dynamic range.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (average ~4.2 stars) and describe the recording as clear; combined weighting of strong musical moments with decent soundboard quality yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD capture, but listeners note an unusual MIDI‑based acoustic guitar texture on Jerry and a slightly limited dynamic range due to in‑ear monitor compression."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell In A Bucket",
+      "Dark Star",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Fought The Law"
+    ],
+    "setlist_flow": "High‑energy first set leads into a second set that shines after Space with extended jams, while the encore feels flat and ends the otherwise strong performance on a weaker note."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar sounds unusually acoustic due to a MIDI “Lightning Bolt” setup; engaging but polarizing for some listeners.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboard tone is described as not too tinny and generally solid, though the reviewer misses Brent’s style.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fought The Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T16:49:58.433295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-13.sbd.barbella.7361.sbeok.shnf"
+}

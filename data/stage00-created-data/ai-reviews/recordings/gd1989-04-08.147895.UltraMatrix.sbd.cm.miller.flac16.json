@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix recording captures a solid Spring tour show with warm vibes and a notable China Cat Sunflower, though overall impression is modest.",
+  "review": "The reviewer recalls a cold, snowy day on the 1989 spring tour and highlights a friendly encounter with Mickey Hart. They praise the performance of the “China” tune (likely China Cat Sunflower) and describe the recording as “really good stuff,” but give the show only three stars, indicating a mixed overall impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "Only one review with a modest 3‑star rating; positive anecdotes suggest decent performance and recording, but the limited data prevents a strong confidence level."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit audio comments; reviewer’s “really good stuff” implies an acceptable matrix mix with no major issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer does not discuss set pacing or flow, focusing instead on atmosphere and a single song highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart gave the reviewer a friendly hug; no comment on his playing."
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:09:49.111052+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-08.147895.UltraMatrix.sbd.cm.miller.flac16"
+}

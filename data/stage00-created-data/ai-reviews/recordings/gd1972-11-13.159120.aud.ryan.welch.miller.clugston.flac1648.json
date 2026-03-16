@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent audience recording featuring a blissful, 72‑minute Dark Star>Dew jam",
+  "review": "The reviewer raves about the audio quality, calling the tape an \"improved gem\" and urging listeners to crank it up. The performance is highlighted by a soaring 72‑minute Dark Star into Dew sequence that lives up to its name.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic 5‑star review; both show and recording are praised, leading to a high composite rating but limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer explicitly loves the AUD (audio) quality, describing it as an \"improved gem\" with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star>Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A massive 72‑minute fall creates a powerful, uplifting jam that dominates the show’s momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T01:17:37.470974+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-13.159120.aud.ryan.welch.miller.clugston.flac1648"
+}

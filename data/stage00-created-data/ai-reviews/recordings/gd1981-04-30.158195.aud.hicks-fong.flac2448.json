@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fan rating; recording and performance quality not detailed",
+  "review": "The lone review rates the show a perfect five stars, calling it “awesome”. No specific comments are provided about the audio source or musical highlights, so both the sound quality and set details remain unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Single five‑star review indicates strong positive sentiment but lacks detail on performance or recording, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source; cannot assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details provided on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T10:25:16.817443+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-04-30.158195.aud.hicks-fong.flac2448"
+}

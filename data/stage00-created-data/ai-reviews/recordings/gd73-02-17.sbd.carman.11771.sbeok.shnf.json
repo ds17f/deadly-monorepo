@@ -1,0 +1,90 @@
+{
+  "summary": "High‑fidelity soundboard capture of a February ’73 gig where the Here Comes Sunshine → China Cat Sunflower → I Know You Rider trio shines despite half the first set missing.",
+  "review": "The recording is a solid soundboard mix that most listeners describe as crisp and close to perfect, with only occasional muddiness on a few tracks. Musically the show is highlighted by the flawless HCS‑China‑Rider transition, a soaring Bird Song and a strong Playing In The Band, though vocal shortcomings (especially Donna Jean) and a missing half of the first set keep it from being a classic night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising the standout trio and overall soundboard quality; only a few note vocal or set‑list issues, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp mix praised by many; some reviewers note occasional lack of clarity on a few songs (e.g., “He's Gone”) and minor technical hiccups, but the overall sound is highly listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine > China Cat Sunflower > I Know You Rider",
+      "Bird Song",
+      "Playing In The Band"
+    ],
+    "poor_songs": [
+      "Not Fade Away",
+      "One More Saturday Night",
+      "He's Gone"
+    ],
+    "setlist_flow": "The second set builds strong energy and ends with a cooking‑hot audience, but half of the first set is missing from this tape, which disrupts the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for leading the HCS‑China‑Rider transition and delivering ripping solos.",
+    "Phil": "",
+    "Bob": "Criticized on this night for a sub‑par vocal delivery (Not Fade Away, One More Saturday Night).",
+    "Keys": "",
+    "Drums": "Bill is mentioned positively in a venue‑correction comment."
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "I Know You Rider": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wave That Flag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:20:34.456805+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-02-17.sbd.carman.11771.sbeok.shnf"
+}

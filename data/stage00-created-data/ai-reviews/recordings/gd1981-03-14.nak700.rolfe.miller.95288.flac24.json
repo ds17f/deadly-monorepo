@@ -1,0 +1,31 @@
+{
+  "summary": "Fans enjoy the music but note Gracenote metadata problems; no details on recording or performance are provided.",
+  "review": "Both reviewers express a generic appreciation for the album, with one mentioning frustration over incorrect Gracenote tagging. No comments are made about sound quality, source type, or specific musical moments, leaving the show and recording qualities undefined.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Reviews contain only vague praise and a metadata complaint; there is insufficient information to evaluate performance or audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "No remarks on sound clarity, mix, or source; reviewers only discuss Gracenote tagging issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T09:52:39.338387+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-14.nak700.rolfe.miller.95288.flac24"
+}

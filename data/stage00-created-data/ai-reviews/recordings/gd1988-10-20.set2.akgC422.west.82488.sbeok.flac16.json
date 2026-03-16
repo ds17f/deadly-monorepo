@@ -1,0 +1,57 @@
+{
+  "summary": "Fair, audience‑sounding tape of a second‑set that shines with Built To Last and a jammy Playing in the Band, but muffled audio limits enjoyment.",
+  "review": "The second set captures several memorable moments – Jerry’s enthusiastic debut of Built To Last, a deep Phil bass groove launching a wild Playing in the Band jam, and a magical Mr Fantasy → Hey Jude finale. However, listeners note a boomy, reverberant sound that often sounds muffled or hard to hear, making the recording feel more like an audience capture with noticeable flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show performance is praised for standout songs and energy (≈4/5), but the recording quality is reported as poor/muffled (≈2/5). Weighted combination yields ~3.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Boomy, reverberant sound; muffled mids and low clarity; several reviewers say it’s hard to hear or barely audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Built To Last",
+      "Playing in the Band",
+      "Mr Fantasy",
+      "Hey Jude"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only the second set is present; it builds strong momentum with a deep bass‑driven jam and a whimsical Mr Fantasy → Hey Jude finale, though missing the first set leaves the overall flow incomplete."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals on Built To Last are described as zestful and lyric‑perfect.",
+    "Phil": "Bass is highlighted for its deep, powerful low end that drives the Playing in the Band jam.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is praised for magical fantasy moments; a memorable on‑stage tumble is also recounted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Built To Last": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:17:11.260481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-10-20.set2.akgC422.west.82488.sbeok.flac16"
+}

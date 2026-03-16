@@ -1,0 +1,57 @@
+{
+  "summary": "Exceptional powerhouse performance with crystal‑clear PCM soundboard capture and standout renditions of Ship of Fools, Crazy Fingers and Franklin’s Tower",
+  "review": "The recording comes from a high‑quality PCM source that delivers clear, well‑balanced sound—Jerry’s guitar and the drums sit nicely alongside Brent’s keyboards. Musically the show is a mid‑summer tour highlight: a bravado‑filled first set that feels like ’77 and a joyous second set featuring a rollicking Franklin’s Tower, a fiery Crazy Fingers, and the new “Women Is Smarter” showcase.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "The single detailed five‑star review praises both the musical performance (exceptional playing, standout songs) and the recording quality (PCM source, clear mix), warranting a high rating despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Derived from a PCM digital source; crisp, balanced mix with strong guitar, drum and keyboard presence. Minor comment about occasional saturation but overall superb clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "Crazy Fingers",
+      "Franklin's Tower",
+      "Women is Smarter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set feels like a classic ’77 run with bravado; second set described as wonderful and joyous from start to finish, giving the concert an uplifting, high‑energy arc."
+  },
+  "band_member_comments": {
+    "Jerry": "More reserved and sweet early (Ship of Fools) then launches into raging runs; “dancing on water” during Women is Smarter; guitar and drum mix sound good.",
+    "Phil": "Dropping bombs all night, showcasing his four‑string bass in a near‑final tour; overall dominant presence.",
+    "Bob": "Described as the complete rock star of the night, hooting and never wanting the show to end.",
+    "Keys": "Brent’s keyboard work sounds quite good in the mix.",
+    "Drums": "Drum sound is clear and sits well with the guitars."
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women is Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:43:18.603677+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-18.146889.FOB.NAK.Anon.Weber-Small.Donaldson.Ammons.Reutlehuber.Noel.t-flac16"
+}

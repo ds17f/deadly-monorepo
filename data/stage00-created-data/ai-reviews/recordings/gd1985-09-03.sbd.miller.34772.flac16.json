@@ -1,0 +1,87 @@
+{
+  "summary": "Crisp soundboard capture of an energetic ’85 show with standout Eyes, Nobody's Fault but Mine and a fiery post‑drums run, despite mixed feelings on Cryptical",
+  "review": "The recording is a clean, crisp soundboard source that lets the interplay between guitars shine and highlights Brent’s spicy Rooster solo. Musically the concert delivers excellent versions of Eyes, a thrilling Nobody's Fault but Mine → Truckin' → Smokestack Lightning → Comes A Time sequence, and a beautiful Baby Blue encore, though the revival of Cryptical Envelopment received mixed reactions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently strong positive comments about both performance and sound quality across six reviews; recording is praised as crisp, show is highlighted for multiple standout moments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with excellent balance; no reported drop‑outs or major flaws, allowing guitar interplay and keyboard solos to be heard distinctly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Nobody's Fault but Mine",
+      "Truckin'",
+      "Smokestack Lightning",
+      "Comes A Time",
+      "Baby Blue",
+      "Cryptical Envelopment"
+    ],
+    "poor_songs": [
+      "Cryptical Envelopment"
+    ],
+    "setlist_flow": "Unusual 1985 song choices give the show a fresh feel; a short, high‑energy set builds into an exciting second‑set run after drums, ending with a heartfelt Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for energetic guitar work and strong interplay, especially on Nobody's Fault but Mine.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s Rooster solo described as ‘spicy’, highlighting his keyboard contribution.",
+    "Drums": "Post‑drums run (Nobody's Fault → Truckin' → Smokestack → Comes A Time) noted as a cool transition."
+  },
+  "song_mentions": {
+    "Cryptical Envelopment": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault but Mine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Need Love": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:26:42.808085+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-03.sbd.miller.34772.flac16"
+}

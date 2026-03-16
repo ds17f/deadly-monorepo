@@ -1,0 +1,75 @@
+{
+  "summary": "Mean‑sounding ’79 soundboard capture of a jam‑heavy show with standout Candyman, Lost Sailor and Shakedown performances despite some high‑end loss",
+  "review": "The concert is praised for its flowing medleys – the I Need a Miracle → Bertha → Good Lovin' chain, a monster Truckin'/Nobody's Fault but Mine jam, and especially the Candyman, Lost Sailor, Althea and Shakedown highlights.  The soundboard source is generally listenable but several reviewers note degraded high‑end or overall inferior fidelity, though others call it a “dank ’79” recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is repeatedly praised (many 5‑star comments) while recording quality receives mixed remarks, resulting in a strong overall rating weighted toward the performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers mention high‑end loss or degraded sound (improper noise reduction), but others describe it as a mean‑sounding, decent ’79 board that remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Lost Sailor",
+      "Althea",
+      "He's Gone > The Other One",
+      "Shakedown",
+      "Truckin'",
+      "I Need a Miracle > Bertha > Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through long, loose‑groove medleys that build a laid‑back mood early and heat up toward the end, with strong second‑set runs (He’s Gone into The Other One) and a climactic Shakedown."
+  },
+  "band_member_comments": {
+    "Jerry": "His Candyman solo is highlighted as a “good one” with excellent tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drum sections are praised; the drumming on Truckin' and Shakedown is noted as solid."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone > The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Need a Miracle > Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:30:27.898214+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-08-13.sbd.clugston.9289.sbeok.shnf"
+}

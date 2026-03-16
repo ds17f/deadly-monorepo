@@ -1,0 +1,91 @@
+{
+  "summary": "A high‑energy audience tape of 4/22/88 delivers a rocking first set and a scorching Watchtower, but the second set loses focus and gets a bit sloppy.",
+  "review": "The recording, despite being an audience source, is surprisingly clear—many reviewers liken it to a matrix capture. Musically the show shines early with solid first‑set work, a fiery China Cat > Rider, strong Estimated > He's Gone and a blistering Watchtower, yet several listeners note that the second half drifts into sloppier territory. Overall the performance is memorable for its excitement, even if it isn’t flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the sound and the high‑energy playing (70%+ positive comments), while a minority point out noticeable sloppiness in parts of the second set; recording quality is consistently rated good to excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp for an audience tape, occasional mic chatter, but many note it sounds almost like a matrix with clear instrument separation and minimal hiss."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat > Rider",
+      "Estimated > He's Gone",
+      "All Along the Watchtower",
+      "Black Muddy River",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "Louie Louie",
+      "Sugar"
+    ],
+    "setlist_flow": "First set is tight and energetic; second set starts strong but becomes increasingly unfocused, with some sections (China Cat > Rider, Estimated) still delivering high points while later jams feel sloppy."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently praised for shredding solos, solid tone on Watchtower and other tunes; occasional sloppiness noted in later jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Synth‑drummed textures highlighted during Space; otherwise no specific comments.",
+    "Drums": "Described as a 'giant chrome motor' with powerful playing that drives the band, especially on Drums>Space."
+  },
+  "song_mentions": {
+    "China Cat > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Louie Louie": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated > He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:03:10.869299+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-22.aud.wiley.16070.sbeok.shnf"
+}

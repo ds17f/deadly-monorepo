@@ -1,0 +1,51 @@
+{
+  "summary": "Enthusiastic fans rave about a sweet “Baby Blue” and a soaring Terrapin Station at the RFK show, though no recording‑quality details are provided.",
+  "review": "Both reviewers give high marks, highlighting Bob Weir’s charismatic band introductions and Jerry Garcia’s fiery Terrapin performance, as well as a memorable Baby Blue. The concert is remembered fondly for its energy and song selection, but the reviews contain no information about the source or technical quality of the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Strong positive comments about performance (standout songs and band interaction) but only two brief reviews and no mention of recording quality, leading to a modest confidence level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewers mentioned soundboard, audience mix, or any audio issues; assume acceptable but unverified quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Baby Blue",
+      "Terrapin Station",
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers emphasize the excitement of the late‑night show, noting a strong second‑half momentum with memorable highlights rather than commenting on overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an \"awesomely built screaming\" Terrapin performance.",
+    "Phil": "",
+    "Bob": "Noted for his engaging introductions of the band members.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T17:26:04.994119+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-07.ifm.gale.34750.flac16"
+}

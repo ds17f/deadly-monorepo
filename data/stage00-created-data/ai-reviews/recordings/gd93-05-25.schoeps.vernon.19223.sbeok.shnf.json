@@ -1,0 +1,31 @@
+{
+  "summary": "A superb audience tape that delivers deep, crisp sound and captures the show’s nonstop excitement.",
+  "review": "Fans rave about the recording’s warm, punchy bass, crystal‑clear stereo separation and ability to make every beat and lyric audible, calling it one of the best audience versions of this concert. The performance itself is described as “effin killer” from start to finish, with the band’s energy and acoustic interplay highlighted, even though no specific songs are singled out. Overall sentiment is overwhelmingly positive despite a single middling review.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and praise both the musical excitement and the high‑quality audience recording; only one modest 3‑star comment tempers the average, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Deep, heavy bass with sub‑woofer feel; crisp and clear instrument separation; warm stereo image that puts the listener between stacks. Reviewers note it outshines available soundboard mixes, though a few mention minor imperfections."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviews focus on the overall energy and excitement of the concert rather than individual song analysis; listeners feel the show was consistently high‑octane from beginning to end."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned playing acoustic guitar during the show (review 2).",
+    "Phil": "Also noted on acoustic guitar in the same review.",
+    "Bob": "Acoustic guitar contribution highlighted by a reviewer.",
+    "Keys": "Bret (Brent) Mydland praised for piano work; Vince’s keyboard level is discussed as being overly loud on soundboards but balanced nicely on this audience tape.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T13:02:11.302794+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-25.schoeps.vernon.19223.sbeok.shnf"
+}

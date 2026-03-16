@@ -1,0 +1,46 @@
+{
+  "summary": "Mixed‑quality recording of a solid show with a standout acoustic set and strong renditions of Black Peter and Music Never Stopped.",
+  "review": "Fans describe the performance as generally good – high‑energy electric numbers, an especially praised acoustic set, and memorable versions of Black Peter and Music Never Stopped. Recording quality isn’t discussed in detail; one reviewer points to a separate soundboard version, implying this source may be audience or matrix with only fair fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is rated positively by most reviewers (5 and 4 stars) while recording comments are vague, leading to a solid but not outstanding overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific audio comments; one reviewer suggests a soundboard version exists elsewhere, hinting this may be an audience/matrix capture with average clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Music Never Stopped",
+      "Acoustic Set (unspecified)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The acoustic set is highlighted as the best part of the night, while electric sets receive mixed feedback – some find them high‑energy and comparable to 1977 shows, others call them mediocre."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being 'on' during the electric set and noted as his favorite on Black Peter.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:01:18.624405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-03.nak300.vernon.16208.sbeok.shnf"
+}

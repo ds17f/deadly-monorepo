@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix recording delivers excellent audio with Jerry’s stellar guitar tone, but the unusually fast tempo on “Eyes of the World” draws criticism.",
+  "review": "The matrix source captures a clear and well‑balanced sound, highlighting Jerry Garcia’s amazing playing that many reviewers praised. While most of the show is described as spectacular, one reviewer felt the early‑80s rendition of “Eyes of the World” was played too fast, detracting from an otherwise strong performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Three reviews (0, 4, and 5 stars) give an average of ~3.0; positive comments about sound quality and Jerry’s playing raise the rating slightly despite a notable negative comment on tempo."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners note crystal‑clear guitar tone and overall crisp mix; no recording flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Eyes of the World"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is described as amazing and a highlight of the recording.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:00:00.993103+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-04.mtx.seamons.95601.sbeok.flac16"
+}

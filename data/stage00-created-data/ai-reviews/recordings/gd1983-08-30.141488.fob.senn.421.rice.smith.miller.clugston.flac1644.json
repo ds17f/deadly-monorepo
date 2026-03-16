@@ -1,0 +1,31 @@
+{
+  "summary": "Recording confirmed as 44.1 kHz (441) instead of 42 kHz (421); no musical details are mentioned.",
+  "review": "The sole reviewer notes a technical correction that the tapes are 44.1 kHz recordings rather than the previously assumed 42 kHz, suggesting the source is properly digitized. No comments were made about the band's performance, setlist flow, or individual musicians, and the show date remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "low",
+    "rationale": "Only one brief review giving 4 stars; rating reflects modest confidence in recording quality based on the sample‑rate note, but no information on musical performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer points out that the files are 44.1 kHz (441) recordings rather than 42 kHz (421); no further comments on clarity, mix, or audience vs. soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the performance or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T09:17:17.365706+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-30.141488.fob.senn.421.rice.smith.miller.clugston.flac1644"
+}

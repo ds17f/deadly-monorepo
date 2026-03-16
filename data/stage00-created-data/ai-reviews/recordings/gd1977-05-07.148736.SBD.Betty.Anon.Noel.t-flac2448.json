@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear soundboard captures a killer first set highlighted by a punchy U.S. Blues and an intense Terrapin excerpt.",
+  "review": "The recording is praised as an “incredible source” with pristine, flowing clarity that makes the listening experience feel like a fresh mountain stream. Musically the show delivers a strong first set – “killer” according to reviewers – with a short but powerful Terrapin moment and Jerry Garcia ripping through U.S. Blues, leaving fans wishing they’d seen it live.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Both reviewers gave high star ratings (5 and 4) and highlighted exceptional audio quality and strong performance, but only two brief reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as an incredible, crystal‑clear source with no noted flaws; reviewers liken it to “drinking from a running stream.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "U.S. Blues",
+      "Terrapin Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as ‘killer’ and only gets better, with an intense Terrapin excerpt leading into strong second‑set momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia “bangs out U.S. Blues” with energetic playing; praised for his tone and drive.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T23:07:21.345941+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-07.148736.SBD.Betty.Anon.Noel.t-flac2448"
+}

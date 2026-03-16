@@ -1,0 +1,51 @@
+{
+  "summary": "Outstanding audience recording of the Frost Amphitheater show, delivering crystal‑clear sound and an energetic set highlighted by Bertha, Ramble on Rose, and Scarlet Begonias.",
+  "review": "The three fan reviews agree that this is the best‑sounding audience source for the concert, describing the tape as clean, tight and surprisingly crisp. The performance itself is praised for its high energy, with standout moments like a soaring Bertha, an emotive Ramble on Rose and a fiery Scarlet Begonias, plus Jerry Garcia’s “special” solo. Overall it’s a highly enjoyable listening experience both musically and technically.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers are enthusiastic (average 4.7 stars), highlighting excellent sound quality and strong performances; weighted rating reflects 70% show value + 30% recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Repeatedly called the best‑sounding audience tape, described as clean, tight and crisp with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Ramble on Rose",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic, sunny springtime vibe; the band plays with enthusiasm and tightness throughout, creating a flowing, uplifting set."
+  },
+  "band_member_comments": {
+    "Jerry": "Highlighted for an especially ecstatic solo (“special Jerry orgasm solo”) and overall “Heavenly Jerry Tingles.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:10:19.860107+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-27.nak700.anon.lmpp.99835.flac16"
+}

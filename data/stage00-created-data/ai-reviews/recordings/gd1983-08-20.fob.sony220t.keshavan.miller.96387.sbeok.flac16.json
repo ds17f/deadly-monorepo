@@ -1,0 +1,78 @@
+{
+  "summary": "Crisp audience tape captures a high‑energy ’83 Stanford Frost show with smoking Bird Song jam and a monster Estimated.",
+  "review": "The recording is an excellent audience capture – bright highs, slight twang and a well‑defined soundstage despite occasional thinness.  The performance is upbeat and energetic, highlighted by a soaring Bird Song, tight Shakedown Street, fiery Eyes and a standout Estimated/Esau run.  Overall the show feels like a classic ’83 set that rewards both listening pleasure and Deadhead nostalgia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both the music and tape quality indicate a strong show with an excellent audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Bright highs, slight twang; overall crisp, well‑defined spectrum. A few reviewers note a thin spot in the mid‑range, but most describe it as one of the better sounding AUD tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "Bird Song",
+      "Shakedown Street",
+      "Eyes",
+      "Alabama Getaway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy – upbeat tempos, tight transitions and extended jams (notably Estimated/Esau) that keep the momentum rolling.  Even the quieter moments feel purposeful, making for a cohesive ’83 concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry ‘rocked’ and delivered perfect tone throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "A reviewer mentions “tinkly” keyboard work on They Love Each Other, indicating a pleasant keys texture.",
+    "Drums": "One comment highlights the “weirdness in the drummers” that year, noting an unusual but interesting rhythmic feel."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ten": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:42:55.822494+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-20.fob.sony220t.keshavan.miller.96387.sbeok.flac16"
+}

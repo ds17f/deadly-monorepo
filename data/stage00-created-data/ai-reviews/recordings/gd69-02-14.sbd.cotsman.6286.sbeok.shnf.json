@@ -1,0 +1,51 @@
+{
+  "summary": "Fair‑quality soundboard capture of the Dead’s raw 1969 Philadelphia debut, highlighted by a soaring Dark Star and tight interplay on The Eleven.",
+  "review": "The recording is a soundboard tape that suffers from a constant hiss and slight muffling, giving it an old‑cassette feel, but all instruments remain clear. Musically the show shines – early‑era power is on full display with a fantastic Dark Star, stellar interplay between Jerry and Phil on The Eleven, and an electrifying closing of the Cryptical suite. Overall fans regard this as a hidden gem from the band’s first Philadelphia outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality is praised across multiple reviews (mostly 5‑star) while recording quality is noted as decent but not pristine, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Constant hiss and slight muffling give it an old‑cassette vibe; not crystal clear but all channels are audible and balanced enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Cryptical Envelopment"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑era raw energy with a solid first set that flows into an adventurous second set; strong interplay and seamless transitions keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring leads on Dark Star, round motif on The Eleven, and electrifying closing of the Cryptical suite.",
+    "Phil": "Highlighted for tight bass interplay with Jerry during The Eleven, adding a Lovelight‑style baseline.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T11:18:14.271029+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-02-14.sbd.cotsman.6286.sbeok.shnf"
+}

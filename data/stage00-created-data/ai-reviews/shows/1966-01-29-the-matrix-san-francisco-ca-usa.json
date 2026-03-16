@@ -1,0 +1,40 @@
+{
+  "summary": "Sparse early Acid Test tape with limited Dead performance",
+  "blurb": "The recording captures an early Acid Test session rather than a full concert, featuring brief spoken interviews and fragmented jams. Jerry appears only on one track, his vocals described as shot, and the overall musical content is thin.",
+  "review": "On January 29, 1966 at The Matrix the Grateful Dead were caught in a quirky Acid Test atmosphere more than delivering a conventional set. Both surviving recordings are soundboard captures of an interview-heavy tape that drifts into loose, trippy jam snippets. Jerry Garcia only surfaces on track 10, where a prankster notes his voice is \"completely shot,\" and the rest of the band’s playing is largely absent or buried beneath ambient chatter. Pigpen's keyboards, Phil's bass, Bob's rhythm guitar and Bill Kreutzmann's drums are barely discernible, making the document more valuable as a historic snapshot than a musical showcase. Listeners seeking classic Dead improvisation will be disappointed, but those interested in the early psychedelic context may find the interview clarity worthwhile.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "Both recordings describe the tape as musically sparse, with limited Dead performance and a thin mix; one notes Jerry's vocals are \"completely shot\". The consistent negative language about performance quality across sources warrants a modest downward adjustment.",
+      "final_calculation": "2.5 + 0.2 + -0.5 = 2.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1966-01-29.sbd.bershaw.5411.shnf",
+    "reason": "Provides the clearest interview segment and the most defined audio of the fragmented jam, making it the most listenable historic document."
+  },
+  "key_highlights": [
+    "Early Acid Test atmosphere captured more as spoken interview than full concert.",
+    "Jerry appears only on one track; his vocal performance is described as shot.",
+    "Audio quality is fair but clearer than other contemporaneous test recordings."
+  ],
+  "song_highlights": [],
+  "band_performance": {
+    "Jerry": "Appears solely on track 10, with vocals described as \"completely shot\" and otherwise minimal presence.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-26T04:35:31.790688+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed"
+}

@@ -1,0 +1,60 @@
+{
+  "summary": "Acoustic benefit set shines; Jerry leads strong electric half‑set",
+  "blurb": "The show opens with a warm Joan Baez acoustic benefit featuring standout renditions of “Lady Di And I” and “The Boxer.” The brief electric second set delivers high‑energy Jerry‑led numbers like “Deep Elem Blues” and “Dire Wolf,” though the mix is uneven.",
+  "review": "On December 12, 1981 at Fiesta Hall, the Grateful Dead delivered a unique two‑part experience. A modest acoustic benefit with Joan Baez set the tone, highlighted by heartfelt takes on “Lady Di And I” and “The Boxer,” where Brent’s Hammond organ slipped in and out, adding a restrained texture that complemented the intimate vibe. After the acoustic interlude the band shifted gears into a compact electric half‑set; Jerry’s guitar was front‑and‑center, ripping through “Deep Elem Blues,” “Dire Wolf,” and the classic “China Cat Sunflower > I Know You Rider” (though the latter isn’t listed in the official setlist). His tone cut through an uneven mix, keeping the energy high despite occasional muddiness. The rhythm section held steady—Mickey’s drumming provided solid support throughout both halves, while Brent’s keyboards and Bill kept the groove tight. Overall, the performance is solid with memorable moments, but the inconsistent sound quality keeps it from reaching classic status.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Multiple recordings note strong, loud Jerry‑led numbers and a warm acoustic set, but also flag uneven mix and average rest of the show; overall sentiment is moderately positive, yielding a modest +0.4 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd81-12-12.nak300.vernon.14011.sbeok.shnf",
+    "reason": "Audience recording captures the warm ambience of the benefit set and provides a complete, listenable version despite not being pristine."
+  },
+  "key_highlights": [
+    "Acoustic Joan Baez benefit set with standout “Lady Di And I” and “The Boxer.”",
+    "Jerry’s ripping lead on “Deep Elem Blues” and “Dire Wolf,” cutting through an uneven mix.",
+    "Brent’s Hammond organ adds restrained texture, ducking in and out of the acoustic tunes.",
+    "Mickey’s steady drumming supports both acoustic and electric portions."
+  ],
+  "song_highlights": [
+    "Lady Di And I**",
+    "The Boxer**",
+    "Deep Elem Blues",
+    "Dire Wolf"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers powerful, front‑and‑center lead on Deep Elem Blues and Dire Wolf; his guitar cuts through the mix with a loud, ripping tone.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Provides restrained Hammond work that ducks in and out during the acoustic set, adding texture without overwhelming the songs.",
+    "Mickey": "Tags along on drums throughout the acoustic portion and holds down solid grooves on the electric half‑set.",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-13T17:25:01.536398+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lady Di And I**"
+    ],
+    [
+      "The Boxer**"
+    ],
+    [
+      "Deep Elem Blues"
+    ],
+    [
+      "Dire Wolf"
+    ]
+  ]
+}

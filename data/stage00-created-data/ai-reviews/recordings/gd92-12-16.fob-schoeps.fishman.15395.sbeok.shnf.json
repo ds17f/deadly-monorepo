@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience recording of a blistering '92 show with standout Shakedown Street, Samson, Dark Star and Casey Jones performances.",
+  "review": "The crowd‑sourced tape captures a crystal‑clear performance – the first set rolls smoothly, Shakedown Street feels jazzy, Samson rips the Coliseum apart, and the second half delivers a pristine Dark Star and a sweet (if slightly sloppy) Casey Jones encore. Reviewers rave about Jerry’s blistering lead work and Phil’s thumping bass, while noting the overall audio clarity is pin‑drop perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Four of five detailed reviews praise both the musical performance and the recording quality; only one low‑star comment concerns availability, not sound or playing."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the tape as crystal clear – “pin drop” quiet moments and pristine overall balance. No major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Samson (Samson & Delilah)",
+      "Dark Star",
+      "Casey Jones",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set smooth and tight; Shakedown Street adds jazzy flair, followed by a powerhouse Samson that “rips the Coliseum apart.” Second half builds to a pristine Dark Star and ends with a sweet (though a touch sloppy) Casey Jones encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Blistering guitar work highlighted throughout the show.",
+    "Phil": "Thumping, driving bass all the way through.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson (Samson & Delilah)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:07:22.087621+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-16.fob-schoeps.fishman.15395.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Good balcony‑style audience recording with crisp highs, but marred by dropouts in Eyes, Playing In The Band and Comes A Time.",
+  "review": "The tape captures a surprisingly clear, board‑proximate sound that many reviewers describe as punchy and slightly crisper than comparable releases. However, the recording suffers noticeable drop‑outs – notably in \"Eyes,\" \"Playing In The Band\" and \"Comes A Time\" – which prevent it from being flawless. No specific musical commentary was provided, so the performance itself remains unassessed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the recording's clarity but deducts points for audible drop‑outs, with no commentary on musical performance."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clean reverb and crisp highs from a balcony/near‑board position; however, there are nasty drop‑outs in Eyes (34:55) and cuts in Playing In The Band and Comes A Time."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Eyes",
+      "Playing In The Band",
+      "Comes A Time"
+    ],
+    "setlist_flow": "No specific comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:46:52.402053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-19.140366.set2.aud.flac1648"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording with noticeable phase and treble issues, but a high‑energy show featuring strong jams like Midnight Hour and Cumberland.",
+  "review": "The concert captures an electric first set full of extended jams (Midnight Hour, Superstitious>Bottom) and a second set that shines on post‑space numbers such as GDTRFB → Stella → Round → Lovelight. While the performance is praised for its intensity and band interplay, the audio suffers from a phase‑inverted channel, Dolby NR artefacts, and noticeable hiss, making the listening experience only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show is generally well‑received with several standout moments, but technical flaws in the recording lower overall enjoyment; weighted blend yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "One channel is phase‑inverted causing strange imaging; Dolby noise reduction appears improperly decoded, exaggerating treble; audible hiss throughout the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Midnight Hour",
+      "Cumberland",
+      "Me and My Uncle",
+      "Superstitious>Bottom",
+      "GDTRFB > Stella > Round > Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, high‑energy first set with seamless segues (MH → WTD → BBM) and a second set that shines on the post‑space sequence; overall pacing keeps momentum despite occasional wandering feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted noodling on Walking the Dog and prompting Bob about his guitar; contributes energetic lead work.",
+    "Phil": "Provides a bass line run on Lovelight and shouts \"Cumberland\" before the song, showing active involvement.",
+    "Bob": "Lays chords to Midnight Hour, sings Me & My Uncle, and leads the blistering Cumberland performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Superstitious>Bottom": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB > Stella > Round > Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:39:09.626291+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-08.118481.sbd.healy.damico.flac16"
+}

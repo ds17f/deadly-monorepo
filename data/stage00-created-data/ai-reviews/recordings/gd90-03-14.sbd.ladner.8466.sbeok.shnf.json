@@ -1,0 +1,87 @@
+{
+  "summary": "Clear soundboard recording of the March 14 1990 Cap Centre show, highlighted by a scorching first set featuring Loose Lucy and Let It Grow.",
+  "review": "The SBD capture is generally clean with only faint tape‑hiss between songs, letting the band’s peak spring‑90 energy shine through.  Reviewers rave about the opening set – Cold Rain & Snow, The Stranger, Row Jimmy and especially the explosive Loose Lucy that sent the crowd into a frenzy – while Let It Grow tops the first‑set climax.  The second set is solid with Crazy Fingers → PITB → U.J.B. highlights but receives fewer accolades than the opener.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over two dozen detailed reviews overwhelmingly praise the performance and note good‑to‑excellent soundboard quality; only a few low‑star comments mention minor setlist preferences, giving a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD mix with strong crowd presence; slight tape hiss between songs but no major drop‑outs or distortion. Listeners note the recording captures the venue’s energy well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "Let It Grow",
+      "Cold Rain & Snow",
+      "The Stranger",
+      "Row Jimmy",
+      "Crazy Fingers",
+      "U.J.B.",
+      "PITB",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set launches hot and stays high‑energy, building to the peak of Loose Lucy and Let It Grow.  Second set is competent with a notable Crazy Fingers → PITB → U.J.B. sequence but feels more of a follow‑up than a second climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers cite Jerry’s “furious leads”, high‑on‑the‑fret‑board bends, and overall scorching solo work.",
+    "Phil": "Praised for intricate bass lines that weave in and out of the jams (e.g., “Phil runs in and out of his guitar‑work with intricate execution”).",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work receives glowing remarks – “tearing sh*t up”, “shines throughout”, and especially strong piano on Big River and Good Times Blues.",
+    "Drums": "Bill’s drumming is noted for the sizzling second‑set drum solo that fuels the PITB → U.J.B. transition."
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Let It Grow": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.J.B.": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "PITB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:22:23.202503+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-14.sbd.ladner.8466.sbeok.shnf"
+}

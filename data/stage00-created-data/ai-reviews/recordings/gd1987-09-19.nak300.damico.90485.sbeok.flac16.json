@@ -1,0 +1,39 @@
+{
+  "summary": "Very good recording with only minor distortion captures a solid show highlighted by an underrated \"Playing in the Band\" performance.",
+  "review": "The sound on this tape is generally very clear and well‑balanced, with just an extremely faint hint of distortion that doesn’t detract from listening. Musically the concert is described as decent overall, with the second‑set “Playing in the Band” standing out as a hidden gem for the reviewer. No major flaws are noted, making it an enjoyable listen for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) praising both the recording and the performance; solid show quality with a standout track, but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Very good overall sound with only extremely minor distortion; clear mix and balanced levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally solid performance throughout; no specific pacing issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:57:02.353481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-19.nak300.damico.90485.sbeok.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Great acoustic show with clear, vocal‑forward soundboard recording; Cassidy and the CD stand out.",
+  "review": "Reviewers rave about this acoustic set, highlighting the front‑and‑center vocals and a solid setlist that includes standout performances of \"Cassidy\" and the mysterious “CD”. The soundboard source delivers an intimate, clear mix that lets the acoustic instruments shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one brief review but it is wholly positive about both performance and sound; limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Vocals are prominently placed, giving a clear acoustic mix; no specific issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "CD"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set praised for its cohesive flow and engaging song choices."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CD": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:11:58.656698+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-06.151267.sbd.betty.anon.noel.flac1644"
+}

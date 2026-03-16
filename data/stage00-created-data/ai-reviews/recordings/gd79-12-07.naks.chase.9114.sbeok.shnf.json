@@ -1,0 +1,31 @@
+{
+  "summary": "Average show with a great jam before drums, but the soundboard recording suffers from noticeable phase problems.",
+  "review": "The performance is described as fairly average overall, highlighted only by an impressive jam leading into the drum solo. The source appears to be a soundboard (SBD), which generally sounds good, yet reviewers note that the tape is out of phase, detracting from the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "low",
+    "rationale": "Limited feedback (only two brief reviews) shows a middling show (≈3/5) and recording issues (phase problems ≈2.5/5); weighted average yields ~2.9."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally decent SBD source, but listeners report the audio is out of phase, causing muddiness and reduced clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Overall an average set with a notable jam right before the drums; no specific song issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T03:09:33.013324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-07.naks.chase.9114.sbeok.shnf"
+}

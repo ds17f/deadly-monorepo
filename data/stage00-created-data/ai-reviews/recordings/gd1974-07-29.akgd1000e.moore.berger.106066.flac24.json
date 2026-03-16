@@ -1,0 +1,31 @@
+{
+  "summary": "Great show captured with a decent recording",
+  "review": "Reviewers describe the concert as a great performance and thank the recorder, Jerry Moore. The audio is noted only as “decent,” indicating it is listenable though no detailed technical comments are provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the show and mentions a decent recording; limited data prevents higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Described as a decent recording; no specific comments on source type, clarity or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T23:16:29.000979+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-29.akgd1000e.moore.berger.106066.flac24"
+}

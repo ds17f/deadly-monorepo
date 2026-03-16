@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture with crystal‑clear mix, highlighted by a thumping Shakedown Street bass and a soaring Playing in the Band jam.",
+  "review": "The recording is praised as fantastic and almost feels like the band is playing in your living room – crisp, full‑bodied sound with superb bass response.  The show itself is described as solid and spectacular, with particular love for the Shakedown Street opener and a ripping Playing in the Band jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews are highly positive (average 4.75 stars); reviewers consistently note excellent sound quality and a strong performance, giving confidence in a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix that feels intimate; bass response on Shakedown Street highlighted as outstanding; no reported drop‑outs or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the overall show as solid and spectacular, with a strong opening and high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass response praised on Shakedown Street opener.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:47:19.062397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-11.schoeps.oade.sacks.8794.sbefail.shnf"
+}

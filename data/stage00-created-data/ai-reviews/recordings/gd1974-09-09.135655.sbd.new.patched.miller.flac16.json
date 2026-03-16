@@ -1,0 +1,80 @@
+{
+  "summary": "Soundboard recording that needs pitch correction but captures a solid first night of the Sept ’74 London run, highlighted by Scarlet Begonias, Mexicali Blues and a standout Truckin' → Wharf Rat.",
+  "review": "The upgraded SBD source finally restores the missing songs from the September 1974 Alexandra Palace show. While the audio requires pitch tweaks and some tracks are muffed or channel‑swapped, the performance shines on Scarlet Begonias, Mexicali Blues and a monster Truckin' that rolls into a late‑night Wharf Rat. Overall it’s an enjoyable snapshot of a historic night, though nights two and three outshine it.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show is decent with several standout jams (≈3.5/5) but recording needs noticeable pitch correction and has occasional clarity issues (≈3/5). Weighted average yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Audio is an SBD that required extensive pitch correction (-1% to -5.5% on various tracks) and channel swaps; some songs have muffed vocals (Bertha) and wavering pitch, making a few sections unlistenable without intervention."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Mexicali Blues",
+      "Truckin'",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Uncle John's"
+    ],
+    "setlist_flow": "First night of a three‑show London run, presented as one long set. Early material (Scarlet, Mexicali, Row Jimmy) is strong, the mid‑set is average, and the second half builds to an epic Truckin' → Wharf Rat climax."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead work on the opening jam of Truckin' is praised; he sounds 'on' while Bob is a bit off.",
+    "Phil": "Solid bass foundation noted even when Bertha’s vocals are muffed.",
+    "Bob": "Not quite \"on\" this night, especially during Truckin'.",
+    "Keys": "Keith is highlighted as a central player all night; his organ work is solid throughout.",
+    "Drums": "Billy Kreutzmann’s drumming drives the high‑energy moments on Scarlet and Mexicali."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:02:48.847558+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-09.135655.sbd.new.patched.miller.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality audience tape of an electrifying 1974 show with a soaring China Cat Sunflower / I Know You Rider and superb guitar work.",
+  "review": "The recording captures a vibrant performance that many fans describe as one of the best from ’74, highlighted by a flowing China Cat Sunflower → I Know You Rider stretch, an inspired rendition of The Greatest Story Ever Told, and a beautiful Wharf Rat.  Sound quality is praised as above‑average for an audience source, with clear guitars (though drums sit a bit low).  While most listeners are enthusiastic, a few find the set flat or unlistenable, giving the overall impression a mixed but largely positive reception.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews rate the show and recording very highly (5‑star), noting excellent setlist, strong playing, and good sound quality; a few low‑star outliers lower the average but do not dominate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced for an audience tape; guitars stand out, drums are a bit low in mix, but overall better than many comparable audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower → I Know You Rider",
+      "The Greatest Story Ever Told",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans praise the seamless flow of the second‑set sequence (China Cat / Rider) and a setlist that feels both sweet and energetic, though a minority felt the performance was flat."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work praised as flowing, creative and beautifully voiced; tone described as perfect by several reviewers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum levels noted as a little low in the mix."
+  },
+  "song_mentions": {
+    "China Cat Sunflower → I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:14:02.159540+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-22.aud.obv.30999.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Sparse review; a 4‑star rating hints at an enjoyable show and decent recording, though no specifics are given.",
+  "review": "The only reviewer gave the tape four stars but offered no commentary on performance or audio quality. This suggests the concert is generally liked, but there are no details about standout moments, set flow, or technical sound characteristics.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single brief 4‑star review; indicates overall satisfaction but lacks detail to refine rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T17:21:50.716089+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-09-27.early.aud.warner-jupillej.12064.sbeok.shnf"
+}

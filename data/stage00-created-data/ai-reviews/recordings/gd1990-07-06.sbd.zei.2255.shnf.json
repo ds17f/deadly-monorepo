@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a vibrant 1990 show highlighted by Brent's magical keyboards and standout renditions of Standing on the Moon and He's Gone.",
+  "review": "Fans rave about this recording’s crystal‑clear mix, calling it “exact” and “great” throughout. The performance shines with Jerry’s enveloping guitar on Standing on the Moon, a soaring 30‑minute stretch into He’s Gone, and Brent’s keyboards at the peak of his final tour. Overall the show is described as one of the best of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All five reviews are overwhelmingly positive, praising both the musical performance and the sound quality; the average star rating (3.8) is boosted by consistent high praise, justifying a solid 4.2 overall."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly note a crisp, balanced mix that sounds great on the speakers; no drop‑outs or muffling are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its smoothness and a remarkable 30‑minute segment from Standing on the Moon into He's Gone, creating one of the most memorable stretches of music."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as bright and enveloping, especially on Standing on the Moon.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards were called magical and a highlight of his last tour.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:44:08.898228+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-06.sbd.zei.2255.shnf"
+}

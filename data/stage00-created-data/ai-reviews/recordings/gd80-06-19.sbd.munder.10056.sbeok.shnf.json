@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording with noticeable high‑treble and vocal clipping but a solid mid‑80s show featuring a strong China > Rider, slow Althea and rich vocals.",
+  "review": "The performance is generally tight – Jerry’s lead work is articulate, Bobby’s voice shines and the China/Rider sequence lands well – while slower moments like Althea are especially appreciated. The soundboard mix, however, leans heavy on the high end, clips vocals at times and lets Brent dominate the keyboard level, making the audio only fair despite a decent show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical tightness and specific song moments (show quality ~3.8/5) but repeatedly note high‑treble, clipping and balance problems in the mix (recording quality ~3.0/5). Weighted combination yields a 3.7 overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Too much treble/high‑end, vocals often stand out and clip; keyboards (Brent) are prominent in the mix; Garcia’s guitar can be buried, especially during China/Rider."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > The Rider",
+      "Althea",
+      "Peggy-O",
+      "Bertha",
+      "They Love Each Other"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set feels like a warm‑up with a solid, tight groove; transitions are smooth and the band builds energy toward the later shows in the run."
+  },
+  "band_member_comments": {
+    "Jerry": "Articulate and in control on lead guitar, though his tone is sometimes buried by the mix.",
+    "Phil": "",
+    "Bob": "Vocals (Bobby) are rich and strong; backup harmonies noted as solid.",
+    "Keys": "Brent’s keyboards dominate the mix, contributing to the high‑end emphasis.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:39:58.469659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-19.sbd.munder.10056.sbeok.shnf"
+}

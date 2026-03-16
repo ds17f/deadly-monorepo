@@ -1,0 +1,79 @@
+{
+  "summary": "A legendary Providence show with smoking Bertha, Eyes and Morning Dew; audience recording by Jim Wise is clear enough despite first‑set sound trouble.",
+  "review": "Fans hail this 1983 Providence concert as one of the era’s highlights – the second set erupts with a monster Bertha, a soaring Eyes jam and a heartfelt Morning Dew, while the first set closes powerfully on LLR→China Cat. The audience recording captured by Jim Wise is generally good, though listeners note some sound‑trouble in the opening set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Four out of five reviewers gave 5 stars and praised multiple standout songs; only one moderate 3‑star review slightly lowers the average. Recording quality is deemed good, so overall rating is high."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear audience capture with solid ambience; first‑set suffers from occasional sound trouble/muddiness but overall listenable and praised for Jim Wise's effort."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Eyes",
+      "Morning Dew",
+      "China Cat > Rider",
+      "Esau",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds to a thrilling LLR→China Cat finish; second set opens unusually with Esau and then explodes into high‑energy jams (Bertha, Eyes, Throwing Stones) delivering an unforgettable night."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for incredible solos in Eyes and strong riffs throughout the show.",
+    "Phil": "Described as blowing the roof off with his bass on Morning Dew.",
+    "Bob": "Great vocals all night; notable intro to \"Don't Ease Me In\".",
+    "Keys": "Brent (keyboard) noted for nice riff work during jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T05:59:27.128710+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-20.aud.wise.92322.sbeok.flac16"
+}

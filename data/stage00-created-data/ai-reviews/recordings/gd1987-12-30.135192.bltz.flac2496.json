@@ -1,0 +1,31 @@
+{
+  "summary": "A fan‑favorite show praised highly despite no details on recording quality",
+  "review": "The sole reviewer rates this concert a perfect five stars, calling it one of their favorites and noting it was only the third show they’ve heard. No information is provided about the source or sound quality, nor are any specific songs or performances highlighted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "The single 5‑star review indicates strong positive sentiment for the performance, but there is no data on recording quality or musical specifics, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on set structure or pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T05:49:01.788726+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-30.135192.bltz.flac2496"
+}

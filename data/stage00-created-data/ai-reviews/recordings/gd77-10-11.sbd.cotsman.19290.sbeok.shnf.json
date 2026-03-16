@@ -1,0 +1,88 @@
+{
+  "summary": "A high‑energy 10/11/77 show captured on a solid soundboard tape – stellar Help > Slip > Franklin’s, Let It Grow and Dancin’ jam dominate a mostly praised performance.",
+  "review": "The October‑1977 concert is famed for its funky groove, with the iconic Help > Slip > Franklin’s sequence, a blistering Let It Grow and an unforgettable Dancin’ In The Streets jam leading a second set of pure Dead magic.  Most listeners rave about the soundboard source – clear, well‑balanced and only suffering occasional glitches (a cut in Slip and minor drop‑outs).  While a few reviewers note Jerry’s playing as uneven early on, the overwhelming consensus is that the band delivers one of ’77’s most compelling shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 40 reviews (mostly 5‑star) praise both musical performance and recording quality; only a handful of mixed or negative comments keep the rating just below “exceptional.”"
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp, well‑balanced SBD with occasional minor glitches (a slip‑segment cut and a few dropouts). No major tape hiss or balance problems reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Let It Grow",
+      "Dancin' In The Streets",
+      "Estimated > Eyes",
+      "Not Fade Away",
+      "Jack Straw",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Help > Slip > Franklin's (early slip cut)",
+      "Wharf Rat (some lyrical slips)"
+    ],
+    "setlist_flow": "First set opens with a funky Help/Slip/Frank combo that tightens after an initial wobble; the second set builds into a marathon of groove‑heavy jams—Let It Grow, Dancin', Estimated/Eyes and a high‑energy Not Fade Away—creating a seamless, dance‑floor‑ready flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Most reviewers love his funk‑filled leads (especially on Let It Grow and Dancin'), though a few note a sloppy start to Help/Slip and occasional lyrical slips.",
+    "Phil": "Praised for the booming opening bass line on Help and overall solid rhythm work throughout the set.",
+    "Bob": "Mentioned mainly in context of vocal harmonies; no strong criticism or praise beyond general band remarks.",
+    "Keys": "Keith’s post‑spring ’77 style gets nods (especially during Estimated/Eyes), occasional references to Brent but no major critique.",
+    "Drums": "Bill’s drumming is described as “booming” and tight, especially on the funk jams; no negative comments."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 22,
+      "negative_mentions": 3,
+      "total_mentions": 25
+    },
+    "Let It Grow": {
+      "positive_mentions": 20,
+      "negative_mentions": 0,
+      "total_mentions": 20
+    },
+    "Dancin' In The Streets": {
+      "positive_mentions": 18,
+      "negative_mentions": 1,
+      "total_mentions": 19
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Not Fade Away": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Jack Straw": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Peggy-O": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Dire Wolf": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-25T04:49:49.159149+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-10-11.sbd.cotsman.19290.sbeok.shnf"
+}

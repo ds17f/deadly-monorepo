@@ -1,0 +1,39 @@
+{
+  "summary": "A stellar acoustic‑focused show with great banter shines, but the release suffers from a distorted mono archival mix.",
+  "review": "Reviewers rave about the unique acoustic set, the superb version of “Going Down The Road,” and the lively on‑stage chatter, noting that the concert’s flow – acoustic → NRPS → Dead sets – works beautifully.  However, the recording is described as a mono, distorted mix with a newer stereo restoration available, which limits its listening quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (high show rating) offset by poor archival mono recording; enough detailed reviews to form a balanced estimate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Distorted, mono mix described as archival; a later stereo restoration from master tapes is recommended for better sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Going Down The Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set leading into an NRPS set and then the Dead's own sets creates a compelling, varied concert experience, highlighted by memorable banter."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Going Down The Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:59:38.906205+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-08.aud.warner.17184.sbeok.shnf"
+}

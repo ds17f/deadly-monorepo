@@ -1,0 +1,84 @@
+{
+  "summary": "Crystal‑clear audience recording of a top‑tier mid‑90s show with killer versions of Good Times, Sugaree, Scarlet Begonias, The Wheel, Black Peter and Weight.",
+  "review": "The recording captures an unusually clear, close‑miked audience sound that many reviewers liken to a soundboard feed. Musically the concert is praised as one of the better ’90s outings – Vince’s keyboards are “top of his game,” and the band delivers standout performances of Good Times, Sugaree, Scarlet Begonias, The Wheel, Black Peter and a flawless Weight. Minor complaints focus on missing tracks and a quirky track‑order issue rather than the music itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance with multiple standout songs and very high praise for audio clarity outweighs only minor setlist completeness issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear, close‑sounding and “like a SBD”; reviewers call it insane quality despite being an audience tape. No major distortion or balance problems noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Times",
+      "Sugaree",
+      "Scarlet Begonias",
+      "The Wheel",
+      "Black Peter",
+      "Weight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout, with a particularly praised second set (Black Peter → Weight). Reviewers note the setlist contains several “gems” that have become personal favorites."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer describes an intense telepathic solo that they felt disrupted the jam; otherwise no specific praise or criticism.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince is highlighted as being at the top of his game, delivering strong keyboard work.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Times": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Weight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:33:55.057212+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-05.schoeps.evans.gems.33827.sbeok.flac16"
+}

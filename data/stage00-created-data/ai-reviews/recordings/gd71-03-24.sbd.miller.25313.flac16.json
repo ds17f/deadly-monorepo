@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a spring‑1971 show highlighted by scorching Hard to Handle, early Bertha and a rare King Bee",
+  "review": "Fans rave about the musical fire of this March‑24‑71 performance – Jerry’s soaring solo on Hard to Handle, Phil’s bass‑heavy jams, and standout renditions of Bertha, King Bee and the Truckin’ → Drums → Other One sequence. The soundboard source is praised for its clear, full‑range fidelity, making it a highly listenable document despite occasional set‑list ordering quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews are 4–5 stars and extol both the show’s musical peaks and the clean soundboard recording; only one low‑rating comment tempers the average, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced capture with typical ’71 bass emphasis; reviewers note good overall clarity and no major dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Hard to Handle",
+      "King Bee",
+      "Truckin'",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised as a complete, upbeat set; while the soundboard file is slightly out of order, listeners feel the pacing and transitions (especially the Truckin’ → Drums → Other One stretch) are strong."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Hard to Handle is described as intense, with perfect bending and classic ’71 tone.",
+    "Phil": "Heavy bass presence noted; his climbing‑fretboard jam leading into Hard to Handle receives high praise for intensity.",
+    "Bob": "Bob Weir’s (Bobby) solo at the start of the break is called one of his best, setting up the subsequent peaks.",
+    "Keys": "",
+    "Drums": "The drum segment within Truckin’ → Drums → Other One is highlighted as a pleasure."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "King Bee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:48:10.682508+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-03-24.sbd.miller.25313.flac16"
+}

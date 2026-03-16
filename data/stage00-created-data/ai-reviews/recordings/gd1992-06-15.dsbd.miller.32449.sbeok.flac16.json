@@ -1,0 +1,81 @@
+{
+  "summary": "Crisp soundboard capture of a high‑energy Giants Stadium show featuring a monster Birdsong and standout Hell in a Bucket, Terrapin and Not Fade Away",
+  "review": "The recording is a clean, crisp SBD that fans repeatedly call the best‑quality source for this gig. Musically the concert is remembered for an epic 14‑minute Birdsong, a powerhouse Hell in a Bucket opener, a soaring Terrapin, and tight finishes on Not Fade Away and Knockin’ on Heaven’s Door, with Vince’s keyboards and the drums getting particular praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews highlight a superb performance (many 4‑5 star ratings) and an excellent soundboard source; only minor criticism of one song keeps the rating just below top‑tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly note a crisp SBD with no reported drop‑outs or muddiness; it’s considered the best‑quality source for this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Hell in a Bucket",
+      "Terrapin",
+      "Same Thing",
+      "Not Fade Away",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [
+      "So Many Roads"
+    ],
+    "setlist_flow": "First set launches with a powerful Hell in a Bucket and settles into a long, hypnotic Birdsong; the second set delivers solid jams (Box, Saint) and a memorable Terrapin, closing strong with Not Fade Away and an uplifting Knockin’ on Heaven’s Door."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for switching through several mod settings during Terrapin and guiding Steve Miller's guest spot; overall his playing is described as varied but solid.",
+    "Phil": "Only a brief \"We Want Phil\" cue is mentioned, no specific performance comment.",
+    "Bob": "Bobby’s vocal delivery on Throwing Stones is called casual and somewhat understated.",
+    "Keys": "Vince is praised repeatedly – tasteful piano riffs, great Voce DMI emulator work, and a standout Knockin' on Heaven's Door segment.",
+    "Drums": "Drums are described as \"hot\" with an energetic Revenge of the Nerds jam."
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:06:04.997043+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-15.dsbd.miller.32449.sbeok.flac16"
+}

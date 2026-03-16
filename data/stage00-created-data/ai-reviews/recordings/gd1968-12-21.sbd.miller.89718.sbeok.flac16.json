@@ -1,0 +1,75 @@
+{
+  "summary": "High‑energy 1968 show with a smoking Alligator and Lovelight, captured on a Charlie Miller soundboard that sounds great despite minor tape hiss.",
+  "review": "The performance is hailed as a barn‑burner – the Alligator, Lovelight, The Other One, Caution and several other jams are described as stellar, and the drumming between Billy and Mickey gets special praise.  The recording is a classic Charlie Miller soundboard: crisp and vibrant with only slight hiss, making it highly listenable for a 1968 tape.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive comments about the music (standout jams, energetic playing) and generally favorable remarks on the soundboard quality outweigh a few minor complaints about hiss."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the sound great, crisp and vibrant; a couple note slight tape hiss or “crappy” fidelity but nothing that obscures the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator",
+      "Lovelight",
+      "The Other One",
+      "Caution",
+      "Feedback",
+      "Bid You",
+      "Hurts"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as a hot, acid‑drenched barn burner with strong momentum throughout; the band moves seamlessly from Alligator into drums and back, delivering high‑energy jams that keep the excitement rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is repeatedly praised – the Alligator jam ‘cooks’ and his tone is highlighted as a highlight of the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The dual drumming of Bill Kreutzmann and Mickey Hart is called “incredible” and a standout element of the performance."
+  },
+  "song_mentions": {
+    "Alligator": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feedback": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bid You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hurts": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:04:28.844425+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-12-21.sbd.miller.89718.sbeok.flac16"
+}

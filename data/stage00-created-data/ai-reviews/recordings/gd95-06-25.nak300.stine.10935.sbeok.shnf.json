@@ -1,0 +1,97 @@
+{
+  "summary": "A solid audience recording that captures an energetic RFK show highlighted by a soaring Wharf Rat, a fiery Shakedown Street opener and a memorable Space > Wharf Rat transition.",
+  "review": "The performance is generally praised for Jerry’s inspired guitar work on Wharf Rat and the excitement of the Shakedown Street opening, with several fans noting standout moments like the Rain‑Run start to set two, Samba and the Ship of Fools.  The Wally Stine audience tape is described as clear and pleasant overall, though a few listeners call out occasional spotty sections.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers are enthusiastic about the music (especially Wharf Rat and Shakedown) while noting only minor recording flaws; a few negative comments keep the overall rating just below four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners repeatedly mention \"nice sound\" and \"great audio,\" with one noting it is likely the Wally Stine audience tape; a couple of spots are described as \"spotty\" but overall clarity is good."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Shakedown Street (opener)",
+      "Space > Wharf Rat",
+      "Ship of Fools",
+      "Rain‑Run (start of set two)",
+      "Samba"
+    ],
+    "poor_songs": [
+      "Shakedown Street (some felt sad)",
+      "Loose Lucy"
+    ],
+    "setlist_flow": "The first set builds nicely with strong openings, while the second set kicks off with a cool Rain‑Run and maintains momentum through Samba and Ship of Fools; the Space > Wharf Rat transition is frequently cited as a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for nailing Wharf Rat, delivering an energetic Shakedown Street opener and showing extra energy compared to the previous night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mentioned in \"drumz/space\" context; no specific criticism or praise beyond that."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rain-Run": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samba": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Train to Cry": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rainy Day Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Box": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:02:50.035827+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-25.nak300.stine.10935.sbeok.shnf"
+}

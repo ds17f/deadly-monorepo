@@ -1,0 +1,82 @@
+{
+  "summary": "A scorching late‑80s show highlighted by a blistering first set and an all‑awesome China>Rider>Saturday Night encore; recording quality is unremarked but presumed solid.",
+  "review": "The concert is praised as an “absolute scorcher” with high energy in the first set, standout performances of Good Times Roll, Ramblin’ Rose and Let It Grow, and a flawless second‑set finale featuring China into Rider and Saturday Night. The reviewer notes a few timing slips on Stranger and Row Jimmy but overall rates the show highly (4 stars). No specific recording issues are mentioned, suggesting an acceptable sound source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with several standout moments outweighs minor sloppy songs; lack of recording comments prevents a higher confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer did not comment on soundboard, audience mix, clarity or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Times Roll",
+      "Ramblin' Rose",
+      "Let It Grow",
+      "China",
+      "Rider",
+      "Saturday Night"
+    ],
+    "poor_songs": [
+      "Stranger",
+      "Row Jimmy"
+    ],
+    "setlist_flow": "First set praised for its energy despite a few timing hiccups; second set described as great from start to finish, ending with an especially strong China>Rider>Saturday Night sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Belts out a killer Ramblin' Rose, noted as a highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramblin' Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:24:02.772266+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-30.141889.UltraMatrix.cm.sbd.miller.flac1644"
+}

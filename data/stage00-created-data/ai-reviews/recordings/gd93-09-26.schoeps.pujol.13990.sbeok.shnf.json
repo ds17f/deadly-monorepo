@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality garden recording highlighted by a spectacular Standing on the Moon performance",
+  "review": "The show is remembered almost exclusively for Jerry’s soaring rendition of “Standing on the Moon,” which many reviewers call the best ever and the high point of the entire tour.  Aside from that centerpiece, the set was solid (with a nice “High Time” treat) and the recording, while not pristine, captures enough clarity and garden intimacy to make it worthwhile.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.15/5, most comments are enthusiastic about the performance (especially SOTM) and the recording is deemed decent despite minor acoustic complaints."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note a slight lack of polish in the garden acoustics and wish for an even better source, but overall the tape is clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert builds toward a powerful “Standing on the Moon” that many fans cite as the tour highlight; the rest of the set is described as solid and enjoyable, with no major dips."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for nailing ‘Standing on the Moon,’ overcoming earlier flubs, and delivering an emotional high‑point.",
+    "Phil": "Noted to be more prominent on this recording; fans love his bass presence here.",
+    "Bob": "Mentioned starting to use acoustic guitar during the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:53:31.433081+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-26.schoeps.pujol.13990.sbeok.shnf"
+}

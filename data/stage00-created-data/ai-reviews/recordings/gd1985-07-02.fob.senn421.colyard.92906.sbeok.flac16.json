@@ -1,0 +1,91 @@
+{
+  "summary": "Indoor mid‑80s show with strong Terrapin Station, Wharf Rat and Revolution → Brokedown performances; the audience recording is a bit tinny but generally listenable.",
+  "review": "The concert captures a tight mid‑summer ’85 Dead set – highlights include a fiery Terrapin Station, solid Wharf Rat, an inspired Revolution → Brokedown encore and a standout Saint of Circumstance. The audience (AUD) recording is noticeably tinny with an over‑emphasized high end, but a modest EQ can tame it, and the sound was decent for those close to the stage.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Reviewers praise many songs and overall band tightness (show quality ~4/5) but note recording flaws such as tinny highs and occasional sound issues (recording quality ~3/5). Weighted average yields about 3.7 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tinny character with overly bright high end; minor EQ can improve clarity. Sound described as \"just OK\" but pleasant for front‑row listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Wharf Rat",
+      "Revolution → Brokedown Palace",
+      "Saint of Circumstance",
+      "Crazy Fingers",
+      "Women Are Smarter"
+    ],
+    "poor_songs": [
+      "Drums"
+    ],
+    "setlist_flow": "First set strong with Terrapin Station, Cassidy and a tight flow; second set more erratic but salvaged by Saint of Circumstance and high‑energy encores. Indoor setting gave the crowd a party vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong guitar tone praised; solo on Revolution highlighted as saving the song.",
+    "Phil": "",
+    "Bob": "Noted for his pink Alligator T‑shirt, no specific musical comment.",
+    "Keys": "",
+    "Drums": "Technical problems during Drums segment noted."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Revolution → Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:31:01.835488+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-02.fob.senn421.colyard.92906.sbeok.flac16"
+}

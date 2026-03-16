@@ -1,0 +1,76 @@
+{
+  "summary": "High‑quality soundboard capture of the Avalon ’68 show with a mind‑melting Cryptical Envelopment and scorching Dark Star, Eleven, and powerful drumming.",
+  "review": "Both reviewers rave about the musical firepower of this late‑summer 1968 Avalon concert – highlighting an intense second round of Cryptical Envelopment, a near‑perfect Dark Star, a dynamite Eleven, and a soulful Death Don't Have No Mercy. The Charlie Miller soundboard mix is described as “good quality,” with only minor splice quirks, making the performance very enjoyable despite a few average moments in the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Both reviews are detailed and highly favorable (4‑5 stars). The show is praised for several standout performances, while the recording is noted as good quality soundboard, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Charlie Miller mix described as good quality; minor splice/abrupt transition from New Potato to drums noted but no major audio flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "The Other One",
+      "Death Don't Have No Mercy",
+      "Cryptical Envelopment"
+    ],
+    "poor_songs": [
+      "New Potato",
+      "Drums"
+    ],
+    "setlist_flow": "First set generally stronger; second set contains an abrupt splice between New Potato and Drums, but overall the concert builds a powerful, psychedelic arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Top‑notch guitar work, especially on Death Don't Have No Mercy; feeding off the band’s energy.",
+    "Phil": "Great bass interaction, part of the tight group dynamic.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drummers are fabulous in the first set (Eleven), less interesting later."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Potato": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:34:29.747615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-10-13.sbd.oleynek.revell.1027.shnf"
+}

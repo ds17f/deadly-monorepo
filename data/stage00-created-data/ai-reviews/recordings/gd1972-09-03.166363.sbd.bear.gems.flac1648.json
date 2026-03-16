@@ -1,0 +1,98 @@
+{
+  "summary": "Soundboard recording of a three‑set show with crisp audio (minor slowdown) and standout jams like Playing in the Band, The Other One and He's Gone",
+  "review": "The three‑set performance is praised for its deep, flowing improvisations – especially the soaring Playing in the Band/Other One sequences and the fiery He’s Gone/Wharf Rat moments. The soundboard source is generally clear, though one listener notes a slight slowdown in the second set. Overall fans rate the show exceptionally high.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers are enthusiastic (two 5‑star, one detailed rave) and mention no serious recording flaws; the musical performance is described as exceptional with many highlight jams."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard mix overall; a few comments about a slight tempo slowdown in the second set but no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "The Other One",
+      "He's Gone",
+      "Wharf Rat",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set marathon that builds from a deep Bird Song opener into intense Playing in the Band jams, then rolls through varied second‑set tunes (Bertha, El Paso, Truckin') before a third set packed with extended improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar returns strong after a broken string; described as \"going ape shit\" and delivering powerful vocals on Wharf Rat.",
+    "Phil": "Phil's bass is praised for “wisdom from the Phil zone” and high‑end backing vocals throughout the show.",
+    "Bob": "Weir is noted for nailing lyrics, providing backup vocals on Casey Jones and other tunes.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:04:00.040597+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-03.166363.sbd.bear.gems.flac1648"
+}

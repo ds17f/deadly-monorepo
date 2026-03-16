@@ -1,0 +1,63 @@
+{
+  "summary": "High‑energy set featuring Brokedown Palace, Sugar Magnolia into Caution and Uncle John's Band; recording sounds fine though source is unknown",
+  "review": "The reviewer rates the show a perfect five stars, highlighting a strong sequence that runs from Brokedown Palace through Sugar Magnolia > Caution (Do Not Stop On Tracks) > jam into Uncle John's Band. No specific comments on the tape quality are given, so the recording is presumed listenable but its source type cannot be identified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single enthusiastic 5‑star review points to an excellent performance; lack of recording details limits confidence, so a strong but slightly conservative rating is applied."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer comments on sound clarity or mix; assumed acceptable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Sugar Magnolia",
+      "Caution (Do Not Stop On Tracks)",
+      "Jam",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its smooth transitions, especially the Sugar Magnolia > Caution > jam sequence leading into Uncle John's Band."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution (Do Not Stop On Tracks)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:07:31.296731+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-22.136682.sbd.sirmick.flac1648"
+}

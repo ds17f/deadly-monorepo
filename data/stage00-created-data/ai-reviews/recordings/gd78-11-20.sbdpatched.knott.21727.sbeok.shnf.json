@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard recording with uneven first‑set fidelity but a funk‑filled second set highlighted by a smoking Shakedown Street, Franklin’s Tower and World to Give.",
+  "review": "The show shines in its second half – the jam that opens the set, a blistering Shakedown Street solo, and standout renditions of Franklin’s Tower, World to Give and Jack‑A‑Roe earn high praise. The patched soundboard source is uneven: the first set suffers from muffled, drop‑out‑laden audio and a noticeable speed anomaly, while the second set sounds much clearer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers award five stars for musicianship and highlight numerous standout songs; recording issues are noted but confined mainly to the first set, resulting in a strong overall impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Patchy soundboard tape – first set described as horrible, muffled and with speed/pitch issues; second set clear and enjoyable. Occasional drop‑outs and “iffy” sections are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "World to Give",
+      "Shakedown Street",
+      "Jack-A-Roe"
+    ],
+    "poor_songs": [
+      "Passenger"
+    ],
+    "setlist_flow": "The second set is praised as the highlight, with a funky opening jam‑drums‑jam and an unforgettable Shakedown Street. The first set’s musical content is less discussed and its impact is dulled by poor recording quality."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers laud his solo work – the opening jam “cooks,” a mighty fine Shakedown Street solo, and overall guitar tone; one note mentions pitch/speed oddities.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The jam‑drums‑jam intro is singled out as tight and energetic."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "World to Give": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:37:33.020187+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-20.sbdpatched.knott.21727.sbeok.shnf"
+}

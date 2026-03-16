@@ -1,0 +1,108 @@
+{
+  "summary": "Good‑ish matrix recording of a solid 1987 Irvine show with standout China‑Rider and Brokedown Palace moments",
+  "review": "The tape captures an enjoyable two‑set performance from the spring ’87 West Coast run. Reviewers rave about the chemistry on the China → Rider transition, the emotional encore of Brokedown Palace, and bright highlights like Mississippi Half‑Step and Minglewood Blues, while noting a few average spots (excessive Not Fade Away, a lukewarm Alabama). The matrix source is clear enough for most listeners, though the sound is described as “ok to fair” with occasional vocal wobble.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance and cite several standout songs; recording quality is mixed but generally listenable, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Sound described as ok/mediocre to fair‑midland; vocal tracks shaky and some mids a bit muffled, but overall clarity is sufficient for enjoyment. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Brokedown Palace",
+      "Mississippi Half‑Step",
+      "Minglewood Blues",
+      "Man Smart (Woman Smarter)",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Not Fade Away (overused)",
+      "Alabama Getaway (underwhelming)",
+      "The Miracle (trash‑y feel)"
+    ],
+    "setlist_flow": "Two well‑balanced sets with a breezy opener, lively mid‑set jams and an emotional encore; transitions (especially China → Rider) are highlighted as smooth, though some songs felt average."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is noted both for busy phrasing that sometimes clashes with the drums and for strong punctuating leads on Miracle and Brokedown Palace.",
+    "Phil": "Praised for harmonized vocals on several numbers (e.g., \"Tons\"/Cassidy) and for a tight jam with Jerry during the China‑Rider transition.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Comments about drumming being “should‑be precise” yet occasionally loose; drums/space sections were described as professional but lacking transcendence."
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:00:50.046964+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-19.matrix.ladner.3822.sbeok.shnf"
+}

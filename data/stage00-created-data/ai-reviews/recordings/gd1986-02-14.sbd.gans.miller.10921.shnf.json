@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording of a fun, if slightly overshadowed, show featuring strong Let It Grow and Brokedown Palace performances.",
+  "review": "The concert is described as terrific and enjoyable despite feeling somewhat \"overshadowed\" by other factors. Reviewers especially highlight the standout renditions of Let It Grow and Brokedown Palace, while no specific recording flaws are mentioned, suggesting a solid soundboard source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews range from high praise (5 stars) to moderate (3 stars) and a negative/unclear comment, indicating an overall decent show with good soundboard quality but mixed enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio fidelity; the absence of complaints implies a clear and listenable recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall fun and engaging performance, though some reviewers felt the show was slightly eclipsed by external expectations."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:53:38.567510+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-02-14.sbd.gans.miller.10921.shnf"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Good tape capture of a mixed Worcester 1984 show featuring strong Bird Song, Lazy Lightnin > Supplication and Truckin', but overall an uneven performance.",
+  "review": "The recording was made with high‑end cassette gear right beside the soundboard, yielding a clear and well‑preserved tape despite being an audience source. Musically the concert is a mixed bag – the first set feels uninspired and the second set has standout moments like a soaring Bird Song, a tight Lazy Lightnin > Supplication sequence and a solid Truckin', while the rendition of I Just Want to Make Love to You falls flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews average ~3‑star with both positive (notable jams) and negative (uneven first set, weak I Just Want…) comments; recording quality is praised while performance is mixed."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded with Mike Rice's D‑5/D‑6 decks and Nakamichi CM‑100s using CP‑4 shotgun caps; tape sound described as great and crisp, no major dropouts noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Lazy Lightnin > Supplication",
+      "Terrapin",
+      "Samson > Make Love",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "I Just Want to Make Love to You"
+    ],
+    "setlist_flow": "First set is described as uninspired and never really blazes, while the second set opens unusually with Terrapin and delivers several strong jams (Bird Song, Lazy Lightnin > Supplication, Samson > Make Love) giving the show an uneven but occasionally spectacular flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping during the Samson > Make Love jam, though noted some tension over song selection with Brent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent referenced regarding setlist decisions; no specific keyboard performance comments.",
+    "Drums": "Drummers receive a solid groove after the space segment and subsequent jam; no detailed critique."
+  },
+  "song_mentions": {
+    "I Just Want to Make Love to You": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightnin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson > Make Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:28:25.341019+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-08.rice-naks.willy.7773.sbeok.shnf"
+}

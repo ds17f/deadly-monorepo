@@ -1,0 +1,88 @@
+{
+  "summary": "A solid soundboard capture (though a bit muddy in places) of the Dead’s historic first UK gig, highlighted by a scorching Dark Star, fierce The Other One and a killer China>Rider.",
+  "review": "Even with some mix‑related hiss, hum and peaking levels, this recording delivers one of 1970’s most celebrated shows – the band’s debut on European soil.  The performance is electric from the opening Casey Jones through a soaring Dark Star, an incendiary Other One and a tight China>Rider, with standout moments from Me & My Uncle, Attics of My Life and Lovelight.  Fans repeatedly note the historic energy outweighs the technical imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (over 70%) award 4‑5 stars and praise the musical performance as top‑tier, while recording issues are noted but not deemed disqualifying; this yields a high overall rating with strong reviewer consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix degrades into Lovelight, noticeable low‑level hum, occasional peaking and tape noise; early set is clearer than later sections, but overall still listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "China Cat > Rider",
+      "Me & My Uncle",
+      "Attics of My Life",
+      "Good Lovin'",
+      "St. Stephen",
+      "Crytical Envelopment"
+    ],
+    "poor_songs": [
+      "Lovelight (mix issues)"
+    ],
+    "setlist_flow": "The concert bursts with energy from the opening Casey Jones, maintains momentum through a powerful first set, and peaks in the second set with extended jams; historic first‑European appearance gives the whole show a sense of purpose."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as electric, energetic and sometimes ‘wacked’, delivering standout solos on Dark Star and The Other One.",
+    "Phil": "Initially low in the mix but later rolls in strong; noted for a distorted tone on some passages.",
+    "Bob": "Praised for rhythm guitar work and vocal harmonies that complement Jerry’s lead, especially on Me & My Uncle.",
+    "Keys": "Pigpen’s organ is highlighted as wild and free, taking charge during Lovelight and other jams.",
+    "Drums": "Billy Cobham‑style kick drum praised for its presence; overall drumming described as solid and driving."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Attics of My Life": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crytical Envelopment": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-12T18:34:06.188631+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-05-24.sbd.hanno.6481.sbeok.shnf"
+}

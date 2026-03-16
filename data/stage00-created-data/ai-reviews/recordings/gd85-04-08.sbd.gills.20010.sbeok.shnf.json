@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent spring‑85 show with smoking Althea and Midnight Hour, captured on a solid soundboard despite occasional muddiness.",
+  "review": "The 4/8/85 Philadelphia performance is widely praised for its high energy first set – highlights include a scorching Althea, a fiery Midnight Hour/Big Boss Man medley and a crowd‑pleasing Revolution.  The recording is generally regarded as a good soundboard source, crisp enough to hear Jerry’s inventive solos (even his Sly Stone quote) though a few listeners note occasional mud.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are very positive (5‑star) and highlight strong musical moments; recording quality is mostly praised with only minor complaints, giving a combined rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the sound as clear and sweet; a few note it can be muddy or more “AUD‑like” than typical SBD, but overall the board is considered listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Midnight Hour > Big Boss Man",
+      "Revolution",
+      "Cumberland Blues",
+      "Walkin' the Dog"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is consistently described as “on” and almost a second‑set in intensity; the second set receives mixed feedback – some love the Revolution, others feel it drifts into sloppiness."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work gets high marks (smoky solos, Sly Stone quote) though his voice was a bit rough early ’85 and he flubbed a lyric here and there.",
+    "Phil": "Lesh is noted as “minimal” in one review; otherwise not specifically mentioned.",
+    "Bob": "",
+    "Keys": "Brent’s vocals are described as deep and smoky between sets; keyboards get no direct critique.",
+    "Drums": "A brief ‘battle’ is cited between Bobby and Jerry during the GDTRFB outro, with some listeners noting a strong drum tempo."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Midnight Hour > Big Boss Man": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Revolution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walkin' the Dog": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T03:32:00.448334+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-08.sbd.gills.20010.sbeok.shnf"
+}

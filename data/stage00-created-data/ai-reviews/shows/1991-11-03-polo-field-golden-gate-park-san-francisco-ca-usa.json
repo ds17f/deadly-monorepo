@@ -1,0 +1,80 @@
+{
+  "summary": "CCR guest jam, strong China Cat, mixed set with The Other One",
+  "blurb": "John Fogerty joins for a handful of rare Creedence covers and the band delivers a fiery China Cat Sunflower → I Know You Rider pairing. The Other One rises as a high‑point amid an otherwise uneven set that swings between joy and tentative playing.",
+  "review": "On November 3, 1991 at San Francisco’s Polo Field, the Grateful Dead turned a free festival into a historic moment when John Fogerty slipped onstage for a string of Creedence classics—Born On The Bayou, Green River, Bad Moon Rising and Proud Mary. Reviewers rave about the “crisp FM‑matrix” capture that lets the crowd feel the excitement of those guest spots. The first set also boasts a classic China Cat Sunflower → I Know You Rider segue that many fans describe as “beautiful,” while The Other One provides one of the night’s few sustained jams, cutting through an otherwise spotty flow. Not all moments shine; several listeners note shaky transitions, a heavy keyboard mix on the SBD source and occasional missteps from Jerry and Phil. Still, the overall energy and the rare Fogerty collaboration make this show a memorable entry in the Dead’s early‑’90s catalog.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Three of the four recordings are positive, highlighting the Fogerty CCR covers, China Cat Sunflower and The Other One, while only one recording is negative, noting mix problems and a few sloppy moments. The predominance of praise yields a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1991-11-03.fm.kome.34912.sbefail.flac16",
+    "reason": "Crisp FM‑matrix capture with clear sound and full coverage of the Fogerty guest set, making it the most accessible listening experience."
+  },
+  "key_highlights": [
+    "John Fogerty’s surprise appearance for four Creedence covers (Born On The Bayou, Green River, Bad Moon Rising, Proud Mary)",
+    "Classic China Cat Sunflower → I Know You Rider transition praised as “beautiful”",
+    "\"The Other One\" stands out as a high‑energy jam amid an uneven set",
+    "Moving encore with Forever Young and Touch of Grey closes the tribute"
+  ],
+  "song_highlights": [
+    "Born On The Bayou*",
+    "Green River*",
+    "Bad Moon Rising*",
+    "Proud Mary*",
+    "China Cat Sunflower",
+    "Wang Dang Doodle**",
+    "The Other One",
+    "Forever Young***"
+  ],
+  "band_performance": {
+    "Jerry": "Shows strong guitar work on the Fogerty jams and delivers tasty licks, but at times sounds caught off‑guard and tentative.",
+    "Phil": "Provides a solid bass foundation overall; a few slip-ups are noted during \"Rider\" but he recovers later in the set.",
+    "Bob": "Tight backing on the Creedence numbers, yet some reviewers hear him out of tune and shaky on several songs.",
+    "Brent": "",
+    "Mickey": "Keeps steady time throughout; no major issues reported despite overall mix challenges.",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-18T02:51:31.243483+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Born On The Bayou*"
+    ],
+    [
+      "Green River*"
+    ],
+    [
+      "Bad Moon Rising*"
+    ],
+    [
+      "Proud Mary*"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Wang Dang Doodle**"
+    ],
+    [
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat",
+      "Sunshine Daydream"
+    ],
+    [
+      "Forever Young***"
+    ]
+  ]
+}

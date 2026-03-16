@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed show with a standout Bird Song; recording quality not discussed",
+  "review": "The reviewer rates the concert as slightly below average for 1992, highlighting Bird Song as the main positive moment. No details are provided about the source or sound quality of the recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review; show considered below average but a specific song is praised, with no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:37:34.033518+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-21.sbd-fishman.barbella.6955.shnf"
+}

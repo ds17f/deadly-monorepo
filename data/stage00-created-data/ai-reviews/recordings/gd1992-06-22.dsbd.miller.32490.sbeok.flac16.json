@@ -1,0 +1,76 @@
+{
+  "summary": "Good soundboard capture with solid first‑set finishes and a standout The Other One, but the brief, tentative Dark Star feels underwhelming.",
+  "review": "The recording is a typical soundboard source that sounds clear overall, though periodic cable‑glitch noises give it a slightly rough edge. Musically the show offers strong moments—especially the first‑set closers (Ramble on Rose, Beat It On Down the Line, Deal) and a memorable Drums → The Other One sequence—but the second set’s Dark Star is unusually short and tentative, making the performance feel mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (some highlights, notable weak spots) while recording quality is generally good but marred by occasional glitches; the weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix with balanced keyboards, but periodic cable‑glitch noises and a slightly tentative guitar tone on Dark Star."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Ramble on Rose",
+      "Beat It On Down the Line",
+      "Deal",
+      "Victim > Dark Star > Drums > Beam > Healy"
+    ],
+    "poor_songs": [
+      "Dark Star",
+      "Scarlet > Fire"
+    ],
+    "setlist_flow": "First set ends strongly with tight, energetic numbers; second set is uneven—highlighted by a compelling The Other One transition but hampered by an unusually brief Dark Star and less‑exciting Scarlet/Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work on Dark Star feels tentative and very short; later he adds a nice Stella Blue lick toward the end.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's repetitive keyboard motif dominates the Dark Star segment; overall keyboard balance is better on this board tape than audience mixes.",
+    "Drums": "Drums segue into The Other One is praised as a highlight, though occasional cable glitches are audible."
+  },
+  "song_mentions": {
+    "Victim > Dark Star > Drums > Beam > Healy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:31:43.817195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-22.dsbd.miller.32490.sbeok.flac16"
+}

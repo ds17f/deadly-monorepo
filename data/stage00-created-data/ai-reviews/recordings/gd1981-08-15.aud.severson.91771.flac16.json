@@ -1,0 +1,57 @@
+{
+  "summary": "An average‑quality audience tape of a lively 1981 show, highlighted by strong performances of Cassidy, Althea, Let It Grow and To Lay Me Down.",
+  "review": "The concert captures an energetic first set and a more relaxed second set, with several fans singling out songs like Cassidy and To Lay Me Down as standout moments. Recording quality is described as average to fair – decent equipment but hampered by the hall’s acoustics – making the listening experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance (average ~4/5) while noting only average to fair recording quality; combined weighted score yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Equipment described as three Nakamichi mics into a D5, with no hi‑hat issues; however reviewers note the hall sounded like a barn and overall sound is average compared to other era tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Althea",
+      "Let It Grow",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set pulsing with energy, second set a bit more human but overall solid; some sloppy moments in the first set are mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:34:27.390743+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-15.aud.severson.91771.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard recording of a unique 1981 show with standout Jerry Garcia guitar work despite a lyric slip in Dark Star.",
+  "review": "Both reviewers rave about the performance, especially Jerry’s singing and soaring guitar tone, calling the concert “stellar” and giving it four to five stars. The recording is a soundboard source that listeners found clear and enjoyable, with only a minor criticism of a missed lyric on Dark Star.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Both reviews are detailed and highly positive about the musical performance; no recording flaws were reported, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No complaints about clarity or mix; reviewers praised the overall sound and guitar tone. One reviewer mentioned having an original tape but did not note any audio problems in this release."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not discuss pacing, but highlighted the uniqueness of the performance and Jerry’s vocal/guitar moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a sweet‑singing guitar tone; his voice was noted as breaking at times yet still preferred over others. A lyric slip on Dark Star was mentioned as a minor flaw.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T15:26:22.049294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-06.sbd.130405.MrBill.flac16"
+}

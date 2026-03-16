@@ -1,0 +1,79 @@
+{
+  "summary": "High‑energy London show with soaring Stella Blue and tight Sugar Magnolia",
+  "blurb": "The October‑6, 1981 Rainbow Theatre gig delivers a punchy first set highlighted by Shakedown Street, Althea and Looks Like Rain. The second set builds into a fiery stretch of He's Gone, Blues For Allah Jam and an uplifting Stella Blue > Good Lovin' finish. Overall the band is tight, with Brent’s funky keys and Jerry’s soaring solos standing out.",
+  "review": "On October 6, 1981 the Grateful Dead took the Rainbow Theatre in London on a tour‑high that still feels fresh. The set opened with a rollicking \"Shakedown Street\" that flowed into bluesy staples like \"New Minglewood Blues\" and the plaintive \"Althea,\" while Jerry’s voice cut through crystal‑clear on \"Looks Like Rain.\"  The second set was a showcase of late‑'80s chemistry: a driving \"Estimated Prophet\" segued into an emphatic \"He's Gone,\" then exploded into a \"Blues For Allah Jam\" that let Brent Mydland lay down his signature funky licks.  The night capped with a post‑drums surge into \"Sugar Magnolia\" and a soaring \"Stella Blue\" that led straight into a two‑solo climax on \"Good Lovin',\" leaving the audience buzzing.  Across all recordings the performance is consistently praised – Jerry’s guitar tone is sweet, his vocals “raindrop” perfect on the rain‑song, Brent shines throughout, and both drummers lock in tight grooves that drive the improvisations forward.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 23,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Seven recordings are clearly positive and two mixed, with no negative sentiment. Reviewers repeatedly call the show \"high‑energy,\" note standout jams (Stella Blue, Blues For Allah Jam) and praise Jerry’s guitar/vocals and Brent’s keyboards, meeting the criteria for a strong positive adjustment (+1.6).",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-10-06.sbd.miller.103627.flac16",
+    "reason": "Clear, hiss‑free soundboard capture with good balance; highlights the post‑drums segment and key songs (Sugar Magnolia, Stella Blue) without major mix issues."
+  },
+  "key_highlights": [
+    "Crystal‑clear SBD that balances the band’s high energy throughout both sets",
+    "\"Stella Blue\" jam leading into a powerful two‑solo close on \"Good Lovin'\"",
+    "Brent Mydland’s funky keyboard work, especially on \"Sugar Magnolia\" and the second‑set jams",
+    "Strong drumming foundation that fuels the extended \"Blues For Allah Jam\""
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Althea",
+    "Looks Like Rain",
+    "Stella Blue",
+    "Sugar Magnolia",
+    "He's Gone",
+    "Blues For Allah Jam",
+    "High Time"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals are front‑and‑center and strong; guitar tone is sweet and soaring, with standout solos on \"Stella Blue\" and beautiful 'raindrop' notes on \"Looks Like Rain\". A few reviewers note the guitar sits low in the mix on one SBD but it doesn’t detract from his overall performance.",
+    "Phil": "Provides a steady, supportive bass foundation; noted for breaking out on \"Unbroken Chain\" (though not on this setlist) and generally keeps the groove locked throughout the night.",
+    "Bob": "Delivers energetic rhythm guitar with plenty of drive; praised as 'bobby' in audience recordings, pushing the band forward especially during the second‑set jams.",
+    "Brent": "Funky, expressive keyboards shine, highlighted on \"Sugar Magnolia\" and throughout the extended improvisations; consistently described as being in awesome form.",
+    "Mickey": "Drums lock tightly with Bill, delivering a powerful post‑drums segment that fuels the high‑energy second set and the climactic jam sections.",
+    "Billy": "Solid percussion work that underpins the band’s flow; while not singled out by reviewers, his steady playing helps maintain momentum through the long jams."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-13T15:31:01.334533+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street",
+      "New Minglewood Blues",
+      "It Must Have Been The Roses"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Cumberland Blues",
+      "Looks Like Rain",
+      "Might As Well"
+    ],
+    [
+      "Estimated Prophet",
+      "He's Gone",
+      "Drums",
+      "Blues For Allah Jam",
+      "Space",
+      "The Wheel",
+      "Sugar Magnolia",
+      "Stella Blue",
+      "Good Lovin'"
+    ],
+    [
+      "High Time"
+    ]
+  ]
+}

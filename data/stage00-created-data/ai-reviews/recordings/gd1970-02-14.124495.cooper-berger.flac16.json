@@ -1,0 +1,63 @@
+{
+  "summary": "A dreamy, historic recording of a classic early‑'70 Dead show highlighted by a soaring Dark Star and beloved early favorites.",
+  "review": "The concert is praised as a turning‑point performance with standout versions of Dark Hollow, Black Peter, Katie Mae, Wake Up Little Susie and an exceptional Dark Star. Reviewers describe the audio as an “echo from the past,” giving it a nostalgic, almost dream‑like quality, while noting no major technical flaws. Overall the show is celebrated for its energy and especially the impressive drumming.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Two detailed 5‑star reviews highlight an excellent performance and a pleasant recording; the third review is neutral, so confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Described as sounding like an echo from the past—clear enough to be enjoyable but with a nostalgic, dreamy character; no specific flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Hollow",
+      "Black Peter",
+      "Katie Mae",
+      "Wake Up Little Susie",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its classic early‑70 vibe, tight transitions and especially the powerful drumming throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drummers are highlighted as particularly impressive in this performance."
+  },
+  "song_mentions": {
+    "Dark Hollow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Katie Mae": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wake Up Little Susie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T16:43:57.256587+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-14.124495.cooper-berger.flac16"
+}

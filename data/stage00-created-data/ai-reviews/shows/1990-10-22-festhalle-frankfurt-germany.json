@@ -1,0 +1,69 @@
+{
+  "summary": "Valley Road shines, Bird Song charms, but a jam cut mars flow",
+  "blurb": "Valley Road dominates both sets, while Victim Or The Crime and Standing On The Moon provide strong vocal moments. Jerry’s vocals are praised on Desolation Row and the titular moon song, and Vince’s keyboard mix settles as the night progresses. A missing segment of the Bird Song jam slightly disrupts the otherwise fresh set flow.",
+  "review": "On October 22 1990 at Frankfurt’s Festhalle the Dead delivered a lively European outing that feels both fresh and oddly uneven. The first set opens with a sluggish Bertha but quickly recovers as Greatest Story Ever Told, Peggy‑O and a spirited Foolish Heart launch into a standout Desolation Row – Jerry’s vocals were described as “standing on the moon” and right on the money. Valley Road caps the first half with a soaring performance that reviewers across recordings flag as a highlight. The second set erupts with Victim Or The Crime, Standing On The Moon and a tight Playing In The Band into Uncle John’s Band, leading to an intense drum‑and‑space excursion before a heartfelt All Along The Watchtower, Stella Blue and Turn On Your Lovelight. Bird Song offers a beautiful moment, though an abrupt cut in the jam (around 7:39) frustrates listeners. Overall the show is solid with several standout moments, but the missing jam fragment keeps it from reaching classic status.\n\nFor fans seeking the best listening experience the clear matrix mix (gd90-10-22.sbd.gardner.8722.sbeok.shnf) captures the band’s energy and balances instruments well, only blemished by the Bird Song cut. Those who prefer pristine board sound may opt for the digital SBD (gd90-10-22.dsbd.hinko.22315.sbeok.shnf), which presents excellent clarity and a slightly high‑early Vince mix that settles later in the night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Four recordings are mixed and one is positive; reviewers repeatedly praise Valley Road, Bird Song, Victim Or The Crime and Jerry's vocals while noting only isolated issues (Bird Song cut, weak Bertha, early high keyboards). This yields a modest positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.5 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd90-10-22.sbd.gardner.8722.sbeok.shnf",
+    "reason": "Clear matrix mix with good instrument balance and audience presence; captures all highlights despite a brief cut in the Bird Song jam."
+  },
+  "key_highlights": [
+    "Valley Road shines as a set‑closing highlight on both sets",
+    "Bird Song delivers beautiful phrasing, though an abrupt jam cut is disappointing",
+    "Victim Or The Crime and Standing On The Moon provide strong vocal performances"
+  ],
+  "song_highlights": [
+    "Valley Road",
+    "Bird Song",
+    "Victim Or The Crime",
+    "Standing On The Moon",
+    "Greatest Story Ever Told"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals praised as ‘standing on the moon’ and right on for Desolation Row; overall vocal delivery strong throughout.",
+    "Phil": "",
+    "Bob": "Desolation Row vocals described as ‘right on’, adding depth to the performance.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-17T14:02:41.167234+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Valley Road"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Victim Or The Crime",
+      "Standing On The Moon",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "All Along The Watchtower",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Bertha",
+      "Greatest Story Ever Told"
+    ]
+  ]
+}

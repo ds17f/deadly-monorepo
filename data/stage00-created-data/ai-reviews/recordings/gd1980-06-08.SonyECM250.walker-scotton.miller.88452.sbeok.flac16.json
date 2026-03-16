@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording that’s clear but suffers from occasional clipping; the show is praised for its tight playing and a standout Uncle John's > Playing > Uncle John's sequence.",
+  "review": "The tape captures a loud, max‑ed‑out soundboard mix that is generally clear yet shows distortion on the high‑output sections. Musically the Boulder concert is described as beautiful, tight and historic – especially the unique Uncle John's > Playing > Uncle John's opening and Jerry Garcia’s inspired work on “Jed.” Overall the performance shines despite some recording rough edges.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show positively (tight, historic) but note distortion and uneven sound quality; star average (~3.7) plus mixed comments yields a solid‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Taper was behind the board and all levels were maxed, causing noticeable distortion/clipping on loud passages; overall mix is clear but overly hot, making it less ideal for critical listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's > Playing > Uncle John's",
+      "Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as tight and intimate, with the first set highlighted for its unique opening sequence and a generally strong, cohesive flow throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his guitar work – “Jerry greatness on Jed!” and noted as a highlight of the show.",
+    "Phil": "",
+    "Bob": "Positive nod to “bobby” (Bob Weir) in one brief comment.",
+    "Keys": "Brent’s arrival is highlighted as a key factor that made the band sound tighter and more beautiful.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's > Playing > Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:16:27.933390+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-08.SonyECM250.walker-scotton.miller.88452.sbeok.flac16"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Emotionally charged final show with standout So Many Roads and Black Muddy River, captured in a fair‑quality recording that’s uneven but moving.",
+  "review": "The performance is remembered for Jerry Garcia’s anguished vocals and soaring guitar on songs like So Many Roads, Black Muddy River, Unbroken Chain and Sugar Magnolia, though the first set was described as weak. The recording is of only fair quality – some vocal drop‑outs and a lack of clarity are noted, but the emotional weight of the show shines through.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Strong musical moments offset by uneven early set and only fair recording quality; mixed reviewer scores lead to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Occasional inaudible vocals and uneven mix; no explicit soundboard or audience designation, but listeners note drop‑outs and lack of clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Black Muddy River",
+      "Unbroken Chain",
+      "Sugar Magnolia",
+      "Corrina"
+    ],
+    "poor_songs": [
+      "First set (warm‑up)",
+      "Shakedown Street"
+    ],
+    "setlist_flow": "The first set is described as uneven and largely forgettable, but the second half lifts dramatically with emotionally charged performances and a highlight Drum/Space segment leading into poignant encores."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice shows pain and anguish yet remains powerful; guitar work praised especially on So Many Roads, Unbroken Chain and Sugar Magnolia.",
+    "Phil": "Noted for delivering an uncommon Unbroken Chain in spring ’95, a highlight for fans.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Drum/Space segment is highlighted as the set’s peak."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Muddy River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drum/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:42:07.661133+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-09.aud.liberated-bootleg.larson.27977.flac16"
+}

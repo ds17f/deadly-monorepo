@@ -1,0 +1,45 @@
+{
+  "summary": "Rough audience‑sourced tape of the historic 16‑May‑1970 Temple Stadium gig, highlighted by a joyous New Speedway Boogie and Workingman's Dead but marred by noisy, muddy sound.",
+  "review": "The performance captures a brief, high‑energy set from May 1970 that many fans remember fondly – especially the spirited New Speedway Boogie and the uplifting Workingman's Dead. While Jerry Garcia’s guitar cuts through clearly at times, the overall mix is crowded with audience noise, low vocals and occasional muddiness, making the recording a mixed listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the historic show and its musical moments (average show rating ≈4.6), but many note significant recording flaws (average recording rating ≈2.8). Weighted combination yields a solid 4‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Heavy audience noise and muddy mix; vocals often low, but Jerry's guitar is occasionally clear. Some reviewers report drop‑outs and a \"rough\" feel, while one calls it \"very well recorded.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Speedway Boogie",
+      "Workingman's Dead"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short (< 1‑hour) but high‑spirited set that captured the excitement of a historic double‑bill with Hendrix and others; fans describe it as joyous and historically significant despite its brevity."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar comes through clear on parts of the tape, earning specific praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Workingman's Dead": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:09:13.785770+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-05-16.aud.weiner.14769.sbeok.shnf"
+}

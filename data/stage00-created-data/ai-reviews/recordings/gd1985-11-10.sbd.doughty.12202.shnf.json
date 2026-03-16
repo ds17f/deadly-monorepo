@@ -1,0 +1,106 @@
+{
+  "summary": "Solid soundboard capture with occasional balance quirks, featuring a hot mid‑80s set highlighted by Sugaree, Feel Like a Stranger, Row Jimmy, Baby Blue and a standout ½ Step > Rider.",
+  "review": "The Doughty SBD source delivers a generally clear recording though the first three tracks suffer from balance issues and the end of \"It's All Over Now\" is cut. Musically the show is praised for its high energy and several A‑plus performances – Sugaree, Feel Like a Stranger, Row Jimmy, Baby Blue, Stagger Lee and the ½ Step > Rider transition stand out, with only a slight dip toward the end of the second set. Overall fans consider this one of the stronger mid‑80s Dead shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑5 stars and highlighted many standout songs; recording is solid but has minor balance problems, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD capture. Early tracks have a noticeable balance problem on the Doughty source and \"It's All Over Now\" is cut at the end; reviewers recommend swapping those sections with the Barbella source for optimal listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Feel Like a Stranger",
+      "Row Jimmy",
+      "Baby Blue",
+      "Stagger Lee",
+      "½ Step > Rider",
+      "Touch",
+      "Hell",
+      "It's All Over Now",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Cassidy",
+      "Comes a Time"
+    ],
+    "setlist_flow": "The first set opens with high‑octane energy and solid song choices; the second set maintains momentum with the memorable ½ Step > Rider segue, though the very end of the show loses a bit of steam."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for his playing (e.g., grin after a flub), though a few reviewers jab at his on‑stage habits; overall his guitar work is seen as solid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "½ Step > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:15:21.661788+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-10.sbd.doughty.12202.shnf"
+}

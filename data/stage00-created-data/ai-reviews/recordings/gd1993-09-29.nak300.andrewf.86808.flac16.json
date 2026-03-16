@@ -1,0 +1,63 @@
+{
+  "summary": "Great soundboard capture of a classic Terrapin Station sequence with clear audio and strong show flow",
+  "review": "The reviewer praises the performance, especially the Terrapin Station → Drums → Space → Playing in the Band (reprise) suite, calling it an all‑time great. The recording is described as far superior to the original audience tape, indicating a clean soundboard source with no noticeable flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review, but it is highly positive about both the musical performance and the audio quality, warranting a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes that this recording clears up doubts caused by a poor audience tape; no specific flaws mentioned, implying clear and balanced sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Playing in the Band (reprise)",
+      "LLR"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The Terrapin Station suite flowing into Drums, Space and a Playing in the Band reprise is highlighted as a seamless, high‑energy sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band (reprise)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:06:50.984926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-29.nak300.andrewf.86808.flac16"
+}

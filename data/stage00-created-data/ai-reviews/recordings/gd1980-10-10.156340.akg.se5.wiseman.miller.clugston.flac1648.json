@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer only notes the recording date is incorrect; no assessment of performance or sound quality.",
+  "review": "The sole comment points out that the concert took place on October 10, 1980 rather than the mislabeled 1989 date. No information about audio fidelity, mix, or musical execution is provided in the review.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one brief review correcting metadata; insufficient data to evaluate show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T04:31:18.288012+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-10.156340.akg.se5.wiseman.miller.clugston.flac1648"
+}

@@ -1,0 +1,77 @@
+{
+  "summary": "Crystal‑clear audience recording of a Rochester show with an epic Scarlet → Fire stretch, stellar Wharf Rat and Good Love, captured in superb sound.",
+  "review": "Fans rave about the astonishing clarity of this 1979 audience tape – many call it “crystal clear” and compare it to a living‑room listening experience. Musically the concert shines especially in the second set: a 30‑minute Scarlet → Fire, a soaring Wharf Rat, tight Half‑Step into Franklin’s Tower and an enthusiastic Good Love that leaves listeners with chills.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 4–5 stars praising both the audio fidelity and the performance, with only a single low‑rating outlier."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviews repeatedly describe the tape as crystal clear, crisp, and well balanced – listeners can hear Phil’s bass and the drums clearly. No major flaws are reported; a few wish for an SBD/AUD matrix but the source is considered among the best primitive AUDs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Wharf Rat",
+      "Good Love",
+      "Half Step → Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is solid with a nice half‑step into Franklin’s. The second set, though shortened by curfew, flows brilliantly – Scarlet morphs into Fire, rolls into a space jam and then bursts into Wharf Rat, ending with an enthusiastic Miracle/Bertha/Good Love sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s wah‑wah Fire solo and final solo are highlighted as mind‑boggling and perfect; his tone is praised throughout.",
+    "Phil": "Lesh drives the jam, teases the Fire intro, provides great counterpoint and is described as the catalyst that makes “the band happening.”",
+    "Bob": "Weir’s rhythm guitar and vocal performance on Good Love receive special mention for their enthusiasm and power.",
+    "Keys": "",
+    "Drums": "The drum transitions into Scarlet → Fire and the space jam are praised; drums are heard clearly and contribute to the tight flow."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Love": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:57:53.335072+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-09-01.aud.10363.sbeok.shnf"
+}

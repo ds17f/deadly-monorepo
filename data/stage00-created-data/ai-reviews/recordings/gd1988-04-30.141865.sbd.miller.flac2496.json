@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture of a Frost show that starts shaky but recovers with a hot Let It Grow jam and a solid Hey Pocky Way.",
+  "review": "The recording sounds clean and balanced, typical of a sound‑board source, though the review focuses on performance rather than audio flaws. Musically the concert suffers from uncorrected tempo problems in the opening songs but pulls together for an energetic Hey Pocky Way and a scorching Let It Grow jam, making it worth listening to despite there being stronger Frost dates.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a 3‑star rating; performance is average with notable highs, and the recording quality appears good, leading to an overall moderate score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No audio issues mentioned; reviewers imply a clean, typical sound‑board mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with noticeable tempo problems that are not corrected, but the band regroups by the third song and delivers a strong second‑half featuring a hot Let It Grow jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hey Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:24:34.961444+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-30.141865.sbd.miller.flac2496"
+}

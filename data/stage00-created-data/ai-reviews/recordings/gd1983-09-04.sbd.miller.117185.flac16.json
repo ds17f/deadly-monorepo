@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard recording with a fun 1983 show highlighted by China > Rider, The Other One and an epic Wharf Rat ending",
+  "review": "The audience consistently praises the crystal‑clear, well‑balanced SBD source, noting only a minor drum‑mix quirk before the second‑set drums come in. Musically the night shines with a classic China Cat Sunflower → The Rider close‑out of set 1, a fiery The Other One into Wharf Rat that showcases Jerry’s soaring climax and tight Jerry/Bob interplay, making it a standout 1983 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and rave about both the recording fidelity and the musical highlights; only one low‑star, unrelated comment does not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Top‑notch clarity and balance noted by several reviewers; a few mention the left‑channel drum mix is thin before the second‑set drums, but overall the SBD is described as crisp, balanced and ‘about perfect.’"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > The Rider",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set ends strong with China > Rider; second set builds momentum with a tasty The Other One → Wharf Rat that delivers an epic Jerry climax and lively band interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight his soaring guitar climax on the Wharf Rat ending and tight interplay with Bob.",
+    "Phil": "",
+    "Bob": "Praised for strong interplay, though one reviewer notes he missed a segue after Wharf Rat, leading to some light‑hearted ribbing.",
+    "Keys": "",
+    "Drums": "Billy (Bill Kreutzmann) is noted as almost absent from the left channel before the drum solo, giving an open feel; drums return strongly after the solo."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > The Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T09:44:36.255012+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-04.sbd.miller.117185.flac16"
+}

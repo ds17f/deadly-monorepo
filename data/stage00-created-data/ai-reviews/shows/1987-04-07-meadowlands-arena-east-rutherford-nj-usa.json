@@ -1,0 +1,81 @@
+{
+  "summary": "Soaring Morning Dew lifts a high‑energy first set",
+  "blurb": "The show opens with a punchy first set highlighted by Touch of Grey, Stagger Lee and New Minglewood Blues. A dynamic drum jam propels the second set into a soaring Morning Dew and a solid Throwing Stones/Not Fade Away finish. Overall performance is strong despite a few uneven moments.",
+  "review": "April 7, 1987 at Meadowlands Arena captured a Grateful Dead in classic ‘87 form – a first set that bursts with energy and a second half that climbs to an emotional peak. The opening stretch rides on the bright, country‑flavored riffing of Touch of Grey and the rollicking drive of Stagger Lee and New Minglewood Blues, even if some fans felt the early pacing was a touch thin. The real fireworks arrive after the intermission: a marathon drum jam fuels an expansive Space that blossoms into a soaring Morning Dew where Jerry’s guitar finally finds its emotional center, and Brent’s keyboards add shimmering texture. The night closes with Throwing Stones into Not Fade Away and a sing‑along Mighty Quinn encore, leaving the audience buzzing. While vocal clarity wavers on some audience tapes and a few songs (Hell In A Bucket, Bertha) received mixed reactions, the overall vibe is one of solid musicianship and memorable moments that make this show worth seeking out.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Multiple recordings praise high‑energy moments (Touch of Grey, Morning Dew, drum jam) and note strong performances, while no consistent negative feedback appears across sources. Mixed sentiments are balanced by clear positive highlights, yielding a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.8 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1987-04-07.fm.pasternak.andrewf.89971.sbeok.flac16",
+    "reason": "Excellent matrix source with crystal‑clear sound, capturing the soaring Morning Dew and tight Throwing Stones/Not Fade Away while preserving full band balance."
+  },
+  "key_highlights": [
+    "Soaring Morning Dew anchored by a dynamic drum jam in the second set.",
+    "High‑energy first‑set punch featuring Touch of Grey, Stagger Lee and New Minglewood Blues.",
+    "Standout Ship Of Fools solo and lively Hell In A Bucket performance.",
+    "Strong closing sequence with Throwing Stones into Not Fade Away and a sing‑along Mighty Quinn encore."
+  ],
+  "song_highlights": [
+    "Touch of Grey",
+    "New Minglewood Blues",
+    "Stagger Lee",
+    "Hell In A Bucket",
+    "Ship Of Fools",
+    "Morning Dew",
+    "Throwing Stones",
+    "Not Fade Away",
+    "The Mighty Quinn (Quinn The Eskimo)"
+  ],
+  "band_performance": {
+    "Jerry": "Limited soloing early on, but his guitar shines on the emotive Morning Dew and delivers energetic, country‑flavored work on Touch of Grey and Stagger Lee.",
+    "Phil": "Provides a solid bass foundation throughout; no specific critiques noted, indicating reliable support for the band’s dynamics.",
+    "Bob": "Flubs the start of Hell In A Bucket but quickly recovers, getting carried away in the jam; overall contributes strong rhythm guitar presence.",
+    "Brent": "Keyboards feed climactic moments, especially during the Dew and Space sections, adding texture and drive to the second‑set peaks.",
+    "Mickey": "Drums deliver a long, dynamic jam that propels the second set and adds muscular, marching energy to the performance.",
+    "Billy": "Works with Mickey to create a powerful rhythmic backbone; the dual‑drum effort underpins the extended drum/space segment."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-15T21:18:46.429856+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Touch of Grey"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Stagger Lee"
+    ],
+    [
+      "Hell In A Bucket",
+      "Don't Ease Me In"
+    ],
+    [
+      "Ship Of Fools"
+    ],
+    [
+      "Man Smart, Woman Smarter",
+      "Drums",
+      "Space",
+      "Gimme Some Lovin'",
+      "Morning Dew",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "The Mighty Quinn (Quinn The Eskimo)"
+    ]
+  ]
+}

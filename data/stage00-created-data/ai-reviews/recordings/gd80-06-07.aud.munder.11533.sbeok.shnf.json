@@ -1,0 +1,45 @@
+{
+  "summary": "Bootleg‑style audience tape with grainy sound but a blistering Althea guitar lick and a standout Ramble On Rose keep the show enjoyable.",
+  "review": "The performance is solid – fans highlight an electrifying Althea riff and a memorable Ramble On Rose – but the recording suffers from typical bootleg muffiness that some listeners find distracting. While the show is generally regarded as decent, the audio quality limits its appeal to those who can overlook the lo‑fi mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around average‑good (most reviewers call it a good or ok show) while recording quality is judged fair to poor due to bootleg sound, yielding a combined rating in the low‑mid 3 range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Described as a bootleg with muddy, lo‑fi mix; some listeners note it sounds like a tape you might toss on the floor. A few moments (e.g., Althea) are clearer, but overall clarity is limited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Billed as a \"15th anniversary\" show; reviewers find the set decent overall with no major pacing issues, though it isn’t highlighted as a landmark performance."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar riff after the first verse of Althea is called 'blistering' and the best ever heard by one reviewer.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:12:38.474179+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-07.aud.munder.11533.sbeok.shnf"
+}

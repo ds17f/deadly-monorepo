@@ -1,0 +1,56 @@
+{
+  "summary": "Fair‑quality studio broadcast that captures a powerful Easy Wind and a standout slowed‑down Candyman, though the mix is often muddied and bass low.",
+  "review": "The short KQED studio session delivers high‑energy performances – especially Pigpen’s raging Easy Wind, the first “slow” take on Candyman and a beautiful Brokedown Palace with gorgeous harmonies.  Technically the recording suffers from muddy spots, drop‑outs and an under‑represented bass due to the quad‑FM broadcast process, making it listenable but far from pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (many 4–5‑star comments) while repeatedly noting significant sound problems, leading to a solid but not outstanding overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddied and distorted sections; bass mixed too low; quad‑FM split causes waffling and occasional drop‑outs; overall listenable but not clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Wind",
+      "Candyman",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief studio set with a mix of filler and gems; the energy is high despite being a TV‑studio performance rather than a full concert."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is highlighted as mesmerizing on Brokedown Palace and praised on Candyman.",
+    "Phil": "Bass is noted as being mixed too low, affecting overall balance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:41:20.519566+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-08-30.fm.jupile.12762.sbeok.shnf"
+}

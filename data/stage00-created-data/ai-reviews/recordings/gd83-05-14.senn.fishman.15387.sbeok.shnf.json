@@ -1,0 +1,75 @@
+{
+  "summary": "Crystal‑clear audience tape captures a razor‑sharp 1983 Greek Theatre show with standout Shakedown Street, Wheel space, Morning Dew and Sugar Magnolia.",
+  "review": "Both reviewers rave about the extraordinary sound quality of this audience recording—thanks to Jeff Silberman’s preservation work it sounds almost studio‑like. The performance itself is described as hot from the opening “Stranger,” tight throughout, with a smoking Shakedown Street, a soaring Wheel space that feeds into a confident Playing reprise, and emotional closers like Morning Dew and a raucous Sugar Magnolia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5‑star ratings and praise both the musical performance and the tape’s clarity; limited to two detailed reviews, confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear capture with excellent preservation; audience ambience retained without muddiness, praised as the best sounding version of this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Shakedown Street",
+      "China Doll",
+      "Wheel",
+      "Playing in the Band",
+      "Morning Dew",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, hot opening on “Stranger,” seamless transitions through jam peaks, a beautiful post‑drums Wheel space leading into Playing and an emotional close with Morning Dew and Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Razor‑sharp guitar work and sweet soloing, especially on Shakedown Street.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Strong post‑drums space on Wheel that fuels the jam."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:49:17.183158+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-05-14.senn.fishman.15387.sbeok.shnf"
+}

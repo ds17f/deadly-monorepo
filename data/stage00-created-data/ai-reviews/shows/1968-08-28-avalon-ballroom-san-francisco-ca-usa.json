@@ -1,0 +1,57 @@
+{
+  "summary": "Soaring Dark Star, tight Eleven, solid Lovelight despite muddy SBD",
+  "blurb": "The set launches with a soaring Dark Star and builds through Saint Stephen into a high‑octane The Eleven. Jerry’s lead guitar shines while Phil locks in on bass, and the band recovers with a strong Turn On Your Lovelight after a weaker Death Don't Have No Mercy.",
+  "review": "On August 28, 1968 at San Francisco's Avalon Ballroom, the Dead delivered a single‑set marvel that still reverberates through the archives. The night opens with an incandescent Dark Star that showcases Jerry Garcia’s blazing, melodic improvisation, then rolls into Saint Stephen before launching into the marathon Eleven where Phil Lesh rides tightly behind him on bass. Though Death Don't Have No Mercy falters, the band snaps back with a punchy Turn On Your Lovelight, highlighted by Pigpen’s gritty harmonica and a jam that lets Jerry stretch his soloing further. The performance is historically significant – an early glimpse of the psychedelic intensity that would define the era – but most recordings suffer from sub‑par soundboard fidelity. A well‑captured audience tape offers the clearest window into this primal set, preserving the energy and nuance that the muddy SBD sources obscure.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are mixed (highlights offset by muddy sound), while one audience tape is positive; overall sentiment leans positive with consistent praise for Dark Star, The Eleven and Lovelight, yielding a moderate +0.8 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1968-08-28.133762.aud.davmar77.flac16",
+    "reason": "Clearest audience tape; captures the primal energy and standout Dark Star despite inherent AUD limitations, making it the most listenable version of this show."
+  },
+  "key_highlights": [
+    "Soaring Dark Star with blistering Garcia leads",
+    "High‑octane The Eleven featuring tight bass‑guitar interplay",
+    "Rare Good Morning Little Schoolgirl captured on audience tape",
+    "Strong Turn On Your Lovelight that lifts the set after a dip"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Saint Stephen",
+    "The Eleven",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Blazing guitar on Dark Star and The Eleven, plus a tasteful solo during Turn On Your Lovelight.",
+    "Phil": "Tight bass support, staying close behind Jerry especially in The Eleven.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T09:06:28.096564+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Death Don't Have No Mercy"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

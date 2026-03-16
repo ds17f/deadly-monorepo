@@ -1,0 +1,65 @@
+{
+  "summary": "Good‑to‑great soundboard recording that captures a mostly inspiring show highlighted by Bird Song, Help > Crazy > Playing and Here Comes Sunshine.",
+  "review": "The tape (likely a sound‑board or front‑of‑house mix) sounds clear and full for most of the set, though a few reviewers note occasional crowd bleed and a drop in clarity on the first half. Musically the band delivers several standout moments – an adventurous Bird Song, a smoking Help > Crazy > Playing sequence and a jubilant Here Comes Sunshine start to the second set – while some tunes (Watchtower, out‑of‑key HCS) fall short for a minority of listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly and praise the recording quality, but several low‑star reviews point to weak first‑set material and occasional performance slips, pulling the overall score toward the middle of the good range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced (several reviewers call it ‘fantastic sounding’ or a ‘magnificent soundboard tape’). A few notes of crowd noise in the first set and possible front‑of‑house bleed are mentioned, but no serious dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Help on the Way > Crazy > Playing",
+      "Here Comes Sunshine",
+      "Lucy In The Sky"
+    ],
+    "poor_songs": [
+      "Watchtower",
+      "Help on the Way (out of key version)"
+    ],
+    "setlist_flow": "Second set is consistently praised for its energy and improvisation, while the first set receives mixed feedback – some find it lackluster or muffled, but a few enjoy the mellow drums and overall vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly noted for his excitement, tone and presence (“Jerry on it!!”, “Jerry gave his life for this”).",
+    "Phil": "Highlighted in one review as ‘busting onto the scene’ during a Picasso Moon opener.",
+    "Bob": "",
+    "Keys": "Vince (keyboards) mentioned in context of heavy reverb/sustain and interplay with Jerry; Brent also referenced indirectly.",
+    "Drums": "Described as “nice mellow drums”, “great drumming” and noted for the classic drum break before the bowl."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Crazy > Playing": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lucy In The Sky": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:32:13.548591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-15.schoeps.fink.17955.sbeok.shnf"
+}

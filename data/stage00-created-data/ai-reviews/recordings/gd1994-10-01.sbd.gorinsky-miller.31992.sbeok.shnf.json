@@ -1,0 +1,45 @@
+{
+  "summary": "Late‑era 1994 show shines with a soaring “So Many Roads” and a stellar “Althea,” captured on a soundboard that many find a bit dry but still listenable.",
+  "review": "Fans rave about the emotional power of Jerry’s vocal on “So Many Roads” and the jam‑filled “Althea,” calling this one of the finest late‑’94 performances. The recording is listed as a soundboard source, though several listeners note it sounds parched or dry, giving the audio a fair rather than excellent rating.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) are 4‑5 stars praising the performance, while a few note audio quality issues; weighted average yields ~4.0."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit technical details beyond the .sbd label; several reviewers describe the sound as parched, dry and somewhat brittle, while others note no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Listeners highlight a strong emotional arc, especially the heartfelt delivery of “So Many Roads” and an energetic jam on “Althea,” marking this as a standout late‑era show."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for inspired, thoughtful playing and moving vocal performance, especially on “So Many Roads.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (keyboard) noted as playing very well.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-19T01:57:05.872591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-01.sbd.gorinsky-miller.31992.sbeok.shnf"
+}

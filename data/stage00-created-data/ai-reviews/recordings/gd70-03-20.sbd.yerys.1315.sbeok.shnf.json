@@ -1,0 +1,55 @@
+{
+  "summary": "A confusing matrix recording that mixes soundboard and audience sources; the Cold Rain & Snow performance shines, but uneven audio quality drags the overall experience.",
+  "review": "The show contains a noteworthy rendition of Cold Rain & Snow (Jerry’s solo gets praise) and a clean Good Lovin' segment, but the tape is a patchwork of SBD and AUD material that jumps between two different nights, leaving the first five tracks muddy and the later sections only marginally better. Reviewers are split – some enjoy the musical moments while many criticize the chaotic source handling and sub‑par sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "high",
+    "rationale": "Show quality is average with a few standout performances; recording quality is inconsistent (matrix, fair overall). The mix of positive and negative reviewer comments leads to a middle‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Tracks are assembled from both soundboard (SBD) and audience (AUD) sources, causing abrupt changes in fidelity; first five tracks are muddy, later electric sections are clearer but still uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The track order is jumbled – the middle of the show appears first, then the opening set from a different night, followed by later material. This creates a confusing flow that obscures the original set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "Nice solo on Cold Rain & Snow noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:31:02.158492+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-03-20.sbd.yerys.1315.sbeok.shnf"
+}

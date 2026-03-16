@@ -1,0 +1,63 @@
+{
+  "summary": "Average recording quality, but the second set delivers standout moments such as That Would Be Something → Days Between and a strong Throwing Stones.",
+  "review": "Listeners find this Boston Garden show from October 2‑1994 fairly enjoyable despite the lack of detailed recording notes. The performance is solid overall, with the highlight being the forty‑minute stretch from \"That Would Be Something\" through the drum solo into \"The Days Between,\" plus a strong Truckin', Space>Days Between and Throwing Stones segment in the second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is average to good (highlighted songs) while recording quality is undocumented, leading to a mid‑range overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers commented on soundboard vs. audience source or clarity; assume an unremarkable listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "That Would Be Something",
+      "The Days Between",
+      "Throwing Stones",
+      "Truckin'",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is noted as the high point, especially the sequence from \"That Would Be Something\" through the drum solo into \"The Days Between\"; first set deemed competent but unremarkable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "That Would Be Something": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:13:01.991294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-02.136875.sbd.miller.flac"
+}

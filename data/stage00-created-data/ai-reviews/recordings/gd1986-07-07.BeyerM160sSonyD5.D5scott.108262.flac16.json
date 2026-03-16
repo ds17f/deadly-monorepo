@@ -1,0 +1,31 @@
+{
+  "summary": "A cryptic, zero‑star review gives no concrete details on sound or performance, leaving the recording’s quality unclear and suggesting strong dissatisfaction.",
+  "review": "The reviewer poetically calls the concert an “end of the ages” show but offers no specific commentary on the music, individual songs, or the audio source. No technical information about the tape (soundboard vs. audience) is provided, and the zero‑star rating indicates a very negative overall impression.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating and no substantive details; rating reflects strong negativity but limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer did not mention any audio characteristics; zero stars imply dissatisfaction with the recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or performance quality were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T17:30:00.315517+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-07.BeyerM160sSonyD5.D5scott.108262.flac16"
+}

@@ -1,0 +1,91 @@
+{
+  "summary": "Crisp soundboard recording of a high‑energy 1971 show highlighted by Casey Jones, Black Peter and a smoking Ramble on Rose.",
+  "review": "The soundboard source is remarkably clear for this era – instruments and vocals come through crisp with only the usual tape hiss. Musically the concert is praised for its fire, especially the second set, with standout moments like Casey Jones, One More Saturday Night, Black Peter, Tennessee and a wildly distorted piano on Ramble on Rose. Overall the performance is viewed as a classic 1971 Dead show despite a few minor flubs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star, highlighting both superb musical moments and excellent soundboard quality; only a couple of middling scores temper the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very crisp and clean mix with clear vocals and instruments; slight tape hiss typical of the period, but piano distortion on \"Ramble on Rose\" adds character rather than detracting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "One More Saturday Night",
+      "Black Peter",
+      "Tennessee",
+      "Ramble on Rose",
+      "Brown Eyed Women",
+      "Truckin'",
+      "Jack"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong start to finish with high energy; the second set is described as \"one of the hottest\" and banter adds a live‑concert feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Flubs the first verse of Brown Eyed Women but overall guitar work praised.",
+    "Phil": "\"Lots o' Phil\" noted on bass, especially during One More Saturday Night.",
+    "Bob": "",
+    "Keys": "Keith's piano is highlighted as essential and even delightfully distorted on Ramble on Rose; praised for supporting Pigpen’s harmonica.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T10:54:38.242177+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-12-09.sbd.kaplan.3345.sbeok.shnf"
+}

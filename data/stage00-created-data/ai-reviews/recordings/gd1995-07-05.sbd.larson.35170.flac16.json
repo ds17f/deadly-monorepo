@@ -1,0 +1,69 @@
+{
+  "summary": "A crisp but slightly sped‑up soundboard captures a solid mid‑90s set with standout Iko Iko, Playing in the Band and Crazy Fingers, though hiss, brief drop‑outs and pitch issues keep it from being perfect.",
+  "review": "The July 5‑1995 show is an energetic performance that shines on the second‑set jams – especially Iko Iko, Playing in the Band, Crazy Fingers and the seamless Drums→Space transition. Reviewers praise Jerry’s solos, Phil’s rumbling bass, Bob’s chords and Brent (Welnick)’s bright keys, but note a noticeable hiss in the first set, a chip‑munk‑like speed/pitch shift, occasional silences and track overlap that detract from an otherwise snappy recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is generally good with several standout jams, but recording suffers from hiss, speed/pitch issues and occasional drop‑outs; the mix of positive and negative feedback yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Clear and snappy overall but exhibits first‑set hiss, slight speed/pitch up (chipmunk effect), brief silences in the second set, and an overlap where drums bleed into Corrina."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Playing in the Band",
+      "Crazy Fingers",
+      "Blues for Allah",
+      "Corrina",
+      "Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set maintains strong momentum with a varied first set and an especially impressive second set that weaves through multiple moods, highlighted by seamless segues and extended jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Right on the money throughout; clever, comical solos in Iko Iko and fiery fingerpicking on Playing in the Band.",
+    "Phil": "Rumbling bassline provides a solid foundation, especially during Playing in the Band.",
+    "Bob": "Bubbles with sagging chords that complement the jams nicely.",
+    "Keys": "Welnick weaves quick strings of notes, adding bright color to the psychedelic stew.",
+    "Drums": "Kreutzmann delivers great tribal‑futuristic drumming; the Drums→Space segment is a highlight."
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blues for Allah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:57:26.260152+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-05.sbd.larson.35170.flac16"
+}

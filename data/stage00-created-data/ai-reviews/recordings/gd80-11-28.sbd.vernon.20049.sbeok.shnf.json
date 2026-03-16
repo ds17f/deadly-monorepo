@@ -1,0 +1,57 @@
+{
+  "summary": "Warm soundboard capture of a solid 1980 show, highlighted by To Lay Me Down, Feel Like A Stranger and an outstanding Terrapin Station.",
+  "review": "The recording is a generally warm and clear sound‑board source with only minor hiss noted by a few listeners, making it quite listenable. Musically the concert shines – fans repeatedly praise the electric Deep Elem blues, a killer Feel Like A Stranger opener, a heartfelt To Lay Me Down and an inspired Terrapin Station in the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, highlighting strong playing and a solid soundboard recording; only occasional comments about hiss lower the technical rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Warm, clear mix overall; several reviewers note slight hiss or a high vocal balance on some tracks, but the recording remains balanced and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down",
+      "Feel Like A Stranger",
+      "Electric Deep Elem Blues",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid first set followed by an inspired second set; the band stays tight and the set builds to a memorable To Lay Me Down and Terrapin Station climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work is repeatedly praised – bubbling tone, energetic playing and “nice Garcia bubbles”.",
+    "Phil": "",
+    "Bob": "Weir’s vocals are highlighted as strong on To Lay Me Down; one reviewer notes his voice sounded a bit high in the mix.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Electric Deep Elem Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T06:04:54.474110+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-11-28.sbd.vernon.20049.sbeok.shnf"
+}

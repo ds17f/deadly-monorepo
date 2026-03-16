@@ -1,0 +1,39 @@
+{
+  "summary": "UltraMatrix captures the Worcester show with crystal‑clear sound, highlighting a stellar Black Peter and Jerry’s soaring vocals.",
+  "review": "The UltraMatrix source delivers an excellent representation of the 1987 Worcester concert, offering clear, balanced audio that lets listeners hear every nuance. Reviewers rave about the performance, especially the beautiful Black Peter, Jerry Garcia’s outstanding vocal and ripping solo, and Bob Weir’s tasteful slide work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one detailed, highly enthusiastic review; it praises both the musical performance and the matrix recording, leading to a strong rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "UltraMatrix provides clear, well‑balanced sound with enough ambience to capture the band‑fan interaction; reviewers recommend playback on good equipment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific criticisms noted; overall performance described as strong and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal outstanding and delivers a ripping solo to close.",
+    "Phil": "",
+    "Bob": "Slide work praised, adding beauty to the performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:42:55.701826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-02.140333.UltraMatrix.sbd.cm.miller.flac1644"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is very grainy and patchy, with no information on performance quality",
+  "review": "The sole review points out that the audio is extremely grainy and patchy, indicating a poor‑quality source. No comments are provided about the band's playing or setlist, so the musical aspect of this show remains unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review mentioning severe audio problems and no positive remarks about the performance; thus rating is very low with limited confidence"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer describes the sound as very grainy and patchy, suggesting low fidelity and likely significant noise or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T23:04:40.765659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-02.116006.NeumannKMF4.daweez.d5scott.flac16"
+}

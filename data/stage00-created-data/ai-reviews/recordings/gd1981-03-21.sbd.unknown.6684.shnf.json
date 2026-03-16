@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard recording captures a smoking show highlighted by Peggy‑O, Alabama Getaway and an incendiary Black Peter solo.",
+  "review": "Both reviewers rave about the crystal‑clear soundboard source, calling the audio “excellent” and noting Brent’s keyboards dominate every track. Musically the concert is described as “smoking,” with standout moments including a blistering Jerry Garcia solo on Black Peter, seamless space into Not Fade Away, and powerful renditions of Peggy‑O, Alabama Getaway, China>Rider and Let It Grow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Two detailed 5‑star reviews praise both the performance (exceptional solos, tight set flow) and the superb soundboard quality, indicating an outstanding overall experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the recording as crisp and excellent; no issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Alabama Getaway",
+      "Black Peter",
+      "Not Fade Away",
+      "China Cat Sunflower > I Know You Rider",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly with seamless transitions (e.g., space into Not Fade Away) and a high‑energy second half packed with highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "His Black Peter solo is called the best ever heard, aggressive, volcanic and emotionally charged.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland “kicks out the keys on all songs,” receiving strong praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:04:39.134427+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-21.sbd.unknown.6684.shnf"
+}

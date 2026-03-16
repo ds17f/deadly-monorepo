@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent audience recording with crisp sound and a standout Shakedown Street/Playin' sequence, despite a few tuning quibbles.",
+  "review": "The tape captures an early‑80s show that many fans describe as powerful and mellow, highlighted by Jerry’s soaring guitar on Shakedown Street and the seamless Playin' segues. The audience‑sourced recording is praised for its clarity and energy, though a couple of reviewers note minor tuning issues and a missing Althea.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.2 combined with overwhelmingly positive comments about both performance and audio quality; many detailed reviews support this assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear audience tape with good balance of instruments; occasional tuning slip noted but overall high‑fidelity and immersive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Playin'",
+      "Ramble on Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is praised for its mellow tempo, while the second set receives mixed feedback – some love the Playin' sequence, others find it short. Overall pacing is described as powerful and emotionally resonant."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his guitar tone, especially on Shakedown Street; described as 'totally on' and 'off the charts.'",
+    "Phil": "Noted positively ('Lots of GUITARS and Phil'), with fans hearing strong bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "No direct performance comment, though one reviewer recalls Hell's Angels around the drum kit."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T08:25:42.399260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-02.nak700.wagner.miller.90450.sbeok.flac24"
+}

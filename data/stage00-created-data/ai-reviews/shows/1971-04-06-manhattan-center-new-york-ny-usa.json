@@ -1,0 +1,87 @@
+{
+  "summary": "Tight early‑71 set with stellar Hog for You and Midnight Hour",
+  "blurb": "The show delivers a focused first set highlighted by a ripping \"I'm A Hog For You Baby\" and \"Playing In The Band,\" while the second half shines with Pigpen’s electric \"Oh Boy\" and an intense Midnight Hour segment. Recording quality varies, but the performance is consistently praised for its tightness and energy.",
+  "review": "April 6, 1971 at Manhattan Center captures the Grateful Dead in a rare moment of studio‑like precision mixed with raw, late‑summer jam power. The first set rolls through classics—\"Bertha,\" \"Dire Wolf,\" and a thunderous \"I'm A Hog For You Baby\"—with Phil’s “hammerstien” bass driving a tight rhythm section. Jerry’s guitar is generally on point, hitting especially bright tones during the Midnight Hour where he locks in with Pigpen’s organ for a fiery exchange. The second set builds momentum through a soaring \"Greatest Story Ever Told,\" an electric rendition of \"Oh Boy,\" and a seamless transition into two rounds of \"Good Lovin'\" that showcase Bill Kreutzmann’s “awesome” drumming. Though some reviewers note vocal wear on later numbers, the overall arc is one of high energy and solid musicianship, making it a must‑listen for fans of early‑’70 Dead intensity. For the clearest listening experience, the SBD from the IFTHIR archive (ID: gd1971-04-06.sbd.ifthir.smith.gems.109026.flac24) offers crisp, balanced sound with no drop‑outs.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Three recordings are explicitly positive, five are mixed and none are consistently negative. The positive mentions focus on standout songs (Hog for You Baby, Oh Boy, Midnight Hour) and tight band play, yielding a moderate positive sentiment adjustment of +1.0.",
+      "final_calculation": "2.5 + 0.2 + 1.0 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1971-04-06.sbd.ifthir.smith.gems.109026.flac24",
+    "reason": "Excellent SBD with crystal‑clear mix, no drop‑outs, and praised as the best version to date."
+  },
+  "key_highlights": [
+    "Ripping \"I'm A Hog For You Baby\" that drives the first set.",
+    "Electric \"Oh Boy\" and an intense Midnight Hour showcase Pigpen’s organ power.",
+    "Two tight \"Good Lovin'\" performances highlight Bill Kreutzmann’s drumming.",
+    "Overall tight, studio‑like sound despite occasional vocal wear."
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Oh Boy",
+    "I'm A Hog For You Baby",
+    "Playing In The Band",
+    "In The Midnight Hour",
+    "Greatest Story Ever Told",
+    "Good Lovin'",
+    "Sugar Magnolia",
+    "Not Fade Away",
+    "Truckin'"
+  ],
+  "band_performance": {
+    "Jerry": "Generally solid with bright tones; shines on Midnight Hour where his guitar locks in tightly with Pigpen, though a few reviewers note occasional fatigue later in the set.",
+    "Phil": "Delivers an intense \"hammerstien\" bass line that anchors the band; overall presence is strong despite minor backup‑vocal criticisms in the second set.",
+    "Bob": "Provides powerful rhythm guitar and tight interplay with Phil; his sync with Jerry during Midnight Hour is a highlight, though one reviewer called his Truckin' vocals harsh.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Consistently praised as \"awesome\"—drums drive the energy, especially locking in on the Midnight Hour and the dual Good Lovin' jams."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-20T04:14:55.371717+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha"
+    ],
+    [
+      "Oh Boy"
+    ],
+    [
+      "I'm A Hog For You Baby"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "In The Midnight Hour"
+    ],
+    [
+      "Greatest Story Ever Told",
+      "Johnny B. Goode"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Sugar Magnolia"
+    ],
+    [
+      "Not Fade Away",
+      "Truckin'",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad"
+    ]
+  ]
+}

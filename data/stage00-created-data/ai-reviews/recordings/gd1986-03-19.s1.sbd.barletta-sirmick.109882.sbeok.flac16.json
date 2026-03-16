@@ -1,0 +1,64 @@
+{
+  "summary": "Soundboard of the first set delivers strong Dylan covers and a solid setlist, but suffers from PA‑related muffiness and generation loss.",
+  "review": "The review praises the historic first‑set soundboard release, especially the rare \"Visions of Johanna\" and \"She Belongs to Me\" performances, calling the show itself a 4.5‑star experience. Recording quality is noted as only average (3.5 stars) due to PA problems on \"Bucket\" and \"Stagger Lee\" and a slightly thin mix, though the archivist's effort is appreciated.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "High show rating (4.5) weighted heavily versus moderate recording rating (3.5) yields an overall 4.2‑star assessment; only one detailed review gives medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "PA problems on \"Bucket\" and \"Stagger Lee\" not captured well, board sounds a bit distant, possible extra generation loss causing slight muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "She Belongs to Me",
+      "C.C. Rider"
+    ],
+    "poor_songs": [
+      "Bucket",
+      "Stagger Lee"
+    ],
+    "setlist_flow": "First‑set only, praised for rare Dylan covers and overall strong setlist; missing second set leaves the release feeling incomplete."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocal and guitar work on the Dylan covers is highlighted as a blessing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:57:20.616473+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-19.s1.sbd.barletta-sirmick.109882.sbeok.flac16"
+}

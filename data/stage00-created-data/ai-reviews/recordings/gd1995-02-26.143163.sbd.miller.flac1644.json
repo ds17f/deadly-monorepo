@@ -1,0 +1,62 @@
+{
+  "summary": "Fair‑quality monitor mix capture of a solid show – Not Fade Away and Lazy River Road shine while some fast tempos make the performance uneven.",
+  "review": "The recording is a monitor‑mix feed that sounds like it was captured on an FM boombox, giving it a slightly sharp, “iffy” sound quality. Musically the concert has highlights such as a kick‑ass Not Fade Away and a favorite Lazy River Road, but several songs suffer from rushed tempos that leave Jerry’s parts sounding out of control. Overall it’s a decent 1995 performance worth hearing for fans despite its technical quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one detailed review; show is rated around 3.5 stars and recording about 3 stars, yielding a weighted average of ~3.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Monitor‑mix feed recorded likely via FM boombox; a few cents sharp and slightly fast playback; overall clarity is limited and some muddiness present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Lazy River Road"
+    ],
+    "poor_songs": [
+      "West LA"
+    ],
+    "setlist_flow": "The set opens strong with Good Times Roll and Not Fade Away, but several mid‑set numbers run too fast, especially Jerry‑led tunes, giving the performance an uneven pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Tempo issues often hit his songs, making parts sound out of control; occasional roughness noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (keys) takes lead vocals on Good Times Roll and contributes to the near‑exquisite Queen Jane performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:29:52.286546+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-26.143163.sbd.miller.flac1644"
+}

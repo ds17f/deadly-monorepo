@@ -1,0 +1,77 @@
+{
+  "summary": "Blazing Lazy Lightning > Supplication, tight PITB sandwich, stellar jams.",
+  "blurb": "The first set builds to a scorching Lazy Lightning > Supplication jam and a punchy Deal closer. The second set delivers a seamless Playing In The Band sandwich into Truckin', highlighted by Peggy‑O and a powerful Wheel > Wharf Rat flow. Keith’s harpsichord adds texture while the dual drummers keep the groove solid.",
+  "review": "October 30, 1977 at Assembly Hall in Bloomington captures the Dead at a high‑octane peak. Jerry erupts from a tentative start into a fiery solo on Supplication and drives Me And My Uncle with his trademark wailing tone – reviewers called it “smoking” and “on fire.” The band’s momentum rockets through Lazy Lightning > Supplication, then barrels into Deal before launching the second‑set juggernaut: a flawless Playing In The Band sandwich that rolls right into Truckin', followed by a tight Wheel > Wharf Rat transition and an epic The Other One. Peggy‑O shines with Keith’s harpsichord adding a sweet, pseudo‑baroque texture, while both Mickey and Bill pound out a crisp, powerful drum foundation throughout. Highlights also include New Minglewood Blues, Tennessee Jed and the soulful Candyman, though Johnny B. Goode in the encore feels less essential. The crystal‑clear Miller soundboard (gd1977-10-30.sbd.miller.99765) captures every nuance with “killer” clarity, making this performance a must‑listen for fans seeking both tight musicianship and that classic ’77 improvisational spark.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 30,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four of six recordings are strongly positive, using descriptors like “killer,” “amazing,” and “stellar.” Mixed reviews note only minor texture issues but no consistent criticism of the performance itself, justifying a moderate positive boost.",
+      "final_calculation": "2.5 + 0.3 + 1.2 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1977-10-30.sbd.miller.99765.sbeok.flac16",
+    "reason": "Crystal‑clear soundboard with excellent instrument separation, no drop‑outs, and the most complete capture of the show’s highlights."
+  },
+  "key_highlights": [
+    "Explosive Lazy Lightning > Supplication jam that launches the set.",
+    "Seamless Playing In The Band sandwich into Truckin' and Wheel > Wharf Rat flow.",
+    "Peggy‑O enhanced by Keith’s harpsichord texture, adding a unique sonic layer."
+  ],
+  "song_highlights": [
+    "Lazy Lightning",
+    "Supplication",
+    "Deal",
+    "Peggy-O",
+    "Playing In The Band",
+    "The Other One",
+    "Wheel",
+    "Wharf Rat",
+    "New Minglewood Blues",
+    "Tennessee Jed"
+  ],
+  "band_performance": {
+    "Jerry": "Starts diffident but erupts into a fiery solo on Supplication and leads Me And My Uncle with wailing, high‑energy playing.",
+    "Phil": "Provides a tight rhythm foundation; his bass underpins the band's drive and he nudges the Wheel > Wharf Rat transition.",
+    "Bob": "Delivers strong vocal leads on Me And My Uncle, adds quirky banter and helps shape tempo choices throughout.",
+    "Keith": "Adds harpsichord texture—sweet on Peggy‑O and Candyman—though occasionally over‑present; shines on slower numbers.",
+    "Mickey": "Steady drum work with crisp call‑outs (e.g., “Bertha”), keeping the groove tight especially on Peggy‑O.",
+    "Billy": "Powerful, punchy drumming that drives the high‑octane jams and reinforces the dual‑drum dynamic."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-25T05:58:00.870869+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lazy Lightning",
+      "Supplication"
+    ],
+    [
+      "Deal"
+    ],
+    [
+      "Peggy-O"
+    ],
+    [
+      "Playing In The Band",
+      "The Other One",
+      "Drums",
+      "The Wheel",
+      "Wharf Rat",
+      "Playing In The Band"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Tennessee Jed"
+    ]
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Clear mic‑recorded tape with solid detail, highlighted by a smashing St. Stephen, buttery Hard to Handle and acoustic I Know You Riders.",
+  "review": "The recording is a stage‑mic capture that sounds surprisingly clean and detailed despite some drum‑mic overload and occasional speaker boominess. Musically the show shines – the band tears through St. Stephen with intensity, delivers a smooth Hard to Handle after a rough start, and treats fans to a lovely acoustic I Know You Riders. A few blemishes (a cut on Cryptical and feedback in The Other One) don’t detract from an overall strong mid‑1970 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical set (standout songs, energetic playing) and the surprisingly good recording quality; minor technical flaws are noted but do not outweigh the positives."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Stage‑mic (not true audience or soundboard) with slight speaker boominess and drums a bit loud; occasional monitor feedback and a cut on Cryptical, but overall clear, well‑EQ'd and detailed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Riders",
+      "St. Stephen",
+      "Hard to Handle"
+    ],
+    "poor_songs": [
+      "Cryptical Envelopment"
+    ],
+    "setlist_flow": "A solid mid‑1970 set that rolls smoothly, delivering strong early acoustic work and building into high‑energy rock numbers; the second half maintains momentum despite minor hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob (Bobby) is heard screaming \"GODDAMMIT!\" during a feedback moment in The Other One.",
+    "Keys": "",
+    "Drums": "Drums are mic'd too loud, contributing to a slightly boomy sound and occasional overload."
+  },
+  "song_mentions": {
+    "I Know You Riders": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:38:07.023574+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-05.132395.bear.wise.flac16"
+}

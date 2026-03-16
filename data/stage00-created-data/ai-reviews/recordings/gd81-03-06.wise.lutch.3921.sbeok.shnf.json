@@ -1,0 +1,110 @@
+{
+  "summary": "Audience recording with good‑to‑excellent sound captures a solid 1981 Pittsburgh show highlighted by stellar Stella Blue, The Other One and a blistering Franklin’s Tower.",
+  "review": "The audience tape is generally clear – big bass, crisp highs and just enough crowd ambience to place you in the intimate Stanley Theater – though a few listeners note it can sound a bit distant. Musically the concert shines with a patient segue from The Other One into Stella Blue, soaring Let It Grow, a fast‑tempo Franklin’s Tower and a memorable Little Red Rooster featuring Brent's keyboard solo; Jerry’s playing ranges from pathos‑filled phrasing to wild improvisations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both the performance (standout jams, tight set flow) and the recording (clear tone, good balance). A few note modest sound‑quality issues, keeping the overall rating just above a solid four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp high end and big bass; enough crowd noise for atmosphere. Some listeners describe it as slightly distant or not as \"crispy\" as top‑tier soundboard tapes, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "The Other One",
+      "Let It Grow",
+      "Franklin's Tower",
+      "Little Red Rooster"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "First set solid with strong song choices; the second set features a patient segue from The Other One into Stella Blue and high‑energy jams (Let It Grow > Deal, Estimated Prophet → Sugar Magnolia). Overall pacing is tight and the intimate venue adds to the vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for emotional phrasing on Stella Blue, wild solos on Franklin’s Tower and a killer Jack Straw opener; some reviewers feel his playing wanes later in the set.",
+    "Phil": "Noted for his legendary ‘13‑note bass riff’ that opened one of the songs, showcasing classic Phil Lesh improvisational flair.",
+    "Bob": "",
+    "Keys": "Brent delivers a notable keyboard/Moog solo during Little Red Rooster; reviewers highlight his accurate clavinet patch and overall keyboard brilliance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gloria Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:52:13.985510+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-06.wise.lutch.3921.sbeok.shnf"
+}

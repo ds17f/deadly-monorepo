@@ -1,0 +1,84 @@
+{
+  "summary": "A lively late‑80s Rochester show captured on a matrix source that’s a bit tinny but still listenable, featuring standout performances of China Rider, Dire Wolf and the Watchtower sequence.",
+  "review": "The concert is remembered as a high‑energy East Coast debut with an unusually long first set, rain‑soaked second half and several classic moments – Jerry’s guitar was “incredibly strong,” Brent added choir‑angel vibes on Stella, and the band delivered tight versions of China Rider, Dire Wolf and Watchtower.  The recording is a matrix mix that leans heavy on audience mics; it sounds a little tinny and occasionally muddy but remains usable for most listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews praise the musical performance (strong setlist, memorable moments) while noting only moderate recording flaws; weighting 70% show quality and 30% audio gives a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Too much audience mic in the mix, slightly tinny highs and occasional muddiness; overall decent but not a clean soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Rider",
+      "Dire Wolf",
+      "Looks Like Rain",
+      "Watchtower",
+      "Stella Blue",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A famously long first set followed by a rain‑charged second set; the band stayed tight, took few risks but delivered classic late‑80s energy and several memorable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for strong guitar work, powerful vocals and even creating “rain sounds” with his playing.",
+    "Phil": "His booming voice on “Tons of Steel” was highlighted.",
+    "Bob": "Brief mention of Bob saying a profanity during the show; no specific musical appraisal.",
+    "Keys": "Brent contributed background “Choir Angels” vocals during Stella; keyboards otherwise not singled out.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tons of Steel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:50:31.757537+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-07-02.sbd.nawrocki.6473.sbefail.shnf"
+}

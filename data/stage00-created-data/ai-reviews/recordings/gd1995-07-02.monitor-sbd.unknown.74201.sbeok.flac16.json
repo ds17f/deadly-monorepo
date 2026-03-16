@@ -1,0 +1,50 @@
+{
+  "summary": "A rough monitor‑SBD capture of a sentimental Deer Creek show, highlighted by scorching Let It Grow and Fire on the Mountain but marred by poor board quality and gate‑crasher chaos.",
+  "review": "Fans who were there rave about Jerry’s hot playing and the magic of Let It Grow and Fire on the Mountain in an intimate Deer Creek setting. The recording is a stage‑monitor feed that many reviewers call the worst they’ve heard, resulting in a muddy, low‑fidelity listening experience. Crowd disturbances and intrusive stage chatter further color the memory, making the overall impression mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is praised for standout songs and emotional significance (≈4/5), but recording quality is consistently described as poor (≈2/5). Weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers note this monitor SBD is the worst of its kind—muddy, low‑fidelity and not well balanced. No positive comments about clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert felt intimate and energetic early on, but was disrupted by gate‑crashers and intrusive stage chatter. The vibe shifted from enthusiastic to uneasy as the night progressed."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sounding 'hot as ever' in one review, but another reviewer feels his health showed and the performance suffered.",
+    "Phil": "Noted for on‑stage chatter ('Look at the back wall', 'There's a riot outside…') which some listeners found distracting.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:50:42.341578+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-02.monitor-sbd.unknown.74201.sbeok.flac16"
+}

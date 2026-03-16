@@ -1,0 +1,46 @@
+{
+  "summary": "Excellent matrix recording captures an early‑80s show with a strong setlist highlighted by Sugaree, though Jerry’s playing wanes on Terrapin.",
+  "review": "The matrix mix is praised for its crystal‑clear soundboard instrument clarity and balanced levels that let every note from Bob, Phil and Jerry shine. Musically the concert is generally lauded – a great early‑80s setlist with standout moments like Sugaree – but one reviewer notes that Jerry’s playing becomes unfocused during Terrapin Station in the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and extol both the superb matrix sound quality and the overall strength of the performance, with only a single moderate critique lowering the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly describe the mix as \"excellent\", noting superb soundboard instrument clarity, balanced keyboards/vocals, and an overall crisp, immersive listening experience that blends SBD and AUD sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "The set list is regarded as strong for the era with a great early‑80s vibe, though the second set suffers when Jerry appears unfocused on Terrapin Station."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for clear presence in the mix, but criticized for being \"too stoned\" and uneven during Terrapin Station.",
+    "Phil": "Noted positively – his bass lines come through clearly in the matrix.",
+    "Bob": "His guitar work is audible and well‑defined according to reviewers.",
+    "Keys": "Brent Mydland’s keyboards are praised for tasteful balance; reviewers like the pre‑mid lineup sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:46:37.739262+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-02.135559.mtx.dusborne.flac16"
+}

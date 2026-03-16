@@ -1,0 +1,91 @@
+{
+  "summary": "Fair‑quality matrix recording of the infamous Tacoma Dome show – Jerry sounds disengaged but Touch of Grey, Playin’ and Miracle provide bright spots.",
+  "review": "The tape captures a notoriously difficult acoustic environment; the house mix was muddy and echo‑laden, though up‑front it can sound surprisingly clear. Musically the band delivered unevenly – Brent’s piano dominates, Jerry battles with vocals and focus, yet songs like Touch of Grey, Playin’, Miracle and a solid Take on Sugaree keep the set from sinking.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality is average to below‑average (many complaints about performance, especially Jerry and sound balance) while recording quality is fair due to severe venue acoustics; the mix of positive song moments lifts the overall rating into the low‑3 range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Venue caused heavy echo and wall absorption; house mix was muddy and piano‑heavy, but the taper’s capture is clear up front and some sections sound almost broadcast‑level."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Playin'",
+      "Miracle",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Space",
+      "Row Jimmy",
+      "Sugaree (flub sections)"
+    ],
+    "setlist_flow": "The set feels uneven – a hard‑rocking first half with Hell and Good Time Blues, followed by a second set that drags in the echo‑filled dome; transitions are hampered by acoustic issues but the band keeps momentum with tight drumming."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers say Jerry sounded disengaged, off‑step and struggled vocally, though a few note moments of energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s piano is repeatedly called overbearing in the house mix, drowning other instruments.",
+    "Drums": "The drums are praised for keeping a tight, driving pulse and rescuing slower songs despite the poor acoustics."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Time Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "UJB": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:32:16.239425+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-08-26.schoeps-fob.gardner.8215.sbeok.shnf"
+}

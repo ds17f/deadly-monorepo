@@ -1,0 +1,45 @@
+{
+  "summary": "Fair‑quality source but a weak performance; only the Foolish Heart jam stands out.",
+  "review": "Both reviewers found the show to be one of the weaker sets of the tour, describing the playing as sloppy and uninspired. The second set does offer a couple of decent jams – notably the Foolish Heart improvisation and the SOTM outro – but overall nothing extraordinary. No comments were made about the recording itself, so its technical quality remains unclear.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Both reviews gave 2‑star ratings and criticized the performance; with no recording details the rating is driven mainly by the poor show assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention any aspects of sound quality, clarity, or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "SOTM outro"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set contains a few nice jams but the overall concert is considered mediocre and uninspired."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "SOTM outro": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:06:51.776227+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-17.sbd.s2.wiley.18384.sbeok.shnf"
+}

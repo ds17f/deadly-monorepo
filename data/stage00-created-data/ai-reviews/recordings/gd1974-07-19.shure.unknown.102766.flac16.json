@@ -1,0 +1,31 @@
+{
+  "summary": "Poor‑quality audience recording of a great show – pitch‑off and muffled despite Wall of Sound ambience.",
+  "review": "The three reviews agree that this is an audience tape, but two flag serious flaws: one version is off‑pitch and another is described as low‑fidelity compared to better sources. While one reviewer praises the “fullest possible perspective” of the Wall of Sound, the consensus is that the recording quality undermines enjoyment, even if the underlying performance may have been strong.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.8,
+    "confidence": "medium",
+    "rationale": "Two out of three reviewers rate the audio poorly (0 and 1 stars) citing pitch errors and inferior fidelity; only one positive comment exists, giving an overall low rating despite no detailed musical commentary."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Version posted is off‑pitch and generally low‑fidelity; reviewers note it sounds worse than other known sources (Eaton/Gans)."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or song performance were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T22:39:21.487845+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-19.shure.unknown.102766.flac16"
+}

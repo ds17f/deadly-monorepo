@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard soundcheck featuring Jerry's sublime solo and a breathtaking Brokedown Palace.",
+  "review": "The recording captures a warm, crystal‑clear soundcheck from September 18 1974, highlighted by an inspired Jerry Garcia solo that many reviewers describe as beautiful and even “Stanley Jordan‑esque.”  The brief instrumental of Brokedown Palace is praised for its deep feeling despite a slightly loose break, and the overall tape quality is considered flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks (4‑5 stars) and focus on the superb soundcheck performance and pristine recording; a few low scores relate to unrelated commentary, so overall rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, warm capture of the soundcheck with no noticeable drop‑outs or distortion; limited to the final minute of the tape but perfectly mixed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Peggy-O",
+      "Eyes",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief, improvisational soundcheck that moves from a gorgeous Jerry solo into a loosely structured but emotionally resonant Brokedown Palace instrumental."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo is repeatedly called beautiful, sublime, and Stanley‑Jordan‑esque, with many noting the warm tone and expressive phrasing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:48:51.853118+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-18.sbd.snchk.miller.32292.sbeok.flac16"
+}

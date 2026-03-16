@@ -1,0 +1,75 @@
+{
+  "summary": "Spectacular audience recording captures a chaotic, high‑energy first set and a loose, jam‑filled second set with standout performances of Cumberland Blues, Looks Like Rain and Uncle John’s Band.",
+  "review": "The tape delivers crystal‑clear AUD sound that even SBD fans praise, despite a few PA spikes in the opening minutes and some mislabeled tracks. Musically the show bursts with energy – the first set is wild and frantic while the second settles into relaxed pacing, highlighted by superb renditions of Cumberland Blues, Cassidy, Looks Like Rain, Uncle John’s Band and an inspired Jerry Garcia solo.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All reviewers rate the release 4‑5 stars, praising both performance and sound; detailed comments allow a confident high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "AUD capture is described as ‘as good as it gets’, with crisp clarity; occasional PA blast in the first set noted but overall spectacular sound. Track list mis‑labeling is mentioned but does not affect audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "Cassidy",
+      "They Love Each Other",
+      "Looks Like Rain",
+      "Uncle John's Band",
+      "The Wheel",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is high‑energy and chaotic, second set relaxes into a loose, well‑paced jam flow with trippy moments and a powerful post‑space climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Closing solo described as a pure, unadulterated cry from the heart; tone praised throughout.",
+    "Phil": "Bass tone cuts through loud and bouncy, adding intensity though occasionally overwhelming the mix.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboards noted as awesome on this vintage ’90 show.",
+    "Drums": "Drum segment highlighted as an extremely fun, trippy journey early in the second set."
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:13:43.663598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-06-23.nak.rob.6945.sbefail.shnf"
+}

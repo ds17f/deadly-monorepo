@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard recording of a solid show with a standout \"Musta Been the Doses\" and great Dylan covers",
+  "review": "The reviewer rates this release five stars, praising both the Beyer tape (sound‑board) and front‑of‑house mixes as very nice. The concert is described as solid – not legendary but enjoyable – with particular love for the \"Musta Been the Doses\" performance and a couple of strong Dylan numbers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One enthusiastic five‑star review indicates an excellent recording and a good (solid) show; weighted rating yields about 4.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer praises the Beyer tape and front‑of‑house mix, noting clear and balanced sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Musta Been the Doses"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistent energy throughout; solid performance with enjoyable Dylan covers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Musta Been the Doses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:52:32.544074+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-25.156081.beyerm201-murtha.holbrook.flac2448"
+}

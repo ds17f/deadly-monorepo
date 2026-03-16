@@ -1,0 +1,92 @@
+{
+  "summary": "Excellent soundboard capture of a spring‑’77 show with a smoking Jack‑A‑Roe, blistering Eyes of the World and a standout Estimated Prophet sequence.",
+  "review": "The performance is widely praised – Jerry’s guitar work is described as “inspired” and “perfectly intertwined” with Bob’s lines, Keith’s unplugged keyboards are sharp, and the rhythm section pushes daring new feels.  Standout moments include Jack‑A‑Roe, Eyes of the World, Estimated Prophet into Eyes, Friend of the Devil and a soulful Stella Blue, while Mexicali Blues and an over‑busy Around & Around draw criticism.  The ladner soundboard source is generally clear and well‑balanced, though listeners note some muffled highs, occasional RF bleed and a missing half‑minute segment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars with enthusiastic language about both the music and the recording; only a few mixed or low‑star comments temper the rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp overall sound, clear bass and keyboards, but some listeners mention muffled highs, RF bleed between songs, stage monitor problems and a missing ~30‑second intro."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-A-Roe",
+      "Eyes of the World",
+      "Estimated Prophet",
+      "Friend of the Devil",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Mexicali Blues",
+      "Around & Around",
+      "Stella Blue (slow version)"
+    ],
+    "setlist_flow": "First set is solid and typical of spring ’77, while the second set is uneven but peaks with the Estimated Prophet → Eyes transition; the show swings between experimental rhythms (samba‑style Jack‑A‑Roe) and classic Dead grooves."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for flawless phrasing, inspired soloing and perfect intertwining with Bob’s guitar.",
+    "Phil": "",
+    "Bob": "Described as upbeat, vocal‑strong on Ship of Fools and delivering a powerful Stella Blue.",
+    "Keys": "Keith is noted for being unplugged yet razor‑sharp; his piano adds eerie texture to Friend of the Devil.",
+    "Drums": "Double‑drum kit experiment receives mixed feedback – some find it heavy or uneven, while others give credit for trying something new."
+  },
+  "song_mentions": {
+    "Jack-A-Roe": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T01:44:00.489802+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-18.sbd.ladner.4618.sbeok.shnf"
+}

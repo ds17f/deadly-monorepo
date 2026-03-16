@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent 1985 audience recording with a tight, funky second set highlighted by Shakedown Street and classic jams, but the song Touch falls short.",
+  "review": "Fans rave about this spring‑’85 show – the second set is described as “funky” and “real tight,” with standout performances of Shakedown Street, Uncle John’s Band, Playing in the Band, Dark Star and a killer Mississippi Half‑Step. The audience recording is praised for its spacious, clear sound, though a few note distant vocals and a weak Touch rendition.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8‑plus) give 4–5 stars, highlight strong musical moments and describe the audience recording as excellent with only minor vocal distance issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners call the AUD “excellent,” “crisp” and “spacious,” but a few mention vocals being distant in the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Uncle John's Band",
+      "Playing in the Band",
+      "Dark Star",
+      "Mississippi Half-Step"
+    ],
+    "poor_songs": [
+      "Touch"
+    ],
+    "setlist_flow": "Second set is praised as funky and tightly played; first set considered average by some, but overall the show maintains high energy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – praised for his energetic playing on the second set, yet criticized for distant vocals and a botched Touch performance.",
+    "Phil": "Positive note about an unexpected soulful lead vocal that surprised the crowd.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drum work highlighted as “awesome,” overall drumming described as tight and driving."
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:06:43.104718+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-27.oade-schoeps.sacks.23442.sbeok.flacf"
+}

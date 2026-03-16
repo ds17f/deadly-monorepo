@@ -1,0 +1,70 @@
+{
+  "summary": "Fair‑quality soundboard recording of a solid 1989 show with standout Playing‑in‑the‑Band/Space jams and strong Sugaree, but muddy mix and rough vocals limit enjoyment.",
+  "review": "The performance shines in the second set’s psychedelic Playin’ > Uncle John’s Jam > Playin’ sequence and a superb post‑space segment, with highlights like Friend of the Devil, Sugaree, Cold Rain & Snow and Deal. However, the soundboard mix is widely criticized for overly bright vocals and hi‑hat, leaving the overall sound muddy and uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is generally good with several praised jams, but recording quality is consistently described as poor to fair, pulling the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mixes are muddy; vocals and hi‑hat are excessively loud while other instruments sit in the background. Some listeners find the source surprisingly decent, but the consensus is that the 1989 two‑track board lacks clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Playing in the Band > Uncle John's Jam > Playing in the Band (post‑space)",
+      "Sugaree",
+      "Cold Rain & Snow",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Just a Little Light"
+    ],
+    "setlist_flow": "Second set delivers an extended psychedelic Playin’ > UJB > Playin’ stretch and an excellent post‑space segment, while the first set is solid but hampered by vocal roughness."
+  },
+  "band_member_comments": {
+    "Jerry": "Sweet Jerry numbers noted (Friend of the Devil), but his voice sounded rougher than usual and guitar work was uneven.",
+    "Phil": "Several reviewers wish Phil's bass had been mixed louder; no specific performance comments.",
+    "Bob": "Bobby’s vocals described as rough on this night.",
+    "Keys": "Brent’s newer songs receive mixed reactions – some listeners feel they’ve aged well, others remain unimpressed (e.g., Just a Little Light).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band > Uncle John's Jam > Playing in the Band (post-space)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T01:29:37.992319+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-25.sbd.walker-scotton.miller.83398.sbeok.flac16"
+}

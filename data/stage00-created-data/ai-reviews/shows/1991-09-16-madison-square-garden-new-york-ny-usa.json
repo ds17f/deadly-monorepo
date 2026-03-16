@@ -1,0 +1,72 @@
+{
+  "summary": "Stellar Half-Step & Attics, first set shines; second set keyboard‑heavy",
+  "blurb": "The first set delivers tight playing with highlights like It Must Have Been The Roses and a powerful Miss Mississippi Half‑Step Uptown Toodeloo. The second set is marred by aggressive keyboard textures that overwhelm tunes such as Saint Of Circumstance and Comes A Time. Overall the show packs memorable moments despite a mixed second half.",
+  "review": "On September 16, 1991 at Madison Square Garden the Dead gave fans a roller‑coaster of energy. The opening set was crisp and exciting – Jerry’s vocals sat atop a solid groove as “Feel Like A Stranger” rolled into a fiery “Bertha,” followed by a bluesy “New Minglewood Blues.”  The ballad “It Must Have Been The Roses” segued smoothly into “Dire Wolf” and the crowd surged on “The Music Never Stopped.”  The real high‑point came in the second set when “Mississippi Half‑Step Uptown Toodeloo” launched a seamless chain through “Uncle John’s Band,” “Attics Of My Life,” and a triumphant “Good Lovin’,” with Jerry’s soaring lead guitar and Bill’s tight drumming driving the flow.  However, the keyboards – primarily Vince Welnick with Bruce Hornsby’s flamboyant touches – became overbearing on songs like “Saint Of Circumstance” and “Comes A Time,” causing Garcia to sit back and the band to lose a bit of its usual cohesion.  The soundboard capture by Kowalski (gd91-09-16.sbd.kowalski.525.sbeok.shnf) presents the performance in crystal‑clear detail, letting listeners hear both the moments of brilliance and the occasional clutter that defined this night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Multiple recordings praise the first set, Half‑Step, Attics, and Jerry’s guitar work (+0.9). Consistent criticism about overbearing keyboards and Garcia deferring in the second set appears across several analyses (-0.2), resulting in a net positive adjustment of +0.7.",
+      "final_calculation": "2.5 + 0.2 + 0.7 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-09-16.sbd.kowalski.525.sbeok.shnf",
+    "reason": "Excellent soundboard source with crisp, clean mix; captures the band’s dynamics and highlights while minimizing drop‑outs."
+  },
+  "key_highlights": [
+    "First set shines with tight playing and standout ballad “It Must Have Been The Roses”.",
+    "Half‑Step → Attics sequence delivers soaring guitar and lush keyboards.",
+    "Jerry’s lead work on Bertha, Comes A Time, and the final Good Lovin’ is among his best of the era.",
+    "Second set suffers from aggressive keyboard dominance that masks some tunes."
+  ],
+  "song_highlights": [
+    "Mississippi Half-Step Uptown Toodeloo",
+    "Comes A Time",
+    "Attics Of My Life",
+    "Bertha",
+    "Uncle John's Band",
+    "It Must Have Been The Roses",
+    "New Minglewood Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers strong vocals and soaring lead guitar, especially on Bertha, Comes A Time and the Attics jam, though he steps back during the keyboard‑heavy second set.",
+    "Phil": "",
+    "Bob": "Provides solid rhythm work and memorable licks, notably on New Minglewood Blues and early Bertha.",
+    "Brent": "Vince Welnick (with Bruce Hornsby) offers lush textures that dazzle on the Attics intro but become over‑aggressive in the second set, overwhelming songs like Saint Of Circumstance.",
+    "Mickey": "",
+    "Billy": "Bill Kreutzmann stays tight throughout, powering transitions and delivering a particularly strong post‑drum drive into the encore."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-18T01:11:43.516581+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Saint Of Circumstance",
+      "Comes A Time",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Goin' Down The Road Feeling Bad",
+      "Attics Of My Life",
+      "Good Lovin'"
+    ],
+    [
+      "Bertha"
+    ],
+    [
+      "It Must Have Been The Roses",
+      "Dire Wolf"
+    ],
+    [
+      "New Minglewood Blues"
+    ]
+  ]
+}

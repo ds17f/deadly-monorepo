@@ -1,0 +1,31 @@
+{
+  "summary": "Review flags an incorrect concert date but provides no insight on sound or performance",
+  "review": "The sole reviewer points out that the recording’s metadata appears to be wrong, asserting the show actually took place on 12/30/79. No comments are made about the audio quality or musical execution of the performance.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review focused on metadata; no information to assess show or recording quality"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer only mentioned an incorrect date; no remarks on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T03:49:04.384551+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-27.167336.nak700.smith.miller.clugston.flac2496"
+}

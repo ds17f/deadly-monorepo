@@ -1,0 +1,73 @@
+{
+  "summary": "Crisp soundboard capture with a few mid‑set glitches, highlighted by a debut Jack A Roe, scorching Scarlet > Fire and one of the tour’s best Other One performances.",
+  "review": "The recording is mostly clean and well‑balanced – a typical Jay‑named soundboard tape – though a spill on the board creates noticeable distortion during Goin’ Down The Road Feeling Bad. Musically the show shines: the first set rocks with Jack A Roe, the Scarlet > Fire segue is fire‑hot, and the Other One ranks among the 1977 season’s finest, with strong contributions from all members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise the performance (standout songs, member work) and note only isolated recording flaws; weighting favors show quality leading to a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clean sound, especially the first set. A spill on the board caused distortion/fizzle‑fry around Goin’ Down The Road Feeling Bad, but overall mix remains balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack A Roe",
+      "Scarlet Begonias > Fire on the Mountain",
+      "The Other One",
+      "Samson & Delilah",
+      "Brown‑Eyed Women"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as tight and magical, with a strong opening and a highlight in Jack A Roe. Second set maintains momentum – Scarlet > Fire and the Other One are especially praised, despite the mid‑song audio glitch."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently noted for being \"on\" with great tone; standout solo during The Other One is highlighted.",
+    "Phil": "Praised for powerful bass work, especially on Scarlet/Fire and the Other One (described as hitting \"8 on the Richter scale\").",
+    "Bob": "Recognized for stepping up energy on El Paso and providing solid rhythm throughout.",
+    "Keys": "Donna Jean’s backing vocals spark debate – many love her contributions on songs like Scarlet/Fire, while a few find her parts over‑the‑top.",
+    "Drums": "Bill and Mickey receive positive remarks; the spill incident is blamed on a technical mishap rather than performance."
+  },
+  "song_mentions": {
+    "Jack A Roe": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:58:21.662731+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-13.sbd.ashley.14942.shnf"
+}

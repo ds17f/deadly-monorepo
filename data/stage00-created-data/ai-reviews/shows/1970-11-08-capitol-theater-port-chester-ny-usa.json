@@ -1,0 +1,62 @@
+{
+  "summary": "Dark Star marathon, soaring Morning Dew and killer Truckin'",
+  "blurb": "The second set erupts with a blistering Dark Star into The Main Ten > Dancin’ In The Street sequence, highlighted by Jerry’s legendary solo. Pigpen’s organ shines on Operator while the acoustic opener sets a relaxed tone. Overall it’s a late‑70s classic that rewards repeated listening.",
+  "review": "Port Chester’s November 8, 1970 concert captures the Grateful Dead at a creative peak. The first set rolls through folk‑rock staples like Dire Wolf and Uncle John’s Band before giving way to an electric onslaught that peaks with a Dark Star that many reviewers call “all‑time favorite,” flowing seamlessly into The Main Ten and a funky Dancin’ In The Street. Jerry Garcia’s tone is on fire, especially during the soaring Morning Dew solo praised as “beyond humanly possible.” Pigpen adds soulful organ color on Operator, while Bob Weir delivers a “crazy” New Orleans that fans still talk about. The dual‑drum attack from Mickey and Bill provides extra sparkle, even earning a nod for a “nice xylophone” texture in Dark Star. With strong acoustic moments, relentless energy, and several standout jams, this show stands out as one of the era’s must‑hear performances.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 147,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.3,
+      "sentiment_rationale": "Five of eight recordings are positively described, highlighting Dark Star, Morning Dew, Truckin', and Pigpen’s organ work; no consistent negative remarks appear, warranting a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.3 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-11-08.aud.weiner.28609.sbeok.shnf",
+    "reason": "Balanced audience mix with clear crowd ambience and good overall fidelity, making it the most enjoyable listening experience."
+  },
+  "key_highlights": [
+    "Legendary Dark Star that stretches into The Main Ten > Dancin’ In The Street",
+    "Jerry’s soaring Morning Dew solo hailed as an all‑time favorite",
+    "Pigpen’s gritty organ on Operator adds soulful depth",
+    "High‑energy first set and seamless transitions keep the momentum alive"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Morning Dew",
+    "Truckin'",
+    "The Main Ten*",
+    "Dancin' In The Street*",
+    "Operator"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers a monster Dark Star solo and an “all‑time favorite” Morning Dew, with his tone and improvisational daring at the show's core.",
+    "Phil": "",
+    "Bob": "Weir shines on New Orleans with a “crazy” guitar vibe and adds vocal intensity throughout the set.",
+    "Brent": "",
+    "Mickey": "Mickey’s percussion adds texture, including a noted “nice xylophone” sound during Dark Star that enhances the rhythmic drive.",
+    "Billy": ""
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-20T01:08:06.718226+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "Dark Star",
+      "The Main Ten*",
+      "Dancin' In The Street*"
+    ],
+    [
+      "Morning Dew"
+    ],
+    [
+      "Operator"
+    ]
+  ]
+}

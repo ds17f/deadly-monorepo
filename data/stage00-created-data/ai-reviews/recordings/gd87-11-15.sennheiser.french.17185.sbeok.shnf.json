@@ -1,0 +1,88 @@
+{
+  "summary": "Ambient HRTF audience recording with brick‑wall distortion but featuring standout moments like He’s Gone, Fire and Black Muddy.",
+  "review": "The show captures a volatile Long Beach performance – highlights include an electrifying He’s Gone, a fiery Fire and the rare Black Muddy, while some numbers (The Other One, Dew) suffer from severe audio loss.  Technically it is an audience‑mic capture using Sennheiser MKE‑2002 HRTF mics; brick‑walling and thin mids make several songs hard to hear, though a later 24/96 remaster eases the worst of the distortion.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is mixed – many fans praise key songs while others find large portions bland, and recording quality is consistently described as brick‑walled and thin, pulling the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Recorded with Sennheiser MKE‑2002 HRTF ambient mics; severe brick‑wall distortion on bass (Phil’s side), thin midrange, occasional dropouts.  A later 24/96 remaster reduces the worst artifacts but does not fully restore clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Fire",
+      "Black Muddy",
+      "Iko Iko",
+      "Watchtower",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Dew",
+      "LLRain"
+    ],
+    "setlist_flow": "The concert has high‑energy peaks (second‑set jams and classic numbers) but is marred by two badly recorded songs that dampen the momentum; overall pacing swings between inspiring and uninspired."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals are praised as strong; his guitar on Candyman sounds synthetic but generally solid, and he “hits hard” on He’s Gone.",
+    "Phil": "Bass overloads caused brick‑walling; Phil’s low end is heavily distorted in the original recording.",
+    "Bob": "Bob (Bobby) delivers classic form on LLR, earning specific praise.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "LLRain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Black Muddy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:29:22.160999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-11-15.sennheiser.french.17185.sbeok.shnf"
+}

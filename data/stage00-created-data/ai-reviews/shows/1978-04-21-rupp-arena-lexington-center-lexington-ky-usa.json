@@ -1,0 +1,80 @@
+{
+  "summary": "High‑energy second set with stellar Stella Blue, Truckin’ and tight band",
+  "blurb": "The second set ignites with a booming drums/percussion jam, delivering standout versions of Stella Blue, Truckin' and The Music Never Stopped. Jerry’s tone is immaculate, Keith’s keyboards add a groovy drive and Bob sprinkles tasteful guitar flourishes. Overall a high‑energy performance that ranks among the stronger 1978 spring shows.",
+  "review": "On April 21, 1978 at Lexington’s Rupp Arena, the Dead kicked off with a modest first set – country‑tinged numbers like \"Ramble On Rose\" and \"Passenger\" kept things moving but didn’t quite spark. The magic erupted in the second set: after a tight \"Playing In The Band\" launch, Mickey and Bill launched into a thunderous Drums that rolled straight into an expansive Jam. From there the band surged through a soulful \"Stella Blue,\" a fiery \"Truckin'\" and back‑into‑\"Playing In The Band\" with Jerry’s guitar on point – crisp, adventurous tones that even flirted with jazzy Bach‑organ colors. Keith’s keyboards supplied a funky undercurrent that some likened to Diana Ross’s “Upside Down,” while Bob added tasteful flourishes throughout. The encore capped the night with a rollicking \"Werewolves Of London\" and a solid \"U.S. Blues.\" Across three soundboard sources the consensus is clear: a high‑energy, well‑balanced show where the percussion jam shines, the vocals stay strong, and the band’s chemistry feels locked in.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 30,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the high‑energy second set, standout Stella Blue and Truckin’, strong percussion jam, while the third is mixed but still notes excellent sound and solid playing. The consistent enthusiasm across multiple sources yields a moderate‑high positive sentiment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1978-04-21.sbd.miller.97501.sbeok.flac16",
+    "reason": "Good soundboard capture that’s clear and well‑balanced, preserving the high energy of the second set while avoiding major dropouts."
+  },
+  "key_highlights": [
+    "Powerful drums/percussion jam that drives the second set",
+    "Stella Blue and Truckin' delivered with standout intensity",
+    "Keith’s groovy keyboard texture likened to Diana Ross’s “Upside Down”",
+    "Bob’s tasteful guitar flourishes add extra sparkle"
+  ],
+  "song_highlights": [
+    "Stella Blue",
+    "Truckin'",
+    "The Music Never Stopped",
+    "It's All Over Now",
+    "Brown Eyed Women",
+    "Ramble On Rose",
+    "Playing In The Band",
+    "Drums",
+    "Jam",
+    "Werewolves Of London"
+  ],
+  "band_performance": {
+    "Jerry": "Totally on point with perfect tone and tight playing; energetic phrasing, jazzy/Bach‑organ tones, joins the late‑show percussion segment adding drums but some note less adventurous later.",
+    "Phil": "Generally solid bass foundation; overall tight though one reviewer called his Truckin' part a bit rough.",
+    "Bob": "Provides nice flourishes on rhythm guitar that reviewers highlight positively, contributing to the groove throughout.",
+    "Brent": "",
+    "Keith": "Keyboards drive the groovy jam, likened to Diana Ross’s “Upside Down,” and he joins the all‑member percussion section, adding texture and momentum.",
+    "Mickey": "Drums are a show‑stealer with funky, intense beats; despite one comment about being \"less than good,\" overall artillery‑like punch drives the high energy.",
+    "Billy": "Shares the powerful, artillery‑like drum attack that propels the second set’s percussion jam."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-25T11:38:07.624946+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jam",
+      "Stella Blue",
+      "Truckin'",
+      "Playing In The Band"
+    ],
+    [
+      "The Music Never Stopped"
+    ],
+    [
+      "It's All Over Now"
+    ],
+    [
+      "Brown Eyed Women"
+    ],
+    [
+      "Ramble On Rose"
+    ],
+    [
+      "Playing In The Band",
+      "Drums"
+    ],
+    [
+      "Werewolves Of London"
+    ]
+  ]
+}

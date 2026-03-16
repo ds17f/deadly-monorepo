@@ -1,0 +1,44 @@
+{
+  "summary": "High‑energy 1990 show with a scorching 30‑minute Dark Star; recording source unknown but fans praise the performance.",
+  "review": "The concert captures the band’s first post‑Europe tour after Brent’s death, delivering a mixed set list that builds to a blazing 30‑minute Dark Star in the second set. Reviewers rave about the chemistry between Garcia and Hornsby and the overall high energy, though they provide no specific comments on sound quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Strong positive feedback on the musical performance (5‑star review) balanced by a single neutral/negative brief rating; recording quality is not addressed, leading to an overall solid but slightly uncertain rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit remarks on sound clarity, mix, or source; reviewers focus solely on the show’s energy and set list."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Mixed set list ending first set with U.S. Blues, high‑energy interplay throughout, culminating in a lengthy Dark Star during the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive remarks about his interplay and energy with Vince Hornsby.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:15:10.499533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-20.sbd.miller.108849.flac16"
+}

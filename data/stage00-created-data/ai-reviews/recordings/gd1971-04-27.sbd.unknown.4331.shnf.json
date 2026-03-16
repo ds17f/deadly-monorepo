@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard capture of a mid‑71 Dead show with the band firing on all cylinders; reviewers love the high‑energy vibe and the hilarious “Okie From Muscogee,” though one critic balks at the NRPS set.",
+  "review": "The recording (a soundboard source) is generally clean, with no audible flaws mentioned. Musically the concert shines – a “mid‑71 bar band on steroids” that delivers loose‑but‑lovable jams and a standout performance of the tongue‑in‑cheek “Okie From Muscogee.” The only sour note is a reviewer’s dislike of the NRPS set and a gripe about Pig Pen’s organ part being swapped for Merl Saunders on an album version.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review praises the show and notes good soundboard quality; a second 0‑star comment is narrowly focused on the NRPS set, giving an overall mixed but leaning‑positive impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio complaints; reviewers assume a clear soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Okie From Muscogee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert maintains a high‑energy, mid‑71 vibe with occasional looseness; overall the performance outweighs any sloppiness."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reviewer notes that Pig Pen’s organ on “Bertha” was replaced by Merl Saunders on the Skullfuck album and prefers Pig’s more rollicking playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Okie From Muscogee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:49:53.003263+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-27.sbd.unknown.4331.shnf"
+}

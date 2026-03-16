@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent balcony audience recording of a solid show highlighted by a standout Althea and tight bass at the Hult Center",
+  "review": "The tapes capture a well‑recorded, audience‑sourced performance from the Hult Center with crisp, opera‑house‑like clarity and a notably tight low end. Musically the band delivers a good show—Jerry’s guitar shines in the first set, Althea gets special praise, and the slower, tribal‑groove jams keep the vibe alive, though his tone dips slightly later.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight both strong musical moments (especially Althea) and high‑quality audience recording; only one mixed review lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded from the top balcony with a portable Aiwa stereo recorder and hat mic; described as crystal‑clear, opera‑house like, with tight, perfect bass. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with a strong first half—Jerry’s guitar is robust—and a slightly mellower second set where Althea receives particular love; overall the tribal‑groove jams keep the energy steady."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong tone in the first set, a little less pronounced in the second.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T09:21:54.471913+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-31.111598.Sennheiser.daweez.d5scott.flac16"
+}

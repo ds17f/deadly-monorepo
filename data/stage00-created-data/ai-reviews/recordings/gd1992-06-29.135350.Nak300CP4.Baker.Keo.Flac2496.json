@@ -1,0 +1,45 @@
+{
+  "summary": "Enthusiastic fan review praises an amazing performance of Althea and So Many Roads, but provides no details on recording quality.",
+  "review": "The reviewer describes the show as life‑changing, highlighting Althea and So Many Roads as standout moments. No specific comments are made about the audio source or its fidelity, so the technical quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic 4‑star review; strong positive sentiment for the performance but no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "So Many Roads"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer states the entire set list was amazing but gives no further detail on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:10:45.229329+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-29.135350.Nak300CP4.Baker.Keo.Flac2496"
+}

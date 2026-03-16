@@ -1,0 +1,31 @@
+{
+  "summary": "Recording appears to be misplaced or unavailable; no musical content can be evaluated",
+  "review": "The sole reviewer expresses frustration that the file is missing or incorrectly placed, giving it a single star and offering no details about performance or sound quality. With no information on source type, setlist, or band playing, both the show and recording cannot be assessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review with no specifics; rating reflects the reviewer’s 1‑star score and lack of detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer indicates the file is missing or misplaced; no audio quality comments available."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T23:08:34.474811+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-20.mtx.dts.haugh.93386.flac16"
+}

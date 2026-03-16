@@ -1,0 +1,93 @@
+{
+  "summary": "Good‑quality soundboard capture of a high‑energy 1993 Omni show, highlighted by an ecstatic 'Eyes of the World' and strong Half‑Step, So Many Roads and Looks Like Rain performances.",
+  "review": "The recording is a solid soundboard source with a faint hiss but remains clear enough to enjoy the band’s vibrant playing. The concert shines with Jerry Garcia’s inspired guitar work, especially on Mississippi Half‑Step and the soaring 'Eyes of the World,' while Vince Welnick adds tasteful keys and the rhythm section drives an energetic set. Overall fans rate the performance highly despite a few rough spots at the end of Maggie’s and the start of Bird Song.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (many 4‑5 star comments) while noting only minor recording hiss; weighted rating favours the strong show quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "A slight background hiss and occasional click‑offs (end of Maggie's, start of Bird Song) are mentioned, but overall clarity and balance are solid for a soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Mississippi Half-Step",
+      "So Many Roads",
+      "Looks Like Rain",
+      "Promised Land",
+      "Truckin' > Smokestack"
+    ],
+    "poor_songs": [
+      "Maggie's",
+      "Bird Song",
+      "The Wheel"
+    ],
+    "setlist_flow": "The show opens powerfully with a blazing Half‑Step, rolls through classic jams, and peaks in the second set with a smoking 'Eyes of the World' that lifts the entire concert. Energy stays high throughout, despite a few minor hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as energetic, ripping on Truckin', delivering deep valleys on Half‑Step and producing one of his best Watchtower solos.",
+    "Phil": "",
+    "Bob": "Bob Weir’s enthusiasm on 'Looks Like Rain' is highlighted as vintage Weir.",
+    "Keys": "Vince Welnick earns praise for tasteful notes, a driving percussion feel in the chorus, and a tone that could have elevated more songs.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "So Many Roads": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin' > Smokestack": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:47:48.284152+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-20.sbd.miller.28428.sbeok.flacf"
+}

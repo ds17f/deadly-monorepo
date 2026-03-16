@@ -1,0 +1,62 @@
+{
+  "summary": "Crisp soundboard capture of a fiery 1991 show with smoking Truckin' > New Speedway Boogie and a standout Rubin‑Cherise jam, though the mix leans heavily on keyboards.",
+  "review": "The performance is widely praised – Jerry’s guitar is on fire, the second‑set jams (Truckin' > New Speedway Boogie, Black Peter and the first-ever Rubin‑Cherise) are described as “off the chain,” and the younger‑Dead vibe shines through China Cat > Rider.  The SBD source is energetic and often crisp, but several listeners note a lopsided mix with Vince/Hornsby too forward and Jerry buried at times, plus occasional vocal distortion.  Overall the show outweighs the technical quirks, making it a favorite among ’91 recordings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical performance highlighted by multiple standout jams and enthusiastic fan comments (70% weight) combined with generally good but imperfect soundboard mix (30% weight). Consistent feedback across >10 reviews gives high confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Energetic SBD capture, often crisp and lively. Mix imbalance reported – keyboards (Vince/Hornsby) too forward, Jerry’s guitar sometimes buried, occasional vocal distortion and slight overall muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin' > New Speedway Boogie",
+      "Black Peter",
+      "China Cat Sunflower > I Know You Rider",
+      "Rubin & Cherise"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid but a bit average; second set shines with the New Speedway Boogie jam and a memorable Rubin‑Cherise debut, keeping the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being \"on fire\" and delivering classic 1977‑style solos; some note his guitar is buried in the mix.",
+    "Phil": "",
+    "Bob": "\"Bob gives a shit\" – noted as engaged, otherwise no specific performance comment.",
+    "Keys": "Vince/Hornsby heavily forward in the mix, described as \"too loud\" and \"crowded\"; keyboard balance is the main technical complaint.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin' > New Speedway Boogie": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rubin & Cherise": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-17T16:27:36.559641+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-17.sbd.miller.28295.sbeok.flacf"
+}

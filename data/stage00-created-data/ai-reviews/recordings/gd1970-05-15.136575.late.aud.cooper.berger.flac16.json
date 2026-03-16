@@ -1,0 +1,52 @@
+{
+  "summary": "Atmospheric audience recording captures a lively St. Stephen and jovial Uncle John’s Band, though Dark Star suffers from clipping.",
+  "review": "The audience‑sourced tape lets the crowd become part of the music, with laughing, crying and coughing adding character to St. Stephen and a bright, communal vibe on Uncle John’s Band. Jerry Garcia’s backing vocals and his pedal‑steel work are highlighted as pleasant touches. The only technical drawback is a noticeable clipping that cuts off Dark Star early.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Single enthusiastic 5‑star review praises the performance and crowd ambience, but notes a recording glitch on Dark Star, tempering the rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crowd audible adds atmosphere; however, Dark Star clips out early, indicating some drop‑out/level issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "The set feels lively and communal, with the audience’s reactions enhancing St. Stephen and a joyful vibe on Uncle John’s Band; only Dark Star is marred by recording loss."
+  },
+  "band_member_comments": {
+    "Jerry": "Backing vocals and pedal‑steel playing praised",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:06:08.952590+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-05-15.136575.late.aud.cooper.berger.flac16"
+}

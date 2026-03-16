@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent audience recording captures a lively ’95 show with standout jammed Stranger, Sugaree, Minglewood, Ramble and an extended Stella Blue.",
+  "review": "The reviewer finds the performance far better than the notorious reputation of 1995, highlighting long, improvisational jams on “Stranger,” “Sugaree,” “Minglewood Blues,” a spirited “Ramble” and a uniquely quick yet extended “Stella Blue.” The audience (AUD) tape is praised as crystal‑clear and well balanced, making the show enjoyable despite its obscure date.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One detailed review gives a strong positive impression of both performance (≈4/5) and recording quality (≈5/5); weighted average yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced audience tape with strong crowd reaction; no dropout or muffling noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Sugaree",
+      "Minglewood Blues",
+      "Ramble",
+      "BT Wind",
+      "Pre-Drumz",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with extended jams and high energy; pre‑drum solo and the quick yet expansive Stella Blue keep momentum strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds excited throughout, especially on the Ramble and the two‑minute post‑vocal outro on Stella Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drum segment described as excellent."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BT Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pre-Drumz": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:55:28.267694+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-04.143099.nak300-cp4.Boedicker.flac1644"
+}

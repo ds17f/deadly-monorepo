@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of a festive New Year's Eve show featuring a soaring Tower of Power horn jam, lively Lovelight with Etta James, and a memorable Greensleeves finale—though the third set divides listeners.",
+  "review": "The recording is a crisp, high‑fidelity soundboard that lets the energy of the 12/31/82 concert shine through. Highlights include an explosive Tower of Power horn jam, a loose but fun Lovelight bolstered by guest vocalist Etta James, and a heartfelt Greensleeves ending. Opinions on the third set are split, with some finding it laid‑back and others calling it lackluster.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both performance and audio quality, but a few strong negative comments about the third set keep the overall rating from being higher."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note the recording is crisp and well‑balanced; no significant audio flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tower of Power (horn jam)",
+      "Lovelight",
+      "Greensleeves"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Festive New Year's Eve vibe with strong first two sets; third set described as loose and divisive, with some listeners loving the relaxed feel while others find it under‑whelming."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work repeatedly praised – “Jerry on guitar” and “perfect tone”.",
+    "Phil": "",
+    "Bob": "Weir noted as “okay” on Lovelight; no standout praise or criticism.",
+    "Keys": "",
+    "Drums": "Drum work highlighted positively in the “playing‑drums‑fade away sequence”."
+  },
+  "song_mentions": {
+    "Tower of Power (horn jam)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greensleeves": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:53:38.813651+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-12-31.sbd.miller.77301.sbeok.flac16"
+}

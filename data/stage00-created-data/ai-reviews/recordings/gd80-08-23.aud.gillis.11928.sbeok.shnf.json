@@ -1,0 +1,39 @@
+{
+  "summary": "Fair audience tape that captures Alpine Valley’s heavy energy, highlighted by a memorable One More Saturday Night finale.",
+  "review": "The show is remembered fondly for its raw power and the closing burst of One More Saturday Night, but the recording itself suffers from limited instrument separation and a generally muddy mix. Listeners who crank the volume report an immersive experience that feels close to being there, though audiophiles may prefer a cleaner source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is decent but not exceptional (average‑to‑good), while recording quality is only fair; combined they yield an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Instrument separation is weak and the mix can be muddy, but the tape captures the concert’s energy and heaviness; works well at high volume."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on pacing, but reviewers note a strong ending with One More Saturday Night and an overall heavy, energetic vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:02:05.828986+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-23.aud.gillis.11928.sbeok.shnf"
+}

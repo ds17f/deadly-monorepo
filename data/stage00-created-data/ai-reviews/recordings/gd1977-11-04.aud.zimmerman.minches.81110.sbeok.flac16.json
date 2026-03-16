@@ -1,0 +1,37 @@
+{
+  "summary": "An energetic ’77 show with a killer second set, but the grainy, patch‑y recording keeps it from being a true classic.",
+  "review": "Fans rave about the high‑octane performance – Phil’s slide bass, Garcia’s guitar and Ace’s “killer chords” make this fall‑tour date unforgettable, especially the explosive second set. However, listeners note that the audio is cloudy, grainy and far inferior to other available copies, suggesting an audience‑type source rather than a clean soundboard.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is praised strongly (≈4.5/5) while recording quality is rated low (≈2/5); weighted average yields ~3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Cloudy, patchy and grainy sound; several reviewers recommend seeking a matrix or better copy for clearer audio."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Consistently high energy throughout the concert with an especially explosive second set that fans describe as “sick” and unforgettable."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is highlighted as a major highlight of the night.",
+    "Phil": "Phil’s slide‑bass work receives enthusiastic praise.",
+    "Bob": "",
+    "Keys": "Ace (keyboard) is noted for laying down “killer chords.”",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T06:33:20.283807+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-11-04.aud.zimmerman.minches.81110.sbeok.flac16"
+}

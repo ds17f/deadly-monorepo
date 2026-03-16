@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience recording captures an intimate night with a standout Comes A Time solo, though the show was marred by a bottle incident.",
+  "review": "The audience‑sourced tape does a solid job of conveying the small‑venue intimacy and the beauty of Jerry Garcia’s solo on Comes A Time. Reviewers highlight the jam and space sections as high points, but one reviewer notes a disruptive bottle throw that hit Bill Kreutzmann’s kit during the second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Two moderately positive reviews (4 and 3 stars) praise the performance and recording, while a single zero‑star review focuses on an incident rather than audio quality; overall rating falls in the average range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Captures the sound of the night well with clear ambience; no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Jam",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Intimate East Coast arena gave a tighter feel; second set was interrupted by a bottle thrown at Bill's drums during Comes A Time, leading to a brief on‑stage tension."
+  },
+  "band_member_comments": {
+    "Jerry": "Solo on Comes A Time described as beautiful and ripping.",
+    "Phil": "",
+    "Bob": "Mentioned breaking equipment after the incident, canceling an encore.",
+    "Keys": "",
+    "Drums": "Bill was hit by a bottle during Comes A Time and responded with a finger gesture to the crowd."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:23:02.238928+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-31.122001.schoeps.pasternak.miller.flac16"
+}

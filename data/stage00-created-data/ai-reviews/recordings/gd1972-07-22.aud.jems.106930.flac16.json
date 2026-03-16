@@ -1,0 +1,54 @@
+{
+  "summary": "Decent audience recording that improves after the first song, featuring a memorable Yellow Dog story and a lively Heart & Soul vamp but marred by abrupt transitions between several songs.",
+  "review": "The tape sounds fine on PC speakers once past the opening number, and fans will love the extended Heart & Soul vamp that frames a classic Yellow Dog story. However, the recording drops the natural flow – there are clear stops between Truckin', He's Gone and Sugar Magnolia, making the set feel choppy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "One moderate (3‑star) review gives both positive show notes and technical complaints; weighted estimate yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audio is acceptable after the first track, but early portions are weaker. Notable abrupt stops between Truckin', He's Gone and Sugar Magnolia indicate missing transitions; overall decent on consumer speakers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Heart And Soul"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The performance includes a strong storytelling segment (Yellow Dog) and an engaging Heart & Soul jam, but the recording’s missing transitions make the set feel fragmented."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s rapid‑fire Yellow Dog story is highlighted as a highlight.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Heart And Soul": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T15:41:03.659262+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-07-22.aud.jems.106930.flac16"
+}

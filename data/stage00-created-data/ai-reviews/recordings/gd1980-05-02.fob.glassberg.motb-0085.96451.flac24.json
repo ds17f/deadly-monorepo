@@ -1,0 +1,93 @@
+{
+  "summary": "Soundboard capture of a fiery early‑80s performance with standout Loser and Friend of the Devil, though reviewers are split on the overall show.",
+  "review": "The recording is clear and well‑balanced, letting listeners hear Jerry Garcia’s blazing guitar work and the electric ambience of the first set. While several fans hail the opening songs – especially “Loser,” “Friend of the Devil,” and “Althea” – as spectacular, opinions diverge on the second set and overall band tightness, resulting in a mixed but generally positive reception.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three of four reviewers rate the show 4‑5 stars and praise the recording’s clarity; one low rating is outweighed, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp mix that captures Jerry's feedback-laced solos; no reported drop‑outs or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Friend of the Devil",
+      "Eyes",
+      "Stella Blue",
+      "Bertha",
+      "Johnny B. Goode",
+      "Althea",
+      "Terrapin Station",
+      "The Music Never Stopped",
+      "Far From Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is universally praised as spectacular; second set receives mixed comments—some find it smoking, others feel it pales compared to the opener."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is described as on fire, edgy with feedback, and superb for early‑80s material.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:22:33.159211+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-02.fob.glassberg.motb-0085.96451.flac24"
+}

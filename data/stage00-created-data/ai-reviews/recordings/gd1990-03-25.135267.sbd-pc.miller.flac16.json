@@ -1,0 +1,88 @@
+{
+  "summary": "Stunning Miller SBD capture (with minor clipping and pitch quirks) documents a solid early‑'90 show highlighted by a brilliant Greatest Story opener, classic Truckin'>Spoonful and Brent’s peak keyboard work on Take You Home.",
+  "review": "Both reviewers praise the recording's overall fidelity – one calling it “stunning quality” and another noting the Miller SBD’s crispness despite some clipped intros and a slight speed issue that needs pitch correction. Musically, the show is described as a strong middle night of the 1990 run, featuring standout moments like Greatest Story, a classic Truckin'>Spoonful, and Brent’s superb Take You Home, while a few segments (Around & Around, Drums>Space) fall flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Two detailed reviews give generally positive comments on performance and recording but note several technical flaws and a few weak song moments, leading to an overall moderate‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the Miller SBD as \"stunning\" and very clean, but note clipped beginnings of Eyes, Wang Dang and Masterpiece, a slight fast running speed requiring about -1% pitch correction, and occasional drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Greatest Story",
+      "Jack A Roe",
+      "Let it Grow",
+      "Truckin'",
+      "Spoonful",
+      "Take You Home",
+      "Goin' Down the Road Feeling Bad",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Around & Around"
+    ],
+    "setlist_flow": "The middle show of a strong early‑'90 run flows well, with a purposeful first set and a second set that builds momentum despite missing the opening of Eyes and a few clipped intros."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby’s playing on Around & Around is criticized as out of place, and his guitar work is noted as weaker compared to other releases.",
+    "Keys": "Brent’s keyboard performance is repeatedly praised – highlighted as his best take of Take You Home and a driving force under Samson.",
+    "Drums": "The Drums>Space segment is described as less impressive than elsewhere on the tour."
+  },
+  "song_mentions": {
+    "Greatest Story": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack A Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let it Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:09:45.673448+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-25.135267.sbd-pc.miller.flac16"
+}

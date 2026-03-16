@@ -1,0 +1,51 @@
+{
+  "summary": "A stellar 1973 performance with classic horns and killer jams, but the audience‑derived recording is uneven and often muddy.",
+  "review": "Reviewers rave about this show’s tight playing, especially the horn‑filled climax of “Nobody's Fault But Mine > Eyes > Wharf Rat Suite > Let It Grow,” calling it one of ’73’s best. However, the sound quality is a mixed bag – some hear crisp detail while others describe the early portion as awful and overall the audience recording falls short of a clean soundboard source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (70% weight) while a significant minority flag serious recording flaws, resulting in an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Audience‑derived matrix; first few songs are described as muddy/awful, later sections improve but remain inconsistent with noticeable hiss and limited clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Nobody's Fault But Mine > Eyes > Wharf Rat Suite > Let It Grow",
+      "Eyes",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second‑set climax with the horn section creates a soaring arc; overall set is solid though some reviewers felt the middle of the show was merely “middle‑of‑the‑road.”"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Nobody's Fault But Mine > Eyes > Wharf Rat Suite > Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T14:55:31.192369+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-09-24.sbd-aud.cotsman.11620.sbeok.shnf"
+}

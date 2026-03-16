@@ -1,0 +1,67 @@
+{
+  "summary": "High‑quality Charlie Miller sound captures a strong LA set with standout Give It A Whirl/Forever Grateful/Forever Dead sequence, though Dire Wolf ends in feedback and Foolish Heart falls flat.",
+  "review": "The recording benefits from excellent Charlie Miller tape work – a clear soundboard source that only suffers a brief burst of feedback near the end of Dire Wolf. Musically the show shines with an exciting Give It A Whirl > Forever Grateful > Forever Dead medley and a joyful Touch of Grey, while Foolish Heart is noted as a lyrical stumble for Jerry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4‑5) and enthusiastic comments about the performance outweigh minor recording hiccups, yielding a strong weighted score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Great Charlie Miller tape quality with clear mix; occasional loud feedback burst near end of Dire Wolf that can be jarring on headphones."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Give It A Whirl > Forever Grateful > Forever Dead",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Foolish Heart"
+    ],
+    "setlist_flow": "The three‑night LA run is described as building momentum, with a particularly strong second half highlighted by the medley and upbeat numbers; overall pacing praised despite one lyrical slip."
+  },
+  "band_member_comments": {
+    "Jerry": "Struggles with lyrics on Foolish Heart, forgetting many words.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Guest Japanese drummer Fujimoto Yoshikazu appears in the lineup."
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Give It A Whirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Forever Grateful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Forever Dead": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:50:42.845268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-02-12.sbd.miller.89200.sbeok.flac16"
+}

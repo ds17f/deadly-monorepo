@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience‑FOB recording that captures a sweet first set highlighted by “Eternity” and “So Many Roads.”",
+  "review": "The tape, recorded with an AMS placed in the center aisle, delivers clear, listenable sound despite being a front‑of‑house capture. Reviewers rave about the first set’s jamming – especially the extended “Eternity” and the extra‑sweet rendition of “So Many Roads” – while the second set remains undocumented for this source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on both performance (first‑set highlights) and recording setup, but limited detail about the second set and overall sound quality keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "AMS recorder positioned in center aisle gave a clear front‑of‑house capture; no complaints of muddiness or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eternity",
+      "So Many Roads"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for strong jams and sweet moments; second set not covered in the available reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:29:42.878020+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-25.set1-AMS.keyser.25805.sbeok.shnf"
+}

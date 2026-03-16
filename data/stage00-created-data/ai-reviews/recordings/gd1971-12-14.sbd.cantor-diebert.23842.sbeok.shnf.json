@@ -1,0 +1,60 @@
+{
+  "summary": "Good soundboard recording with clear Pigpen vocals and a few mix quirks, featuring standout Run Rudolph Run and Casey Jones amid an overall average show.",
+  "review": "The tape offers solid sound‑board quality for its era – Pigpen’s voice is front‑and‑center on “Run Rudolph Run” and the mix is generally clear, though a slight balance issue on “Casey Jones” and missing break announcements are noted. Musically the night delivers some high points (Pigpen’s vocal fun, an energetic “Casey Jones”, and the classic Cryptical Envelopment → Drums → The Other One sequence) but reviewers describe the set as overall average.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviews are largely positive (4‑5 stars) praising recording clarity and specific songs, though one calls the show only “pretty average”. Weighting musical performance higher yields a strong but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear for its time with Pigpen’s vocals prominent; slight mix imbalance on “Casey Jones”, missing break announcement, and track‑change edits between Cryptical/Drums/The Other One affect continuity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Run Rudolph Run",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally average overall; a few high‑energy moments stand out but the flow suffers from editing of the Cryptical Envelopment → Drums → The Other One sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Track changes between Cryptical, Drums and The Other One break continuity; otherwise drum work is not specifically critiqued."
+  },
+  "song_mentions": {
+    "Run Rudolph Run": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:14:27.396384+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-14.sbd.cantor-diebert.23842.sbeok.shnf"
+}

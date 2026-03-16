@@ -1,0 +1,31 @@
+{
+  "summary": "Review provides no details on sound or performance, only a request for access to the recording.",
+  "review": "The sole review is a brief inquiry about how to obtain this \"gem\" and offers no commentary on the audio source, mix quality, or musical execution. Consequently, there is insufficient information to assess either the recording fidelity or the concert's performance merits.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one vague review with no substantive feedback on sound or show; rating reflects uncertainty and lack of data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No technical comments provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T02:00:42.024985+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-12-28.mtx.dts.tobin.87301.sbeok.flac16"
+}

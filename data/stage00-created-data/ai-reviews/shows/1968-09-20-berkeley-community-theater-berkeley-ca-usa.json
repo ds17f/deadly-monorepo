@@ -1,0 +1,56 @@
+{
+  "summary": "Playful St. Stephen, epic tabla‑driven Drums, mixed set flow",
+  "blurb": "Jerry’s laugh‑filled take on Saint Stephen and a sprawling 25‑minute drum marathon with guest tabla percussion are the show’s high points. St. Stephen and The Eleven shine, while Good Morning Little School Girl feels uneven. Overall the performance is mixed but offers unique moments for Deadheads.",
+  "review": "September 20, 1968 at Berkeley Community Theater captures a band in an experimental phase. Jerry Garcia delights the crowd with jokes and a quirky vibrating tone during his vocal on Saint Stephen, turning the song into a memorable highlight. The Eleven bursts through with its tight, high‑energy swing before the set dissolves into an audacious 25‑minute Drums segment, featuring tabla‑flavored percussion that some fans find hypnotic while others deem it meandering. Good Morning Little School Girl opens the set in a quirky fashion but suffers from low vocal presence and feels out of step with the later improvisations. The partial soundboard tapes preserve clear stage banter and decent fidelity for a 1968 recording, though the missing portions make the overall flow feel disjointed. Listeners who relish extended percussive explorations will gravitate to this show, while those seeking a tighter song‑by‑song experience may find it uneven.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Two of the three recordings are described as mixed, highlighting both strong moments (St. Stephen, long Drums) and weak spots (School Girl vocals, disjointed flow). The third recording is simply positive without detail. The overall pattern does not show consistent praise or criticism, so no sentiment points are added or subtracted.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd68-09-20.sbd.partial.vernon.5930.sbeok.shnf",
+    "reason": "Clear soundboard capture with vivid stage banter and the full 25‑minute drum solo, despite being partial."
+  },
+  "key_highlights": [
+    "Extended 25‑minute tabla‑enhanced Drums marathon that polarizes listeners.",
+    "Jerry’s playful vocal laugh on Saint Stephen makes the song a standout moment.",
+    "The Eleven delivers a brief but spirited performance amid an experimental set.",
+    "Clear stage banter and decent fidelity for a 1968 tape preserve unique atmosphere."
+  ],
+  "song_highlights": [
+    "Good Morning Little School Girl",
+    "Saint Stephen",
+    "The Eleven",
+    "Drums*"
+  ],
+  "band_performance": {
+    "Jerry": "Adds humor with laughs on Saint Stephen and experiments with a vibrating tone behind his vocal, giving the set a playful edge.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Co‑leads an ambitious drum marathon, incorporating tabla percussion that adds exotic texture to the extended solo.",
+    "Billy": "Provides solid rhythmic foundation throughout the long Drums segment and keeps the groove tight during The Eleven."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T09:16:20.318738+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Good Morning Little School Girl"
+    ],
+    [
+      "Saint Stephen",
+      "The Eleven",
+      "Drums*"
+    ]
+  ]
+}

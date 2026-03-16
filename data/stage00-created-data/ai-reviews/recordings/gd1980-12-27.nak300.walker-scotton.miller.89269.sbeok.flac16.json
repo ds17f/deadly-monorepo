@@ -1,0 +1,51 @@
+{
+  "summary": "Exceptional audience recording mastered by Charlie Miller paired with a high‑energy 1980 show highlighted by a stellar Wheel and tight second‑set jams.",
+  "review": "The Miller‑mixed AUD captures the concert with crystal‑clear highs, rich bass and an almost front‑row presence, making it one of the best audience tapes from 1980. The performance is consistently tight – the band rides a liquid second set with an epic Wheel, a fiery Truckin' and a soaring Eyes of the World – even if a few vocal slips keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews overwhelmingly praise both the sound quality and the musical performance, with only one mixed comment; the weighted average of reviewer stars is ~4.1, justifying a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller’s mix brings clear, rich highs and tight bass, recorded in the \"sweet spot\"; listeners describe it as front‑row floor level with loud, clean, and well‑balanced sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Truckin'",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy first set leads into a second set described as \"pure liquid\" with an abstract jam after Eyes that melts into a hot Wheel, keeping the band tight and the crowd engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Fans reminisce about Jerry’s presence (“Miss you Jerry”) and note his legendary status, though no specific guitar commentary is given.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are praised as tight; a short drums‑>space segment is highlighted for its quality."
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:19:19.189235+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-27.nak300.walker-scotton.miller.89269.sbeok.flac16"
+}

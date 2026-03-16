@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality audience tape capturing an inspired show highlighted by a lo‑ng, loose Scarlet > Fire and a stellar Loser, with Phil’s bass unusually forward.",
+  "review": "The concert is praised for its strong performances – an extra‑long, loose but captivating Scarlet > Fire, a standout vocal on “Loser,” and a powerful first‑set close.  Although recorded from the audience at Manor Downs (a venue known for sucking dynamic range), Charlie Miller’s tape manages excellent bass presence and overall clarity, despite a slightly funky edge noted by one reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Reviews consistently highlight strong musical moments (show quality ~4.6/5) and a generally good but not perfect recording (recording quality ~4.0/5); combined weighted score yields about 4.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Typical Manor Downs venue dynamics are tamed; the taper captured a clear, forward bass (Phil) and overall balanced mix, though some listeners note a slightly funky tonal character."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set with a strong closing, followed by an expansive second set highlighted by the extended Scarlet > Fire; overall flow described as tight and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals on “Loser” are praised as very cool.",
+    "Phil": "Bass is notably loud and resonant, mixed well enough to be heard clearly throughout the venue.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:38:53.739378+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-13.senn441.miller.83117.sbeok.flac16"
+}

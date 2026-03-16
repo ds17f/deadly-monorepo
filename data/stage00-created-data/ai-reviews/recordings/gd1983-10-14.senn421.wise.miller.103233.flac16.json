@@ -1,0 +1,78 @@
+{
+  "summary": "Excellent audience recording captures the legendary 30‑minute Scarlet Begonias → Fire on the Mountain jam, with crisp, clean sound and a standout second set.",
+  "review": "The Wise/Miller audience tape is praised for its crystal‑clear mix that lets the crowd ambience enhance rather than mask the music.  The show shines especially in the second set – a soaring Scarlet Begonias > Fire on the Mountain, tight Estimated > Eyes, and a thrilling Other One > Stella Blue sequence – while the first set is noted as uneven but still enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight superb sound quality plus iconic second‑set jams; only a few note first‑set shakiness, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with balanced crowd noise; reviewers call it the best sound for this show and note no major drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Estimated > Eyes",
+      "The Other One > Stella Blue"
+    ],
+    "poor_songs": [
+      "Alabama Getaway"
+    ],
+    "setlist_flow": "First set is described as uneven with some shaky moments, but the second set delivers a classic arc – a marathon Scarlet > Fire followed by tight transitions into Estimated/Eyes and a powerful Other One > Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his soaring tone and exploratory solos, especially during the Scarlet‑Fire jam.",
+    "Phil": "Praised for being upfront and pushing Jerry into great explorations; drops the hammer on Fire.",
+    "Bob": "His hoarse vocals are mentioned but also his strong contributions on Big River and slide work on See See Rider Blues.",
+    "Keys": "Brent is highlighted for flavorful keyboard noodling that sets up the second set, with several reviewers calling it a harbinger of things to come.",
+    "Drums": "Mixed remarks – “drummer soup” noted in first set, but solid input from Mickey on Fire and standard‑fare post‑jam drumming."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One > Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T12:17:46.298553+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-14.senn421.wise.miller.103233.flac16"
+}

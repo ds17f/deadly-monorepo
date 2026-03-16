@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent Sennheiser soundboard captures a high‑energy show highlighted by a soaring China Doll and a ripping Sugar Magnolia on a cold, rainy night.",
+  "review": "Both reviewers rave about the performance – the second set is described as “ripped” with a beautiful China Doll, an electrifying post‑drums section and one of the most rocking Sugar Magnolias of the ’80s. The Sennheiser 421 tape is praised as clear and superior to other sources, making the recording as enjoyable as the show itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (5‑star and 4‑star reviews) and explicit commendation of the Sennheiser recording quality suggest a top‑tier show with excellent audio, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers highlight the clarity and warmth of the Sennheiser 421 tape, preferring it to other mic setups; no issues or drop‑outs are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Despite dreary weather, the band delivered a fiery second set with a notable post‑drums segment; energy stayed high throughout, especially from Jerry and Brent."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ‘off the rails with energy’ and clearly having fun on guitar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboard work is called energetic and a key part of the show’s excitement.",
+    "Drums": "The post‑drums section of the set received special praise, indicating strong drumming."
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:04:33.169992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-29.119403.Sennheiser421.d5scott.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard capture of a solid 1987 show highlighted by a strong Space → Spanish Jam → Other One sequence.",
+  "review": "The recording is a clean sound‑board (sbd) source with a generally good mix, though a few reviewers note thin bass and occasional odd song transitions. Musically the concert is respectable – not the very best of ’87 but featuring an impressive Space‑>Spanish Jam‑>Other One stretch that many fans single out. Overall the performance has good energy despite some lyrical slip‑ups.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is average‑good (standout sequence, decent energy) and recording quality is solid but with minor issues (thin bass, odd transitions), leading to a middle‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix; praised remaster by Charlie and Hammond tone, but some note thin bass and occasional odd transitions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Spanish Jam",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally energetic with a notable Space‑>Spanish Jam‑>Other One sequence; a few transitions feel awkward and lyrics are occasionally off."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass noted as thin by one reviewer.",
+    "Bob": "",
+    "Keys": "Brent's Hammond organ sound praised for its richness.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:10:11.530809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-11-08.sbd.walker-scotton.miller.85587.sbeok.flac16"
+}

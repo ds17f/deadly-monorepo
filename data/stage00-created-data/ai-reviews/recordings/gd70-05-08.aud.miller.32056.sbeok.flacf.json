@@ -1,0 +1,56 @@
+{
+  "summary": "Terrible audience‑mic recording, but the show dazzles with an iconic Dark Star → Dancin' and a killer Good Lovin' jam.",
+  "review": "The tape is plagued by muffled, tin‑can‑like sound and bass overload, making most of the set hard to follow.  Nevertheless, listeners repeatedly praise the extraordinary Dark Star that segues directly into Dancin', the soaring Good Lovin' jam, and a standout Uncle John’s, with Jerry’s guitar work described as “beaming” and Phil delivering a memorable bass solo.  For fans willing to brave the lo‑fi audio, the performance is a rare gem from the Dead's early‑70s peak.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (especially Dark Star/Dancin' and Good Lovin'), but recording quality is uniformly described as poor; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muffled, tin‑can mic sound; heavy distortion and bass overload; occasional clarity only during Dark Star; overall listening is difficult but tolerable for the standout tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Dancin' In The Streets",
+      "Good Lovin'",
+      "Uncle John's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unique transition where Dark Star skips its second verse and jumps straight into Dancin', followed by a high‑energy Good Lovin' jam and a solid Uncle John’s finish; overall pacing is praised despite the lo‑fi capture."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for an otherworldly, beaming guitar tone throughout Dark Star and Good Lovin'.",
+    "Phil": "Noted for a short but impressive bass solo during Good Lovin'.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mentioned positively in the drum‑focused jam after Good Lovin'."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 12,
+      "negative_mentions": 2,
+      "total_mentions": 14
+    },
+    "Dancin' In The Streets": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Good Lovin'": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Uncle John's": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T19:19:50.929404+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-05-08.aud.miller.32056.sbeok.flacf"
+}

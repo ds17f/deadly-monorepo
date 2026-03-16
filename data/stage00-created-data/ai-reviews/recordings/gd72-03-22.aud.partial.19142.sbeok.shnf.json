@@ -1,0 +1,51 @@
+{
+  "summary": "A high‑energy 1972 performance highlighted by a dynamic Wharf Rat and an impeccable Sugar Magnolia / Caution stretch, captured from the audience with mixed sound quality.",
+  "review": "Reviewers rave about the band’s peak‑year chemistry – the dramatic rise and fall of “Wharf Rat” and the flawless Sugar Magnolia > Caution transition are repeatedly singled out. The recording is clearly an audience tap, which some listeners describe as crystal‑clear while others liken to a “soup‑can” mic, resulting in mixed technical impressions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (standout performances, strong band interplay) while recording quality receives both high and low marks, pulling the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Comments diverge: one reviewer calls it a wonderful recording, another likens it to a poorly miked soup‑can. Overall the audience source is usable but not uniformly clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Caution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as dynamically rich, with the band listening closely to each other and delivering seamless transitions, especially on the highlighted numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:07:05.268490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-03-22.aud.partial.19142.sbeok.shnf"
+}

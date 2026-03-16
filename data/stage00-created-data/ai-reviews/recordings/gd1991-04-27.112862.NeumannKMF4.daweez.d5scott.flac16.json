@@ -1,0 +1,31 @@
+{
+  "summary": "Stunning audience capture with excellent sound quality, though one reviewer could not verify the file integrity",
+  "review": "The recording is an audience‑sourced tape that reviewers praise as unusually clear and faithful to how the show should sound. One user reported an MD5 checksum failure, but no musical criticisms were offered, leaving the performance itself uncommented.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "One high‑rating review (4 stars) highlights superb audience recording quality; a second low rating (0 stars) concerns file integrity, not performance. With limited data the overall score leans positive for sound but is tempered by uncertainty."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience capture praised as 'stunning' and very clear; one reviewer noted an MD5 checksum failure indicating possible file corruption."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on the set or song performance were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T19:04:11.683802+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-27.112862.NeumannKMF4.daweez.d5scott.flac16"
+}

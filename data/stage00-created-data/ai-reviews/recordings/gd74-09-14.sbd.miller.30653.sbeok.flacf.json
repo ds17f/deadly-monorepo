@@ -1,0 +1,94 @@
+{
+  "summary": "A mostly soundboard recording (with audience patches) captures a solid ’74 show highlighted by a scorching Scarlet Begonias, powerful Big River and tight Eyes of the World, though some listeners note occasional audio bleed and uneven playing on a few numbers.",
+  "review": "The source is a matrix‑type mix that starts with audience ambience before the soundboard comes in around the 5:30 mark of Scarlet Begonias, delivering clear instrument separation for most of the set. The performance shines on tracks like Scarlet Begonias, Big River, Mississippi Half‑Step Uptown and Eyes of the World, while a few songs (Deal, Jack Straw, some early Scarlet/WRS sections) suffer from muffled mix or weaker playing according to a minority of reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of 11 reviews rate the show 4‑5 stars and praise both performance and sound quality; only two low‑rating reviews focus on poor playing or heavy audience bleed, yielding an overall strong positive assessment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Starts with audience mix (reverb, distant feel) and switches to clean soundboard around the mid‑Scarlet Begonias section; patches from AUD for early tracks are audible but the SBD portion is crisp with good levels. Some reviewers note occasional dropouts or slight speed issues in patched sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Big River",
+      "Eyes of the World",
+      "Mississippi Half-Step Uptown",
+      "Around & Around",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Deal",
+      "Jack Straw",
+      "Let It Grow (Weather Report Suite)",
+      "Truckin'"
+    ],
+    "setlist_flow": "The first quarter is audience‑only, then the board kicks in during Scarlet Begonias giving a lift to the set. Big River opens the second set with high energy, and the show maintains momentum through extended jams before a triple encore (Eyes of the World → U.S. Blues)."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for wild solo work, vocal improvisations, and overall verve; several reviewers call his playing \"crazy\" and \"face‑stealing\".",
+    "Phil": "Bass is highlighted as crystal‑clear once the board takes over; multiple reviewers note Phil’s takeovers and powerful low end.",
+    "Bob": "Bobby (Weir) receives compliments on guitar solos during jams and for solid rhythm work, though one reviewer missed his early verses due to audience bleed.",
+    "Keys": "Keith is praised for beautiful playing on many tracks, but one negative review mentions his keyboard being noticeably off in the first set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Big River": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half-Step Uptown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-23T00:28:05.869085+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-09-14.sbd.miller.30653.sbeok.flacf"
+}

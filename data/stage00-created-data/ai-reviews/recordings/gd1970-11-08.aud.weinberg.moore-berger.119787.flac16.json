@@ -1,0 +1,51 @@
+{
+  "summary": "Great audience recording with vivid crowd ambience and standout performances of Operator, Baby Blue and a legendary Morning Dew",
+  "review": "The tape captures an atmospheric show filled with Pigpen’s confident vocals on “Operator,” a tender cover of “Baby Blue,” and a famously emotional “Morning Dew” that even includes the rare first‑minute intro. Reviewers praise the dynamic Jerry solo and the overall room‑feel, noting the recording is solid despite being an audience source and some missing original tape quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both the musical performance and the audible room ambience indicate a strong show with good recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear crowd ambience and audience banter are praised as priceless; the first minute of Morning Dew is intact, though one reviewer laments that the original tape’s condition may never be heard again."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Operator",
+      "Baby Blue",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through strong vocal moments, a heartfelt cover, and an emotionally charged Morning Dew with a unique intro, creating an engaging and memorable concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers call his solo on this show 'all‑time favorite' and note the dynamics are beyond humanly possible.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Operator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T01:02:25.224440+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-08.aud.weinberg.moore-berger.119787.flac16"
+}

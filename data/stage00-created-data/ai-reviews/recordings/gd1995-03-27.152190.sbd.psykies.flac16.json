@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard capture of a powerhouse 1995 show, highlighted by soaring Sugaree, epic Uncle John's Band, and stellar Jerry Garcia solos.",
+  "review": "The reviewer praises this recording as the best‑sounding source for the period, noting crystal‑clear soundboard quality and a polished mix. Musically the concert is described as one of the band’s late‑career peaks, with standout performances of Sugaree, So Many Roads, Let It Grow, Playing in the Band into Uncle John's Band, and a soaring Days Between, all driven by Jerry Garcia’s inspired guitar work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The single detailed review rates the show 4/5, lauds both performance and audio quality, and provides ample evidence of a strong musical experience despite minor vocal flubs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best‑sounding source of its period; clear, crisp mix with only tiny vocal flubs and a brief tonal misstep at the end of one song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "So Many Roads",
+      "Let It Grow",
+      "Playing in the Band",
+      "Uncle John's Band",
+      "Days Between",
+      "Sugar Magnolia",
+      "Picasso Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with a rocking All On (AON) and soaring ballads; second set stretches to 97 minutes, delivering extended jams, especially the 13‑minute Uncle John's Band and an intergalactic drum duel, creating an exhilarating arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as electric all night, delivering flawless tone, soaring slides, intense runs, and masterful MIDI control throughout the show.",
+    "Phil": "Phil Lesh is noted for being more prominent in the mix, engaging tightly with Jerry and providing strong counter‑points during jams.",
+    "Bob": "Bob Weir (Bobby) takes a commanding stance early, though his tone at the end of one song is called scratchy; vocal flubs are mentioned briefly.",
+    "Keys": "Vince Welnick shines on electric piano and B‑3 organ, rallying in his element and complementing the band’s improvisations.",
+    "Drums": "Bill Kreutzmann and Mickey Hart launch a fast‑paced duel, providing an “intergalactic” drum section that energizes the second set."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:05:52.964408+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-27.152190.sbd.psykies.flac16"
+}

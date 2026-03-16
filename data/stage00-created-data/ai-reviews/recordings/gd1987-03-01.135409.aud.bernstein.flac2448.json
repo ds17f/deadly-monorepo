@@ -1,0 +1,31 @@
+{
+  "summary": "A nicely captured recording of a high‑energy show that reviewers call one of the best performances.",
+  "review": "Both reviewers praise the concert’s electric atmosphere, calling it possibly the best show they’ve witnessed. The recording is described as “nice,” suggesting decent sound quality even though no technical details are given. Overall the performance shines and the audio is listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Two strongly positive reviews (4‑ and 5‑star) highlight an outstanding show; recording quality is mentioned only as “nice,” implying good but unverified fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific technical comments; reviewers simply call it a nice recording, indicating acceptable clarity and balance."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note exceptional energy and overall cohesion, though no details on set structure are provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T18:53:46.356673+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-01.135409.aud.bernstein.flac2448"
+}

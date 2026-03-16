@@ -1,0 +1,78 @@
+{
+  "summary": "Clean soundboard capture of a spring ’77 Dead show featuring gorgeous Looks Like Rain and an epic Terrapin→Playing→Drums→Wharf Rat jam.",
+  "review": "The recording is a bright, clean sound‑board source that lets the band’s tight spring‑’77 groove shine. Highlights include Jerry’s soaring solo on Looks Like Rain, a monster Scarlet Begonias fire, and a marathon second‑set sequence (Terrapin Station → Playing in the Band → Drums → Wharf Rat → PITB reprise) that many reviewers call “awesome.” Overall the show feels in‑the‑moment with strong setlist flow despite a few minor audio patches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both performance and recording; standout jams and clean soundboard give a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean, bright mix with excellent clarity; a few reviewers note minor patches/eq tweaks but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Wharf Rat",
+      "Terrapin Station → Playing in the Band → Drums → Wharf Rat → PITB Reprise",
+      "Scarlet Begonias",
+      "Lazy Lightning → Supplication"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong spring‑77 setlist; first set solid, second set builds into a 45‑minute jam that showcases the band’s improvisational chemistry."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his gorgeous solo on Looks Like Rain and a loose, fiery Scarlet Begonias solo.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station → Playing in the Band → Drums → Wharf Rat → PITB Reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning → Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:31:00.413179+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-25.sbd.130529.MrBill.flac16"
+}

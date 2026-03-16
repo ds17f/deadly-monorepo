@@ -1,0 +1,45 @@
+{
+  "summary": "Beloved 1978 show hampered by a low‑fidelity audience recording.",
+  "review": "Fans rave about the performance – calling it one of their favorite ’78 shows and praising quieter numbers like “Roses” and “Black Peter.” However, all reviewers note that the tape is an audience (aud) source with limited clarity and urge for a matrix or better mix. The show’s musical quality shines through, but the recording quality keeps the overall listening experience only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Consistent praise for the concert itself (high show value) but unanimous criticism of the audience‑only recording; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audio is an audience tape; quiet sections are tolerable, but overall fidelity is low with noticeable ambient noise. Reviewers request a matrix or soundboard mix to improve clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Roses",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers focus on overall enjoyment of the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:58:04.140811+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-24.109177.aud.acetboy.flac16"
+}

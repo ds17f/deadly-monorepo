@@ -1,0 +1,97 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy ’90s show highlighted by a scorching Ramble On Rose and tight Jack Straw, with only a few weak spots.",
+  "review": "The recording is a crisp SBD that delivers the band’s 1993‑era power – Jerry’s lead guitar and vocals are front‑and‑center, Phil’s bass is described as “monster,” and Vince’s keyboard solos add sparkle.  Fans rave about the blistering Ramble On Rose, Jack Straw, China Cat→Rider and the Attics, while the Way to Go Home/Corrina segment and a sloppy US Blues bring down the second set briefly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average user rating ≈4.4★, overwhelmingly positive comments about performance and sound quality; only a few mixed/negative notes on specific songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear SBD with very little hiss or distortion. A couple of reviewers note Bertha sounding slightly flat, but overall the mix is balanced and instrument separation is strong."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Jack Straw",
+      "China Cat > Rider",
+      "Terrapin Station",
+      "The Attic"
+    ],
+    "poor_songs": [
+      "Way to Go Home / Corrina",
+      "US Blues",
+      "Bertha (a bit flat)"
+    ],
+    "setlist_flow": "First set bursts with high energy – Jack Straw, Terrapin and Ramble On Rose dominate. The second set opens hot with China Cat→Rider but stumbles in the middle on Way to Go Home/Corrina before soaring again through Attics and a strong NFA finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his lead guitar fire, vocal delivery (especially on Ramble On Rose), and overall stage energy.",
+    "Phil": "Called a “monster” on bass; tight and driving throughout the show.",
+    "Bob": "",
+    "Keys": "Vince’s keyboard solos highlighted on Terrapin Station and other jams; keyboards add texture without overpowering.",
+    "Drums": "Bill is noted as tight, with the drum sound lifting the band especially in the first set."
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Jack Straw": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Attic": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "US Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Way to Go Home / Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Tom Thumb Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:31:26.711345+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-10.dsbd.miller.28782.sbeok.flacf"
+}

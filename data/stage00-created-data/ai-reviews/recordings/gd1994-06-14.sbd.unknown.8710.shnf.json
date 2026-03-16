@@ -1,0 +1,69 @@
+{
+  "summary": "Good soundboard capture of a memorable Seattle show featuring standout Truckin/Space, vibrant Samba and powerful Shakedown/Eternity performances.",
+  "review": "The three fan reviews paint a picture of an iconic June‑14‑1994 Seattle concert that many consider one of the best of the era, highlighted by a fiery Truckin → Space sequence, tight Samba jams, and inspired renditions of Shakedown and Eternity.  The SBD source is regarded as solid though reviewers give no detailed technical critique.  One reviewer notes Jerry’s health was not optimal and a segment of the Apollo‑landing tape is missing, tempering an otherwise enthusiastic reception.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Two glowing 5‑star reviews praise the performance and setlist while a single 0‑star review points to performance and missing material; overall show quality is high, recording quality appears adequate."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not comment on specific sonic flaws; the SBD is accepted as a decent representation of the concert with no noted drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Eternity",
+      "Samba",
+      "Truckin",
+      "Space",
+      "Victim/Lazy River Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as epic, with a powerful Truckin → Space run and an extended Samba jam; the show builds to a memorable climax despite a missing Apollo‑landing excerpt."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for quintessential moments (Shakedown/Eternity) but noted later in the run he may not have been in top shape.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy & Mickey delivered a dramatic, fear‑inducing Drums/Space segment that many reviewers highlighted."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samba": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim/Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:17:25.413453+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-06-14.sbd.unknown.8710.shnf"
+}

@@ -1,0 +1,97 @@
+{
+  "summary": "Excellent matrix recording with superb soundstage captures a fireworks‑lit July 4 1981 show where the second set’s Bird Song, Wharf Rat and China Cat→I Know You Rider jams shine.",
+  "review": "The tape delivers crystal‑clear depth and balance – a well‑mixed soundboard/audience composite that many reviewers call “superb” and superior to pure audience versions. Musically the concert is highlighted by a soaring second set (Bird Song, Wharf Rat, China Cat Sunflower → I Know You Rider, Space→Not Fade Away) despite a brief interruption from fireworks; a few listeners note a shaky vocal moment and a short second set, but overall the performance is regarded as one of the stronger Independence Day shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 80 % of reviews are 4‑5 stars and praise both the audio fidelity and key musical moments; only a few low‑star comments focus on set length or isolated performance slips, yielding an overall weighted rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, balanced mix with strong midrange and depth; reviewers note superb soundboard clarity combined with audience ambience, occasional minor quirks but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Wharf Rat",
+      "China Cat Sunflower → I Know You Rider",
+      "Space → Not Fade Away",
+      "Peggy-O",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "One More Saturday Night",
+      "Jack Straw (mixed feeling after fireworks interruption)"
+    ],
+    "setlist_flow": "Two energetic sets bookended by a blazing Jack Straw opener and a fireworks‑cut short second set; transitions such as Space→Not Fade Away and China Cat→I Know You Rider are highlighted, while the brief pause from fireworks gave the show an unusual pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for “perfect tone” and tight interplay with Brent; a few notes of vocal shakiness early in the set.",
+    "Phil": "",
+    "Bob": "Vocals described as sharp and strong, especially on first‑set numbers; however Bob’s delivery on One More Saturday Night is called out as slipping.",
+    "Keys": "Brent (keys) receives high marks for interplay with Jerry and contributes to the recording’s depth and balance.",
+    "Drums": "Drumming noted as tight, particularly during the Not Fade Away groove."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:27:56.996541+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-04.sbd.samaritano-miller.21802.sbeok.shnf"
+}

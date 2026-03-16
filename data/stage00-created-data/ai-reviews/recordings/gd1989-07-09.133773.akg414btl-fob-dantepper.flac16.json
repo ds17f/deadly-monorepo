@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality recording that captures a wild Bird Song, but the concert is actually a Dark Star Orchestra performance.",
+  "review": "The tape is praised for its excellent sound, with listeners noting a particularly fiery Bird Song. However, the show isn’t an original Grateful Dead gig—it’s a 2006 Dark Star Orchestra set that fooled some fans, leading to mixed reactions overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Positive remarks about the audio quality and a standout Bird Song are offset by confusion over the source (DSO vs. Dead) and one outright negative comment, yielding an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer calls it \"excellent recording\"; no specific technical flaws are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:55:53.797728+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-09.133773.akg414btl-fob-dantepper.flac16"
+}

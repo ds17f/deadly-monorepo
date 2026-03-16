@@ -1,0 +1,63 @@
+{
+  "summary": "A high‑energy Spring‑87 show captured on a superb 24‑bit matrix – the band roars through a smoking Touch, soaring Cumberland and an epic Morning Dew.",
+  "review": "The concert is praised for its relentless energy and tight playing, with the second set highlighted by a vibrant Touch, a dazzling Cumberland, and one of the season’s most powerful Morning Dew performances.  The 24‑bit matrix source is described as “sparkling” and “buttery,” delivering crystal‑clear crowd ambience, punchy bass and full‑bodied drums that make the recording sound better than many contemporary soundboard tapes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers give 4–5 stars, consistently praising both performance and the matrix source; the weighted average of show (≈4.7) and recording quality (≈5) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "24‑bit live matrix master praised for crisp, punchy bass, clear drums and well‑balanced crowd mix; described as ‘sparkling’, ‘buttery’, and superior to older SBD releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "Cumberland",
+      "Morning Dew",
+      "Uncle John's Band",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are high‑octane, with the first set building momentum and a second set that never lets up – seamless transitions, strong vocal moments and an emotionally charged encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Regained his twang, delivers soaring solos (Touch, Cumberland) and sings like ’72 on Morning Dew; described as ablaze and full of exuberance.",
+    "Phil": "Lays down deep groove bombs, adds rich organ texture throughout the set, especially on Touch and Cumberland.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s B‑3 work is highlighted – jazzy, layered, and gospel‑like, adding color to Touch, Cumberland and the jam sections.",
+    "Drums": "The drummers pound with power; ‘what drums!’ remarks emphasize their driving presence on the second set."
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:52:47.168147+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-27.sbd.seaweed.111241.flac2448"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Superb soundboard capture of an incendiary New York jam featuring a soaring Dark Star/Spanish Jam/Lovelight sequence.",
+  "review": "The patched soundboard version delivers crystal‑clear audio that lets listeners soak in one of the most celebrated guest‑filled performances ever – a blistering Dark Star into Spanish Jam and Lovelight with Duane Allman, Peter Green and Gregg Allman all joining. Reviewers rave about the cosmic intensity and flawless mix, noting only a few personal taste objections to Garcia’s single‑coil tone shift.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high 4‑5 star reviews praise both the musical performance (standout Dark Star/Spanish Jam/Lovelight) and the superb soundboard quality; only a single low‑star comment about guitar tone slightly lowers the average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, balanced mix with superb clarity; patched to fill missing segments but no audible drop‑outs. Minor comment that Peter Green’s guitar is faint, yet overall sound is praised as superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Spanish Jam",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows as a free‑form, star‑studded jam session; guests weave in and out creating a coherent yet wild musical narrative that builds to an epic Dark Star/Spanish Jam/Lovelight climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s shift toward single‑coil guitars is noted (some listeners miss the early tone), but his lead work during the marathon jams is widely praised.",
+    "Phil": "Phil steps back on Lovelight as Berry Oakley takes over bass, highlighting a relaxed moment for Phil during the jam.",
+    "Bob": "Bob Weir joins in the post‑show embrace; no specific performance remarks were made.",
+    "Keys": "Gregg Allman slides onto the organ bench for Spanish Jam and trades vocals with Pigpen, adding a powerful keyboard presence.",
+    "Drums": "Butch, Mickey (with his massive gong), and guest drummers Mick Fleetwood & Danny Kirwan layer an expansive percussion wall throughout the set."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-19T16:00:11.808088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-11.sbd.warner.patched.28292.sbeok.flac16"
+}

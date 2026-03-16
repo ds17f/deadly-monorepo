@@ -1,0 +1,65 @@
+{
+  "summary": "High‑quality audience recording of a rocking show highlighted by Black Peter and a fiery Jerry Garcia solo.",
+  "review": "Fans rave about the powerful performance, especially the soaring Black Peter and the unstoppable energy that earns the show a \"rockin\" label. The audio is praised as one of the best‑sounding audience tapes in the collection, with only brief cuts in Esau and a track‑change glitch on Looks Like Rain marring an otherwise excellent upload.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical praise (70% weight) combined with generally good sound quality despite minor glitches (30% weight) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and balanced for an audience source; noted brief cut in Esau and a track‑change issue during Looks Like Rain, but overall comparable to soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Women Smarter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic first set that fulfills expectations; the show maintains high energy throughout with no reported pacing problems."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"shredding\" and delivering a rocking solo.",
+    "Phil": "Mentioned in context of sharing a mic on Revolution, but no direct performance comment.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Revolution": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:03:23.493203+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-12.aud.gustin.345.sbeok.shnf"
+}

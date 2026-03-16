@@ -1,0 +1,70 @@
+{
+  "summary": "A high‑energy FOB audience tape captures the historic first Wharf Rat meeting with good sound, but the performance is uneven – monitor glitches and a shaky Dylan guest spot dampen an otherwise notable show.",
+  "review": "Fans rave about this being the inaugural Wharf Rat gathering and praise the vivid front‑of‑house ambience that brings the outdoor field vibe to life. The music, however, is mixed: rare late‑period Alabama Getaway appears but suffers from disjointed starts, a disastrous Don’t Think Twice with Dylan, and an overall uneven second set that falls apart toward the end.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is judged around B+/B (≈3.5/5) while the audience recording is praised as A+ (≈4.5/5); weighting these yields an overall rating near 3.8."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Tremendous FOB presence with clear crowd ambience; occasional loud mic intrusions and monitor problems cause disjointed song starts, but overall the tape is listenable and captures the outdoor atmosphere well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [
+      "Don't Think Twice",
+      "The Baby Blue",
+      "Red Rooster",
+      "Alabama Getaway"
+    ],
+    "setlist_flow": "First set is noisy and interrupted by Dylan's guest appearance, leading to monitor issues that affect several songs. The second set opens with an average China>Rider but a strong Playing in the Band before slipping toward the end, leaving the overall experience uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Attempted to recover after the disastrous Don’t Think Twice; noted as absent during part of the second set (possible illness).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Don't Think Twice": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:59:45.133271+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-02.fob.thompson.motb.82520.flac24"
+}

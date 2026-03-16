@@ -1,0 +1,64 @@
+{
+  "summary": "Recording source unknown; show features a nice Eyes > Eternity > He's Gone run but is overall described as lethargic and uneven.",
+  "review": "The three fan reviews are split – one enthusiastically rates the concert five stars, while two criticize it for being laid‑back to the point of boredom, noting weak performances on songs like \"Shoe Fits\" and a botched \"Roses.\" The only clear musical highlight mentioned is the \"Eyes > Eternity > He's Gone\" sequence, and reviewers give no details about the audio quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Mixed show feedback with one positive outlier; lack of recording comments limits confidence, leading to a modest rating reflecting overall lukewarm reception."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience, or any audio clarity issues; recording quality cannot be assessed from the provided comments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Eternity > He's Gone"
+    ],
+    "poor_songs": [
+      "Shoe Fits",
+      "Cheesy Answers",
+      "Way To Go Vince",
+      "Roses"
+    ],
+    "setlist_flow": "Described as laid‑back and lethargic, with a sleepy second half after the Space jam; overall engagement was low according to reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes > Eternity > He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cheesy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Way To Go Vince": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:13:22.548168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-24.112820.bk.schmit.sbeok.flac16"
+}

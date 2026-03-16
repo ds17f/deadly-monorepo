@@ -1,0 +1,39 @@
+{
+  "summary": "Recording is incomplete, missing “Eyes of the World”, resulting in a poor overall experience.",
+  "review": "The sole review flags this upload as essentially unusable because the pivotal “Eyes of the World” track is absent, making the set feel broken. No comments on sound quality are provided, but the missing song alone drives the rating down to an outright negative assessment.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one highly critical review (1 star) mentioning a major omission; insufficient data for a nuanced rating, but the feedback is clearly negative."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Upload is missing the “Eyes of the World” performance, rendering the recording incomplete. No specific comments on audio clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Eyes of the World (missing)"
+    ],
+    "setlist_flow": "Set appears truncated due to missing track; reviewers note it feels like a joke rather than a complete concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:28:03.009915+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-28.sennme80.wklitz.91643.flac"
+}

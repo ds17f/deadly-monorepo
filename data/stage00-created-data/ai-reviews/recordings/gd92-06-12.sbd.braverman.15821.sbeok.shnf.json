@@ -1,0 +1,74 @@
+{
+  "summary": "Fair soundboard recording of a classic early‑90s show that shines on the blistering Scarlet > Fire and solid first‑set staples.",
+  "review": "The performance is widely praised for its high‑energy first set (Jack Straw, New Speedway Boogie > Promised Land) and a standout Scarlet > Fire/China Doll sequence, with strong vocal work from Bob and memorable Attics encore.  The source is a first‑generation cassette soundboard that suffers from speed/pitch issues and overall low fidelity, though some listeners still find it acceptable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers love the musical set (≈4/5) while repeatedly noting serious recording flaws (≈2½/5). Weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First‑gen cassette SBD with noticeable speed/pitch problems; some describe it as fast and muddy, while a few say the audience mix is decent. Overall clarity is limited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Jack Straw",
+      "New Speedway Boogie > Promised Land",
+      "Sugar Magnolia",
+      "China Doll",
+      "Attics"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A classic early‑90s first set with solid song choices and a high‑energy second set highlighted by Scarlet > Fire, China Doll and an Attics encore; the flow is praised as tight and exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work gets major praise (horn‑style jams in Fire, great on China Doll) but a few note over‑reliance on MIDI during Scarlet > Fire.",
+    "Phil": "",
+    "Bob": "Described as \"smokin'\" on Sugar Magnolia; vocal contributions are well received.",
+    "Keys": "Vince’s synth work adds midi texture to Fire (some think it over‑done) and stumbles a few times; overall keyboard contribution is noted but mixed.",
+    "Drums": "Rare Smokestack into drums segment highlighted positively."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Speedway Boogie > Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:54:24.349537+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-12.sbd.braverman.15821.sbeok.shnf"
+}

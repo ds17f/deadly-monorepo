@@ -1,0 +1,82 @@
+{
+  "summary": "A solid soundboard capture (with a few early hiccups) of a scorching summer‑’90 show, highlighted by a smoking Help > Slip > Franklin’s and an epic Scarlet‑Fire.",
+  "review": "The recording is a generally clean SBD that settles after a brief front‑of‑stage wobble and a low vocal on the first verse of “Help”. The performance shines with an ultra‑tight Help > Slip > Franklin’s, a blistering Scarlet‑Fire, and marathon jams like Around And Around and He’s Gone, though a few missed notes and vocal slips (notably on Hell In A Bucket) keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars, praising key jams and overall sound; recording quality is consistently described as good with only minor issues, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑stage mix is a bit shaky at the start and Jerry's vocal on the first verse of Help is low but corrected; slight dip at the beginning of Scarlet‑Fire. Otherwise the SBD is clear, balanced and captures the band well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's",
+      "Scarlet > Fire",
+      "Around And Around",
+      "He's Gone",
+      "Just a Little Light",
+      "Round And Round",
+      "Blow Away"
+    ],
+    "poor_songs": [
+      "Hell In A Bucket"
+    ],
+    "setlist_flow": "First set opens with the classic Help > Slip > Franklin’s and closes unusually with Hell In A Bucket; the second set stretches into long, exploratory jams (He’s Gone, Around And Around) that build to a half‑hour Scarlet‑Fire climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ferocious guitar work, extended jam mood and even MIDI textures; vocal dip early in Help noted but fixed quickly.",
+    "Phil": "",
+    "Bob": "Noted vocal slips on Hell In A Bucket and Scarlet‑Fire (dropped verses), though his singing otherwise holds up.",
+    "Keys": "Brent (keyboards) highlighted for adding heat on Blow Away, bells, whistles and overall strong playing throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Blow Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Round And Round": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around And Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T07:42:51.912275+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-06-15.sbd.ladner.8570.sbeok.shnf"
+}

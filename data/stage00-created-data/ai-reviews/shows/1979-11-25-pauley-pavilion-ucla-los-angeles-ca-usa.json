@@ -1,0 +1,76 @@
+{
+  "summary": "Fiery Jack Straw, soaring Stella Blue, epic Shakedown→Bertha jam",
+  "blurb": "The UCLA show erupts with Jerry in top form and Phil’s booming bass anchoring every groove. Standout moments include a scorching Shakedown Street → Bertha transition, a soaring Stella Blue, and tight renditions of Jack Straw and The Other One.",
+  "review": "On November 25, 1979 at Pauley Pavilion the Dead were firing on all cylinders. Jerry Garcia was \"in the zone,\" delivering fiery leads on Shakedown Street → Bertha and a horn‑like tone on Stella Blue while his recovered voice rang strong through Althea and Loser. Phil Lesh’s bass thundered, dropping bombs that propelled the band especially during Jack Straw, The Other One, and the second‑set jams. Brent Mydland added depth with funky organ voicings and bright synth textures that lifted Shakedown Street and Bertha to new heights; his high‑register tones and vocal harmonies shone throughout. Bob Weir’s rhythm work was tight and his guitar tone perfect, even taking lead on Truckin'. The dual drumming of Mickey Hart and Bill Kreutzmann kept a relentless groove, highlighted by a \"stellar jam into drums\" in the second set. Across both soundboard and matrix sources the performance is consistently praised for its energy, seamless transitions (notably Lost Sailor → Saint Of Circumstance and Shakedown → Bertha) and standout songs like Jack Straw, Stella Blue, The Other One, Deal and Althea. With crystal‑clear audio on several recordings—especially the Miller soundboard transfer—the show stands as a quintessential late‑'79 UCLA experience.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 79,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All eight analyzed recordings carry a positive sentiment, repeatedly using terms like 'stellar', 'fiery', 'soaring' and praising the same songs (Shakedown Street → Bertha, Stella Blue, Jack Straw). The consistency across soundboard, matrix and audience sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1979-11-25.sbd.miller.84489.flac16",
+    "reason": "Excellent soundboard capture with crisp, clear mix and no drop‑outs; widely praised as an A+ transfer."
+  },
+  "key_highlights": [
+    "Scorching Shakedown Street → Bertha transition that drives the second set.",
+    "Jerry’s soaring Stella Blue and fiery leads throughout the night.",
+    "Brent Mydland’s funky organ and synth textures add depth to jams.",
+    "Phil Lesh’s thunderous, bomb‑dropping bass anchors the performance."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Shakedown Street",
+    "Bertha",
+    "Stella Blue",
+    "The Other One",
+    "Deal",
+    "Althea",
+    "Lost Sailor"
+  ],
+  "band_performance": {
+    "Jerry": "In top form, delivering fiery leads on Shakedown → Bertha and a horn‑like tone on Stella Blue; vocals fully recovered and powerful throughout.",
+    "Phil": "Booming, thunderous bass that drops bombs on Jack Straw, The Other One and the second‑set jams, serving as the show’s main thruster.",
+    "Bob": "Perfect guitar tone with solid rhythm work; takes lead on Truckin' and provides tight accompaniment across the set.",
+    "Brent": "Funky organ voicings, bright synth textures, high‑register tones and vocal harmonies that lift Shakedown Street, Bertha and other jams.",
+    "Mickey": "Energetic drumming that fuels the groove, especially during the second‑set improvisations.",
+    "Billy": "Keeps relentless drive with crisp cymbal work and powerful fills, contributing to the \"stellar jam into drums\" moment."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-26T02:14:30.281429+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Shakedown Street",
+      "Bertha"
+    ],
+    [
+      "He's Gone",
+      "The Other One",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Stella Blue",
+      "Good Lovin'"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Deal"
+    ],
+    [
+      "Althea"
+    ]
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Mixed reception – the audience recording is described as tinny and overly bright, yet the show itself gets praise for good vibes and solid performance.",
+  "review": "Reviewers are split: one lauds the recording’s vibe and thanks Jerry, while two criticize the audience‑sourced tape for being high‑end, tinny and speaker‑crackling. No specific song moments are mentioned, but the live sound at the venue was noted as excellent, suggesting the performance itself was decent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "While the show is generally regarded as enjoyable, the majority of comments focus on poor recording quality that detracts from listening pleasure, pulling the overall rating toward average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Described as mediocre with excessive high‑end, tinny character and speaker‑crackling artifacts; does not capture the venue’s excellent sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific set or song commentary; reviewers only note that the live sound at the theatre was good, implying an overall decent performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Thanked for 'nice vibes' and presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T09:53:11.315077+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-28.set2-33P.moore.acohen.88156.flac16"
+}

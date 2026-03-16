@@ -1,0 +1,31 @@
+{
+  "summary": "Recording details are unclear and reviewers describe the concert as lackluster with no standout moments.",
+  "review": "Both reviewers give little concrete information about the audio source; one rates it zero stars while the other offers a neutral three‑star rating. The second reviewer notes that the Dead were “lackluster at the Ice Palace,” but provides no specifics on songs, performance nuances, or recording quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "low",
+    "rationale": "Only two vague reviews; one negative rating and one neutral, with no details on sound quality or musical highlights, leading to a low overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about the audio source, clarity, mix, or any technical issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers mention a generally lackluster performance and provide no details on set structure or notable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T14:11:27.535087+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-27.sbd.braverman.fix-9373.21254.sbeok.shnf"
+}

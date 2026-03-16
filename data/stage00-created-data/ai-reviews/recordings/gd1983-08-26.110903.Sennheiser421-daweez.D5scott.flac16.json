@@ -1,0 +1,46 @@
+{
+  "summary": "In‑your‑face sound that gets clearer as the show progresses, highlighted by a strong Scarlet > Fire performance.",
+  "review": "The recording is generally good enough for casual listening – it improves in clarity later in the set and isn’t overly boomy according to most listeners. Musically the night shines on the Scarlet > Fire jam, though the opening of Truckin' is noted as a bit sloppy. Overall the show feels solid but not spectacular.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is average with one clear standout (Scarlet > Fire) and a minor slip on Truckin'; recording is decent, improving later, with only mild boomy complaints."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear enough for car listening; some listeners note low‑end boominess while others describe it as in‑your‑face. Quality improves noticeably as the concert goes on."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "The first half is a bit uneven, but the performance tightens and sound improves in the later portion of the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:53:51.838105+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-26.110903.Sennheiser421-daweez.D5scott.flac16"
+}

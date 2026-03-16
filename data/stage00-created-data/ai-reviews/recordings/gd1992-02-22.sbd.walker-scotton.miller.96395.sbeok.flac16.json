@@ -1,0 +1,46 @@
+{
+  "summary": "Average show with a solid So Many Roads performance; recording is unremarkable but appreciated for making the missing West‑Coast concert available.",
+  "review": "The concert is viewed as mediocre overall – So Many Roads gets praise while Wave to the Wind falls flat – and several reviewers simply note that it’s a debut of those tunes. No concrete comments on the audio fidelity are offered, but listeners value having this long‑lost show digitized. Sentiment across the five reviews ranges from enthusiastic to indifferent, resulting in a mixed overall impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is described as mediocre with one standout song; recording quality receives no specific praise or criticism, so the combined weighted score lands just above average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not discuss sound clarity, mix, or source type, implying an average listening experience without notable issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads"
+    ],
+    "poor_songs": [
+      "Wave to the Wind"
+    ],
+    "setlist_flow": "The set is noted mainly for debuting So Many Roads and Wave to the Wind; beyond that, reviewers give no detailed assessment of pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "So Many Roads is highlighted as a good Jerry guitar moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T03:21:33.052327+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-02-22.sbd.walker-scotton.miller.96395.sbeok.flac16"
+}

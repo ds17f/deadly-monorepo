@@ -1,0 +1,81 @@
+{
+  "summary": "High‑quality FM broadcast of the legendary 6/12/76 Boston show – superb performance (Samson & Delilah, Mission, Big River) captured with clear sound despite modest hiss and occasional distortion.",
+  "review": "The recording is an FM‑broadcast tape that sounds surprisingly clean for a radio source; reviewers note a pleasant mix with a little background noise but overall good fidelity. Musically the concert shines – Jerry’s mid‑’76 Travis Bean tone, Keith’s soaring keys and strong contributions from Phil, Bob and Bill are highlighted, especially on Samson & Delilah, Mission in the Rain, Big River, Cassidy and Comes a Time. The set flows with an electrifying first set opener and a second set that, while mixed in consistency, delivers several memorable peaks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give five stars and praise both the performance and the recording; only one review is mildly critical of a few songs or minor noise, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FM‑broadcast source with clear mix and decent instrument separation; occasional hiss/noise and brief distortion noted but not disruptive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah",
+      "Big River",
+      "Mission (Mission in the Rain)",
+      "Comes a Time",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Row Jimmy",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "First set launches with a powerful Samson opener and strong early numbers, then settles into an average middle; second set is uneven but contains high points (Cassidy, Comes a Time) and a lively close."
+  },
+  "band_member_comments": {
+    "Jerry": "His mid‑’76 Travis Bean tone is repeatedly praised; Garcia’s noodling, storytelling and vocal backing receive strong compliments.",
+    "Phil": "Bass work highlighted as solid and driving; Phil’s opening notes on \"Lazy Lightning\" noted positively.",
+    "Bob": "Weir’s vocals and lyric delivery are mentioned (e.g., on Looks Like Rain); occasional comment about sharing spotlight but overall positive.",
+    "Keys": "Keith’s playing is called “amazing” on Friend of the Devil and praised throughout; keyboards sit well in the mix.",
+    "Drums": "The drummers are credited for energizing the crowd, with remarks that they could “bring the entire Garden to the ground.”"
+  },
+  "song_mentions": {
+    "Samson & Delilah": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Big River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mission (Mission in the Rain)": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:58:39.440757+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-12.fm.sbd.moore.berger.100328.flac16"
+}

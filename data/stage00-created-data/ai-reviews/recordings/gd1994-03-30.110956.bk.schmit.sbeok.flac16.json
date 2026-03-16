@@ -1,0 +1,93 @@
+{
+  "summary": "Crisp audience tape captures an electrifying second set (Fire, Dark Star, epic Drums/Space) with strong organ work, while the first set is mixed.",
+  "review": "The Atlanta recording delivers a powerful second half—huge Fire, jazzy Playin', a soaring Dark Star and one of the most intense modern‑day Drums/Space sequences—enhanced by Vince’s tasty organ textures. The audience source is clear and wide‑ranged, though volume levels are low and a few moments feel uneven; the first set receives mixed remarks, especially on HC Sunshine and Jack‑a‑Roe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the second‑set performance and note good (if slightly low) audio clarity; weighted average of strong show quality (≈4.5) and solid recording quality (≈4.0) yields a ~4.3 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear mic placement captures crowd ambience and wide frequency response; low overall volume and occasional uneven levels, but overall crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire",
+      "Playin' in the Band",
+      "Dark Star",
+      "Stella Blue",
+      "Liberty",
+      "New Speedway Boogie"
+    ],
+    "poor_songs": [
+      "Hard to Come (HC) Sunshine",
+      "Jack-a-Roe",
+      "Comes a Time (tease)"
+    ],
+    "setlist_flow": "First set is uneven with some weaker numbers, but the second set builds superbly, delivering deep jams and a memorable Drums/Space that drives the concert’s high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Starts half‑asleep on early songs, then becomes alert; strong guitar tone and vocal delivery on New Speedway Boogie, Stella Blue and Liberty.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's organ work is highlighted as tasty and inventive, adding Dark Star motifs and enriching the jams.",
+    "Drums": "Mickey’s drumming in the Drums/Space is described as magical, intense, with ghostly choir samples and drones."
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Come (HC) Sunshine": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Comes a Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:10:26.390638+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-30.110956.bk.schmit.sbeok.flac16"
+}

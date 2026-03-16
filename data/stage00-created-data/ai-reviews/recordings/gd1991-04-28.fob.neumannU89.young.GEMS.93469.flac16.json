@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience recording with sweet, dynamic sound; the show delivers standout Crazy Fingers and Foolish Heart but overall feels routine.",
+  "review": "The Gem‑taped audience capture is superb – Neumann 89 mics and careful transfers give a clear, front‑of‑hall feel that lets every nuance shine. Musically the band is cohesive with highlights like Crazy Fingers and a strong Foolish Heart opener, though many songs (Truckin’, Deal) fall short of fire and even Santana’s cameo on Bird Song doesn’t add much excitement.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Review praises the recording highly but rates the show only 4 ★, noting several middling performances; weighted average yields a solid 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Gem audience tape using Neumann U‑89s, very sweet and dynamic; transfers aim for accurate front‑of‑hall reproduction with minimal processing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Foolish Heart",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Deal"
+    ],
+    "setlist_flow": "The band plays as a tight, orchestral‑era unit with Jerry holding back while Phil’s bass shines; the second set opens strong but later songs lose momentum, making the overall pacing solid but not spectacular."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as more restrained ‘front porch’ playing, allowing the ensemble to shine without his usual high‑octane leads.",
+    "Phil": "Praised for a relentless, growling bass tone enhanced by the Aural Exciter; called an “other‑worldly” performance.",
+    "Bob": "His improvisational figures are noted as captivating and adroit, though Healy’s vocal touch on The Other One is called ‘weirdness’.",
+    "Keys": "Bruce Hornsby and Vince Welnick provide a homogeneous, orchestral backdrop that contributes to the cohesive sound of the era.",
+    "Drums": "Bill's drumming moves into an interesting space, adding texture without dominating."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:12:59.572232+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-28.fob.neumannU89.young.GEMS.93469.flac16"
+}

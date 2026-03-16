@@ -1,0 +1,92 @@
+{
+  "summary": "Soundboard capture of the July 22 1990 Tinley Park show – solid performance with emotional Brent moments and fair‑to‑poor venue acoustics.",
+  "review": "The concert is remembered as one of the best of the three‑night Tinley Park run, highlighted by a Box of Rain opener, rare “BIODTL,” Far From Me, Hey Pocky Way, and an epic Eyes jam.  Reviewers praise Brent’s heartfelt keyboards and the band’s energy, but note that the venue’s acoustics and vocal pickup were weak, making the recording sound only fair despite being a soundboard source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (≈4.2/5) while recording quality is described as fair to good (≈3.0/5); weighted average yields ~3.8‑4.0. Many reviews provide detail, but opinions on the sound are mixed, giving medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Instrumental clarity is good, but vocal pickup is weak and venue acoustics were poor; some audience copies suffered pitch issues. Overall the soundboard capture is usable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "BIODTL",
+      "Far From Me",
+      "Hey Pocky Way",
+      "Eyes",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Estimated Prophet",
+      "West LA Fadeaway (missing)"
+    ],
+    "setlist_flow": "Three‑night Tinley Park run is praised for its energy and emotional weight, especially Brent’s last performances.  The set moves smoothly through rare gems and strong jams, though the venue’s echo and occasional weak vocals dampen the listening experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally solid; a few reviewers felt his playing slipped after Brent’s death.",
+    "Phil": "Criticized for weak vocal pickup on several songs.",
+    "Bob": "Mentioned forgetting lyrics on some numbers.",
+    "Keys": "Brent’s keyboards are the emotional centerpiece – praised on Far From Me and Eyes, though a few note his decline late in the tour.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BIODTL": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:42:18.107655+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-22.sbd.conner.7834.sbeok.shnf"
+}

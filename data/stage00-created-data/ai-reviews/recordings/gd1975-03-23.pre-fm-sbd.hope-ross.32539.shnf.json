@@ -1,0 +1,31 @@
+{
+  "summary": "An acclaimed, long‑awaited concert captured in an outstanding audio recording that fans call a masterpiece.",
+  "review": "Both reviewers rave about the performance, describing it as incredible and mind‑blowing with jam sections that stand out. The audio quality is praised as the best version heard, suggesting a crystal‑clear capture even though no specific source type is mentioned. Overall the show is celebrated as one of the band’s finest recordings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly enthusiastic about both the musical performance and the audio quality, indicating a top‑tier show with excellent recording despite limited technical detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as the best version they've heard, noting crystal‑clear sound and no reported issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Listeners call the concert an incredible, long‑awaited performance with mind‑blowing jam sections and overall high energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised implicitly as part of the 'Garcias' comment and described as delivering a mind‑blowing jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T02:02:13.099332+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-03-23.pre-fm-sbd.hope-ross.32539.shnf"
+}

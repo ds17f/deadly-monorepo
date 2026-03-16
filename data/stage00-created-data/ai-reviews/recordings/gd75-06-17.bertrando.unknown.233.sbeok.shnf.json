@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent audience tape that captures the historic debut of Crazy Fingers and the Help‑Slip‑Franklin’s trio, with clear sound and a vibrant 1975 performance",
+  "review": "The recording is an impressive mid‑70s audience capture – surprisingly clear, full of crowd ambience and only occasional drop‑outs. Musically the show is a landmark: first performances of Crazy Fingers, Help>Slip>Franklin’s, and a uniquely slow Peggy‑O, plus strong outings of Blues for Allah, Slipknot! and Stronger Than Dirt, making it one of the most celebrated 1975 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (30+) are 4‑5 stars and praise both the historic setlist and the surprisingly good audience sound, outweighing a few isolated complaints about tunnel‑like tone."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix with strong crowd ambience; captures the vibe of Winterland. Some reviewers note occasional muffled ‘tunnel’ perception and brief drop‑outs, but most consider it excellent for an aud of this era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Peggy-O",
+      "Blues for Allah",
+      "Slipknot!",
+      "Stronger Than Dirt"
+    ],
+    "poor_songs": [
+      "Beat It On Down the Line"
+    ],
+    "setlist_flow": "A historic, high‑energy set that debuts several new pieces and moves smoothly through them; despite being a relatively short show it feels cohesive and revelatory."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone and vocals are highlighted throughout – many reviewers note his playing shines on Crazy Fingers, Help>Slip>Franklin’s and the mellow Peggy‑O.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith is heard prominently; Donna's keyboards are audible (especially on Franklin’s), though a few reviewers initially thought she was absent.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Peggy-O": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Blues for Allah": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Slipknot!": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Stronger Than Dirt": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T02:08:12.366616+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd75-06-17.bertrando.unknown.233.sbeok.shnf"
+}

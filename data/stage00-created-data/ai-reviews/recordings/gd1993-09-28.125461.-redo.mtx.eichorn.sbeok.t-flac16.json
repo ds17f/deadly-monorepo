@@ -1,0 +1,37 @@
+{
+  "summary": "Matrix SBD+AUD mix is praised for its clarity but suffers from song‑order and duplication errors.",
+  "review": "The recording combines soundboard and audience sources (SBD+AUD) and most listeners find the overall sound incredible, with a clean mix that highlights the band well. However, reviewers note problems with the track sequencing – a duplicated \"So Many Roads\" segment and misplaced tuning for \"China Cat Sunflower\" – and wish the full concert were available.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Recording quality is good to excellent, but show performance cannot be evaluated and there are clear mixing/track‑order issues that lower the overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners commend the SBD+AUD reworking for its clean, crisp sound, but point out song‑ordering mistakes and a duplicated track that detract from the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific performance comments; reviewers only note missing portions of the concert and a tuning break for \"China Cat Sunflower\" in the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:01:00.267615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-28.125461.-redo.mtx.eichorn.sbeok.t-flac16"
+}

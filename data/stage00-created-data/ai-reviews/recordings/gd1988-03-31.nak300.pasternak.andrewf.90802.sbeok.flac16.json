@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy late‑80s show, highlighted by a scorching Scarlet > Fire and a seamless, flowing second set.",
+  "review": "The recording is praised for its crystal‑clear soundboard quality that even rivals the FM broadcast, making every instrument shine. Fans describe the concert as electric – from the opening Hell in a Bucket to the unforgettable Scarlet > Fire, with standout moments like Terrapin Station and an inspired Watchtower reading, while the second set flows effortlessly. A few reviewers note the performance isn’t as flawless as other nights, but overall the show is celebrated for its energy and memorable jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews (6/7) are 4‑5 stars and highlight both superb soundboard quality and strong musical moments; only one moderate review tempers the praise, resulting in a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, great, and on par with or better than the FM broadcast; no dropout or muffling issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Terrapin Station",
+      "Hell in a Bucket",
+      "Watchtower",
+      "Hey Jude"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a high‑energy opening, seamless transitions in the second set, and an especially uplifting Fantasy > Hey Jude fade‑out; overall pacing is described as flowing effortlessly."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as \"flowing seamlessly\" with his guitar work throughout the second set.",
+    "Phil": "",
+    "Bob": "His unorthodox reading of Watchtower gave reviewers chills and was highlighted as a unique moment.",
+    "Keys": "Brent (keyboardist) described as phenomenal, especially on vocal parts for Mr. Fantasy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T07:30:12.562356+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-31.nak300.pasternak.andrewf.90802.sbeok.flac16"
+}

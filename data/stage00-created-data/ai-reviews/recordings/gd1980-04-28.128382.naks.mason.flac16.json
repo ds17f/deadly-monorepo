@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent low‑end‑rich recording of a high‑energy show featuring a scorching The Other One and a rippin’ Alabama Getaway.",
+  "review": "Fans rave about the powerful bottom end and natural sound captured on a Nakajima 300 deck, calling the tape “very nice” and “crisp”.  The performance is described as energetic with standout moments on The Other One (noted for its scary climax) and an exuberant Alabama Getaway.  Overall the show and recording are highly praised despite one terse negative note.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4‑5) and enthusiastic comments on both performance and audio quality; minor ambiguous low‑star entry does not detract from overall positivity."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Strong bottom end, natural sounding Nakamichi 300 microphones, clear mix; praised as a very nice recording by multiple reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Alabama Getaway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy show with a short but punchy set; the band kept strong momentum throughout, highlighted by an intense The Other One and a rippin’ Alabama Getaway."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-12T22:07:28.407434+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-04-28.128382.naks.mason.flac16"
+}

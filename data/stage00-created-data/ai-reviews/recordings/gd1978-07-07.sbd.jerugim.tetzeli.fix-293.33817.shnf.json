@@ -1,0 +1,94 @@
+{
+  "summary": "Good‑quality soundboard matrix (dry, flat image) captures a mixed July ’78 Red Rocks show with standout Cassidy, Dancing in the Street and Black Peter.",
+  "review": "The recording is a soundboard/matrix source that sounds clear but somewhat dry and flat, yet reviewers still rate it highly for fidelity. Musically the concert is considered a lesser‑than‑stellar night on the tour, though highlights like Cassidy, Dancing in the Street and a superb Black Peter keep it interesting. Overall sentiment is mixed because of strong sound praise against an average performance assessment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality averages around 3¼ stars while recording quality receives high marks; weighted average yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Original SBD was mono; a matrix adds stereo image but sounds dry and flat, typical of the ’78 tour. Song titles are mis‑labelled from \"Space\" onward, which is a metadata issue rather than audio quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Dancing in the Street",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Peggy-O",
+      "Around & Around"
+    ],
+    "setlist_flow": "First set rated B‑, second set C+, overall 3¼ stars; first half of the show is tighter than the second, with a few average or sloppy moments but strong peaks in the middle."
+  },
+  "band_member_comments": {
+    "Jerry": "Warms up and takes off with Jack Straw; no specific criticism.",
+    "Phil": "\"Phil is the man on Tennessee\" – bass work highlighted positively.",
+    "Bob": "",
+    "Keys": "Keith excels on Big River, though his parts are only clear in certain audio mixes.",
+    "Drums": "Drums Not Fade described as average with a brief Nobody's Fault quote."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums Not Fade": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:02:15.956850+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-07.sbd.jerugim.tetzeli.fix-293.33817.shnf"
+}

@@ -1,0 +1,92 @@
+{
+  "summary": "Good audience recording that captures a strong first set highlighted by Peggy‑O, Mama Tried and Big River, while the second set stalls on Touch of Grey and Dewiminna.",
+  "review": "The front‑of‑board audience source provides decent clarity with a slightly narrow midrange, making it listenable but not pristine. Musically the show shines in the first set – Peggy‑O, Mama Tried and Big River are praised as standout performances – whereas the second set is deemed average, with Touch of Grey and Dewiminna described as vapid despite a solid Black Peter jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is strong in the first set but weaker in the second, and recording quality is good though not outstanding; combined weighted score yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑board audience tape with missing mids (1.5–7 kHz), narrower frequency range and less clarity than some soundboard sources, but offers a wide overall spectrum and is less fatiguing once EQ adjusted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Mama Tried",
+      "Big River",
+      "Black Peter",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Touch of Grey",
+      "Dewiminna",
+      "Shakedown"
+    ],
+    "setlist_flow": "First set earns a B+ with tight, energetic performances; second set drops to a C, feeling average for ’84 despite a strong ending jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Loses an entire verse in Shakedown but otherwise solid playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dewiminna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:51:16.705370+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-11.141028.FOB.Neumann.billydee.Sellers.Noel.t-flac1644"
+}

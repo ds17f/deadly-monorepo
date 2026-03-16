@@ -1,0 +1,57 @@
+{
+  "summary": "Good‑quality soundboard capture of a mixed ’69 show highlighted by Big Boy Pete, Good Lovin', He Was A Friend Of Mine and It’s All Over Now",
+  "review": "The recording is a solid soundboard source with clear mix on the later tracks (especially Big Boy Pete) but the first three cuts suffer from low volume and tape‑hiss. Musically the set is uneven – some reviewers call it a “walk‑through” while others celebrate extended jams and strong vocal performances, particularly Garcia’s tone and Pigpen’s contributions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Average to good show quality (mixed reviews) combined with generally good soundboard recording yields a mid‑range rating; sufficient number of detailed reviews supports confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Low volume on first three tracks, tape hiss present but removable with EQ. Later tracks (Big Boy Pete) have proper levels and a clean mix; overall recording is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boy Pete",
+      "Good Lovin'",
+      "He Was A Friend Of Mine",
+      "All Over Now"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual ’69 set with a long He Was A Friend Of Mine jam, solid Good Lovin' and the rare cover All Over Now; some feel the band moves sluggishly early on."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as rock‑solid and strong; leads vocals on Good Lovin'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Boy Pete": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He Was A Friend Of Mine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "All Over Now": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T17:12:02.940752+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-09-06.sbd.samaritano.16608.sbeok.shnf"
+}

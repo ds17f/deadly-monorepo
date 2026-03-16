@@ -1,0 +1,44 @@
+{
+  "summary": "Good soundboard capture of a rocking performance, though the \"It's a Sin\" segment is cut short.",
+  "review": "The tape delivers a high‑energy version that fans call the most rocking they’ve heard, especially the highlighted “Doin’ That Rag”. Recording quality is praised as better than earlier sources, but the set is truncated – the \"It's a Sin\" excerpt ends after just 30 seconds, leaving the best part of the show missing. Overall it’s an enjoyable listen despite the incomplete edit.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "All three reviewers gave 4‑star ratings, noting strong performance and good sound quality but also a significant cut in the recording; this balances to an overall solid 4‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and better‑than‑previous tape, but the track \"It's a Sin\" is cut after ~30 seconds, making the recording incomplete."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Doin' That Rag"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and highly praised performance, yet the truncated recording leaves out key moments, affecting overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "It's a Sin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T13:17:34.427955+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-15.sbd.oswley.9073.sbeok.shnf"
+}

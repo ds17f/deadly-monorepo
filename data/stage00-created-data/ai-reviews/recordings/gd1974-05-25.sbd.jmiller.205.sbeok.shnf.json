@@ -1,0 +1,56 @@
+{
+  "summary": "Top‑notch soundboard capture of a fiery 1974 show featuring a smoking China Cat Sunflower and unstoppable Billy Kreutzmann drumming.",
+  "review": "The recording is praised as crystal‑clear and runs great, indicating an excellent soundboard source. Musically the concert shines with a standout China Cat Sunflower, tight Truckin → Let It Grow segue, and a jam that leads into I Know You Rider, all propelled by Bill Kreutzmann’s legendary drumming, though Phil Lesh briefly drops out during the key change.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores and glowing comments about both performance (standout songs, exceptional drumming) and recording quality (top‑notch sound), with only a minor bass drop noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Runs great; reviewers describe the sound as crystal‑clear, top‑notch mix with no noticeable flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Truckin",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong flow highlighted by a seamless Truckin → Let It Grow transition and a tight jam leading into I Know You Rider; overall energy high despite a brief bass drop."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Drops out in the key change during China Cat Sunflower after the second verse.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy K (Bill Kreutzmann) praised for fire‑like, multi‑limb playing; described as \"on fire\" and \"four arms and four legs.\""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T20:04:37.639829+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-25.sbd.jmiller.205.sbeok.shnf"
+}

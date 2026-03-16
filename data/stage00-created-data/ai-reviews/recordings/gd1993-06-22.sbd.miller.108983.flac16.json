@@ -1,0 +1,81 @@
+{
+  "summary": "Solid sound‑board capture with a stellar Help > Slip > Frank sequence and a punchy second set highlighted by He's Gone, High Time and Crazy Fingers.",
+  "review": "The June 22 1993 Deer Creek show is praised for its tight first set and an epic second set where the Help > Slip > Frank segue ignites the crowd. Reviewers love Jerry’s soaring solos, Vince’s tasteful keys, Phil’s confident vocals and especially the drum work, while the soundboard source provides a generally clear mix despite occasional click artifacts noted on “High Time.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviewers rate the show 4‑5 stars and highlight many musical high points; recording quality is described as good with only minor artifact complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced, but a few listeners note click/artifact issues on “High Time” that may stem from down‑sampling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "He's Gone",
+      "High Time",
+      "Crazy Fingers",
+      "Looks Like Rain",
+      "Days Between"
+    ],
+    "poor_songs": [
+      "Victim"
+    ],
+    "setlist_flow": "Strong first set builds into an epic second set; the Help‑Slip‑Frank segue creates a high‑energy peak, and the closing jam after Crazy Fingers sustains momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequent praise for his solos – fingerpicking on Help/Slip/Frank, soaring lead on High Time, and an intense finish on Days Between (though one reviewer felt the last verse was a bit butchered).",
+    "Phil": "Noted singing on All Over Now and praised for confident vocal delivery; generally mentioned as being in top form.",
+    "Bob": "Mixed remarks – credited with keeping positive vibes on “All Over Now” but also critiqued for briefly “dropping the ball.”",
+    "Keys": "Vince’s keyboard work highlighted repeatedly, especially a barrel‑house piano solo on All Over Now and tasteful fills before verses of Help/Slip/Frank.",
+    "Drums": "The drum performance is singled out as a highlight; reviewers encourage listening with headphones to appreciate the power of the second‑set drumming."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:01:49.816095+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-22.sbd.miller.108983.flac16"
+}

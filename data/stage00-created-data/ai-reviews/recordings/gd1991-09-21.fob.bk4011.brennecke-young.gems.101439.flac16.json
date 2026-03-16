@@ -1,0 +1,57 @@
+{
+  "summary": "Full, balanced soundboard capture of a quintessential Saturday show with standout performances of Cassidy, Tom Thumb and an exhilarating second set.",
+  "review": "The recording is praised for its full, balanced mix – Phil’s bass sits dead‑center while the rest of the band is nicely spread.  The first set rolls at a relaxed pace before building into a powerful mid‑set, and the second set is described as “sparkly” with the band firing on all cylinders.  Overall both the performance and the tape quality earn high marks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "The single detailed 5‑star review highlights an excellent performance and a superb soundboard recording, leading to a near‑top rating despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Full and balanced mix; Phil’s bass is dead‑center with the rest of the band spread out appropriately. No audible flaws or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Tom Thumb",
+      "Minglewood Blues",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set takes its sweet time and builds gradually; second set is described as sparkly and highly engaging, delivering a classic Saturday‑night arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive remarks about his “follow‑up” after the opening song and his improvisational choices (e.g., Fire out of Slipknot).",
+    "Phil": "Noted for being dead‑center in the mix, indicating a strong bass presence.",
+    "Bob": "",
+    "Keys": "Bruce’s extroverted playing is highlighted as adding excitement, especially in the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:36:47.081565+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-21.fob.bk4011.brennecke-young.gems.101439.flac16"
+}

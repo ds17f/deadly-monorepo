@@ -1,0 +1,37 @@
+{
+  "summary": "Recording marred by a repeat glitch at the end of Candyman and cluttered tuning tracks, with no performance details provided.",
+  "review": "The sole reviewer points out a technical defect where the final 45 seconds of \"Candyman\" loop back after the song ends, and notes that tunings are appended to the previous track instead of being separated, creating setlist clutter. No comments were made about the musical performance or band members, so the show quality cannot be assessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one brief review focusing on a recording glitch; no positive aspects mentioned and no performance information available."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Last 45 seconds of \"Candyman\" repeat after the song ends; tunings are not isolated as separate tracks, causing clutter in the setlist."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about performance or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:54:56.778898+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-24.150970.prefm.WBUF.larussa-blackwwod-chastain-waddell.flac2496"
+}

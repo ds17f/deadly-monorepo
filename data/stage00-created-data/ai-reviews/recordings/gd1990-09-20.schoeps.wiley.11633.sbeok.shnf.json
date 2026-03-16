@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised show with no detailed recording information available",
+  "review": "The lone fan review rates the performance a perfect five stars, indicating strong enthusiasm for the concert. No specifics are given about the audio source or sound quality, so the recording’s technical attributes remain unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review suggests a very positive experience, but the lack of detail about both performance and recording limits confidence in assigning a precise rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed observations about set structure or pacing were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T13:16:13.806582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-20.schoeps.wiley.11633.sbeok.shnf"
+}

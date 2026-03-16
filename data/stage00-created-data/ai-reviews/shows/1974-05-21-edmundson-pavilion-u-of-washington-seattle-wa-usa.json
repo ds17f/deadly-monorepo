@@ -1,0 +1,74 @@
+{
+  "summary": "Epic Playing In The Band marathon with tight jams throughout",
+  "blurb": "The show features a monumental 45‑minute Playing In The Band surrounded by standout renditions of Wharf Rat, Eyes Of The World and Ship Of Fools. Jerry’s adventurous guitar work and Keith’s forward piano drive the jam-heavy second set.",
+  "review": "May 21, 1974 at Edmundson Pavilion captured one of the Dead's most daring moments – a soaring 45‑minute Playing In The Band that serves as the centerpiece of an otherwise flawless two‑set marathon. The first set rolls through classics like Scarlet Begonias, Row Jimmy and a hot Money Money before launching into the second‑set juggernaut. Reviewers rave about the fluid, almost autoharp‑like guitar work from Jerry, his atonal excursions that push the band into new territories, while Phil’s low‑end bass anchors every groove, especially on Eyes Of The World where his solo shines. Keith Godchaux steps out of the usual mix, with a piano that sits unusually forward and an organ that adds “freaky” counterpoint throughout the extended jams. Bill Kreutzmann delivers a jazzy, funk‑charged drum feel that fuels the marathon PITB, and even though some listeners note occasional vocal strain on Wharf Rat, the overall energy never wanes. With multiple high‑quality soundboard and matrix sources, this show stands out as a must‑listen snapshot of the band’s Wall‑of‑Sound era at its most adventurous.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 83,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Across all recordings the sentiment is overwhelmingly positive: reviewers consistently describe the Playing In The Band as 'legendary', 'epic' and 'marathon', highlight multiple songs (Wharf Rat, Eyes Of The World, Ship Of Fools, Scarlet Begonias) with praise, and note no recurring performance flaws. Only isolated criticisms (e.g., occasional vocal strain, a few poor songs in one matrix) appear, so the overall adjustment is a strong positive boost.",
+      "final_calculation": "2.5 + 0.4 + 1.4 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd74-05-21.sbd.belkin.2597.sbefail.shnf",
+    "reason": "Excellent soundboard capture with crystal‑clear mix, prominent Keith piano, and the most faithful rendering of the 45‑minute Playing In The Band."
+  },
+  "key_highlights": [
+    "Monumental 45‑minute Playing In The Band that defines the second set",
+    "Tight, adventurous guitar work from Jerry and fluid organ/piano from Keith",
+    "Strong rhythm section: Phil’s bass foundation and Bill’s jazzy funk groove",
+    "Standout renditions of Wharf Rat, Eyes Of The World, Ship Of Fools, and Scarlet Begonias"
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Wharf Rat",
+    "Eyes Of The World",
+    "Ship Of Fools",
+    "Scarlet Begonias",
+    "China Doll",
+    "Money Money"
+  ],
+  "band_performance": {
+    "Jerry": "Adventurous, fluid guitar that veers into atonal/12‑tone territory; praised for autoharp‑like phrasing and strong vocal delivery throughout the marathon jams.",
+    "Phil": "Solid, grooving bass with heavy low‑end presence; highlighted on Eyes Of The World and pushes the band forward during the lengthy Playing In The Band.",
+    "Bob": "Consistently solid rhythm guitar; occasional vocal strain noted on Wharf Rat but overall reliable accompaniment.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Jazzy, funk‑charged drumming that fuels the extended jams; praised for precise hi‑hat work and percussive perfection throughout the set."
+  },
+  "processed_recordings": 12,
+  "processed_date": "2025-09-22T20:03:40.892872+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band"
+    ],
+    [
+      "Eyes Of The World",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    [
+      "Ship Of Fools"
+    ],
+    [
+      "Scarlet Begonias"
+    ],
+    [
+      "Weather Report Suite Prelude",
+      "Weather Report Suite Part 1",
+      "Let It Grow",
+      "China Doll"
+    ],
+    [
+      "Money Money"
+    ]
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Good‑quality DSBD soundboard remaster with a hot, high‑energy show highlighted by Terrapin Station, The Other One and Brent’s “Easy to Love You”.",
+  "review": "The Charlie Miller DSBD remaster delivers clear, well‑balanced sound overall, though the first track skips and some listeners note a slightly flat mix compared with other sources. Musically the May 6 1990 performance is praised for its scorching second set, strong renditions of Terrapin Station, The Other One and Brent’s “Easy to Love You”, and an electrifying atmosphere despite 120‑degree heat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise the show’s energy and setlist; recording quality is generally good with only a few complaints, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp DSBD remaster by Charlie Miller; occasional first‑track skipping (likely playback issue) and some listeners describe the mix as a bit flat compared with other copies, but overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "The Other One",
+      "Easy to Love You",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A scorching first set followed by an other‑worldly second set; the heat of the day adds to the mythic vibe, and the band rides a strong groove through the classics."
+  },
+  "band_member_comments": {
+    "Jerry": "Brent’s keyboards are noted as helping Jerry’s playing on this tour.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s mix was sometimes perceived as too forward, but many reviewers appreciate his positive impact on the overall sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:56:35.439971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-05-06.dsbd.miller.80278.sbeok.flac16"
+}

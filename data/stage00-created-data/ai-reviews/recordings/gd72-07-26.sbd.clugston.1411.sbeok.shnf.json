@@ -1,0 +1,72 @@
+{
+  "summary": "Soundboard capture delivers clean, crisp audio of a solid 1972 set highlighted by an epic Dark Star and strong mid‑set numbers.",
+  "review": "The recording is generally praised for its clear, well‑balanced sound though a few listeners note a slightly fast vocal mix and occasional tape‑speed quirks. Musically the show is described as solid with standout moments – especially the 30‑minute Dark Star and the flowing Comes a Time/Stella Blue sequence – while the early part of the set is considered routine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.3 with many enthusiastic comments about both performance and sound; minor complaints are outweighed by strong positives."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the sound clean, crisp and well‑balanced. A few note vocal mix being forward, a slightly slow tape speed affecting Jerry's tone, and occasional mic squeak, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Comes a Time",
+      "Stella Blue",
+      "Cold Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist is described as fairly standard but solid, with the early portion considered routine and the performance really taking off after Dark Star, leading into a strong mid‑set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for superb tone and interplay with Keith during Dark Star; some note tape‑speed issue makes his sound feel slightly off.",
+    "Phil": "",
+    "Bob": "Noted for sweet, clear vocal presence that adds to the overall vibe.",
+    "Keys": "Keith’s keyboard work highlighted as a key element of the expansive Dark Star improvisation.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T15:53:05.068168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-07-26.sbd.clugston.1411.sbeok.shnf"
+}

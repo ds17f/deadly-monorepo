@@ -1,0 +1,92 @@
+{
+  "summary": "Fair‑quality soundboard capture of a shaky first set but a magisterial second set highlighted by The Wheel > Good Lovin' > Comes A Time sequence.",
+  "review": "The Miller SBD source offers decent clarity with occasional dips, and the audience (AUD) is often described as unlistenable. Musically the show shines in its second half – Playing in the Band, Music Never Stopped and a sprawling The Wheel‑Good Lovin'‑Comes A Time jam are repeatedly praised, while the first set suffers from cold tempos and thin guitar work. Overall it’s an enjoyable recording for Deadheads who value the deep second‑set improvisations despite a mixed mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Five detailed reviews give an average of 4 ★, with strong praise for the second set outweighing noted recording flaws and a weaker first set."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear soundboard (Miller S2) but several reviewers note dips, a poor mix on the original SBD and an AUD that is often described as unlistenable. The Miller source improves the second‑set balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel > Good Lovin' > Comes A Time",
+      "Playing in the Band",
+      "Music Never Stopped",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Mama Tried",
+      "Loser",
+      "El Paso"
+    ],
+    "setlist_flow": "First set is uneven – cold tempos and thin guitar on several numbers – but the second set builds into a must‑hear sequence, delivering deep jams and strong group interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Jer pulls the jam into Good Lovin' and provides the transition; no specific criticism.",
+    "Phil": "Phil‑centric moments highlighted (Minglewood, bass takeover on the ending of Good Lovin'), praised for his rhythmic leadership.",
+    "Bob": "Bob's guitar disappears on several tracks (Ramble on Rose, Samson & Delilah) but later adds key A7 chord that drives a Phil‑centered reprise.",
+    "Keys": "Keith is turned up in the mix and sometimes dominates; sets rhythm during The Wheel jam.",
+    "Drums": "Described as a “trad Zep/Deep Purple/Cream‑style” segment with an odd, extended drum break."
+  },
+  "song_mentions": {
+    "The Wheel > Good Lovin' > Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:06:48.987694+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-03.121945.s2.sbd.miller.flac16"
+}

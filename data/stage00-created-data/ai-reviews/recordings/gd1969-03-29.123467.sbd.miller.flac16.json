@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard capture of a 1969 show, highlighted by an electrifying Dark Star while Jerry’s vocals draw mixed reactions.",
+  "review": "The Miller‑sourced soundboard recording is praised for its unusually clear 1969 audio quality, letting the band’s energy shine through. Reviewers repeatedly call the Dark Star a “phenomenal” or “awesome” centerpiece, though some note that Garcia’s singing sounds raw and off‑key early in the set. Overall the performance is considered strong with standout guitar work, offset by vocal imperfections.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and laud the sound quality and Dark Star; a few note vocal shortcomings, leading to an overall strong but not flawless impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers comment that the 1969 sound is “ridiculously good” and that the mix highlights Jerry’s lead guitar; no major drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviews focus almost exclusively on Dark Star, indicating it was the high point of the set; overall pacing is viewed positively despite some vocal roughness."
+  },
+  "band_member_comments": {
+    "Jerry": "Leads are described as “killer,” “shredding,” and a saving grace; vocals are criticized as thin, off‑key, and sounding like a young girl scout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T12:32:13.203483+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-03-29.123467.sbd.miller.flac16"
+}

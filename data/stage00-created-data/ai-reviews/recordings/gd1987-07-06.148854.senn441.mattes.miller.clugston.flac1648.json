@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent matrix recording captures a solid 7/6/87 show with standout Franklin’s Tower and Shakedown Street performances.",
+  "review": "The newly‑added HQ front‑of‑house/matrix source delivers crystal‑clear audio that far outshines earlier releases of this tour. Musically the concert is strong – a relaxed first set highlighted by Franklin’s Tower, Big River and Desolation Row, followed by an energetic second set featuring Shakedown Street, Women Are Smarter and a sprawling Knocking on Heaven’s Door – though a few moments (Samson, Don’t Ease Me In) feel a bit distracted. Overall the show is enjoyable and the recording makes it highly listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "One detailed review shows an excellent recording but a moderately good performance with some uneven spots, leading to a blended rating near the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "HQ front‑of‑house/matrix mix praised as clear, balanced and a big improvement over previous audience recordings; no major flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Big River",
+      "Desolation Row",
+      "Shakedown Street",
+      "Women Are Smarter"
+    ],
+    "poor_songs": [
+      "Samson",
+      "Knocking on Heaven's Door"
+    ],
+    "setlist_flow": "First set is chill and expansive, building nicely to Franklin’s Tower; second set opens powerfully with Shakedown Street and maintains momentum despite a few distracted moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for his big smile onstage; no specific guitar critique.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboard work highlighted as driving the tonal development of the Shakedown Street jam.",
+    "Drums": "Drums and Space are longer and more intricate than typical 1987 performances, receiving positive mention."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knocking on Heaven's Door": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:20:24.000635+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-06.148854.senn441.mattes.miller.clugston.flac1648"
+}

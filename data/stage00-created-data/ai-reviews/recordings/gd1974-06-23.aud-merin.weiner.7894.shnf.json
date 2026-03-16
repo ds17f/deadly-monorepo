@@ -1,0 +1,69 @@
+{
+  "summary": "High‑quality audience tape of a classic ’74 set, highlighted by a scorching Dark Star → Spanish Jam and superb Weather Report → China Doll sequence.",
+  "review": "The three reviewers rave about the performance, noting tight first‑set work on Jack Straw and an even more inspired second set featuring Weather Report into China Doll, a mind‑blowing Dark Star that melts into a Spanish jam, and a sublime Seastones aftermath. The AUD tape is praised for its clear, well‑captured sound despite occasional tuning gaps, making it a valuable historical document.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviews are five‑star and uniformly positive about both the music (standout jams) and the tape quality, yielding a near‑excellent combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear AUD tape with fine taping job; occasional tuning gaps noted but overall crisp and immersive sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Weather Report",
+      "China Doll",
+      "Dark Star",
+      "Spanish Jam",
+      "Seastones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set strong, second set even tighter with superb transitions; jam after Seastones highlighted as sublime."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's playing is described as goose‑bumps inducing and a key part of the show's excitement.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Seastones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:42:36.561788+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-23.aud-merin.weiner.7894.shnf"
+}

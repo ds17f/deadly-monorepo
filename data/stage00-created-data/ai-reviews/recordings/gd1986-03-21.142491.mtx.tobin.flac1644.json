@@ -1,0 +1,45 @@
+{
+  "summary": "Nice recording of a lopsided 1986 show marked by a chaotic Supplication/Let It Griw interruption.",
+  "review": "The recording is praised as \"nice,\" but the performance itself is described as uneven, with the band playing well individually yet failing to click together. Highlights are few, limited to the humorous mishap where Bob interrupts an ill‑fated Supplication instrumental with a rushed Let It Griw, and a confused attempt to return to Supplication from the end of Uncle John’s in the second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the show 3 stars, noting a decent recording but a poorly cohesive performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls the recording \"nice\" and provides no complaints about sound clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Supplication",
+      "Let It Griw"
+    ],
+    "setlist_flow": "Second set described as chaotic, with an ill‑fated Supplication instrumental interrupted by a rushed Let It Griw and a clumsy attempt to resume Supplication from the tail of Uncle John’s."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob (Bobby) interrupts the Supplication instrumental with a hurried Let It Griw, contributing to the show’s uneven feel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Griw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:17:39.521985+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-21.142491.mtx.tobin.flac1644"
+}

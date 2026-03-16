@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent 1979 soundboard capture with standout China‑Rider and CC Rider performances, though the second set suffers from reduced highs.",
+  "review": "Fans rave about this 1979 show, especially the legendary China > Rider suite, a soaring CC Rider jam, and tight renditions of He's Gone, Looks Like Rain and Black Peter. The soundboard source is generally clear and crisp, but several reviewers note low‑volume/high‑frequency loss on the second set and occasional track cuts. Overall the musical performance outweighs the minor recording flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (≈13/15) are enthusiastic about the music and give 4‑5 stars; only a few note recording deficiencies, so the weighted average leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp with good instrument separation; however the second set is reported as low‑volume with missing high frequencies, a few abrupt cuts (e.g., Jack Straw → 17 min Sugaree), and one reviewer mentions a corrupted Sugaree file."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "CC Rider",
+      "He's Gone",
+      "Looks Like Rain",
+      "Black Peter",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as strong and mellow, while the second set maintains high energy (especially the China‑Rider suite) despite some recording volume issues; overall flow is praised for its groove and interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is repeatedly highlighted as smooth, round and “perfect” on China‑Rider and CC Rider, though one reviewer notes the SBD mix can make his guitar sound harsh.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboards are lauded for their jangly tone and prominent “tinkle‑tinkle,” especially during the CC Rider jam.",
+    "Drums": "The drumming (Bill Kreutzmann) is described as solid, with a nice post‑drum NFA transition in the second set."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "CC Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-26T02:37:57.999113+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-01.sbd.barbella.6022.sbeok.shnf"
+}

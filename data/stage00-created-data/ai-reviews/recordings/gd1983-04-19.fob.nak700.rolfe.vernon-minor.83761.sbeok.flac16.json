@@ -1,0 +1,57 @@
+{
+  "summary": "High‑energy Maine show highlighted by a scorching Sugaree and raucous Truckin', recorded from the audience with decent clarity but noticeable low‑end muddiness.",
+  "review": "Fans recall an intimate ice‑rink venue where the band delivered a high‑octane performance – Sugaree opens the second set, Bob Weir turns Truckin' into a rock‑star showcase, and Jack Straw and Friend of the Devil shine. The tape is an audience recording; it sounds good for the room but the arena’s acoustics muddy Phil’s bass and give the mix a thin low end.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "The show is consistently praised (standout songs, energy) while recording quality receives mixed comments (good for an audience tape but low‑end issues). Weighted rating yields a solid 4‑star score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Room acoustics cause low‑end resonance that muddies Phil's bass; speakers were stage‑stacked. Some reviewers say it sounds good given the venue, others note it’s below average."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Truckin'",
+      "Jack Straw",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, high‑energy set with an explosive second‑set opener (Sugaree) and a lively post‑drums segment that got the crowd dancing."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as feeling great and really jamming on Sugaree.",
+    "Phil": "Bass is muddled by low‑end resonance of the ice‑rink venue.",
+    "Bob": "Weir acted like a \"Bobby Rock‑Star\" during Truckin', running around the stage.",
+    "Keys": "",
+    "Drums": "Post‑drums section noted as especially exciting."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:50:07.045630+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-19.fob.nak700.rolfe.vernon-minor.83761.sbeok.flac16"
+}

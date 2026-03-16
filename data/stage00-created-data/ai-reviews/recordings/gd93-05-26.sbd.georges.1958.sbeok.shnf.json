@@ -1,0 +1,68 @@
+{
+  "summary": "Soundboard recording with good clarity captures an iconic 1993 show highlighted by a monster Playin' in the Band and strong Samson opener.",
+  "review": "The performance is widely celebrated for Jerry Garcia’s scorching guitar, especially on the legendary Playin' in the Band, and for a rare Samson opening that set a high‑energy tone.  While most listeners find the soundboard mix clear enough to enjoy the jams, a few note thin bass and occasional EQ needs, keeping the recording quality at solid good rather than pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.1 stars; overwhelmingly positive comments about the music (70%+ of reviews) and generally good soundboard quality give a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the audio \"nice\" or \"crisp,\" but a few complain about low bass response and the need for EQ, indicating solid but not flawless soundboard fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Samson",
+      "Victim > Crazy Fingers",
+      "China Doll",
+      "Liberty"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A diverse first set followed by a jam‑heavy second set; the Samson opener and the extended Playin' in the Band provide the high points, while the Victim/Crazy Fingers transition keeps momentum through to a strong finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly praised – smoky, fast, edgy, clean and shredding, especially on Playin' and the Samson opener.",
+    "Phil": "Bass presence is mixed: some hear Phil clearly and appreciate his punch, while others say the low end is thin and needs EQ.",
+    "Bob": "Bob Weir gets thanks for vocal pushes and solid rhythm work throughout the set.",
+    "Keys": "Brent Mydland’s keyboards are noted as part of the jam fabric; Vince’s vocals on Samson are highlighted, and the keys blend well without disappearing.",
+    "Drums": "The drum performance is lauded as powerful, aggressive and a key driver of the show’s energy."
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Victim": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:09:15.778868+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-26.sbd.georges.1958.sbeok.shnf"
+}

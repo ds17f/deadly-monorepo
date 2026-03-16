@@ -1,0 +1,58 @@
+{
+  "summary": "Audience tape with solid sound despite SBE/channel glitches, highlighted by a smoking Lovelight and fiery Black Peter.",
+  "review": "The recording captures the Henry J. Kaiser Convention Center show of February 20‑85 with generally good audience ambience; several listeners praise its clarity while others note persistent SBE errors on the first tracks and occasional channel‑shifting problems during Space. Musically the night is divisive – some hail the Lovelight and the intense Black Peter jam, whereas others criticize a lifeless first set and a hoarse Bobby on Looks Like Rain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance and sound highly (4‑5 stars) but a few give very low scores due to technical glitches and perceived weak playing, yielding an overall above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Great ambience and clear audio for most of the set; however SBE errors affect each disc's first track and major channel‑shifting glitches occur during Space, making portions unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "The first set is described by some as lifeless and hampered by a hoarse Bobby, but the second half builds into a psychedelic journey with strong jams, especially after the drums regain momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned only in passing (cue to Phil on U.S. Blues); no specific comment on his playing.",
+    "Phil": "Criticized for not singing more (majordomo) and queried about a vocal cameo on U.S. Blues (natwashboard).",
+    "Bob": "Hoarse on Looks Like Rain early in the show, later praised for an extroverted slide on Black Peter and a \"rockin'\" Lovelight performance.",
+    "Keys": "",
+    "Drums": "Described as unhinged and fiery during the post‑drum Space jam; overall percussion energy noted positively."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:54:50.009523+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-02-20.sen441.lai.5303.sbefail.shnf"
+}

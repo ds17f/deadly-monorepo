@@ -1,0 +1,101 @@
+{
+  "summary": "Clean soundboard recording captures a strong second set highlighted by soaring Eyes of the World, an extended Other One jam, and standout Bruce Hornsby performances.",
+  "review": "The SBD source is generally crisp and full‑bodied, with just enough ambient crowd to retain the live feel. Musically the show shines in the second set – sharp transitions, a superb Eyes of the World jam, a marathon Space→Other One excursion and several fire‑brand Hornsby moments – while the first set is viewed as comparatively flat. Overall the recording is listenable and the performance is well worth revisiting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, praising both the sound quality and many standout songs; a few criticisms about first‑set energy and Hornsby’s accordion do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clean, full SBD mix with pleasant crowd ambience; some reviewers note a cassette‑like hiss and occasional muddiness when Hornsby’s squeezebox dominates the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "The Other One",
+      "Wharf Rat",
+      "Saturday Night",
+      "Minglewood Blues"
+    ],
+    "poor_songs": [
+      "Hell in a Bucket",
+      "First set (overall)"
+    ],
+    "setlist_flow": "Second set is compelling with sharp transitions (UJB → Saint) and extended jams; first set is considered ho‑hum by several listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp guitar tone, lyrical delivery and inventive midi jams, especially during the Other One and space jam.",
+    "Phil": "His deep, crisp bass shines on the extended Other One jam.",
+    "Bob": "",
+    "Keys": "Mixed remarks – piano work is praised, but many feel Hornsby’s accordion/squeezebox is over‑prominent and muddies parts of the first set.",
+    "Drums": "Bill and Mickey earn kudos for a dynamic drum solo after Eyes and an early return during the Other One jam."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TLEO": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T01:35:20.592690+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-21.sbd.mccall.529.sbeok.shnf"
+}

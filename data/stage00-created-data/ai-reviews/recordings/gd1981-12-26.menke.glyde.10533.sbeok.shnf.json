@@ -1,0 +1,64 @@
+{
+  "summary": "Fair audience recording marred by digital rot, but the show shines with a rare Eleven jam, Bob Weir’s named improvisation, and a scorching The Other One.",
+  "review": "The performance is praised for its unique moments – a one‑off Eleven jam in E, Bob Weir’s whimsically titled “Meantime, a day at the dentist!” improv, and a hot take on The Other One (with Dark Star gaining new fans). Recording quality is uneven: listeners note arena reverb and balloon pops that give it an audience feel, but also significant digi‑rot on Scarlet Begonias and overall faint, lo‑fi sound that some deem non‑listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (mostly 5‑star praise) weighed against mixed recording feedback, including serious audio defects; weighted average yields a solid rating but with moderate certainty due to contradictory sound comments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience ambience captured (arena reverb, balloon pops) but plagued by digi‑rot on Scarlet Begonias and overall faint/lousy mix that some reviewers find non‑listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eleven",
+      "Meantime , a day at the dentist !",
+      "The Other One",
+      "Dark Star"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias"
+    ],
+    "setlist_flow": "Reviewers describe the set list as great on paper with strong flow, highlighted by rare jams and high‑energy improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir gave an improvisation a whimsical name \"Meantime , a day at the dentist !\" and delivered a memorable jam.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Meantime , a day at the dentist !": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:28:41.089173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-26.menke.glyde.10533.sbeok.shnf"
+}

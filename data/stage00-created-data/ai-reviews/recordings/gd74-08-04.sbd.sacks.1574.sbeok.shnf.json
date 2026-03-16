@@ -1,0 +1,69 @@
+{
+  "summary": "High‑quality soundboard capture of an August 4 1974 show featuring a monster Playing in the Band, soaring Weather Report Suite/Let It Grow jam and tight Keith–Jerry interplay.",
+  "review": "Fans rave about this 8/4/74 performance, highlighting a ten‑minute melt‑down after the Weather Report Suite into Wharf Rat, an expansive 25‑minute Playing in the Band, plus stellar Scarlet Begonias, Loose Lucy and Casey Jones. The SBD source is generally clear with only a slight muff on the Weather Report intro, making it a very listenable document of one of the band’s peak late‑summer runs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All four reviewers are enthusiastic (average 4.75★) and emphasize strong musical moments; recording is soundboard‑derived and mostly clear with only minor intro muff, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix; slight muffed intro on the Weather Report Suite but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Weather Report Suite > Let It Grow",
+      "Wharf Rat",
+      "Scarlet Begonias",
+      "Loose Lucy",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set rolls smoothly through extended jams, with a ten‑minute Weather Report/Let It Grow climax that segues into Wharf Rat and a marathon Playing in the Band, showcasing the band's improvisational peak of late summer 1974."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tight interplay with Keith during the jam sections.",
+    "Phil": "",
+    "Bob": "Intro on Weather Report Suite noted as slightly muffed, likely a recording artifact rather than performance issue.",
+    "Keys": "Keith rises to the occasion and plays perfectly off Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Weather Report Suite > Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:33:54.490404+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-08-04.sbd.sacks.1574.sbeok.shnf"
+}

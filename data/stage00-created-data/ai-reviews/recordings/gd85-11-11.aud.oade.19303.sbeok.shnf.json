@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard capture with top‑notch song selection, though the Althea segment is missing a few seconds.",
+  "review": "The recording is praised for its outstanding separation, rich low end and crisp highs, indicating a high‑quality soundboard source. The show itself is described as a strong \"sleeper\" of 1985 with excellent set choices, but one reviewer notes a 3‑4 second gap in Althea that removes about two minutes of music.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance and excellent recording quality yield a high rating, but the noted flaw in Althea and limited number of reviews temper confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean highs and rich lows with excellent instrument separation; however a speed discrepancy is noted and a brief gap in Althea is missing."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "Song selection described as top‑notch for a 1985 show, making it a strong overall performance despite the Althea issue."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:36:05.993021+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-11.aud.oade.19303.sbeok.shnf"
+}

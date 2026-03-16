@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer gave this recording zero stars with no details, indicating strong dissatisfaction but providing no information on sound or performance.",
+  "review": "The sole review is extremely brief and assigns a 0‑star rating, suggesting the reviewer was very unhappy with the release. No specific comments about the audio source, mix quality, or musical execution are provided, so both recording and show quality remain unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating; absence of detail makes it hard to assess the actual qualities, but the extreme negative rating drives a low overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No technical comments were made; the zero‑star rating implies the reviewer found the recording unsatisfactory."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or performance was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T11:49:09.139166+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-13.139957.fob.senn421.streeter.miller.clugston.flac2496"
+}

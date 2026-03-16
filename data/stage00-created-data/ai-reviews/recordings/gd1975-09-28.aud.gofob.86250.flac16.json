@@ -1,0 +1,86 @@
+{
+  "summary": "A vibrant 1975 audience/matrix tape captures a high‑energy show highlighted by a smoking Help > Slip > Franklin’s and standout Donna Jean vocals.",
+  "review": "The recording, sourced from the audience with matrix elements, is praised for its clarity, punchy mix and authentic crowd ambience. Musically the concert shines on the second‑set sequence Help > Slip > Franklin’s, big‑river energy and a fiery Donna Jean performance, though a few vocal slips by Jerry and a mediocre Truckin' keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers (9/10) give 4‑5 stars, praising both the performance and the sound quality; only one outlier is negative. Weighted rating (70% show, 30% recording) yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Several reviewers call it a great/crisp audience tape; one notes a \"great matrix\" mix, describing the sound as balanced, punchy and full of crowd ambience with no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Goin' Down The Road Feelin' Bad",
+      "Big River",
+      "Donna Jean vocal performance"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "NFW",
+      "Saturday Night"
+    ],
+    "setlist_flow": "The concert builds strong momentum into the second set, with Help‑Slip‑Franklin’s serving as a centerpiece. Energy stays high through Big River and GDTRFB, though the latter part of the show shows signs of fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – praised for guitar tone but criticized for several vocal lyric slips, especially on Help and later songs.",
+    "Phil": "Positive – noted as bringing solid bass energy throughout the set.",
+    "Bob": "Positive – highlighted for strong vocal chemistry with Donna Jean and tight harmonies.",
+    "Keys": "Positive – Keith Godchaux described as \"spot on\" and adding lush keyboard texture.",
+    "Drums": "Generally solid; reviewer notes drummers were steady but historically could be indulgent or rush tempo."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Goin' Down The Road Feelin' Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "NFW": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Beat It On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T02:48:42.822666+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-09-28.aud.gofob.86250.flac16"
+}

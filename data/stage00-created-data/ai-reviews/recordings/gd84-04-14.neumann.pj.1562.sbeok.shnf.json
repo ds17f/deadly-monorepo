@@ -1,0 +1,63 @@
+{
+  "summary": "Audience recording with good clarity and a superb spring‑'84 show highlighted by a soaring “Stranger”, powerful “Let It Grow”, and an unforgettable “Morning Dew”.",
+  "review": "The crowd‑recorded tape captures the relaxed, laid‑back vibe of the Hampton venue in spring ’84, delivering standout performances of “Stranger”, “Let It Grow”, “Touch of Grey”, a soaring “Terrapin Station” jam and perhaps the most celebrated “Morning Dew” of the era.  While a few minor drop‑outs are noted, Jerry’s crisp guitar tone, Brent’s sparkling keyboards and Phil’s supportive bass make the show a fan favorite.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4‑5 stars) praising both musical performance and recording quality; minor technical glitches do not outweigh the strong show."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear and crisp, especially Jerry's guitar; a few small drop‑outs are mentioned, and one reviewer reported a corrupt SHN file but the MP3 remains usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Let It Grow",
+      "Touch of Grey",
+      "Morning Dew",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is described as flowing beautifully with a laid‑back, jam‑focused atmosphere; the first set is noted as solid throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Crisp guitar tone, soulful voice and strong six‑string attack highlighted throughout.",
+    "Phil": "Provides nice, supportive bass lines especially during the Dew jam.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work stands out, offering sparkling interplay with Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T15:37:20.618907+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-14.neumann.pj.1562.sbeok.shnf"
+}

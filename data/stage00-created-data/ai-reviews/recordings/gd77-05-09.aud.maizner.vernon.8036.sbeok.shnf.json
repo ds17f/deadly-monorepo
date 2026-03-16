@@ -1,0 +1,70 @@
+{
+  "summary": "Stunning audience (AUD) recording that rivals the soundboard, highlighted by a legendary Help‑Slip‑Franklin’s opener and a breathtaking Comes A Time solo",
+  "review": "Fans rave about this AUD capture as crystal‑clear and surprisingly immersive, often saying it sounds as good as any soundboard tape. Musically the show is lauded for its incendiary Help > Slipknot! > Franklin’s opening, a transcendent Comes A Time with Jerry’s soaring solo, and standout moments from Sunshine Daydream, The Music Never Stopped and Brown‑Eyed Woman.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over twenty enthusiastic reviews praise both the performance (standout songs, Jerry’s solo, overall energy) and the recording quality (crisp, crowd‑feel AUD that rivals SBD). Only a single low‑star outlier exists, so the consensus is overwhelmingly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix that captures crowd ambience; many say it rivals soundboard tapes. Donna Jean’s vocals are noted as sweet and properly mixed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Comes A Time",
+      "Sunshine Daydream",
+      "The Music Never Stopped",
+      "Brown Eyed Woman"
+    ],
+    "poor_songs": [
+      "Peggy-O"
+    ],
+    "setlist_flow": "A powerful opening with Help‑Slip‑Franklin’s sets a high bar; the first set stays tight, and the second half builds to an emotional Comes A Time finale. Energy remains high throughout, making the show feel cohesive and exhilarating."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his tone, out‑of‑this‑world solo on Comes A Time, and overall guitar brilliance.",
+    "Phil": "",
+    "Bob": "Noted for a special intertwining moment with Jerry’s guitars around 8:53 that gives listeners \"goosebumps\".",
+    "Keys": "Keith is singled out as the favorite keyboard player; his playing adds to the show’s magic.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Comes A Time": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:22:45.958524+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-09.aud.maizner.vernon.8036.sbeok.shnf"
+}

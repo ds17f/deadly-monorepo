@@ -1,0 +1,45 @@
+{
+  "summary": "A solid rock show with Jerry’s finest playing, a rapturous drum solo and space jam, captured in an otherwise good recording despite early low levels and dropouts.",
+  "review": "Both reviewers rave about the May 1991 Cal Expo performance – highlighting Jerry Garcia’s soaring guitar, a standout drum solo, beautiful long jams and strong renditions of “Race Is On” and “Uncle John’s Band.” The recording is praised overall but noted for low levels and typical drop‑outs in the first half of the first set, making it solid yet not flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "High praise for musical performance (standout guitar, drum solo, jam flow) and generally good recording quality; minor technical issues lower the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Low levels and typical dropouts in the first half of the first set; otherwise solid, clear rock sound throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Race Is On",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as fun with highlights like “Race Is On,” while the second set is a long, beautiful jam that showcases the band’s cohesion and improvisational strength."
+  },
+  "band_member_comments": {
+    "Jerry": "Plenty of Jerry at his finest – soaring guitar work praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum solo rocks; highlighted as a rapturous moment in the set."
+  },
+  "song_mentions": {
+    "Race Is On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:21:39.830902+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-05-04.at853.lech.116894.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Great audience tape of a hot July ’78 show, highlighting strong Loser, Peggy‑O and Music performances.",
+  "review": "The audience recording is praised as dialed‑in and immersive, putting listeners right in the venue. Reviewers note that this July 1978 concert was one of the band’s peak performances, with standout versions of Loser, Peggy‑O, Music and the BE Women rendition. Overall the show and tape are regarded very positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with several highlighted songs and a well‑captured audience recording; limited to a single detailed review, so confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Review calls it a \"great audience tape\" that puts you right there and mentions the sound was always dialed in at this venue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Peggy-O",
+      "Music",
+      "BE Women"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical hot July ’78 set; reviewers note the band consistently played well at this venue and that many songs peaked during this period."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BE Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:21:09.883511+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-02-03.164048.akg.mckenzie.miller.clugston.flac1648"
+}

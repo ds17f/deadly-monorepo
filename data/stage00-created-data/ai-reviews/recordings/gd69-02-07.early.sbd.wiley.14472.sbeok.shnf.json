@@ -1,0 +1,75 @@
+{
+  "summary": "High‑energy early‑show with standout Dark Star, William Tell and Eleven, captured on a solid soundboard tape despite modest tape hiss.",
+  "review": "The performance is consistently praised for its intensity – Dark Star opens the set broodingly, William Tell and the Alligator→Caution sequence are called “one for the ages,” and the Eleven/Love‑Light jam is described as extra‑tasty.  Recording quality is noted as a well‑balanced soundboard (SBD) with some tape hiss and occasional power loss, but overall it remains clear enough to enjoy the music.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight numerous standout songs; recording is described as good with only minor hiss, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Balanced SBD tape with noticeable old‑tape hiss and occasional loss of fidelity/power dropouts, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "William Tell",
+      "Eleven",
+      "Love Light",
+      "Cryptical Envelopment",
+      "Alligator > Caution",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with a concise Dark Star that sets an intense tone, flows through powerful mid‑set jams (William Tell, Alligator→Caution) and culminates in a soaring Eleven/Love‑Light second‑set sequence; reviewers note strong pacing and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is repeatedly praised – “shooting sparks,” perfect tone, and energetic leads.",
+    "Phil": "Phil Lesh’s bass work is highlighted as dynamic with hints of new material; drummers and Phil together are said to “tear the roof off.”",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum attack is lauded for intensity, especially in the Eleven jam."
+  },
+  "song_mentions": {
+    "William Tell": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alligator > Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Love Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T11:05:16.502777+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-02-07.early.sbd.wiley.14472.sbeok.shnf"
+}

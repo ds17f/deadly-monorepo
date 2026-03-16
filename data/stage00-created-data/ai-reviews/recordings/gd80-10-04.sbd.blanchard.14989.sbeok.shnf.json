@@ -1,0 +1,57 @@
+{
+  "summary": "High‑quality soundboard capture of an Oct 1980 show, highlighted by a stellar acoustic set and standout Deal/Stranger performance.",
+  "review": "The recording delivers a clear, enjoyable soundboard experience – not as immaculate as some Betty tapes but still very listenable. Musically the concert shines with an exceptional acoustic set, a beautiful rendition of “To Lay Me Down,” and a memorable Deal > Stranger sequence, plus a whisper‑soft “Eyes of the World.” Overall the show is considered one of the more fun October‑80 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both performance and audio quality across most reviews; only minor recording complaints and one outlier spam review."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp; a few listeners note it isn’t as pristine as other Betty recordings, but the overall mix is solid and very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Stranger",
+      "To Lay Me Down",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The acoustic set is repeatedly praised as a highlight, and the second set maintains that energy with strong song choices like Deal > Stranger; overall pacing keeps the show fun and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar on “Eyes of the World” is described as whisper‑soft and beautiful.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:06:38.564403+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-04.sbd.blanchard.14989.sbeok.shnf"
+}

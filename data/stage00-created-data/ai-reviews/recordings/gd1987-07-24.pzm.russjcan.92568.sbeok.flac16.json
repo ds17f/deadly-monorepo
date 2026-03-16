@@ -1,0 +1,114 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy ’87 Oakland show featuring a smoking Deal, scorching Bertha → Sugar Magnolia and standout Scarlet Begonias.",
+  "review": "The recording is a hat‑mic soundboard (SBD) that most listeners describe as crisp, clear and surprisingly immersive, with only occasional digital skips or loud audience chatter. Musically the band is in top form – Jerry’s tone and solos shine, Brent adds memorable keys, Phil’s bass drives the groove and Bill & Mickey lock in tight. Highlights include The Deal, Bertha into Sugar Magnolia, Scarlet Begonias, Jack Straw and Half‑Step Mississippi; the Dylan set is solid but mixed (vocals and a few lyric slips). Overall it’s an A‑grade performance captured with excellent audio fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (12/15) award 4–5 stars and praise both the sound quality and the band's performance, with only a few isolated criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Hat‑mounted mics give a clear PA mix; reviewers note crispness and detail. Minor issues: occasional digital skip on \"Knockin' on Heaven's Door\" and an overly loud audience chant during Jerry’s solo."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Deal",
+      "Bertha → Sugar Magnolia",
+      "Scarlet Begonias",
+      "Jack Straw",
+      "Half‑Step Mississippi",
+      "Funiculi Funicula (tuning)",
+      "Big River"
+    ],
+    "poor_songs": [
+      "\"Touch of Grey\" (lyric flub)",
+      "\"Baby Blue\" (sloppy)",
+      "Dylan set vocal performance (some reviewers)"
+    ],
+    "setlist_flow": "Three‑set marathon with a solid first set, an especially fire‑filled second set and a high‑energy Dylan third set. Transitions are praised (e.g., Deal → Sugar Magnolia) and the overall pacing keeps momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his crystal‑clear tone, soaring solos (Bertha, Friend of the Devil), pedal‑steel flavor and occasional vocal quirks.",
+    "Phil": "Bass described as heavy, driving and \"bombs\" that power jams; highlighted on Highway 61 and overall groove.",
+    "Bob": "Vocals noted on cowboy medley and strong rhythm work; praised for supporting Jerry’s leads.",
+    "Keys": "Brent (keyboard) receives shout‑outs for smashing solos, eerie undertones and a memorable Far From Me insertion; no specific mention of Keith or Vince.",
+    "Drums": "Bill & Mickey are commended for tight, energetic drumming that propels the set."
+  },
+  "song_mentions": {
+    "The Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha → Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half‑Step Mississippi": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Funiculi Funicula": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Times They Are A‑Changing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Highway 61": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:17:16.083150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-24.pzm.russjcan.92568.sbeok.flac16"
+}

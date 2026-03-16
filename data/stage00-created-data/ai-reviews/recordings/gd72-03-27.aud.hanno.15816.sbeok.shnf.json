@@ -1,0 +1,39 @@
+{
+  "summary": "A solid 1972 set highlighted by a great version of “Loser,” but the grainy audience recording makes it hard to enjoy.",
+  "review": "Fans rave about the performance, especially noting an excellent take on “Loser” and recalling the marathon “Casey Jones.” However, multiple reviewers label the sound as dodgy, grainy, and even unlistenable, describing a high‑in‑mix audience that drowns out the music. The show itself seems strong, but the poor audience recording limits its appeal.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (standout song, enthusiastic memories) while recording quality is consistently described as bad; weighting yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Grainy, low vocals, high audience mix; several reviewers call it dodgy or unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on pacing; reviewers focus on individual moments rather than overall set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:36:24.738190+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-03-27.aud.hanno.15816.sbeok.shnf"
+}

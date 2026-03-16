@@ -1,0 +1,91 @@
+{
+  "summary": "Good‑quality soundboard tape of a June ’69 Fillmore run, highlighted by a smoking Dark Star, The Eleven and an epic Lovelight.",
+  "review": "The recording is a decent soundboard capture – a little hissy and flat in places with a brief pitch wobble, but overall clear enough to enjoy the band's tight 1969 performance.  The show is consistently strong, with standout moments on Dark Star, The Eleven/Long Length, the Cryptical→Other One sandwich and an extended Lovelight that many reviewers call “smoking”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (11/15) are 5‑star, praising both the musical performance and the sound quality; only a few note minor audio flaws, yielding an overall high rating with strong reviewer consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Hissy cassette tape with some flatness and one reported pitch problem near the end of the first set; otherwise clear for a 1969 board source, occasional suggestion to boost bass EQ."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Dark Star",
+      "Cryptical > The Other One > Cryptical",
+      "Turn On Your Love Light (Lovelight)",
+      "Friend of Mine",
+      "Me and My Uncle",
+      "Doin' That Rag",
+      "China Cat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens solidly with Morning Dew and Me & My Uncle, builds through a strong first set, then erupts in the second set where The Eleven, Dark Star and an extended Lovelight drive the energy to peak.  Overall pacing is tight and consistently high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Jerry Garcia’s guitar tone and vocals, calling his playing ‘nailing it’, ‘on another level’, and noting perfect tone on Doin’ That Rag and Friend of Mine.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Doin' That Rag": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Friend of Mine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Love Light (Lovelight)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:01:41.865813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-05.sbd.cotsman.15204.sbeok.shnf"
+}

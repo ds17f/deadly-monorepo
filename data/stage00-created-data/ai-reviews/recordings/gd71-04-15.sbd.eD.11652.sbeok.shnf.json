@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent 1971 soundboard capture of a high‑energy Allegheny College show with scorching Garcia solos and standout performances of Big Boss Man, El Paso and Good Lovin'.",
+  "review": "The recording is a pristine soundboard source that delivers the classic ’71 Dead clarity while preserving the intimate gym atmosphere.  The band is in top form – Jerry shreds on every tune, Pigpen drives the early set and the second half erupts with Big Boss Man, El Paso, Good Lovin' and a memorable Next Time You See Me.  Despite five missing tracks, listeners rave about the vibrant performance and superb audio quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise both musical performance and soundboard fidelity; only one low‑score comment notes a slight veiling, so the combined show (70%) + recording (30%) rating is very high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear classic 1971 soundboard; superb mix with occasional comment about a few missing songs and one reviewer noting a slight ‘veiled’ character in parts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boss Man",
+      "El Paso",
+      "Good Lovin'",
+      "Next Time You See Me"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "Intimate gym setting with strong audience interaction; early set builds slowly then ignites with Pigpen on Good Lovin', leading into a high‑energy second half highlighted by big jams and tight transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for shredding, sharp solos and perfect tone throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:58:08.413092+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-04-15.sbd.eD.11652.sbeok.shnf"
+}

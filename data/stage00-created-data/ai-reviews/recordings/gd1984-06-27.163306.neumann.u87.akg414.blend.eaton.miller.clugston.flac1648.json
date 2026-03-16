@@ -1,0 +1,31 @@
+{
+  "summary": "A solid recording of a great show, praised as a fine artifact despite limited technical detail.",
+  "review": "The reviewer remembers the concert fondly and rates it highly, calling the performance great and thanking the archivist for preserving the \"fine artifact.\" No specific comments about sound quality are provided, so the recording is assumed to be at least listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one 4‑star review; positive remarks about the show but no concrete information on recording quality, leading to a moderate rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound clarity or mix; reviewer describes it as a \"fine artifact,\" implying acceptable quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer mentions the show was great overall but provides no details on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T19:12:06.662600+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-27.163306.neumann.u87.akg414.blend.eaton.miller.clugston.flac1648"
+}

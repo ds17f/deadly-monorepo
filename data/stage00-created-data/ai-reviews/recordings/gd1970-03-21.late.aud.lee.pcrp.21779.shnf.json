@@ -1,0 +1,79 @@
+{
+  "summary": "Clear audience recording captures a historic March 21 1970 late show with the first known Friend of the Devil and a scorching 18‑minute Dancin' jam, delivering strong performances despite occasional cuts.",
+  "review": "The late‑show tape is an audience source that’s surprisingly clear, only marred by a few cut‑offs and some noisy crowd moments. Musically the concert shines – it opens with rare early‑1970 folk material (first documented Friend of the Devil), rolls into epic jams like Dancin' and Easy Wind, and closes with a powerhouse Midnight Hour > Lovelight. Reviewers consistently praise the band’s energy and the historic setlist.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers (12/13) give 4‑5 stars, highlighting rare songs, strong jams and a surprisingly clear audience recording; the few technical complaints are minor compared to the musical strengths."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced for an audience tape; noted occasional cut‑offs (Easy Wind end, Midnight Hour) and loud crowd noise during NFA, but overall listenable with good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin'",
+      "Easy Wind",
+      "Friend of the Devil",
+      "Cosmic Charlie",
+      "St. Stephen > Not Fade Away",
+      "The Midnight Hour > Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show blends new folk material (first FOTD, Walking the Dog, He Was A Friend of Mine) with classic psychedelic jams; an acoustic set follows the early jam marathon, and the high‑energy second half builds to a climactic Midnight Hour/Lovelight that keeps the audience driving the band."
+  },
+  "band_member_comments": {
+    "Jerry": "Exceptional melodic and rhythmic playing on Easy Wind; tone praised as perfect.",
+    "Phil": "Creative bass line highlighted during the long Dancin' jam, reminiscent of peak Caution performances.",
+    "Bob": "Outstanding solo noted in the Dancin' improvisation.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dancin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Easy Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walking the Dog": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He Was A Friend of Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen > Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Midnight Hour > Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T17:42:16.059733+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-03-21.late.aud.lee.pcrp.21779.shnf"
+}

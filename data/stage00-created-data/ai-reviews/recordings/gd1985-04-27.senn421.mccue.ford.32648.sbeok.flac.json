@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy mid‑80s Frost Amphitheater show captured on crisp Sennheiser 421 audience tape, highlighted by a smoking Scarlet Begonias/Eyes of the World combo and Ramble On Rose.",
+  "review": "The performance is described as near‑perfect with a long, packed setlist that delivers classic moments like Scarlet Begonias into Eyes of the World and an inspired Ramble On Rose. The audience recording using Sennheiser 421 mics is praised for its clarity and low‑maintenance EQ needs, though vocals are noted as a bit tinny and there’s a slight cut on the Scarlet intro. Overall fans consider this a must‑keep show from the vibrant Frost era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and enthusiastic language indicate an excellent performance and a very good recording, yielding a weighted rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp Sennheiser 421 mic capture; little EQ needed; vocals slightly tinny; minor intro cut on Scarlet Begonias."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Eyes of the World",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Long, packed set with high energy; transitions flow smoothly and the band sustains a fast‑paced yet controlled momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his soaring solo (“Jerry orgasm solo”) and overall tingle.",
+    "Phil": "Described as “encapsulated” throughout, highlighting strong bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:06:34.550509+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-27.senn421.mccue.ford.32648.sbeok.flac"
+}

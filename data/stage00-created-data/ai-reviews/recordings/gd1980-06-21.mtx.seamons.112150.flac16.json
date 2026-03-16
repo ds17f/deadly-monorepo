@@ -1,0 +1,39 @@
+{
+  "summary": "A seamless Hunter Seamons matrix captures the gym’s ambience with crystal clarity, while the show shines with Jerry’s inventive playing and a standout Terrapin Station jam.",
+  "review": "The matrix recording reproduces the tiny Anchorage gym’s echo while preserving board‑level detail, making it sound great on headphones. Musically the concert delivers fine moments throughout, highlighted by Jerry Garcia’s “storyteller” jam in Terrapin Station and an especially strong second set. Though one reviewer is only moderately enthusiastic about 1980 overall, the performance is generally praised as a pleasure to listen to.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Both reviewers note strong musical moments (especially Jerry’s playing and Terrapin Station) and the recording is described as excellent; however only two reviews limit certainty, yielding a mixed‑positive overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Hunter Seamons matrix captures the echo of the small gym while maintaining board clarity; crisp, detailed sound that shines on headphones with balanced audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is noted as stronger and the overall flow solid despite some ambivalence about the year’s typical performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Inventive playing throughout, highlighted by a “storyteller” jam in Terrapin Station.",
+    "Phil": "Bass bombs are audible and add rumble to the mix.",
+    "Bob": "Gentle, semi‑acoustic phrasing is present and well‑balanced.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:18:46.216912+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-21.mtx.seamons.112150.flac16"
+}

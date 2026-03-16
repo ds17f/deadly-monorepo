@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent front‑of‑house recording with strong, thick sound and a very good, exciting 1984 performance despite occasional sloppiness.",
+  "review": "The FOB capture is praised as ‘very strong and thick’ with excellent imaging, making the audio quality essentially flawless. The show itself is described as a very good (vg) performance that’s generally exciting, though it has brief moments of typical 1984 sloppiness. Overall the recording and music combine to give an enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One detailed review rates both the show (vg) and the recording (excellent) highly; weighted average yields ~4.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑house mix described as very strong, thick, with excellent stereo imaging and no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Very good show overall; exciting energy despite a few moments of typical 1984 sloppiness."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T21:40:02.834254+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-09.beyerm88.suraci.77880.flac16"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent audience recording of a magical 1995 East Coast show with standout Terrapin, Hell in a Bucket and Bird Song, despite a weak Samba solo.",
+  "review": "The crowd‑sourced tape is praised as the cleanest and loudest version of this June 30 1995 performance, capturing a rain‑soaked night that many attendees call one of the tour’s best. Highlights include Terrapin, Hell in a Bucket, Bird Song, Standing on the Moon and a rare Candy Man, while the Samba in the Rain segment suffers from a missing Jerry solo.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly and describe the audience recording as exceptionally clear; only one review notes a minor performance flaw, leading to an overall strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, loud, and clear capture with no reported dropouts or balance issues; regarded as the best available audience source for this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Hell in a Bucket",
+      "Bird Song",
+      "Standing on the Moon",
+      "Candy Man"
+    ],
+    "poor_songs": [
+      "Samba in the Rain"
+    ],
+    "setlist_flow": "First set enjoyed sunny, dance‑friendly vibes; second set deepened the magic with rain and lightning, leading to an atmospheric transition that many fans cite as a highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for creating the rain atmosphere; however, missed his solo during Samba in the Rain.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candy Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samba in the Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:31:04.265782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-30.fob.schoeps.evans.GEMS.83144.flac16"
+}

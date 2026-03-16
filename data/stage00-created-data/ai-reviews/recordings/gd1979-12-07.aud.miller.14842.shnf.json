@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from severe out‑of‑phase problems; musical content unknown",
+  "review": "The sole reviewer flags a major phase issue that renders the audio essentially unlistenable. No comments are provided about the performance, setlist, or individual musicians.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one extremely negative review mentioning a critical recording flaw; no positive information to balance the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Out‑of‑phase audio reported, causing significant distortion and loss of clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T03:09:43.693911+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-07.aud.miller.14842.shnf"
+}

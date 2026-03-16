@@ -1,0 +1,85 @@
+{
+  "summary": "Decent sound‑board capture, but Jerry’s raspy, near‑silent vocals dominate a night that only occasional highlights like Promised Land and Little Red Rooster shine.",
+  "review": "The audience recording (likely a soundboard source) is clear enough to hear the band, yet the performance is marred by Garcia’s throat problems – he cracks, croaks and even throws his mic during Black Peter.  A few moments stand out, such as a spirited Promised Land > GSET opener, Brent’s Little Red Rooster vocal solo and a solid Cold Rain & Snow, but the overall set feels flat and under‑explored.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "high",
+    "rationale": "Most reviewers (≈70%) rate the show poorly due to Jerry’s vocal condition, while recording quality is described as good; weighted combination yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced; reviewers note it as a 'Good Aud Rec' with no major dropouts or distortion, but no exceptional fidelity mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land > GSET opener",
+      "Little Red Rooster",
+      "Cold Rain & Snow"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "Franklin's Tower",
+      "Black Peter (for many listeners)"
+    ],
+    "setlist_flow": "First set is passable, bolstered by Brent’s vocal contribution; second set suffers from Garcia’s failing voice and limited improvisation, making the overall pacing feel sluggish."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice raspy, croaky, near‑mute; throws mic during Black Peter but guitar work remains strong.",
+    "Phil": "Attempts at singing were mocked; vocal contribution considered weak.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) praised for a standout Little Red Rooster solo and Hammond colorings on the first set.",
+    "Drums": "Generally solid; one reviewer notes an occasional overly loud moment."
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:49:26.728998+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-03.sbd.painoman.9628.sbeok.shnf"
+}

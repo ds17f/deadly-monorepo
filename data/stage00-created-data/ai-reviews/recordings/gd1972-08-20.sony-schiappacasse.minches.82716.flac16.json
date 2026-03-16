@@ -1,0 +1,51 @@
+{
+  "summary": "Muddy, slightly noisy tape that improves midway – the highlight is a solid The Other One while Bertha suffers from poor sound.",
+  "review": "The recording is uneven; early tracks are muddy, a half‑step fast, and even contain noise and a cut at the end of Truckin', making Bertha almost unlistenable. However, the second disc picks up with a strong performance of The Other One (though Mickey Hart’s “ravenous tiger” isn’t fully captured). Overall sentiment is mixed, reflecting both the show’s musical moments and the sub‑par audio quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "One detailed review points to significant recording flaws but praises The Other One; a brief five‑star review is enthusiastic but lacks specifics, yielding an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Sound described as slightly muddy, half‑step fast, with weird noise and a cut at the end of Truckin'. Bertha is nearly unlistenable; overall tape improves later in the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "Early part of the show suffers from audio issues, while the second disc (starting with Bird Song) feels stronger and more cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart’s ‘ravenous tiger’ doesn’t quite come through in the mix."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T16:07:36.381423+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-20.sony-schiappacasse.minches.82716.flac16"
+}

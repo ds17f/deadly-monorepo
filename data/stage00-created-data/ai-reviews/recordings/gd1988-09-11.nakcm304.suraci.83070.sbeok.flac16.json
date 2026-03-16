@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent sound captures an upbeat Franklin's Tower and a blaring Tennessee Jed at the Spectrum, delivering a solid show from start to finish.",
+  "review": "Both reviewers rave about the performance – one highlights a lively, upbeat version of \"Franklin's Tower\" while the other recalls \"Tennessee Jed\" blasting through the venue. The recording is praised for its great sound quality and vivid crowd ambience, making it an enjoyable listen despite limited technical detail. Overall the show feels solid and energetic from start to finish.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two reviews – one 5‑star, one 3‑star – both emphasize strong musical performance and good sound quality; limited data yields a moderate confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note great sound quality and clear crowd presence, describing the audio as crisp and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a solid, upbeat show from start to finish with strong crowd energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:28:02.700021+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-11.nakcm304.suraci.83070.sbeok.flac16"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Gardner soundboard capture of the 11/11/73 show with a soaring Dark Star and strong setlist, though pitch quirks and occasional speed issues temper the listening experience.",
+  "review": "Fans rave about this Winterland performance – the 35‑minute Dark Star, a dynamic China Cat Sunflower > I Know You Rider, and a hot Big River rank it among the top shows of ’73. The Gardner SBD source is generally good but suffers from pitch errors, a fast‑running wow and brief right‑channel loss that require correction.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star praise for the musical performance while one detailed review flags notable recording flaws; weighting show quality (70%) and recording quality (30%) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Pitch errors and slow/long wow across the tape; runs fast in places, occasional right‑channel loss around the Eyes segment (fixable by mono). Overall the Gardner SBD sounds fuller than other sources despite these issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "China Cat Sunflower > I Know You Rider",
+      "Big River",
+      "And We Bid You Good Night"
+    ],
+    "poor_songs": [
+      "Black-Throated Rose",
+      "Ramble on Rose",
+      "Sugar Magnolia & Uncle John's"
+    ],
+    "setlist_flow": "First set is an average ’73 outing with a few rough spots, while the second set climbs to peak energy – highlighted by the marathon Dark Star and tight band interplay before a heartfelt close."
+  },
+  "band_member_comments": {
+    "Jerry": "Long leash on Big River; great improvisation in the first half of the second set but becomes sloppy toward the end.",
+    "Phil": "Monster bass section inside the Dark Star is noted as a highlight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy's shuffling pocket drives the groove, especially on Big River."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "And We Bid You Good Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black-Throated Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia & Uncle John's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:20:23.335272+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-11.sbd.gardner.12178.sbeok.shnf"
+}

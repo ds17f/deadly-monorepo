@@ -1,0 +1,31 @@
+{
+  "summary": "Decent performance with solid sound despite some clipping concerns in the audience recording.",
+  "review": "The show is regarded as a good, hot set that isn’t an all‑time favorite but still enjoyable. Opinions on the source are split – some praise its balance and lack of over‑saturation, while others criticize clipping and consider it inferior to other available tapes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Reviewers are divided: two give high marks for the performance (4‑5 stars) while two rate the recording poorly (0‑1 star). Weighted averaging of show vs. recording quality yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Some listeners note clipping and inferiority compared to other sources; others find the balance good with enough Phil without drowning out other instruments."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Generally described as a solid, hot show but not highlighted as an all‑time classic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as \"enough Phil without saturating the other voices and instruments out of existence\" – praised for balanced bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T07:23:15.641720+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-09.fob.alabamabob.andrewf.95251.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fans rave about the performance, though recording details are unknown",
+  "review": "The lone review is highly enthusiastic, calling the show \"good stuff\" and asking where to obtain a copy. No specifics about the audio source or musical highlights are provided, so both the sound quality and setlist remain unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review indicates strong positive sentiment, but the lack of detail about recording or performance limits confidence in assigning a precise rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No technical comments; reviewer only expressed general enthusiasm."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T19:03:46.184916+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-27.AKG451.Darby.118571.Flac2448"
+}

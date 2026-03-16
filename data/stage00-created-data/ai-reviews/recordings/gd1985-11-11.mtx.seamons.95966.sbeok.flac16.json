@@ -1,0 +1,51 @@
+{
+  "summary": "A solid 1985 matrix recording that captures a rare Walking the Dog → Deal opener and a standout Goin' Down The Road, with generally good sound quality.",
+  "review": "Fans rave about the surprise rarity of the Walking the Dog → Deal sequence and praise the high‑energy second set, especially the fiery Goin' Down The Road. The matrix mix is described as nice and instrument‑clear, though a few listeners initially found it odd before warming up to it. Overall the show feels like a joyous 1985 party with strong performances from Jerry and Phil.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, highlighting excellent musical moments and a generally good matrix mix; only occasional mixed comments about the blend do not outweigh the strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners call it a nice matrix with clear instrument separation; one reviewer noted an initially weird mix that later sounded fine, no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walking the Dog",
+      "Deal",
+      "Goin' Down The Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as solid; rare opening with Walking the Dog → Deal sets a party vibe, and the overall performance is viewed as a fun, energetic 1985 show."
+  },
+  "band_member_comments": {
+    "Jerry": "His sweet licks are repeatedly praised, noted for clear tone in the mix.",
+    "Phil": "Bass 'bombs' are mentioned fondly in recollections of the night.",
+    "Bob": "Tone of all three guitarists (including Jerry) is highlighted as well‑separated and audible.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Walking the Dog": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down The Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:33:32.850500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-11.mtx.seamons.95966.sbeok.flac16"
+}

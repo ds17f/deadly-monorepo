@@ -1,0 +1,129 @@
+{
+  "summary": "Decent sound (mix a bit off, newer transfer more dynamic) captures a mellow Phoenix show with Jerry’s standout Crazy and solid Brent keyboards, but the set is uneven.",
+  "review": "The performance on this unknown‑date show is mixed – the first set drifts in a laid‑back mood while the second set delivers highlights like a sway‑errific “Crazy”, tight “Bertha” and strong keyboard work on “Fantasy”/“Wharf”. The recording is generally listenable; reviewers note the mix isn’t perfect but a newer transfer brings more dynamics. Overall the show offers some memorable moments despite its uneven energy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is moderate with several praised songs and many lukewarm/negative comments; recording quality is decent but noted as slightly off‑mix, giving a combined weighted rating around 3.5‑3.7."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Mix described as a little off; newer transfer noted to be more dynamic. One comment mentions PCM source vs. DAT, but no clear soundboard/audience indication."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy",
+      "Bertha",
+      "Peggy's",
+      "Fantasy",
+      "Wharf"
+    ],
+    "poor_songs": [
+      "Hell",
+      "Sugaree",
+      "Terrapin",
+      "Space",
+      "Walkin'"
+    ],
+    "setlist_flow": "The first set is described as mellow and run‑of‑the‑mill, while the second set has spikes of energy (Crazy, Bertha) mixed with sections that felt unfocused (drums bogged down, drifting Space). Overall an uneven but occasionally inspiring performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a sway‑errific solo on “Crazy” and ethereal notes on “Peggy's”.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work highlighted as virile on “Fantasy” and fresh sounding on “Wharf”.",
+    "Drums": "Drum sound described as mired in a summer‑evening bog at times, though some segments are called convincing."
+  },
+  "song_mentions": {
+    "Hell": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Walkin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:09:20.087415+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-08-18.schoeps.paino.13102.sbeok.shnf"
+}

@@ -1,0 +1,37 @@
+{
+  "summary": "Mixed reception: clear 24‑bit audio praised by one reviewer while another calls the tape cloudy; rhythm section and Vince get kudos but overall show details are sparse.",
+  "review": "The recording is a 24‑bit audience capture that some listeners find crisp and spacious, especially highlighting Phil Lesh’s bass, the dual drummers’ “driving under thunder,” and Vince’s keyboards. Others complain of cloudiness and an over‑emphasized low end, making the technical quality feel only fair. No specific song performances are praised beyond a brief nod to Touch of Grey.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show performance comments are minimal, while recording quality is split between clear and cloudy; the combined assessment lands around average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer notes nice, clear 24‑bit sound; another mentions cloudiness and bass heaviness that reduces clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for solid bass work; highlighted as a key part of the rhythm.",
+    "Bob": "",
+    "Keys": "Vince mentioned positively, appreciated his playing.",
+    "Drums": "Mickey and Bill praised for creating space while delivering a driving thunderous feel."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:10:47.527211+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-03.Nak300CP4.Floater.Keo.112294.Flac2496"
+}

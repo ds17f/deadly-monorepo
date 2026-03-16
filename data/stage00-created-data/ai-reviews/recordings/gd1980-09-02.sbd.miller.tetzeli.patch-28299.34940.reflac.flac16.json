@@ -1,0 +1,63 @@
+{
+  "summary": "Matrix‑sourced recording with good sound quality captures a high‑energy show highlighted by a stellar Jam, Iko‑Iko, and an unforgettable Morning Dew.",
+  "review": "Fans rave about the improvisational heights of this 1980 performance – the jam, Iko‑Iko, Sugar Magnolia, Space and especially the soaring Morning Dew are repeatedly called out as standouts. The recording, a matrix mix that includes crowd ambience, is generally clear and vibrant though a few listeners note occasional loss of definition in the second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (12/16) are 4‑5 stars and praise both the musical performance and the recording; a few lower scores note specific issues, giving an overall strong but not flawless impression."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Crowd roar is captured, adding to the live feel. Most listeners describe the sound as crisp and clean, though a couple mention sections that become \"less clear\" or uneven in the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jam",
+      "Iko‑Iko",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as tight and energetic, while the second set starts a bit sluggish before the drums/space segment lifts the band into a powerful Jam → Iko‑Iko → Dew sequence that rescues the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for poignant, refined guitar tone and an epic Morning Dew; some reviewers claim his playing sounded slowed or erratic due to alleged substance use.",
+    "Phil": "",
+    "Bob": "Mentioned briefly as watching Jerry leave the stage during a solo; no specific performance comments.",
+    "Keys": "",
+    "Drums": "Noted for a strong drum break that fuels the post‑drum madness, though a few listeners felt the drums dragged in places."
+  },
+  "song_mentions": {
+    "Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Iko‑Iko": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:41:03.171357+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-02.sbd.miller.tetzeli.patch-28299.34940.reflac.flac16"
+}

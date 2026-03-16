@@ -1,0 +1,58 @@
+{
+  "summary": "Good soundboard capture of a solid show highlighted by a strong second set featuring China Cat/I Know You Rider, Good Lovin' and Ripple despite a rough Easy Wind.",
+  "review": "The recording (a soundboard source) is generally clear and pleasant to listen to, though a few reviewers note minor imperfections. Musically the concert shines in the second set – the China Cat‑I Know You Rider opener, a unbroken Good Lovin', and Ripple are praised, while Pigpen’s slip on Easy Wind drags that moment down. Overall the show is considered decent with a strong finish, even if it isn’t the very best of the Capitol run.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight several standout songs and a clear soundboard recording; a few note performance flaws, leading to an overall solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers describe the audio as beautiful or fantastic, indicating a clear soundboard capture; no major technical complaints were noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat – I Know You Rider",
+      "Good Lovin'",
+      "Ripple"
+    ],
+    "poor_songs": [
+      "Easy Wind"
+    ],
+    "setlist_flow": "Second set is praised for its energy and song choices, opening with a crowd‑howl intro and China Cat; the first set is seen as less adventurous, and the overall show is solid but not the strongest of the run."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir (Bob) cues the audience to howl like a coyote before launching into the second set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat – I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T03:05:06.512020+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-21.sbd.miller.116618.flac16"
+}

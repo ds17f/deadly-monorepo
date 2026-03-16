@@ -1,0 +1,81 @@
+{
+  "summary": "Solid soundboard capture of a mixed‑bag show – highlights include Dire Wolf, Peggy‑O and a spectacular Not Fade jam, while many of the new tunes feel uneven.",
+  "review": "The Miller soundboard tape is generally clear with decent EQ and no major dropouts, making the performance easy to follow. Reviewers love Bobby’s vocal lead and the killer post‑drums jam into Not Fade, but they note that a slew of fresh songs (Easy to Love You, Saint of Circumstance, Eyes of the World) sound rushed or unpolished. Overall the concert is enjoyable for its strong moments despite an uneven set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (standout jams vs. shaky new material) while recording quality is good; the weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound, patches and EQ are acceptable; no major glitches reported but some reviewers note standard EQ adjustments needed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dire Wolf",
+      "Peggy-O",
+      "Shakedown Street",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Easy to Love You",
+      "Saint of Circumstance",
+      "Eyes of the World"
+    ],
+    "setlist_flow": "The set is overloaded with new material that feels under‑rehearsed, yet the second‑half jam after drums into Not Fade shines and lifts the overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Sings a unique lyric on 'Eyes of the World' ('Ace of diamonds'); no specific guitar comments.",
+    "Phil": "",
+    "Bob": "Great vocal performance, almost steals the show according to one reviewer.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Easy to Love You": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:42:48.992055+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-31.sbd.miller.92924.sbeok.flac16"
+}

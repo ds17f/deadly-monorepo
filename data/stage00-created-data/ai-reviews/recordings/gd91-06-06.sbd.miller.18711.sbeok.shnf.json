@@ -1,0 +1,104 @@
+{
+  "summary": "A solid soundboard capture of a standout Summer ’91 show – killer Jack Straw opener, fiery China‑Rider transition and soaring Stella Blue.",
+  "review": "The recording is a clean soundboard transfer that preserves the band’s high energy on this summer‑’91 night. Reviewers rave about the blazing first‑set opener “Jack Straw,” the seamless Row Jimmy → Cassidy → Might As Well flow, and a second set highlighted by “China‑Rider,” “The Wheel,” “Stella Blue” and “Lovelight.” A few note a slight loss of high‑end detail on the DAT source and a mixed feeling about “Wang Dang Doodle,” but overall the performance is described as joyous, tight, and essential.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (4‑5★) praise both the musical setlist and the soundboard quality; only minor technical complaints lower the rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced board mix praised by many; a few note low‑end roll‑off from the original 32 kHz DAT and occasional early‑show muddiness, plus some mix quirks (Jerry’s lead a bit recessed)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Row Jimmy",
+      "Cassidy",
+      "Might As Well",
+      "China > Rider",
+      "The Wheel",
+      "Stella Blue",
+      "Lovelight",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Wang Dang Doodle"
+    ],
+    "setlist_flow": "A high‑octane first set with a classic Jack Straw opener and tight transitions into Row Jimmy and Cassidy, followed by an explosive second set where China‑Rider kicks things off, the band rides through The Wheel and Watchtower, then delivers emotive Stella Blue and a punchy Lovelight encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for strong tone and happy stage presence; a few note his lead guitar is a bit recessed in the mix.",
+    "Phil": "Box of Rain encore highlighted as a stellar Phil moment.",
+    "Bob": "Mentioned positively (e.g., “Bob spit on those in the front rows”), no specific playing critique.",
+    "Keys": "Vince’s keyboards described as awesome and often prominent; occasional high‑mix level noted, plus cool midi horn work on transitions.",
+    "Drums": "Drumming called “the best” with Bill’s groove praised and Mickey’s low‑frequency rumble on Watchtower noted."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Row Jimmy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Big RR Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T20:01:16.863493+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-06.sbd.miller.18711.sbeok.shnf"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Superb matrix recording captures a psychedelic peak of the late‑80s tour with standout Althea, Cassidy, China Rider and an inspired Garcia.",
+  "review": "The matrix mix is described as superb—Phil’s bass is big and bouncy while Bob’s guitar cuts through and the vocals sit evenly. Musically the show shines with marvelous performances of Althea, Cassidy, China Rider and a thrilling I Know You Rider, only the slower Good Time and Don’t Ease falling short.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "The review is overwhelmingly enthusiastic (5‑star) about both performance and recording; a single detailed review gives moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as a superb matrix mix – clear, balanced with Phil’s bass prominent, Bob’s guitar front‑and‑center and even vocal levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Cassidy",
+      "China Rider",
+      "I Know You Rider"
+    ],
+    "poor_songs": [
+      "Good Time",
+      "Don’t Ease"
+    ],
+    "setlist_flow": "The concert is portrayed as a continuous wave of psychedelic exploration, with the band floating in a ‘digital nebula’ and maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is said to be “possessed by digital demons,” delivering intense guitar tone and heartfelt vocals all night.",
+    "Phil": "Phil’s bass is described as big, bouncy, and a prominent part of the mix.",
+    "Bob": "Bob’s (Bobby) guitar is noted as ‘in your face’ throughout the performance.",
+    "Keys": "Brent Mydland’s MIDI keyboards are credited with powering the show’s inventive, psychedelic sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Don’t Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:05:48.906029+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-11.mtx.hansokolow.96599.flac16"
+}

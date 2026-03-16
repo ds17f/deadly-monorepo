@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard mix captures a fiery show highlighted by a scorching La Bamba and a powerhouse second set.",
+  "review": "The Healy‑engineered soundboard delivers a clear, well‑balanced mix with only brief drop‑outs on “Stranger.”  Musically the concert is electric – Jerry’s Spanish‑language solo on “La Bamba,” Bobby’s high‑energy vocals on “Desolation Row” and “Good Lovin’,” plus a thunderous second set make this one of the most memorable ’87 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Four detailed reviews are overwhelmingly positive about both performance and recording; only a single moderate‑rated review notes minor technical hiccups, resulting in a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Healy mix is clear and instruments sit nicely in the mix; occasional technical difficulty/drop‑out on “Stranger” but otherwise crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "La Bamba",
+      "Desolation Row",
+      "Good Lovin'",
+      "U.S. Blues",
+      "Tons of Steel",
+      "Dear Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "Stranger"
+    ],
+    "setlist_flow": "Set 1 starts a bit weak on lyrics but builds into strong guitar work; Set 2 is powerful and tight, with seamless energy despite some non‑musical gaps noted by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his scorching solos, especially the Spanish vocal solo on “La Bamba,” noting he was ‘on fire’ after recent health issues.",
+    "Phil": "",
+    "Bob": "Bobby (Brent) is described as ‘on fire,’ delivering high‑energy vocals and driving the show’s intensity throughout.",
+    "Keys": "Keyboardist Brent Mydland receives acclaim for being at his peak, adding vibrant texture to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "La Bamba": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tons of Steel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:24:06.584361+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-23.sbd.ladner.30887.sbeok.flacf"
+}

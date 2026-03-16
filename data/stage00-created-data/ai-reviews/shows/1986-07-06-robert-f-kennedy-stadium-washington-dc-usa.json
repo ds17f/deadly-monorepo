@@ -1,0 +1,69 @@
+{
+  "summary": "Saint > Looks Like Rain pair shines, solid classics amid heat‑filled set",
+  "blurb": "The second set lifts the night with a soaring Saint Of Circumstance into Looks Like Rain, and Sugaree and Stella Blue deliver strong performances. The first set is uneven, hampered by heat‑related vocal slips on Althea. Overall the show offers solid Dead classics despite some rough spots.",
+  "review": "July 6 1986 at RFK Stadium found the Grateful Dead battling a sweltering Washington night, but still managed to carve out memorable moments. The first set opened with Hell In A Bucket and meandered through familiar terrain – Sugaree sparked Jerry’s peak playing, while Althea suffered a lyric flub that hinted at the oppressive heat. The real highlight arrived in the second set: Saint Of Circumstance surged into an exuberant Looks Like Rain, lifting the crowd’s spirits and showcasing Bob’s heartfelt vocal rap. From there the band rolled through a fiery He's Gone, a spacious Space, and a soulful Stella Blue before closing with Throwing Stones, Not Fade Away, and a tender encore of Brokedown Palace. Though the set flow felt a bit flat at times, the night is remembered for its standout pairings and Jerry’s inspired guitar work despite the conditions.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings report mixed sentiment with clear praise for Saint Of Circumstance, Looks Like Rain, Sugaree and overall energy, while a third notes a negative view on the placement of Saint Of Circumstance. The balance tilts slightly positive, yielding a modest +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.6 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd86-07-06.aud.eD.12928.sbeok.shnf",
+    "reason": "Audience tape with good clarity that captures the standout Saint > Looks Like Rain sequence and overall energy despite heat‑related distortion."
+  },
+  "key_highlights": [
+    "Saint Of Circumstance into Looks Like Rain lifts the second set",
+    "Jerry’s peak playing on Sugaree and Saint Of Circumstance",
+    "Soulful Stella Blue performance and tender Brokedown Palace encore",
+    "Heat‑filled atmosphere adds a raw, authentic vibe"
+  ],
+  "song_highlights": [
+    "Saint Of Circumstance",
+    "Looks Like Rain",
+    "Sugaree",
+    "Stella Blue",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Peak playing on Sugaree and Saint Of Circumstance, highlighted by a memorable fire‑hose chant during intermission.",
+    "Phil": "Provides solid bass foundation throughout and adds humorous banter about next night’s tickets.",
+    "Bob": "Delivers a heartfelt vocal rap on Saint Of Circumstance, adding emotional depth to the performance.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-15T17:17:21.993599+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Saint Of Circumstance",
+      "Iko Iko"
+    ],
+    [
+      "Looks Like Rain",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "Stella Blue",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Hell In A Bucket",
+      "Sugaree"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

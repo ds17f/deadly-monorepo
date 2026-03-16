@@ -1,0 +1,44 @@
+{
+  "summary": "Good‑quality unknown source recording with a standout Althea, though Jerry struggles with the Terrapin lyrics.",
+  "review": "Both reviewers rate this show four stars and praise it as a gem, especially highlighting an electrifying rendition of Althea. The only criticism is that Jerry had a rough time delivering the Terrapin Station lyrics, but no recording‑quality issues are mentioned, suggesting the audio is at least listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Two positive four‑star reviews indicate a solid performance and acceptable recording; lack of technical detail limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity or mix; reviewers did not note any problems, implying the recording is satisfactory."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not discussed in the reviews"
+  },
+  "band_member_comments": {
+    "Jerry": "Struggles with Terrapin Station lyrics",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:47:41.937663+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-02.senn421.willy.7463.shnf"
+}

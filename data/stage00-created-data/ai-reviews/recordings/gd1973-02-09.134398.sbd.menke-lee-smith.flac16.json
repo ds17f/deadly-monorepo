@@ -1,0 +1,110 @@
+{
+  "summary": "Soundboard capture with uneven balance, but the mellow 1973 set delivers strong dance‑able jams and a monster second‑set exploration.",
+  "review": "The show is praised for its relaxed, rehearsal‑like vibe and a slew of standout numbers – from a smoking Loose Lucy to an 18‑minute Eyes jam that rolls into Truckin' and China Doll. Reviewers note the soundboard source but describe it as patchy and unbalanced, making some sections hard to follow despite the overall musical strength.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Both reviewers give 4‑star ratings; they agree the performance is solid with many high points, while the recording quality is described as patchy and unbalanced, pulling the overall score down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Described as a 'patchy, messy SBD' with balance issues; some sections sound fat and clear but the tape never stays consistently balanced throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "El Paso",
+      "Truckin' > Eyes (18 min)",
+      "China > Rider"
+    ],
+    "poor_songs": [
+      "Row Jimmy",
+      "B.T.W."
+    ],
+    "setlist_flow": "The first set feels like a rehearsal with new tunes and a mellow 1973 vibe; the second set ramps up into extended jams, highlighted by an 18‑minute Eyes sequence and strong transitions between China, Rider, Jack Straw and Truckin'."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is called 'shredding' on Me & My Uncle, his voice pristine on Sugaree, and licks are everywhere.",
+    "Phil": "Phil's bass described as ‘fat’, thunderous on L.L.R., and he even takes lead vocals on Mexicali.",
+    "Bob": "",
+    "Keys": "Keith Godchaux is noted as finally joining the mix; keyboards add depth throughout.",
+    "Drums": "Backbeat on T.L.E.O. called bouncy, but no specific drummer named."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roll Out the Barrel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "B.T.W.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T04:53:45.693178+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-09.134398.sbd.menke-lee-smith.flac16"
+}

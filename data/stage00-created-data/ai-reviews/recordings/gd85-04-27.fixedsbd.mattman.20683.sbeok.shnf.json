@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality recording of a sun‑splashed 80s show featuring a stellar Jerry solo and standout versions of Ramble On Rose and Scarlet Begonias",
+  "review": "The three fan reviews are uniformly enthusiastic about the performance, highlighting the sunny, intimate atmosphere, a soaring Jerry Garcia solo, and memorable renditions of Ramble On Rose and Scarlet Begonias. Recording quality is described as “good” and “clean,” though no specific source (soundboard/audience) is identified. Overall the show feels vibrant and well‑captured despite limited technical detail.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the music and a generally good audio impression yield an above‑average rating; limited technical specifics keep confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the tape is clean, moist and tight with no reported dropouts or muddiness; however, they do not specify whether it is a soundboard or audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for its sunny, spring‑time vibe and smooth flow, with a particularly memorable Jerry Garcia solo that lifts the energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly highlighted for “Heavenly Jerry Tingles,” an orgasmic solo, and overall tight playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:08:17.276961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-27.fixedsbd.mattman.20683.sbeok.shnf"
+}

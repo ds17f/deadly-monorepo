@@ -1,0 +1,50 @@
+{
+  "summary": "High‑energy Madison show with a solid soundboard capture (minor cut) and standout Weather Report Suite and Bobby‑led Saturday Night finale.",
+  "review": "The 1973‑10‑25 Madison concert is hailed as one of the band’s all‑time greats, featuring an electrifying Weather Report Suite and a vocal flourish from Bob on Saturday Night. The soundboard source is generally clean, though reviewers note a brief cut in the JED segment. Overall the performance and recording are praised as spectacular.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviews rate the show highly (4‑5 stars) and praise both the musical flow and the quality of the soundboard recording, with only a minor note about a cut."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; one reviewer mentions a small cut in the JED segment but no major mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Weather Report Suite",
+      "Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as exploratory and tightly sequenced, with the Weather Report Suite highlighted as a big local draw and Bobby's vocal flourishes capping the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewers rave about Jerry’s string‑bending toward the end of the JED tune, calling his playing insane and out‑of‑this‑world.",
+    "Phil": "",
+    "Bob": "Bob’s vocal flourishes on Saturday Night are praised as a strong finish to the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "JED": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:37:31.027117+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-25.136695.sbd.sirmick.flac16"
+}

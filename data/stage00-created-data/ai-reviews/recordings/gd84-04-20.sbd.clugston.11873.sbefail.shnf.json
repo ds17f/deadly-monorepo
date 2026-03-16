@@ -1,0 +1,45 @@
+{
+  "summary": "Crisp soundboard captures a fiery Philadelphia show with a massive “Stranger” and a huge Scarlet>Fire sequence.",
+  "review": "The performance is hailed as one of the tour’s best, kicking off with an explosive “Stranger” and delivering a monster Scarlet>Fire that keeps the entire set smoking. The recording is described as crispy and fantastic, offering clear, high‑quality sound that lets the band’s energy shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise both the musical performance (standout songs, high energy) and the audio quality (crisp, fantastic), yielding a strong combined rating despite one moderate‑star review."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with no reported dropouts or muddiness; listeners note the sound is fantastic and “crispy”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Scarlet>Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band fires out of the gate, maintaining high energy throughout with seamless transitions, especially highlighted by the massive Scarlet>Fire sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T16:15:42.505597+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-20.sbd.clugston.11873.sbefail.shnf"
+}

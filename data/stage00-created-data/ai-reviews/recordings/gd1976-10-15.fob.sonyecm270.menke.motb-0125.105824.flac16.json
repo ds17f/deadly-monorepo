@@ -1,0 +1,81 @@
+{
+  "summary": "Warm audience recording captures a high‑energy 1976 show with explosive Eyes > Music and an unforgettable Sugaree.",
+  "review": "The tape, recorded by an FOB professional, delivers a warm, well‑balanced sound with instruments nicely placed though the mix leans slightly right. Musically the concert is praised for its relentless energy, standout performances of Eyes > Music, Bertha, Sugaree, and a second‑set marathon ending in The Other One → Comes A Time → Franklin’s Tower. Reviewers overwhelmingly recommend this show as a must‑have.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4–5) and enthusiastic comments about both performance and sound quality indicate an excellent show with a good‑to‑excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm, well‑placed instrument mix; slightly right‑biased panning and modest separation issues but overall clear and enjoyable without intrusive audience noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Music",
+      "Bertha",
+      "Sugaree",
+      "It's All Over Now",
+      "New Minglewood Blues",
+      "The Other One",
+      "Comes a Time",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy throughout with a hard‑hitting second set that rolls from the Eyes opener through an extended jam ending in The Other One → Comes A Time → Franklin’s Tower; no encore needed as the crowd stayed for an extended applause."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s heavier amp tone is praised, though his guitar is only clearly audible during solos due to mix balance.",
+    "Phil": "",
+    "Bob": "Bob Weir (Bobby) is noted as being almost buried in the mix, making his vocals/guitar less prominent.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes > Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:38:10.763871+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-15.fob.sonyecm270.menke.motb-0125.105824.flac16"
+}

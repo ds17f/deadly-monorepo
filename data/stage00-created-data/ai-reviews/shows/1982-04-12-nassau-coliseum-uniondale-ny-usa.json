@@ -1,0 +1,79 @@
+{
+  "summary": "Vibrant set with soaring Peggy‑O, Sugaree & tight rhythm",
+  "blurb": "The April 12 1982 Nassau Coliseum show delivers a fiery Peggy‑O, bright Bird Song and a soulful Sugaree that lift both sets. Jerry’s guitar shines throughout while Brent’s keyboards lock in, and the dual‑drummer groove stays crisp. The Charlie Miller soundboard capture offers a clear, balanced listening experience.",
+  "review": "On April 12, 1982 at Nassau Coliseum the Dead were on a roll, rolling out a setlist that crackles with energy from the opening “Iko Iko” through a tight‑shut “Deal”. Highlights include an almost‑floating Jerry Garcia on “Peggy‑O”, a soaring duet with Brent Mydland on “Bird Song”, and a deep‑groove “Sugaree” that rolls into a soulful “Stella Blue”. The second set builds momentum with a surprising “Estimated Prophet” segue into “Uncle John’s Band”, a thunderous “The Other One”, and a jubilant finish with “Sugar Magnolia” and the encore “(I Can’t Get No) Satisfaction”. Across multiple recordings the band is praised for tight rhythm, crisp drums, and Brent’s consummate keyboard work. While some audience tapes lose instrument detail, the Miller soundboard (gd1982-04-12.sbd.miller.95638.sbeok.flac16) provides the cleanest mix, capturing every nuance of this vibrant performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Five of nine recordings are explicitly positive, praising guitar work, standout songs and tight rhythm; four are mixed but contain no consistent negative criticism. This yields a strong overall positive sentiment, warranting a moderate‑high adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1982-04-12.sbd.miller.95638.sbeok.flac16",
+    "reason": "Crisp Charlie Miller soundboard capture with excellent drum definition, clear mix and full representation of the show's standout moments."
+  },
+  "key_highlights": [
+    "Peggy‑O delivers a soaring vocal/guitar moment that lifts the first set.",
+    "Sugaree and Stella Blue provide deep emotional peaks in the second set.",
+    "Estimated Prophet transitions seamlessly into Uncle John’s Band, showcasing tight ensemble play.",
+    "The dual‑drummer groove stays crisp throughout, especially on The Other One."
+  ],
+  "song_highlights": [
+    "Peggy-O",
+    "Bird Song",
+    "Sugaree",
+    "Stella Blue",
+    "Estimated Prophet",
+    "Uncle John's Band",
+    "Sugar Magnolia",
+    "Iko Iko",
+    "Mexicali Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Fiery, lyrical guitar work shines on Peggy‑O, Bird Song and Sugaree; a brief unsteady moment after the set break resolves into strong second‑set playing.",
+    "Phil": "Well‑balanced bass that sits solidly in the mix; noted for bomb‑dropping lines that drive the groove.",
+    "Bob": "Vocals range from slurred on one track to melodic support on Estimated Prophet and The Other One, generally adding mood‑filled texture.",
+    "Brent": "Consummate keyboard prowess with vocal harmonies; locks tightly with Jerry during Bird Song duet and adds depth throughout the set.",
+    "Mickey": "Crisp, powerful drumming that defines the rhythm section; highlighted as a saving grace on the more uneven recordings.",
+    "Billy": "Solid rhythmic foundation alongside Mickey; locked in from the outset, reinforcing the band’s tight groove."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-13T20:03:29.762875+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Peggy-O"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Man Smart, Woman Smarter",
+      "Sugaree"
+    ],
+    [
+      "Estimated Prophet",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Iko Iko"
+    ],
+    [
+      "Mama Tried",
+      "Mexicali Blues"
+    ]
+  ]
+}

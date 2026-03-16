@@ -1,0 +1,51 @@
+{
+  "summary": "Transcendent 1969 show highlighted by a soaring Eleven, ferocious Alligator Jam and nasty Caution; recording source unknown but praised for its listenability.",
+  "review": "Fans rave about this late‑'69 performance, calling The Eleven one of the era’s best and singling out the short but explosive Alligator Jam and a vicious take on Caution as standouts. While no reviewer mentions technical details, the sheer enthusiasm (all five‑star ratings) suggests the tape is at least good enough to enjoy the musical brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviews are five stars and focus on exceptional playing; with no recording complaints, the show is judged outstanding and the audio presumed satisfactory."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not comment on soundboard vs. audience or clarity; focus is entirely on performance, implying the recording is at least listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Alligator Jam",
+      "Caution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a textbook ’69 show with strong, high‑energy moments; the second set (including The Eleven and Alligator) is highlighted as particularly transcendent."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is in top form, especially on The Eleven.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alligator Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T11:15:39.595999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-02-12.sbd-late.cotsman.6285.sbeok.shnf"
+}

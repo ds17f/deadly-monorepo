@@ -1,0 +1,58 @@
+{
+  "summary": "Great audience tape of a solid 1977 Winterland show with standout Scarlet > Fire, Not Fade Away and The Other One, though the Alhambra feels tentative.",
+  "review": "The recording captures an enthusiastic crowd on a March‑1977 Winterland night, delivering strong moments like the blazing Scarlet > Fire sequence, a huge Not Fade Away, and a highlight performance of The Other One. While the tape sounds clear enough for a fan audience source, some songs (notably Alhambra) feel a bit tentative, giving the show a mixed‑but‑overall positive vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave high ratings (5 and 4 stars) and praised key performances, with only minor comments about tentative moments; recording quality is described positively but without detailed technical analysis."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Fan tape with a lively audience presence; reviewers note the tape’s special personal value and no major audio flaws, suggesting clear enough sound for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Not Fade Away",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Alhambra"
+    ],
+    "setlist_flow": "The show opens strong with Scarlet > Fire and a crowd‑loving Scarlet reprise, builds to a highlight with The Other One, but includes a tentative Alhambra and a brief St. Stephen before closing with an OK Uncle John's Band."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alhambra": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:41:47.828465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-03-18.140942.fixed.ecm270.menke.sirmick.flac1644"
+}

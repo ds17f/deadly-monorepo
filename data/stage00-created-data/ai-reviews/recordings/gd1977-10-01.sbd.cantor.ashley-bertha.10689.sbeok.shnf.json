@@ -1,0 +1,74 @@
+{
+  "summary": "High‑quality soundboard recording with regal, bass‑heavy mix and a solid late‑1977 show featuring smoking Passenger and standout jams like Estimated Prophet > Eyes of the World.",
+  "review": "The soundboard source delivers extraordinary instrument separation and clarity, though the low end can overwhelm modest home systems and there’s a touch of distortion on “Estimated”. Musically the band may not be at its peak overall, but fans highlight soaring Garcia riffs on Passenger, a fiery Estimated Prophet > Eyes sequence, and tight jams on Good Lovin’, Not Fade Away, Black Peter and Around. Keyboard work is prominent, drums are full‑bodied, and the whole set rewards attentive listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the recording’s detail and many song performances; weighting show quality (≈4.5) higher than recording (≈4) yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Exceptionally clear separation, but bass is extremely heavy for small systems and there is minor scratchy distortion on the Estimated track."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Passenger",
+      "Estimated Prophet > Eyes of the World",
+      "Good Lovin'",
+      "Not Fade Away",
+      "Black Peter",
+      "Around"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through extended jams with strong transitions, especially the Estimated Prophet > Eyes sequence that builds into a high‑energy climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s riffs are highlighted as some of the night’s best; a slight distortion on his refurbished Wolf guitar is noted on Estimated.",
+    "Phil": "Phil’s bass is described as both over and under the drummer, taking lead on the Eyes segment.",
+    "Bob": "Bob contributes strong vocal parts alongside Donna; his rhythm work supports the jams.",
+    "Keys": "Keith's keyboards are very prominent and add depth to the mix.",
+    "Drums": "The drums are full‑on, intricate, and drive the jam sections."
+  },
+  "song_mentions": {
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:15:43.159779+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-01.sbd.cantor.ashley-bertha.10689.sbeok.shnf"
+}

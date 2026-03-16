@@ -1,0 +1,41 @@
+{
+  "summary": "A well‑balanced audience recording with crisp sound captures a fun second‑night show highlighted by a memorable (if uneven) Hey Jude moment.",
+  "review": "The tape, likely taken with high‑quality Nakamichi mics, delivers crystal‑clear vocals and instruments while keeping the crowd ambience in perfect perspective. Fans recall the energy of the second night and especially note the “fantasy Jude” segment, though one reviewer mentions Brent’s keyboard slip on Hey Jude. Overall the performance is enjoyable and the recording makes you feel right on the floor.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All three reviewers gave four stars, praising the sound quality and overall vibe; only a minor performance slip is noted, so the combined show‑and‑recording score is solidly above average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced crowd noise, crisp vocals and instruments; likely captured with Nakamichi mics giving a full low‑bass to high‑end range. No major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Jude"
+    ],
+    "poor_songs": [
+      "Hey Jude"
+    ],
+    "setlist_flow": "Second‑night energy runs strong with good crowd interaction; the set flows well despite a hiccup on Hey Jude."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work slipped on Hey Jude (dropped the ball).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T04:42:35.531268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-22.aud.gidley.91779.sbeok.flac16"
+}

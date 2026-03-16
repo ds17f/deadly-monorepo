@@ -1,0 +1,79 @@
+{
+  "summary": "Excellent 1977 Forum show with a smoking Terrapin/Estimated/Playing‑in‑the‑Band sandwich, captured on a surprisingly good audience tape.",
+  "review": "The performance is hailed as a vintage ’77 highlight – the second set erupts from Terrapin Station through Estimated Prophet into a monster Playing in the Band sequence that even reaches Franklin’s Tower.  Although it’s an audience recording, Rob Bertrando’s tape delivers strong dynamics, clear bass and drums, with only typical crowd noise and the occasional talk‑over marring the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the music (70% weight) plus generally good audience recording quality (30% weight) from more than ten detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Nice‑sounding AUD tape with solid dynamic range, clear drum and bass response; some crowd yellers and occasional talk‑over (Peggy‑O) but no major dropouts.  Not a soundboard recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Estimated Prophet",
+      "Playing in the Band > ... > Franklin's Tower",
+      "China Doll",
+      "Lazy Lightning",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A three‑hour marathon that starts a bit tired after the East Coast tour but bursts into life in the second set; the famed ‘Playin’ sandwich’ carries the momentum through to a powerful close."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised throughout, especially his soaring solos and the strength of the Playing‑in‑the‑Band sandwich.",
+    "Phil": "Phil’s bass is noted for its solid presence and good response in the mix.",
+    "Bob": "",
+    "Keys": "Keith’s use of the PolyMoog synth on Loser and Estimated Prophet is highlighted, along with his piano work throughout the show.",
+    "Drums": "The drums receive compliments for dynamic range, powerful thumping that drives transitions, and a tight groove in the second set."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T02:56:48.397149+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-06-04.bertrando.goodbear.3417.sbeok.shnf"
+}

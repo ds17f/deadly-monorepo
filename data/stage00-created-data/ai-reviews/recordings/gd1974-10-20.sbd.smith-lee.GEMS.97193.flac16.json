@@ -1,0 +1,109 @@
+{
+  "summary": "High‑energy Winterland show with stellar performances (Stella Blue, Tennessee Jed, Wharf Rat) and a legendary 30‑minute Seastones suite; soundboard source is good but marred by delay artifacts and occasional crowd‑clap noise.",
+  "review": "The October 20 1974 Winterland concert delivers many of the Dead’s classic moments – a soaring Tennessee Jed, an emotionally charged Wharf Rat, one of the finest Stella Blue renditions ever, plus the experimental 30‑minute Seastones segment that showcases Ned Lagin’s futuristic synth work. The soundboard mix is generally clear and well‑balanced, though listeners note a noticeable slap‑back delay from room mics and a problematic third set where crowd claps drown out the music.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rave about the musical performance (average ~4.7/5) while the recording quality receives mixed feedback (~3.5/5). Weighted combination yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and balanced for most of the set; however, a ‘slap‑back’ delay from distant room mics is audible, and the third set suffers from off‑beat crowd clapping that makes it nearly unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Tennessee Jed",
+      "Wharf Rat",
+      "Cold Rain & Snow",
+      "The Other One",
+      "Seastones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely with strong folk‑rock numbers; the second set dives into experimental territory highlighted by Seastones and an expansive NFA jam, while the third set is musically solid but compromised by sound issues."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crystal‑clear guitar tone, memorable riff in Wharf Rat, and engaging dialog with Phil during the intro.",
+    "Phil": "Lauded for towering bass lines on The Other One; a few reviewers note moments where he seemed distracted (cryptical tease).",
+    "Bob": "Recognized for powerful vocals on Tennessee Jed and solid rock‑n‑roll closure with Around & Around.",
+    "Keys": "Ned Lagin’s synth/keyboard work on the 30‑minute Seastones is highlighted as a futuristic masterpiece; overall keyboard contribution praised.",
+    "Drums": "Late‑74 Bill Kreutzmann drumming described as “great” and dual‑drummer interplay noted, though the delay effect from room mics divides opinion."
+  },
+  "song_mentions": {
+    "Seastones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:50:02.318390+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-20.sbd.smith-lee.GEMS.97193.flac16"
+}

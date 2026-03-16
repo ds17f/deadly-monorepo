@@ -1,0 +1,118 @@
+{
+  "summary": "Good soundboard capture with hall echo and pitch issues, but a strong three‑set performance highlighted by Half‑Step, Franklin's Tower and classic acoustic numbers.",
+  "review": "The Rolfe‑Miller tape offers a fairly full‑bodied soundboard source that runs slightly fast and needs a modest pitch correction, with noticeable edits to several solos. Musically the show shines – the acoustic first set is consistently great, the second set features a magical Mississippi Half‑Step solo and a stellar Franklin's Tower, and the third set recovers after a slow start with tight renditions of Uncle John's Band, Playing in the Band and U.S. Blues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Positive musical highlights (standout songs, strong group interplay) offset by recording quirks (speed, edits, echo). The detailed 4‑star review carries more weight than the single 0‑star comment about overall roughness."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Hall echo adds fullness but runs fast; requires ~-1% pitch correction. Four edit points cut or shorten solos, and some frequency range is limited compared to other sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Franklin's Tower",
+      "Dire Wolf",
+      "Race Is On",
+      "Monkey",
+      "Looks Like Rain",
+      "Me and My Uncle",
+      "Uncle John's Band",
+      "Playing in the Band",
+      "One More Saturday Night",
+      "U.S. Blues",
+      "Deal"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Lost"
+    ],
+    "setlist_flow": "Three‑set marathon: acoustic first set consistently great, second set peaks with Half‑Step and Franklin's Tower, third set starts a bit lifeless but regains momentum with tight jams and strong finishes."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar roars on Deal and shines in the Half‑Step solo, though some of his solos were edited out.",
+    "Phil": "Phil’s bass is highlighted in a powerful 'Phil‑bomb' during Playing in the Band.",
+    "Bob": "",
+    "Keys": "Brent Mydland provides solid keyboards throughout, especially on Half‑Step and Franklin's Tower, and joins on Race Is On & Monkey.",
+    "Drums": "The drummers deliver a big‑time drum segment after Playing in the Band, energizing the set."
+  },
+  "song_mentions": {
+    "Race Is On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Monkey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lost": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:16:53.052737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-25.nak700.rolfe.miller.93804.sbeok.flac16"
+}

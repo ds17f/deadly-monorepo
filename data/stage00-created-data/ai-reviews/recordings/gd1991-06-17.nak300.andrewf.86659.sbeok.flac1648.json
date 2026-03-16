@@ -1,0 +1,39 @@
+{
+  "summary": "A thunder‑filled audience tape that captures an electrifying show with a standout “Eyes of the World” opening.",
+  "review": "The recording is an audience (AUD) capture that lets listeners feel the massive crowd roar and the pounding drumbeats from the very first notes of Eyes of the World. Reviewers rave about the raw energy and describe the performance as shattering late‑year formulas, making it a must‑listen despite typical AUD ambience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One enthusiastic 4‑star review praises the show’s energy and highlights a key song; recording quality is good for an audience tape but lacks detailed technical assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape captures thunderous drums and crowd roar, delivering high energy though likely with the usual ambient noise of AUD recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review emphasizes a powerful opening and sustained high‑energy momentum throughout, noting the show breaks typical late‑year patterns."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Thunderous drumbeats are specifically highlighted as a driving force of the performance."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:35:20.321825+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-17.nak300.andrewf.86659.sbeok.flac1648"
+}

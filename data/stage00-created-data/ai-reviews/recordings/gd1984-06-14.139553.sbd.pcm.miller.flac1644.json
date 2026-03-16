@@ -1,0 +1,67 @@
+{
+  "summary": "Soundboard source with a rough front‑of‑house mix, but a tight 1984 performance highlighted by Iko Iko, Dear Mr. Fantasy and an energetic Playing in the Band.",
+  "review": "The show is generally praised for its tight playing and several standout moments – the whopper “Iko Iko”, the first-ever “Dear Mr. Fantasy” and a driving “Playing in the Band”. Recording-wise the SBD source suffers from a muddy front‑of‑house mix and missing Phil on many tracks, though a later pitch‑corrected version improves clarity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two substantive reviews rate the musical performance around 3½–4 stars and note recording mix issues that bring the technical score down, yielding an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Front‑of‑house mix is muddy; many tracks lack Phil's bass in the board feed. A cleaned, pitch‑corrected SBD version exists but still shows matrix‑like inconsistencies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Dear Mr. Fantasy",
+      "Space",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set short, uptempo and tight; second set a continuous high‑energy flow with strong segues (Shakedown Street → Playing in the Band) but hampered by the poor mix."
+  },
+  "band_member_comments": {
+    "Jerry": "Tight guitar work praised throughout, especially on Iko Iko, Jack Straw and the first Dear Mr. Fantasy.",
+    "Phil": "Often missing from the board feed; listeners hear him better on audience (AUD) tracks.",
+    "Bob": "Noted for slide‑practice in Minglewood and humorous banter during US Blues.",
+    "Keys": "Brent Mydland’s spontaneous entry on Dear Mr. Fantasy highlighted as a magical moment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:20:27.372787+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-14.139553.sbd.pcm.miller.flac1644"
+}

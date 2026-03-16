@@ -1,0 +1,87 @@
+{
+  "summary": "The show is a jam‑heavy 1990 Shoreline performance with standout Terrapin, Estimated and China Doll jams; the audience recording is decent but marred by occasional pops and power‑out glitches.",
+  "review": "Fans rave about the marathon second‑set improvisations – especially the Terrapin Station outro, an epic Estimated>Terrapin sequence and a thunderous China Doll – while the first set is praised for its crispness and classic numbers like Truckin' and Sugar Magnolia. The audio source appears to be an audience capture from the DVD release; it sounds clear enough to convey the energy but suffers from pops, occasional drop‑outs and a brief board power loss that some listeners note. Overall the performance outweighs the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars for musical excellence, while recording comments range from good to poor; weighting shows (70 %) and recording (30 %) yields a solid above‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively but contains intermittent pops, a brief power‑out click, and occasional missing instrument balance (e.g., reduced Jerry on China Doll verses)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Estimated",
+      "China Doll",
+      "Sugar Magnolia",
+      "Truckin'",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [
+      "China Doll",
+      "Terrapin Station"
+    ],
+    "setlist_flow": "A tight, song‑filled first set leads into a second set that abandons the usual drum solo in favor of extended Jerry‑drum jams, space excursions and an epic Terrapin/Estimated/China Doll suite; the flow is jam‑centric and rewards listeners who enjoy long improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as energetic and ever‑present – from soaring solos to a marathon jam with the drums – though a few reviewers note occasional lyrical slips.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are highlighted as a ‘real aura of danger and electricity’, delivering an environmental ditty before Estimated; some missed verses in later songs are noted but overall his playing is praised above the era's other keyboardists.",
+    "Drums": "Mickey gets an extended workout on the big drums, often trading spots with Jerry; the usual drum‑solo segment is omitted, replaced by integrated jam sections."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "China Doll": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Estimated": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Can Run": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T07:56:11.007926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-06-16.nak.ladner.7763.sbeok.shnf"
+}

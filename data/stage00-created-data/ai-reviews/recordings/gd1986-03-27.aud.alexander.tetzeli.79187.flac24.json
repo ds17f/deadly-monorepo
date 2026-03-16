@@ -1,0 +1,45 @@
+{
+  "summary": "Clean audience recording captures an energetic show with a standout China>Rider and lively Sugar Magnolia despite a few uneven moments.",
+  "review": "The audience‑sourced tape is praised for its clarity and the way it lets listeners hear the crowd, delivering a generally good listening experience. The performance is described as high‑energy and memorable – especially the China Cat Sunflower > I Know You Rider sequence and Bob’s laugh on Sugar Magnolia – though one reviewer found the overall show sloppy and the keyboards phoned‑in.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two reviewers rate the show highly (5 stars) while one rates it low (2 stars); recording quality is generally praised but noted as only okay by one reviewer, leading to a weighted average around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clean and crisp sound that lets the crowd be heard; one reviewer calls it \"up there with many other great sounding aud's\", another says the recording quality is merely okay."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy performance with strong crowd interaction; a few moments felt sloppy, particularly the keyboard work, but overall the set is remembered as one of the year's top shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgot the second stanza during China>Rider but otherwise delivered solid guitar work.",
+    "Phil": "",
+    "Bob": "Laughed onstage during Sugar Magnolia, adding to the fun atmosphere.",
+    "Keys": "Peggy O's keyboard sounded phoned‑in and lackluster according to one reviewer.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:01:53.646336+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-27.aud.alexander.tetzeli.79187.flac24"
+}

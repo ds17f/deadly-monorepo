@@ -1,0 +1,50 @@
+{
+  "summary": "Clear matrix mix captures a fresh European ’90 show with standout Desolation Row and Valley Road, though an abrupt cut in the Birdsong jam hurts the flow.",
+  "review": "The recording is a well‑balanced matrix source that delivers crystal‑clear instrument separation and plenty of audience ambience. The band sounds energized – Jerry’s vocals are praised, Bob’s singing on Desolation Row shines, and the “Valley Road” moment is highlighted as a high point. Unfortunately an unexplained edit during the Birdsong jam detracts from an otherwise solid performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise both the playing and sound quality; a single low‑star review notes a serious audio cut, pulling the overall impression toward mixed but still above average."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally crystal‑clear mix with good instrument balance and audience presence; however there is an unexplained cut at ~7:39 into the Birdsong jam that frustrates listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Valley Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set feels fresh and fun, with strong vocal moments and a lively atmosphere; the only blemish is the missing portion of the Birdsong jam."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are noted as “standing on the moon” and generally praised.",
+    "Phil": "",
+    "Bob": "Vocals on Desolation Row described as “right on”.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Valley Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:58:21.792129+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-22.sbd.gardner.8722.sbeok.shnf"
+}

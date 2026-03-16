@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 1976 show captured on a mixed soundboard/audience tape with a few board drop‑outs, highlighted by a scorching Sugaree and a soaring Franklin's Tower.",
+  "review": "The performance is widely praised – the band is described as “on point” with standout moments like a hot‑off‑the‑gate Sugaree and an unforgettable Franklin’s Tower, while the second set flows nicely into a ballad‑style Ramble On Rose. The recording starts on soundboard then switches to audience midway through Row Jimmy, offering generally clear sound but suffers occasional board drop‑outs during Dancing in the Street.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star praise for the musical performance; recording quality is good despite noted board drop‑outs, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Begins as soundboard (SBD) then switches to audience (AUD) around halfway through Row Jimmy; occasional board dropout during Dancing in the Street, otherwise clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Franklin's Tower",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first set leading into a well‑chosen second set; ballad‑style closer works nicely and transitions feel natural."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:57:31.443777+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-21.sbd.digitalrbb.miller.112171.flac16"
+}

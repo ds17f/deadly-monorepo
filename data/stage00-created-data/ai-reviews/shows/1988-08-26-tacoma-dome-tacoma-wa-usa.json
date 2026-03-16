@@ -1,0 +1,61 @@
+{
+  "summary": "High‑energy second set, Touch of Grey shines; Jerry sounds disengaged",
+  "blurb": "Second set delivers strong Touch of Grey, Playing In The Band and I Need A Miracle, with the rhythm section driving tight grooves despite the dome's echo. Jerry’s vocals sound off‑step on several numbers, while Brent’s piano dominates the house mix.",
+  "review": "The August 26, 1988 Tacoma Dome show captures a band riding a wave of summer energy but hampered by a notoriously reverberant venue. The first set rolls through hard‑rocking cuts like Hell In A Bucket and Good Time Blues before slipping into a muddy acoustic space where Brent’s piano often overpowers the mix. By contrast, the second set snaps back to form: China Cat Sunflower → I Know You Rider segues cleanly into a fiery Playing In The Band, Uncle John’s Band, and a drum‑and‑space excursion that erupts into an uplifting Touch of Grey and a soaring I Need A Miracle before closing with Black Peter and Turn On Your Lovelight. Throughout, Mickey and Billy keep a tight, driving pulse that rescues slower moments, yet Jerry’s vocal delivery feels disengaged and at times off‑step, especially on Sugaree where flubs are noted. Fans who can look past the dome’s echo will find bright spots in the high‑energy vibe and solid rhythm section, making this show a mixed but memorable entry in the 1988 summer tour.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 36,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Two of the three recordings are described as positive, highlighting high energy and solid vibe, while one is mixed noting Jerry’s disengagement and acoustic problems. The overall sentiment leans mildly positive, warranting a moderate +0.7 adjustment.",
+      "final_calculation": "2.5 + 0.3 + 0.7 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1988-08-26.152393.ultramatrix.miller.fixed.flac2496",
+    "reason": "Ultramatrix source with good classification, praised for solid energy and listenable sound without the heavy echo issues noted in other recordings."
+  },
+  "key_highlights": [
+    "Touch of Grey brings a bright, uplifting moment despite overall acoustic challenges.",
+    "Drums by Mickey and Billy provide a tight, driving pulse that rescues slower songs.",
+    "Brent’s piano is overbearing in the house mix, drowning some instruments.",
+    "Jerry’s vocal performance feels disengaged on several numbers, notably Sugaree."
+  ],
+  "song_highlights": [
+    "Touch of Grey",
+    "Playing In The Band",
+    "I Need A Miracle",
+    "Sugaree"
+  ],
+  "band_performance": {
+    "Jerry": "Sounds disengaged and off‑step, with vocal struggles on several songs; occasional bursts of energy noted on Touch of Grey.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Piano dominates the house mix, often drowning out other instruments, especially in the first set.",
+    "Mickey": "Keeps a tight, driving pulse that underpins the show and helps pull slower numbers forward despite acoustic issues.",
+    "Billy": "Provides solid drumming alongside Mickey, contributing to the rhythmic stability throughout both sets."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-16T12:34:47.775783+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Touch of Grey",
+      "I Need A Miracle",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Sugaree"
+    ]
+  ]
+}

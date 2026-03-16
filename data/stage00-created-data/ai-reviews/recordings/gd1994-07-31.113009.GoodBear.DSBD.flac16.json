@@ -1,0 +1,86 @@
+{
+  "summary": "Decent ’94 show highlighted by a standout Way to Go Home and Space > Spanish Jam, captured on a generally good GoodBear soundboard source but marred by occasional clicks, drop‑outs and panning quirks.",
+  "review": "The performance offers a few high points – an excellent take on Way to Go Home, a memorable Space > Spanish Jam excursion and inventive guitar work from Jerry during Row Jimmy – but the set overall feels uneven, with newer post‑’91 material sounding under‑cooked. The GoodBear DSBD recording is clear enough to enjoy, though listeners will notice occasional clicks, cuts and some panning oddities that require swapping sources for a few sections.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (average to slightly above average) while recording quality is generally good with minor flaws; weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear and balanced, but contains clicks, occasional drop‑outs, and some panning issues on the GoodBear source; other matrix sources (Runyon, LaPorte) are noted as cleaner for specific sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Way to Go Home",
+      "Space>Spanish Jam",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set has a solid middle but feels clunky overall; the second set is less inspired, with newer songs appearing under‑developed and the show ending on a half‑asleep Last Time."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar shines with inventive MIDI riffs during Row Jimmy and a notable space tease; his vocals are described as more emotive on Black Peter.",
+    "Phil": "",
+    "Bob": "Bob adds acoustic lead on “Uncle” and helps blend Mexicali Blues into Big River, providing a fun acoustic texture.",
+    "Keys": "Vince’s keyboard contributions receive praise, especially on the emotional rendering of Black Peter.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Way to Go Home": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space>Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Speedway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:43:52.996130+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-31.113009.GoodBear.DSBD.flac16"
+}

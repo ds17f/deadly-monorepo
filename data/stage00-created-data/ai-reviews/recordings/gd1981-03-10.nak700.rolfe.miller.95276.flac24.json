@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent show highlighted by a stellar Brokedown Palace close, though recording source and quality are unclear",
+  "review": "The reviewer raves about the performance, calling Brokedown Palace one of the best closers ever and even suggesting We Bid You Goodnight could match it. No details are given about the audio source or fidelity, leaving the recording quality uncertain. Overall the musical impression is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single enthusiastic review focuses on the show’s strength; lack of any recording comments prevents a higher score, so rating reflects strong performance but unknown audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "We Bid You Goodnight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer emphasizes the power of the closing segment, indicating a strong finish to the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:29:21.509141+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-10.nak700.rolfe.miller.95276.flac24"
+}

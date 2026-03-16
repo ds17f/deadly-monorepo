@@ -1,0 +1,85 @@
+{
+  "summary": "A stellar matrix capture of the May‑8‑1977 show, highlighted by a blistering Scarlet > Fire and soaring Morning Dew.",
+  "review": "The recording is praised for its crystal‑clear matrix balance and buttery soundstage, making every instrument shine. Musically the concert is hailed as one of ’77’s finest – the second set delivers a perfect Scarlet > Fire, an incendiary Morning Dew and nonstop dancing on Dancin', with the first set solid throughout. Fans repeatedly note the exceptional energy and tight playing across the whole night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive commentary on both performance (standout songs, tight playing) and recording quality (excellent matrix sound), with many detailed reviews supporting a high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, balanced and buttery; listeners note beautiful instrument separation and no reported drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Morning Dew",
+      "St. Stephen",
+      "Not Fade Away",
+      "Dancin'",
+      "Loser",
+      "Brown Eyed Women"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is solid with a spectacular Loser and a long, jam‑rich Dancin', while the second set flows flawlessly through Scarlet > Fire into an unforgettable Morning Dew; transitions are praised as seamless."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s “nice slidin'” moments and perfect guitar tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LL>Supp": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T23:25:29.925500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.mtx.seamons.97274.sbeok.flac16"
+}

@@ -1,0 +1,84 @@
+{
+  "summary": "High‑energy 1981 show with scorching Eyes Of The World and strong organ",
+  "blurb": "The set rides a fast‑paced 1981 vibe, highlighted by an incendiary Eyes Of The World and tight transitions into The Other One. Brent’s organ shines throughout, while the band delivers solid grooves on Let It Grow > Deal and Bertha. Some listeners note Jerry’s guitar can disappear early and the tempo feels rushed in certain mixes.",
+  "review": "On October 10, 1981 at Bremen’s StadtHalle the Dead unleashed a rapid‑fire set that captures the restless energy of their early‑’80s tour. The second set erupts with a blistering Eyes Of The World that propels the band into an expansive The Other One, while Let It Grow flows straight into a rollicking Deal. Brent Mydland’s organ work is a standout thread, adding depth to Bird Song and Bertha, and Phil Lesh lays down a rock‑solid bass foundation throughout. Jerry Garcia’s guitar drives the high‑octane moments, though on some recordings his tone sits low in the mix early on and his Shakedown Street feels a touch tepid. Bob Weir’s vocal delivery is uneven at times, but the overall performance remains compelling. Recording quality varies – the Jim soundboard capture offers clear bass and decent balance despite occasional front‑heavy vocals, while the audience tape adds warmth but suffers from top‑end distortion and occasional speed issues. For most listeners the Jim SBD version provides the clearest window onto this high‑energy night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Two recordings are clearly positive, praising Eyes Of The World, strong organ work and overall high energy; one mixed review still highlights several standout songs; a single negative review notes fast‑playback issues but focuses on recording artefacts rather than performance flaws. The net sentiment is mildly positive, warranting a moderate +0.9 boost.",
+      "final_calculation": "2.5 + 0.1 + 0.9 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd81-10-10.sbd.jim.12998.sbefail.shnf",
+    "reason": "Good‑quality soundboard capture with clear bass and overall balance; community consensus tags it as the most reliable source despite occasional front‑heavy vocals."
+  },
+  "key_highlights": [
+    "Scorching Eyes Of The World that drives the second set.",
+    "Brent Mydland’s organ shines, especially on Bird Song and Bertha.",
+    "High‑energy pacing typical of the 1981 European tour, with tight transitions into The Other One."
+  ],
+  "song_highlights": [
+    "Eyes Of The World",
+    "Sugaree",
+    "Friend Of The Devil",
+    "The Other One",
+    "Let It Grow",
+    "Deal",
+    "Bird Song",
+    "Bertha",
+    "Casey Jones"
+  ],
+  "band_performance": {
+    "Jerry": "Guitar sometimes buried early in the mix, but he pushes the high‑energy moments like Eyes Of The World; his playing on Shakedown Street is less compelling.",
+    "Phil": "Delivers a rock‑solid bass foundation throughout, highlighted by strong grooves on Let It Grow and the driving pulse behind Eyes Of The World.",
+    "Bob": "Vocal delivery is uneven, with some strained moments noted as ‘blowing right and left.’",
+    "Brent": "Organ work stands out as a highlight of the night, adding depth and warmth to several songs.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-13T15:43:05.325557+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Eyes Of The World",
+      "Drums",
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat",
+      "One More Saturday Night"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Friend Of The Devil",
+      "El Paso"
+    ],
+    [
+      "Let It Grow",
+      "Deal"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Shakedown Street",
+      "Bertha",
+      "New Minglewood Blues"
+    ],
+    [
+      "Casey Jones"
+    ]
+  ]
+}

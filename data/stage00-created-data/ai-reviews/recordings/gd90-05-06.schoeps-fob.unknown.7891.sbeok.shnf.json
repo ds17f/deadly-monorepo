@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp front‑of‑house recording captures a scorching Brent‑era show highlighted by Foolish Heart, Standing on the Moon and The Other One.",
+  "review": "The tape delivers clear, punchy sound that fans compare favorably to the FM broadcast, making the performance easy to enjoy despite the sweltering heat. Musically the night shines with Brent at his peak, a stellar first‑set close on Foolish Heart, a soaring Standing on the Moon and an inspired The Other One, plus a memorable Feel Like a Stranger moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All eight substantive reviews are 4‑5 stars, praising both the performance (especially Brent and key songs) and the clear sound; weighted calculation yields a ~4.6 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑house tape described as crisp, clear and comparable to FM broadcast; no dropout or muffling issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Standing on the Moon",
+      "The Other One",
+      "Feel Like a Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set closed strongly with Foolish Heart; second‑set surprises and high energy kept momentum, despite extreme heat, delivering a classic Brent‑era flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping Standing on the Moon and overall strong playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent highlighted as being at his high point throughout the shows.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:55:09.055293+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-05-06.schoeps-fob.unknown.7891.sbeok.shnf"
+}

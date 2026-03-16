@@ -1,0 +1,70 @@
+{
+  "summary": "Strong Women>Smarter jam, solid Space, but mix masks some vocals",
+  "blurb": "The second set delivers a smoking Man Smart, Woman Smarter jam and an expansive Space segment. Highlights include China Cat Sunflower > I Know You Rider, Touch of Grey and Playing In The Band, though the mix buries Bob’s vocals and guitar.",
+  "review": "On March 30, 1983 at the Warfield, the Dead slipped into a comfortable groove that grew richer as the night progressed. The first set leans on classic fare – Bertha, The Promised Land, Dire Wolf and a nicely paced run through New Minglewood Blues – but it’s the second set that truly shines. A fiery Man Smart, Woman Smarter jam launches an improvisational flight that morphs into a deep, resonant Space, before the band swings back into Playing In The Band and a jubilant Sugar Magnolia finale. Touch of Grey and the ever‑reliable China Cat Sunflower > I Know You Rider provide bright, melodic anchors, while the encore U.S. Blues rounds out the night with classic energy.\n\nPerformance-wise, Jerry’s guitar tone stays solid throughout, delivering his trademark phrasing without missing a beat. Brent’s keyboards are lush and adventurous, though the recording mix pushes them forward at the expense of Bob’s vocal presence. Phil holds down a steady bass foundation, while both Mickey and Bill drive the rhythmic currents – especially during the Space excursion where their percussion locks in perfectly. Unfortunately, the soundboard capture isn’t flawless: Bob’s guitar and vocals sit low in the mix, and occasional audience chatter adds an uneven texture. Still, the musical moments outweigh these flaws, making this show a worthwhile listen for fans of the early‑’80s era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Both recordings describe strong jams (Women>Smarter, Space, Touch of Grey) and highlight several songs positively, but also note mix problems that bury Bob's vocals/guitar and uneven balance. The overall tone is mixed with a slight positive tilt, justifying a modest +0.4 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd83-03-30.sbd.bennett.10919.sbeok.shnf",
+    "reason": "Good soundboard capture with clear instrument separation and the strongest representation of the Women>Smarter jam and Space segment, despite a slightly forward Brent mix."
+  },
+  "key_highlights": [
+    "Man Smart, Woman Smarter jam launches an expansive second‑set improvisation",
+    "Space segment showcases tight drumming and atmospheric keyboards",
+    "China Cat Sunflower > I Know You Rider provides a classic, seamless segue",
+    "Touch of Grey shines as an early‑’80s highlight despite mix quirks"
+  ],
+  "song_highlights": [
+    "Man Smart, Woman Smarter",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Space",
+    "Playing In The Band",
+    "New Minglewood Blues",
+    "Touch of Grey"
+  ],
+  "band_performance": {
+    "Jerry": "Plays solidly throughout with a reliable guitar tone and confident solos.",
+    "Phil": "",
+    "Bob": "Vocals and guitar are frequently buried in the mix, and he flubs lyrics early in the set.",
+    "Brent": "Delivers lush keyboard textures; his parts are musical highlights but sometimes overly prominent due to mixing choices.",
+    "Mickey": "Provides excellent percussion, especially driving the Space jam with rhythmic nuance.",
+    "Billy": "Locks in tight grooves alongside Mickey, contributing to the powerful drumming foundation."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-14T04:19:17.641744+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Man Smart, Woman Smarter",
+      "China Doll",
+      "Playing In The Band",
+      "Sugar Magnolia"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Touch of Grey"
+    ]
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard recording with stellar performances, highlighted by a superb Bobby McGee and a hot Pigpen harmonica on Big Boss Man.",
+  "review": "Both reviewers rave about the crystal‑clear audio and high‑energy set, calling it a must‑listen gem. The show shines especially on Bobby McGee and the fiery Pigpen harp solo during Big Boss Man, making this one of the best 1971 recordings available.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "low",
+    "rationale": "All reviews (2) give 5‑star ratings and praise both the performance and sound quality, but the small sample size limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as crystal‑clear, crisp, and one of the best they've heard; no issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bobby McGee",
+      "Big Boss Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy performance with tight transitions; the band is described as ‘rockin’ and inspiring throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's harmonica (harp) on Big Boss Man is highlighted as hot and inspirational.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bobby McGee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:45:35.048545+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-13.sbd.ashley.82986.dvdf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Fair‑quality soundboard capture with noticeable peaking, but the band delivers a solid performance highlighted by a strong Mason’s Children jam.",
+  "review": "The show is generally praised – reviewers say the boys really lay it down and especially enjoy the Mason’s Children jam. The recording, while sourced from a soundboard, suffers from high levels and distortion that make it sound sketchy and beat‑up, placing its technical quality at a fair level.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4 stars, noting a good show despite consistent complaints about distortion and tape quality; the weighted average of strong performance (70%) and moderate recording issues (30%) yields a rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Levels were too high, causing noticeable distortion; tape is described as sketchy/beat‑up, giving a lo‑fi feel despite being a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mason's Children"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not detail set structure, but overall describe the concert as fun and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mason's Children": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T19:22:55.280547+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-12-28.sbd.cotsman.6030.sbefail.shnf"
+}

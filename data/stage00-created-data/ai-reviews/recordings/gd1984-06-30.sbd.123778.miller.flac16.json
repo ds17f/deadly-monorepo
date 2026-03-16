@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed audience/soundboard tape with thin bass in the first set but a solid second‑set soundboard capture; the show is strong overall except for a weak “Far From Me.”",
+  "review": "The recording sounds more like an audience tape for the first set, suffering from a noticeable lack of low end and crowd bleed, while the second set switches to a cleaner soundboard feed. Musically the concert is praised as good, with most songs holding up well; the only clear complaint is “Far From Me,” which the reviewer feels should be omitted. Jerry’s presence during “Stella Blue” is noted, adding a personal touch to an otherwise enjoyable performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "5‑star review indicates strong overall enjoyment; minor recording flaws and one song criticism keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First set sounds like an audience tape with severely lacking bass and microphone bleed; soundboard feed kicks in for the second set, improving clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Far From Me"
+    ],
+    "setlist_flow": "First set suffers from poor audio fidelity but the performance remains solid; second set benefits from a proper soundboard mix, giving the concert a smoother overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned thinking during “Stella Blue,” implying engaged playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:24:17.941945+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-30.sbd.123778.miller.flac16"
+}

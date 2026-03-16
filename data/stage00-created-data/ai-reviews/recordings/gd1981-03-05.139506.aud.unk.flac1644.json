@@ -1,0 +1,87 @@
+{
+  "summary": "Clean, punchy audience tape of a jam‑heavy show with standout versions of The Music Never Stopped, Fire and Playing in the Band.",
+  "review": "The recording captures a very solid audience sound – clean, correctly pitched and surprisingly detailed on Brent’s electric piano – though it runs about 2 % slower than other sources. Musically the concert is praised for Jerry’s soaring solos, an expansive The Music Never Stopped, a 14‑minute Playing in the Band, and tight transitions like Not Fade Away → Wharf Rat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance highlighted by multiple reviewers outweighs minor recording speed issue; only two reviews give moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clean, correct pitch and captures keyboards well; slightly less crisp than some soundboard sources and runs ~2 % slower than other audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stopped",
+      "Fire",
+      "Playing in the Band",
+      "Not Fade Away",
+      "Wharf Rat",
+      "Passenger",
+      "Scarlet Begonias",
+      "Friend of the Devil",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as pedestrian but energized by Jerry’s “mustard”; second set hampered early by equipment issues, then delivers extended jams and memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for inventive solos on every song, especially the transition jam into Fire and a unique lick on Scarlet Begonias; leads long Playing in the Band.",
+    "Phil": "Drops “a few bombs” and thunders in a tiny room; strong bass presence noted.",
+    "Bob": "Takes lead on Passenger when Jerry is absent; solid rhythm work throughout.",
+    "Keys": "Brent’s electric piano captured well, with tasty licks on Friend of the Devil.",
+    "Drums": "Long, intricate drum jam praised as mind‑blowing; drummers provide “answer” to a noodling section."
+  },
+  "song_mentions": {
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:45:47.496940+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-05.139506.aud.unk.flac1644"
+}

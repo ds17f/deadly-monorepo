@@ -1,0 +1,93 @@
+{
+  "summary": "High‑quality soundboard upgrade captures a vibrant French ’74 show with scorching Scarlet Begonias, a soaring Weather Report Suite and tight Truckin/Eyes sequences.",
+  "review": "The upgraded soundboard source delivers clear, well‑balanced audio (with a few occasional mix quirks such as low Weir and Bobby levels and some odd synth‑type noises). Musically the performance is widely praised – the first set’s Weather Report Suite/Let It Grow jam, a blistering Scarlet Begonias, and the second‑set Truckin → Space → Eyes of the World chain are highlighted as standouts, while a few reviewers note a weaker U.S. Blues and occasional off‑track moments in the second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers award 4–5 stars and praise both the show and the upgraded soundboard, but a handful of negative or mixed comments about mix balance and second‑set looseness pull the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Improved clarity and correct pitch compared to earlier archive version; crisp overall but occasional low‑mix of Weir/Bobby guitars, unbalanced instrument levels on some tracks, and brief robot‑like synth noises."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Weather Report Suite (Prelude → Part 1 → Let It Grow)",
+      "Stella Blue",
+      "Row Jimmy",
+      "Eyes of the World",
+      "Truckin > Space > Eyes of the World",
+      "Not Fade Away (solo section)",
+      "Saturday Night"
+    ],
+    "poor_songs": [
+      "U.S. Blues"
+    ],
+    "setlist_flow": "A dreamy, well‑paced first set highlighted by a long Weather Report Suite jam and hot Scarlet Begonias; the second set ventures into experimental Truckin/Space/Eyes sequences with mixed results – some reviewers love the free‑form flow while others feel it drifts off‑track."
+  },
+  "band_member_comments": {
+    "Jerry": "Not Fade Away solo praised; his guitar occasionally sits low in the mix.",
+    "Phil": "Lots of bass presence noted and praised throughout.",
+    "Bob": "Guitar a tad better than previous releases but still mixed low; vocal lead on Saturday Night highlighted positively.",
+    "Keys": "Keyboard work described as trippy, especially during Let It Grow and the Weather Report Suite jams.",
+    "Drums": "Shredding/funky drumming praised; some describe the rhythm section as solid and laid‑back."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:53:57.294372+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-20.131529.sbd.miller.flac16"
+}

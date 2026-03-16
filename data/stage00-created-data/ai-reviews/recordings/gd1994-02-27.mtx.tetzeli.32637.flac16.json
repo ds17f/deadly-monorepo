@@ -1,0 +1,75 @@
+{
+  "summary": "Matrix mix delivers a thick, full sound that captures a lively 1994 show highlighted by an ecstatic Uncle John's Band and soaring jams on Samson, U.B. Jesus, The Other One and more.",
+  "review": "The performance is praised for its energy and tight playing – Jerry’s tone sounds like the early‑’90s heyday, Phil lays down thunderous bass lines, Bob adds strong harmonies and Brent’s keyboards sit perfectly in the mix.  The matrix recording is clear and full‑bodied with only minor lyrical slip‑ups noted, making it an enjoyable listen for anyone wanting a solid snapshot of the band’s mid‑1994 vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Consistently positive 4‑star reviews highlight strong musical moments and a clear, well‑balanced matrix recording; the weighting of show quality (70%) and recording quality (30%) yields an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Thick, full sound with clear instrument separation; no major drop‑outs or muffiness reported, only occasional flubbed lyrics that don’t detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Drums/Space",
+      "Tennessee Jed",
+      "Samson",
+      "U.B. Jesus",
+      "The Other One",
+      "Cosmic Charlie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall energetic and cohesive, though one reviewer felt the set a bit disjointed; the band’s interplay – especially during jams like Samson and The Other One – keeps momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is described as reminiscent of earlier years, fast, on‑point, lyrical when needed, and he delivers a playful Cosmic Charlie tease.",
+    "Phil": "Bass work is called \"bombs\" and \"thunder perfect\" on The Other One and Tennessee Jed, providing a thick foundation.",
+    "Bob": "Vocal harmonies praised; his interplay with Jerry on the “Cowboy” songs noted as tight and powerful.",
+    "Keys": "Brent Mydland’s contributions are described as the right amount of higher‑end texture, complementing the overall mix nicely.",
+    "Drums": "The Drums/Space segment is highlighted as a reunion of two estranged wolf packs, indicating an inspired rhythmic excursion."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.B. Jesus": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:25:21.277184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-02-27.mtx.tetzeli.32637.flac16"
+}

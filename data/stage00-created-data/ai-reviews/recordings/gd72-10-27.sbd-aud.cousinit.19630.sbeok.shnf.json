@@ -1,0 +1,75 @@
+{
+  "summary": "Matrix recording mixes a crisp audience capture with a modest soundboard, preserving an energetic 1972 show highlighted by a monster Truckin' → The Other One → Half‑Step jam.",
+  "review": "The performance shines in the second set where the classic Truckin' > The Other One > Half Step sequence rolls into a soaring Dew, and the Bear audience tape adds vivid atmosphere. Recording quality is mixed – the audience portion is praised while parts of the soundboard suffer flat bass, over‑compression and occasional drop‑outs, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Show quality is strong around the jam sections (≈3.5/5) but recording issues pull the overall experience down (≈3/5); weighted average yields ~3.4."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Audience (Bear) tape is described as spectacular and adds vivid ambience. Soundboard sections are clear but thin on bass, later generations lose clarity, first set suffers from over‑compressed Dolby artifacts and hall echo; some vocal tracks (Bertha, Mexicali) have memory loss."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin' > The Other One > Half Step > Dew",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is uneven and hampered by PA quirks, but the second set delivers a tight, clean performance with the signature jam that fans rave about."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar sounded chimey/flat early due to PA problems; overall playing described as tight and clean.",
+    "Phil": "",
+    "Bob": "During tuning Bob warned people off the piano riser, showing his typical stage‑side humor.",
+    "Keys": "Keith's piano was intermittent at first but later returned to normal after crew adjustments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:56:50.286537+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-27.sbd-aud.cousinit.19630.sbeok.shnf"
+}

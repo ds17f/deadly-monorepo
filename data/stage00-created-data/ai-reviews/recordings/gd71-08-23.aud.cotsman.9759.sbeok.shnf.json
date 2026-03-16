@@ -1,0 +1,77 @@
+{
+  "summary": "A very poor audience‑recorded tape of a solid show (first Brown Eyed Women) that is almost unlistenable.",
+  "review": "The performance itself is regarded as decent – even “very good” by one reviewer and notable for featuring the first appearance of \"Brown Eyed Women\" – but the recording quality is repeatedly described as cheap, muffled and essentially unlistenable. The source appears to be a low‑fidelity audience capture that fails to match the setlist, leading to confusion and frustration among listeners.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "high",
+    "rationale": "Most reviewers condemn the audio as terrible (1‑2 ★), while a few note that the show itself is decent. Weighted toward show quality (70 %) and recording quality (30 %), the combined score lands around a three‑star average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Described as recorded with a cheap tape player and built‑in mic, muffled, weak, and at times unlistenable. The audio does not align cleanly with known setlists, adding to the confusion."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Partial/incomplete set; many reviewers note mismatches with other releases (e.g., RT 1:3) and missing tracks like Casey Jones, causing confusion about the true sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:52:35.389887+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-08-23.aud.cotsman.9759.sbeok.shnf"
+}

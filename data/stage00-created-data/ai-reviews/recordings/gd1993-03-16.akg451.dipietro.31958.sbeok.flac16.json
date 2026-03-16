@@ -1,0 +1,70 @@
+{
+  "summary": "Fair audience recording that captures a high‑energy opening but is marred by a botched Morning Dew and mixed performance quality.",
+  "review": "The show opens with electric Jack Straw riffs, vibrant crowd interaction and solid spots like Minglewood Blues and Uncle John's Band, but Jerry’s flub on Morning Dew drags the momentum down and the recording sounds a bit blotto, likely from shotgun mics. Overall the performance is uneven and the audio only moderately listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "high",
+    "rationale": "Five consistent reviews point to an average musical show (≈2½/5) with a fair‑quality audience recording (≈3/5); weighted combination yields ~2.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audio described as 'blotto' and possibly off‑board, with shotgun mic ambience; Morning Dew is noted as chopped, overall clarity modest but crowd vibe present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Minglewood Blues",
+      "Uncle John's Band",
+      "Good Lovin'",
+      "Lucy in the Sky"
+    ],
+    "poor_songs": [
+      "Morning Dew"
+    ],
+    "setlist_flow": "Opening set bursts with high energy and strong guitar work, but loses steam after a disastrous Morning Dew; second set is decent yet ends without a strong climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Awesome Jack Straw riffs and Spanish‑flavored licks early on, but flubs lyrics on Morning Dew and abandons the jam.",
+    "Phil": "Steps in with hard bass riffs during the Dew mishap to help pull the band back.",
+    "Bob": "Waits while Jerry falters, then launches into Sugar Magnolia after the Dew incident.",
+    "Keys": "Vince contributes a rag‑time jam on Minglewood Blues.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lucy in the Sky": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:28:04.695335+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-16.akg451.dipietro.31958.sbeok.flac16"
+}

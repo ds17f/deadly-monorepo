@@ -1,0 +1,45 @@
+{
+  "summary": "A high‑energy New Year’s Eve 1982 performance shines in a horn‑laden third set; the FM mix is praised for its balance though some miss the crispness of the Miller SBD.",
+  "review": "Fans rave about the electric atmosphere and solid song selection, especially the third set featuring Tower of Power horns, a glowing Lovelight and a midnight Sugar Magnolia ring‑in. The FM broadcast mix is lauded for letting every instrument be heard, even if a few listeners note it isn’t as crisp as the Miller SBD version.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and highlight strong musical performance; recording quality is generally praised though a minority miss the crispness of the SBD, yielding an overall high but not perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Mix balances horns and band well; described as grittier/funkier than SBD, with some reviewers noting less crispness compared to the Miller soundboard recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid song selection and nonstop energy throughout, with a particularly memorable horn‑filled third set that kept the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'on fire' with great tone; his playing stands out in the praised third set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:52:34.255335+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-12-31.FM.azjones.113090.flac16"
+}

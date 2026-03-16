@@ -1,0 +1,73 @@
+{
+  "summary": "Uneven but memorable RFK set with standout Baby Blue and Terrapin",
+  "blurb": "The first set feels tentative as Jerry battles illness, but the second half erupts into fire. Highlights include a soaring Baby Blue, a powerful Box of Rain, and an electrifying Satisfaction intro. Brent’s keyboards and Phil’s bass keep the momentum high despite the band’s rough edges.",
+  "review": "July 7‑1986 at RFK Stadium is a historic but uneven night in Dead history. A short, heat‑dragged first set limps through Ramble On Rose and a shaky Baby Blue/Desolation Row combo while Jerry Garcia fights a diabetic crisis that forces him offstage more than once. The second set, bolstered by Bob Dylan’s guest appearance, lifts the show with a blistering Box of Rain, a majestic Terrapin Station, and a jam‑filled sequence through Drums, Space, and The Other One that showcases Brent Mydland’s fierce keyboard work and Phil Lesh’s “killer” bass lines. The encore’s (I Can't Get No) Satisfaction intro – complete with Bob’s charismatic band introductions – provides the final high‑octane punch, even as Jerry’s voice remains ragged. Fans who can look past the health‑related hiccups will find moments of true magic in this performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 57,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.2,
+      "sentiment_rationale": "Mixed sentiment across recordings: one positive review, three mixed reviews highlighting strong Baby Blue, Box of Rain and Terrapin moments, but also consistent criticism of Jerry's frail health and uneven first‑set performance. Net effect is a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 0.2 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1986-07-07.fm.miller.88176.flac16",
+    "reason": "Good‑quality FM matrix capture with clear sound, balanced mix and minimal buzz; it presents the show’s highlights while preserving crowd ambience."
+  },
+  "key_highlights": [
+    "Baby Blue shines despite Jerry’s frailty.",
+    "Terrapin Station delivers a soaring vocal and instrumental climax.",
+    "Box of Rain showcases Phil’s bass and Brent’s keyboards.",
+    "Satisfaction intro electrifies the encore, with band introductions."
+  ],
+  "song_highlights": [
+    "It's All Over Now Baby Blue*",
+    "Desolation Row*",
+    "Box of Rain",
+    "Terrapin Station",
+    "Playing In The Band",
+    "Wharf Rat",
+    "(I Can't Get No) Satisfaction"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia battles a diabetic crisis, leading to uneven vocals and occasional off‑key moments, but still pulls out magical solos on Baby Blue and Terrapin Station that fans cherish.",
+    "Phil": "Lesh delivers solid, “killer” bass work throughout, especially on Box of Rain, anchoring the band when Jerry falters.",
+    "Bob": "Weir’s introductions are praised, his vocal contributions on Desolation Row and the Dylan collaboration add energy, though a duet mishap with Bobby draws criticism in one review.",
+    "Brent": "Mydland’s keyboard slashing and backing vocals stand out, particularly during the post‑Terrapin jam and throughout the second set, compensating for Jerry's health issues.",
+    "Mickey": "",
+    "Billy": "Kreutzmann provides steady drumming with big‑drum energy; missing drum mix on The Other One is noted but overall his playing remains solid."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-15T17:32:17.146380+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "It's All Over Now Baby Blue*"
+    ],
+    [
+      "Desolation Row*"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Around & Around",
+      "Good Lovin'"
+    ],
+    [
+      "(I Can't Get No) Satisfaction"
+    ]
+  ]
+}

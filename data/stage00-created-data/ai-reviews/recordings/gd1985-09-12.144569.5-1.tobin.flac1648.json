@@ -1,0 +1,31 @@
+{
+  "summary": "Good recording quality but track‑listing error; no performance details available",
+  "review": "The reviewer rates the recording as good, noting a mix‑up in the track names (Row Jimmy and My Brother Esau are swapped). No comments on the musical performance or band members are provided, so the show’s quality cannot be assessed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one review giving a 4‑star rating and mentioning a solid recording; lack of performance details limits the overall assessment, resulting in a moderate rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Overall good sound quality noted; however, track naming error (Row Jimmy mislabeled as My Brother Esau and vice‑versa)."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T09:18:32.764700+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-12.144569.5-1.tobin.flac1648"
+}

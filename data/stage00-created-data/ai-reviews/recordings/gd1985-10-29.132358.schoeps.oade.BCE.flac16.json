@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive feedback on recording or performance; reviewers focus solely on attribution corrections.",
+  "review": "Both reviews are concerned with correcting the attribution of the digital transfer and mastering, stating that the reviewer was not present at the concert and did not handle the source material. Consequently, there is no information regarding the audio quality, source type, or musical performance to evaluate.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Insufficient data on show or recording; only attribution comments provided."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound quality, clarity, or mix in the reviews."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information on setlist or performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T10:03:29.842820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-29.132358.schoeps.oade.BCE.flac16"
+}

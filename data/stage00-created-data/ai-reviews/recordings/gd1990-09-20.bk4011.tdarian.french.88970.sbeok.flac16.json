@@ -1,0 +1,86 @@
+{
+  "summary": "Crystal‑clear audience recording captures a powerhouse set highlighted by Dark Star, Truckin' and Touch of Grey with tight, inspired playing from the band.",
+  "review": "The audience (AUD) tape is praised as remarkably clear—many reviewers say it sounds like a soundboard—and faithfully conveys the energy of the night. Musically the show shines with standout performances of Dark Star, Truckin' into China Cat Sunflower and Touch of Grey, an ecstatic drum solo, and strong renditions of Brown Eyed Women, while the only notable dip is a weak El Paso. Overall the band is described as tight and inspired, with especially good interplay between Jerry and Bruce Hornsby and solid bass work from Phil.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All nine reviews rate the release 4‑5 stars, repeatedly praising both the pristine audience recording and the inspired performance; the few minor criticisms (e.g., El Paso) do not outweigh the overwhelmingly positive feedback."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, clear and almost soundboard‑like; some note it may be a matrix but no audible flaws or dropouts are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Truckin'",
+      "China Cat Sunflower",
+      "Touch of Grey",
+      "Brown Eyed Women",
+      "Drums"
+    ],
+    "poor_songs": [
+      "El Paso"
+    ],
+    "setlist_flow": "Reviewers highlight a strong second set that rolls from Truckin' through China Cat Sunflower into an extended Dark Star, culminating in Touch of Grey and a stellar drum segment; the first set is also noted as solid."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tight playing and especially his musical connection with guest keyboardist Bruce Hornsby.",
+    "Phil": "Described as strong throughout, providing a solid bass foundation.",
+    "Bob": "",
+    "Keys": "Mixed views: Vince Welnick’s playing is noted as occasionally hard to take but also praised on this recording; Bruce Hornsby is called a “bad‑ass” who inspired Jerry.",
+    "Drums": "The drum segment is highlighted as “awesome” and a highlight of the second set."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' Reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:12:13.235400+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-20.bk4011.tdarian.french.88970.sbeok.flac16"
+}

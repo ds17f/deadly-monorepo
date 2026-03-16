@@ -1,0 +1,62 @@
+{
+  "summary": "Audience recording captures a scorching New York show with standout Truckin, Half Step → I Know You Rider, The Other One and Eleven.",
+  "review": "The concert is praised as a “killa” night in New York where the band was on fire, delivering high‑energy versions of Truckin, Half Step into I Know You Rider, The Other One and Eleven.  The Ode’s audience tape is noted for its crystal‑clear capture of both crowd enthusiasm and the music, though a few listeners describe it as merely “OK”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong positive comments about the performance and several standout songs outweigh occasional remarks of a rough show; recording is generally praised for clarity, giving an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners commend the crystal‑clear sound and good balance between crowd and music, though one reviewer called it “kinda rough” and another just “OK recording”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin",
+      "Half Step > I Know You Rider",
+      "The Other One",
+      "Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note the daring Half Step → I Know You Rider transition and a high‑energy set that could have lasted twice as long, indicating excellent pacing and momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:21:39.854410+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-10.oade.connor.7955.sbeok.shnf"
+}

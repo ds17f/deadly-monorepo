@@ -1,0 +1,39 @@
+{
+  "summary": "Energetic 1977 Hartford audience tape captures a thrilling Sugaree jam, though its rough sound divides listeners.",
+  "review": "Fans rave about the electric crowd energy and an extended, exciting Sugaree jam that makes this May‑1977 Hartford show stand out. The audience recording is praised for its lively atmosphere and even distortion, but one reviewer finds it unlistenable compared to another tape, indicating mixed opinions on the audio fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is highly praised (standout Sugaree jam) while recording quality is mostly positive but has a notable negative outlier, resulting in an overall strong rating with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Lively crowd noise and purposeful distortion add character; however, some listeners consider the tape rough or unlistenable compared to other sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers emphasize the show’s high energy and jam‑heavy vibe, especially highlighting the extended Sugaree performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work shines in the extended Sugaree jam, noted as exciting and energetic.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T02:51:39.469555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-28.aud.wise.goodbear.77267.sbeok.flac16"
+}

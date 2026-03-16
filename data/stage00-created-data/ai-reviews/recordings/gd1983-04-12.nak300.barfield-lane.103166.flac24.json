@@ -1,0 +1,39 @@
+{
+  "summary": "Recording praised by some but marred by abrupt cut‑offs (e.g., Lost Sailor), with unknown source and only fair technical quality.",
+  "review": "The three reviews are split – one fan calls it the best recording, while two complain that the song “Lost Sailor” is cut off mid‑performance. No details about soundboard or audience sources are given, but the abrupt truncation suggests a flawed capture despite overall decent sound quality for those who enjoy it.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Two low‑star reviews criticize an important song being cut off, while one high‑star review praises the recording; limited detail leads to a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Song Lost Sailor ends abruptly (cut off), indicating incomplete capture; otherwise praised as a good recording by at least one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on overall set flow; only issue noted is the premature cut‑off of Lost Sailor."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:01:22.894541+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-12.nak300.barfield-lane.103166.flac24"
+}

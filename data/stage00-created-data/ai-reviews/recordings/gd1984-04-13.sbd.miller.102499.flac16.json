@@ -1,0 +1,57 @@
+{
+  "summary": "Pristine soundboard upgrade captures a smoking show highlighted by Scarlet>Fire, Fire on the Mountain, Birdsong and an amusing Estimated jam.",
+  "review": "The recording is praised for its crystal‑clear, upgraded soundboard quality that far exceeds the audience tapes. Musically the concert shines with a blistering Scarlet > Fire sequence, soaring Fire on the Mountain (complete with Mickey Hart’s talking drum), mesmerizing Birdsong and a hilariously wild Estimated jam featuring Bob Weir’s screams. Overall the performance is regarded as one of the best of that tour despite a few mixed comments about set‑list quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Strong positive remarks on both musical performance (standout songs, high energy) and recording quality (pristine soundboard upgrade); majority of reviews are 4‑5 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as a pristine upgrade over audience recordings; clear, crisp mix with no noted dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Fire on the Mountain",
+      "Birdsong",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, seamless flow with both nights ‘smoking’; highlighted jams and a memorable talking‑drum segment on Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as frustrated by Bob’s style during the Estimated jam.",
+    "Phil": "",
+    "Bob": "His screams during the Estimated jam were called “absolutely hilarious” and added to the fun of the night.",
+    "Keys": "",
+    "Drums": "Mickey Hart’s talking drum on Fire on the Mountain received specific praise."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T15:24:37.822803+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-13.sbd.miller.102499.flac16"
+}

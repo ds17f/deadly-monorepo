@@ -1,0 +1,55 @@
+{
+  "summary": "Soundboard recording captures a bittersweet final show highlighted by an emotional Black Muddy River/Box of Rain double‑encore.",
+  "review": "The Tony Gardner soundboard source is clear and well‑balanced, giving listeners a solid picture of the band’s last tour.  The performance shines on the double encore – Black Muddy River and Box of Rain – which many reviewers cite as moving and powerful, though some note Jerry’s voice sounding tired and the overall energy a bit low.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (soundboard, good clarity). Show quality has both strong highlights (double encore) and criticism (tired vocals, low energy), leading to a balanced overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call it a “great sounding board” and note it isn’t too sloppy for the final show; no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Muddy River",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert builds to a poignant double encore with Black Muddy River followed by Box of Rain, creating a bittersweet closing that many fans find emotionally resonant despite the overall low‑energy vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is described as tired yet deeply emotional; his solo on Black Muddy River and even a leg‑up gesture are highlighted as moving moments.",
+    "Phil": "Praised for stepping in with Box of Rain, delivering the vocal lead and adding emotional weight to the finale.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Several reviewers note that the drummers were “kicking ass,” giving the jams solid drive."
+  },
+  "song_mentions": {
+    "Black Muddy River": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Box of Rain": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:28:24.287130+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-09.sbd.gardner.4091.shnf"
+}

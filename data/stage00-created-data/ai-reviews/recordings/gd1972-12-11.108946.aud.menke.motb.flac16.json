@@ -1,0 +1,44 @@
+{
+  "summary": "A surprisingly clear Winterland balcony audience tape that captures a classic early‑'70s Dead show highlighted by an excellent Dark Star.",
+  "review": "The recording, made from the balcony at Winterland in 1972, delivers better clarity than most AUD sources – drums sit low, bass is a bit boomy and there’s some ambient echo, but the overall listenability is high. Musically the band is in top form: Jerry’s white‑Strat tones sparkle, Bob’s rhythm chops nicely, Keith’s keys are on point, and Dark Star stands out as a show‑stopper.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (especially Dark Star) and consider the sound quality good for an audience balcony tape, despite minor mix issues; consistent positive feedback across multiple detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Balcony AUD with clear overall picture; drums are slightly recessed in the mix, bass can be boomy/mushy and there is some distortion/ambient echo, but the tape is listenable and better than typical 1972 audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical early‑'70s set with a relaxed, sparse Winterland crowd; the band’s interplay is tight and the energy stays high throughout, especially in the extended Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "His white Strat tone ‘squawks like a good maple neck Strat should’ – praised for clarity and sparkle.",
+    "Phil": "",
+    "Bob": "Bobby’s rhythm “exfoliates” Jerry’s leads, noted as solid and supportive.",
+    "Keys": "Keith delivers consistently; reviewers highlight his keyboard work as strong throughout the show.",
+    "Drums": "Drums are present but a bit low in the mix; one reviewer wishes they were captured more prominently."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:34:38.063375+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-12-11.108946.aud.menke.motb.flac16"
+}

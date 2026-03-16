@@ -1,0 +1,50 @@
+{
+  "summary": "Crystal‑clear soundboard recording of a smoky 1966 show, highlighted by a stellar Cream Puff War and Viola Lee Blues",
+  "review": "The upgraded SBD mix is praised as exceptionally clear for a recording made over four decades ago, delivering an audible, polished listening experience. Musically the performance is described as solid and forward‑looking, with Cream Puff War and Viola Lee Blues standing out, though one reviewer found the rest of the set weak.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality is generally praised (most reviewers give 4‑5 stars) with a few harsh criticisms, while recording quality is uniformly lauded as crisp and well‑mixed; the weighted average yields a strong >4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, very clear mix despite being recorded in 1966; the recent upgrade/polish is highlighted as making the audio sound modern and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cream Puff War",
+      "Viola Lee Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewed as a solid, forward‑moving set that pushed further than the previous night; pacing and transitions are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Repeatedly praised – 'Phil bomb', loved his intro, highlighted as a strong point of the show.",
+    "Bob": "",
+    "Keys": "Pigpen's vocal performance described negatively by one reviewer; otherwise no specific keyboard comments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cream Puff War": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T05:33:27.205437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-07-30.sbd.GEMS.94631.flac16"
+}

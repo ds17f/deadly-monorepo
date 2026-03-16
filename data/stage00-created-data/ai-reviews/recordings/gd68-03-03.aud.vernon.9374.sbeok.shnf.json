@@ -1,0 +1,57 @@
+{
+  "summary": "A rough but listenable audience tape that captures the historic Haight‑Street flatbed‑truck gig, highlighted by a hypnotic Viola Lee Blues and a scorching Smokestack Lightning.",
+  "review": "This mono Uher audience recording is far from hi‑fi – it’s muddy, mono and suffers from occasional vocal distortion – but the performance shines through.  The band was on fire, delivering an unforgettable Viola Lee Blues riff, a blistering Smokestack Lightning and a surprisingly strong Lovelight despite its vocal quirks.  For Deadheads the historical context outweighs the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews praise the musical performance and historic significance, while consistently noting only modest recording fidelity; weighted scoring (70% show, 30% tape) yields a solid mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Mono Uher reel‑to‑reel captured with a cheap mic over the crowd; sound is muddy, vocals distorted in places and some pitch issues, but instruments remain relatively clear and the tape is surprisingly listenable for a 1968 SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "Smokestack Lightning"
+    ],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "A short, high‑energy set typical of early ’68 – the band launched straight into Viola Lee, moved through Smokestack and Lovelight, and wrapped with a crowd‑pleasing Dancin’ in the Street.  The free‑street vibe kept the momentum rolling despite the makeshift stage."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as hypnotic on Viola Lee and shredding on Smokestack Lightning; his Les Paul with P90s gets special mention.",
+    "Phil": "",
+    "Bob": "Bob (or “Bobby”) delivers a praised final verse on Lovelight, though the vocal blend is noted as distorted in places.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 10,
+      "negative_mentions": 1,
+      "total_mentions": 11
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Dancin' in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T07:50:49.162476+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-03-03.aud.vernon.9374.sbeok.shnf"
+}

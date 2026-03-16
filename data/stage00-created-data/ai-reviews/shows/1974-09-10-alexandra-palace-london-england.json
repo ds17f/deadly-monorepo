@@ -1,0 +1,71 @@
+{
+  "summary": "Stellar Dark Star > Morning Dew, soaring Weather Report Suite",
+  "blurb": "The concert features an epic Dark Star into Morning Dew and a soaring Weather Report Suite that showcases Keith’s keyboard work. Jerry’s tone and Phil’s bass are in top form, while the first set builds to strong peaks with Peggy‑O, Stella Blue and tight China Cat Sunflower → I Know You Rider.",
+  "review": "On September 10, 1974 at Alexandra Palace, the Dead delivered one of their most memorable late‑summer shows. The first set unfolds gently but soon erupts into highlights – a plaintive Peggy‑O, the intricate Weather Report Suite (Prelude, Part 1 and Let It Grow) that lets Keith Godchaux’s Rhodes shine, and a soulful Stella Blue. The second set is where the night truly soars: a relaxed yet adventurous segue into an enormous Dark Star that features Jerry Garcia’s soaring “Tiger” solo and Spanish‑mode phrasing, culminating in a cathartic Morning Dew. Even with a few rough spots – a flat Dire Wolf and a truncated Sugar Magnolia – the band’s chemistry is unmistakable, and Billy Kreutzmann’s crisp drumming drives the high‑energy jams.\n\nAcross all available recordings the performance is consistently praised; the soundboard captured by “samaritano” offers the clearest window into this magic despite occasional drop‑outs. Fans will hear Phil Lesh in top form on bass, Bob Weir adding his trademark vocal grit and rhythmic fire, and Keith’s keyboard textures that lift the Weather Report Suite to new heights. In short, this show is a must‑listen for anyone who loves the 1974 era of expansive improvisation and tight songcraft.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Three recordings label the show as positive and highlight the same epic moments (Dark Star > Morning Dew, Weather Report Suite, China Cat Sunflower → I Know You Rider). No recording offers consistent criticism of the performance itself; only one mixed review notes speed issues in the source. The strong, repeated praise across multiple sources warrants a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.5 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd74-09-10.sbd.samaritano.18806.sbeok.shnf",
+    "reason": "Highest‑quality soundboard with crisp, well‑balanced mix; captures the standout Dark Star > Morning Dew and Weather Report Suite despite minor drop‑outs."
+  },
+  "key_highlights": [
+    "Epic Dark Star → Morning Dew sequence with Jerry’s soaring solo",
+    "Weather Report Suite (Prelude, Part 1, Let It Grow) showcases Keith’s keyboards",
+    "First set peaks with Peggy‑O, Stella Blue and tight China Cat Sunflower → I Know You Rider",
+    "Billy Kreutzmann’s crisp drumming drives the high‑energy jams"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Morning Dew",
+    "Weather Report Suite Prelude",
+    "Weather Report Suite Part 1",
+    "Let It Grow",
+    "Peggy-O",
+    "Stella Blue",
+    "China Cat Sunflower",
+    "I Know You Rider"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers a rich tone, Spanish‑mode phrasing and an iconic ‘Tiger’ solo in Dark Star; his vocals are strong throughout.",
+    "Phil": "Lesh is on top form with clean, melodic bass lines that anchor the Weather Report Suite and drive the whole show.",
+    "Bob": "Weir adds energetic screaming on Not Fade Away, fuels the jams with chaotic rhythm work, and shines on China Cat Sunflower → I Know You Rider.",
+    "Brent": "",
+    "Keith": "Godchaux’s Rhodes is perfect on the Weather Report Suite and Let It Grow, adding soulful texture to the performance.",
+    "Mickey": "",
+    "Billy": "Kreutzmann’s drumming is crisp and articulate, propelling the high‑energy improvisations especially in Dark Star."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-23T00:11:59.271227+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Morning Dew"
+    ],
+    [
+      "Weather Report Suite Prelude",
+      "Weather Report Suite Part 1",
+      "Let It Grow",
+      "Stella Blue"
+    ],
+    [
+      "Peggy-O"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ]
+  ]
+}

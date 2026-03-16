@@ -1,0 +1,69 @@
+{
+  "summary": "Strong early‑80s performance with a smoking Scarlet > Fire sequence and stellar Jerry Garcia, captured on an unknown‑source recording of decent quality.",
+  "review": "The show is praised for its energetic first set and an outstanding second set highlighted by Scarlet > Fire, Sailor, Terrapin Station and a heartfelt Baby Blue encore. Reviewers rave about Jerry’s guitar work and Brent’s keyboards, while noting that the tape source is unknown but sounds good enough for enjoyment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight a high‑quality performance with many standout songs; recording quality is not specifically criticized, though the source is unknown, leading to a solid but not exceptional overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit complaints about clarity or mix; reviewers focus on performance. One comment attributes perceived bass level issues to laptop speakers, not the recording itself."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Sailor",
+      "Terrapin Station",
+      "Stella Blue",
+      "Dupree's",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a lively first set that builds into an especially powerful second set, with seamless jams (e.g., Scarlet > Fire) and a moving encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly praised for soaring guitar work, passionate vocals and driving the band’s energy throughout the night.",
+    "Phil": "One reviewer notes Phil's bass isn’t as prominent, but attributes this to poor laptop speakers rather than the performance itself.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) receives strong commendation for locking in with Jerry and adding a lot of texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:54:25.316669+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-11.aud.unknown.85854.sbeok.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Highly praised recording featuring a standout Lovelight/Shakedown Street performance, with fans raving about the tape’s overall vibe.",
+  "review": "Fans are clearly enthusiastic about this show, repeatedly calling out the Lovelight (and related Phil) moment and the Shakedown Street encore as highlights. While no technical details are given, the uniformly high star ratings suggest a listenable, enjoyable recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "All three reviews are very positive (4–5 stars) and mention standout songs, but they lack detail on recording specifics, leading to a solid but not certain rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound clarity or mix; positive overall impression implies acceptable listening quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic encore and strong energy throughout, with fans especially noting the Lovelight moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:15:02.855380+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-25.Nak300CP4.Floater.Keo.111860.flac2496"
+}

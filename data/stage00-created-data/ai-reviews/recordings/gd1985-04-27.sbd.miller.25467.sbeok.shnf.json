@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent soundboard remaster captures a high‑energy 1985 show highlighted by a scorching Scarlet>Eyes>GDTRFB sequence and tight Dancin’ opener.",
+  "review": "The Miller‑remastered soundboard delivers crisp, sparkly audio that lets the band’s 1985 fire shine through. Reviewers rave about Jerry’s ferocious guitar work, the seamless Scarlet→Eyes transition, and a setlist packed with standout moments from Dancin’ to Truckin’ and The Wheel.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8/10) are strongly positive, praising both the musical performance and the high‑quality soundboard recording; only one review is negative about song choices, so a high rating with strong confidence is warranted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, sparkly, clean and well‑balanced; Miller’s remaster praised for preserving clarity without any noted dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Eyes",
+      "GDTRFB",
+      "Dancin'",
+      "Bertha",
+      "Ramble on Rose",
+      "The Wheel",
+      "Black Peter",
+      "Truckin'",
+      "Around >Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a strong, well‑sequenced setlist with smooth transitions (especially Scarlet→Eyes) and an energetic second set that keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tearing it up on guitar, bright tones and sharp playing; even when vocals were strained his lead work remained a highlight.",
+    "Phil": "Noted as “up” in the mix, delivering strong bass presence after Brent’s addition to the band.",
+    "Bob": "Weir is mentioned positively on Truckin’/TOO and Around >Saturday Night, showing solid rhythm guitar and vocal contributions.",
+    "Keys": "Brent’s keyboards receive positive nods as part of the refreshed 1985 sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Eyes": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "GDTRFB": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around >Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:04:41.928826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-27.sbd.miller.25467.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "An audience‑sourced recording that captures the nostalgic New Year's Eve blaze, with standout renditions of Cold Rain & Snow, Terrapin Station and Morning Dew despite modest sound fidelity.",
+  "review": "Fans rave about the historic vibe of this late‑1981 show – calling it a blistering five‑star performance and highlighting smoky versions of Cold Rain & Snow, Terrapin Station and Morning Dew. The audience recording isn’t crystal‑clear, but its ambience adds a nostalgic dimension that many listeners appreciate.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Show is universally praised (average ~4.8/5) while recording quality is noted as moderate; weighting yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Not high‑fidelity – lacks the crispness of a soundboard but captures crowd ambience and offers an authentic “aud” dimension; some listeners note it isn’t great quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow",
+      "Terrapin Station",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is remembered as a classic New Year's celebration with a warm, nostalgic flow that builds on the energy of the crowd and the band's improvisational spirit."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:00:22.579582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-31.nak100.field.gmb.85628.sbeok.flac16"
+}

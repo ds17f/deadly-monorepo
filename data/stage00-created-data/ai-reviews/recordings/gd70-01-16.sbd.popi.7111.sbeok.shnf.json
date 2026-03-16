@@ -1,0 +1,78 @@
+{
+  "summary": "Clear soundboard recording with a few tape‑cuts, highlighted by a smoking Alligator → Drums → Eleven jam and an outstanding Easy Wind.",
+  "review": "The SBD source captures the band in a tight early‑70 groove – guitars, bass and drums all sit cleanly in the mix.  Performance‑wise the show shines on the Alligator > Drums > Eleven sequence, the soaring Easy Wind, and the energetic China Cat > Rider/​Dancin’ segment, despite several song cuts that truncate the flow.  Overall it’s a solid, highly enjoyable snapshot of the Dead at the start of their ‘70 evolution.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about playing quality and many standout moments; recording is praised for clarity with only minor issues (cuts, occasional glitches) that do not detract from overall listenability."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clear instrument separation and balanced mix; a few noticeable tape cuts (Cumberland Blues, early part of the show) and occasional pops/glitches, but overall the audio is crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator",
+      "The Eleven",
+      "Death Don't Have No Mercy",
+      "Easy Wind",
+      "China Cat > Rider",
+      "Dancin' in the Street",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Cumberland Blues (cut)",
+      "Cumberland (beginning cut)"
+    ],
+    "setlist_flow": "Shows a tight early‑70 set structure; the crowd‑prompted Alligator kicks off a seamless Alligator → Drums → Eleven → Death jam sequence, followed by concise but effective Dancin' and a memorable Easy Wind that lifts the second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as clear and “great” on DDHNM; his lead work in the Eleven jam and vocal delivery are highlighted.",
+    "Phil": "Licks of bass clarity noted, especially on China Cat > Rider where Phil shines; also mentioned for a witty intro to Uncle John’s Band.",
+    "Bob": "Only referenced for spoken introductions (relative sub‑dominant comment) – no specific performance remarks.",
+    "Keys": "",
+    "Drums": "Both drummers receive strong praise; the drum segment is called “great” and the Eleven jam’s transition is noted as a highlight."
+  },
+  "song_mentions": {
+    "Alligator": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Wind": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin' in the Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-11T22:26:28.031251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-16.sbd.popi.7111.sbeok.shnf"
+}

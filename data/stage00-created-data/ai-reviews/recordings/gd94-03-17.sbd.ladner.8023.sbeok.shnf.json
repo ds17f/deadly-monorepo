@@ -1,0 +1,88 @@
+{
+  "summary": "A solid 1994 Rosemont show captured on a good‑quality soundboard, highlighted by a stellar Box of Rain, The Wheel and an epic Morning Dew/Rain close.",
+  "review": "The recording is a clean soundboard capture that many listeners describe as crisp, with only occasional mix quirks (Vince a tad forward, Phil sometimes buried). Musically the night shines thanks to front‑row Jerry vocals, a soaring Box of Rain, The Wheel and one of the most praised Morning Dew/Rain closers of the ’94 tour, though Eternity draws mixed feelings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑5 stars and praise both performance and sound quality; occasional criticisms (Eternity, mix balance) keep the rating just above a solid 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear overall with some reviewers noting Vince a bit high in the mix and Phil occasionally buried, but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "The Wheel",
+      "Morning Dew / Rain",
+      "Althea",
+      "Playing > Uncle John's Band",
+      "Lazy River Road",
+      "Iko Iko",
+      "Wang Dang Doodle"
+    ],
+    "poor_songs": [
+      "Eternity"
+    ],
+    "setlist_flow": "First set described as short and uneven, while the second set builds momentum with strong transitions, culminating in a memorable Morning Dew/Rain close."
+  },
+  "band_member_comments": {
+    "Jerry": "Front‑row viewers rave about his powerful voice and acoustic‑bolt tone; several call it one of his best vocal performances.",
+    "Phil": "Generally praised for digging deep, but noted as occasionally buried in the early ’94 board mix.",
+    "Bob": "His vocals and tasteful color are highlighted, though a few reviewers mention an out‑of‑tune acoustic moment and a disliked steel‑drum/guitar blend on The Wheel.",
+    "Keys": "Vince receives strong praise for grand piano, organ, and driving jam work, with occasional remarks that his mix level is too high.",
+    "Drums": "Bill’s drumming and the space segment are described as remarkable and a highlight of the second‑set jam."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Morning Dew / Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing > Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eternity": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:06:12.895209+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-17.sbd.ladner.8023.sbeok.shnf"
+}

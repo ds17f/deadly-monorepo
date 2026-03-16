@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive feedback; reviewer gave a low rating and simply requests a streaming version",
+  "review": "The lone review offers only a request for a streamable copy and assigns a single star, providing no insight into the performance or audio fidelity. With no comments on sound quality, setlist, or musicianship, it’s impossible to assess the show's musical merits or recording characteristics.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief 1‑star review with no detail; rating reflects the expressed dissatisfaction but lacks enough data for a robust assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific comments about sound clarity or mix; low star suggests reviewer was dissatisfied, possibly due to accessibility rather than audio quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T23:12:59.595718+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-18.132239.Nak100CP4.Hill.Keo.Flac2496"
+}

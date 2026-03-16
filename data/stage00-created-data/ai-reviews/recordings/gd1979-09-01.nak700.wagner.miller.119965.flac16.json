@@ -1,0 +1,52 @@
+{
+  "summary": "Audience‑sourced recording with good sound captures a solid show highlighted by an excellent Half Step and Jerry’s soaring Wharf Rat.",
+  "review": "The three reviewers all give the tape four stars, praising its clear audience mix and a consistently strong performance. Highlights include a standout “Half Step” that one reviewer calls the best of ’79 and Jerry Garcia’s wailing on “Wharf Rat,” while the brief second set is noted as curfew‑forced but still solid. The only blemish mentioned is the unfinished lyrical delivery on “Saint of Circumstance.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All three reviews are uniformly positive (4‑star) and note good sound quality plus strong musical moments, yielding a solid‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the audience tape as having nice, clear sound with no major dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Saint of Circumstance"
+    ],
+    "setlist_flow": "Second set is brief due to curfew constraints, but the overall setlist flows well and each song is solid."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised for wailing out on “Wharf Rat.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:59:11.123713+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-01.nak700.wagner.miller.119965.flac16"
+}

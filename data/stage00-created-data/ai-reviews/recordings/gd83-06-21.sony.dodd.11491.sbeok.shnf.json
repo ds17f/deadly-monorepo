@@ -1,0 +1,78 @@
+{
+  "summary": "A solid, mostly fire‑filled show captured on a well‑balanced audience tape that highlights strong first‑set jams and Jerry’s soaring guitar work.",
+  "review": "Fans rave about the blazing first set – Cumberland, Big Railroad Blues, Me & My Uncle and a sweet Terrapin – and praise Jerry Garcia’s tone and runs. The audience recording is generally praised for its clear “Merriweather sound,” though a few note a harsh edge in the second‑set audio. Overall the performance is deemed memorable with only minor set‑list hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.4/5, most comments highlight a great show and good audio; weighting favors the strong musical performance while acknowledging some mixed audio remarks."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced Merriweather venue ambience, praised for good levels; a few listeners describe the later half as harsh or indistinct."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland",
+      "Big Railroad Blues",
+      "Terrapin Station",
+      "Me & My Uncle",
+      "Women of Sparta"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is highlighted as a smoking, unusually placed sequence that kept the crowd energized; second set is viewed as shaky by some listeners and left a few expecting a bigger climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for sweet tone on Terrapin, scorching runs on Cumberland, and overall stellar solos.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women of Sparta": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:43:04.584008+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-06-21.sony.dodd.11491.sbeok.shnf"
+}

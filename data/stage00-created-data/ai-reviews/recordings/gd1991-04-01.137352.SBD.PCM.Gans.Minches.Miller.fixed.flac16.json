@@ -1,0 +1,39 @@
+{
+  "summary": "Strong performance highlighted by a monster Dark Star, but recording details are unspecified",
+  "review": "The lone review rates the show four stars and hails the Dark Star as \"monster,\" indicating a standout performance for that jam. No information is provided about the source or clarity of the recording, so listeners should assume an unknown technical quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review; it praises Dark Star and gives a 4‑star rating, suggesting a good show but offers no recording details."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard vs. audience, clarity, or any mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:02:45.246123+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-01.137352.SBD.PCM.Gans.Minches.Miller.fixed.flac16"
+}

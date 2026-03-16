@@ -1,0 +1,81 @@
+{
+  "summary": "Warm, well‑balanced audience tape that captures a standout late‑’80s set with scorching China Rider and soulful Supplication",
+  "review": "The show is praised for its dynamic flow – the high‑energy punch of China Rider followed by the mellow Althea, plus killer moments on Supplication, He’s Gone and Black Peter.  The recording, a fan‑tape sourced from Rob Eaton’s archive, isn’t a pristine soundboard but offers surprisingly warm bass, clear organ work and an unusually prominent Garcia guitar that many reviewers love despite a slight drop in overall fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance (multiple standout songs) and generally good but not perfect recording quality; five detailed reviews give a reliable overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm, bass‑rich mix with excellent organ and Garcia guitar presence; slight loss of fidelity noted as \"slightly lesser quality\" and pre‑drum intro highlighted, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Rider",
+      "Supplication",
+      "He's Gone",
+      "Black Peter",
+      "Jack Straw",
+      "Estimated Prophet",
+      "Althea",
+      "TLEO"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a clever juxtaposition of the fiery China Rider with the cooler Althea, creating an effective ebb‑and‑flow that keeps the crowd engaged throughout the set."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is unusually front‑and‑center, especially during China Rider where his layered riffs are highlighted.",
+    "Phil": "Phil's bass \"percolates\" underneath the organ and Garcia, providing a solid foundation.",
+    "Bob": "Bob Weir adds train‑horn slide sounds on China Rider and delivers strong vocal hollerin' on Estimated Prophet.",
+    "Keys": "Brent Mydland’s organ is described as sounding like subway wheels, adding texture to the mix.",
+    "Drums": "Pre‑drum intro noted as \"Nice Pre‑drums\"; overall drum sound considered solid."
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TLEO": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T13:07:32.032464+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-18.senn441-u87.eaton.miller.91344.sbeok.flac16"
+}

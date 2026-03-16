@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent Owsley soundboard (matrix‑like) recording of the Oregon Jam I, with a rough first set that improves after “Candyman”.",
+  "review": "The tape captures an outstanding Owsley SBD source – listeners rave about its crystal‑clear clarity and even mistake it for a matrix. Musically the show starts shakily with feedback problems in the first set, but picks up momentum around “Candyman” and delivers a solid mid‑to‑late‑set performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Recording quality is praised as excellent, while the show receives mixed feedback (strong later moments but a rough start), resulting in an overall rating near four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great clarity and fidelity; many note it sounds better than other sources and even resembles a matrix. No major drop‑outs reported, though the first set suffers from feedback onstage."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is hampered by feedback and a rough start; energy improves around “Candyman” and the later portion of the concert feels more engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:32:22.453724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-06-25.152977.sbd.bear.gems.flac1648"
+}

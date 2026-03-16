@@ -1,0 +1,81 @@
+{
+  "summary": "Matrix recording captures a high‑energy 1985 show with scorching Day Tripper, The Wheel, China Doll and a monster Playin' in the Band sandwich, despite a few rough spots.",
+  "review": "The performance is praised for its adventurous improvisations, standout jams like The Wheel into Playin' in the Band and a pristine China Doll, while the crowd‑fuelled Day Tripper kicks off the set. Reviewers note an overall strong sound—described as “outstanding” and “monster BIG drumz”—with only minor complaints about Jack Straw and an over‑the‑top space jam. The recording’s matrix source delivers a clear, lively listening experience that lets the band's 1985 vigor shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Eight reviews (majority 5‑star) highlight exceptional playing and solid sound quality; only a few isolated negatives keep the rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the sound \"outstanding\" and note powerful drums, with no mention of major drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Day Tripper",
+      "The Wheel",
+      "China Doll",
+      "Sugar Magnolia",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Space jam"
+    ],
+    "setlist_flow": "A blazing first set (noted as long but energetic) followed by a second‑set sandwich featuring Playin' in the Band, The Wheel and China Doll that keeps the momentum high; crowd excitement is highlighted throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his guitar work on the China>Rider segment and overall strong playing.",
+    "Phil": "Noted for singing with Brent, adding vocal depth to the performance.",
+    "Bob": "",
+    "Keys": "Brent's keyboards are highlighted alongside Phil’s vocals; no specific mention of Keith or Vince.",
+    "Drums": "Described as \"monster BIG drumz\", indicating a powerful and driving rhythm section."
+  },
+  "song_mentions": {
+    "Day Tripper": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space jam": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T05:54:53.083259+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-25.mtx.seamons.kutik.106640.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Energetic show captured in a crisp matrix mix that highlights Bob’s guitar up front and balances out Jerry’s tone.",
+  "review": "The concert is described as really energetic and one of the reviewer’s favorites. The matrix recording is praised for its overall nice sound, with Bob Weir’s rhythm guitar sitting prominently while Jerry Garcia’s lead sits lower on “Shakedown Street” and “Promised Land” but evens out later in the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single 5‑star review emphasizes a strong performance and a high‑quality matrix recording, leading to a very high rating but low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Bob’s guitar is upfront; Jerry’s guitar sits low on a couple of songs but balances out, resulting in an overall nice‑sounding recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes the show as really energetic with no specific set‑list issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "Low in the mix on “Shakedown Street” and “Promised Land” but levels out later.",
+    "Phil": "",
+    "Bob": "Guitar is prominently upfront, adding to the energetic feel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T21:20:13.123083+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-05-23.mtx.seamons.102124.sbeok.flac16"
+}

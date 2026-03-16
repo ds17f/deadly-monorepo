@@ -1,0 +1,52 @@
+{
+  "summary": "High‑energy show captured on a clean Dusborne matrix, highlighted by a stellar Slipknot! and an unforgettable Stephen Stills cameo.",
+  "review": "Both reviewers rave about the electric pacing of this 1983 performance, noting a blistering tempo and standout moments like an unmatched Slipknot! and a superb Playing in the Band jam. The Dusborne MTX source is praised for faithfully reproducing the concert’s vibe, with only one song (“Love The One You’re With”) receiving mixed feedback. Overall the recording is listenable and the show is deemed a memorable highlight of the early‑80s era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Both reviews are detailed and enthusiastic (4‑5 stars); the musical performance is described as exceptional with only a minor song criticism, while the matrix recording is noted as clean and well‑captured."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers say the Dusborne MTX captures the show nicely; no complaints about dropouts or muddiness, indicating a clear and balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot!",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Love The One You're With"
+    ],
+    "setlist_flow": "The concert rides at a unusually high speed, delivering tight playing throughout. Guest appearance by Stephen Stills adds a unique highlight, and unconventional percussion (balafon/xylophone) plus a hair‑dryer effect give the second set an extra burst of euphoria."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart’s balafon/xylophone work and the hair‑dryer effect during the drums/space segment are singled out as magical, unique touches."
+  },
+  "song_mentions": {
+    "Love The One You're With": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:42:59.281089+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-17.138277.mtx.dusborne.flac16"
+}

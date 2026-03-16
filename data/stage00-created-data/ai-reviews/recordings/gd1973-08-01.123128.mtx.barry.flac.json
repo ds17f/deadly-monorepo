@@ -1,0 +1,31 @@
+{
+  "summary": "Great performance captured on a mixed‑quality matrix recording—some love it, others find it subpar.",
+  "review": "Both reviewers agree the concert itself is strong, describing it as a great show. Opinions diverge sharply on the matrix source: one reviewer calls this MTX “not one of the few I like,” while another says they “love this matrix.” The recording is a matrix mix, resulting in mixed technical impressions despite the solid musical performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised, yielding a high show score; recording quality receives both positive and negative feedback, lowering its contribution. Weighted combination (70% show, 30% recording) produces an overall rating of ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer dislikes the matrix sound, calling it not among their favorites; another enthusiastically praises the matrix, indicating a split perception of clarity and mix quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlighted the overall concert as great but gave no specific comments on set structure or song flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T16:47:32.448173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-08-01.123128.mtx.barry.flac"
+}

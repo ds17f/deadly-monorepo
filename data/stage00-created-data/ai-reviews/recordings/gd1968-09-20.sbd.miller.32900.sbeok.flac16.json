@@ -1,0 +1,60 @@
+{
+  "summary": "Soundboard capture of the September 20 1968 Berkeley show delivers good clarity, with a quirky Schoolgirl and a standout tabla‑enhanced drum marathon offset by mixed song performances.",
+  "review": "The recording is a soundboard source that sounds mostly top‑notch despite a little hiss and heavy mic‑trap on the drums. Musically the concert is a mixed bag – the long, guest‑filled Drums segment and Jerry’s laugh‑filled St Stephen are praised, while Schoolgirl’s feedback and the abbreviated Eleven draw criticism.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Four detailed reviews give a balanced picture: solid soundboard quality (good) but an uneven performance (mixed), leading to a rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp; occasional hiss and heavy mickey‑trap on the drums, but overall top‑notch for a 1968 board tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "The Eleven",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Schoolgirl",
+      "The Eleven",
+      "Drums"
+    ],
+    "setlist_flow": "The set swings between an experimental Schoolgirl, a brief but spirited The Eleven, and an extended, tabla‑flavored Drums segment that some find hypnotic while others deem it meandering."
+  },
+  "band_member_comments": {
+    "Jerry": "Laughs and jokes during St. Stephen, adding a playful, priceless moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Features two guest percussionists (including tabla) for a long, hypnotic section; praised as riveting by some but called uninteresting by others."
+  },
+  "song_mentions": {
+    "Schoolgirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T09:14:06.214279+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-09-20.sbd.miller.32900.sbeok.flac16"
+}

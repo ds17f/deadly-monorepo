@@ -1,0 +1,57 @@
+{
+  "summary": "Solid 1984 show with standout Let It Grow, Terrapin Station, Stranger and Morning Dew, captured on a generally good soundboard source despite occasional tape‑speed quirks.",
+  "review": "Fans praise the performance – especially Let It Grow, Terrapin Station, Stranger and Morning Dew – and describe the set as short but sweet and spacey. The recording is mostly praised as the best available source, though one reviewer notes a noticeable tape‑speed issue that colors the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show positively (4‑star comments) and highlight several standout songs, but a few give zero stars due to perceived tape‑speed problems and personal grievances, pulling the overall rating toward the middle."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally praised as the best available source, but one reviewer reports the tape speed sounds off (too fast/slow) and another mentions occasional playback issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Terrapin Station",
+      "Stranger",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as short but sweet and \"spacey goodness,\" with a strong second‑half vibe; fans appreciate the concise, high‑energy flow."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer mentions Jerry's vocals and playing deteriorating early, while others are silent about his performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart is noted for a humorous pre‑song comment before China Cat Sunflower > I Know You Rider, but no direct drumming assessment."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:36:06.282712+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-14.sbd.walker.scotton.miller.105836.flac16"
+}

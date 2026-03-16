@@ -1,0 +1,54 @@
+{
+  "summary": "Rare early set shines with In The Pines and Cardboard Cowboy",
+  "blurb": "The show features a tight early‑Dead set packed with blues and folk numbers, highlighted by standout performances of In The Pines and Cardboard Cowboy. Pigpen’s organ adds a full west‑coast texture while Jerry delivers one of his finest solos. Overall the band is energetic and cohesive despite a brief runtime.",
+  "review": "On July 17 1966 at San Francisco’s Fillmore Auditorium the Grateful Dead delivered a concise but electrifying first set that captures the raw, garage‑band spirit of their early years. From the opening “Big Boss Man” through a seamless flow into “Standing On The Corner” and “Beat It On Down The Line,” the group builds momentum that erupts on the haunting rendition of “In The Pines,” where Jerry Garcia launches what reviewers called “the cream of one of Jerry’s finest solos.” Pigpen’s organ swells with his signature west‑coast sound, especially evident on the quirky “Cardboard Cowboy,” giving the set a full, balanced atmosphere that many listeners describe as crystal‑clear. Though the set is brief, the energy never wanes; highlights like “Cream Puff War,” “King Bee,” and “Cold Rain & Snow” (captured on other recordings of this night) showcase a band already locked in tight blues chemistry. With an active, moving bass line from Phil Lesh and Bill Kreutzmann’s solid drumming, the performance stands as a rare snapshot of the Dead before they expanded into their legendary improvisational era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All three recordings express positive sentiment, repeatedly praising the crystal‑clear soundboard capture, rare material (In The Pines, Cardboard Cowboy), and standout performances by Jerry and Pigpen. No negative comments appear; the consistency of high praise across sources justifies a strong +1.6 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1966-07-17.sbd.serafin.4458.shnf",
+    "reason": "Crystal‑clear soundboard with excellent balance, capturing the rare set and full organ presence without dropouts."
+  },
+  "key_highlights": [
+    "Rare early‑Dead set featuring standout performances of In The Pines and Cardboard Cowboy.",
+    "High‑energy blues numbers (Cream Puff War, King Bee, Cold Rain & Snow) showcase raw power.",
+    "Pigpen’s organ provides a full west‑coast texture that adds depth to the brief but tight set."
+  ],
+  "song_highlights": [
+    "In The Pines",
+    "Cardboard Cowboy"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a muscular, snarling tone and one of his finest solos on In The Pines; overall guitar work is strong throughout the set.",
+    "Phil": "Bass is active and moving, providing a solid low‑end foundation that drives the early‑Dead energy.",
+    "Bob": "",
+    "Pigpen": "Organ shines as a standout element with his signature west‑coast sound clearly audible, adding richness to every number.",
+    "Mickey": "",
+    "Billy": "Drumming is already great for this period, laying down steady, propulsive rhythms that underpin the blues-heavy set."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-26T05:27:37.080276+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Standing On The Corner",
+      "Beat It On Down The Line",
+      "In The Pines"
+    ],
+    [
+      "Cardboard Cowboy",
+      "Nobody's Fault But Mine"
+    ]
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard recording with a few cuts, yet delivers an energetic 1969 show highlighted by a soaring Dark Star, blazing Morning Dew and a fiery Eleven.",
+  "review": "The performance is charged with the classic ’69 vibe – Pigpen’s wild organ on Lovelight, Jerry’s incendiary runs on Dew, and one of the era’s most compelling Dark Stars.  The Miller‑transferred soundboard source sounds clear overall, though noticeable cuts truncate the end of Lovelight, part of Dark Star and the Caution jam.  Despite those gaps the set flows well and is remembered for its high energy and standout jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The bulk of reviews rate the show 4‑5 stars, praising musical highlights while noting only minor recording omissions; overall rating falls in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear Miller transfer with occasional cuts – Lovelight ends abruptly, Dark Star loses its finale, and the Caution jam is missing. Overall sound is balanced and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "The Eleven",
+      "Lovelight",
+      "Schoolgirl"
+    ],
+    "poor_songs": [
+      "Doin' That Rag"
+    ],
+    "setlist_flow": "High‑energy set with strong transitions, especially the jam‑heavy second half; occasional interruptions from missing tape sections slightly affect continuity."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for blistering runs on Dew, soaring solo on Lovelight and crushing lead on the Eleven.",
+    "Phil": "Noted as being in a \"musical world\" during Dark Star, providing solid bass foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s spontaneous clapping during Dark Star highlighted the band's dynamic interplay; drums‑>jam segment noted as typical for the period."
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Schoolgirl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Caution": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T13:13:26.901742+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-04-13.sbd.cotsman.6287.sbeok.shnf"
+}

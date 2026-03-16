@@ -1,0 +1,51 @@
+{
+  "summary": "Spectacular early‑'87 performance highlighted by a warm Brokedown Palace encore and solid Mighty Quinn opener, captured on an unknown‑source recording of good quality",
+  "review": "Both reviewers rate this show five stars, praising the overall energy, Jerry's spectacular playing and the memorable encore where he forgets the lyrics to Brokedown Palace and the crowd steps in. While no specific technical details are given, the recording is considered listenable enough to complement the strong set that opens with Mighty Quinn and features a beloved rendition of Morning Dew.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Show quality is highly praised (5‑star) while recording quality isn’t discussed but assumed adequate; combined weighted rating yields a strong 4.6"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not comment on technical aspects; no complaints suggest the audio is at least listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Brokedown Palace",
+      "Mighty Quinn"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic opener with Mighty Quinn, solid mid‑set culminating in a warm encore where the crowd helps Jerry on Brokedown Palace; overall flow praised as spectacular."
+  },
+  "band_member_comments": {
+    "Jerry": "Spectacular playing throughout; memorable moment forgetting Brokedown Palace lyrics and crowd singing for him.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:10:19.650650+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-03.135313.aud.bernstein.flac2448"
+}

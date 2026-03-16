@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture of a fire‑filled set, with a blistering The Other One and killer Brent organ on Wharf Rat.",
+  "review": "The reviewers rave that the band was \"on fire\" and \"smoking,\" pointing to an especially wild The Other One and a phenomenal Brent‑driven organ performance on Wharf Rat. No technical complaints are noted, and thanks to “Charlie” suggest the soundboard mix is solid. Overall the show is described as high‑energy and unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong enthusiasm for the performance (70% weight) and no reported recording flaws (30% weight) lead to a high overall rating despite only three reviews."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No negative comments; reviewers thank the engineer (Charlie), implying a clear, well‑balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy set with seamless transitions, highlighted by intense improvisation and standout organ work."
+  },
+  "band_member_comments": {
+    "Jerry": "His improvisational drive on The Other One is praised as \"gone into other\" and mind‑blowing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's organ playing described as \"killer\" and \"phenomenal\".",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:12:57.345784+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-17.s2.sbd.digitalrbb.miller.112865.flac16"
+}

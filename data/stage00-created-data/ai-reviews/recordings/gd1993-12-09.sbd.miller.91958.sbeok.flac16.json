@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording shows some thumping/popping, but the 1993 show shines – especially on the soaring Space jam and a killer Easy Answers.",
+  "review": "The performance is generally praised as a high‑point of the ’90s era, with Garcia “playing like a god” and memorable moments like Space and Easy Answers. The soundboard source has a noticeable jangly/thumping character that detracts slightly from an otherwise terrific show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight strong musical moments, giving 4‑5 stars, but several note recording flaws and one reviewer gave a zero rating, pulling the weighted average down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners report thumping/popping and a generally jangly sound; no mention of crisp or pristine clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Easy Answers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid set with energetic improvisations; reviewers didn’t flag any pacing problems, though one felt there were no distinct highlights beyond the noted jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is praised as “playing like a god” despite occasional health‑related inconsistency notes.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:25:14.178243+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-09.sbd.miller.91958.sbeok.flac16"
+}

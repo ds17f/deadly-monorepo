@@ -1,0 +1,90 @@
+{
+  "summary": "A high‑energy 1985 summer show captured on a superb Oade audience tape, highlighted by an electrifying Shakedown Street and stellar He's Gone → Cryptical transition.",
+  "review": "Fans rave about the June 30 1985 performance, calling it one of the best shows of the era. The Oade audience recording is praised for its clear levels and ability to convey the MPP vibe, while the music shines – Shakedown Street erupts with crowd frenzy, He's Gone into Cryptical Envelopment dazzles, and Samson, Sugar Magnolia and other classics deliver unforgettable moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive comments about both the performance (standout songs, high energy) and the recording quality (clear levels, excellent Oade capture). Weighted average of show (≈4.7) and recording (≈4.3) yields a 4.6 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Oade audience tape noted for great level balance, clear capture of crowd ambience and Phil's “bombs”. Minor criticism of the Cryptical Envelopment mix, but overall listeners find it listenable and vivid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "He's Gone > Cryptical Envelopment",
+      "Samson & Delilah",
+      "Sugar Magnolia",
+      "Gimme Some Lovin'",
+      "Other One",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set opens with a thunderous Shakedown Street, propelling the crowd into a peak around the 13:45 mark. Transitions (He's Gone → Cryptical) are seamless, keeping momentum through Samson and the uplifting Sugar Magnolia finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers laud his soaring solos – especially on Shakedown Street and Mississippi Half-Step – saying he “lifts the audience” and hits beautiful high tones.",
+    "Phil": "Praised for powerful bass “bombs” and memorable power‑chord hits at the start of Shakedown; occasional PA issues noted from a prior night but overall his playing is a highlight.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s vocals and keyboard work receive positive nods (e.g., on Gimme Some Lovin' and Keep On Growing).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "He's Gone > Cryptical Envelopment": {
+      "positive_mentions": 8,
+      "negative_mentions": 2,
+      "total_mentions": 10
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:03:24.741380+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-30.oade-schoeps.sacks.25242.sbeok.flacf"
+}

@@ -1,0 +1,71 @@
+{
+  "summary": "Stellar first Hornsby show with The Weight & Gimme Some Lovin'",
+  "blurb": "The set features a historic debut by Bruce Hornsby, highlighted by a powerful rendition of The Weight and the final Brent‑less \"Gimme Some Lovin'\". Jerry’s solo on Stella Blue shines while Phil anchors the groove; overall the performance is energetic and memorable.",
+  "review": "On September 15 1990 at Madison Square Garden the Grateful Dead delivered a landmark concert: Bruce Hornsby stepped in for Brent Mydland, bringing an organic grand‑piano voice that instantly clicked with the band. The night’s high points include a soulful take on \"The Weight\" that opened the second set, a rousing \"Touch of Grey\" to kick off the evening, and the unique closing of \"Gimme Some Lovin'\" without Brent's iconic B‑3 organ. Jerry Garcia’s weathered yet determined vocals carried through, and his soaring solo on \"Stella Blue\" was singled out as a highlight. While Vince Welnick’s synth sparked mixed feelings among fans, the overall energy remained high, with strong contributions from Phil Lesh’s bass foundation and tight drumming by Mickey Hart and Bill Kreutzmann. The show stands out not only for its historic personnel change but also for the tight set flow and memorable jams that make it a must‑listen snapshot of the Dead’s early‑90s evolution.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 49,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Across all recordings the sentiment is overwhelmingly positive: multiple reviewers praise Hornsby’s debut, The Weight, Touch of Grey, Gimme Some Lovin' and Jerry's solo on Stella Blue. Only a few mixed comments (Vince synth criticism, occasional poor song mentions) appear, so the positive weight dominates, justifying a strong +1.6 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1990-09-15.sbd.miller.89070.sbeok.flac16",
+    "reason": "High‑quality soundboard capture with warm, well‑balanced tone that cleanly presents Hornsby’s piano and the band’s dynamics, making it the clearest listening experience of this historic show."
+  },
+  "key_highlights": [
+    "Bruce Hornsby's debut on keyboards adds fresh energy",
+    "\"The Weight\" delivers an emotional high point",
+    "Final Brent‑less \"Gimme Some Lovin'\" provides a unique closing",
+    "Jerry Garcia’s standout solo on \"Stella Blue\""
+  ],
+  "song_highlights": [
+    "The Weight",
+    "Gimme Some Lovin'",
+    "Touch of Grey",
+    "Bird Song",
+    "Stella Blue"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a weathered but compelling vocal performance; his solo on \"Stella Blue\" is highlighted as a peak moment.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Absent; reviewers note the loss of his B‑3 organ sound, with Bruce Hornsby filling in on keyboards and vocals.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 15,
+  "processed_date": "2025-09-17T12:21:34.374887+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "The Weight"
+    ],
+    [
+      "Playing In The Band",
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Gimme Some Lovin'",
+      "All Along The Watchtower",
+      "Stella Blue",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Touch of Grey",
+      "Walkin' Blues"
+    ],
+    [
+      "Bird Song"
+    ]
+  ]
+}

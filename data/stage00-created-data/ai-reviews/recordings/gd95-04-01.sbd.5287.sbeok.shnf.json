@@ -1,0 +1,112 @@
+{
+  "summary": "Soundboard capture of a wildly energetic Memphis Pyramid show with standout Candyman, Foolish Heart and Take Me To The River, but the recording swings between crisp and muddy.",
+  "review": "The April Fools‑night 1995 Pyramid concert is remembered for its searing Candyman, a heartfelt Foolish Heart opener and a gorgeous Take Me To The River, while the first‑set flow takes a while to ignite.  The SBD source delivers moments of crystal‑clear clarity but also suffers from low‑frequency modulation, speed anomalies and occasional muddiness, leaving listeners divided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Average star rating across 34 reviews is ~3.7; strong positive comments about key songs offset notable technical complaints, yielding a solid‑above‑average overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews mention crisp, perfect mixes alongside low‑frequency modulation (muddy/bright swings), speed‑up issues, and lossy conversion artifacts.  Overall the tape is listenable but not consistently high‑fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Foolish Heart",
+      "Take Me To The River",
+      "Hell in a Bucket",
+      "Standing on the Moon",
+      "The Wheel",
+      "All Along the Watchtower",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Masterpiece",
+      "Childhood's End",
+      "Lazy River Road",
+      "Saint of Circumstance",
+      "Eyes of the World"
+    ],
+    "setlist_flow": "The first set starts slowly and only cooks later, but the second set bursts out with a powerful Foolish Heart opener and a series of high‑energy jams that keep the Pyramid on fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soulful vocals on Standing on the Moon and Candyman; also noted as occasionally off‑key or ‘behind’ the band in later parts.",
+    "Phil": "Few specific comments; some reviewers note he didn't over‑sing on Childhood's End, otherwise no strong remarks.",
+    "Bob": "Mentioned hitting his part strongly on Masterpiece and getting funky with Vince on The Wheel.",
+    "Keys": "Vince (keyboards) highlighted for funkiness on The Wheel; otherwise keyboards receive little direct commentary.",
+    "Drums": "Drums/Space sections are praised for their energy, though a few note occasional muddiness in the mix."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Take Me To The River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Childhood's End": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Lazy River Road": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:32:29.003771+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-04-01.sbd.5287.sbeok.shnf"
+}

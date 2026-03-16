@@ -1,0 +1,37 @@
+{
+  "summary": "Soundboard recording praised for preserving song continuity (no split tracks), especially Good Lovin', with no noted audio issues.",
+  "review": "The reviewer thanks the engineer for keeping Good Lovin' as a single, uninterrupted track, indicating careful handling of the source material. No complaints about sound quality or performance are made, implying the recording is at least listenable and well‑mixed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one five‑star review focused on track handling; no detailed audio or performance comments, so rating is based mainly on the positive remark about preserving song integrity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer praises that songs (e.g., Good Lovin') are not broken into multiple tracks, indicating a clean and coherent mix; no other audio quality comments provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific performance comments were made in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:30:00.164394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-08.sbd.lai.fix-120.23732.sbeok.shnf"
+}

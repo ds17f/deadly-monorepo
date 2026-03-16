@@ -1,0 +1,94 @@
+{
+  "summary": "Great audience recording of a high‑energy spring ’78 show with standout Brown Eyed Women, Scarlet Begonias > Fire On The Mountain > Truckin' and a fresh Deal.",
+  "review": "Nick512 raves about the February 1978 performance, highlighting Garcia’s “wolf tone,” Keith’s fiery keyboards and Bobby’s charged playing. The audience‑sourced tape sounds clear and lively, with only minor slip‑ups in solos, while the set flows tightly from a solid first half into a chef’s‑kiss second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "One detailed, enthusiastic review gives a strong positive impression of both the musical performance and recording quality; limited data prevents higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the AUD (audience) mic is prominent and clear, with no major sound issues aside from a couple of solo slips that are performance‑related rather than technical."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown Eyed Women",
+      "Minglewood Blues",
+      "Friend Of The Devil",
+      "Scarlet Begonias",
+      "Fire On The Mountain",
+      "Truckin'",
+      "Deal"
+    ],
+    "poor_songs": [
+      "El Paso",
+      "Tennessee Jed",
+      "Sunrise"
+    ],
+    "setlist_flow": "The first set is described as high‑energy with solid transitions, while the second set delivers a chef’s‑kiss sequence of Scarlet Begonias > Fire On The Mountain > Truckin' and a fresh Deal, keeping the vibe fun and tightly locked."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as ‘wolf tone’ and he “deestroys” his parts, delivering strong solos throughout.",
+    "Phil": "",
+    "Bob": "Bobby (the drummer) receives kudos for his “charges,” energetic playing and keeping the groove tight.",
+    "Keys": "Keith Godchaux is highlighted as being on fire, dancing, and providing overtures that lift the music.",
+    "Drums": "The double‑whammy drum kits are mentioned positively, emphasizing a powerful rhythmic foundation."
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend Of The Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:36:05.457323+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-02-05.151821.s1.aud.lamarre.vernon.sirmick.flac16"
+}

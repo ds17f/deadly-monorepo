@@ -1,0 +1,51 @@
+{
+  "summary": "High‑fidelity soundboard capture of a solid early‑90s stadium show, highlighted by a thrilling Crazy Fingers and a crisp Dark Star > Playing sequence.",
+  "review": "The recording is a clean 24‑bit soundboard master that delivers clear instrument separation and excellent overall fidelity. Musically the concert offers strong moments—Jerry’s fiery lead on Crazy Fingers, a soaring Shakedown solo, and an exploratory Dark Star > Playing reprise—though some listeners note ragged vocals and overbearing keyboards typical of the post‑Touch‑of‑Grey era.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "One reviewer rates the soundboard quality five stars and the show ~3.5–4, while another gives a modest three‑star overall rating with mixed comments on performance; weighted average yields ~3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "24‑bit master praised as crisp and clear; no dropout or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Shakedown",
+      "Dark Star > Playing"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set shines with high‑energy jams (Crazy Fingers, Dark Star > Playing) and solid space/drum work; overall the show feels cohesive despite occasional vocal roughness."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead guitar is lauded, especially on Crazy Fingers, though his vocals are described as ragged.",
+    "Phil": "Lesh drives the mix expertly and stays on point throughout.",
+    "Bob": "His falsetto howl in the LLR coda is criticized as a \"laughable abomination.\"",
+    "Keys": "Vince’s keyboard tone is called obnoxious, distracting, and overbearing by one reviewer.",
+    "Drums": "The drum work and space passages are praised as excellent."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star > Playing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:16:27.791693+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-22.150678.sbd.cm.miller.flac16"
+}

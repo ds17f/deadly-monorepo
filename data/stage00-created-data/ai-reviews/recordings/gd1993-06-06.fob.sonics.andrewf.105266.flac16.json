@@ -1,0 +1,45 @@
+{
+  "summary": "Fair‑quality audience tape of a mixed show – highlights include Space and Here Comes Sunshine despite noticeable channel dropouts.",
+  "review": "The recording is an audience capture with decent moments but suffers from occasional swirling dropouts on one channel, leading some listeners to describe the sound as terrible. Musically the concert gets praise for its setlist, especially the Space segment and a strong rendition of Here Comes Sunshine, though overall impressions are mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Three reviews give mixed star scores (5, 3, 2) and comment on both good musical moments and serious recording flaws; the weighted average lands in the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Decent sounding in parts but suffers from a swirling dropout on one channel; another reviewer called the sound terrible, noting it sounded like house music at times."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a solid setlist with memorable moments (Space, Here Comes Sunshine) but the overall experience is clouded by poor sound and personal frustrations during the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:36:08.502394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-06.fob.sonics.andrewf.105266.flac16"
+}

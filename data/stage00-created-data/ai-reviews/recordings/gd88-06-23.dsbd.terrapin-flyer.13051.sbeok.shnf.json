@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp‑ish soundboard capture of an Alpine Valley night where Hey Pocky Way, Believe It Or Not and a thunderous Morning Dew shine despite odd vocal flanging.",
+  "review": "The performance is widely hailed as one of the highlights of the 1988 Dust Bowl run – debuting “Believe It Or Not,” opening the second set with an incendiary Hey Pocky Way, and delivering a monumental Morning Dew.  The soundboard source is generally clear and lively, though many note a pervasive chorus/flanger effect on vocals that can feel underwater at times.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 50 reviews, the vast majority are 4‑5 ★ and praise the musical performance; technical complaints about flanging are consistent but do not outweigh the strong show appraisal."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp with plenty of bass and clear drums, but a noticeable stereo chorus/flanger on vocals (often described as “underwater” or “phasing”) detracts for some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way",
+      "Believe It Or Not",
+      "Morning Dew",
+      "Brokedown Palace",
+      "Roses"
+    ],
+    "poor_songs": [
+      "Blackbird"
+    ],
+    "setlist_flow": "The set opens with a fresh “Hey Pocky Way,” rolls through a strong first‑set block (Roses → Masterpiece → Bird Song → Promised Land), and the second set builds to an emotional peak with the debut of “Believe It Or Not” and a thunderous “Morning Dew”, ending on a gentle Blackbird/Brokedown encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery on “Believe It Or Not” and the wailing on “Morning Dew” are repeatedly called emotional; early reviewers also praised his guitar tone.",
+    "Phil": "Bass described as “thunder bass”; noted big chord work during the Dew and occasional rhythm tightness issues.",
+    "Bob": "Weir’s vocals sometimes sounded off due to the flanging, but his lead on “Watchtower” and overall energy were praised.",
+    "Keys": "Brent (keys) gets multiple shout‑outs for backing vocals, laughter on Blackbird, and energizing moments in the second set.",
+    "Drums": "Kick drum is highlighted as strong and clear; later reviews note interesting drum textures during the Dew."
+  },
+  "song_mentions": {
+    "Hey Pocky Way": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Believe It Or Not": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Morning Dew": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Blackbird": {
+      "positive_mentions": 5,
+      "negative_mentions": 4,
+      "total_mentions": 9
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Roses": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-16T09:59:20.193849+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-23.dsbd.terrapin-flyer.13051.sbeok.shnf"
+}

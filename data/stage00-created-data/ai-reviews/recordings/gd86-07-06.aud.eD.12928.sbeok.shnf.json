@@ -1,0 +1,76 @@
+{
+  "summary": "Audience recording of the July 6, 1986 RFK show captures a scorching night with a standout Saint‑of‑Circumstance/Looks‑Like‑Rain sequence and solid Dead classics.",
+  "review": "The tape is an audience source that manages to stay clear enough to enjoy the band's mid‑80s energy despite the heat‑induced crowd noise.  Highlights include a fiery Saint of Circumstance into Looks Like Rain, a soaring Sugaree and a memorable Brokedown Palace, while the first set was hampered by temperature‑related flatness.  Overall the performance is remembered fondly for its vibe rather than pristine sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show’s energy and specific song moments, while noting the heat and ordinary audience‑tape quality; the weighted average of strong show (≈4.2) and decent recording (≈3.5) yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear for an audience tape; crowd ambience and occasional heat‑related distortion are present but do not obscure the music. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint of Circumstance",
+      "Looks Like Rain",
+      "Sugaree",
+      "Brokedown Palace",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Althea (lyric flub)",
+      "Throwing NFA (sloppy spots)"
+    ],
+    "setlist_flow": "Typical mid‑80s stadium set: a warm, somewhat flat first set followed by an inspired second set where Saint of Circumstance and Looks Like Rain lift the mood. The energy stays high despite oppressive heat."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his peak playing on Sugaree and Saint, plus the memorable fire‑hose chant \"Jerr‑rree\" during intermission.",
+    "Phil": "Praised for humorous banter (telling fans about next night’s tickets) and solid bass foundation throughout.",
+    "Bob": "Weir’s vocal rap on Saint of Circumstance is highlighted as a heartfelt moment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint of Circumstance": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing NFA": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:14:18.584898+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-07-06.aud.eD.12928.sbeok.shnf"
+}

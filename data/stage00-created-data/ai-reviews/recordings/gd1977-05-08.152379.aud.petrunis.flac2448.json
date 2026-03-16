@@ -1,0 +1,31 @@
+{
+  "summary": "A grainy but immediate recording that captures the drums with good fidelity; reviewers give no specific comments on the musical performance.",
+  "review": "The sole review praises the recording for its immediacy and overall fidelity, especially highlighting the drum sound, while noting a slight graininess. No remarks are made about the band's playing, setlist flow, or standout moments, leaving the show quality undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one review is available; it rates the recording 4 stars and mentions good fidelity despite graininess, but provides no insight into performance quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Sound is a little grainy yet has immediacy and good overall fidelity; drums are especially clear."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums noted for having good fidelity and presence."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T00:04:20.863016+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.152379.aud.petrunis.flac2448"
+}

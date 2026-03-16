@@ -1,0 +1,105 @@
+{
+  "summary": "Crisp soundboard capture of a stellar May‑15 1980 Nassau show, highlighted by an epic Althea→Lost Sailor→Saint→Terrapin→Playin' in the Band→Uncle John’s jam and flawless band playing.",
+  "review": "The recording is a clean sound‑board (Betty Board/Miller) source with only minor rough patches and a few drum edits, delivering an overall clear and well‑balanced listening experience. Musically the show shines – reviewers rave about the Althea→Lost Sailor→Saint→Terrapin→Playin' in the Band→Uncle John’s sequence, as well as Supplication, Jack Straw and Franklin's Tower, while noting Brent Mydland’s high‑pitched vocals that sometimes clash with Jerry’s tone. The consensus is overwhelmingly positive despite a few vocal‑mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (5/6) rate the show 4‑5 stars and praise both performance and sound quality; only one modest 3‑star review mentions minor rough patches, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced mix from the Betty Board/Miller source; a few rough patches and edited drum sections noted, but overall clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Lost Sailor",
+      "Saint",
+      "Terrapin Station",
+      "Playin' in the Band",
+      "Uncle John's Band",
+      "Supplication",
+      "Jack Straw",
+      "Franklin's Tower",
+      "Feel Like a Stranger",
+      "Alabama Getaway",
+      "Goin' Down the Road Feelin' Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a solid first set that builds into an increasingly energetic second set, with the Althea→...→UJB sequence serving as the performance high point and the band maintaining strong momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his guitar work was “excellent”, “full of tone” and a key driver of the show’s strength.",
+    "Phil": "Praised for great bass on \"Feel Like a Stranger\" and generally solid playing throughout.",
+    "Bob": "",
+    "Keys": "Brent Mydland's high‑pitched voice is highlighted – praised for its distinctiveness but also mentioned as sometimes not meshing with Jerry’s tone.",
+    "Drums": "The drum segment includes a few edited sections in the official release; overall drummers keep solid time and contribute to the high energy of the second set."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feelin' Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:40:59.234555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-15.sbd.cantor.miller.93426.sbeok.flac16"
+}

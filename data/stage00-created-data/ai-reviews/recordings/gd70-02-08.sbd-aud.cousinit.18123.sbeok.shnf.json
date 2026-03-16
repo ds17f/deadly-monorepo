@@ -1,0 +1,51 @@
+{
+  "summary": "Great setlist with an epic Smokestack Lightning duel, but only fair‑quality audience tape from the ’70s.",
+  "review": "Fans rave about the performance – especially the legendary Smokestack Lightning and the unusual St. Stephen > Not Fade Away sandwich – while noting that the recording is a vintage audience capture with occasional sound issues. The show shines musically despite the modest audio fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Strong musical praise (standout songs, guitar duels) outweighs the middling recording quality; weighted rating yields a solid 4‑star recommendation."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Not the best tape – some hiss and occasional drop‑outs, but acceptable for a 1970 audience recording; sound issues noted by multiple reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "St. Stephen",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features a unique St. Stephen > Not Fade Away > St. Stephen sandwich and culminates with an unforgettable Smokestack Lightning that showcases a rare guitar duel."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work, especially the duel with Bob during Smokestack Lightning, is highlighted as a show‑stealing moment.",
+    "Phil": "",
+    "Bob": "Praised for his interplay with Jerry on the climactic break of Smokestack Lightning.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:46:58.611809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-08.sbd-aud.cousinit.18123.sbeok.shnf"
+}

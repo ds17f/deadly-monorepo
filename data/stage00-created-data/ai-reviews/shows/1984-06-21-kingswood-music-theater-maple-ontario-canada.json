@@ -1,0 +1,81 @@
+{
+  "summary": "Scarlet>Fire, Looks Like Rain, and a lively New Orleans encore shine",
+  "blurb": "The first set delivers strong numbers like Looks Like Rain and Might As Well before launching into a seamless Scarlet Begonias → Fire on the Mountain transition that fuels an explosive second half. Highlights include Terrapin Station, The Wheel, Throwing Stones and a vibrant encore featuring New Orleans and Big Boss Man.",
+  "review": "June 21, 1984 at Kingswood Music Theater captured one of those summer‑solstice shows where the Dead were clearly in a good mood. The opening half is anchored by solid performances of Looks Like Rain and Might As Well, but it’s the second set that truly shines – a flawless Scarlet Begonias into Fire on the Mountain segue sets up a rolling groove through Terrapin Station, an extended Drum‑Space excursion, and a powerful closing trio of The Wheel, Throwing Stones and Not Fade Away. The encore brings a joyous New Orleans jam and a gritty Big Boss Man, amplified by The Band’s guest appearance, leaving the crowd dancing into the night.\n\nFrom a listening perspective the best experience comes from the high‑quality audience tape (gd1984-06-21.nak300...), which preserves the room’s energy while delivering clear instrument separation. While the FM matrix capture offers crisp detail, its treble‑heavy mix buries Phil’s bass and Brent’s keys. Overall, the show balances tight musicianship with that unmistakable Dead spontaneity – a solid 4½‑star outing worth revisiting.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 44,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Four of the seven recordings use explicitly positive language (e.g., \"spectacular\", \"stellar\", \"good\"), highlighting multiple standout songs and a strong overall vibe, while the remaining three are mixed but not negative. The prevalence of praise across several sources justifies a moderate‑high positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1984-06-21.nak300.ackerman.andrewf.32640.sbeok.flac16",
+    "reason": "Excellent audience tape with immersive, rich crowd ambience and clear capture of the set, especially New Orleans and Big Boss Man; offers the most enjoyable listening experience despite being an audience source."
+  },
+  "key_highlights": [
+    "Seamless Scarlet Begonias → Fire on the Mountain transition",
+    "Terrapin Station > Drum > Space > The Wheel > Throwing Stones flow",
+    "Lively New Orleans encore with guest appearance by The Band",
+    "Strong first‑set numbers like Looks Like Rain and Might As Well"
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Looks Like Rain",
+    "Bird Song",
+    "Terrapin Station",
+    "The Wheel",
+    "Throwing Stones",
+    "Might As Well",
+    "New Orleans*",
+    "Big Boss Man*"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar shines on the Scarlet>Fire transition and he delivers energetic vocals throughout, though his voice shows a hint of mid‑80s strain.",
+    "Phil": "Lesh’s bass is largely buried in the mix, making it difficult to hear his usual solid foundation.",
+    "Bob": "Weir’s rhythm work is barely audible on several recordings, receiving little mention beyond occasional presence.",
+    "Brent": "Mydland’s keyboards are low in the FM matrix mix and often missing, with no notable highlights noted by reviewers.",
+    "Mickey": "Hart’s drumming cuts through with solid power; cymbal crashes are prominent but well‑balanced.",
+    "Billy": "Kreutzmann provides a steady rhythmic backbone, complementing Hart without major issues."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-14T18:32:25.512018+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Looks Like Rain"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Samson & Delilah",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Might As Well"
+    ],
+    [
+      "New Orleans*",
+      "Big Boss Man*",
+      "Iko Iko*"
+    ]
+  ]
+}

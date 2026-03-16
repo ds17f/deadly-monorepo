@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard recording of a mellow 1980 show highlighted by a scorching Scarlet > Fire sequence and tight second‑set flow.",
+  "review": "Fans rave about the crystal‑clear SBD source, noting crisp separation and an A+‑level mix. Musically the set shines with a laid‑back first half and a second‑set that bursts into a hot Scarlet Begonias → Fire on the Mountain, stellar China Cat Sunflower → I Know You Rider, Ramble On Rose, and a soaring Sugar Magnolia, while Jerry’s guitar work and Brent’s subtle keyboards add depth. A few reviewers cite uneven vocals and an abrupt Not Fade Away, but overall the performance is regarded as one of the stronger early‑80s outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.4/5; recording quality is described as excellent and show quality receives consistent praise for several standout songs, outweighing a few minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound \"crisp,\" \"A+,\" and highlight superb channel separation; no major dropouts reported, only occasional comments about uneven vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "China Cat Sunflower > I Know You Rider",
+      "Ramble On Rose",
+      "Estimated Prophet",
+      "Sugar Magnolia",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Not Fade Away"
+    ],
+    "setlist_flow": "First set is relaxed and well‑played; the second set kicks into high gear with seamless transitions (Scarlet > Fire, CC Rider, Ramble On Rose) that keep the momentum flowing and showcase strong improvisational jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Nice guitar work throughout, especially on Black Peter; some reviewers note his tone is solid but not always as exciting as other eras.",
+    "Phil": "His bass presence is felt throughout the mellow vibe of the show.",
+    "Bob": "",
+    "Keys": "Brent Mydland adds understated yet plentiful keyboard texture; described as “delirious” during peaks.",
+    "Drums": "Billy and Mickey are “smokin’” during transitions, providing a driving rhythmic foundation."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T02:25:04.611568+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-30.set2-sbd.munder.8775.sbeok.shnf"
+}

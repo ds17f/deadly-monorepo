@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard source with modest fidelity captures an outstanding 1987 show deemed one of the year's best.",
+  "review": "The reviewer notes that, while this is finally a sound‑board recording, it isn’t pristine and offers little improvement over audience tapes. Nevertheless, the performance itself is described as amazing – arguably one of the top shows of 1987 – earning a full five‑star rating.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "low",
+    "rationale": "Only a single, brief review is available; it praises the show highly but criticizes the recording quality, leading to a weighted estimate of ~4.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Not pristine sounding; does not markedly improve over existing audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewer simply calls the overall show amazing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T21:23:38.103318+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-09.140872.sbd.miller.flac2496"
+}

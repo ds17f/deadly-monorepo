@@ -1,0 +1,31 @@
+{
+  "summary": "Positive fan sentiment reflected in a 4‑star rating, though recording and performance details are scarce.",
+  "review": "The lone review offers an enthusiastic shout‑out that captures the emotional connection fans feel to the music, earning it a solid four stars. No concrete information is provided about the sound source, audio clarity, or specific moments of the concert, so listeners should temper expectations regarding recording quality and setlist highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Only one brief, enthusiastic review (4 stars) is available; it praises the show emotionally but gives no technical or musical detail, limiting confidence in rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard vs. audience, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific feedback on set structure or pacing was mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T00:50:48.020888+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-13.nak300.bleich-sirmick.111224.sbeok.flac16"
+}

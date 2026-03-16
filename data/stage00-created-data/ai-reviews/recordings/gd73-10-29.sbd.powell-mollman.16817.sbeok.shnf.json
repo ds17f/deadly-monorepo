@@ -1,0 +1,44 @@
+{
+  "summary": "Good 1973 performance with a standout Dark Star, captured on a mixed‑source recording that has occasional mix quirks.",
+  "review": "The show is praised for its classic ’73 vibe – not too fast and not too slow – with Dark Star singled out as a highlight. The recording is a blend of soundboard and audience sources; it’s listenable but suffers from odd mix issues (notably on Wharf Rat) and missing stage mics on El Paso.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (average 4‑star reviews) balanced against a fair‑quality recording with mix problems, yielding an overall rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Some funny audio artifacts and poor drum mix on Wharf Rat; El Paso is a pure audience recording with stage mics off, indicating a mixed soundboard/audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1973 set—balanced tempos and energy (‘not too fast and not too slow’) that fans of the era will enjoy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy's mix is noted as poor on some tracks (especially Wharf Rat)."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:51:59.689726+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-10-29.sbd.powell-mollman.16817.sbeok.shnf"
+}

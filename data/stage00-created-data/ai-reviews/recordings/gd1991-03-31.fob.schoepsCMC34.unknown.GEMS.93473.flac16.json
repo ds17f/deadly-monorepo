@@ -1,0 +1,81 @@
+{
+  "summary": "Top‑notch audience recording of a transcendent 1991 show, highlighted by a soaring Half Step opener, spell‑binding Eyes and a killer Dark Star tease.",
+  "review": "The performance is widely praised for its emotional power – the opening Half Step and the haunting Eyes moved listeners to tears, while the second set delivered a thrilling Dark Star tease, fiery Devil jam and classic encores. The audience source captures the venue’s ambience with excellent clarity, though one reviewer notes the drummers losing steam later in the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Four detailed reviews overwhelmingly positive about both the music and the recording; strong show quality (70%) plus excellent audience capture (30%) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced audience mix that conveys venue ambience; no major drop‑outs or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Eyes",
+      "Devil",
+      "Dark Star (tease)",
+      "Liberty",
+      "Terrapin Station",
+      "Brokedown Palace",
+      "Round 'n' Round"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A powerful opening with Half Step and Eyes, followed by a jam‑heavy middle featuring Devil and an elusive Dark Star tease; the second half stays high‑energy with Liberty, Terrapin and a strong encore, though drums appear to flag toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers soaring leads on Half Step and Eyes, keeping energy up even as the rhythm section wanes.",
+    "Phil": "Lesh’s Double Quartet shines on Round 'n' Round, finding a jazzy groove.",
+    "Bob": "Weir pairs with Garcia on “guitfiddles,” contributing solid rhythm work.",
+    "Keys": "Bruce Hornsby and Vince Welnick provide dueling, crazy keys especially on Devil.",
+    "Drums": "Hart and Kreutzmann are noted as drifting off later, reducing the drive."
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star (tease)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Round 'n' Round": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:50:33.028243+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-31.fob.schoepsCMC34.unknown.GEMS.93473.flac16"
+}

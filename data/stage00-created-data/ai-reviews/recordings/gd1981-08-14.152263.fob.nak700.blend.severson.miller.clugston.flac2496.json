@@ -1,0 +1,39 @@
+{
+  "summary": "Sweet audience recording captures a solid 1981 show highlighted by an ominous rendition of \"It's All Over Now, Baby Blue\".",
+  "review": "The tape delivers a consistently entertaining performance from start to finish, with the Dylan cover standing out as a powerful moment that foreshadows Jerry's later vocal struggles. While the West Coast crowd’s energy feels a bit lower than typical East‑coast shows, the audience recording is clear and enjoyable enough to make the concert worth listening to.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Review praises the show as solid with a notable song highlight and rates the audience recording positively; limited to one detailed review, so rating is moderately confident."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape described as sweet and clear; no major flaws noted beyond typical ambient crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It's All Over Now, Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid throughout with consistent energy, though the West Coast audience dampens overall excitement a bit."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery on \"It's All Over Now, Baby Blue\" is described as ominous and indicative of his upcoming struggles.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "It's All Over Now, Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:31:06.435175+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-14.152263.fob.nak700.blend.severson.miller.clugston.flac2496"
+}

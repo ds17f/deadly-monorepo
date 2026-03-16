@@ -1,0 +1,79 @@
+{
+  "summary": "A solid Boston Garden farewell captured on a crisp audience tape, highlighted by standout Box of Rain, Shakedown and Brokedown Palace performances.",
+  "review": "The recording is an audience‑sourced capture that sounds clear and well balanced, with only brief PA hiccups noted during Watchtower. The show itself is praised for its strong second set – Box of Rain into a soaring Shakedown and an emotional Brokedown Palace – though a few moments (Bird Song, Touch of Grey) are seen as weaker. Overall the performance feels like a fitting end to the Garden run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, emphasizing good sound quality and several standout songs; only a few minor performance criticisms keep the rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced tape from balcony mics (shotgun capsules, DAT); occasional PA shutdown for a second during Watchtower but overall crisp sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box Of Rain",
+      "Shakedown",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Bird Song",
+      "Touch Of Grey"
+    ],
+    "setlist_flow": "Well‑rounded set with a strong second‑set opener (Box of Rain → Shakedown) and an emotionally charged close; some reviewers felt the first half was rushed but the overall flow is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgot lyrics to Touch of Grey, jumbled words in Brokedown Palace, yet showed strong effort throughout, especially during the high‑energy moments.",
+    "Phil": "Delivered powerful bass that ‘made the balcony shake’; solid work on Box of Rain and overall supportive groove.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box Of Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Touch Of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around And Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BIODTL": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T02:20:13.835543+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-03.pmb.pujol.15112.sbeok.shnf"
+}

@@ -1,0 +1,106 @@
+{
+  "summary": "Clear soundboard capture of a solid 1973 show with standout He’s Gone, Truckin’, and an epic second‑set flow.",
+  "review": "The recording, sourced from the original soundboard (despite a faint tape hiss), delivers surprisingly clean audio that lets the band's energy shine through. The performance is consistently strong – Jerry’s frenzied lead work, a soaring He’s Gone/Truckin’ sequence and rare moments like Bertha > Greatest Story Ever Told make this show a fan favorite, while the second set’s heavy snare/tom mix adds extra drive. Overall the show feels both historic and enjoyable, with only minor critiques of a less‑raging Other One jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Thirteen reviews overwhelmingly rate the show 4–5 stars, praising both performance and sound quality; only one outlier is negative, giving a strong consensus for a high‑quality recording of a great show."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight tape hiss from a 2nd‑gen cassette source; bass EQ needed on some tracks, but overall clear, crisp mix with clean cleanup work noted by multiple reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He’s Gone",
+      "Truckin’",
+      "The Other One",
+      "I Know You Rider",
+      "Bertha > Greatest Story Ever Told",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Reviewers note an unusual but exciting second‑set list, with the He’s Gone > Truckin’ > Other One > Rider sequence highlighted as a high point; some felt the Other One jam wasn’t as raging as typical ’73 shows, yet overall the pacing and transitions kept the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for frantic, harmonics‑laden lead work, perfect tone on many songs, and extra conviction on TLEO; occasional lyrical flubs noted but quickly recovered.",
+    "Phil": "Noted for a strong vocal run with Donna on Box of Rain (though not reaching the usual climax).",
+    "Bob": "Mentioned only in passing about his haircut disappointment; no specific musical commentary.",
+    "Keys": "",
+    "Drums": "Heavy snare and tom presence noted, especially on the second set; Drum solo (“Drumz”) highlighted as part of the epic sequence."
+  },
+  "song_mentions": {
+    "He’s Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin’": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "I Know You Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Spanish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha > Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T07:20:19.146278+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-31.sbd.bertha-ashley.31604.sbeok.flac16"
+}

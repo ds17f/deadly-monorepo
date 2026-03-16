@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy Fillmore set capped by a scorching Turn On Your Lovelight",
+  "blurb": "The show builds to an explosive Turn On Your Lovelight where Pigpen’s organ and Bob Weir’s wild finish shine. Jerry Garcia’s feral minor‑mode playing and a soaring feedback solo drive the performance. Overall the set is energetic despite some early sloppiness.",
+  "review": "On April 11, 1970 at the Fillmore West, the Dead delivered a raucous first set that surged toward a monumental Turn On Your Lovelight finale. Early numbers like Cold Rain And Snow and Dire Wolf were a bit loose, but the band quickly found its groove, with Pigpen’s organ and vocal antics adding extra heat. The centerpiece of the night is unmistakable: Garcia launches into a feral minor‑mode romp, punctuated by an especially praised feedback solo around the 18‑minute mark, while Bob Weir goes absolutely nuts on the Lovelight climax, delivering a fierce finish that lifts the whole room. Though Not Fade Away falters, the overall energy and improvisational spark make this show a standout early‑‘70 performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All three recordings are marked as positive, with multiple reviewers praising the Turn On Your Lovelight climax, Garcia's feral minor‑mode playing and feedback solo, and Bob Weir’s wild finish. The consistent enthusiasm across sources warrants a strong positive sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-04-11.sbd.cotsman.12072.sbeok.shnf",
+    "reason": "Full‑show soundboard tape with good, era‑appropriate balance that captures the high‑energy Lovelight climax clearly."
+  },
+  "key_highlights": [
+    "Turn On Your Lovelight delivers a scorching, high‑energy finale.",
+    "Garcia’s feral minor‑mode playing and soaring feedback solo around 18 min.",
+    "Bob Weir goes nuts on Lovelight, providing a fierce finish.",
+    "Pigpen’s organ and vocal antics add extra heat to the climax."
+  ],
+  "song_highlights": [
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers feral minor‑mode playing, highlighted by a soaring feedback solo around the 18‑minute mark that drives the high‑energy climax.",
+    "Phil": "",
+    "Bob": "Weir goes nuts on Turn On Your Lovelight, delivering a fierce finish that fuels the band's peak.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T18:09:36.992142+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "Not Fade Away",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

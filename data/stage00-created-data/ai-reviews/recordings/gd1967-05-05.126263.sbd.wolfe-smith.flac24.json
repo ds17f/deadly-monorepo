@@ -1,0 +1,42 @@
+{
+  "summary": "A clean soundboard upgrade with correct track order and less noise reduction, featuring a loose, free performance highlighted by early Jerry Gibson tones.",
+  "review": "The recording is a solid sound‑board source that improves on earlier releases by fixing track order, reducing processing artifacts, and correcting pitch on New Potato Caboose and HWAFOM. Musically the show is beloved for its free, loose playing and an early glimpse of Jerry Garcia on a Gibson, even if the vocals are described as weak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise both the performance and the technical improvements; weighting show quality (70%) higher than recording quality (30%) yields a strong overall rating despite limited detail."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Tracks now in correct order, less aggressive noise reduction, and corrected pitch on New Potato Caboose and HWAFOM; overall clearer and more faithful to the original."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Loose, free playing praised; early Jerry Gibson tone noted as a highlight despite weak vocal performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Possibly the earliest known recording of Garcia on a Gibson; playing described as free and excellent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Potato Caboose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "HWAFOM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:00:53.656860+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-05-05.126263.sbd.wolfe-smith.flac24"
+}

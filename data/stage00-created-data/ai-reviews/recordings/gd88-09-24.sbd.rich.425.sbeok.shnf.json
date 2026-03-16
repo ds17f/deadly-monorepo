@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard‑sourced tape with decent clarity but a mixed show – Rooster and Chinese Bones shine while Jerry’s hoarse voice drags many moments.",
+  "review": "The recording is a soundboard feed that generally sounds clear and well‑balanced, though a few reviewers note radio‑level compression and occasional muddiness. Musically the concert is uneven: guest‑filled highlights such as Mick Taylor’s Rooster, Suzanne Vega’s Chinese Bones, West LA and a solid Feel Like a Stranger are praised, but the majority of fans lament Jerry Garcia’s severely strained vocals and a set that feels listless overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Show quality is judged around average (≈3 ★) due to widespread criticism of Garcia’s voice and uneven set, while recording quality scores higher (≈4 ★). Weighted averaging (70 % show, 30 % recording) yields ~3.3 ★."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced soundboard mix; a few listeners mention radio‑style compression, occasional muffling, but overall the tape is listenable with good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rooster",
+      "Chinese Bones",
+      "West LA",
+      "Feel Like a Stranger"
+    ],
+    "poor_songs": [
+      "Throwing Stones > Not Fade Away"
+    ],
+    "setlist_flow": "The setlist is unusual – heavy guest appearances (Vega, Hall & Oates, Mick Taylor, Hornsby) break the usual Dead flow. The first set feels okay to some, but many describe the second set as listless and the overall pacing uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s voice is described by many reviewers as hoarse, shot, or painful to listen to, though his guitar work on tracks like Rooster and West LA still earns praise.",
+    "Phil": "Phil Lesh receives occasional nods for solid bass lines (e.g., on \"West LA\"), but no extensive commentary.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy Kreutzmann and Mickey Hart are repeatedly praised for “booming” and “tight” drumming; Babatunde Olatunji’s percussion is also highlighted."
+  },
+  "song_mentions": {
+    "Rooster": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Chinese Bones": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "West LA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Throwing Stones > Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:34:51.637978+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-24.sbd.rich.425.sbeok.shnf"
+}

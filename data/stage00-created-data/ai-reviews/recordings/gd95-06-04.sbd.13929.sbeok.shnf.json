@@ -1,0 +1,82 @@
+{
+  "summary": "A decent‑quality soundboard recording of the shaky 1995 Shoreline show, highlighted by a soaring “Days Between” and strong “Brokedown Palace” amid a sloppy second set and Jerry’s waning playing.",
+  "review": "The SBD capture is generally clear with only mild hiss and occasional speed/ detune quirks, but it preserves the uneven performance of what many call the last Bay‑Area run. While the first set holds together, the second set unravels on “Victim” yet still offers gems like “Days Between,” “Brokedown Palace,” and “Unbroken Chain.” Fans are divided – some mourn the decline, others cherish the sentimental moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Show quality is average‑to‑below (sloppy second set, many negative comments) while recording quality is good; weighted blend yields ~3.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD with mild hiss, occasional slight detuning (right‑ear Vince), and one report of the tape running a half‑step fast; overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "Brokedown Palace",
+      "Unbroken Chain",
+      "Lazy River Road",
+      "Peggy-O",
+      "Cassidy",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [
+      "Victim"
+    ],
+    "setlist_flow": "First set is solid and enjoyable; second set falls apart with a chaotic “Victim” but contains high points (Days Between, Brokedown Palace). Overall pacing feels uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – many note his deteriorating playing and occasional sloppy moments, yet several reviewers praise a soulful vocal on “Days Between,” shining guitar tones, and a heartfelt solo.",
+    "Phil": "Criticized for slipping into the wrong key on “Victim” and briefly stopping to re‑orient the band.",
+    "Bob": "",
+    "Keys": "Vince’s high‑pitched screams and slight detuning are mentioned; other comments compare Brent vs. Keith, generally noting keyboards were adequate but not a highlight.",
+    "Drums": "One reviewer notes an unusually long drum segment (~30 min) but overall the rhythm section is credited with holding things down."
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 5,
+      "total_mentions": 5
+    },
+    "Days Between": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:36:02.189478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-04.sbd.13929.sbeok.shnf"
+}

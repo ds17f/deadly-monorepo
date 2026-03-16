@@ -1,0 +1,97 @@
+{
+  "summary": "High‑octane audience tape that captures a ripping Jack Straw opener, tight Deep Elem Blues and an epic Deal, with overall good sound despite occasional muddiness.",
+  "review": "The show is praised for its explosive first set – especially the legendary Jack Straw, a crisp Deep Elem Blues and a soaring Deal – while the second set offers solid moments like Touch‑of‑Grey proto‑versions and Black Peter.  The audience recording, sourced from a Sennheiser 441/VHS‑dig‑deck chain, is generally clear and lively, though a few listeners note some mud and lag.  Overall the performance shines, with Jerry’s guitar work and Phil’s bass “bombs” getting repeated shout‑outs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "20 detailed reviews overwhelmingly rate the show 4–5 stars, highlighting strong musical moments and a generally good audience recording; only a few low‑star comments note minor flaws."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape captured via NAK 700 → Sony D‑5 → MC → HHB CD writer; many cite Sennheiser 441 mics and a digital‑VHS source, describing the sound as clear and lively, though some note occasional muddiness or lag."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Deep Elem Blues",
+      "The Deal",
+      "Touch of Grey (proto)",
+      "Brown Eyed Women",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Saturday Night (rushed/flubbed)",
+      "Uncle John's Band (flubs)"
+    ],
+    "setlist_flow": "First set is consistently praised for its energy and tight playing; the second set is mixed, with some tasty jams but fewer standout moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for high‑octane guitar tone, solid solos on Jack Straw, Deal and other jams; occasional flubs noted on Uncle John's Band.",
+    "Phil": "Repeatedly highlighted for “bombs” on bass, especially during Jack Straw and Deep Elem Blues; described as being “on a very proper level.”",
+    "Bob": "Described as solid throughout with good backup vocals; no major criticisms.",
+    "Keys": "",
+    "Drums": "Drums>Space segment praised for its bird‑song effects and overall energy."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Deal": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Touch of Grey": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:02:00.736876+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-08-27.aud.hinko.16439.sbeok.shnf"
+}

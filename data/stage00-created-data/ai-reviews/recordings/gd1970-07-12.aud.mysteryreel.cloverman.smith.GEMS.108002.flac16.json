@@ -1,0 +1,50 @@
+{
+  "summary": "Acoustic gems like Attics and a first‑ever How Long Blues shine despite the tape‑grade (C) sound quality.",
+  "review": "The recording captures an intimate acoustic set that builds to a thrilling finish with Attics and a rare How Long Blues, which many reviewers call “off the charts.”  The audio is described as a definite C – likely cassette‑type fidelity – so while the performance shines, the technical side feels modest.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Both reviewers are enthusiastic about the music (high show quality) but note low‑fidelity sound, leading to a strong overall rating tempered by recording limitations."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer calls the sound a “definite C,” indicating modest fidelity typical of tape or low‑grade audience recordings; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Attics",
+      "How Long Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set builds smoothly to a powerful climax, highlighted by an ecstatic dancing finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned singing “don’t murder me” in the anecdotal memory; no specific instrumental critique.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "How Long Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T21:57:42.689065+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-07-12.aud.mysteryreel.cloverman.smith.GEMS.108002.flac16"
+}

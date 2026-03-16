@@ -1,0 +1,39 @@
+{
+  "summary": "Impeccable, immersive audio captures a fiery performance highlighted by a standout \"Other One\", though the pitch is slightly off.",
+  "review": "Reviewers rave about the crystal‑clear sound that makes you feel like you're in the venue and praise the band’s energy, especially the inventive stretch in The Other One. The only technical quibble is a half‑semitone pitch discrepancy, but overall the recording is considered very high quality and the show highly enjoyable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4 stars and highlighted strong musical performance with excellent sound, tempered by a minor pitch‑speed issue."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Audio described as immaculate and venue‑like; however one reviewer notes the recording is off about half a semitone, indicating a slight speed/pitch anomaly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers focus on overall fire and fresh energy of the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:17:18.611591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-03.135937.dsbd.GEMS.flac16"
+}

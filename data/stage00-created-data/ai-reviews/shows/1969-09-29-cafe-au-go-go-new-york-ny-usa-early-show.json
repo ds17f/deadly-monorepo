@@ -1,0 +1,56 @@
+{
+  "summary": "Rare The Seven jam shines; St. Stephen > The Eleven tight and vibrant",
+  "blurb": "The early set features a rare, soaring The Seven jam and a crisp Saint Stephen > The Eleven sequence. Jerry’s leads dominate while Phil anchors with solid bass, and the dual drums lock in tight. Recording is muddy but captures the band's interplay.",
+  "review": "On September 29 1969 at New York’s Cafe au Go‑Go the Grateful Dead delivered an early‑show set that has become a collector’s gem thanks to its rare material. The highlight is undoubtedly the expansive The Seven, where Jerry Garcia’s soaring lead lines weave through a tight rhythm section, creating one of the era’s most memorable guitar moments. That momentum carries into a crisp Saint Stephen > The Eleven segue, with the band locked in and the dual drummers Bill Kreutzmann and Mickey Hart sprinting together like “two cheetahs”. Phil Lesh’s bass is solid and audible throughout, while Bob Weir’s rhythm guitar shimmers front‑and‑center. Though Tom Constanten’s organ is buried by tape hiss, the overall mix remains surprisingly balanced for an audience recording. Even with muddy vocals and occasional wash‑outs, the performance captures a unique snapshot of the Dead’s improvisational fire during their early New York run.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "All available analysis (one recording) expresses a positive sentiment, praising the rare The Seven jam, the crisp Saint Stephen > The Eleven sequence, and tight drum interplay. Consistent praise across these points warrants a solid +1.0 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-09-29.aud.early.hollister.79.sbeok.shnf",
+    "reason": "Only source available; despite muddy tape it captures the rare The Seven jam and crisp Saint Stephen > The Eleven, offering the most complete representation of this short set."
+  },
+  "key_highlights": [
+    "Rare “The Seven” improvisation showcases Jerry’s soaring lead.",
+    "Saint Stephen > The Eleven is crisp and energetic despite tape issues.",
+    "Dual drummers Bill Kreutzmann and Mickey Hart deliver tight, high‑speed interplay described as “two cheetahs sprinting”.",
+    "Tom Constanten’s organ gets lost in hiss but the mix remains surprisingly balanced."
+  ],
+  "song_highlights": [
+    "The Seven",
+    "Saint Stephen",
+    "The Eleven"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry’s leads are soaring, central to The Seven, and one of the most memorable guitar moments of the era.",
+    "Phil": "Phil’s bass is clearly audible and provides a solid foundation throughout the improvisation.",
+    "Bob": "Bob Weir’s rhythm guitar shines in the mix, often noted as “shimmering” and front‑and‑center.",
+    "Brent": "The organ (Tom Constanten) is buried in tape hiss and fails to cut through, making it a minor casualty of the recording.",
+    "Mickey": "Mickey Hart delivers tight, high‑speed interplay, described as part of “two cheetahs sprinting in lockstep”.",
+    "Billy": "Bill Kreutzmann matches Mickey with crisp, energetic drumming that drives the jams forward."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T17:27:36.848242+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Doin' That Rag",
+      "The Seven",
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'",
+      "Saint Stephen",
+      "The Eleven"
+    ]
+  ]
+}

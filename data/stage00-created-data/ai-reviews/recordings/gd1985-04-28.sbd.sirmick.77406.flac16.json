@@ -1,0 +1,45 @@
+{
+  "summary": "Blazing Jerry and a scorching \"Rider\" turn this triple‑Playing in the Band set into a Primo performance, though the recording source isn’t described.",
+  "review": "The reviewer raves about Jerry’s blistering guitar work and an on‑fire rendition of \"The Rider,\" highlighting three appearances of \"Playing in the Band\" as a show‑stopping moment. No technical details are given, so the audio quality is assumed decent but remains unspecified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 5‑star review praises the musical performance heavily; lack of recording‑quality details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on soundboard, audience mix, clarity or issues; assumed listenable based on overall praise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "The Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer emphasizes three separate \"Playing in the Band\" moments and a fiery \"Rider,\" suggesting an energetic, high‑flow performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as blistering and on fire; top‑level guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:18:32.611333+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-28.sbd.sirmick.77406.flac16"
+}

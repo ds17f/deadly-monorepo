@@ -1,0 +1,99 @@
+{
+  "summary": "Respectable audience recording of a disappointing Denver show plagued by unusually short, disengaged performances.",
+  "review": "The tape captures an audience‑sourced recording that is decent given the venue’s acoustics, but the concert itself is widely regarded as one of the weakest of the era. Reviewers note that most songs are cut down to near‑minimum lengths and the band appears to be merely punching the clock, with Jerry even missing a lyric in Terrapin.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.6,
+    "confidence": "low",
+    "rationale": "Only one strongly negative review; performance is rated very poor while recording quality is merely respectable, leading to an overall low rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Respectable audience (AUD) source despite venue acoustics that were not optimal; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Cassidy",
+      "Crazy Fingers",
+      "Estimated",
+      "Loose Lucy",
+      "Miracle",
+      "Queen Jane",
+      "Samba",
+      "SOTM",
+      "Terrapin",
+      "Touch",
+      "West L.A."
+    ],
+    "setlist_flow": "The set feels rushed and disengaged, with many songs truncated to the shortest versions of the year; overall energy is low and the band seems to be merely keeping time."
+  },
+  "band_member_comments": {
+    "Jerry": "Misses the 'Inspiration' lyric in Terrapin, indicating a lack of focus.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "SOTM": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:05:13.771592+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-11-30.141191.FOB.Schoeps.Clark.Miller.Noel.t-flac1648"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "A high‑energy show with Jerry’s unforgettable stage stunt captured on a clear audience recording.",
+  "review": "Reviewers rave about the tight playing, especially the opening “Shakedown Street” and the thrilling transition from “Around and Around” into “Johnny B. Goode,” where Jerry leapt with his guitar.  Although not a soundboard source, the audience tape is described as clear enough to convey the concert’s excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers give 4‑5 stars and highlight strong musical moments; recording quality is good for an audience source, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to hear the band’s tight playing and stage energy despite being an audience tap; no major sound issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Around and Around",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening “Shakedown Street” gets the crowd moving, followed by a seamless, high‑energy flow that peaks with Jerry’s dramatic jump into “Johnny B. Goode.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Caught on camera swinging his guitar in the air and landing while playing the opening riff of \"Johnny B. Goode\"; praised for high energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:20:19.019743+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-15.fob-miller.23850.sbeok.shnf"
+}

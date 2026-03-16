@@ -1,0 +1,69 @@
+{
+  "summary": "Mixed performance with standout Rooster and Chinese Bones",
+  "blurb": "The set delivers solid moments like \"Little Red Rooster\" and \"Chinese Bones\", but Jerry's strained vocals and uneven pacing keep it from soaring. The rhythm section stays tight, especially the booming drumming, making for a decent if uneven night.",
+  "review": "On September 24, 1988 at Madison Square Garden the Dead rolled out an unusual, guest‑laden set that felt more like a variety show than a classic two‑set romp. Highlights such as \"Little Red Rooster\", \"Feel Like A Stranger\", \"West L.A. Fadeaway\" and the soulful take on \"Chinese Bones\" showed flashes of brilliance, with Jerry’s guitar work cutting through even as his voice sounded hoarse and shot. The rhythm section—Mickey Hart and Bill Kreutzmann—provided booming, tight drumming throughout, and Phil Lesh locked in a solid bass line on West L.A.. However, the second set sagged; \"Throwing Stones > Not Fade Away\" stumbled, and overall pacing felt listless. Guest appearances (Vega, Hall & Oates, Mick Taylor, Hornsby) added novelty but broke the usual Dead flow. For fans looking for a snapshot of this odd‑ball night, the show offers a few memorable jams amid an otherwise uneven performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 47,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Across six recordings the sentiment is mixed: one positive, one negative, and four mixed. No consistent praise or criticism emerges across multiple sources, so no sentiment points are added or subtracted.",
+      "final_calculation": "2.5 + 0.4 + 0.0 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-09-24.sbd.rich.425.sbeok.shnf",
+    "reason": "Decent soundboard source with good instrument separation and clear capture of the band’s tighter moments, making it the most listenable version despite mixed performance."
+  },
+  "key_highlights": [
+    "Guest‑heavy setlist disrupts the usual Dead flow, giving the night a novelty feel.",
+    "Jerry's voice is hoarse, but his guitar shines on \"Little Red Rooster\" and \"West L.A. Fadeaway\".",
+    "Mickey Hart and Bill Kreutzmann deliver booming, tight drumming that anchors the band.",
+    "Standout tracks include \"Chinese Bones\", \"What's Going On\", and the encore \"Knockin' On Heaven's Door\"."
+  ],
+  "song_highlights": [
+    "Feel Like A Stranger",
+    "West L.A. Fadeaway",
+    "Little Red Rooster(1)",
+    "Chinese Bones(2)",
+    "What's Going On(3)",
+    "Knockin' On Heaven's Door"
+  ],
+  "band_performance": {
+    "Jerry": "Voice is hoarse and uneven, but his guitar work remains expressive and shines on \"Little Red Rooster\" and \"West L.A. Fadeaway\".",
+    "Phil": "Provides solid bass foundation, especially notable on \"West L.A. Fadeaway\".",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Booming and tight drumming praised throughout the show.",
+    "Billy": "Booming and tight drumming praised throughout the show."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-16T14:38:41.802959+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "West L.A. Fadeaway"
+    ],
+    [
+      "Little Red Rooster(1)"
+    ],
+    [
+      "Chinese Bones(2)"
+    ],
+    [
+      "What's Going On(3)",
+      "Drums(4)"
+    ],
+    [
+      "Knockin' On Heaven's Door"
+    ]
+  ]
+}

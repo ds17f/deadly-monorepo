@@ -1,0 +1,39 @@
+{
+  "summary": "Recording sounds good but the set disappoints by omitting Dark Star",
+  "review": "The sole reviewer praised the audio quality, noting it sounds great, yet expressed disappointment that Dark Star was missing from the performance. With no other comments on the music or recording, the overall impression is negative due to the absent centerpiece of a typical Dead show.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "low",
+    "rationale": "Only one low‑star review; reviewer liked the sound but was unhappy that Dark Star was missing, leading to an overall negative assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the audio as sounding great; no specific technical issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Dark Star (missing)"
+    ],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:15:20.245119+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-13.141156.FOB.s2.Schoeps.Oade.Bryant.Miller.Noel.t-flac1644"
+}

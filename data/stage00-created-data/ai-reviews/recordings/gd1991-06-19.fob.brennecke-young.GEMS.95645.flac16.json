@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent front‑of‑house capture of a tight 1991 summer tour show highlighted by a smoking Scarlet>Fire and stellar 'They Love Each Other'.",
+  "review": "The concert is praised for its tight playing and vibrant atmosphere, with standout performances of Scarlet > Fire, The Other One, Stella Blue, and a soaring version of They Love Each Other. Reviewers note great sound quality that captures both the band’s interplay—especially Jerry’s dialogue with Bruce Hornsby and Vince Welnick—and enthusiastic crowd reactions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Both reviewers give 4‑star ratings, extoll the musical performance with multiple standout songs, and describe the sound as great; weighting show quality (70%) and recording quality (30%) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Great clarity and balance noted by reviewers; captures crowd reactions clearly, no reported drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "The Other One",
+      "Stella Blue",
+      "They Love Each Other"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the show as tightly in sync, with a powerful first set opener and an especially magical second‑set sequence centered around Scarlet>Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Interplay highlighted on 'They Love Each Other' with Bruce Hornsby and Vince; crowd reacts to his vocal verses.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick (and guest Bruce Hornsby) receive praise for their contributions, especially during the jam sections.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:47:08.897729+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-19.fob.brennecke-young.GEMS.95645.flac16"
+}

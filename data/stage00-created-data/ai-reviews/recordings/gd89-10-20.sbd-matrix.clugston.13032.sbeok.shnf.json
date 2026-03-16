@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑to‑great matrix recording of a high‑energy 10/20/84 show, highlighted by an incendiary Memphis Blues and an emotional California Earthquake.",
+  "review": "The performance is widely praised – fans call it nearly flawless, with Bob Weir exploding on Memphis Blues and Jerry delivering a tear‑filled vocal on the surprise cover California Earthquake. The source is a matrix mix; most listeners find it clear enough to enjoy, though a few note hiss and bobble artifacts that keep it from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Strong, unanimous praise for the show (70% weight) combined with generally good but not flawless recording quality (30% weight) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the sound as solid and enjoyable; one notes great clarity, while another complains of noticeable hiss and bobbles. Overall the mix is usable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Memphis Blues",
+      "California Earthquake"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the concert as an emotional, high‑energy experience with a strong vibe throughout; no specific pacing issues were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal on California Earthquake is described as deeply emotional and moving.",
+    "Phil": "",
+    "Bob": "Bob Weir (Bobby) 'goes nuts' during Memphis Blues, delivering an explosive performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "California Earthquake": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:03:56.946813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-20.sbd-matrix.clugston.13032.sbeok.shnf"
+}

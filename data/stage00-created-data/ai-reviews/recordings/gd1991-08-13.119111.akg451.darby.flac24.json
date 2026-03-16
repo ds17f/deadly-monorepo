@@ -1,0 +1,67 @@
+{
+  "summary": "Muddy but improving recording captures a stellar first set and a mixed second set with strong Drums/Space",
+  "review": "The review notes a generally muddy sound that gets clearer the farther you are from the speakers, with the piano cutting through nicely. Musically the first set is praised as a five‑star performance while the second set falters until the Drums/Space and Black Peter/Sugar Magnolia rescue it.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a strong positive impression of the first set but notes recording muddiness and a weaker second half, leading to an overall good‑to‑great rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Very muddy sound overall; piano stands out. Audio improves when listening farther from speakers but still suffers from buried guitars and occasional piercing tones."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Black Peter",
+      "Sugar Magnolia",
+      "Drums/Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and energetic, earning a five‑star rating; second set starts sluggishly, with the early songs weak, but Drums/Space and Black Peter/Sugar Magnolia lift the latter half."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is inconsistent – at times buried in mud, later piercing on Watchtower, but he recovers before the crescendo of Let It Grow.",
+    "Phil": "Lesh is highlighted as playing particularly well throughout the show.",
+    "Bob": "Weir is noted for strong playing during the first set.",
+    "Keys": "Piano (keyboard) stands out clearly despite overall muddiness.",
+    "Drums": "The Drums/Space segment is described as the highlight of the second set."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:01:48.426526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-13.119111.akg451.darby.flac24"
+}

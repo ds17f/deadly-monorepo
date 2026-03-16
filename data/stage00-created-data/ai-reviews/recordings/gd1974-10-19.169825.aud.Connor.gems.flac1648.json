@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience recording captures a fantastic, surprise‑filled show.",
+  "review": "The reviewer raves about stumbling upon this gem on a cold, rainy night, calling the audio “great AUD” and praising the performance as fantastic. The audience source delivers clear, enjoyable sound that lets listeners soak in the concert’s vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review highlights both an excellent audience recording and a fantastic show, leading to a high rating but limited data for confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer notes the AUD is great—clear enough to be enjoyable despite being an audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T01:43:33.427885+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-19.169825.aud.Connor.gems.flac1648"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal‑clear audience recording captures a scorching Scarlet → Dancin' transition, soaring drums and standout Sugaree.",
+  "review": "The audience tape is praised for its crisp, clear mix that many say outshines the contemporary soundboard sources. Musically the show shines in the second set with an electrifying Scarlet → Dancin' segue, a marathon drum excursion, and strong renditions of Sugaree and Lazy > Supplication, though a few listeners note the 18‑minute drum stretch runs long.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ~4.3) and uniformly positive comments about both the performance and the audience recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crisp, clear, wonderful mix; several reviewers say it’s better than the contemporaneous soundboard tapes. No major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Dancin'",
+      "Drums",
+      "Sugaree",
+      "Lazy > Supplication",
+      "Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A unique second‑set set‑list highlighted by the Scarlet → Dancin' transition and an extended drum jam; overall flow is praised, though the length of the drum segment (≈18 min) is mentioned as a possible overstay."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for riding the long drum/keyboard excursion with extra energy alongside Keith.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's playing highlighted during the extended jam, described as “extra, extra high.”",
+    "Drums": "The 18‑minute drum solo is praised as breathtaking and a highlight, with a special “werewolf howl” moment at 2:09."
+  },
+  "song_mentions": {
+    "Scarlet > Dancin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Drums": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:20:56.068926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-18.shure.vernon.12383.sbeok.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Rough audience recording that captures a free outdoor show with strong jams on Good Lovin', Lovelight, Hard To Handle and China/Rider",
+  "review": "The tape is an audience (crowd) recording of uneven quality – often muddy and noisy, though occasional moments like the Lovelight segment come through clearly. Musically the concert is remembered for its high‑energy jamming, standout performances of Good Lovin', Lovelight, Hard To Handle and a powerful China/Rider sequence, set against a historic free‑concert atmosphere.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show is praised for several standout jams and historic context (≈3.8/5), but the recording quality is widely criticized as poor to fair (≈2.0/5); weighted average yields about a 3.3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Very rough crowd tape with heavy din and muffled band mix; occasional clarity on Lovelight, but overall muddy and far from soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Lovelight",
+      "Hard To Handle",
+      "China/Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Free outdoor concert on a hillside after the Harper show, opening acoustic set by Garcia & Weir, followed by NRPS, then the Dead; political announcements about Nixon's Cambodia bombing and campus protests give the show historic flavor."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard To Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China/Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T18:51:03.192406+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-05-03.aud.cotsman.9378.sbeok.shnf"
+}

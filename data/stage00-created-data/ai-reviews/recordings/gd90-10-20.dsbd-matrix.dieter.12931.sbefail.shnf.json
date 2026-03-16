@@ -1,0 +1,79 @@
+{
+  "summary": "A crystal‑clear matrix recording captures a Berlin show that dazzles with a soaring Dark Star, fiery Half‑Step, and a magical Hornsby jam into Box of Rain.",
+  "review": "The DSBD‑matrix tape delivers full‑bodied, crisp sound that lets listeners hear every nuance – from the punchy drums to Vince Hornsby's piano brilliance. Musically the concert shines on Dark Star, Mississippi Half‑Step and a spectacular Let It Grow → Box of Rain sequence, though a few Jerry vocal flubs dent an otherwise stellar performance. Overall the show is celebrated as one of the high points of the ’90 European tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 reviews, average rating ~4.1, with consistent praise for both performance and recording quality; only minor criticisms about vocals."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Digital DSBD matrix mix described as full, crisp, and clear; audience ambience adds excitement but does not detract from the sound. No significant drop‑outs or noise reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Mississippi Half-Step",
+      "Eyes",
+      "Let It Grow → Box of Rain"
+    ],
+    "poor_songs": [
+      "Let It Grow (vocal flubs)"
+    ],
+    "setlist_flow": "First set praised for tight song selection and strong openers (Jack Straw, Half‑Step). Second set flows beautifully with Eyes into Samson and a monster Dark Star; the Let It Grow → Box of Rain jam is highlighted as a seamless, inspired transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Early in the show his voice was strong and his Walkin' Blues solo tight, but later vocal flubs on Let It Grow drew some criticism.",
+    "Phil": "Mentioned positively alongside Bruce for excellent playing on several reviews.",
+    "Bob": "Generally quiet; one reviewer noted he 'laid out' during the Hornsby jam while others did not comment.",
+    "Keys": "Vince Hornsby's piano work is a major highlight, described as magical and a key element of the show’s energy.",
+    "Drums": "Praised for spectacular power, especially Bill Kreutzmann's snare snap; drum sections on Dark Star cited as among the best of the era."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 14,
+      "negative_mentions": 0,
+      "total_mentions": 14
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow → Box of Rain": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Box of Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:52:49.031488+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-20.dsbd-matrix.dieter.12931.sbefail.shnf"
+}

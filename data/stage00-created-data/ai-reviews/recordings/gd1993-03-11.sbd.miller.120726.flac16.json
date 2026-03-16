@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard capture is marred by Rosemont's concrete acoustic nightmare, yet the concert dazzles with new‑song gems and a memorable Ken Nordine‑enhanced Space.",
+  "review": "The performance on this night is widely praised for its ambitious set, featuring fresh material like So Many Roads, Wave to the Wind and the haunting masterpiece Days Between, plus standout moments such as The Island and the Help>Slip>Franklin's sequence. While the band’s playing—especially Jerry Garcia’s phenomenal contributions—is celebrated, reviewers note that the venue’s concrete structure turns the soundboard recording into a rather muddy listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (new songs, strong jams, guest appearance), earning a high show score; however, one detailed comment describes the recording as an 'audio nightmare', pulling the overall rating down to just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Rosemont venue's concrete construction creates a muddy, echo‑filled sound; reviewers describe it as an 'audio nightmare' despite being a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Island",
+      "So Many Roads",
+      "Wave to the Wind",
+      "Days Between",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Truckin' > Spoonful > He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An ambitious blend of new material and classics with strong segues (help>slip>franklins, truckin>spoonful>he’s gone) and a memorable Ken Nordine recitation, giving the third night a distinctive aura despite earlier tour fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's playing is described as phenomenal; his two new songs are highlighted as haunting masterpieces.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Island": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin' > Spoonful > He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:11:03.887525+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-11.sbd.miller.120726.flac16"
+}

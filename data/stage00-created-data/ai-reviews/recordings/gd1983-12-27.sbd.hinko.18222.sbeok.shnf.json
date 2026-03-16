@@ -1,0 +1,76 @@
+{
+  "summary": "Fair soundboard recording plagued by speed/pitch issues, but the second set’s Scarlet Begonias → Fire on the Mountain jam shines.",
+  "review": "The SBD source runs fast and needs pitch correction, with several mic and mix problems that make the first set feel uneven. The highlight is a monster 29‑minute Scarlet Begonias into Fire on the Mountain sequence that puts this show in the same tier as classic ’83 performances. Overall the recording is listenable for fans of the jam, but technical flaws keep it from being great.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a moderate 2½‑star overall assessment; strong second‑set performance raises the rating, while recording and first‑set issues keep it around a low‑mid score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "SBD source runs too fast (needs –1.5% pitch correction), kick‑drum mic scrubs the opener, Jerry’s mic is manually switched, and several mix failures cause muddiness in early songs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Cold Rain & Snow",
+      "Althea",
+      "West L.A. Fadeaway",
+      "Hellin'",
+      "Might as Well"
+    ],
+    "setlist_flow": "First set is uneven and hampered by technical glitches, but the second set builds momentum and delivers a classic ’83 jam marathon that carries through to drums and space."
+  },
+  "band_member_comments": {
+    "Jerry": "His mic problems are noted, yet his guitar work on Fire on the Mountain is described as “just wow” with a Spanish‑flavored improvisation later in the set.",
+    "Phil": "",
+    "Bob": "In Space he launches a ‘Mind Left Body’ riff and teases that inspire Jerry’s playing; his contributions are highlighted as part of the jam flow.",
+    "Keys": "",
+    "Drums": "Energy from the second set carries into Drums, but no specific commentary on performance quality."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hellin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Might as Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:11:26.294467+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-27.sbd.hinko.18222.sbeok.shnf"
+}

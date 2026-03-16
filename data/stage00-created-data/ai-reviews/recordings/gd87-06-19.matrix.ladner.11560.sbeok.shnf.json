@@ -1,0 +1,64 @@
+{
+  "summary": "Matrix recording with a solid, clear mix (Phil front‑center) captures a strong show highlighted by Brown Eyed Women, Desperation Row and an exceptional Stella Blue, though Push Comes to Shove falls flat.",
+  "review": "Both reviewers praise the sound quality, noting a crisp matrix mix that places Phil up front and gives Jerry's tone its usual sweetness while Brent shines on keys. The performance is remembered fondly, especially the first‑set Brown Eyed Women and Desperation Row and the second‑set Terrapin Station into an outstanding Stella Blue, with Push Comes to Shove cited as a weaker moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Two detailed 4‑star reviews emphasize good musical performance and solid recording quality, leading to an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Mix described as solid and excellent; Phil is prominently in the front‑mix, Jerry's tone sweet, Brent hot on keys. One reviewer notes it could use some sound improvements, but overall clarity is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown Eyed Women",
+      "Desperation Row",
+      "Terrapin Station",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Push Comes to Shove"
+    ],
+    "setlist_flow": "First set praised for a strong Brown Eyed Women and Desperation Row; second set considered alright with the Terrapin Station → Stella Blue sequence highlighted as the 'gravy on the biscuit.' Overall flow is viewed positively despite minor setbacks."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as sweet as always.",
+    "Phil": "Up front in the mix and sounds great.",
+    "Bob": "Bobby (Weir) gave a dramatic, rock‑star performance on Desperation Row.",
+    "Keys": "Brent is hot on keyboards; no other keyboardist mentioned.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desperation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:59:10.364217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-19.matrix.ladner.11560.sbeok.shnf"
+}

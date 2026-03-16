@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy early set with scorching Truckin' and Sugar Magnolia",
+  "blurb": "The show bursts with high‑octane energy, delivering standout performances of Truckin', Sugar Magnolia and Good Lovin'. Jerry’s guitar wails, Pigpen’s playful rap in Lovelight and the tight rhythm section keep the band on fire throughout. The recording captures every nuance with crystal‑clear soundboard fidelity.",
+  "review": "On October 30, 1970 at Pritchard Gym, the Grateful Dead turned an early‑show slot into a fireworks display of pure 1970‑era vigor. From the opening Cold Rain And Snow they launched straight into a scorching Truckin' that showcases Bob’s lead vocal power and Jerry’s “delicious” Wah‑Wah guitar tone on Sugar Magnolia. The band rides a wave of momentum through Good Lovin', a tight Drums segment, and a rousing Cumberland Blues – a rare inclusion that fans adore. Pigpen slips in his trademark Lovelight rap, adding a quirky charm to an otherwise straight‑ahead set, while the rhythm duo of Mickey and Bill keep the groove loose yet propulsive, especially during the Good Lovin'/Drums transition. The soundboard capture (gd1970-10-30.121126.sbd.deluca.digitalrbb.miller.flac16) is superbly clean, preserving every vocal nuance and instrumental sparkle, making this performance a must‑listen for anyone wanting to feel the band “on fire” in their early‑’70 stride.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four recordings describe the show as high‑energy, with multiple positive highlights (Truckin', Sugar Magnolia, Good Lovin', Cumberland Blues) and praise for band tightness; only one mixed review notes audio drops and a single negative comment about an incorrect setlist, which does not reflect performance quality. The consensus is strongly positive, warranting a +1.6 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-10-30.121126.sbd.deluca.digitalrbb.miller.flac16",
+    "reason": "Excellent soundboard source with clean digital transfer; captures the band’s high‑energy performance and vocal banter without dropouts."
+  },
+  "key_highlights": [
+    "High‑octane early set featuring Truckin' and Sugar Magnolia.",
+    "Pigpen’s playful Lovelight rap adds quirky charm.",
+    "Cumberland Blues appears as a rare, energetic inclusion.",
+    "Tight Good Lovin'/Drums segment drives the groove."
+  ],
+  "song_highlights": [
+    "Truckin'",
+    "Sugar Magnolia",
+    "Good Lovin'",
+    "Cumberland Blues",
+    "Casey Jones",
+    "Next Time You See Me"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar tone is described as delicious, with Wah‑Wah on Sugar Magnolia and solid backing vocals that shine throughout.",
+    "Phil": "Lesh provides tight bass foundations and harmonic support, praised in the “Pig & Phil” moments for keeping the outfit together.",
+    "Bob": "Weir delivers strong lead vocals on Truckin' and Sugar Magnolia, described as ‘excited’ early then calming later, anchoring the set’s vocal energy.",
+    "Brent": "",
+    "Mickey": "The dual‑drummer attack is prominent, with looseness straight into Good Lovin' and a powerful presence in the mix.",
+    "Billy": "Kreutzmann’s drumming drives the high‑energy flow, especially during the extended jams and the Good Lovin'/Drums transition."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-20T00:09:02.111321+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'"
+    ],
+    [
+      "Sugar Magnolia"
+    ],
+    [
+      "Me And My Uncle",
+      "Good Lovin'",
+      "Drums",
+      "Cumberland Blues",
+      "Good Lovin'"
+    ],
+    [
+      "Casey Jones"
+    ],
+    [
+      "Next Time You See Me"
+    ]
+  ]
+}

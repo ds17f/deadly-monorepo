@@ -1,0 +1,57 @@
+{
+  "summary": "High‑energy 1994 Spectrum show with stellar Jerry Garcia solos and solid setlists, though the recording source isn’t specified.",
+  "review": "Fans rave about this October 1994 Spectrum performance, calling it a \"banger\" with standout moments like Jerry’s extended Drums>Space trek and a powerful second Jack Straw solo. The first set is praised for tight renditions of Queen Jane and Little Red Rooster, while the second set is described as even stronger than most early‑90s shows. No specific comments on audio fidelity were provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Three detailed 4‑5 star reviews highlight an exceptional performance; recording quality is not mentioned, so rating reflects strong show quality with assumed adequate audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not discuss soundboard vs. audience or clarity; no technical issues were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Drums>Space",
+      "Queen Jane",
+      "Little Red Rooster"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid with well‑executed classics; second set praised as exceptional, highlighted by Jerry’s extended improvisations and a rare on‑stage Drums>Space run."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his engagement, taking the band on a \"serious ride\", staying on stage through most of Drums>Space, and delivering a powerful second Jack Straw solo.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:33:19.325523+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-05.151083.dsbd.miller.flac1644"
+}

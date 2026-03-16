@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of an intense Spring‑‘87 show highlighted by a spectacular first set featuring Desolation Row, Birdsong and Row Jimmy.",
+  "review": "Fans rave about the crystal‑clear Charlie Miller soundboard tape, calling it an “excellent capture” with a great crowd mix. The performance is described as one of the best of the spring ’87 tour, with a standout first set – Desolation Row, Birdsong, Row Jimmy and a killer China > Rider sequence – and Jerry Garcia’s playing praised as his strongest since the early‑80s.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviews are strongly positive (average 4.5 stars), praising both musical performance and recording quality; the consensus is consistent with no major criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note an excellent capture, crisp mix, and pleasant crowd blend; no technical complaints are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Birdsong",
+      "Row Jimmy",
+      "The Midnight Hour > Cryptic Suite",
+      "China > Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy, intense show with a spectacular first set that builds into a powerful second half; reviewers describe the night as “intense” and “one of the best of spring ’87.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised – back in form and better than early‑80s performances.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Midnight Hour > Cryptic Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:45:42.407324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-26.138166.sbd.miller.sbeok.flac16"
+}

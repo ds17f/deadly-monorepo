@@ -1,0 +1,57 @@
+{
+  "summary": "Good matrix recording captures a fine‑form show with standout Help/Slipknot!/Franklin’s, Blow Away and a smoking The Other One jam.",
+  "review": "The concert is praised for its high energy first set, great song choices and tight playing—especially Phil Lesh and Brent Mydland. Highlights include the rare pre‑Hampton Help > Slipknot! > Franklin's Tower sequence, a killer Blow Away, and an incendiary The Other One jam that rolls out of He's Gone. The UltraMatrix source sounds clean enough to let the performance shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "One detailed 5‑star review lauds both musical performance and recording quality; weighting favors the strong show with a presumed good matrix mix."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints; reviewers imply the UltraMatrix capture is clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Blow Away",
+      "The Other One",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for energy and song selection; second set flows smoothly through a solid He's Gone into I Will Take You Home, then launches into a smoking The Other One jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil Lesh is noted as being in fine form and contributing to the overall strength of the show.",
+    "Bob": "",
+    "Keys": "Brent Mydland's keyboards are highlighted, especially his role in lifting Franklin’s and shaping the overall vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:57:58.509227+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-08.140265.UltraMatrix.sbd.cm.miller.flac1644"
+}

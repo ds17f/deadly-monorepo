@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording with decent ambience but a cut‑off encore and mislabeled date",
+  "review": "The tape captures the audience sound fairly well, giving a pleasant live feel, yet the recording is marred by a sharp cutoff of \"Brokedown Palace\" in the encore and confusion over the concert date. Reviewers note that the show is actually from 12/27/1979 (or possibly 12/30/79) and criticize the mislabeling and incomplete track.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.8,
+    "confidence": "medium",
+    "rationale": "Both reviewers are dissatisfied with labeling errors and a missing portion of the encore, resulting in low overall satisfaction despite acceptable audience ambience"
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Generally decent crowd ambience but the encore (Brokedown Palace) is cut off sharply; mislabeling adds confusion"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Brokedown Palace"
+    ],
+    "setlist_flow": "Date discrepancy and missing ending of the encore disrupts the perceived flow of the concert"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:48:50.434440+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-27.167335.nak700.smith.miller.clugston.flac1648"
+}

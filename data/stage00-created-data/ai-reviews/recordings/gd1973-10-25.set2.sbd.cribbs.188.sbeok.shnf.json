@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard recording (good overall) with a minor glitch in Let It Grow, highlighted by an outstanding Dark Star that ranks among the tour’s best.",
+  "review": "The set is praised for its powerful, flowing Dark Star – several reviewers call it one of the top performances of the ’70s. The soundboard source delivers clear audio, though one listener notes a strange cut in Let It Grow that adds a spooky moment to the tape. Overall the show is considered solid and worth listening to.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong consensus on Dark Star’s excellence (70% weight) plus generally good soundboard quality with only a minor recording glitch (30% weight) yields an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and balanced overall; a noticeable splice/cut in Let It Grow creates a brief, spooky artifact but does not detract significantly from the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is anchored by a stellar Dark Star; aside from a minor recording hiccup, the performance flows smoothly and maintains strong energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:36:43.524832+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-25.set2.sbd.cribbs.188.sbeok.shnf"
+}

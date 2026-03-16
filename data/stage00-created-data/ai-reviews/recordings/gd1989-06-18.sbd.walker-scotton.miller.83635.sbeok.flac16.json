@@ -1,0 +1,77 @@
+{
+  "summary": "High‑energy ’89 show with crisp, well‑balanced soundboard recording and standout transitions like Foolish Heart → Jack Straw and Pocky Way → Iko Iko",
+  "review": "The performance is packed with smooth segues, a scorching Pocky Way jam, and a high‑octane He’s Gone that many fans cite as a highlight, while some moments (Samson, Saint Stephen) feel a bit sloppy. The soundboard source is surprisingly clear—almost audience‑like—with good balance but a slight thinness in Phil’s bass. Overall the show is regarded as one of ’89’s best despite a few uneven spots.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating is 4.0, reviews overwhelmingly praise the musical flow and recording clarity while noting occasional performance hiccups and a thin bass response."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and well‑balanced sound with subtle audience ambience; some reviewers note the bass is a little thin but overall the mix is clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart > Jack Straw",
+      "Pocky Way > Iko Iko",
+      "He's Gone",
+      "Wheel intro",
+      "Cumberland"
+    ],
+    "poor_songs": [
+      "Samson",
+      "Saint Stephen",
+      "He's Gone (some feel it fell flat)"
+    ],
+    "setlist_flow": "The set flows with many smooth transitions and high‑energy jams, though a few songs start out unevenly before the band locks back into its groove."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead on Pocky Way is described as “killer” and heavy‑fanning, leaning in hard during solos.",
+    "Phil": "Bass noted as a bit thin by one reviewer.",
+    "Bob": "",
+    "Keys": "Brent’s B3 work gets high praise (some of the best solo heard) but his lyric delivery on Pocky Way is called ‘biffed’ and occasionally sloppy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart > Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pocky Way > Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wheel intro": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:39:24.933598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-06-18.sbd.walker-scotton.miller.83635.sbeok.flac16"
+}

@@ -1,0 +1,118 @@
+{
+  "summary": "Fair‑quality soundboard with hiss and pitch issues, but the show shines with stellar versions of Sugaree, Peggy‑O and a soaring Stella Blue.",
+  "review": "The performance is widely praised – long, fireworks‑like Sugaree, an extended, emotive Stella Blue, and tight renditions of Peggy‑O, Jack Straw and The Other One make this night a standout.  The soundboard source, however, suffers from background hiss, muddy mids, speed/pitch wobble and occasional drop‑outs that keep the recording at best fair.  Overall the music outweighs the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently highlight strong musical moments (high show rating) while repeatedly noting sub‑par soundboard quality (lower recording rating); the weighted average yields a solid 4‑star recommendation."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Background hiss and mud dominate; pitch/frequency issues cause sections to run fast/slow; occasional vocal drops and a ~30 s drum cut; limited high‑frequency response (no >8 kHz) makes cymbals thin.  Some reviewers suggest a matrix could improve the listen."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Peggy-O",
+      "Stella Blue",
+      "Jack Straw",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A powerful opener with a 14‑minute Sugaree sets an energetic tone, the first set flows through solid mid‑tempo numbers, and the second set delivers a memorable sequence (Truckin' → The Other One → Stella Blue) that keeps heads elated despite ragged edges."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly praised – gentle weeping on Stella Blue, extended solo on Peggy‑O and spirited licks on Truckin'.",
+    "Phil": "Noted for a tight lock‑step with Bob during The Other One, helping stir the tempest of that jam.",
+    "Bob": "His vocals and rhythm guitar are highlighted, especially on The Other One and Good Lovin', contributing to the upbeat second‑set mood.",
+    "Keys": "",
+    "Drums": "A brief 30‑second cut is mentioned; otherwise Bill's drumming holds the groove, though balance issues affect the mix."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:56:47.103855+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-11.sbd.miller.fix-102430.102446.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording captures a stellar second‑set blues jam with Boz Scaggs and John Cippolina, highlighted by crisp guitars and standout Walkin' Blues and Death Letter Blues.",
+  "review": "Both reviewers praise the tape’s clarity – the Nakamichi mic setup delivers crystal‑clear drums, bass and guitar while still sounding good despite the venue’s acoustics. The show’s highlight is a guest‑filled second set where Boz Scaggs and John Cippolina drive powerful blues renditions of Walkin' Blues, Death Letter Blues, Lovelight and J.B. Goode, with Jerry Garcia delivering two ripping solos. Overall the musical performance and recording quality make this a must‑listen snapshot of a unique 1982 benefit concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Consistently high praise for both the show (guest performances, standout blues jams) and the recording (crisp, excellent sound), leading to a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear leads and drums thanks to Nakamichi mic setup; overall very good for an audience tape despite muffled acoustics of the arena."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walkin' Blues",
+      "Death Letter Blues",
+      "Lovelight",
+      "J.B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set was uneven with muted vocals, but the second set surged with a fast‑paced blues groove and seamless guest integration."
+  },
+  "band_member_comments": {
+    "Jerry": "Rips two great solos (including on NFA) and drives the blues jams; vocals were shut off in the first set.",
+    "Phil": "Provides solid bass foundation throughout, especially during Cippolina‑featured sections.",
+    "Bob": "",
+    "Keys": "Brent Mydland takes prominent Hammond B3 solos early in the second set.",
+    "Drums": "Bill Kreutzmann’s drums are clear and powerful; space in the mix lets drums and bass shine."
+  },
+  "song_mentions": {
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Letter Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "J.B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:27:38.752123+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-05-28.nak300.dgrabski.10974.sbefail.shnf"
+}

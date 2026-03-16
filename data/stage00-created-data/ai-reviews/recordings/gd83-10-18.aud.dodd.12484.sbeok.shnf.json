@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent audience‑sourced recording captures a high‑energy 1983 Maine show, highlighted by blistering Jack Straw, Lazy Lightning → Supplication and standout keyboard work.",
+  "review": "The performance is consistently praised for its tight playing, soaring first set and powerful jams like Lazy Lightning into Supplication, with Jack Straw repeatedly called the best ever heard.  The audience recording is described as clear and lively despite crowd noise, making it a must‑listen for fans of this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.6/5; the vast majority of comments are enthusiastic about both the music and the recording, with only one modest 3‑star review that still notes good sound."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear and lively despite noticeable crowd noise; many reviewers call it a great‑sounding audience tape with crisp instrument detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "TLEO",
+      "Lazy Lightning → Supplication",
+      "Althea",
+      "Black Peter",
+      "China Cat Sunflower > I Know You Rider",
+      "Dupree's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about a high‑energy first set that tells the story of the night, with momentum briefly dipping mid‑set before soaring again on Lazy Lightning → Supplication; the second set is solid but generally seen as secondary to the explosive opening half."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for crisp, tight guitar work—especially on Jack Straw and throughout the first set.",
+    "Phil": "Bass noted as thumping and driving the Supplication jam; overall strong support.",
+    "Bob": "Highlighted for a scorching slide‑guitar solo on Dupree's and energetic vocal contributions.",
+    "Keys": "Brent Mydland’s keyboards described as friendly, bouncy, and real‑sounding; one reviewer preferred piano over synth on China > Rider.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "TLEO": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lazy Lightning → Supplication": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T13:06:11.433961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-18.aud.dodd.12484.sbeok.shnf"
+}

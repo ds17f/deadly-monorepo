@@ -1,0 +1,46 @@
+{
+  "summary": "Clear soundboard recording captures a listless MSG show, with a standout Picasso Moon performance despite generally muted energy.",
+  "review": "The SBD source provides very clear audio that most reviewers praise as great or very good. Musically the night is seen as uneven – Jerry Garcia’s playing is described both as uninspired and half‑assed on Black Peter, yet his guitar work improves later, and Picasso Moon shines as the highlight of an otherwise listless first set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (high score), while show performance receives mixed feedback with several negative comments about energy and Jerry’s focus, yielding a mid‑range overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced soundboard capture; reviewers repeatedly note the sound is great or very good with no major issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Picasso Moon"
+    ],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": "Setlist feels muted and uninspired overall, though a few moments (e.g., Picasso Moon) stand out; energy dips especially in the first set."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as uninspired and half‑assed on Black Peter by some reviewers, yet others note his guitar work recovers later and is strong.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Picasso Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T01:12:41.367246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-17.sbd.unknown.12847.sbeok.shnf"
+}

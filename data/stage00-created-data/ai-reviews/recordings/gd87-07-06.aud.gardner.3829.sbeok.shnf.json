@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1987 Pittsburgh show featuring a scorching Shakedown Street, Knockin' on Heaven's Door and the Neville Brothers’ Iko‑Iko jam.",
+  "review": "The recording is a crisp third‑generation soundboard tape that preserves the raw excitement of this late‑summer ’87 Pittsburgh gig.  Fans rave about the blistering second set – Shakedown Street, Knockin' on Heaven's Door and the Nevilles’ Iko‑Iko/Day‑O jam are highlighted as unforgettable moments – while Jerry’s playing is described as “jumping”, “in fine form” and even delivering a rare skat vocal.  Minor tape wear is noted, but it does not detract from an overall electrifying performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "25 reviews with an average of 4.84 stars; overwhelmingly positive language about both the music and the soundboard quality, only a single mildly critical comment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Third‑generation soundboard source (DAT); crisp, clear mix with occasional tape wear but no major dropouts. Reviewers repeatedly call the sound \"great\" and \"amazing quality.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Knockin' on Heaven's Door",
+      "Shakedown Street",
+      "Iko-Iko",
+      "Day-O",
+      "Stranger",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Desolation Row"
+    ],
+    "setlist_flow": "Second set is repeatedly praised for its nonstop high energy, especially the Nevilles’ guest spot and the Shakedown Street/Knockin' on Heaven's Door climax. The first set is described as solid but less highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "Energetic jumping, fine guitar tone, rare skat singing, overall in great form throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Solid, intense drumming noted on tracks like Johnny B. Goode and Day‑O."
+  },
+  "song_mentions": {
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Shakedown Street": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Iko-Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Day-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T00:14:19.633647+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-07-06.aud.gardner.3829.sbeok.shnf"
+}

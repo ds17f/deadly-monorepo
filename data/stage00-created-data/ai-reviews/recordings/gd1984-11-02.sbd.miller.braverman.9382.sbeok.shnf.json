@@ -1,0 +1,141 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy ’84 show with standout Lost Sailor→Saint and Help→Slipknot!→Franklin’s jams despite some uneven moments.",
+  "review": "The recording is a clean, well‑mixed soundboard tape that showcases Brent’s lush keyboards and Phil’s prominent bass lines. Musically the concert delivers several high points – the Lost Sailor → Saint transition, the Help‑Slipknot!‑Franklin’s sequence and a fiery Wharf Rat – though songs like El Paso suffer from noticeable miscues. Overall it’s an engaging snapshot of late‑’84 Dead with both strong highlights and occasional rough edges.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the soundboard quality and several standout jams, while a few note sloppy moments and vocal flubs; weighting show (70%) and recording (30%) yields an overall rating around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix with Brent’s choral keyboard effects and Phil prominent in the blend; a slight delay/matrix‑like artifact noted by one reviewer but overall very clean. Minor vocal flubs are present but do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor → Saint",
+      "Help → Slipknot! → Franklin’s Tower",
+      "Wharf Rat",
+      "Gimme Some Lovin'",
+      "Casey Jones",
+      "Smokestack Lightning → Spoonful"
+    ],
+    "poor_songs": [
+      "El Paso"
+    ],
+    "setlist_flow": "First set builds momentum with a driving Jack Straw and strong Pegg O, but stumbles on El Paso; the second set lifts off with intense jamming, especially the Help‑Slipknot!‑Franklin’s stretch, leading into an uplifting Lost Sailor→Saint transition and a high‑energy finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Majestic solo work praised, though his vocal performance is described as one of his worst; still delivers passionate leads on Wharf Rat and Casey Jones.",
+    "Phil": "Very prominent in the mix with ascending/descending bass lines during Saint; possible (though unconfirmed) vocal contribution on Gimme Some Lovin'.",
+    "Bob": "Miscues on El Paso and a forceful vocal on Smokestack Lightning noted as less than ideal.",
+    "Keys": "Brent’s choral keyboard textures add emotional depth throughout, especially on Lost Sailor and the second‑set jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spoonful": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin’s Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:58:37.828506+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-11-02.sbd.miller.braverman.9382.sbeok.shnf"
+}

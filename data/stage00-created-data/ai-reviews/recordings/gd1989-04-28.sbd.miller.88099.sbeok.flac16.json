@@ -1,0 +1,74 @@
+{
+  "summary": "Top‑notch Miller soundboard capture of a late‑'80s set featuring a chilling Cold Rain & Snow opener, soaring Crazy Fingers, and a favorite Standing on the Moon.",
+  "review": "The recording is a clean, high‑fidelity soundboard cut thanks to Charlie Miller’s meticulous work, delivering crystal‑clear instrument separation. Musically the show shines with an icy Cold Rain & Snow opener, a rare Crazy Fingers second‑set kickoff, a heartfelt rendition of Standing on the Moon and a lively Sugar Magnolia, though Bob Weir’s performance on Picasso Moon draws mixed reactions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance and Miller's soundboard quality; a few note Bob Weir’s weaker moments, yielding an overall strong but not flawless impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the sound \"top‑notch\", \"crisp\" and praise Miller's clean capture; no significant dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow",
+      "Crazy Fingers",
+      "Standing on the Moon",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "The first set opens strong with Cold Rain & Snow and a quirky Little Light, while the second set kicks off unusually with Crazy Fingers and builds to a soaring Standing on the Moon before closing with a upbeat Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for fabulous vocals and solid guitar work throughout the show.",
+    "Phil": "",
+    "Bob": "Several reviewers criticize his performance, calling him \"poor\" and noting a screeching tone on Picasso Moon.",
+    "Keys": "Brent Mydland’s harmonies on Touch and Mighty Quinn are highlighted as superb; piano/organ work described as solid overall.",
+    "Drums": "Pre‑drum jams noted as fantastic, no specific complaints about the rhythm section."
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-16T19:01:46.311181+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-28.sbd.miller.88099.sbeok.flac16"
+}

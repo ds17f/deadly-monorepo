@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording with decent clarity despite a slightly sterile mix, capturing a vibrant 1981 show highlighted by a soaring Franklin’s Tower and strong second‑set jams.",
+  "review": "The performance is generally praised for its energy – the first set warms up the crowd while the second set delivers an hour‑long Franklin’s Tower jam, memorable Rhythm Devils work and standout moments like Feels Like A Stranger and Morning Dew. The Charlie Miller soundboard mix sounds a bit digital and lacking audience ambience, but remains clear enough for most listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Eight detailed reviews show a strong consensus of musical enjoyment with only mixed comments on the mix; overall rating averages to about 4‑star quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is described as slightly sterile, early‑digital sounding with limited reverb and audience vibe; vocal‑heavy second set and occasional weirdness noted, but overall clear and lively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Feels Like A Stranger",
+      "Morning Dew",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set provides a warm‑up, second set becomes a mind‑bending journey anchored by an extended Franklin’s Tower jam and a powerful Rhythm Devils segment; overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "General praise for the band's playing and the ‘speed goes crazy’ moments, implying strong Garcia guitar work.",
+    "Phil": "",
+    "Bob": "Mention of “Bobby's Rooster” as a highlight, suggesting an energetic Weir contribution.",
+    "Keys": "",
+    "Drums": "Mickey Hart’s bodhran‑driven Rhythm Devils section is singled out as awesome and menacing."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feels Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T15:16:32.234242+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-03.sbd.miller.103480.flac16"
+}

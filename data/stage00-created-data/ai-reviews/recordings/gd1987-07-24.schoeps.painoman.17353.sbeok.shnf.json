@@ -1,0 +1,31 @@
+{
+  "summary": "Very poor recording quality; reviewers say this source sounds worse than alternatives and offers little musical value.",
+  "review": "Both reviewers gave the release a single star, criticizing the audio as inferior to other available sources and describing it as (even) worse. No comments on the performance itself are provided, so the show cannot be judged beyond the sub‑par sound quality.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "medium",
+    "rationale": "Two consistent 1‑star reviews focus solely on bad audio; no positive musical remarks to lift the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers state this source sounds worse than other recordings, implying muffled or low‑fidelity sound with overall unsatisfactory audio quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T01:18:40.235393+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-24.schoeps.painoman.17353.sbeok.shnf"
+}

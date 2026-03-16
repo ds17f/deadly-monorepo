@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience tape capturing an energetic 1980 Vernon show highlighted by a rare New Orleans Truckin’, Fire on the Mountain and a soaring Wharf Rat.",
+  "review": "The set delivers high‑energy playing with standout moments like the exclusive New Orleans version of \"Truckin'\", a fiery rendition of \"Fire on the Mountain\" and an anticipatory build into \"Wharf Rat\". The audience recording is generally clear and praised as one of the top‑20 tape captures, though some listeners are distracted by constant taper chatter.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rave about the show’s energy and rare performances while noting the recording is solid overall despite occasional taper talk, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced audience tape; praised as a top‑20 recording but marred for some by continuous taper talking throughout the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin’ (New Orleans version)",
+      "Fire on the Mountain",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The performance is described as smooth and highly energetic, with a memorable second set featuring the rare Truckin' moment and strong acoustic portions earlier in the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin’ (New Orleans version)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:59:13.710500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-19.set2-3-aud.vernon.13469.sbeok.shnf"
+}

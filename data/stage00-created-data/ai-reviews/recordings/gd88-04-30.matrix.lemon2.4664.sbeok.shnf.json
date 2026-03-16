@@ -1,0 +1,88 @@
+{
+  "summary": "Good matrix recording captures a standout Let the Good Times Roll set and a triple encore of China Cat > Rider > Saturday Night, plus praised Shakedown, Space and Hey Pocky Way.",
+  "review": "The show is remembered for its upbeat first set – highlighted by a lively Let the Good Times Roll – and an unforgettable three‑song encore that fans still chant about.  Performances from Brent on keyboards/vocals and a soaring Space jam give the concert extra sparkle, while the matrix source provides clear, enjoyable sound despite occasional mix hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise both the musical flow and the recording quality; only a few note minor mix or instrument issues, so the overall impression is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers call the sound \"amazing\" and \"crisp\", noting clear balance between board and audience.  A few mention occasional mix problems (guitar drop‑out, early cut on Watchtower) but these do not dominate the overall perception."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let the Good Times Roll",
+      "China Cat",
+      "Rider",
+      "Saturday Night",
+      "Shakedown",
+      "Space",
+      "Hey Pocky Way",
+      "Women are Smarter"
+    ],
+    "poor_songs": [
+      "China Cat (flub on guitar)"
+    ],
+    "setlist_flow": "Creative first set that strays from the generic 1988 formula, a solid second set highlighted by Shakedown and Space, and an unexpected three‑song encore that many fans recall as a highlight despite minor sound glitches."
+  },
+  "band_member_comments": {
+    "Jerry": "Smiles through Let the Good Times Roll, vocal work praised as improved; guitar tone cranked up on Space but flubs China Cat and suffers a brief malfunction.",
+    "Phil": "Noted as missing or unheard by at least one reviewer; otherwise no specific comments.",
+    "Bob": "Guitar malfunction mentioned (early Watchtower cut); limited vocal presence noted.",
+    "Keys": "Brent receives strong praise for lead vocals on Man Smart/Women are Smarter and overall keyboard presence, described as a key factor in the show’s energy.",
+    "Drums": "Drummers' choice highlighted; drums described as \"war machine\" adding power to the set."
+  },
+  "song_mentions": {
+    "Let the Good Times Roll": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Saturday Night": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Women are Smarter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:21:33.253748+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-30.matrix.lemon2.4664.sbeok.shnf"
+}

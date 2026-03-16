@@ -1,0 +1,69 @@
+{
+  "summary": "Rough‑hand audience tape captures an electrifying 1969 show with a monster Dark Star, soaring Turn On Your Lovelight and blistering The Other One.",
+  "review": "The performance is hailed as one of the era’s most intense, highlighted by a searing Dark Star, a powerful Take on Turn On Your Lovelight and an unstoppable run through The Other One.  Recorded with a hand‑held mic, the AUD source is surprisingly listenable – clear enough to enjoy the music but punctuated by occasional crowd chatter that some listeners find distracting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance (standout Dark Star, Lovelight, The Other One) combined with generally favorable comments about the audibility of this audience recording despite its hand‑held mic limitations."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Hand‑held microphone captures a lot of crowd ambience and occasional chatter (notably during Dark Star).  Reviewers note the tape is surprisingly clear for an AUD, with some EQ tweaks improving low‑end muddiness; overall listenable but not studio‑grade."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Turn On Your Lovelight",
+      "China Cat Sunflower",
+      "The Other One",
+      "Cryptical Reprise",
+      "CE>TOO>CE"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic flow praised throughout, especially the seamless segues from China Cat into subsequent jams and the explosive transition into The Other One; reviewers describe the set as a continuous surge of ecstasy."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone described as front‑and‑center, out front and 'the mans axe sounds great'.",
+    "Phil": "Called a 'monster' and part of a solid wall of sound.",
+    "Bob": "One reviewer dismissively wrote \"Bobs who cares\", otherwise no specific praise or criticism.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical Reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CE>TOO>CE": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T13:15:51.052596+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-04-15.aud.miller.31435.sbeok.flacf"
+}

@@ -1,0 +1,99 @@
+{
+  "summary": "Muddy audience (AUD) recording of a shaky Colorado show; highlights include Vince's Way to Go Home and Bird Song, but frequent lyric flubs and poor sound quality dominate.",
+  "review": "The performance is uneven – Jerry’s guitar and vocals stumble on several numbers (Days Between, Here Comes Sunshine, Brokedown), yet moments like Vince’s Way to Go Home, a strong Bird Song and an enthusiastic Throwing Stones give the night some shine. The recording is an audience tape with low fidelity (“like it was taped in the bathroom”), limited presence for Phil and the drums, and overall poor clarity, making the good parts hard to enjoy.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.8,
+    "confidence": "high",
+    "rationale": "Nine reviews show a consistent pattern of negative comments about both performance and audio quality; only a few positive notes are outweighed by the many criticisms, leading to a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muffled, bathroom‑like sound; no soundboard source, limited presence for Phil and drums; occasional drop‑outs and low‑fidelity mix make details hard to discern."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Way to Go Home (Vince's Way to Go Home)",
+      "Bird Song",
+      "Throwing Stones",
+      "Hellina",
+      "Masterpiece"
+    ],
+    "poor_songs": [
+      "Days Between",
+      "Here Comes Sunshine",
+      "Saint of Circumstance",
+      "Loser",
+      "Brokedown"
+    ],
+    "setlist_flow": "First set starts solidly with Hellina and Masterpiece but quickly degrades due to lyric flubs (Loser, Days). The second set is a roller‑coaster: technical glitches on Here Comes Sunshine, a mixed‑quality Way to Go Home, a long, uneven Space segment, and a shaky finish with Brokedown."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequent lyric miscues and muted guitar (Days Between, Here Comes Sunshine, Brokedown) but shows flashes of good fretwork on Bird Song.",
+    "Phil": "",
+    "Bob": "Vocals slip on Throwing Stones and Days; however his humorous correction of lyrics during Throwing Stones added a memorable laugh for the audience.",
+    "Keys": "Vince’s Way to Go Home highlighted the keyboards; Bralove/space sections were noted, though overall keyboard presence was uneven in the mix.",
+    "Drums": "The drummers (Bill/Mickey) received praise for an inspiring space jam and are considered the strongest part of the rhythm section despite the poor recording."
+  },
+  "song_mentions": {
+    "Way to Go Home (Vince's Way to Go Home)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Hellina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "If the Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-19T04:09:23.538435+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-01.aud.ladner.10932.sbeok.shnf"
+}

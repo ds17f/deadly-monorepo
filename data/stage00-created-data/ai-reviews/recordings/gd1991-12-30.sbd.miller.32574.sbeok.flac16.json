@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a stellar late‑1991 set featuring a soaring Dear Prudence jam, sweet Stella Blue and tight Row Jimmy.",
+  "review": "The recording is praised as a crystal‑clear SBD that lets the band’s performance shine. Fans highlight Jerry’s lyrical flourishes, Vince’s dialed keyboards, and standout moments like the Dear Prudence jam, a beautiful Stella Blue, a solid Ramble On and a tight Row Jimmy. Overall the show is regarded as one of the best from this era, even rivaling the famed NYE shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviews are mostly enthusiastic (average non‑zero rating ~4), noting strong musical performance and excellent soundboard quality; some reviews lack detail, giving moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Fans describe the CM SBD as \"SICK\" and note no audio issues; the capture is crisp and clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Prudence",
+      "Stella Blue",
+      "Ramble On",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly, often compared favorably to NYE and 12/28 shows, with a strong second half and memorable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Lyrical, focused flourishes praised by reviewers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's playing described as dialed and fine.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Prudence": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:08:45.853712+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-12-30.sbd.miller.32574.sbeok.flac16"
+}

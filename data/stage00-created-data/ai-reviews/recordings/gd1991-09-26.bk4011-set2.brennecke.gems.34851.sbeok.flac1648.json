@@ -1,0 +1,39 @@
+{
+  "summary": "Stunning, upfront recording captures a solid show, though the guest accordion on “Broken Down Palace” draws criticism.",
+  "review": "The tape is praised for its incredible clarity and vivid imaging, placing listeners right in the venue. The performance is generally very good, but the aggressive accordion work by the guest musician on ‘Broken Down Palace’ is seen as a misstep that sticks out from an otherwise solid set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave high marks (5 and 4 stars). Recording quality is described as excellent, while the show is rated very good overall despite a specific negative comment about a guest instrument."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note incredible sounding tape, very upfront placement, brilliant imaging and an overall excellent job on the mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Broken Down Palace"
+    ],
+    "setlist_flow": "Overall very good set; the only notable issue is the guest accordion's aggressive, out‑of‑place playing on ‘Broken Down Palace’."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Down Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:12:26.805115+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-26.bk4011-set2.brennecke.gems.34851.sbeok.flac1648"
+}

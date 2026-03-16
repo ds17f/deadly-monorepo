@@ -1,0 +1,39 @@
+{
+  "summary": "Hot show with an amazing drums‑in‑space segment; recording quality not described",
+  "review": "The reviewer was thrilled by the performance, calling the concert \"HOT\" and singling out the extended drums‑in‑space section as a highlight. No details about the actual audio source or sound clarity are given, only a wish for a soundboard version to capture those drums.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 5‑star review praises the musical performance but provides no information on recording quality, limiting confidence in a precise rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not comment on sound clarity or mix; only expresses desire for an SBD to hear the drums better."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer mentions seeing Jerry at the Wharf before the show, indicating his presence but no performance detail.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Described as \"amazing\" during the Space segment; drums in space singled out as a highlight."
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:21:17.414049+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-25.aud.seff.4777.shnf"
+}

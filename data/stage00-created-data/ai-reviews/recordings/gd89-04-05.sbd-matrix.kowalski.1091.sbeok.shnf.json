@@ -1,0 +1,77 @@
+{
+  "summary": "Excellent matrix recording captures a blues‑heavy Ann Arbor show with standout Sampson→Cumberland and a memorable Terrapin→Drums, though the set feels short and low on improvisation.",
+  "review": "The sbd‑matrix source is praised for its crystal‑clear mix and clean instrument separation, making this a very listenable document of the 1989 Ann Arbor concert.  The performance leans heavily into blues numbers – US Blues, Sampson, Cumberland and China Doll – with several reviewers highlighting the surprise US Blues close and the Sampson→Cumberland transition as high points, while noting a relatively short second set and limited jamming overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently rated excellent (≈4.5‑5★) while show quality is described as decent but not spectacular (≈3.0‑3.5★). Weighted average (70% show, 30% recording) yields ~3.8★."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the sound \"great\", \"killer\" and \"crisp\"; the matrix blend is described as clean with good instrument balance and no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "US Blues",
+      "Samson > Cumberland",
+      "Terrapin → Drumz",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 1 opens strong with Stranger→Franklin's and a surprise US Blues closer; Set 2 is shorter than expected, featuring Sampson>Cumberland and the usual late‑night sequence (Terrapin → Drumz).  The concert leans heavily on blues cuts (five in total) and lacks extended improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Lead breaks on Stranger and Cumberland praised; long solo on China Doll noted, though a few reviewers say his tone isn’t as electrifying later in the set.",
+    "Phil": "New bass rig mentioned positively; anchors Let It Grow and keeps pace with Jerry during Sampson/Cumberland.",
+    "Bob": "",
+    "Keys": "Brent’s shoulder‑shrug solo on Candyman highlighted; overall keyboard work described as solid.",
+    "Drums": "Standard drum segment noted; Drumz/Space transitions described as tight."
+  },
+  "song_mentions": {
+    "US Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson > Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin → Drumz": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:47:29.236412+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-05.sbd-matrix.kowalski.1091.sbeok.shnf"
+}

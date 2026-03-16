@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard capture of a solid 1978 Fox Theatre gig with a monster Franklin's Tower and standout Jack Straw, overall good audio and lively performance.",
+  "review": "The show is praised for its extended, soaring Franklin's Tower and tight Jack Straw renditions, plus a fluid take on Dancing in the Streets. While the set gets off to a slow start and the drummers sound a bit loose early on, the second‑set energy lifts the entire performance. The recording, a soundboard source, is generally clear with no major complaints.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4‑5 stars) and strong praise for key songs indicate a great performance; lack of recording complaints suggests the soundboard tape is at least good quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio issues mentioned; reviewers imply the tape sounds clear enough for repeated listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Jack Straw",
+      "Dancing in the Streets",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "The Music Never Stopped"
+    ],
+    "setlist_flow": "A slow gate and a slightly loose first half give way after Dire Wolf, leading to a strong second set highlighted by an expansive 17‑minute Franklin's Tower."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Late, off‑beat entry on 'The Music Never Stopped' that briefly threw the band out of sync.",
+    "Keys": "",
+    "Drums": "Drummers sounded a bit drunk early in the set, affecting tightness until they settled later."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:04:48.812038+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-10.sbd.miller.108665.flac16"
+}

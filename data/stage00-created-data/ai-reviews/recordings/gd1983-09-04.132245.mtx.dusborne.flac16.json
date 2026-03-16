@@ -1,0 +1,31 @@
+{
+  "summary": "Matrix recording captures a decent show with solid sound, though the track listing is misordered.",
+  "review": "The performance is described as decent and the matrix source provides good overall audio quality. Reviewers note that the track list is inaccurate—Man Smart, Woman Smarter appears after Fire and is mislabeled as Drums—but this does not appear to detract significantly from listening enjoyment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Only one review, but a 4‑star rating and positive language indicate a good show with decent matrix recording quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Overall sound is solid; reviewers call it a decent recording. The only issue noted is an incorrect track listing."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Setlist order appears inaccurate (Man Smart, Woman Smarter placed after Fire and mislabeled), but no comments on musical performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T09:50:05.592184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-04.132245.mtx.dusborne.flac16"
+}

@@ -1,0 +1,104 @@
+{
+  "summary": "Audience recording of a high‑energy Hartford show with generally good sound (though a bit tinny early) and standout moments like Loser, Rhythm Devils/Space and China Doll.",
+  "review": "The tape captures an unusually long October ’84 performance that many fans describe as energetic and mostly together, highlighted by strong renditions of Loser, the I Need A Miracle → Mighty Swell segue, a fiery Throwing Stones → Not Fade Away → Lovelight stretch, Rhythm Devils/Space and a soaring China Doll.  Sound quality is solid for an audience source – clear and lively after an initial tinny start – but a few sections are hit‑and‑miss and the first set shows some rough spots (e.g., The Greatest Story Ever Told, Dire Wolf).",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the show’s energy and key performances while noting occasional sloppy moments and variable audio quality; weighting show (70%) higher than recording (30%) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively after an initial tinny start; audio is hit‑and‑miss in places but overall very listenable for a crowd recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "I Need A Miracle > Mighty Swell",
+      "Throwing Stones > Not Fade Away > Lovelight",
+      "Rhythm Devils",
+      "Space",
+      "China Doll",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "The Greatest Story Ever Told",
+      "Dire Wolf",
+      "Might As Well"
+    ],
+    "setlist_flow": "Long, high‑energy set with a strong first half despite some rough patches; the second set settles into tighter jams and memorable segues."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – praised for overall energy but criticized on Dire Wolf and Might As Well where his playing sounded shaky.",
+    "Phil": "",
+    "Bob": "Positive vibe noted (Healy presence) indicating solid rhythm guitar contribution.",
+    "Keys": "",
+    "Drums": "Rhythm Devils and Space highlighted as standout drum excursions; overall drumming described as high‑energy."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need A Miracle > Mighty Swell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rhythm Devils": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:35:14.274782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-14.senn421.pauline.miller.patch-91385.98557.flac16"
+}

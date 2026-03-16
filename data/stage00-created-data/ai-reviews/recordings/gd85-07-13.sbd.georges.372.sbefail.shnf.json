@@ -1,0 +1,75 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a legendary summer ’85 show with a scorching Fire on the Mountain and standout Bird Song, backed by an energetic setlist.",
+  "review": "The SBD recording is praised as “crystal clear,” “superb,” and rivaling official releases, with only occasional static from Phil’s bass. Musically the concert is celebrated for its rare opener (One More Saturday Night), a blazing Fire on the Mountain, tight Bird Song, gorgeous Comes A Time and a memorable Dupree’s Diamond Blues, though a few fans note Cryptical as a weak point and Jerry’s rushed Touch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 4‑5 stars, highlighting excellent soundboard quality (30% weight) and a high‑energy, memorable performance with several standout songs (70% weight). Minor criticisms (static, Cryptical) keep the rating just below “exceptional.”"
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crystal‑clear, crisp and superb; a few comments about occasional bass static but no major dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Bird Song",
+      "Comes A Time",
+      "Dupree's Diamond Blues"
+    ],
+    "poor_songs": [
+      "Cryptical",
+      "Touch"
+    ],
+    "setlist_flow": "Unique and exciting setlist – rare One More Saturday Night opener, high‑energy first set that rolls into a magical second set with seamless transitions; fans note the show feels like a ‘summer ’85 highlight.’"
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for great tone and energy; noted to be rushed on Touch but overall solid playing.",
+    "Phil": "Bass described as popping, crackling and sometimes static‑laden; overall strong foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:39:34.694994+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-07-13.sbd.georges.372.sbefail.shnf"
+}

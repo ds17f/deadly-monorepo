@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording is fair with spotty drops, but the show shines thanks to a tight first set, standout Truckin' vocals and a fire‑filled Good Lovin'/Drums segment.",
+  "review": "Fans praise this 1970 performance for its energetic early set – especially Bob Weir’s vocal on “Truckin’” and a scorching Good Lovin’/Drums sequence with a nice Cumberland jam – while noting the later half feels weary. The SBD source suffers from inconsistent levels, disc‑to‑disc drop‑outs and occasional out‑of‑tune guitars, making the audio only fair despite its historical value.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality averages high (≈3.9/5) while recording quality is lower (≈2.6/5); weighted combination yields a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Sound drops between discs, spotty mids, occasional out‑of‑tune guitars and the SBD runs out mid‑song (“Rider”). Overall decent but far from pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Good Lovin'",
+      "Drums",
+      "Cumberland"
+    ],
+    "poor_songs": [
+      "Sunshine Daydream",
+      "Rider"
+    ],
+    "setlist_flow": "Early set is tight and memorable; late set loses steam, typical of the era’s fatigue. Transitions are solid, with a highlight in the Good Lovin'/Drums/Cumberland jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir's vocals on 'Truckin'' were singled out as a standout moment.",
+    "Keys": "",
+    "Drums": "The drum segment paired with Good Lovin' received strong praise."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:11:24.850202+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-10-30.sbd.cotsman.20044.sbeok.shnf"
+}

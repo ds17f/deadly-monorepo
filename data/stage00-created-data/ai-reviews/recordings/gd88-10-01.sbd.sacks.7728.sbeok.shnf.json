@@ -1,0 +1,81 @@
+{
+  "summary": "Decent second‑set show with solid Cassidy and a loose Scarlet/Fire, but Jerry’s raspy vocals and thin low end keep it from being great despite a clean soundboard mix.",
+  "review": "The performance has several bright spots – a strong momentum‑building “Cassidy”, an airy “Scarlet > Fire” transition, and fun moments like “UJB” and “Dew”.  However the night is hampered by Jerry Garcia’s noticeably hoarse voice and a mix that lacks bottom end, making Phil’s bass feel weak.  The soundboard recording is clean but a bit thin, so overall it feels like an okay show that could have been better.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Most reviewers give middle‑range scores (average ~3 ★) and note both good musical moments and consistent vocal/bass issues; the clean soundboard mix is praised, leading to a balanced rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is clear and clean but lacks low‑frequency punch; reviewers note missing bottom end that affects Phil’s bass presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Scarlet > Fire",
+      "UJB",
+      "The Other One",
+      "Dew"
+    ],
+    "poor_songs": [
+      "Jerry's vocals (throughout)",
+      "Space"
+    ],
+    "setlist_flow": "First set builds nicely with “Cassidy” and other mid‑tempo numbers, then the early second set feels flat until after a long “Space”.  The band picks up again on the latter half, delivering stronger jams and tighter transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice is consistently raspy/pipeish and often out of shape; occasional good guitar moments but vocal issues dominate.",
+    "Phil": "Bass feels thin in the mix; a few reviewers note “brilliant bombs” from Phil during the second set.",
+    "Bob": "",
+    "Keys": "Brent Mydland receives strong praise for his synth work and making “The Other One” crunchy; some criticism of prog‑synth sections as less folk‑like.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "UJB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:45:18.482498+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-10-01.sbd.sacks.7728.sbeok.shnf"
+}

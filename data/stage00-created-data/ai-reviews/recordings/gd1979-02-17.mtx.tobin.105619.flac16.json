@@ -1,0 +1,39 @@
+{
+  "summary": "Fresh matrix recording with generally good sound but occasional source mis‑alignment; the show swings between sloppy moments and hot peaks, highlighted by a solid Shakedown Street.",
+  "review": "The matrix mix is praised for keeping the tape fresh, though one reviewer notes that the audience and board sources sometimes drift out of sync. Performance-wise the concert is uneven – some passages feel sloppy while others are really hot, with “Shakedown Street” standing out as a highlight. Overall the recording is listenable and the show has its moments despite the inconsistency.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Two positive ratings (5,4) focus on the matrix quality, while a 3‑star review points to uneven playing; weighted average of show (≈3) and recording (≈4) yields ~3.3."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally fresh and clear matrix mix, but some reviewers report the audience and board sources not lining up perfectly in parts of the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Inconsistent performance that goes back‑and‑forth from sloppy to pretty hot, with occasional high points."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:35:15.541817+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-17.mtx.tobin.105619.flac16"
+}

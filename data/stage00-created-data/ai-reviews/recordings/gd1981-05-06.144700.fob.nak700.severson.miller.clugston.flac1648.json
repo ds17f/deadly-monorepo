@@ -1,0 +1,57 @@
+{
+  "summary": "Outstanding performance highlighted by a massive \"He's Gone\" jam; recording source and quality are not specified.",
+  "review": "The reviewer raves about the entire show, calling the first set well‑played with great song choices and describing the second set as increasingly thrilling, especially the extended \"He's Gone\" jam. No details are given about the audio source or fidelity, so the listening experience cannot be judged from this review alone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "The show is described as exceptional (5‑star praise) but there is no information on recording quality, so the rating leans heavily on performance and remains tentative."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not mention any aspects of soundboard, audience mix, clarity, or other technical characteristics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Jack-a-Roe",
+      "Dire Wolf",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for tight playing and song selection; second set noted as even stronger with a monumental \"He's Gone\" jam that improves on each listen."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:05:22.680489+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-06.144700.fob.nak700.severson.miller.clugston.flac1648"
+}

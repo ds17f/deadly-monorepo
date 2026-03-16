@@ -1,0 +1,51 @@
+{
+  "summary": "Top‑notch recording captures an all‑out, fire‑filled show where every song – from “Saint” to “Deal” and “Stranger” – shines.",
+  "review": "Both reviewers rave that the performance is \"amazing\" with the whole gang on fire, calling each track a standout. The sound quality is described as top‑notch and immersive, making listeners feel right in the middle of the concert. No drawbacks are noted, indicating an excellent listening experience both musically and technically.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Two consistent 5‑star reviews praise both performance and sound quality; limited review count keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as top‑notch, clear and immersive – feels like being in the middle of a phenomenal show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint",
+      "Deal",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is portrayed as uniformly high‑energy with every song highlighted as a standout, suggesting a tight, flowing performance throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:12:57.799995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-10.110830.fob.nak700.glassberg.motb0161.flac16"
+}

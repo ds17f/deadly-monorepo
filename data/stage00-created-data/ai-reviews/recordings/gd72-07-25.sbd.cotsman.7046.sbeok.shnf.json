@@ -1,0 +1,64 @@
+{
+  "summary": "Good soundboard recording with minor dropouts and balance quirks, highlighted by a unique, soaring Other One jam that makes the second set shine.",
+  "review": "The SBD capture is generally clear and lively, though listeners note occasional drop‑outs and early‑set mix imbalances (Promised Land, Sugaree). Musically the show sits in the middle of the summer‑’72 run – a mellow first set but a second set that erupts with an unforgettable, exploratory Other One jam, strong Wharf Rat, and a few standout solos. Overall fans love the unique jam while accepting the show's overall average vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars, praising the Other One jam and acceptable soundboard quality despite noted balance issues; the weighted average of show (≈3.8) and recording (≈4.0) yields a solid 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall SBD mix with occasional minor drop‑outs, early‑set balance problems on Promised Land and Sugaree (vocals/guitar panned oddly), occasional vocal distortion and tuning hiccups, but room ambience and vocal mics are well captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat",
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Black Throated Wind"
+    ],
+    "setlist_flow": "First set is described as average and a bit subdued; the second set builds momentum, with an exceptional Other One jam that lifts the whole performance, followed by a strong Wharf Rat and solid closing energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is noted as wiry and at times out of tune, but delivers powerful solos—including Allman‑style slide work—especially during the Other One jam.",
+    "Phil": "Lesh provides an extended melodic solo early in The Other One and offers strong, contrapuntal bass lines throughout; his playing is highlighted as a highlight of the jam.",
+    "Bob": "Weir’s vocals are prominent (sometimes overly loud) and he delivers memorable lyrical flubs that add character; his guitar is occasionally panned hard to one ear early in the show.",
+    "Keys": "Keith is barely audible on Promised Land but adds tasteful texture later, especially during the Other One jam; occasional tuning oddities noted.",
+    "Drums": "Bill Kreutzmann’s drums sit a bit forward in the mix and are praised for solid, driving support, though brief tuning adjustments interrupt the flow."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T15:46:54.960394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-07-25.sbd.cotsman.7046.sbeok.shnf"
+}

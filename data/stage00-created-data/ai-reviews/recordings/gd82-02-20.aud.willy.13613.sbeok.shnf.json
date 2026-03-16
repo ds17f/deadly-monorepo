@@ -1,0 +1,63 @@
+{
+  "summary": "Pristine‑sounding audience tape captures a high‑energy 1982 Golden Hall show with a monster Let It Grow and the rare Franklin’s > Samson opener.",
+  "review": "The recording delivers an immersive ‘you are there’ feeling, generally clear and crisp despite occasional sketchiness common to stealth audience tapes. Musically the concert is a standout – the first set shines with a soaring To Lay Me Down and a stellar China Cat > I Know You Rider, while the second set erupts with an 18‑minute Let It Grow, a flawless Franklin’s > Samson transition and powerful Playing in the Band. Garcia’s lead work, Brent Mydland’s solo jam and Bob Weir’s on‑stage banter add extra flavor to an already memorable night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both performance (standout songs, unique set flow) and recording quality (crisp, immersive), with only minor complaints about occasional sketchiness."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp with a strong ‘you‑are‑there’ vibe; some reviewers note occasional sketchy moments typical of stealth audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Franklin's Tower > Samson and Delilah",
+      "China Cat Sunflower > I Know You Rider",
+      "To Lay Me Down",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely with tight transitions; second set opens uniquely with Franklin’s > Samson and maintains high energy throughout, delivering several epic jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia ‘tears up’ Let It Grow, delivering powerful lead guitar work.",
+    "Phil": "",
+    "Bob": "Bob Weir adds a spoken “Pay Attention!” during Samson and contributes strong vocal presence.",
+    "Keys": "Brent Mydland shines with an impressive solo jam that flows into the drums.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower > Samson and Delilah": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T18:32:19.033963+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-02-20.aud.willy.13613.sbeok.shnf"
+}

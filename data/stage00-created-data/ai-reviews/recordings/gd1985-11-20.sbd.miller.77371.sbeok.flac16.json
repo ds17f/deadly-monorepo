@@ -1,0 +1,73 @@
+{
+  "summary": "Clean soundboard capture of an energetic 1985 East Coast run with standout High Time and an over‑the‑top Sugar Magnolia.",
+  "review": "The Miller soundboard tape is crisp and clean, letting listeners hear the subtleties of Jerry’s fiery lead work and the tight band dynamics. The show bursts with energy – High Time is called a show‑stopper, Peggy‑O is spirited, and the second set rolls through three rockers ending on an exuberant Sugar Magnolia. Minor quibbles about Bob not being ready and Phil arriving late are far outweighed by the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Review is highly detailed and overwhelmingly positive about both performance and recording; only one review limits confidence, but its depth supports a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, crisp mix that highlights subtle guitar nuances and overall band balance; no reported drop‑outs or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Peggy-O",
+      "Terrapin",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert maintains a high‑energy arc with three rockers closing the first set and a second set that builds from a serious opener into a chaotic Terrapin jam, followed by sweet Stella Blue and an over‑the‑top Sugar Magnolia before ending on a rocking U.S. Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead guitar is described as fiery, intense, and even “scrubbing” for half a minute on Sugar Magnolia; also noted for a poignant vocal line on ‘laid his body down’.",
+    "Phil": "Mentioned as arriving late to the second‑set opener.",
+    "Bob": "Described as not ready at the start of the second set.",
+    "Keys": "",
+    "Drums": "Early second‑set tension noted between Bob and the drummers; later drums drive a chaotic, primal jam after Terrapin."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:49:56.350701+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-20.sbd.miller.77371.sbeok.flac16"
+}

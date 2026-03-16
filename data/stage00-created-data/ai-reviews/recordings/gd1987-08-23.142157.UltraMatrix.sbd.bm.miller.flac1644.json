@@ -1,0 +1,91 @@
+{
+  "summary": "Fair matrix recording with decent frequency range but unbalanced levels; show is mixed but highlights a stellar Watchtower, Brent‑driven Playing in the Band and a short yet solid I Need a Miracle.",
+  "review": "The UltraMatrix SBD provides a fairly clear picture of the concert, offering more frequencies than other sources though it suffers from hum and uneven leveling. Musically the performance is uneven – the first set dips after a strong start and the second set has highs like an energized All Along the Watchtower and a Brent‑powered Playing in the Band, but also weaker moments on Scarlet Begonias and Not Fade Away.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives an overall 3¼‑star rating; the show has both strong highlights and noticeable flaws, while the recording is usable but not perfectly balanced."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "UltraMatrix SBD captures a wider frequency range than other sources, has a mild hum, and lacks proper balancing/leveling; other available mixes have glitches and low volume."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "All Along the Watchtower",
+      "Playing in the Band",
+      "I Need a Miracle"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias",
+      "High Time",
+      "Not Fade Away",
+      "Morning Dew"
+    ],
+    "setlist_flow": "First set starts solid, dips around High Time and recovers, while the second set is uneven – strong moments (Watchtower, Playing in the Band, Miracle) interspersed with weaker jams (Scarlet verses, lackluster Drums>Space). Overall a mixed‑quality performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Appears spent later in the show; less energetic compared to Bob during Walkin' Blues.",
+    "Phil": "",
+    "Bob": "Guitar work strong, especially on Watchtower and generally better than Jerry in the early blues numbers.",
+    "Keys": "Brent (keyboards) is pivotal on Playing in the Band, delivering an ace performance.",
+    "Drums": "The Drums>Space segment isn’t as compelling as elsewhere on this tour."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:32:30.736188+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-23.142157.UltraMatrix.sbd.bm.miller.flac1644"
+}

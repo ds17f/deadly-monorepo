@@ -1,0 +1,115 @@
+{
+  "summary": "Crisp sound‑board capture of the 1993 St. Patrick’s Day show with a blazing Shakedown, soaring Dark Star and magical Lucy in the Sky.",
+  "review": "The recording is a generally clean sound‑board mix (with occasional hiss and a few channel swaps) that lets listeners hear the band’s high energy on this March ’93 run.  Highlights include an incendiary Shakedown opener, a monster Dark Star → Drums/Space, the crowd‑crazy Lucy in the Sky, plus memorable jams like Handsome Cabin Boy, Days Between and The Other One.  While some newer songs stumble and a few cuts (Eternity, Ramble On) are noted, most reviewers celebrate the performance as one of the era’s best.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews give detailed praise for both performance and sound; show quality dominates (≈70%) with many standout songs, while recording issues are minor enough to keep the overall rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well balanced; a few reviewers note hiss, occasional channel reversal, and missing segments (Eternity, Ramble On)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Dark Star",
+      "Lucy in the Sky",
+      "LSD",
+      "Handsome Cabin Boy",
+      "Days Between",
+      "The Other One",
+      "Picasso Moon"
+    ],
+    "poor_songs": [
+      "Desolation Row",
+      "Liberty",
+      "Good Lovin"
+    ],
+    "setlist_flow": "The first set starts strong with Shakedown but loses momentum after the new songs; the second set rebuilds, delivering a cohesive Dark Star → Drums/Space sequence followed by powerful jams that lift the show to a memorable peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring lead guitar on Dark Star, strong tone on Lazy River Road and energetic vocals (though a few note vocal strain on LSD).",
+    "Phil": "Bass work described as solid and front‑center, especially in the second set where he “smiled a lot” and interplayed heavily.",
+    "Bob": "Rhythm guitar noted positively on Wang Dang Doodle and overall fun contributions.",
+    "Keys": "Vince’s keyboards called “tripy”, with tasteful chording during Days Between and strong presence throughout the show.",
+    "Drums": "Bill & Mickey receive consistent praise for a tight, dynamic drums/space segment."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Dark Star": {
+      "positive_mentions": 10,
+      "negative_mentions": 1,
+      "total_mentions": 11
+    },
+    "Lucy in the Sky": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "LSD": {
+      "positive_mentions": 7,
+      "negative_mentions": 2,
+      "total_mentions": 9
+    },
+    "Handsome Cabin Boy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Days Between": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Picasso Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Two Soldiers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Liberty": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T10:36:20.516252+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-17.sbd.ladner.4979.sbeok.shnf"
+}

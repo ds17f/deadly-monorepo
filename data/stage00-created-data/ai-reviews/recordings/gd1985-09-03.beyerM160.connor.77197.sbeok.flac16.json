@@ -1,0 +1,46 @@
+{
+  "summary": "Front‑of‑soundboard audience recording captures a high‑energy show with a standout Truckin' performance despite some lyric slips.",
+  "review": "The concert is praised for its energetic vibe and strong guitar work, especially the soaring Truckin' that left fans raving. The front‑of‑soundboard audience source provides clear, lively sound, though Jerry occasionally stumbled on lyrics and the Cryptical Envelopment was a bit shaky. Overall the performance and recording are both regarded positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Both reviewers are enthusiastic (4‑5 stars). Show quality is solid (average ~3.5–4 ★) and recording quality is rated high (4.5 ★), yielding a weighted rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑soundboard audience capture described as great sounding and clear; no major technical complaints noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Cryptical Envelopment"
+    ],
+    "setlist_flow": "High‑energy first set deemed mediocre overall but the opening four songs shine; second set features unusual song combos and strong blues covers after Space."
+  },
+  "band_member_comments": {
+    "Jerry": "Great guitar work noted, though he struggled with lyric recall during the show.",
+    "Phil": "",
+    "Bob": "Praised enthusiastically; reviewer expressed deep gratitude for his playing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:33:25.189188+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-03.beyerM160.connor.77197.sbeok.flac16"
+}

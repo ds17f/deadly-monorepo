@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard source with noticeable hiss, but a rare early‑68 show featuring a standout Mountains of the Moon and strong acoustic moments.",
+  "review": "The recording captures an early 1968 performance that is prized for its rarity – it includes the seldom‑played Mountains of the Moon (with Jerry on acoustic) and a nicely played Lovelight highlighted by Phil.  While the soundboard tape suffers from noticeable hiss, the musical content and historic value outweigh the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Reviewers consistently praise the show’s rare songs and performances (70% weight) while noting hiss and modest sound quality (30% weight), resulting in a solid above‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers mention prominent tape hiss; overall the mix is acceptable but not crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mountains of the Moon",
+      "Lovelight",
+      "Line on You"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical early‑Dead folk set with a rare acoustic centerpiece; the show feels like a snapshot of the band’s wet‑behind‑the‑ears era, highlighted by the unusual acoustic rendition and strong group interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Acoustic guitar on Mountains of the Moon noted as very nice.",
+    "Phil": "Praised for his playing on Lovelight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mountains of the Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Line on You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:01:55.385989+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-12-20.sbd.tiedrich.9532.sbeok.shnf"
+}

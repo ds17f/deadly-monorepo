@@ -1,0 +1,58 @@
+{
+  "summary": "Soundboard recording is generally clear despite early‑set sound glitches, and the show offers a mixed performance highlighted by an epic Foolish Heart/Space jam.",
+  "review": "The SBD source delivers good overall fidelity, though several listeners note muddiness in the first set. Musically the concert is seen as uneven – many describe it as a weak night on the tour, yet the extended Foolish Heart into space and the mellow Let It Grow receive consistent praise. Bob Weir’s stage antics draw criticism while Hornsby’s keyboards and the drum climax after Foolish Heart are noted positively.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show around average (3‑4 stars) with a few higher scores for recording quality; soundboard clarity is good, leading to an overall rating in the low‑mid 3 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable SBD, but early‑set suffers from sound issues and occasional muddiness; later portions are praised as crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Let It Grow",
+      "Roses"
+    ],
+    "poor_songs": [
+      "Hell in a Bucket"
+    ],
+    "setlist_flow": "First set is described as lackluster and hampered by sound problems, while the second half picks up with a lengthy Foolish Heart/Space jam and stronger playing on Let It Grow and Roses."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir is criticized for appearing disengaged and for stage antics that distracted from the performance.",
+    "Keys": "Bruce Hornsby’s keyboard work receives mixed feedback – some find it decent, others wish for more traditional piano involvement.",
+    "Drums": "The drum segment following Foolish Heart is highlighted as one of the best in years, earning praise for both Mickey Hart and Bill Kreutzmann."
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:53:56.949288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-09.sbd.miller.25466.sbeok.shnf"
+}

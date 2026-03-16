@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard capture (a little echoy) delivers a solid ’89 spring show highlighted by a bouncy China > Rider and a killer Other One.",
+  "review": "The SBD recording is generally clear, with only a slight boom/echo in the venue, making the performance easy to follow. Fans remember this as an average‑to‑good Dead concert—second‑set gems like China > Rider, Masterpiece, Birdsong and a standout Other One keep it memorable, while Jerry’s guitar and vocals are praised and the drum work (Mickey & Bill) receives special kudos.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising both the musical moments and the SBD sound; only one low/neutral rating appears, so the weighted average leans toward a strong positive assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD source with slight echo/booming characteristic of the Coliseum space; overall crisp and listenable, no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "The Other One",
+      "Masterpiece",
+      "Birdsong",
+      "He's Gone",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical spring‑89 set with a strong second half; the vibe was relaxed and communal, making it a solid, if not classic, Dead performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers note Jerry’s guitar tone and vocals were especially good, calling him “looking and singing better than he had in a long time.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboards) receives mixed remarks – one reviewer isn’t a big Brent fan but acknowledges a brief moment of his best playing.",
+    "Drums": "Mickey Hart and Bill Kreutzmann’s cymbal synchronicity is highlighted, and the Drums>Space segment is called excellent."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:10:49.723638+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-03-30.sbd.walker-scotton.miller.81531.sbeok.flac16"
+}

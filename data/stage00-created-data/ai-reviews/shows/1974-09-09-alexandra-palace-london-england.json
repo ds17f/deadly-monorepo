@@ -1,0 +1,63 @@
+{
+  "summary": "Uneven '74 set with standout Truckin'→Wharf Rat and solid Playin'",
+  "blurb": "The show opens with a mixed first half but delivers highlights such as a magical Playin' in the second set and an impressive Truckin' → Wharf Rat sequence. Jerry’s lead work shines on Truckin', while Keith provides steady organ throughout. Recording quality varies, with the recommended soundboard offering decent audio despite several cuts.",
+  "review": "On September 9, 1974 at Alexandra Palace, the Dead kicked off a night that would prove uneven but not without memorable moments. The first set meanders through familiar terrain—Bertha and The Promised Land sit beside a bright Scarlet Begonias and a rollicking Mexicali Blues—but it’s the second half where the show truly lifts. A magical \"Playing In The Band\" segues into a soaring Truckin' that finds Jerry on fire, leading into an epic Wharf Rat climax that stands as one of ’74’s finest transitions. Keith Godchaux’s organ work remains solid throughout, anchoring the band while Billy Kreutzmann drives the high‑energy peaks. Yet the performance is marred by a delayed start, Bob Weir’s disengaged moments, and several song cuts (Scarlet > Fire, Help > Slip > Franklin’s) that leave the set feeling fragmented. The recommended soundboard capture delivers decent clarity despite these omissions, making it the best way to experience this mixed‑bag show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "Two recordings report mixed sentiment while one is clearly negative; no strong positive consensus emerges, leading to a slight negative adjustment.",
+      "final_calculation": "2.5 + 0.1 - 0.5 = 2.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd74-09-09.sbd.sly.12846.sbeok.shnf",
+    "reason": "Decent soundboard audio with clear balance and the most complete set despite numerous cuts; captures the magical Playin' and strong Truckin' jam."
+  },
+  "key_highlights": [
+    "Strong second‑set jam on \"Playing In The Band\"",
+    "Epic Truckin' → Wharf Rat transition",
+    "Bright early moments with Scarlet Begonias and Mexicali Blues",
+    "Numerous song cuts (Scarlet>Fire, Help>Slip>Franklin's) affect flow"
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Truckin'",
+    "Wharf Rat",
+    "Scarlet Begonias",
+    "Mexicali Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry delivers strong lead work on the Truckin' jam and is generally 'on' during the high points, though some moments feel uneven.",
+    "Phil": "Phil provides a solid bass foundation throughout, keeping the groove steady even when vocals are muffed.",
+    "Bob": "Bob is inconsistent; his playing feels off during Truckin' and he appears disengaged early in the show, especially after apologizing for the delayed start.",
+    "Keith": "Keith's organ work is central all night, offering reliable support that underpins the strong moments like Scarlet and Mexicali.",
+    "Mickey": "",
+    "Billy": "Billy drives the high‑energy sections on Scarlet Begonias and Mexicali Blues with crisp, propulsive drumming."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-23T00:05:32.399950+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band"
+    ],
+    [
+      "Truckin'",
+      "Wharf Rat",
+      "Uncle John's Band"
+    ],
+    [
+      "Scarlet Begonias"
+    ],
+    [
+      "Mexicali Blues"
+    ]
+  ]
+}

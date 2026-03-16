@@ -1,0 +1,39 @@
+{
+  "summary": "Clear soundboard capture highlighted by an especially jam‑heavy Hard to Handle.",
+  "review": "The reviewer rates this recording five stars, calling the Hard to Handle performance a favorite and noting its unusually extended jamming. While no specific technical comments are given, the high rating implies a solid soundboard source that faithfully presents the band’s playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Single enthusiastic 5‑star review praising a key song; limited data but strong positive sentiment leads to a high rating with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound quality; presumed clear and balanced typical of soundboard recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient detail; reviewer focuses solely on Hard to Handle."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:03:04.640445+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-06-05.135518.sbd.miller.flac1648"
+}

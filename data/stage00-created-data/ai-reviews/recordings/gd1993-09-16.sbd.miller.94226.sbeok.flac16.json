@@ -1,0 +1,70 @@
+{
+  "summary": "Solid soundboard capture of a mixed‑quality show, highlighted by scorching Shakedown Street and Cold Rain performances.",
+  "review": "The recording (a soundboard source) is generally clear but some listeners note a sterile mix typical of the late‑93 era. Musically the concert shines in its opening quartet – Rain, Shakedown Street, Wang Dang Doodle and Cold Rain – which several reviewers call among the best of the period, while the remainder of the set is described as uneven or boring. Jerry’s tone receives both high praise early on and criticism later, and Vince’s keyboards are singled out for excellence.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (strong opening quartet vs a weaker second half) while the recording is decent but not exceptional; combined weighted score yields ~3.5 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard capture praised as sweet and crisp by some, though several note a sterile mix for this period and occasional acoustic‑tone issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Cold Rain",
+      "Rain",
+      "Althea",
+      "Wang Dang Doodle"
+    ],
+    "poor_songs": [
+      "Queen Jane"
+    ],
+    "setlist_flow": "The opening four-song run (Rain → Shakedown Street → Wang Dang Doodle → Cold Rain) is consistently praised, but reviewers feel the energy drops sharply after that, making the second half feel flat or boring."
+  },
+  "band_member_comments": {
+    "Jerry": "Early in the set his tone is described as funky and perfect; later reviewers criticize a 'sterile' acoustic tone and overall decline.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (keyboards) is highlighted as being in rare, top form on this night.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cold Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:58:29.187010+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-16.sbd.miller.94226.sbeok.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Good audience recording with slight speed/pitch issues but captures a solid performance where the boys played well.",
+  "review": "The tape, recorded by M Darby, is generally clear and enjoyable, though several reviewers note it runs a half‑step fast and could benefit from proper speed calibration. Musically the concert was praised as a strong show with the band playing well, even if no specific songs were singled out.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is regarded as good (solid performance) while recording quality is good but marred by speed/pitch problems; the weighted average yields a ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound, but several comments about the tape running slightly fast (≈½ step) and pitch being off; reviewers suggest speed calibration would improve it."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed set‑list commentary; reviewers simply note that the band was playing well throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T23:27:44.890305+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-27.Senn421.Darby.117502.Flac1644"
+}

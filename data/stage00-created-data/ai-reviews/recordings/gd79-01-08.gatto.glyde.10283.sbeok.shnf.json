@@ -1,0 +1,79 @@
+{
+  "summary": "A high‑energy late‑70’s NYC show captured on a decent audience tape – the music shines despite some crowd noise and occasional vocal roughness.",
+  "review": "The performance is widely praised for its blistering Half‑Step, scorching Lazy Lightning → Supplication, soaring Scarlet > Fire and an unforgettable Terrapin.  Most listeners note that Keith Gatto’s Nak 300 audience tape is surprisingly clean, though the mix can be a bit noisy and Jerry’s voice sounds hoarse at times.  Overall the show is considered one of the standout late‑70s Dead concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈75 %) are 4–5 stars and highlight exceptional musical moments, while the recording is described as good‑to‑very good for an audience source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers call the tape “clean”, “real nice AUD” and appreciate Keith Gatto’s use of Nak 300 mics.  Complaints focus on crowd noise, occasional muffling and a marginal overall fidelity, but no catastrophic drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightning → Supplication",
+      "Mississippi Half-Step (Half‑Step)",
+      "Scarlet Begonias > Fire",
+      "Terrapin Station",
+      "Friend of the Devil",
+      "All Over Now"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is praised for tight songwriting (Friend of the Devil, All Over Now, Brown Eyed Women) and a driving energy that carries into a second‑set jam marathon highlighted by the Lazy Lightning/Supplication sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work described as “on fire” and “froggy”, but his vocal tone is often noted as hoarse or “shot” due to illness.",
+    "Phil": "Bass playing gets a nod for solid support; Phil’s outro on All Over Now is specifically praised.",
+    "Bob": "Bob’s vocals are called “madman‑like” and energetic; occasional off‑key moments are forgiven.",
+    "Keys": "Donna (keyboardist) is mentioned as being “on key” and adding to the overall power of the band.",
+    "Drums": "The drum work is generally praised; Mickey’s antics (“falling off his chair”) are recalled fondly."
+  },
+  "song_mentions": {
+    "Lazy Lightning → Supplication": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Mississippi Half-Step (Half‑Step)": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Scarlet Begonias > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:39:32.645603+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-08.gatto.glyde.10283.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear matrix capture of a high‑energy early‑80s show, highlighted by an epic Sugaree and tight Terrapin performance.",
+  "review": "The recording is praised for its superb board‑plus‑audience mix – clean imaging, strong bass presence and overall clarity that makes the listener feel present at the concert. Musically the show is lauded for a soaring, spacey Sugaree, tight playing throughout, great harmonies on Loser and a standout Terrapin Station, with only one dissenting voice noting a dip in Sugaree. Overall the performance feels fun, tight and full of joy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both sound quality (excellent matrix) and musical execution (standout songs, tight set), with only a single negative comment; weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean soundboard feed combined with clear audience ambience; superb imaging, bass pressure and presence; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Loser",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, upbeat performance from start to finish; the band sounds having fun and the mix lets the audience feel the energy without obscuring any instrument."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:14:28.977167+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-21.mtx.dan.28475.sbeok.flac24"
+}

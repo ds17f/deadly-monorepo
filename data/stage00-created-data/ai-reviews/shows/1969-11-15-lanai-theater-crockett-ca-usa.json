@@ -1,0 +1,51 @@
+{
+  "summary": "Stellar Casey Jones and marathon Lovelight despite uneven set",
+  "blurb": "The show delivers a soaring rendition of Casey Jones and an epic 42‑minute Turn On Your Lovelight that showcases Pigpen’s organ power. Jerry’s vocal harmonies sit front‑and‑center while the rest of the band provides solid support. Recording quality varies, but the best soundboard captures the high‑energy arc.",
+  "review": "On November 15, 1969 at the Lanai Theater the Dead rolled out a set that still shines for its highlights. The opening “Casey Jones” is a standout – Garcia’s voice blends beautifully with Pigpen’s harmonies and his guitar stays locked in all night. The real marathon comes later when the band launches into a 42‑minute “Turn On Your Lovelight,” letting Pigpen’s organ dominate and turn the jam into a soulful, improvisational journey; even a brief power loss only adds an a‑capella interlude before they dive back in. While the overall set can feel uneven – some reviewers note sloppy moments and muddy mix on certain tapes – the high points are undeniably compelling. The best soundboard capture (gd1969-11-15.sbd.tiedrich.9137.shnf) renders those peaks with crystal‑clear clarity, preserving the warm depth of the 1969 mix while keeping vocals prominent but never overpowering.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "The three recordings show mixed sentiment – one positive, one mixed, and one negative – with no consistent praise or criticism across multiple sources. Consequently no positive or negative sentiment points are applied.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1969-11-15.sbd.tiedrich.9137.shnf",
+    "reason": "Excellent soundboard capture with crystal‑clear harmonies and a full, uninterrupted 42‑minute Turn On Your Lovelight."
+  },
+  "key_highlights": [
+    "Epic 42‑minute Turn On Your Lovelight that showcases Pigpen’s organ mastery.",
+    "Soaring performance of Casey Jones with tight vocal harmonies.",
+    "High‑energy arc despite occasional sloppy moments and a mid‑song power outage on other recordings."
+  ],
+  "song_highlights": [
+    "Casey Jones",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s vocal harmonies are front‑and‑center and his guitar work stays solid throughout, even when a power loss cuts him off during Lovelight.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Pigpen’s organ dominates the 42‑minute Turn On Your Lovelight, providing a tight, soulful backbone; he also shares vocal harmonies on Casey Jones.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T18:16:11.887172+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Casey Jones"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

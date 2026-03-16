@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience recording praised as the best source available.",
+  "review": "The reviewer rates this tape four stars and calls it the “best aud source,” indicating a very high‑quality audio capture with no reported flaws. No specific comments about the musical performance are provided, so the show itself cannot be evaluated beyond the positive impression of the sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one brief review; it praises the recording highly but gives no detail on performance, so rating leans toward strong audio quality with uncertain show quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best audio source; no issues or flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T13:43:01.799941+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-27.153334.nak304.vita.miller.clugston.flac1648"
+}

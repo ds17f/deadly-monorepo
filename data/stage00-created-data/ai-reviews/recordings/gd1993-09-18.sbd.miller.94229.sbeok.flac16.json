@@ -1,0 +1,62 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a fiery 1993 show highlighted by an unforgettable Brown‑Eyed Women, China Doll and Loose Lucy.",
+  "review": "The recording is a well‑balanced SBD that lets every instrument shine, with listeners praising the clarity and separation throughout. Musically the night is hailed as one of ’93’s gems – Jerry’s guitar is “on fire,” Brown‑Eyed Women is called the greatest ever heard, and China Doll’s ending is repeatedly singled out as spectacular. Overall the performance feels energetic, tightly paced and full of standout moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews are 5‑star praises for both performance and recording; only a few low or neutral scores exist, so the weighted average is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced SBD with crystal‑clear instrument separation; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "Brown Eyed Women",
+      "China Doll",
+      "Uncle John’s Band > Corrina"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as original and well‑paced, with strong first‑half songs, a tight second half that avoids over‑reliance on jam vehicles, and an encore that pleasantly surprises."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly called “on fire” and praised for searing solos and emotionally charged vocals.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums/space segment is highlighted as “kickass,” adding energy to the show."
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John’s Band > Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:09:47.460252+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-18.sbd.miller.94229.sbeok.flac16"
+}

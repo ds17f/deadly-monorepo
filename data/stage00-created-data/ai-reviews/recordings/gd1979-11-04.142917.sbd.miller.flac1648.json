@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a stellar Providence ’79 show featuring an over‑the‑top Alabama Getaway and The Other One.",
+  "review": "Both reviewers rave about the performance, calling it stellar and highlighting the explosive Alabama Getaway and Phil’s bomb‑filled The Other One. The recording is praised as great, with the .sbd source delivering a clear, well‑balanced mix that makes the show highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5 stars and emphasize superb playing and a high‑quality recording; weightings favor the strong musical performance and clear soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix; reviewers describe the recording as great with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout, with memorable peaks on Alabama Getaway and an over‑the‑top The Other One featuring Phil’s bass bombs."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's bass work is highlighted on The Other One, especially his 'bombs' that drive the jam.",
+    "Bob": "",
+    "Keys": "Keith's keyboards are noted as part of the strong performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:00:16.096101+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-04.142917.sbd.miller.flac1648"
+}

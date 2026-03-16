@@ -1,0 +1,45 @@
+{
+  "summary": "Audience‑sourced tape captures an energetic Alpine ’86 show with solid opening numbers and a standout Sampson closer, but the recording is only fair in clarity.",
+  "review": "The performance is generally praised – the first three songs are described as “solid” and the second set feels “energetic, playful, and dexterous,” with the Sampson close highlighted as a high point. Recording quality is mixed: some listeners call it a “great sounding audience” tape while others note muddiness, boominess and lack of board‑level clarity, making it an okay but not superb source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently described as good/energetic, while recording quality ranges from great to mediocre; the weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note decent audience ambience and occasional clarity (“great sounding audience”), but also describe the tape as boomy, not clear, and less crisp than a soundboard. Overall the mix is acceptable for casual listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sampson",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening three numbers are praised as solid; the second set is highlighted for its energy and audience interaction, making the show feel lively despite no specific complaints about pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is noted as strong and healthy – “does not sound like a guy who's gonna be in a coma soon.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:41:59.853393+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-29.nak100.cohen.104996.flac16"
+}

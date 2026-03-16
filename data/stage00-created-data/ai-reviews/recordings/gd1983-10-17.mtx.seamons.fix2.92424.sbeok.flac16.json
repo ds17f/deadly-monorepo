@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent Hunter matrix captures a high‑energy 1983 show highlighted by a monster 16‑minute Sugaree and stellar Birdsong, Deal and Wheel performances.",
+  "review": "The recording is a Hunter‑crafted matrix that delivers deep, detailed soundboard quality with just enough audience ambience to feel like you’re in the room.  Musically the night shines – a soaring, 16‑minute Sugaree opens the set, followed by fire‑breathing Birdsong, a thunderous Deal and an exuberant Wheel; most reviewers call these moments “monster” or “smoking.”  A few notes mention a waning second‑set energy (Revolution, Terrapin tonal quirks) but overall the performance is rated as one of the era’s best.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 70 reviews overwhelmingly praise both the matrix recording (excellent technical quality) and the musical performance (standout songs, high energy). Minor second‑set criticisms do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Hunter’s matrix mix is described as deep, detailed and “soundboard quality” with pleasant ambience; a few listeners note occasional tonal quirks but no major drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Birdsong",
+      "Deal",
+      "Wheel",
+      "Terrapin Station",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Revolution",
+      "Terrapin Station (tonal issues in some ears)"
+    ],
+    "setlist_flow": "The first set builds with an epic 16‑minute Sugaree and stays high‑energy through Birdsong and Deal.  The second set contains the classic Wheel→Terrapin transition, but a few reviewers feel the energy tapers toward the end (Revolution, Terrapin tonal quirks). Overall pacing is praised as “magical mystery tour” with memorable moments throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called sharp, on fire, crushing, and full of ideas; many note his soaring solos and vocal strain toward the end.",
+    "Phil": "A few reviewers mention Phil bringing it on, especially in the later part of the show.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) is praised as “fuelled, fluid, flying” with strong harmonies, particularly on Wheel and the second‑set jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 30,
+      "negative_mentions": 0,
+      "total_mentions": 30
+    },
+    "Birdsong": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Deal": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Wheel": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Terrapin Station": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Revolution": {
+      "positive_mentions": 2,
+      "negative_mentions": 4,
+      "total_mentions": 6
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T12:48:34.603858+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-17.mtx.seamons.fix2.92424.sbeok.flac16"
+}

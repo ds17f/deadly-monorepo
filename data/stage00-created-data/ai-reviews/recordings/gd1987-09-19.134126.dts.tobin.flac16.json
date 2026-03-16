@@ -1,0 +1,31 @@
+{
+  "summary": "Recording contains no audible music, rendering it completely unlistenable.",
+  "review": "The only reviewer reports that the tape has \"no music,\" indicating a total failure of the recording. With no audio present, neither the performance nor any musical highlights can be assessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Single 1‑star review stating the recording has no music; no positive or mixed feedback to offset it."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "File appears silent or corrupted – no audible music at all."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T04:00:41.158592+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-19.134126.dts.tobin.flac16"
+}

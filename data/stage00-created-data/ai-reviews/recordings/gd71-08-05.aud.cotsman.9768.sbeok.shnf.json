@@ -1,0 +1,73 @@
+{
+  "summary": "Excellent 1971 audience recording capturing a psychedelic, top‑notch first set with standout Bertha and The Other One.",
+  "review": "The tape delivers crystal‑clear highs and a solid frequency range that lets every instrument shine, despite a few missing tracks. Musically the show is a firecracker – a smashing first set highlighted by a monster Bertha, Mr. Charlie, Casey Jones and an inspired Cryptical > Drums > Other One sequence, while the second set runs a bit weaker but remains enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance and audio fidelity across many reviews; minor issues (missing songs, possible source swap) do not detract from overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp highs, solid frequency range and clear instrument separation; a few reviewers note the second‑set may have been sourced differently, but overall the AUD tape is among the best 1971 audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "The Other One",
+      "Mr. Charlie",
+      "Cryptical Envelopment > Drums > The Other One",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set shines with tight playing and memorable jams; second set is slightly weaker yet still solid, though some listeners suspect a different source for part of it."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgot to sing until the third verse of Bertha but delivers psychedelic guitar work throughout.",
+    "Phil": "",
+    "Bob": "Bobby’s (Bob's) on‑stage encouragement is captured and adds to the tape’s charm.",
+    "Keys": "",
+    "Drums": "The drum segment in Cryptical > Drums > Other One is highlighted as a standout moment."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment > Drums > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:07:43.868754+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-08-05.aud.cotsman.9768.sbeok.shnf"
+}

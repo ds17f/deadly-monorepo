@@ -1,0 +1,57 @@
+{
+  "summary": "An audience tape that captures a thrilling Truckin → drums → Other One marathon, but suffers from uneven volume swings and occasional cloudiness.",
+  "review": "The performance shines with an extended Truckin > drums > The Other One sequence, a sweet segue into Casey Jones, and a noteworthy acoustic set, earning high praise from listeners. However, the audience recording is inconsistent—levels bounce dramatically, conversations intrude, and the sound can be “cloudy,” which detracts from the listening experience for some fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is rated very high based on multiple enthusiastic comments, while recording quality is mixed (some call it amazing, others criticize volume swings), resulting in an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Volume levels bounce dramatically between songs, causing the need for constant adjustments; occasional background conversation and a generally cloudy sound are noted, though some listeners find the tape magical and recommend EQ treatment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin",
+      "The Other One",
+      "Casey Jones",
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid setlist that moves from an enjoyable acoustic segment into a high‑energy electric half, highlighted by the long Truckin > drums > Other One jam and smooth transitions throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum section receives special praise for an extended ~16‑minute segment leading into The Other One."
+  },
+  "song_mentions": {
+    "Truckin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:45:03.994288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-07.aud.warner.10306.sbeok.shnf"
+}

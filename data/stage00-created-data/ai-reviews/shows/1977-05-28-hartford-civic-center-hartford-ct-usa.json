@@ -1,0 +1,87 @@
+{
+  "summary": "Stellar Sugaree jam, soaring Good Lovin', epic Playing In The Band",
+  "blurb": "The Hartford show delivers a monster Sugaree stretch and a tight Good Lovin' → Sugaree transition. Both sets stay above‑average with an hour‑long Playing In The Band suite that locks the band into peak energy.",
+  "review": "May 28, 1977 at the Hartford Civic Center captures the Grateful Dead in top spring‑’77 form. Jerry Garcia’s tone is immaculate – from the angular twang on Tennessee Jed to the soaring solos that lift a 20‑minute Sugaree into legendary territory. Keith Godchaux provides solid keys while Donna Jean’s vocals are “on the ball,” and the dual‑drum engine of Mickey Hart and Bill Kreutzmann locks in with a half‑time groove that fuels the marathon Playing In The Band/Not Fade Away → Wharf Rat sequence. Highlights include a seamless Good Lovin' into Sugaree segue, a powerful Bertha, and an inspired second‑set run featuring Estimated Prophet and One More Saturday Night, all wrapped up by a rousing U.S. Blues encore.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 68,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Five of seven recordings are clearly positive, repeatedly praising the Sugaree jam, Good Lovin' transition and overall high energy; two mixed reviews note minor issues but do not detract from the strong consensus. This consistent enthusiasm yields a +1.6 sentiment boost.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd77-05-28.sbd.obv.31952.sbeok.shnf",
+    "reason": "Excellent soundboard capture with crisp, clear mix; highlights Sugaree and Tennessee Jed perfectly and is praised as \"awesome\" and \"amazing\" by multiple listeners."
+  },
+  "key_highlights": [
+    "20‑minute Sugaree jam that defines the night",
+    "Soaring Good Lovin' → Sugaree transition",
+    "Epic hour‑long Playing In The Band suite with tight Not Fade Away > Wharf Rat segues",
+    "Matrix recording adds immersive ambience while preserving SBD clarity"
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Good Lovin'",
+    "Sugaree",
+    "New Minglewood Blues",
+    "Candyman",
+    "Brown Eyed Women",
+    "Samson & Delilah",
+    "Tennessee Jed",
+    "Estimated Prophet",
+    "Playing In The Band",
+    "Not Fade Away",
+    "Wharf Rat",
+    "One More Saturday Night"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers perfect tone and soaring solos; his guitar shines especially on the 20‑minute Sugaree and adds angular flair to Tennessee Jed.",
+    "Phil": "",
+    "Bob": "",
+    "Keith": "",
+    "Mickey": "Locks in a half‑time groove that drives the jams, particularly during Playing In The Band.",
+    "Billy": "Pairs with Mickey for tight dual‑drum interplay, propelling the extended sequences."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-25T02:54:54.730604+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha",
+      "Good Lovin'",
+      "Sugaree"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Brown Eyed Women"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Tennessee Jed"
+    ],
+    [
+      "Estimated Prophet",
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Not Fade Away",
+      "Wharf Rat",
+      "Playing In The Band",
+      "One More Saturday Night"
+    ]
+  ]
+}

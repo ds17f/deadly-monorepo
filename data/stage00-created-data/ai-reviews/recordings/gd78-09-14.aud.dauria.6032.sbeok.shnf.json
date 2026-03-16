@@ -1,0 +1,52 @@
+{
+  "summary": "Fair audience‑sourced recording captures a mixed Egypt show – highlights like a stellar Scarlet Begonia contrast with uneven performances and occasional dropouts.",
+  "review": "The AUD tape is listenable but suffers from muffling, gaps and an overly bass‑heavy mix that can obscure details. Musically the concert swings between inspired moments (Garcia’s strong playing, standout Scarlet Begonia) and sloppy stretches (weak versions of Scarlet Fire and Truckin'), leaving the overall experience mixed but still worth hearing for its historic vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Average star rating ≈4.1 across 16 reviews; most praise key moments while noting recording flaws, yielding a solid but not exceptional overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is a bit muffled with occasional gaps/cuts and untimely fades; bass and vocal levels are unusually high, and there are some dropouts, but the tape remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonia"
+    ],
+    "poor_songs": [
+      "Scarlet>Fire",
+      "Truckin'"
+    ],
+    "setlist_flow": "The concert opens strong (first ten minutes praised) and then drifts, with experimental highs in the middle but a noticeable dip toward the end; pacing is uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is frequently described as playing extremely well with great tone.",
+    "Phil": "Phil Lesh is noted as mellow and solid on bass, though not highlighted beyond that.",
+    "Bob": "Bob Weir receives a positive shout‑out for an outstanding performance in at least one review.",
+    "Keys": "Keith (keys) was forced to audition but delivered sweet synth work; keyboards are generally praised.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:03:10.974360+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-09-14.aud.dauria.6032.sbeok.shnf"
+}

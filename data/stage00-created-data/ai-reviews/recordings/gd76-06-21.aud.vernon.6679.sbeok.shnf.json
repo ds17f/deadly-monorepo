@@ -1,0 +1,61 @@
+{
+  "summary": "Muddy audience recording of a 1976 show, but the scorching Help‑>Slip‑>Franklin’s sequence and high‑energy set make it a fan favorite.",
+  "review": "The performance shines with a super‑mellow yet fiery Help → Slip → Franklin’s run, tight first‑set work and a rousing Dancing in the Street.  The audience tape is noisy and often described as muddy or horrible, though several listeners note it captures the era's raw vibe.  Overall the music outweighs the technical flaws for most Deadheads.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show (average performance rating ~4.5) while consistently criticizing the audio quality (average recording rating ~2.5).  Weighted combination yields a solid 4‑star recommendation."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Many describe the sound as horrible, muddy and filled with crowd yelling; however some note it is decent for an early audience tape and captures the period's ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Dancing in the Street",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy set with a stacked first half and a killer second half; the Help‑>Slip‑>Franklin’s sequence is highlighted as especially hot, keeping the momentum flowing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Slipknot!": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:59:16.430349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-21.aud.vernon.6679.sbeok.shnf"
+}

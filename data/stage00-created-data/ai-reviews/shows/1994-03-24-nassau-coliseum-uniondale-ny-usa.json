@@ -1,0 +1,66 @@
+{
+  "summary": "Solid mid‑90s set with standout Sugaree, Cassidy and Terrapin jam",
+  "blurb": "The show delivers strong performances of Sugaree, Cassidy and a lively post‑Terrapin jam. Jerry’s guitar is solid and the drums drive the second set forward. While Eyes of the World falls flat, the overall pacing stays consistent.",
+  "review": "On March 24, 1994 at Nassau Coliseum the Dead served up a reliably good two‑set show that captures the band in a comfortable mid‑90s groove. The first set rolls through Hell In A Bucket into a warm, expressive Sugaree and a bluesy Walkin' Blues before hitting a nicely sung Loser—Jerry’s lyrics on “Loser” were noted as nailed with solid guitar work throughout. Cassidy shines with a heady jam that many fans point to as the night’s high‑point, and the second set builds momentum with Looks Like Rain and a spirited Terrapin Station that spills into an energetic post‑Terrapin jam highlighted by Mickey and Billy’s tight drumming. Though Eyes of the World never quite finds its footing, the overall flow stays smooth, making this a solid entry for anyone looking to hear the band’s late‑era chemistry.\n\nThe audience recording (gd94-03-24.naks.ladner.14258.sbeok.shnf) offers good clarity and captures the warmth of the crowd, providing the most complete listening experience despite lacking the crispness of a soundboard source. Fans seeking the best representation of this night should start with that tape, as it balances performance highlights with decent audio fidelity.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "Both recordings describe the show as mixed, noting several highlights (Sugaree, Cassidy, Terrapin jam) while also pointing out weaker moments (Eyes of the World). The overall tone leans slightly positive, warranting a modest +0.3 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-03-24.naks.ladner.14258.sbeok.shnf",
+    "reason": "Audience tape with good clarity that captures the standout songs and overall set flow better than the unknown‑quality recording."
+  },
+  "key_highlights": [
+    "Sugaree delivers a warm, expressive performance early in Set 1.",
+    "Cassidy features a heady jam that stands out as the night’s peak.",
+    "Terrapin Station segues into an energetic post‑Terrapin jam with strong drumming.",
+    "Looks Like Rain shines in Set 2 despite overall mixed momentum."
+  ],
+  "song_highlights": [
+    "Sugaree",
+    "Cassidy",
+    "Looks Like Rain",
+    "Terrapin Station"
+  ],
+  "band_performance": {
+    "Jerry": "Lyrics on “Loser” are nailed and his guitar work stays solid throughout the night.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Provides energetic driving rhythms, especially during the post‑Terrapin jam.",
+    "Billy": "Matches Mickey’s intensity, keeping the groove tight through the second set."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-18T20:36:54.250974+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hell In A Bucket",
+      "Sugaree"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Looks Like Rain"
+    ],
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

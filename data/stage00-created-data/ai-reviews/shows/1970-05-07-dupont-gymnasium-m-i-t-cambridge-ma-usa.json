@@ -1,0 +1,79 @@
+{
+  "summary": "Monumental Lovelight jam, strong second‑set jams, historic MIT vibe",
+  "blurb": "The show delivers a towering 31‑minute Turn On Your Lovelight and tight Easy Wind and Candyman performances. Jerry’s guitar shines throughout while the band builds solid energy in the second set.",
+  "review": "May 7, 1970 at MIT remains one of those early‑‘70 concerts that feels both raw and transcendent. The night opens with a modest first set – a mix of folk‑rock numbers and some uneven moments – but the real magic erupts once the band dives into the electric second set. Good Lovin' bursts out, segues into an extended drum break, then rolls into a string of high‑energy jams: Cold Rain And Snow, Dire Wolf, Easy Wind and the unforgettable 31‑minute Turn On Your Lovelight that closes the night. Jerry Garcia’s humor (“The Eleven”) and his steel‑guitar cameo with the New Riders add extra sparkle, while Mickey Hart’s beat‑calling drives the groove. Though audience recordings show typical ’70 tape quirks – hiss, occasional EQ wobble and chatty mic intrusions – the historic atmosphere and stellar improvisations more than compensate, making this MIT show a must‑listen for fans who crave that early Dead fire.\n\nThe performance is not without its rough edges; several songs in the first set (Rider, Speedway, Black Peter, Casey Jones, King Bee) stumble, reflecting the band’s occasional inconsistency at the time. Still, the standout moments – especially the Lovelight marathon and the tight interplay on Easy Wind and Candyman – cement this concert as a key snapshot of the Dead’s evolving live prowess.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 30,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are explicitly positive, two are mixed; no negative consensus. The repeated praise for the Lovelight jam and strong second‑set jams yields a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 0.8 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-05-07.aud.sirmick.32276.sbeok.flac16",
+    "reason": "Good audience tape with clear capture of the historic vibe; balances clarity and energy, making the Lovelight and other jams most listenable."
+  },
+  "key_highlights": [
+    "Monumental 31‑minute Turn On Your Lovelight that closes the show",
+    "Tight Easy Wind and Candyman performances with strong Garcia guitar work",
+    "Energetic second set building from Good Lovin' into extended jams (Cold Rain & Snow, Dire Wolf)",
+    "Historic MIT atmosphere shines despite typical ’70 recording quirks"
+  ],
+  "song_highlights": [
+    "Candyman",
+    "Good Lovin'",
+    "Cold Rain And Snow",
+    "Dire Wolf",
+    "Easy Wind",
+    "Turn On Your Lovelight",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia jokes about “The Eleven,” leads the epic Love Light jam, delivers strong guitar on Easy Wind and Good Lovin', and adds a memorable steel‑guitar cameo with NRPS.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Hart’s beat‑calling is highlighted during Beat It On Down The Line, underpinning the high‑energy jams throughout the second set.",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-19T19:15:18.476178+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Candyman"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Cold Rain And Snow"
+    ],
+    [
+      "Dire Wolf"
+    ],
+    [
+      "Easy Wind"
+    ],
+    [
+      "Not Fade Away",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Cosmic Charlie"
+    ]
+  ]
+}

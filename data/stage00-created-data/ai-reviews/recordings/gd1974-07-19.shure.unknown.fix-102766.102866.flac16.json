@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp, pitch‑corrected audience recording captures a hot July ’74 show with standout performances of Scarlet, Playing in the Band, Row Jimmy and a spooky Spanish jam.",
+  "review": "The audience tape, cleaned up with a pitch fix, sounds surprisingly clear for a 1974 source, though some listeners note occasional high‑level distortion. Musically the night is praised as powerful, featuring an electrifying Scarlet/Playing in the Band pairing, a killer Row Jimmy solo by Jerry, and a creepy yet fun Spanish jam that keeps fans buzzing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (average 4.38) with strong praise for both performance and recording; minor distortion note slightly lowers the overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Pitch‑corrected, crisp and rich sounding for a ’74 audience tape; some reviewers mention overly high levels causing occasional distortion but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet",
+      "Playing in the Band",
+      "Row Jimmy",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic, hot July night with a powerful flow; crowd enthusiasm matches the band's high‑octane playing."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo and vocal on Row Jimmy are highlighted as fantastic.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "The organ creates a creepy yet fun Spanish jam, praised by reviewers.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:38:53.017937+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-19.shure.unknown.fix-102766.102866.flac16"
+}

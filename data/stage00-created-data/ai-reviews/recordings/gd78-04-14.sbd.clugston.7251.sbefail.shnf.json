@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy Virginia Tech show highlighted by a monster Peggy‑O, scorching Black Peter and a soaring The Other One",
+  "review": "The April 14 1978 Virginia Tech performance is consistently praised for its electric college‑arena vibe, blistering guitar work from Jerry and standout moments like Peggy‑O (with an epic post‑Peggy jam), Black Peter, The Other One and a rousing Johnny B. Goode finale.  Reviewers also note the recording is a crisp, well‑mixed soundboard capture that makes the energy come through clearly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈80 %) give 4–5 stars and extol both the performance and the audio quality; only a few low‑star comments concern setlist labeling or unrelated topics."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑mixed soundboard tape (often called “betty board” by reviewers); no major audio glitches mentioned, only occasional setlist mislabeling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Looks Like Rain",
+      "Black Peter",
+      "The Other One",
+      "Sugar Magnolia",
+      "Johnny B. Goode",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, high‑energy first set that builds into a legendary post‑Peggy-O jam and a second set that maintains momentum with strong blues/rock numbers and a fun, extended drum/chaos segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching guitar tone, hot soloing (especially on Black Peter) and overall “hot damn” performance.",
+    "Phil": "Noted for goofing around during Drums (chair‑playing anecdote) and generally solid bass foundation.",
+    "Bob": "Weir’s stage banter is mentioned; no specific musical critique beyond that.",
+    "Keys": "",
+    "Drums": "Drums segment highlighted as a long, energetic jam; the chair‑drumming moment is a memorable detail."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:41:13.938520+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-14.sbd.clugston.7251.sbefail.shnf"
+}

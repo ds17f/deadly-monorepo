@@ -1,0 +1,84 @@
+{
+  "summary": "A powerful second set highlighted by a rare pre‑drums Baba > Tomorrow Never Knows captured on a decent audience tape.",
+  "review": "The show is widely praised for its explosive second‑set sequence – Playing in the Band into Uncle John’s, the one‑of‑a‑kind Baba > Tomorrow Never Knows before the drums, and soaring renditions of So Many Roads and Jack Straw.  The recording is an audience (AUD) source that sounds surprisingly clear for the era, though a few listeners note crowd chatter and mic bleed that can mask details.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the musical performance highly (many 4‑5 stars) while noting a solid but not pristine audience recording; the weighted average yields a strong show score with good but imperfect audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp in many sections (vocals on Aiko, Playin, and So Many Roads), but occasional crowd noise, microphone bleed and a few screaming moments make parts less listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Baba > Tomorrow Never Knows",
+      "Playing in the Band",
+      "So Many Roads",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Peggy-O"
+    ],
+    "setlist_flow": "First set is described as tight and driven, but the second set steals the show with a rare pre‑drums Baba > TNK transition, wild jams in Playing in the Band, and an overall high‑energy vibe despite Jerry’s brief exit during Easy Answers."
+  },
+  "band_member_comments": {
+    "Jerry": "Had technical hiccups early (left stage for Easy Answers) but delivered strong vocals on So Many Roads and threw his guitar dramatically; later seemed to enjoy himself.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick gets special mention for his keyboard work during the Baba > TNK moment, described as a highlight of his tenure.",
+    "Drums": "Mickey Hart and Bill Kreutzmann’s dual rhythm is praised as aggressive and tightly locked, especially as they drive into Tomorrow Never Knows."
+  },
+  "song_mentions": {
+    "Tomorrow Never Knows": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Baba > Tomorrow Never Knows": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:58:27.347698+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-11-29.schoeps.ladner.10541.sbeok.shnf"
+}

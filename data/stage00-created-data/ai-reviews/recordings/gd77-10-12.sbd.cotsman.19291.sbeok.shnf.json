@@ -1,0 +1,76 @@
+{
+  "summary": "A solid soundboard capture (with some rough audience patches) highlighted by a scorching Black Peter and a tight Lazy Lightning > Supplication.",
+  "review": "The October‑1977 Manor Downs show delivers classic Dead magic – blazing Black Peter, an epic Sugar Magnolia, a fire‑breathing The Other One and a razor‑sharp Lazy Lightning > Supplication.  The SBD source is clean, though the audience fill‑ins are noticeably thin, which some listeners flag as a drawback.  Overall the performance shines despite the cold night and occasional recording hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.2, with most comments praising the musical moments while noting only minor recording flaws; strong consensus yields a confident positive score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "SBD tracks are clear and well‑balanced; audience patches used to fill gaps are described as “crummy” or “terrible,” creating occasional drop‑outs but not overwhelming the overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Sugar Magnolia",
+      "The Other One",
+      "Lazy Lightning > Supplication",
+      "Me & My Uncle"
+    ],
+    "poor_songs": [
+      "Candyman",
+      "Donna Jean (bridge/arrangement issue)"
+    ],
+    "setlist_flow": "Cold, rowdy Texas night with a rodeo backdrop; the first set builds to a fiery Lazy Lightning > Supplication closing, while the second set ramps up with an ultra‑hot Sam & D segment and a soaring Black Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead guitar is described as “shredding” and delivering hot solos (especially on Candyman and The Other One).",
+    "Phil": "Lesh gets kudos for “dropping nukes” at the start of The Other One; his vocals are noted as hoarse but enthusiastic.",
+    "Bob": "Bob Weir’s vocal performance shines on Lightning > Supplication, with reviewers calling it full‑displayed prowess.",
+    "Keys": "Keith (or Brent) is praised for “angular key work” that adds richness and dialog to the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Donna Jean": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:56:46.919000+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-10-12.sbd.cotsman.19291.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Pleasant audience recording with occasional volume jumps captures a high‑energy Greek Theater set where the Dead are in top form.",
+  "review": "The show is a high‑energy performance from the 1987 Greek Theatre run, with the band firing on all cylinders and delivering a punchy set. The audience source is generally pleasant and lets listeners hear the venue ambience, but the processing creates noticeable volume jumps between crowd buffers and songs. If you can overlook those quirks, the recording showcases how good a well‑captured Dead audience tape can be.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Reviewers praise the musical performance as high‑energy and strong, but note processing artifacts that affect listening continuity; weighting the strong show (≈5) against good‑fair recording quality (≈3–4) yields a combined rating around 4.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Pleasant, clear audience mix that captures venue ambience; however each song is separated by isolated crowd buffer tracks that were individually normalized, causing noticeable volume jumps between tracks."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy set that 'packs a punch' despite not looking special on paper; the band is in a sweet spot of the tour, delivering strong, consistent performance throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T23:00:03.341236+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-19.138259.Schoeps.bryant.miller.sirmick.sbeok.flac16"
+}

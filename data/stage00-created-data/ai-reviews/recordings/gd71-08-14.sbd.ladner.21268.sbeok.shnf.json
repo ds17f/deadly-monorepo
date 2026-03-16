@@ -1,0 +1,81 @@
+{
+  "summary": "Crisp soundboard capture of a legendary Berkeley ’71 show, driven by explosive Other One jams and blistering Hard‑to‑Handle performances.",
+  "review": "The recording is a solid sound‑board source that delivers clear instrument separation, though the mix sometimes pushes Phil forward and lets Bob’s guitar fade. Musically the concert shines – the first set kicks off with a monster Bertha/Me & My Uncle/Mr. Charlie stretch and the second set erupts into an unforgettable Other One jam, Hard‑to‑Handle, Cumberland Blues and Sugar Magnolia. Overall the band is tight, energetic, and the night is repeatedly cited as a top‑tier 1971 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (30+) are 4–5 stars and praise both the musical performance and recording quality; only a few note minor mix or pitch issues, so the combined show‑plus‑recording score is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced SBD, but occasional mix quirks – Phil’s bass front‑center, Jerry a bit recessed, Bob’s rhythm guitar disappearing in parts, and some pitch/speed correction needed on certain tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One (jam)",
+      "Bertha",
+      "Me & My Uncle",
+      "Mr. Charlie",
+      "Hard to Handle",
+      "Cumberland Blues",
+      "Sugar Magnolia",
+      "Big Railroad Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds momentum with a classic Bertha‑Me & My Uncle‑Mr. Charlie sequence; second set launches into a monster Other One jam, followed by hard‑hitting Hard‑to‑Handle, Cumberland and a soaring Sugar Magnolia, giving the concert an exhilarating rise‑and‑fall arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching lead work, power chords on The Other One jam, bright background vocals on Bobby McGee, and overall ‘ripping’ guitar tone despite occasional mix recess.",
+    "Phil": "Repeatedly highlighted – heavy, melodic bass lines, crystal‑clear brilliance on the Other One jams, described as “God” and a cornerstone of the show’s power.",
+    "Bob": "Noted for rhythmic glue; some reviewers lament his guitar disappearing in parts of Not Fade Away jam, but overall his rhythm work is appreciated.",
+    "Keys": "Pigpen’s organ and vocals receive strong kudos (especially on first‑set numbers), while Keith’s piano presence is mentioned as a later‑year development rather than prominent here.",
+    "Drums": "Mickey’s drumming described as solid ‘in the pocket’; no major complaints, just steady support for the high‑energy jams."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T07:38:10.134999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-08-14.sbd.ladner.21268.sbeok.shnf"
+}

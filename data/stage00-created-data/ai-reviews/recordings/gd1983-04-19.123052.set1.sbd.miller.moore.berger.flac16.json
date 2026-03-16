@@ -1,0 +1,57 @@
+{
+  "summary": "Recording quality is unspecified, but the show shines with a killer Jack Straw and monster Sugaree before tapering off in the second set.",
+  "review": "The performance is praised for an above‑average Jack Straw featuring an extended guitar break and a 17‑minute monster Sugaree that stands out as a highlight. The reviewer also notes a strong All Over Now and a good Big River, but feels the remainder of the second set falls short of the first. No details on the audio source or fidelity are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Positive comments about several songs and overall show strength, but only one review with no recording‑quality details lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not comment on sound quality or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Sugaree",
+      "All Over Now",
+      "Big River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is highlighted as strong, especially Jack Straw; the second set opens with a monster Sugaree but overall feels weaker compared to the first half."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:53:35.252528+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-19.123052.set1.sbd.miller.moore.berger.flac16"
+}

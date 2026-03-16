@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent audience recording with great presence and a standout third‑set featuring Scarlet Begonia → Fire on the Mountain, but mixed show pacing and some missing drum sections.",
+  "review": "The tape captures an electric three‑set performance that many fans rank among the best of the 1980 New York run.  Highlights include a soaring China Cat Sunflower, a punchy U.S. Blues and the Scarlet Begonia → Fire on the Mountain sequence, while the mix is generally clear with strong room ambience despite occasional taper chatter and a few technical glitches (missing drum segment, slight speed issue).",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "One reviewer rates the show/recording 5 stars praising performance and sound; another gives a more tempered 3‑star rating noting missing drums and pacing issues.  Weighted toward show quality, the overall assessment lands just under 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear room presence and decent clarity; occasional taper talk adds character.  One source runs slightly fast and needs pitch correction, and a 4‑minute drum segment is missing in the primary audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "U.S. Blues",
+      "Scarlet Begonia",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Friend of the Devil",
+      "Peggy-O",
+      "Not Fade"
+    ],
+    "setlist_flow": "Three‑set marathon with a solid first set, a second set that loses some momentum but contains big numbers, and a third set that builds to a powerful Scarlet Begonia → Fire on the Mountain climax before an upbeat encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as “perfect” and “incredible”; another reviewer notes he was mixed low throughout.",
+    "Phil": "His bass can be heard clearly in some sources, providing a solid foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum sound described as loose/approximate; a 4‑minute drum segment is missing and the drums run slightly fast."
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:06:26.281864+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-22.nak300.morris.101778.sbeok.flac16"
+}

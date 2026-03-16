@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality not mentioned, but the first set is highlighted for a killer \"Crazy Fingers\" performance.",
+  "review": "The sole fan comment praises the opening set, calling out an especially strong rendition of \"Crazy Fingers.\" No details are given about the source or fidelity of the recording, so listeners should assume a typical unknown‑quality capture. Overall the impression is positive regarding the musical moment, though information on the audio quality is lacking.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review that mentions a single song positively; no data on recording quality leads to a moderate rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard, audience mix, clarity, or any technical issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only the first set is referenced; insufficient information to comment on overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:46:07.489425+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-04.127700.chasingwilma.flac24"
+}

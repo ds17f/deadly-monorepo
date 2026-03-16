@@ -1,0 +1,49 @@
+{
+  "summary": "Outstanding audio of a beloved Starlight Theater show, highlighted by Jerry’s opening of “Nobody’s Fault” and the classic Drums‑Space huddle.",
+  "review": "Fans rave about the crystal‑clear recording quality, calling it outstanding and noting that it captures one of the best shows they ever attended at the Starlight Theater. The performance is remembered fondly for Jerry’s powerful start with “Nobody’s Fault” and the immersive Drums/Space segment that got the crowd huddling together. No technical flaws are reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Three detailed 5‑star reviews praise both the musical performance and the audio fidelity, while a single off‑topic low rating does not reflect recording or show quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly describe the sound as outstanding, crystal‑clear and of high fidelity; no dropouts or muddiness are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Nobody's Fault"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is remembered for its seamless flow, especially the opening of “Nobody’s Fault” and a memorable Drums‑Space segment that engaged the entire audience."
+  },
+  "band_member_comments": {
+    "Jerry": "Highlighted for starting ‘Nobody's Fault’ with strong guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Nobody's Fault": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:32:11.649217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-03.mtx.seamons.94595.sbeok.flac16"
+}

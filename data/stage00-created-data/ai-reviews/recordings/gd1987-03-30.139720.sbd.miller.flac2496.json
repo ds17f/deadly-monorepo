@@ -1,0 +1,51 @@
+{
+  "summary": "Exceptionally clean recording that captures a superb show highlighted by Jerry’s spot‑on vocals and an outstanding version of “It’s All Over Now, Baby Blue.”",
+  "review": "Both reviewers rave about the pristine sound – guitars crystal clear, vocals razor sharp and rhythm tight – making this one of the best‑recorded Dead shows they’ve heard. The performance shines especially on “It’s All Over Now, Baby Blue,” with Phil’s spicy bass intro earning special praise. No flaws are noted, resulting in an overall glowing impression.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (standout songs and energetic Phil) plus excellent recording quality; limited to two reviews so confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe guitars as “so clean,” Jerry’s voice as spot‑on, and the overall mix as crystal clear with perfect rhythm – no negatives mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It’s All Over Now, Baby Blue",
+      "The Loser",
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening highlighted by Phil’s spicy bass, flowing into tight rhythm and clean guitars throughout; the show maintains high energy and musical cohesion."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice is spot‑on according to reviewers.",
+    "Phil": "Starts the show with a “spicy” bass line that signals a great performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "It’s All Over Now, Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:13:54.686534+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-30.139720.sbd.miller.flac2496"
+}

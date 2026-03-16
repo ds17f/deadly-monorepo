@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording of decent quality captures a spirited show with standout Bird Song and Big River performances.",
+  "review": "The concert is praised for its energetic delivery, especially the beloved Bird Song and what one reviewer calls the greatest rendition of Big River. While the soundboard source provides a clear listen, a few listeners note uneven moments that make this gig feel slightly weaker than other shows from the same period.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Reviewers are generally positive about specific songs and overall vibe, but mixed comments about consistency keep the rating just below four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit complaints; reviewers imply a clear, listenable capture typical of soundboard sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Big River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as played with gusto and energy, though a few weak spots are noted that make it feel less cohesive than other shows from the same two‑week run."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T18:01:34.028334+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-23.sbd.130728.MrBill.flac16"
+}

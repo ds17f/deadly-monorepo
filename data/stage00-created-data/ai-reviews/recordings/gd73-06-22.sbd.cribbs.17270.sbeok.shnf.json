@@ -1,0 +1,74 @@
+{
+  "summary": "A superb June‑22 1973 soundboard capture (with a few splice artifacts) that delivers crystal‑clear mix and an electrifying show highlighted by a legendary Bird Song, epic Playing in the Band and marathon Truckin’/Other One jams.",
+  "review": "The recording is a mostly clean SBD source – listeners praise its excellent separation, vivid organ and guitar tones, and only note occasional volume drops or splice points early in the set. Musically the concert is frequently called one of the band’s finest of the ’70s, with a relaxed yet inspired vibe, soaring Bird Song, a monster 21‑minute Playing in the Band, and an unstoppable second‑set suite (Truckin’ → Nobody’s Jam → The Other One) that many fans rank among the year’s best. Overall both sound and performance earn unanimous high praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 25 reviews, average rating ~4.63; overwhelmingly positive language about both the music and recording quality with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear separation of instruments, crisp mix, prominent Keith organ and Jerry guitar. Early discs show volume variations and audible AUD splices; later discs are crystal‑clean. Audience patches fill holes; overall listening experience is very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Playing in the Band",
+      "He's Gone",
+      "Truckin' > Nobody's Jam > The Other One",
+      "Sugar Magnolia",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed, loose feel that builds into a powerhouse second set; seamless segues (China Cat → Rider, Truckin' → jam suite) and extended improvisations keep the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for gentle, humble tone, creative guitar ideas, and standout solos on Bird Song and the long jams.",
+    "Phil": "Described as wildly creative – ‘third‑guitar’ style, longest solo of the era, beautiful harmonies and a driving force in the set.",
+    "Bob": "",
+    "Keys": "Keith's organ noted as prominent and beautifully mixed, especially during verses of several songs.",
+    "Drums": "Bill (and later Mickey) receive general praise for solid, driving rhythm that fuels the extended jams."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Playing in the Band": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "He's Gone": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-22T14:49:00.508053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-06-22.sbd.cribbs.17270.sbeok.shnf"
+}

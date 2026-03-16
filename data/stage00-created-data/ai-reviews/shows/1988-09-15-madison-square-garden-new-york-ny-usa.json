@@ -1,0 +1,74 @@
+{
+  "summary": "High‑energy set with soaring Sugaree and killer PITB > UJB",
+  "blurb": "The show bursts out of the gate with a fiery Sugaree and tight Desolation Row. The second set builds momentum through Crazy Fingers into a classic Playing In The Band → Uncle John's Band segue, ending on an inspired All Along The Watchtower.",
+  "review": "September 15, 1988 at Madison Square Garden finds the Dead in top‑form, delivering a concise but punchy two‑set marathon. Jerry launches the night with a soaring solo on Sugaree and later trades blistering leads on Crazy Fingers that melt into the famed Playing In The Band → Uncle John's Band transition – a highlight that still feels fresh. Phil’s bass is solid throughout, punctuated by his spoken “Phil Speaks” moment and crystal‑clear lines on Desolation Row. The rhythm section (Mickey and Bill) stays tight, keeping the groove steady even as occasional trash‑can accents surface during the jam. While a few numbers—Samson & Delilah, Uncle (solo), Lovelight—never quite ignite, the overall energy never wanes, culminating in an exuberant All Along The Watchtower and a rousing Turn On Your Lovelight that sends the crowd home on a high note.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Three recordings are positive, praising standout songs (Sugaree, Desolation Row, PITB > UJB) and Jerry's guitar work; only one negative note concerns a matrix cut, which is a recording issue not performance‑related. Consistent enthusiastic language yields a moderate‑high positive sentiment.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-09-15.sbd.barbella.5068.sbeok.shnf",
+    "reason": "Clear soundboard capture with good balance, minimal glitches, and the most detailed commentary on standout songs."
+  },
+  "key_highlights": [
+    "Sugaree opens the show with soaring Garcia guitar.",
+    "Crazy Fingers → Playing In The Band → Uncle John's Band sequence drives the second set.",
+    "All Along The Watchtower closes the set with powerful energy, leading into a rousing Turn On Your Lovelight."
+  ],
+  "song_highlights": [
+    "Sugaree",
+    "Desolation Row",
+    "Deal",
+    "Crazy Fingers",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "All Along The Watchtower"
+  ],
+  "band_performance": {
+    "Jerry": "Soars on Sugaree and delivers an extended solo on Mexicali Blues (though not in the setlist); vocal strain appears on Crazy Fingers and a cracked voice shows up during the encore.",
+    "Phil": "Provides solid, audible bass throughout; highlighted by his spoken “Phil Speaks” moment and clear presence on Desolation Row.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Drums are clear and present, driving the band forward with steady power; occasional trash‑can sounds add texture during jams.",
+    "Billy": "Shares the crisp, energetic drum work with Mickey, keeping the rhythm tight throughout."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T13:52:43.646580+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hell In A Bucket",
+      "Sugaree"
+    ],
+    [
+      "Desolation Row"
+    ],
+    [
+      "Cassidy",
+      "Deal"
+    ],
+    [
+      "Samson & Delilah",
+      "Crazy Fingers",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "I Will Take You Home",
+      "All Along The Watchtower",
+      "Goin' Down The Road Feeling Bad",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

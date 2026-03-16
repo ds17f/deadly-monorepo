@@ -1,0 +1,51 @@
+{
+  "summary": "Clear soundboard recording captures a solid Greensboro show with a space‑y Dark Star and crisp Hornsby in the mix.",
+  "review": "The reviewer praises this April 1991 Greensboro performance as the better of two shows they attended, noting a pleasant first set that opened with Jack Straw > Peggy‑O and a solid second set highlighted by a “spacey” Dark Star. The sound is described as very good, with Brent Hornsby’s keyboards sitting nicely in the mix, making it an enjoyable listen for fans of the spring run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; both show and recording are praised (show solid, recording very good), leading to a high rating but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear mix with Hornsby’s keyboards audible; overall sound described as 'very good' with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens smoothly with Jack Straw into Peggy‑O; second set maintains momentum and peaks with a spacey Dark Star, providing a balanced and engaging concert flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Hornsby sounds nice in the mix and is enjoyed on this spring run.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:03:40.125862+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-01.p1.all2.sbd.serafin.8257.sbefail.shnf"
+}

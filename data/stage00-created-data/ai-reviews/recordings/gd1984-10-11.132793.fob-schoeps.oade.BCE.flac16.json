@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent matrix recording captures a high‑energy October ’84 Augusta show with standout Peggy‑O, Little Red Rooster → Mighty Swell and a smoking Playing in the Band.",
+  "review": "The remastered matrix source is praised as fantastic and crystal‑clear, delivering an immersive listening experience. Musically the concert maintains a high‑energy vibe throughout, highlighted by Peggy‑O, Little Red Rooster into Mighty Swell, Hell in a Bucket → Touch, and a soaring Playing in the Band. Overall the show is regarded as strong, though one reviewer noted no specific highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is described as high‑energy with several standout songs (≈4/5) and recording quality is rated excellent (≈5/5); weighted average yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix work described as fantastic; remaster praised for great clarity and immersive sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Little Red Rooster",
+      "Mighty Swell",
+      "Hell in a Bucket",
+      "Touch",
+      "Playing In The Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy show sustained throughout; strong opener, first‑set close Little Red Rooster → Mighty Swell, second‑set opening Hell in a Bucket → Touch showcases the new mid‑80s Dead sound."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Swell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:49:03.123638+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-11.132793.fob-schoeps.oade.BCE.flac16"
+}

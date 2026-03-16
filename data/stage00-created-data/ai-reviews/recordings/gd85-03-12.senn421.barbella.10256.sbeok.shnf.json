@@ -1,0 +1,92 @@
+{
+  "summary": "Solid audience recording captures a brief set highlighted by a scorching Touch → Playin' jam, but the overall performance is uneven and often listless.",
+  "review": "The AUD‑sourced tape offers a clear mix with just enough crowd ambience to feel present, making it an enjoyable document despite its short length. Musically the show shines on the second‑set opening Touch leading into a dense fifteen‑minute Playin' jam and occasional sparks like Iko and Red Rooster, yet many numbers (Touch of Grey, Throwing Stones, Looks Like Rain) fall flat, leaving the performance feeling inconsistent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed to poor with several low‑star critiques, while the recording itself is praised as solid; combined weighting yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a solid mix with clear instrument balance and limited crowd noise; no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch > Playin' in the Band",
+      "Iko Iko",
+      "Red Rooster",
+      "Not Fade Away > Love Light"
+    ],
+    "poor_songs": [
+      "Touch of Grey",
+      "Throwing Stones",
+      "Looks Like Rain",
+      "He's Gone"
+    ],
+    "setlist_flow": "A short first set opens strong with Iko and Red Rooster, but quickly becomes lethargic. The second set begins promisingly with Touch, then delivers a highlight in Playin', before sagging on Throwing Stones and ending on an energetic NFA/Love Light combo."
+  },
+  "band_member_comments": {
+    "Jerry": "Shows strong solos on Red Rooster and the Playin' jam, but sounds terrible on the sloppy Touch of Grey.",
+    "Phil": "",
+    "Bob": "Passionate vocals on Red Rooster; spotty vocal delivery noted on Dupree's and listless on Looks Like Rain.",
+    "Keys": "Brent delivers impressive solos on Red Rooster; no other keyboard comments.",
+    "Drums": "Positive mention of the drum segment (\"Drumz!!!\") in the second‑set opening."
+  },
+  "song_mentions": {
+    "Touch > Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away > Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:10:30.101507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-12.senn421.barbella.10256.sbeok.shnf"
+}

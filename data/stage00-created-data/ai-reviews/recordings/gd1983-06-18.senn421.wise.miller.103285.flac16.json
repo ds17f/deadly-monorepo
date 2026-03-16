@@ -1,0 +1,56 @@
+{
+  "summary": "High‑energy 1983 show with a scorching Scarlet > Fire and solid Hell in a Bucket > Deal, captured on a decent soundboard recording that’s a bit flat for some listeners.",
+  "review": "The performance is consistently praised for its intensity – especially the second set’s blistering Scarlet > Fire and the standout Hell in a Bucket > Deal – with Jerry’s vocals noted as on‑point. Recording quality is described as decent soundboard (AUD) but occasionally flat, making some peaks hard to hear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight exceptional musical moments; recording quality is generally good but with noted flatness, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally decent AUD (audience‑mic) soundboard mix; several listeners note the sound is flat and peaks are hard to hear, but overall it’s listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Hell in a Bucket > Deal",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid, second set described as insane and high‑energy with the rain‑cleared opening of Scarlet leading into massive jams; the show builds to an unforgettable climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are on point; overall guitar work praised indirectly through references to “the boys” being in sync.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland weaves a clever I Can See Clearly Now melodic cue into the Scarlet opening.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Hell in a Bucket > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Can See Clearly Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T07:19:28.646748+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-18.senn421.wise.miller.103285.flac16"
+}

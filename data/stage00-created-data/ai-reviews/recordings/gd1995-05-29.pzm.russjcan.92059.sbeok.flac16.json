@@ -1,0 +1,31 @@
+{
+  "summary": "Fans express strong affection for the show, but reviews give no details on performance or audio quality, leaving the recording source and sound quality uncertain.",
+  "review": "One reviewer gives the recording a perfect five‑star rating, praising their love of the Dead, while another offers a modest three stars, recalling only the atmosphere and a Chuck Berry appearance. No specific comments about song execution, band members, or audio fidelity are provided, so both show and recording quality remain undefined.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Average of the two star ratings (5 + 3) ÷ 2 = 4, adjusted slightly downward due to lack of concrete information about performance and sound quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers mentioned any audio characteristics; therefore the recording quality cannot be assessed beyond a neutral assumption."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T09:12:36.333172+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-29.pzm.russjcan.92059.sbeok.flac16"
+}

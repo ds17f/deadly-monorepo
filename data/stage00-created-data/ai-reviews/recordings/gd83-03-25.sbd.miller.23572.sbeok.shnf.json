@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard source with generally good fidelity but noticeable low‑treble muddiness, capturing a mixed‑quality show highlighted by a strong Help on the Way → Slipknot sequence.",
+  "review": "The recording is a soundboard (SBD) that most listeners find clear, though one reviewer notes the treble was turned down, leaving a muddy low‑end. Musically the concert was uneven – a rough start and some sloppy playing were mentioned – but the return of Help on the Way into the setlist is repeatedly praised as a standout moment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Multiple reviews provide consistent feedback: decent soundboard quality with some EQ issues, and an average performance that improves notably during the Help → Slipknot segment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD; one reviewer cites low‑treble, muddy sound after the opening seconds. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opened sluggishly with sloppy playing, but the setlist gains momentum when Help on the Way re‑appears, signaling a positive shift in energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Enthusiastic call to 'Play one Phil!' but no specific comment on his bass work.",
+    "Bob": "",
+    "Keys": "Mentions past keyboardists Keith/Brent in passing; no direct assessment of current keys performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-14T03:58:57.445404+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-03-25.sbd.miller.23572.sbeok.shnf"
+}

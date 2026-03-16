@@ -1,0 +1,71 @@
+{
+  "summary": "High‑energy Boston ’73 with stellar Playin’, Weather Report and soaring Eyes",
+  "blurb": "The first set builds to a blistering Playing In The Band, while the second set journeys through an inspired Weather Report Suite into a Dark Star jam and a soaring Eyes Of The World. Jerry’s guitar is on fire, Keith adds depth on piano, and Bill’s jazzy drumming keeps the momentum tight.",
+  "review": "On November 30, 1973 at Boston Music Hall the Dead delivered one of those rare late‑’73 marathons that still feels fresh decades later. A bright, upbeat first set rockets from a haunting Morning Dew into a ferocious Playing In The Band that showcases Garcia’s “on fire” lead work and Phil’s bass gymnastics on El Paso. After a classic Bertha → The Promised Land segue the band dives deep into a Weather Report Suite that lets Keith’s piano shine, morphs into an exploratory Dark Star jam, and lifts off into an unforgettable Eyes Of The World before closing with Sugar Magnolia. The energy never wanes, Jerry’s tone is “perfect” and “energy‑filled,” Bill’s jazzy drumming adds subtle swing, and even the absence of Mickey Hart doesn’t hurt the flow. For listeners who want crystal‑clear instrument separation and vocal clarity, the soundboard tape (gd73-11-30.sbd.vernon.8099.sbeok.shnf) is the definitive source, though the matrix version offers an equally clean blend for those who prefer a touch of audience ambience.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 42,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Multiple recordings describe the performance in glowing terms—\"stellar Playin',\" \"soaring Eyes Of The World,\" \"perfect\" guitar tone, and “jazzy” drumming—while only one source is mixed and none are negative. Consistent praise across three sources yields a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd73-11-30.sbd.vernon.8099.sbeok.shnf",
+    "reason": "Crystal‑clear instrument separation and vocal clarity; well‑mixed soundboard despite minor pitch quirks, making it the clearest representation of the show’s energy."
+  },
+  "key_highlights": [
+    "High‑energy first set that climaxes with a blistering Playing In The Band",
+    "Exploratory second set featuring Weather Report Suite → Dark Star jam → soaring Eyes Of The World",
+    "Keith Godchaux’s piano adds depth to the Weather Report Suite",
+    "Matrix recording praised for flawless mix, but SBD remains best for clarity"
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Weather Report Suite Prelude",
+    "Weather Report Suite Part 1",
+    "Let It Grow",
+    "Dark Star Jam",
+    "Eyes Of The World",
+    "Bertha",
+    "Sugar Magnolia",
+    "Morning Dew"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia is described as \"on fire\" with a blistering, swervy lead on Playin' and a perfect, energy‑filled tone throughout the set.",
+    "Phil": "Phil delivers standout bass work on El Paso (\"Phil pwns it\") and provides a solid foundation for the entire marathon.",
+    "Bob": "Bob’s rhythm guitar is solid and his vocals are crystal‑clear; he adds a humorous \"Donnaskreech\" during Sugar Magnolia.",
+    "Brent": "Keith Godchaux shines on piano, especially throughout the Weather Report Suite, adding depth and melodic richness to the second set.",
+    "Mickey": "Mickey Hart is absent for this show but his omission does not detract from the overall groove.",
+    "Billy": "Bill Kreutzmann’s jazzy drumming style is praised, driving the transitions and keeping the momentum tight."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T03:33:49.236418+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band"
+    ],
+    [
+      "Weather Report Suite Prelude",
+      "Weather Report Suite Part 1",
+      "Let It Grow",
+      "Dark Star Jam",
+      "Eyes Of The World",
+      "Sugar Magnolia"
+    ],
+    [
+      "Bertha",
+      "The Promised Land"
+    ],
+    [
+      "Morning Dew"
+    ]
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "summary": "Soundboard capture of a wildly energetic 10‑11‑83 MSG show – stellar St. Stephen and China > Rider moments despite fair‑ish tape clarity and a few rough songs.",
+  "review": "The performance is remembered for its electric second set, with St. Stephen delivering goose‑bumps, a scorching China > Rider segue and strong Throwing Stones, Jack Straw and Birdsong jams.  The sbd source is usable but not crisp – audience bleed is sparse and the mix can sound muddy on some tunes (Wang Dang Doodle, Day Job).  Overall fans rate the show highly, though opinions diverge on a handful of songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (especially St. Stephen and second‑set jams) while noting only moderate tape quality; weighted average of show (≈4.5) and recording (≈3) yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "sbd with limited crowd ambience; some reviewers call it \"so‑so\" or \"not crisp\"; occasional muddiness on certain tracks (Wang Dang Doodle, Day Job) but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "China > Rider",
+      "Throwing Stones",
+      "Bertha",
+      "Jack Straw",
+      "Birdsong",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Wang Dang Doodle",
+      "Day Job"
+    ],
+    "setlist_flow": "Second set erupts with massive crowd excitement; St. Stephen is teased for minutes before breaking out, creating a high‑energy peak.  Transitions are occasionally sloppy (e.g., into Stones), but overall the flow from Miracle to Bertha to China Doll feels natural and thrilling."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised repeatedly for soaring guitar tone, inventive fills on Day Job and strong vocal delivery; a few reviewers note his voice sounding off‑key on certain songs.",
+    "Phil": "Bass described as \"nimble\" and a solid groove that underpins the jam sections; occasional mention of Phil’s mic during China Doll.",
+    "Bob": "Rhythm guitar called \"sizzling\" and \"out‑of‑this‑world\"; some note his level is low in the mix on certain tracks.",
+    "Keys": "Brent (keyboards) receives high marks for his electronic piano texture, though a few call it \"tinny\"; overall keyboard work praised on China Doll and Birdsong.",
+    "Drums": "Bill (drummer) gets thumbs‑up from fans, with the drum break before St. Stephen highlighted as a crowd‑pleaser."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 22,
+      "negative_mentions": 6,
+      "total_mentions": 28
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 0,
+      "negative_mentions": 7,
+      "total_mentions": 7
+    },
+    "Day Job": {
+      "positive_mentions": 2,
+      "negative_mentions": 4,
+      "total_mentions": 6
+    },
+    "China > Rider": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Throwing Stones": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Bertha": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Birdsong": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T11:29:41.897641+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-11.sbd.harrell.7339.sbeok.shnf"
+}

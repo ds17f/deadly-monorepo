@@ -1,0 +1,58 @@
+{
+  "summary": "Best‑sounding audience recording with sparkling Stella Blue and Lovelight, but marred by numerous flubs in Shakedown Street and Touch of Grey.",
+  "review": "The audio capture is praised as the best‑sounding AUD pull to date, delivering clear and lively sound. However, the performance itself suffers from many mistakes—especially on Shakedown Street and Touch of Grey—leaving only Stella Blue and Lovelight to truly shine in the post‑space set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "One review gives a 3‑star overall rating; it highlights excellent audience recording quality but notes significant performance flaws, resulting in an average combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best‑sounding AUD pull on record—clear, crisp, and well balanced for a crowd source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Shakedown Street",
+      "Touch of Grey"
+    ],
+    "setlist_flow": "The set is uneven, with many flubs early on and only two strong tunes after the space segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:10:05.739687+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-27.149304.senn441.hunt.mattes.miller.clugston.flac2496"
+}

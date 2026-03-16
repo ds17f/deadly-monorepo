@@ -1,0 +1,51 @@
+{
+  "summary": "Historic Pigpen farewell with a superb first‑ever Stella Blue, but captured on a low‑fi audience tape that swings between muffled and occasionally clear.",
+  "review": "The Hollywood Bowl show of June 17 1972 is notable for being Ron “Pigpen” McKernan’s final appearance and for delivering the debut performance of “Stella Blue,” which many reviewers describe as fully developed and emotionally powerful. Musically the band is praised – Jerry’s guitar and vocals, Phil’s bass interplay, Bob’s vocal form on “Black‑Throated Wind,” and Pigpen’s organ on the ballad shine through – yet the audience recording is widely condemned as unlistenable, with drop‑outs, muffled openings and occasional moments of surprising clarity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "The consensus is that the performance is historically significant and musically strong (average show rating ~4.5) while the recording quality is consistently poor (average ~2). Weighting show 70 % and recording 30 % yields a combined score around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience mic capture with frequent skips, drop‑outs, muffled start, occasional microphone‑in‑pocket/rectum rumors; audible crowd chatter and stage banter. Sound improves later in the set but never reaches high fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "The Other One",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as swinging and energetic; second set suffers from recording degradation but contains strong jams (Stella Blue debut, a compelling “Other One,” and a solid “Playing in the Band”). The historic weight of Pigpen’s last appearance gives the whole concert an elevated emotional arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tight guitar work, warm vocals, and his tie‑dyed Fender Twin‑Reverb/Strat; highlighted on “Stella Blue,” “Loser,” and other numbers.",
+    "Phil": "Noted for solid bass interplay (old Guild hollow‑body) and strong interaction with Jerry during jams.",
+    "Bob": "Mentioned in the infamous “watch the wires!” moment, praised vocal form on “Black Throated Wind” and an energetic “Beat It.”",
+    "Keys": "Pigpen’s organ shines on the first-ever “Stella Blue”; later reviewers note Keith Godchaux piano complementing the organ.",
+    "Drums": "Bill Kreutzmann singled out as the perfect drummer for this era; Mickey Hart receives little direct comment."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T14:54:15.174465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-06-17.aud.hanno.16470.sbeok.shnf"
+}

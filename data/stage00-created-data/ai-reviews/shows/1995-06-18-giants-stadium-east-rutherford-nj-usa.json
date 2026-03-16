@@ -1,0 +1,71 @@
+{
+  "summary": "Uneven Giants show with strong Spanish jam and mixed Garcia playing",
+  "blurb": "The set features a highlight‑filled second set – China Cat Sunflower > I Know You Rider, Eyes Of The World into a seamless Spanish Jam that rolls into Lucy In The Sky With Diamonds. Jerry’s performance swings between fatigued moments and flashes of fire, while the drum/Space edit on some releases disrupts the flow. Overall the show is uneven but offers several standout jams.",
+  "review": "June 18, 1995 at Giants Stadium captured a Grateful Dead night that feels both bittersweet and brilliant. The first set rolls along with solid staples, but it’s the second set that draws most attention: a fluid China Cat Sunflower → I Know You Rider segue, an inspiring Eyes Of The World leading into a lush Spanish Jam, and a soaring Lucy In The Sky With Diamonds to close. Jerry Garcia’s playing is a study in contrast – reviewers note his obvious fatigue and rough patches, yet others hear him “firing on all cylinders,” delivering moments of true fire that outshine many 1995 outings. The rhythm section stays tight, though the removal of the Space segment on some releases makes the drum solo feel abrupt. In short, Giants ’95 is an uneven performance marked by standout jams and a poignant glimpse of Garcia’s waning health.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 81,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "Multiple recordings highlight negative aspects – two reviews explicitly criticize Jerry’s deteriorating condition and the edited Space segment, while only one review offers unequivocally positive praise. The mixed/negative sentiment outweighs the solitary positive note, leading to a net negative adjustment.",
+      "final_calculation": "2.5 + 0.4 - 0.5 = 2.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-06-18.120080.nak.Boedicker.flac16",
+    "reason": "Excellent audio quality with clear balance and no technical issues; reviewers praise Garcia’s fire and the strong Spanish‑jam flow, making it the most complete and enjoyable capture of this show."
+  },
+  "key_highlights": [
+    "Standout China Cat Sunflower → I Know You Rider transition",
+    "Spanish Jam that builds into Lucy In The Sky With Diamonds",
+    "Eyes Of The World jam showcases tight group interplay",
+    "Show energy is uneven due to Jerry’s health, but moments of brilliance shine through"
+  ],
+  "song_highlights": [
+    "The Same Thing",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Spanish Jam",
+    "Eyes Of The World",
+    "Wharf Rat",
+    "Lucy In The Sky With Diamonds"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s playing swings between noticeable fatigue and flashes of fire, with some reviewers calling his performance rough while others say he was firing on all cylinders.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "",
+    "Drums": "The drum solo is solid, but the removal of the preceding Space segment in certain releases creates a jarring edit that disrupts the natural build‑up."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-19T10:07:39.001797+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "The Same Thing"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "I Need A Miracle",
+      "Wharf Rat",
+      "Not Fade Away"
+    ],
+    [
+      "Lucy In The Sky With Diamonds"
+    ]
+  ]
+}

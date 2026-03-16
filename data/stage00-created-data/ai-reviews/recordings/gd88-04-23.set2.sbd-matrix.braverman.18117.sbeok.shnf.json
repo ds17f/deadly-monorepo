@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy show with standout Hey Jude and Stella Blue, captured on a clean matrix mix that leans heavily on the soundboard.",
+  "review": "Fans recall an electric performance highlighted by a soaring Hey Jude cover and a heartfelt Stella Blue, plus the rare Pocky Way moment. The matrix recording sounds solid – the SBD side is crisp while the audience layer is barely audible – making it a very listenable document of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers are enthusiastic about the show (average 4.5 stars) and note good but not perfect recording quality (4‑star comment), yielding a weighted rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard mix; audience bleed is minimal, so the ambience is faint but the overall clarity is strong."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Jude",
+      "Stella Blue",
+      "Pocky Way"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy with a cool song selection; crowd interaction peaked during drums and the Hey Jude moment, creating an uplifting flow throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Fans note Jerry’s emotive vocal on Stella Blue and his indulgent presence during that slow song.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Crowd started howling during the drum segment, indicating a strong rhythmic drive."
+  },
+  "song_mentions": {
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:11:02.987848+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-23.set2.sbd-matrix.braverman.18117.sbeok.shnf"
+}

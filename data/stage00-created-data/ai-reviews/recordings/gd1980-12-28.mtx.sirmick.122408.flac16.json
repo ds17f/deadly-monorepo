@@ -1,0 +1,31 @@
+{
+  "summary": "Fun, hot show with unknown recording quality",
+  "review": "The concert is described as a fun and energetic performance, earning a solid four‑star rating from the reviewer. No details are given about the source or fidelity of the recording, so its technical quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single brief review with a 4‑star rating; shows positive reception but provides no information on recording fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Review mentions the show was fun and hot but provides no specifics about song order or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T07:26:13.618553+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-28.mtx.sirmick.122408.flac16"
+}

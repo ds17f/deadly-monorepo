@@ -1,0 +1,70 @@
+{
+  "summary": "Rough‑around‑the‑edges audience recording but an electrifying show highlighted by Dark Star, The Other One and rare It’s a Sin",
+  "review": "The performance shines with a monster Dark Star, a ballistic The Other One and a rare appearance of It’s a Sin, plus standout jams out of China Cat Sunflower and Cryptical Envelopment.  The tape is an old‑school ’69 audience recording that sounds “garage‑band” gritty and would benefit from EQ, making it a hard listen for audiophiles but still worth the musical payoff.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is praised by most reviewers (≈4/5) while recording quality is consistently described as poor/fair (≈2.5/5). Weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crude, garage‑band sound with noticeable muddiness; benefits from EQ and suffers from occasional drop‑outs typical of ’69 audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "Cryptical Envelopment",
+      "It’s a Sin",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [
+      "Eleven"
+    ],
+    "setlist_flow": "Strong second‑set momentum centered on Dark Star and Cryptical, with rare It’s a Sin adding excitement; overall high energy despite the rough tape."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pig’s harmonica (harp) appears on a rare track, adding an extra flavor.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It’s a Sin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eleven": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T13:17:04.043805+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-15.aud.sbd-patch.komar.miller.31939.sbeok.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Wild, audience‑charged performance highlighted by a fiery Hell in a Bucket; recording quality not detailed but presumed adequate.",
+  "review": "Both reviewers rave about the high energy of this show – the crowd clapped from floor to balcony and erupted when Garcia launched his first solo. The standout moment cited is an impromptu “Hell in a Bucket” that sent the audience into a frenzy. No specific recording‑quality comments were made, so the source is unknown but likely acceptable for listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong positive feedback on performance (70% weight) and no reported recording problems (30% weight) lead to a high overall rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not comment on sound clarity, mix, or source; only audience atmosphere is described."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set sparked continuous excitement, with the crowd responding wildly from start to intermission and a memorable spontaneous jam of Hell in a Bucket."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia stepped back for his first solo, gave it a little kick, and ignited the audience.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:49:01.397936+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-26.at835-d12e.Ackerman-Tarazski.102131.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Stunning soundboard clarity captures a rock‑solid New Year's Eve show highlighted by fiery Jerry and Bob, a blazing Cassidy, and an energetic Let It Grow.",
+  "review": "The Charlie Miller soundboard release delivers crystal‑clear detail – every note from the band is audible and the mix is praised as “magic” and “stunning.”  Performance‑wise the concert is described as solid and powerful, with Set 2’s first half especially revered, Cassidy and Let It Grow shining, and the second set flowing beautifully.  While one reviewer calls it a low point compared to earlier NYE shows, the overwhelming consensus is that both the music and the recording are outstanding.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (6 of 7) rate the show 4‑5 stars and praise both the performance and Miller’s soundboard clarity; only one negative review exists, so the overall assessment is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptional clarity and detail – reviewers note you can hear every instrument, no drop‑outs mentioned; Miller’s mix is described as “stunning,” “magic,” and a huge upgrade over older FM copies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Let It Grow",
+      "Not Fade Away",
+      "Dupree's Diamond Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opened with a high‑energy Not Fade Away, maintained rock‑solid momentum throughout the first set, and featured beautiful transitions in a second set that many fans cite as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as “on fire” and full of energy; even backstage sightings add to his presence.",
+    "Phil": "Bass notes are crystal clear; reviewers note the added power from Lesh’s Modulus bass.",
+    "Bob": "Bob Weir’s guitar on Cassidy is praised as “on fire,” with his song highlighted as a show‑high point.",
+    "Keys": "",
+    "Drums": "The drumming is called stellar and energetic, contributing to the overall drive of the performance."
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:21:12.441379+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-12-31.sbd.miller.78054.sbeok.flac16"
+}

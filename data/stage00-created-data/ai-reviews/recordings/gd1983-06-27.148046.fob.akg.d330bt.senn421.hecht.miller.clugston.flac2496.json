@@ -1,0 +1,39 @@
+{
+  "summary": "Average audience recording with Jerry up front and a smoking Sugaree performance",
+  "review": "The show is praised as a good Dead concert, highlighted by an especially fiery rendition of \"Sugaree\" and a prominent Jerry Garcia mix. However the recording lacks a proper soundboard source, leaving Phil Lesh's bass thump weak and the overall balance fair, requiring software tricks to pull out low end.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One review gives a 3‑star rating, noting solid musical performance but significant recording shortcomings; the weighted average leans toward an overall modest score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Jerry's guitar is front‑center while Phil's bass thump is missing; overall mix feels thin on low end and would benefit from a true soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewer only mentions overall enjoyment of the show."
+  },
+  "band_member_comments": {
+    "Jerry": "More upfront and centered in the mix, highlighted positively.",
+    "Phil": "Missing the characteristic bass thump; weak low‑end presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:21:08.710869+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-27.148046.fob.akg.d330bt.senn421.hecht.miller.clugston.flac2496"
+}

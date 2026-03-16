@@ -1,0 +1,135 @@
+{
+  "summary": "Crystal‑clear 24‑bit soundboard captures a fire‑filled 1982 Frost show with standout jams on Minglewood, Red Rooster and Touch of Grey.",
+  "review": "The Miller‑fixed SBD is praised as one of the best‑sounding Brent‑era recordings – crisp, balanced and only mildly hissy at the start. Musically the concert shines from an organ‑driven “Minglewood” through a jam‑laden second set highlighted by “Touch of Grey”, “Crazy Fingers”, “Black Peter” and a raucous encore, with every band member receiving glowing remarks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All nine reviews are 4–5 stars, repeatedly calling the performance exceptional and the recording superb; consistent praise across multiple detailed reviews yields a high‑confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "24‑bit SBD praised for its sweet, slightly gritty tone, excellent balance after the first few songs, minor hiss and brief early‑set balance quirks but overall crystal‑clear and well‑mixed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood",
+      "Red Rooster",
+      "Tennessee Jed",
+      "Sugaree",
+      "Loser",
+      "Far From Me",
+      "Playing in the Band",
+      "Crazy Fingers",
+      "Touch of Grey",
+      "Throwing Stones",
+      "Black Peter",
+      "It's All Over Now, Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with tight jams and vocal highlights; second set escalates with seamless transitions (China > Rider, PITB) and a double encore that never loses energy. The band’s chemistry is described as relaxed yet explosively driven."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on top of his game\" with superb guitar tone, powerful Loser solo, commanding Touch of Grey and Black Peter performances.",
+    "Phil": "Prominent, low‑frequency bass that drives the band; noted for being especially present on early songs and during the jam sections.",
+    "Bob": "Earns extra \"cheese points\" for vocal flourishes and spoken‑word bits; occasional over‑cheesiness mentioned but overall praised.",
+    "Keys": "Brent Mydland is \"on fire\", delivering a standout organ solo on Minglewood, key piano work in jams (Sailor, Far From Me) and strong vocal contributions (extra verse on Rooster).",
+    "Drums": "Drummers are highlighted as \"on fire\" in the closing set, taking spotlight during the encore and providing solid rhythmic drive."
+  },
+  "song_mentions": {
+    "Minglewood": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Red Rooster": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now, Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T02:50:05.617166+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-10.sbd.fixed.miller.110783.flac24"
+}

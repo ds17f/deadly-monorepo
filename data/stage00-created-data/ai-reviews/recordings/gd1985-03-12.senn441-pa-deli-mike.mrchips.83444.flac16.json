@@ -1,0 +1,46 @@
+{
+  "summary": "Raw, raunchy audience‑recorded set with spooky sound effects and a solid mix, but an uneven performance—especially on the second set.",
+  "review": "The recording captures a gritty, atmospheric vibe with notable sound‑effects on “Looks Like Rain” and generally good clarity that fans praised. Musically the show is mixed: while some enjoy the slow, spooky feel of the first set, the second half feels like a garage‑band jam with “Touch of Grey” falling flat and Jerry’s guitar described as terrible.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers commend the recording quality (awesome/good), but they diverge on performance—one rates it highly for sound, the other calls the playing a clunker. Averaging these views yields an overall 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Raw and raunchy with clear sound‑effects (e.g., on “Looks Like Rain”); listeners note the mix is solid despite the gritty ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "First set described as slow and spooky; second set feels like a local garage band playing for friends, lacking energy and tightness."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as sounding terrible and out of it during the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:11:16.350591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-12.senn441-pa-deli-mike.mrchips.83444.flac16"
+}

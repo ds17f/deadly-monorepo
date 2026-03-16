@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown and no musical details provided; reviewer gave a zero‑star rating indicating a poor experience.",
+  "review": "The only review offers no insight into the performance quality or audio fidelity, merely stating that the reviewer sang briefly before leaving. The zero‑star rating conveys clear dissatisfaction, resulting in an overall negative sentiment.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating and no substantive comments; cannot assess show or recording quality beyond the expressed dissatisfaction."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No technical details mentioned; star rating suggests listener found it unsatisfactory."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T12:18:07.418301+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-04-04.akg460.swayne.85859.flac16"
+}

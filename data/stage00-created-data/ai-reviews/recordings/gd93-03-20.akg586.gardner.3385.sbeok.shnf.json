@@ -1,0 +1,74 @@
+{
+  "summary": "Clear AKG soundboard capture of a jazzy second set highlighted by Eyes of the World, Watchtower and Looks Like Rain.",
+  "review": "The recording benefits from excellent AKG mic placement, delivering dynamic range and crystal‑clear instrument separation that makes listeners feel like they’re in the Omni. Musically the show shines with a sweet, jazzy second‑set opener, passionate Bob Weir on Looks Like Rain, smoky Lesh bass and Jerry Garcia’s soaring leads on Watchtower, Standing on the Moon and Saturday Night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently strong musical praise across multiple reviews plus frequent remarks about superb soundboard clarity lead to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "AKG‑568 mics provide impressive dynamic range, clear bass and crisp guitar; reviewers note the tape is very listenable with only occasional loose moments but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Looks Like Rain",
+      "Smokestack Lightning",
+      "Watchtower",
+      "Standing on the Moon",
+      "Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets opened with Jerry tunes but quickly became a Bobby‑centric show; the second set is described as jazzy and sweet, building energy that peaks in the last four songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for screaming, youthful guitar on Watchtower, Standing on the Moon and Saturday Night; energetic throughout.",
+    "Phil": "Lesh’s bass described as “concrete‑shaking” and fully present from start to finish.",
+    "Bob": "Highlighted for passionate vocals on Looks Like Rain and strong rhythm work on Standing on the Moon.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:48:55.108888+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-20.akg586.gardner.3385.sbeok.shnf"
+}

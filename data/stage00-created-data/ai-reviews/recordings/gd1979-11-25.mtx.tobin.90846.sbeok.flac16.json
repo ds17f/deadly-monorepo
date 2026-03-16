@@ -1,0 +1,82 @@
+{
+  "summary": "A superb UCLA matrix captures a fire‑filled set highlighted by an amazing Jack Straw and a funked‑up Shakedown Street, with warm, crystal‑clear sound.",
+  "review": "The recording is praised as the best matrix ever heard – a perfect blend of soundboard and audience that feels like you’re in the room. The show itself shines with standout moments from Jack Straw, Shakedown Street, Stella Blue, Bertha and a stellar Lost Sailor/​Saint sequence, while only Althea is noted as a bit sluggish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive 5‑star reviews (13 of 14) praise both the performance and the matrix mix; only minor criticism of one song keeps the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the blend of SBD (soundboard) and audience \"superb\", \"warm\", \"rich\" and \"crisp\", noting that it feels like being at the UCLA show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Shakedown Street",
+      "Stella Blue",
+      "Bertha",
+      "Lost Sailor",
+      "Saint of Circumstance",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "Strong first set with a notable Jack Straw opener, followed by an explosive second set where Shakedown Street kick‑starts the funk and the band stays on fire through Bertha, Lost Sailor/​Saint and Good Lovin', creating a classic UCLA vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as \"rippin\" with perfect tone, driving the show forward.",
+    "Phil": "Phil's bass is called thunderous, solid as rock, and very prominent throughout.",
+    "Bob": "",
+    "Keys": "Brent's keyboards are praised for ringing in; Mydland’s playing gets special mention on Shakedown Street and Bertha.",
+    "Drums": "Bill and Mickey are lauded for bringing the energy and keeping the groove alive."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:10:15.263498+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-25.mtx.tobin.90846.sbeok.flac16"
+}

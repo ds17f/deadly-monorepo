@@ -1,0 +1,114 @@
+{
+  "summary": "High‑quality soundboard capture of an energetic June ’74 show highlighted by a smoking China > Rider, a standout Playing > UJB > Playing sandwich and superb jams on Eyes, Truckin' and the NFA/GTDRFB/Saturday Night sequence.",
+  "review": "The recording is a crisp soundboard source with only minor mix quirks and two tiny patched cuts, making it very listenable. Musically the concert delivers a powerful first set and an exploratory second set, with the China > Rider segue, the UJB/Playing sandwich and the extended Eyes‑Stella jam standing out, though a few songs (Loser, Peggy‑O) feel flat. Overall the performance is praised for its energy and improvisational peaks despite occasional dips.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise both the musical performance and the soundboard quality; only a few note mix or song issues, yielding an overall strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear overall; praised as one of the best ’74 boards. Minor early‑set mix imbalance (vocals high, Jerry low) and two tiny cuts that were patched cleanly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing > Uncle John's Band",
+      "China > Rider",
+      "Scarlet Begonias",
+      "Eyes of the World > Stella Blue",
+      "U.S. Blues > Truckin' > Nobody's Fault Jam > Eyes > Stella",
+      "Not Fade Away > Goin' Down The Road Feelin' Bad > Saturday Night"
+    ],
+    "poor_songs": [
+      "Loser",
+      "Peggy-O",
+      "Jack Straw",
+      "China > Rider (as described by one reviewer as a snoozefest)"
+    ],
+    "setlist_flow": "The first set builds strong momentum and ends with a fiery Playing‑UJB sandwich, while the second set opens with a spacious China‑Rider that leads into high‑energy jams; occasional lulls are offset by powerful peaks such as the Eyes‑Stella sequence and the closing NFA/GTDRFB/Saturday Night medley."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – early mix puts his vocals low, some moments sound off, but his solos on UJB, Truckin', and the Eyes jam are praised as fiery and inventive.",
+    "Phil": "Bass work frequently highlighted (Cumberland Blues, UJB, Eyes) with several reviewers calling it 'pep' and a driving force in the jams.",
+    "Bob": "Vocals noted as sometimes too high or over‑done; still contributes strong energy to songs like Peggy-O and Scarlet.",
+    "Keys": "Keith's organ/piano praised for solid support (quasi‑organ solo on UJB, piano on Stella) despite early mix imbalance with Jerry.",
+    "Drums": "Bill Kreutzmann described as \"awesome\" and a steady backbone throughout the set."
+  },
+  "song_mentions": {
+    "Playing > Uncle John's Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down The Road Feelin' Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Nobody's Fault Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:17:28.112025+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-30.sbd.miller.96275.sbeok.flac16"
+}

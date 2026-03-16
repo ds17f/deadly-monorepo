@@ -1,0 +1,39 @@
+{
+  "summary": "A superb audience recording that captures a beautifully performed Brokedown Palace with vivid venue acoustics.",
+  "review": "Both reviewers rave about the life‑filled sound of this audience (AUD) tape, noting that the venue’s acoustics really shine. The performance is described as \"simply beautiful\" with a standout rendition of Brokedown Palace, making the set highly enjoyable despite the limited commentary on individual songs or band members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Both reviews are overwhelmingly positive about both the sound and the music; however only two reviews are available, so the rating reflects strong show and recording quality but limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers praise the AUD for its vivid life compared to soundboard tapes, noting excellent venue acoustics and a clear, immersive mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers focused on overall beauty of the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:09:31.692355+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-30.senn421.walker-scotton.miller.89259.sbeok.flac16"
+}

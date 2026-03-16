@@ -1,0 +1,98 @@
+{
+  "summary": "A solid sound‑board capture of a fun June‑30 1974 show, highlighted by the juicy Playing‑in‑the‑Band/Uncle John’s sandwich, vibrant Cumberland Blues and an inspired Slipknot tease.",
+  "review": "The recording is clear enough for repeated listening, with only occasional tape‑hiss noted by one reviewer. Musically the concert shines – Jerry’s playful guitar work, a jazzy “Playin’ > UJB > Playin’” sandwich, scorching Cumberland Blues and a memorable Slipknot snippet keep the energy high, though the Eyes of the World falls short of expectations. Overall it ranks as a strong mid‑summer ’74 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate 4–5 stars and praise the set’s flow and several standout jams; recording quality is generally good with only minor hiss complaints, yielding a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear mix typical of sound‑board tapes; one reviewer mentions tape hiss but overall the audio is listenable and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Uncle John's Band",
+      "Cumberland Blues",
+      "Slipknot!",
+      "Scarlet Begonias",
+      "China Cat Sunflower > I Know You Rider",
+      "Truckin'",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Eyes of the World"
+    ],
+    "setlist_flow": "The first set builds a tasty Playin'/UJB sandwich that carries momentum into a second set full of melodic jams; mellow segues (Scarlet‑China>Rider) balance the high‑energy peaks, creating an engaging, well‑paced concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his fun, jazzy guitar tone and a humorous moment after the \"Gideon came in...\" lyric; his playing is described as explosive and central to the show’s vibe.",
+    "Phil": "His bass work shines on the transition into Uncle John’s Band, with reviewers noting he “blows up a few stars” before the magical segue.",
+    "Bob": "",
+    "Keys": "Keith (the 1974 keyboardist) is highlighted as explosive and integral to the band’s sound during this era.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Slipknot!": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "G-SET": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T22:15:29.492151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-30.sbd.weiner.17814.sbeok.shnf"
+}

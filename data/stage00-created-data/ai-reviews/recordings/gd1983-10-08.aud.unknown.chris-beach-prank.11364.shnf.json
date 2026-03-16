@@ -1,0 +1,39 @@
+{
+  "summary": "Raw audience tape with an uneven mix that still captures the show’s vibe; “The Stranger” shines.",
+  "review": "This audience recording delivers the feeling of the night despite a noticeable imbalance—Brent’s keys often drown out Jerry’s guitar. The mix is imperfect, but fans will appreciate the energy and especially enjoy the standout performance of “The Stranger.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Only one moderate‑rating (3★) review; shows are described as enjoyable but hampered by mix imbalance, leading to an overall average score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Typical audience tape quirks with a pronounced mix imbalance (Brent louder than Jerry), but retains the live atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not specifically discussed; reviewers focus on overall feeling rather than set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Often buried in the mix, quieter compared to Brent on some songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are noticeably louder at times, creating an uneven balance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:04:13.702895+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-08.aud.unknown.chris-beach-prank.11364.shnf"
+}

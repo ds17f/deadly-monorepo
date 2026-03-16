@@ -1,0 +1,71 @@
+{
+  "summary": "Good audience tape of a summer‑’83 show that’s uneven but boasts standout Women Are Smarter, Uncle John’s Band and a powerful Jack Straw despite Jerry’s early vocal slip‑ups.",
+  "review": "The recording is an audience capture from the front rows that delivers clear balance and strong bass presence, making it pleasant to listen to even when the performance wavers. The show features several highlights – Women Are Smarter, Uncle John’s Band, Big River Blues and a memorable Jack Straw – but suffers from a shaky second‑set opener where Jerry’s vocals stumble. Overall the set is mixed, with a strong second half that many reviewers cite as a highlight.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑5 stars and praise the recording’s clarity; performance is described as uneven but with notable high points, leading to a solid above‑average combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑row audience tape praised for balanced instruments and tight bass; some mention of missing drum mix on B side but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Women Are Smarter",
+      "Uncle John's Band",
+      "Jack Straw",
+      "Big River Blues",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Touch Of Grey",
+      "Second‑set opener (Jerry vocal issues)"
+    ],
+    "setlist_flow": "The first half drags with a shaky opener, but the second half picks up momentum, delivering strong jams and memorable finishes that many fans cite as classic ’83 Dead."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals stumble on the early second‑set opener; otherwise his guitar work is not specifically praised.",
+    "Phil": "Bass pops at the end of the set are highlighted as a strong point.",
+    "Bob": "Bobby's playing described as “wacked” in one review, indicating a weaker performance.",
+    "Keys": "",
+    "Drums": "One reviewer notes drums were omitted on the B side due to taping policy; otherwise no specific comments."
+  },
+  "song_mentions": {
+    "Women Are Smarter": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch Of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:09:02.061970+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-06-25.aud.dodd.11802.sbeok.shnf"
+}

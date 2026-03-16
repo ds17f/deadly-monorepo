@@ -1,0 +1,31 @@
+{
+  "summary": "Decent FM broadcast audio, but Jerry's strained vocals make the show hard to enjoy.",
+  "review": "The recording is sourced from an FM broadcast, so the sound quality is generally clear aside from occasional DJ station IDs. However, the reviewer finds Jerry Garcia's vocal performance severely compromised, describing it as \"the night Jerry's voice barely worked at all,\" which dominates their overall impression of the concert.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "medium",
+    "rationale": "A single review rates the show 2 stars, citing poor vocal performance despite acceptable recording quality; weighting gives a low overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FM broadcast source with occasional DJ station identification bleed‑through; otherwise clear sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "Voice barely works; vocals are painful to listen to.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T17:02:31.959063+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-24.sbd.unknown.304.sbefixed.shnf"
+}

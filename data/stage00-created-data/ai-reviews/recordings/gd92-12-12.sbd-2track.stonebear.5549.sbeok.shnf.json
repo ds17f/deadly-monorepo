@@ -1,0 +1,52 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a vibrant Oakland show highlighted by soaring Crazy Fingers and a fiery Standing on the Moon.",
+  "review": "The recording is praised for its pristine clarity, balanced mix and lack of major glitches – a true soundboard quality tape. Musically the performance shines with Jerry’s “crazy fingers” solo work and an inspiring rendition of Standing on the Moon, while Vince’s assertive keyboards add extra color. A few minor hiccups (strings low in Bertha) are noted but do not detract from the overall energized and soulful vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, highlighting excellent soundboard quality and strong musical moments; only one outlier rating is ignored."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great clarity, decent to majestic mix throughout, no major glitches reported; reviewers repeatedly call the sound \"great\" and \"crisp.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Standing on the Moon"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "Set list is described as not spectacular but the high‑quality sound and energized playing keep the momentum; the show feels more contemplative and soulful than flashy."
+  },
+  "band_member_comments": {
+    "Jerry": "Showcases his \"crazy fingers\" guitar work, a beautiful solo on Standing on the Moon, but strings were low in Bertha and he stumbles with lyrics briefly.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince is assertive on keyboards and vocals, standing out throughout the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:51:25.197123+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-12.sbd-2track.stonebear.5549.sbeok.shnf"
+}

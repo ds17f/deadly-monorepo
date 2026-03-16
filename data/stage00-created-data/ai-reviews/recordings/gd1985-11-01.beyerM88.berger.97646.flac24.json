@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent recording of a sweltering night, spotlighting a scorching Gloria and Jerry’s howl on High Time.",
+  "review": "Fans rave about the hot‑weather energy of this show, noting that Dancin' Set set the tone and Gloria closed it out in spectacular fashion. Jerry's vocal intensity on High Time is singled out, and the audio is praised as sounding great for a coliseum venue. No technical flaws are reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews are strongly positive, highlighting standout performances and a clean‑sounding recording; the weighted average of show (≈4.8) and recording quality (≈4.5) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the sound as great with no noted drop‑outs or muddiness; clarity and balance are implied to be solid for this venue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gloria",
+      "Dancin' Set",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set built momentum with a lively Dancin' Set, culminating in an epic Gloria finale; Jerry’s vocal peak on High Time adds extra excitement to the night."
+  },
+  "band_member_comments": {
+    "Jerry": "His howl on High Time is highlighted as a memorable moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Gloria": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin' Set": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:22:47.560669+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-01.beyerM88.berger.97646.flac24"
+}

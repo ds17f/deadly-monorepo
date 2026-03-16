@@ -1,0 +1,39 @@
+{
+  "summary": "Good recording overall with a superb second‑set sound, great music throughout and a lively early cover of Johnny B. Goode.",
+  "review": "The three reviewers give the show solid four‑star marks, noting strong musical performances in both sets and especially praising the clear, punchy sound of the second set. Recording quality is mixed – the first set is described as less clear while the second set sounds superb – but the overall listening experience is positive, highlighted by an early Johnny B. Goode cover that got the crowd dancing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All three reviews are uniformly four‑star and emphasize good music with only minor recording issues, leading to a strong positive overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First set described as sounding \"not so great\" (a bit muffled), while the second set is praised for \"superb sound\"; overall mix is acceptable but not flawless."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set delivers solid music despite modest sound, and the second set shines both musically and sonically, giving the concert a lively, party‑like feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:18:52.190499+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-29.sbd-aud.munder.10033.sbeok.shnf"
+}

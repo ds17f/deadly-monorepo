@@ -1,0 +1,58 @@
+{
+  "summary": "A solid soundboard capture of a strong second set with a smoking Playing > Uncle John’s Band jam and a Baby Blue encore, though the mix is a bit hissy and guitar‑heavy.",
+  "review": "The recording delivers a good‑quality SBD of the March‑18‑1991 second set, highlighted by an inspired transition from Playing in the Band into Uncle John's Band and a satisfying Baby Blue encore. While the audio isn’t pristine – it’s slightly hissy with heavy snare and guitars that sit forward in the mix – the performance is generally strong, despite a few flubs on Terrapin.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about the musical performance (70% weight) and decent but not pristine soundboard quality (30% weight) yield an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight hiss, heavy snare and guitars sit forward; Vince’s keys are distant and Hornsby barely audible, but overall the SBD is adequate and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Uncle John's Band",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "Second set flows well, with a strong post‑drums segment and a seamless jam from Playing into Uncle John’s Band; the encore rounds it out nicely."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboards are distant and Hornsby is barely audible in this mix.",
+    "Drums": "Heavy snare and drums are prominent; the post‑drums section received praise."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:36:22.933122+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-18.sbd.set2.oconnor.10926.sbeok.shnf"
+}

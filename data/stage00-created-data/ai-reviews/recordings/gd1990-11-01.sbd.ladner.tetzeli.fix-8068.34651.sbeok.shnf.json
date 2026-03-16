@@ -1,0 +1,52 @@
+{
+  "summary": "Odd setlist with a rare Standing on the Moon tease before Wharf Rat; recording source unknown and sound quality not discussed.",
+  "review": "The show is described as an unusual, post‑Halloween performance with a quirky set list – a Standing on the Moon tease leading into Wharf Rat and a lackluster Dark Star that never fully takes off. Reviewers did not comment on the audio fidelity, leaving the recording quality indeterminate. Overall the musical content receives mixed remarks, highlighting some rare moments but noting several odd choices.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "One detailed review rates the show 3/5 and notes both positives (rare tease) and negatives (weak Dark Star, strange set list). The second review provides no substantive info but gives a 0 rating, yielding a modest overall score with medium confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned sound clarity, mix balance, or source type; therefore recording quality cannot be definitively assessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Standing on the Moon (tease)"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "Described as odd and unconventional for a 'day after Halloween' show, with unusual choices such as ending set 1 with Standing on the Mountain."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:41:22.814583+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-11-01.sbd.ladner.tetzeli.fix-8068.34651.sbeok.shnf"
+}

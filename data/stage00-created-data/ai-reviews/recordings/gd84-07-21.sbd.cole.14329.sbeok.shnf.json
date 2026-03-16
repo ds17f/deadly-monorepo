@@ -1,0 +1,81 @@
+{
+  "summary": "High‑energy 1984 Ventura show captured on a soundboard tape – superb performances (China > Rider, Shakedown, Eyes of the World) despite occasional mix hiccups and an early‑cut Drums.",
+  "review": "The Saturday night concert is hailed by fans as a “barnburner,” with hyper‑driven jams like China > Rider, a searing Space → The Other One solo, and one of the most relaxed Eyes of the World ever heard.  The soundboard source is generally clear and bass‑heavy, though several listeners note echo on vocals/instruments and occasional level swings that can be distracting.  Overall the musical firepower far outweighs the technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise multiple standout performances; recording issues are noted but do not dominate, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and bass‑rich soundboard tape.  Problems reported: occasional level spikes on Phil’s bass in the first set, noticeable echo on Jerry and Bob’s mics, and the Drums segment cut short before Mickey’s balaphone.  Despite these quirks the mix is listenable and captures the band’s energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Shakedown",
+      "The Other One",
+      "Eyes of the World",
+      "Space > The Other One",
+      "Truckin'",
+      "Cold Rain and Snow",
+      "R&R > Sat Nite"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans love the opening burst (China > Rider, Shakedown) and describe the second set as scorching, especially the post‑Drums segment.  The overall pacing is praised for maintaining high energy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Space→The Other One is described as 'out of this world' with magical notes; also praised on Eyes of the World, though one reviewer feels he sounds faded later in his career.",
+    "Phil": "Bass mix fluctuates early in the show (some reviewers notice level jumps), but his rhythmic drive on Shakedown and tight sync with the drummers receive strong praise.",
+    "Bob": "Noted for aggressive whammy‑bar chords, atonal rhythm work on The Other One, and overall strong guitar presence.",
+    "Keys": "",
+    "Drums": "Post‑Drums segment is highlighted as one of the best; however Drums was cut prematurely, omitting Mickey’s balaphone.  Sync among Phil, Brent and Mickey is praised."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown": {
+      "positive_mentions": 6,
+      "negative_mentions": 3,
+      "total_mentions": 9
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "R&R > Sat Nite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:40:15.715997+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-07-21.sbd.cole.14329.sbeok.shnf"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Brilliant matrix mix captures an outstanding December 1973 show featuring a smoking Playing in the Band and deep second‑set jams.",
+  "review": "The Dusborne matrix recording is praised as “brilliant” and exceptionally clear, delivering a well‑balanced listening experience. The performance shines with a powerful Playing in the Band (including a vocal coda), a full Uncle John’s Band jam, and an adventurous second set launched by Dark Star/The Other One, while even the later Row Jimmy feels slightly thin in the mix. Overall the show is regarded as one of the best from this period.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the matrix recording quality and the musical performance, with only a single reviewer noting minor sound thinness."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix blend praised as brilliant and clear; one comment notes occasional thinness during Row Jimmy but no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Uncle John's Band",
+      "Dark Star / The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set launched by a Dark Star or The Other One jam, with unusual late placement of Row Jimmy and Greatest Story Ever Told, creating an adventurous and varied flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s riff work is highlighted in the final jam; praised for tight playing.",
+    "Phil": "Phil is teased by a fan during banter; no specific musical comment.",
+    "Bob": "",
+    "Keys": "Keith's keyboards support Garcia’s riffs and add texture to the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star / The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:38:48.450746+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-01.124132.mtx.dusborne.flac16"
+}

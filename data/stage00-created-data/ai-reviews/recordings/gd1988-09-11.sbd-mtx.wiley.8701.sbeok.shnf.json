@@ -1,0 +1,42 @@
+{
+  "summary": "Nice soundboard capture of a mixed‑quality 1988 show – long Memphis Blues and a pre‑drums Foolish/Victim/Scarlet>Fire sequence, but many listeners find the performance overly fast.",
+  "review": "The recording is praised as a very nice soundboard source with clear mix, highlighting a ten‑minute Memphis Blues in the first set and an energetic pre‑drums run of Foolish, Victim and Scarlet > Fire. However, several reviewers complain that the band plays slightly fast and out of tune, describing the show as average or even disappointing, resulting in mixed overall impressions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Positive remarks about a clean soundboard recording are offset by multiple low‑star reviews criticizing speed/tuning and lack of highlights, yielding an overall middling score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix noted as \"very nice\" by reviewers; no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Memphis Blues",
+      "Foolish",
+      "Victim",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set features a lengthy Memphis Blues; second set delivers a pre‑drums sequence of Foolish → Victim → Scarlet > Fire, but overall pacing is perceived as slightly rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:26:29.492542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-11.sbd-mtx.wiley.8701.sbeok.shnf"
+}

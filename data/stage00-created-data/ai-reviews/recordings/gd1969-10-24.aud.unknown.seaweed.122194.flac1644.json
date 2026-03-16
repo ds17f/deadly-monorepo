@@ -1,0 +1,57 @@
+{
+  "summary": "Stereo audience tape captures a clear, boomy Winterland sound with a rare Cryptical Envelopment → Cosmic Charlie segue, but the half‑set is only an average show.",
+  "review": "The recording is an unusual stereo audience capture from Winterland that sounds surprisingly clear and boomy, with Tom Constanten sitting high in the mix. Musically the concert is an average one‑set opener for Jefferson Airplane, highlighted by a unique Pigpen/TC/Garcia jam on Easy Wind and an unforgettable Cryptical Envelopment → Cosmic Charlie transition, though large portions of the set – including most of The Other One – are missing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews note decent stereo audience sound and a few standout moments, but also point out that the set is incomplete and musically average overall."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, boomy Winterland ambience; rare stereo AUD tape with Tom Constanten prominent in mix. Incomplete capture – only about half the show survives."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical Envelopment > Cosmic Charlie",
+      "Easy Wind"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Short one‑set opener for Jefferson Airplane; overall average performance but punctuated by a unique jam and an exceptional Cryptical→Cosmic segue."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia goes “bananas” on the Cryptical intro and solos alongside Pigpen and TC in the Easy Wind jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Tom Constanten is up in the mix; Pigpen’s organ/harmonica solo shines during the Easy Wind jam.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:31:38.851161+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-10-24.aud.unknown.seaweed.122194.flac1644"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "A superb audience capture with astonishing depth and clarity, highlighted by a ripping Terrapin > Playin' > China Doll sequence.",
+  "review": "Reviewers rave about the Walker‑Cotton tape’s immersive, crystal‑clear sound that rivals many soundboard releases. The musical high point is the Terrapin > Playin' > China Doll jam, which is praised as one of the best moments of this run. The only drawback noted is an inaccurate track‑list labeling rather than any audio flaw.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (highlighted sequence) and excellent audience recording quality drive a high rating; minor metadata errors keep confidence from being high."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Depth, clarity and realism repeatedly praised; reviewers say it sounds better than many board recordings. No audio defects mentioned, only track‑list mismatches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Playin'",
+      "China Doll",
+      "Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set flow is well‑received, especially the Terrapin > Playin' > China Doll jam; only complaint concerns mislabeled songs in the archive metadata."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:35:48.647238+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-28.aud.walker-cotton.miller.106167.flac16"
+}

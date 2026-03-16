@@ -1,0 +1,73 @@
+{
+  "summary": "High‑energy Oakland show with stellar Terrapin Station and seamless Jack Straw>China>Rider",
+  "blurb": "The second set roars with a flawless Jack Straw → China Cat Sunflower → I Know You Rider segue and a haunting Terrapin Station. First‑set opener Bertha → Good Lovin' sets a rock‑driven tone, while the band stays locked in through Estimated Prophet into The Other One. Multiple matrix recordings capture the energy with good clarity.",
+  "review": "On December 30, 1989 the Dead turned the Oakland Coliseum into a late‑year celebration of pure jam power. Jerry’s lead work glides from crisp riffs on “Bertha” to soaring lines on “Terrapin Station,” while Phil lays down a steady, melodic bass foundation that lets the group stretch out. Bob shines especially on “When I Paint My Masterpiece,” taking the song into new territory, and Brent’s keyboard textures add depth—though his vocal lullaby on Terrapin drew mixed reactions from listeners. Mickey and Bill keep the dual‑drum engine humming, driving the second‑set momentum through a seamless Jack Straw → China Cat Sunflower → I Know You Rider transition, into an ecstatic “Estimated Prophet” → “Terrapin Station” pair that builds into a fiery “The Other One” and a rousing “One More Saturday Night.” The show’s high‑energy feel is captured best on the recommended matrix mix, which balances board clarity with audience ambience, preserving both the musical detail and the crowd’s excitement.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 42,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Five of six recordings describe the show as high‑energy, with multiple mentions of standout songs (Bertha, Good Lovin', Jack Straw > China > Rider, Terrapin Station) and strong overall performance; only one negative review offers no substantive criticism. Consistent praise across sources justifies a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1989-12-30.aud-sbd.unknown.5069.sbeok.shnf",
+    "reason": "Balanced matrix mix of board and audience captures the show’s energy with good clarity; preferred for its completeness and faithful representation of both music and crowd."
+  },
+  "key_highlights": [
+    "Electric first‑set opener Bertha → Good Lovin' sets a rock‑driven tone.",
+    "Seamless Jack Straw → China Cat Sunflower → I Know You Rider transition fuels the second set.",
+    "Haunting Terrapin Station performance anchors the middle of the night.",
+    "Climactic close with Estimated Prophet → Terrapin Station into The Other One and a rousing Saturday Night."
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Good Lovin'",
+    "Jack Straw",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Estimated Prophet",
+    "Terrapin Station",
+    "The Other One",
+    "One More Saturday Night"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers solid lead guitar throughout, with standout solos on Terrapin Station and tight comping on the high‑energy jams.",
+    "Phil": "Provides a steady, melodic bass foundation that underpins the band’s expansive improvisations.",
+    "Bob": "Leads the way on \"When I Paint My Masterpiece,\" earning specific praise; his rhythm work remains reliable all night.",
+    "Brent": "Adds rich keyboard textures; his vocal lullaby on Terrapin Station draws mixed reactions, reflecting its polarizing effect.",
+    "Mickey": "Keeps a tight, driving pulse alongside Bill, especially during the second‑set jams and drum‑to‑space transitions.",
+    "Billy": "Locks in with Mickey to propel the set’s momentum, delivering powerful dual‑drum dynamics throughout."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-17T02:44:20.234347+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha",
+      "Good Lovin'",
+      "Sugaree"
+    ],
+    [
+      "Jack Straw",
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Drums*",
+      "Space",
+      "I Will Take You Home",
+      "The Other One",
+      "Standing On The Moon",
+      "One More Saturday Night"
+    ]
+  ]
+}

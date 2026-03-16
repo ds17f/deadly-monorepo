@@ -1,0 +1,81 @@
+{
+  "summary": "Laid‑back Red Rocks show shines on the first Miracle and a soaring “If I Had The World To Give”, but the audience tape is only fair in clarity.",
+  "review": "Fans rave about the unique, relaxed vibe of this Red Rocks performance – especially the debut Miracle jam, the heartfelt “World To Give”/“If I Had The World To Give” sequence and a monster Sugaree.  The recording is an audience (AUD) capture; while the second‑set soundboard portions are praised, overall the tape suffers from venue acoustics, chatter and occasional muddiness that can make listening a test of patience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers love the musical moments (high show weight) but note significant recording flaws; the mixed star scores and divergent comments lead to a balanced rating with medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Chatter does not completely obscure music, but venue acoustics cause sound to dissipate; some parts (2nd‑set) are from a soundboard and sound clearer, while the overall tape is not clean and can feel muddy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Miracle",
+      "World To Give",
+      "If I Had The World To Give",
+      "Sugaree",
+      "Stagger Lee",
+      "Other One",
+      "Eyes",
+      "Aiko Aiko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as laid‑back and unrushed, with a relaxed second set that weaves jams together (Estimated > Other One > Eyes) and a smooth transition into an upbeat “Iko” feel."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals on “If I Had The World To Give” are highlighted along with several cool guitar licks.",
+    "Phil": "Mentioned for cosmic vocalizing during the jam and overall bass/drum space feeling.",
+    "Bob": "Weir’s slide licks receive praise in the later jam.",
+    "Keys": "",
+    "Drums": "The drum work in the final jam (Aiko Aiko) is singled out as a favorite moment."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "World To Give": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "If I Had The World To Give": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Aiko Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:31:22.962573+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-08-30.aud.wiley.11479.sbeok.shnf"
+}

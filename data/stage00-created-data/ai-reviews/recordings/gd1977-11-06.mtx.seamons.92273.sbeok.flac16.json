@@ -1,0 +1,83 @@
+{
+  "summary": "Crystal‑clear matrix recording of a high‑energy 1977 show with a blistering Half‑Step opener and a standout St. Stephen > Not Fade Away > Wharf Rat jam.",
+  "review": "The Hunter Seamons matrix captures the concert with exceptional clarity – the soundboard‑like mix is crisp while still conveying much of the crowd’s excitement. Musically the first set shines (Half‑Step, Tennessee Jed, New Minglewood Blues) and the second‑set St. Stephen/Not Fade Away/Wharf Rat sequence is repeatedly praised, though a few reviewers note sloppy moments in Scarlet Begonias and a slower‑moving second half. Overall the performance is regarded as one of the stronger Fall ’77 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "11 reviews with a clear majority giving 4‑5 stars, consistent praise for both the matrix sound quality and key musical moments; only a few mixed/negative comments about specific songs."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, soundboard‑like clarity with balanced instrument separation; some reviewers note the lack of full audience ambience compared to pure audience tapes but overall the mix is praised as superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Tennessee Jed",
+      "New Minglewood Blues",
+      "St. Stephen > Not Fade Away > Wharf Rat > Truckin'",
+      "Scarlet Begonias > Fire",
+      "Good Lovin'",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias (early sloppy intro)",
+      "Second‑set overall (slow tempo, uneven energy) – as noted by several reviewers"
+    ],
+    "setlist_flow": "The first set bursts with high‑octane momentum—Half Step, Tennessee Jed and tight vocal harmonies—while the second set is more mixed; it offers a spectacular St. Stephen/Wharf Rat jam but also sections that feel sluggish or under‑rehearsed."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for soaring leads (Half Step, iconic riffs in Scarlet > Fire and the rescue solos on Wharf Rat), though one reviewer notes a brief tuning slip early in Scarlet.",
+    "Phil": "Described as 'frantic sand‑worm' energy and solid melodic foundation; praised for holding down the groove during jams.",
+    "Bob": "Vocal work highlighted on New Minglewood Blues and his playful interplay with Jerry’s lead, called ‘crafty devil’ by a reviewer.",
+    "Keys": "Keith's early piano sweeps receive high praise, but later sections are criticized for sloppy, percussive playing that drags the second half.",
+    "Drums": "Bill's drumming is generally noted as steady and consistent; no major complaints beyond occasional tempo drag in the latter part of the show."
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen > Not Fade Away > Wharf Rat > Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T07:01:39.845476+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-11-06.mtx.seamons.92273.sbeok.flac16"
+}

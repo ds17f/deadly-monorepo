@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience tape captures a very nice Space → The Wheel transition.",
+  "review": "The audience recording is praised for its good quality, delivering clear sound that lets listeners enjoy the performance. Reviewers especially highlight the smooth and powerful segue from Space into The Wheel as a standout moment of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Single 4‑star review notes good audience recording quality and highlights a strong musical transition, indicating an overall solid performance with decent sound."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the tape as \"good quality\" with no major flaws; clear enough to appreciate the music."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Positive comments focus on the seamless Space → The Wheel segue, suggesting a well‑crafted set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:01:04.624949+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-05-21.nak700.wagner.miller.109334.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Nearly flawless recording that feels like a nostalgic reunion, though a brief cut in “Shakedown Street” prevents perfection.",
+  "review": "The reviewer praises the tape’s audio fidelity as almost five‑star quality, noting it surpasses many archive releases. The only criticism is a missing segment of “Shakedown Street,” but the overall sentiment remains overwhelmingly positive, likening the experience to meeting an old beloved girlfriend.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the recording very highly and gives a five‑star overall rating despite a minor cut, but provides little information on musical performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Sound described as close to 5‑star quality; very clear and well‑balanced. Noted a cut/missing segment in the middle of “Shakedown Street.”"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Shakedown Street"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:09:54.944411+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-29.142924.beyerm201.holbrook.flac1644"
+}

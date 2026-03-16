@@ -1,0 +1,58 @@
+{
+  "summary": "Energetic Alpine Valley set with solid jams and a rousing One More Saturday Night",
+  "blurb": "The band delivers a heavy‑charged performance highlighted by a standout \"He's Gone\" stretch and a high‑energy encore of \"One More Saturday Night.\" Audience tapes are fair but capture the concert’s raw power, making it worth a listen for fans who enjoy that Alpine Valley grit.",
+  "review": "On August 23, 1980 at Alpine Valley Music Theatre the Dead turned the night into a full‑throttle romp. The first set kicked off with a driving \"Alabama Getaway\" and rolled through tight classics like \"The Promised Land,\" \"Candyman,\" and the groovy pairing of \"Lazy Lightning > Supplication.\" In the second set, the band built a powerful momentum that peaked during the \"Lost Sailor > Saint Of Circumstance > He's Gone\" sequence, where Jerry’s lead and Brent’s organ swelled over Phil’s bass foundation. The drum duel between Mickey and Bill kept the groove tight before they launched into an exploratory Space that segued into a soulful \"Wharf Rat\" and a rollicking \"Around & Around,\" closing with a joyous \"Good Lovin'.\" The night capped off with a raucous, sing‑along encore of \"One More Saturday Night,\" leaving the crowd buzzing. Both audience recordings are only fair – instrument separation is weak and high frequencies can be harsh – but they succeed in conveying the show’s raw energy and heavy vibe, especially at higher volumes.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 7,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Both recordings are described with mixed sentiment – they note strong moments (\"He's Gone\", \"One More Saturday Night\") but also point out fair audio quality and muddy mix, resulting in no clear positive or negative consensus on the performance itself.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-08-23.aud.gillis.11928.sbeok.shnf",
+    "reason": "Captures the concert’s heavy energy and strong encore despite being a fair‑quality audience tape; best overall representation of the show’s vibe."
+  },
+  "key_highlights": [
+    "Heavy, energetic vibe throughout the night",
+    "\"He's Gone\" sequence in Set 2 shines with tight interplay",
+    "Rousing \"One More Saturday Night\" finale that lifts the crowd"
+  ],
+  "song_highlights": [
+    "One More Saturday Night",
+    "He's Gone"
+  ],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-13T02:03:44.124914+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "One More Saturday Night"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "Wharf Rat",
+      "Around & Around",
+      "Good Lovin'"
+    ]
+  ]
+}

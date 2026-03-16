@@ -1,0 +1,63 @@
+{
+  "summary": "Front‑row audience recording captures a smoking show highlighted by Foolish Heart, Space/Other One jam and strong Fantasy/Jude moments.",
+  "review": "The audience tape delivers a surprisingly clear, front‑row feel after the first few seconds settle, letting listeners enjoy one of the tour’s most energetic performances.  Highlights include a gem‑like Foolish Heart, an ecstatic Space that segues into The Other One and the Wheel, plus memorable Fantasy and Hey Jude moments; the set flows with high energy despite chaotic venue entry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All seven reviews are strongly positive about both the music and the recording, with consistent praise for standout songs and a clear audience‑capture that is described as good to excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑row ambience captured; mix settles after ~30 seconds, but overall clarity and presence are praised. No major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Space",
+      "The Other One",
+      "Fantasy",
+      "Hey Jude"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy set with strong song selection; the first set builds momentum, while the second set delivers a soaring Space→Other One→Wheel sequence and memorable mid‑set numbers like Fantasy and Hey Jude."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry teased The Other One during Space, prompting an audience sigh before launching into the Wheel.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:25:54.589888+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-02.beyerM88.connor.29734.sbeok.shnf"
+}

@@ -1,0 +1,83 @@
+{
+  "summary": "High‑quality soundboard recording that captures an iconic 1981 show highlighted by a scorching China Cat > Rider, deep Estimated > UJB and soaring Bird Song.",
+  "review": "The performance is repeatedly praised as one of the best of the decade – Garcia opens up on every tune, the second set climbs to another echelon with Bird Song veering into Dark‑Star territory and a legendary China Cat > Rider > Samson sequence.  The SBD source (with an excellent audience mix) delivers clear, balanced sound that lets the band’s dynamics shine, though a few reviewers note it isn’t a matrix.  Overall the show is celebrated for its deep jams, tight transitions and standout moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and strong praise for both the musical performance and recording quality push the combined weighted score into the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the sound as clear, balanced and “stellar AUD source”; a few wish for a matrix blend but no major drop‑outs or distortion are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat > Rider > Samson",
+      "Estimated > Uncle John's Band",
+      "Bird Song",
+      "Feel Like a Stranger",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows without rushing; the first set is solid while the second set reaches a higher echelon with deep jams, seamless transitions and extended improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and lead work are repeatedly called “perfect”, “on the money” and “smokin hot”.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboards receive a brief nod for fun moments during The Other One and Deep Elem Blues.",
+    "Drums": "Mickey’s drum solo is highlighted for its power, including a dramatic hand‑held drum hit that shook the venue."
+  },
+  "song_mentions": {
+    "China Cat > Rider > Samson": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated > Uncle John's Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:09:50.601046+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-09.sbd.clugston.4953.sbeok.shnf"
+}

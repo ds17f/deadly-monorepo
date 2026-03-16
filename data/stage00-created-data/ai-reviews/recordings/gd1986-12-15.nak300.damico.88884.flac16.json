@@ -1,0 +1,39 @@
+{
+  "summary": "A decent audience recording captures an emotionally charged Candyman performance as Jerry returns to the stage.",
+  "review": "The show is praised for its fresh energy after Garcia’s return, with the crowd‑filled “Candyman” highlighted as a standout moment. While the recording isn’t a pristine soundboard tape and is described as merely adequate, it still conveys the excitement of the night. Overall the performance feels joyful and heartfelt despite modest audio fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently praise the musical performance (especially Jerry’s return and Candyman) while noting only average recording quality; weighting yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note the tape is not mind‑blowing and lacks high‑fidelity clarity; it’s adequate for capturing the vibe but has typical audience‑recording ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as having more fire and spunk than earlier ’86 shows, with a fresh joy throughout despite not being the most jam‑heavy night."
+  },
+  "band_member_comments": {
+    "Jerry": "His first show back after a serious health scare; emotional playing highlighted on Candyman.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T17:42:15.905990+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-15.nak300.damico.88884.flac16"
+}

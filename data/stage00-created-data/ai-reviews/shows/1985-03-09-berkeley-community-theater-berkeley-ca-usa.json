@@ -1,0 +1,77 @@
+{
+  "summary": "Strong second‑set segues, Let It Grow shines",
+  "blurb": "The show builds a solid first set with Bertha and Sugaree, then launches into an inventive second set highlighted by the China > Cumberland transition and a soaring Let It Grow. Guest Merl Saunders adds texture to the Space/Other One stretch.",
+  "review": "Recorded on March 9‑1985 at Berkeley Community Theater, this show is a mixed bag that leans toward the bright side. The first set feels a bit thin—Row Jimmy falls flat and the early mix overemphasizes kick drum—but Jerry’s guitar stays crisp, delivering blistering solos on Sugaree and an electrifying Let It Grow that lifts the whole night. The second set is where the magic happens: a surprise China Cat Sunflower → Cumberland Blues segue fuels a seamless flow into I Need A Miracle → Eyes Of The World, followed by a spacious drum‑and‑Space excursion that lets Merl Saunders sprinkle experimental keys before The Other One and The Wheel roll out into Sugar Magnolia. Brent’s aggressive, jazzy keyboards drive the jams, while Mickey and Bill provide a warm two‑drummer foundation. Overall, the performance is solid with standout moments that make it worth a listen despite some mix quirks.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Across five recordings, two are clearly positive (highlighting Bertha, China> Cumberland, The Other One) while three are mixed, noting both strong moments (Let It Grow, Sugaree) and flaws (mix issues, buried bass on Row Jimmy). The net tone is modestly upbeat, justifying a +0.7 sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 0.7 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1985-03-09.sbd.miller.104962.flac16",
+    "reason": "Solid soundboard capture with the clearest mix of the night, preserving the standout China > Cumberland segue and Let It Grow despite early treble‑heavy quirks."
+  },
+  "key_highlights": [
+    "Inventive China Cat Sunflower → Cumberland Blues transition that fuels the second set",
+    "Electrifying Let It Grow performance with crisp Garcia guitar and vocal lift",
+    "Strong two‑drummer dynamic (Bill & Mickey) supporting a spacious Space → The Other One jam",
+    "Guest Merl Saunders adds experimental texture during the Space/Other One segment"
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Sugaree",
+    "Let It Grow",
+    "China Cat Sunflower",
+    "Cumberland Blues",
+    "I Need A Miracle",
+    "Eyes Of The World",
+    "The Other One",
+    "The Wheel",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar stays crisp and fast, delivering blistering solos on Sugaree and Let It Grow; his vocals recover after an early mix dip and sound energetic throughout.",
+    "Phil": "Phil’s bass often gets buried in the mix, especially on Row Jimmy, leaving him less audible than usual.",
+    "Bob": "Weir’s voice shows improvement, with a noticeable echo on Let It Grow and solid rhythm work; a minor slip on The Wheel is noted but overall he provides reliable harmonies.",
+    "Brent": "Mydland delivers aggressive, jazzy keyboard lines that drive the jams, complemented by Merl Saunders’ experimental touches during Space.",
+    "Mickey": "Provides warm, supportive drumming that blends well with Bill’s groove, contributing to a balanced two‑drummer feel.",
+    "Billy": "Keeps the rhythmic foundation steady and warm, complementing Mickey without overpowering the mix."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-15T01:03:51.368661+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha",
+      "One More Saturday Night"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "China Cat Sunflower",
+      "Cumberland Blues"
+    ],
+    [
+      "I Need A Miracle",
+      "Eyes Of The World",
+      "Drums",
+      "Space*",
+      "The Other One",
+      "The Wheel",
+      "Sugar Magnolia"
+    ]
+  ]
+}

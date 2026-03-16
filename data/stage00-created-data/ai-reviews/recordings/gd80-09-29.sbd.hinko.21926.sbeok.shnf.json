@@ -1,0 +1,95 @@
+{
+  "summary": "Good‑to‑great soundboard recording with crystal‑clear moments but plagued by audience mic chatter and occasional fuzzy guitar; the show shines on Ripple, Brown‑Eyed Women, All Over Now and a strong Wharf Rat while suffering from vocal slips and missing parts.",
+  "review": "The performance captures an historic Warfield acoustic run with beautiful harmonies on Ripple and tight playing through the second set, highlighted by Brown‑Eyed Women, All Over Now and a soaring Wharf Rat. Recording quality is generally excellent and clear, though audience talk during “To Lay Me Down” and occasional fuzzy/high‑end guitar tone detract from an otherwise superb soundboard source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance and overall clarity, offset by recurring complaints about talk‑overs, missing sections and occasional fuzzy guitar; weighted average yields a solid near‑4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crystal‑clear sound for most of the show, but includes intrusive audience mic chatter on “To Lay Me Down”, occasional fuzzy/high guitar tone, a high‑end heavy mix lacking bass, and short cuts/low‑quality audience patches in the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Brown-Eyed Women",
+      "All Over Now",
+      "China Cat Sunflower > I Know You Rider",
+      "Wharf Rat",
+      "Candyman",
+      "Space"
+    ],
+    "poor_songs": [
+      "To Lay Me Down (talking)",
+      "Ain't No Lie (missing segment)",
+      "Bird Song (vocal issues)",
+      "Truckin' (uninspired)"
+    ],
+    "setlist_flow": "Historic acoustic sets that set the tone, a tight and vocal‑rich second set with strong harmonies, followed by a serious third set featuring an introspective Garcia solo after Terrapin and an interesting Space segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Early equipment trouble left his guitar sounding pained/fuzzy; later his tone is high‑end and at times he sounds faint on “Rider\" and has vocal issues on Bird Song.",
+    "Phil": "",
+    "Bob": "Stumbles vocally a couple of times during the acoustic set.",
+    "Keys": "",
+    "Drums": "Tight playing with a notable intro solo after Terrapin, solid drumming throughout."
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:45:22.494237+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-29.sbd.hinko.21926.sbeok.shnf"
+}

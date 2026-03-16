@@ -1,0 +1,64 @@
+{
+  "summary": "Fair‑quality soundboard captures a historic, chant‑filled show highlighted by monster Main Ten and Other One jams",
+  "review": "The recording is a soundboard capture with noticeable hum, low vocals and occasional drop‑outs, but the performance more than makes up for it.  This Carousel/Fillmore West concert is famous for its 20‑minute crowd chant, an epic Main Ten jam that birthed the Playing in the Band riff, and a ferocious Other One duet between Jerry and Phil.  The strange, psychedelic atmosphere and historic first Not Fade Away round out a truly unique Dead experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Reviewers consistently award 4‑5 stars for the musical brilliance and historical significance, while noting the recording is only fair; weighting show quality (70 %) against recording quality (30 %) yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Hum and electrical noise during Lovelight, very low vocal levels, occasional drop‑outs; overall mix is listenable but far from pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Main Ten",
+      "The Other One",
+      "Not Fade Away (first 1968 performance)",
+      "Chant (20‑minute crowd chant)"
+    ],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "A wildly experimental set: a marathon Lovelight segues into an unprecedented 20‑minute chanting section, then erupts into two massive improvisational stretches (Main Ten → Other One) that foreshadow the band’s later jazz‑ier direction."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is praised for shredding on The Other One and delivering a thunderous tone during the Main Ten jam.",
+    "Phil": "Lesh's bass intertwines with Jerry in a duelling duet on The Other One; also shouted a memorable line during the Lovelight drum break.",
+    "Bob": "",
+    "Keys": "The organ is barely audible, likely Pigpen or Tom Constanten’s sparse contributions; reviewers note its faint presence.",
+    "Drums": "A notable drum jam occurs in the middle of Lovelight; Bill Graham’s voice is heard directing the crowd but no criticism of the drummers."
+  },
+  "song_mentions": {
+    "The Main Ten": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "The Other One": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 4,
+      "total_mentions": 6
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Chant": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-24T11:28:13.280183+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-02-19.sbd.cotsman.4511.sbeok.shnf"
+}

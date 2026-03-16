@@ -1,0 +1,52 @@
+{
+  "summary": "Good‑sounding 1987 show with a nostalgic 80’s vibe, highlighted by solid Eyes and a quirky Jack Straw despite a shaky Get Back.",
+  "review": "Both reviewers rate the concert highly, noting that even though it isn’t the band’s peak performance it captures the fun of the mid‑80s era. Highlights include Jerry’s lead on “Eyes” and a classic “Jack Straw”, while Brent’s keyboards keep the set listenable through a rough “Get Back”. The recording is considered listenable, though its exact source isn’t identified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews praise the musical moments and find the audio listenable; minor criticisms keep the overall rating just above a solid four."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit source details are given, but reviewers describe it as listenable and appreciate its availability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Get Back"
+    ],
+    "setlist_flow": "The set has a relaxed, nostalgic flow typical of the mid‑80s Dead, with occasional slip‑ups that add charm rather than detract."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive mention of his playing on “Eyes”.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are credited with saving the show and keeping it listenable.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Get Back": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:33:27.239839+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-28.nak100.koucky.gmb.79466.sbeok.flac16"
+}

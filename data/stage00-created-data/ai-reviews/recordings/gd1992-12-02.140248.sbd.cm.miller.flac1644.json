@@ -1,0 +1,128 @@
+{
+  "summary": "Fair‑quality soundboard capture of a mellow late‑1992 show, buoyed by strong versions of They Love Each Other and China Cat despite early bleed‑through and mix quirks.",
+  "review": "The recording is a soundboard tape that suffers from interference on the opener “Stranger,” occasional volume swings and a brief loss of Vince’s mic, giving it an overall fair sound quality. Musically the band delivers a mellow performance with standout moments such as “They Love Each Other,” “Jack‑a‑Roe,” “China Cat” and a superb “He’s Gone,” though some songs (e.g., “Truckin’,” “Space”) fall short. Health issues for Jerry and vocal strain on Bob add a slightly subdued tone to the show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 3‑star ratings; the show has several highlights but is hampered by notable recording flaws, leading to an overall moderate score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Bleed‑through of another band on the opener “Stranger,” intermittent FM‑crossover interference, volume fluctuations across instruments, Vince’s mic off for part of a verse, overall clearer after the first song but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "They Love Each Other",
+      "Same Thing",
+      "Jack-a-Roe",
+      "Let It Grow",
+      "China Cat",
+      "I Know You Rider",
+      "Rider",
+      "He's Gone",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Stranger",
+      "Truckin'",
+      "Space",
+      "Miracle",
+      "Lovelight"
+    ],
+    "setlist_flow": "Four tunings and a mix of new‑song introductions give the set an exploratory feel; volume inconsistencies and occasional mic issues make listening uneven, but the second set builds momentum with strong jams before a visually striking drum segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds raspy and lower due to health issues; his guitar tone shines on “Rider,” but his volume is turned down at times.",
+    "Phil": "Steps in solidly when Bob drops out, providing steady bass support throughout the night.",
+    "Bob": "Shows vocal strain and intermittently steps offstage during the set; returns for a lugubrious “Lovelight.”",
+    "Keys": "Vince delivers an organic piano performance with strong playing; his mic is muted early on but recovers later. Bralove keeps synth textures minimal.",
+    "Drums": "Mickey sticks mainly to congas and bongos, delivering an intense visual drum segment."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:19:29.427507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-02.140248.sbd.cm.miller.flac1644"
+}

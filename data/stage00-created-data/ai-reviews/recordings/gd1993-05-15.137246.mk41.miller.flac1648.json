@@ -1,0 +1,39 @@
+{
+  "summary": "Poorly received show with a lone highlight (Bird Song) and no clear recording details",
+  "review": "Reviewers found the concert largely unengaging, calling it boring with a weak six‑song first set, though one reviewer singled out Bird Song as a high point. No information about the source or sound quality is provided, so the technical aspect remains unclear.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.4,
+    "confidence": "medium",
+    "rationale": "Three reviews – one modest (3★) and two very low (0★, 1★) – give an average of ~1.3 stars; the consensus is negative despite a single song mention."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No reviewer commented on soundboard, audience mix, or clarity; low overall ratings suggest listeners were dissatisfied, but specific audio issues are not documented."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Criticized as a dull six‑song first set that made the concert feel monotonous; overall pacing described as boring."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:34:38.020265+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-15.137246.mk41.miller.flac1648"
+}

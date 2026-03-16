@@ -1,0 +1,45 @@
+{
+  "summary": "Good soundboard capture of a 1992 Cal Expo show with standout Drums and Space sections despite an odd setlist flow.",
+  "review": "The recording delivers clear, well‑balanced audio that lets the impressive Drums and Space passages shine – listeners even spot a Van Hallen sample. While fans love the energetic improvisations, some note the unusual placement of Truckin' and Saint making the second night feel a bit unfocused, yet Garcia's vocal tone is praised as aging beautifully.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and praise the drums/space, while a few criticize setlist oddness; recording quality is inferred as good from lack of complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific sound issues mentioned; drums and space described as incredible, indicating a clear capture with solid mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Drums",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features an unconventional order—Truckin' appears early and Saint leads into drums—which some find unfocused, but the improvisational peaks in Drums and Space are highlighted as exceptional."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's voice is noted as sounding better with age.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment is called incredible, with listeners noting a Van Hallen sample and overall strong performance."
+  },
+  "song_mentions": {
+    "Drums": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T05:36:31.424290+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-21.sbd.miller.92355.sbeok.flac16"
+}

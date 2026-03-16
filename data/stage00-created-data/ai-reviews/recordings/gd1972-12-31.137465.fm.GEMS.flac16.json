@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy Winterland show featuring a soaring The Other One, sizzling Truckin', and magnificent Morning Dew, captured on an audience recording of decent quality.",
+  "review": "The performance is praised for its extended, hypnotic The Other One sequence that carried the crowd into the early morning, plus a hot jam out of Truckin' and a breathtaking Morning Dew. Reviewers note the lack of Pigpen but celebrate the overall vibe, while the recording itself receives no specific technical praise beyond being an audience capture that includes rare on‑stage moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance highlighted by several reviewers, but limited information on recording fidelity and a contradictory low‑star review keep confidence moderate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity or mix; the source is noted for capturing rare stage moments (the \"putz\" incident), suggesting a usable but not pristine audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Truckin'",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers emphasize an extended, late‑night The Other One that kept the energy high into the early morning, with strong jams in Truckin' and a standout Morning Dew to close."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill is mentioned scolding a \"putz\" during the late‑night Other One sequence, highlighting his presence onstage."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:48:04.467944+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-12-31.137465.fm.GEMS.flac16"
+}

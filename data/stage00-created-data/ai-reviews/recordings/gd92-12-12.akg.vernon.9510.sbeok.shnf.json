@@ -1,0 +1,51 @@
+{
+  "summary": "Good‑quality audience tape of a solid show, highlighted by a jazzy Dark Star on an excellent second set.",
+  "review": "The recording is an unrecognized audience tape that remains very listenable and clear enough for enjoyment. Musically the concert shines in its second set, especially a jazzy Dark Star, while the first set feels sluggish with a flubbed Friend of the Devil and slower Jerry Garcia playing. Overall it’s a damned good show despite its early‑set rough edges.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Only one detailed review; shows strong second‑set performance (≈3.5) and decent audience recording quality (≈4). Weighted average yields ~3.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as very listenable and good‑quality for an unrecognized audience tape; no major flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [
+      "Friend of the Devil"
+    ],
+    "setlist_flow": "First set feels slow and tentative, especially Jerry's playing, while the second set picks up with strong momentum and a jazzy Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "Appears in a very slow, opiatic mood; flubs high‑speed solo on Friend of the Devil but uses negative space nicely on Bird Song.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:53:18.294208+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-12.akg.vernon.9510.sbeok.shnf"
+}

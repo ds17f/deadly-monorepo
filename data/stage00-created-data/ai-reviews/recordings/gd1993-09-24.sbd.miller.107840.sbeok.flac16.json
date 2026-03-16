@@ -1,0 +1,79 @@
+{
+  "summary": "Crisp soundboard capture of a solid 1993 Boston Garden show where the standout “Days Between” shines despite an uneven set.",
+  "review": "The recording is a clean, crisp sound‑board source that overcomes the notoriously poor house mix people recall from the Boston Garden night. Musically the concert is average to slightly above average – the first set keeps solid tempo and playing, while the second set drifts with weak transitions, but the “Days Between” performance stands out as a high point.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the soundboard quality and highlight the strong ‘Days Between’ rendition, but many note uneven song execution and lackluster second‑set flow, leading to an overall mixed impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear soundboard recording that fixes the original house mix issues; no dropout or major distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between"
+    ],
+    "poor_songs": [
+      "Stagger Lee",
+      "Queen Jane Approximately",
+      "Around and Around",
+      "Scarlet Begonias"
+    ],
+    "setlist_flow": "First set maintains solid tempo and playing; second set suffers from weak transitions and a generally lackluster vibe, making the overall pacing uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong guitar tone and a sparkly final solo, though some felt the band didn’t always sync with him.",
+    "Phil": "Consistently praised, noted as ‘killing it’ throughout the performance.",
+    "Bob": "",
+    "Keys": "Vince’s keyboards are a mixed bag – early energy appreciated but later synth/steel‑drum sounds were criticized for clashing with Jerry.",
+    "Drums": "Bill's drumming described as solid and standard, providing reliable backbone even when set transitions felt sloppy."
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:40:51.011232+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-24.sbd.miller.107840.sbeok.flac16"
+}

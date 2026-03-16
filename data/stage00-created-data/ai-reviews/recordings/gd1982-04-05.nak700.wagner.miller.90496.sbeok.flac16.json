@@ -1,0 +1,93 @@
+{
+  "summary": "A strong audience (AUD) recording captures a solid 1982 Spectrum show, highlighted by a standout Friend of the Devil and an epic Bertha → Playin' → Ship jam.",
+  "review": "The audience tape is praised as clear and well‑balanced, though it suffers from occasional crowd noise and a few missing seconds at the start of the second set. Musically the concert is solid – first‑set workmanlike with a superb Friend of the Devil, while the second set delivers a memorable Bertha>Playin' into Ship of Fools jam, even if some listeners felt the later second‑set moments were a bit wacky. Overall the performance is enjoyable with several high points despite minor slip‑ups.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews give a consistent picture of good musical performance and a clear audience recording; occasional criticisms keep the rating just below excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Brilliant, crisp audience tape with good balance; some missing seconds at the start of the second set, a fast patch in Jack Straw, and occasional crowd interruptions (yelling during Playin' jam)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Bertha",
+      "Playin' in the Band",
+      "Ship of Fools",
+      "Althea",
+      "Dough Knees",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [
+      "Deep Elem",
+      "Good Lovin'"
+    ],
+    "setlist_flow": "First set is solid and tight; the second set launches into a legendary Bertha → Playin' → Ship of Fools sequence with an extended post‑Ship jam into Drums, then continues with a wilder second Playin', Good Lovin' (less inspired) and a perfect Dough Knees."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is praised as ‘great’ and his guitar work described as firing on eight cylinders; tone noted as excellent.",
+    "Phil": "Mentioned in the context of swapping places with Jerry for the drummers' segment; no specific bass commentary.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The post‑Ship jam into Drums is highlighted as a unique, extended excursion with both drummers staying in the mix."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deep Elem": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dewiminna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:17:19.104107+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-05.nak700.wagner.miller.90496.sbeok.flac16"
+}

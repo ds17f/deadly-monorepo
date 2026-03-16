@@ -1,0 +1,73 @@
+{
+  "summary": "Crystal‑clear 1971 soundboard captures a raw, high‑energy show highlighted by an epic Dark Star → Bird Song and stellar China Cat → I Know You Rider sequence.",
+  "review": "The Miller‑sourced soundboard restoration is excellent – crisp, well‑balanced and virtually free of tape artifacts. Musically the concert is a standout early‑’71 performance: a soaring Dark Star into Bird Song, a blistering China Cat > I Know You Rider, plus memorable Uncle John’s Band and Johnny B. Goode moments, all fueled by Jerry’s fiery guitar, Phil’s inventive bass and Bill Kreutzmann’s thunderous drumming.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Ten detailed reviews overwhelmingly praise both the show (exceptional jams, high energy) and the recording (restored soundboard, clear mix). The weighted average of show quality (70%) and recording quality (30%) yields a near‑perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Restored from 1971 tape by Charlie Miller; crisp, balanced mix with minimal hiss or dropouts. Listeners note the recording captures Bill’s drums and Jerry’s guitar brilliantly, with only faint tape artifacts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star → Bird Song",
+      "China Cat Sunflower > I Know You Rider",
+      "Uncle John's Band",
+      "Johnny B. Goode",
+      "Feelin' Groovy jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set starts a bit slow but builds into the spectacular Dark Star → Bird Song sequence; second set maintains momentum with China Cat > Rider, Uncle John’s Band and a rousing encore. The raw early‑’71 energy and the infamous Yale Bowl riot add a unique, electric atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery guitar tone, on‑stage jokes, and trad lead work on Johnny B. Goode.",
+    "Phil": "Highlighted for inventive bass runs in Dark Star and China Cat, captured well on the Miller source.",
+    "Bob": "",
+    "Keys": "Pig (organ) noted walking around the stage; less psychedelic but still part of the jam texture.",
+    "Drums": "Bill Kreutzmann described as 'out of control' with massive fills that are beautifully recorded."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feelin' Groovy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T06:50:47.340897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-07-31.132730.sbd.miller.flac16"
+}

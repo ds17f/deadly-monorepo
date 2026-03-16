@@ -1,0 +1,50 @@
+{
+  "summary": "Soundboard capture of a 1969 summer gig featuring an unusually long Doin' That Rag jam and decent overall sound, though Janis Joplin’s guest spot splits opinion.",
+  "review": "The recording is a sound‑board tape that most listeners find clear and enjoyable, especially the extended jam on “Doin’ That Rag” and the occasional interplay between Janis Joplin and Pig Pen. While some reviewers praise the performance and Jerry’s song choices, others criticize Janis’s vocal contribution, making overall sentiment mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show has standout moments (long jam, guest interplay) but polarizing vocal performance; recording quality is generally good, leading to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the tape sounds really good overall with no major flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Doin' That Rag",
+      "The Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A typical summer‑1969 set with a long improvisational jam and guest vocals that add variety, though the Janis segment is viewed as uneven by some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Mostly Jerry‑written tunes are highlighted positively.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Doin' That Rag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:14:26.838242+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-06-07.132685.sbd.reels.wise.flac16"
+}

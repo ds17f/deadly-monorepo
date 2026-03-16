@@ -1,0 +1,87 @@
+{
+  "summary": "Fair‑quality audience recording of a solid Pittsburgh gig where Brent’s keyboards dominate on Bertha and Blow Away, but the mix sits slightly below average.",
+  "review": "The performance is generally praised – Brent’s harmonies on Bertha, a ripping Blow Away, a soaring Stella, and a tight Crazy Fingers get strong nods, while the second set feels especially strong. The audience tape suffers from polarity issues and an overall sound that is “slightly below average,” making it listenable but not pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated around 4 stars across reviewers, while recording quality is noted as below average/fair; weighted combination yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Polarity reversal causes channel imbalance; overall sound slightly below average with occasional talking bursts, but the tape is still listenable after correction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Blow Away",
+      "Stella",
+      "Crazy Fingers",
+      "El Paso",
+      "Tom Thumb's Blues"
+    ],
+    "poor_songs": [
+      "Uncle John's Band",
+      "Black Muddy River"
+    ],
+    "setlist_flow": "Second set is highlighted as strong and Brent‑centric; overall show is good but not as heavy‑hitting as the night before."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil’s vocals on Tom Thumb's Blues are noted as decent.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work and harmonies receive strong praise, especially on Bertha and Blow Away.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T17:38:11.214616+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-03.beyerM88.connor.29758.sbeok.shnf"
+}

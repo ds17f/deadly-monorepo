@@ -1,0 +1,39 @@
+{
+  "summary": "Audience tape captures the intimate 80s venue vibe with solid low‑end detail, though some find the levels overly saturated; the show itself is high‑energy with a memorable second encore of “Satisfaction.”",
+  "review": "The recording is an audience source that does a good job rendering the room’s ambience and low frequencies, but a few listeners report excessive saturation and distortion. Musically the concert is remembered as a fun, high‑energy performance – especially the second encore of “Satisfaction” that got the crowd dancing. Overall the show shines despite the mixed technical impressions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the performance and crowd energy (70% weight) offset by divided opinions on recording quality (30% weight), resulting in an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Good low‑end response and vivid venue ambience noted, but levels are reported as too high and distorted by some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans recall a lively atmosphere with strong crowd participation; the second encore of “Satisfaction” is highlighted as an especially energetic moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T09:22:29.604541+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-31.aud.unknown.34928.flac16"
+}

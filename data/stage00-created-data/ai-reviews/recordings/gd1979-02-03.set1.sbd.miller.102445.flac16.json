@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording suffers from a badly mixed, reverberant arena sound that makes a first set feel sour, though Keith's piano cuts through clearly.",
+  "review": "The reviewer finds the audio plagued by an untrained soundman’s mix and the venue’s tin‑can acoustics – heavy reverb, high‑mid peaks and excessive delay that ruin the opening \"Promised Land\" and \"Candyman.\" While the band’s playing is described as strained by the poor sound, Keith Godchaux’s piano is praised for its clarity despite sitting too forward in the mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Only one detailed review; it highlights major recording flaws and a mediocre performance, with a few positive notes about keyboards, leading to an overall low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Mix was not set up before the show; heavy reverb and high‑mid peaking create a tin‑can, delayed sound. The audience hears excessive feedback and the piano is overly forward in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Promised Land",
+      "Candyman"
+    ],
+    "setlist_flow": "The first set is marred by the bad mix and venue acoustics, causing a sour vibe that colors both Garcia's and Weir's vocals; no positive flow or highlights are noted."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals sound strained and sour, likely affected by the poor mix.",
+    "Phil": "",
+    "Bob": "His vocal phrasing appears dulled by the bad sound environment.",
+    "Keys": "Keith's piano is clear and stands out, though it sits too high in the mix; mentioned as a positive amid overall issues.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:01:04.274073+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-03.set1.sbd.miller.102445.flac16"
+}

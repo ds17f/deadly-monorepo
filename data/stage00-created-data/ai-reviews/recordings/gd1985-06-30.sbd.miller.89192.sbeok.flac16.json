@@ -1,0 +1,92 @@
+{
+  "summary": "A stellar sound‑board capture of a classic summer ’85 show highlighted by an epic Shakedown Street and tight band chemistry.",
+  "review": "The Charlie Miller SBD delivers crystal‑clear, well‑balanced audio that lets the band’s high energy shine through.  Highlights include a scorching Shakedown Street, a fiery Half‑Step into Keep on Growing, and a soaring second set with The Other One, Stella Blue and Sugar Magnolia; even the occasional hiccup (e.g., a loose Samson) can’t dim the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise both performance and sound quality; show strength (≈70% weight) and recording excellence (≈30%) combine to a near‑top rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as \"clean\", \"crispy\" and \"super clean\"; no major drop‑outs or distortion reported. One reviewer noted earlier SBD copies were muddy, but Miller’s version is praised for its clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Keep on Growing",
+      "Half Step",
+      "The Other One",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Don't Ease",
+      "Samson (off‑rhythm for a moment)"
+    ],
+    "setlist_flow": "First set bursts out with an upbeat Half‑Step, C.C. Rider and Keep on Growing; the second set launches into a legendary Shakedown Street jam that flows through Samson, Gimme Some Lovin', He's Gone → Cryptical → Drums → Space → The Other One → Stella Blue → Sugar Magnolia, delivering continuous momentum and strong segues."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring solos, vocal phrasing (e.g., \"Across the Rio Grande\"), and tight interplay with Brent; a few notes of his rhythm slipping on Samson.",
+    "Phil": "",
+    "Bob": "His thick, punchy guitar tone during Shakedown Street is highlighted as one of the best‑ever ’80s performances.",
+    "Keys": "Brent’s mandolin/MIDI work gets special mention (delicate intro on Half Step, \"twist\" around 11:30, and synth/MIDI contributions on C.C. Rider).",
+    "Drums": "The Drums > Space segment is called “great”; Bill/​Mickey’s groove is noted as a driving force behind the second‑set jams."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "Keep on Growing": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Half Step": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "C.C. Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Don't Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-15T06:49:29.432113+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-30.sbd.miller.89192.sbeok.flac16"
+}

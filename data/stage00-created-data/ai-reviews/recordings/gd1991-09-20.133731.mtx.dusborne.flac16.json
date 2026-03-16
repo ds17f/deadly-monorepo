@@ -1,0 +1,45 @@
+{
+  "summary": "Great‑sounding matrix recording featuring a beautifully played Brokedown Palace and a gorgeous Bird Song in the first set",
+  "review": "The reviewer praises this matrix source as “great sounding,” noting clear, balanced audio that captures the band well. Musically the first set shines with a wonderfully rendered later‑era Brokedown Palace and an especially beautiful Bird Song, leaving listeners eager for the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one review, but its enthusiastic language rates both performance and recording highly; limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as a ‘great sounding’ matrix mix – clear, well‑balanced, no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Positive comments focus on the first set; reviewer highlights strong playing and expresses excitement for a second set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:29:38.117152+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-20.133731.mtx.dusborne.flac16"
+}

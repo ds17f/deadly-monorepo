@@ -1,0 +1,50 @@
+{
+  "summary": "Soundboard recording of a short, partial show that still delivers solid first‑set material and an epic Casey Jones/One More Saturday Night suite.",
+  "review": "Although the release only contains a few tracks from the December 10, 1973 concert, reviewers note that the performance is competent and enjoyable, highlighting the long Casey Jones > Jam > One More Saturday Night sequence and a standout China > Rider. The soundboard source is generally regarded as clear, but the incomplete nature and labeling errors dominate many comments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments (especially the Casey Jones suite) while consistently criticizing the partial/incorrect nature of the release; recording quality is assumed good from the soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints about clarity or mix; reviewers focus on the fact that only a few songs are present and some mislabeling, implying the audio itself is acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones > Jam > One More Saturday Night",
+      "China > Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Partial release (2‑3 songs) limits the flow, but the included material showcases a solid first set and an extended jam suite that fans find exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:23:48.401659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-12-10pt.sbd.elliot.11800.sbeok.shnf"
+}

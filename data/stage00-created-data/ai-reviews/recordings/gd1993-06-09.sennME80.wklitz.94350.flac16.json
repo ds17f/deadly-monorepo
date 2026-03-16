@@ -1,0 +1,31 @@
+{
+  "summary": "An excellent performance is praised, though no details about the recording source or sound quality are provided.",
+  "review": "The lone review gives the show a glowing five‑star rating and calls it “excellent,” indicating strong musical enjoyment. No information is offered regarding how the concert was captured, so the technical quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 5‑star comment highlights a great show, but the lack of any recording details limits certainty about overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on the set structure or pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T13:46:40.150916+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-09.sennME80.wklitz.94350.flac16"
+}

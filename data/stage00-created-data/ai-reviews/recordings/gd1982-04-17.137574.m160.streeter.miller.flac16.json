@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience recording captures a solid show with standout Shakedown Street, Spanish jam and Wharf Rat.",
+  "review": "The audience‑sourced tape immerses the listener in the 1982 performance, delivering clear crowd ambience that puts you there. The set shines on Shakedown Street, an expansive Spanish jam and a heartfelt Wharf Rat, making it a worthwhile download despite being only an audience capture.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Single positive 4‑star review highlights strong performance and enjoyable audience recording; limited data keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape praised for its immersive ambience; no major clarity or dropout issues mentioned, though reviewer notes a preference for soundboard sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Spanish Jam",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic set with strong groove; Spanish jam provides a smooth transition and the show closes on an emotive Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:25:13.955126+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-17.137574.m160.streeter.miller.flac16"
+}

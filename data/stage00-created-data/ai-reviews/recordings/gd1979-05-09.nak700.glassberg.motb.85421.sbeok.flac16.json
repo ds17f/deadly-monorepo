@@ -1,0 +1,67 @@
+{
+  "summary": "Pristine audience recording with flawless sound and a powerhouse set highlighted by an unforgettable Sugaree opener and smoking jam on He's Gone → Truckin' → The Other One.",
+  "review": "These reviews rave about the glass‑clean capture from Glassberg/MOTB, calling it “pristine” and “full and clear,” with only a few micro‑dropouts that can be fixed. The show itself is described as one of the band’s best – a hummingbird‑fast Jerry, a top‑ten Sugaree, a monster Jack Straw close, and a second‑set jam that lets the Beast loose. Overall the performance and recording are both judged to be exceptional.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All detailed reviews are five‑star, praising both musical execution (70% weight) and the high‑quality Glassberg/MOTB source (30% weight). Minor dropouts noted do not diminish the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Pristine, full‑frequency capture typical of Glassberg/MOTB tapes; a handful of micro‑dropouts in Sugaree that some listeners have had to clean up."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Jack Straw",
+      "China/Rider",
+      "He's Gone > Truckin' > The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds with a hummingbird‑fast Jerry and an epic Sugaree opener that carries through to a soaring Jack Straw. Second set opens strong with China/Rider and then lets loose on the He's Gone → Truckin' → Other One jam, delivering a high‑energy climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as “fingers moving like a hummingbird on crack” and generally sounding great for the month.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "First‑time appearance of Brent on keyboards; reviewers note he meshed well and added to the music.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China/Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone > Truckin' > The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:27:35.670059+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-09.nak700.glassberg.motb.85421.sbeok.flac16"
+}

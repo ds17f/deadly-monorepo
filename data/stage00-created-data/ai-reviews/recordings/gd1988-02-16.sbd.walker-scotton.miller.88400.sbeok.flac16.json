@@ -1,0 +1,58 @@
+{
+  "summary": "Soundboard recording with decent clarity but a muddy mix; the show is average overall with Dear Mr. Fantasy as the only clear highlight.",
+  "review": "The three reviewers agree the C‑Miller soundboard source sounds good when turned up, yet several note muddiness and an unbalanced mix that buries Bob’s guitar while Brent dominates at times. Musically the night is described as “all right” with a few missteps—most notably a jarring Birdsong and sloppy transitions—but Dear Mr. Fantasy stands out as a highlight.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Average show quality (mixed performance notes) combined with a soundboard that is praised by some but criticized for muddiness yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally good capture from C Miller, but several reviewers describe the mix as muddy, Bob's guitar hard to hear, and Brent's keyboards too loud, leading to a less clear overall sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "Birdsong",
+      "Playing in the Band",
+      "Eyes of the World"
+    ],
+    "setlist_flow": "The set is described as uneven – a jarring shift in Birdsong and a messy transition between Playing in the Band and Eyes of the World, with overall performance deemed just okay."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "His guitar is difficult to hear for much of the mix.",
+    "Keys": "Brent's keyboards are often too loud, drowning out other instruments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:13:47.881947+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-02-16.sbd.walker-scotton.miller.88400.sbeok.flac16"
+}

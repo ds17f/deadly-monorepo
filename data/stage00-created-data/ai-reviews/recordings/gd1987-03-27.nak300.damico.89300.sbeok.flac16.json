@@ -1,0 +1,57 @@
+{
+  "summary": "Good‑quality recording of an electric spring‑tour show featuring Jerry’s snarling guitar tone and standout jams on Samson and Uncle John’s Band > AM Dew.",
+  "review": "The performance is praised for Jerry Garcia’s edge‑of‑distortion tone, a soaring jam on “Music,” a fiery “Touch,” and a long drummer intro on “Samson.” Reviewers also highlight the bridge jam in the Uncle John's Band → AM Dew sequence with Phil dropping bombs. The recording quality is described as merely “ok,” making it listenable but not pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One detailed, 4‑star review emphasizes strong musical moments and only modest recording quality, leading to a high show rating tempered by an average technical rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer says the recording quality is “ok”; no specific mention of soundboard or audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music",
+      "Touch",
+      "Samson",
+      "Uncle John's Band > AM Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review notes a high‑energy set with several highlight moments and unique jams, especially the long drummer intro on Samson and the bridge jam in the Uncle John's Band sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone had a slight edge of distortion, screaming lead during the AM Dew bridge, and a roaring finish on Music.",
+    "Phil": "Dropping bombs during the AM Dew bridge jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Long intro on Samson fueled by audience clapping."
+  },
+  "song_mentions": {
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band > AM Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:55:08.235386+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-27.nak300.damico.89300.sbeok.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Good soundboard capture of a heartfelt December outdoor show, highlighted by an emotional post‑concert Imagine sing‑along and sweet performances of Foolish Heart, Terrapin Station, Victim and U.S. Blues.",
+  "review": "The recording is a solid soundboard mix that many listeners describe as crisp, though a few users reported empty tracks. The concert itself was memorable – fans recall the moving Imagine moment after the set and several strong songs such as Foolish Heart and Terrapin Station, even if some felt the overall performance was only average compared to other 1990 shows.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Average show ratings (≈3.5/5) combined with generally good but occasionally problematic soundboard quality (≈4/5) yield a weighted overall score around 3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as a \"sick\" and crisp soundboard by one reviewer; Jerry sits well in the mix. A few reviewers reported blank/empty tracks, suggesting possible file‑specific issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Imagine (post‑concert sing‑along)",
+      "Foolish Heart",
+      "Terrapin Station",
+      "Victim",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Daytime outdoor show in December; first set noted as more interesting by some, overall performance considered solid but not spectacular compared to other 1990 dates."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for loose, shredding guitar work and a well‑balanced placement in the mix.",
+    "Phil": "Mentioned briefly during the Coda where Jerry continues soloing; no detailed critique.",
+    "Bob": "",
+    "Keys": "References to Brent’s recent passing and “Bruce on fire” (keyboardist) indicate strong keyboard presence, though not deeply analyzed.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Imagine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:57:13.980337+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-12-08.sbd.hollister.472.sbeok.shnf"
+}

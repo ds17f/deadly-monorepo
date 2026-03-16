@@ -1,0 +1,51 @@
+{
+  "summary": "Nice board‑recorded Set 2 with solid playing and a meaty Black Peter, overall good sound quality despite mixed sources",
+  "review": "The reviewer praises the second set’s soundboard capture, highlighting Jerry’s noodling and a “meaty” Black Peter. The first three songs are called standard but well received, and the recording is generally clear though some portions (US Blues, Sugar Magnolia) appear to come from other audience sources.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review notes strong musical performance and a decent board recording; minor source inconsistencies keep the rating just below top tier."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Second set is clean soundboard; first set and some tracks (US Blues, Sugar Magnolia) appear to be from audience sources, causing slight variation but overall clear mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "From The Heart Of Me",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First three tunes are described as standard yet well received, followed by a solid sandwich of Playin', strong Jerry noodling and an especially meaty Black Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for generous noodling throughout the set",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "From The Heart Of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:45:18.324521+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-21.152899.s2.lamarre.vernon.sirmick.flac16"
+}

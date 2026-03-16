@@ -1,0 +1,45 @@
+{
+  "summary": "A largely disappointing show highlighted by a flat Scarlet Begonias and a lack‑luster Truckin' jam; recording quality is not discussed.",
+  "review": "Reviewers consistently criticize the performance, calling it a near train‑wreck with uninspired versions of Scarlet Begonias and an average Truckin' > Jam. No comments address the audio source or fidelity, suggesting the recording itself is at best unremarkable. Overall sentiment is negative toward both the music and the overall experience.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Show quality is judged poor by multiple reviewers (≈2/5). Recording quality is unknown but presumed average, giving a modest boost. Weighted combination yields a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not mention soundboard vs. audience or any audio clarity issues; focus is on performance problems."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Scarlet Begonias",
+      "Truckin' > Jam"
+    ],
+    "setlist_flow": "The concert suffered a delayed start, with Bob Weir apologizing twice; the band attempted to compensate with a double encore, but reviewers felt it could not salvage the overall weak performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir is noted for apologizing for the late start and appears disengaged.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin' > Jam": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:03:21.587435+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-09.sbd.dp7-outtakes.sirmick.fix-32642.97013.flac16"
+}

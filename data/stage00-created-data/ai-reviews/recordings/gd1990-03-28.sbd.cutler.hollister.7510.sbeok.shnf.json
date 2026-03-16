@@ -1,0 +1,45 @@
+{
+  "summary": "Stunning 24‑track soundboard capture of a peak‑era 1990 show featuring a killer \"Cold Rain and Snow\" and a standout \"The Weight\" encore.",
+  "review": "Both reviewers rave about this near‑peak 1989‑90 performance, calling it one of the best recordings from that era. The 24‑track soundboard source is praised for its crystal‑clear, full‑band depth, while the show itself delivers a great flow highlighted by an emphatic \"The Weight\" and a scorching \"Cold Rain and Snow\".",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Both reviews are highly positive (5★ and 4★) and emphasize excellent show quality and an exceptional 24‑track soundboard recording, leading to a high rating despite the small sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as a 24‑track \"monster\" with crystal‑clear mix and full band depth; no reported flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow",
+      "The Weight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Great overall pacing; the encore \"The Weight\" feels like a full performance rather than a quick exit, contributing to an energetic finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:30:40.207431+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-28.sbd.cutler.hollister.7510.sbeok.shnf"
+}

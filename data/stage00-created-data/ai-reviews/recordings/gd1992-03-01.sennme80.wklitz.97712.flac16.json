@@ -1,0 +1,46 @@
+{
+  "summary": "Excellent audience recording that captures an energetic first set led by Jerry, with crowd noise adding vivid atmosphere and standout Black Peter.",
+  "review": "The Sennheiser ME‑80 mic capture delivers crisp, lively sound, letting the audience ambience shine through. Fans rave about a strong first set—calling it a true \"Jerry Set\"—with Black Peter highlighted, though Wang Dang Doodle draws mixed feelings. Overall the show and recording are both highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for audio quality (5‑star) and a strong first set (4‑star), offset only by minor song dislike; weighted rating yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Sennheiser ME‑80 mics provide clear, punchy audio with vivid crowd noise that enhances the live feel; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Wang Dang Doodle"
+    ],
+    "setlist_flow": "First set is highlighted as a strong, Jerry‑focused performance with great energy and audience interaction; overall pacing praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as a \"Jerry Set\" – Garcia’s playing leads the first set and is a major highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:43:17.703692+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-01.sennme80.wklitz.97712.flac16"
+}

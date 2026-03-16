@@ -1,0 +1,31 @@
+{
+  "summary": "A wildly enthusiastic fan review praises this matrix‑recorded concert as an unforgettable experience, despite no specific technical details.",
+  "review": "The lone five‑star review is pure devotion – the reviewer was born on the night of the show and calls it “the ultimate trip,” even noting the lunar eclipse. While no concrete comments about sound clarity are given, the .mtx file suggests a matrix mix, and the fan’s excitement implies the recording is at least listenable and the performance memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Strong positive sentiment and high enthusiasm indicate a great show; lack of concrete audio details keeps confidence moderate."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity or mix, but the enthusiastic tone suggests the recording is acceptable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific setlist commentary; reviewer focuses on emotional impact rather than song-by-song performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T15:11:57.411439+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-15.mtx.tobin.88923.flac"
+}

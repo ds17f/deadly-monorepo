@@ -1,0 +1,45 @@
+{
+  "summary": "A great Deadhead night highlighted by a legendary Help > Slip > Franklin’s and superb Peggy‑O, though the recording source and quality are not specified.",
+  "review": "Reviewers rave about the energy of the show, calling it a truly great night with the band “bringing it.” The performance of Peggy‑O is praised as the best of the evening and the Help > Slip > Franklin’s sequence is described as legendary. No details are given about the recording source or sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Single enthusiastic review focuses on strong musical performance and standout songs; lack of any recording‑quality comments keeps the overall rating modest."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix or source were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Help on the Way > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The reviewer conveys an overall high‑energy, cohesive concert that felt like a perfect night for Deadheads."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:01:52.207349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-12.137356"
+}

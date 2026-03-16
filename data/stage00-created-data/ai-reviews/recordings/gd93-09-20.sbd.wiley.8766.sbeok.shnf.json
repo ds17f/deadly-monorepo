@@ -1,0 +1,92 @@
+{
+  "summary": "Good‑quality soundboard capture of a mixed‑bag show – first set smoking and smooth, Edie Brickell adds sparkle, but some muddy vocals and uneven moments.",
+  "review": "The recording is a solid SBD source that many fans praise for its clarity, though a few note muddy vocals on the first set. Musically the concert shines with a fluid first set, memorable Johnny B. lead work by Vince, and Edie Brickell’s vocal highlights in Space and GDTRFB, but Jerry’s playing drifts on So Many Roads and Race Is On draws mixed reactions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (smooth first set, strong guest vocals) but marred by uneven performance notes; recording is mostly clear with occasional mud, yielding a combined rating in the high‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers find the SBD crisp and enjoyable (analog master praised). A few mention muddy vocals on Set I and a different source for that set, plus some reverb/echo work on Edie's voice."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Johnny B.",
+      "Dire Wolf",
+      "Memphis",
+      "Lazy River Road",
+      "JBG"
+    ],
+    "poor_songs": [
+      "Race Is On",
+      "So Many Roads"
+    ],
+    "setlist_flow": "First set is described as smooth, smoking and easy‑listening. The second set gains a dramatic flair from Edie's chanting in Space and her backing vocals on GDTRFB, though the back‑end tunes are viewed as mediocre by some."
+  },
+  "band_member_comments": {
+    "Jerry": "Some reviewers feel Jerry drifts on So Many Roads and misses a note opening Race Is On, but others say his playing is smoking after that.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (keyboards) delivers rare strong leads on Johnny B.; monitor reverb/echo work adds depth to Edie's vocals.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "GDTRFB": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Race Is On": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "JBG": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:15:11.485199+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-20.sbd.wiley.8766.sbeok.shnf"
+}

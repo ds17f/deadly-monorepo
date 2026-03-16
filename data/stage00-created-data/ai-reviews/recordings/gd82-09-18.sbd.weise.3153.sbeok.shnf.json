@@ -1,0 +1,81 @@
+{
+  "summary": "Crisp sound‑board capture of a high‑energy Boston Garden show highlighted by Samson & Delilah, Uncle John’s Band and a stellar Baby Blue encore.",
+  "review": "The recording is a solid sound‑board source that delivers clear guitar and vocal detail, though some listeners note the era’s thin ambience and occasional bass thinness. Musically the concert shines – Jerry’s scorching lead, Brent’s vibrant piano on “Far From Me,” and an unforgettable second set featuring Samson & Delilah, Uncle John’s Band/Playin’ and a soaring Baby Blue encore. Overall the performance is remembered as one of the era’s fan‑favorites despite a few mixed impressions of the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈75 %) are 4–5 stars and praise both the setlist and recording clarity; a minority note thin SBD sound, pulling the overall weighted score to ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced with clear guitar and vocals; some reviewers cite a “thin” early‑80s SBD sound, limited ambience and occasional bass lightness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah",
+      "Uncle John's Band / Playin'",
+      "Baby Blue",
+      "West L.A.",
+      "Far From Me",
+      "Throwing Stones (first Boston Garden performance)",
+      "Dupree's",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong first set with solid jams (Sugaree, West L.A., Jack Straw) leads into an even hotter second set; the band’s energy peaks on Samson & Delilah and the encore leaves a lasting impression."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for “smokin” strings, powerful lead tones and heartfelt delivery of Baby Blue.",
+    "Phil": "A few notes mention a “little Phil‑lite” bass in places, suggesting occasional thinness but no major issues.",
+    "Bob": "Highlighted for his lively banter (“mouthy and ornery”) and memorable vocal moments (e.g., the “tear this old building down” chant).",
+    "Keys": "Brent Mydland gets strong kudos for piano work on Far From Me, Uncle John’s Band/Playin’, and overall keyboard presence.",
+    "Drums": "Drum solo praised for its power; some reviewers describe the SBD drums as sounding “toy‑like” due to recording limitations."
+  },
+  "song_mentions": {
+    "Samson & Delilah": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Uncle John's Band / Playin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Baby Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "West L.A.": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:47:07.225672+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-18.sbd.weise.3153.sbeok.shnf"
+}

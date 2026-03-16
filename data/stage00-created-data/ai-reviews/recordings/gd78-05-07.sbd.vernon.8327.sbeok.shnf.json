@@ -1,0 +1,73 @@
+{
+  "summary": "High‑energy 1978 set with scorching Scarlet > Fire, powerful Iko > Other One and soaring Jerry solos, captured on a mostly crisp soundboard despite occasional drop‑outs.",
+  "review": "The show is repeatedly described as one of the best of ’78 – first‑set firepower, a second set that explodes with Scarlet > Fire, Estimated > He's Gone, Iko > Other One and an epic Black Peter.  The soundboard source is generally clear and lively, though several listeners note brief garbled sections, audience bleed near the end of Black Peter and occasional board‑to‑audience switches.  Overall the musical performance outweighs the modest technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (≈80 %) are 4‑5 stars and praise the performance, while recording complaints are consistent but limited to occasional drop‑outs; the weighted blend yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp soundboard mix with clear instrument separation.  Early Scarlet start has audience bleed and a brief garbled segment; later Black Peter swells into audience noise.  Several reviewers mention occasional drop‑outs and board/audience switches, but most find them tolerable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Estimated > He's Gone",
+      "Iko > The Other One",
+      "Black Peter",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds relentless momentum; second set launches with a monster Scarlet > Fire and maintains high energy through Estimated, Iko > Other One and a soaring Black Peter.  Banter and crowd interaction are highlighted as part of the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for blazing wah‑filled solos, emotional vocals (especially on Black Peter) and the iconic \"Oh! Run and See\" scream.",
+    "Phil": "Noted for powerful bass bombs during The Other One, adding depth to the jam sections.",
+    "Bob": "Slide work mentioned (e.g., competing with Garcia on Fire), but no strong positive/negative verdict beyond that observation.",
+    "Keys": "Donna Jean’s vocal contributions are highlighted as beautiful and integral to songs like Passenger and Music Never Stopped; no specific keyboard comments.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive high marks for an outstanding drum segment after Estimated, with a dedicated drummer calling it \"excellent\"."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Black Peter": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated > He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Iko > The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:23:08.841867+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-07.sbd.vernon.8327.sbeok.shnf"
+}

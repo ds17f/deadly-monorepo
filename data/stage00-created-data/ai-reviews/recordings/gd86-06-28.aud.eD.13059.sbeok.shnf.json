@@ -1,0 +1,68 @@
+{
+  "summary": "Solid audience recording captures a jam‑heavy Alpine Valley set where the second‑set explorations of Playin' in the Band, U.B. Jesus and China Doll shine despite Jerry’s off‑day.",
+  "review": "The tape delivers good outdoor sound – deep, thunderous and clear enough to hear the crowd vibe – while the show itself is a mixed bag: the second set erupts with standout jams on Playin' in the Band, U.B. Jesus, China Doll and The Other One, but several reviewers note Jerry Garcia sounding ill and the first set falling flat for some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the second‑set jams and overall sound quality, but a number of low‑star comments about Jerry’s condition and first‑set weakness pull the average down to a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the sound as good for an outdoor venue, deep and thunderous with clear audience presence; no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "U.B. Jesus",
+      "China Doll",
+      "The Other One",
+      "Ramble on Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is considered weak or uneven by several listeners, while the second set delivers extended jams and strong transitions that many fans highlight as the high point of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some praise his phrasing on China Doll, but multiple reviewers note he sounded ailing, bailed early from the stage, and seemed disengaged.",
+    "Phil": "Mentioned positively in context of audience vibe ('on Phil's side on the grass'), no specific musical commentary.",
+    "Bob": "",
+    "Keys": "Brent (referred to as Bobby) is noted for 'something strange' but overall contributes to the hot jam atmosphere.",
+    "Drums": "Drummers receive strong praise for the 7/4 U.B. Jesus jam, fluid rhythmic flow and overall fun in the second‑set jams."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.B. Jesus": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:31:39.214192+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-06-28.aud.eD.13059.sbeok.shnf"
+}

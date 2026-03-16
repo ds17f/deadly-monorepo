@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard source with a slightly muddy mix delivers an energetic rock‑heavy show highlighted by an epic Let It Grow and a scorching Not Fade Away.",
+  "review": "The performance is notable for Jerry’s laryngitis‑forced guitar heroics, turning the night into a straight‑up rock set with standout moments on Not Fade Away, Dancin' (24 min), Let It Grow and a powerful Minglewood.  The recording is a soundboard tape that most listeners find clear enough to enjoy, though several note a muddy, less spacious mix compared with adjacent nights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviewers (10/13) gave 4‑5 stars and praised the musical performance, especially Jerry’s guitar work and key jams; recording comments are mixed but generally acceptable, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture, but several reviewers describe the mix as muddy, lacking spatial depth and slightly heavy on certain instruments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Let It Grow",
+      "Dancin'",
+      "Minglewood"
+    ],
+    "poor_songs": [
+      "Me & My Uncle",
+      "Passenger > Mexicali Blues"
+    ],
+    "setlist_flow": "High‑energy first set with occasional slower moments (e.g., \"L.L. Rain\"), followed by a second‑set jam marathon where the band rocks hard; some feel parts are rushed or aimless, but most praise the overall rock drive."
+  },
+  "band_member_comments": {
+    "Jerry": "Suffering from laryngitis he skips vocals and delivers blistering guitar solos, notable slide work and 'quack‑tone' that some find overdone.",
+    "Phil": "Featured prominently on Let It Grow; his bass lines are highlighted throughout the set.",
+    "Bob": "Steps in to sing Jerry’s vocal parts (e.g., Jack Straw) and provides solid rhythm guitar support.",
+    "Keys": "Keith delivers strong fills during Let It Grow breaks; keyboards add texture but receive fewer specific mentions.",
+    "Drums": "Both drummers are praised for heavy, slam‑in’ playing that recalls the October ’77 performances."
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dancin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:42:50.713425+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-07.sbd.cotsman.17806.sbeok.shnf"
+}

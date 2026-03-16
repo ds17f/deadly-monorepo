@@ -1,0 +1,31 @@
+{
+  "summary": "Good-quality recording of a great set",
+  "review": "The reviewer rates the performance as a \"Great set\" and notes the sound as \"Good quality,\" indicating both an enjoyable show and a listenable recording. No specific details about song highlights or technical issues are provided, so the assessment remains general but positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one moderately detailed review with a 4‑star rating; both performance and recording are praised, leading to an overall high rating but limited confidence due to sparse data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the quality as \"Good,\" with no further specifics on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Review mentions a great set but provides no detail on pacing or song order."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T06:38:57.531173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-07-02.118485.pre-FMwithFMdedication.flac16"
+}

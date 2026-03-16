@@ -1,0 +1,68 @@
+{
+  "summary": "Crystal‑clear audience recording of a mixed‑quality 1982 show, highlighted by strong renditions of The Other One and Morning Dew but marred by uneven playing.",
+  "review": "The tape is praised as an almost‑stereo‑board audience capture with exceptional clarity, making every instrument audible despite the mix being a bit low on Phil’s bass and Brent’s keys. Musically the concert is divisive – some listeners love the fun vibe and gems like The Other One, Morning Dew, and Throwing Stones, while others describe sloppy chord changes, tired vocals and a generally weak performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "All reviewers agree the recording quality is excellent (≈4.5/5). Opinions on the musical performance are split, averaging around a 3/5. Weighted combination yields ~3.5 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crystal‑clear, almost like a stereo soundboard; minor mix issues (Phil’s bass low, Brent’s early‑80s electric piano sounds thin)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Throwing Stones > Touch of Grey"
+    ],
+    "setlist_flow": "First set deemed plain and sloppy; second set starts poorly but contains a few highlights (Other One, Morning Dew). Overall performance feels uneven and lacking the usual Dead synergy."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some note clear lead articulation and good tone, others describe his playing as tired, forced, and his vocals blown.",
+    "Phil": "Bass is low in the mix with little punch; a few mention he may have been using a Fender Jazz bass that didn't suit him.",
+    "Bob": "Criticized for wrong notes and over‑dramatic singing by some reviewers, but praised by others for rhythmically interesting guitar work.",
+    "Keys": "Brent’s early‑80s electric piano sounds cheap (Casio‑like) compared to his usual Rhodes/B‑3; generally low in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T02:38:48.595537+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-09.sonyecm220T.fixed.keshavan.miller.93827.sbeok.flac16"
+}

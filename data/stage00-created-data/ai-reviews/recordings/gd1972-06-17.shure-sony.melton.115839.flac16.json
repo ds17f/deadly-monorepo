@@ -1,0 +1,51 @@
+{
+  "summary": "Audience recording with occasional cloudiness captures a stellar June 17 1972 show highlighted by a soaring China Cat Sunflower and a monster Truckin’/The Other One jam.",
+  "review": "Fans rave about this late‑June ’72 performance, calling it possibly the best of the year and praising Pigpen’s final organ showcase as well as standout renditions of China Cat Sunflower, Truckin' and The Other One. The audience tape is described as generally good but a bit cloudy in the second set and marred by pops and other flaws in the original transfer. Overall the musical magic outweighs the technical imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong, consistent praise for the show’s performance (70% weight) combined with mixed but generally acceptable audio quality (30% weight) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Original tape has noticeable pops, occasional cloudiness (especially in the second set) and other minor flaws; however listeners note that the recording is still enjoyable for a well‑captured audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Truckin'",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans love the seamless jam flow, especially the linked Truckin'/The Other One sequence; despite some audio haze in the second set, the energy and Pigpen’s final organ work keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's organ playing is highlighted as beautiful, resolute, and a fitting farewell performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T14:55:08.300565+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-06-17.shure-sony.melton.115839.flac16"
+}

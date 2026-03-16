@@ -1,0 +1,51 @@
+{
+  "summary": "Poor‑quality recording of a mixed performance – some magic moments but muddled sound and uneven playing.",
+  "review": "The tape suffers from bad acoustics and a generally thin mix, which several reviewers call “sucked” or “awful.” The show itself is divisive: a few fans recall the night’s magic and even got converted, while others criticize Jerry’s mumbling on “So Many Roads,” odd song choices like “Easy Answers” and “Long Way To Go Home,” and Vince’s gimmicky keyboard tones. Overall it feels like a completist’s entry rather than an essential listen.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed with both positive and negative comments, while recording quality is generally regarded as poor; the combined weighted score yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers note bad acoustics, muffled sound and overall 'sucked' audio quality; no clear indication of source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "So Many Roads",
+      "Easy Answers",
+      "Long Way To Go Home"
+    ],
+    "setlist_flow": "The set is described as uneven, with odd song selections and moments of mumbling; some fans felt the night had lingering magic, others saw it as only for completists."
+  },
+  "band_member_comments": {
+    "Jerry": "Mumbling on 'So Many Roads' noted; still managed to convert a listener.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's 'Fisher Price' tinkering on keyboards is called out as odd.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Long Way To Go Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:37:49.791222+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-09-27.pnb.pujol.14021.sbeok.shnf"
+}

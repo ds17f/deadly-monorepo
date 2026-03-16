@@ -1,0 +1,75 @@
+{
+  "summary": "Solid Miller‑ized soundboard capture of a uneven 1989 show – Jerry’s ballads shine, Iko starts oddly and Victim falters.",
+  "review": "The Miller‑processed SBD sounds clear and improved over earlier releases, though a few reviewers note occasional scratchy vocals. Musically the concert delivers several highlights—Loser, Heaven's Door, Foolish Heart and the debut of Just A Little Light—while the opening Iko/Iko start is quirky and Victim is described as a train‑wreck. Overall the performance is enjoyable but inconsistent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Seven detailed reviews give a balanced picture: recording quality is generally good to excellent, while the show has notable high points plus clear weak spots, yielding an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Millerized SBD is praised as crisp and improved; a few listeners mention uneven levels and occasional scratchy vocal on Jerry, but overall the mix is clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Heaven's Door",
+      "Foolish Heart",
+      "Just A Little Light"
+    ],
+    "poor_songs": [
+      "Victim",
+      "Iko"
+    ],
+    "setlist_flow": "Starts hot with a festive Mardi Gras vibe and strong Jerry ballads, then coasts through the middle; an odd Iko opening and a shaky Victim entry create bumps before the set settles into a trance‑like groove."
+  },
+  "band_member_comments": {
+    "Jerry": "His ballad work (Loser, Heaven's Door, Foolish Heart) is praised, but several reviewers note his vocals/guitar sound were scratchy or weak in places.",
+    "Phil": "Highlighted for \"Phil bombs\" – energetic bass moments that stood out in the intimate venue.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard playing is lauded as being on another level since ’88 and he leads the show with a strong opening.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Just A Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:27:44.230503+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-02-07.sbd.walker-scotton.miller.32543.sbeok.flac16"
+}

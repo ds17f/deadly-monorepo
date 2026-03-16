@@ -1,0 +1,81 @@
+{
+  "summary": "Crisp audience tape captures a superb mid‑80s show highlighted by a smoking Help>Slip>Franklin’s and stellar Bird Song performances.",
+  "review": "Both reviewers rave about the crystal‑clear, sweet‑sounding audience recording and praise the band’s high energy, especially Jerry’s loose playing on Sugaree and the soaring Bird Song. The set is lauded for several classic highlights – Jack Straw, Let It Grow, a blistering Help>Slip>Franklin’s, Estimated Prophet > Eyes of the World, and an unforgettable China Doll – making this one of the standout March‑85 releases.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly enthusiastic (4‑5 stars) and emphasize excellent musical performance plus a crisp audience source, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crispy, super‑sweet and crystal‑clear; no dropouts or balance problems noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Sugaree",
+      "Bird Song",
+      "Let It Grow",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Estimated Prophet > Eyes of the World",
+      "Drums > Space > The Other One",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with Jack Straw and Sugaree; second set opens explosively with Help>Slip>Franklin’s and maintains high energy through Estimated Prophet, the drum/space segment, and a soaring China Doll."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for letting loose on Sugaree and delivering an especially sweet tone throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums > Space segment praised as above‑average, driving the second‑set momentum."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet > Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:58:39.940574+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-25.150739.nak701x3.barnum.miller.flac2496"
+}

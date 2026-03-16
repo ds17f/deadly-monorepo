@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a mellow 1974 show, highlighted by a stellar MLB jam and classic Truckin', Wharf Rat and Sugar Magnolia performances.",
+  "review": "The SBD recording is praised for its crystal‑clear mix and balance, making the focused, mellow playing of this 1974 concert shine. Reviewers single out the MLB (Might Look Bad) jam along with Truckin', Wharf Rat and Sugar Magnolia as standout moments, while noting the overall set flows smoothly with a relaxed vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Four reviews consistently praise both the soundboard quality and the musical performance; three give 4 stars and one gives 3, leading to a weighted average around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp SBD with great mix; no notable muffling or dropouts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Might Look Bad (MLB Jam)",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Focused and mellow playing typical of ’74, with smooth transitions especially into the MLB jam and a relaxed overall vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his enthusiastic lead on the MLB jam; reviewers note he took the jam to fun lengths.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might Look Bad (MLB Jam)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:30:04.781816+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-14.28353.sbeok.flac16"
+}

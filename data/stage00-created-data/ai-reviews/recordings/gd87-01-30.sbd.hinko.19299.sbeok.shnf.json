@@ -1,0 +1,108 @@
+{
+  "summary": "An average show hampered by Bobby’s off‑night and out‑of‑tune guitar, but rescued by solid moments like Candyman, Wharf Rat and a gospelly Brokedown Palace; the soundboard mix is decent overall.",
+  "review": "The performance is uneven – early songs suffer from Bobby’s vocal fatigue and tuning problems (notably I Kō I Kō and Ship of Fools), while later numbers such as Candyman, Wharf Rat and a heartfelt Brokedown Palace shine. The recording sounds like a sound‑board source with a clear mix that lets the vocals and Jerry’s guitar cut through, though occasional vocal prominence makes some lyrics hard to follow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Both reviewers gave 3‑star ratings; they note many performance flaws but also several strong songs and a generally listenable soundboard recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced mix with vocals present; occasional lyric muddiness when Jerry’s voice is high, but no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "When Push Comes to Shove",
+      "Wharf Rat",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Iko Iko",
+      "Ship of Fools",
+      "Throwing Stones",
+      "Man Smart, Woman Smarter",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "The first set drags under Bobby’s vocal fatigue and tuning woes, but picks up momentum with China Cat Sunflower → I Know You Rider. The second set starts rough (I Kō I Kō, Man Smart…) before the band regains focus on Estimated Prophet, Truckin', and a late‑night surge through The Other One, Wharf Rat and a heartfelt encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Stumbles on lyrics early and sounds haggard at times, but delivers strong solos and solid vocal presence later (Brokedown Palace, Wharf Rat).",
+    "Phil": "Provides his characteristic funk bass lines and steady skank throughout the set.",
+    "Bob": "Frequently out of tune and vocally fatigued; improves mid‑show after retuning, but his guitar issues dominate several songs.",
+    "Keys": "Brent’s organ/piano adds color (frantic fills on Estimated Prophet, synth chords) though his throat sounded “frog‑like” on some choruses.",
+    "Drums": "Billy and Mickey trade extended, tribal‑themed drum sections; Mickey’s koto/talking‑drum moments draw crowd cheers."
+  },
+  "song_mentions": {
+    "When Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Man Smart, Woman Smarter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:46:42.976744+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-01-30.sbd.hinko.19299.sbeok.shnf"
+}

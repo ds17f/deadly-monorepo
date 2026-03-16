@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard recording plagued by harsh diginoise during the peak Dark Star, but the performance itself is electrifying.",
+  "review": "The show’s standout moment – a soaring Dark Star – earns high praise from several listeners despite severe tape‑noise and metallic doubling that render much of the latter half nearly unlistenable. Earlier portions are clearer and capture the 1969 vibe, yet the pervasive interference drags the overall listening experience down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Performance quality is strong (especially Dark Star) but recording defects are serious; weighted average of show (≈4) and recording (≈2) yields a moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Severe diginoise/metallic doubling from ~14:00 into Dark Star, tape degradation, occasional over‑saturation; early parts clearer but overall marred by interference."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Technical glitches cause emotional ups and downs, yet the Dark Star and closing medley retain high energy and are highlighted as special moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is described both as shrieking metallic double‑track (negative) and as perfectly responsive within the Dark Star (positive).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Organ work during Dark Star is praised for cueing Jerry into new realms.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:24:28.501356+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-10.132812.sbd.bear.wise.sirmick.sbeok.flac16"
+}

@@ -1,0 +1,82 @@
+{
+  "summary": "Warm, well‑balanced soundboard capture of an early‑71 show that swings between solid moments (Hard to Handle, Going Down the Road, Morning Dew) and a generally tentative performance.",
+  "review": "The Miller SBD delivers a rich, warm mix that lets Jerry’s smooth vocals and Bob’s jazzy lead on “Hard to Handle” shine, while the overall band sound is nicely balanced.  Musically the concert offers several highlights – strong renditions of “Morning Dew”, “Going Down the Road” and an interesting ending to “Easy Wind” – but the set feels a bit tentative and unsynchronised at times, leaving the show feeling average overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised as warm and well‑balanced (≈4.5/5). Show performance receives mixed feedback – notable highs but also several criticisms, giving it an average‑to‑good rating (≈3.8/5). Weighted combination yields a 4‑star overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Warm, well‑balanced mix with clear vocals and instruments; not harsh or jangly like many other ’71 tapes.  Listeners note crispness and good low‑end, making it a pleasant listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Morning Dew",
+      "Going Down the Road",
+      "Easy Wind",
+      "Good Lovin'",
+      "Uncle John's Encore"
+    ],
+    "poor_songs": [
+      "Hard to Handle",
+      "Easy Wind"
+    ],
+    "setlist_flow": "The set is short‑and‑sweet, reflecting a relaxed early‑71 vibe.  While several tunes burst with energy, the band overall feels tentative and occasionally out of sync, giving the concert an uneven flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as smooth and soulful; guitar tone likened to Tennessee whiskey – solid but his solo on “Loser” was called short and uninspired.",
+    "Phil": "Low‑key, subtle and tasty throughout; generally supportive of the relaxed feel.",
+    "Bob": "Jazz‑like ringing tone praised; his solo jam on “Hard to Handle” highlighted as awesome.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Going Down the Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Uncle John's Encore": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:54:12.788263+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-04.sbd.miller.110325.flac16"
+}

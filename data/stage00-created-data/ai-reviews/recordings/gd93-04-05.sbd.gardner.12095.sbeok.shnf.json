@@ -1,0 +1,75 @@
+{
+  "summary": "Fair soundboard recording with noticeable tape‑hiss, a strong first set highlighted by Black Throated Wind and Garcia’s work on Music>Deal, but a uneven second set that falls flat.",
+  "review": "The show delivers a solid, if tired, performance – the opening set shines with standout versions of Black Throated Wind, Tom Thumb, Lazy River and a fire‑brand Music>Deal. The tape‑sourced soundboard copy suffers from hiss and vocal distance, especially on the second set where the band sounds low‑energy and several songs drag. Overall it’s an up‑and‑down concert that’s worth hearing for the first‑set gems despite its technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3–4 stars, praising the first set while noting a weak second set and tape‑hiss issues; consistent feedback across >10 reviews gives confidence in the rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cassette‑generation copy introduces noticeable tape hiss, especially evident during Space. Vocals sound canned and distant in Set II; overall mix degrades on the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Throated Wind",
+      "Music > Deal",
+      "Tom Thumb",
+      "Lazy River"
+    ],
+    "poor_songs": [
+      "I Fought -> Way to Go Home -> Corrina",
+      "US Blues"
+    ],
+    "setlist_flow": "First set is praised as the highlight of the night, delivering high‑energy jams; the second set is described as average to disappointing, with low vocals and a loss of momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work shines on Music>Deal and Black Throated Wind, but his playing fades later in the show (US Blues, Wharf Rat).",
+    "Phil": "Phil’s bass adaptation on Tom Thumb (lyric change) is noted positively.",
+    "Bob": "Weir’s vocals sound rough and low‑energy, especially in the second set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Throated Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music > Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tom Thumb": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought -> Way to Go Home -> Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:21:42.051086+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-04-05.sbd.gardner.12095.sbeok.shnf"
+}

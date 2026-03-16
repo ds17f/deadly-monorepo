@@ -1,0 +1,39 @@
+{
+  "summary": "A mellow Scarlet Begonias jam shines despite a mixed audience‑to‑board recording and a long, tedious Phil‑Lesh keyboard stretch.",
+  "review": "The performance is highlighted by an exceptionally melodic Jerry Garcia jam on Scarlet Begonias that many fans consider one of the best. Recording quality is uneven – it opens with a rough audience capture before settling into clear soundboard audio – and the extended Phil & Ned improvisation drags for nearly forty minutes, making parts of the show feel tedious.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "One reviewer rates it a perfect 5 praising the Jerry jam, while another gives a 3 noting uneven recording and a long, unfocused keyboard jam; combined weighting yields a solid but not outstanding score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Starts with low‑fidelity audience pickup ('crappy audience') then transitions to crisp soundboard audio ('crystal board'), resulting in an overall uneven listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens strong with a mellow, melodic jam but loses momentum during a lengthy 40‑minute Phil & Ned improvisation that many find tedious."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised as delivering one of his best, most melodic Scarlet Begonias jams.",
+    "Phil": "Criticized for a 40‑minute cacophonous jam with Ned that drags the show down.",
+    "Bob": "",
+    "Keys": "Mention of Ned (keyboardist) in the long, unfocused jam.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:08:06.763759+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-10-16.sbd-patched.unknown.222.fails-md5.sbeok.shnf"
+}

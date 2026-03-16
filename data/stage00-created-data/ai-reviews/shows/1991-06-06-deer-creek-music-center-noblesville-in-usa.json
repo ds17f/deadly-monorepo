@@ -1,0 +1,75 @@
+{
+  "summary": "Jack Straw fireworks, tight China>Rider, soaring Stella Blue",
+  "blurb": "The set opens with a blistering Jack Straw that launches a high‑octane first half. Highlights include a seamless China Cat Sunflower → I Know You Rider transition, an on‑point Estimated Prophet, and a soaring Stella Blue, capped by a heartfelt Box of Rain encore. The rhythm section is locked in, with Bruce Hornsby’s keyboards adding extra sparkle.",
+  "review": "June 6 1991 at Deer Creek proved to be one of the Grateful Dead’s quintessential summer shows. A ferocious Jack Straw kicks off the night and never lets up, feeding into a tight‑knit first set that swings through Row Jimmy, Cassidy and a surprisingly punchy Might As Well. The second set is where the magic truly ignites – China Cat Sunflower slides straight into I Know You Rider with Hornsby’s piano pumping and Vince’s midi‑horn accents, followed by an on‑point Estimated Prophet that rides the groove into Uncle John’s Band, a soaring Drum/Space journey, and a powerful The Wheel that rolls right into an electrifying All Along The Watchtower. Stella Blue soars above the mix before the band wraps the night with a joyous Turn On Your Lovelight and a heartfelt Box of Rain encore. Across all available sources the band sounds locked‑in: Jerry’s lead guitar is blistering, Phil lays down thunderous bass “bombs,” Bob trades vocals with gusto, and the dual drummers deliver what many call the best drum work of the year. The soundboard recordings capture this energy with crisp separation, while a few audience tapes even manage to convey the live ambience without muddying the mix.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 53,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Six out of eight recordings are strongly positive, repeatedly praising the Jack Straw opener, China>Rider transition, Estimated Prophet and Stella Blue. No consistent negative comments about musical performance appear; only mixed remarks concern audio fidelity. This consensus yields a robust +1.5 sentiment boost.",
+      "final_calculation": "2.5 + 0.4 + 1.5 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-06-06.sbd.miller.18711.sbeok.shnf",
+    "reason": "High‑quality soundboard source with crisp, well‑balanced mix; captures the full show without major dropouts and is praised for its clarity despite minor low‑end roll‑off."
+  },
+  "key_highlights": [
+    "Blistering Jack Straw opener sets a high‑octane tone.",
+    "Seamless China Cat Sunflower → I Know You Rider transition with Hornsby’s piano and midi‑horn work.",
+    "Soaring Stella Blue and emotive Box of Rain encore showcase the band's dynamic range.",
+    "Dual drummers deliver what reviewers call “the best” groove, especially on The Wheel and Watchtower."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Estimated Prophet",
+    "Stella Blue",
+    "Cassidy",
+    "The Wheel",
+    "Box of Rain"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers blistering lead tones and a gorgeous solo that recalls the Alpine ’89 vibe; his guitar is occasionally recessed in the mix but remains a driving force throughout.",
+    "Phil": "Lays down thunderous bass “bombs,” especially on Box of Rain and Estimated Prophet, with energetic stage movement that fuels the groove.",
+    "Bob": "Trades verses confidently with Jerry, provides strong vocals (even cheekily described as ‘cheesy in a good way’), and adds his trademark grit to the front‑row energy.",
+    "Brent": "Bruce Hornsby’s piano is pumped, pushing limits and often dominates the mix; Vince Welnick adds bright midi‑horn textures, making the keyboards a highlight of the night.",
+    "Mickey": "Time‑warp drumming shines on The Wheel and Watchtower, delivering low‑frequency rumble that anchors the band’s dynamics.",
+    "Billy": "Provides a tight, grooving foundation praised as “the best” drum work of the year, locking in perfectly with Mickey."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-17T20:09:32.178406+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Estimated Prophet",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "All Along The Watchtower",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Box of Rain"
+    ]
+  ]
+}

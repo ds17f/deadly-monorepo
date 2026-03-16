@@ -1,0 +1,31 @@
+{
+  "summary": "Solid, well‑done performance from an unknown recording source; good but not a smoking show.",
+  "review": "The reviewer rates the concert as very good—well‑executed and solid—even though it isn’t considered a standout or \"smoker.\" No specific comments about the audio source are provided, so the technical quality remains unclear, but the overall impression is positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one review gives a 4‑star rating and praises the musical performance while offering no details on recording quality; thus the rating leans toward good show quality with uncertain audio, yielding a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the show as solid and well‑done but not a “smoker,” implying consistent pacing without major highs or lows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T14:23:54.952335+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-23.nak300.damico.90983.sbeok.flac16"
+}

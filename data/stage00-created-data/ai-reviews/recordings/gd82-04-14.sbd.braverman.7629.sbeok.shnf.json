@@ -1,0 +1,66 @@
+{
+  "summary": "Excellent sound‑board capture of an ’82 show with a smoking China Rider, killer Jack Straw and a soaring Playin’ in the Band.",
+  "review": "The recording is a high‑fidelity sound‑board tape that most reviewers describe as crisp, well balanced and among the best of the era. Musically the concert shines on the second set – the China‑Rider jam, an inspired Playin’ in the Band and a standout Jack Straw – while a few listeners note a sloppy first set and vocals pushed high in the mix. Overall the performance is celebrated as one of the band’s peaks in 1982.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews (30+ out of ~50) give 4‑5 stars, praising both the sound quality and key performances; only a handful are negative, yielding a strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers repeatedly mention crisp, clear mix and excellent sound‑board fidelity; occasional complaints about vocals being high in the mix or minor drop‑outs but no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat / China Rider",
+      "Playin' in the Band",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is universally praised for its flow and jams; first set described as uneven by some, but overall the concert maintains strong energy and memorable segues."
+  },
+  "band_member_comments": {
+    "Jerry": "Most reviewers laud Garcia’s guitar tone and improvisations (especially on China Rider), though a few note occasional sloppy solo starts and vocals high in the mix.",
+    "Phil": "Phil’s bass is generally praised for driving the band; no specific criticisms noted.",
+    "Bob": "Bob Weir receives positive remarks for rhythm work and vocal contributions; no major negatives mentioned.",
+    "Keys": "Brent Mydland’s keyboards are highlighted as busy and loud, with some reviewers calling the mix ‘turned up’ but still effective; occasional comment about his high‑pitched voice.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat / China Rider": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:07:58.730598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-14.sbd.braverman.7629.sbeok.shnf"
+}

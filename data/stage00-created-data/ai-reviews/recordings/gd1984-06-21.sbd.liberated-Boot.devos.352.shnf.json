@@ -1,0 +1,68 @@
+{
+  "summary": "Fair audience‑sourced recording with a distant “big shed” sound, but the show is remembered for its fun encore with Rick Danko and a lively New Orleans jam.",
+  "review": "The performance is generally regarded as average – most reviewers note that no one really shines and the set lacks oomph, though the unique encore with The Band (Rick Danko) provides the highlight. The source appears to be an audience radio feed, giving the mix a distant, slightly muddy character, speed‑issues, and a missing chunk of Space.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers describe an average show with a few memorable moments, while the recording suffers from distant sound, speed problems and missing sections; overall rating sits just above the midpoint."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Distant \"big shed\" ambience, occasional speed‑off issues, a noticeable drop‑out/missing portion of Space and overall slightly muddy mix typical of radio broadcast recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Orleans (encore jam)",
+      "Peggy-O",
+      "Satisfaction",
+      "New Speedway Boogie",
+      "TLEO"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as fairly ordinary with little standout playing, but the unique encore featuring The Band and a lively New Orleans jam adds a memorable climax."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Orleans": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TLEO": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:26:44.106098+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-21.sbd.liberated-Boot.devos.352.shnf"
+}

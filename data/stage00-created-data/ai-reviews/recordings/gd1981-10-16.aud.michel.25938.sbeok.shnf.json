@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording of a rare, tight and jam‑filled show highlighted by a standout Lovelight.",
+  "review": "Fans rave about the fun, compact yet improvisational vibe of this performance, calling it a “house‑party” feel with strong jams throughout. The audience tape is praised as the best‑sounding of the four available sources, though one reviewer notes a lower‑generation tape sounds clearer. Overall the show and its capture are regarded very positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Three unanimous 5‑star reviews praise both the musical performance and recording quality, with only a single 3‑star comment noting clarity issues; weighted toward show quality (70%) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape described as very good and the best sounding of four available versions, though another lower‑gen tape is said to be clearer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fun, tight and compact performance that kept the energy high and encouraged jammed improvisations throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:03:15.714118+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-16.aud.michel.25938.sbeok.shnf"
+}

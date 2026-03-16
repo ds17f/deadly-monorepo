@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent matrix mix captures a superbly tight show with standout Eyes of the World and Weather Report Suite, despite some crowd noise and late‑stage muddiness.",
+  "review": "The performance is praised for its tight playing, especially the horn‑enhanced Eyes of the World, Weather Report Suite and Let It Grow, with Jerry’s guitar leading confidently and Phil stepping forward early. The matrix recording delivers a clear, well‑balanced mix, though listeners note an ugly crowd buzz on Rain and a slight mudding toward the end of the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Three detailed 4‑5 star reviews highlight strong musical execution and generally excellent sound, with only minor recording flaws noted."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced mix overall; crowd noise is noticeable on Rain and the sound muddies slightly during the final SSD segment, but horns and keyboards come through clearly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Weather Report Suite",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Rain"
+    ],
+    "setlist_flow": "First set rolls with tight playing; second half shines with horn‑laden jams and a strong Weather Report Suite, though Sugar Magnolia after the suite feels a bit tentative."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for perfect tone, quick entry on Eyes of the World, commanding solos and seamless interaction with horns.",
+    "Phil": "Noted for stepping up early, grabbing lead lines, and sounding great alongside the horn players.",
+    "Bob": "",
+    "Keys": "Keith's piano work is highlighted as solid throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T14:57:59.506286+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-24.mtx.tobin.95744.flac16"
+}

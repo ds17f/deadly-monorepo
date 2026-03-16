@@ -1,0 +1,39 @@
+{
+  "summary": "Average show with a surprisingly good Touch encore; recording quality not discussed",
+  "review": "The reviewer was initially underwhelmed by the concert but later discovered some highlights, most notably the Touch encore that stood out positively. No comments were made about the audio source or mix, leaving the recording quality unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only a single, moderately‑rated review; the show is judged average with no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:39:40.511193+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-12.142921.sbd.miller.flac2496"
+}

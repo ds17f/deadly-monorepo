@@ -1,0 +1,113 @@
+{
+  "summary": "High‑energy 1982 Manor Downs show captured on a solid soundboard tape (mostly clear, with occasional static), highlighted by tight playing and standout jams on Candy Man, Music Never Stopped, Scarlet > Fire, and a superb second set.",
+  "review": "The performance is consistently praised for its tight, high‑bouncing energy and several “gem” moments – especially the first‑set classics (Candy Man, Brown Eyed Woman, Deal) and the second‑set fireworks of Music Never Stopped, Scarlet > Fire and an epic Uncle John’s → Truckin’ segue.  The Charlie Miller soundboard mix is generally described as very good to excellent, though a few reviewers note static on Uncle John’s and heat‑induced distortion early in the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviews are 4–5 stars, with strong praise for both the musical performance and the soundboard recording; only a few note minor technical glitches, yielding an overall high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced mix (Charlie Miller), but occasional static on Uncle John’s Band, a monitor blow causing buzz, and some heat‑related distortion early in the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Brown Eyed Woman",
+      "Deal",
+      "Music Never Stopped",
+      "Scarlet Begonias > Fire On The Mountain",
+      "Uncle John's Band → Truckin'",
+      "Estimated",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "First set described as solid and tightly executed; second set builds into long, dramatic jams with strong segues (UJB into Truckin') despite a brief technical hiccup early on."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp, top‑form guitar playing throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent contributed nice vocal harmonies on Candyman; overall keyboard work not singled out but the mix captures their contributions well.",
+    "Drums": "Bill and Mickey praised as an “extra step above” usual standard, described as almost a single drummer with eight arms."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown Eyed Woman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire On The Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T22:24:48.834416+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-07-31.sbd.miller.31002.sbeok.flacf"
+}

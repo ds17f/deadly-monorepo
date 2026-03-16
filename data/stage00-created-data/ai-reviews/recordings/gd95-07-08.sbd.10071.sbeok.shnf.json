@@ -1,0 +1,81 @@
+{
+  "summary": "Decent sound‑board recording of a mixed‑quality 1995 show – solid Jack Straw and a soaring Visions of Johanna amid frequent lyric flubs.",
+  "review": "The SBD source captures the band with respectable clarity, though the tape runs slightly fast and some tracks are patched from an AUD source. Musically the concert is uneven: Jerry’s vocals stumble on several numbers (Terrapin Station, Sugaree) while his emotive delivery on Visions of Johanna earns rave reactions; the set swings between solid moments (Jack Straw, The Other One) and lackluster passages (China Cat/Rider). Overall the show feels average for the late‑90s era but is worth a listen for its highlight tracks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Many reviewers note serious performance issues (lyric flubs, weak drums) pulling the show rating down, but the recording is generally clear and several songs receive strong praise, leading to an overall moderate score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD capture with good balance; tape runs a bit fast and Eternity is patched from an AUD source. No major drop‑outs, but speed/tempo issues are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "Jack Straw",
+      "The Other One",
+      "All Too Much"
+    ],
+    "poor_songs": [
+      "Terrapin Station",
+      "China Cat > Rider",
+      "Sugaree (lyric flubs)"
+    ],
+    "setlist_flow": "First and second sets mirror each other – solid opener, long Sugaree with lyrical slips, a brief China>Rider that many found average, followed by an emotionally powerful Visions of Johanna. The overall pacing feels uneven, with high points interspersed among forgettable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequent lyric and vocal mishaps (Terrapin Station, Sugaree) but moments of real emotion on Visions of Johanna; occasional fist‑pump excitement.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboards draw mixed reactions – some enjoy his hurdy‑gurdy texture while others think it detracts from the band’s cohesion.",
+    "Drums": "Bill and Mickey are praised for tight playing by several reviewers, though a few note weaker drum presence on certain songs."
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 5,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "All Too Much": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:20:36.363540+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-07-08.sbd.10071.sbeok.shnf"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Soundboard recording captures crisp, clean sound with an outstanding Scarlet Begonias and Fire on the Mountain, though minor static and a cut before Dear Mr. Fantasy are noted.",
+  "review": "The show is celebrated for its tight, articulate playing—especially Jerry Garcia’s phrasing on Scarlet Begonias and the soaring jam into Fire on the Mountain. The soundboard source delivers generally excellent clarity, with only slight static and an unfortunate edit right before the peak of Dear Mr. Fantasy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for musical performance (standout songs, Jerry’s playing) and mostly excellent sound quality; only minor recording flaws lower the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clean overall; listeners note slight static in some sections and a noticeable cut before Dear Mr. Fantasy, but mix is generally balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Dear Mr. Fantasy"
+    ],
+    "setlist_flow": "The concert flows smoothly, with a particularly strong second‑set jam that links Scarlet into Fire, creating a high‑energy peak; overall vibe is described as cohesive and fun."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for articulate, precise, dominant and perfectly phrased guitar work, especially on Scarlet Begonias.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:12:15.813631+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-07-01.sbd.paino.8482.sbeok.shnf"
+}

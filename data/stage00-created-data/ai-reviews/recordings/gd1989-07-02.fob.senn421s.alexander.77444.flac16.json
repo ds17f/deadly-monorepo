@@ -1,0 +1,39 @@
+{
+  "summary": "Fan raves about a killer “Eyes of the World” performance; recording source is unclear but no issues were noted.",
+  "review": "The lone review is wildly enthusiastic, calling the setlist great and highlighting a Hendrix‑style riff during the drum break in “Eyes of the World.” No specific comments are made about the audio source or sound quality, suggesting the recording is at least listenable. Overall sentiment is overwhelmingly positive despite the lack of technical details.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one five‑star review; strong praise for the performance but no concrete information on recording quality, so rating leans on show enthusiasm with limited confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer did not mention any sound issues or describe the source; absence of complaints implies acceptable listening quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the setlist as great and the overall show as excellent."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:13:35.702703+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-02.fob.senn421s.alexander.77444.flac16"
+}

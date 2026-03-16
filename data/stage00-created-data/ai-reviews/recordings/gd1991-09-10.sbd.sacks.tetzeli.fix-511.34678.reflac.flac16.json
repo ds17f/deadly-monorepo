@@ -1,0 +1,63 @@
+{
+  "summary": "A fire‑filled show with Shakedown Street, Help > Slipknot! > Franklin's and a standout Branford guest, captured on an unknown‑source recording that fans rave about.",
+  "review": "Fans describe this 1991 concert as absolutely electrifying – the band was “on fire” with blistering versions of Shakedown Street, Help on the Way into Slipknot! into Franklin's Tower, and a magical Baby Blue finale. The presence of Branford Marsalis added an extra thrill, and Jerry Garcia is noted as visibly having fun. No specific recording‑quality comments were given, but the enthusiasm suggests the audio is at least listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Both reviews give 5 stars and praise the performance heavily; recording quality isn’t mentioned, so rating reflects an excellent show with presumed adequate audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not comment on soundboard vs. audience or clarity; enthusiasm implies the recording is at least satisfactory for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Help on the Way",
+      "Slipknot!",
+      "Franklin's Tower",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as high‑energy throughout, with a seamless segue from Help into Slipknot! and Franklin's Tower, capped off by a memorable Baby Blue ending."
+  },
+  "band_member_comments": {
+    "Jerry": "Looks like he was having fun and the boys were on fire.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:33:56.508618+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-10.sbd.sacks.tetzeli.fix-511.34678.reflac.flac16"
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard source with minor pitch quirks captures a dazzling first set (Dancin', He Was A Friend of Mine, China Cat Sunflower, New Potato Caboose) while the second‑set Lovelight drags.",
+  "review": "The upgraded soundboard transfer is generally clear and well balanced, though listeners note a slight speed/pitch error on the opening Dancing in the Street that needs correction. Musically the show shines in its first half – Jerry’s vocal work, Phil’s wild bass chords and the seamless China Cat → New Potato Caboose flow are repeatedly praised – but the guest‑led Lovelight portion of the second set is widely regarded as a low point.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Average star rating across nine reviews is 4.0; most reviewers are enthusiastic about the performance and sound quality, with only a few strong negative comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced SBD transfer but suffers from a slight pitch/speed error on Dancing (requires +1–2% correction) and occasional low guest vocal levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' in the Street",
+      "He Was A Friend of Mine",
+      "China Cat Sunflower",
+      "New Potato Caboose",
+      "Cosmic Charlie"
+    ],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "First set is tight, psychedelic and full of memorable transitions; second set is uneven due to guest‑driven Lovelight but recovers with the Cryptical Envelopment → The Other One → Cosmic Charlie sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for expressive vocals (especially on He Was A Friend of Mine) and dynamic guitar tone, though a few note his voice creaking late in Dancin' and occasional out‑of‑tune moments.",
+    "Phil": "Highlighted for wild bass chords, blazing tone, and unique “Patricia” jam during New Potato Caboose; several reviewers call his playing a peak of the night.",
+    "Bob": "Noted for sweet three‑part harmonies on He Was A Friend of Mine and overall vocal support.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dancin' in the Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "He Was A Friend of Mine": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "TOO > Cosmic": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:22:11.625841+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-06-08.123986.sbd.miller.flac16"
+}

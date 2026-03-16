@@ -1,0 +1,69 @@
+{
+  "summary": "Tight first set, monster Uncle John's Band jam",
+  "blurb": "The show shines with a fiery Shakedown Street → The Promised Land finish to Set 1 and a high‑energy second set highlighted by an epic Uncle John's Band/Wheel reprise. Jerry’s tone is front‑and‑center while the dual‑drum launch adds extra punch.",
+  "review": "Chicago’s Uptown Theater on August 21, 1980 delivered a performance that many fans still point to as a late‑’80 high‑water mark. The first set rolls smoothly through classics before exploding on Shakedown Street and spilling straight into The Promised Land, with Jerry’s guitar gleaming in the mix and his vocals on fire. Set 2 may be shorter than usual but it’s packed – the dual‑drum opening launches a massive 13‑minute Uncle John’s Band that segues into a thrilling Wheel reprise, while Truckin’ rolls into an intense The Other One stretch. Highlights like High Time, Sugar Magnolia and the encore Alabama Getaway round out a night where the band was locked in, despite occasional mix quirks on some recordings. For anyone wanting a clean, crisp listening experience, Charlie Miller’s remastered soundboard capture (gd1980-08-21.sbd.miller.99034.sbeok.flac16) is the definitive source.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four out of five recordings are strongly positive, repeatedly praising the tight first set, the monster Uncle John's Band jam, and the high‑energy Wheel/Truckin'/Other One sequence. No consistent negative comments about playing were found, only occasional mix issues, leading to a robust positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1980-08-21.sbd.miller.99034.sbeok.flac16",
+    "reason": "Excellent soundboard remaster with crisp separation, prominent Jerry mix, and full capture of the tight first set and well‑sequenced second‑set jam."
+  },
+  "key_highlights": [
+    "Tight first set culminating in Shakedown Street → The Promised Land",
+    "13‑minute Uncle John's Band with Wheel reprise delivering high energy",
+    "Truckin' → The Other One sequence showcases deep improvisational fire",
+    "Dual‑drum opening provides a powerful launch into the second set"
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "The Promised Land",
+    "Uncle John's Band",
+    "Truckin'",
+    "The Other One",
+    "High Time",
+    "The Wheel",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone is praised as perfect and prominent on the SBD, delivering strong vocals and Mexican‑style improvisations; a few recordings note his guitar being buried but overall his playing drives the show.",
+    "Phil": "Lesh provides a solid rumble on bass during the Too intro and remains clear and audible throughout, especially in audience recordings.",
+    "Bob": "Weir’s vocal contributions are described as rough in one source, but otherwise he blends into the mix without major issues.",
+    "Brent": "Mydland’s keyboards occasionally dominate the mix on some SBDs, yet they add texture and support the jams without detracting from the overall flow.",
+    "Mickey": "Hart’s drumming shines in the opening duet and UJB sandwich, adding dynamic power to the set transitions.",
+    "Billy": "Kreutzmann partners Hart effectively; their dual‑drum interplay is highlighted as a key strength of the performance."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-13T02:01:31.952817+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street",
+      "The Promised Land"
+    ],
+    [
+      "Drums",
+      "Uncle John's Band",
+      "Truckin'",
+      "The Other One",
+      "Drums",
+      "The Wheel",
+      "Uncle John's Band",
+      "Sugar Magnolia"
+    ],
+    [
+      "High Time"
+    ]
+  ]
+}

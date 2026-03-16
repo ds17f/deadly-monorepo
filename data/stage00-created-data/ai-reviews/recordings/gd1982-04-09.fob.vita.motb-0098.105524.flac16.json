@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent, clean audience recording of a fire‑filled 4/9/82 show with standout Birdsong, To Lay Me Down and Stella Blue",
+  "review": "The Rochester 4/9/82 concert is hailed as one of the band’s best of the era – the first set burns from the opening 'Bammy > Greatest Story Ever Told' through a scorching Birdsong to a soaring Chinarider, while the second set delivers a crying 'To Lay Me Down', thunderous 'The Other One' and delicate, soaring 'Stella Blue'.  Jim Vita’s audience tape is described as very clean and expertly mastered, making the superb performance easy to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviewers give 4‑5 stars, praising both the musical performance (multiple standout songs, high energy) and the tape quality (clean audience recording, excellent mastering)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clean audience capture; Jim Vita’s mastering praised as crisp with no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "To Lay Me Down",
+      "Stella Blue",
+      "The Other One",
+      "Going Down the Road Feeling Bad",
+      "Satisfaction",
+      "Brokedown Palace",
+      "Great Loser",
+      "All Over Now"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard 'Bammy > Greatest Story Ever Told' opener leads into a blazing first set that never lets up, while the second set builds with emotional depth (To Lay Me Down) and peaks with a thunderous Other One before closing on delicate ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals (and implied guitar work) highlighted as strong throughout; praised alongside Bob’s voice.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocal contributions noted as impressive, especially in the harmonies with Jerry.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Great Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:42:44.261996+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-09.fob.vita.motb-0098.105524.flac16"
+}

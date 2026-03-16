@@ -1,0 +1,45 @@
+{
+  "summary": "Outstanding 1983 concert featuring a blistering Alabama Getaway and scorching Minglewood Blues, captured in an excellent recording.",
+  "review": "Both reviewers rave that this show was one of the best of ’83, highlighting Bobby’s raunchy slide solo on Minglewood Blues and a blistering Alabama Getaway. Garcia’s fuzzy‑distorted leads and strong vocals are praised, and the recording is described as great – clear enough to be enjoyed on headphones. Overall it’s an energetic, high‑quality performance with a solid, listenable source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviews are five‑star and emphasize exceptional musical performance plus a great‑sounding recording; the limited number of reviews (2) lowers confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the recording as “great” and note it sounds fantastic on headphones, indicating clear and well‑balanced audio despite no explicit source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Minglewood Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout; the band was “firing on all cylinders,” delivering strong vocals and tight playing despite a few minor flubs."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s fuzz‑distorted lead guitar tone is highlighted as fantastic.",
+    "Phil": "",
+    "Bob": "Bobby (Bob) delivers an incredibly raunchy slide solo on Minglewood Blues.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:00:48.374496+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-12.134998.nak300.schley.flac1644"
+}

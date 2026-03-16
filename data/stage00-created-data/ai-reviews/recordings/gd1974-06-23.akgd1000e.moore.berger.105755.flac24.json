@@ -1,0 +1,85 @@
+{
+  "summary": "High‑fidelity soundboard capture of a legendary 1974 performance, highlighted by a smoking Dark Star > Spanish > U.S. Blues sequence and superb band interplay.",
+  "review": "The show is repeatedly praised as one of the Dead’s peak‑year concerts, with standout moments like Dark Star into Spanish into U.S. Blues, a flawless Ship of Fools jam, and emotive ballads such as China Doll and Black Peter.  Most listeners rave about the 24‑bit Jerry Moore transfer, though a few report intermittent drop‑outs or file‑corruption issues that affect playback.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong consensus on an exceptional musical performance (70% weight) and generally excellent soundboard transfer, offset by isolated reports of technical glitches (30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the 24‑bit transfer as crystal‑clear and dynamic; a minority experience drop‑outs or file corruption, suggesting occasional digital issues rather than poor source material."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Spanish > U.S. Blues",
+      "Ship of Fools",
+      "Let It Rock",
+      "Casey Jones",
+      "China Doll",
+      "Black Peter",
+      "Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note seamless transitions and a rare ROR opener, with the band in tight sync; ballads are highlighted for their vocal clarity while jams feel practiced yet spontaneous."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for perfect tone, flawless leads, and overall leadership throughout the set.",
+    "Phil": "",
+    "Bob": "Noted for crisp rhythm work and “peeling off” licks that complement Jerry’s lead.",
+    "Keys": "Keith receives a shout‑out for a rich B3‑style Hammond sound on several numbers.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Rock": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:41:54.340665+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-23.akgd1000e.moore.berger.105755.flac24"
+}

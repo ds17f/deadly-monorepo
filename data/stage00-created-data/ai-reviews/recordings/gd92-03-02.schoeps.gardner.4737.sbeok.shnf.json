@@ -1,0 +1,75 @@
+{
+  "summary": "An excellent audience recording captures a smoking second set with standout China > Rider, Terrapin > Jackhammer and a soaring Stella Blue.",
+  "review": "Fans rave that the show is one of the best Omni performances of the early‑90s, highlighting an explosive second set – China > Rider, Terrapin > Jackhammer, The Other One and a beautiful Stella Blue.  The audience tape (Schoeps/Gardner) is praised as exceptionally clear and well balanced, reproducing the on‑stage energy with remarkable fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 5‑star, lauding both musical performance and recording quality; only one mixed 3‑star review tempers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Well‑balanced audience tape with clear instrument separation, strong stage ambience and minimal noise; some reviewers note occasional off‑notes/vocal slips but they do not detract from the overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Terrapin > Jackhammer",
+      "Stella Blue",
+      "The Other One",
+      "Loser"
+    ],
+    "poor_songs": [
+      "China > Rider (ending)"
+    ],
+    "setlist_flow": "A solid, melodic first set followed by a powerhouse second set; the band rides a tight groove, builds tension into The Other One and delivers an unforgettable Jackhammer climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia lets loose on Loser and adds soaring lead lines throughout the night.",
+    "Phil": "Phil’s bass bomb opening The Other One is described as a tsunami of low‑end power.",
+    "Bob": "",
+    "Keys": "Keyboard work (Vince/Welnick era) is called “a force of nature,” with playful moments like handing off the opening China notes.",
+    "Drums": "Mickey and Bill are praised for their high energy, especially during the Jackhammer section and on‑stage camaraderie."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Terrapin > Jackhammer": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:48:06.253442+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-02.schoeps.gardner.4737.sbeok.shnf"
+}

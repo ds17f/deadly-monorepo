@@ -1,0 +1,126 @@
+{
+  "summary": "High‑quality soundboard capture of the 1993 Albany show with standout renditions of Bertha, Eyes of the World, Days Between and a soaring Watchtower.",
+  "review": "The recording is praised for its very good soundboard fidelity – clearer than most SBD releases and with excellent levels.  Musically the night is remembered for Jerry’s triumphant return, fierce solos and inspired band work, highlighted by Bertha, Eyes of the World, Days Between, Watchtower and a fiery Loose Lucy, while a few numbers (Broken Arrow, Corrina, Estimated) receive mixed comments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews overwhelmingly praise the performance and note good‑to‑excellent soundboard quality; only a handful of songs are critiqued, resulting in a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as very good, crisp and with better levels than other SBDs; one notes the matrix version has more energy but the soundboard is clear and listenable throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Eyes of the World",
+      "Days Between",
+      "All Along the Watchtower",
+      "Loose Lucy",
+      "Cassidy",
+      "Casey Jones (final version)",
+      "Comes A Time"
+    ],
+    "poor_songs": [
+      "Broken Arrow",
+      "Corrina",
+      "Estimated",
+      "Fought the Law"
+    ],
+    "setlist_flow": "The first set is described as tight and energetic, moving smoothly through classics like Bertha and Peggy‑O.  The second set builds with a long Eyes‑Estimated opener, then rolls into a rare Comes A Time, a blistering Watchtower and the show‑stopping Days Between, ending on a high note with One More Saturday."
+  },
+  "band_member_comments": {
+    "Jerry": "His return after health problems is highlighted – powerful, passionate solos and a confident tone throughout.",
+    "Phil": "Described as 'on top' and heavily into the music, delivering inspired bass work.",
+    "Bob": "Strong presence in the mix; vocals noted as scratchy at times but he pushes forward with digital delay effects.",
+    "Keys": "Vince’s groove is praised, though several reviewers note the keyboards are buried on some mixes.",
+    "Drums": "Bill's drumming is called 'quite good' and the drum/space segment receives mixed remarks (some say it lacks energy)."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Loose Lucy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Fought the Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Hellina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:38:58.475054+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-27.sbd.samaritano-miller.92523.sbeok.flac16"
+}

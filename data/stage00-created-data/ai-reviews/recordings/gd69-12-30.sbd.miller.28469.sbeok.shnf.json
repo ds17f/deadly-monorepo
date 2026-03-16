@@ -1,0 +1,85 @@
+{
+  "summary": "A pristine A+ soundboard captures a jam‑heavy 12/30/69 show featuring a monster Dark Star > Alligator > Drums > The Eleven and scorching versions of New Speedway Boogie, Black Peter, and Uncle John’s Band.",
+  "review": "The recording is an excellent, well‑mastered soundboard (Charlie Miller’s work) that delivers crystal‑clear guitar tones and tight drums. Musically the concert shines with a sprawling second set – Dark Star into Alligator, Drums and The Eleven – plus standout renditions of New Speedway Boogie, Black Peter, Mason’s Children, The Other One, Comes a Time and Uncle John’s Band.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic 5‑star reviews praise both the performance and the A+ soundboard; only one modest 3‑star note mentions missing track info, so overall rating is very high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "A+ soundboard, Charlie Miller’s mastering; crisp clarity, superb guitar and drum separation. Minor comment about slight vocal distortion on Uncle John’s Band when pushed to max."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Speedway Boogie",
+      "Black Peter",
+      "Dark Star > Alligator > Drums > The Eleven",
+      "Mason's Children",
+      "The Other One",
+      "Comes a Time",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, cohesive second set that builds into an extended jam; the band moves from high‑energy rock (New Speedway Boogie) to deep improvisational passages (Dark Star/Alligator/The Eleven), delivering a balanced and electrifying concert."
+  },
+  "band_member_comments": {
+    "Jerry": "His Gibson SG is described as ‘fired up’ with perfect tone; the Uncle John’s Band lead work is highlighted as brilliant.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment within the Dark Star > Alligator > Drums > The Eleven sequence is praised for its tightness and power."
+  },
+  "song_mentions": {
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Mason's Children": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T19:30:43.540973+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-12-30.sbd.miller.28469.sbeok.shnf"
+}

@@ -1,0 +1,94 @@
+{
+  "summary": "Excellent soundboard capture of a strong 1987 show, highlighted by High Time, Push, a beautiful Crazy Fingers into Uncle John’s Band and a heartfelt Black Muddy River encore.",
+  "review": "Reviewers rave about the crystal‑clear board mix—Phil’s bass shines and Jerry delivers an amazing bridge solo on Crazy Fingers—while praising the upbeat setlist with standout performances of High Time, Push and a superb Uncle John’s Band. A few reviewers complain that the tape is mislabeled or that the streaming service lacks true SBD files, but the musical quality and recording fidelity are consistently rated very high.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two detailed 5‑star reviews praise both performance and soundboard quality; two brief negative reviews focus on labeling/streaming issues rather than the music itself, leading to a strong overall rating with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Board is described as sweet and crystal‑clear (Phil’s bass especially), no major dropouts mentioned; criticisms relate only to possible mislabeling, not audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Push",
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Long Playing (Playing in the Band)",
+      "Black Muddy River",
+      "Maggie's Farm",
+      "1/2 Step > ALON"
+    ],
+    "poor_songs": [
+      "Black Peter",
+      "Around"
+    ],
+    "setlist_flow": "The setlist is praised for its upbeat energy and smart song sequencing, opening strong with a perfect ½ Step>ALON, flowing through high‑energy numbers, and closing the second set with a beautiful Crazy Fingers into one of the best Uncle John's Band performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Amazing bridge solo on Crazy Fingers; fluid and vibrant playing throughout.",
+    "Phil": "Bass is crystal clear in this board mix.",
+    "Bob": "Interesting slide solo noted, sound uniquely “cool”.",
+    "Keys": "",
+    "Drums": "Post‑drums segment broadcast on TV for Farm Aid III was highlighted as a rare treat."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Long Playing (Playing in the Band)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "1/2 Step > ALON": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:55:54.754720+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-19.sbd.painoman.76469.sbeok.flac16"
+}

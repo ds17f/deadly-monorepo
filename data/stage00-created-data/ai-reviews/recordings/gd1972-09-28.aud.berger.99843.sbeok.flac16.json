@@ -1,0 +1,44 @@
+{
+  "summary": "Great show highlighted by a stellar St. Stephen jam, but the stadium‑filled audience recording drowns out most of the music.",
+  "review": "Fans agree the performance itself is top‑notch – especially the extended St. Stephen jam that gets an enthusiastic crowd reaction – yet the recording is marred by nonstop stadium clapping that makes the band virtually unlistenable. The sound quality is clearly an audience capture with overwhelming applause, limiting its usefulness despite the strong set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is praised as excellent (high weight) while recording quality is deemed poor due to excessive crowd noise (lower weight). The weighted average yields a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Thunderous, continuous stadium clapping throughout the set overwhelms the mix; band details are hard to hear and some reviewers call it unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is regarded as a great performance, but the recording's crowd noise obscures the flow, making it difficult to appreciate the set despite strong playing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China>Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T04:28:29.813186+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-28.aud.berger.99843.sbeok.flac16"
+}

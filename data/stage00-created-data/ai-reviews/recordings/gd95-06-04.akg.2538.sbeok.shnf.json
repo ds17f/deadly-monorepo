@@ -1,0 +1,39 @@
+{
+  "summary": "Fair audience recording of a largely disappointing show, with the lone bright spot being the final “Broken Down” performance.",
+  "review": "Most reviewers describe this concert as a weak outing – several call it a “turd of a show,” “horrible,” or simply “bad,” and note that the sound is uneven, especially for those away from the stage. The recording, likely an audience tape, is judged only okay at best, with complaints about muddiness and poor balance. One enthusiastic fan does praise the last song (“Broken Down”) as a magical moment, but that sentiment is isolated.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.2,
+    "confidence": "medium",
+    "rationale": "The majority of reviews are negative about both performance and audio quality, pulling the overall rating down despite a single glowing comment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners report uneven sound – decent close‑to‑stage but muddy or “crap” for most of the audience; no clear indication of a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; overall impression is that the concert failed to engage most listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:36:38.841498+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-04.akg.2538.sbeok.shnf"
+}

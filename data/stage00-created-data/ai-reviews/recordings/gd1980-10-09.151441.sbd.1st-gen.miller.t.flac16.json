@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture of the historic 1980 Warfield acoustic set, featuring the iconic \"Greatest Story Ever Told\".",
+  "review": "Both reviewers rave about this recording, noting its clear and nicely mixed soundboard source. The show is part of the famed three‑set Warfield concerts with an acoustic first set, highlighted by the standout performance of “Greatest Story Ever Told,” which also appears on the Dead Set LP.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Strong positive feedback (5‑star reviews) emphasizes both excellent recording quality and a historically significant, well‑performed show; limited number of reviews keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the sound as \"nice quality\" with no reported issues – a clean, clear board mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Part of the renowned three‑set Warfield run in 1980; first set acoustic, creating a unique and memorable flow that fans appreciate."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:22:15.865171+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-09.151441.sbd.1st-gen.miller.t.flac16"
+}

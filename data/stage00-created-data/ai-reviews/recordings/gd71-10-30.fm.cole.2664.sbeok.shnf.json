@@ -1,0 +1,39 @@
+{
+  "summary": "Great performance praised by some, but the mix and overall sound quality divide listeners.",
+  "review": "Several reviewers rave about an excellent show and clear sound, yet a notable portion complain of a muddy, low‑level Jerry mix with peaking and bleed issues that make it hard to enjoy. The recording’s technical flaws dominate the conversation, while the musical set itself receives only limited specific praise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Average star rating (≈3.7) reflects strong positive comments about the show offset by multiple detailed complaints about the recording mix; mixed feedback leads to medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Some reviewers call it \"great sound quality,\" but others note a bad mix, low Jerry levels, mic bleed into the board, and peaking problems that render parts of the tape unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set pacing; only a brief mention urging \"play Truckin\" suggests the song stood out for at least one listener."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised as great by some reviewers, but others say his guitar is buried low in the mix and sounds like \"shitbomb treatment,\" making it difficult to hear.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T08:59:15.603750+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-10-30.fm.cole.2664.sbeok.shnf"
+}

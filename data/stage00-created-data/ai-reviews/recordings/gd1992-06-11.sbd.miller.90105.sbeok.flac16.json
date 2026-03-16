@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard recording captures a beautifully paced show with standout versions of Bertha, Foolish Heart and Playing in the Band, plus clear Vince keyboard vocals.",
+  "review": "The concert is praised for its relaxed pacing that lets each musician breathe, highlighted by Jerry’s expressive phrasing and strong lead on tracks like Bertha, Foolish Heart and the opening of Playing in the Band. The soundboard source delivers crystal‑clear audio that showcases Vince Welnick’s keyboards and vocal blend, making the overall listening experience very satisfying.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 3‑5 stars and comment positively on both performance and audio quality; one outlier rating lowers confidence slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as great sounding, crisp, and revealing of vocals and keyboards; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Foolish Heart",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a relaxed, un‑rushed pace that lets each member shine, creating a smooth and engaging set."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for adept playing, beautiful phrasing and clear lead throughout the show.",
+    "Phil": "Mentioned as present but not overly forward in the mix.",
+    "Bob": "Noted as supportive in the background without dominating the sound.",
+    "Keys": "Vince Welnick’s keyboards and vocals are highlighted as a strong element of the performance; Hornsby is also referenced for his showcase.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:48:51.338465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-11.sbd.miller.90105.sbeok.flac16"
+}

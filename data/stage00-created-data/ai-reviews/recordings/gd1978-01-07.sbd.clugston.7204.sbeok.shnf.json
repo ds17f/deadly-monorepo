@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard recording showcases Phil's booming bass and Keith's clear piano, with a solid set highlighted by Let It Grow and a monster Dancing In The Street despite the lack of Jerry's vocals.",
+  "review": "The SB tape dramatically improves instrument separation over the audience source – Phil’s low end and Keith’s piano shine, and the drums are praised as “really good.” Musically the show is strong: Let It Grow sits solidly, Dancing In The Street erupts as a monster, and Playing in the Band drifts spacey, while Bob Weir handles all Jack Straw vocals. The only notable drawback is Jerry’s missing vocal contributions, though reviewers feel his guitar work more than compensates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviews are detailed and positive; the performance is good with standout songs, and the soundboard source is described as a major improvement over audience recordings."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear instrument separation, strong bass and piano presence, drums well captured; reviewers note it vastly outperforms the audience tape and would make a great matrix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Dancing In The Street",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid set with strong second‑half energy; missing Jerry vocals noted but compensated by guitar work and Weir’s full vocal turn on Jack Straw."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals largely absent, but his guitar work is highlighted as stronger without the vocal mix.",
+    "Phil": "Bass comes through exceptionally well on this recording; described as \"rocks out.\"",
+    "Bob": "Weir sings all of Jack Straw and delivers solid rhythm throughout.",
+    "Keys": "Keith's piano is much clearer and more present than on audience recordings.",
+    "Drums": "Drums are praised as \"really good\" with a nice feel."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing In The Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:44:45.101415+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-07.sbd.clugston.7204.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard capture of a strong 1969 show featuring standout Easy Wind and Lovelight, with only minor distortion and a brief loss at the start of Dark Star.",
+  "review": "Fans rave about this recording’s clear soundboard source and the band’s adventurous playing in Baton Rouge. The set shines on Jerry’s soaring Easy Wind and an emotive Lovelight, while Tom Constanten’s keyboards add a rare ’69 flavor; the only blemishes are a small distortion at 9:45 into Lovelight and a missing fragment of Dark Star’s opening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Four enthusiastic reviews (average 4.75 stars) praise both performance and sound quality; minor recording glitches keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced, but a brief distortion around 9:45 in Lovelight and loss of the first few seconds of Dark Star are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Wind",
+      "Lovelight",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The performance feels like a focused, exploratory 'Cajun Dead' session with strong Jerry-led tunes and fluid transitions, especially into Lovelight."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his powerful playing – ‘Captain Trips’ vibes and strong Easy Wind performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Tom Constanten (TC) highlighted as a solid 'Pig on keys' adding unique texture to the 1969 sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:08:14.624736+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-09-01.171656.BatonRougeLA.sbd.anon.gems.flac1644"
+}

@@ -1,0 +1,106 @@
+{
+  "summary": "Excellent Springfield show with standout Franklin's Tower and Truckin', captured on a decent audience recording that needs a slight pitch tweak.",
+  "review": "Reviewers hail this performance as the best of the ’80 tour, highlighting fiery versions of Franklin’s Tower, High Time, Saint of Circumstance, and an ace Truckin' plus a superb Brokedown Palace. The source is an audience (AUD) recording that sounds dry and runs slightly slow, so a modest pitch increase (+1‑2%) is recommended, but overall the audio is clear enough to enjoy the music.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "The show receives glowing praise with many standout songs and only minor performance dents; recording quality is good but requires pitch correction, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Dry mix that sounds clear but runs slightly slow; listeners recommend increasing pitch by ~1‑2%. The Download 7 version has edited drum cuts to fit on two CDs. Overall the Tim Friend AUD is considered the best source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Mama Tried",
+      "Mexicali Blues",
+      "Althea",
+      "Candyman",
+      "High Time",
+      "Saint of Circumstance",
+      "Truckin'",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Feel Like a Stranger",
+      "Johnny B. Goode",
+      "Let It Grow"
+    ],
+    "setlist_flow": "First set is long and builds from a warm‑up into several high‑energy jams; the second set delivers strong highlights (High Time, Saint of Circumstance, Truckin') with an experimental Space/Wharf Rat interlude, and the encore closes on a superb Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone praised on Mexicali Blues, Franklin's Tower and the solo in Brokedown Palace; he also provides fills to Brent and leads jams.",
+    "Phil": "Phil’s bass work noted as solid with good harmonies on High Time; he trades spots with Jerry during Around.",
+    "Bob": "",
+    "Keys": "Brent Mydland receives kudos for keyboard fills, especially on High Time and the Space section of Saint of Circumstance.",
+    "Drums": "Drummers have a brief edited drum break in the Download version; overall rhythm section praised for tightness during Space and Truckin'."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let it Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:54:50.727439+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-03.fob.nak300.friend.andrewf.103169.flac16"
+}

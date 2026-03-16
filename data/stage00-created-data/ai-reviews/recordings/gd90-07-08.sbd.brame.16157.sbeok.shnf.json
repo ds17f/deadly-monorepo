@@ -1,0 +1,72 @@
+{
+  "summary": "Soundboard source with noticeable speed‑up and dropouts, yet a scorching second set highlighted by a monster Eyes of the World and fire‑filled Samson & Delilah.",
+  "review": "The show is celebrated for its incendiary second half – Brent’s keys blaze on Samson & Delilah, the band delivers an epic Eyes of the World, and Let It Grow erupts as a monster.  Recording-wise the SBD suffers from fast‑playback quirks and occasional drops/cuts that detract from the listening experience, though the performance itself remains highly praised.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance (especially the second set) giving it ~4‑5 stars, but many note speed and dropout problems that lower the technical rating to ~2‑3 stars; weighted average yields a mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple reviewers report fast playback (OGG/other formats) and audible drops/cuts; no consistent mention of crispness, indicating the source is usable but flawed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Samson & Delilah",
+      "Let it Grow",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as average or merely solid, while the second set is repeatedly called fire‑hot, with the band building momentum from Samson into a soaring Eyes of the World and a monster Let It Grow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for energetic playing, dancing during Samson & Delilah, creative MIDI work on Lovelight, and overall “traversing the planet” vibe.",
+    "Phil": "Mentioned as above‑average on Tom Thumb's; otherwise no specific comments.",
+    "Bob": "Noted having fun with Tom Thumb lyrics and dancing on Samson, though one reviewer jokes about a ‘Bob asthma attack’, indicating mixed but generally positive remarks.",
+    "Keys": "Brent (keys) described as “on fire” for Samson & Delilah and delivering strong support throughout the night.",
+    "Drums": "Drum performances highlighted as among the best of the era, especially during the extended jam sections."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let it Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tom Thumb's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Show on Earth": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:52:59.067271+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-08.sbd.brame.16157.sbeok.shnf"
+}

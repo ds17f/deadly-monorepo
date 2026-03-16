@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent soundboard recording captures a stellar 1977 show highlighted by a smoking Wharf Rat and Jerry’s fiery guitar work.",
+  "review": "Fans rave that this November‑6‑1977 performance is one of the band’s finest, with Garcia “on fire” all night and a particularly glowing Wharf Rat that builds into an explosive climax. The soundboard source is praised as clear and well‑balanced, making every tight jam—from Jack Straw to Samson & Delilah—easy to hear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All four reviewers give 4–5 stars and enthusiastically praise both the musical performance and the soundboard quality; no negative comments were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly mention great, clear sound with no reported drop‑outs or muddiness; the mix is well balanced and captures the band’s dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Jack Straw",
+      "Dire Wolf",
+      "Samson & Delilah",
+      "Sunrise",
+      "St. Stephen",
+      "Truckin'",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as creative and laid‑back, while the second set builds intensity, climaxing with a smoking Wharf Rat and ending on an energetic Johnny B. Goode encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly called “on fire,” “top of the mix,” and gives listeners chills.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment in the St. Stephen > Drums transition is highlighted as part of a powerful medley."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:04:30.787164+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-11-06.122296.sbd.flac16"
+}

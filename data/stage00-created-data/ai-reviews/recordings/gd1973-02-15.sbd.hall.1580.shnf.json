@@ -1,0 +1,81 @@
+{
+  "summary": "A crisp soundboard capture of a legendary 1973 show, highlighted by an epic Dark Star → Eyes → China Doll suite and stellar performances throughout.",
+  "review": "The recording (sound‑board source) is generally clear and well balanced, though a few reviewers note occasional mix quirks and low‑end thinness. Musically the concert shines – fans rave about the soaring Dark Star > Eyes > China Doll marathon, fiery Row Jimmy, tight Playing in the Band, and vibrant Here Comes Sunshine, with Bill Kreutzmann’s drums and Jerry Garcia’s lead work getting special praise. Overall sentiment is overwhelmingly positive despite minor audio imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈20) are 4‑5 stars and extol the performance; recording quality is praised as good/clear with only isolated complaints, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the sound as crisp, clear and well‑balanced. A few note a slightly thin bass response, occasional mix imbalance (vocals high), and sporadic ‘crap’ moments; matrix/cleaned versions are praised for restoring clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Eyes > China Doll",
+      "Row Jimmy",
+      "Playing in the Band",
+      "Here Comes Sunshine",
+      "Loose Lucy",
+      "El Paso"
+    ],
+    "poor_songs": [
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "First set is energetic and song‑rich, while the second set builds into a monumental jam sequence (Dark Star → Eyes → China Doll) that many reviewers call a masterpiece; transitions such as China Cat Sunflower > I Know You Rider are described as seamless."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for gritty, ‘down‑and‑dirty’ lead guitar and soaring solos, especially on Dark Star and Row Jimmy.",
+    "Phil": "Noted for a powerful bass zone and an epic solo in the Dark Star/Eyes sequence; several reviewers call his playing unmistakable.",
+    "Bob": "Highlighted for strong rhythm work and tasteful fills, particularly on Playing in the Band and Casey Jones.",
+    "Keys": "Keith is lauded as ‘perfect accompaniment’ with clear piano throughout; occasional mention of Donna’s contributions on vocals.",
+    "Drums": "Bill Kreutzmann receives high praise for precise tom tuning, crisp cymbal accents, and overall drumming excellence."
+  },
+  "song_mentions": {
+    "Dark Star > Eyes > China Doll": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T04:58:43.956243+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-15.sbd.hall.1580.shnf"
+}

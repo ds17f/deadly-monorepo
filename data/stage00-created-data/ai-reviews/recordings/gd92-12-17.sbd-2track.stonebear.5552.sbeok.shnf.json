@@ -1,0 +1,97 @@
+{
+  "summary": "Pristine soundboard recording with a standout Scarlet>Fire second set, though the first set feels thin and occasional gating issues soften the mix.",
+  "review": "The two‑track SBD capture is remarkably clear – many reviewers call it “sharp” and “gorgeous” – but the heavy noise‑gate on some instruments makes vocals and keyboards sound distant. Musically the show shines in the second half, especially the Scarlet>Fire sequence, Here Comes Sunshine and Baba O’Riley, while the short first set and songs like So Many Roads receive mixed reactions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the recording’s clarity and the second‑set performances, but a sizable minority note gating, drop‑outs, and a weak first set; the weighted average of show (70 %) and recording (30 %) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix praised as “pristine” by several users; however, heavy noise‑gate makes keyboards and vocals sound weak or clipped, and a few reviewers note occasional drop‑outs in the drum/space segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Here Comes Sunshine",
+      "Baba O'Riley",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "So Many Roads",
+      "Music Never Stopped",
+      "Corrina (mixed reception)"
+    ],
+    "setlist_flow": "The first set is short and considered uneven, but the second set builds momentum with a powerful Scarlet>Fire transition, a heartfelt HC Sunshine, and extended jams that carry the show. Some reviewers note an odd placement of HC Sunshine and a rough transition into Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is lauded for his tone, runs on HC Sunshine and Corrina, and overall fine form, though a few users mention weak vocals and occasional lack of focus later in the set.",
+    "Phil": "Phil Lesh receives glowing praise – called “shiznit” and a “big maniacal rubber spider” – with many noting his bass work as a highlight of the night.",
+    "Bob": "",
+    "Keys": "The keyboard mix suffers from heavy noise‑gating, making instruments sound distant; Vince’s playing on Music Never Stopped is singled out positively.",
+    "Drums": "Drummers are described as giving a funky feel with bongos and providing solid comping, but some feel the drum/space segment lacks energy."
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Baba O'Riley": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:13:27.433164+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-17.sbd-2track.stonebear.5552.sbeok.shnf"
+}

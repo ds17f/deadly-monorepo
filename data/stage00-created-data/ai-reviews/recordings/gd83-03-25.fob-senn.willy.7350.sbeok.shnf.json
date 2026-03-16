@@ -1,0 +1,75 @@
+{
+  "summary": "Stunning audience recording of a rain‑soaked Phoenix show with a brilliant Help>Slip>Franklin’s and Let It Grow, but an uneven performance overall.",
+  "review": "The AUD capture is widely praised for its clarity and presence, often called one of the best audience tapes from the era. Musically the night is mixed – the second set shines with a smoking Help‑Slip‑Franklin’s and a standout Let It Grow, while the first set feels sloppy and the band sounds out of sync. Highlights also include the debut of Esau and solid Sugar Magnolia moments, but vocal strain and overall looseness keep the show from being great.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently rated excellent/good (≈4.5/5) while performance quality is mixed with many reviewers calling the show sloppy (≈3/5). Weighted average yields ~3.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note crystal‑clear sound, great ambience and minimal drop‑outs; the tape is considered one of the best AUD recordings from 1983 despite being a crowd source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's",
+      "Let It Grow",
+      "Esau (first performance)",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "First‑set material (general sloppiness)",
+      "Playin' (mixed reception)"
+    ],
+    "setlist_flow": "The first set is described as uneven and rushed, likely affected by weather; the second set recovers with a tight Help>Slip>Franklin’s and stronger jams, ending on a high note."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work generally solid, but vocals were strained and sounded “off” for much of the night.",
+    "Phil": "Bass shines especially on Let It Grow; several reviewers note his upper‑register runs and strong presence.",
+    "Bob": "Feeds off Jerry early in the show; noted as feeding each other from the start.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Let It Grow": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:00:34.955868+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-03-25.fob-senn.willy.7350.sbeok.shnf"
+}

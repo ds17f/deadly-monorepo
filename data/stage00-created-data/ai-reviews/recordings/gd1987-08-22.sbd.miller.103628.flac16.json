@@ -1,0 +1,79 @@
+{
+  "summary": "Great soundboard recording with beautiful tone and standout performances of Good Morning Little Schoolgirl, Midnight Hour and Bird Song",
+  "review": "The miller‑103628 FLAC captures a warm, clear soundboard mix that many fans describe as \"beautiful\" and \"crisp,\" despite minor glitches like a mono error at the start of Hell in a Bucket and a track slip after Masterpiece. Musically the show shines with an electrifying Good Morning Little Schoolgirl featuring Santana and Carlos Santana, a soaring Midnight Hour, and several peak moments in Bird Song, Tennessee Jed and Little Red Rooster, making it a memorable late‑summer 1987 outing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance (standout songs, strong band interplay) and the soundboard quality; minor recording quirks keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and beautiful overall sound; drums less muddy than older Betamax transfers. Noted mono error at the start of Hell in a Bucket and a track‑mistake after Masterpiece, but still considered a great upgrade."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Morning Little Schoolgirl",
+      "Midnight Hour",
+      "Bird Song",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "First set builds nicely with strong openers (Touch, Little Red Rooster) and peaks on Bird Song and Good Morning Little Schoolgirl; second set keeps momentum with Hell in a Bucket, The Other One segue and a satisfying finish on U.S. Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his interplay with Carlos during Midnight Hour and for soaking the atmosphere on Tennessee Jed.",
+    "Phil": "Noted as ready on the Touch opener and taking vocal leads on Tons of Steel, showing solid form.",
+    "Bob": "Described as being in fine stage shape, especially on Hell in a Bucket where his performance is highlighted.",
+    "Keys": "",
+    "Drums": "Drum mix less low/muddy than earlier transfers; overall drum sound considered good."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Midnight Hour": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:22:31.637315+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-22.sbd.miller.103628.flac16"
+}

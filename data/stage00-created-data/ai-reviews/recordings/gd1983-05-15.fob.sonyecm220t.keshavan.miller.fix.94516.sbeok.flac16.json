@@ -1,0 +1,80 @@
+{
+  "summary": "Audience-sourced recording captures a fiery second set – Help‑Slipknot‑Franklin’s, Stella Blue and Hell in a Bucket shine despite occasional punch‑loss in the mix.",
+  "review": "The show is widely praised for its intense second set, highlighted by a soaring Help‑Slipknot‑Franklin’s suite, a gorgeous Stella Blue finale and a blistering Hell in a Bucket. Reviewers note Jerry Garcia’s guitar work as near flawless (aside from a tongue‑in‑cheek jab at Happy Birthday) and love the guest vocals during Drums/Space. The audience recording is generally regarded as good, though one reviewer felt it lacked some of the performance's punch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average star rating ≈4.3 with 14 detailed reviews that overwhelmingly praise the musical performance and consider the recording solid, yielding a strong positive overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the sound as clear and well‑balanced; one reviewer mentions it feels slightly under‑punchy for such a hot show. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot! > Franklin's Tower",
+      "Stella Blue",
+      "Hell in a Bucket",
+      "Ramble on Rose",
+      "Space"
+    ],
+    "poor_songs": [
+      "Happy Birthday"
+    ],
+    "setlist_flow": "Reviewers rave about the second‑set momentum – a high‑energy first set that ‘revved the engines’ followed by an almost mythic 22‑minute Help‑Slipknot‑Franklin’s and a soaring finish on Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as being in total command – flawless tone, immaculate phrasing, especially on Help/Slipknot and Ramble on Rose; only one tongue‑in‑cheek gripe about Happy Birthday.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s synth and vocal contributions are noted as a pleasant addition to older songs; no specific complaints.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive praise for their tight, laid‑back intensity during Drums/Space, with guest vocalist Flora Purim (and percussionist Aito Moreria) adding extra flavor."
+  },
+  "song_mentions": {
+    "Happy Birthday": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-14T06:54:53.244195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-05-15.fob.sonyecm220t.keshavan.miller.fix.94516.sbeok.flac16"
+}

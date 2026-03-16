@@ -1,0 +1,39 @@
+{
+  "summary": "Energetic show highlighted by a stellar Black Peter, captured on an audience tape that’s clear when the crowd quiets but often overrun by applause.",
+  "review": "The performance shines especially on a powerful rendition of Black Peter, which reviewers call one of the finest they’ve heard. The recording is an audience source – while moments of high clapping drown the band, the mix clears up during quieter passages, preserving the concert’s sorcerous energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (especially for Black Peter) outweighs modest recording issues; three detailed reviews give a reliable but not exhaustive picture."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crowd noise frequently drowns the band, but when the audience quiets the sound is clear and instrument separation is good; overall listenable despite frequent applause."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is noted for its high energy exchange between band and audience, though constant clapping can interrupt the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T01:17:45.695828+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-06.set2-senn-barnehama.minches.85575.flac16"
+}

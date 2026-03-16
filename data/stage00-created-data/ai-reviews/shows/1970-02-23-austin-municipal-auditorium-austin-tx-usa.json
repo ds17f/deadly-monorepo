@@ -1,0 +1,71 @@
+{
+  "summary": "Mixed acoustic/electric set with strong Not Fade Away",
+  "blurb": "The fragment captures a tight acoustic interlude and a fiery Not Fade Away. Jerry’s gnarly tone trades licks with Pigpen while Phil drives the bass train. Recording quality is fair and missing material makes the flow feel disjointed.",
+  "review": "On February 23, 1970 at the Austin Municipal Auditorium the Dead delivered a half‑caught snapshot of their early‑70s sound—a brief acoustic detour sandwiched between electric fireworks. The surviving soundboard fragment showcases an intimate Little Sadie and a heartfelt Seasons Of My Heart before launching into a gritty Not Fade Away where Phil’s bass locks in like a locomotive. Jerry’s tone is described as gnarly, trading licks with Pigpen on the NFA, and a broken string momentarily stalls Me And My Uncle but adds a human touch. Bob Weir throws in a playful solo and vocal jokes, while Pigpen’s organ—unusually forward in the mix despite occasional distortion—adds extra color. The tape suffers from muddy balance, hum between songs, and cuts out Mason’s Children mid‑verse, leaving the set feeling fragmented, but the performances that do survive are solid examples of the band’s early chemistry.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.8,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.2,
+      "sentiment_rationale": "The sole recording analysis labels the sentiment as mixed, noting both standout moments (Little Sadie, Not Fade Away, strong bass train) and drawbacks (missing material, muddy mix). This yields a modest positive adjustment rather than a strong boost.",
+      "final_calculation": "2.5 + 0.1 + 0.2 = 2.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-02-23.sbd.vernon.10375.sbeok.shnf",
+    "reason": "Fair‑quality soundboard fragment that captures the acoustic set and a fiery Not Fade Away; despite missing parts, it is the clearest representation of this show."
+  },
+  "key_highlights": [
+    "Intimate acoustic interlude featuring Little Sadie and Seasons Of My Heart",
+    "Fiery Not Fade Away with Phil’s bass train and Jerry’s gnarly tone",
+    "Bob’s solo on Me And My Uncle plus vocal jokes",
+    "Pigpen’s organ pushes forward despite occasional distortion"
+  ],
+  "song_highlights": [
+    "Little Sadie",
+    "Seasons Of My Heart",
+    "High Time",
+    "Not Fade Away",
+    "Me And My Uncle",
+    "Black Peter"
+  ],
+  "band_performance": {
+    "Jerry": "Gnarly tone on his SG/Strat, trades licks with Pigpen on Not Fade Away; a broken string causes a brief pause during Me And My Uncle.",
+    "Phil": "Locks in a powerful bass train on Not Fade Away, standing out even through the uneven mix.",
+    "Bob": "Delivers a solo on Me And My Uncle and adds vocal jokes; organ presence noted despite low overall mix level.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-19T16:50:09.919874+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Little Sadie"
+    ],
+    [
+      "Seasons Of My Heart",
+      "Uncle John's Band"
+    ],
+    [
+      "I Know You Rider",
+      "High Time"
+    ],
+    [
+      "Not Fade Away",
+      "Mason's Children"
+    ],
+    [
+      "Me And My Uncle"
+    ],
+    [
+      "Black Peter"
+    ]
+  ]
+}

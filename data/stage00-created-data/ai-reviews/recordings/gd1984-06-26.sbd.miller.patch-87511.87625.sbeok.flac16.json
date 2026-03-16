@@ -1,0 +1,64 @@
+{
+  "summary": "A stellar 1984 soundboard capture with crystal‑clear mix, highlighted by a roaring Casey Jones opener and standout Althea, Mighty Swell and China > Rider performances.",
+  "review": "These three reviews rave about the pristine 84 soundboard tape, calling it “amazing” and “excellent,” while also celebrating the show’s high energy – especially the explosive Casey Jones opening, the soaring Althea and Mighty Swell in set one, and a snappy China > I Know You Rider start to the second set. The only dent is a reviewer’s lukewarm feeling toward Day Job.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers give high marks (5, 5, 4) and focus on both superb recording quality and strong musical moments; only a single minor criticism appears."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the 84 boards as \"amazing\" with crisp, clear mix; audience recording also praised but secondary to the superb soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "Althea",
+      "Mighty Swell",
+      "China > I Know You Rider"
+    ],
+    "poor_songs": [
+      "Day Job"
+    ],
+    "setlist_flow": "First set remembered for a blistering Casey Jones opener and memorable Althea/Mighty Swell moments; second set kicks off with an energetic China > Rider segue, followed by tight transitions and enthusiastic vocal leads."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocal lead is highlighted (“Bobby leads us into the song”), adding excitement to the set.",
+    "Keys": "Brent Mydland’s keyboard tone in ’84 is called distinct and trippy, a standout element of the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Swell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:58:41.727106+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-26.sbd.miller.patch-87511.87625.sbeok.flac16"
+}

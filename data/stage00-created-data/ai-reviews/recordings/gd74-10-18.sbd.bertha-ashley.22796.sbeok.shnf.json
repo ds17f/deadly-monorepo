@@ -1,0 +1,77 @@
+{
+  "summary": "A solid sound‑board capture of a legendary ’74 show, highlighted by an epic Dark Star → Morning Dew stretch and a punchy first set.",
+  "review": "The performance is consistently praised as one of the strongest of 1974, with the jam into Dark Star and the ensuing Morning Dew singled out as career‑defining.  While most listeners find the soundboard recording clean and lively, a few note hiss and that Garcia’s guitar sits low in the mix.  Overall the show and its recording are celebrated by the community.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (10/12) give 5‑star ratings and extol both the musical performance and the sound quality; only one review is mixed (3 stars) and mentions a modest mix issue, leading to an overall rating in the high‑4 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; several reviewers describe it as crisp or excellent. A few note hiss and that Garcia’s guitar is slightly buried, but these issues do not detract from overall enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "Jack Straw",
+      "Brown Eyed Women"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised for tight, energetic rock (Brown Eyed Women, El Paso, Jack Straw). The second set builds into a seamless jam that erupts into an iconic Dark Star → Morning Dew climax, making the concert feel like a cohesive journey."
+  },
+  "band_member_comments": {
+    "Jerry": "Often described as sweet and dialed‑in; a few reviewers note his guitar is low in the mix.",
+    "Phil": "Lauded for huge power, driving the band, and flawless dynamics throughout the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Generally solid; one reviewer mentions a slight anomaly in the drum sound but says it doesn't spoil the performance."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:21:36.669636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-10-18.sbd.bertha-ashley.22796.sbeok.shnf"
+}

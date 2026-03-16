@@ -1,0 +1,31 @@
+{
+  "summary": "Mislabeled recording – actually a Henry Kaiser San Francisco show, not the advertised Grateful Dead Fillmore Denver performance.",
+  "review": "The sole reviewer flags this entry as incorrectly labeled, stating it features Henry Kaiser in San Francisco rather than a Grateful Dead concert at the Fillmore in Denver. No details are provided about audio fidelity or musical performance of the Dead, so the recording cannot be evaluated on those criteria.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one negative review highlighting a mislabel; no useful information about show or recording quality for the Grateful Dead, resulting in a low rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer notes that the file is mislabeled and actually contains a Henry Kaiser performance; no comments on sound clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No valid Grateful Dead set to assess; reviewer indicates the recording is not the advertised concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T12:01:22.031117+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-21.134815.sur5-1.tobin.flac1648"
+}

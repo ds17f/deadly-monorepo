@@ -1,0 +1,91 @@
+{
+  "summary": "Clean soundboard recording of an ’89 show highlighted by a smoking Help > Slip > Franklin’s and a soaring Morning Dew, with mostly strong performances despite a few uneven spots.",
+  "review": "The performance is widely praised for its tight second set, especially the incendiary Help‑on‑the‑Way > Slipknot! > Franklin's Tower sequence and one of the last great renditions of Morning Dew. Recording quality is noted as the cleanest Miller soundboard source available, though a few reviewers note that other mixes (Bertha, matrix) have different tonal balances. Overall the show is considered a standout for the era, with only occasional lapses such as a mediocre Eyes and a shaky Gimme Some Lovin'.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Four out of five reviews are highly positive, praising both the musical performance and the clean soundboard source; one strongly negative review lowers the average but does not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller soundboard transfer described as the cleanest version, with clear instrument separation; Bertha and matrix mixes also noted but Miller is preferred for hi‑fi playback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Eyes",
+      "Gimme Some Lovin'",
+      "Bird Song",
+      "Promised Land",
+      "Candyman"
+    ],
+    "setlist_flow": "Second set is praised as massive and in sync, while the first set is described by some as a slow start with uneven moments; overall pacing improves after the early songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Attempts hard (takes an extra bar) but is sometimes pushed off‑track by Brent's hot playing.",
+    "Phil": "",
+    "Bob": "Leans heavily on his black Casio PG380, emphasizing tremolo and harmonics; occasional off‑rail moments on Promised Land.",
+    "Keys": "Brent Mydland delivers strong solos (great on Queen Jane and Help), driving the band’s energy in the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "And We Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:30:25.985344+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-08.sbd.walker-scotton.miller.81532.sbeok.flac16"
+}

@@ -1,0 +1,114 @@
+{
+  "summary": "Excellent soundboard capture of a classic September‑1972 show with a smoking Dark Star, soaring Bird Song and tight Playin' – recording is solid, performance is stellar.",
+  "review": "The September ’72 Hollywood Palladium concert delivers several of the era’s highlights – an expansive 32‑minute Dark Star, a mysterious, guitar‑laden Playin', and one of the longest, sun‑soaked Bird Songs ever heard.  The SBD source is clean enough to enjoy the intricate interplay, though occasional drop‑outs keep it from being pristine; overall the musical payoff far outweighs any technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise the show’s setlist, solos and song flow; recording is described as good to excellent with only minor glitches, yielding a weighted average of ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean SBD with warm early‑70s character; a few cuts (Bertha intro missing) and occasional drop‑outs, but patches are seamless. Some listeners note a “matrix feel” and minor hiss, yet the mix remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Playin'",
+      "Bird Song",
+      "Jack Straw",
+      "He's Gone > Truckin'",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical ’72 two‑set layout – solid first set with Bird Song and Playin' leading into a fiery second set highlighted by an epic Dark Star that segues smoothly into Jack Straw, followed by powerful Truckin', Black Peter and a heartfelt El Paso."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is repeatedly called “massive”, “Coltrane‑like” and “chunky”; his solos on Playin', Dark Star and Jack Straw are singled out as career‑high moments.",
+    "Phil": "Lesh gets praise for lead‑bass passages, especially during the middle of Dark Star where he “takes the spotlight” with inventive fills.",
+    "Bob": "Weir’s vocal harmonies receive mixed notes – occasional tuning issues on Bird Song but strong, soulful delivery on Black Peter and Greatest Story.",
+    "Keys": "Keith Godchaux is highlighted for a soaring lead on The Deal and tasteful comping throughout; his presence adds the “jazzy feel” many reviewers love.",
+    "Drums": "Bill Kreutzmann is lauded as “outer‑planet” drumming, driving Playin', Dark Star and Truckin' with power and subtlety."
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Bird Song": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "He's Gone > Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Greatest Story": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T17:18:46.851321+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-10.sbd.winters.17690.sbeok.shnf"
+}

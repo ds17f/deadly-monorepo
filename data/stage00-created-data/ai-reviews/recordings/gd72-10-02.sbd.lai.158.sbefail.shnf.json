@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording with modest tape hiss but clear mix captures a classic 1972 Springfield show highlighted by an incredible Truckin' jam and strong overall performance.",
+  "review": "Fans rave about the quintessential 1972 Springfield set, praising the powerful guitar work, soaring harmonies on \"Tomorrow Is Forever\" and a superb Truckin' > Nobody's Fault > Feelin' Groovy sequence. The soundboard source is generally clear and well‑balanced despite some tape hiss and occasional muffling, making it an enjoyable listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars and extol the musical performance; recording quality is mixed but still acceptable, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Noted tape hiss and occasional muffling, but instruments are clear, well‑spaced and the mix is generally balanced; some reviewers suggest a remaster would improve it."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Nobody's Fault",
+      "Feelin' Groovy",
+      "Tomorrow Is Forever"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe both sets as classic ’72 material with a seamless flow; the opening ambience, powerful mid‑set jams and a soaring second set are highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is described as body‑shaking and his harmonies on \"Tomorrow Is Forever\" praised; noted as absent during the Truckin' jam, giving space to Weir and Phil.",
+    "Phil": "Praised for driving the post‑drum jam that felt like a Weir‑Phil showcase.",
+    "Bob": "",
+    "Keys": "Keith's keyboards are highlighted as adding great depth to the mix, especially in the jam sections.",
+    "Drums": "Billy (Bill Kreutzmann) receives specific commendation for his “sick” drumming during the Truckin' sequence."
+  },
+  "song_mentions": {
+    "Tomorrow Is Forever": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feelin' Groovy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:14:15.931043+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-02.sbd.lai.158.sbefail.shnf"
+}

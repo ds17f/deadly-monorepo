@@ -1,0 +1,63 @@
+{
+  "summary": "High‑energy 1968 Avalon Ballroom show featuring a smoking Dark Star and flawless Eleven, captured on a crisp vintage soundboard despite a few pitch quirks.",
+  "review": "The performance is hailed as one of the band’s classic late‑summer ’68 outings – Dark Star, The Eleven, New Potato > Drums, Other One and Death Don’t Have No Mercy all receive glowing praise for their intensity and ensemble interplay.  The Charley Miller soundboard source delivers clear vintage sound, though a handful of listeners note a slight pitch issue and an abrupt splice at the end of New Potato.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high 5‑star reviews praise the musical performance; recording is generally praised as clear soundboard with only minor technical complaints, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp vintage soundboard capture; several reviewers call it “great recording.” One reviewer mentions the track is slightly short and needs pitch correction, and another notes a possible splice at New Potato > Drums."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Eleven",
+      "New Potato > Drums > Jam",
+      "Other One",
+      "Death Don't Have No Mercy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, especially in the second set; seamless transitions praised except for an abrupt ending of New Potato that some find jarring."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for masterful guitar work on Dark Star and Death Don't Have No Mercy.",
+    "Phil": "Bass highlighted as feeding off the drummers and contributing to the tight ensemble sound.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drummers described as fabulous; New Potato > Drums jam cited as a highlight, though one reviewer found the pure ‘Drums’ segment less interesting."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "New Potato > Drums > Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T09:31:04.540889+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-10-13.sbd.gans.miller.owen.9386.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Decent recording but only a fair show; reviewers provide very little detail.",
+  "review": "One reviewer rates the tape as a good recording yet calls the performance just fair, while another recounts numerous technical hiccups from their first taping attempt and gives it zero stars. Overall the comments are sparse, offering no specific musical highlights or clear picture of the source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.2,
+    "confidence": "low",
+    "rationale": "Only two brief reviews with divergent star ratings (3 and 0). One notes a good recording but a fair show; the other focuses on technical problems and assigns zero stars, leading to an overall low‑to‑moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Described as a good recording; no specifics about clarity, mix balance, or source type are provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T05:24:34.902608+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-15.fob.miller.87753.flac24"
+}

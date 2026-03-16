@@ -1,0 +1,61 @@
+{
+  "summary": "Historic Fillmore half‑show with debut New Speedway Boogie and strong China Cat > Rider",
+  "blurb": "The early set shines with a tight Mason's Children opener and the classic China Cat Sunflower → I Know You Rider segue. The second set delivers the first ever New Speedway Boogie, an extended Turn On Your Lovelight, and focused renditions of Saint Stephen, The Eleven, and Turn On Your Lovelight.",
+  "review": "On December 20, 1969 the Grateful Dead took the Fillmore Auditorium into uncharted territory. While the recording suffers from hiss, occasional skips, and a red‑lined soundboard, the performance itself remains compelling. Set 1 bursts open with Mason's Children before launching into one of the most celebrated China Cat Sunflower → I Know You Rider transitions of the era; even with a CD‑skip on “China Cat,” the energy is undeniable. The set closes unevenly with weaker outings of High Time and Hard To Handle, but those moments are quickly eclipsed by the monumental second half. Here the band unveils New Speedway Boogie for the first time, stretches Turn On Your Lovelight into an extended jam, and navigates complex passages in Saint Stephen and The Eleven with surprising tightness. Pigpen’s organ swells on “Lovelight,” and the dual drumming of Mickey Hart and Bill Kreutzmann drives the improvisations forward. Though the tape is far from pristine, this half‑show captures a pivotal moment in Dead history—a raw snapshot of a band on the brink of new horizons.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.8,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.2,
+      "sentiment_rationale": "The single analysis labels the overall sentiment as mixed: it praises standout moments (China Cat > Rider, New Speedway Boogie debut, Lovelight, The Eleven, Saint Stephen) while noting weaker songs (High Time, Hard To Handle). This balance yields a modest positive adjustment rather than a strong boost.",
+      "final_calculation": "2.5 + 0.1 + 0.2 = 2.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-12-20.sbd.cotsman.6301.sbefail.shnf",
+    "reason": "Only available soundboard capture; despite hiss and skips it contains the debut New Speedway Boogie and the full set, making it the definitive source for this historic half‑show."
+  },
+  "key_highlights": [
+    "Debut of New Speedway Boogie in its first live outing",
+    "Iconic China Cat Sunflower → I Know You Rider transition despite tape skip",
+    "Extended Turn On Your Lovelight jam showcasing dual drummers and Pigpen’s organ",
+    "Tight performances of Saint Stephen, The Eleven, and the overall historic weight of the show"
+  ],
+  "song_highlights": [
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "New Speedway Boogie",
+    "Turn On Your Lovelight",
+    "Saint Stephen",
+    "The Eleven"
+  ],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T19:03:14.401582+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "New Speedway Boogie",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

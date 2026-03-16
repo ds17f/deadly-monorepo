@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard capture with mixed fidelity, but the 1977 show dazzles – blistering first set and standout renditions of Bertha, Half‑Step and St. Stephen.",
+  "review": "The performance is widely praised for its high energy, especially the first set that many call the best of ’77, and for explosive moments like the Half‑Step jam, the St. Stephen sandwich and a soaring Terrapin Station finale. Recording quality is uneven – the Betty soundboard provides a solid base, yet listeners note occasional source changes, saturation and distortion in some audience-derived copies.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are enthusiastic about the music (average show rating ≈4.7) while recording comments are mixed but generally acceptable (≈3.0). Weighted combination yields a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Betty board provides an even mix and clear instrument separation, but several reviewers report a major source change mid‑Bertha, saturation/distortion in some audience (AUD) versions, and overall occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Half-Step",
+      "St. Stephen",
+      "Terrapin Station",
+      "Stella Blue",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set hailed as possibly the best of ’77, followed by a second set that builds into a ferocious jam ending with St. Stephen and a climactic close; transitions are praised for their momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted throughout – high‑energy solos, especially on Half‑Step and the closing jam where he ‘crushes it’.",
+    "Phil": "Bass lines are noted as distinct and well‑defined in the mix; several reviewers commend Phil’s presence.",
+    "Bob": "Bob Weir (Bobby) receives positive nods for vocal contributions and rhythm work, particularly on the second‑set jams.",
+    "Keys": "Keith’s keyboards get praise, with mentions of a great night for him and clear presence in the overall sound.",
+    "Drums": "Drum work is referenced indirectly via hi‑hat and cowbell clarity; no specific criticism."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T22:02:14.011501+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-04-30.moore.minches.17952.sbeok.shnf"
+}

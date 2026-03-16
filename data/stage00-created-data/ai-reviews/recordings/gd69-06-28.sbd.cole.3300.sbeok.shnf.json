@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard capture of a classic ’69 Dead show filled with cowboy‑country gems and crisp, clear audio",
+  "review": "The recording is a clean soundboard source that most fans describe as crystal‑clear and exquisitely mixed, letting Jerry’s steel work on “Slewfoot” and “Silver Threads,” Pigpen’s “King Bee,” and the soaring “Turn On Your Love Light” shine. The performance itself is hailed as one of the band’s best early‑year outings – a seamless blend of country numbers, tight vocals and firecracker drums that makes the whole set feel like a single, flowing masterpiece.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (7 out of 8) give 5‑star praise for both the music and recording quality; only one low‑rating comment exists, yielding an overall strong average and consistent positive sentiment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers repeatedly note crisp, clear sound and excellent levels; a single reviewer mentions a desire for Dolby NR, but overall the mix is praised as exquisite and highly listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Doin' That Rag",
+      "High Time",
+      "Slewfoot",
+      "Silver Threads And Golden Needles",
+      "King Bee",
+      "Turn On Your Love Light",
+      "Mama Tried",
+      "Me and My Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as seamless and organic, moving from early country‑rock numbers into extended jams; transitions such as “Doin' That Rag → High Time” are highlighted for their fluidity."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for steel guitar on Slewfoot and Silver Threads, expansive vocal phrasing, and overall pedal work.",
+    "Phil": "Bass described as ‘rocking the bass like it’s a baby in his arms,’ indicating strong, supportive playing.",
+    "Bob": "Vocals called youthful, cutting to the core, and perfectly meshing with Jerry on cowboy tunes.",
+    "Keys": "Organ noted for its “mad scientist” character, adding texture throughout the show.",
+    "Drums": "Mickey’s double‑drum magic highlighted; drums described as firecracker‑like and driving."
+  },
+  "song_mentions": {
+    "Doin' That Rag": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slewfoot": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Silver Threads And Golden Needles": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "King Bee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T15:55:21.259951+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-28.sbd.cole.3300.sbeok.shnf"
+}

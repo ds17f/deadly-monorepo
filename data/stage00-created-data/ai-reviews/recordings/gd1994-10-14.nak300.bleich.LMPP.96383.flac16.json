@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording that captures a transcendent Scarlet > Fire, though Vince Welnick’s vocals on Corrina fall flat",
+  "review": "The tape is an unusually clear audience capture that lets listeners feel the electric X‑factor of the second set, especially the half‑hour Scarlet > Fire suite where Jerry’s solos are described as tight, melodic and utterly mesmerizing. While most fans praise the energy and emotional climax, a few note that Vince Welnick’s vocal on Corrina is weak, pulling down an otherwise stellar performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Strong musical moments and high‑quality audience recording lift the score, but significant criticism of Vince’s vocals and a zero‑star review pull it down from the top tier."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the audience tape \"great quality\" and note crispness for a 1994 recording, with no major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [
+      "Corrina"
+    ],
+    "setlist_flow": "First set described as ordinary but solid; the second set builds into a legendary Scarlet > Fire sequence that creates a peak X‑factor moment, followed by a calmer finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos during Scarlet > Fire are called tight, melodic and zone‑like; he leads the band through an emotional climax.",
+    "Phil": "Mentioned only as the audience focus of Jerry’s pause; no specific playing comments.",
+    "Bob": "",
+    "Keys": "Vince Welnick’s vocal on Corrina is criticized as off‑key and ruining that moment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:23:43.940470+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-14.nak300.bleich.LMPP.96383.flac16"
+}

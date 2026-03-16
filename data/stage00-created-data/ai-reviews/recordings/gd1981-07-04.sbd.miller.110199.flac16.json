@@ -1,0 +1,93 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy 4th of July show with standout performances of Jack Straw, Peggy‑O, Sugar Magnolia and One More Saturday Night",
+  "review": "Fans rave about the crystal‑clear soundboard source and the electric atmosphere of this July 4th concert. The set is packed with memorable moments – Brent Mydland’s soaring keys on Me & My Uncle and Big River, a killer Jack Straw that turned many into Deadheads, and an unstoppable One More Saturday Night – while even the occasional lyrical slip is taken in good humor.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 4‑5 stars and praise both the musical performance and the recording quality; only a single zero‑star review mentions a lyrical flub, so the overall rating stays in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound \"excellent\", \"beautiful\" and \"the best recording I've ever heard of this show\"; no complaints about noise or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "Birdsong",
+      "Playin' in the Band",
+      "Not Fade Away",
+      "Sugar Magnolia",
+      "China Cat Sunflower > I Know You Rider",
+      "One More Saturday Night",
+      "Me and My Uncle",
+      "Big River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert bursts with energy from the opening parachute stunt, maintains a wild second‑set vibe, and is punctuated by fireworks and memorable jams that keep the crowd dancing all night."
+  },
+  "band_member_comments": {
+    "Jerry": "A lyrical slip on Jack Straw was noted but otherwise his vocals and stage presence were praised.",
+    "Phil": "",
+    "Bob": "Solid rhythm guitar work; helped keep everything together during the Jack Straw lyric mishap.",
+    "Keys": "Brent Mydland shines – keys roll in Me & My Uncle and a standout solo on Big River are repeatedly highlighted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:25:13.749010+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-04.sbd.miller.110199.flac16"
+}

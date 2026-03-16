@@ -1,0 +1,78 @@
+{
+  "summary": "A fair‑quality audience tape that captures a nostalgic show packed with standout Dancin', Werewolves of London, Franklin's Tower and Candyman.",
+  "review": "Fans rave about the energy of this early‑era set – Ship of Fools, Dancin', New/Old (NFA), Werewolves of London and Franklin’s Tower are repeatedly called out as highlights, with beautiful renditions of Candyman, Looks Like Rain and a sweet Friend of the Devil.  The recording is an audience source that sounds a bit “crummy” at first but grows on listeners, offering enough clarity to enjoy the performances despite its vintage tape limitations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for song performance and overall show quality outweighs modest audience‑tape recording issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crummy vintage audience tape with generational copy loss; not crisp but improves after a few listens, no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin'",
+      "Werewolves of London",
+      "Franklin's Tower",
+      "Candyman",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans remember a solid first set that kept the groove going, with a second set that builds momentum and delivers memorable peaks in the middle (Franklin’s opener, Dancin', space‑NFA). The overall pacing is described as “solid time” and nostalgically enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "Great guitar work noted on Friend of the Devil; overall playing praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s keyboard work likened to Jerry’s style in ’83, indicating strong, melodic playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Werewolves of London": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:31:03.668252+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-09.sony.vernon.12184.sbeok.shnf"
+}

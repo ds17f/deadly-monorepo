@@ -1,0 +1,39 @@
+{
+  "summary": "A beloved performance highlighted by a great Lost Sailor; recording praised for making the show available despite unknown technical details.",
+  "review": "The reviewer rates the concert highly, emphasizing the emotional impact of the music—especially the Lost Sailor tune—and thanks the archivist for preserving it online. No concrete comments on sound quality are given, so the technical assessment remains uncertain, but the overall sentiment is clearly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single five‑star review expresses strong enthusiasm for the show and gratitude for its availability; lack of concrete audio details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not discuss clarity, mix, or source type—only thanks the archivist for posting the recording, implying it is at least listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or set structure were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mentions Brent Mydland, later Vince Welnick and Bruce Hornsby, indicating appreciation for the keyboardists during different eras.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:22:16.241720+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-06.150980.aud.gems.flac1648"
+}

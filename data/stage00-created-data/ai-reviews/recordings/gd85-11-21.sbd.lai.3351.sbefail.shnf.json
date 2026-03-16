@@ -1,0 +1,75 @@
+{
+  "summary": "A solid sound‑board capture of a classic ’85 show highlighted by Big Boy Pete, Shakedown Street and a soaring Playing > She Belongs sequence.",
+  "review": "The recording is a well‑balanced soundboard (with some matrix ambience on the second set) that presents clear guitars, strong bass and lively crowd presence. Musically the concert is a fan favorite – Big Boy Pete and Walkin’ the Dog kick things off, Shakedown Street erupts into spacey jams, and the Playing > She Belongs stretch in the second set is repeatedly praised. Minor slip‑ups are noted but they don’t detract from an overall energetic and memorable performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical set (standout songs, strong jams) and the recording quality (crisp soundboard with good balance); only occasional minor flaws mentioned."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe a very good SB source – balanced vocals vs guitars, crisp sound, some high‑end loss and slight interference noted on the matrix‑like second set, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boy Pete",
+      "Walkin' the Dog",
+      "Shakedown Street",
+      "Crazy Fingers",
+      "Playing in the Band",
+      "She Belongs to Me",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A surprise opener and encore frame a first set of concise, high‑energy numbers. The second set shines with spacey transitions – especially the Playing > She Belongs jam – and the overall pacing is described as ‘electric’ and ‘trippy.’"
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly praised – envelope‑filter work, fast heavy notes, and a generally “on fire” performance.",
+    "Phil": "Fans note the powerful “Phil zone,” feeling the bass deep in the bones; the low end is described as strong and immersive.",
+    "Bob": "",
+    "Keys": "Keyboardists (Brent Mydland/Bobby) are called “on fire” with vibrant reverb and melodic support throughout the show.",
+    "Drums": "The drumming is energetic, with a few eclectic post‑jam moments highlighted."
+  },
+  "song_mentions": {
+    "Big Boy Pete": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Walkin' the Dog": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Shakedown Street": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Playing in the Band": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-15T11:59:17.702518+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-21.sbd.lai.3351.sbefail.shnf"
+}

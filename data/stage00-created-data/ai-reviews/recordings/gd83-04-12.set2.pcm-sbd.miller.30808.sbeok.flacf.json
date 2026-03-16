@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal‑clear soundboard recording of an electric April ’83 second set highlighted by a scorching Slipknot!, powerhouse Wharf Rat and the debut crowd‑chanting Not Fade Away.",
+  "review": "The Miller SBD flac delivers exceptionally clean, balanced audio that lets every nuance of this lively Broome County show shine. The band is on fire – Jerry’s vocals blaze, Phil locks in with thunderous bass drops on Terrapin Station, and the setlist flows from a soulful Wharf Rat to a jaw‑dropping Slipknot! ending with the historic Not Fade Away crowd chant.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are overwhelmingly positive, praising both the superb soundboard quality and the high‑energy performance; weighting (70% show, 30% recording) yields a rating in the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Super‑clean SBD flac with no reported dropouts or muddiness; reviewers call it one of the best‑sounding 1983 downloads."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Help on the Way",
+      "Slipknot!",
+      "Terrapin Station",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic second set that builds from strong vocals on Wharf Rat through a fiery Help→Slipknot! sequence, culminating in a powerful Terrapin and the historic Not Fade Away crowd chant."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as \"on fire\"; thunderous first note of Slipknot! after a flubbed line on Help.",
+    "Phil": "In sync with Jerry, delivering “bombs” on Terrapin Station that wowed the audience.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:55:48.768482+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-12.set2.pcm-sbd.miller.30808.sbeok.flacf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Limited feedback; reviewer gave a zero‑star rating with no details on sound or performance.",
+  "review": "The sole review provides no information about the recording's source, clarity, or musical highlights, only noting that the reviewer sang briefly before leaving. With a 0‑star rating, the sentiment leans negative, but specifics are lacking.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating and no substantive comments; cannot assess quality beyond apparent dissatisfaction."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No technical details provided; low star rating suggests poor perceived quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T11:53:54.014201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-02.nak300.holtz.jaz.92522.flac16"
+}

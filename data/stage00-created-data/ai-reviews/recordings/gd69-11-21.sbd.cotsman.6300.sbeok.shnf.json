@@ -1,0 +1,63 @@
+{
+  "summary": "Mixed‑quality soundboard recording that shines on the second set – Pigpen dominates and Good Lovin', High Time, China Cat Sunflower/INYR and Me & My Uncle stand out.",
+  "review": "The performance is a treat for Deadheads, especially the second half where Pigpen’s organ work steals the show and classic jams like Good Lovin' and High Time soar. Recording quality is uneven – the first six tracks suffer from muffled, noisy audio while the latter half delivers clear, well‑balanced soundboard fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviewers praise the musical performance (especially Pigpen and several standout songs) while noting a split in recording quality; weighted scoring yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First six tracks are described as poor‑quality, noisy (electronic mice), but the remaining seven tracks are high‑fidelity with a clean mix. Overall the tape is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "China Cat Sunflower > I Know You Rider",
+      "High Time",
+      "Me & My Uncle",
+      "Turn On Your Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as the keeper – strong segues (China Cat > INYR) and a lively, slightly ‘splammy’ High Time. First half performance is praised but hampered by recording flaws."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar described as 'fat' and right at the cross‑road between Live Dead psychedelia and Workingman's Dead country feel.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboard weaving noted as snaky, almost Dylanesque, especially on Me & My Uncle.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:18:06.494151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-11-21.sbd.cotsman.6300.sbeok.shnf"
+}

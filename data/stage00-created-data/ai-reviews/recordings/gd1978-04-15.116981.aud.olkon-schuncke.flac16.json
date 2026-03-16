@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent mono audience recording captures a high‑energy spring ’78 show with standout Powerhouse 1/2 Step, LIG and a rare Dew.",
+  "review": "The single‑mic audience tape delivers surprisingly clear, direct sound that many reviewers say beats a poor stereo source. The concert itself is described as one of the best shows, full of power‑filled jams like “Powerhouse 1/2 Step,” “LIG,” and a rare rendition of “Dew.” Overall the performance and recording are both praised highly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive, highlighting both superb sound quality for a one‑mic audience source and an outstanding live performance."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Mono recording with a single mic captures direct sound; reviewers note it is clearer than many bad stereo recordings. Some mention a matrix but overall the tape is praised for its clarity and presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Powerhouse 1/2 Step",
+      "LIG",
+      "Playin'",
+      "Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as a high‑energy, party‑like performance with the crowd feeding the band, resulting in powerful jams and a memorable overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Powerhouse 1/2 Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LIG": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:54:09.380679+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-15.116981.aud.olkon-schuncke.flac16"
+}

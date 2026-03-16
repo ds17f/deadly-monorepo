@@ -1,0 +1,31 @@
+{
+  "summary": "A memorable first Grateful Dead concert experience captured on an unidentified recording source.",
+  "review": "The reviewer recounts their first ever Grateful Dead show, describing the excitement of traveling from New Jersey and scalping a ticket at age 16. While no specifics about the performance or audio quality are given, the positive tone and four‑star rating suggest an overall enjoyable experience despite the unknown recording fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only a single, brief review with no technical or musical detail; positive sentiment and 4‑star rating push the score toward the upper mid‑range, but lack of information lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source; recording type cannot be determined from the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details on set structure or song performance were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T23:29:09.682699+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-06.sbd.clugston.tetzeli.fix-9454.35218.sbeok.flac16"
+}

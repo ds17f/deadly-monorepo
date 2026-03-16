@@ -1,0 +1,45 @@
+{
+  "summary": "Good recording quality (unspecified source) capturing a powerful show highlighted by Althea and a thrilling Box of Rain.",
+  "review": "Both reviewers give the performance a solid four‑star rating, praising the magical atmosphere despite the cold front and especially noting the electrifying renditions of Althea and Box of Rain. No recording issues are mentioned, suggesting the audio is clean enough for enjoyment, while the setlist is described as decent with the Box moment standing out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two consistent four‑star reviews focus on strong musical moments and report no audio problems, indicating a good show and acceptable recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not comment on any sound flaws or mix issues, implying the recording is clear enough for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The setlist is considered solid but not extraordinary; the highlight is the high‑energy Box of Rain that energized the crowd, with Althea also receiving strong praise."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T13:11:52.140364+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-20.132687.naks.datbrad.lynn.flac16"
+}

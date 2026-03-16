@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent Charlie Miller soundboard captures a beautiful, jam‑heavy show with standout Sunrise and Brown Eyed Women performances.",
+  "review": "The recording is a crisp, high‑fidelity soundboard cut from Charlie Miller that fans praise for its clarity. Musically the concert shines in spots – Jerry’s exploratory guitar work, a spacey Dancin > drums > Jam segment, and strong renditions of Sunrise and Brown Eyed Women – though a few reviewers feel it doesn’t quite eclipse the two shows surrounding it.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews are uniformly positive about both performance and recording; weighted scoring (70 % show, 30 % tape) yields a solid 4.3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced soundboard capture from Charlie Miller; no listeners reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sunrise",
+      "Brown Eyed Women",
+      "Dancin > drums > Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through beautiful moments and adventurous jams; some fans note it isn’t quite as strong as the two surrounding shows but still delivers a satisfying experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Locked‑in, exploratory guitar playing highlighted during the jam.",
+    "Phil": "Prominent bass presence – ‘phil all over his 4 string’ noted by reviewers.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Energetic drumming praised in the Dancin > drums > Jam section."
+  },
+  "song_mentions": {
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin > drums > Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:07:23.907673+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-13.135501.sbd.miller.flac24"
+}

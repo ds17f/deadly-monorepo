@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture with a tight, trippy second set highlighted by Bird Song and a standout Scarlet Begonias.",
+  "review": "The recording is praised for its crystal‑clear board mix that lets the band’s energy shine through, especially on the second set. Reviewers rave about the soaring Bird Song, a fiery Scarlet Begonias into Touch of Grey, and a beautiful Morning Dew finale, while one reviewer finds the early digital bird effects a bit dated. Overall the performance is considered tight, inspiring, and well‑balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Three out of four reviewers give high marks (4‑5 stars) praising both the music and the soundboard quality; the lone low rating is an outlier focused on dated effects, so the aggregate rating leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced board mix with prominent drums and clear instrument separation; a few reviewers note the novelty of synthetic bird sounds in Bird Song which can feel distracting to modern ears."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Scarlet Begonias",
+      "Touch of Grey",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Short and sweet overall, with a particularly tight second set that builds from Scarlet Begonias into Touch of Grey and closes on a beautiful Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Leads out the second set from Scarlet Begonias, delivers trippy guitar work on Bird Song, and experiments with early digital effects.",
+    "Phil": "His bass is noted as more prominent in the board mix of the second set.",
+    "Bob": "Bob (referred to as \"bobby\") is audible and supportive throughout, especially in the first half.",
+    "Keys": "",
+    "Drums": "The drummers receive a \"VIP\" shout‑out for their all‑night performance."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:08:24.864149+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-08-30.sbd.serafin.32799.sbeok.flac16"
+}

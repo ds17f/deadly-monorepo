@@ -1,0 +1,74 @@
+{
+  "summary": "Soundboard recording of a fun 1978 Capitol Center show with strong Terrapin, Shakedown Street and Dancing in the Streets, but many audience patches keep it from being pristine.",
+  "review": "The performance is praised for its energetic jams – especially Terrapin Station, Shakedown Street, Franklin’s Tower and the funky Dancing in the Streets – and the band’s chemistry on a Thanksgiving night. The source is a soundboard (sbd) that suffers from frequent audience‑mic patches, making parts of the set (notably Terrapin) sound more like an audience recording than a clean board mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (average 4.1 stars) and highlight strong musical moments, while several note recording issues that prevent a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear soundboard capture but plagued by numerous audience‑mic patches, especially on Terrapin Station and later portions of the set; missing three tunes from the middle of the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Shakedown Street",
+      "Franklin's Tower",
+      "Dancing in the Streets",
+      "Passenger",
+      "Samson and Delilah"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid first set followed by a jam‑heavy second set; the band kept the energy high despite Jerry’s voice cracking, with memorable moments like an opening version of Franklin's and a funky Dancing in the Streets."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice shows some cracking on this night but he still delivers strong guitar work and vocals.",
+    "Phil": "",
+    "Bob": "Weir makes a tongue‑in‑cheek comment about the Redskins loss during the US Blues closer.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ollin Arageed (Egyptian Space)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:49:30.659539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-23.sbd.jools.9846.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer gave a glowing 5‑star rating but provided no details on sound or performance.",
+  "review": "The sole review is enthusiastic, thanking the recorder Mr. Dusborn and awarding five stars, indicating strong overall approval. However, it contains no information about the recording source, audio clarity, setlist, or individual performances, so those aspects cannot be evaluated from this feedback.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 5‑star review suggests high satisfaction, but the lack of any descriptive content limits confidence in rating the show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T19:49:58.478055+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-11.137976.mtx.dusborne.flac16"
+}

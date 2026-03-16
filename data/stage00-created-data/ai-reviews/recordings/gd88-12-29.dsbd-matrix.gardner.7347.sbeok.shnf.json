@@ -1,0 +1,109 @@
+{
+  "summary": "Fair matrix recording with a persistent hum, but it captures a memorable second‑set run of Playing → Crazy Fingers → Sampson → Eyes and strong first‑set interplay.",
+  "review": "The show is widely praised for its tight playing and standout moments – especially the second‑set sequence of Playing, Crazy Fingers, Sampson and Eyes, plus Jerry’s vocal on To Lay Me Down and Brent’s soaring keyboards. The matrix source suffers from an audible hum that colors the recording, particularly during Other One and the Stones→NFA segment, but the performance quality more than compensates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated high (multiple 4‑star praises, many standout songs) while recording quality is average due to hum; weighted average yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable humming throughout the tape, especially evident during the Other One intro and Stones→NFA section; some reviewers find the ultra‑matrix mix less appealing but overall usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing",
+      "Crazy Fingers",
+      "Sampson",
+      "Eyes",
+      "To Lay Me Down",
+      "Let It Grow",
+      "Hell > Sugaree",
+      "Other One"
+    ],
+    "poor_songs": [
+      "Queen Jane",
+      "Stella Blue"
+    ],
+    "setlist_flow": "First set described as perfectly played with excellent Jerry‑Brent interplay and strong song selection; second set peaks with Sampson and Eyes, though it opens a bit pedestrian before soaring."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal on To Lay Me Down is highlighted as superb, and his tasteful guitar work throughout the jams (especially holding back on Eyes) receives praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work is repeatedly lauded – described as 'sick', chilling, and a major driver of interplay with Jerry.",
+    "Drums": "Drumming noted as interesting but not particularly standout during Space."
+  },
+  "song_mentions": {
+    "Playing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sampson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell > Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:49:26.637916+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-12-29.dsbd-matrix.gardner.7347.sbeok.shnf"
+}

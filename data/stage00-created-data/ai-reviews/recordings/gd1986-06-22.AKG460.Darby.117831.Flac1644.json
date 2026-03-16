@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source information disputed; no details on sound or performance",
+  "review": "The sole review points out an error in the listed source, stating it is not a KPFA broadcast but shares the same origin as the rest of the show. No comments are made about audio fidelity, musical execution, or specific songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief review focusing on source metadata; insufficient information to assess show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": ""
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T16:21:12.977229+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-22.AKG460.Darby.117831.Flac1644"
+}

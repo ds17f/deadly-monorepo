@@ -1,0 +1,37 @@
+{
+  "summary": "Recording quality unknown and the show receives a negative reaction, with only a fleeting comment about Slipknot! in Playin'",
+  "review": "The sole review offers no insight into the audio source or mix, merely noting an odd early appearance of Slipknot! around 7:45 into \"Playin'\". With a zero‑star rating and no further detail, the overall impression is negative and the recording cannot be evaluated for technical quality.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating; no concrete information on performance or sound, leading to a low confidence assessment of poor overall quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about clarity, mix, or source; unable to assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:43:33.714560+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-27.142772.set2p.sbd.eaton.miller.clugston.flac1648"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent soundboard capture of a rare, jazzy 1968 show featuring the first Clementine, Spanish Jam and stellar Pigpen keyboards.",
+  "review": "The performance is hailed as one of the most exciting pre‑1970 Dead concerts, with swing‑filled improvisations, rare songs like Clementine, New Potato, Born Cross‑Eyed and a superb Spanish Jam. Reviewers praise the crystal‑clear soundboard (Miller) recording that lets every instrument shine, making this a must‑listen for collectors.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All but one review give 5 stars and extol both the musical performance and the audio quality; the lone low rating concerns missing track info, not the show itself."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note the Miller source as the best, describing the audio as crisp, every instrument audible and overall excellent. No significant flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Clementine",
+      "New Potato",
+      "Born Cross-Eyed",
+      "Spanish Jam",
+      "Caution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Transitions are described as smooth and jazzy, with a swing feel that carries through the set, making even brief performances feel cohesive and exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is praised; delivers a spacious New Potato sound and leads vocal on Clementine.",
+    "Phil": "Credited with writing Clementine and noted for his Coltrane‑inspired approach, contributing to the jazzy vibe.",
+    "Bob": "",
+    "Keys": "Pigpen on keyboards is highlighted as being at his best throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Clementine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Potato": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Born Cross-Eyed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T07:11:19.713982+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-01-20.sbd.ward.47.sbeok.shnf"
+}

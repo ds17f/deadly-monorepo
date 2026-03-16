@@ -1,0 +1,69 @@
+{
+  "summary": "Good soundboard recording of a high‑energy show highlighted by an Iko>Wheel jam, stellar Wharf Rat and Sugar Magnolia, though the extended Terrapin feels tentative.",
+  "review": "The set captures a lively performance with standout moments like the fiery Iko>Wheel sequence, a soaring Wharf Rat, and a brilliant Sugar Magnolia. The soundboard source is generally clear and well‑balanced, but several listeners note that the nearly 15‑minute Terrapin Station drags a bit and feels unsure in places.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average star rating of 4.33 across nine reviews, with strong praise for key songs and overall good sound quality, tempered by mixed comments on the Terrapin performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; no major dropouts or distortion reported. Reviewers describe the sound as good, with no specific technical complaints."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko > Wheel",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Playin'"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "Overall high‑energy and well‑played, but the extended Terrapin Station feels tentative and a bit awkward in its vocal transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Some listeners felt Jerry's vocals were uncertain during the lengthy Terrapin Station, giving it an uneasy feel.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Iko > Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "SM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:36:01.896506+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-07.sbd-set2.miller.79020.sbeok.flac16"
+}

@@ -1,0 +1,122 @@
+{
+  "summary": "A fiery 8/3/82 show with smoking Shakedown Street, Mississippi Half‑Step and Let It Grow, captured on a decent but slightly fuzzy cassette‑derived soundboard.",
+  "review": "The performance is consistently praised – Jerry’s 40th‑birthday vocal fire, tight segues from Mississippi Half‑Step into Franklin’s Tower and a blistering second set highlighted by Shakedown Street, Let It Grow and The Other One.  The recording is respectable for an early‑80s cassette‑derived soundboard source: clear enough to enjoy the band’s dynamics but marred by occasional fuzz, speed quirks and stepped‑on intros.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show itself 4½–5 stars, citing standout jams and tight playing, while recording quality averages around 3½–4 stars (fuzzy, some speed issues). Weighted combination yields ~4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Cassette‑derived copy; generally clear but a bit fuzzy and occasionally sped up. Some intros sound ‘stepped on’, the stream can be odd, and there’s an audible cut for Cassidy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Mississippi Half Step",
+      "Franklin's Tower",
+      "Let It Grow",
+      "The Other One",
+      "Casey Jones",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [
+      "Cassidy"
+    ],
+    "setlist_flow": "Solid playing and well‑chosen segues throughout; the second set especially tight with a seamless flow from Shakedown Street through Let It Grow, Drums/Space and The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being ‘on fire’ at 40, strong vocals and crisp guitar tone during solos.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums highlighted in the Let It Grow > Drums sequence; tight and driving."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi Half Step": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T22:56:11.667882+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-08-03.sbd.unk.19228.sbeok.shnf"
+}

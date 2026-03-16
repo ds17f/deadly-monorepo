@@ -1,0 +1,97 @@
+{
+  "summary": "Excellent soundboard capture with standout first‑set gems like The Loser, Bird Song and Music Never Stopped, plus a solid second set highlighted by Terrapin and Days Between.",
+  "review": "The recording is consistently praised as crystal‑clear and “amazing,” earning five‑star marks for its sound quality. Musically the show shines in the first set – The Loser, Bird Song and Music Never Stopped receive glowing comments – while the second set delivers strong moments such as Terrapin, Days Between and a heartfelt Not Fade Away, despite a few weaker spots like Tom Thumb and Wave to the Wind.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Six detailed reviews overwhelmingly rate the sound as excellent (5‑star) and give the show mostly positive marks (average ~4‑star). Minor criticisms of a few songs keep the rating just below the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the audio “amazing,” “crisp,” and “excellent”; no complaints about drop‑outs or muddiness. The .sbd suffix confirms a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Loser",
+      "Bird Song",
+      "Music Never Stopped",
+      "Terrapin",
+      "Days Between"
+    ],
+    "poor_songs": [
+      "Tom Thumb",
+      "It's All Over Now",
+      "Wave to the Wind"
+    ],
+    "setlist_flow": "First set is highlighted as the strongest portion of the concert, packed with high‑energy jams and vocal highlights. The second set maintains a solid groove, delivering memorable moments (Terrapin, Days Between) but lacks the peak intensity of the prior night’s marathon set."
+  },
+  "band_member_comments": {
+    "Jerry": "Raw, stripped‑down solo on The Loser; extended, creative playing on Bird Song and Music Never Stopped; chops noted as “up to speed” on Jack Straw; heartfelt vocal delivery on Days Between.",
+    "Phil": "Vocals described as a major highlight (The Loser, Wave to the Wind) and called \"very welcome\" and \"incredible,\" though Wave to the Wind received mixed opinions about its strength.",
+    "Bob": "Leads into Saint and Terrapin with solid rhythm work; post‑drum “Need a Miracle” segment energized the crowd.",
+    "Keys": "Vince’s synth tones were sometimes deemed too heavy, but his vocal contributions during choruses earned praise.",
+    "Drums": "Bill’s drumming characterized as psychedelic, \"rainforest\" space especially during Terrapin and the extended jams; post‑drum sections highlighted for crowd interaction."
+  },
+  "song_mentions": {
+    "The Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tom Thumb": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lucy in the Sky": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:56:55.261172+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-23.sbd.wiley.8707.sbeok.shnf"
+}

@@ -1,0 +1,98 @@
+{
+  "summary": "Clear soundboard tape captures a solid yet uneven 1994 Chicago show – bright guitar work and standout Terrapin, Masterpiece and The Other One shine despite a lackluster LSD.",
+  "review": "The SBD source is crisp and well‑balanced, preserving Garcia’s sparkling tone and the band’s dynamic jams. Musically the concert swings between inspired moments (Terrapin, Masterpiece, The Other One → Wharf Rat) and weaker stretches (LSD, Lazy River Road, Samba), leading to a mixed overall impression of the performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised as clear and enjoyable (≈4 ★). Show quality varies widely, with many reviewers noting both highlights and disappointments (average ≈3.5 ★). Weighted combination yields a solid 3.7‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp tape with little hiss; typical earpiece SBD mix of the era, clear guitar and overall enjoyable balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Masterpiece",
+      "The Other One",
+      "Wharf Rat",
+      "Brown Eyed Women",
+      "Picasso Moon"
+    ],
+    "poor_songs": [
+      "LSD",
+      "Lazy River Road",
+      "Samba"
+    ],
+    "setlist_flow": "First set described as a yawner with several weaker numbers, while the second set lifts the energy with strong jams and better transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is praised as bright and sparkly; his Terrapin intro and overall playing are highlighted, though some note vocal slip‑ups and a “grandpa” voice on later songs.",
+    "Phil": "",
+    "Bob": "Bob’s occasional lyric flubs on Lucy in the Sky are mentioned, but no specific praise or criticism of his playing.",
+    "Keys": "",
+    "Drums": "The drums/space segment (Drums > Space) receives positive remarks for its color and energy."
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "LSD": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Masterpiece": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lucy in the Sky": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:08:48.806306+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-23.sbd.fishman.14839.sbeok.shnf"
+}

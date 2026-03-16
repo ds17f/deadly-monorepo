@@ -1,0 +1,70 @@
+{
+  "summary": "Warm, clear audience recording of a fan‑favorite show featuring a scorching Scarlet > Fire jam and a soaring Uncle John’s Band.",
+  "review": "The performance is widely praised for its telekinetic communication, especially the sublime Scarlet > Fire sequence, the explosive second set, and an unforgettable Uncle John’s Band. The audience source is described as deep, warm and very listenable, with no major flaws noted. Overall the show is considered a standout Dead experience despite a few first‑set hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, highlighting strong musical moments and an excellent audience recording; only one modest 3‑star review tempers the rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, warm and present audience mix that brings out instrument detail; very listenable with no reported dropouts or major balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Uncle John's Band",
+      "Truckin'",
+      "Spanish Jam"
+    ],
+    "poor_songs": [
+      "Feel Like a Stranger",
+      "Alabama Getaway (transition)"
+    ],
+    "setlist_flow": "First set solid but not spectacular; second set shines with the Scarlet > Fire jam, Space > UJB sequence and an electrifying Uncle John’s Band ending, punctuated by a wild Truckin' climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Rips throughout; epic guitar break in Fire that sends hairs standing up.",
+    "Phil": "Great bombs and telekinetic communication; solid playing from the second‑row Phil side.",
+    "Bob": "",
+    "Keys": "Bobby (keyboardist) adds weird whale‑like slide sounds, adding texture to the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:57:13.646650+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-05.wise.clugston.8595.sbeok.shnf"
+}

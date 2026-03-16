@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording with solid audio captures a standout second set highlighted by an excellent Dark Star.",
+  "review": "Reviewers rave about the second set, calling it one of the band’s best and praising the Dark Star for its jazzy, well‑played vibe. The source is a soundboard (sbd) tape, which listeners assume to be clear though no specific audio comments were made. Overall the performance is viewed very positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Strong show praise (especially second‑set Dark Star) and presumed good soundboard source, but only one detailed review limits certainty."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio; assumed clear soundboard capture based on file type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as one of the band’s best, delivering a jazzy, high‑energy performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:02:03.774139+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-01.137439.sbd.miller.flac24"
+}

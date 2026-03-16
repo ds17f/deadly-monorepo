@@ -1,0 +1,76 @@
+{
+  "summary": "Near‑perfect soundboard remaster with crystal‑clear clarity, highlighted by a dreamy Help > Slip > Franklin’s and a monster Crazy Fingers jam.",
+  "review": "The Seamons‑fixed SBD capture sounds immaculate – pitch‑corrected, dynamic and with superb instrument separation – aside from a brief glitch in the latter part of Franklin's Tower. Musically the show shines: Help > Slip > Franklin’s rolls like a blissful sandwich, Crazy Fingers stretches out trippy, and the Let It Grow → Drums → Let It Grow segment is a tasty highlight. Overall the performance is widely praised as one of 1976’s finest despite minor tuning dead‑air gaps noted by a single reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "15 reviews overwhelmingly positive (average 4.7★), with consistent praise for both the remastered soundboard quality and the musical performance; only one modest‑level critique."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Pitch‑corrected and fully remastered by Hunter Seamons; crystal‑clear separation, wide dynamic range, and clean mix. A small “hole” near the end of Franklin's Tower is noted, and a matrix/audience blend exists but the soundboard core dominates."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Crazy Fingers",
+      "Let it Grow > Drums > Let it Grow",
+      "Scarlet Begonias",
+      "Might As Well",
+      "Dancin'"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "The set flows beautifully with extended jams and seamless segues, though one reviewer mentions occasional long tuning/dead‑air pauses that slightly disrupt the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as perfect after pitch correction; his vocal on “Roll Away the Dew” is highlighted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's keyboard work receives positive nods, especially in harmony with Donna and overall mix balance.",
+    "Drums": "The drum segment within the Let‑It‑Grow sandwich is called a \"tasty\" highlight even by those usually not fond of drums."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let it Grow > Drums > Let it Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-23T02:58:04.940381+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-03.sbd.seamons.fix-20004.86745.sbeok.shnf"
+}

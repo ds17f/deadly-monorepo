@@ -1,0 +1,39 @@
+{
+  "summary": "DTS 5.1 surround encoding gives brilliant audio when played on a proper setup, but many users hear only static; the show is solid with a highlighted “St. Stephen.”",
+  "review": "The recording is a DTS‑encoded matrix mix that sounds spectacular in a 5.1 system, though listeners without DTS hardware report silence or static. Musically the concert is deemed good – not legendary – with “St. Stephen” singled out as a strong performance. Overall opinions are split between technical frustration and high‑fidelity appreciation.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is modestly positive (good but not great) while recording quality ranges from poor (static on standard players) to excellent (surround‑sound experience), yielding a mid‑high rating with mixed confidence due to divergent user experiences."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Encoded as DTS 5.1; plays cleanly only on DTS‑capable receivers, otherwise produces static or silence for most players. Reviewers praise the surround mix (SBD front, AUD rear) when properly decoded."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall considered a solid performance – good rather than great – with no specific criticisms of pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:23:31.825975+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-31.dts.mtx.tobin.motb-0134.106419.flac16"
+}

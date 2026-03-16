@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard captures a high‑energy July 5, 1981 show highlighted by a fiery Shakedown Street opener, Lesh’s groove on “Hard to Handle,” and a standout “Brown Eyed Women.”",
+  "review": "The July 5, 1981 performance delivers strong first‑ and second‑sets with an energetic Shakedown Street opening, a powerful Lesh‑driven Hard to Handle jam, and memorable moments like Brown Eyed Women. Reviewers praise the crystal‑clear SBD mix, noting only minor perceived glitches that were later dismissed. Overall the show is remembered as a life‑changing Dead experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4–5) and strong praise for both the musical performance and the soundboard recording lead to a weighted rating of ~4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix; reviewers repeatedly call it a killer/well‑balanced SBD with no noticeable dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Hard to Handle",
+      "Brown Eyed Women"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and powerful; second set remains solid though a few early songs feel like first‑set material. Overall pacing keeps the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Initial uncertainty on Shakedown but quickly becomes present and intentional, delivering strong lead guitar throughout.",
+    "Phil": "Lesh is highlighted for his “all over it” groove on Hard to Handle.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:37:01.913393+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-05.sbd.miller.109839.flac16"
+}

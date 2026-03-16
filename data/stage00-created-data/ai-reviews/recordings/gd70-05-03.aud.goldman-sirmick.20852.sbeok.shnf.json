@@ -1,0 +1,46 @@
+{
+  "summary": "A historically significant Wesleyan show hampered by a very poor audience recording; Jerry’s pedal‑steel moments and a quirky China Cat Sunflower shine through the mud.",
+  "review": "The tape is an amateur audience capture with a falling crowd mic, frequent talk‑overs and low band levels that make it almost unlistenable for most listeners.  Despite the audio woes the concert is remembered for its political atmosphere, Jerry Garcia’s unexpected pedal‑steel work (and a student‑composed piece) and a memorable rendition of China Cat Sunflower.  The performance itself is of moderate interest, but the recording quality severely limits enjoyment.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "high",
+    "rationale": "Consistently low scores and many comments about unusable audio drag the overall rating down; show quality is only modestly positive, yielding a weighted average around 2½."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Crowd microphone drops, time‑check announcements, heavy talk/laughter, very low band level and muffled mix; essentially a home‑brew tape that many deem unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [
+      "Dire Wolf"
+    ],
+    "setlist_flow": "Acoustic set (missing from this collection) → New Riders set → Dead set; the show featured spontaneous announcements and a relaxed, politically charged vibe typical of early‑70s campus concerts."
+  },
+  "band_member_comments": {
+    "Jerry": "Pedal steel highlighted during the NRPS set and he even played a student‑composed piece; generally praised by listeners who could hear him.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Ron \"Pigpen\" McKernan's keyboards received positive remarks as a high point of the evening.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T18:52:37.148732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-05-03.aud.goldman-sirmick.20852.sbeok.shnf"
+}

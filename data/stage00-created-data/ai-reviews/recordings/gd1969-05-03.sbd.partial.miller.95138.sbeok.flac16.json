@@ -1,0 +1,31 @@
+{
+  "summary": "Poor performance and a recording plagued by tape hiss",
+  "review": "The reviewer found the musical execution lacking, stating “The band? Not so much.” The recording is criticized for its excessive tape hiss, making it difficult to enjoy. Overall the show and its capture are deemed unsatisfactory.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one 1‑star review indicating both weak performance and bad audio; insufficient data for higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer highlights prominent tape hiss, implying a noisy, low‑fidelity source that detracts from clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No positive comments on the set; reviewer suggests overall band performance was subpar."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T14:14:01.548330+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-03.sbd.partial.miller.95138.sbeok.flac16"
+}

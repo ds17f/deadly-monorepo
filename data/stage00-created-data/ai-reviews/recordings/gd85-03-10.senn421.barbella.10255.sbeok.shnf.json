@@ -1,0 +1,93 @@
+{
+  "summary": "High‑energy ’85 show with stellar performances of Stranger, Terrapin and a smoking Samson → Terrapin → Truckin’, recorded with a bass‑heavy but otherwise clear sound.",
+  "review": "The concert is praised for its relentless energy, tight set flow and standout renditions of Stranger, Peggy‑O, CC Rider, Bird Song, the Samson‑Terrapin‑Truckin' sequence, Smokestack Lightning jam and a beautiful Stella Blue. Reviewers note Jerry Garcia’s enthusiastic guitar work and vocals, while the recording is described as generally clear but noticeably boomy/bassy, making it a good‑to‑fair listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight an excellent performance with many standout songs; recording quality is solid though some find it bass‑heavy, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix but noticeably boomy/bassy; no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Peggy-O",
+      "CC Rider",
+      "Bird Song",
+      "Samson > Terrapin > Truckin'",
+      "Smokestack Lightning",
+      "Stella Blue",
+      "Goin' Down the Road"
+    ],
+    "poor_songs": [
+      "Smokestack Lightning"
+    ],
+    "setlist_flow": "Strong, high‑energy first set that builds into an even hotter second set; seamless transitions (Samson → Terrapin → Truckin') and a memorable pre‑drums jam leading into Space and Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and vocals are repeatedly praised – enthusiastic leads on Samson, soaring solo on Terrapin, blistering leads on Goin' Down the Road, and soulful singing on Stella Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "CC Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson > Terrapin > Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:05:24.122875+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-10.senn421.barbella.10255.sbeok.shnf"
+}

@@ -1,0 +1,78 @@
+{
+  "summary": "Fair‑quality matrix recording of a Jan 1978 show that shines on Bertha, Dire Wolf and an epic Music Never Stopped jam.",
+  "review": "The performance is consistently praised – Jerry’s explosive yet ethereal playing, a smoking Music Never Stopped, and standout versions of Bertha, Dire Wolf, Playing in the Band and Wharf Rat > Sugar Magnolia.  The soundboard‑audience mix is described as average to below‑par, with noticeable bleed on the second set, but listeners find it still enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical praise across many reviews (70% weight) outweighs the modest recording quality concerns (30% weight), yielding an overall rating above four stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Board sound described as average; second set is audience‑only with noticeable bleed and limited clarity, but overall listenable on regular speakers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Dire Wolf",
+      "Music Never Stopped",
+      "Playing in the Band",
+      "Wharf Rat > Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The Jan‑78 show maintains a strong, smoky momentum with an especially powerful second set built around the extended Music Never Stopped jam; fans note a solid first set and no encore but feel the night stands tall in the early‑1978 run."
+  },
+  "band_member_comments": {
+    "Jerry": "Explosive yet ethereal playing, perfect tone; his voice is noted as missing but the music still smokes.",
+    "Phil": "",
+    "Bob": "Quoted for a humorous ‘declared Nuclear War’ line; no specific performance comment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat > Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:17:42.738775+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-15.sbd-aud.citsman.13252.sbeok.shnf"
+}

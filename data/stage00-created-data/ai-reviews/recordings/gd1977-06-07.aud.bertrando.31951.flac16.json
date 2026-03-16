@@ -1,0 +1,98 @@
+{
+  "summary": "A stellar audience capture of a June 1977 Winterland show, highlighted by an epic seven‑minute “The Music Never Stopped” and a transcendent “Morning Dew,” with crystal‑clear tone and flawless playing.",
+  "review": "The recording is praised as a dynamic, high‑fidelity audience tape that lets every instrument shine—especially Jerry’s newly restored Wolf guitar. Musically the concert is described as a high‑water mark for 1977, with the first‑set closer “The Music Never Stopped” and the soaring “Morning Dew” standing out above an otherwise superb setlist.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All ten reviews award five stars, repeatedly call the show a masterpiece and the recording “dynamic” or “crisp.” Both performance and audio quality are consistently praised, leaving virtually no doubt of an exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the tape as dynamic, crystal‑clear and well balanced—no dropouts or muffiness noted. The audience capture is said to rival soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stopped",
+      "Morning Dew",
+      "Estimated Prophet",
+      "Jack Straw",
+      "Tennessee Jed",
+      "Little Light",
+      "Peggy-O",
+      "Friend of the Devil",
+      "Around and Around",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly from upbeat first‑set numbers into a soaring second set; the seven‑minute “The Music Never Stopped” closes the first set spectacularly, while “Morning Dew” crowns the night as the emotional high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is repeatedly lauded—his Wolf guitar is described as ‘flaming,’ with hurricane‑like overtones; reviewers note this may be the definitive capture of that instrument.",
+    "Phil": "Bass is noted as less prominent but more accurate than many SBD recordings, and its sound is praised for clarity.",
+    "Bob": "Bob’s rhythm work and vocal harmonies are highlighted as part of the “beautiful chords” that flood the Dew segment.",
+    "Keys": "Keith’s keyboard textures receive praise, especially his use of Mutron effects on “Estimated Prophet” and contributions to “Morning Dew.”",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T03:09:18.921954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-06-07.aud.bertrando.31951.flac16"
+}

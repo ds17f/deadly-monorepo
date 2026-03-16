@@ -1,0 +1,45 @@
+{
+  "summary": "Decent soundboard capture of a 1995 Birmingham show that many listeners found listless, with only a few bright moments like Sugaree and Ramble On Rose.",
+  "review": "The Schoeps‑mic soundboard recording is generally clear but suffers from occasional talking in quiet sections and lacks the punch of better Dead tapes. Most reviewers describe the performance as flat and uninspired, though a handful note a spark on Sugaree and some enjoyable space in the second set. Overall it’s a mixed bag – technically serviceable but musically disappointing for most fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "The majority of reviews criticize the performance (low star ratings) while noting the recording is at least passable; the weighted average yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Clear overall but with noticeable talking in quiet parts and occasional muffling; some reviewers call it \"not the greatest record\" yet not outright bad."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is viewed as slightly better, offering some spacey moments, but the overall flow is considered flat and lacking energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry's playing was listless or minimal, with little spark except a brief moment in Sugaree.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:54:38.916460+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-04-04.schoeps.10545.sbeok.shnf"
+}

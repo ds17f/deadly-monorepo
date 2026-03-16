@@ -1,0 +1,82 @@
+{
+  "summary": "Fiery New Year's Eve with soaring Terrapin and tight second‑set jams",
+  "blurb": "The show kicks off with a high‑energy Not Fade Away that rolls into a punchy Touch of Grey. Highlights include a soaring Terrapin Station, fiery Throwing Stones and an inspired Let It Grow, while the drummers drive the band forward throughout.",
+  "review": "On December 31 1985 the Dead delivered a quintessential New Year’s Eve set at Oakland‑Alameda County Coliseum that still feels fresh for fans. The first set bursts out with Not Fade Away and a brisk Touch of Grey before cruising through fan‑favorites like Cassidy, Brown Eyed Women and a luminous Let It Grow. The second set shines brightest: In The Midnight Hour opens a seamless flow into Sugaree, then a monster sequence of Playing In The Band > Terrapin Station > Drums > Space > Truckin' > Black Peter > Throwing Stones, ending with another Not Fade Away that carries the party into an encore of Turn On Your Lovelight and Brokedown Palace. Across the board the band is tight—Jerry’s lead guitar sizzles, Phil’s bass sings on Let It Grow, Brent’s keys lift Terrapin, and Mickey and Bill crank out high‑octane grooves. While a few reviewers note that Touch of Grey runs a touch fast and the Terrapin intro can feel flat, the overall performance is energetic, melodic, and packed with memorable moments that make this New Year's show worth revisiting.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 50,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Four recordings are clearly positive (two soundboard mixes praised as 'stunning' and 'fiery', plus two audience tapes noted as 'positive'), while the remaining analyses are mixed but not negative. Consistent praise for Terrapin Station, Throwing Stones, Let It Grow and overall band energy yields a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.0 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-12-31.sbd.prefm.ashley-bertha.20006.sbeok.shnf",
+    "reason": "Good soundboard source with crisp instrument separation and minimal glitches; captures the soaring Terrapin, fiery Throwing Stones and magical Midnight Hour despite a few mix quirks."
+  },
+  "key_highlights": [
+    "Soaring Terrapin Station with Brent’s supportive keys and Jerry’s lead work",
+    "Fiery Throwing Stones backed by tight drumming and strong vocal delivery",
+    "High‑energy Not Fade Away opener that propels the set into a punchy Touch of Grey",
+    "Let It Grow showcases sweet Phil bass runs and cohesive band interplay"
+  ],
+  "song_highlights": [
+    "Not Fade Away",
+    "Touch of Grey",
+    "Cassidy",
+    "Brown Eyed Women",
+    "Let It Grow",
+    "In The Midnight Hour",
+    "Terrapin Station",
+    "Throwing Stones",
+    "Black Peter",
+    "Dupree's Diamond Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Guitar is on fire throughout, especially on Let It Grow and Terrapin; vocals occasionally get buried in the mix but his lead work remains a highlight.",
+    "Phil": "Delivers sweet, melodic bass lines—most notable on Let It Grow and during the Modulus‑enhanced sections of the second set.",
+    "Bob": "Strong lyrical delivery on Throwing Stones and fiery playing on Cassidy; occasional chatty moments noted in the radio broadcast but overall solid rhythm work.",
+    "Brent": "Provides supportive, soaring keyboard textures on Terrapin Station and adds tasteful fills throughout the show.",
+    "Mickey": "High‑energy drumming that drives the band forward; at times a bit fast early on but locks into great grooves during Throwing Stones and Midnight Hour.",
+    "Billy": "Pairs with Mickey for powerful, propulsive rhythms; contributes stellar energy especially in the second‑set jams."
+  },
+  "processed_recordings": 10,
+  "processed_date": "2025-09-15T12:27:42.846018+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Not Fade Away",
+      "Touch of Grey"
+    ],
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums*",
+      "Space",
+      "Truckin'",
+      "Black Peter",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Cassidy",
+      "Brown Eyed Women"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "In The Midnight Hour",
+      "Sugaree"
+    ],
+    [
+      "Dupree's Diamond Blues"
+    ]
+  ]
+}

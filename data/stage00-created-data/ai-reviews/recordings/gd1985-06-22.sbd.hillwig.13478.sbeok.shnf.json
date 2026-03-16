@@ -1,0 +1,122 @@
+{
+  "summary": "Good soundboard capture (Jerry a bit low in the mix) featuring an outstanding Lost Sailor > Saint of Circumstance sequence and strong second‑set jams.",
+  "review": "The recording is a solid soundboard source with clear overall balance, though several reviewers note that Jerry’s guitar sits too low in the mix. Musically the show shines on the second set – especially the soaring Lost Sailor > Saint of Circumstance transition – while the first set is uneven with a few lackluster moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and only note modest mix issues; recording quality is good, show quality is strong, yielding an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard tape, but Jerry’s guitar is noticeably low in the mix; Phil’s bass sounds stronger on audience recordings, suggesting a matrix could improve balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor > Saint of Circumstance",
+      "Bucket",
+      "Sugaree",
+      "Stella Blue",
+      "Odd Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "Walkin Blues",
+      "Keep On Growing",
+      "Saturday Night"
+    ],
+    "setlist_flow": "First set is uneven with a few off‑kilter numbers, but the second set builds beautifully, highlighted by a flawless Lost Sailor > Saint of Circumstance transition and high‑energy jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as beautiful and mellow; guitar sits low in the mix, limiting presence.",
+    "Phil": "",
+    "Bob": "Strong vocal delivery on Lost Sailor and Saint of Circumstance, praised for passion.",
+    "Keys": "Brent’s keyboards dominate, outshining Bob and often taking lead vocally.",
+    "Drums": "Described as a \"drizzle of honey\" with psychedelic, tribal rhythms; overall interesting performance."
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Keep On Growing": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Odd Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:20:02.188582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-22.sbd.hillwig.13478.sbeok.shnf"
+}

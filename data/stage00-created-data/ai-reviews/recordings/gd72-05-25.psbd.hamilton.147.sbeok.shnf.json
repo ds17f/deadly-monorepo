@@ -1,0 +1,57 @@
+{
+  "summary": "High‑quality soundboard capture of a classic ’72 show highlighted by an epic Dark Star, seamless Uncle John’s Band → Wharf Rat transition and a soaring Sugar Magnolia.",
+  "review": "The recording is praised as a well‑balanced soundboard (SBD) with all the mics in the right places, delivering clear, vivid audio despite minor tape degradation. Musically the set is hailed as one of the best one‑disc performances of Europe ’72, featuring a transcendent Dark Star, inventive UJB‑Wharf Rat segues and a jubilant Sugar Magnolia that showcase Jerry’s fiery soloing and tight interplay among the band.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All substantive reviews (15+) are 5‑star, extolling both the performance and recording; only minor comments about slight tape wear keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note a slightly degraded tape but overall very good clarity; mics are well placed, mix is balanced, and hiss is minimal. The SBD captures the full band dynamics with crisp instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Uncle John's Band",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows beautifully, with a legendary UJB → Wharf Rat → Dark Star segue and a seamless transition into Sugar Magnolia; the long, spacey jams are described as jazzy, dissonant and “mind‑left‑body” in nature."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for a peak‑of‑his‑game solo on Dark Star, described as ‘on fire’ and second‑to‑none.",
+    "Phil": "Noted for soulful, tight bass work especially during the jazzy sections of Dark Star.",
+    "Bob": "",
+    "Keys": "Keith’s piano shines in the interplay with Bill; highlighted as a key element of the jam.",
+    "Drums": "Bill (Kreutzmann) keeps a quick, resonant beat that drives the high‑octane energy throughout."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-20T14:35:08.709841+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-05-25.psbd.hamilton.147.sbeok.shnf"
+}

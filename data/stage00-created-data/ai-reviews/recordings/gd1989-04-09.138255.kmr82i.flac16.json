@@ -1,0 +1,57 @@
+{
+  "summary": "Good early‑digital audience recording with clear sound, showcasing solid performances of Roses, Desolation Row, Estimated Prophet and a jammed Uncle John’s Band.",
+  "review": "The DAT source captured with a KMR‑82i shotgun mic is praised as the best available for this show – it’s fairly clean with only mild “honkiness” and minimal crowd bleed. Musically the concert is described as well played but not scorching, with highlights including Roses, Desolation Row, Estimated Prophet and an extended jam at the end of Uncle John’s Band.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single detailed review rates the recording as good and the performance as solid but not exceptional, leading to an overall four‑star rating with limited confidence due to only one source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Early digital DAT captured via KMR‑82i shotgun mic; some honky capsule coloration but low crowd noise, better than the existing soundboard version though EQ/remastering could improve it."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Roses",
+      "Desolation Row",
+      "Estimated Prophet",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is routine with a few highlights (Roses, Desolation Row); second set delivers stronger moments like Estimated Prophet and an extended jam after Uncle John’s Band."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:21:15.735586+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-09.138255.kmr82i.flac16"
+}

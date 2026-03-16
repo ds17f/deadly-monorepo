@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard recording of a scorching 1991 show highlighted by a transcendent Bird Song with Carlos Santana and a tight Deal > Drums sequence.",
+  "review": "The performance captures the Dead at a creative peak in early ’91, with Jerry’s guitar soaring, Bill Kreutzmann and Mickey Hart on fire, and a legendary fifteen‑minute Bird Song featuring Carlos Santana that many reviewers call the best ever. The soundboard source is crisp and dynamic, delivering a hot first set and an even hotter second set where Deal > Drums, Wharf Rat, and a house‑stompin’ Truckin' keep the energy blazing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8 out of 9) rate the show 4‑5 stars, praising both musical performance and recording quality; only one outlier gives a zero star with no substantive comment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, outstanding, and well‑crafted; no complaints about dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Deal > Drums",
+      "Wharf Rat",
+      "Truckin'",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [
+      "Saint",
+      "Foolish Heart"
+    ],
+    "setlist_flow": "Strong first set followed by a hot second set; the slot‑machine space and Deal > Drums transition are highlighted as especially fitting for the Las Vegas setting, creating an engaging, well‑paced show."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for letting Carlos take charge on Bird Song, back to his classic style, though vocals were noted as a bit weaker in one review.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mixed feelings about post‑Brent era; Vince's synth tones on Saint described as over‑saturated, but overall keyboards support the energy.",
+    "Drums": "Bill and Mickey are described as 'on fire' throughout; Deal > Drums highlighted as a rare and fitting moment."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Deal > Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:08:04.645465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-28.sbd.miller.92278.sbeok.flac16"
+}

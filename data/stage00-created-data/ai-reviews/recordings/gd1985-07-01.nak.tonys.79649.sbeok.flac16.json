@@ -1,0 +1,93 @@
+{
+  "summary": "Clear audience recording of an uneven but entertaining show, with a standout Stagger Lee and a ripping second set.",
+  "review": "The performance swings from a shaky first half—marked by weak Garcia on Dupree's and a ho‑hum Jack‑a‑Roe—to high points like an unforgettable Stagger Lee, a slow‑burning Walkin', and a rip‑roaring Good Lovin' that carries into one of the greatest encores ever. The audience (AUD) tape is praised as clear and deep, making it one of the better fan recordings despite its occasional rough edges.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviewers highlight strong musical moments and a good‑quality audience recording, but also note several weak songs and an uneven first set, leading to a solid but not exceptional overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, deep sound; Suraci’s tape work is praised for fidelity despite being an audience (AUD) source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee",
+      "Walkin'",
+      "Scarlet > Fire",
+      "Good Lovin'",
+      "Satisfaction",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Dupree's",
+      "Jack-a-Roe",
+      "Playin'"
+    ],
+    "setlist_flow": "First set starts shaky with a few weak spots, but the momentum builds after Space into a strong second set that delivers several classic peaks and an iconic encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is cited as the weakest link early (Dupree's) yet praised for inventive phrasing on Stagger Lee and overall energy later in the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Uncle John’s > Drums transition is noted positively, indicating solid drumming that helped lift the set."
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:20:37.222572+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-01.nak.tonys.79649.sbeok.flac16"
+}

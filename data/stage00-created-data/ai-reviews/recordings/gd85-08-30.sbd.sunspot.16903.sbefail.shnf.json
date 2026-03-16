@@ -1,0 +1,86 @@
+{
+  "summary": "Crisp soundboard captures a powerhouse first set and an inspired second set with standout Deal, Bird Song and Morning Dew, even though one reviewer noted Jerry’s shaky moments.",
+  "review": "The recording is a clean SBD that many describe as crispy and very listenable, though not audiophile‑grade. The show delivers a rocking first set highlighted by Deal, Bird Song, Scarlet > Touch and an unforgettable Morning Dew, while the second set shines with Wheel > Other One, Sugar Magnolia and a soaring encore. Most fans love the performance, though one reviewer felt Jerry was barely holding together in the early part of the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews praise both the musical performance and the soundboard quality, with only a single low‑star comment focused on Jerry's playing; overall rating reflects strong show plus good but not perfect recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as crispy and very listenable; some mention lack of deep low‑end unless system boosts ~125 Hz, and one note it is not A+ but still clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Bird Song",
+      "Scarlet > Touch Me",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "Jack Straw",
+      "Wheel",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set rocks with tight, loose jams; second set is inspired but slightly shortened by heat/humidity, still delivering strong transitions and a powerful encore."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer says he was nearly keeling over in the early second set, while another insists he played fine throughout.",
+    "Phil": "His bass is described as trebly but with low end present if the system can boost around 125 Hz.",
+    "Bob": "Guitar has a slight out‑of‑tune twang throughout, noted but not detrimental.",
+    "Keys": "",
+    "Drums": "The drum solo leading into Wheel > Other One is praised as totally inspired."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Touch Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:03:55.273673+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-08-30.sbd.sunspot.16903.sbefail.shnf"
+}

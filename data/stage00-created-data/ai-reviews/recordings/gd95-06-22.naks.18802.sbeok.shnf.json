@@ -1,0 +1,93 @@
+{
+  "summary": "A good‑quality recording captures a memorable 1995 Albany show with standout Masterpiece, So Many Roads and the Help > Slip > Franklin’s sequence despite Jerry’s occasional vocal and guitar slips.",
+  "review": "The tape is generally clear and listenable, letting the band’s late‑'90 energy shine through. Highlights include a ripping Masterpiece, an inspired So Many Roads, and a soaring Help‑on‑the‑Way → Slipknot! → Franklin’s Tower, while Jerry Garcia’s health shows up in uneven vocals and guitar work on several numbers. Overall it’s a mixed but enjoyable snapshot of the band’s final tour.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "22 reviews give a clear picture: solid recording quality (≈4 ★) and a show that is both strong and flawed (≈3.5 ★). Weighted combination yields ~3.7 ★."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note the sound is “pretty good” or “great,” with no major dropout complaints; occasional mention of typical live ambience but overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Masterpiece",
+      "So Many Roads",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Black Peter",
+      "Around & Around"
+    ],
+    "poor_songs": [
+      "Franklin's Tower (off‑key/struggling vocals)",
+      "Touch (Jerry’s solo off note)"
+    ],
+    "setlist_flow": "The first set is uneven, but the second set builds momentum with strong segues into Help/Slip/Franklin’s and a powerful closing Black Peter; overall pacing swings between high‑energy peaks and moments of sloppiness."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals and guitar are described as emotional yet uneven—struggling on Franklin's, off‑key on Touch, but delivering heartfelt solos on Masterpiece and So Many Roads.",
+    "Phil": "",
+    "Bob": "Bob Weir shines on Black Peter and provides solid rhythm throughout; his playing is praised especially in the second set.",
+    "Keys": "Vince (keys) steps in when Jerry falters—cutting him off on Samba—but also adds strong texture, notably during the Space/Watchtower jam.",
+    "Drums": "The drum‑>Space segment is called a “snoozefest,” indicating less excitement compared to other parts."
+  },
+  "song_mentions": {
+    "Masterpiece": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "So Many Roads": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been The Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:39:03.985104+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-22.naks.18802.sbeok.shnf"
+}

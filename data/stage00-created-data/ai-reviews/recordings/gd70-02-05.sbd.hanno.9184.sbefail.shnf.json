@@ -1,0 +1,73 @@
+{
+  "summary": "Solid matrix recording with good‑to‑great sound and a stellar February ’70 show highlighted by The Eleven → Caution sequence and an outstanding Mason’s Children.",
+  "review": "The tape is a mixed source – the first few tracks are audience recordings while the bulk comes from a crystal‑clear soundboard, though the bass can be low and the treble a bit harsh.  Musically the performance is widely praised: The Eleven into Caution dazzles, Mason’s Children (especially the second instrumental) is called the best on tape, and the NFA → Cumberland transition shines, making this one of the top shows of the early‑70 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and extol the musical performance; recording quality is good but mixed, yielding a strong overall weighted score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First four tracks are audience‑sourced (acceptable for age), remainder is soundboard with occasional mud and low bass; treble can be bright, but overall clarity is high.  One AUD fragment at the end is lower quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Caution (Do Not Stop On Tracks)",
+      "Mason's Children (second instrumental)",
+      "Not Fade Away",
+      "Cumberland Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early acoustic filler and some missing tracks give way to a powerful second half; seamless transitions especially The Eleven → Caution and NFA → Cumberland make the set flow exceptionally well."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised, notably a new‑Speedway Boogie style jam inside Big Boss Man and his overall tone throughout the show.",
+    "Phil": "Lesh’s bass is noted as low in the mix but his interplay with Weir during Mason’s Children receives high praise; Phil’s insistent riff on Caution is highlighted.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ on The Eleven is singled out as a rare and moving moment for this period.",
+    "Drums": "The drum sound gets strong compliments – bright mix, fantastic interplay, and the “rat‑tat” groove in the closing jam are celebrated."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Eleven": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Caution (Do Not Stop On Tracks)": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mason's Children": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T15:30:47.125213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-05.sbd.hanno.9184.sbefail.shnf"
+}

@@ -1,0 +1,117 @@
+{
+  "summary": "Soundboard recording of a high‑energy 1978 Lexington show – crisp enough to enjoy, with standout performances of Stella Blue, Truckin' and The Music Never Stopped.",
+  "review": "The upgraded sound‑board source is clean and listenable, though a few reviewers note the drums mix isn’t perfect. Musically the concert is celebrated for a soaring second set, tight Garcia work, killer jams (especially the Drums/“Staying Alive” segment) and memorable renditions of Stella Blue, Truckin', The Music Never Stopped and All Over Now.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise the performance; recording is a soundboard with only minor mix quirks, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Upgraded SBD version is clear and well‑balanced. A few comments about the drums being \"less than good\" but no major dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Truckin'",
+      "The Music Never Stopped",
+      "All Over Now",
+      "Brown Eyed Women",
+      "Ramble on Rose"
+    ],
+    "poor_songs": [
+      "Passenger",
+      "Ramble on Rose (rocky start)"
+    ],
+    "setlist_flow": "First set is described as average/country‑tinged, but the second set erupts with high energy, a powerful Drums jam and several “landmark” performances that lift the whole show."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia was \"totally on point\" with perfect tone and tight playing throughout.",
+    "Phil": "Bass is generally solid; one reviewer calls his Truckin' part a bit rough, but overall tight.",
+    "Bob": "",
+    "Keys": "Keith's keyboards drive the groovy jam that some liken to Diana Ross’ \"Upside Down\" and he joins the all‑member percussion section.",
+    "Drums": "Mixed feedback – one reviewer says drums were less than good, while others praise the insane beats and unique jam."
+  },
+  "song_mentions": {
+    "Werewolves of London": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Funiculi": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T11:33:09.230553+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-21.sbd.miller.97501.sbeok.flac16"
+}

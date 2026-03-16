@@ -1,0 +1,31 @@
+{
+  "summary": "Great show praised by the reviewer; recording quality not specified",
+  "review": "The lone review is enthusiastic, calling the performance a great show and giving it five stars. No details are provided about the sound source or audio fidelity, so the recording quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "A single 5‑star review highlights a great performance but gives no information on recording quality; rating reflects strong show impression with uncertainty about audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T02:45:02.919940+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-08.sony.dnc.8597.sbeok.shnf"
+}

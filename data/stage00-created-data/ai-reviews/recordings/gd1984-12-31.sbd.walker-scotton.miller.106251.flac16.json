@@ -1,0 +1,121 @@
+{
+  "summary": "Fair‑sounding FM soundboard captures a strong second set highlighted by a scorching Scarlet → Fire jam, though pitch glitches and occasional off‑night moments temper the experience.",
+  "review": "The show shines in its second set – the Scarlet/Fire transition is described as magnificent and Jerry’s solo work is praised as “on fire.”  The opening Shakedown and a ripping Minglewood Blues also stand out.  However, the FM‑SBD source suffers from pitch errors, a missing portion of Fire and a dry, sometimes thin sound that keeps the recording quality at only a fair level.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rave about the performance (especially the second‑set jam and Jerry’s solo) while one detailed review notes pitch and cut issues that keep the recording from being excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cleanest FM‑SBD available but has noticeable pitch errors (-1% to -1.5% depending on track), a cut segment of Fire, dry mids and reduced high‑end in some versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Minglewood Blues",
+      "Jack Straw",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [
+      "Hellina",
+      "Dough Knees",
+      "Dewiminna",
+      "The Wheel",
+      "Throwing Stones",
+      "Gimme Some Lovin'",
+      "Uncle John's",
+      "Around & Around"
+    ],
+    "setlist_flow": "First set is uneven with a few weak spots, but the second set delivers a solid performance highlighted by the Scarlet/Fire jam and strong drums‑>space segment.  The third set feels ragged, with several songs out of sync."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s solo on Fire is repeatedly called “fire” and his improvisational drive is a high point of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Drums>Space sequence is praised as the best part of the set, showing solid playing."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hellina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dewiminna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "It's All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:33:00.003041+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-12-31.sbd.walker-scotton.miller.106251.flac16"
+}

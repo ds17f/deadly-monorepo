@@ -1,0 +1,31 @@
+{
+  "summary": "A highly praised night captured on a sound‑board source, though details about the performance are scarce.",
+  "review": "The lone five‑star review gushes that anyone who was there knows how special this show was, indicating strong positive sentiment. No specific comments about the mix or individual songs are provided, but the .sbd tag suggests a clean sound‑board recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one brief review, but it is enthusiastic (5 stars). Assuming typical sound‑board quality leads to a high rating despite lack of detail."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No explicit comments; the .sbd designation implies a clear, well‑balanced recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T22:39:53.970341+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-25.149647.sbd.cm.miller.flac16"
+}

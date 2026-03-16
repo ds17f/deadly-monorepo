@@ -1,0 +1,63 @@
+{
+  "summary": "A superb soundboard recording of the historic Nassau ’90 show – Birdsong and a jaw‑dropping Eyes of the World make this a must‑listen.",
+  "review": "The SBD captures an electrifying night where Branford Marsalis’s saxophone lifts the band into jazzy, exploratory territory.  Highlights include a soaring Birdsong, a blistering Eyes of the World, and a second set that many fans describe as “atomic.”  The mix is crystal‑clear with every instrument in its place, making this one of the most celebrated recordings of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive 5‑star commentary praising both performance and soundboard quality; only a single neutral/negative note about a brief Dark Star slip."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly call the tape “crisp,” “clear,” and praise the soundboard mix; no significant drop‑outs or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Eyes of the World",
+      "Dark Star",
+      "Jack Straw",
+      "Throwing Stones > Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set strong with a standout Jack Straw opening; second set described as “atomic,” featuring seamless interplay with Branford and extended jams that eclipse the first half."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring tone, inventive midi‑flute effect, and tight interplay with Branford (only a brief Dark Star slip noted).",
+    "Phil": "Described as “everywhere in the mix,” solid bass foundation throughout.",
+    "Bob": "Backup vocals from Mydland highlighted as exceptional; vocal performance strong overall.",
+    "Keys": "Brent’s jazzy piano/organ work praised for fitting the guest‑jam vibe; keyboards sit perfectly in the mix.",
+    "Drums": "Bill/Mickey noted as tight, perfect rhythm section that drives the jams."
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Eyes of the World": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones > Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:41:21.728167+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-29.sbd.nawrocki.3389.sbeok.shnf"
+}

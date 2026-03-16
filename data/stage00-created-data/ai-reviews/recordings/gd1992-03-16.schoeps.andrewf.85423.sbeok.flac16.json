@@ -1,0 +1,51 @@
+{
+  "summary": "Clear audience‑sourced recording captures highlight moments like the C.C. Rider → Train to Cry transition, though a drum cut in Space mars an otherwise strong show.",
+  "review": "The audience tape delivers crisp, immersive sound that lets listeners hear the spontaneity of the C.C. Rider morph into Train to Cry and the lone Space jam with vivid clarity. Reviewers praise the ambience and overall mix but note an abrupt drum edit during Space and a generally low‑jam feel for the night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is average to good (some highlight moments but overall described as jam‑less), while recording quality is praised as clear and immersive despite a noticeable drum edit; weighted rating yields ~3.7 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced sound with useful audience ambience; however there is an abrupt cut in the drums during the Space segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "C.C. Rider",
+      "Train to Cry",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth transition from C.C. Rider into Train to Cry is highlighted; overall set feels low on jams aside from the Space, and a drum edit slightly disrupts continuity."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Abrupt cut noted during the transition into Space."
+  },
+  "song_mentions": {
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Train to Cry": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:42:30.758383+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-16.schoeps.andrewf.85423.sbeok.flac16"
+}

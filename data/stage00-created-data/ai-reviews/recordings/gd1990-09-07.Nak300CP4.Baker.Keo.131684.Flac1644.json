@@ -1,0 +1,31 @@
+{
+  "summary": "A highly praised show that grooves, though recording details are unspecified",
+  "review": "The reviewer gives the performance a glowing five‑star rating, emphasizing how the music makes you want to groove. No concrete information about the source or technical fidelity is provided, nor are any specific songs or band member moments highlighted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review (5 stars) with no concrete details on recording quality or setlist, so the rating leans high but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments about soundboard, audience mix, clarity, or other technical aspects were given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The review does not discuss set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T11:16:17.735912+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-07.Nak300CP4.Baker.Keo.131684.Flac1644"
+}

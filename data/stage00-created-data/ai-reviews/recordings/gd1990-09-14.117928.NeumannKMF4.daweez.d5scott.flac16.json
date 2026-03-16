@@ -1,0 +1,31 @@
+{
+  "summary": "Highly immersive audience recording with strong crowd ambience, though vocals and drums are thin and keyboard presence is reduced",
+  "review": "Both reviewers praise the concert’s atmosphere, describing it as a vivid, front‑row experience that captures the excitement of the night. The tape offers more of Jerry Garcia and Phil Lesh in the jams while Vince Welnick's keyboards and most of the drum track are barely audible, leading to mixed technical quality despite the high enjoyment factor.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Positive fan sentiment and strong live feel (70% show weight) offset moderate recording issues such as missing drums and reduced vocal/keyboard clarity (30% recording weight). Only two reviews limit confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Vocals come mainly from the crowd, most drum tracks are missing, and keyboard (Vince) presence is reduced; however, overall ambience is vivid and immersive."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers focus on overall concert atmosphere rather than individual songs."
+  },
+  "band_member_comments": {
+    "Jerry": "More prominent in the jams compared to other audience sources.",
+    "Phil": "More audible in the jams, giving a clearer presence of his bass work.",
+    "Bob": "",
+    "Keys": "Less of Vince Welnick's keyboard heard; his parts are subdued.",
+    "Drums": "Almost all drum tracks are missing from this recording."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T12:06:25.047406+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-14.117928.NeumannKMF4.daweez.d5scott.flac16"
+}

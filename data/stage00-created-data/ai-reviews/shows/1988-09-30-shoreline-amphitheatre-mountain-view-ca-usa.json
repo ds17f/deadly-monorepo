@@ -1,0 +1,78 @@
+{
+  "summary": "Mellow Shoreline show with strong Terrapin/Black Peter but uneven flow",
+  "blurb": "The set opens sweetly with Iko Iko and includes a soaring Terrapin Station and a powerful Black Peter. The second half delivers solid Bertha, Playing In The Band and an engaging drums‑space segment, though the energy wanes toward the end. Overall the performance is mixed, offering a few bright moments amid generally flat pacing.",
+  "review": "September 30, 1988 – Shoreline Amphitheatre: The Dead took the stage with a gentle opener, slipping into Iko Iko before wandering through bluesy territory on Walkin' Blues and Stagger Lee. Highlights emerged in the first set when Jerry’s guitar rose on Terrapin Station and his phrasing shone on Black Peter, while Brent's keyboards stayed in the background. The second set kicked off with a spirited Bertha and a seamless transition into Playing In The Band, leading to a well‑received drums‑space segment that added some spark. Yet the show never fully regained momentum; songs like Push Comes To Shove and Sugar Magnolia felt listless, and by the encore the energy had largely dissipated. Fans will find worthwhile moments—especially Terrapin Station, Black Peter, and the early Iko Iko—but should temper expectations for a consistently high‑energy experience.\n\nFor listeners seeking the clearest capture, the soundboard recording (gd88-09-30.set2-sbd.sacks.7585.sbeok.shnf) offers solid clarity and showcases the strongest parts of the performance without the muffled mix that plagues other sources.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 9,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "Two recordings describe the show as mixed and one as positive; overall sentiment leans slightly positive but lacks strong consensus, warranting a modest +0.3 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-09-30.set2-sbd.sacks.7585.sbeok.shnf",
+    "reason": "Clear soundboard source with praised drums/space segment and overall good audio fidelity."
+  },
+  "key_highlights": [
+    "Terrapin Station's soaring climax",
+    "Black Peter shines with blues phrasing",
+    "Drums‑space improvisation in set two is a standout",
+    "Iko Iko opens the show sweetly"
+  ],
+  "song_highlights": [
+    "Iko Iko",
+    "Walkin' Blues",
+    "Terrapin Station",
+    "Black Peter",
+    "Let It Grow",
+    "Big River",
+    "Bertha",
+    "Playing In The Band"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry delivered moments of brilliance on Black Peter and a soaring Terrapin Station, yet his playing was uneven overall, with some thin MIDI textures and occasional lyrical slips.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Mickey helped keep the rhythm solid; the drums‑space segment in set two was noted as an enjoyable highlight.",
+    "Billy": "Bill provided a steady foundation, contributing to the competent but unexciting drum work throughout."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-16T14:43:42.650819+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Iko Iko"
+    ],
+    [
+      "Walkin' Blues"
+    ],
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "All Along The Watchtower",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "Me And My Uncle",
+      "Big River"
+    ],
+    [
+      "Bertha"
+    ]
+  ]
+}

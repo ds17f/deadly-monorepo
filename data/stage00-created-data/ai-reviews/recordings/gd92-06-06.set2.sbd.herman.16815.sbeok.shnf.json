@@ -1,0 +1,80 @@
+{
+  "summary": "Decent soundboard recording of a mixed‑energy 6/6/92 show with solid jams (Estimated Prophet→Same Thing, Baba O’Riley→Truckin’, Drums>Space) but low overall excitement and uneven playing.",
+  "review": "The SBD capture is a monitor mix that lets the band’s cue comments bleed through and sounds a bit thin, yet it remains clear enough with virtually no hiss. Musically the concert swings between highlights – a tasty Estimated Prophet into Same Thing, an inspired Baba O’Riley→Truckin' run, and a strong Drums‑>Space segment – and low‑energy moments where Bob flubs Throwing Stones and the Other One feels awkward. Vince’s keyboards draw mixed opinions, while Jerry delivers some gorgeous Wheel passages despite overall band lethargy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "high",
+    "rationale": "Many reviews (10+) give a clear picture: the performance is average to below‑average with a few standout jams, and the recording is usable but not great; weighted combination yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Monitor mix with cue comments (\"quarter\", \"hold it\") audible; overall volume feels low, but clarity is decent and there is no noticeable hiss."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet → Same Thing",
+      "Baba O'Riley → Truckin'",
+      "Drums > Space",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "Throwing Stones",
+      "Other One (awkward first verse)"
+    ],
+    "setlist_flow": "The set opens solidly but quickly settles into a low‑energy groove; jams like Drums>Space and the Estimated→Same Thing sequence lift the show, yet overall pacing feels flat with several missed opportunities."
+  },
+  "band_member_comments": {
+    "Jerry": "Gorgeous playing on The Wheel praised, but his heroin use is blamed for occasional lethargy and lack of inspiration.",
+    "Phil": "",
+    "Bob": "Flubs lyrics on Throwing Stones and cuts off jams early; overall performance seen as below‑par.",
+    "Keys": "Vince’s keyboard leads described as limited and uninteresting by many reviewers, though some defend his effort under the circumstances.",
+    "Drums": "The Drums>Space segment highlighted as a strong moment with a locomotive theme."
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet → Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baba O'Riley → Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:25:49.076020+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-06.set2.sbd.herman.16815.sbeok.shnf"
+}

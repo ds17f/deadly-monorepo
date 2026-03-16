@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard mix with Bob Weir front‑and‑center, highlighted by a scorching Slipknot! performance",
+  "review": "The UltraMatrix recording from 1990 delivers a crystal‑clear board mix that puts Bob Weir’s guitar right up front, giving him an attacking tone that shines especially during the Slipknot! section. Reviewers rave about the overall show quality and note the same tight Weir sound appears later at RFK, making this a must‑listen for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Single detailed 5‑star review praises both the musical performance (especially Bob Weir) and the high‑quality soundboard recording, indicating an outstanding show and excellent audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Board mix is clean and well balanced; Bob Weir's guitar is especially tight and prominent throughout, with no reported issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review highlights the overall strength of the show, emphasizing a powerful Slipknot! moment and consistent performance across the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Tight, attacking tone; prominently up front throughout the show, especially on Slipknot!",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T07:44:44.480485+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-15.143855.UltraMatrix.sbd.cm.miller.flac1644"
+}

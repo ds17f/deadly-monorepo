@@ -1,0 +1,44 @@
+{
+  "summary": "Crisp, clean soundboard recording captures a solid 1986 show highlighted by a tight Birdsong and strong overall performance.",
+  "review": "The set is praised for its energetic flow and especially the unique, driving version of Birdsong. Reviewers note that the soundboard source sounds crispy and clear, with Jerry’s guitar tone and vocals standing out. While most listeners find the show enjoyable, a few consider it average with no obvious standout moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight an excellent recording and strong performance (especially Birdsong), but some note the show as merely average, resulting in a solid yet not outstanding overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "The mix is described as crispy and clean; Jerry’s vocals are loud and clear, and the whole band sounds well‑balanced with no noticeable hiss or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is generally regarded as strong throughout; the second set opening with Uncle John's Band is noted as unusual but does not detract from the overall solid pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Sweet guitar tone and clear, loud vocals praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T14:33:42.102162+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-03.sbd.jeffm.2789.sbeok.shnf"
+}

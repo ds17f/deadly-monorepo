@@ -1,0 +1,31 @@
+{
+  "summary": "Recording marred by frequent out‑of‑sync problems, with no performance details provided",
+  "review": "The matrix source suffers from persistent synchronization issues that make the listening experience difficult. Reviewers gave no feedback on the musical performance, so the show’s quality cannot be assessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review, rating of 0 stars and a strong complaint about sync problems; no positive comments to offset the negative."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "poor",
+    "technical_notes": "Two sources frequently fall out of sync, causing audible timing errors throughout the set."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T00:12:31.369184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-27.mtx.groves.sbeok.92049.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Highly acclaimed Winterland closing show with a superb Scarlet Begonias→Fire On The Mountain segue and an award‑winning, crystal‑clear recording.",
+  "review": "Fans rave that this concert is a top‑five essential, highlighting the magical Scarlet Begonias into Fire On The Mountain transition and the historic atmosphere of Winterland’s final night. The recording is repeatedly called “award‑winning” and “way better,” suggesting an exceptionally clear source, though reviewers do not specify whether it is soundboard or audience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are 4‑5 stars and enthusiastically praise both the performance (especially the Scarlet Begonias→Fire On The Mountain segue) and the recording quality, indicating an outstanding show with a high‑fidelity capture."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the release as award‑winning and “way better,” implying very clear and well‑balanced audio; no specific issues or source details are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for its historic significance and strong flow, with the highlighted segue underscoring a seamless second‑set energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:24:13.203195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-31.fob.akgd224e.holwein.motb-0130.106102.flac16"
+}

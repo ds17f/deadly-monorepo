@@ -1,0 +1,31 @@
+{
+  "summary": "Great recording with no detailed information on the performance",
+  "review": "The sole review is enthusiastic, calling the tape a great recording and awarding four stars. No comments are offered about the band's playing, setlist flow, or specific songs, so the musical quality cannot be assessed from this input.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "A single positive review (4 stars) praises the recording but gives no insight into the show; rating reflects good audio quality with unknown performance strength."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as 'great' but provides no specifics about soundboard vs. audience, clarity, or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T02:20:59.033288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-28.nak700.mccue.ford.34839.sbeok.flac16"
+}

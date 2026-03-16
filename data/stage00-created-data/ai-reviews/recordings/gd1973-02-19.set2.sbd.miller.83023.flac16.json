@@ -1,0 +1,75 @@
+{
+  "summary": "Crystal‑clear soundboard captures a legendary Feb 19 1973 second set brimming with scorching jams from He’s Gone through China Doll.",
+  "review": "The recording is a pristine SBD capture that lets the band’s marathon second‑set shine – from an extended He’s Gone into Truckin', The Other One, a 20‑minute Eyes of the World and a sublime China Doll, all delivered with tight, melodic playing. Reviewers rave about Phil Lesh’s lead‑bass work, Jerry Garcia’s flawless tone on China Doll, and the overall nonstop energy, while noting the clean mix makes every nuance audible.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise both the musical performance (standout jams, band cohesion) and the pristine soundboard recording; only a single low‑star comment mentions venue acoustics, not the tape."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the mix as clean, crisp and well‑balanced; no dropout or muffling issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Truckin'",
+      "The Other One",
+      "Eyes of the World",
+      "China Doll",
+      "Sugar Magnolia",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A nonstop second‑set marathon that flows seamlessly from He’s Gone into a 70‑minute jam sequence, maintaining high energy and dynamic contrast throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for perfect tone, emotive guitar work and vocal delivery on China Doll; his playing is described as flawless.",
+    "Phil": "Repeatedly highlighted for “kicking ass,” lead‑bass brilliance, and shining brighter than ever in early ’73.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Cymbals noted to shimmer and crash, with Bill’s playing described as slightly different but effective."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "China Doll": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T05:25:41.227196+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-19.set2.sbd.miller.83023.flac16"
+}

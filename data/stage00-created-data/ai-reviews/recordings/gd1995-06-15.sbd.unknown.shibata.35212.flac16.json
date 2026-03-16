@@ -1,0 +1,76 @@
+{
+  "summary": "Decent audience recording of a chaotic Highgate ’95 show – solid first set, uneven second set with Jerry struggling and mixed band performance.",
+  "review": "The tape is an audience capture that sounds surprisingly clear for the circumstances, though it reflects the overcrowded, noisy venue. Musically the concert swings between moments of fun (Peggy‑O, El Paso, Here Comes Sunshine) and a ragged second half hampered by Jerry Garcia’s poor health and over‑busy keyboards, leaving many fans with a mixed impression.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "high",
+    "rationale": "Many reviewers rate the show poorly (average ★2.3) citing weak performance and venue chaos, while the recording itself is judged decent; combined weighting yields an overall ~3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Pretty good audience recording despite challenging conditions (soft June Vermont soil, crowded venue). No major dropouts reported; clarity is respectable for a taping."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "El Paso",
+      "Loose Lucy",
+      "Here Comes Sunshine",
+      "Liberty"
+    ],
+    "poor_songs": [
+      "Ramble on Rose",
+      "Bob's Slide"
+    ],
+    "setlist_flow": "First set is described as solid and familiar; second set feels rushed and uneven, with strong drum work but a noticeable decline in Garcia’s playing and an over‑busy keyboard presence."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note that Jerry was sick, ‘smacked out’, and often struggling, though some say he still carried parts of the show.",
+    "Phil": "",
+    "Bob": "Bob's slide is singled out as a low point by at least one reviewer.",
+    "Keys": "Vince’s keyboards receive mixed feedback – occasional praise for sounding okay, but overall criticism for being over‑busy and detracting from the music.",
+    "Drums": "The drumming is repeatedly praised as powerful and ‘out of control’ in a good way, providing strong space jams."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bob's Slide": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:42:38.092130+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-15.sbd.unknown.shibata.35212.flac16"
+}

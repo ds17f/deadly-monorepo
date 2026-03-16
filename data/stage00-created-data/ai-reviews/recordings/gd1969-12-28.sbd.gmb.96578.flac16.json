@@ -1,0 +1,31 @@
+{
+  "summary": "Great soundboard clarity with a solid but not spectacular performance.",
+  "review": "The recording is praised for its crystal‑clear sound quality, earning a perfect five‑star rating from the reviewer. The show itself is described as good—pretty enjoyable—but falls short of the band's peak performances, resulting in an overall four‑star rating. Listeners can expect a clean mix even if the musical set isn’t among the Dead’s most legendary nights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "One review rates sound quality at 5 stars and the show at 4 stars; weighted average (70% show, 30% recording) yields ~4.0."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer notes great sound quality with no issues mentioned; clear and balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; overall performance described as good but not among the best."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T19:23:18.248107+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-12-28.sbd.gmb.96578.flac16"
+}

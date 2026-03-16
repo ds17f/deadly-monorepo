@@ -1,0 +1,120 @@
+{
+  "summary": "High‑energy Vegas show with an unforgettable Black Peter and a monster second set; soundboard source with occasional audience patches but overall good clarity.",
+  "review": "The April‑27‑1991 Las Vegas concert is remembered for its soaring Black Peter, blistering Might As Well/Cassidy stretch and a second‑set marathon that many fans call \"the monster\" (Scarlet>Fire, Playing‑Uncle John’s jam, Space, Miracle).  The recording is primarily SBD with a few audience patches – clear enough to enjoy the band’s interplay, though some listeners note occasional mix‑balance quirks and a need for EQ on songs like Touch and Loose Lucy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise the performance (especially Black Peter and the second‑set jams) and give 4–5 stars; recording quality is described as solid SBD with minor mix issues, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Primarily SBD with a few AUD crowd patches. Generally clear and listenable, but listeners note occasional EQ needs, over‑powerful keyboard mix, and minor drop‑outs on Touch, Loose Lucy and The Weight."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Might As Well > Cassidy",
+      "Scarlet > Fire",
+      "Sugar Magnolia > Scarlet Begonias",
+      "Playing in the Band > Uncle John's Jam",
+      "Space",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Touch",
+      "Loose Lucy",
+      "The Weight",
+      "Mexicali"
+    ],
+    "setlist_flow": "First set starts a bit rough but builds momentum, ending triumphantly with Might As Well.  Second set launches into a nonstop jam marathon that many fans cite as the highlight of the weekend."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly praised (sweet on Friend of the Devil, monster solo on Black Peter, tight control of midi effects).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboard mix is a frequent point of contention – some love Bruce Hornsby’s piano, others decry overcrowded keyboards and Vince Welnick’s contribution (one reviewer calls it ‘marginal utility’).",
+    "Drums": "Drums section noted as a solid jam leading into Space; no major complaints."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Might As Well": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T19:00:56.971874+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-27.sbd.vernon-fink.12018.sbeok.shnf"
+}

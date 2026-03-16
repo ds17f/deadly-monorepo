@@ -1,0 +1,93 @@
+{
+  "summary": "High‑quality soundboard captures a strong early‑Welnick era show with soaring Jerry, tight set and standout jams on Terrapin and Eyes of the World.",
+  "review": "The recording is a clean SBD mix that delivers excellent frequency balance, though the keyboards sit a bit high in the second set. Musically the band is firing on all cylinders – Jerry’s lead work soars, Vince Welnick slots in unobtrusively and the first‑set classics flow into an experimental second set highlighted by a monster Terrapin jam and a 17‑minute, uniquely vibrant Eyes of the World.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑star ratings (one 5) and praised both performance and soundboard quality; consistent positive language across >8 detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced SBD with great frequency representation. Minor issues: keyboards mixed a bit high in the second set and an occasional PA dropout (not audible on this SBD)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Terrapin",
+      "Sugaree",
+      "Minglewood Blues",
+      "Deal",
+      "All Along the Watchtower",
+      "Loser",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Stella"
+    ],
+    "setlist_flow": "A tight first set of classic standards builds momentum, ending with a strong Deal. The second set ventures into experimental territory – high‑energy jams on Terrapin and Eyes of the World offset by a rougher Stella performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring lead guitar work and stepping up to cover for the new keyboardist; vocals described as youthful and inspiring.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick noted as unobtrusive and fitting in beautifully, though the second‑set keyboard mix is a bit high on this SBD.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:20:34.695656+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-08.sbd.miller.92241.sbeok.flac16"
+}

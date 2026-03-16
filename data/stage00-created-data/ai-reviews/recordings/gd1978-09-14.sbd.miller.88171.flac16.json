@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed recording quality on an otherwise solid show highlighted by a blistering Scarlet > Fire jam.",
+  "review": "Fans rave about the groove and especially the scorching Scarlet > Fire sequence, noting wonderful drums and a solid setlist.  The soundboard tape is uneven – vocal mix issues mute Bob’s voice and Jerry’s presence at times, leaving the overall listening experience only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Strong musical moments (Scarlet > Fire) boost the rating, but vocal‑mix problems and mixed reviewer opinions on sound quality pull it down."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Soundboard capture is usable but suffers from a poor vocal mix – Bob’s vocals are barely audible and Jerry’s guitar often buried.  Overall clarity is okay, drums stand out."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set described as solid with a good groove; however some listeners feel the band was “getting their bearings” early in the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for funk‑filled thump on Scarlet>Fire, but elsewhere his guitar is muted and barely present.",
+    "Phil": "",
+    "Bob": "Vocal mix drowns out Bob’s voice, especially in the first set.",
+    "Keys": "",
+    "Drums": "Drums described as wonderful and a highlight of the performance."
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:01:45.133142+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-14.sbd.miller.88171.flac16"
+}

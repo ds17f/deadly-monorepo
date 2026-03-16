@@ -1,0 +1,56 @@
+{
+  "summary": "Solid UltraMatrix matrix recording captures a strong 1989 show with highlights like Sugaree, He’s Gone and a lovely Brokedown Palace.",
+  "review": "The performance showcases the late‑‘80s Dead at their best – a mix of new Bobby/Brent material and classic Garcia songs, with standout moments on Sugaree, He’s Gone and the closing Brokedown Palace. The UltraMatrix source delivers a clear, well‑balanced sound despite a few lyrical scuffs and experimental MIDI bits that don’t quite land. Overall it’s an underrated but solid night that deadheads will appreciate.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "The single detailed review is overwhelmingly positive about the music and rates the show 4 stars, while noting only minor recording quirks; weighted averaging yields a ~4.3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "UltraMatrix matrix (soundboard + audience) is generally clear and well balanced; a couple of lyrical scuffs and MIDI experiments are noted but do not detract significantly from listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "He’s Gone",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set blends new Bobby/Brent tunes with classic Garcia numbers; second set builds a strong stretch from He’s Gone through the end, delivering an October ’73‑style vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'Wolf-wielding' and praised for his guitar work on older tunes.",
+    "Phil": "Credited with inspiring a standout Sugaree performance.",
+    "Bob": "",
+    "Keys": "MIDI experiments mentioned but noted as not fully paying off; overall keyboard work is solid.",
+    "Drums": "Drummers received praise for creative maneuvers and strong playing throughout."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He’s Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:11:53.970794+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-12.147659.UltraMatrix.sbd.cm.miller.flac16"
+}

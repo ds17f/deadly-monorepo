@@ -1,0 +1,56 @@
+{
+  "summary": "Jam‑heavy set with standout Alligator solo and blues organ",
+  "blurb": "The show delivers a jam‑centric first set featuring Pigpen’s gritty blues organ, Jerry’s fiery Alligator solo, and solid renditions of Good Lovin’ and Turn On Your Lovelight. Transitions stay tight despite tape hiss and a mid‑song cut.",
+  "review": "On November 1 1969 at the Family Dog on the Great Highway, the Dead served up an unapologetically jam‑heavy set that feels like a snapshot of their late‑’60s blues‑rock energy. Pigpen (and possibly Tom Constanten) dominate the organ and harmonica front, driving the blues numbers while Jerry Garcia launches into a scorching solo over the percussion during “Alligator.” The band rides through classic covers – “Good Lovin’” stays tight and uplifting, and even with a noticeable tape cut in the middle of “Turn On Your Lovelight,” the performance remains compelling. Although the soundboard capture bears the era‑typical hiss and some muddiness, it preserves enough clarity to hear the tight transitions and the Ludwig drum thump that underpins the whole set.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "The single soundboard analysis uses clearly positive language—‘jam‑heavy’, ‘highlighted by…’, and praises standout jams—indicating a strong positive consensus despite limited sources.",
+      "final_calculation": "2.5 + 0.1 + 0.7 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-11-01.sbd.cotsman.6298.sbeok.shnf",
+    "reason": "Only soundboard source; despite tape hiss it captures the full jam‑centric set and key performances clearly."
+  },
+  "key_highlights": [
+    "Jam‑centric first set with Pigpen’s gritty blues organ driving the vibe.",
+    "Jerry Garcia delivers an impressive Alligator solo over percussion.",
+    "Strong renditions of Good Lovin' and Turn On Your Lovelight despite a mid‑song cut.",
+    "Solid Ludwig drum foundation from Mickey and Bill keeps energy high."
+  ],
+  "song_highlights": [
+    "Good Lovin'",
+    "Alligator",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers an impressive Alligator jam soloing over percussion, showcasing his fiery improvisational edge.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Pigpen (and possibly Tom Constanten) provide prominent organ/keyboard work that drives the blues‑heavy feel of the show.",
+    "Mickey": "Provides a solid Ludwig drum sound that underpins the set with steady, powerful rhythm.",
+    "Billy": "Offers reliable drumming alongside Mickey, reinforcing the tight rhythmic foundation throughout."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T17:46:18.098959+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Good Lovin'"
+    ],
+    [
+      "Alligator",
+      "Drums",
+      "Jam",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

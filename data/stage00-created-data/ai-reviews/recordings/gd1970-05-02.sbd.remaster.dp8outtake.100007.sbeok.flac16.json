@@ -1,0 +1,81 @@
+{
+  "summary": "A high‑energy 1970 out‑take with a monster Other One and Viola Lee Blues; soundboard source that’s generally good despite some tuning quirks.",
+  "review": "The performance is praised for its soaring Other One, fiery Viola Lee Blues, and an unforgettable run through St Stephen, Cosmic Charley, The Dew, Man’s World, Dancin’ and Cold Rain & Snow. While the soundboard recording benefits from EQ tweaks, listeners note occasional out‑of‑tune moments (especially on Cold Rain & Snow) and a mono electric set, but overall the show is considered a must‑listen classic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight many standout songs; technical complaints are limited to tuning quirks and mono mix, so the show’s musical strength outweighs recording imperfections."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard source but benefits from EQ; some reviewers note a mono electric set, occasional out‑of‑tune sections (Cold Rain & Snow) and advise avoiding SRS WOW distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Viola Lee Blues",
+      "St Stephen",
+      "Cosmic Charley",
+      "The Dew",
+      "Man's World",
+      "Dancin'",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Listeners love the overall flow, though several note missing songs from the original DP 8 set and a mono acoustic portion; despite these gaps the performance feels cohesive and transcendent."
+  },
+  "band_member_comments": {
+    "Jerry": "Out‑of‑tune issues noted (Gibson SG neck problem), but his recovery and overall tone are praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charley": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man's World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-19T18:45:47.274649+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-05-02.sbd.remaster.dp8outtake.100007.sbeok.flac16"
+}

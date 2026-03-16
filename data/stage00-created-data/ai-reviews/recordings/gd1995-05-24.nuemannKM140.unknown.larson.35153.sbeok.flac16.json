@@ -1,0 +1,31 @@
+{
+  "summary": "High‑fidelity front‑of‑house recording with Neumann KM140s and Aerco pre‑amp, but no performance details are available.",
+  "review": "The sole review provides a detailed signal chain—Neumann KM140 microphones into an Aerco pre‑amp feeding a Sony D‑10 Pro recorder—indicating a professional front‑of‑house (soundboard) capture. The reviewer rates the recording five stars, suggesting excellent clarity and mix quality, though no comments are made about the musical performance itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Only one detailed review focusing on recording quality (rated 5 stars). No information on show performance, so a neutral estimate for musical quality is used, resulting in an overall rating around the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑house capture using Neumann KM140 mics, Aerco pre‑amp and Sony D‑10 Pro; reviewers praise its fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T08:42:43.225361+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-24.nuemannKM140.unknown.larson.35153.sbeok.flac16"
+}

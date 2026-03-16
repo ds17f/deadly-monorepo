@@ -1,0 +1,112 @@
+{
+  "summary": "Soundboard capture of a raw ’90s Dead show with solid performances of Uncle John’s Band, Good Lovin’, Attics and Minglewood, though the mix is occasionally muddy.",
+  "review": "The recording is a sound‑board source that delivers a generally clear picture of the band but can be heavy and hard to hear in places. Musically the show shines on tracks like Uncle John’s Band > Playin’ In The Band, Good Lovin’, Attics and the rare Minglewood jam, while songs such as Corrina, Broken Arrow and Throwin’ Stones feel weaker. Overall it’s a respectable snapshot of the late‑90s era with both highlights and noticeable rough edges.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show has several standout jams but also multiple weak songs; recording is decent soundboard quality but noted as muddy at times, leading to an overall solid‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Raw and heavy mix with moments that are hard to hear; generally decent SB clarity but occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood",
+      "Uncle John's Band",
+      "Good Lovin'",
+      "Attics",
+      "Here Comes Sunshine",
+      "Bertha",
+      "So Many Roads",
+      "Days Between",
+      "Liberty"
+    ],
+    "poor_songs": [
+      "Corrina",
+      "Broken Arrow",
+      "Throwin' Stones",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "First set described as well‑played and fairly standard; second set builds into a beast with strong jams (Bertha, Good Lovin'>UJB>PITB) but loses momentum after the post‑drum segment due to weaker songs like Corrina and over‑played Throwin' Stones."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being very present and delivering strong guitar work; missed first chorus on Ramble on Rose but recovered strongly.",
+    "Phil": "",
+    "Bob": "Provided harmony on Ramble on Rose; otherwise not specifically highlighted.",
+    "Keys": "Bobby's voice noted as spent, suggesting weaker keyboard/vocal contribution.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Throwin' Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:35:27.180699+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-06.sbd.unknown.8246.sbeok.shnf"
+}

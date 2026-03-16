@@ -1,0 +1,108 @@
+{
+  "summary": "Soundboard recording with clear audio captures a mixed‑quality show – solid Bay Area vibe, standout Corrina/Playing/UJB jams but marred by out‑of‑tune Bob Weir on several cuts.",
+  "review": "The SBD source provides a clean and well‑balanced sound, letting listeners hear the relaxed crowd and the band’s exploratory second set. Highlights include the post‑Corrina jam, an inspired Playing In The Band reprise, Uncle John’s (UJB) and the expansive Drums/Space, while Bob Weir’s tone slips out of tune on the new songs and some Playing sections. Overall sentiment is mixed: many fans love the jazzy moments, but several criticize the guitar tuning issues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality averages out to about a 3‑star performance (highlights offset by notable flaws), while the recording itself is good; weighted average yields ~3.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard source (SBD>Dat>Cass Master) with clear, balanced mix. No major drop‑outs reported, but tonal issues (out‑of‑tune guitar) affect perceived quality for some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Corrina jam",
+      "Playing In The Band",
+      "Uncle John's (UJB)",
+      "Drums/Space",
+      "All Along the Watchtower",
+      "Maggie's Farm",
+      "Shakedown"
+    ],
+    "poor_songs": [
+      "lwtgh",
+      "Velveeta Cheese It Up Bobby"
+    ],
+    "setlist_flow": "First set solid and pleasant, second set swings between exploratory highs (corrina jam, playing reprise, UJB, extended jazzy Around & Around) and lows caused by out‑of‑tune Bob Weir on two new songs. The relaxed Bay Area crowd adds a warm atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised – described as sounding nice and waiting to let the jams build.",
+    "Phil": "Mentioned positively in one review (“Phil … sound very nice”).",
+    "Bob": "Mixed: early tone called epic, but several reviewers note his guitar was horribly out of tune on Playing/Uncle John's and on two new songs.",
+    "Keys": "Welnick’s piano on Watchtower highlighted as heartrending; otherwise no specific comments on keyboards.",
+    "Drums": "Drums/Space praised for its cool silence and uplifting jam sections."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing In The Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Uncle John's": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Drums/Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way to Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat > Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "lwtgh": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Velveeta Cheese It Up Bobby": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:29:01.587511+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-01-25.sbd.ladner.9368.sbeok.shnf"
+}

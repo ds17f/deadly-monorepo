@@ -1,0 +1,45 @@
+{
+  "summary": "Front‑board recording captures a three‑hour San Diego marathon with a standout Tennessee Jed and a solid One More Saturday Night.",
+  "review": "The show is praised for its length, unique instrumental twists and strong performances—especially Jerry’s soaring lead on Tennessee Jed and an energetic encore of One More Saturday Night. The source is a front‑of‑board soundboard tape recorded on high‑grade equipment; despite a few cuts and tape‑grade changes it remains clear and highly listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviewers gave 4‑5 stars, highlighting excellent musical moments and a generally good soundboard source with only minor technical cuts."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Recorded from ~10‑20 ft in front of the board on Sony D5 with ANRS noise reduction; a few cuts in the first and second sets and tape‑grade changes for the encore, but overall clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A marathon three‑hour set (12‑song first set, long second set) with unique instrumental progressions; the band delivered a powerful performance despite minor song cuts."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is highlighted as especially powerful on Tennessee Jed, with a memorable final C chord and an unusual ascending/descending verse approach.",
+    "Phil": "",
+    "Bob": "Weir’s lyrical substitution of “Clive” for “life” in Jack Straw is noted, plus his occasional polka‑style rhythm comment in Mexicali Blues; encore One More Saturday Night is described as solid but not his best.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:06:22.801024+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-30.sbd.tonyg.8826.shnf"
+}

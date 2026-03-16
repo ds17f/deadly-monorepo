@@ -1,0 +1,66 @@
+{
+  "summary": "Uneven Alpine show; flashes of Let It Grow and Foolish Heart amid sloppy sets",
+  "blurb": "First set offers solid grooves with Let It Grow and Tennessee Jed, while the second set stumbles on a disastrous Stella Blue and uneven transitions. Highlights include Foolish Heart, Scarlet Begonias, and Turn On Your Lovelight, but overall execution feels under‑rehearsed.",
+  "review": "Alpine Valley on June 22, 1988 delivered an inconsistent night from the Dead. The opening half of the concert had moments of joy – Jerry’s searing solo on Let It Grow lifted the set and Brent’s keyboards added a bright undercurrent, while the band nailed classics like Tennessee Jed and Walkin' Blues. The second set started strong with Foolish Heart and a smooth segue into Scarlet Begonias, but the momentum unraveled after I Will Take You Home; Stella Blue flopped completely, leaving Jerry fumbling lyrics and both drummers looking out of sync – Mickey even pauses his playing while grinning at Jerry. Brent’s vocal delivery on I Will Take You Home felt rushed, Phil’s bass surged loud in places, and Bob’s vocals were praised on Lovelight but slipped out of tune during Stella. In short, the show shines in isolated spots but overall feels under‑rehearsed and uneven.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": -0.4,
+      "sentiment_rationale": "Multiple recordings describe the show as sloppy, with a disastrous Stella Blue and uneven second‑set flow; negative language appears in three of four analyses, outweighing the few positive mentions.",
+      "final_calculation": "2.5 + 0.2 - 0.4 = 2.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1988-06-22.s2.sbd.miller.119780.flac16",
+    "reason": "Only soundboard source, providing the most complete capture despite its muddy character."
+  },
+  "key_highlights": [
+    "Foolish Heart shines early in set 2",
+    "Let It Grow features a fierce Jerry solo",
+    "Scarlet Begonias > I Will Take You Home segue works briefly before the set drifts",
+    "Stella Blue flops, exposing sloppy playing and lyrical mishaps"
+  ],
+  "song_highlights": [
+    "Let It Grow",
+    "Foolish Heart",
+    "Scarlet Begonias",
+    "Turn On Your Lovelight",
+    "Jed",
+    "I Will Take You Home"
+  ],
+  "band_performance": {
+    "Jerry": "Struggles with lyrics and timing on Stella Blue, sounding confused at the start, but later delivers a fierce solo on Let It Grow and retains his usual flair elsewhere.",
+    "Phil": "Solid bass foundation overall; noted as a bit loud in one audience tape but otherwise unremarkable.",
+    "Bob": "Vocals praised on Turn On Your Lovelight; out of tune during Stella Blue, with occasional noisy feedback.",
+    "Brent": "Vocal delivery rushed on I Will Take You Home; keyboards lift the mood, especially on Let It Grow and Jed.",
+    "Mickey": "Stops drumming during the problematic Stella Blue segment and grins at Jerry; drum transition described as cold and ragged.",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T09:56:30.689641+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let It Grow"
+    ],
+    [
+      "Foolish Heart",
+      "Looks Like Rain"
+    ],
+    [
+      "Scarlet Begonias",
+      "I Will Take You Home",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

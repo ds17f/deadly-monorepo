@@ -1,0 +1,44 @@
+{
+  "summary": "Good show with memorable Phil bomb‑filled Satisfaction, recording quality unremarked but presumed decent",
+  "review": "The concert was enjoyed for its intimate venue and the explosive Phil Lesh “bombs” during a fiery rendition of Satisfaction, which reviewers say alone makes the download worthwhile. No specific technical issues are noted, suggesting an acceptable source, though details on soundboard vs. audience are unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Both reviewers enjoyed the performance (especially Satisfaction) but gave modest star ratings (4 and 3). Recording quality is not discussed, so it defaults to average; overall rating reflects a solid show with no major flaws."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity, mix, or source; reviewers did not report any audio problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Intimate setting praised; not described as a barn‑burner but enjoyable with strong moments, especially the Phil bomb‑laden Satisfaction."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Highlighted for his reckless \"bombs\" during Satisfaction, noted repeatedly by reviewers.",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) is mentioned singing \"Baby What You Want Me To Do\", eliciting a humorous reaction.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby What You Want Me To Do": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:12:00.142207+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-08.beyer.connor.4773.sbeok.shnf"
+}

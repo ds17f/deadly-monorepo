@@ -1,0 +1,120 @@
+{
+  "summary": "Mixed‑source recording that starts clear but degrades, yet the show shines with tight acoustic openers and standout jams like Jack‑a‑Roe, Deal and The Other One.",
+  "review": "The performance is praised for its sparkling acoustic set and powerful second‑ and third‑set moments, especially Jerry Garcia’s inspired solos and Brent Mydland’s keyboard work. The audio, however, is a patchwork of soundboard fragments and audience tapes with balance issues that make later portions sound muddy, requiring listeners to stitch together multiple sources.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated 4‑plus stars by reviewers, while recording quality is noted as poor/fair; the weighted average yields a solid 4‑star recommendation."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Early acoustic tracks sound great; after Ripple the mix becomes muddy, likely a low‑grade soundboard or audience feed. Reviewers note balance problems and recommend mixing multiple sources (Miller SBD, vman AUD, bershaw composite)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-a-Roe",
+      "Deep Elem Blues",
+      "Peggy-O",
+      "Big Railroad Blues",
+      "Supplication",
+      "Deal",
+      "Saint of Circumstance",
+      "The Other One",
+      "Johnny B. Goode",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Sugaree"
+    ],
+    "setlist_flow": "Tight, sparkling acoustic opener followed by a strong second set that lifts off after an average Sugaree, and a third set with solid jams and a powerful The Other One despite some balance quirks."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as 'ON' throughout, delivering an incredible first solo, jumping keys, and spinning webs of guitar.",
+    "Phil": "",
+    "Bob": "Bob Weir's slide work gets a nod for effort despite a few flubs; overall solid rhythm/vocal contribution.",
+    "Keys": "Brent Mydland sounds like a younger Vince Welnick on Samson; keyboards need balance adjustments in the audience mix.",
+    "Drums": "The Drums>Space segment is noted as less engaging, but The Other One features powerful drumming that energizes the set."
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "See See Rider Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightnin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:43:03.681021+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-13.set1-set3-sbd.miller.25559.sbeok.shnf"
+}

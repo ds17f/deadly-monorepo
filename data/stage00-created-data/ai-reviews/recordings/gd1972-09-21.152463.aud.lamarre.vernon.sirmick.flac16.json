@@ -1,0 +1,56 @@
+{
+  "summary": "Vibrant audience recording of the 9/21/72 show captures an explosive Playing in the Band and a magical Dark Star → Morning Dew sandwich.",
+  "review": "The tape delivers raw, atmospheric sound that lets the chemistry of the September‑21‑1972 performance shine through. Reviewers rave about the soaring Playing in the Band, the dazzling Dark Star → Morning Dew sequence and Garcia’s rich guitar tone, while noting the recording is a high‑quality audience capture that feels more vivid than many soundboard tapes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one detailed review but it is overwhelmingly positive about both performance and recording; weighting favors the excellent show, giving a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Vibrant, clear for an audience tape; captures full ambience with no major drop‑outs or muddiness, though not the absolute best AUD ever heard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "Dark Star",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first‑set momentum building into an explosive Playing In The Band, followed by a seamless Dark Star → Morning Dew sandwich that showcases the band's tight interplay and cosmic vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is highlighted as rich, tonal and central to the performance’s structure.",
+    "Phil": "Phil’s bass tone is noted as especially clear and close‑miked, adding depth to the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:54:19.110996+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-21.152463.aud.lamarre.vernon.sirmick.flac16"
+}

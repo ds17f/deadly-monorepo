@@ -1,0 +1,96 @@
+{
+  "summary": "Soundboard source with generally good audio (though some conversion glitches) capturing a standout Jack Straw and an emotionally charged Morning Dew.",
+  "review": "The show is remembered for a superb Jack Straw, an ecstatic Jerry dancing through Morning Dew, and a second‑set that many fans call the “post‑space” high point with Terrapin Station and Sugar Magnolia. The SBD recording sounds solid overall, but at least one listener reported missing audio after conversion and notes that another mix on the Archive is slightly cleaner.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (strong second set, memorable jams) while a few flag serious recording issues; weighted average yields a solid >4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD sound, but one reviewer found the SHN files empty after conversion and another mentions a better SBD/AUD mix exists, indicating occasional glitches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "Terrapin Station",
+      "Space"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "U.J.B."
+    ],
+    "setlist_flow": "First set solid but not spectacular; the second set shines with extended post‑space jams, a powerful Terrapin Station, and an energetic closer that keeps momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Dances during Morning Dew, goes \"nuts\" on his fretboard in the post‑space jam, and digs deeper than usual for this era.",
+    "Phil": "Bass shines on Jack Straw, leads the charge in the Playing jam, and trades beautiful chops with Jerry during Morning Dew.",
+    "Bob": "",
+    "Keys": "Brent's piano animates Row Jimmy, adds a Little Feat‑flavored solo on Blow Away, and is strong on Terrapin Station and Sugar Magnolia.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.J.B.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:59:18.947580+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-07-02.sbd.jeffm.2328.sbeok.shnf"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent soundboard capture of a classic mid‑80s show featuring a smoking Estimated Prophet and fast Eyes of the World, with standout Hell in a Bucket and West LA Fadeaway.",
+  "review": "The SBD recording is crystal‑clear and balances the band beautifully, letting Jerry’s guitar tone and Brent’s keyboards shine even when the rhythm section slips a beat. Musically the night shines on Estimated Prophet, Eyes of the World, Hell in a Bucket and West LA Fadeaway, though some listeners find the ultra‑fast Eyes and later second‑set material a bit too rushed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance (especially Estimated Prophet, Eyes of the World and Hell in a Bucket) and the soundboard quality; a few note sloppy moments, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with superb balance; occasional comments about drummers dropping the beat do not affect audio fidelity. No dropout or hiss reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Hell in a Bucket",
+      "Sugaree",
+      "West LA Fadeaway",
+      "Desolation Row"
+    ],
+    "poor_songs": [
+      "Fast Eyes of the World (too rushed for some listeners)",
+      "Minglewood's (described as uninspired)"
+    ],
+    "setlist_flow": "First set is solid with highlights like West LA and Desolation Row; second set builds a high‑energy peak around Estimated Prophet and Hell in a Bucket before slipping into a faster, less cohesive Eyes of the World."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone praised as 'perfect' and voice strong, but several reviewers note occasional rushed playing and beat‑dropping.",
+    "Phil": "",
+    "Bob": "His vocal catharsis in Estimated Prophet and playful delay effects receive high marks; fanfare moments are highlighted.",
+    "Keys": "Keyboard work described as \"unbelievable ivories\" (Brent Mydland).",
+    "Drums": "Mickey's drumming is celebrated, though the era’s tendency to drop the beat is mentioned."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 9,
+      "negative_mentions": 1,
+      "total_mentions": 10
+    },
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwin' Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:49:24.755242+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-05-10.sbd.hinko.19962.sbeok.shnf"
+}

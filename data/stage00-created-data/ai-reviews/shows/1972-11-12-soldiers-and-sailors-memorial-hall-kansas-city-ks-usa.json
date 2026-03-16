@@ -1,0 +1,78 @@
+{
+  "summary": "High‑energy second set highlighted by Bertha, Birdsong & classic jams",
+  "blurb": "The show shines on the second set with soaring versions of Bertha, Tennessee Jed and a fiery Bird Song solo. Jerry’s machine‑gun licks and Phil’s booming bass drive the performance despite a thin vocal mix. Recommended for fans who want to hear this era’s improvisational peak.",
+  "review": "On November 12, 1972 at Soldiers' and Sailors' Memorial Hall the Dead delivered a punchy, jam‑laden concert that still feels fresh despite the rough mix of the only surviving soundboard. The first set rolls through familiar terrain, but it’s the second set that truly stands out – Bertha erupts with razor‑sharp guitar work, Tennessee Jed grooves relentlessly, and Bird Song showcases Jerry Garcia’s inspired, machine‑gun soloing. Phil Lesh lays down “bombs” of bass that lock in perfectly with Bill Kreutzmann’s understated drumming, while the band’s interplay on Stella Blue and Big River radiates the high‑energy creativity the group was known for in ’72. Recording issues – notably low vocals, missing keyboards and uneven levels – dim some of the sonic detail, yet they also put the guitars and bass front‑and‑center, offering a unique listening perspective on a classic performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Positive remarks dominate (standout songs, inspired solos, solid rhythm section) while the only negatives concern mix problems rather than musical execution, yielding a modest positive sentiment.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd72-11-12.sbd.cotsman.9771.sbeok.shnf",
+    "reason": "Only full‑show soundboard capture; despite mix flaws it preserves the complete performance and is the sole source."
+  },
+  "key_highlights": [
+    "Second set creativity with Bertha, Tennessee Jed and Bird Song solos",
+    "Phil’s booming bass lines and tight rhythm section drive the jam flow",
+    "Mix issues obscure vocals and keyboards but highlight guitars and bass"
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Big River",
+    "Tennessee Jed",
+    "El Paso",
+    "Friend Of The Devil",
+    "Stella Blue",
+    "Not Fade Away",
+    "Bird Song"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers inspired, machine‑gun licks with standout solos on Bertha and Bird Song.",
+    "Phil": "Lays down \"bombs\" of bass with a great groove; level issues noted but overall solid.",
+    "Bob": "Exquisite guitar interplay with Jerry; his parts shine despite vocal deficiencies in the mix.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Drum presence is low and sometimes inaudible, yet the rhythm section still drives the performance."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-22T01:11:34.246673+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha"
+    ],
+    [
+      "Big River"
+    ],
+    [
+      "Tennessee Jed"
+    ],
+    [
+      "El Paso"
+    ],
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "Stella Blue"
+    ],
+    [
+      "He's Gone",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away"
+    ],
+    [
+      "Bird Song"
+    ]
+  ]
+}

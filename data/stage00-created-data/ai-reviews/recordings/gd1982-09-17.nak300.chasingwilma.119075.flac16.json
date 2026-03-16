@@ -1,0 +1,106 @@
+{
+  "summary": "Good soundboard‑ish capture of a show with standout jams (Candyman, High Time, The Other One, Morning Dew) despite mid‑set new‑song lull and occasional Lesh drop‑outs.",
+  "review": "The performance shines in the post‑drums sequence, delivering powerful versions of Candyman, Althea, High Time, The Other One, Morning Dew and Sugar Magnolia, while early‑era material like West L.A., Throwing Stones and Touch of Grey drags the mid‑set down. Recording quality is generally solid and clear, though the drums track cuts off in its final minutes and occasional drops hint at a non‑official source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one detailed 4‑star review; strong musical positives offset by noted recording cut‑off and uneven mid‑set material."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well balanced, but the final few minutes of the drums track are missing; no major distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Althea",
+      "High Time",
+      "The Other One",
+      "Morning Dew",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "West L.A.",
+      "Throwing Stones",
+      "Touch of Grey",
+      "Deal",
+      "Women are Smarter",
+      "Spanish Jam"
+    ],
+    "setlist_flow": "Set 1 is solid but hampered by early‑era new songs that create a mid‑set lull; the post‑drums second half erupts into high‑energy jams, making the show memorable despite occasional Lesh drop‑outs."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia “noodles nicely,” delivers brawny muscle on Morning Dew and drives the jam intensity throughout.",
+    "Phil": "Lesh is erratic – disappears several times (likely equipment issues) but when he returns his playing adds explosive power to the jams.",
+    "Bob": "Weir’s rhythm guitar pushes the intensity envelope, especially during the The Other One and Sugar Magnolia sections.",
+    "Keys": "",
+    "Drums": "Drums are solid; however the recording cuts off the last few minutes of the drum segment."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Women are Smarter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:42:48.037629+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-17.nak300.chasingwilma.119075.flac16"
+}

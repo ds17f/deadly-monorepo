@@ -1,0 +1,45 @@
+{
+  "summary": "Phenomenal matrix recording of a stripped‑down Amsterdam club show highlighted by a killer Hully Gully and Lovelight.",
+  "review": "The show opens with an inspired acoustic set before launching into a tight electric half where Bob Weir’s guitar shines through Brent Mydland’s piano‑only accompaniment. Reviewers rave about the matrix mix, calling it “phenomenal” and praising how it captures the intimate club atmosphere while keeping the instruments clean and balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single five‑star review praises both the musical performance (standout songs, unique stripped‑down sound) and the recording (matrix mix, excellent clarity), indicating a top‑tier show and excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix mix captures intimate Dutch club ambience; guitars are clear and not drowned out by keyboards, overall crisp and well‑balanced despite stripped‑down gear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hully Gully",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Starts with a strong acoustic set, then transitions to an electric set that feels stripped down and focused, showcasing the band’s energy in a small‑venue setting."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir's guitar is prominent and not drowned out, standing out nicely in the mix.",
+    "Keys": "Brent plays piano only, giving the band a stripped‑down texture that reviewers find super cool.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hully Gully": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:05:45.441517+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-16.mtx.seamons.110497.flac16"
+}

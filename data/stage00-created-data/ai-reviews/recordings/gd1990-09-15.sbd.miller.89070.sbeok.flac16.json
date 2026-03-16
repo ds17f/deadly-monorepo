@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard capture of Bruce Hornsby’s debut era, with a strong set highlighted by The Weight, Gimme Some Lovin’ and Masterpiece.",
+  "review": "Listeners rave about the solid, slightly “Dolby‑ish” sound that still conveys the classic early‑90s vibe.  The show is praised for its historic significance – Bruce Hornsby's first night and a memorable second‑set opener with The Weight – and for standout performances of Gimme Some Lovin’ and Masterpiece.  Recording glitches on the archive site aside, the performance itself is considered a highlight of this period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average user rating ≈3.8, but most comments are strongly positive about both music and sound; weighting favors the high‑quality show, raising the overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Solid recording with a warm, slightly Dolby‑styled character; not as crystal‑clear as other Miller tapes but generally clear and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Weight",
+      "Gimme Some Lovin'",
+      "Masterpiece"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set opens with The Weight (Brent’s last song) and flows into a historic first appearance of Bruce Hornsby, creating a fresh yet cohesive arc for the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Improvisational lyric work on 'Masterpiece' noted by reviewers.",
+    "Keys": "Bruce Hornsby's debut brings an organic grand piano sound that many fans celebrate as a refreshing addition.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T12:10:54.616694+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-15.sbd.miller.89070.sbeok.flac16"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Energetic second set with standout Truckin' and Blow Away",
+  "blurb": "Second set bursts with a driving Truckin' into a smoky Smokestack Lightning jam and an unexpected \"Carry On\" vamp. Brent's synth adds sparkling texture while Jerry delivers emotive vocals on Sugaree. Overall the show offers solid performances despite some vocal wear and mixed tape quality.",
+  "review": "On October 15, 1988 at the Bayfront Center Arena the Dead served up a four‑set marathon that still feels like a classic late‑‘80s party. The first set opened strong with “The Music Never Stopped,” then moved through fan favorites – a soulful “Sugaree” where Jerry’s voice carried genuine feeling, a breezy “Blow Away,” and tight renditions of “Queen Jane Approximately” and “Tennessee Jed.”  \n\nThe real fireworks came in Set 2. After a rousing “One More Saturday Night,” the band launched into a fiery “Crazy Fingers” that many reviewers cite as a highlight, then weaved through an expansive “Playing In The Band” → “Uncle John’s Band” → Drum/Space sequence before exploding into a Truckin’ that segues into Smokestack Lightning with a surprise CSNY‑style “Carry On” vamp.  Brent Mydland’s keyboards sprinkled the night with his trademark \"fairy dust\" synth textures, and the dual drumming of Mickey and Bill kept the groove both propulsive and playful.  While some tape sources note Jerry’s voice sounding a bit haggard toward the end and Phil’s bass can sound distorted on certain audience recordings, the musical chemistry shines through, making this show a worthwhile listen for fans who enjoy the high‑energy vibe of the era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 27,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Across the seven recordings, three are clearly positive (highlighting Sugaree, Blow Away, Truckin'), three are mixed (noting both strong moments and tape issues), and one is negative. The prevalence of positive comments about specific songs and overall energy outweighs the criticisms, yielding a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.7 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-10-15.set2.partial.miller.28438.sbeok.flacf",
+    "reason": "Clean matrix‑board source with well‑mixed sound and no major dropouts; captures the standout “Crazy Fingers” moment clearly."
+  },
+  "key_highlights": [
+    "Driving Truckin' into a smoky Smokestack Lightning jam with an unexpected \"Carry On\" vamp.",
+    "\"Blow Away\" debut praised for its fresh energy across multiple recordings.",
+    "Brent Mydland's sparkling synth textures add fairy‑dust sparkle to the entire performance."
+  ],
+  "song_highlights": [
+    "Sugaree",
+    "Blow Away",
+    "Crazy Fingers",
+    "Truckin'",
+    "Smokestack Lightning",
+    "Queen Jane Approximately"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers emotive vocals on Sugaree and shows his characteristic phrasing, though a few reviewers note his voice sounding slightly haggard later in the night.",
+    "Phil": "Provides a solid bass foundation; any perceived distortion is attributed to tape quality rather than playing ability.",
+    "Bob": "",
+    "Brent": "Adds sparkling \"fairy dust\" synth textures that enhance the vibe, especially during the second‑set jams.",
+    "Mickey": "Keeps the rhythmic drive lively, contributing energetic fills throughout Drum/Space and the Truckin' sequence.",
+    "Billy": "Pairs with Mickey to create a propulsive dual‑drum groove, highlighted in the Drum/Space segment."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-16T15:04:51.841581+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "The Music Never Stopped",
+      "Sugaree"
+    ],
+    [
+      "Blow Away"
+    ],
+    [
+      "Crazy Fingers",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Smokestack Lightning",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Queen Jane Approximately"
+    ]
+  ]
+}

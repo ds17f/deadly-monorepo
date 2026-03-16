@@ -1,0 +1,70 @@
+{
+  "summary": "Warm matrix capture softened by a touch of reverb, featuring a stellar Franklin’s Tower and the rare high‑energy Miracle > Bertha > Good Lovin’ > U.S. Blues finish.",
+  "review": "The matrix source delivers a pleasantly warm cassette‑like sound, though the board is a bit sterile and benefits from added reverb. Musically the show shines with an inspired Franklin’s Tower and an electrifying Miracle → Bertha → Good Lovin’ sequence that rolls into a rare U.S. Blues ending, despite Jerry’s lingering laryngitis on Half Step.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Three reviews (average 4.7 stars) praise both the performance and the matrix recording, noting only minor vocal wobble and a sterile board that was corrected with reverb."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Warm cassette‑like feel; board is somewhat sterile, listeners add reverb for fullness. Minor speed issue on Eyes of the World noted; overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Miracle",
+      "Bertha",
+      "Good Lovin'",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Half Step"
+    ],
+    "setlist_flow": "Strong, high‑energy second half with a rare Miracle > Bertha > Good Lovin’ → U.S. Blues closing that lifts the whole concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Still battling laryngitis; vocals wobble on Half Step but guitar work remains solid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:19:14.188057+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-05.mtx.seamons.102476.sbeok.flac16"
+}

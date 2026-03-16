@@ -1,0 +1,66 @@
+{
+  "summary": "A superb audience recording captures a scorching second set highlighted by an epic China Cat Sunflower > I Know You Rider and an emotional He's Gone.",
+  "review": "The show is praised as one of the best ever heard, with a pre‑drums segment that “scorches,” a seamless second set, and standout moments like the China Cat > Rider jam, Jerry’s monster solos on Friend of the Devil and Johnny B. Goode, and a tear‑filled He's Gone.  The audience tape is described as one of the best ever made – clear, well‑balanced, and free of major flaws, making the performance fully enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance (multiple 5‑star comments) and recording quality (several notes calling it one of the best audience recordings). The show is deemed exceptional while the tape, though not “perfect,” is judged good to excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners call it a 'nice‑sounding AUD' and one of the best audience recordings; no major obstacles or distortion mentioned, just generally clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "He's Gone",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set flows seamlessly with powerful transitions (China>Rider, Johnny B. Goode into Good Lovin'), pre‑drums segment described as scorching; first set includes solid performances like Althea."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as a monster with great solos on Friend of the Devil and Johnny B. Goode, plus an emotional performance on He's Gone.",
+    "Phil": "Noted literally jumping around the stage, adding visible energy to the show.",
+    "Bob": "Mentioned joining in Good Lovin' and contributing to the seamless transitions.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:44:53.873292+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-12-12.set2-aud.munder.13192.sbeok.shnf"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent audience recording that captures the high‑energy May ’79 show with standout Shakedown Street, Estimated Prophet and a soaring Franklin’s Tower.",
+  "review": "The roll of the Nakamichi 700 mics delivers an unusually clear and warm audience capture, preserving the raw energy of this late‑May 1979 run.  The performance is solid throughout – highlights include Shakedown Street, an enthusiastic Estimated Prophet, and a powerful Franklin’s Tower that closes the second set, despite Jerry’s slightly ragged vocals early on.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Eight consistent, mostly five‑star reviews praise both the musical performance and the surprisingly high‑fidelity audience recording; average reviewer rating is 4.5, with strong show quality pushing the overall score higher."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Close DFC mic placement gives warm ambiance and good clarity; reviewers note a slight high‑hat emphasis typical of Nakamichi 700 mics but overall the sound is crisp, balanced and unusually detailed for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Estimated Prophet",
+      "Franklin's Tower",
+      "Mama Tried > Mexicali",
+      "Miracle > Bertha > Good Lovin'"
+    ],
+    "poor_songs": [
+      "Eyes of the World"
+    ],
+    "setlist_flow": "Energy stays high from start to finish; the second set kicks off strongly with Estimated Prophet and builds to a climactic Franklin’s Tower, while transitions such as Mama Tried into Mexicali keep the momentum flowing."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals were strained early in the show due to recent laryngitis, but his guitar work remained strong and he delivered powerful high notes later on.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mama Tried > Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle > Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:40:50.213425+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-11.nak700.rolfe.miller.99029.sbeok.flac16"
+}

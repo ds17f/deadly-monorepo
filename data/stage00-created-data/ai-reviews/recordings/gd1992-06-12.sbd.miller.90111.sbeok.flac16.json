@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard capture of a blistering 1992 show highlighted by a smoking Scarlet Fire, fresh New Speedway Boogie and a tight Attics of My Life, despite a lackluster Truckin'.",
+  "review": "The recording (soundboard) is generally clean and “crunchy,” delivering the hot energy of one of ’92’s strongest performances. Reviewers rave about the fiery Scarlet Fire, the surprise return of New Speedway Boogie and a well‑executed Attics of My Life, while noting that Truckin’ never quite ignited and a few felt Jerry’s playing was a bit distracted.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance and highlight several standout songs, while the recording is described as solid soundboard quality; only a few negative comments pull the average down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as crunchy/clean board with no major drop‑outs or distortion; overall clear enough to convey the show's intensity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "New Speedway Boogie",
+      "Attics of My Life",
+      "Sugaree",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "Strong, hot first set followed by an even hotter second set; transitions flow well and the show builds to a high‑energy climax despite one weak Truckin' moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally solid playing, though one reviewer felt he sounded distracted and like he was watching TV reruns.",
+    "Phil": "Off‑kilter vocals on BEW/BTW noted as exciting by the crowd.",
+    "Bob": "",
+    "Keys": "Vince (and Brent/ Bruce) were called competent; some reviewers prefer Brent's style but overall keyboard work was solid.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Attics of My Life": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:52:16.994343+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-12.sbd.miller.90111.sbeok.flac16"
+}

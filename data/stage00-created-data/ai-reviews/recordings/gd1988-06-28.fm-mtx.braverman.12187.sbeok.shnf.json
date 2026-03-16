@@ -1,0 +1,57 @@
+{
+  "summary": "High‑energy SPAC ’85 show featuring an epic Stella Blue ending and a scorching Scarlet→Fire, captured on soundboard that’s clear but lacks crowd ambience.",
+  "review": "The performance is praised for its intensity – highlights include a goose‑bumps‑inducing Stella Blue finale, a blistering second set with Scarlet → Fire on par with the famed Hampton run, and strong Victim → Foolish Heart moments driven by Brent’s piano work. The soundboard source delivers good instrument clarity, though listeners note the audience is barely audible across all boards.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviews are overwhelmingly positive about the musical performance with multiple standout songs; recording quality is generally good but consistently criticized for missing audience ambience, resulting in a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear instrument mix and solid fidelity (\"sound A\"), but all five boards sound alike and capture very little of the crowd, making the audience atmosphere almost absent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Scarlet > Fire",
+      "Victim",
+      "Foolish Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy, well‑played show with a powerful second set; transitions flow smoothly and the new 1985 material (Victim, Foolish Heart) feels fresh and compelling."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for rolling sequence with Brent on Stella Blue and a tasty solo in Row Jimmy; blistering lead work during rain‑soaked Candyman.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s piano work highlighted, especially the extended, melodic section in Foolish Heart and his interplay with Jerry on Stella Blue.",
+    "Drums": "Drums noted as part of the epic sonic texture (\"drums, stars twinkling, horses thundering\") but no specific performance critique."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T10:38:50.753971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-28.fm-mtx.braverman.12187.sbeok.shnf"
+}

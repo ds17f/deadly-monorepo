@@ -1,0 +1,88 @@
+{
+  "summary": "Soundboard recording is generally good (despite a missing right channel on Shakedown and a cut‑up Day Job), and the show shines with a blistering second set – Sailor > Saint, Shakedown, Playin', Terrapin and Deal are standout moments.",
+  "review": "Fans rave about the high energy of this 1984 Indianapolis tennis‑court gig, especially the soaring Sailor > Saint sequence, the wild Shakedown‑Playin’‑Terrapin suite and a killer Deal. The soundboard source is praised for its clarity, though listeners note the right channel drops out during Shakedown and the Day Job encore is badly cut. Overall the performance is considered one of the year’s highlights despite the partial first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.25/5, with consistent praise for the musical performance and generally good soundboard quality; only a few technical flaws are mentioned."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and crisp overall, but the right channel is missing during Shakedown, Day Job is cut up, and the first‑set portion is incomplete. Some reviewers note a chopped space segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sailor > Saint",
+      "Shakedown",
+      "Playin'",
+      "Terrapin",
+      "Deal",
+      "Stella Blue",
+      "Spoonful",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Day Job"
+    ],
+    "setlist_flow": "Unique tennis‑court venue with two sets; the first set ends on a high‑energy Sailor > Saint > Deal, while the second set builds into an intense Shakedown‑Playin’‑Terrapin marathon that loses a bit of steam toward the end but remains psychedelic and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s leads on Sailor > Saint are described as ‘jaw‑dropping’ with perfect tone; his guitar work is highlighted throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum solo is praised for its power (blistering hot up to the drums) though a helicopter’s searchlight during the drums added a strange visual element."
+  },
+  "song_mentions": {
+    "Sailor > Saint": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Shakedown": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T19:21:22.326902+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-30.sbd.partial.finney.2542.sbeok.shnf"
+}

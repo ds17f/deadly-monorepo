@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience capture of an electrifying 1987 MSG show, highlighted by a smoking Dew and La Bamba.",
+  "review": "The crowd‑sourced (AUD) recording is praised as crystal‑clear and expertly mixed by Joe D’Amico, making the performance easy to enjoy.  The concert itself is described as high‑energy and well‑executed, with Jerry’s guitar and vocals soaring on Dew and La Bamba, while the band’s tight rhythm section drives the show forward.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All eight reviews are overwhelmingly positive (mostly 5‑star), highlighting both a stellar performance and an excellent audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call it a 'Superior AUD Capture' and note Joe D’Amico’s skill, describing the sound as crisp, well‑balanced and good‑sounding throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dew",
+      "La Bamba",
+      "All Along the Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is portrayed as a high‑energy, well‑paced set that captured the Dead at the peak of their late‑80s commercial popularity, with smooth transitions and an especially powerful second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for perfect balance, soaring guitar riffs, emotional vocals, and overall energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Described as 'killer' and a driving force behind the show’s excitement."
+  },
+  "song_mentions": {
+    "Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "La Bamba": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:39:00.449608+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-18.nak300.damico.90241.sbeok.flac16"
+}

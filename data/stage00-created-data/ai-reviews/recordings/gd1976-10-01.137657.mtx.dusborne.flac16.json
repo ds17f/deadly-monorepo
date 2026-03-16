@@ -1,0 +1,51 @@
+{
+  "summary": "Stellar audience recording of a 1976 show with a smoking Help / Slipknot / Franklin's Tower sequence in the second set.",
+  "review": "The tape, captured from an audience Nagra recorder, is praised for its clear and lively sound despite years of handling. The performance shines especially in the second set, highlighted by a killer Help on the Way → Slipknot! → Franklin’s Tower run that many reviewers call \"smoking\" and deeply personal.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviews are highly positive about both the music (especially the second‑set sequence) and the audio quality, yielding a strong combined score; limited number of reviews keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded on a Nagra RTR 7.5 IPS tape recorder; many generations of copying have introduced some wear, but overall the sound is clear and \"stellar\" according to reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way",
+      "Slipknot!",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as smoking and the overall show is considered an excellent 1976 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:56:31.932929+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-01.137657.mtx.dusborne.flac16"
+}

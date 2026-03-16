@@ -1,0 +1,63 @@
+{
+  "summary": "Poor audience recording of a memorable Manhattan Center first night, with standout Bobby McGee solo and exquisite Morning Dew",
+  "review": "The performance is praised for several magical moments – a legendary Bobby McGee guitar solo, an exquisite Morning Dew, soaring St. Stephen and an intense Good Lovin' – making it one of the best early‑April shows despite the sub‑par audience (AUD) recording that many find unacceptable. Listeners will need to tolerate muffled sound to enjoy the musical highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Show quality is rated highly based on multiple positive comments about specific performances, but recording quality is consistently described as terrible, pulling the overall rating down to a solid mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers repeatedly call the AUD source 'terrible', 'unacceptable' and only suitable for completists; the mix is muffled, low fidelity and detracts from enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bobby McGee",
+      "Morning Dew",
+      "St. Stephen",
+      "Good Lovin'",
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First night of a three‑show Manhattan Center run; despite crowd density and chaotic moments, the band delivered strong transitions and memorable peaks, especially in the second go‑through after Jerry's lead."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for leading the band beautifully, with his guitar work highlighted during the Bobby McGee solo and the flow into the second go‑through.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:55:10.825544+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-04-04.aud.cotsman.10358.sbeok.shnf"
+}

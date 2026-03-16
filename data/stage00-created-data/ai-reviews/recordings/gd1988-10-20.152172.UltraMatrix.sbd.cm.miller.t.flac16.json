@@ -1,0 +1,39 @@
+{
+  "summary": "Enthusiastic personal recollection of a Fire on the Mountain show with no concrete details on recording or performance quality",
+  "review": "The reviewer fondly recalls this concert as their “one and only Dead show,” highlighting the presence of Fire on the Mountain, but provides no information about the audio source, sound clarity, or musical execution. Consequently, the analysis must treat both the recording and the performance as unknown beyond the reviewer’s positive sentiment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only a single, anecdotal review with no technical or musical detail; sentiment is upbeat but insufficient data to assign a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:17:31.423580+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-10-20.152172.UltraMatrix.sbd.cm.miller.t.flac16"
+}

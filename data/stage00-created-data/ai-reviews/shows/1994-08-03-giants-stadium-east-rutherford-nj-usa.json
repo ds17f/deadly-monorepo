@@ -1,0 +1,68 @@
+{
+  "summary": "Bird Song shines, Foolish Heart/Attics solid amid flat set",
+  "blurb": "The show offers a strong Bird Song and an inspired Foolish Heart → Attics Of My Life sequence. Jerry’s guitar swings between jazzy bursts and buried tones, while the rhythm section feels uneven. Liberty closes on a brighter note.",
+  "review": "Giants Stadium on August 3 1994 delivered a notoriously uneven Dead show. The set opens with a limp \"Mississippi Half‑Step Uptown Toodeloo\" and drifts through several lackluster numbers before hitting a high point with \"Bird Song,\" which many fans cite as the night’s sole fireball. The second set recovers a bit, especially the seamless segue from \"Foolish Heart\" into \"Attics Of My Life,\" delivering jazzy improvisation that lifts the mood. However, the rest of the performance feels disjointed—\"The Other One\" sputters, and ballads like \"Stella Blue\" never find their groove. The encore’s \"Liberty\" offers a modest redemption.\n\nRecording-wise the only complete source is an audience tape (gd94‑08‑03.aud.unknown.8728.sbeok.shnf). Its sound quality is poor—muffled mids, boomy bass, and pervasive crackle—but it captures the full set, making it the de facto reference despite its flaws. Listeners should temper expectations: the show’s musical merits are limited, and the audio will test even patient ears.\n\nOverall, this gig stands as a cautionary entry in the 1994 tour—worth hearing for completists and for the rare bright spots, but not a showcase of the Dead at their best.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 22,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": -0.6,
+      "sentiment_rationale": "Two of the three recordings are flagged as negative and only one is mixed, indicating a consistent pattern of disappointment across the show. Reviewers repeatedly call the set disjointed, cite poor song choices, and mention uneven playing, leading to a modest negative adjustment.",
+      "final_calculation": "2.5 + 0.2 + -0.6 = 2.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-08-03.aud.unknown.8728.sbeok.shnf",
+    "reason": "Only source that captures the full show; despite poor fidelity it is the most complete reference for this performance."
+  },
+  "key_highlights": [
+    "Bird Song stands out as an intense, memorable moment.",
+    "Foolish Heart → Attics Of My Life sequence delivers jazzy improvisation and strong jams.",
+    "Liberty provides a brighter closing note amid an otherwise flat set.",
+    "Recording quality is poor (ambient audience tape) but the show is fully represented."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Foolish Heart",
+    "Attics Of My Life",
+    "Liberty"
+  ],
+  "band_performance": {
+    "Jerry": "Mixed performance – occasional jazzy bursts and strong solos, but many sections sound buried or off‑the‑rails.",
+    "Phil": "",
+    "Bob": "Generally solid; hits most notes even when the overall show feels weak.",
+    "Brent": "",
+    "Mickey": "Drum sections receive mixed feedback; post‑drum jams (Attics) praised, earlier drum spots described as chaotic.",
+    "Billy": "Same as Mickey – rhythm section uneven, with occasional high points after the drums."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T01:07:44.229856+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song",
+      "The Promised Land"
+    ],
+    [
+      "Foolish Heart",
+      "Easy Answers"
+    ],
+    [
+      "Crazy Fingers",
+      "Corinna",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Attics Of My Life",
+      "Sugar Magnolia"
+    ],
+    [
+      "Liberty"
+    ]
+  ]
+}

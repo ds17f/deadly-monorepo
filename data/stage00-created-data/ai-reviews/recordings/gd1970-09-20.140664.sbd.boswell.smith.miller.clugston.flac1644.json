@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard capture of a stellar 1970 show featuring epic \"Cumberland Blues\", \"New Speedway Boogie\" and an emotional \"To Lay Me Down\"",
+  "review": "Reviewers rave about the performance, calling the playing superb and highlighting the epic renditions of Cumberland Blues, New Speedway Boogie and a moving To Lay Me Down. The soundboard source is generally clear though a faint tape hiss is noted, and the piano/organ balance is praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance combined with a solid soundboard recording (minor hiss) yields an overall rating in the exceptional range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight tape‑hiss noted from older copy, but overall clear and well‑balanced; piano and organ sit nicely together."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "New Speedway Boogie",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show flows smoothly with strong acoustic/electric interplay; reviewers describe the entire set as worth listening to any time."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work is described as superb and his tone praised, though one reviewer was confused about his presence on a particular track.",
+    "Phil": "",
+    "Bob": "Weir’s rhythm guitar/vocals are noted ('Weir doing his thing'), adding texture to the performance.",
+    "Keys": "TC’s soft, mournful piano is highlighted as a key emotional element; another reviewer remarks on the piano sounding like the album version.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T23:12:35.995735+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-20.140664.sbd.boswell.smith.miller.clugston.flac1644"
+}

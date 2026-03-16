@@ -1,0 +1,44 @@
+{
+  "summary": "A classic ’69 Dead show praised for its era‑specific vibe but marred by a missing segment of “The Eleven” and uneven playing.",
+  "review": "Fans love the raw 1969 energy, calling the performance incredible for those craving that period sound. However, some note Garcia’s tentative slide work, Pigpen’s off‑kilter vocals, and a missing portion of “The Eleven,” which detracts from an otherwise solid set. Recording details are unclear, but the gap suggests only fair technical quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Positive enthusiasm for the ’69 vibe balanced against criticism of performance flaws and a missing segment; limited technical info leads to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "A part of “The Eleven” is missing, indicating an incomplete or imperfect capture; no other audio quality comments provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "The Eleven"
+    ],
+    "setlist_flow": "Typical early‑69 set with strong energy but uneven execution; jams only click later and a missing bridge disrupts flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is still learning slide technique, resulting in tentative playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:18:37.923649+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-03-15.140931.sbd.miller.sirmick.flac1644"
+}

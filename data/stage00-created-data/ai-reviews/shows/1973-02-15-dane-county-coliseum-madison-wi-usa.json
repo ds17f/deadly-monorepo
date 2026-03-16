@@ -1,0 +1,68 @@
+{
+  "summary": "Epic Dark Star suite, gritty Row Jimmy, tight rhythm throughout",
+  "blurb": "The show shines with an unforgettable Dark Star → Eyes Of The World → China Doll sequence, complemented by a fiery Row Jimmy and solid Playing In The Band. Jerry’s down‑and‑dirty lead guitar and Phil’s booming bass drive the second set, while Keith provides crisp piano throughout.",
+  "review": "On February 15, 1973 at Dane County Coliseum, the Dead delivered one of their quintessential early‑’73 performances. The first set roared through a punchy mix of folk‑rock staples—Loose Lucy, Beat It On Down The Line, and a seamless China Cat Sunflower > I Know You Rider transition—setting up a high‑energy launch into Row Jimmy, where Jerry’s gritty lead cut through with soaring solos. \n\nThe second set is the show’s crown jewel: a monumental Dark Star → Eyes Of The World → China Doll suite that reviewers call “epic” and “masterpiece,” featuring Phil’s juicy bass solo and Bill’s crisp tom work. Here Comes Sunshine, El Paso, and a tight Playing In The Band keep the momentum rolling into a joyous encore of Uncle John’s Band and One More Saturday Night. Keith’s piano is a perfect accompaniment throughout, and Donna’s backing vocals add extra sparkle. For anyone chasing that classic 1973 magic, this show delivers it in spades.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 239,
+      "review_count_boost": 0.5,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Five of seven recordings are strongly positive, repeatedly praising the Dark Star → Eyes Of The World → China Doll suite, Jerry’s gritty lead work, and Phil’s powerful bass solo. Consistent acclaim across multiple sources warrants a high positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.5 + 1.6 = 4.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1973-02-15.sbd.hall.1580.shnf",
+    "reason": "Crisp soundboard capture with clear balance, showcasing the epic Dark Star suite and tight band interplay."
+  },
+  "key_highlights": [
+    "Monumental Dark Star → Eyes Of The World → China Doll sequence that defines the show",
+    "Gritty, down‑and‑dirty Jerry Garcia solo on Row Jimmy and Dark Star",
+    "Phil Lesh’s powerful bass zone and standout solo during the Dark Star suite",
+    "Seamless transitions such as China Cat Sunflower > I Know You Rider"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Eyes Of The World",
+    "China Doll",
+    "Row Jimmy",
+    "Playing In The Band",
+    "Here Comes Sunshine",
+    "Loose Lucy"
+  ],
+  "band_performance": {
+    "Jerry": "Gritty, down‑and‑dirty lead guitar with soaring solos, especially on Dark Star and Row Jimmy.",
+    "Phil": "Powerful bass presence with an epic solo in the Dark Star/Eyes segment; juicy moments highlighted in matrix tape.",
+    "Bob": "Strong rhythm work and tasteful fills, notably on Playing In The Band and Casey Jones.",
+    "Keith": "Perfect accompaniment on piano throughout, providing clear, crisp support to the band’s dynamics.",
+    "Mickey": "",
+    "Billy": "Precise tom tuning, crisp cymbal accents, and overall drumming excellence that drives the jams."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-22T05:13:23.593944+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Eyes Of The World",
+      "China Doll"
+    ],
+    [
+      "Row Jimmy"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "Here Comes Sunshine"
+    ],
+    [
+      "Loose Lucy"
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent Nak‑mic recording delivers a solid show, but the track \"Passenger\" is noted as odd by one listener.",
+  "review": "The tape was captured with Charlie Miller’s famed NAK shotgun microphones and offers crystal‑clear audience sound that reviewers praise as great. The performance itself is generally well‑received, though one fan calls the song “Passenger” a strange choice. Overall the recording is listenable and enjoyable despite the mixed feelings about that particular tune.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One enthusiastic 5‑star review highlights superb sound quality and a great show, while another gives 0 stars and questions a specific song, resulting in an average rating that reflects mixed sentiment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded with NAK shotgun microphones; reviewers describe the sound as clear, balanced and of great quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Passenger"
+    ],
+    "setlist_flow": "No detailed comments on set pacing; overall impression is positive aside from the oddity of \"Passenger\"."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:06:12.144507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-14.nak700.miller.89003.sbeok.flac16"
+}

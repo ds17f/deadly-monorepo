@@ -1,0 +1,55 @@
+{
+  "summary": "Echoey audience tape with mixed performance; standout NFA→St Stephen segue but overall poor sound quality.",
+  "review": "The recording is an audience capture in a cavernous hall, resulting in echo‑filled and muddy audio that many listeners find hard to sit through. Musically the show offers a novel Not Fade Away → St Stephen transition that some fans enjoy, yet the first song is deemed unremarkable and the tape ends abruptly.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "One reviewer rates it 0/5 due to terrible recording quality, while another gives 4/5 for a unique song segue; the mixed feedback and only two reviews lead to a moderate confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Echo‑filled, cavernous hall sound with little clarity; no soundboard source, many listeners describe it as skippable and abrasive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual segue flips the typical Not Fade Away → St Stephen order, creating a long jam early in NFA; the show ends abruptly and overall pacing is described as uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "His moaning on 'Candyman' is noted positively, though no other specific comments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T21:16:19.366684+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-21.154086.aud2.flac1648"
+}

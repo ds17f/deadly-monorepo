@@ -1,0 +1,69 @@
+{
+  "summary": "Energetic audience recording of Jerry’s comeback featuring a soaring Candyman and Touch of Grey, but with a tinny, crowd‑forward mix.",
+  "review": "This audience tape captures the electric atmosphere of the first post‑coma show, highlighted by an unforgettable Candyman and a tear‑jerking Touch of Grey.  Reviewers rave about the band’s renewed energy and Jerry’s deeper vocal tone, while noting that the sound is a bit tinny and front‑loaded with crowd noise, especially in the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 reviews uniformly praise the performance and historical significance, while consistently noting only modest audio shortcomings; weighted heavily toward show quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tinny tonal balance, especially on early songs; very prominent crowd noise that adds atmosphere but can mask detail; overall usable and captures the energy despite occasional mix imbalances."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Touch of Grey",
+      "Wharf Rat",
+      "Black Muddy River",
+      "Althea",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert rides a wave of jubilation from the opening Touch of Grey, building through high‑energy numbers like Candyman and Wharf Rat, and maintains an emotional momentum that reflects the band’s reunion spirit."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his return to form – a deeper, craggier voice but full of emotion; he commands the crowd and even points at fans during Candyman.",
+    "Phil": "",
+    "Bob": "Bass is described as sitting forward in the mix and occasionally wandering, yet still anchors the high‑energy performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Touch of Grey": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:39:57.743052+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-12-15.nakcm101-dwonk.25263.sbeok.flacf"
+}

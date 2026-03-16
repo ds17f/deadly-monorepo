@@ -1,0 +1,51 @@
+{
+  "summary": "Clean, balanced soundboard capture of a solid ’85 set featuring vintage Dark Star jams and a standout Terrapin Station jam.",
+  "review": "The second‑set recording is praised as the cleanest and most balanced version available, suggesting a high‑quality soundboard source. Musically the show is regarded as strong – the post‑Terrapin jam (dubbed a “Mind Left Body Jam”), a full‑on Spanish Jam, and vintage jams into and out of Dark Star give this 1985 performance an interesting flavor despite not being an epic summer show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Reviews consistently note good to great musical moments and a clean, balanced recording; average user stars are 3½, leading to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as the cleanest and most balanced copy; no major flaws noted, though one reviewer mentions it was chosen for better tracking without direct comparison."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Dark Star",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set praised for strong jams—especially the post‑Terrapin “Mind Left Body” jam and vintage Dark Star transitions—giving the show an engaging, flowing second set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:33:50.956367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-22.aud-set2.ingle.8593.sbeok.shnf"
+}

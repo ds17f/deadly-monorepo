@@ -1,0 +1,68 @@
+{
+  "summary": "Bird Song jam shines, Here Comes Sunshine energizes second set",
+  "blurb": "The show delivers a soaring Bird Song jam and a vibrant Here Comes Sunshine in the second set. Jerry’s excitable guitar work and Phil’s thunderous bass drive the performance, though the first set feels uneven.",
+  "review": "May 15, 1993 at the Sam Boyd Silver Bowl captured a night of contrasting moods. The first set drifted through Picasso Moon, Peggy‑O and a mellow Bird Song, with some listeners noting a lackluster flow and even an out‑of‑key moment on Help (which isn’t in the official setlist). By contrast, the second set erupted: Here Comes Sunshine kicked things off, followed by a classic Playin' In The Band sandwich that built tension into a sprawling Bird Song jam lasting over fifteen minutes. Phil Lesh’s bass was “potent” and “thunderous,” especially during the middle of Bird Song, while Jerry Garcia threw himself into every note, earning chants of “Jerry on it!!”. Vince Welnick’s reverb‑laden keyboards added atmospheric depth, and Mickey Hart and Bill Kreutzmann supplied solid, mellow drumming with a memorable drum break before the bowl. The encore closed on a high with Lucy In The Sky With Diamonds, leaving the audience humming into the night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 23,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Most recordings praised the Bird Song jam, Jerry’s excitement and Phil’s potent bass (positive sentiment). A few mixed notes about a weak first set and one negative review temper enthusiasm, yielding a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.6 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-05-15.schoeps.fink.17955.sbeok.shnf",
+    "reason": "Good‑to‑great soundboard tape that cleanly captures the standout Bird Song jam and second‑set energy with minimal crowd bleed."
+  },
+  "key_highlights": [
+    "Epic 15‑minute Bird Song jam featuring Phil’s thunderous bass.",
+    "Here Comes Sunshine opens a vibrant second set.",
+    "Playin' In The Band sandwich builds tension around Crazy Fingers.",
+    "Lucy In The Sky With Diamonds encore wraps the night on a high note."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Here Comes Sunshine",
+    "Playing In The Band",
+    "Days Between",
+    "Lucy In The Sky With Diamonds"
+  ],
+  "band_performance": {
+    "Jerry": "Excited and present throughout, especially on Bird Song and Here Comes Sunshine; a bit fatigued later in the set.",
+    "Phil": "Potent, thunderous bass with an exquisite middle section on Bird Song; “busting onto the scene” during the Picasso Moon opener.",
+    "Bob": "",
+    "Vince": "Heavy reverb‑sustain adds atmospheric texture that interplays nicely with Jerry’s lead lines.",
+    "Mickey": "Provides nice mellow drumming and a classic drum break before the bowl, anchoring the groove.",
+    "Billy": "Solid rhythmic support alongside Mickey; contributes to the overall “great drumming” feel."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-18T12:36:37.305644+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Here Comes Sunshine"
+    ],
+    [
+      "Playing In The Band",
+      "Crazy Fingers",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "All Along The Watchtower",
+      "Days Between",
+      "One More Saturday Night"
+    ],
+    [
+      "Lucy In The Sky With Diamonds"
+    ]
+  ]
+}

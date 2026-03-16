@@ -1,0 +1,69 @@
+{
+  "summary": "Crisp soundboard capture of a stellar Winterland run with scorching Scarlet Begonias, Row Jimmy and St Stephen highlights",
+  "review": "The recording is a clean sound‑board source with only faint hiss that never detracts from the music.  The show itself is hailed as one of ’77’s finest – a powerhouse first set capped by an epic Scarlet Begonias and a second set featuring an emotional Row Jimmy, a soaring Terrapin encore, plus standout performances of St Stephen, The Other One and Brown Eyed Women.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (average ~4.65), universal praise for both performance and recording quality, with only minor comments about hiss."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear sound‑board mix; a little background hiss is noted but it does not interfere with listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Row Jimmy",
+      "St. Stephen",
+      "The Other One",
+      "Brown Eyed Women",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Winterland run (Mar 18‑20 1977) flows brilliantly – a first set that builds to an orphaned, fiery Scarlet Begonias and a second set highlighted by Row Jimmy, a powerful Terrapin encore, and seamless transitions throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for emotional, fluid and intense guitar solos; reviewers call his playing “killer” and say he clearly loved the material.",
+    "Phil": "Described as having \"roaring\" bass throughout the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Row Jimmy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T20:57:19.178155+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-03-20.sbd.kempa.257.sbefixed.shnf"
+}

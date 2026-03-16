@@ -1,0 +1,110 @@
+{
+  "summary": "Clean, well‑balanced soundboard capture of a high‑energy 1984 show with standout Shakedown, Deal, Scarlet Begonias/Fire and a soaring Baby Blue encore.",
+  "review": "The Miller SBD source is praised for its crisp, balanced mix that lets the band’s 1984 fire shine through. Reviewers highlight an explosive opener (Shakedown), a monster Deal close‑out, blistering Scarlet Begonias into a marathon Fire on the Mountain, and a memorable Baby Blue encore, while noting occasional vocal roughness from Garcia and some static/cuts in the SBD that can be mitigated with other sources. Overall the performance is energetic and enjoyable despite minor imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (7 of 9) give 4‑5 stars and praise both the musical performance and the soundboard quality; only a few note specific flaws, so the combined show‑and‑recording score is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean, crisp and well‑balanced with A+‑level mix; occasional flatness, static hiss, short cuts (e.g., in Fire on the Mountain) and slight pitch drift are reported, but they do not overwhelm the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Deal",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Throwing Stones",
+      "Lazy Lightning"
+    ],
+    "setlist_flow": "A strong, hook‑filled first set builds into an even more intense second set; early verses can be a bit rough but the pacing stays high‑energy and the long Fire/Scarlet sequence provides a peak before a satisfying encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals unusually solid for this era, guitar solos praised (especially on BEW), flourishes throughout, and a hint of “return to earth” noted in the outro jam.",
+    "Phil": "Provides steady bass fills during segues (e.g., into Supplication) and underpins the rhythm section well.",
+    "Bob": "Delivers powerful Hell in a Bucket and high‑octane solos; vocal strain shows on Throwing Stones, but overall energetic performance.",
+    "Keys": "Brent Hammond’s laser effect on Shakedown, standout solo on CC Rider, punctuating riffs throughout, and a spotlight moment in the second set are repeatedly highlighted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Supplication": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T17:08:15.866184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-26.sbd.miller.91432.sbeok.flac16"
+}

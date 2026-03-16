@@ -1,0 +1,39 @@
+{
+  "summary": "Recording is incomplete and out of order, but features an exceptional “Cold Rain and Snow” with great Garcia wah‑wah.",
+  "review": "Both reviewers note serious issues with the release – it’s missing parts and tracks are out of sequence – which makes the recording frustrating to listen to.  The only musical praise centers on a haunting rendition of Cold Rain and Snow, highlighted for Jerry Garcia’s expressive wah‑wah guitar work.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one is strongly negative about completeness, the other praises a single song. Combined show and recording quality are below average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers complain that the tape is incomplete and out of order; no specific comments on clarity or mix, but the missing material limits listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Noted as incomplete and tracks out of sequence, making set flow unclear."
+  },
+  "band_member_comments": {
+    "Jerry": "Great wah‑wah playing on Cold Rain and Snow",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:21:57.417936+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-16.sbd.112987.flac"
+}

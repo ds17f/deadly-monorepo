@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording with a clean Miller transfer captures a moving set highlighted by standout Sugaree and Jack‑A‑Roe, though fans view the overall performance as mixed.",
+  "review": "The SBD capture is praised for its clear, well‑balanced transfer by C. Miller, making the music easy to hear. The show delivers a heartfelt Sugaree and a solid Jack‑A‑Roe, with the latter part of the second set often singled out as the high point, but many listeners describe the overall performance as merely average.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (≈4.5/5) while show quality receives mixed feedback (≈3.5/5). Weighted combination yields a rating around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice, clean transfer by C. Miller/Mr. Miller; clear and well‑balanced sound with no reported dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Jack‑A‑Roe"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Decent first set; the back end of the second set is frequently cited as the strongest portion, but overall the show is viewed as average rather than exceptional."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Reviewer imagines standing in front of Phil during Sugaree, indicating a strong vocal presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack‑A‑Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:39:54.850185+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-17.sbd.walker-scotton.miller.83773.sbeok.flac16"
+}

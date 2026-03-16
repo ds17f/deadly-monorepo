@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audience tape with thin but clear sound; Jerry's voice shines while the band plays a bit sloppy.",
+  "review": "The recording is an audience source that sounds a little thin yet retains enough clarity to be enjoyable. Jerry Garcia’s vocals are praised as exceptional for the mid‑90s, though Vince’s keyboards sit a bit high on \"Might As Well\" and the overall playing can be sloppy at times. Opinions are split, with one reviewer finding it worthwhile and another dismissing it as a clunker.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "low",
+    "rationale": "Limited (two) reviews with mixed feedback; show quality is average to below‑average and recording is fair, resulting in a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is a little thin but clarity is good for an audience tape; overall listenable despite some thinness."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Might As Well"
+    ],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds exceptional for this point in time.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince comes in a little too high on the chorus, especially in \"Might As Well\".",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Might As Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:31:26.117326+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-23.naks.ladner.14257.shnf"
+}

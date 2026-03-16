@@ -1,0 +1,51 @@
+{
+  "providers": {
+    "lmstudio": {
+      "endpoint": "http://localhost:1234/v1",
+      "api_key": "dummy-key",
+      "model": "current_model",
+      "rate_limiting": {
+        "delay_seconds": 0.1,
+        "max_retries": 3,
+        "backoff_factor": 2.0
+      },
+      "custom_headers": {},
+      "timeout": 180,
+      "max_tokens": 4096
+    },
+    "openai": {
+      "endpoint": "https://api.openai.com/v1",
+      "api_key": "sk-your-key-here",
+      "model": "gpt-4",
+      "rate_limiting": {
+        "delay_seconds": 2.0,
+        "max_retries": 5,
+        "backoff_factor": 2.0
+      },
+      "organization": null,
+      "timeout": 60,
+      "max_tokens": 4096
+    },
+    "anthropic": {
+      "endpoint": "https://api.anthropic.com",
+      "api_key": "sk-ant-your-key-here",
+      "model": "claude-3-sonnet-20240229",
+      "rate_limiting": {
+        "delay_seconds": 1.2,
+        "max_retries": 3,
+        "backoff_factor": 1.5
+      },
+      "max_tokens": 4096,
+      "timeout": 90
+    }
+  },
+  "default_provider": "lmstudio",
+  "processing": {
+    "cache_responses": true,
+    "skip_processed": true,
+    "min_reviews_for_processing": 1,
+    "output_debug": false,
+    "batch_size": 1
+  }
+}
+

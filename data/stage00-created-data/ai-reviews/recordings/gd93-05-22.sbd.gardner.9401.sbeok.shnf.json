@@ -1,0 +1,85 @@
+{
+  "summary": "High‑quality soundboard recording captures a strong 1993 show highlighted by a soaring Half Step jam, fiery Supplication breakout and standout Stagger Lee, Stella Blue and Foolish Heart performances.",
+  "review": "The May 22‑93 concert shines with Jerry Garcia’s inspired guitar—especially the epic Half Step jam—and tight band interplay that lifts songs like Supplication, Stagger Lee, Stella Blue and Foolish Heart. Listeners repeatedly praise the crisp DAT soundboard mix (often rated a perfect five), though a few feel the encore \"IFTL\" falls flat. Overall the show is regarded as one of the better 1993 outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average star rating ≈ 4.2 across 13 reviews, with consistent praise for both performance and sound quality; only minor criticisms appear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "DAT‑derived soundboard capture praised as crisp, well‑balanced and a \"nice mix\"; several reviewers gave the audio a perfect 5/5."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Supplication",
+      "Stagger Lee",
+      "Stella Blue",
+      "Foolish Heart"
+    ],
+    "poor_songs": [
+      "IFTL"
+    ],
+    "setlist_flow": "The first set builds strong momentum with a powerful Half Step opener and tight jams; the second set maintains energy through a fiery Foolish Heart, a memorable Corrina/Space segment, and an explosive Stella Blue/OMSN climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is repeatedly lauded—especially on Half Step, Stagger Lee and the soaring ending of Stella Blue.",
+    "Phil": "Phil’s bass locks in with Jerry and Vince during the Half Step jam, providing a solid, melodic foundation.",
+    "Bob": "",
+    "Keys": "Vince’s keyboard work shines on Foolish Heart (resembling Brent’s style) and adds texture throughout the set.",
+    "Drums": "The dual‑drummer groove is highlighted as unique on Corrina and in the post‑Space section, delivering a driving rhythmic backbone."
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "IFTL": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:51:44.866518+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-22.sbd.gardner.9401.sbeok.shnf"
+}

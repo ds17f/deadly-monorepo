@@ -1,0 +1,99 @@
+{
+  "summary": "High‑fidelity Betty‑Board sound captures a tight first set and blissful second set highlighted by stellar performances of Looks Like Rain, Sugaree and St. Stephen.",
+  "review": "The recording is an excellent Betty‑Board mix with clear, punchy balance; only occasional dropouts appear on Tennessee Jed and Deal. Musically the show shines from a laid‑back yet tight first set into a second‑set flow that gels beautifully, featuring standout renditions of Looks Like Rain, Sugaree, St. Stephen and a soaring version of The Music Never Stops.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ≈4.9) and enthusiastic comments on both performance and sound quality, with only minor technical hiccups."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear Betty‑Board mix; low gain noted but easily corrected. Small dropout glitches reported on Tennessee Jed and Deal, otherwise crisp and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stops",
+      "Lazy Lightnin' > Supplication",
+      "Bertha",
+      "Scarlet > Fire",
+      "Sugaree",
+      "Looks Like Rain",
+      "St. Stephen",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Tennessee Jed",
+      "Deal"
+    ],
+    "setlist_flow": "First set described as long, laid‑back yet tight; second set opens with Bertha and flows into a blissful Scarlet > Fire segment, maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for perfect note choice and phrasing on the Looks Like Rain solo and overall tone.",
+    "Phil": "His bass line on Looks Like Rain called \"incredibly melodic and flowing\".",
+    "Bob": "Noted that cutting Sugar Magnolia a bit short was disappointing, implying his vocal/guitar lead could have extended it.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Music Never Stops": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T22:35:26.413363+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-05.sbd.cantor.7725.shnf"
+}

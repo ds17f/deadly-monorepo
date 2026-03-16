@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown, but fans describe the show as great overall despite some ups and downs.",
+  "review": "The two available reviews offer little detail on the audio fidelity, leaving the recording source and quality indeterminate. One reviewer rates the performance highly, calling it a \"great show\" with occasional ups and downs, while another simply thanks the archivist for making the tape available. Overall the sentiment is positive toward the musical content.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one gives a perfect 5‑star rating for the show, but no information on recording quality, leading to an estimated overall rating of about 4 stars with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer commented on sound clarity, mix balance, or source type; therefore the recording quality cannot be confidently assessed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes a generally great show with some ups and downs but provides no specifics on pacing or song order."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T17:51:03.648459+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-27.aud-schug.warner.21480.sbeok.shnf"
+}

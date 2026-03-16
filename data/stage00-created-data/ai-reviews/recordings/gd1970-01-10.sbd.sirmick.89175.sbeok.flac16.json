@@ -1,0 +1,45 @@
+{
+  "summary": "Great soundboard capture of a lively early‑70 set with standout Mason’s Children and a ferocious China Cat Sunflower.",
+  "review": "The recording is praised as crystal‑clear and “great,” indicating an excellent soundboard source. The performance is described as the band being \"on\" with Mason's Children highlighted by one reviewer and a fierce rendition of China Cat Sunflower lauded by another, while a third notes the set’s concise, refreshing brevity after the Fillmore East shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Three enthusiastic reviews (two 5‑star, one 4‑star) consistently praise the sound quality and highlight specific songs; weighting show (70%) and recording (30%) yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp sound with no reported drop‑outs or balance issues; reviewers explicitly call the audio \"great\" and a \"true gem.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mason's Children",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is noted for its brevity, offering shorter, refreshing renditions that differ from the extended jams of the preceding Fillmore East shows."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing is singled out as \"fierce\" on China Cat Sunflower and generally praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mason's Children": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:29:30.309859+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-01-10.sbd.sirmick.89175.sbeok.flac16"
+}

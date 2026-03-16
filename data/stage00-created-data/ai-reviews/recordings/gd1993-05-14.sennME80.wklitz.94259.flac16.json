@@ -1,0 +1,47 @@
+{
+  "summary": "Wonderful tape job captures a vibrant Scarlet > Fire combo and strong first set, though the second set isn’t quite as tight.",
+  "review": "The recording is praised as a “wonderful tape job” with clear mix that highlights Keith’s keyboards and Phil’s rhythmic soloing. Musically the show shines on the bouncy Scarlet > Fire sequence and the SOTM > Sugar Magnolia closer, while the second set is noted as slightly weaker and Jerry’s brief absence during Fire detracts a bit.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.33/5; most comments praise both performance and tape quality, with only minor criticisms about the second set and a brief guitar silence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Tape job described as wonderful and clear; mix brings out keyboards and rhythm section nicely. No major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "SOTM > Sugar Mag"
+    ],
+    "poor_songs": [
+      "Fire"
+    ],
+    "setlist_flow": "First set is energetic and well‑played; the second set, while still enjoyable, is considered less tight than the opener."
+  },
+  "band_member_comments": {
+    "Jerry": "Absent for ~90 seconds during 'Scarlet > Fire', which some reviewers saw as a drawback.",
+    "Phil": "His bass (and talking drum) solo is highlighted as an interesting rhythmic feature.",
+    "Bob": "",
+    "Keys": "Keith’s playing receives enthusiastic praise, especially on the Scarlet > Fire combo.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "SOTM > Sugar Mag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:29:00.184244+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-14.sennME80.wklitz.94259.flac16"
+}

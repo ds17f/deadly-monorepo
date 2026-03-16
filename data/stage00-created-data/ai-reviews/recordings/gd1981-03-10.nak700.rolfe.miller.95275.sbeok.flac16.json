@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording of an electrifying early‑80s show, highlighted by scorching Scarlet Begonias and Fire.",
+  "review": "The three reviewers all rave about the high‑energy performance, noting Jerry’s “possessed” playing and the sheer magic of the set—especially the blistering Scarlet Begonias/Fire segment.  While the source is an audience tape, the crowd‑band blend is described as clear and enticing, making the recording a worthwhile download.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviews give 5 stars, praising both the show’s musical intensity and the enjoyable audience mix; recording quality is good for an Aud source, so the combined weighted score is very high."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape praised for its clear crowd‑band blend and overall pleasant sound; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, magical performance with consistent intensity throughout; the scarlet/fire segment is singled out as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as sounding possessed and full of energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:27:14.089428+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-10.nak700.rolfe.miller.95275.sbeok.flac16"
+}

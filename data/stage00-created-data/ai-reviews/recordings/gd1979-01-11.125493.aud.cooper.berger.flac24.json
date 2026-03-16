@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent performance despite brief jams; recording quality not specified",
+  "review": "The reviewer rates the concert a perfect five stars, praising the overall show while noting that the improvisational jams are a bit shorter than usual. No information is provided about the source or fidelity of the recording, so its technical quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single 5‑star review highlights an excellent show (70% weight) with only a minor comment about short jams; lack of recording details reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised overall but the jams are noted as being a bit short, giving the show a tighter feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T19:01:06.066961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-11.125493.aud.cooper.berger.flac24"
+}

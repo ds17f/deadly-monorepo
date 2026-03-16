@@ -1,0 +1,51 @@
+{
+  "summary": "Average show with a solid setlist and good Phil Lesh moments, but no recording details and overall negative impression",
+  "review": "The reviewer finds the concert only average, hampered by a poor venue despite an outstanding setlist that includes a strong Broken Arrow from Phil, a West LA Fadeaway, and a cool intro to The Wheel. No comments are made about the audio source or sound quality.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only one low‑star review; shows mixed praise for a few songs but overall disappointment and no recording info, leading to a rating near the reviewer’s 2‑star score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality or source; reviewers did not discuss audio clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow",
+      "West LA Fadeaway",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer calls the setlist outstanding despite an average performance overall, highlighting a few strong moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Kicks ass as usual on Broken Arrow",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:39:31.814734+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-04-06.141427.OTS.AKG.Ackerman.Miller.Noel.t-flac.1648"
+}

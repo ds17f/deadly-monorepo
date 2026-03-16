@@ -1,0 +1,57 @@
+{
+  "summary": "A memorable show with a stellar second set (Valley Road, Wheel → Playing In The Band Reprise → Goin' Down the Road) captured on an unusually clear audience‑sounding tape.",
+  "review": "Reviewers rave about the second‑set energy—especially Hornsby’s “Valley Road” and the closing Wheel/Playin’ In The Band reprise/Goin’ Down the Road sequence—while noting that the recording sounds better than a typical soundboard, with vocals and instruments standing out clearly. The overall vibe is nostalgic and positive despite one modest 3‑star rating that focuses more on the travel experience than the music itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong, enthusiastic comments about the performance and a clear recording outweigh a single neutral review; weighting favors the show quality (70%) with good technical notes (30%)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners say the tape sounds better than the board, with less muffling and vocals/instruments clearly audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Valley Road",
+      "Wheel",
+      "Playing In The Band Reprise",
+      "Goin' Down the Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set highlighted; sun setting as it began, flowing into a powerful closing sequence that reviewers describe as sweet and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping his guitar (“jerry rips it!!”).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Valley Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band Reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:02:43.552155+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-09.aud.gardner.4182.shnf"
+}

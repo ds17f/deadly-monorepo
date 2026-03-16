@@ -1,0 +1,63 @@
+{
+  "summary": "Mixed-quality show with standout Black Muddy River and Days Between",
+  "blurb": "The set delivers a powerful encore with Black Muddy River and an inspired Days Between jam in the second set. Jerry shines on his solo despite being buried in parts of the mix, while the band's energy fluctuates through uneven moments.",
+  "review": "On June 24, 1995 at RFK Stadium, the Dead rode a wave of highs and lows that left fans divided but still appreciative of the night’s peaks. The first set rolled through familiar terrain—Jack Straw, Althea, Little Red Rooster—and built momentum with So Many Roads into The Promised Land. The second set was more erratic: Iko Iko and Way To Go Home opened a patchwork stretch that found its groove only after the New Speedway Boogie surge, leading into an emotional climax of Days Between where Jerry’s solo sparked tight sync from both drummers. The encore, Black Muddy River, rose above the inconsistencies, delivering a heartfelt finish that many listeners cite as the night’s true highlight. Recording-wise, the best‑available source is a fair‑quality audience tape (gd95-06-24.aud.schoeps-oade.wiley.8819.sbeok.shnf), which captures the overall vibe despite Jerry’s guitar being occasionally buried; a good front‑of‑house capture also offers clearer moments of the high‑energy jams.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 50,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "Both recordings describe a mixed‑feel show: multiple reviewers praise standout moments like Days Between and Black Muddy River, but also note uneven performance and lack of power in parts of the set, leading to a modest positive sentiment boost.",
+      "final_calculation": "2.5 + 0.4 + 0.3 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd95-06-24.aud.schoeps-oade.wiley.8819.sbeok.shnf",
+    "reason": "Provides the most complete capture of the show despite a fair mix; it includes all songs and delivers enough clarity to appreciate the highlights."
+  },
+  "key_highlights": [
+    "Black Muddy River shines as an emotive encore, often cited as the show's strongest moment.",
+    "Days Between features an epic solo and tight drum lock‑in, standing out amid a mixed second set.",
+    "New Speedway Boogie injects high energy early in Set 2, offering a bright contrast to uneven sections."
+  ],
+  "song_highlights": [
+    "Black Muddy River",
+    "Days Between",
+    "New Speedway Boogie",
+    "So Many Roads"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers a strong solo on Days Between and an emotive performance on Black Muddy River, though his lead guitar is often buried in the mix.",
+    "Phil": "",
+    "Bob": "Weir’s rhythm work stays solid throughout; early songs sound good according to listeners.",
+    "Vince": "Vince Welnick's keyboards are complemented by a guest grand piano from Hornsby, adding texture and positively noted throughout the show.",
+    "Mickey": "Hart locks in tightly during the Days Between jam, providing steady drive alongside Bill.",
+    "Billy": "Kreutzmann’s drumming meshes with Hart, especially evident in the tight sync on the Days Between solo."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T10:56:09.343599+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Black Muddy River"
+    ],
+    [
+      "Saint Of Circumstance",
+      "New Speedway Boogie",
+      "That Would Be Something",
+      "Drums",
+      "Space",
+      "Days Between",
+      "One More Saturday Night"
+    ],
+    [
+      "So Many Roads",
+      "The Promised Land"
+    ]
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Pristine soundboard capture of a mellow, holiday‑filled show highlighted by an extended Good Lovin' jam and a sweet Dire Wolf performance.",
+  "review": "The recording is praised for its crystal‑clear soundboard quality that places the vocals right in the listener’s living room. Musically the band delivers a loose, mellow set with standout moments on Good Lovin' (including an extended Jerry improvisation) and a beloved Dire Wolf, all wrapped in festive banter perfect for a Christmas Eve concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star praising both the pristine soundboard recording and the strong musical performance; only one mixed comment lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as pristine, crisp, with vocals sounding intimate; no issues such as muddiness or drop‑outs are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, holiday‑themed vibe with loose and mellow playing, generous banter, and a particularly extended Good Lovin' jam that showcases the band's on‑stage chemistry."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar extemporizing during the long Good Lovin' is highlighted as a high point.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:41:06.858790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-12-23.132343.sbd.miller.flac16"
+}

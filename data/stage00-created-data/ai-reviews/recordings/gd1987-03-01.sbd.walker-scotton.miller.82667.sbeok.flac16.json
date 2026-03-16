@@ -1,0 +1,57 @@
+{
+  "summary": "Great soundboard recording with minor tape‑hiss, highlighted by a shredding Fire on the Mountain and stellar Black Peter",
+  "review": "The remastered soundboard capture is clear and generally excellent, though a faint generational hiss can be heard in quieter moments. Musically the show shines – Fire on the Mountain “shreds,” Black Peter ranks among the best versions, and Space turns into an extended jam, all backed by tight post‑drum work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four substantive reviews rate the show 4–5 stars and praise both performance and recording; the weighted average yields a solid 4.2 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered soundboard with clear mix that improves through set 1; minor tape‑generation hiss audible in quiet passages but overall great recording quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Black Peter",
+      "Space",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 1 mix builds nicely, and the second half delivers jam‑heavy moments (Space) and strong post‑drum sections; overall pacing is smooth and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drummers praised for the powerful post‑drums section and tight playing throughout."
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:51:05.304925+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-01.sbd.walker-scotton.miller.82667.sbeok.flac16"
+}

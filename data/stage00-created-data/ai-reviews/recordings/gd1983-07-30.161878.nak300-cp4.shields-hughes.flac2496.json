@@ -1,0 +1,31 @@
+{
+  "summary": "Metadata issue flagged; reviewers provide no insight into audio or performance quality.",
+  "review": "Both reviews point out that the setlist metadata was incorrect (show listed as 9/11/83) and note that it has been corrected, but they give no commentary on the musical performance or recording fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only two reviews focused solely on a setlist error; there is insufficient information to assess show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type; reviewers only discussed metadata."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers noted the setlist information was wrong (listed as 9/11/83) but confirmed the music itself is correct."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T08:33:41.078079+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-07-30.161878.nak300-cp4.shields-hughes.flac2496"
+}

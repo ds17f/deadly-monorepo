@@ -1,0 +1,87 @@
+{
+  "summary": "A lively audience tape of the 1979 second set captures Brent Mydland’s early keys and a soaring Shakedown Street jam, plus emotive renditions of Estimated Prophet, Eyes of the World and Stella Blue.",
+  "review": "The recording is an audience source with some rough edges but plenty of crowd ambience that adds to the historic feel. Musically the show shines – Brent’s nascent keyboard work, a blazing Shakedown Street jam, and heartfelt performances of Estimated Prophet, Eyes of the World, Stella Blue, Good Lovin' and U.S. Blues make it a memorable night despite a few filler moments like Passenger.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently praise the musical performance and highlight several standout songs, while noting typical audience‑tape roughness; three reviews give an average of 4.3 stars, leading to a weighted rating around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Typical audience tape with noticeable crowd noise between songs and occasional roughness; keys sound soft at the start but overall volume is decent, especially during the space jam where bass frequencies are pronounced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Friend of the Devil",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Stella Blue",
+      "Good Lovin'",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Passenger"
+    ],
+    "setlist_flow": "The set flows smoothly from a strong Estimated Prophet into an upbeat Eyes of the World, followed by an atmospheric space jam that segues into a moving Stella Blue and closes with high‑energy Good Lovin' and U.S. Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for vocal power on Friend of the Devil and emotional delivery on Stella Blue; guitar work noted as solid throughout.",
+    "Phil": "Highlighted for his thunderous bass chords during the space jam, creating a visceral low‑frequency impact.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s early playing is described as soft at first but quickly shows his talent with an impressive solo on Friend of the Devil; reviewer calls him their favorite keys player.",
+    "Drums": "Mentioned briefly as adding subtle texture during the space jam."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T23:51:02.067569+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-25.set2.nak700-rolfe.vernon.90098.sbeok.flac16"
+}

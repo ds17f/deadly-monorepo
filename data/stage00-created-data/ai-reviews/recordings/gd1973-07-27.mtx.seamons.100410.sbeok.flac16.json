@@ -1,0 +1,44 @@
+{
+  "summary": "A solid matrix recording that captures a superb 1973 show highlighted by the soaring jam before Wharf Rat and tight ensemble playing.",
+  "review": "Fans rave about this performance, especially the phenomenal second‑set jam that leads into Wharf Rat and the overall happy vibe of the concert. The matrix source delivers clear sound with good stage banter, letting listeners hear each member’s contributions. The show is praised for its joyful energy and tight ensemble work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are overwhelmingly positive (five 5‑star, one 4‑star) and highlight both the musical excellence and the good sound quality; thus the combined show/recording rating is very high."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the sound as good/clear with pleasant stage banter and no noticeable drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows naturally, building into a standout second‑set jam that segues into Wharf Rat; overall pacing and banter keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his pick‑and‑finger guitar work and overall superb ensemble contribution.",
+    "Phil": "Noted for lower‑register bass explorations adding depth to the jam.",
+    "Bob": "Highlighted for rhythmic counterpoint that enriches the improvisation.",
+    "Keys": "Keith is praised for sitting out the first ten minutes of the jam then bursting in with fierce electric piano playing.",
+    "Drums": "Bill's cymbal work is singled out as outstanding during the extended jam."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "FOTM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:44:19.818242+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-27.mtx.seamons.100410.sbeok.flac16"
+}

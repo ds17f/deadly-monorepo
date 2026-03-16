@@ -1,0 +1,106 @@
+{
+  "summary": "High‑quality soundboard recording with a few level quirks, highlighted by stellar RR Blues and Mississippi Half‑Step performances despite missing early‑set tracks.",
+  "review": "The SBD capture of the July 22 1972 Vernon show is generally clear and well‑balanced, though some listeners note an occasional treble boost and uneven levels. Musically the concert shines on Jerry’s ripping RR Blues, multiple inspired Mississippi Half‑Step jams, a soaring Box‑of‑Rain finale and standout renditions of Yellow Dog and Stella Blue, while the missing first‑set numbers and a truncated Playing in the Band dent the overall flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating of reviewers is ~4.1; most comments praise the performance and sound, with a few noting missing tracks or tonal quirks, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp SBD capture; reviewers cite good clarity and solid mix, though some mention a harsh treble boost, fluctuating levels, and occasional hiss that was later cleaned up."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramblin' Rose Blues",
+      "Mississippi Half Step",
+      "Box of Rain",
+      "Yellow Dog",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Cumberland Blues",
+      "Playing in the Band"
+    ],
+    "setlist_flow": "The first‑set portion is incomplete (Bertha, Me & My Uncle, You Win Again, Jack Straw missing) which disrupts continuity, but the remaining setlist flows well with a strong early half and a varied second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery solos on RR Blues, multiple Half‑Step jams, and overall guitar intensity.",
+    "Phil": "His baritone backing vocals are highlighted as excellent; several reviewers note his vocal presence throughout the show.",
+    "Bob": "Commended for powerful delivery on Box of Rain (B.T. Wind) and humorous interplay with Pig during 'Chopsticks' jam.",
+    "Keys": "Keith's keyboard work receives positive nods, especially in the playful 'Chopsticks' segment.",
+    "Drums": "Bill’s drumming is noted for tight interaction in jams and steady support throughout."
+  },
+  "song_mentions": {
+    "Ramblin' Rose Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half Step": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Yellow Dog": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "You Win Again": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T15:37:45.950872+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-07-22.sbd.vernon.13562.sbeok.shnf"
+}

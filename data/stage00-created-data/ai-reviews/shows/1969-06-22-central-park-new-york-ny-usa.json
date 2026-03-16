@@ -1,0 +1,58 @@
+{
+  "summary": "Casey Jones shines, Dancin' In The Street energizes the set",
+  "blurb": "The concert opens with a raucous Dancin' In The Street before delivering a fiery Casey Jones that fans rave about. A high‑energy run through Dark Star into The Other One and Saint Stephen showcases early psychedelic improvisation. Recordings are rough, but the performance remains a highlight of the 1969 Central Park shows.",
+  "review": "On June 22 1969 the Dead took over the Great Lawn in Central Park for a set that still feels vibrant despite the poor audio captures available. The night kicks off with an exuberant Dancin' In The Street that instantly lifts the crowd, leading into one of the most celebrated renditions of Casey Jones from this era – reviewers consistently call it “stellar” and “standout”. After a handful of concise covers like Hard To Handle, Me And My Uncle, Sittin' On Top Of The World and Silver Threads And Golden Needles, the band launches into an extended psychedelic suite: Dark Star segues into The Other One and then Saint Stephen, displaying the group's improvisational fire that would define their late‑60s sound. While all three known recordings suffer from hiss, mud and missing sections – one being labeled hopelessly poor – the musical moments cut through clearly enough to let listeners appreciate the raw energy and adventurous spirit of this historic outdoor gig.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "All three analyses use mixed sentiment but uniformly highlight Casey Jones and other songs with no criticism, indicating a modestly positive overall view.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-06-22.sbd.kaplan.17892.sbeok.shnf",
+    "reason": "Despite poor and incomplete audio, it captures the early standout moments (Casey Jones, Dancin' In The Street) and is the most complete of the available sources."
+  },
+  "key_highlights": [
+    "Stellar early Casey Jones performance that stands out across recordings.",
+    "Energetic Dancin' In The Street opener sets a festive tone.",
+    "Extended psychedelic journey through Dark Star > The Other One > Saint Stephen showcases improvisational fire.",
+    "Recording quality is rough, with heavy hiss and missing sections, but the musical moments shine through."
+  ],
+  "song_highlights": [
+    "Dancin' In The Street",
+    "Casey Jones",
+    "Silver Threads And Golden Needles",
+    "Me And My Uncle"
+  ],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T15:47:53.735150+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dancin' In The Street",
+      "Casey Jones"
+    ],
+    [
+      "Silver Threads And Golden Needles"
+    ],
+    [
+      "Me And My Uncle"
+    ]
+  ]
+}

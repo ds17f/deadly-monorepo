@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from significant pitch problems, making it noticeably flat.",
+  "review": "The tape is out of tune, with the entire performance recorded a full semitone low (and even the soundboard sources are still over a third‑semitone flat). This pitch error dominates the listening experience and overshadows any assessment of the musical performance.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief review focusing on a major pitch issue; no positive comments about the show, leading to a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Pitch/speed are significantly off – flat by an entire semitone (SBDs still ~1/3 semitone flat)."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T03:28:15.856346+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-07.senn-hubbard.bandrofcheck.81454.flac16"
+}

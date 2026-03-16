@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard recording of a powerful ’70 show highlighted by the classic “And We Bid You Goodnight” jam.",
+  "review": "All three reviewers praise this 1970 performance, calling it powerful and noting the standout ‘And We Bid You Goodnight’ jam that foreshadows later Dead material. The SBD source is assumed to be clean and well‑balanced, with no reported technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (5, 5, 4) and uniformly positive language indicate both a great show and an excellent soundboard recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No specific issues mentioned; reviewers focus on performance quality, implying a clear and well‑balanced SBD capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "And We Bid You Goodnight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not detailed in reviews, but described as a powerful ’70 set with the classic jam serving as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "And We Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:20:48.063095+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-05-24.136669.sbd.sirmick.flac1648"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Superb soundboard capture of an '78 gem with standout Estimated Prophet, He's Gone, The Other One and Wharf Rat performances, though the show is uneven and missing Bertha.",
+  "review": "The recording quality is repeatedly praised as superb, delivering a clear and balanced soundboard experience. Musically the concert shines on several jams – especially Estimated Prophet, He’s Gone (featuring strong Jerry solos), The Other One and Wharf Rat – but some listeners note low energy from Jerry and the absence of the expected Bertha opener, giving the overall impression a mixed feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently rated excellent while show quality ranges from high praise to notable criticism (missing song and low energy), resulting in a solid but not outstanding overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the sound as superb, crisp and clear; no technical flaws or drop‑outs were mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "He's Gone",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "The set is praised for passionate, high‑energy jams on several numbers, but a few listeners felt the overall energy sagged and noted the missing Bertha opener, giving the flow an uneven feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for great solos on He's Gone and strong jamming; later described as tired, distracted and low‑energy by another reviewer.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:38:50.267954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-06.sbd.unknown.290.sbeok.shnf"
+}

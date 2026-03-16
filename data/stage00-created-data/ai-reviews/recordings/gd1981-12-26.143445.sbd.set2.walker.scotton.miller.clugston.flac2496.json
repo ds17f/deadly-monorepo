@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard capture of an excellent NYE ’81 run featuring a big second set with standout Space → A Day at the Dentist → The Eleven.",
+  "review": "The reviewer rates this New Year's Eve 1981 show highly, praising a massive second set that includes a wild Space jam flowing into A Day at the Dentist and a soaring Eleven. While no specific recording issues are noted, the SBD source suggests a clear and balanced mix, making the performance enjoyable to listen to.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Single 4‑star review highlights a strong musical performance and implies decent soundboard quality; limited data keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio issues; assumed clear based on SBD source and positive overall rating."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "A Day at the Dentist",
+      "The Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Big, energetic second set with seamless transitions; reviewer emphasizes its superiority to earlier December shows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "A Day at the Dentist": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:30:12.569308+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-26.143445.sbd.set2.walker.scotton.miller.clugston.flac2496"
+}

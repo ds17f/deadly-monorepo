@@ -1,0 +1,31 @@
+{
+  "summary": "High‑quality audience recording of a beloved Fall ’94 show, though some listeners experience slow playback due to the 48 kHz master.",
+  "review": "Reviewers rave about the clarity and fidelity of this audience (AUD) capture, calling it one of the best sounding sources from the fall‑1994 run. The only complaint centers on a perceived slowdown when the 48 kHz master is incorrectly down‑sampled to 44.1 kHz, not on the performance itself.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews praise the recording and show, while one 2‑star review notes a speed issue caused by sample‑rate conversion; overall rating reflects strong show quality with minor technical confusion."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Mastered at 48 kHz, yielding superb clarity when played at native rate. Playback at 44.1 kHz causes the audio to sound slow; proper conversion is required."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers simply note it as a favorite Fall ’94 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T02:34:17.826019+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-05.schoeps.wklitz-jones.85225.flac1648"
+}

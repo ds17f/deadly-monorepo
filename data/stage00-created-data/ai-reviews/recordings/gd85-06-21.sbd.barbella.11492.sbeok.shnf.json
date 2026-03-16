@@ -1,0 +1,120 @@
+{
+  "summary": "Good‑quality soundboard capture of a mixed‑bag show – first set uneven, second set stellar with standout Estimated Prophet and Sugar Magnolia.",
+  "review": "The recording is a soundboard source that sounds decent overall but suffers from occasional muffling, odd MIDI effects from Brent and confusing track splits (Ain’t Superstitious/Down To The Bottom). Musically the concert swings between a shaky first set and an inspired second set featuring fiery Estimated Prophet, tight Man Smart/Woman Smarter → Goin’ Down the Road, a soaring Truckin’, soulful Black Peter and a rousing Sugar Magnolia. Reviewers are split – many rave about the energy while a few lament missing Day Job and sloppy early songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average star rating ≈3.7 across 17 reviews, with strong positive comments on the second set and decent soundboard quality offset by technical quirks; weighted toward performance (70%) gives a solid 4‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear but at times muffled; split‑track labeling of Ain’t Superstitious/Down To The Bottom confuses listening; Brent’s MIDI effects are distracting; not ideal for headphone critical listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Looks Like Rain",
+      "Man Smart (Woman Smarter)",
+      "Goin' Down the Road",
+      "Truckin'",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Ain't Superstitious / Down To The Bottom",
+      "Stagger Lee",
+      "Mama Tried",
+      "Around and Around"
+    ],
+    "setlist_flow": "First set is uneven – a few clunky moments (Cold Rain & Snow, Stagger Lee, Mama Tried) and a missing Day Job. The second set lifts the concert with high energy, tight jams and strong transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's lead work praised as excellent; solo highlights on Goin' Down the Road and Truckin'.",
+    "Phil": "",
+    "Bob": "Bob Weir (referred to as Bobby) described as \"on fire\" during Estimated Prophet and other jams.",
+    "Keys": "Brent Mydland’s odd MIDI effects and split‑track handling of Ain’t Superstitious criticized.",
+    "Drums": "The drum segment called \"beatastic\" with a strong pre‑drums jam."
+  },
+  "song_mentions": {
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ain't Superstitious / Down To The Bottom": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:14:15.404151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-21.sbd.barbella.11492.sbeok.shnf"
+}

@@ -1,0 +1,88 @@
+{
+  "summary": "Good‑quality audience recording of a high‑energy 1982 show with standout Other One, Little Red Rooster and Candyman performances",
+  "review": "The tape captures an electric early‑April ’82 concert where the band’s chemistry is heightened by Jerry and Phil swapping sides. Highlights include a piano‑driven, soaring The Other One, a fiery Little Red Rooster with Brent’s scat, and a blistering Candyman; the first set flows strong while the second set is mixed but features an excellent Drums>Space>Other One jam. Recording quality is praised as clear and punchy for an audience source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (5/6) give five‑star praise for both performance and sound, noting clear audio and many superb moments; a couple of mixed/negative reviews lower the overall average but the show remains strong."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the recording \"very fine\" and \"punchy\", noting clear instrument separation despite being an audience tape; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Little Red Rooster",
+      "Candyman",
+      "Samson",
+      "China > Rider",
+      "Dark Star",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Roses",
+      "He's Gone"
+    ],
+    "setlist_flow": "First set is described as \"bang on\" with a strong peak at Little Red Rooster; second set is more uneven but contains the celebrated Drums>Space>Other One sequence and a busy Dark Star, ending with a spry Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is energetic – dancing on stage, feeding off Brent’s keyboards, delivering free‑form solos especially in The Other One and Little Red Rooster.",
+    "Phil": "Phil’s bass work shines after the historic left/right swap, adding a tighter low‑end interplay with the new stage positions.",
+    "Bob": "Brent Mydland provides piano‑driven texture on The Other One, scat vocals on Little Red Rooster, and leads a slide jam in Samson; his vocal contributions are praised throughout.",
+    "Keys": "Mydland’s keyboards are highlighted as jazzy and piano‑like, driving several jams and adding melodic depth.",
+    "Drums": "Bill & Mickey deliver an excellent Drums>Space>Other One segment; their interplay is called “fierce” and a highlight of the second set."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:00:39.913441+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-02.nak700.wagner.miller.112822.flac16"
+}

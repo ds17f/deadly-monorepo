@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard source with fair‑muddy audio captures a wildly energetic 1983 show – high points are the Help > Slip > Franklin’s run and the Playing jam, while Stephen Stills’ “Love The One You’re With” splits opinion.",
+  "review": "The recording is a multi‑gen soundboard tape that suffers from hiss and level problems but still lets listeners hear the thunderous drums, Jerry’s soaring lead on Slipknot and the ferocious Help > Slip > Franklin’s sequence. The show shines in its second‑set energy and the epic Playing in the Band jam, though the guest appearance by Stephen Stills on “Love The One You’re With” is praised by some and derided by others.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "27 reviews provide a clear split: performance aspects (show) are generally praised (70% weight) while the recording quality is consistently noted as muddy/faulty (30% weight). The weighted average lands in the good‑to‑average range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Multi‑gen soundboard with noticeable hiss, occasional level problems and muddy mids; some tracks are clear but overall fidelity is limited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Playing in the Band",
+      "The Wheel > Playing"
+    ],
+    "poor_songs": [
+      "Love The One You're With"
+    ],
+    "setlist_flow": "First set is solid with strong early jams; second set erupts into a high‑octane Help/Slip/Franklin’s run and an expansive Playing in the Band, giving the concert its most memorable moments despite occasional vocal slip‑ups."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead work on Slipknot and the thundering solo on the Help/Slip transition are repeatedly praised; a few reviewers note a flub on Franklin’s.",
+    "Phil": "Bass is described as ‘exploding’ and dropping bombs throughout, especially during the second‑set jams.",
+    "Bob": "",
+    "Keys": "Brent's eerie organ/xylophone texture gets highlighted during the Playin' jam; no specific mention of Keith or Vince.",
+    "Drums": "Bill’s drumming is called ‘thundering’ and a highlight on Slipknot and the transition into the third verse of the second‑set jam."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Love The One You're With": {
+      "positive_mentions": 5,
+      "negative_mentions": 7,
+      "total_mentions": 12
+    },
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Wheel > Playing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slipknot!": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-14T05:39:17.180433+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-17.sbd.fink.14941.sbeok.shnf"
+}

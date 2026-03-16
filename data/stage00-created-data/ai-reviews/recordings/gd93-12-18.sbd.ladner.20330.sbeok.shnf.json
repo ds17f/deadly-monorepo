@@ -1,0 +1,57 @@
+{
+  "summary": "Crystal‑clear soundboard recording of a mellow ’93 show highlighted by an outstanding Playing in the Band → Uncle John’s Band jam and a stellar Deal performance.",
+  "review": "The recording is praised for its crisp mix, forward‑placed keyboards and superb balance that lets the free‑form post‑Uncle John’s jam shine. Musically the concert delivers a nicely blended set with a particularly inspired Playing in the Band → Uncle John’s Band sequence, an exploratory jam, and a standout Deal, despite Jerry’s slightly ragged vocal on a few numbers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently positive reviews (mostly 4‑5 stars) highlight excellent soundboard quality and several standout performances, with only one moderate‑scoring comment about Jerry’s voice."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix, front‑heavy keys, well‑balanced instruments; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Uncle John's Band",
+      "Jam (post‑UJB)",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, mellow ’93 set that flows smoothly into a free‑form jam after Uncle John’s, with the band exploring synth textures and tight percussion before moving into a concise Deal."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice a bit rough on some numbers but guitar work is strong; he experiments with many synth patches and delivers inventive phrasing.",
+    "Phil": "Praised for his unique bass voice, giving the band its ‘blessing’ during the jam and contributing to the exploratory feel.",
+    "Bob": "",
+    "Keys": "Front‑placed keyboards are highlighted as a major strength of the mix, adding clarity and presence throughout.",
+    "Drums": "Mickey’s percussion (bongos and extra textures) is noted for its intimacy; overall drum work blends nicely with the jam."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jam (post-UJB)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:59:54.209207+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-18.sbd.ladner.20330.sbeok.shnf"
+}

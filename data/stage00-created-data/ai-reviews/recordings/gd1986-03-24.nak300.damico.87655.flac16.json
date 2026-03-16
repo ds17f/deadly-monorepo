@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard capture of a stellar 1986 Spectrum show, highlighted by a soaring Morning Dew and sweet Box of Rain.",
+  "review": "Reviewers rave about the performance, calling it one of the best shows of ’86 with standout moments like Morning Dew, Box of Rain, High Time and Saint Of Circumstance. The Joe D’Amico recording is praised for its clarity and ability to “sound like the Spectrum,” making the listening experience as vivid as being there.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are 4‑5 stars, consistently praising both the musical performance and the recording fidelity; strong consensus yields a high confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers highlight D'Amico's superb upload, noting that it captures the venue atmosphere perfectly with no reported drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Box of Rain",
+      "High Time",
+      "Saint Of Circumstance",
+      "Lost Sailor > Saint Of Circumstance",
+      "Space > Morning Dew",
+      "Half-Step"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as strong from start to finish, with a memorable second‑set climax (Space into Morning Dew) and seamless transitions that kept the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is called “fantastic” and “sweet,” with especially good tone on several songs.",
+    "Phil": "Phil’s voice is noted as unusually strong and his singing super‑strong on Box of Rain.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:38:50.658478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-24.nak300.damico.87655.flac16"
+}

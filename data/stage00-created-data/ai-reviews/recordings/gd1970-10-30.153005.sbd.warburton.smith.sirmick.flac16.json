@@ -1,0 +1,31 @@
+{
+  "summary": "Poor recording with an inaccurate setlist; no musical details provided",
+  "review": "The lone reviewer gave this release a single star, complaining that the posted setlist is scrambled and even lists songs that were not in the Dead's repertoire at the time. No remarks were made about the audio itself, so the technical quality cannot be confirmed beyond likely being sub‑par given the overall dissatisfaction.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review mentioning setlist errors; no audio commentary, leading to a low rating with minimal confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer did not discuss sound quality; focus was on incorrect setlist information."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Setlist appears to be erroneous, with songs listed that were not performed, making the show's structure unclear."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T00:13:21.226044+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-30.153005.sbd.warburton.smith.sirmick.flac16"
+}

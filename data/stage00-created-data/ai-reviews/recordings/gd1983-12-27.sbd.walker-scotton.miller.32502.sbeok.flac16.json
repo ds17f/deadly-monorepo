@@ -1,0 +1,51 @@
+{
+  "summary": "A solid soundboard upgrade captures a scorching Scarlet Begonias→Fire on the Mountain and a blazing second set, though the first set feels ragged.",
+  "review": "The recording (a sound‑board source with an upgraded master) delivers clear, well‑balanced audio, especially after a pitch fix was applied. Musically the show shines in the second half – Scarlet Begonias>Fire on the Mountain, Samson and Delilah, and He’s Gone are highlighted – but listeners note that the first set is uneven and “ragged.” Overall the performance is praised by most reviewers despite the rough start.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Three strong positive reviews (4‑5 stars) praise the show and the upgraded recording, while one very negative review criticizes a ragged first set; averaged rating lands around 4.0 with moderate confidence given the small, mixed sample."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Upgraded master is clear and balanced; original had pitch issues that were later fixed, suggesting decent but not flawless source quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Samson and Delilah",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set rolls strongly with extended jams, while the first set is described as ragged and less cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s whammy‑bar work during transitions is called out for its intensity.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:08:32.202679+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-27.sbd.walker-scotton.miller.32502.sbeok.flac16"
+}

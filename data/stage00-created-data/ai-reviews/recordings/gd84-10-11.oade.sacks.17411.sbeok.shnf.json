@@ -1,0 +1,90 @@
+{
+  "summary": "High‑energy early‑80s Augusta show captured on a lively audience tape; performance is stellar with standout Peggy‑O and marathon Shakedown despite minor hi‑freq whine.",
+  "review": "The August 84 shows in Augusta are remembered as wild, crowd‑charged nights with Jerry digging deep, Phil soaring on bass, and Brent’s keyboards lighting up the jams. Reviewers rave about a mint Peggy‑O, an epic 15‑minute Shakedown (even if a lyric slip is noted), Black Peter and Mr. Fantasy, while noting the tape has a bit of warbly high‑end whine but overall solid audience sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise the musical performance heavily; recording quality is generally good with only minor high‑frequency issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with deep bass and defined cymbals; a few reviewers note a warbly whine in the high end but most find the ambience and definition excellent for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Shakedown",
+      "Black Peter",
+      "Mr. Fantasy",
+      "Jack-A-Row"
+    ],
+    "poor_songs": [
+      "Shakedown (lyric slip)"
+    ],
+    "setlist_flow": "The shows feature a tight, energetic first set that builds into extended jams – the 15‑minute Shakedown is a centerpiece, followed by classic Dead cuts and high‑spirited crowd interaction."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers hard‑driving leads and “banging it out,” though one reviewer notes a lyrical stumble during Shakedown.",
+    "Phil": "Phil’s bass work shines – highlighted in the long Shakedown, sending chills through Sugar Magnolia, and remembered for his onstage antics (pressing head against monitor).",
+    "Bob": "",
+    "Keys": "Brent’s keyboards receive strong praise, especially on Mr. Fantasy and throughout the jams; earlier eras’ Keith also noted as awesome.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:45:04.266233+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-11.oade.sacks.17411.sbeok.shnf"
+}

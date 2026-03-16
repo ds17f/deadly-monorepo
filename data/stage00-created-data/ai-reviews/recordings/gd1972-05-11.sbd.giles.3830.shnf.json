@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording captures a stellar Good Lovin' with Garcia on organ and lead guitar.",
+  "review": "The sole fan review is wildly enthusiastic, noting that Jerry Garcia himself took over the organ while still handling lead guitar on Good Lovin', a rare and exciting moment. The recording is a sound‑board source, and although no specific audio comments are made, it is presumed to be clear enough to highlight this unique performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one review (5 stars) praising the performance; recording quality not discussed but assumed typical soundboard clarity, yielding a high overall rating with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio fidelity; presumed clear typical soundboard quality without noted issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient information beyond the highlighted Good Lovin' moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is praised for playing organ and lead guitar simultaneously on Good Lovin'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T13:49:33.190148+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-11.sbd.giles.3830.shnf"
+}

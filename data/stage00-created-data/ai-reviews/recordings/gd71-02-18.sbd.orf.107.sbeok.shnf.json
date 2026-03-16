@@ -1,0 +1,83 @@
+{
+  "summary": "Crystal‑clear soundboard source captures a historic 1971 Capitol show highlighted by the legendary Dark Star → Wharf Rat → Dark Star sandwich and dozens of first‑time performances.",
+  "review": "The recording is a clean, well‑balanced soundboard capture (aside from a few noise‑reduction artifacts noted in alternate versions) that lets listeners hear every nuance of Jerry Garcia’s soaring guitar and the band’s high‑energy improvisation.  Musically the show is a landmark – first renditions of Bertha, Wharf Rat, Greatest Story Ever Told, Loser and Playing in the Band, plus an unforgettable Dark Star/Wharf Rat/Dark Star sequence that many fans call one of the best ever.  Overall the performance is vibrant and historic, with only a handful of minor song‑level criticisms.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 70 % of the reviews are 4–5 stars praising both the performance and the audio; only a small minority criticize noise‑reduction glitches or isolated song choices.  The strong weighting toward show quality (70 %) pushes the overall rating into the “excellent” range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced; most listeners describe the mix as clear.  A few comments note noise‑reduction artifacts on later versions and an isolated glitch at ~2:22 of track 2, but these are considered minor compared to the overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star → Wharf Rat → Dark Star",
+      "Bertha",
+      "Truckin'",
+      "Playing in the Band",
+      "Loser",
+      "St. Stephen",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Playing in the Band (some callers call it a ‘stinker’)",
+      "Dark Star (a few reviewers felt it didn’t live up to hype)"
+    ],
+    "setlist_flow": "The set is packed with first‑time performances that flow naturally; the first set builds energy with tight, concise songs while the second set erupts into extended jams, climaxing in the iconic Dark Star/Wharf Rat sandwich and a fiery close."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for articulate, soaring guitar work and his ‘beautiful jam’ improvisations; several reviewers call his playing on the Dark Star reprise transcendent.",
+    "Phil": "Mentioned once as being moved to tears by the “Beautiful Jam” and noted for his bass foundation during the jams.",
+    "Bob": "",
+    "Keys": "Ned Lagin is identified on Casey Jones, highlighting a unique keyboard contribution for this era.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 15,
+      "negative_mentions": 3,
+      "total_mentions": 18
+    },
+    "Wharf Rat": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Bertha": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Loser": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T02:35:08.374888+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-02-18.sbd.orf.107.sbeok.shnf"
+}

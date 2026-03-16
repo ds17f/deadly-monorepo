@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 1981 show with Jerry on fire and a standout Baby Blue encore, recording quality not discussed",
+  "review": "The reviewer raves about this late‑'81 performance, calling it one of the better shows of the year. Jerry Garcia’s guitar and vocals are described as “on fire,” with deep‑elm blues through Bertha delivering red‑hot jams and an especially memorable Baby Blue encore. No comments on the audio source or sound quality were provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (70% weight) and a perfect 5‑star rating, but no information on recording fidelity (30% weight), leading to a high yet slightly moderated overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Review does not mention any details about the sound source or audio clarity, so recording quality cannot be assessed beyond an assumed acceptable level."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deep Elem Blues",
+      "Bertha",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "After a shaky start, the band hits its stride from Deep Elem Blues through Bertha with red‑hot playing, culminating in an exceptional Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\" with superb guitar work and vocal performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deep Elem Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:43:41.409606+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-03.158830.mtx.seamons.ht148.flac16"
+}

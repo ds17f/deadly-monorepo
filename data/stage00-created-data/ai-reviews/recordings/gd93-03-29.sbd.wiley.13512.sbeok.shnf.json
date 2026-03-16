@@ -1,0 +1,72 @@
+{
+  "summary": "Clean soundboard capture of a high‑energy first set (Stranger, Loser, Lazy River) with mixed second‑set performance and occasional recording volume quirks.",
+  "review": "The SBD source is clear and crisp, though a bit low on volume and lacking the ambience an audience matrix would add. Musically the show shines in the first set – Jerry’s leads on Loser and Stranger are repeatedly called “smoking” and the band delivers standout moments on Lazy River, Box of Rain, He’s Gone and Wharf Rat. The second set, however, is described as losing steam, with some songs dragging and the overall vibe turning low‑energy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Many reviewers praise the first set and specific song performances while noting a weak second set; recording quality is consistently described as clean but slightly low‑volume, yielding an overall mixed‑positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean and crisp SBD; lacks the spatial ambience of an audience mix and could be a bit louder, but no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Loser",
+      "Lazy River",
+      "Box of Rain",
+      "He's Gone",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Box of Rain",
+      "He's Gone"
+    ],
+    "setlist_flow": "First set is high‑energy and tightly executed; second set loses momentum, feeling tired and less inspiring."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers scorching leads on Loser and Stranger (often called the best solos of the era), though a few reviewers note his vocals sag in the later part of the show.",
+    "Phil": "",
+    "Bob": "Weir is described as sounding tired in the second set, with some comments about his vocal delivery dragging.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming receives high praise – called “amazing” and one of his best performances."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Loser": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Lazy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T11:51:09.455459+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-29.sbd.wiley.13512.sbeok.shnf"
+}

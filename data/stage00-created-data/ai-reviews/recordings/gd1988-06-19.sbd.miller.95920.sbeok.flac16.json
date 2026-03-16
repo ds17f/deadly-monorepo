@@ -1,0 +1,88 @@
+{
+  "summary": "Soundboard recording with mixed audio quality but many fans rave about a solid mid‑summer ’88 show featuring standout Bird Song and Promised Land jams.",
+  "review": "The concert is remembered for its hot Alpine atmosphere and a set that delivered sweet Bird Song, a rocking Promised Land, and early Foolish Heart versions that some consider among the best of the decade. Audio opinions diverge – a few listeners describe it as a “crappy audience copy,” while others praise it as a great soundboard capture – leaving the technical side uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and highlight several strong performances, but audio quality comments are split, pulling the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Some fans call it a ‘crappy audience copy’ with muffled sound, while others describe the recording as crisp and great; overall the audio is uneven but usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Promised Land",
+      "Foolish Heart",
+      "Throwing Stones",
+      "Even Knockin",
+      "Half Step"
+    ],
+    "poor_songs": [
+      "Not Fade Away",
+      "Heaven's Door",
+      "Dear Mr. Fantasy"
+    ],
+    "setlist_flow": "Fans note a solid, sometimes uneven performance typical of the 1988 Alpine run – strong jams and good rhythm sections but occasional lapses in energy, especially under extreme heat."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer says he ‘wrecked the lyrics,’ but others love his early Foolish Heart solo work and overall guitar tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Positive nods to Brent Mydland’s contributions – “Brent tune each set” and solid keyboard textures throughout.",
+    "Drums": "General praise for the drum groove (“pre‑drumz list”), no specific criticisms."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Even Knockin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:39:42.312594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-19.sbd.miller.95920.sbeok.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Let It Grow shines, Watchtower rocks, uneven pacing",
+  "blurb": "Standout versions of Let It Grow and All Along The Watchtower anchor a solid second set that lifts the show. Jerry’s guitar is fire‑brand on the highlights while Phil’s bass adds swagger; some mid‑set jams feel flat.",
+  "review": "The Shoreline Amphitheatre show on October 2, 1987 delivers a mixed but memorable experience. The band bursts into life with an electrifying Let It Grow that showcases Jerry’s “finest” lead work and Brent’s blustering keyboard swagger. All Along The Watchtower follows, featuring gritty pirate‑like vocals from Bob and muscular guitar chops that keep the crowd on its feet. The second set builds momentum through a bright China Cat Sunflower → I Know You Rider jam and a spirited Man Smart, Woman Smarter, while the Drums → Space excursion offers a solid beam episode before winding down with The Wheel and Gimme Some Lovin’. Though the pacing wavers—some songs like China, Rooster, Truckin’ and Ease feel listless—the overall flow is rescued by high‑energy moments and a sweet encore of Black Muddy River. Audio captures range from clean SBDs (the recommended Bertha‑Ashley board) to a well‑balanced Oade audience tape, giving listeners multiple ways to enjoy the performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Four recordings describe the show as mixed, two call it positive; consistent praise for Let It Grow, Watchtower and second‑set jams yields a modest positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd87-10-02.sbd.bertha-ashley.7367.sbeok.shnf",
+    "reason": "Clean, crisp soundboard capture that highlights Let It Grow and Watchtower with minimal tape noise; the most complete and polished SBD of the night."
+  },
+  "key_highlights": [
+    "Let It Grow delivers a high‑energy centerpiece with stellar guitar work.",
+    "All Along The Watchtower showcases gritty vocals and tight band interplay.",
+    "China Cat Sunflower → I Know You Rider jam lifts the second set momentum.",
+    "Man Smart, Woman Smarter adds bright, upbeat flavor to the middle of Set 2."
+  ],
+  "song_highlights": [
+    "Let It Grow",
+    "All Along The Watchtower",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Man Smart, Woman Smarter",
+    "Little Red Rooster"
+  ],
+  "band_performance": {
+    "Jerry": "Rips through Let It Grow and Watchtower with muscular lead guitar; occasional vocal slip on Far From Me but overall a strong performance.",
+    "Phil": "Provides youthful swagger and fiery bass, especially during the China > Rider jam; solid foundation throughout.",
+    "Bob": "Delivers gritty, pirate‑like vocals on Watchtower and steady rhythm work; occasional croak on Far From Me noted but generally reliable.",
+    "Brent": "Adds bluster and swagger on keys, energizing bland tunes; solo in Man Smart is a bit biffed but his vocal contributions lift several numbers.",
+    "Mickey": "Drums are mixed—some reviewers find the space segment long and uninspired, though the beam episode during Drums > Space receives praise.",
+    "Billy": "Shares drum duties with Mickey; noted for solid moments in the beam episode but overall lacking distinction on slower sections."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T04:39:20.366964+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let It Grow"
+    ],
+    [
+      "Truckin'",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Gimme Some Lovin'",
+      "All Along The Watchtower"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Man Smart, Woman Smarter"
+    ],
+    [
+      "Little Red Rooster"
+    ]
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Fair audience recording of a mixed Vegas show where a soaring “Standing on the Moon” and a smoking Help‑Slip‑Franklin’s shine despite a weak first set and a botched Althea.",
+  "review": "The tape captures an average 1995 Las Vegas performance – the first set is described as tepid and the band flubs the beloved Althea, while Jerry is noted to be disengaged. The second set provides the high points, especially “Standing on the Moon” and a fiery Help‑Slip‑Franklin’s sequence that keep the crowd alive. Audio quality is uneven; some listeners call it “so‑so AUD” while others praise it as one of the better audience recordings available.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show below average (average star ≈2.7) and note inconsistent audio quality, but a few highlight strong moments in the second set, leading to a mixed overall impression."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers call the sound “not the best,” “so‑so AUD,” or mention dropouts, though one claims it’s the best audience recording they’ve heard. Overall clarity is modest with occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Playin' in the Band > Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "The first set is widely described as tepid and poorly executed, especially the Althea performance. The second set recovers with strong jams and crowd‑pleasers like Standing on the Moon, making the overall show uneven but not without memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s lack of energy – “sleeping,” “head on mic,” and a butchered Althea – suggesting a sub‑par performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "One reviewer blames Vince (or another keyboardist) for the botched Althea bridge, implying keyboard duties were a factor.",
+    "Drums": "Comments about long drum/space passages (up to 12 minutes) that seemed to fill time while Jerry was disengaged."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band > Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T08:17:05.117068+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-05-19.schoeps.18704.sbeok.shnf"
+}

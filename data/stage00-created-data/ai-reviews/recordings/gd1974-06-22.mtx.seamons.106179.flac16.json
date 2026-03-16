@@ -1,0 +1,56 @@
+{
+  "summary": "A superb matrix recording of the June 22 1974 Miami show that shines with a scorching China Cat → Rider segue and a powerhouse Playin’ jam.",
+  "review": "The four fan reviews unanimously hail this performance as one of the Dead’s finest, singling out Jerry Garcia’s inspired playing, the electrifying China Cat > Rider transition, and an intense Playin’ jam. The matrix source (soundboard blended with audience) is described as crystal‑clear and perfectly balanced, delivering a vivid sense of the sweltering Miami venue while preserving the band’s loose, joyous groove.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All four reviewers gave five‑star ratings and praised both the musical performance (standout songs, Jerry’s playing) and the recording (perfect matrix mix), indicating an exceptional show with excellent audio quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviews call the sound “perfect,” “crisp,” and a seamless blend of pre‑FM SBD with Jerry Moore’s audience overlay, delivering clear instrument separation and vivid crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat",
+      "Rider",
+      "Playin' jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with a relaxed, beach‑ball groove, highlighted by a mountainous China Cat transition into Rider and an intense Playin’ jam that keeps the energy soaring throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for pure tone, inspired performance, and carrying the show from start to finish.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:12:10.802278+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-22.mtx.seamons.106179.flac16"
+}

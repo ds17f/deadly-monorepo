@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience recording captures a lovely performance featuring Donna's Dire Wolf and an exquisite Morning Dew.",
+  "review": "The reviewer praises this show as a quality performance, highlighting Donna’s vocal on “Dire Wolf” and the band’s beautiful delivery of “Morning Dew.” The AUD (audience) source is described as nice and clear, making the recording pleasant to listen to.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show 4 stars and praises both performance and recording, leading to a solid but cautiously estimated rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as lovely and nice, with no noted flaws; suggests clear and listenable AUD capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dire Wolf",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Positive remarks indicate a well‑received set with strong moments, though no specific comments on pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:42:43.314525+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-24.127535.chasingwilma.flac24"
+}

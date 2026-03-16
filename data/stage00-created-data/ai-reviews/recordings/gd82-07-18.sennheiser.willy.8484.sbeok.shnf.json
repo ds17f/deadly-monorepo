@@ -1,0 +1,39 @@
+{
+  "summary": "A mixed‑bag recording – some listeners rave about the fire‑filled performance and A+ sound, while others complain of missing low end and tape‑speed problems.",
+  "review": "The July 18 1982 Ventura show captures Jerry in a high‑energy “disco‑Dead” mode with a standout Loser solo that many fans love, and Phil’s bass is praised as booming. However the recording itself is divisive: one reviewer calls it crystal‑clear A+ quality, whereas others note a severe lack of low frequencies and possible speed errors, and even suggest another source is superior. Overall the performance shines for Deadheads who appreciate the era, but the audio fidelity may disappoint those seeking a clean soundboard capture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Five reviews give a spread of high (5) and low (1‑2) scores; the average star rating is ~3.4, and comments balance strong musical praise with significant recording complaints."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Comments range from “A+ quality sound” to complaints of no low‑end and possible incorrect tape speed; one reviewer says another source sounds better, indicating inconsistent audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as fast‑paced “disco‑Dead” with no encore captured on this tape; fans note the high energy of the first half and a strong Loser solo in the second."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ‘on fire’ by one reviewer, but another notes his solo sounding rough and mentions his health issues affecting playing.",
+    "Phil": "Praised for “blowing it up” with powerful bass on this night.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:39:35.110088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-07-18.sennheiser.willy.8484.sbeok.shnf"
+}

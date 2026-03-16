@@ -1,0 +1,45 @@
+{
+  "summary": "Good-quality fan recording captures a high‑energy show with standout Jack Straw → Sugaree opening, though some listeners find the night less on than other classic performances.",
+  "review": "The concert is remembered for its vibrant energy and a sweet Jack Straw into Sugaree opener that many fans cite as a highlight. One reviewer praises Joel's recording and the overall excitement, while another feels the performance never quite reaches the intensity of the band’s best nights, calling it slightly overrated.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "One positive (4‑star) and one mixed (3‑star) review; show is praised for energy but also noted as not fully on, recording quality mentioned positively."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the tape was well labeled and praises Joel's recording, indicating a clear and listenable source despite no explicit description of soundboard vs. audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout with the band turned on; strong opening transition from Jack Straw into Sugaree, maintaining momentum for the rest of the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:43:39.104883+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-01.senn-barnehama.minches.82489.flac16"
+}

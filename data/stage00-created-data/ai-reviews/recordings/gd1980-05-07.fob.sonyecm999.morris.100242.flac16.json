@@ -1,0 +1,57 @@
+{
+  "summary": "High‑rated recording featuring first‑time Saint of Circumstance and memorable Cornell alma mater & English Country Garden riffs during Take a Step Back",
+  "review": "Both reviewers praise this show for its unique moments – the debut of Saint of Circumstance without Lost Sailor, plus Jerry Garcia slipping in renditions of the Cornell alma mater and an English country garden tune during the two Take a Step Back jams. No concrete comments on the audio source are given, but the enthusiastic star ratings suggest the recording is at least listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Both reviews are strongly positive (4‑5 stars) and focus on standout musical moments; lack of recording‑quality detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint of Circumstance",
+      "Take a Step Back",
+      "English Country Garden",
+      "Cornell Alma Mater"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Notable for the first appearance of Saint of Circumstance without Lost Sailor and two Take a Step Back jams that incorporate quirky musical quotes."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia slips in a brief Cornell alma mater excerpt during the first Take a Step Back and delivers an English Country Garden quote on the second.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Take a Step Back": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "English Country Garden": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cornell Alma Mater": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:46:27.345897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-07.fob.sonyecm999.morris.100242.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Great soundboard recording with a high‑energy show highlighted by Little Red Rooster, He's Gone and Let It Grow, though Jerry’s guitar sits low in the mix.",
+  "review": "The performance is praised for its electric energy, standout jams on Little Red Rooster, Brokedown Palace, Ripple, Let It Grow and a soaring He's Gone, with an amusing Bobby Mexican‑accent intro before Estimated. The soundboard source delivers clear, superior quality after the initial audience roar, but several listeners note Jerry’s guitar is unusually buried in the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and highlight strong musical moments; recording quality is generally praised despite a noted balance issue with Jerry’s guitar, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, superior‑quality board after the opening audience roar; occasional loud audience bleed at start and a persistent issue with Jerry Garcia’s guitar being too low in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Little Red Rooster",
+      "Brokedown Palace",
+      "Ripple",
+      "Let It Grow",
+      "He's Gone",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy performance with long jams, a memorable Bobby spoken intro before Estimated, and a powerful second half that kept the crowd fully engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently noted as the quietest instrument in the mix, an issue common to many 80s SBD releases.",
+    "Phil": "",
+    "Bob": "Provides a humorous faux‑Mexican accent intro before Estimated; otherwise no specific musical commentary.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T05:22:46.489738+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-26sbd.remaster.18896.sbeok.shnf"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Epic Music Never Stopped jam, spacey Wharf Rat solo, solid first set",
+  "blurb": "The show delivers a powerful first set highlighted by Bertha, Dire Wolf and an expansive The Music Never Stopped jam. The second set turns space‑filled with a standout Wharf Rat solo, Terrapin Station into Playing In The Band segue, and a soaring Sugar Magnolia finish.",
+  "review": "On Jan 15, 1978 at Fresno’s Selland Arena the Dead were in fine form. Jerry’s lead guitar was \"explosive yet ethereal\" with perfect tone even as his voice sounded thin from laryngitis, but the music never missed a beat. The first set rode on a strong Bertha and Dire Wolf, then launched into a truly epic The Music Never Stopped jam that still smokes in the memory of anyone who’s heard it. \nThe second half took a more space‑y turn – a mesmerizing Wharf Rat solo floated over a lush Terrapin Station/Playing In The Band sequence before spilling into a bright Sugar Magnolia. Bob Weir’s humor shone with his infamous “declared Nuclear War” line, making the set feel uniquely Bob‑centric. While the matrix source isn’t pristine and the audience recordings can be thin, the performance itself is consistently praised across all available tapes, making this show a must‑listen for fans of the late‑’70s era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Three recordings describe the show in positive terms (highlighting Bertha, Dire Wolf, Music Never Stopped, and a spacey Wharf Rat solo) while one is mixed but still notes strong moments; overall sentiment is solidly positive without major criticism, meriting a moderate +0.9 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.9 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd78-01-15.sbd-aud.citsman.13252.sbeok.shnf",
+    "reason": "Fair‑quality matrix capture that reliably presents the key highlights—Bertha, Dire Wolf, Music Never Stopped and the Wharf Rat solo—while being the most complete source among available tapes."
+  },
+  "key_highlights": [
+    "Epic The Music Never Stopped jam that defines the first set",
+    "Space‑filled second set with a celebrated Wharf Rat solo",
+    "Strong Bertha and Dire Wolf performances anchoring the opener",
+    "Terrapin Station → Playing In The Band segue leading into Sugar Magnolia"
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Dire Wolf",
+    "The Music Never Stopped",
+    "Terrapin Station",
+    "Playing In The Band",
+    "Wharf Rat",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Explosive yet ethereal guitar work with perfect tone; voice thin from laryngitis but the playing remains smoky and compelling.",
+    "Phil": "",
+    "Bob": "Adds humor with a \"declared Nuclear War\" line, making the set feel Bob‑centric.",
+    "Keith": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-25T08:20:46.798971+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha",
+      "Good Lovin'"
+    ],
+    [
+      "Dire Wolf"
+    ],
+    [
+      "The Music Never Stopped"
+    ],
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ]
+  ]
+}

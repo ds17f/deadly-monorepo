@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive details on recording or performance; reviewer gave a zero‑star rating",
+  "review": "The lone review offers only a brief personal note and does not discuss the audio fidelity, source type, or any musical moments from the concert. With a zero‑star rating and no descriptive content, it suggests the reviewer was dissatisfied but provides no concrete reasons.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one vague review with a zero‑star rating; insufficient information to assess quality, leading to a minimal rating and low confidence"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The review does not mention any songs, set structure, or performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T16:52:09.740653+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-02-12.137086.sbd.miller.flac16"
+}

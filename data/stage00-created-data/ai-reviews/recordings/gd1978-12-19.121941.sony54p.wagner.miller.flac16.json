@@ -1,0 +1,39 @@
+{
+  "summary": "Decent recording captures a solid show highlighted by a flavorful Not Fade Away performance.",
+  "review": "The reviewer gave the concert a solid four‑star rating, praising the unique “Stella tone” taken on Not Fade Away and calling the overall show pretty good and interesting. No specific audio issues were mentioned, though the keyboard work was noted as restrained rather than forceful.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4 stars) with generally positive comments about the performance and no reported recording problems, leading to a solid but cautious rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer did not comment on sound clarity, mix balance, or source type; overall impression suggests the audio was acceptable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer described the show as pretty good and interesting but gave no detailed comments on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's playing was noted as restrained, not pounding out his point.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:41:07.754794+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-19.121941.sony54p.wagner.miller.flac16"
+}

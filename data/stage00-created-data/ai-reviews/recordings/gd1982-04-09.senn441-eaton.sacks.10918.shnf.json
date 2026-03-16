@@ -1,0 +1,79 @@
+{
+  "summary": "Clear, well‑mixed recording captures a high‑energy Rochester show with standout Bird Song, Loser and a rare To Lay Me Down performance.",
+  "review": "The tape delivers clean, minimally processed sound that lets the band’s interplay shine—especially Jerry’s soaring leads and Brent’s tasteful keyboards. Fans rave about the tight first set, the triumphant Loser, an immaculate Bird Song, and a one‑of‑a‑few To Lay Me Down, making this 1982 Rochester concert a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews consistently praise the musical performance and note good, clear recording quality with no major flaws."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clean mix with minimal signal processing; guitars heard very clearly, hall ambience captured without excessive muddiness or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Loser",
+      "To Lay Me Down",
+      "China > Rider",
+      "Minglewood (Brent)",
+      "Alabama > Good Shepherd"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid opening with Alabama>Good Shepherd, a first set that builds smoothly into an energetic second set featuring several rare and powerful performances; the intermission separates two well‑crafted halves."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for clean tone, long soaring leads (Bird Song, China>Rider) and inventive improvisation throughout.",
+    "Phil": "Noted for a big intro on The Other One, though the jam was described as not fully coalescing.",
+    "Bob": "Vocals highlighted as great; his interplay with Jerry in Bird Song received specific praise.",
+    "Keys": "Brent Mydland singled out for superb harmony on Minglewood and a standout keyboard‑driven version of To Lay Me Down.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama > Good Shepherd": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood (Brent)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:44:46.783411+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-09.senn441-eaton.sacks.10918.shnf"
+}

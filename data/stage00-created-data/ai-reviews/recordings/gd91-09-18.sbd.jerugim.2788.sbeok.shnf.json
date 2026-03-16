@@ -1,0 +1,110 @@
+{
+  "summary": "Crisp soundboard recording captures an energetic first set and a jam‑heavy second set highlighted by Midnight Hour, Jack Straw and a soaring Victim → Crazy → Playin' → Terrapin sequence.",
+  "review": "The SBD is generally clear with only occasional audience patches or a loud keyboard spill, making the music easy to hear. The show delivers a rocking first set (Midnight Hour, Ramble, Candyman, Memphis Blues, Jack Straw) and an expansive second set that peaks on the Victim‑Crazy‑Playin'‑Terrapin medley and a standout Wharf, though Crazy Fingers falters for some listeners. Overall the performance is praised as relaxed, mature and full of memorable jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (8 of 11) give 4‑5 stars and highlight strong playing and good sound; only a few note minor flaws, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp SBD with clear instrument separation; occasional audience patches and a brief fan‑mic outburst noted, plus some complaints about the keyboard being overly loud."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Midnight Hour",
+      "Jack Straw",
+      "Victim > Crazy > Playin' > Terrapin",
+      "Wharf",
+      "Wheel"
+    ],
+    "poor_songs": [
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "First set is tight and energetic, moving through classic rock numbers; second set stretches out into extended jams with a few sleepy moments but culminates in powerful sequences like Victim‑Crazy‑Playin'‑Terrapin and the epic Wharf."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping Jack Straw, liquid‑gold playing on Midnight Hour and emotional solo on Fingers; however one reviewer cites a disastrous Crazy Fingers vocal slip.",
+    "Phil": "Described as delivering a remarkable, immaculate bass performance captured well in the mix.",
+    "Bob": "",
+    "Keys": "Vince’s keyboard work receives mixed feedback – some enjoy his tasteful fills while others complain he’s too loud or needs to ‘shut up.’",
+    "Drums": "Bill Kreutzmann receives abundant praise for his relaxed, powerful drumming; drums and space sections are highlighted as standout moments."
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Ramble": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Memphis Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Victim": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:17:39.149310+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-18.sbd.jerugim.2788.sbeok.shnf"
+}

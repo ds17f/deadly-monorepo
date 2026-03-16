@@ -1,0 +1,51 @@
+{
+  "summary": "Stellar playing and a crisp recording overall, though the E‑72 cuts of Tennessee Jed, China Cat Sunflower and He's Gone are flat by about half a semitone.",
+  "review": "Reviewers rave about both the musicianship and the audio fidelity of this release, calling it near‑perfect. The only drawback noted is that three tracks taken from Europe ’72 sound slightly flat and contain studio overdub vocals, suggesting a hybrid live‑studio splice. Aside from those pitch quirks the show is praised as an excellent performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Both reviewers are largely enthusiastic (5 and 4 stars). Show quality is judged very high, while recording quality is good but marred by pitch issues on a few tracks; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear and well‑mixed, but three E‑72 excerpts (Tennessee Jed, China Cat Sunflower, He's Gone) are flat by ~½ semitone and feature studio overdub vocals, indicating a hybrid splice."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Tennessee Jed",
+      "China Cat Sunflower",
+      "He's Gone"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T13:17:39.570108+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-03.139539.sbd.16.track.reels.miller.clugston.flac16"
+}

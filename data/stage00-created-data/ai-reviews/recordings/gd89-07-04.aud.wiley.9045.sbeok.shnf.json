@@ -1,0 +1,73 @@
+{
+  "summary": "Good audience recording with solid sound after a little EQ work, capturing an energetic late‑80s show highlighted by Terrapin Station, Morning Dew and Looks Like Rain.",
+  "review": "The audience tape (AUD) is generally clear – listeners note a “killer” bass response after tweaking the EQ and describe the mix as decent enough for car‑listening. The concert itself is remembered as an energetic, high‑spirit performance with a strong first set and standout moments like Terrapin Station, Morning Dew, Not Fade Away and the rain‑soaked Looks Like Rain jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the show’s energy and song highlights while noting the audience recording is decent to good after EQ; the weighted average of strong show quality (≈4.5) and solid recording quality (≈4.0) yields a 4.3 overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners report decent clarity, strong bass after EQ tweaks, occasional comments that the audio isn’t perfect but still enjoyable; no major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Morning Dew",
+      "Looks Like Rain",
+      "Not Fade Away",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans highlight a powerful opening three‑song stretch, a solid first set and an especially memorable second half with NFA and the rain‑driven jam; overall pacing is described as high‑energy and “awesome”."
+  },
+  "band_member_comments": {
+    "Jerry": "Mostly praised – great on Terrapin Station and Looks Like Rain; one reviewer notes his voice sounded weary, but most say he was rocking.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent receives frequent praise for vocals and interplay with Jerry (especially on NFA).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal & Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:17:59.125947+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-07-04.aud.wiley.9045.sbeok.shnf"
+}

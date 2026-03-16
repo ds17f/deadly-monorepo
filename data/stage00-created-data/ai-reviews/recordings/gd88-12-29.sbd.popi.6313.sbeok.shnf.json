@@ -1,0 +1,82 @@
+{
+  "summary": "A solid soundboard capture of a tightly‑knit 1988 show, highlighted by an emotive To Lay Me Down and an intense The Other One.",
+  "review": "The recording is a clean soundboard source that listeners describe as clear and well balanced. Musically the band delivers a consistently strong performance – tight ensemble playing, heartfelt ballads and energetic jams, with particular praise for To Lay Me Down, The Other One, Let It Grow and the Sampson/Eyes sequence. A few minor criticisms (a rushed Quinn) do not detract from the overall enjoyment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑star ratings and praise both the musical performance and the soundboard quality; only a single low rating relates to download issues, not the recording itself."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers repeatedly note good sound, clear mix and no major audio flaws; no specific complaints about muddiness or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down",
+      "The Other One",
+      "Let It Grow",
+      "Playin'",
+      "Crazy Fingers",
+      "Sampson",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Quinn"
+    ],
+    "setlist_flow": "Setlists are described as solid and well‑paced, with smooth transitions (e.g., Playin' into Crazy Fingers) and strong interplay between Jerry and Brent throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal performance on To Lay Me Down is repeatedly praised; guitar work noted as lovely and expressive.",
+    "Phil": "Bass lines receive positive nods, especially the “pebble attack” on Crazy Fingers.",
+    "Bob": "",
+    "Keys": "Brent’s energetic keyboard contributions (toy piano, chordal textures) are highlighted as a major boost to the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Quinn": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:47:45.212983+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-12-29.sbd.popi.6313.sbeok.shnf"
+}

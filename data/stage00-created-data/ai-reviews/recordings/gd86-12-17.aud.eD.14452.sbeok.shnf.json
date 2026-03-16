@@ -1,0 +1,39 @@
+{
+  "summary": "Typical audience recording captures a spirited, high‑energy show with memorable moments like Jerry’s post‑coma performance and a standout Desolation Row.",
+  "review": "Fans rave about the electric atmosphere of this concert – eleven tunes after the break, an inspiring encore, and Jerry’s triumphant return to the stage after his coma. The audience‑sourced tape is described as a keeper despite being slightly ragged, delivering enough clarity to enjoy the performance. Overall the show is celebrated as one of the best live experiences by multiple reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the musical performance (mostly 5‑star) outweigh a single moderate review; recording is an audience tape but considered good enough, leading to a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Typical audience recording – clear enough for enjoyment though slightly ragged and not studio‑grade; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy with eleven tunes after the break and a strong encore; performance described as slightly ragged but rocking, capturing an unforgettable spirit."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for standing upright and belting out songs shortly after his coma, adding emotional weight to the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:54:16.829201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-12-17.aud.eD.14452.sbeok.shnf"
+}

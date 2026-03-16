@@ -1,0 +1,99 @@
+{
+  "summary": "Solid audience tape (a bit high‑pitched) with clear highs/lows, highlighted by a blistering Shakedown Street and an unforgettable Brown‑Eyed Women solo.",
+  "review": "The show is widely praised for its energetic first set – especially the scorching Shakedown Street, tight CC Rider and soaring Let It Grow – and a second‑set that delivers rare pre‑drum pairings like Don't Ease Me In → Music Never Stopped plus a flawless Other One → Stella jam.  The audience recording captures the band well, though several listeners note it runs slightly sharp and contains a brief drop‑out on He's Gone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) emphasize an excellent performance; recording is good for an audience source with only minor pitch/speed issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear highs, mids and lows for an audience tape; playback runs slightly sharp (needs ~1% pitch reduction) and a short cut/drop‑out on He's Gone."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "CC Rider",
+      "Let It Grow",
+      "Brown Eyed Women",
+      "Other One",
+      "Stella"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as tight and well‑played with multiple highlights; second set praised for seven pre‑drum songs, rare pairings (Don't Ease Me In → Music Never Stopped) and a seamless Other One → Stella jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called 'in the zone', delivering scorching solos (notably on Brown‑Eyed Women) and driving the band's energy.",
+    "Phil": "",
+    "Bob": "Mentioned as hitting his stride, especially on a strong early CC Rider.",
+    "Keys": "",
+    "Drums": "Noted for a flawless transition into the Other One → Stella jam after the drum break."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CC Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:39:29.672878+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-05.nak700.munder.9126.sbeok.shnf"
+}

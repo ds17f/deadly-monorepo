@@ -1,0 +1,80 @@
+{
+  "summary": "Crisp soundboard capture of an energetic 1989 show highlighted by a smoking Help > Slip > Franklin’s and a standout Dear Mr. Fantasy, with Jerry in top form.",
+  "review": "The recording is a clean SBD that most listeners describe as crisp and virtually perfect, with only minor EQ quirks noted. Musically the concert shines – second‑set sequences like Help > Slip > Franklin’s, Dear Mr. Fantasy, and a powerful Death Don't Have No Mercy are repeatedly praised, while Jerry Garcia’s solos and Brent Mydland’s vocals receive particular acclaim.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both performance and soundboard quality indicate a strong show with excellent recording, offset only by isolated minor critiques."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crispy SBD with virtually perfect EQ; one reviewer notes the board is slightly off for Charlie Miller, but overall clarity and balance are praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr. Fantasy",
+      "Cassidy",
+      "Help > Slip > Franklin's Tower",
+      "Death Don't Have No Mercy",
+      "Wheel"
+    ],
+    "poor_songs": [
+      "Matilda"
+    ],
+    "setlist_flow": "The first set offers solid new‑song material, while the second set delivers high energy and seamless segues (Help > Slip > Franklin’s, Wheel, etc.), making the concert feel like a peak moment of the October ’89 tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's solos are described as \"rocking\" and \"spot on\", his vocal mic’ing praised, fully present and in charge throughout; one minor slip noted on \"Matilda\".",
+    "Phil": "",
+    "Bob": "Weir is credited with strong rhythm guitar and vocal effort alongside Garcia.",
+    "Keys": "Brent Mydland's keyboard work is highlighted as thoughtful and heavy (especially on \"Wheel\"); his vocals in \"Franklin's\" are called priceless.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Matilda": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:50:13.204460+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-19.sbd.walker-scotton.miller.83305.sbeok.flac16"
+}

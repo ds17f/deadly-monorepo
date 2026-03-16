@@ -1,0 +1,78 @@
+{
+  "summary": "Stunning audience recording of a 1974 show that delivers Let It Rock, a soaring Dark Star > Spanish Jam sequence and a blistering U.S. Blues.",
+  "review": "The performance is widely praised for its inspired playing – Jerry Garcia’s crystal‑clear guitar, Keith Godchaux’s intricate piano work and Bill Kreutzmann’s powerful drum fills dominate highlights like Let It Rock, Dark Star > Spanish Jam → U.S. Blues and Ship of Fools.  The Moore audience tape is described as “tight”, “amazing” and “excellent” for the era, with great instrument balance despite the usual lack of complete separation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.7/5 and uniformly enthusiastic comments about both musical performance and recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, tight capture with good mic placement; vocals and guitars are sharp.  Instrument separation is limited (typical of audience tapes), but overall clarity and balance exceed most Wall‑of‑Sound era recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Rock",
+      "Dark Star > Spanish Jam > U.S. Blues",
+      "Ship of Fools",
+      "Seastones",
+      "Cumberland Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set swings from high‑energy rockers (Let It Rock) into exploratory jams (Dark Star → Spanish Jam → U.S. Blues) and experimental Seastones, maintaining an intense, inspired vibe throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is repeatedly called crystal‑clear and his improvisations are described as hypnotic and intricate.",
+    "Phil": "Phil Lesh’s bass is noted for a “feedbacky” sequence with Ned Lagin, adding an abrasive texture that some reviewers love.",
+    "Bob": "",
+    "Keys": "Keith Godchaux’s piano work receives high praise for density and intricacy; Keith’s fluttering style is highlighted in the recording notes.",
+    "Drums": "Bill Kreutzmann’s drum fills are called “high intensity” and a key part of the show’s interconnectivity."
+  },
+  "song_mentions": {
+    "Let It Rock": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Seastones": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Dark Star > Spanish Jam > U.S. Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:40:52.691520+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-23.aud.moore.berger.84615.flac16"
+}

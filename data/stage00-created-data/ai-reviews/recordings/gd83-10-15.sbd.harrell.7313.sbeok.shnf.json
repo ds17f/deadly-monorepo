@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard capture of the legendary Hartford 10/15/83 show, highlighted by a blistering St. Stephen and soaring China Doll.",
+  "review": "The recording is a clean sound‑board source that delivers most of the concert with clarity, only occasional minor imperfections noted. Musically the performance is consistently praised – the second set erupts with a fiery St. Stephen, a soaring China Doll/China > Rider sequence and tight renditions of The Stranger, Day Job and Dire Wolf. Overall the show is regarded as one of the best of 1983.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews are overwhelmingly positive, praising both the musical performance and the sound quality; the weighting favours a strong show with a good‑to‑excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and balanced; reviewers call it superb or excellent, with only occasional remarks that the sound is not perfect but does not detract from enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "China Doll",
+      "China > Rider",
+      "Playin' in the World",
+      "The Stranger",
+      "Day Job",
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is solid throughout, but the second set shines with imaginative playing, a tight Day Job, and an extended, ecstatic St. Stephen that many consider the best of the three 1983 performances."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as stepping out and energetic; his vocals are noted as raw and haggard yet powerful.",
+    "Phil": "",
+    "Bob": "Praised for syncing with Jerry during space jams, creating a 'same planet' feeling.",
+    "Keys": "Brent Mydland's playing is highlighted repeatedly – synth lines, Rhodes work, and overall contribution to the musical canvas are lauded.",
+    "Drums": "The drum interplay is called sublime, punchy, and tight, driving the show forward."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "China Doll": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playin' in the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Day Job": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T12:26:34.547842+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-15.sbd.harrell.7313.sbeok.shnf"
+}

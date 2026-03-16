@@ -1,0 +1,39 @@
+{
+  "summary": "Studio‑like soundboard capture of a sweet 1980 Vernon show with an intriguing early Supplication Jam.",
+  "review": "Both reviewers praise the recording’s crystal‑clear, almost studio quality and describe the performance as a sweet, enjoyable set. One reviewer highlights an interesting jam that predates known recordings of the Supplication theme. Overall the show is well‑received and the audio source is considered excellent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Both reviews are positive (5 and 4 stars) and comment favorably on sound quality and performance, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, studio‑like clarity noted; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Supplication Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Supplication Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:02:24.613281+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-04.sbd-set2.vernon.20014.sbeok.shnf"
+}

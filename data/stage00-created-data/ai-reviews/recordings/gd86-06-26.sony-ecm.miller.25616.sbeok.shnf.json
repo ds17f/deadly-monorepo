@@ -1,0 +1,57 @@
+{
+  "summary": "Muddy dome recording captures a solid but unremarkable set with Jerry’s decent playing and a few bright moments like Terrapin Station and the Mexicali‑>Estimated Prophet transition.",
+  "review": "The audience tape reflects the notoriously poor acoustics of the Metrodome – echoing drums, muddy mids and a washy sound that varies from barely tolerable to passably clear on the floor. Musically the show is described as solid but not spectacular; Jerry’s guitar work earns occasional praise while the setlist quirks (Dylan/Petty opening, Terrapin Station, Mexicali Blues → Estimated Prophet) are noted as the only highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews criticize the sound quality and call the performance merely solid, with only a few positive comments about Jerry’s playing and specific song transitions; this yields an overall rating just below average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Severe echo and reverberation in the dome, muddy mids, wash effect from mis‑aimed sound towers, occasional clarity only for floor listeners; overall a very harsh and uneven listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Mexicali Blues",
+      "Estimated Prophet",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Single‑set show with an unusual Dylan/Petty opening followed by the Dead; set feels disjointed but includes a few interesting transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers note Jerry’s playing was decent or even mesmerizing despite the bad sound.",
+    "Phil": "Comments that Lesh’s bass gets lost in the mix and a anecdote of Phil standing on c‑scaffolding shouting ‘Watch the band!’",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Frequent remarks about echoing, muddy drum sound and a general lack of clarity for the rhythm section."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:25:18.935619+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-06-26.sony-ecm.miller.25616.sbeok.shnf"
+}

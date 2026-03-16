@@ -12,7 +12,11 @@ protocol GitHubReleasesClient: Sendable {
 // MARK: - URLSession implementation
 
 struct URLSessionGitHubReleasesClient: GitHubReleasesClient {
-    private static let releasesURL = URL(string: "https://api.github.com/repos/ds17f/dead-metadata/releases/latest")!
+    /// Data version pinned at build time from data/version.
+    /// Update this when bumping the data release.
+    static let dataVersion = "2.3.0"
+
+    private static let releasesURL = URL(string: "https://api.github.com/repos/ds17f/deadly-monorepo/releases/tags/data-v\(dataVersion)")!
 
     func fetchLatestRelease() async throws -> GitHubRelease {
         var request = URLRequest(url: Self.releasesURL)

@@ -1,0 +1,72 @@
+{
+  "summary": "Foolish Heart ascendant; tight first set with Bertha and Row Jimmy",
+  "blurb": "The first set shines with crisp performances of Bertha, Row Jimmy, Dire Wolf and Loose Lucy. The second set builds around a soaring Foolish Heart that segues into an expansive Playing In The Band, while Vince Welnick’s keyboards add color throughout.",
+  "review": "On June 11 1992 the Grateful Dead took the stage at Albany’s Knickerbocker Arena for a show that balances tight songcraft with relaxed improvisation. The opening set is a highlight reel of classic Dead energy – Jerry’s lead guitar glides over “Bertha” and “Row Jimmy,” Phil anchors the groove, and the band rolls through “Dire Wolf” and “Loose Lucy” with clean, punchy execution that reviewers called “nice clean sbd\" and \"great sound quality.\"  The second set lifts off with a luminous rendition of “Foolish Heart,” which many fans described as ascendant, before diving into a flowing “Playing In The Band” sequence that carries the momentum through “Uncle John’s Band,” a generous jam, and a satisfying encore. Vince Welnick’s keyboards and vocal harmonies are repeatedly praised for adding depth, and despite a brief frisbee incident, the band stays locked in, delivering a relaxed yet engaging performance that feels both polished and spontaneous.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "All four recordings are marked positive; reviewers consistently praise the clean soundboard capture, standout versions of Foolish Heart, Bertha and Playing In The Band, and highlight Jerry’s inspired playing and Vince’s keyboards. No negative comments about performance quality appear, indicating strong overall sentiment.",
+      "final_calculation": "2.5 + 0.1 + 1.5 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd92-06-11.sbd.ladner.8069.sbeok.shnf",
+    "reason": "Excellent clean soundboard capture with no drop‑outs, praised for its clarity and faithful representation of the band’s tight playing."
+  },
+  "key_highlights": [
+    "First set delivers crisp, energetic performances of classic material.",
+    "\"Foolish Heart\" leads a soaring second‑set flow into an expansive \"Playing In The Band\" jam.",
+    "Vince Welnick’s keyboards and vocals add notable color throughout the show."
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Row Jimmy",
+    "Dire Wolf",
+    "Loose Lucy",
+    "Foolish Heart",
+    "Playing In The Band"
+  ],
+  "band_performance": {
+    "Jerry": "Shows inspired, beautiful phrasing and clear lead throughout; highlighted as especially motivated at this show.",
+    "Phil": "Present in the mix, providing a solid bass foundation without dominating the sound.",
+    "Bob": "Supportive rhythm work that blends into the overall texture without overpowering.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-18T06:51:09.304623+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha"
+    ],
+    [
+      "Row Jimmy"
+    ],
+    [
+      "Dire Wolf"
+    ],
+    [
+      "Loose Lucy"
+    ],
+    [
+      "Foolish Heart",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Playing In The Band Jam",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Wharf Rat",
+      "Around & Around"
+    ]
+  ]
+}

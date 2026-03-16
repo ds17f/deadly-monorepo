@@ -1,0 +1,58 @@
+{
+  "summary": "Inspired Scarlet Begonias > Fire, solid first set, second‑set drifts",
+  "blurb": "The show shines with a long, loose Scarlet Begonias → Fire sequence and a standout Loser. First‑set energy stays tight throughout, while the second half loses focus after the Spanish Jam.",
+  "review": "On September 13, 1983 at Manor Downs, the Dead delivered an energetic early‑’80s set that still feels fresh for listeners today. The first set rolls out classics like Bertha, Little Red Rooster and a tight Loser where Jerry’s vocals are described as “very cool,” backed by Phil’s booming, forward‑projected bass. The high point of the night is the expansive Scarlet Begonias → Fire on the mountain in the second set – reviewers call it “inspired” and “loose,” with Garcia’s tone and improvisational spirit likened to “wailing on the mountain.” While the band stretches out nicely over a Spanish Jam, the latter half of the concert meanders and ends perfunctorily, leaving the encore Brokedown Palace as a modest close. Overall, the performance is solid with moments of brilliance that outweigh its occasional drift.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the Scarlet>Fire sequence, Loser and strong bass presence; two others are mixed, noting a long first set and a drifting second half. The overall tone is moderately upbeat with consistent highlights, yielding a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.9 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd83-09-13.aud.dodd.12483.sbeok.shnf",
+    "reason": "Clear, crisp audience capture that highlights the high‑energy Scarlet Begonias → Fire sequence with excellent overall fidelity."
+  },
+  "key_highlights": [
+    "Long, loose Scarlet Begonias → Fire sequence thrills the crowd.",
+    "Loser features cool vocals and forward‑projected bass.",
+    "First set stays tight with strong renditions of Bertha and Little Red Rooster.",
+    "Second half drifts after Spanish Jam; closing feels perfunctory."
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Loser",
+    "Little Red Rooster"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s playing is described as inspirational and “on another planet tonight,” with standout tone on Scarlet Begonias and cool vocal delivery on Loser.",
+    "Phil": "Lesh receives praise for a great low‑end presence, bouncing bass throughout, and an unusually forward, resonant mix that shines in the audience recordings.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-14T10:42:05.030717+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Loser"
+    ],
+    [
+      "Little Red Rooster"
+    ]
+  ]
+}

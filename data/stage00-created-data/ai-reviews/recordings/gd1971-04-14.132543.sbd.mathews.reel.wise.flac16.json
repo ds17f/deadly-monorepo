@@ -1,0 +1,81 @@
+{
+  "summary": "Superb soundboard capture of a scorching Pennsylvania show, highlighted by a smoking Bird Song and a killer Johnny B. Goode.",
+  "review": "The performance is described as one of the band’s hottest of the early‑'71 tour – tight jams, funk‑filled Rider, an epic nine‑minute Bird Song and a raucous Sugar Magnolia that even brings Pigpen on guiro. The soundboard source is generally excellent despite occasional static, low‑frequency hum and barely audible keyboards, giving listeners plenty of audience ambience while keeping the mix clear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Both reviewers gave five stars and praised the musical fire‑power; recording is noted as superb overall with only minor era‑typical artifacts, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "A few spots of static and low‑frequency hum typical of early ’71 tapes; keyboards are mostly buried except for tuning, but overall the mix is clear with good instrument separation and pleasant audience bleed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Bird Song",
+      "Sugar Magnolia",
+      "Johnny B. Goode",
+      "Hard to Handle",
+      "Rider",
+      "Second That Emotion",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set that keeps the momentum rolling into a second set dominated by an expansive Bird Song and funk‑driven jams, ending with an exuberant Sugar Magnolia; the pacing is praised throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as perfect; uses crybaby pedal; gives audience instructions; solo called perfunctory but still solid.",
+    "Phil": "",
+    "Bob": "Weir “takes no prisoners,” delivers powerful vocals (especially on Sugar Magnolia) and drives the band’s intensity.",
+    "Keys": "Pigpen’s keyboards are largely inaudible except for brief tuning; he adds guiro on Sugar Magnolia, adding a quirky texture.",
+    "Drums": "Kreutzmann locks into funkier rhythms (e.g., on Rider) and maintains tight drive throughout."
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Second That Emotion": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:52:32.457645+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-14.132543.sbd.mathews.reel.wise.flac16"
+}

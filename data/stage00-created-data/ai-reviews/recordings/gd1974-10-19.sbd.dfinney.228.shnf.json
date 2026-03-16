@@ -1,0 +1,86 @@
+{
+  "summary": "Solid soundboard recording (needs slight pitch correction) captures a strong second set with classic Eyes of the World, perfect Truckin' reprise and tight Black Peter.",
+  "review": "The show offers several standout moments—most notably a quintessential '74 Eyes of the World, an almost flawless second‑half Truckin', and a tight Black Peter—all while the first set sits at average level. The soundboard source is decent but suffers from variable speed/pitch issues that require a small slowdown to sound correct.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One detailed review notes a good performance with multiple highlights, offset by pitch/speed problems in the recording; weighted assessment yields an overall four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch runs too fast and varies throughout; needs about -2% speed correction (some tracks -3%). Image is better than alternative Miller source but the pitch issue detracts from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Truckin'",
+      "Black Peter",
+      "U.S. Blues",
+      "Mexicali"
+    ],
+    "poor_songs": [
+      "China Doll",
+      "He's Gone"
+    ],
+    "setlist_flow": "First set is average to above‑average, hampered by heat and a few off‑notes; the second set shines with rare moments (train‑whistle chords, pre‑hiatus Drums>Space) and tighter jams, earning an overall B‑ rating."
+  },
+  "band_member_comments": {
+    "Jerry": "Shows rare train‑whistle chord work on Big Railroad and strong riff interplay throughout the set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's keyboard interplay is highlighted during Mexicali and other jams.",
+    "Drums": "Billy stays on drums for a rare pre‑hiatus Drums>Space segment."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big Railroad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:42:54.815249+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-19.sbd.dfinney.228.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent matrix mix captures a strong Jerry‑led performance with standout Candyman and Terrapin Station moments.",
+  "review": "The recording is praised as an excellent matrix blend that delivers clear, well‑balanced sound, despite a few early hiccups in the drums. Musically the show shines – Jerry’s guitar is on fire, the crowd builds during Candyman, and Terrapin Station rolls without any “nasty” moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly favorable (average 4.7 stars), highlighting both an outstanding performance and a top‑notch matrix recording; only minor drum quirks are noted."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Synergistic blend of soundboard and audience sources praised as crisp and well‑balanced; a few early drum hiccups mentioned but no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall high energy with an East‑Coast vibe; strong crowd interaction especially during Candyman, and a solid, uninterrupted Terrapin Station."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as “strong” and hitting all the perfect moments after his recent ordeal.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A few hiccups near the beginning, possibly odd drum stuff."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:41:19.924539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-15.128689.mtx.nicksmix.flac16"
+}

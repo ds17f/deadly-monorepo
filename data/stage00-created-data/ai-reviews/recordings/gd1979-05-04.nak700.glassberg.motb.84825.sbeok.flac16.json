@@ -1,0 +1,97 @@
+{
+  "summary": "Warm Mouth‑of‑the‑Beast audience tape of the ‘79 Hampton show delivers a fiery set with standout Half‑Step, Franklin’s Tower and Bertha despite pitch‑and‑wow quirks.",
+  "review": "The performance is widely praised for its high energy – Mississippi Half‑Step, Franklin’s Tower, Mama Tried > Mexicali Blues and Bertha are highlighted as exceptional moments. The Glassberg MOTB audience recording is generally clear and piano‑forward, though several reviewers note pitch drift, wow and occasional distortion that require EQ or pitch correction. Overall the show shines even if the source needs a bit of tech‑tinkering.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated very high (multiple 4–5 star comments) while recording quality is good but marred by pitch/wow issues; weighted average yields a solid 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear piano presence and overall warmth, but suffers from variable pitch errors, wow, occasional distortion and requires EQ/pitch correction for optimal listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Franklin's Tower",
+      "Mama Tried > Mexicali Blues",
+      "Candyman",
+      "Supplication",
+      "Bertha",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [
+      "Stella"
+    ],
+    "setlist_flow": "First set bursts with high‑octane jams and tight ensemble work; the second set stays taut, delivering a soaring Bertha and a focused Miracle/Estimated sequence before winding down."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is described as relentless – especially on Mama Tried and Mexicali Blues where he “eats the neck” and delivers soaring solos throughout.",
+    "Phil": "Lesh provides solid, melodic bass lines that shine on Half‑Step and other tight ensemble moments.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboards are highlighted for a strong first solo (Minglewood) and overall energetic contribution; piano is notably high in the mix.",
+    "Drums": "Bill and Mickey are praised for cruising the Beast, keeping solid grooves especially on the second set."
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried > Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:01:21.133216+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-04.nak700.glassberg.motb.84825.sbeok.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Recording receives a 0‑star rating with no details on performance, indicating poor quality and no notable highlights.",
+  "review": "The sole review offers only a brief personal note and assigns zero stars, providing no insight into the audio source, sound clarity, or musical execution. With no song mentions or band member commentary, both the recording and the show are judged unfavorably by the reviewer.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one vague review with a 0‑star rating; insufficient detail but the rating suggests both performance and recording are unsatisfactory."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific technical comments; zero stars imply dissatisfaction with the audio."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information about set structure or song performance was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T00:51:06.850053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-13.sbd.kowalski.tetzeli.fix-520.34679.reflac.flac16"
+}

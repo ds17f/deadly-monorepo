@@ -1,0 +1,39 @@
+{
+  "summary": "Muddy soundboard recording of a shaky Alpine show with a disastrous Stella Blue start.",
+  "review": "The only SBD circulating captures an uneven performance – the band stumbles on tracks like Stella Blue, which opens as a “train wreck,” and overall playing is described as poor. The audio is muddy at times, though fans are grateful that any soundboard source exists for this obscure 6/22/88 Alpine gig.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Most reviewers criticize both the performance and the audio quality, with only one high‑rating comment noting the rarity of an SBD source; this yields a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy at times, lacks clarity and warmth; not a hot recording despite being the only SBD available."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "Inconsistent set with first‑time songs (Foolish Heart, I Will Take You Home) but overall below‑average execution; the show feels uneven and under‑rehearsed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:50:34.932579+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-22.s2.sbd.miller.119780.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard source with good fidelity, featuring a blazing 20‑minute Dark Star and the rare “Tomorrow Is Forever” cover.",
+  "review": "The recording captures a high‑energy 1972 show on a soundboard source that, while one generation removed from the Miller transfer, still offers clear, enjoyable listening. Reviewers rave about the extended Dark Star and the unexpected Dolly Parton cover, noting Jerry Garcia’s ecstatic performance throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The show is praised for its standout jams and rare song choice (70% weight), while the recording is deemed good but slightly inferior to another transfer (30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Extra generation added via an additional Revox A77 and different Dolby decoding; slight pitch increase and a bit more 'noise‑reduced' character compared to the Miller transfer, but still clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Tomorrow Is Forever"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Band is in a great mood, delivering a blistering 20‑minute jam and a heavy Dark Star that drives the set forward; the rare cover adds an unexpected highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described with vivid enthusiasm—his tone, presence, and ecstatic playing are highlighted throughout the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tomorrow Is Forever": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:06:04.582194+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-19.132970.sbd.menke-lee-smith.flac24"
+}

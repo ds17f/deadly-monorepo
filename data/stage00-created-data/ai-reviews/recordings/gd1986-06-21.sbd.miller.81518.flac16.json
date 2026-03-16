@@ -1,0 +1,52 @@
+{
+  "summary": "Good audience recording of an uneven show – Promised Land and Fire on the Mountain shine, but energy fades after Desolation Row",
+  "review": "The audience‑sourced tape is praised as clearer than many other AG recordings, offering a solid listening base. Musically the concert starts strong with a driving Promised Land and a tasty Fire on the Mountain, yet loses momentum through Desolation Row, leaving the reviewer uncertain about the second set’s quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; recording is viewed positively while the performance receives mixed feedback, leading to an average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes it’s better than many other audience recordings, implying relatively clear and balanced sound despite being a non‑soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Desolation Row"
+    ],
+    "setlist_flow": "Starts strong with high energy, drops after Desolation Row, second set left ambiguous but possibly stronger."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:12:27.577942+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-21.sbd.miller.81518.flac16"
+}

@@ -1,0 +1,44 @@
+{
+  "summary": "High‑quality soundboard capture of a memorable 1972 Nashville show highlighted by an exceptional \"He's Gone\" jam.",
+  "review": "Fans rave about this October 1972 Nashville performance, calling it a favorite first Dead concert and praising Jerry’s sweet, “First There Is A Mountain”‑inspired jamming on He’s Gone. The recording is noted as clear and well‑balanced—especially allowing Phil’s bass to shine—making the show easy to enjoy despite its age.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (4‑5) and enthusiastic comments about both performance and audio quality indicate a strong show with good recording fidelity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Audio described as fine and clearer than most mid‑70s recordings; Phil’s bass is audible, no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is remembered as a high point for first‑time Dead fans, with an especially uplifting second set that flows naturally and builds to the memorable He’s Gone jam."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is highlighted as \"obscenely sweet\" with a quoted line from “First There Is A Mountain” during He’s Gone.",
+    "Phil": "Bass is noted as clear and audible, which listeners often miss in recordings from this era.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "First There Is A Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:36:23.515379+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-21.set2-partial.sbd.rbbert.fix-94410.94453.flac16"
+}

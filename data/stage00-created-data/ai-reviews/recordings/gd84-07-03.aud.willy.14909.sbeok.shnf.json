@@ -1,0 +1,78 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1984 set highlighted by a blistering Scarlet > Touch > Fire and scorching Alabama > Promised Land.",
+  "review": "The tape offers crystal‑clear, airy sound that lets every instrument shine, especially Brent’s synth work and Jerry’s searing guitar solos.  The show is praised for its electric first set and a pre‑drums Scarlet > Touch > Fire that many reviewers call one of the best ever, with Deal, Throwing Stones and Don’t Need Love also standing out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5), strong praise for both performance and audio quality, with many reviewers calling it a standout 84 show."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, airy 3‑D soundfield; well‑balanced mix with Brent on the right channel and prominent Phil bass. Minor ambient crowd noise but overall pristine and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama > Promised Land",
+      "Scarlet > Touch > Fire",
+      "Deal",
+      "Throwing Stones",
+      "Don't Need Love"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set builds into a tight, tension‑filled pre‑drums segment; Scarlet > Touch > Fire serves as the high point before a spirited second half with strong finishes."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching solos on Scarlet, Fire, Deal and Alabama; described as shredding, fuzzed out and locked in deep with Phil.",
+    "Phil": "Noted for dropping bombs on West L.A., providing a solid bass foundation throughout, especially during the tight pre‑drums.",
+    "Bob": "Highlighted for strong vocals and guitar on Esau, a memorable Bobby rap on Lost (LLR) and humorous moments on Throwing Stones.",
+    "Keys": "Brent's keyboards called emotional, trippy and central to the Scarlet > Touch > Fire transition, adding depth to the mix.",
+    "Drums": "Pre‑drums segment described as tight and energetic; Bill’s playing drives the Scarlet > Touch > Fire sequence."
+  },
+  "song_mentions": {
+    "Alabama > Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Touch > Fire": {
+      "positive_mentions": 9,
+      "negative_mentions": 1,
+      "total_mentions": 10
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Need Love": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West L.A.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:36:56.080556+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-07-03.aud.willy.14909.sbeok.shnf"
+}

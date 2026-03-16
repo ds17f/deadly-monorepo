@@ -1,0 +1,74 @@
+{
+  "summary": "Stunning audience recording with crystal‑clear instrument separation, featuring an epic second set highlighted by Dark Star, Let It Grow and a fiery Bob Weir.",
+  "review": "The audience capture is exceptional – minimal crowd noise, superb clarity and spacious instrument separation that rivals many soundboards. The show itself shines especially in the second set, where Dark Star, Let It Grow, Wharf Rat and other gems blaze, with Bob Weir’s guitar work taking a front‑row seat. A few listeners note occasional balance quirks (bass/piano low, drums uneven) but overall the performance and recording are celebrated.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Six out of seven reviewers gave 5 stars praising both the music (especially the second set) and the audio quality; only one mixed review noted balance issues, resulting in a high average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Instrument separation is outstanding, minimal hiss and crowd noise, very clear mix. A few reviewers mention occasional balance problems – bass/piano low in places, early drums a bit quiet, and Bob Weir sometimes overly forward."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Let It Grow",
+      "Wharf Rat",
+      "Eyes of the World",
+      "Row Jimmy",
+      "China Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is repeatedly described as legendary, fire‑filled and tightly woven, with seamless transitions that keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar tone is crisp and clear; generally well‑balanced though occasionally buried under a very prominent Weir mix.",
+    "Phil": "Phil’s bass is described as “fat” and “swampy,” providing a strong foundation, but some listeners note it can be hard to hear due to balance issues.",
+    "Bob": "Bob Weir receives glowing praise for his inventive lead work, vocal delivery and overall prominence – often highlighted as the star of the performance.",
+    "Keys": "Keyboard presence (no Donna Jean) is minimal; piano is barely audible but reviewers feel its absence does not detract from the show.",
+    "Drums": "Bill Kreutzmann’s drumming is lauded for a “fabulous” sound and powerful fills; early drums are noted as slightly low, and Mickey Hart is absent."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "WRS": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:45:45.527716+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-18.122508.aud.adamg.droncit.flac16"
+}

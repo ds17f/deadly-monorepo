@@ -1,0 +1,62 @@
+{
+  "summary": "High‑energy Boston Garden show highlighted by a scorching He's Gone jam, captured on a solid audience tape.",
+  "review": "The second set of this Boston Garden concert is repeatedly praised for its blazing He's Gone improvisation, a fiery rendition of Saint of Circumstance and high‑octane Sugar Magnolia and U.S. Blues.  The audience recording (AUD) is described as decent to good with a clear mix that lets the band’s dynamics shine, making it a worthwhile gem despite the arena ambience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong musical moments (especially the second‑set jams) while noting the audience recording is decent to good, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call it a \"decent AUD\" or \"good AUD recording\" with solid placement of tracks like 'Feel Like a Stranger'; no major drop‑outs reported, though typical arena ambience is present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Saint of Circumstance",
+      "Sugar Magnolia",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set builds relentless momentum, featuring an extended post‑He’s Gone jam that many describe as phenomenal, followed by high‑energy classics that keep the excitement rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\" with scorching guitar work and belting vocals on U.S. Blues; leads the post‑He's Gone jam.",
+    "Phil": "Starts a distinct 'Caution (Do Not Stop On Tracks)' bass riff in the post‑He's Gone segment, receiving special mention.",
+    "Bob": "Joins the power‑chord burst during the Caution jam and contributes vocals on U.S. Blues.",
+    "Keys": "Brent adds to the power‑chord section of the Caution jam, enhancing the improvisation.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution (Do Not Stop on Tracks)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:30:38.638227+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-12.rolfe.weiner.5922.sbeok.shnf"
+}

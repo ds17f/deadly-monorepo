@@ -1,0 +1,85 @@
+{
+  "summary": "A high‑quality soundboard capture of the legendary 12/06/73 show, highlighted by an epic Here Comes Sunshine and a towering Dark Star, with generally good audio despite minor missing intros.",
+  "review": "The performance is widely praised – set two shines with a marathon Here Comes Sunshine, a soaring Dark Star, Big River and Eyes – while the first set delivers solid classics. The Miller soundboard upgrade sounds clear and balanced, though listeners note a missing ~20‑second intro to Dark Star and some late‑show mix issues with Bob’s guitar. Overall the recording offers an excellent historical snapshot of one of ’73’s most talked‑about concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star, highlighting superb musical moments and a clear soundboard source; only isolated technical quirks (missing intro, fade‑out on guitar) keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced mix with a recent patch fixing the end of Here Comes Sunshine. Missing first ~20 seconds of Dark Star and the very start of Bertha are noted, as is a later reduction in Bob Weir's guitar presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Dark Star",
+      "Big River",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Beat It On Down The Line",
+      "Around And Around"
+    ],
+    "setlist_flow": "First set rolls through classic 1973 material with a few flat spots, but the second set erupts into an unforgettable journey – Ramble on Rose and Me & My Uncle open the set, leading to the marathon Here Comes Sunshine, a powerful Dark Star > Eyes sequence, and a fiery Big River."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar tone on Here Comes Sunshine and Dark Star; his vocals are noted as especially clear on Ramble on Rose.",
+    "Phil": "His bass is described as echoing beautifully (especially after China>Rider) and having a “fuzz‑tone” quality that recalls early‑70s jazz fusion sounds.",
+    "Bob": "Early in the show he adds strong rhythm and commentary; later his guitar fades in the mix, which some listeners find disappointing.",
+    "Keys": "Keith is highlighted for sounding nice on piano during Big River and switching to Rhodes mid‑Dark Star, adding texture to the jam.",
+    "Drums": "Billy (Bill Kreutzmann) “beats his drum kit to death” on Big River and provides a driving pulse throughout the second set."
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around And Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:10:02.884225+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-06.132361.sbd.miller.flac16"
+}

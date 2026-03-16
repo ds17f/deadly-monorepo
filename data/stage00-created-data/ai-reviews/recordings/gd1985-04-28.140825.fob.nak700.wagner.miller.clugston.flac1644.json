@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent front‑of‑house matrix capture of a stellar Frost show with standout Gimme Some Lovin’, Crazy Fingers, Play in the Band and a soaring She Belongs to Me encore.",
+  "review": "The performance is described as a fire‑on‑all‑cylinders set from the Frost venue, highlighted by Jerry’s inspired solos, Phil’s driving bass, Brent’s tasteful keys and multiple high‑energy peaks like Gimme Some Lovin’, Crazy Fingers and Play in the Band. The FOB (matrix) recording is praised for its natural high‑end sparkle, full bass presence and perfect balance of crowd ambience, making it a very listenable document despite one reviewer giving a low rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two glowing 5‑star reviews praise both the musical performance and the FOB matrix recording as excellent, while a third review gives a zero rating, pulling the overall sentiment toward mixed and lowering confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "FOB source described as having natural high‑end sparkle, full bass, perfect crowd balance and warm spring day ambience; no notable dropouts or muffling mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gimme Some Lovin'",
+      "Birdsong",
+      "China > Rider",
+      "Crazy Fingers",
+      "Play in the Band",
+      "Wharf Rat",
+      "Throwing > Away",
+      "US Blues",
+      "She Belongs To Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first set with a killer Gimme Some Lovin' opener, followed by a second‑set PITB suite that builds through Crazy Fingers, Play in the Band, Wharf Rat and culminates in an emotional double encore featuring She Belongs To Me."
+  },
+  "band_member_comments": {
+    "Jerry": "Exceptional guitar work with sweet first solo and powerful second solo; voice rough but compensated by energetic playing.",
+    "Phil": "Takes the helm early with a full‑out romp on Gimme Some Lovin' and provides solid support throughout, especially during She Belongs To Me.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards perfectly accent the majestic moments, particularly on the final encore.",
+    "Drums": "Drum segment (Drumz) noted as decent and part of the PITB suite."
+  },
+  "song_mentions": {
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Play in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing > Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs To Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T04:20:40.309712+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-28.140825.fob.nak700.wagner.miller.clugston.flac1644"
+}

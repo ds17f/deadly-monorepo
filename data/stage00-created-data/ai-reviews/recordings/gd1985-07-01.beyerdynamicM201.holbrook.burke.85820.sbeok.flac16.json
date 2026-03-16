@@ -1,0 +1,45 @@
+{
+  "summary": "Great audience recording with crystal‑clear sound, featuring a blazing Scarlet Begonias → Fire on the Mountain sequence",
+  "review": "The reviewer praises this audience (AUD) tape as superior to other circulating versions, calling it a great and clear capture of an excellent 1985 show. Highlights include a scorching Scarlet Begonias into Fire on the Mountain segue, and overall enthusiasm for the tour’s performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Positive comments about both the show (great performance) and recording (excellent AUD), but only a single review limits certainty."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls it a \"great AUD\" and better than other known audience versions, implying clear and well‑balanced capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic about the tour; notable segue of Scarlet Begonias into Fire on the Mountain praised as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:21:17.423880+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-01.beyerdynamicM201.holbrook.burke.85820.sbeok.flac16"
+}

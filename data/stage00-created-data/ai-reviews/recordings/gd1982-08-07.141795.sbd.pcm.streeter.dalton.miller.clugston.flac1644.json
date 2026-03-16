@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised show at an incredible venue, but no details on recording quality or specific performances",
+  "review": "Reviewers are enthusiastic about the concert itself, calling it \"incredible\" and recommending it strongly. No information is provided about the source or clarity of the audio, nor are any particular songs or band members highlighted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Based on an average star rating of ~4.7 and a single enthusiastic comment about the show; lack of recording details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments regarding soundboard, audience mix, clarity, or any technical issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific remarks about set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T23:39:43.878923+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-07.141795.sbd.pcm.streeter.dalton.miller.clugston.flac1644"
+}

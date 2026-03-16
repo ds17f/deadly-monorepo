@@ -1,0 +1,90 @@
+{
+  "summary": "A superb audience (Oade) tape that captures an electrifying second set – Morning Dew, Cold Rain, Uncle John’s and Jack‑A‑Roe shine.",
+  "review": "The Augusta 10‑12‑84 show is celebrated for its high‑energy second set, with a legendary “Morning Dew” vocal performance by Jerry, scorching leads, and tight jams from Cold Rain through Uncle John’s into the soaring Dew.  The Oade audience recording, while thin in the low end, is widely praised for clarity and presence, putting listeners right in the tiny gym.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the performance (especially the second set) and the Oade audience recording; only a handful of low‑star comments note bass depth issues, so the combined show/recording score is very high."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Oade mics capture the room with surprising clarity; reviewers cite excellent ambience and presence but note a thin low‑end/bass response and occasional level inconsistencies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Cold Rain",
+      "Uncle John's (UJB)",
+      "Jack-A-Roe",
+      "Music Never Stopped",
+      "All Over Now",
+      "Cumberland"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as a powerhouse that lifts the entire concert; first set is considered weaker or merely 'OK' by several fans, but overall the show flows with high energy and memorable segues."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for an emotional, powerful vocal on Morning Dew and fiery guitar leads throughout the second set.",
+    "Phil": "Bass noted as lacking depth in the recording; otherwise no specific performance comments.",
+    "Bob": "Mentioned as picking and grinning, contributing to the upbeat vibe; no detailed musical critique.",
+    "Keys": "Organ/keyboard presence is felt but some reviewers complain about thinness of the low end affecting organ feel.",
+    "Drums": "Drums receive praise for tight playing after Uncle John's and during space jams; the post‑UJB drum break is highlighted."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Cold Rain": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Uncle John's": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "All Over Now": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cumberland": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "On the Road Again": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T22:20:40.858709+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-12-oade.sacks.8795.sbefail.shnf"
+}

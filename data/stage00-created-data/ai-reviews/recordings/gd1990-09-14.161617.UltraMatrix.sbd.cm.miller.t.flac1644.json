@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent matrix blend captures a strong Scarlet > Fire performance, though keyboardist Welnick’s playing feels out of step.",
+  "review": "The recording offers an excellent Matrix blend that is clear and well‑balanced, letting the band’s tight playing shine through. The show is highlighted by a great Scarlet > Fire sequence, but reviewers note Brent Welnick’s keyboards lack the usual Dead feel, tempering the overall enthusiasm.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single review gives a solid 4‑star rating, praising the sound and Scarlet > Fire while critiquing keyboard work; weighting yields an overall ~4‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the Matrix blend as excellent, with no noted flaws in clarity or balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall nice show with a strong flow; the highlight is the Scarlet > Fire sequence, though keyboard performance draws criticism."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Welnick’s playing described as lacking Deadness.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:05:40.143478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-14.161617.UltraMatrix.sbd.cm.miller.t.flac1644"
+}

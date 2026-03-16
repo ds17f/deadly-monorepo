@@ -1,0 +1,69 @@
+{
+  "summary": "Epic The Other One marathon & fiery Playing In The Band highlight a peak ’72 London show",
+  "blurb": "The second set boasts a towering 30‑minute \"The Other One\" and a monster \"Playing In The Band\". Jerry’s tone glows on \"Sing Me Back Home\" while Phil’s bass drives the jams. The soundboard capture delivers crisp stereo balance, making it the go‑to source.",
+  "review": "May 24, 1972 at London’s Strand Lyceum captures the Grateful Dead in full exploratory mode. After a punchy first set of concise rockers, the band launches into an astonishing second half: a sprawling thirty‑minute \"The Other One\" that showcases Jerry Garcia’s beautiful tone and tight duets with Bob Weir, anchored by Phil Lesh’s jazzy, beast‑like bass. The momentum rolls straight into a fiery \"Playing In The Band\", where the organ textures swell space‑y and the rhythm section drives the intensity forward. Highlights also include a powerful “Truckin’”, a soulful “Black Peter”, and a soaring segue from “Turn On Your Lovelight” into “The Stranger (Two Souls in Communion)”. The SBD recording is praised for its crisp, well‑balanced stereo mix, rendering this performance one of the most compelling documents of the 1972 European tour.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 22,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Multiple recordings praise the show’s epic jams—especially the 30‑minute \"The Other One\" and a monster \"Playing In The Band\"—and consistently note strong playing from Garcia, Lesh, and Weir. Positive language such as “stellar”, “epic”, “fiery” appears across several sources, while criticism is limited to recording quality rather than performance, yielding a solid positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1972-05-24.sbd-pset2.unknown.91509.flac16",
+    "reason": "Soundboard source with good stereo hi‑fi mix; captures the epic jams clearly and is praised as the most complete, crisp representation of the show."
+  },
+  "key_highlights": [
+    "30‑minute \"The Other One\" jam that defines the second set peak",
+    "\"Playing In The Band\" delivers a monster, high‑energy performance",
+    "Strong keyboard organ textures adding space‑y depth to the jams",
+    "Crisp stereo soundboard capture makes this the definitive listening source"
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Playing In The Band",
+    "Truckin'",
+    "Black Peter",
+    "Turn On Your Lovelight",
+    "The Stranger (Two Souls in Communion)"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone shines on \"Sing Me Back Home\" and his duets during the sprawling \"The Other One\" are described as beautiful and tight.",
+    "Phil": "Phil is called a ‘beast’, laying down jazzy, propulsive bass that fuels the extended improvisations in \"The Other One\" and keeps the groove rolling.",
+    "Bob": "Weir locks into strong duet interplay with Jerry on \"The Other One\" and provides solid rhythm throughout the set.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Kreutzmann’s drumming drives the high‑energy first set and underpins the massive second‑set jams."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-20T14:31:09.974226+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Sing Me Back Home",
+      "Sugar Magnolia"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "Black Peter"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ],
+    [
+      "The Stranger (Two Souls in Communion)"
+    ]
+  ]
+}

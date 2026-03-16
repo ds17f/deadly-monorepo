@@ -1,0 +1,80 @@
+{
+  "summary": "Strong late‑80s show with a smoking Sugaree and solid set flow, captured on an audience recording that’s colorful but a bit tinny.",
+  "review": "Fans rave about the energy of Mickey Hart’s birthday gig – especially the second‑set opener Sugar > Sugaree and the overall vibe of a happy DC crowd. The performance is praised as tight and enthusiastic, though the tape suffers from a thin, tinny mix that sometimes buries Phil’s bass and lacks board‑level clarity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The musical performance is consistently praised (most reviewers give 4–5 stars) while the recording quality draws mixed comments, lowering the overall score slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tinny sound with occasional loss of mix balance (Phil buried), but hall echo adds color; not a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Bertha",
+      "Sugar",
+      "Estimated",
+      "Desolation Row"
+    ],
+    "poor_songs": [
+      "Deal"
+    ],
+    "setlist_flow": "The first set builds nicely from a lively Bertha into classic jams, while the second‑set opener Sugar > Sugaree ignites the crowd and carries the energy through to a satisfying close."
+  },
+  "band_member_comments": {
+    "Jerry": "String broke near the end of Deal; his voice described as not fresh but still delivers strong solos.",
+    "Phil": "Often gets lost in the mix on this recording, though his harmonies with Brent are highlighted at times.",
+    "Bob": "Bobby (Weir) vocal performance is praised for storytelling on Desolation Row and overall energy.",
+    "Keys": "Brent Mydland’s Hammond organ shines toward the end of the set, adding vigor to Fantasy and Watchtower.",
+    "Drums": "Mickey Hart’s birthday is celebrated; drums/space segment noted as typical but not a standout."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:58:40.587053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-11.schoeps.dipietro.8906.sbeok.shnf"
+}

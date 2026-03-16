@@ -1,0 +1,103 @@
+{
+  "summary": "Soundboard capture with good overall fidelity (minor wind‑noise and a dropout) of an energetic 1991 Chicago show highlighted by Terrapin, Dark Star and Shakedown Street.",
+  "review": "The recording is a Miller soundboard tape that sounds fairly clear and dynamic, though listeners note occasional wind‑related muffling for part of the audience and a brief drop‑out on “Wang Dang.” Musically the concert shines – Hornsby’s only Chicago appearance fuels an expansive Terrapin jam, a soaring instrumental Dark Star and a monster Shakedown Street, while the first set delivers strong renditions of “Hell in a Bucket,” “Brown Eyed Girl” and “Let It Grow.” A few spots (e.g., “Wang Dang,” “Foolish Heart,” “Looks Like Rain”) fall short, but the overall vibe is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Five reviews (four with detailed commentary) praise the performance and note only minor technical flaws; the weighted blend of strong show quality (70%) and decent soundboard recording (30%) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally dynamic and clear Miller SBD tape; occasional wind‑noise that affected audience sections, a brief dropout on “Wang Dang,” and slight compression compared with other Miller sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Dark Star (instrumental)",
+      "Shakedown Street",
+      "Hell in a Bucket",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Wang Dang",
+      "Foolish Heart",
+      "Looks Like Rain",
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "First set opens strong with dual‑key gems and a monster Shakedown Street; second set stretches into a two‑hour jam featuring an expansive Terrapin segueing into an instrumental Dark Star, delivering a satisfying arc despite a few weaker moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia floats on MIDI flute during the Terrapin coda and leads the instrumental Dark Star with melodic phrasing; his playing is praised throughout.",
+    "Phil": "Lesh provides a deep, dark bass foundation that lifts the jam past its sludge, noted as a “sinister and deep dark bass effect.”",
+    "Bob": "Weir’s performance on “Looks Like Rain” is critiqued (“Bobby's a muppet”), though his rhythm work elsewhere is not highlighted.",
+    "Keys": "Hornsby’s only Chicago appearance shines; the dual‑key setup (Hornsby/Brent) is called “stellar,” with Hornsby adding MIDI sax/flute textures and dark‑star quotes.",
+    "Drums": "Both drummers are described as “stellar,” delivering pounding fills, call‑and‑response sections, tribal/techno grooves, and an overall powerhouse rhythm section."
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star (instrumental)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Girl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:15:22.764203+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-22.sbd.gans.miller.112775.flac16"
+}

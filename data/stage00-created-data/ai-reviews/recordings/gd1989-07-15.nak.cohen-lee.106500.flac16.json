@@ -1,0 +1,82 @@
+{
+  "summary": "A solid late‑80s show captured on a clear audience tape, highlighted by a phenomenal Bird Song and an explosive Truckin' outro.",
+  "review": "The audience recording stands out as the best available for this July 15 1989 concert, offering clarity that eclipses other tinny sources. Musically the performance is strong, with Bird Song, Truckin', Smokestack Lightning, Watchtower, Stella and Sugar Magnolia receiving high praise, while Crazy Fingers and China Doll fall short. Overall the set flows well, building energy through jams toward a rousing finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed review rates the show 4 stars and highlights many standout moments; recording is praised as the best audience source, giving a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clearer than other available audience tapes; not tinny, captures the mix well with good overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Truckin'",
+      "Smokestack Lightning",
+      "Watchtower",
+      "Stella",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "China Doll"
+    ],
+    "setlist_flow": "The set builds nicely from solid early songs into high‑energy jams, culminating in a powerful second‑half climax and a rousing close."
+  },
+  "band_member_comments": {
+    "Jerry": "Stella features some of Jerry's most impassioned playing; his guitar work contributes to the swirling mix throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:29:03.868397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-15.nak.cohen-lee.106500.flac16"
+}

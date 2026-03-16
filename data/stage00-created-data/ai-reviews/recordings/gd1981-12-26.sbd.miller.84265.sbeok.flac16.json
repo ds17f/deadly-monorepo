@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent soundboard capture of an electrifying 12/26/1981 show, with a blistering second set highlighted by Scarlet Begonias, Big Boss Man and He's Gone.",
+  "review": "The recording delivers beautiful, crystal‑clear soundboard quality that lets the band's energy shine through, especially on the soaring second set. Reviewers rave about standout moments like Scarlet Begonias, The Eleven, Big Boss Man, He's Gone and a rare Day at the Dentist, while noting Jerry’s strong vocals and Brent’s dazzling keyboard solo. Overall the show is described as a “rager” and a hidden gem that lives up to the Dead’s legendary live reputation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen reviews uniformly praise both the musical performance (especially the second set) and the soundboard recording quality, with no significant criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the soundboard beautiful, strong, big and fat; no issues like drop‑outs or muddiness are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "The Eleven",
+      "Big Boss Man",
+      "He's Gone",
+      "All Over Now",
+      "Day at the Dentist",
+      "Birdsong",
+      "Oakland Jam",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is repeatedly singled out as phenomenal, with seamless transitions and high‑energy jams that keep listeners hooked from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are praised for being strong and enjoyable.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard solo steals the spotlight, showcasing his virtuosity.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Day at the Dentist": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Oakland Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:26:24.196514+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-26.sbd.miller.84265.sbeok.flac16"
+}

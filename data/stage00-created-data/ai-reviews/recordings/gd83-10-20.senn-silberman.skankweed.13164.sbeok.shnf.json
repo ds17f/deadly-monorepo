@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience recording captures a historic Worcester Centrum debut with a smoking Scarlet Begonias → Fire and strong renditions of Wharf Rat, Miracle and Music Never Stopped.",
+  "review": "The tape is hailed as one of the finest audience recordings—crisp, clear and surprisingly balanced for an AUD source. The show itself is celebrated for its historic first‑time appearance at the Worcester Centrum and standout jams, though vocal slip‑ups on Stella Blue and a few rough moments keep it from being flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.0; most comments praise the performance and recording quality, with only a few criticisms, leading to an overall strong but not perfect assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very crisp AUD tape; clear instrument separation despite being crowd‑sourced, no major drop‑outs or muddiness noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias → Fire",
+      "Wharf Rat",
+      "The Miracle",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "Historic first show at the new Worcester Centrum generated huge excitement; first set strong, second set featured a monster Scarlet/Fire jam but suffered vocal meltdowns on Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – some note a botched opening verse and vocal slip‑ups, yet later praise his decision to keep jamming and overall guitar presence.",
+    "Phil": "",
+    "Bob": "Bobby is mentioned yelling “combine,” tapping Jerry’s shoulder, and generally adding energy during transitions.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T13:14:37.575526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-20.senn-silberman.skankweed.13164.sbeok.shnf"
+}

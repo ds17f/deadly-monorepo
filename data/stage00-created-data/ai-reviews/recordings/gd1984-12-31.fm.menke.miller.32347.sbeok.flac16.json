@@ -1,0 +1,93 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an electrifying NYE ’84 show highlighted by a monster Shakedown Street and fiery second‑set gems.",
+  "review": "The recording is praised for its crisp, balanced, “big‑fat” sound that makes the band feel live and immediate. Musically the concert shines with a commanding Jerry Garcia, tight Brent Mydland keyboards and Phil Lesh’s booming bass, delivering standout moments like Shakedown Street, Scarlet > Fire, Peggy‑O and an inspired second set featuring Jack Straw → Bird Song, Space and Uncle John’s Cabin. Overall fans consider it one of the best New Year’s Eve performances of the mid‑80s.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All 12 reviews are 4–5 stars, overwhelmingly praising both performance and sound quality; the weighted average yields a rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean, balanced mix with big‑fat low end; occasional crowd noise noted on Sugar Magnolia but overall live feel is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Scarlet > Fire",
+      "Peggy-O",
+      "Jack Straw > Bird Song",
+      "Hell in a Bucket",
+      "Space",
+      "Uncle John's Cabin",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "First set bursts with energy and tight grooves; second set goes primal, building momentum through seamless transitions (Jack Straw into Bird Song) and culminating in a soaring jam suite of Space → Wheel → Uncle John's Cabin."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ‘in command from the first song’, delivering a ferocious Shakedown solo, emotive vocals on Peggy‑O and an intense Baby Blue; fans note his “happy” tone and powerful improvisations.",
+    "Phil": "Praised for a solid, primal groove, frequent “bombs” in Scarlet, Space and Wheel, filling out the bottom end with authority.",
+    "Bob": "Noted for tight rhythm work, contributions to Spanish‑jam sections of Space, and full‑harmony vocals on Uncle John’s Cabin.",
+    "Keys": "Brent Mydland is highlighted as being “in fine form”, providing strong organ/keyboard textures and vocal harmonies (especially on Peggy‑O). Later comments reflect nostalgia for his era after his passing.",
+    "Drums": "Bill and Mickey lock into a primal, driving beat; marimba‑like textures in Space and relentless propulsion on Jack Straw are singled out."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw > Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Cabin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:35:26.258937+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-12-31.fm.menke.miller.32347.sbeok.flac16"
+}

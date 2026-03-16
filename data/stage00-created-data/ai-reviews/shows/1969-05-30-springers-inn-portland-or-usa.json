@@ -1,0 +1,54 @@
+{
+  "summary": "Intense Dark Star jam and tight rhythm drive this Portland set",
+  "blurb": "The show builds from a gentle Morning Dew into high‑energy jams, highlighted by an expansive Dark Star and a seamless segue into Saint Stephen, The Eleven, and Turn On Your Lovelight. Jerry’s solo is fiery, the rhythm section locks in, and the soundboard capture is remarkably clear.",
+  "review": "On May 30, 1969 at Springer's Inn in Portland the Dead delivered a classic early‑psychedelic set that still feels fresh. The evening opens with a plaintive Morning Dew before kicking into Me & My Uncle and Doin' That Rag, leading to an explosive Dark Star where Jerry’s broken‑string solo adds both drama and virtuosity. That momentum carries straight into Saint Stephen’s soaring intro, morphs into the complex rhythmic weave of The Eleven, and culminates in a truncated but still fiery Turn On Your Lovelight. Throughout, Phil’s bass is steady and sure, while Bill and Mickey play near‑unison drums with aggressive accents that drive the improvisations forward. Tom Constanten’s keyboards add rich textures on Saint Stephen, complementing Pigpen’s vocal flourishes on Me & My Uncle and his white‑noise contributions to Lovelight. The Miller soundboard source captures the performance with crisp balance and just enough tape hiss to remind you it’s a 1969 recording, making this one of the best‑documented snapshots of that era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "All available analysis is positive, praising Dark Star, The Eleven, and overall performance; no consistent negative comments about the music itself were found.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1969-05-30.sbd.miller.87516.sbeok.flac16",
+    "reason": "Excellent soundboard capture with clean, balanced mix and minimal tape hiss; faithfully renders the band’s performance."
+  },
+  "key_highlights": [
+    "Dark Star showcases an intense, broken‑string solo from Jerry.",
+    "The Eleven delivers rhythmic complexity that propels the set forward.",
+    "Saint Stephen’s extended intro leads seamlessly into The Eleven.",
+    "Turn On Your Lovelight, though truncated, retains high‑energy momentum."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Saint Stephen",
+    "The Eleven",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Intense solo on Dark Star with broken strings adds drama and signature bending.",
+    "Phil": "Steady, sure bass anchoring the improvisations throughout the set.",
+    "Bob": "Vocals praised on Me & My Uncle; contributes white‑noise textures on Lovelight.",
+    "Tom": "Provides rich keyboard textures on Saint Stephen’s intro, enhancing the jam flow.",
+    "Mickey": "Drums lock in near‑unison with Bill, adding aggressive accents that drive the jams.",
+    "Billy": "Shares tight, unified drumming with Mickey, reinforcing the rhythmic foundation."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T14:55:19.112480+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

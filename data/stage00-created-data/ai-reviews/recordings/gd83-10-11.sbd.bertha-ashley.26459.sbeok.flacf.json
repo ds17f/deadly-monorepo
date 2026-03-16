@@ -1,0 +1,83 @@
+{
+  "summary": "Crisp soundboard recording captures a high‑energy show highlighted by a breakout St. Stephen and a sweet China Doll performance.",
+  "review": "The October 11, 1983 Madison Square Garden concert is praised for its electric vibe, especially the first‑time East Coast debut of St. Stephen and the shimmering China Doll with Brent’s synth/harpsichord work. The SBD source is generally clear and well‑balanced, though a digital limiter adds a slight oddness in places; overall listeners find it an excellent listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, highlighting strong performances and a good‑to‑excellent soundboard mix; the weighted average of show (≈4.5) and recording (≈4.0) yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD with a crisp mix; digital limiter introduces occasional unnatural coloration, but overall sound is clean and balanced. Matrix versions are also praised for blending ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "China Doll",
+      "Wang Dang Doodle",
+      "Bird Song",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set grooves with solid energy; second set ramps up dramatically, featuring a rocking pre‑drums run and a powerful Bertha. The show maintains high momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Reliable dancing bass lines; his vocals on China Doll were noted as a rare highlight.",
+    "Bob": "",
+    "Keys": "Brent’s synth/harpsichord adds texture to China Doll, enhancing the band interplay.",
+    "Drums": "Pre‑drums run and an emphatic Bertha solo drive the second set's excitement."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:20:53.608938+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-11.sbd.bertha-ashley.26459.sbeok.flacf"
+}

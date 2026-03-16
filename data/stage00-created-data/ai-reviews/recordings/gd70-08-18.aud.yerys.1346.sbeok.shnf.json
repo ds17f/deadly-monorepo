@@ -1,0 +1,85 @@
+{
+  "summary": "A listenable audience tape of the historic Aug‑18 1970 Fillmore West show, notable for first‑time performances of Ripple, Brokedown Palace, Operator and Truckin'.",
+  "review": "The recording is a lo‑fi audience capture – boomy and far from audiophile grade – but it remains surprisingly clear enough to enjoy the historic set.  Musically the night shines with debut renditions of Ripple, Brokedown Palace, Operator and Truckin', plus standout jams like Cryptical > Other One, Attics and Man’s World, making it a prized early‑70 show despite its sonic roughness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (first‑time songs, strong jams) while recording quality is described as decent for a 1970 audience tape; the weighted average yields a solid 4.2‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Pocket‑recorder style lo‑fi tape with noticeable boominess around 960 Hz, occasional hiss and crowd ambience; still listenable after a brief adjustment period."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Brokedown Palace",
+      "Operator",
+      "Truckin'",
+      "Man's World",
+      "Cryptical > Other One",
+      "Attics"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic first set is praised as a “real peach,” followed by an electric second set that builds into powerful jams (Cryptical>Other One, Attics) and wraps with classic closers; the historic debuts give the show a unique excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's guitar tone and vocal presence as a key reason to listen despite tape quality.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Uncertainty about who is on piano (Pigpen, Howard Wales or Ned Lagin) but keyboards are noted on Truckin', Ripple and New Speedway Boogie.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Operator": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Man's World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cryptical > Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:28:48.494316+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-08-18.aud.yerys.1346.sbeok.shnf"
+}

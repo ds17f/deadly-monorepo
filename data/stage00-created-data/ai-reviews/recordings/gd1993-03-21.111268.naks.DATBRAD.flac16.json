@@ -1,0 +1,39 @@
+{
+  "summary": "Low‑rated show with waning energy and no clear recording details, noted for a repeated Liberty performance",
+  "review": "The reviewer feels the concert suffered from diminishing enthusiasm, especially on newer “darkhead” material, and notes the oddity of playing ‘Liberty’ in back‑to‑back shows. No specific comments about the audio source or sound quality are provided, only thanks to DATBRAD for the copy.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one review with a 2‑star rating; the reviewer criticizes the performance and offers no positive remarks about sound quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on audio clarity, mix, or source type were made by the reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Liberty (repeated)"
+    ],
+    "setlist_flow": "Reviewer notes a lack of punch in newer material and overall waning enthusiasm, suggesting an uneven set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Liberty": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:53:34.284610+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-21.111268.naks.DATBRAD.flac16"
+}

@@ -1,0 +1,65 @@
+{
+  "summary": "Blues‑heavy second set with Walkin' Blues and strong Jerry solos",
+  "blurb": "The Moscone benefit show erupts in a high‑energy blues jam featuring Boz Scaggs and John Cipollina, highlighted by a fiery Walkin' Blues. Jerry’s guitar is on fire while his vocals dip in and out, and the band locks into a tight Truckin' early on. Overall a solid performance despite a muffled first half.",
+  "review": "May 28‑1982 at the Moscone Convention Center was a benefit that turned into an unexpected blues showcase. After a fairly standard opening—Alabama Getaway into Greatest Story Ever Told and a crisp Althea—the band launched into Truckin' before diving into the usual drum‑Space‑road‑feeling‑bad sequence. The second set stole the show: Boz Scaggs and John Cipollina sat in for an unrestrained blues/rock jam that many reviewers called “high‑gear” and “spirited.” Walkin' Blues roared, Brent’s Hammond B3 cut through with a soulful solo, and Bill’s drums were crystal clear on the audience tape. Jerry ripped two memorable solos and kept the guitar fire burning, even if his vocal mic flickered. Phil laid down a rock‑steady bass line that held the groove together, while Bob was unusually lively in the rhythm department. The recording landscape is mixed—some soundboards are muffled, but an excellent Nakamichi audience tape captures the second‑set magic with startling clarity.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four of five recordings praise the show’s high‑energy blues second set, guest performances, and strong instrumental work; one recording notes mixed quality due to intoxicated playing and vocal drop‑outs. The overwhelming positive language ('high‑gear', 'stellar', 'spirited') outweighs the isolated negatives, warranting a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd82-05-28.nak300.dgrabski.10974.sbefail.shnf",
+    "reason": "Excellent audience tape with crystal‑clear guitars and drums that captures the standout blues jam and Walkin' Blues in vivid detail."
+  },
+  "key_highlights": [
+    "Boz Scaggs & John Cipollina guest blues/rock jam on second set",
+    "Walkin' Blues delivers a tight, high‑energy performance",
+    "Jerry’s searing guitar solos drive the blues sections despite vocal mic issues",
+    "Brent Mydland’s Hammond B3 solo shines early in the second set"
+  ],
+  "song_highlights": [
+    "Walkin' Blues**",
+    "Truckin'",
+    "Althea",
+    "Turn On Your Lovelight**"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers scorching guitar work and two memorable solos, especially in the blues jam; vocals intermittently drop out due to mic issues and occasional intoxication.",
+    "Phil": "Provides a solid bass foundation that underpins the high‑energy second set and guest sections.",
+    "Bob": "Shows extra spark, offering an unusually spirited rhythm guitar performance throughout.",
+    "Brent": "Steps forward with prominent Hammond B3 solos early in the second set, adding soulful texture to the blues groove.",
+    "Mickey": "",
+    "Billy": "Drums are clear and powerful, driving the fast‑paced blues jam; counted off the opening and kept the momentum alive."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-13T21:29:34.080714+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Walkin' Blues**"
+    ],
+    [
+      "Truckin'",
+      "Drums*",
+      "Space",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Turn On Your Lovelight**",
+      "Johnny B. Goode**"
+    ]
+  ]
+}

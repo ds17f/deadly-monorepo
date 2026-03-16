@@ -1,0 +1,87 @@
+{
+  "summary": "A solid Charlie Miller soundboard capture that’s a bit bass‑heavy, but the June 1992 show shines with an inspired So Many Roads and a stellar China→Rider sequence.",
+  "review": "The recording is a typical Miller board – generally clear and well‑balanced yet burdened by overly strong low frequencies that can strain speakers. Musically the concert is highly praised: fans highlight So Many Roads, the blazing China Cat Sunflower → I Know You Rider medley, a memorable Dark Star and an energetic Crazy Fingers→Corrina→Drumz stretch. Overall the performance is regarded as one of the stronger shows of that summer tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and rave about the set, while recording comments note only a low‑end muddiness issue; weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix with crisp mids/highs; however the lows are excessively heavy/muddy, causing speaker strain for some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "China Cat Sunflower > I Know You Rider",
+      "Dark Star",
+      "Crazy Fingers",
+      "Corrina",
+      "Drumz",
+      "The Last Time",
+      "Don't Ease Me In",
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the concert as high‑energy with smooth transitions – a strong opener, an explosive second set featuring tight segues (Crazy Fingers→Corrina→Drumz) and a powerful closer."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as strong and confident (especially on \"Don't Ease Me In\"), guitar tone praised; minor lyric slip noted during Crazy Fingers.",
+    "Phil": "Stepped up to the mic for So Many Roads, adding vocal variety that listeners appreciated.",
+    "Bob": "",
+    "Keys": "Vince’s keyboards are called “smokin’” and add a rich texture throughout the show.",
+    "Drums": "Bill (drums) highlighted in the Drumz segment; rhythm section praised for tight, energetic playing."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drumz": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:38:53.311668+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-08.sbd.miller.89981.sbeok.flac16"
+}

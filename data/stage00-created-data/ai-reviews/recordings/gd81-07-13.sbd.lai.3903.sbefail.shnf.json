@@ -1,0 +1,82 @@
+{
+  "summary": "High‑energy ’81 show with scorching Jerry riffs and a blistering Scarlet > Fire, captured on a solid but bass‑heavy soundboard tape.",
+  "review": "The performance is widely praised for its fire‑brand guitar work, tight rhythm section and standout moments like the Scarlet > Fire sequence, Deal and Althea. The SBD source sounds good for its era, though the mix leans heavy on bass and occasional high‑end distortion can be tamed with EQ. Overall it’s a must‑listen for fans of the band’s early‑’80s peak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, highlighting superb musical performance while noting only moderate recording flaws (bass‑heavy mix, occasional distortion). The weighted blend of strong show quality and decent soundboard fidelity yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Bass is over‑mixed and mids/highs can become distorted; occasional tape saturation artifacts. Some listeners note the tape runs slightly fast/pitch‑high, but overall clarity is solid for an 1981 SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Deal",
+      "Althea",
+      "Jack-a-Roe",
+      "The Stranger",
+      "Roses",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "Fast tempos and high energy drive both sets; the second set builds nicely with a hot jam at the end of Scarlet, while occasional tempo‑rushes are noted but don’t detract from overall momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Ripping, raunchy riffs on Althea and scorching solo work; vocal flubs on Terrapin but an expressive delivery on Black Peter.",
+    "Phil": "Crunchy, powerful bass that drives the band; excellent dynamics on Scarlet > Fire; occasional drop‑out in mix during Estimated/Terrapin.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards add an otherworldly texture and mellow touches (noted on TLEO).",
+    "Drums": "Heavy, punchy drum sound with good ride cymbal presence; high‑end distortion when volume is turned up."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T13:10:57.729748+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-13.sbd.lai.3903.sbefail.shnf"
+}

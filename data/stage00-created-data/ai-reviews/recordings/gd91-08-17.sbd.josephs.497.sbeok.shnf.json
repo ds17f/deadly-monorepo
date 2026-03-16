@@ -1,0 +1,88 @@
+{
+  "summary": "Clear soundboard capture of a hot second set highlighted by a stellar Help‑Slip‑Frank opener and one of the best Morning Dews of the ’90s",
+  "review": "The recording is a clean soundboard source with crisp instrument separation, only occasional lyric flubs. Musically the show shines on the opening Help > Slip > Franklin’s Tower and an expansive Morning Dew that many reviewers call one of the era’s finest, supported by strong jams from He's Gone through Smokestack Lightning. The first set is described as laid‑back or a bit rough, but the second half maintains high energy despite a few critics noting a brief Dark Star tease and some sloppy moments in “Women” tunes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising the Dew and overall performance; a few lower scores focus on isolated set or song issues. Recording quality is consistently praised as clear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with good instrument separation; occasional lyric flubs but no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Morning Dew",
+      "He's Gone",
+      "Smokestack Lightning",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Women (BE Women)",
+      "Brown Eyed Women",
+      "Music Never Stopped",
+      "Dark Star (short tease) "
+    ],
+    "setlist_flow": "First set described as smooth but a bit laid‑back; second set heats up with a rippin Phil/Bobby jam after He's Gone, a deep Space → Dark Star transition that leads into a celebrated Morning Dew, and a soulful Smokestack Lightning that flows into an epic Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his guitar tone, powerful solo on Morning Dew, stylish fills and strong backing vocals; occasional lyric slip‑up noted.",
+    "Phil": "Highlighted for a ripping jam with Bob (Bobby) after He's Gone, adding energy to the second set.",
+    "Bob": "Gritty vocal work on Queen Jane, solid vocals throughout the second set, Bobby’s growls in Smokestack Lightning; some lyric flubs mentioned.",
+    "Keys": "Vince's organ shines early; Brent/Hornsby piano described as stunning, sparkling and essential to the Dew and Dark Star sections.",
+    "Drums": "Drums/Space sequence praised as above‑average with tight interplay; drummers provide strong drive especially after He's Gone."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 10,
+      "negative_mentions": 1,
+      "total_mentions": 11
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women (BE Women)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:25:02.256694+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-08-17.sbd.josephs.497.sbeok.shnf"
+}

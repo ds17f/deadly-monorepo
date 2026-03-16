@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a gentle, precise show highlighted by a beautiful Comes A Time → Sailor → Saint opening.",
+  "review": "The recording offers crystal‑clear soundboard audio for the acoustic and second electric sets, delivering a pristine listening experience. Musically the concert is praised for Jerry Garcia’s delicate, “new” guitar tone and a standout sequence that flows from Comes A Time into Sailor and Saint, with Terrapin Station’s crescendos adding extra sparkle. Listeners note the precision and fluidity of the performance despite the first electric set being unavailable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Two 5‑star reviews praise both sound quality and musical highlights, while a single 3‑star review offers moderate criticism of style only; overall the show is strong and the recording excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Soundboard source for acoustic set and second electric set; clear, detailed mix with no noticeable drop‑outs. First electric set not present in this release."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Sailor",
+      "Saint",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic portion is fun and standard; the second electric set opens with a beautiful drum intro into Comes A Time, then flows smoothly into Sailor and Saint, creating a memorable and precise opening that sets the tone for the rest of the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as having his “new” guitar dialed in, delivering watery, delicate touches and understated solos that give the set a gentle, precise feel.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Opening drum intro into Comes A Time is highlighted as beautiful and perfectly segues into the song."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:56:38.736454+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-02.set3-sbd.jerugim.2204.sbeok.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "High‑quality soundboard capture of a lively East Coast show with standout Jack Straw, Cumberland Blues and He's Gone performances.",
+  "review": "The recording is a solid soundboard source that sounds good overall – only a hint of muffling but pleasantly thick. The concert shines with an energetic first set capped by a great Jack Straw, a fiery Cumberland Blues, a memorable He’s Gone and a tight LLR featuring Jerry’s breakout solo, while the band’s chemistry keeps the crowd buzzing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic reviews highlight strong musical moments and a decent soundboard recording; weighting gives a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with a thick, warm tone; one reviewer notes slight muffling but it does not detract from enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Cumberland Blues",
+      "He's Gone",
+      "LLR",
+      "Sugaree",
+      "Down Boy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely to a powerful Jack Straw; second half flows through Down Boy into LLR and a classic He's Gone, maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his solo work (notably the breakdown in LLR) and his relaxed tone later in the set.",
+    "Phil": "",
+    "Bob": "Weir is highlighted for an exuberant performance, especially during Jack Straw and the post‑break excitement.",
+    "Keys": "",
+    "Drums": "The drummer’s choices are praised – “smokes” into Cumberland Blues and provides a strong backdrop for He's Gone with notable \"oooohs\"."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "LLR": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Down Boy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:09:03.459590+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-12.sbd.koehler.5925.sbeok.shnf"
+}

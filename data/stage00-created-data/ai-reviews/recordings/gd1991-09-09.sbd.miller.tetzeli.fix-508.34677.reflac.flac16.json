@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard capture of a punchy “New Speedway Boogie,” but limited detail leaves the overall recording quality unclear.",
+  "review": "One reviewer raves about the energy of New Speedway Boogie, calling it a standout moment despite later versions being considered superior. No concrete comments on the mix or clarity are provided, and another review merely notes a download issue, leaving the technical side ambiguous.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one praises a single song while the other is unrelated to performance. With scant information on audio quality, a moderate rating reflects an average show and unknown recording fidelity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentions clarity, balance, or mix issues; the filename suggests a soundboard source but quality cannot be confirmed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Speedway Boogie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient commentary to assess set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:14:13.178663+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-09.sbd.miller.tetzeli.fix-508.34677.reflac.flac16"
+}

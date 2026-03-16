@@ -1,0 +1,73 @@
+{
+  "summary": "Excellent soundboard capture of an energetic 1984 show, highlighted by a mind‑blowing Help → Slipknot! → Franklin's Tower sequence.",
+  "review": "The recording is praised for its crystal‑clear mix and faithful transfer by Charlie Miller, delivering a vivid listening experience. The concert itself is remembered as a life‑changing night with high energy, a fast‑paced set, and standout performances of Help→Slipknot→Franklin's Tower, Dire Wolf and the rare Brother Esau. Minor quibbles include a few forgotten lyrics early on and a stumble into Slipknot, but overall the show is celebrated by reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviews overwhelmingly highlight strong musical performance and excellent recording quality; only one low‑star outlier mentions tempo, so the combined weighted rating is high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix with good integration of house and board sound; no significant dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way → Slipknot! → Franklin's Tower",
+      "Dire Wolf",
+      "Brother Esau",
+      "Jack Straw",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note a fast‑paced, high‑energy set that moves smoothly from the first to the second half, with an especially powerful opening of the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice was rough at the start but improved; forgotten lyrics early on and an epic stumble into Slipknot noted, yet overall guitar work praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slipknot!": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T15:56:18.535351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-17.neumann-u87.eaton.miller.90543.sbeok.flac16"
+}

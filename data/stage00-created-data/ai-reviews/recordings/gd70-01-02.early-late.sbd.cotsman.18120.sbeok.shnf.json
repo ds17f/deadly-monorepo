@@ -1,0 +1,93 @@
+{
+  "summary": "Crisp soundboard capture of an early‑1970 Fillmore East show, highlighted by a scorching Dark Star → St. Stephen → Eleven → Lovelight sequence and fiery performances from the whole band.",
+  "review": "The recording is a sound‑board source that sounds generally clear and well balanced, though a few listeners note vocal level quirks, occasional channel swaps and speed‑correction needs. Musically the show is celebrated for its incendiary Dark Star, tight Eleven, soaring Lovelight and strong renditions of Mason’s Children, Casey Jones, High Time and The Other One, making it one of the more memorable early‑70 performances despite a few minor slip‑ups (e.g., Cumberland Blues).",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the performance and most note good to excellent soundboard quality; only a handful of minor complaints keep the rating just below “exceptional”."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear with solid instrument separation. Some reviewers mention vocals too low, occasional channel swaps (especially on early‑show tracks), speed/pitch wavers that benefit from correction, and a few missing seconds in transitions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "Eleven",
+      "Lovelight",
+      "Mason's Children",
+      "Casey Jones",
+      "High Time",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Cumberland Blues"
+    ],
+    "setlist_flow": "The early set is solid and typical of 1970, while the late set launches into a marathon Dark Star that morphs through St. Stephen, Eleven and Lovelight, delivering the show’s emotional peak; minor technical hiccups interrupt a few transitions but overall pacing is strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring lead‑guitar tone, inventive licks and playful onstage chatter (e.g., chuckles during Lovelight).",
+    "Phil": "Bass work highlighted as full and driving, especially noted in the Lovelight climax.",
+    "Bob": "",
+    "Keys": "Keyboard contributions (Pigpen/Constanten) described as “on fire,” with organ textures adding depth to Dark Star and Cosmic Charlie; Tom Constanten’s playing gets specific commendation.",
+    "Drums": "Mickey and Bill receive kudos for tight, powerful drumming on Eleven and the “tighten‑up” jam within Dark Star."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Lovelight": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "St. Stephen": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Eleven": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Mason's Children": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Casey Jones": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:08:27.900722+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-02.early-late.sbd.cotsman.18120.sbeok.shnf"
+}

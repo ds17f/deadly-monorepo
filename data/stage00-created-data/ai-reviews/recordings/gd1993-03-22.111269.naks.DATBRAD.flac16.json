@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording captures a smokin show with crisp sound and standout performances of Wave to the Wind, Stella Blue and China Doll.",
+  "review": "The FLAC offers outstanding fidelity – crystal‑clear mids, punchy bass and an unusually “close‑to‑the‑stage” ambience that makes it feel like you were sitting in the loge.  Musically the concert is praised for its fire, with Wave to the Wind, Stella Blue and China Doll highlighted as high points, and the overall flow described as smooth and energetic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both the musical performance and the recording quality across four detailed reviews, outweighing a single outlier low‑star comment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note exceptional fidelity, crispness, and especially strong bass reproduction; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wave to the Wind",
+      "Stella Blue",
+      "China Doll",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as tight and “smokin,” with a seamless progression that keeps the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass reproduced exceptionally well, highlighting Phil's low‑end work.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:58:33.884111+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-22.111269.naks.DATBRAD.flac16"
+}

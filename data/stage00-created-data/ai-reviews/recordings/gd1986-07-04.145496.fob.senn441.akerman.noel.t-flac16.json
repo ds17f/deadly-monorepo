@@ -1,0 +1,94 @@
+{
+  "summary": "A solid soundboard capture of the July 4 1986 Buffalo show, but the performance is uneven and often described as mediocre.",
+  "review": "The recording is praised for being a clear, decent sound‑board tape captured under difficult conditions. The concert itself is portrayed as hit‑or‑miss – with a lackluster first set and several songs called out as sloppy, yet moments like \"Cold Rain and Snow,\" the surprise Fire on the Mountain, and a rousing Uncle John’s Band provide highlights. Overall listeners feel mixed about the show despite the good tape quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two reviewers gave high marks for the recording (4‑5 stars) while a third rated the performance low (3 stars). The weighted mix of strong tape quality and uneven show leads to an overall rating in the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as spectacular, crisp and decent despite difficult taping conditions; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow",
+      "Fire on the Mountain",
+      "The Wheel",
+      "Miracle",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Brother Esau",
+      "Touch",
+      "Samson",
+      "Gimme Some Lovin'"
+    ],
+    "setlist_flow": "The first set was seen as disjointed and brief, with equipment hiccups and a long delay before the Dylan/Petty portion. The second set picked up some energy (wind, rain) and delivered a few strong moments, but overall the concert felt uneven and mediocre."
+  },
+  "band_member_comments": {
+    "Jerry": "Surprised the band by jumping into Fire on the Mountain and delivered solid guitar work.",
+    "Phil": "Noted cameras and acted as sardonic emcee; seemed confused by production instructions during the show.",
+    "Bob": "Introduced The Wheel with a quirky crop‑rotation metaphor and participated in rare pre‑drums sections.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:10:02.559385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-04.145496.fob.senn441.akerman.noel.t-flac16"
+}

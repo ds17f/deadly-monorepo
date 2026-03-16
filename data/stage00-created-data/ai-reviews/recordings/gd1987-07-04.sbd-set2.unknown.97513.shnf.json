@@ -1,0 +1,71 @@
+{
+  "summary": "Good‑sounding soundboard capture of the 1987 Dylan‑with‑the‑Dead show, highlighted by standout performances of Slow Train Coming, Joey and a rousing Watchtower.",
+  "review": "The set showcases a hot‑day concert where the Dead and Bob Dylan click on several numbers – especially “Slow Train Coming,” “Joey” and an exuberant take on “All Along The Watchtower.”  Reviewers note the soundboard source is generally clear, though mid‑80s Dolby C noise reduction adds a slight processed sheen.  Despite a grumpy crowd early on, the band’s energy and tight playing make it a memorable performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ~4.2) and enthusiastic comments about the music outweigh minor recording coloration concerns."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced, but reviewers note mid‑80s Dolby C noise reduction giving a slightly processed/colored tone."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slow Train Coming",
+      "Joey",
+      "All Along The Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A single long “megaset” followed by a dedicated Dylan segment; the heat and early crowd restlessness gave way to strong grooves, especially on the Dylan numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised (“ripped it up”) and his vocal harmonies behind Dylan are highlighted.",
+    "Phil": "",
+    "Bob": "Weir’s vocal performance on “All Along The Watchtower” is singled out as a highlight.",
+    "Keys": "Brent (Barlow) provides notable backing vocals on the opening of the Dylan set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Slow Train Coming": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Joey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ballad of Thin Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Chimes of Freedom": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along The Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "John Brown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:00:03.678272+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-04.sbd-set2.unknown.97513.shnf"
+}

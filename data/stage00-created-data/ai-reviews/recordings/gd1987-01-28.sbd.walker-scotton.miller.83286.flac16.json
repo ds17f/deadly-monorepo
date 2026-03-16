@@ -1,0 +1,80 @@
+{
+  "summary": "Crystal‑clear soundboard transfer of a notoriously sloppy 1987 show – decent first‑set moments but infamous botched Get Back and vocal mishaps.",
+  "review": "The Charlie Miller soundboard capture is praised for its pristine clarity, making even the worst parts of this mid‑80s concert listenable. Musically the performance is uneven: the first set has a few bright spots (Jack Straw, the end of Eyes) while the second set suffers from sloppy vocals, lyric flubs and a widely derided Get Back cover. Overall listeners love the audio quality but remain divided on the show itself.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently rated excellent (≈4.5/5) while musical performance averages low‑mid (≈2.5/5). Weighted 30 % recording + 70 % show yields an overall rating around 3.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Transfer by Charlie Miller described as crystal‑clear, accurate and very clean; no major dropouts or balance issues noted despite the show's flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Eyes (end)",
+      "Push Comes to Shove"
+    ],
+    "poor_songs": [
+      "Get Back",
+      "Black Muddy River",
+      "Around And Around / Sugar Magnolia"
+    ],
+    "setlist_flow": "First set is passable with a few highlights; second set feels disjointed, heavy on lyric slip‑ups and an ill‑executed Beatles cover, leaving the overall pacing uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are often slurred or off‑key (especially on Get Back), but his guitar work shines at the close of Eyes; occasional “frog in throat” humor noted.",
+    "Phil": "",
+    "Bob": "Weir’s vocal performance is repeatedly called out as out of key and strained, particularly on Get Back; some reviewers note he struggles with high notes.",
+    "Keys": "Brent (keys) receives praise for solid playing on a few tracks, though other comments are neutral.",
+    "Drums": "Drumming is generally described as energetic and “jamming” well, with the rhythm section getting credit even when vocals falter."
+  },
+  "song_mentions": {
+    "Get Back": {
+      "positive_mentions": 2,
+      "negative_mentions": 7,
+      "total_mentions": 9
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Around And Around / Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:29:12.738844+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-28.sbd.walker-scotton.miller.83286.flac16"
+}

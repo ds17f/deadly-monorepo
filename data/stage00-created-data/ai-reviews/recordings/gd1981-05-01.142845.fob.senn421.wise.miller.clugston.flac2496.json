@@ -1,0 +1,31 @@
+{
+  "summary": "Phenomenal audience recording capturing an outstanding Grateful Dead show",
+  "review": "The sole reviewer gave this tape a perfect five‑star rating, calling it a “Phenomenal AUD”. While no specific songs or performance details are mentioned, the enthusiastic language implies both the live performance and the audience‑recorded sound are highly regarded.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only one brief but very positive review (5 stars) describing the recording as phenomenal; insufficient detail for higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer labels the audience recording as 'Phenomenal', suggesting clear, immersive sound despite lack of technical description."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T10:36:17.070053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-01.142845.fob.senn421.wise.miller.clugston.flac2496"
+}

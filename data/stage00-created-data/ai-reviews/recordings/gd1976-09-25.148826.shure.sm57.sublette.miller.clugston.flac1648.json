@@ -1,0 +1,56 @@
+{
+  "summary": "Muddy audience recording of an uneven show that sparks occasional brilliance with a rare Cosmic Charlie and a standout Phil bass bomb.",
+  "review": "The tape is an audience‑sourced mix that suffers from excess reverb and a hollow “skating‑rink” sound, requiring heavy EQ to become listenable. Musically the performance is mixed – a few high points such as the rarely‑played Cosmic Charlie, a lively St. Stephen > Not Fade Away sequence and a spectacular Phil bass solo contrast with an overall middling, mellow set that many find forgettable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "One reviewer rates the show and tape highly while another finds both the performance and recording sub‑par; with limited data the average falls in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Original capture described as \"skating rink\" hollow, overabundant reverb and muffled mids; reviewer applied significant treble/bass boost and mid‑range cut to improve clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cosmic Charlie",
+      "St. Stephen > Not Fade Away",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a mellow, uneven set with only a few sparks of excitement toward the end; the rare Cosmic Charlie and strong Phil bass solo are the main highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for \"mutron lava streams\" and restoring order after jams.",
+    "Phil": "Highlighted for delivering the \"greatest Phil bomb\" (bass solo).",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:26:39.713318+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-09-25.148826.shure.sm57.sublette.miller.clugston.flac1648"
+}

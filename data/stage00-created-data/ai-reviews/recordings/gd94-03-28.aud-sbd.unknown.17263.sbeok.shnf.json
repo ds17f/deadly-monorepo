@@ -1,0 +1,128 @@
+{
+  "summary": "Soundboard recording of a strong Spring‑94 show with standout performances of Days Between, Going Down the Road and Rain, though the mix is treble‑heavy for some ears.",
+  "review": "The concert is widely praised for its high energy second set, rain‑themed songs and memorable jams on Days Between, GDTRFB and Bertha, with Jerry’s guitar especially noted as robust and twangy. The soundboard source sounds clear but leans toward a bright treble focus and occasional low‑level issues, which some listeners found harsh. Overall the musical performance outweighs the modest recording quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (4‑5 stars) highlight an excellent show and solid soundboard capture; only a few note treble‑heavy or low‑volume problems, giving a weighted rating of ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix with good instrument separation, but noticeably bright/treble‑forward and a bit shrill for some listeners; one reviewer reported very low volume making it hard to hear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "Going Down the Road",
+      "Rain",
+      "Bertha",
+      "GSET"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong, upbeat first set followed by a rain‑themed second set that builds nicely into drums/space; pre‑drums transitions (Victim→Box, GDTRFB emergence) are highlighted as particularly effective."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for a robust, less twangy but more ‘bang’ tone and energetic solos; a few miscues noted but overall his playing is a highlight.",
+    "Phil": "Described as ‘on fire’, dominating the vocal duties on Bertha, GSET and Box, delivering strong bass lines and occasional lead vocals.",
+    "Bob": "",
+    "Keys": "Vince (keyboards) gets shout‑outs for tearing it up; a couple of harmony miscues are mentioned but overall solid keyboard work.",
+    "Drums": "Bill (Billy) and Mickey receive praise for high‑energy drumming, tight space sections and keeping the momentum alive."
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Going Down the Road": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GSET": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BIODTL": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "LTGTR": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That Would Be Something": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T20:51:54.973700+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-28.aud-sbd.unknown.17263.sbeok.shnf"
+}

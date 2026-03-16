@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard capture of a jam‑heavy second set, highlighted by a priceless Truckin' jam.",
+  "review": "The SBD source provides clear, crisp audio that lets the band’s improvisational spirit shine, especially on the extended Truckin' jam leading into its reprise. Reviewers rave about the guitar work and overall vibe of set two, noting only minor vocal‑harmony slips but no technical recording problems.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Single 5‑star review praises both the performance and audio quality; strong positive language yields a high rating, but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp soundboard recording with no reported drop‑outs or muddiness; guitars and jam details are well captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is jam‑focused, building a powerful Truckin' sequence that flows into an inspiring reprise."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work praised ('wha, wha on guitar') and considered a great finish.",
+    "Phil": "",
+    "Bob": "Vocals noted as off in places during Truckin', but the jam outweighs lyrical slip‑ups.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-21T14:03:32.318126+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-16.pset2-sbd.vernon.9196.sbeok.shnf"
+}

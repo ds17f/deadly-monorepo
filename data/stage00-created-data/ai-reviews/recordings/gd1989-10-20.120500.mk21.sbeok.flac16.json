@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear MK21 front‑of‑house mix captures a marathon three‑night run with standout California Earthquake close and a killer Truckin’ jam.",
+  "review": "The MK21 FOB recording is praised as the best‑sounding source, well balanced and clear throughout. The show itself is described as a marathon effort, highlighted by an intriguing California Earthquake finish to set 1 after Promised Land and a superb post‑Truckin’ jam in set 2, making it a memorable part of a great three‑night run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single detailed 5‑star review praises both the performance and the recording; high show and recording quality lead to a strong rating, but confidence is low due to limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls it the best‑sounding MK21 copy, describing it as well balanced and clear – a front‑of‑house mix with no noted issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "California Earthquake",
+      "Promised Land",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Marathon three‑night run; set 1 closed intriguingly with California Earthquake after Promised Land, while set 2 is looser but features the best jam following Truckin'."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "California Earthquake": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:10:31.234691+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-20.120500.mk21.sbeok.flac16"
+}

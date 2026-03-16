@@ -1,0 +1,52 @@
+{
+  "summary": "Good soundboard recording of an average 1991 show highlighted by a standout Terrapin Station amidst rainy, dark‑vibe conditions.",
+  "review": "The audience captures a chilly, rain‑soaked night in Oakland where the band delivered a solid but uneven performance. Jerry’s walk across stage and his “Mozart on guitar” moments are noted, and Terrapin Station shines as the high point while Mexicali and Loose Lucy fall flat. The Miller‑cleaned soundboard source is clear and free of major glitches.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality averages out (some highlights, several forgettable moments) while the recording is clean; combined weighting yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean Miller‑processed soundboard with no reported dropouts or muddiness; reviewers note the recording as “clean up” and give no complaints about audio clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Mexicali",
+      "Loose Lucy"
+    ],
+    "setlist_flow": "Rain‑soaked, slightly dark vibe; overall an average performance with a few bright spots (Terrapin) amid forgettable numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted walking across the stage before tuning and praised for “Mozart on guitar” style playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:53:16.845072+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-12-27.sbd.miller.105582.flac16"
+}

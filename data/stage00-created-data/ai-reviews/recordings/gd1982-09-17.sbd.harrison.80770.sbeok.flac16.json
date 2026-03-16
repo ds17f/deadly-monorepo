@@ -1,0 +1,55 @@
+{
+  "summary": "Rich, ambient soundboard capture of an above‑average 1982 show with a standout Morning Dew and solid performances by Jerry, Bob and Brent.",
+  "review": "The recording is praised for its clear, rich ambience and lack of the typical muffled bass found in early‑80s tapes, delivering a very good soundboard source. Musically the concert is described as consistently good, highlighted by an authoritative Morning Dew and strong playing from Jerry Garcia, Bob Weir and Brent Mydland, though Phil Lesh has mixed remarks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews note high‑quality soundboard audio and a solid performance with only minor criticisms (Phil's off night, modest star rating from one reviewer), leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Rich and ambient mix, no muffled bass; typical post‑April ’82 SBD with good bass presence and clear instrument separation. Phil’s bass is well represented in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently solid throughout with no single section dominating; typical early‑80s set structure featuring a strong first set and a cohesive second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently strong guitar work throughout, praised by attendees.",
+    "Phil": "Mixed feedback – shows authority in mix and vocal parts but noted as having an off night during the Spanish Jam.",
+    "Bob": "Great rhythm guitar and vocals, highlighted positively by reviewer who attended.",
+    "Keys": "Brent (keys) noted as great throughout the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:30:45.987201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-17.sbd.harrison.80770.sbeok.flac16"
+}

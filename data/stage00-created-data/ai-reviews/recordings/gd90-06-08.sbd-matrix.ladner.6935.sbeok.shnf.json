@@ -1,0 +1,65 @@
+{
+  "summary": "Excellent matrix recording captures a high‑energy 1990 show with a stellar Foolish Heart jam and superb Jerry Garcia solos.",
+  "review": "The matrix source is crystal‑clear, offering wonderful instrument separation and a beautifully balanced mix that lets the band’s 1990 fire shine through.  Highlights include an inspired Uncle John's Band → China Cat Sunflower → I Know You Rider sequence, a soaring Foolish Heart jam (often called one of the best pre‑drums jams), and tight performances of Estimated Prophet, High Time and Black Peter.  While a few vocal slip‑ups on Queen Jane are noted, the overall set – especially the second half – is consistently strong.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.76, overwhelmingly positive comments on both performance and sound; recording praised as crisp/excellent and show highlighted by multiple standout moments."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with great instrument separation; beautifully balanced matrix capture despite occasional vocal repeat on China Cat. No noticeable drop‑outs or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Uncle John's Band → China Cat Sunflower → I Know You Rider",
+      "Estimated Prophet",
+      "High Time",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Queen Jane"
+    ],
+    "setlist_flow": "First set a bit shaky but song selection solid; second set erupts with energy – Uncle John's opener, a fire‑truck China Cat ride, and an unforgettable Foolish Heart pre‑drums jam that drives the show forward."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for inspired leads, especially the soaring solo in China Cat and his adventurous guitar work during the Foolish Heart jam; vocals noted as slightly repetitive but overall stellar.",
+    "Phil": "Described as flawless, adventurous and ‘bass‑bombs’ – especially on the 6‑string Ken Smith that defined the spring‑summer ’90 vibe.",
+    "Bob": "Called a loose cannon who flubs lyrics on Queen Jane yet delivers superb rhythm playing elsewhere in the set.",
+    "Keys": "Brent (and occasionally Vince) lauded for energetic interplay, adding color and “melting together” with Jerry; his contributions highlighted throughout the jam sections.",
+    "Drums": "Pre‑drums jam after Foolish Heart singled out as a highlight; overall drum work considered solid and supportive."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Uncle John's Band → China Cat Sunflower → I Know You Rider": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-17T07:06:09.713390+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-06-08.sbd-matrix.ladner.6935.sbeok.shnf"
+}

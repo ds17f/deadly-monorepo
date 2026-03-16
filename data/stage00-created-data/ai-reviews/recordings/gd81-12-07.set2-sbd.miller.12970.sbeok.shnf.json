@@ -1,0 +1,63 @@
+{
+  "summary": "Good‑quality soundboard capture of an intimate show, highlighted by a smoking Half Step > Franklin’s and strong second‑set energy.",
+  "review": "The recording is a soundboard (SBD) with a generally good mix, though a few reviewers note a hot/over‑bright keyboard balance that makes repeated listening a bit harsh. Musically the concert shines in the second set – fans rave about a dynamite Half Step > Franklin’s, solid Help on the Way, and tight jams like Truckin' and Black Peter, with plenty of creative pacing throughout.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show receives strong praise for performance and song selection (≈4.2/5) while the recording is solid but not pristine (≈3.8/5); weighted average yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear SBD with a very hot keyboard mix; some listeners find it less pleasant for repeated listening, but generally very usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step > Franklin's",
+      "Help on the Way",
+      "Truckin'",
+      "Spoonful",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised for tight pacing and creative energy; first set less discussed but overall an intimate, energetic performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Great vocal work noted on Half Step > Franklin’s.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard playing is highlighted (\"eggs on Garcia\") and the hot mix of keys is a recurring point.",
+    "Drums": "Early part of drums described as “kick butt.”"
+  },
+  "song_mentions": {
+    "Half Step > Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:10:30.709109+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-07.set2-sbd.miller.12970.sbeok.shnf"
+}

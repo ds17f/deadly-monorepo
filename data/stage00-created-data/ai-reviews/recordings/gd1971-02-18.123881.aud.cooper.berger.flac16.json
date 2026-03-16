@@ -1,0 +1,31 @@
+{
+  "summary": "A four‑star rating indicates a solid performance and generally satisfactory recording despite the lack of detailed commentary.",
+  "review": "The sole review gives the recording a 4‑star rating, suggesting that listeners found both the show and its audio quality to be good overall. No specific remarks were made about the sound source, setlist flow, or individual performances, so the assessment remains general.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating; it signals a positive impression but provides no detail to refine the score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed feedback on the set structure or pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T02:39:23.631382+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-18.123881.aud.cooper.berger.flac16"
+}

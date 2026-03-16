@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard source captures a ferocious Jerry, fire‑blazing Phil and a legendary Other One/Dark Star run – a flawless show with crystal‑clear audio.",
+  "review": "The multitrack soundboard capture is praised as clean and crisp, delivering every nuance of the band’s peak performance. Reviewers repeatedly cite the monster The Other One, ferocious Dark Star, soaring New Potato Caboose and a flawless Hey Jude encore, while Jerry’s SG tone and Phil’s bass are highlighted as outstanding.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All 30+ reviews award five stars, consistently praising both the musical performance and the clean soundboard source; no substantive criticism appears."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean multitrack (16‑track) source; reviewers describe it as crisp, clear and free of hiss. One comment notes the original tape had hiss, but the released version is praised for its purity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Dark Star",
+      "New Potato Caboose",
+      "Cosmic Charlie",
+      "The Eleven",
+      "Hey Jude"
+    ],
+    "poor_songs": [
+      "The Eleven"
+    ],
+    "setlist_flow": "Reviewers love the nonstop flow – songs segue into each other with almost no breaks, creating a continuous high‑energy journey from Stephen St. Stephen through The Eleven and beyond."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ferocious on the SG, tone \"perfect\" and \"propulsion\" for the whole show.",
+    "Phil": "Repeatedly called \"on fire\", matching Jerry note‑for‑note; several reviewers call this his best performance ever.",
+    "Bob": "",
+    "Keys": "Brent's playing noted on the Hey Jude encore (rare live appearance).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Hey Jude": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cryptical Envelopement": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T12:05:42.345427+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-03-01.sbd.16track.kaplan.4030.sbeok.shnf"
+}

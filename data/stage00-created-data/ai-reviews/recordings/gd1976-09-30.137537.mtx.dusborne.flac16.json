@@ -1,0 +1,118 @@
+{
+  "summary": "A well‑produced matrix captures a solid but unremarkable 1976 show, highlighted by a superb Samson & Delilah and a smoking Saint Stephen while the recording is generally good with occasional mix quirks.",
+  "review": "The Dave Usborne matrix does a great job smoothing over the soundboard’s uneven balance, delivering clear vocals and a pleasant overall tone despite an early mic‑level issue. Musically the concert sits in the middle of the ’76 tour – competent playing with standout moments like Samson & Delilah, It’s All Over Now and Saint Stephen, but several stretches (Wharf Rat, Dew, NFA) feel listless or average.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is average to good (≈3★) while the matrix recording is clearly above‑average (≈4★); weighted combination yields ~3.3★."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Dave Usborne’s matrix is praised as beautiful and lifts a lackluster board source; early mic‑high on vocals, occasional mix errors in the first set, but overall clear, balanced and more listenable than the SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It’s All Over Now",
+      "Saint Stephen",
+      "Samson & Delilah",
+      "Supplication",
+      "Wharf Rat (matrix version)",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Wharf Rat (original board version)",
+      "Dew",
+      "NFA"
+    ],
+    "setlist_flow": "First set opens strong with TMNS and Sugaree, but drifts in the middle; second set features a long St. Stephen jam that many find dragging, though it contains high points. Overall the concert feels mellow/uninspired for ’76."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his snaky leads, adjacent‑fret runs on Samson & Delilah and a unique jam before NFA, highlighting his guitar work as a highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Reviewer mentions routinely truncating Drumz and feeling the drum segment drags."
+  },
+  "song_mentions": {
+    "Terrapin Station (TMNS)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It’s All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat (original)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat (matrix version)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "NFA": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lazy Lightnin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:49:13.039806+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-09-30.137537.mtx.dusborne.flac16"
+}

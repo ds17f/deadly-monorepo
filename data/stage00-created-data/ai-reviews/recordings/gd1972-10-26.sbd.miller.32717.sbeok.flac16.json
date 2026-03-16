@@ -1,0 +1,82 @@
+{
+  "summary": "Crisp soundboard recording captures a soaring second set highlighted by an epic Playin', Deal and Dark Star, though the bass drum can be over‑present.",
+  "review": "The show shines on its second half – a blistering Playing in the Band opener followed by a legendary Playin' that many reviewers call the best ever, plus a heartfelt Deal, soaring Bird Song, and an emotionally charged Sing Me Back Home. The soundboard mix is generally clean and well‑balanced, with a few early hiss issues and a bass drum that some find too dominant, while Phil’s bass is occasionally buried. Overall the performance is rated very highly despite minor recording quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (≥10 of 14) give 4‑5 stars and praise the musical performance, especially the second set; recording quality is consistently described as crisp with only minor flaws, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix described as perfect, crisp and clean; early wobble/hiss noted but easily mitigated. Bass drum is prominent for some listeners; Phil’s bass was not always plugged in, reducing low‑end presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Deal",
+      "Playin'",
+      "Bird Song",
+      "Sing Me Back Home",
+      "Dark Star"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Dark Star"
+    ],
+    "setlist_flow": "First set is solid but unremarkable; the second set launches with a monster Playin' that lifts the entire concert, followed by Deal, Truckin', Dark Star and an energetic Sugar Magnolia finish. The pacing builds dramatically after the opener and maintains high intensity throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching solos, cosmic guitar tone, and being the driving musical force of the night.",
+    "Phil": "Bass often buried because not plugged into board, but when audible his playing is described as brilliant and a key part of the jam intensity.",
+    "Bob": "Vocal performance noted as weak on several songs (e.g., poor singing on Sugar Magnolia).",
+    "Keys": "Keith plays piano and Rhodes with interesting pedal effects; keyboards blend well in the mix.",
+    "Drums": "Bill (Billy) described as driving the train, stellar, but his bass drum is sometimes overly prominent and obtrusive."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:52:39.682229+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-26.sbd.miller.32717.sbeok.flac16"
+}

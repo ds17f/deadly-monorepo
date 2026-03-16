@@ -1,0 +1,79 @@
+{
+  "summary": "Fiery '78 show with standout Black Peter and solid second set",
+  "blurb": "The Summit gig delivers a scorching first half highlighted by Black Peter, Friend Of The Devil and Stagger Lee, while the second set rolls through a meaty Black Peter sandwiched between two strong Playin' In The Band jams. Jerry’s guitar is on fire and Phil’s bass rumbles, making it a solid listen despite mixed recording sources.",
+  "review": "On December 21, 1978 at The Summit in Houston the Dead were in top form. The first set crackles with energy – Jerry Garcia powers through Black Peter and an inspired take on Stagger Lee, while Phil Lesh’s bass thunders enough to “threaten to blow speakers.” Even with a few vocal slips early on, the band’s momentum never wanes. The second set shines in its classic sandwich: after a tight I Need A Miracle → Bertha transition, the group rolls into a generous Playin' In The Band that segues into an expansive Black Peter and returns to another soaring Playin' In The Band before closing with Sugar Magnolia. Fans will love the fiery Jerry noodling, the forceful Phil, and the overall tightness of the jams. Recording-wise, the matrix source captures the second set cleanly while the audience tape offers a more distant but still enjoyable portrait of the night; for the best listening experience opt for the matrix recording.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "One recording is clearly positive (meaty Black Peter, solid playing) while the other is mixed but still praises many songs; overall sentiment leans positive with consistent highlights across both sources.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1978-12-21.152899.s2.lamarre.vernon.sirmick.flac16",
+    "reason": "Matrix source provides clean soundboard capture of the second set and overall clearer mix, outweighing the distant audience tape."
+  },
+  "key_highlights": [
+    "Black Peter stands out as a centerpiece in both sets",
+    "Second‑set sandwich with Playin' In The Band flanking Black Peter",
+    "Jerry’s fiery guitar work and generous noodling throughout",
+    "Phil's bass power drives the band, especially on early numbers"
+  ],
+  "song_highlights": [
+    "Black Peter",
+    "Friend Of The Devil",
+    "Stagger Lee",
+    "Dire Wolf",
+    "Passenger",
+    "Brown Eyed Women",
+    "Playin' In The Band",
+    "From The Heart Of Me",
+    "Terrapin Station"
+  ],
+  "band_performance": {
+    "Jerry": "Occasional early vocal flubs but largely on fire with powerful guitar, generous noodling and a standout Black Peter solo.",
+    "Phil": "Bass so strong it threatened to blow speakers; forceful playing that underpins the whole show.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-25T17:46:41.012462+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Black Peter",
+      "Playing In The Band",
+      "Sugar Magnolia"
+    ],
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "Stagger Lee"
+    ],
+    [
+      "Dire Wolf"
+    ],
+    [
+      "Passenger"
+    ],
+    [
+      "Brown Eyed Women"
+    ],
+    [
+      "From The Heart Of Me"
+    ]
+  ]
+}

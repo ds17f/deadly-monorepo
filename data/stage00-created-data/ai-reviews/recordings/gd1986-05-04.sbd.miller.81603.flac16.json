@@ -1,0 +1,75 @@
+{
+  "summary": "Good‑quality soundboard capture of a strong 86 show – highlights include China>Rider, Gimme Some Lovin', a stellar Drums > Space and post‑drums UJB/Good Lovin' despite a Box of Rain vocal echo.",
+  "review": "The recording is a solid SBD with generally clear mids and excellent drum presence, though one listener notes an odd vocal echo on Box of Rain and another mentions slight fuzz compared to other ’84 shows. Musically the concert shines with a beloved China>Rider finish to set 1, a fiery Gimme Some Lovin', a monster Drums‑Space, and a post‑drums run of Uncle John’s Band into Good Lovin' that several reviewers rate as the night’s high point.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers (5‑star and 4‑star) praise both performance and sound quality; a few note minor issues, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well balanced with excellent drum mids. One reviewer reports a vocal echo on Box of Rain; another mentions slight fuzz/Dolby‑like coloration compared to some ’84 tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Gimme Some Lovin'",
+      "Drums > Space",
+      "Half‑Step",
+      "Uncle John's Band",
+      "Good Lovin'",
+      "Box of Rain (encore)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 1 ends on a classic China>Rider; reviewers wish for more than two songs before the second‑set drums, but the second set delivers with powerful jams and an especially rewarding post‑drums sequence (UJB → Good Lovin')."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is noted in the climactic growls near the end of the show.",
+    "Phil": "Bass highlighted alongside Jerry during the intense Drums/Space and closing jams.",
+    "Bob": "Rambling lyrics during Good Lovin' are remembered by listeners.",
+    "Keys": "Brent Mydland’s organ shines on Gimme Some Lovin', earning high praise for his presence throughout the show.",
+    "Drums": "Drums > Space described as strong and excellent; listeners recommend boosting upper mids to hear it best."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Half‑Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T15:42:42.137408+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-05-04.sbd.miller.81603.flac16"
+}

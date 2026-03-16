@@ -1,0 +1,68 @@
+{
+  "summary": "Solid soundboard recording of an energetic Texas Fourth‑of‑July show with standout Bird Song, PITB and a smoking second set despite a few lyric slips.",
+  "review": "The Charlie Miller SBD captures a festive 1981 Austin gig that many fans remember for its high‑octane energy – Jerry’s solos are described as “shredding,” and the second‑set highlights like Bird Song, Playing in the Band and Not Fade Away shine. Sound quality is generally praised as good, though a couple of reviewers note minor imperfections and Bob Weir’s infamous lyric flub on \"Leaving Texas\".",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average star rating ~3.6 with most reviewers highlighting strong performance and decent sound; weighting show quality (70%) and recording quality (30%) yields a solid 4‑star overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced SBD; reviewers repeatedly note \"good sound\" and praise the Miller board, with no major complaints about dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Playing in the Band",
+      "Not Fade Away",
+      "China Cat Sunflower > I Know You Rider",
+      "The Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A lively first set that some felt was uneven, but a fire‑filled second set that kept the crowd moving; occasional lyric slip on \"Leaving Texas\" is the only noted blemish."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his shredding guitar work and high energy solos.",
+    "Phil": "",
+    "Bob": "His lyric flub on \"Leaving Texas\" draws criticism (called a “Bobby blow‑out”), though many fans excuse it as part of the live experience.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Leaving Texas": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T12:29:15.260950+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-04.sbd.miller.30151.sbeok.flacf"
+}

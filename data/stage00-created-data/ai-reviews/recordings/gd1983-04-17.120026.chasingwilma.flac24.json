@@ -1,0 +1,73 @@
+{
+  "summary": "Excellent audience recording that captures an outstanding 1983 show with a killer Let It Grow, soaring Slipknot interplay and possibly the best Franklin's Tower ever.",
+  "review": "The two‑track audience source is praised as the better of the Wilma recordings – levels are balanced and it even sounds clearer than many soundboard tapes.  Musically the concert shines: Let It Grow unfolds as a long, intricate centerpiece, Slipknot! showcases tight interplay between Jerry, Brent and Phil, and Franklin's Tower may be one of the band’s finest renditions, while Playing in the Band receives “mind‑blowing” accolades.  Overall reviewers feel this is a rare show that delivers strong first and second sets despite a few minor mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two detailed 4‑star reviews highlight both superb performance and high‑quality audience recording; the third review adds enthusiasm for a key song.  The weighted average (70 % show, 30 % recording) yields a rating in the good–great range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Better of two Wilma audience sources; levels are superior and the tape is described as sounding clearer than many soundboard recordings.  Minor issue noted: Bob's guitar volume appears low during Slipknot!."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Slipknot!",
+      "Franklin's Tower",
+      "Playing in the Band",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are strong; the first set builds into a powerful Let It Grow, while the second set delivers high‑energy jams and a memorable Franklin's Tower.  Reviewers note the concert is rare for maintaining quality throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His interplay with Brent and Phil on Slipknot! is highlighted as stunning.",
+    "Phil": "Praised for tight interaction during Slipknot! and overall bass work.",
+    "Bob": "Volume appears turned down or absent on Slipknot!, but returns strongly on Franklin's Tower.",
+    "Keys": "Brent's keyboard contributions are singled out in the Slipknot! interplay.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Colgate 77": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:45:50.281495+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-17.120026.chasingwilma.flac24"
+}

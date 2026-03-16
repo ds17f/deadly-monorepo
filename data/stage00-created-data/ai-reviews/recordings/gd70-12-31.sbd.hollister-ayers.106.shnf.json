@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from mislabeled song titles, with no clear comments on audio or performance quality.",
+  "review": "The sole reviewer notes that the track list is inaccurate, which can be confusing for listeners. No details are given about the soundboard source, clarity, or musical execution, leaving the overall quality of both the recording and the show uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review; it mentions a labeling issue but provides no insight into performance or audio quality, so a middle rating is appropriate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Song titles are off (track list mislabeled); no comments on sound clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T02:05:50.451185+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-12-31.sbd.hollister-ayers.106.shnf"
+}

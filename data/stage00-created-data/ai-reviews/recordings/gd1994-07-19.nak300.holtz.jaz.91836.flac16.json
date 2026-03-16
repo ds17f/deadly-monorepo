@@ -1,0 +1,37 @@
+{
+  "summary": "No substantive information on recording or performance; the sole comment corrects the encore title.",
+  "review": "The only review for this recording is a brief correction that the encore track is titled \"Rain\" rather than \"the rain song,\" and it contains no remarks about sound quality, setlist flow, or musical execution. Consequently there is insufficient data to assess either the audio fidelity or the show’s musical strengths.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "A single, terse review provides no positive information about the music or recording; the reviewer expresses frustration, leading to a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:40:19.014061+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-19.nak300.holtz.jaz.91836.flac16"
+}

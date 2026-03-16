@@ -1,0 +1,91 @@
+{
+  "summary": "Excellent soundboard recording with superb Miller transfer capturing a high‑energy spring ’78 show highlighted by Let It Grow, Estimated Prophet and Brown Eyed Women",
+  "review": "The Miller SBD of this May 1978 concert is crisp and exceptionally balanced, letting the band’s tight interplay shine. Reviewers rave about Jerry’s soaring solos on Let It Grow, Looks Like Rain and Estimated Prophet, as well as fiery performances of Brown Eyed Women and Eyes of the World, while noting only a few minor set‑list hiccups. Overall the show is judged one of the strongest from the spring‑78 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The vast majority of detailed reviews give 4–5 stars and praise both the musical performance and Miller’s soundboard transfer, yielding a high average (≈4.75) that translates to a strong rating after weighting show quality more heavily."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Charlie Miller's SBD transfer is described as superb, crisp and well‑balanced; minor edits (short cuts) are noted but do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Estimated Prophet",
+      "Brown Eyed Women",
+      "Looks Like Rain",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "U.S. Blues",
+      "Around & Around"
+    ],
+    "setlist_flow": "Reviewers describe a solid, high‑energy first set that builds into an even more intense second set; a few mid‑show numbers are deemed average, but the overall pacing and momentum remain strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as thick and jazzy; his solos on Let It Grow, Estimated Prophet, Looks Like Rain and Brown Eyed Women are called ‘unreal’, ‘flaming’ and a highlight of the night.",
+    "Phil": "Phil’s bass work is noted for locking in with the band’s fire—especially on Eyes of the World where he lays down a “down‑and‑dirty” beat that matches Jerry’s intensity.",
+    "Bob": "Bob Weir receives kudos for powerful guitar on Brown Eyed Women and Let It Grow, plus a memorable slide after the drums; his playing is described as louder and exceptional on this SBD.",
+    "Keys": "Keith Godchaux’s keyboards are highlighted for being prominent (louder on the SBD) and driving songs like Ship of Fools with better tempo; overall keyboard work is praised throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:52:35.223551+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-14.sbd.miller.108996.flac16"
+}

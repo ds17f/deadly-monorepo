@@ -1,0 +1,75 @@
+{
+  "summary": "Superb matrix mix captures a high‑energy 1987 show with standout Morning Dew, Loser, Hey Pocky Way and other classics.",
+  "review": "The performance is praised as one of the top shows of ’87, delivering explosive versions of Morning Dew, Loser, Hey Pocky Way, Cassidy and a soaring second set that builds to a magnificent Miracle‑Truckin’ segue.  The matrix recording is described as crisp, natural‑sounding and perfectly balanced between band and crowd, with only a slight high‑end emphasis noted by one reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ~4.4) and uniformly enthusiastic comments about both the musical performance and the superb matrix mix justify a rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers highlight a smooth, natural‑sounding recording with great ambience; praised as a superb blend of soundboard and audience. One note mentions the high‑end being a bit heavy, but overall the mix is crisp and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Loser",
+      "Hey Pocky Way",
+      "Cassidy",
+      "Might As Well",
+      "Truckin'",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as high‑energy with an outstanding Loser and a smoking Hey Pocky Way, while the second set builds through a Spanish jam tease into Truckin' and culminates in a soaring, five‑star Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Spectacular guitar work, high energy playing and spot‑on vocals; described as \"up\" and grooving throughout.",
+    "Phil": "Heavy, bass‑filled performance especially on Hey Pocky Way; his solo is called a \"detonation\" that lifts the crowd.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:03:31.419840+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-12.sbd.ladner.31018.sbeok.flacf"
+}

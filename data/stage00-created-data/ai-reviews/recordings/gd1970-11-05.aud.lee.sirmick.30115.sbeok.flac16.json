@@ -1,0 +1,51 @@
+{
+  "summary": "Classic 1970 show with a creepy Dark Star and lovely Lovelight, captured on an audience tape that’s been remastered but still suffers noticeable sound flaws.",
+  "review": "The performance is praised for its quintessential 1970 energy – strong rockers, a haunting Dark Star that many call the centerpiece, and a beautiful Lovelight to close. The recording is an audience (AUD) source that has been remastered; while it sounds better than older transfers, reviewers note persistent sound‑quality issues, tonal inconsistencies and occasional drop‑outs that limit appreciation of the full band interplay.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (≈4 / 5) while recording quality is mixed (≈2.8 / 5); weighted average yields a solid 3‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Remastered AUD tape; better than older copies but still has noticeable hiss, drop‑outs and tonal differences (especially on Jerry's guitar). Some sections are incomplete or muffled, making the 21‑minute Dark Star hard to follow."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Lovelight",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid early‑1970 set with powerful rockers, a long, exploratory Dark Star that serves as the main highlight, and a gentle Lovelight to close. Reviewers miss an acoustic segment and note the NRPS set is absent from this recording."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is frequently highlighted—both praised for its character and noted as sounding different due to tape issues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboardist Ned Lagin appears on the Other One → Dark Star → St. Stephen sequence, adding an abstract, feedback‑laden layer.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:34:58.847825+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-05.aud.lee.sirmick.30115.sbeok.flac16"
+}

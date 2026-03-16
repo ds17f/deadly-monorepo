@@ -1,0 +1,98 @@
+{
+  "summary": "Audience‑recorded tape with a fair but lively sound captures a standout 1976 show highlighted by Let It Grow > Goin’ Down the Road Feeling Bad and a soaring second set.",
+  "review": "The concert is widely praised for its explosive jams – especially the Let It Grow → Goin’ Down the Road sequence, The Wheel, Tennessee Jed and an extended Playin' sandwich – and many reviewers describe it as one of the best ’76 performances.  The AUD source is a bit muddy by modern standards but still delivers a big “I’m there” feeling with strong drums and crowd ambience, making the listening experience enjoyable despite occasional technical shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings for the performance; recording quality is mixed but generally acceptable, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy at times and described as \"crummy\" by one reviewer, but many note the recording’s big soundstage, clear drum presence and good capture of Phil’s high‑note bass harmonics.  Overall listenable for a 1976 AUD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow > Goin' Down The Road Feeling Bad",
+      "The Wheel",
+      "Tennessee Jed",
+      "Eyes",
+      "Playin' sandwich (Playin' extravaganza)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its seamless transitions and long, exploratory jams – the first set builds energy with Tennessee Jed and Let It Grow, while the second set delivers a continuous journey through Playin', The Wheel and other high‑water marks."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s guitar tone, reverb on Candyman, and his “sublime turn” during Goin’ Down the Road.",
+    "Phil": "Phil’s bass work is repeatedly praised, especially the soaring high‑note thumps in Let It Grow.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums are noted for their power and “big” presence, contributing to the psychedelic drive of the show."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Goin' Down The Road Feeling Bad": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Orange Tango Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:39:03.192367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-09-28.aud.vernon.14356.sbeok.shnf"
+}

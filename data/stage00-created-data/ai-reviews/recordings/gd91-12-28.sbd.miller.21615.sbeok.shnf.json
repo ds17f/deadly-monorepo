@@ -1,0 +1,96 @@
+{
+  "summary": "High‑quality soundboard capture of a legendary 12‑28‑91 show where the second set – highlighted by a soaring Standing on the Moon and a fiery Same Thing – shines despite a weaker first set.",
+  "review": "The recording is a well‑balanced soundboard (sbd) that lets Phil’s bass thunder through and keeps the drums up front, though a few reviewers note it isn’t razor‑crisp. Musically the night is remembered for Jerry’s blues‑bent solo work (especially on Jack Straw and Foolish Heart), a spectacular Standing on the Moon, and a high‑energy Same Thing that drove the crowd into a frenzy; the first set receives mixed comments but the second set is universally praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise both performance (standout songs, band interplay) and recording (soundboard with strong bass and drum mix). The few criticisms are limited to first‑set selections or minor clarity issues, so the weighted average is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Above‑average sbd; bass and toms sit forward, overall mix clear but not perfectly crisp. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Foolish Heart",
+      "The Same Thing",
+      "Jack Straw",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "OMSN > Jack Straw (transition)",
+      "Same Thing (for a few dissenting listeners)"
+    ],
+    "setlist_flow": "First set is described as uneven, with the OMSN opener feeling oddly placed. The second set ignites, launching from a strong Uncle John's Band into a surprise Same Thing and a soaring Standing on the Moon, ending with a Throwing Stones reprise that ties the night together."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for blues‑y bent tone, use of a pitch‑bender pedal, powerful SOTM vocal/guitar work, and standout solos on Jack Straw and Foolish Heart.",
+    "Phil": "Repeatedly highlighted; bass is described as thick, beefy, front‑and‑center, with ‘mega‑bass’ presence that many listeners love.",
+    "Bob": "Mentioned for a lyric slip early in the second set but overall solid rhythm guitar and vocal contribution.",
+    "Keys": "Vince’s keyboards receive strong admiration on Loser, Cassidy and Deal; his piano/organ tone is called “ballin’” and “perfect”.",
+    "Drums": "Phil’s toms are noted as front‑of‑mix, Mickey the Monster praised for power, and Bill’s drumming described as “banged and drove it” throughout."
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Foolish Heart": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Same Thing": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-18T02:58:36.422473+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-12-28.sbd.miller.21615.sbeok.shnf"
+}

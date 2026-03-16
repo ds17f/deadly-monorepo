@@ -1,0 +1,92 @@
+{
+  "summary": "High‑quality soundboard recording of a classic 3/16/73 Nassau show, highlighted by a stellar Dark Star and soaring Bird Song.",
+  "review": "The Miller‑sourced SBD capture is clean and well‑mastered, with only occasional hot‑board clipping that fades in the second set. Musically the performance is quintessential early‑’73 Dead – a ripping China→Rider opener, a monster Dark Star, tight Playing‑in‑the‑Band, and an emotional Morning Dew finale make this a must‑hear show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4–5 stars and praise both the performance (standout Dark Star, Bird Song, PITB) and the sound quality; only a few note minor clipping or uneven sound."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clean mastering with excellent mix balance. A few reviewers mention hot‑board levels causing slight clipping in the first set, but overall the audio is clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Bird Song",
+      "Playing in the Band",
+      "Truckin'",
+      "Morning Dew",
+      "China > Rider (Feelin' Groovy Jam)",
+      "Jack Straw",
+      "Looks Like Rain",
+      "Promised Land > Bertha > Greatest"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with a fiery China→Rider sandwich that sets a high‑energy tone, flows through classic first‑set peaks (Bird Song → PITB), and the second set delivers a soaring Dark Star into a hot Truckin' → emotional Morning Dew finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his scorching guitar tone, inventive licks and overall intensity throughout the show.",
+    "Phil": "Highlighted for solid bass work and strong backing vocals; one reviewer says \"Check Phil out – this show smokes.\"",
+    "Bob": "Mentioned for rhythmic guitar work and vocal contributions on songs like Looks Like Rain and Jack Straw.",
+    "Keys": "Keith’s piano/organ is noted as a major driver of the jams, especially in Bird Song and Playing‑in‑the‑Band.",
+    "Drums": "Bill Kreutzmann receives commendations for his powerful drumming; no specific mention of Mickey."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Bird Song": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Playing in the Band": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Truckin'": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land > Bertha > Greatest": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:04:55.491492+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-16.sbd.miller.79186.sbeok.flac16"
+}

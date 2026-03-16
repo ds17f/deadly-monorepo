@@ -1,0 +1,86 @@
+{
+  "summary": "Crystal‑clear soundboard captures a fiery 1985 performance highlighted by a scorching Cryptical > Other One > Cryptical sequence, soaring Eyes of the World and a blistering Dire Wolf.",
+  "review": "The SBD source is remarkably clean – reviewers rave about its crystal‑clear mix with only occasional “shaky” moments that can be fixed by swapping channels. Musically the show shines in the second set, especially the intense Cryptical > Other One > Cryptical sandwich, a soaring Eyes of the World and powerful renditions of Dire Wolf and Comes A Time, though some feel Jerry’s vocals sag on certain numbers and the first‑set Eye jam runs too fast for others.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The performance is generally praised with several standout moments, while a minority of reviewers note vocal and pacing issues; the recording is consistently described as clear and high‑quality, leading to an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crystal‑clear mix praised by most reviewers; a few note occasional shakiness, the need to swap channels on TMNS>Don't Ease, and a less‑than‑perfect splice in Space→Nobody's Fault."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical > Other One > Cryptical",
+      "Eyes of the World",
+      "Dire Wolf",
+      "Comes A Time",
+      "Space"
+    ],
+    "poor_songs": [
+      "Eyes of the World (some say it runs too fast)",
+      "The Other One / TLEO (mixed reception)"
+    ],
+    "setlist_flow": "First set is described as a classic ’85 opener, while the second set flips into high energy with an intense Cryptical sandwich and soaring jams; pacing is praised overall but a few listeners felt the eye jam was rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work is called \"hot\" and \"on fire\" by several reviewers, but his vocal performance on Cryptical and some eye‑jam moments is criticized as weak or wasted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboard) gets quirky mentions – “Bobby lovelight rap”, “Brent don't need love anymore” – generally seen as part of the show’s character rather than a performance issue.",
+    "Drums": "Bill’s drumming is noted for driving the high‑energy sections; one reviewer mentions drums kicking in hard during Eyes, adding intensity."
+  },
+  "song_mentions": {
+    "Cryptical": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Nobody's Fault but Mine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "TLEO": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T08:29:12.176168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-03.sbd.keith.7229.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Recording has conflicting reports—one reviewer finds only static while another praises the 5.1 surround quality; no musical details available",
+  "review": "The two reviews are at odds: one claims the tracks contain only static and should be removed, rating it poorly, whereas the other highlights excellent multi‑channel sound that shines on a DTS or Dolby 5.1 system. No comments on performance were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Average star rating (3) with contradictory feedback; limited data prevents a higher confidence assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer reports only static/no audio, while another notes high‑quality multi‑channel FLAC that requires a 5.1 surround setup."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T18:43:03.282269+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-03-23.dts.tobin.82531.sbeok.flac16"
+}

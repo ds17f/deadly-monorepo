@@ -1,0 +1,39 @@
+{
+  "summary": "Great tape with sparkling keys and Jerry ripping on Althea, clear audience recording that captures the band's energy",
+  "review": "Both reviewers rave about this mid‑80s audience tape, noting its surprisingly good sound quality, bright keyboard tones throughout, and a particularly fiery performance by Garcia on Althea. The recording is clean enough to enjoy without major flaws, making it a favorite among fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly positive (4‑5 stars) and highlight strong musical performance plus good tape sound quality; limited number of reviews keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Tape sounds clear and warm, with sparkling keyboard presence; no reported dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and tight performance that holds the listener's interest throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Ripping on Althea, Garcia is highlighted as tearing it up.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Sparkly keys throughout, keyboard work praised.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:26:51.096287+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-30.s1.127431.sbd.pasternak.flac16"
+}

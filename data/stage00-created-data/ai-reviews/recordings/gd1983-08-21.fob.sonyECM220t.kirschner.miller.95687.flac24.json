@@ -1,0 +1,39 @@
+{
+  "summary": "Generally good, treble‑heavy recording of a strong show that opens with a standout Cassidy performance.",
+  "review": "Reviewers rave about the nearly perfect performance, especially noting the powerful opening with \"Cassidy\" and the overall improvement as the set progresses. The audio is described as treble‑heavy and a bit rough at the start, but still enjoyable at louder volumes. Sentiment is mixed because one reviewer gave a zero rating despite no specific musical complaint.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is praised by most reviewers (average ~4‑5 stars) while recording quality receives mixed comments (treble‑heavy, rough start), leading to a weighted rating around 3.9."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Treble‑heavy audio; starts rough but becomes clearer. No explicit mention of soundboard or audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opens with Cassidy, which reviewers feel sets a positive tone; early part described as rough but improves noticeably through the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T08:49:57.628716+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-21.fob.sonyECM220t.kirschner.miller.95687.flac24"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Clear, lively audience recording captures a standout 1993 performance highlighted by a soaring Sugaree and an explosive Ramble On Rose.",
+  "review": "The show is praised for its high‑energy jams, especially the climactic Sugaree and the horn‑filled Ramble On Rose, with Jerry Garcia “on” all night. Listeners note that the audience recording sounds great overall—clear enough to enjoy the music while still preserving the crowd ambience, despite occasional touch‑hand noise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4–5) and enthusiastic comments about both performance and audio quality indicate an excellent show with a good‑to‑excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound, pleasant mix that lets the music shine; some audience noise (touch‑hand chatter) but no major dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Sugaree",
+      "The Promised Land",
+      "Foolish Heart"
+    ],
+    "poor_songs": [
+      "Ship O'"
+    ],
+    "setlist_flow": "Fans describe a solid, love‑themed set with strong jams and climactic peaks; the second half especially builds momentum through Ramble On Rose and Sugaree."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly noted as being 'on' all night, wailing on Sugaree and delivering stellar leads during Ramble On Rose.",
+    "Phil": "",
+    "Bob": "Bob Weir provides background soloing during the Ramble On Rose segment.",
+    "Keys": "",
+    "Drums": "Billy Kreutzmann and Mickey Hart receive specific praise for their tight, driving playing."
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship O'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:05:47.689785+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-17.ams.georges.5704.sbeok.shnf"
+}

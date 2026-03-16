@@ -1,0 +1,39 @@
+{
+  "summary": "Good recording with distant audience chatter; Mission in the Rain shines despite background talking",
+  "review": "The reviewer rates the tape very well, noting clear and pleasant sound that lets the gorgeous performance of \"Mission in the Rain\" come through. The only drawback is a persistent talker whose voice is far enough away to be mostly filtered out, even though they return for the encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the recording quality and a standout song while noting minor talk‑over issues, leading to an overall positive but modest rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Clear sound with distant background talking throughout most of the set; chatter fades later but returns for the encore, yet remains far enough away to be mostly screened out."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mission in the Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; only the highlighted Mission in the Rain is mentioned positively."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mission in the Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:59:32.776213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-29.aud.digitalrbb.miller.112407.flac16"
+}

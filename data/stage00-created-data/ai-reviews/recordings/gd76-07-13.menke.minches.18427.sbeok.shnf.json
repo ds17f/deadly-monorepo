@@ -1,0 +1,51 @@
+{
+  "summary": "Treble‑heavy audience tape with occasional pitch issues captures a solid Orpheum ’76 set highlighted by Let It Grow, Stella! and St. Stephen.",
+  "review": "The recording is an audience source that leans toward the trebly and echo‑laden side, with some reviewers noting a half‑step speed/pitch problem and overall weak sound. Musically the show is regarded as decent – a “blinder” for some – featuring standout moments on Let It Grow, Stella! and a mellow St. Stephen, though several listeners feel it isn’t an exceptional performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is viewed as average‑to‑good (mostly 3‑4 stars) while recording quality ranges from fair to poor, resulting in a mid‑range combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Treble‑heavy and echo‑y; one reviewer reports a half‑step speed/pitch increase making it sound tinny. Overall sound is described as weak by several users, though one notes the tape sounds pretty good for 1976."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Stella!",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally solid performance with a few high points, but not considered a landmark show; some listeners find it merely okay."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:13:31.595420+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-13.menke.minches.18427.sbeok.shnf"
+}

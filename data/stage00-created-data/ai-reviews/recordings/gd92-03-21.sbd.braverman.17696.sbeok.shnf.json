@@ -1,0 +1,68 @@
+{
+  "summary": "Fair‑quality soundboard recording of a mixed Hamilton show with a strong Terrapin > Jam and Help‑Slip‑Franklin sequence, but uneven performance overall.",
+  "review": "The set captures a night in Hamilton that deadheads remember for its soaring Terrapin > Jam, the soaring Help‑Slip‑Franklin segue and a solid So Many Roads.  While the soundboard source is decent, reviewers note vocal clipping, tape‑generation compression and occasional distortion that keep the audio from being crystal clear.  The band’s playing swings between inspired (especially Bruce Hornsby’s piano) and lackluster (Jerry’s vocals and guitar on the second night), leaving the overall experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "A large number of reviews give a wide range of opinions; standout songs boost the rating while frequent complaints about vocal clipping, tape‑generation loss and uneven performance pull it down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers mention clipped vocals, compressed dynamics from a cassette two‑generations removed, and overall distortion.  The mix is decent for a soundboard source but lacks clarity in the mids and suffers from occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin > Jam",
+      "Help > Slip > Franklin",
+      "So Many Roads",
+      "Peggy-O",
+      "Shenandoah"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first night is praised as spectacular, while the second night is described as lackluster; overall the set swings between high‑energy jams and moments where Jerry’s voice/guitar were off."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals often clipped or croaky; on the second night he sounded ‘off’ and his guitar work was uneven.",
+    "Phil": "His avant‑garde bass lines add tension when the band is loose, occasionally contributing to a disjointed feel.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s piano and vocal contributions are highlighted as strong; Vince Welnick’s synth work receives criticism, and Brent Mydland is noted as missed.",
+    "Drums": "Drumming generally solid; one reviewer notes the band “found airy space before settling into Drums.”"
+  },
+  "song_mentions": {
+    "Terrapin > Jam": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Help > Slip > Franklin": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shenandoah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:08:27.042765+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-21.sbd.braverman.17696.sbeok.shnf"
+}

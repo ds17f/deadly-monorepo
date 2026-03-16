@@ -1,0 +1,39 @@
+{
+  "summary": "Sparse review noting a massive Stella Blue; recording quality unclear",
+  "review": "The lone reviewer highlights an especially long rendition of \"Stella Blue,\" but provides no details on the audio source or overall performance. With a zero‑star rating and no technical commentary, both the show and recording assessments remain uncertain.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Only one brief review with a 0‑star rating; while the comment about Stella Blue is mildly positive, the lack of information on performance and sound quality limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": ""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:00:13.410515+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-04.152576.UltraMatrix.sbd.cm.miller.t.flac16"
+}

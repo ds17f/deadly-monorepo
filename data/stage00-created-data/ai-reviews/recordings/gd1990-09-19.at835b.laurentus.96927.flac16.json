@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent recording captures the latter half of a stellar MSG show, highlighted by a jam out of Weather Report and a beautiful Stella Blue.",
+  "review": "The reviewer who attended the concert calls this one of the best Madison Square Garden shows they’ve seen. They especially praise the end of the first set and the second‑set stretch through “Stella Blue,” noting an inspired jam emerging from the Weather Report suite with Jerry and Bruce. The recording is described as great, implying a clean, enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "A single detailed 5‑star review lauds both the musical performance and the recording quality, indicating an outstanding show despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer states “Recording is great!” with no noted flaws; suggests clear, well‑balanced audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Weather Report Suite",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "End of first set and the early part of the second set (through Stella Blue) are highlighted as wonderful, indicating a strong flow in that portion of the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Jam out of Weather Report praised; his playing noted as a highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce (keyboardist) receives praise for his contribution to the Weather Report jam.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:59:40.876308+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-19.at835b.laurentus.96927.flac16"
+}

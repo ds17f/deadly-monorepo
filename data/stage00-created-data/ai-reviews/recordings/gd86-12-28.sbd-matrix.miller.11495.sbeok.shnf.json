@@ -1,0 +1,51 @@
+{
+  "summary": "Smooth matrix recording captures an emotionally charged show highlighted by a soaring Scarlet Begonias solo, heartfelt Black Peter and a rousing Big Railroad Blues.",
+  "review": "The performance on 12‑28‑86 is remembered for Jerry’s moving Black Peter, the high‑energy opening with Big Railroad Blues and a hot second solo on Scarlet Begonias that even drew an amazed Bob.  The matrix source sounds crisp and well‑balanced – reviewers note a “very smooth soundboard” mix with only minor low‑end roughness on Cold Rain – making it an enjoyable listen despite mixed opinions about the overall set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Show quality averages around a 3/5 (mixed praise and criticism) while recording quality is consistently rated good‑to‑excellent; weighted combination yields ~3.4."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Smooth matrix mix with clear instrument separation; a slight raunchy low end on Cold Rain but overall crisp and very good sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Railroad Blues",
+      "Scarlet Begonias",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as high‑energy with strong openings; emotional mid‑set moments (Black Peter) and a memorable Scarlet solo, though some listeners found the overall show short and generic."
+  },
+  "band_member_comments": {
+    "Jerry": "Back in great form – heartfelt Black Peter and strong guitar tone on Scarlet Begonias; appears a bit reserved but emotionally compelling.",
+    "Phil": "",
+    "Bob": "Noted for eye‑contact with Jerry and an amazed reaction to the second solo on Scarlet Begonias.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T18:06:23.595871+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-12-28.sbd-matrix.miller.11495.sbeok.shnf"
+}

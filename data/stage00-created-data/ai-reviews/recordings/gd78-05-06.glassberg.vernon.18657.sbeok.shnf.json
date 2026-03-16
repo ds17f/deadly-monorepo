@@ -1,0 +1,50 @@
+{
+  "summary": "A high‑energy show featuring a moving Peggy‑O and a soaring Sugaree, but the audience‑dominated recording swings between clear moments and muddy, clapping‑heavy sections.",
+  "review": "Fans rave about the enthusiastic crowd and standout renditions of Peggy‑O and Sugaree, calling the performance one of the band’s better gym shows. However, the recording quality is disputed – some hear crisp detail while others are overwhelmed by audience noise and muffled instruments, making parts of the tape difficult to enjoy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance (4‑5 stars) while opinions on the recording split between excellent and poor, leading to an overall rating just under 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Clapping and crowd noise dominate much of the mix; some listeners report clear instrument detail while others describe it as atrocious, muddy, or unintelligible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy O",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy, buoyed by a super‑enthusiastic audience in the gym setting; the performance feels tight and engaging despite venue constraints."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are muffled/overwhelmed by crowd noise in the recording.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:14:07.863102+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-06.glassberg.vernon.18657.sbeok.shnf"
+}

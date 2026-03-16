@@ -1,0 +1,73 @@
+{
+  "summary": "Soundboard recording sounds good overall, with a smoking‑hot second set highlighted by Terrapin Station, China > I Know You Rider and a strong I Fought the Law jam.",
+  "review": "The show is generally praised for its solid first set and a fiery second half featuring standout performances of Terrapin Station (and its ensuing jam), China into I Know You Rider, Broken Arrow and I Fought the Law.  The soundboard source is described as clear and “beautiful,” though several listeners note uneven levels – low Jerry vocals/guitar and an over‑present accordion that can mask other instruments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews are split between high praise for the performance and sound quality (5‑star entries) and criticism of mix balance and individual playing (1‑2‑star entries), yielding an average around 3½."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear, crisp soundboard with “beautiful” mix; some listeners report low Jerry vocal/guitar levels and overly loud accordion/bass making the balance uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "China > I Know You Rider",
+      "Broken Arrow",
+      "The Music Never Stopped",
+      "I Fought The Law"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid; second set “smoking hot” with strong transitions (Terrapin jam, China>Rider) despite occasional accordion overload."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals and guitar often sound low or pulled away from the mic; some note a decline in tone toward late‑93.",
+    "Phil": "Bass noted as too loud on this recording.",
+    "Bob": "Weir’s rhythm part is said to be missing, leaving keyboards to fill; his guitar sometimes inaudible.",
+    "Keys": "Hornsby’s accordion adds flavor (especially on I Know You Rider) but can be excessive and muddy the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought The Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:43:50.299088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-18.dsbd.miller.79070.sbeok.flac16"
+}

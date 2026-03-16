@@ -1,0 +1,87 @@
+{
+  "summary": "Audience recording of a snow‑bound Richfield show with mixed performance – stellar Stella Blue and Terrapin moments but overall flat playing and technical woes.",
+  "review": "The June 1993 Richfield concert was captured from the audience, delivering a listenable but not pristine sound. Musically the night was uneven: the first set was short and ragged while the second offered highlights like a soaring Stella Blue and a solid Terrapin, yet many songs (Touch, Corrina, I Fought The Law) were flat and Jerry’s coughing made the band sound off‑kilter.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "The majority of reviews rate the show poorly (1–2 stars) citing flat playing and bad songs, while a few praise specific moments; recording quality is described as decent audience tape, yielding an overall low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners describe the tape as fun and decently listenable but not crystal‑clear; no specific soundboard clarity is mentioned, only that it’s an audience (AUD) recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Terrapin Station",
+      "Eternity",
+      "Throwing Stones"
+    ],
+    "poor_songs": [
+      "Touch",
+      "Corrina",
+      "I Fought The Law",
+      "Long Way to Hear This"
+    ],
+    "setlist_flow": "A short, ragged first set followed by an uneven second set – a few high points (Stella Blue, Terrapin) are sandwiched between lackluster jams and flat renditions."
+  },
+  "band_member_comments": {
+    "Jerry": "Coughing throughout, flat guitar tone, occasional lyric flubs, new acoustic‑type sound noted as thin.",
+    "Phil": "Had to slow down on \"Tom Thumb's\" to keep the band together; otherwise little specific comment.",
+    "Bob": "",
+    "Keys": "Vince Welnick’s keyboard tone described as thin/cheesy and not locking in well.",
+    "Drums": "Pre‑drum segment called the worst part of the night; post‑drum section deemed okay."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "I Fought The Law": {
+      "positive_mentions": 2,
+      "negative_mentions": 5,
+      "total_mentions": 7
+    },
+    "Eternity": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Long Way to Hear This": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T10:20:31.522582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-14.senn.jimbo67.14830.sbeok.shnf"
+}

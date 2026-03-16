@@ -1,0 +1,63 @@
+{
+  "summary": "Clear soundboard capture of the 2‑21‑91 Oakland show, highlighted by a smoking Help > Slip > Franklin’s, stellar Eyes out of Space and one of the best Slipknot jams.",
+  "review": "The SBD recording is clean with excellent instrument placement and only a single minor glitch noted. Musically the concert shines especially in the second set – the Help‑Slip‑Franklin’s sequence, the soaring Eyes out of Space and a magnificent Slipknot make it a must‑listen for 1991 fans. Vince’s organ work adds extra flavor while Jerry’s guitar is on fire throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high 4‑star reviews (plus a few 5‑star) praise both the performance and the soundboard quality; only one 3‑star mentions an average overall impression, giving a strong positive bias."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp mix with good placement of each band member; reviewers note it as a “nice board” and “very nice SBD”. One reviewer mentions a single minor glitch, but no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's",
+      "Eyes (from Space)",
+      "Slipknot!",
+      "Terrapin",
+      "Memphis Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid with a few surprising moments; second set tight and jam‑heavy, flowing seamlessly from Help‑Slip‑Franklin’s into Terrapin, Space and the unforgettable Eyes out of Space."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ripping it up on guitar, especially during the Eyes solo and the Help‑Slip‑Franklin’s jam; described as playing his heart out.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's organ/keyboard work is highlighted – heavy at times but generally solid, with great runs on Franklin’s, Memphis Blues and the Slipknot sequence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Slipknot!": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes (from Space)": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:23:37.393032+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-02-21.sbd.miller.22308.sbeok.shnf"
+}

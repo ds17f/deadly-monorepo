@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a mellow set with standout versions of Loser, Bertha and Franklin’s Tower.",
+  "review": "The four reviewers rave about the clean, well‑balanced audio – thanks to careful cleanup and a solid soundboard source – and describe the performance as mellow yet vibrant. Highlights include Loser (ranked in the reviewer’s top 25), Bertha, Fire on the Mountain and a soaring Franklin’s Tower, with Keith’s piano nicely present in the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews are 5‑star, praising both the musical performance and the pristine recording; thus the show is exceptional and the soundboard source is excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean-up work noted as effective; audio described as clear, mellow, with keyboards well‑balanced in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Bertha",
+      "Franklin's Tower",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth, mellow vibe with strong transitions; reviewers highlight the overall energy and enjoyment of the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s piano is up in the mix and appreciated by listeners.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:23:58.739813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-23.sbd.aj.gardner.4334.shnf"
+}

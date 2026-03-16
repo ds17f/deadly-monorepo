@@ -1,0 +1,72 @@
+{
+  "summary": "Solid late‑'88 set with hot China>Rider and tight Playin’ jam",
+  "blurb": "The show delivers a flowing second set highlighted by the classic China Cat Sunflower → I Know You Rider segue and an expansive Playin’ In The Band → Uncle John’s Band → Playin’ sequence. Jerry’s vocals and Brent’s keyboards shine, while the rhythm section keeps the energy high throughout.",
+  "review": "Recorded on September 5, 1988 at the Capital Centre, this concert captures a band in fine form during the late‑'80s run. The first set rides a mellow groove with standout moments like “Walkin’ Blues” and “Stuck Inside of Mobile with the Memphis Blues Again,” but it’s the second set that truly shines. A crisp audience tape (the recommended recording) showcases the celebrated China Cat Sunflower → I Know You Rider transition, followed by an inspired Playin’ In The Band → Uncle John’s Band → Playin’ marathon that feeds seamlessly into a fiery Drums‑Space segment and a soulful “Turn On Your Lovelight.” Brent Mydland’s keyboard textures are front‑and‑center, especially on the bluesy “Memphis Blues” and the upbeat “Gimme Some Lovin’,” while Jerry Garcia delivers strong lead vocals with memorable backup harmonies on “Lovelight.” The rhythm duo of Mickey Hart and Bill Kreutzmann drives the band forward with excitable, hot drumming that fuels the improvisational peaks. Overall, the performance is consistently energetic, well‑sequenced, and representative of a solid Capital Centre night in ’88.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings are clearly positive, one is mixed and only a single recording is negative with no substantive criticism of the performance. The consensus praises the China>Rider segue, Playin' sequences, and overall band energy, justifying a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-09-05.nakamichi.leeds.16440.sbeok.shnf",
+    "reason": "Clear audience tape that captures the full flow of the show, especially the China Cat Sunflower → Rider and Playin’ sequences, with good balance and no major drop‑outs."
+  },
+  "key_highlights": [
+    "Classic China Cat Sunflower → I Know You Rider segue",
+    "Extended Playin’ In The Band → Uncle John’s Band → Playin’ jam feeding into Drums/Space",
+    "Jerry’s powerful vocals on Lovelight and Memphis Blues solo",
+    "Brent’s textured keyboards throughout, especially on Walkin' Blues and Gimme Some Lovin'"
+  ],
+  "song_highlights": [
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "Drums",
+    "Space",
+    "Gimme Some Lovin'",
+    "Black Peter",
+    "Turn On Your Lovelight",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Strong vocals and creative guitar work; highlighted on Lovelight backup harmonies and a raging solo on Memphis Blues, with heartfelt delivery on key numbers.",
+    "Phil": "Solid bass foundation that especially locked in during the Playin’ sequence, providing steady drive throughout the set.",
+    "Bob": "",
+    "Brent": "Shines on keyboards, laying out Walkin' Blues and adding texture across the show; praised for his vibrant playing on several songs.",
+    "Mickey": "Excitable, hot drumming that fuels the energy on Memphis Blues, Space, and the extended jam sections.",
+    "Billy": "Provides a tight, energetic counterpart to Mickey, keeping the rhythm section punchy during the high‑octane moments."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T13:07:55.799558+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Gimme Some Lovin'",
+      "Black Peter",
+      "Around & Around",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Matrix recording with a five‑star rating, but the review provides no details on sound or performance.",
+  "review": "The sole reviewer gave this release a perfect five stars, yet their comments focus solely on streaming availability and contain no information about the audio fidelity or musical performance. Consequently, while sentiment is clearly positive, there is insufficient data to evaluate recording quality or show highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review with a high rating; however, it lacks any substantive commentary on the music or sound, so the rating is based mainly on the star count rather than detailed analysis."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "unknown",
+    "technical_notes": "The review does not mention any aspects of sound clarity, mix balance, or other technical qualities."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T18:56:19.883998+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-12.sbd.matrix-dts.tobin.90179.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "A matrix recording that captures a top‑shelf show, though the mix can feel clumsy to some listeners.",
+  "review": "The performance is described as \"top‑shelf\" by one reviewer and generally solid by another, indicating a strong musical showing. The recording is a matrix; while one listener praises its hall‑like clarity, another finds the added reverb and crowd noise make the mix feel clumpy and distracting. Overall the show shines, but the listening experience may vary depending on tolerance for the mix's ambience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality receives high praise (top‑shelf) while recording quality has mixed feedback (good matrix vs clumsy mix), resulting in a moderate‑high overall rating with medium confidence due to only two reviews."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Board source is clean; reverb and crowd whoops added in the matrix mix make it feel clumsy for some listeners, though others describe it as a pleasant small‑hall ambience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers generally note the show is top‑shelf overall."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T18:31:25.586225+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-02-24.136140.mtx.tobin.flac16"
+}

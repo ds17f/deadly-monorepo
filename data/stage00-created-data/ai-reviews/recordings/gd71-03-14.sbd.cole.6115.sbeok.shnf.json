@@ -1,0 +1,51 @@
+{
+  "summary": "Crisp 1971 soundboard recording captures a high‑energy show highlighted by a killer Hard to Handle and monster Good Lovin'.",
+  "review": "The SB source is praised for its clarity and crispness, with Garcia’s vocals and the overall mix sounding exceptional despite occasional cymbal harshness and slight channel funkiness on Hard to Handle. Musically the concert shines – Pigpen delivers a fierce Hurts Me Too, the band launches into an incendiary Hard to Handle jam, and Good Lovin' is repeatedly called a “monster” performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈4.6, overwhelmingly positive comments on both performance and sound quality; minor recording quirks do not detract from the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear SB capture with excellent vocal clarity; a few reviewers note cymbal harshness and slight distortion/funkiness in Hard to Handle channels but overall the mix is balanced and very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hurts Me Too",
+      "Hard to Handle",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high‑octane energy, building from Pigpen’s soulful Hurts Me Too into a soaring Hard to Handle jam and culminating in an unforgettable, monster Good Lovin' that many reviewers cite as the show’s peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as “on” with killer tone on Hurts Me Too and driving his work on Hard to Handle.",
+    "Phil": "Phil’s bass line in Hard to Handle is highlighted as a wall‑peeling moment, and he’s praised for carrying the jam alongside Jerry.",
+    "Bob": "",
+    "Keys": "Ron McKernan (keyboardist) is noted by reviewers, confirming his presence on organ/harmonica.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T03:29:05.967038+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-03-14.sbd.cole.6115.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Clear soundboard recording, but track titles are misaligned throughout the set.",
+  "review": "The audio quality of this capture is praised as clear and pleasant, indicating a solid soundboard source. However, the biggest drawback noted by reviewers is that the track names are shifted, causing mismatches between the music and its labeling. Aside from the labeling issue, no substantive comments on the performance itself were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only two reviews; one gives a positive 4‑star comment about sound quality while noting labeling errors, the other is a brief non‑rating remark. Recording quality appears good, but lack of performance feedback limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Audio described as nice/clear; primary issue is misaligned track naming rather than sound fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on musical flow; reviewers focused on metadata errors."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T00:18:28.619088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-14.sbd.walker-scotton.miller.83296.sbeok.flac16"
+}

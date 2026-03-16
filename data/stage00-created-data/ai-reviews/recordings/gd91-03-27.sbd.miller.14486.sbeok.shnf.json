@@ -1,0 +1,93 @@
+{
+  "summary": "Soundboard capture with generally good clarity showcases a stellar 1991 set highlighted by the rare Rubin/Cherise, scorching Scarlet > Fire and emotive Stella Blue despite some hiss and organ quirks.",
+  "review": "The recording is a sound‑board source that most listeners find clear and well‑balanced, though several reviewers note a persistent hiss, occasional channel drop‑outs and a thin early‑set acoustic. Musically the show shines – Jerry’s “Wolf” guitar adds sparkle to a rare Rubin/Cherise performance, Phil’s bass on New Minglewood is praised, and the second set delivers a blazing Scarlet > Fire, tight Drums→Space, All‑Along‑the‑Watchtower and what many call the best Stella Blue ever heard. While Vince’s organ tone divides opinion and a few critics mention monitor or venue issues, the overall energy and rare moments make this a strong show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) are strongly positive about both performance and recording, with only a minority highlighting significant sound‑quality problems; this yields a rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp SBD foundation praised by several listeners, but notable hiss throughout, occasional channel cut‑outs in first set, and a thin/blowy early‑set sound. Vince’s organ/keyboard tone is described as ‘carnival organ’ or harsh, which some find distracting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rubin and Cherise",
+      "Scarlet > Fire",
+      "Stella Blue",
+      "Loose Lucy",
+      "All Along the Watchtower",
+      "Drums > Space",
+      "Estimated Prophet",
+      "Uncle John's Band",
+      "Sugar Magnolia",
+      "New Minglewood"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a powerful second set with seamless transitions (Scarlet > Fire → Estimated Prophet → Uncle John’s → Drums→Space → Watchtower) and a rare early‑set Rubin/Cherise that energizes the crowd; occasional monitor or venue issues are mentioned but do not detract from overall momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is noted for using his ‘Wolf’ guitar, delivering strong lead work and vibrant vocals throughout.",
+    "Phil": "Phil Lesh’s bass on New Minglewood receives specific praise for its clarity and drive.",
+    "Bob": "Bob Weir’s vocal level is called out as a bit loud by one reviewer, but overall rhythm playing is solid.",
+    "Keys": "Vince’s organ/keyboard tone divides opinion – described as ‘carnival organ’, harsh, or overly synthetic, though some enjoy the added texture.",
+    "Drums": "Bill Kreutzmann’s drumming shines, especially in the Drums > Space segment and a praised bass solo during Space."
+  },
+  "song_mentions": {
+    "Rubin and Cherise": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:20:15.102985+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-27.sbd.miller.14486.sbeok.shnf"
+}

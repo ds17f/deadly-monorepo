@@ -1,0 +1,55 @@
+{
+  "summary": "Soundboard recording is decent for the era, but the show is uneven – Sugaree and Stella shine while overall performance feels lackluster.",
+  "review": "The SBD source captures a respectable mix with a slightly hot bass/vocal balance, typical of early‑'80s recordings. Musically the concert is mixed: the second‑set Sugaree and Stella receive praise, drums are highlighted as the saving grace, yet many songs are described as bland and the first set unusually short. Listener sentiment ranges from disappointment to modest appreciation.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Show quality is judged below average based on two negative reviews and one neutral, while the recording is viewed as decent; weighted combination yields a ~3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Relatively good mix for the period; bass and vocals slightly hot but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Stella"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set unusually short (six songs) followed by a long break; second set considered impressive in parts but overall described as bland, with drums providing the main highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Extra‑good guitar break noted on Sugaree.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums segment praised as the saving grace of the show."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:59:14.076240+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-12.sbd.miller.tetzeli.fix-32014.35160.reflac.flac16"
+}

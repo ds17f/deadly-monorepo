@@ -1,0 +1,52 @@
+{
+  "summary": "A nostalgic but garbled soundboard capture that still delivers high‑voltage Jerry guitar on Good Lovin’ and a standout Lovelight despite the tape’s age.",
+  "review": "The performance shines with Jerry's electrifying lead work on “Good Lovin'” and an inspired “Lovelight” finale, while Pigpen’s soulful vocals add extra magic. The recording shows its age – it’s occasionally garbled and dusty – but moments of clarity make the show worth listening to for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Show is praised with standout songs, but recording quality is described as garbled and aged; combined weight yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Tape shows age, some garbled sections and dust, but parts (e.g., Good Lovin') sound fresh again."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Hard to Handle"
+    ],
+    "setlist_flow": "The show builds toward a rewarding ending, with the band conjuring classic Dead magic for listeners who stay until the final numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "High‑voltage, unique guitar playing noted especially on Lovelight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:33:29.643168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-01-10.sbd.sirmick.89614.flac24"
+}

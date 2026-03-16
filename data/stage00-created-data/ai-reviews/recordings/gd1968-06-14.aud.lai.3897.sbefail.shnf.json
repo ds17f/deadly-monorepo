@@ -1,0 +1,58 @@
+{
+  "summary": "A ragged audience tape that still dazzles thanks to a smoking Eleven → St. Stephen run and Jerry’s soaring lead work.",
+  "review": "Listeners rave about the historic June‑68 performance – especially the rare feedback→Eleven→St. Stephen sandwich, the fiery Alligator transition and Jerry Garcia’s vocal/guitar intensity.  The recording is low‑fidelity audience tape with clipping and muffled vocals, but fans say it rewards careful listening on good headphones.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The show is repeatedly described as one of the best of ’68 with standout jams, while the recording quality is consistently called ragged or terrible; weighting 70 % performance and 30 % audio yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Low‑fidelity audience tape – heavy clipping, barely audible vocals, overall muddy mix; however headphones can mitigate noise and reveal the performance’s energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "St. Stephen",
+      "Alligator"
+    ],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "Unusual feedback sandwich opens and closes the show, leading into a rare feedback→Eleven→St. Stephen sequence; odd Alligator→Lovelight transition adds intrigue despite Lovelight’s middling execution."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead guitar and vocal delivery are highlighted as exceptional, carrying the whole performance.",
+    "Phil": "Occasional vocal harmonies from Phil Fill noted; no specific bass commentary.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:36:56.119155+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-06-14.aud.lai.3897.sbefail.shnf"
+}

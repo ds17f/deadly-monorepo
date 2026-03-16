@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard capture of an August 25 show with decent sound despite occasional static, highlighted by a strong performance of \"So Many Roads\".",
+  "review": "The recording is a soundboard FLAC that generally sounds clear but some listeners note brief static artifacts. Musically the show earned high praise, especially for the rendition of \"So Many Roads,\" though detailed comments on other songs or band members are absent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "One reviewer gave a perfect score praising the show, while another reported static and gave a zero rating; limited detail makes a cautious middle‑of‑the‑road rating appropriate."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Overall clear soundboard capture but occasional static noise reported by a reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; overall impression is positive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:02:00.267268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-25.147626.sbd.miller.flac1648"
+}

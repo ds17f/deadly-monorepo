@@ -1,0 +1,69 @@
+{
+  "summary": "Bright Jerry leads vibrant set; Maggie's Farm & Truckin' shine",
+  "blurb": "The show delivers strong performances of Maggie's Farm, Sugaree, and an explosive Truckin'. Jerry’s bright guitar tone and Hornsby’s tasteful keys drive the band, while the rhythm section locks in on China > Rider and The Wheel.",
+  "review": "On October 17, 1990 at Gruga Halle in Essen, the Dead turned in a lively European outing that still feels fresh. Jerry Garcia’s guitar was described as “bright, full, clear and ‘Wolf’-like,” carving soaring solos while his vocals stayed strong throughout. Bruce Hornsby’s piano added lovely texture, especially under the driving rhythm laid down by Phil Lesh’s big‑bomb bass and the tight dual‑drum interplay of Mickey Hart and Bill Kreutzmann. Highlights include a rousing Maggie's Farm, a soulful Sugaree, an explosive Truckin' that segued into a powerful He's Gone, and a seamless China Cat Sunflower > I Know You Rider transition that built momentum into the second set’s Space‑> Wheel journey. The show’s flow is smooth, with standout moments like High Time and Black Peter rounding out a setlist that balances mellow storytelling with high‑octane jams.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Both recordings are marked as positive, praising the overall performance, standout songs (Maggie's Farm, Sugaree, Truckin'), and band members’ playing. Consistent language like “stellar,” “explosive,” and “bright” across sources indicates strong positive sentiment.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd90-10-17.dsbd.wiley.11613.sbeok.shnf",
+    "reason": "Excellent soundboard source with crisp, clear mix and superb instrument separation; captures the show’s energy best."
+  },
+  "key_highlights": [
+    "Standout Maggie's Farm and Sugaree performances with bright guitar tone.",
+    "Explosive Truckin' leading into a powerful second‑set flow (China > Rider, Space > Wheel).",
+    "Strong rhythm section: Phil’s big‑bomb bass and tight dual drums from Mickey & Bill."
+  ],
+  "song_highlights": [
+    "Maggie's Farm",
+    "Sugaree",
+    "Truckin'",
+    "High Time",
+    "Black Peter"
+  ],
+  "band_performance": {
+    "Jerry": "Bright, full‑tone guitar with Wolf‑like solos; vocals strong throughout.",
+    "Phil": "Big‑bomb bass adds crunchy presence and drives the band in sections like China and Rider.",
+    "Bob": "Solid rhythm work and vocal leads (especially on China); occasional falsetto backup noted.",
+    "Brent": "",
+    "Mickey": "Crisp, pronounced beats; tight interplay with Bill creates a powerful dual‑drum foundation.",
+    "Billy": "Pronounced, crisp drumming that locks in with Mickey for solid rhythmic drive."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-17T13:38:34.700343+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Me And My Uncle",
+      "Maggie's Farm"
+    ],
+    [
+      "Hell In A Bucket",
+      "Sugaree"
+    ],
+    [
+      "Truckin'",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "I Need A Miracle",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "High Time"
+    ]
+  ]
+}

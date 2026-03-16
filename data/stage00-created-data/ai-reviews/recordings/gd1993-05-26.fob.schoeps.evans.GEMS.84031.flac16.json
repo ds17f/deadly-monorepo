@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent, high‑energy show highlighted by a blistering Playing in the Band jam and heartfelt China Doll, captured on an unknown‑source recording of good quality",
+  "review": "The concert is praised as one of the Dead’s final great shows, with an aggressive, exploratory 15‑minute Playing in the Band that never slips into noise and a sincere China Doll that bookends the reprise. Reviewers rave about Jerry Garcia’s sweet guitar lines and rare vocal poise, while no specific recording issues are noted, suggesting a listenable source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single detailed 5‑star review emphasizes an outstanding performance; recording quality is not discussed but presumed adequate, leading to a high combined rating with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound clarity or mix; reviewers focus solely on performance, implying the recording is at least listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as an open, exploratory set with a powerful, aggressive jam that maintains tension and release throughout, culminating in a heartfelt China Doll reprise."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is praised as sweet and fluid; his vocals are noted as rare, poised, and affirming during the China Doll and overall performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:13:49.350490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-26.fob.schoeps.evans.GEMS.84031.flac16"
+}

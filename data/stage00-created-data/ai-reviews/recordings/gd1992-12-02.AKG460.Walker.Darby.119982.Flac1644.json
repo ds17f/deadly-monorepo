@@ -1,0 +1,31 @@
+{
+  "summary": "Thin recording with no notable musical commentary",
+  "review": "The only review describes the audio as thin and provides no details about the band's performance or setlist. Recording quality is judged poor, and there is insufficient information to assess the show itself.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "A single 0‑star review highlights a thin recording and offers no positive aspects; with minimal data, rating is low and confidence is limited."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer describes the audio as 'thin', indicating lack of fullness and clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T08:22:04.319407+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-02.AKG460.Walker.Darby.119982.Flac1644"
+}

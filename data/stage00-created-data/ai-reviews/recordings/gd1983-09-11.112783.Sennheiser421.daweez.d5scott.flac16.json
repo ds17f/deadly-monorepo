@@ -1,0 +1,31 @@
+{
+  "summary": "Strong show performance but the Dolby processing mutes the high frequencies, reducing overall listenability.",
+  "review": "The concert itself is described as \"very good,\" indicating a solid musical performance. However, the recording suffers from excessive Dolby noise reduction that swallows the highs, making the sound less clear and enjoyable. The issue dominates the impression of this release.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "One reviewer praises the show but gives a near‑zero star rating due to recording problems; weighting 70% show (good) and 30% recording (fair) yields ~3.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Dolby processing is overly aggressive, swallowing high frequencies and making the mix sound dull."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T10:34:27.679008+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-11.112783.Sennheiser421.daweez.d5scott.flac16"
+}

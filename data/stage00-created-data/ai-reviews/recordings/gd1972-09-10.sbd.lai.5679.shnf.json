@@ -1,0 +1,61 @@
+{
+  "summary": "Excellent soundboard capture of a fiery 1972 show highlighted by a scorching Dark Star, a top‑5 He's Gone, and a standout Black Peter.",
+  "review": "The recording is praised as a crystal‑clear soundboard mix with the guitars especially forward in the blend. Fans rave about the intense early jam, a “really hot” Dark Star that serves as the show’s peak, plus Jerry’s two soaring solos on He's Gone and a memorable Black Peter. Overall the performance is considered one of the stronger September ’72 dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star and highlight both superb soundboard quality and standout performances; only one low‑rating comment is vague, so the weighted average leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the mix as wonderful, crisp and full‑bodied, with guitars especially prominent (Bob’s guitar higher than usual). No dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "He's Gone",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set bursts into high‑energy improvisation in the first ten minutes, builds to a scorching Dark Star centerpiece, and closes with an extended, spooky outro on He's Gone; overall pacing is praised as intense and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work gets special praise – two soaring solos on He's Gone and strong presence throughout the show.",
+    "Phil": "Phil Lesh is noted as “in the zone” during Dark Star, delivering a deep, locked‑in bass groove.",
+    "Bob": "Bob Weir’s rhythm guitar sits higher in the mix than usual, adding extra bite to the jam sections.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:19:58.668848+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-10.sbd.lai.5679.shnf"
+}

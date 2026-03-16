@@ -1,0 +1,85 @@
+{
+  "summary": "High‑energy 3/31‑87 Spectrum show shines with a blistering Jack Straw → Franklin’s run and tight setlist; the FM broadcast matrix captures the excitement though the mix is a bit muddy.",
+  "review": "The March 31, 1987 Philadelphia concert is remembered for its scorching opening Jack Straw → Franklin’s, relentless Candyman, and an emotionally charged Brokedown Palace. Reviewers praise Jerry’s searing guitar work, tight rhythm section play, and a set that stays on fire from start to finish, while noting the FM broadcast matrix sounds good overall but can be muddied and bass‑heavy at times.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the performance (many 4–5 ★) with consistent standout song mentions; recording quality is described as decent but occasionally muddy, pulling the overall weighted score to just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "FM broadcast mix captures the band well – clear vocals and instrument separation are generally good, but several reviewers note a muddy mid‑range, bass rumble and occasional lack of instrument definition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw → Franklin's Tower",
+      "Candyman",
+      "Brokedown Palace",
+      "Estimated > Terrapin Station",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "The show bursts out of the gate with an explosive Jack Straw → Franklin’s, maintains high energy through a tight first set, dips slightly in the second‑set pacing but rebounds with powerful jams (Estimated/Terrapin, U.J.B., Stella) and ends on an emotional Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching solos, especially the Jack Straw lead‑in and multiple fiery leads in Franklin’s, Candyman and Stella.",
+    "Phil": "Described as “bombing” with strong bass lines; a few mentions of his chime work on Ramble On Rose and solid support throughout.",
+    "Bob": "Noted for roaring vocals (“keep us on the run!”) and enthusiastic delivery on Desolation Row, Candyman and Brokedown Palace.",
+    "Keys": "Brent (and occasionally Keith) receive brief nods for subtle background color on Desolation Row and overall tightness of the keyboards.",
+    "Drums": "Lively, active drumming highlighted in the first‑set “drums pounding” and second‑set drum segment described as high‑energy."
+  },
+  "song_mentions": {
+    "Jack Straw → Franklin's Tower": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Candyman": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Estimated > Terrapin Station": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "U.J.B.": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Desolation Row": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-15T20:26:30.504421+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-31.fm.miller.21267.sbeok.shnf"
+}

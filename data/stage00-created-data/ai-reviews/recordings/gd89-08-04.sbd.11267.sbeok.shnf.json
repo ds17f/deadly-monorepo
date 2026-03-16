@@ -1,0 +1,93 @@
+{
+  "summary": "Soundboard capture of an electrifying 8/4/89 Cal Expo run, highlighted by a ripping Bertha opener, Brent’s wild Queen Jane piano solo and a beloved Stella Blue encore.",
+  "review": "The recording is a clean sound‑board source that delivers clear instrument separation and plenty of stage energy.  Fans rave about the long, high‑energy first set (Bertha, Althea, Built to Last) and a second half packed with Queen Jane, Cumberland, Crazy Fingers and a soaring Stella Blue encore.  Overall the show is praised for its tight playing, Jerry’s birthday tribute in Space and Brent’s standout piano work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "22 reviews with an average of 4.45 stars; overwhelmingly positive comments about both performance and sound quality, only a single 3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as clear and well balanced; no major dropouts or muddiness noted. Listeners mention “nice sound”, “energy and sound clarity was awesome” and “sound is good”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Stella Blue",
+      "Queen Jane",
+      "Althea",
+      "Cumberland",
+      "Crazy Fingers",
+      "Built to Last",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Eyes"
+    ],
+    "setlist_flow": "Fans highlight an unusually long, 11‑song first set that kept the energy high, followed by a second set that opened with Truckin' and delivered strong mid‑set peaks (Queen Jane piano solo, Cumberland) before closing on a beloved Stella Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his high energy, vocal performance and birthday tribute during Space; several reviewers note his guitar tone and overall presence as a highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s piano work is a focal point – many call it “wild”, “awesome” and a standout solo on Queen Jane (though one reviewer joked it ‘hurt’ listeners).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Queen Jane": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Built to Last": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:16:53.380601+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-04.sbd.11267.sbeok.shnf"
+}

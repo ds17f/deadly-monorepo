@@ -1,0 +1,66 @@
+{
+  "summary": "A warm audience tape of the 1‑12‑79 Spectrum show captures a legendary second set highlighted by an epic 25‑minute Dancing in the Streets jam and Jerry Garcia’s blazing guitar work.",
+  "review": "The recording is an audience (AUD) source that, while not pristine, offers a surprisingly clear low‑end and minimal hiss, giving the listener the feel of being in the hall. Musically the show shines – the first set is solid but the second set erupts with a marathon Dancing in the Streets jam, a hot 15‑minute Not Fade Away drum solo and soaring moments from Jerry, Bob and Bill that many reviewers call “insane”. Overall sentiment is overwhelmingly positive despite occasional complaints about tape fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) are 4‑5 stars and praise the performance, especially the Dancing in the Streets sequence; recording complaints are present but limited to a minority, resulting in an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm AUD tape with good low‑frequency response and little hiss. Some listeners note the mix is “lame” or “kinda lame”, but most describe it as clear enough to enjoy the long jams; Bob’s rhythm guitar is unusually loud in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancing in the Streets (including jam with Jerry & Bill)",
+      "Not Fade Away",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid and fairly conventional; the second set explodes with a 25‑minute Dancing in the Streets, followed by an extended drum solo (NFA) and a tight finish that many reviewers cite as the highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for “on fire” guitar work, fast noodling, and a gritty ’79 tone; his voice is noted as frail but endearing.",
+    "Phil": "His bass on the drum solo (NFA) is called “hot” and provides great space in the jam.",
+    "Bob": "Mix places his rhythm guitar unusually forward – loud throughout, especially on GDTRFB where his slide is turned up high.",
+    "Keys": "Keith & Donna are highlighted as making their last Spectrum appearance; fans love hearing them even though specific playing comments are few.",
+    "Drums": "Bill Kreutzmann’s 15‑minute drum solo (NFA) receives universal acclaim as a “hot” and energetic highlight."
+  },
+  "song_mentions": {
+    "Dancing in the Streets": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-25T19:08:42.046787+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-12.claridge.kempka.309.sbeok.shnf"
+}

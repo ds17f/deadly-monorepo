@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent 1989 show with a soaring Blow Away and tasty Scarlet>Fire, captured on a decent audience recording.",
+  "review": "Both reviewers rate the performance five stars, highlighting a powerful version of \"Blow Away,\" a tasty \"Scarlet Begonias > Fire On The Mountain\" sequence, and an unexpectedly strong rendition of \"The Rooster.\"  The audience (AUD) source is described as sounding alright and superior to other audience copies, making the recording pleasant enough to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Strong musical praise across all reviews and a decent audience recording give a high combined score; only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listener notes the AUD source sounds alright and is preferable to other audience copies; no major drop‑outs or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away",
+      "Scarlet Begonias > Fire On The Mountain",
+      "The Rooster"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer calls the show a \"killer\" with many highlights, indicating an overall energetic and well‑flowing set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s boogie on keyboards is praised for its soulfulness.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:38:57.186910+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-07.nak300.andrewf.96993.flac24"
+}

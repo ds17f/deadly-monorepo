@@ -1,0 +1,31 @@
+{
+  "summary": "Mixed reception – a handful of fans love the show (especially Jerry) while others are unimpressed, and no recording details are provided.",
+  "review": "Two reviews give conflicting impressions: one rates the recording low with no commentary, while another gives it five stars and simply praises Jerry’s presence. No specific comments about sound quality or setlist were offered, leaving the technical side unknown and the musical highlights vague.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "One high‑rating (5★) enthusiastic review versus one low‑rating (2★) with no detail results in an average around the middle of the scale; limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details provided about the set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive praise – reviewer says “I like this show Jerry!!!!”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T06:01:36.418222+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-20.nak300.morrone.120288.flac1644"
+}

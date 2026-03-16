@@ -1,0 +1,51 @@
+{
+  "summary": "Listen‑able audience tape of a solid late‑'78 show with hot Shakedown Street and Franklin’s Tower, but the recording is only fair.",
+  "review": "The performance captures a strong Thanksgiving night in 1978 – Jerry played through a cold, Shakedown Street and the half‑step into Franklin’s Tower were highlights, and Tennessee Jed lifted the set. The audience (AUD) source isn’t pristine; reviewers note muffled sound and missing keyboard presence, yet it remains enjoyable for fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (≈4/5) while recording quality is described as only fair to decent (≈3/5); weighted average yields ~3.7 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound isn’t great – a bit muffled and requires ear adjustment; some parts missing (incomplete Tennessee Jed) and Keith’s keyboards are almost absent, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Franklin's Tower",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well with a strong opening, the space‑jam into Shakedown Street, and a hot half‑step transition into Franklin’s Tower; despite Jerry’s cold the band keeps energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Playing through a cold but still delivering solid lead work.",
+    "Phil": "",
+    "Bob": "Bobby's comp lines come forward, especially with Keith low in the mix.",
+    "Keys": "Keith is almost nonexistent; fell off his stool, leaving keyboards barely audible.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:51:36.804954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-23.aud.wiley.11668.sbeok.shnf"
+}

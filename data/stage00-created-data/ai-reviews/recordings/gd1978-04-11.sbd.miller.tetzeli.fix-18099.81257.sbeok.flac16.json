@@ -1,0 +1,31 @@
+{
+  "summary": "Great show hampered by a badly equalized soundboard recording",
+  "review": "The performance is praised as great, but the recording suffers from poor equalization that leaves the bass recessed and the mix muddy. The source appears to be a stereo soundboard (sbd) with only modest audio clarity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Review highlights an excellent musical performance but notes significant EQ problems; the weighted average of show quality (high) and recording quality (low) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Bad equalization, bass recessed, overall mix sounds muddy"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass appears weak/recessed due to poor EQ",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T10:16:47.019826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-11.sbd.miller.tetzeli.fix-18099.81257.sbeok.flac16"
+}

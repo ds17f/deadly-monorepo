@@ -1,0 +1,74 @@
+{
+  "summary": "Epic second‑set fire performances and tight jams all night",
+  "blurb": "The Spectrum show delivers a blistering second set highlighted by Bertha → Good Lovin', Terrapin Station, Truckin' and an uplifting One More Saturday Night encore. Jerry’s guitar is on the edge of joy while Phil lays down high‑intensity bass. Both soundboard and audience tapes capture the band in top form.",
+  "review": "May 13, 1978 at The Spectrum captured a Grateful Dead that was firing on all cylinders. The first set opened strong with Jack Straw, Candyman and The Music Never Stopped, but it’s the second set that truly shines – Bertha segues straight into a rousing Good Lovin', followed by an expansive Terrapin Station that bursts into a soaring Playing In The Band → Drums → Space marathon before collapsing back into Truckin' and a jubilant finish with Sugar Magnolia. The Rhythm Devils stretch out on drums, and Keith’s keyboards are described as “not asleep,” adding vivid color throughout. The encore’s One More Saturday Night leaves the house buzzing. Both the crystal‑clear Miller soundboard tape and the solid audience recording confirm that this night was a high‑energy, tightly locked‑in performance worth revisiting.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Both recordings are marked as positive; reviewers repeatedly praise the epic second‑set flow, fierce guitar work, high‑intensity bass, and vivid keyboard playing with no notable criticism. Consistent acclaim across multiple sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1978-05-13.sbd.set2.miller.116978.flac16",
+    "reason": "Crystal‑clear soundboard capture with excellent mix, no dropouts, and the most vivid rendering of the epic second set."
+  },
+  "key_highlights": [
+    "Epic Bertha → Good Lovin' segue that launches a high‑energy second set.",
+    "Terrapin Station and Playing In The Band/Drums/Space jam showcase tight band interplay.",
+    "Jerry’s fierce guitar and vocal joy, especially on Candyman and the soaring solos.",
+    "Keith’s lively keyboards and powerful Rhythm Devils drumming add extra fire."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Bertha",
+    "Good Lovin'",
+    "Terrapin Station",
+    "Truckin'",
+    "One More Saturday Night",
+    "Candyman"
+  ],
+  "band_performance": {
+    "Jerry": "Fierce guitar work and vocal joy dominate, with a gritty ‘moaning’ on Candyman that fans love.",
+    "Phil": "High‑intensity bass lines drive Truckin' and he commands the front stage throughout the set.",
+    "Bob": "",
+    "Brent": "",
+    "Keith": "Lively, vivid keyboard work; reviewers note he’s “not asleep” at the piano, adding color to every jam.",
+    "Mickey": "Delivers high‑intensity drumming, especially during the Rhythm Devils segment.",
+    "Billy": "Pairs with Mickey for powerful, relentless drum passages that propel the second‑set energy."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-25T12:50:02.958435+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Bertha",
+      "Good Lovin'"
+    ],
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    [
+      "One More Saturday Night"
+    ],
+    [
+      "Candyman"
+    ]
+  ]
+}

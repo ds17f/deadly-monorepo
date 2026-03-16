@@ -1,0 +1,74 @@
+{
+  "summary": "A high‑energy Denver FOB audience tape that captures standout performances of Peggy‑O, Little Red Rooster and Terrapin Station, despite occasional mix quirks and chatter.",
+  "review": "The recording is a solid front‑of‑house (FOB) audience capture that most reviewers describe as clear with clean tape changes, though a few note boxy tones and mic‑adjustment chatter. Musically the show shines – Jerry’s vocals on Peggy‑O are praised, Little Red Rooster and Terrapin Station receive glowing mentions, and the second set is repeatedly called “whipping ass.” A handful of listeners point out mix imbalances (Vince too forward, Bob buried) and a negative reaction to Corrina.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars praising the performance and noting good audience recording quality; only a few low‑star comments cite minor mix issues, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear FOB tape with clean tape changes and good ambience; occasional mic readjustments cause chatter, some beeping sounds, a boxy tonal quality, and imbalance (Vince loud, Bob recessed)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Little Red Rooster",
+      "Terrapin Station",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Corrina"
+    ],
+    "setlist_flow": "Both sets are described as solid and energetic, with the second set especially praised for nonstop momentum; the blizzard/storm backdrop adds to the memorable atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals in rare form on Peggy‑O; generally feeling good throughout the show.",
+    "Phil": "",
+    "Bob": "One reviewer notes Bob (Weir) is too far back in the mix.",
+    "Keys": "Vince Welnick is described as overly prominent in at least one mix comment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gloria": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:26:08.425631+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-03.neumann.vernon.9474.sbeok.shnf"
+}

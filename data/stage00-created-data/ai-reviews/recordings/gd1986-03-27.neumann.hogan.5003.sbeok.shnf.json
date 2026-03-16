@@ -1,0 +1,31 @@
+{
+  "summary": "The recording is noted for being overly fast and pitch‑sharp, with no commentary on the musical performance.",
+  "review": "Both reviewers highlight a serious playback problem – the tape runs about half a tone sharp and sounds too fast – which detracts from the listening experience. No remarks are made about the band's playing or any standout moments, leaving the show quality undefined.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Both reviews focus on a major recording flaw and give low star ratings (3 and 2). With no positive comments about the performance, the overall rating leans toward the lower end of the scale."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Playback is too fast, resulting in a half‑tone sharp pitch; described as 'up front' but suffers from speed/pitch distortion."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the set or song flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T14:00:52.098918+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-27.neumann.hogan.5003.sbeok.shnf"
+}

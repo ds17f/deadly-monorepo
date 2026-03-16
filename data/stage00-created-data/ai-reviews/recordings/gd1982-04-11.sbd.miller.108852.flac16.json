@@ -1,0 +1,45 @@
+{
+  "summary": "Recording source not described, but fans praise a fiery Brent solo and the rare Row Jimmy performance.",
+  "review": "The few reviews focus on musical moments rather than audio fidelity – a gritty, soulful guitar line followed by an angry Brent Mydland keyboard solo is highlighted, and the show is noted for featuring one of only three Row Jimmy performances in 1982. Recording quality isn’t discussed, so the tape’s technical merits remain unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Positive comments about individual musical moments (two 5‑star and one 4‑star) are offset by a zero‑star rating and lack of concrete recording quality feedback, leading to a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentions sound clarity, mix balance, or source type; therefore the technical quality cannot be assessed from the available comments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Row Jimmy",
+      "Beat It On Down the Line"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviews do not describe overall set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland delivers an angry, hellacious solo that reviewers single out as a highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:49:31.738347+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-11.sbd.miller.108852.flac16"
+}

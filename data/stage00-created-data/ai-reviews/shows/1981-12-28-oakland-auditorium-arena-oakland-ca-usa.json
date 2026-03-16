@@ -1,0 +1,64 @@
+{
+  "summary": "Solid New Year's show with strong Lost Sailor→Saint and Never Trust A Woman",
+  "blurb": "The second set shines with a standout Lost Sailor → Saint transition and an inspired Space jam. Jerry’s guitar work is praised throughout the first set while Phil lays down “bombs galore” on bass. Overall the performance is tight and cohesive despite mixed recording quality across sources.",
+  "review": "December 28, 1981 at Oakland Auditorium Arena finds the Dead in a solid groove as they close out their New Year’s run. The first set rolls through familiar Garcia‑fronted material with Jerry delivering “great” guitar tones, highlighted by a fiery Lost Sailor → Saint sequence that many listeners cite as a high point. Phil’s bass is described as “bombs galore,” anchoring the band while Brent’s keyboards and the dual drummers keep the energy humming. The second set builds momentum into an expansive Space segment before diving into The Other One, Stella Blue, and a rollicking Good Lovin’. Though recording quality varies—ranging from a clear soundboard capture to hissy audience tapes—the show’s musicality remains intact, offering tight transitions, strong jams on Never Trust A Woman, and a satisfying encore with U.S. Blues.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Most recordings note positive aspects—solid playing, standout Lost Sailor→Saint sequence, Phil's powerful bass, and Jerry's strong guitar—while none report consistent negative criticism. The mix of one clearly positive review and several mixed but still favorable comments yields a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.7 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd81-12-28.sbd.hinko.21036.sbeok.shnf",
+    "reason": "Clear soundboard source with pleasant mix and no drop‑outs, capturing the show’s energy most faithfully."
+  },
+  "key_highlights": [
+    "Strong second‑set jams, especially Lost Sailor → Saint and Space.",
+    "Phil's bass described as \"bombs galore\" throughout the performance.",
+    "Never Trust A Woman stands out as a highlight in the first set.",
+    "Overall tight transitions and cohesive flow despite varied recording quality."
+  ],
+  "song_highlights": [
+    "Lost Sailor",
+    "Saint Of Circumstance",
+    "Never Trust A Woman",
+    "Space"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar work is praised as great throughout the first set, driving the band with confidence.",
+    "Phil": "Lesh delivers powerful bass lines—“bombs galore”—that anchor the group and add extra punch.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-13T17:43:07.977646+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance"
+    ],
+    [
+      "Never Trust A Woman"
+    ],
+    [
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Around & Around",
+      "Good Lovin'"
+    ]
+  ]
+}

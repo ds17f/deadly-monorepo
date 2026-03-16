@@ -1,0 +1,88 @@
+{
+  "summary": "Clear soundboard capture of a marathon 1994 show with stellar highlights like El Paso, Victim and a superb Saint of Circumstance.",
+  "review": "Both reviewers rave about the strength of this 1994 performance – a long, jam‑filled second set and a first set packed with standout numbers such as El Paso, Tom Thumb's Blues, Victim, and an especially powerful Saint of Circumstance. The Charlie Miller soundboard source is reported as clean and well‑mixed, though the Terrapin Station suite suffers from minor timing hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "The show receives high marks for musical highlights and overall energy, while the recording is clean; a small negative note on Terrapin timing keeps it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard source (Charlie Miller); clear and well‑balanced mix with no reported audio problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "El Paso",
+      "Tom Thumb's Blues",
+      "Victim",
+      "Saint of Circumstance",
+      "Terrapin Station",
+      "Eyes",
+      "Drums > Space > Wheel",
+      "Dew"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "Two solid sets with a marathon second set (~2 hours) packed with extended jams and smooth transitions, keeping the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for nailing the Terrapin solo and teasing Deal; strong lead guitar work noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Nice Drums>Space>Wheel segment highlighted by reviewers."
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space > Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:51:12.340678+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-06-26.138699.sbd.miller.flac1644"
+}

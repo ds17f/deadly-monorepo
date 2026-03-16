@@ -1,0 +1,44 @@
+{
+  "summary": "The recording is plagued by a mislabeled track – U.S. Blues appears as \"Wave That Flag\" – and provides no useful information on sound quality.",
+  "review": "Both reviewers criticize the apparent misidentification of the early‑1973 performance of U.S. Blues, noting it is listed under the obscure title \"Wave That Flag\" and describing the rendition as musically undeveloped. No comments are made about the audio source or mix, leaving the technical quality uncertain.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only two very negative reviews focusing on track mislabeling; no positive remarks about performance or recording to boost the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not discuss sound clarity, mix, or source type, so recording quality cannot be assessed beyond being unremarkable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "U.S. Blues / Wave That Flag"
+    ],
+    "setlist_flow": "Reviews only mention a mislabeled encore; no commentary on overall set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Wave That Flag": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T05:38:58.638326+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-22.sbd.hamilton.166.shnf"
+}

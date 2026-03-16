@@ -1,0 +1,56 @@
+{
+  "summary": "Fair‑quality audience recording of a historically momentous show highlighted by the debut of Unbroken Chain, though musical performance is mixed.",
+  "review": "The tape captures the excitement of hearing Unbroken Chain for the first time in Philadelphia, with crowd reactions that give the set its only real spark.  Musically the concert is uneven – Jerry’s vocals and a few bright moments (Stella Blue, Crazy Fingers) shine, but the second set feels lackluster and the mix is a bit hollow and boomy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed – historic high point (Unbroken Chain) versus overall weak performance, while the audience recording is decent but not pristine.  The balance of positive and negative reviews yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hollow‑sounding mix with recessed vocals, the first few seconds of \"Alabama Getaway\" clipped, arena boomy ambience; overall listenable but not crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Unbroken Chain",
+      "Stella Blue",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A surprisingly short five‑song first set ends with a historic Unbroken Chain breakout that electrifies the crowd; the second set drifts and feels lackluster, leaving the show dependent on the historic moment."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice on \"Crazy Fingers\" is praised as wonderful; some note his vocals are recessed or sound older, but generally he sounded into the material.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 6,
+      "negative_mentions": 8,
+      "total_mentions": 14
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mathilda": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:09:49.927241+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-19.schoeps.wiley.7479.shnf"
+}

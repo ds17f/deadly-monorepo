@@ -1,0 +1,57 @@
+{
+  "summary": "Vivid audience recording of a fiery second‑set, highlighted by Jerry’s soaring guitar and standout renditions of Jack‑a‑Roe, World to Give and Playing in the Band.",
+  "review": "The set bursts out of the gate with a jam that rolls straight into drums before launching into a spectacular sequence of Jack‑a‑Roe, Playing in the Band > Shakedown Street > World to Give. Reviewers rave about Jerry Garcia’s “big fat chords” and lemon‑squeezer arpeggios, while noting the recording captures lively audience ambience despite an out‑of‑phase stereo issue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical performance (standout jams and guitar work) weighted heavily, offset slightly by a modest recording flaw (phase problem). Consistent high star ratings across four reviews give confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Lively, personable sound with clear audience presence; however both channels are out of phase, causing a slightly smeared stereo image."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-a-Roe",
+      "Playing in the Band",
+      "Shakedown Street",
+      "World to Give"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set flows organically from a drum‑focused jam into a seamless medley, keeping momentum high and audience energy up throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as having \"it\" that night—big fat chords, lemon‑squeezer arpeggios, and a magical tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The opening jam “into drums” is highlighted as a driving force for the set."
+  },
+  "song_mentions": {
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "World to Give": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T16:39:20.128011+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-20.set2-aud.sacks.302.sbefail.shnf"
+}

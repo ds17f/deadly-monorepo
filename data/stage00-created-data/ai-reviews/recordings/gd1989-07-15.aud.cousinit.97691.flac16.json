@@ -1,0 +1,75 @@
+{
+  "summary": "A high‑energy 7/15/89 Indiana show captured on a clear audience tape, highlighted by Garcia’s soaring Birdsong, Crazy Fingers and a rousing Bertha opener.",
+  "review": "The concert is remembered for its enthusiastic crowd and strong first‑set work – Garcia’s bird‑songing guitar, the fiery Crazy Fingers jam, Truckin’, Smokestack Lightning, Peggy‑O and Foolish Heart all get rave mentions.  The audience recording, while subject to the venue’s modest acoustics, is praised as clear and lively enough to convey the night’s excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4–5 stars and highlighted both a solid performance and an enjoyable audience recording; the weighted average of show (70%) and tape quality (30%) supports a rating in the low‑4s."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to hear the band distinctly, with strong crowd ambience; venue acoustics were not ideal but the tape remains listenable and captures the energy of the night."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Crazy Fingers",
+      "Truckin'",
+      "Smokestack Lightning",
+      "Peggy-O",
+      "Foolish Heart",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opened boldly with Bertha, then rolled through a tight first set packed with classic Dead numbers; the flow was praised as energetic and well‑sequenced, keeping the audience fully engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted as strong, especially his bird‑songing leads on several tunes.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:27:38.781163+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-15.aud.cousinit.97691.flac16"
+}

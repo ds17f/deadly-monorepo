@@ -1,0 +1,70 @@
+{
+  "summary": "High‑energy show with standout Touch, China Cat, Uncle John’s Band and Love The One You’re With; recording quality not noted but assumed solid.",
+  "review": "Fans rave about the scorching second set – early “Touch”, a fast‑tempo “China Cat”, a joyous “Iko Iko” and an electrifying “Love The One You’re With”. Jerry’s guitar work is praised for sharpness and lyrical recall, while Phil’s thunderous claps add extra sparkle. No recording issues are reported, so the tape is presumed listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All five reviews are 4–5 stars and highlight strong performances with no technical complaints; thus a high combined score for show (70 %) and assumed good recording (30 %)."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not discuss the audio source or sound issues, implying no obvious problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "China Cat",
+      "Uncle John's Band",
+      "Iko Iko",
+      "Love The One You're With"
+    ],
+    "poor_songs": [
+      "Little Star"
+    ],
+    "setlist_flow": "First set described as typical, while the second set builds momentum with high‑tempo numbers and guest Steve Stills, culminating in a wild space leading into “Love The One You’re With”."
+  },
+  "band_member_comments": {
+    "Jerry": "Fine form, sharp guitar start out of the gate, remembered lyrics; overall praised throughout.",
+    "Phil": "Thunder claps on “Love The One You're With” highlighted as a highlight.",
+    "Bob": "\"Little Star\" called \"kind of stupid\", indicating a weak moment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Love The One You're With": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:30:29.400461+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-16.rolfe.weiner.7316.sbeok.shnf"
+}

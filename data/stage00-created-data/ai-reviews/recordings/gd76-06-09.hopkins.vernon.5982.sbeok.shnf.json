@@ -1,0 +1,97 @@
+{
+  "summary": "Excellent audience recording of the June 9 1976 Boston Music Hall show, highlighted by a soaring St Stephen, hypnotic Eyes of the World and a transcendent Franklin’s Tower.",
+  "review": "The June‑9‑1976 concert is repeatedly praised for its tight yet trippy performance, with standout moments on St Stephen, Eyes of the World, Let It Grow, Crazy Fingers and Franklin’s Tower.  The audience (AUD) source captures a warm, immersive crowd vibe; most listeners note it sounds clean after a modest mid‑range EQ tweak, though a few cite occasional vocal drop‑outs and an SBD patch in “Eyes”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (10/13) are 4–5 stars and extol the musical performance, while recording comments are mostly positive with only a few isolated complaints."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm low‑end, clear vocals on most tracks; mid‑range often needs to be cut for optimal balance. One reviewer mentions a brief SBD patch in “Eyes” and another says vocals are hard to hear, but overall the audience tape is considered one of the better 1976 AUDs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint Stephen",
+      "Eyes of the World",
+      "Let It Grow",
+      "Cassidy",
+      "Crazy Fingers",
+      "Looks Like Rain",
+      "They Love Each Other",
+      "Franklin's Tower",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds nicely from a powerful first‑set opener into a seamless St Stephen → Eyes transition, maintaining high energy through the second set and closing with an uplifting Franklin’s Tower encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong vocal presence and clear guitar tone; his voice is described as excellent and his playing “effortless and trippy”.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:31:12.041231+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-09.hopkins.vernon.5982.sbeok.shnf"
+}

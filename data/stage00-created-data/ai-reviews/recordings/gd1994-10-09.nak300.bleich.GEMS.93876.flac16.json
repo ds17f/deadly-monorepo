@@ -1,0 +1,31 @@
+{
+  "summary": "Great recording of a nice show, with fans noting Jerry's presence before the end.",
+  "review": "Both reviewers gave the performance five stars, calling it a “nice” show and praising the recording as great. While no specific songs or technical details are mentioned, the overall vibe is positive and listeners appreciate being able to relive the concert experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews are enthusiastic five‑star ratings, indicating an excellent performance and a recording that fans found satisfying, though limited detail reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as \"great\" but provides no further technical details."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers simply enjoyed the overall show."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned positively as being present before the end of the concert.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T02:50:25.667030+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-09.nak300.bleich.GEMS.93876.flac16"
+}

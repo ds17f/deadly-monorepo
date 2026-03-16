@@ -1,0 +1,98 @@
+{
+  "summary": "A high‑energy April ’82 show captured on a strong audience recording, highlighted by a soaring Peggy‑O, sweet Sugaree and an unforgettable Bird Song.",
+  "review": "The performance is consistently praised for its lyrical Jerry Garcia solos, tight rhythm section and standout moments such as Peggy‑O, Sugaree, Stella and a blistering Bird Song. The audience recording delivers clear stereo dynamics with only a slightly low bass presence, making the show both enjoyable and listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and describe it as a favorite; recording quality is repeatedly called great with only minor bass issues, yielding an overall high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear stereo imaging and crisp mix praised throughout; the bass signal sits a little low in places but there are no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Sugaree",
+      "Stella",
+      "Bird Song",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds momentum with Iko, Peggy‑O and Bird Song; the second set delivers sustained peaks on Sugaree, Estimated, Stella and a rousing Satisfaction encore, keeping the audience locked in from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for lyrical, ‘sprightly’ solos and beautiful vocal work on Peggy‑O and Bird Song; his guitar tone is described as one of the best heard on this run.",
+    "Phil": "Noted for wild, bomb‑dropping bass lines; while the recording’s low‑frequency response is a bit thin, his playing shines through.",
+    "Bob": "His vocals on Estimated (and other numbers) are called terrific and unshowy, adding strong melodic support.",
+    "Keys": "Brent Mydland praised for consummate keyboard prowess and vocal harmony; he locks with Jerry during the Bird Song duet.",
+    "Drums": "Both drummers are described as locked in from the outset, providing a solid rhythmic foundation throughout."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T19:57:25.159196+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-12.aud.glyde.9508.sbeok.shnf"
+}

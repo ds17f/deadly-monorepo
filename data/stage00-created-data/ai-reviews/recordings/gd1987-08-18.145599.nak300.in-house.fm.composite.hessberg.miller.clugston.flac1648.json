@@ -1,0 +1,87 @@
+{
+  "summary": "Legendary ’87 show with scorching Bertha and tight jams, captured on a patched FM‑matrix that’s good despite some frequency quirks.",
+  "review": "The performance is hailed as one of the best of the hot summer ’87 tour – highlights include an all‑rounder Sugaree, a blistering Ramble On Rose, a legendary Bertha and a soaring Dear Mr. Fantasy. Recording wise the composite FM source (matrix) has been nicely patched but suffers from uneven highs/lows and a clipped tail on Lovelight, so it’s listenable but not pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "The reviewer gives five stars and praises both the musical performance and the recording (noting only minor EQ/clipping issues), leading to a high overall rating despite limited review count."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Composite FM broadcast patched with other sources; frequencies are uneven (need roll‑off around 600 Hz and boost >8 kHz); last seconds of Lovelight are clipped."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Ramble On Rose",
+      "My Brother Esau",
+      "Greatest Story Ever Told",
+      "Bertha",
+      "Playing in the Band",
+      "Dear Mr. Fantasy",
+      "Throwing Stones",
+      "Turn on Your Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds solidly with bright tempos; second set kicks off with an uptempo Playin' and maintains high energy through Terrapin, a strong Drums/Space segment, and finishes on a party‑closing Lovelight."
+  },
+  "band_member_comments": {
+    "Jerry": "Jer’s guitar is described as \"ON\" throughout, especially on Ramble On Rose.",
+    "Phil": "Phil goes off during Greatest Story Ever Told and shines on Playing in the Band; both drummers and Phil are praised for their energy.",
+    "Bob": "Bobby’s rhythm work is highlighted on My Brother Esau and Throwing Stones, where he drives the band overdrive.",
+    "Keys": "Brent (keyboard) plays crazily, matching the level on Dear Mr. Fantasy.",
+    "Drums": "Both drummers (Bill & Mickey) amaze; Drums segment is called \"good\"."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "My Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn on Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:07:20.705598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-18.145599.nak300.in-house.fm.composite.hessberg.miller.clugston.flac1648"
+}

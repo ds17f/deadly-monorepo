@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture of a relaxed show, highlighted by a superb U.S. Blues and Jerry’s exceptional pedal‑steel work.",
+  "review": "The three reviewers all praise the recording’s clear, great‑sound quality and describe the performance as a nice, chill set that really shines on U.S. Blues and the unexpected pedal‑steel showcase from Jerry. No technical flaws are mentioned, and the overall vibe is described as wonderful and “absolutely rocks.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviews are positive (4–5 stars) and comment on both good sound quality and a strong performance, especially the U.S. Blues and pedal‑steel moments; this yields a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers repeatedly note “great sound” and “wonderful place to make something better,” with no complaints about muddiness, drop‑outs or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a relaxed, chill set that flows nicely and is especially memorable for the pedal‑steel highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his exceptional pedal‑steel playing, one of the finest in the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:26:35.717659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-12.sbd.serafin.18805.sbeok.shnf"
+}

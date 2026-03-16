@@ -1,0 +1,82 @@
+{
+  "summary": "Good FM‑broadcast capture of an ’84 classic with a smoking Looks Like Rain and stellar Scarlet > Fire, though the mix is treble‑heavy and bass‑light.",
+  "review": "The show is widely praised for its standout performances – especially the soaring Looks Like Rain, fiery Scarlet Begonias > Fire segue and superb Bird Song – making it one of the top Dead concerts of 1984.  The recording comes from an FM broadcast; most listeners find it clear enough to enjoy, but several note a bright treble bias and thin low end that can mask some instruments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 20 reviews with an average of ~4.1 stars, the majority are enthusiastic about the performance and deem the FM broadcast listenable despite some tonal complaints."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally regarded as a solid FM‑broadcast source; many say it’s crisp, but several note excessive treble, thin bass and occasional instrument masking (Phil's bass, Brent's keys)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Scarlet Begonias > Fire",
+      "Bird Song",
+      "Terrapin",
+      "The Wheel",
+      "Throwing Stones",
+      "Might As Well"
+    ],
+    "poor_songs": [
+      "Duprees"
+    ],
+    "setlist_flow": "Reviewers describe a killer first set and an even stronger second set, highlighting the seamless transition from Scarlet into Fire and the powerful closing trio of LLR, Bird Song, and Terrapin."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for his guitar work (especially on Scarlet) and energetic vocals; one reviewer notes a slightly strained voice typical of the mid‑80s.",
+    "Phil": "Often buried in the mix; several reviewers say the bass is barely audible or missing.",
+    "Bob": "Mentioned as virtually nonexistent in at least one negative review; otherwise not highlighted.",
+    "Keys": "Brent’s keyboards are reported as missing or very low in the FM mix by a critic, though no positive keyboard comments appear.",
+    "Drums": "Drum presence is solid but some note overpowering cymbal crashes."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Scarlet Begonias > Fire": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Duprees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:29:28.458437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-21.sbe.tbrame.15405.sbeok.shnf"
+}

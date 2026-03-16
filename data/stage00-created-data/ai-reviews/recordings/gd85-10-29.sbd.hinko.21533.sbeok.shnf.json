@@ -1,0 +1,82 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an ’85 Fox Theatre show with smoking Stranger, epic Sailor > Saint > Crazy Fingers jam and a standout Franklin’s Tower/Other One second set",
+  "review": "Fans rave that this is one of the best‑sounding SBDs from the mid‑80s – crystal clear, no hiss and a pristine mix that lets every instrument shine. Musically the concert is a high point: a hot Stranger opener, a superb Sailor > Saint > Crazy Fingers sequence, smoking Half Step, multiple Franklin’s Tower renditions and a soaring Other One jam make the second set unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, most 5‑star, all praising both performance and sound quality; only minor lyrical slip noted. Weighted show (70 %) and recording (30 %) scores are both excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crystal‑clear, superior mix with no hiss or distortion; many call it the best soundboard of this era and note flawless mastering throughout both sets."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Sailor > Saint > Crazy Fingers",
+      "Half Step",
+      "Franklin's Tower",
+      "The Other One",
+      "Friend of the Devil",
+      "Hell in a Bucket"
+    ],
+    "poor_songs": [
+      "St. of Circumstance (out of sync)"
+    ],
+    "setlist_flow": "First set is short but packed with fire (Stranger, Friend of the Devil); the second set launches into an extended Sailor‑Saint‑Crazy Fingers jam, flows through Half Step and Franklin’s Tower, and climaxes with a soaring Other One. The pacing is praised as tight and exhilarating."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone described as perfect; vocals on Friend of the Devil highlighted as strong, though one reviewer notes a lyrical stumble during Crazy Fingers.",
+    "Phil": "Bass called “rock solid” by listeners, providing a firm foundation throughout the jams.",
+    "Bob": "Bobby’s scream after the bridge in Hell in a Bucket is celebrated as a classic Weir move.",
+    "Keys": "Brent (keyboard) praised as rock‑solid; overall keyboards noted as “nice” and integral to the jam flow.",
+    "Drums": "Bill's drumming described as solid and “drippy” during the Crazy Fingers segment, keeping the groove tight."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sailor > Saint > Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:58:20.809580+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-10-29.sbd.hinko.21533.sbeok.shnf"
+}

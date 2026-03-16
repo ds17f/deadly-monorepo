@@ -1,0 +1,69 @@
+{
+  "summary": "Dark Star jam and Corinna shine; solid Hornsby‑Jerry interplay",
+  "blurb": "The show delivers a scorching Dark Star/Space excursion and a fiery Corinna medley, highlighted by tight Hornsby‑Garcia interplay. Jerry’s guitar is rich on the early jams while Phil lays down a phat bass line throughout.",
+  "review": "On March 9, 1992 at the Capital Centre, the Dead rolled out a setlist that balanced classic roots with late‑era firepower. The first set opened with a tight “Jack Straw” and surged through “Cassidy > Deal,” setting a high‑energy tone that carried into an electric second half. The centerpiece was the dark‑starred voyage: a soaring Dark Star that melted into space, followed by a blistering “Corinna” jam where Jerry’s thoughtful lead wove perfectly with Bruce Hornsby’s piano textures. The post‑drums medley of “Victim Or The Crime > Iko Iko > Corinna” kept the momentum blazing, and the evening closed on a haunting “Morning Dew.” While Jerry showed signs of fatigue toward the end, his early‑night brilliance and the band’s tight rhythm section made this a standout 1992 performance. Fans looking for the definitive capture should gravitate to the crisp soundboard recording that showcases every nuance without dropouts.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 32,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings praise the show (Dark Star, Corinna, Hornsby‑Garcia interplay) while two are mixed and one negative; overall sentiment is clearly positive but not unanimous, warranting a moderate +1.2 boost.",
+      "final_calculation": "2.5 + 0.3 + 1.2 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd92-03-09.sbd.braverman.9755.sbeok.shnf",
+    "reason": "Crisp, clean soundboard feed with excellent instrument separation; captures the full show without hiss or dropouts."
+  },
+  "key_highlights": [
+    "Scorching Dark Star > Space excursion with tight Hornsby‑Garcia interplay",
+    "Fiery Corinna medley and post‑drums Victim Or The Crime > Iko Iko > Corinna sequence",
+    "Strong early set featuring Jack Straw, Cassidy > Deal, and Row Jimmy"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Cassidy",
+    "Deal",
+    "Victim Or The Crime",
+    "Iko Iko",
+    "Corinna",
+    "Dark Star",
+    "Morning Dew"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a rich, thoughtful guitar tone on Dark Star and Corinna with standout interplay with Bruce Hornsby; energy tapers slightly later in the night.",
+    "Phil": "Lays down a phat, driving bass line especially on Corinna, providing solid foundation throughout.",
+    "Bob": "Vocals are solid with a humorous slip on the \"dark sard\" line; his singing shines on Corinna.",
+    "Bruce": "Keyboard work adds vibrant texture and dynamic interplay, particularly during the Hornsby‑Garcia sections and the space jam.",
+    "Mickey": "Provides steady, propulsive rhythms that lift the second‑set jams.",
+    "Billy": "Delivers crisp drum work; his contributions help drive the high‑energy medleys."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-18T04:26:26.850915+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw",
+      "West L.A. Fadeaway"
+    ],
+    [
+      "Cassidy",
+      "Deal"
+    ],
+    [
+      "Victim Or The Crime",
+      "Iko Iko",
+      "Corinna",
+      "Dark Star",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Morning Dew"
+    ]
+  ]
+}

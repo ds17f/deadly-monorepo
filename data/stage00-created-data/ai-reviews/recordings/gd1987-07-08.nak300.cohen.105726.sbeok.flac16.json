@@ -1,0 +1,69 @@
+{
+  "summary": "Clean tape captures a solid Roanoke show with standout performances of Cumberland Blues, Crazy Fingers, and Sugar Magnolia.",
+  "review": "The three reviewers agree this July‑8‑1987 Roanoke concert is a hidden gem – a well‑played set that shines especially on the bluesy first‑set cuts and an emotionally charged second set highlighted by Scarlet Fire, Crazy Fingers and Sugar Magnolia. The recording is praised as clear and clean, making it an enjoyable listen despite the show falling in what some consider a weaker year for the Dead.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Consistently high praise for musical performance (70% weight) and clean, clear audio (30% weight) across three detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the tape as clean and crisp with no major drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "Big Railroad Blues",
+      "Let It Grow",
+      "Scarlet Fire",
+      "Crazy Fingers",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid first set of blues‑heavy numbers flows into a sentimental, tight second set where the crowd erupts, especially during Scarlet Fire and the high‑energy jams on Crazy Fingers and Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:42:40.960514+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-08.nak300.cohen.105726.sbeok.flac16"
+}

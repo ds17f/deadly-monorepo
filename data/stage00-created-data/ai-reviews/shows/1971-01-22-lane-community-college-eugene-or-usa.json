@@ -1,0 +1,56 @@
+{
+  "summary": "Raw early‑1970s set with spirited Casey Jones and heartfelt Brokedown Palace",
+  "blurb": "The concert opens with a frantic Casey Jones and runs over two ½ hours of blues‑rock and psychedelia. Highlights include an inspired Brokedown Palace and a lively Hard To Handle despite occasional missteps. The muddy soundboard captures the raw energy of the early ’71 lineup.",
+  "review": "On January 22, 1971 at Lane Community College the Dead delivered a sprawling two‑and‑a‑half hour set that swings between high‑octane blues and tentative psychedelia. A raucous Casey Jones kicks things off, leading into a mix of familiar numbers—Beat It On Down The Line, It Hurts Me Too, Me And My Uncle—and a lengthy Hard To Handle jam that shows both sparks of Jerry’s “train‑like” lead and moments where the band drifts out of sync. Phil steps in to steady the tempo, but the performance never quite settles into a smooth groove. Brokedown Palace shines as a heartfelt centerpiece, while the set closes with the classic China Cat Sunflower → I Know You Rider segue that hints at the improvisational heights the group would later reach.\n\nThe only recording available is a mud‑filled soundboard tape from a reused reel‑to‑reel. Hiss, distortion and occasional dropouts keep the fidelity fair, but an EQ boost can coax out enough detail to hear the band’s raw enthusiasm. For fans of early ’70s Dead who appreciate unpolished authenticity, this show offers a compelling snapshot despite its technical flaws.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "The single recording analysis describes mixed sentiment: positive notes about high energy, inspired Brokedown Palace and spirited Casey Jones, but also negative remarks about out‑of‑sync playing during Hard To Handle and overall muddy sound. The balance of praise and criticism leads to a neutral adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd71-01-22.sbd.cotsman.12592.sbeok.shnf",
+    "reason": "Muddy soundboard captures the full set and preserves the raw energy of this early‑1971 performance, despite low fidelity."
+  },
+  "key_highlights": [
+    "High‑energy opening with Casey Jones sets an urgent tone.",
+    "Heartfelt Brokedown Palace stands out as a lyrical high point.",
+    "Hard To Handle jam showcases both sparks and sync issues, highlighting the band's raw improvisational drive.",
+    "Smooth transition from China Cat Sunflower into I Know You Rider hints at later classic pairings."
+  ],
+  "song_highlights": [
+    "Casey Jones",
+    "Hard To Handle",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "His solo work draws mixed reactions – a ‘train‑like’ lead on Hard To Handle is praised, but he had to restart leads due to band mis‑sync.",
+    "Phil": "Steps in to steer the Hard To Handle jam back on track and corrects tempo lapses.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-20T02:16:18.588173+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Casey Jones"
+    ],
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

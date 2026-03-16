@@ -1,0 +1,51 @@
+{
+  "summary": "Decent sound with a bass‑heavy mix; solid playing overall but songs were often cut short, with the Dew standing out.",
+  "review": "The recording sounds pretty good overall, though the low end on \"Looks Like Rain\" is so heavy it can blow speakers. The band performed well, especially Phil’s bass work and the highlight referred to as “the Dew,” but several numbers—most notably the Uncle John’s>Playin'>Uncle John’s sequence—were cut short, which disrupts the flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; shows a mixed impression of both performance and recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Overall decent clarity, but bass is overly pronounced on \"Looks Like Rain\" causing potential speaker overload; no explicit source type mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Dew"
+    ],
+    "poor_songs": [
+      "Uncle John's>Playin'>Uncle John's"
+    ],
+    "setlist_flow": "Good audience energy and generally solid playing, but frequent song cuts (especially the Uncle John’s sequence) make the set feel truncated."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised as \"bombs away\" – strong bass performance throughout.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's>Playin'>Uncle John's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:23:52.251854+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-30.nak300.pasternak.andrewf.89813.sbeok.flac16"
+}

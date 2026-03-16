@@ -1,0 +1,92 @@
+{
+  "summary": "Muddy matrix recording but a scorching performance highlighted by the Terrapin > St. Stephen > The Other One run and a powerhouse second set.",
+  "review": "The show is repeatedly praised for its intense energy, flawless jams (especially the 31‑minute Terrapin > St. Stephen > The Other One sequence) and standout moments like Let It Grow, Good Lovin' and Sugar Magnolia. Recording-wise the matrix mix is described as muddy and oversaturated by some listeners, yet many find it solid enough to enjoy the music despite its flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical performance (70% weight) with multiple enthusiastic reviews outweighs the mixed but generally acceptable recording quality (30% weight), yielding an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Oversaturated soundboard core makes the mix muddy for some listeners; however, the added audience portion provides decent room ambience and crowd noise, making it listenable despite the flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "St. Stephen",
+      "The Other One",
+      "Let It Grow",
+      "Good Lovin'",
+      "Bertha",
+      "Samson",
+      "Sugar Magnolia",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are described as high‑energy and tightly sequenced, with a particularly intense second set that builds through Terrapin > St. Stephen > The Other One into a memorable jam climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his soaring melodies, powerful solo on Good Lovin', and overall fantastic guitar tone throughout the show.",
+    "Phil": "Praised for locking in the pocket and thumping out bass lines, especially during Bertha > Good Lovin'.",
+    "Bob": "Vocal and guitar contributions described as fantastic, adding to the overall excitement.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:14:24.038426+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-15.137270.mtx.dusborne.flac16"
+}

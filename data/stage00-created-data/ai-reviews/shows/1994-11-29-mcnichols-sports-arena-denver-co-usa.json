@@ -1,0 +1,66 @@
+{
+  "summary": "High‑energy second set with rare pre‑drums Baba > TNK",
+  "blurb": "The first set stays tight while the second set shines, featuring a rare pre‑drums transition from Baba O'Riley into Tomorrow Never Knows, plus powerful Playing In The Band and Jack Straw. Jerry’s vocals on So Many Roads stand out despite a brief exit during Easy Answers. The show is recommended for its adventurous second‑set flow.",
+  "review": "On November 29, 1994 at McNichols Sports Arena the Dead delivered a memorable two‑set performance that has become a reference point for late‑year energy. Set 1 was solid and driven, though it suffered a few hiccups—most notably Jerry stepping offstage during Easy Answers—but he came back strong on So Many Roads, delivering clear vocals and an impassioned guitar throw.  The real magic unfolded in Set 2: the band launched into a wild Iko Iko before launching a pre‑drums mash‑up of Baba O'Riley into the psychedelic stretch of Tomorrow Never Knows, a moment highlighted by Vince Welnick’s soaring keyboards and the dual drummers’ aggressive lock‑step.  Playing In The Band erupted into an expansive jam, Jack Straw kept the momentum tight, and the drum/space segment built to a thunderous peak before winding down with a soulful Stella Blue and a bright Sugar Magnolia finale.  While audience recordings vary in fidelity—ranging from excellent clarity to spotty mix—the musical moments stand out, making this show a must‑listen for fans of the band’s late‑period improvisational fire.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings are mixed (pointing out both strong moments and weak spots) and one is positive. The overall consensus leans modestly positive due to repeated praise for the second‑set energy, rare Baba > TNK transition, and strong drumming, but mixed comments about vocal dropouts and occasional poor songs keep the boost moderate.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-11-29.schoeps.ladner.10541.sbeok.shnf",
+    "reason": "Decent audience capture with clear vocals on So Many Roads and the standout pre‑drums Baba > Tomorrow Never Knows moment; overall good balance of clarity and ambience."
+  },
+  "key_highlights": [
+    "Rare pre‑drums transition from Baba O'Riley into Tomorrow Never Knows",
+    "Aggressive, tightly locked dual drumming driving the second set",
+    "Vince Welnick’s soaring keyboard work during the Baba > TNK segment",
+    "High‑energy jam on Playing In The Band"
+  ],
+  "song_highlights": [
+    "Baba O'Riley",
+    "Tomorrow Never Knows",
+    "Playing In The Band",
+    "Jack Straw",
+    "So Many Roads"
+  ],
+  "band_performance": {
+    "Jerry": "Technical hiccup early (left stage for Easy Answers) but delivered strong vocals on So Many Roads and returned with energetic guitar work later in the show.",
+    "Phil": "",
+    "Bob": "",
+    "Vince": "Keyboard playing shines during the Baba O'Riley → Tomorrow Never Knows transition, providing a memorable melodic lift that fans cite as a highlight of his tenure.",
+    "Mickey": "Dual rhythm with Bill is aggressive and tightly locked, especially driving into the pre‑drums segment and sustaining high energy throughout the second set.",
+    "Billy": "Drumming intensity builds to a powerful peak in the drum/space portion; his partnership with Mickey delivers one of the show's standout rhythmic moments."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T04:02:02.834112+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Baba O'Riley",
+      "Tomorrow Never Knows",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "So Many Roads"
+    ]
+  ]
+}

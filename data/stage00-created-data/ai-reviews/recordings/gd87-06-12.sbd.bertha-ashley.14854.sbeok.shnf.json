@@ -1,0 +1,79 @@
+{
+  "summary": "Solid soundboard capture of a pleasant Ventura show with decent performance and a few standout moments like Esau and Touch",
+  "review": "The recording is a typical SBD from the 1987 Ventura run – generally clear with a bit of ambient bird‑call noise and occasional questions about its exact source, but listeners find it listenable. The concert itself is described as an enjoyable, beach‑vibe set that never quite reaches “must‑hear” status; highlights include West LA, Esau, Far From Me and the encore Touch, while the second‑set flow is seen as steady but not spectacular.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Average star rating across seven reviews (~3.7) combined with several enthusiastic comments about the performance and generally good soundboard quality yields a solid four‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix, some listeners note bird‑call artifacts and question if the SBD sounds “AUD‑like,” but no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West LA",
+      "Esau",
+      "Far From Me",
+      "Touch"
+    ],
+    "poor_songs": [
+      "Far From Me (as noted by one reviewer as gumming up the set)"
+    ],
+    "setlist_flow": "A relaxed beach‑side vibe with a standard first set, a steady second set that builds into a modest jam section; overall pacing is comfortable but not especially adventurous."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocal delivery on “Desolation” and occasional yelps are noted; his presence adds a solid, familiar feel.",
+    "Keys": "Brent Mydland is referenced with the “Brent tune” (Far From Me) and contributes to the keyboard texture throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Far From Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "West LA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Esau": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "G Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:37:25.374502+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-12.sbd.bertha-ashley.14854.sbeok.shnf"
+}

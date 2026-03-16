@@ -1,0 +1,31 @@
+{
+  "summary": "Awesome show captured with great live sound, delivering a memorable Grateful Dead experience.",
+  "review": "The reviewer rates the concert five stars, praising both the performance and the overall live‑sound quality captured from one of the band’s best venues. No specific songs or instrumental details are mentioned, but the positive tone indicates an enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only a single five‑star review is available; it praises both the show and the live sound, suggesting high quality, but lack of detail limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes \"great live sound\" with no reported issues, indicating a clear and enjoyable recording despite the source type not being specified."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "General enthusiasm for the entire performance; no specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T14:12:43.672375+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-20.139647.OTS.Schoeps.Oade.Bryant.Gastwirt.Miller.Noel.t-flac16"
+}

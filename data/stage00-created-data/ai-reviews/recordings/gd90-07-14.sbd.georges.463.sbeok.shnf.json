@@ -1,0 +1,91 @@
+{
+  "summary": "Fair‑quality soundboard recording of a summer ’90 Foxboro show with standout Shakedown Street and a soaring Eyes → Estimated → Crazy Fingers sequence.",
+  "review": "The July 14, 1990 Foxboro performance shines in the second set – eyes‑estimated‑crazy fingers rolls into Uncle John’s, a double encore of Last Time/​Bid You Goodnight, and a gutsy Far From Me.  The SBD source is listenable but suffers from hiss, occasional drop‑outs and cassette‑era mastering quirks that keep it from being pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (strong second set, many standout songs) while recording quality is mixed with noticeable hiss and drop‑outs; the weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss, static pops (especially around 12:25), occasional drop‑outs and mastering errors; overall the mix is decent but not as sharp as later digital SBDs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Eyes > Estimated > Crazy Fingers > Uncle John's Band",
+      "Take a Step Back (I Want To Take You Home)",
+      "Goin' Down The Road Feeling Bad",
+      "Last Time / Bid You Goodnight"
+    ],
+    "poor_songs": [
+      "Take a Step Back (some listeners disliked the intro)",
+      "Bid You Goodnight (one reviewer called it cringe)"
+    ],
+    "setlist_flow": "First set is solid but a bit short; the second set flows beautifully with the iconic Eyes‑Estimated opener, tight transitions into Crazy Fingers and Uncle John’s, and a satisfying double encore that caps a hot summer night."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone praised by some reviewers, but others note his voice sounded dry on Shakedown and occasional midi timing slips.",
+    "Phil": "Bass presence is highlighted throughout; many fans mention “lots of Phil” as a positive feature.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s raspy, echo‑laden vocals and keyboards are frequently noted (daughter ballad anecdote, strong presence on Take a Step Back).",
+    "Drums": "Powerful drumming receives compliments, especially the post‑drum segment in the second set."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes > Estimated > Crazy Fingers > Uncle John's Band": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Goin' Down The Road Feeling Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Take a Step Back (I Want To Take You Home)": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bid You Goodnight": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Walking Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:32:15.850414+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-14.sbd.georges.463.sbeok.shnf"
+}

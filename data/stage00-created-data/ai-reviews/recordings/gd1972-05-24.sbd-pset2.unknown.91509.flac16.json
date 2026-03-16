@@ -1,0 +1,108 @@
+{
+  "summary": "Excellent soundboard capture of a stellar London ’72 show, highlighted by an epic 30‑minute The Other One and a fiery Playing in the Band.",
+  "review": "The recording offers a crisp stereo soundboard mix that lets listeners hear Garcia’s soaring solo on Sing Me Back Home, Phil Lesh’s thunderous bass on a jazzy 30‑minute The Other One, and a monster eleven‑minute Playing in the Band.  While the set is incomplete and some early‑set cuts are only available from poor audience sources, the material that does survive is consistently praised for its energy, improvisational depth, and standout moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, repeatedly cite exceptional performances (The Other One, Playing in the Band) and note a high‑quality soundboard mix despite missing portions of the show."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Stereo hi‑fi mix praised as crisp and well balanced; occasional references to poor audience recordings for missing sections, but the available soundboard portion is described as excellent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Playing in the Band",
+      "Truckin'",
+      "Lovelight > Two Souls",
+      "Cold Rain & Snow",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Dire Wolf",
+      "Truckin' (rushed feel)",
+      "Cold Rain & Snow (average on some listeners)"
+    ],
+    "setlist_flow": "A blistering 15‑song first set of short, high‑energy tunes gives way to a second set dominated by long, spacey jams; the epic The Other One and a monster Playing in the Band provide the tour’s signature exploratory peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solo work are repeatedly praised – beautiful on Sing Me Back Home and tight in duets during The Other One.",
+    "Phil": "Phil is called a ‘beast’ whose jazzy bass drives the extended sections of The Other One and adds groove throughout.",
+    "Bob": "Weir is noted for strong duet interplay with Garcia in The Other One and solid rhythm work on several cuts.",
+    "Keys": "Keyboard textures described as sustained, space‑y and prominently featured (organ audible) during jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight > Two Souls": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "You Win Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rockin' Pneumonia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T14:26:42.875075+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-24.sbd-pset2.unknown.91509.flac16"
+}

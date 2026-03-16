@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard recording of a high‑energy RFK show with stellar Terrapin Station/Playing‑in‑the‑Band jams, crisp overall sound but occasional mix quirks.",
+  "review": "The June 26 1993 RFK performance is remembered for an explosive Playing in the Band → Terrapin Station sequence, soaring Birdsong and a fiery “Stranger” opener.  The SBD source is generally clear and balanced, though a few listeners noted Bruce Hornsby’s late‑set piano (the “squeezebox”) could be intrusive.  Overall the show is praised for its intensity, tight musicianship and memorable moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently strong musical praise (Terrapin/Playin>Terrapin jam, Birdsong, Stranger) across many reviews and a soundboard source that is described as clear; only minor mix complaints keep it just short of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced SBD capture. A few reviewers mentioned the Bruce Hornsby piano/squeezebox at the end of the first set as a bit harsh, but no major dropouts or muffiness were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Playing in the Band > Terrapin Station",
+      "Birdsong",
+      "Stranger",
+      "Box Elder Woods",
+      "Lazy River Road"
+    ],
+    "poor_songs": [
+      "The Long Way"
+    ],
+    "setlist_flow": "Strong, high‑energy opener (Stranger → BEW) followed by a first set that kept the momentum, then a second‑set highlight centered on an extended Playing in the Band into Terrapin jam (~30‑35 min) with solid supporting material."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping solos (e.g., WTGH), intense guitar work during Terrapin, and memorable moments like walking on the Moon with Sting.",
+    "Phil": "",
+    "Bob": "Noted as having a scratchy vocal due to throat surgery but otherwise not a focus of criticism.",
+    "Keys": "Bruce Hornsby’s piano guest received mixed reactions – some loved the contribution, others found the late‑set “squeezebox” distracting.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Birdsong": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stranger": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Box Elder Woods": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band > Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lazy River Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Long Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:33:27.030675+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-26.sbd.peich.7742.sbeok.shnf"
+}

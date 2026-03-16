@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal‑clear audience/matrix recording captures a flawless 9/21/82 Garden show with Jerry’s blazing guitar and standout performances of Crazy Fingers, Big River and High Time.",
+  "review": "Both reviewers rave about the show’s consistent energy from start to finish, highlighting Jerry Garcia’s inventive guitar work and several superb renditions – especially “Crazy Fingers,” “Big River” and “High Time.” The audience recording is praised as matrix‑quality: clean, clear, with no boominess or echo and vocals that cut through like a soundboard. Overall it’s an almost perfect performance captured in excellent audio.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "All reviews are five‑star, praising both the musical execution and the high‑fidelity audience/matrix recording; weighted average yields a near‑perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean and clear sound with no boominess or echo; audience ambience fades when music starts, vocals crisp as on any SBD or matrix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Big River",
+      "High Time",
+      "Throwing Stones",
+      "Beat it On Down The Line"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the concert as stellar from start to finish with no low point, indicating a tight, high‑energy flow throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar blazing with inventive and unexpected lines throughout the entire show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat it On Down The Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:11:29.104862+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-21.nak300.dyche.105339.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording captures a solid St Paul show highlighted by Bird Song, Scarlet Begonias → Fire on the Mountain and Tennessee Jed.",
+  "review": "The tape, lovingly remastered by Hunter Seamons, offers an unusually clear matrix sound that reviewers describe as excellent despite its vintage splicing. Musically the concert delivers strong performances, with Bird Song, the Scarlet Begonias → Fire on the Mountain sequence and Tennessee Jed standing out, plus a consistently good second set. Overall the show is regarded as a hidden gem of the 1982 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Reviews are uniformly positive about both performance and recording; weighted average (70% show, 30% recording) yields a rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Hunter Seamons' remaster provides crisp, well‑balanced matrix sound; some reviewers note vintage tape splicing but the audio remains clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set list praised as strong overall, with particular love for the first half of set 2 and a solid second set; some reviewers found the overall song choices a bit iffy but no specific track was singled out as weak."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Mentioned making an emergency announcement for Scott Anthony Williams during the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T23:25:21.002964+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-06.mtx.seamons.ht58.125889.flac16"
+}

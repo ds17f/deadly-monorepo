@@ -1,0 +1,51 @@
+{
+  "summary": "Balanced Nak 700 audience tape captures the show well, but the performance feels sloppy—especially a disappointing second set.",
+  "review": "The recording, sourced from a Nakamichi 700 cassette, is praised for its proper speed and balanced tone, though it leans a bit bright. Musically the concert disappoints many listeners; the second set lacks tightness with a shaky transition into Playing in the Band, a saggy Terrapin Station, and a botched \"rusty strings\" line in Stella Blue, while Jerry's voice sounds hoarse.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is average to below‑average (3 ★) while the recording is solid (4 ★); weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Balanced sound with correct tape speed; slightly bright but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Playing in the Band",
+      "Terrapin Station",
+      "Stella Blue"
+    ],
+    "setlist_flow": "Second set feels loose and poorly paced, with awkward transitions and lack of the usual tight, choogling energy."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice sounds hoarse throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:25:59.321951+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-30.140199.fob.nak700.unknown.clugston.flac1644"
+}

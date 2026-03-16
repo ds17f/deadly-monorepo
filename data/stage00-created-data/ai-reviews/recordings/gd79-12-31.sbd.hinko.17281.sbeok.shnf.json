@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard recording is fuzzy but listenable; the three‑set New Year’s show shines with a monster Franklin's, tasty Althea and an epic third set.",
+  "review": "Fans agree the performance is solid – three sets with unique transitions, a standout 17‑minute \"Franklin's\" solo, fresh renditions of Althea and China / Rider, and a powerful third‑set climax ending with \"Not Fade Away.\" The SBD source is noticeably fuzzy and could use a CM upgrade, keeping the audio at only fair quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality averages around 4‑plus (many reviewers praise playing, setlist and specific jams) while recording quality is consistently described as fuzzy or only okay (~2.5). Weighted combination yields ~3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple reviewers note fuzziness, lack of clarity and a need for CM upgrade; overall sound is only okay but still usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's",
+      "Althea",
+      "China Cat Sunflower / I Know You Rider",
+      "Jack Straw > Franklin's",
+      "Uncle John's Band",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set New Year’s show with a looser, low‑energy first two sets but an epic third set featuring long jams and strong transitions; unique moments like the Jack Straw‑Franklin's segue and the high‑energy Not Fade Away close."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being \"on fire,\" delivering a rip‑roaring 17‑minute Franklin's solo, and generally outshining guests.",
+    "Phil": "",
+    "Bob": "Bobby’s swooping slide on Althea noted as a highlight; his rhythm work appreciated by the side‑stage listener.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower / I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw > Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:13:46.415526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-31.sbd.hinko.17281.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Clear soundboard capture of an epic show highlighted by wildly psychedelic drumming.",
+  "review": "The lone five‑star review hails this performance as \"epic\" and especially praises the drums as the most psychedelic the Dead ever delivered, rivaling their Acid Test era. While no specific songs are mentioned, the enthusiasm suggests a top‑flight concert, and the soundboard source implies a clean, listenable recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Single glowing review (5 stars) emphasizes an outstanding performance; assumed good soundboard quality yields a high rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio fidelity; soundboard source suggests clear and balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Not described in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Described as the most psychedelic drumming ever heard, surpassing even the Acid Tests."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T06:20:13.485639+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-31.150298.sbd.cm.miller.flac16"
+}

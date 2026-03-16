@@ -1,0 +1,74 @@
+{
+  "summary": "Soundboard recording with crisp acoustic set and minor splice glitches; acoustic highlights like Bird Song, Ripple, Peggy‑O and a stellar Greatest Story solo shine while the electric second set feels uninspired.",
+  "review": "The recording captures a clean, mostly crisp soundboard source, especially on the acoustic first set where songs such as Bird Song, Ripple, Peggy‑O and High Time are beautifully rendered. Reviewers praise Jerry’s closing solo on “The Greatest Story Ever Told” and a nice Terrapin Station in the third set, but note distracting crowd‑noise splices, PA fuzz on High Time and an overall flat second (electric) set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong acoustic performances; recording is generally good but has noticeable splice and PA issues, leading to a solid yet not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Acoustic set sounds clean and crisp. Some reviewers note poorly spliced crowd noise at the start/end of songs (e.g., \"On the Road Again\") and occasional PA fuzz on High Time; Bob’s vocal mic is described as hot and upfront, affecting electric mix balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song (acoustic)",
+      "Ripple",
+      "Peggy-O",
+      "High Time",
+      "The Greatest Story Ever Told (Jerry's solo)",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic first set is superb and highlighted as a rare treat; the second electric set feels uninspired to many listeners, while the third set recovers with a nice Terrapin Station performance."
+  },
+  "band_member_comments": {
+    "Jerry": "His final solo on \"The Greatest Story Ever Told\" is praised as possibly the best ever; also noted for beautiful vocal delivery on Peggy‑O and High Time.",
+    "Phil": "",
+    "Bob": "Bob’s microphone is described as overly hot/up‑front, making it hard to hear the electric set clearly; also humorously interacts with Otis the dog during the acoustic set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song (acoustic)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "On the Road Again": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:21:53.322914+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-09.sbd.unknown.11042.sbeok.shnf"
+}

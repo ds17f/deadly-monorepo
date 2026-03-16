@@ -1,0 +1,81 @@
+{
+  "summary": "Clear, well‑balanced audience recording captures a spirited 1986 set highlighted by Scarlet Begonias → Touch of Grey, Tom Thumb Blues and a heartfelt Brokedown Palace.",
+  "review": "The tape delivers surprisingly clean highs and mids despite being an audience source, with the venue’s “hollow” vocal character noted but not detracting from overall listenability. The performance is energetic and memorable – fans repeatedly cite the Scarlet Begonias/Touch of Grey transition, Tom Thumb Blues and a moving Brokedown Palace as show‑highlights, even though some feel the second‑set rain‑song sequence fell short of a proper Fire jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (7/12) rate the show highly and praise both the music and sound quality; only a minority cite serious flaws. Weighted 70 % for strong musical performance and 30 % for generally good recording yields an overall rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear highs and mids, crisp instrument separation; vocal sound described as hollow due to the Spectrum venue acoustics but still listenable. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Touch of Grey",
+      "Tom Thumb Blues",
+      "Brokedown Palace",
+      "Feel Like a Stranger",
+      "Desolation Row"
+    ],
+    "poor_songs": [
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "The set swings between high‑energy jams and reflective ballads, with the early‑set excitement carried into a playful second set. While the Scarlet Begonias → Touch of Grey segue is praised, some feel the subsequent rain‑song segment never reaches the expected Fire intensity."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for vocal delivery and guitar work; occasional critique of an odd ending on Scarlet but generally seen as a strong frontman.",
+    "Phil": "Noted for belting out Tom Thumb Blues and providing clear bass presence; highlighted positively in several reviews.",
+    "Bob": "Mentioned taking lead moments in \"Feel Like a Stranger\" and delivering a playful vibe on \"Black Peter\"; overall positive remarks.",
+    "Keys": "Brent (keyboards) receives commendation for solid playing and adding blues riffs; sound quality of keys noted as clear.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Touch of Grey": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tom Thumb Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwin' Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:49:13.780471+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-25.beyer.connor.3188.sbeok.shnf"
+}

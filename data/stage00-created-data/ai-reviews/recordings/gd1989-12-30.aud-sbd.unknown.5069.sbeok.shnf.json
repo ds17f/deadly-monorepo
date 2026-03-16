@@ -1,0 +1,65 @@
+{
+  "summary": "A show‑for‑the‑ages highlighted by a haunting Terrapin Station and an electric Jack Straw > China > Rider; the recording is a mixed audience/soundboard source of decent quality.",
+  "review": "Reviewers rave about the second set, calling it one of the best they've heard with a standout Terrapin Station and a scorching Jack Straw > China > Rider medley. The tape appears to be a matrix (audience plus soundboard) that sounds good enough for enjoyment, though some wish for an isolated audience track. Overall sentiment is overwhelmingly positive despite a few mixed remarks about keyboard contributions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical praise across multiple reviews (70% weight) and no major complaints about the audio, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the recording combines audience and soundboard sources; no serious flaws are reported, though some wish for a separate audience track."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Jack Straw > China > Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is praised for its Bertha > Good Lovin' opener and Sugaree focus, while the second set receives universal acclaim for its energy and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's vocal lullaby draws mixed reactions—some reviewers appreciate his contribution, others criticize it.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:30:47.745902+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-30.aud-sbd.unknown.5069.sbeok.shnf"
+}

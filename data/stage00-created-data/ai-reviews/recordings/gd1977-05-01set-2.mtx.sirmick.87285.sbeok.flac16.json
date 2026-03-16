@@ -1,0 +1,46 @@
+{
+  "summary": "Solid show with a stellar jam into Playing in the Band, but a sluggish This Comes A Time; recording quality not described",
+  "review": "The performance is highlighted by an incredible, delicate jam that rockets back into Playing in the Band, offering a soaring outer‑space vibe. However, the reviewer felt This Comes A Time was unusually slow and somewhat disappointing. No details about the source or sound quality were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a 4‑star overall rating, praising the jam but criticizing one song; lack of recording info keeps the technical score modest."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on soundboard vs. audience or clarity; no specific audio quality remarks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "This Comes A Time"
+    ],
+    "setlist_flow": "The set starts with a very slow This Comes A Time, then lifts off into an exquisite jam that segues into Playing in the Band, giving the concert an outer‑space feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "This Comes A Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T22:12:39.991759+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-01set-2.mtx.sirmick.87285.sbeok.flac16"
+}

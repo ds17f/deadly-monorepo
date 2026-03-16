@@ -1,0 +1,58 @@
+{
+  "summary": "High‑energy audience tape with a smoking Help‑Slip‑Franklin’s, guest‑enhanced Birdsong and a legendary Wharf Rat second set, marred only by lengthy pre‑show tuning.",
+  "review": "The show is widely praised for its adventurous opening jam (Help>Slip>Franklins), an unforgettable Birdsong featuring saxophonist David Murrey, and a second‑set Wharf Rat that many consider a highlight of the run.  The audience recording is described as “as perfect as audience recordings come,” though listeners note a seven‑minute pre‑show noise segment and slightly over‑prominent drums and vocals.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for the performance (standout jams, guest sax) combined with generally favorable comments on sound quality, offset only by minor recording annoyances."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and full‑bodied for an audience tape; drums a bit loud in “Minglewood,” vocals prominent, and a lengthy (~7 min) pre‑show tuning segment that many reviewers suggest editing out."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's Tower",
+      "Birdsong",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "The first set launches with a high‑octane Help‑Slip‑Franklin’s jam, builds through Birdsong (guest sax), and the second set delivers an iconic Wharf Rat climax; overall pacing is praised as top‑form for the Garden run."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly noted as being “really on” with great passages throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Generally solid but a little loud in the mix, especially during “Minglewood.”"
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help>Slip>Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:29:25.966172+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-22.ST250s.brennecke-young.4533.sbeok.shnf"
+}

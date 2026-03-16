@@ -1,0 +1,67 @@
+{
+  "summary": "Crystal‑clear audience recording captures a scorching MSG show highlighted by a volcanic Scarlet Fire, soaring Terrapin jam and an unforgettable Sugar Magnolia.",
+  "review": "The tape is one of the best audience recordings in the archive – clear, spacious and almost as good as a soundboard.  Musically the night shines with a blistering Scarlet Fire, a sweet Terrapin Station jam, gorgeous Wharf Rat and a Sugar Magnolia that many fans rank among the year’s best.  Vince Welnick’s keyboards are noted as still rough around the edges, but the rest of the band is in top form.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (7/8) give 4‑5 stars and praise both performance and audio; only one low rating is a tongue‑in‑cheek rant unrelated to the music.  The weighted average of show (≈4.5) and recording quality (≈4.3) yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear audience tape with garden ambience; reviewers call it one of the best AUDs, almost as clean as an SBD.  One note mentions a flat soundboard mix, but the audience capture adds breadth and clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Terrapin Station",
+      "Sugar Magnolia",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely with a strong Stranger>Sugaree opener and a fire‑rising Scarlet Fire, while the second set peaks with an inspired Terrapin jam and a breathtaking Sugar Magnolia, making the concert feel like a warm‑up to the legendary later dates."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery, soaring licks especially on Scarlet Fire and Sugar Magnolia; described as “in the mood” and “sparkling”.",
+    "Phil": "Consistently solid bass work, noted as being exactly where you want him.",
+    "Bob": "Bill Kreutzmann’s drumming called volcanic, driving the energy of Scarlet Fire and adding powerful fire‑egg moments.",
+    "Keys": "Vince Welnick’s keyboard tone was described as terrible/unfinished but showing promise for future shows.",
+    "Drums": "The drum work (primarily Bill) is highlighted as energetic and “vicious”, providing a powerful backbone throughout the set."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger > Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin' > Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:05:08.712502+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-14.schoeps-fob.wiley.11810.sbeok.shnf"
+}

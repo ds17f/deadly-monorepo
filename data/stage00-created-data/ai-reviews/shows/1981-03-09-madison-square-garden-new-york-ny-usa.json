@@ -1,0 +1,68 @@
+{
+  "summary": "Scorching China>Rider, tight jams & soaring Bird Song",
+  "blurb": "The March 9 1981 MSG set is packed with a blistering China Cat Sunflower → I Know You Rider segue, relentless The Other One, and a soaring Bird Song. Jerry’s overdriven tone and Brent’s synth work shine throughout, making this a quintessential early‑80s Dead show.",
+  "review": "Madison Square Garden on March 9, 1981 delivered one of the era’s most electrifying performances. From the opening “Feel Like A Stranger” through a tight first set that built momentum with “Althea,” “Ramble On Rose,” and “Bird Song,” the band never let up. The second set erupted with a legendary China Cat Sunflower → I Know You Rider transition, followed by a fiery “Samson & Delilah,” a soaring “Estimated Prophet” into Uncle John’s Band, and an unrelenting “The Other One” that kept the crowd in a trance until the final “Good Lovin’.” Reviewers across soundboard, matrix, and audience sources rave about Jerry Garcia’s over‑driven, razor‑sharp guitar tone and his incendiary solos that \"terrorized\" MSG, while Brent Mydland filled gaps with synth riffs that were both quirky and scorching. The rhythm section—Mickey Hart’s powerful drum solo and Billy Kreutzmann’s blistering support—propelled the jams forward, and Phil Lesh’s thumping bass anchored every improvisation. With crystal‑clear captures on both SBD and audience tapes, this show stands out as a high‑octane snapshot of the Dead at their 1981 peak.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 131,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.8,
+      "sentiment_rationale": "All eleven recordings are uniformly positive, describing the show as 'stellar', 'iconic', 'electrifying' and highlighting multiple songs across sources. No consistent negative comments about performance quality appear; only minor song‑specific critiques (U.S. Blues, Stella Blue) that do not detract from the overall enthusiasm.",
+      "final_calculation": "2.5 + 0.4 + 1.8 = 4.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-03-09.sbd.miller.74220.sbeok.flac16",
+    "reason": "Soundboard source with crisp, overdriven guitar tones and overall good clarity; captures the full show without drop‑outs and is widely praised as the most faithful representation."
+  },
+  "key_highlights": [
+    "China Cat Sunflower → I Know You Rider transition erupts with scorching guitar and tight band interplay",
+    "The Other One delivers a relentless, thumping jam that showcases the Rhythm Devils' power",
+    "Bird Song soars with bright vocals and soaring solos, highlighted as a show‑stealer",
+    "Brent Mydland's synth solo on New Minglewood Blues adds quirky heat to the set"
+  ],
+  "song_highlights": [
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "The Other One",
+    "Bird Song",
+    "Samson & Delilah",
+    "Estimated Prophet",
+    "Uncle John's Band"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone is described as overdriven, perfect and ‘crackling with electricity,’ delivering scorching solos that dominate the China>Rider sequence and The Other One.",
+    "Phil": "Lesh provides a solid, thumping bass line that pounds especially during The Other One and jam sections, anchoring the band’s drive.",
+    "Bob": "Weir’s vocals are in excellent form with rhythmic ‘tic‑tac’ patterns; his rhythm guitar adds energy, highlighted by a Frampton‑like lick on China Cat Sunflower.",
+    "Brent": "Mydland fills gaps and jams like a mofo, delivering quirky synth textures, an odd yet memorable solo on New Minglewood Blues, and solid keyboard support throughout the show.",
+    "Mickey": "Mickey’s drumming shines with a powerful solo featuring a dramatic hand‑held hit that shakes the venue; his contributions drive the second‑set jams.",
+    "Billy": "Bill’s blistering drumming pairs tightly with Mickey, creating a relentless rhythmic foundation described as ‘musical and very listenable.’"
+  },
+  "processed_recordings": 9,
+  "processed_date": "2025-09-13T09:23:14.948441+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Samson & Delilah"
+    ],
+    [
+      "Estimated Prophet",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Good Lovin'"
+    ],
+    [
+      "Bird Song"
+    ]
+  ]
+}

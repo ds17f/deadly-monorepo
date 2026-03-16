@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fan review praises the show as a standout performance that outshone contemporary acts, though recording details are unknown",
+  "review": "The lone review is wildly positive, declaring the September 26 1981 concert a killer set that eclipsed both The Kinks and The Rolling Stones on the same weekend. While the reviewer gushes about the overall setlist, no specific songs or recording characteristics are mentioned, leaving the technical quality unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review provides strong positive sentiment for the performance but gives no information on recording quality, limiting confidence in the overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer emphasizes that the setlist was impressive and outshone other major acts of the weekend."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T15:00:15.595946+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-26.aud.sen.112234.flac1644"
+}

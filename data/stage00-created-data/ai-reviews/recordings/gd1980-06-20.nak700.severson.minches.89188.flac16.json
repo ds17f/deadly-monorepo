@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent recording captures a mixed‑quality show – Jerry’s tone shines, but the overall performance feels substandard.",
+  "review": "The tape is praised for its clear and well‑captured sound, with one listener noting an “excellent recording.” Musically, opinions diverge: one reviewer lauds Jerry Garcia’s guitar as still sounding awesome, while another calls the show “substandard” and says Garcia was “too on the nod to listen to himself.” The result is a solid audio document of a performance that didn’t fully satisfy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Recording quality is rated high by reviewers, but show quality receives mixed feedback; weighting yields an overall rating around 3.8/5."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer calls the recording excellent; no specific issues are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as sounding awesome by one reviewer, but another says he was “too on the nod” and not fully engaging.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T00:55:23.222943+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-20.nak700.severson.minches.89188.flac16"
+}

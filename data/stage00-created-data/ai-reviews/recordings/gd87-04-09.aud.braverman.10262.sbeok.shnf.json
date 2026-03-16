@@ -1,0 +1,102 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1987 show highlighted by a blistering Scarlet > Fire, soaring Deal and moving China Doll.",
+  "review": "The concert is praised for its electric atmosphere and strong performances, especially the second‑set opener Scarlet > Fire, the fiery Deal, and heartfelt renditions of China Doll and US Blues. Reviewers note a vibrant post‑comeback Jerry and tight band playing, while the audience tape delivers clear, punchy sound with only occasional reverb. Overall the show is regarded as one of the standout dates of the spring ’87 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Ten reviews, most 4‑5 stars, consistently highlight energetic performance and good audience recording; only a few moderate comments lower the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape with clear instrument separation and strong crowd presence; several reviewers call it 'great' or 'excellent', one notes a bit of reverb in later edits but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Deal",
+      "China Doll",
+      "Far From Me",
+      "Greatest Story Ever Told > Promised Land",
+      "US Blues"
+    ],
+    "poor_songs": [
+      "Uncle",
+      "Space"
+    ],
+    "setlist_flow": "First set builds momentum with high‑energy numbers like Far From Me and Deal, while the second set kicks off with a rapturous Scarlet > Fire that drives the night; reviewers feel the concert is a powerful warm‑up for the following show."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as gregarious, energetic and tearing up his guitar throughout; several reviewers cite stellar solos on Deal and Far From Me, though a couple note his vocal was not at its best.",
+    "Phil": "His bass ‘bomb’ at the end of The Promised Land is highlighted as a perfect moment that jolts the audience.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s contributions on two Brent‑written songs are praised as well‑played and fitting the show’s energy.",
+    "Drums": "The drum segment in the ’87 version is noted for being longer than usual, adding to the overall drive."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Goodtime Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story Ever Told > Promised Land": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:21:46.015594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-09.aud.braverman.10262.sbeok.shnf"
+}

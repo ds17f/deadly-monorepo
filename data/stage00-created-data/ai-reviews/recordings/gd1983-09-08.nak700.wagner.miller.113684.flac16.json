@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a late‑summer ’83 show, delivering high‑energy Fire on the Mountain, Throwing Stones and a beloved Baby Blue encore.",
+  "review": "The recording, sourced from Charlie Miller’s famed front‑of‑house mix, offers clear stage ambience that even overcomes the typical 80s soundboard weakness on Phil’s bass. The performance is praised for its strong setlist—especially the fiery Fire on the Mountain, Throwing Stones and a heartfelt Baby Blue encore—though a few note the second‑set’s opening feeling a bit tired.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4/5), strong praise for both musical performance and recording quality with only minor mixed comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Charlie Miller’s front‑of‑house mix is praised as the best of the era, delivering clear stage presence and better bass capture than typical 80s soundboards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Throwin' Stones",
+      "Baby Blue",
+      "China Rider",
+      "LLR > Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall energetic set with strong first‑set closers and high‑octane second‑set numbers, though the opening of the second set is described as slightly tired by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Typical 80s soundboards often muffled his bass, but this recording captures Phil’s low end much better.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwin' Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:12:24.315155+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-08.nak700.wagner.miller.113684.flac16"
+}

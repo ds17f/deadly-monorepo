@@ -1,0 +1,69 @@
+{
+  "summary": "Good matrix recording captures a solid 1986 show with standout Sugaree > Jack Straw segue and high‑energy Iko Iko.",
+  "review": "The tape, a roughly 75 % soundboard/25 % audience mix, sounds clear and well‑balanced, delivering an enjoyable listening experience. The performance is praised for its interesting set list – highlights include the Sugaree→Jack Straw transition, Box of Rain opening the second set, and a fast‑tempo Iko Iko – and for being one of the first shows after Jerry’s return from his coma. Overall fans describe it as a damn good show with great vibes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about both the musical performance and the sound quality; weighted rating (70 % show, 30 % recording) yields a high‑average score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Mix described as ~75 % SBD and 25 % ambient audience; reviewers note good sound, clear mix, no significant dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Jack Straw",
+      "Box of Rain",
+      "Willie and the Hand Jive",
+      "Iko Iko",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Interesting set list with a strong first‑set finish (Sugaree→Jack Straw) that carries into a solid second set opener (Box of Rain) and energetic moments like Willie and the Hand Jive → Iko Iko."
+  },
+  "band_member_comments": {
+    "Jerry": "His return after the coma was celebrated; vocals/guitar praised, especially on ‘Stella Blue’ and other moments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Willie and the Hand Jive": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:46:15.768118+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-16.sbd.miller.77409.flac16"
+}

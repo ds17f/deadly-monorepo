@@ -1,0 +1,61 @@
+{
+  "summary": "Good‑quality soundboard capture of a rare early‑1970 show dominated by an outstanding acoustic set, with highlights like Saw Mill, Hard to Handle and a stellar Katie May performance.",
+  "review": "The recording is a solid SBD source – a little hissy but generally clear – that preserves one of the Dead’s most intriguing acoustic‑heavy concerts. Reviewers rave about the rare gems (Saw Mill, Hard to Handle, Katie May) and the energy of Jerry’s guitar, while noting Phil’s busted amp added an unexpected second‑set charm. Overall the show is praised for its emotion, rarity and strong performances despite a few technical hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4‑5 stars and emphasize rare song gems and strong playing; recording quality is described as acceptable with minor hiss, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD capture with some hiss and occasional amp noise; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saw Mill",
+      "Hard to Handle",
+      "Katie May"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A rare acoustic set opens the show, followed by a second set that gained unexpected strength after Phil's amp mishap; the concert feels emotionally rich despite short song lengths."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his intense, amazing guitar work and standout solos.",
+    "Phil": "His bass amp blew during the show, creating a mishap that led to an unexpected but praised second set.",
+    "Bob": "",
+    "Keys": "Pigpen is mentioned returning to organ and delivering captivating playing throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saw Mill": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Katie May": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Sadie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Seasons": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:07:01.985173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-31.sbd.cotsman.7045.sbefail.shnf"
+}

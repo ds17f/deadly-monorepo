@@ -1,0 +1,42 @@
+{
+  "summary": "Soundboard source (unspecified quality) captures a modestly praised Jack Straw → Franklin's transition that didn’t fully stick.",
+  "review": "The lone review notes the rare first‑set pairing of Jack Straw into Franklin’s as a nice combination, though it wasn’t especially memorable. No information about the audio fidelity is provided, leaving the recording quality uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one brief review with a lukewarm comment on the performance and no details on recording quality; rating reflects an average show and unknown audio fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or other technical aspects in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The reviewer highlights an unusual first‑set transition (Jack Straw → Franklin’s) that occurred only nine times in Dead history, describing it as a nice but not especially sticky combination."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:54:46.372298+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-20.sbd.miller.25469.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard capture of an upbeat 1984 show with Jerry on fire and Brent’s polished keyboards, highlighted by a standout “Feel Like a Stranger”.",
+  "review": "The recording is a clean, remastered sound‑board (SB) that sounds pristine and tremendously clear. The performance shines – Jerry’s guitar is described as ‘on fire’, Brent weaves an elaborate tapestry on the keys, Phil drives the low end and Bill/Mick keep a solid groove, with Bob adding tasteful slides and vocal touches; the first set feels good and the second set ramps up to high‑energy Chuck Berry‑style closers, especially the praised “Feel Like a Stranger”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance and soundboard quality across multiple detailed reviews; only one outlier negative comment does not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, polished, pristine remastered SB with crystal‑clear instrument separation and tremendous overall sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as good; second set deemed great with high‑energy Chuck Berry‑style closers, delivering an upbeat and flowing concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ‘on fire’ with exceptional guitar work.",
+    "Phil": "Bass thumping away underneath the band.",
+    "Bob": "Chiming in at the right moments; noted improvement on slide playing.",
+    "Keys": "Brent’s keyboard tickling the ivories and weaving an elaborate tapestry; praised as being in ‘prime time’.",
+    "Drums": "Bill/Mick’s drums thumping away, providing a solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:12:41.438936+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-20.sbd.miller.103432.flac16"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard recording suffers from tape‑warble but captures a fiery Irvine show highlighted by a scorching Spanish Theme jam and tight second‑set play.",
+  "review": "Fans rave about the performance – the Spanish Theme, Althea, The Other One and an explosive Uncle John’s Band jam are repeatedly called out as stand‑outs, with punchy drums and tight transitions. The technical side is mixed: while the SBD source sounds good in places, a pervasive pitch warble makes large portions of the tape difficult to enjoy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews praise the musical performance (70% weight) while a minority flag serious recording warble issues (30% weight), yielding an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape‑warble causing pitch wobble throughout; some listeners find the second set cleaner, but overall the warble makes the recording unlistenable for several reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Theme",
+      "Althea",
+      "The Other One",
+      "Uncle John's Band",
+      "Feel Like a Stranger"
+    ],
+    "poor_songs": [
+      "One More Saturday Night (encore)"
+    ],
+    "setlist_flow": "Second set is repeatedly described as soaring with seamless transitions, crazy poly‑rhythmic jams and punchy drumming; the first set is solid but the show’s highlight is the extended Spanish Theme jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass amp buzzed noticeably during 'Feel Like a Stranger', creating a funny but noticeable issue.",
+    "Bob": "His playing is described as wildly far‑out, especially on the second‑set jams.",
+    "Keys": "",
+    "Drums": "Drummers are praised for punchy, tight playing and a crazy poly‑rhythmic jam that drives the second set."
+  },
+  "song_mentions": {
+    "Spanish Theme": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:18:41.632523+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-07.sbd.dodd.13816.sbeok.shnf"
+}

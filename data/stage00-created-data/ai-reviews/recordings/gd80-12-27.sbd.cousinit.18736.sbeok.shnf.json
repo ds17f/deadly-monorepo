@@ -1,0 +1,51 @@
+{
+  "summary": "Mixed‑quality recording with warbly filler tracks and some high‑grade SBD sections, while the show offers energetic moments (Good Lovin, Dark Star) but suffers from vocal lapses.",
+  "review": "The release combines a rough audience‑style filler that sounds “beat up” with a cleaner soundboard source for the Dark Star segment, resulting in an overall fair listening experience. The performance has flashes of excitement—especially the crowd‑driven Good Lovin and a sweet China>Rider>Estimated>Eyes sequence—but is marred by vocal slip‑ups and uneven musical focus. Track‑gap editing issues also detract from flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (good moments but vocal/musical lapses) and recording quality varies between poor audience‑style filler and decent soundboard sections, leading to a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "First filler (drums/Good Lovin) is warbly and sounds like an old audience tape; Dark Star filler is a clean SBD source. Reviewers note long dead‑silence gaps before songs and overall inconsistent editing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin",
+      "Dark Star",
+      "China>Rider>Estimated>Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The main set contains energetic peaks (notably Good Lovin and the China‑Rider‑Estimated‑Eyes run) but is interrupted by vocal lapses and uneven pacing, further hampered by long silence gaps between tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China>Rider>Estimated>Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:20:20.838466+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-12-27.sbd.cousinit.18736.sbeok.shnf"
+}

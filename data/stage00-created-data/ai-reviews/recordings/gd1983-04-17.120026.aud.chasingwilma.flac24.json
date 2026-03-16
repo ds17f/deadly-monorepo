@@ -1,0 +1,63 @@
+{
+  "summary": "Fair audience tape with a little gurgle and low levels, but an inspired show highlighted by Garcia’s wild Rooster solo and a ripping Slipknot! jam.",
+  "review": "The recording is an audience‑tape that needs some EQ – it sounds a bit gurgly and the levels are low – yet the performance shines. Reviewers rave about an excellent first set, a spectacular Garcia solo on “Rooster,” a high‑energy “Might As Well,” and a rip‑roaring jam into “Slipknot!” while noting Brent’s occasional slip in transitions. Overall the music outweighs the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is strong (excellent first set, standout solos) while recording quality is only fair (low levels, gurgle, needs EQ); weighted average yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tape has a slight gurgly character and low overall levels; reviewers note it needs EQ to bring out clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rooster",
+      "Might As Well",
+      "Slipknot!",
+      "Not Fade Away",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as excellent and charged; second‑set jam into Slipknot! is a high point despite a brief transition stumble."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers a crazy, impressive solo on “Rooster.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboard) hilariously loses his way during the transitions in Slipknot!.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:43:49.262860+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-17.120026.aud.chasingwilma.flac24"
+}

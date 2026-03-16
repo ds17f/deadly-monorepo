@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is a dubious hand‑held audience tape of poor quality, while the show itself is remembered fondly but without specific musical highlights.",
+  "review": "The reviews focus almost entirely on the questionable provenance and low fidelity of this hand‑held audience recording, with accusations of mislabeling and re‑sampling. One reviewer does note that the concert was \"awesome,\" but no concrete performance details are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Two strongly negative reviews flag the recording as suspect and low quality, while a single positive review praises the concert experience but offers no detail. The overall rating reflects a poor recording offset by some enjoyment of the show."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Hand‑held mics, likely first/second generation copy, possible re‑sampling and mislabeled lineage; listeners report it as a raw, low‑fidelity tape with questionable authenticity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or song performance were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T19:19:32.233451+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-22.135544.chasingwilma.flac24"
+}

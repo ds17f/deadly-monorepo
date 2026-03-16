@@ -1,0 +1,87 @@
+{
+  "summary": "Good sound‑board recording that improves after a rough start, highlighted by an epic Dark Star > Eyes medley and classic ’73 gems like Bertha, Sugar and Mexicali Blues.",
+  "review": "The Miller SBD capture of the June 24 1973 Portland show starts out a bit muddy – the first few tracks are noisy and there’s a noticeable cut in “I Know You Rider” plus a poorly mixed drum kit – but the mix settles into solid, clear sound by the middle of the set. Musically the concert shines with a soaring Dark Star→Eyes→China‑Doll sequence, rare Bertha, sweet Sugar, and strong contributions from Jerry’s lead guitar, Phil’s jazzy vamping, and Keith’s keyboard work.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (especially Dark Star and second‑set jams) and consider the recording good once past the opening flaws; the weighted assessment (70 % show, 30 % recording) yields a rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early tracks are muddy and a cut at ~2:28 in “I Know You Rider” is audible; Billy’s drum kit is mixed low. After the first set the sound becomes clear and well‑balanced, with overall good fidelity for a 1973 SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Eyes > China Doll",
+      "Bertha",
+      "Sugar",
+      "Mexicali Blues",
+      "China Cat Sunflower",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Row Jimmy"
+    ],
+    "setlist_flow": "The first set is uneven – rough start, some missed verses and a muddy mix – but it tightens by the middle. The second set is consistently strong, anchored by an epic Dark Star/Eyes medley that carries the concert to a high‑energy finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for spectacular lead work on Dark Star and other jams; his guitar tone is highlighted as ‘special’ and ‘amazing’ on several tracks.",
+    "Phil": "Noted for jazzy, free‑form vamping (‘Philo Stop’) during Dark Star and praised for brilliant playing on China Cat and Half‑Step Mississippi.",
+    "Bob": "",
+    "Keys": "Keith (and Brent when present) receive praise for standout moments on Mexicali Blues, China Cat Sunflower, and overall keyboard brilliance throughout the show.",
+    "Drums": "Billy’s kit is reported as poorly mixed in the early portion; otherwise drumming performance isn’t specifically critiqued."
+  },
+  "song_mentions": {
+    "Dark Star > Eyes > China Doll": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:05:41.523201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-24.sbd.miller.99852.sbeok.flac16"
+}

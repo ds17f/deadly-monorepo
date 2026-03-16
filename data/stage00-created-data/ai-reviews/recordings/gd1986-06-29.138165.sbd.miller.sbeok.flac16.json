@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard capture with a clear Neumann source but noticeable mic issues, highlighted by an electric Dancin’ in the Streets amid a brisk, uneven set.",
+  "review": "The SBD recording offers a generally clean sound thanks to a top‑notch Neumann feed, though Jerry’s guitar is often distant and the drums feel sparse and underwater. Musically the show swings between strong moments – a driving Dancin’ in the Streets, solid Stagger Lee and Sampson & Delilah – and weaker spots like lyric flubs on Brown Eyed Women and an unhinged The Other One.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only a single mixed review; the show has several standout performances but also notable performance and recording flaws, leading to an average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Neumann source is top‑notch and generally clear, but mic placement issues make Jerry's guitar sound distant, drums are described as sparse and underwater, and some FX are over‑processed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' in the Streets",
+      "Stagger Lee",
+      "Sampson and Delilah",
+      "Estimated Prophet > Eyes of the World"
+    ],
+    "poor_songs": [
+      "Brown Eyed Women",
+      "Tom Thumb Blues",
+      "The Other One"
+    ],
+    "setlist_flow": "Second set moves at a brisk, almost hurried pace – possibly due to Jerry feeling under‑the‑weather – resulting in a tight but sometimes thin performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar often distant because of mic placement; early entry on The Other One; delivers a unique sustained‑note solo on Dancin' in the Streets.",
+    "Phil": "Pushes the band harder than usual; noted for silly lyric changes on Tom Thumb Blues.",
+    "Bob": "Guides quick transition into Wharf Rat; otherwise not specifically highlighted.",
+    "Keys": "",
+    "Drums": "Sparse and underwater mix; drummers push harder early but overall drum sound described as thin."
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tom Thumb Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet > Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:40:38.969388+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-29.138165.sbd.miller.sbeok.flac16"
+}

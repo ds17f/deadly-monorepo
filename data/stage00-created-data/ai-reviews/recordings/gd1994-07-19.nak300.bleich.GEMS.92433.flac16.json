@@ -1,0 +1,85 @@
+{
+  "summary": "Good‑quality audience recording of a 1994 show with a spectacular Playing in the Band > Drums > Wharf Rat jam and solid overall performance.",
+  "review": "Both reviewers rate the tape four stars, noting that it sounds far better than most shed (audience) recordings and captures an especially inspired Playing‑in‑the‑Band > Drumz > Wharf Rat sequence. The show has highs like a funky Shakedown opener, a vivid Throwing Stones, and the beautiful Beatles cover The Rain, though the first set suffers from weaker moments such as Broken Arrow and Cheesy Answers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two detailed 4‑star reviews highlight a strong performance (especially the jam) and a good‑quality audience recording, yielding an overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as far better than most shed tapes; clear enough to hear drums with ambient insect sounds, no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Drums > Wharf Rat",
+      "Throwing Stones",
+      "The Rain"
+    ],
+    "poor_songs": [
+      "Broken Arrow",
+      "Cheesy Answers",
+      "Foolish Heart"
+    ],
+    "setlist_flow": "First set opens strong with a funky Shakedown but stalls in the middle; second set builds to an epic Playing‑in‑the‑Band jam that serves as the show’s peak before winding down into a powerful Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "His grizzled vocal on Wharf Rat is praised, and his guitar work on Throwing Stones is highlighted as a favorite.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are noted as solid, with the Drumz segment adding excitement; ambient insect sounds add realism."
+  },
+  "song_mentions": {
+    "Playing in the Band > Drums > Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cheesy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Want to Tell You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:39:56.342633+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-19.nak300.bleich.GEMS.92433.flac16"
+}

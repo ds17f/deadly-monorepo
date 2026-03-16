@@ -1,0 +1,51 @@
+{
+  "summary": "Fair audience tape of an electrifying Norfolk show with a smoking Scarlet Begonias → Fire on the Mountain and a rousing Not Fade Away",
+  "review": "The recording is an audience capture on a hand‑held tape recorder that suffers from some muddiness and vibration, but it still conveys the raw energy of this rare Norfolk gig. The performance shines on intense versions of Scarlet Begonias → Fire on the Mountain, a rousing Not Fade Away and a high‑octane China Cat Sunflower → I Know You Rider, making it a memorable show despite occasional sloppiness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance and highlight several standout songs; recording quality is mixed but generally listenable, leading to an overall strong impression."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hand‑held audience tape with noticeable vibration and occasional muddiness; not crisp like a soundboard but captures the live vibe sufficiently."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Not Fade Away",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is high‑energy and psychedelic, with strong crowd interaction; a few moments are described as sloppy, but overall the set flows well and keeps the audience electrified."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:06:31.594150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-03.aud.snyder.5314.sbeok.shnf"
+}

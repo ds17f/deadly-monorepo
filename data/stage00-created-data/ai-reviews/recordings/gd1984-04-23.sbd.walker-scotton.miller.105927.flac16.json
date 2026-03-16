@@ -1,0 +1,57 @@
+{
+  "summary": "A soundboard capture with occasional drop‑outs and bright cymbals that still delivers a solid first set highlighted by Jack Straw and St. Stephen, though the unusually short six‑song opening feels like a letdown.",
+  "review": "The recording is a soundboard source that suffers from vocal suppression, some drop‑outs and overly forward cymbals, yet listeners praise its overall mix and Brent Mydland’s kaleidoscopic keyboard work. Musically the show offers strong moments – Jack Straw and a jam‑filled St. Stephen – but the abbreviated first set and a rough Jerry on Black Peter keep it from being a classic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (some standout songs, but short first set and uneven playing) while recording quality is decent with notable flaws; combined weighted rating yields ~3.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Vocals are a bit suppressed, there are occasional drop‑outs and cymbals sit too high in the mix; however the overall balance is pleasant and Brent’s keyboards shine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "St. Stephen"
+    ],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": "The first set is unusually short (six songs) and leaves many feeling disappointed, but the energy on Jack Straw and the jam in St. Stephen provide bright spots; the second set isn’t detailed but overall the show feels ordinary."
+  },
+  "band_member_comments": {
+    "Jerry": "Rough sounding on Black Peter and a flubbed Sugaree lyric, though his playing on the St. Stephen jam is praised.",
+    "Phil": "",
+    "Bob": "His slide work is notably absent this night, which some fans view as a small victory in an otherwise average show.",
+    "Keys": "Brent Mydland receives high praise for his varied keyboard textures and overall performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:33:19.341598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-23.sbd.walker-scotton.miller.105927.flac16"
+}

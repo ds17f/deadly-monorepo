@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent summer‑'89 show with high energy, great vocal performances and clear sound; highlights include Let the Good Times Roll, Box of Rain and a rare Foolish Heart encore.",
+  "review": "Reviewers rave about this famed August ’89 performance, noting its infectious energy, strong vocals from Brent (Bobby) Mydland, Phil Lesh and Jerry Garcia, and a solid mix that captures both the crowd and the band. Standout moments are the opening Let the Good Times Roll, a powerful Box of Rain to close set one, and a rare Foolish Heart encore, all delivered with “great sound” that makes the recording worth adding to any collection.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "A single 5‑star review praises both musical performance and audio quality, indicating an outstanding show with excellent sound; limited data lowers confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the sound as “great,” implying a clear, well‑balanced capture with no noted issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let the Good Times Roll",
+      "Box of Rain",
+      "Foolish Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic opening, strong first‑set finish with Box of Rain, and a memorable rare encore that gives the concert a unique flavor."
+  },
+  "band_member_comments": {
+    "Jerry": "Solid playing throughout; no specific solos called out but overall solid performance.",
+    "Phil": "Strong vocal contribution noted by reviewer.",
+    "Bob": "Brent (referred to as Bobby) delivered strong vocals.",
+    "Keys": "Brent Mydland’s keyboards and vocals praised as a strong night.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let the Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:01:10.260742+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-19.aud-senn.pa-deli-mike.mrchips.83803.flac16"
+}

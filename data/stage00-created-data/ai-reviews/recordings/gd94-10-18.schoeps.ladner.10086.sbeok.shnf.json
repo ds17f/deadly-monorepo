@@ -1,0 +1,90 @@
+{
+  "summary": "Decent audience tape of a solid ’94 MSG show with a smoking Help‑Slip‑Franklin’s sequence and strong Days Between, though the recording has some quirks.",
+  "review": "The performance is generally praised for its fresh setlist and standout moments like the fat Help > Slip > Franklin’s suite, the Truckin > Smokestack > He's Gone reversal, and a vivid rendition of Days Between. The audience recording is usable but exhibits odd tonal quirks (a strange Iko and a false ending on Franklin’s) that keep it from being pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Reviews are split between solid musical moments and noticeable recording oddities, yielding an average rating around the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Decent audience tape with generally clear sound but occasional oddities (distorted Iko, false ending on Franklin’s) and modest overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Truckin' > Smokestack Lightnin' > He's Gone",
+      "Days Between",
+      "Same Thing",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Childhood's End"
+    ],
+    "setlist_flow": "A fresh ’94 setlist that swaps the usual Truckin‑Smokestack‑He's Gone order, delivering a nice change of pace and keeping energy high throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Mentioned indirectly in criticism of Childhood's End ('sorry Phil').",
+    "Bob": "Described as under‑represented by one reviewer but noted for heavy distortion on Days Between; mixed impressions.",
+    "Keys": "Vince praised for a China‑Doll‑esque harpsichord tone on Days Between.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightnin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Ika": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Childhood's End": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:43:51.940486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-18.schoeps.ladner.10086.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Recording missing the requested Eyes of the World track, with no other details available",
+  "review": "The sole reviewer expresses frustration that the recording does not include the Eyes of the World performance they were hoping for. No information about sound quality or musical execution is provided, leaving the overall assessment uncertain.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating indicating a missing track; insufficient data for higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes that the Eyes of the World track is absent, implying an incomplete recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Eyes of the World (missing)"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:08:53.114224+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-30.123231.sbd.moore-berger.flac2496"
+}

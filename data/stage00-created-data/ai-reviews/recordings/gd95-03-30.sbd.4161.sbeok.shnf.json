@@ -1,0 +1,70 @@
+{
+  "summary": "Good analog FM soundboard capture of a mixed‑quality show that still delivers highlights like Visions of Johanna, China Cat Sunflower → I Know You Rider and an extended Alabama Getaway jam.",
+  "review": "The recording is an FM broadcast soundboard tape with the characteristic hiss and compression of analog FM, but it remains clear enough for enjoyment. The performance itself is uneven – Jerry Garcia sounds tired and unfocused on many numbers, yet several songs (Visions of Johanna, China>Rider, Alabama Getaway, Lucy) stand out as memorable moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 3‑4 stars and note a decent but not pristine recording; the show is judged average overall with a few strong song highlights, leading to a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Analog FM source with noticeable hiss and some compression, but overall clear; some reviewers suspect UHF or pre‑FM taping but agree it sounds better than many audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "China Cat Sunflower > I Know You Rider",
+      "Alabama Getaway",
+      "Lucy in the Sky With Diamonds",
+      "He's Gone > Truckin'"
+    ],
+    "poor_songs": [
+      "Schoolgirl"
+    ],
+    "setlist_flow": "First set described as sweet with strong openings (FOTD, Broken Arrow) and a solid Alabama closer; second set builds intensity with China>Rider, He's Gone > Truckin', Visions of Johanna and a powerful Lucy finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Often noted as off‑hand, tired and lacking focus, though some reviewers praise his vocal nuances and occasional guitar moments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lucy in the Sky With Diamonds": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone > Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Schoolgirl": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:22:19.351316+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-30.sbd.4161.sbeok.shnf"
+}

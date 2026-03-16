@@ -1,0 +1,31 @@
+{
+  "summary": "A solid, crowd‑driven Maine show that rises above an average set, captured on a recording limited by venue acoustics.",
+  "review": "Both reviewers rave about the tight, enthusiastic audience and Jerry’s gritty vocal performance, noting that the second‑set chaos only added to the magic of what they call an “average show turned great.” The recording is usable but suffers from the venue’s less‑than‑ideal sound, with no specific tape or mix issues reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on performance (70% weight) offset by modest criticism of venue acoustics (30% weight); two detailed reviews give a reliable but limited data set."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers note the CCCC sound was not the best, suggesting sub‑par venue acoustics; no explicit tape or mix problems mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as an average show that became great thanks to tight crowd interaction and a lively, chaotic second set."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is described as having a growl and being amplified well; strong vocal presence noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-12T23:19:49.679564+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-11.aud.willy.7539.sbeok.shnf"
+}

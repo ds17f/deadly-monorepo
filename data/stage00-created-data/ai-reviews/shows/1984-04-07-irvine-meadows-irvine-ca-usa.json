@@ -1,0 +1,66 @@
+{
+  "summary": "Spanish Jam fireworks and strong second‑set jams",
+  "blurb": "The show delivers a scorching Spanish Jam centerpiece and tight second‑set transitions, highlighted by Althea, The Other One, and Not Fade Away. Jerry’s guitar is on fire while Phil drives the band with a bass line that even buzzes into character. Overall a solid early‑80s set with mixed recording quality across sources.",
+  "review": "April 7, 1984 at Irvine Meadows finds the Dead in prime form, kicking off with a punchy Feel Like A Stranger and cruising through an eclectic first set that includes West L.A. Fadeaway and Touch of Grey. The real highlight erupts in the second set: after a brief Iko Iko opener the band launches into a seamless flow of Playing In The Band → Uncle John's Band → Drums → Space, then explodes on a scorching Spanish Jam that showcases Jerry’s fiery lead work and Bob’s wildly far‑out rhythm chops. Phil’s bass is front‑and‑center – even a buzzing amp on Feel Like A Stranger adds a quirky texture – while the twin‑drum attack from Mickey and Bill remains tight and poly‑rhythmic, propelling The Other One, Wharf Rat and the fan‑favorite Not Fade Away to a triumphant close. Recording quality varies: the Dodd soundboard captures the full show but suffers from tape‑warble, whereas audience tapes offer crystal‑clear balance. For listeners who want the complete performance with its legendary Spanish Jam, the Dodd SBD remains the go‑to despite its flaws.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 22,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Across four recordings, two are explicitly positive and two mixed; no consistent negative language appears. Reviewers repeatedly praise the Spanish Jam, tight second‑set flow, and strong individual performances, yielding a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.6 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd84-04-07.sbd.dodd.13816.sbeok.shnf",
+    "reason": "Captures the full show and iconic Spanish Jam despite tape‑warble; most complete source for the performance."
+  },
+  "key_highlights": [
+    "Scorching Spanish Jam centerpiece that drives the second set.",
+    "Tight, punchy drumming and crazy poly‑rhythmic jams throughout Set 2.",
+    "Phil’s prominent bass work, even a buzzing amp adds character on Feel Like A Stranger.",
+    "Recording quality varies: excellent audience tapes vs tape‑warble soundboard."
+  ],
+  "song_highlights": [
+    "Spanish Jam",
+    "Althea",
+    "The Other One",
+    "Feel Like A Stranger",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers fiery lead work, especially during the Spanish Jam and second‑set improvisations.",
+    "Phil": "Bass is front‑and‑center, driving the groove; a noticeable amp buzz on Feel Like A Stranger adds quirky texture.",
+    "Bob": "Rhythm guitar ventures wildly far‑out in the second‑set jams, adding adventurous color to the flow.",
+    "Brent": "Provides solid keyboard textures that support the extended jams without drawing focus.",
+    "Mickey": "Punchy, tight playing that fuels the poly‑rhythmic intensity of the second set.",
+    "Billy": "Locks in with Mickey for a powerful twin‑drum attack, especially evident during The Other One and Not Fade Away."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-14T15:22:37.605309+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "The Other One",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Feel Like A Stranger"
+    ]
+  ]
+}

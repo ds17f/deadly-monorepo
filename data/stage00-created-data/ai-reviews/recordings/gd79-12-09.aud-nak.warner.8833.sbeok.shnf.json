@@ -1,0 +1,39 @@
+{
+  "summary": "Out‑of‑phase and unusually fast recording makes listening difficult, but the concert is remembered for an epic 14‑minute Shakedown Street.",
+  "review": "The tape suffers from serious technical flaws – it sounds out of phase, runs faster than normal and lacks the clarity of a proper soundboard source, which many reviewers found frustrating.  Despite these issues, listeners who recall the show speak highly of its energy, especially noting a memorable 14‑minute \"Shakedown Street\" that made the night unforgettable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (epic performance, high enthusiasm) while recording quality is consistently criticized (phase problems, speed issues), yielding a mid‑high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Out of phase, playback runs fast, low fidelity compared to soundboard; difficult for tape‑patching and overall listening experience is compromised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers focus on the impact of the long Shakedown Street jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:15:56.165437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-09.aud-nak.warner.8833.sbeok.shnf"
+}

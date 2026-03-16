@@ -1,0 +1,45 @@
+{
+  "summary": "Good show featuring Keep On Growing and Mexicali Blues; recording source not specified",
+  "review": "Reviewers rate this performance highly, calling it a good show and highlighting the enjoyment of \"Keep On Growing\" and \"Mexicali Blues.\" No details are given about the audio source or sound quality, so the technical side remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single 5‑star review praises the musical performance strongly; lack of recording details limits confidence but overall impression is very positive."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Review does not mention any audio characteristics, so no specific technical observations are available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Keep On Growing",
+      "Mexicali Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer simply states the show is good; no detailed comments on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Keep On Growing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:07:20.477554+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-30.aud.set1.mckeown.7893.sbefail.shnf"
+}

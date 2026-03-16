@@ -1,0 +1,107 @@
+{
+  "summary": "Fair‑quality audience tape of a solid Greek Theatre show, highlighted by Jack Straw > Bertha, To Lay Me Down and a memorable Never Trust A Woman sequence, though the mix is a bit tinny and Terrapin Station suffers from lyric slip‑ups.",
+  "review": "The performance captures several standout moments – an excellent Jack Straw > Bertha opener, a top‑ten rendition of To Lay Me Down, and the newly introduced Never Trust A Woman that kept the energy high. Recording-wise the audience source is thin and slightly tinny with the post‑drums segment missing, yet it still conveys unique stage antics like the Hells Angels motorcycle during the drum solo.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical setlist and unique moments (show quality ~3.8/5) while noting a thin, tinny mix with missing post‑drums (recording quality ~3.2/5); combined weighted rating yields about 3.6."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Thin early‑80s audience mix that sounds a little tinny; post‑drums segment is missing; motorcycle noise from a Hells Angels bike is audible but not overpowering."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Bertha",
+      "To Lay Me Down",
+      "Let It Grow > Might As Well",
+      "Never Trust A Woman",
+      "Cold Rain > Samson",
+      "Roses",
+      "Satisfaction / Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "The first set builds nicely with a strong Jack Straw/Bertha opener and solid mid‑set tunes; the second set is unusually long with seven songs before drums, featuring the debut of Never Trust A Woman and a vibrant Cold Rain/Samson pairing. Unique stage elements (motorcycle, hot‑air balloons) add extra excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgot lyrics during Terrapin Station and appeared embarrassed; Bob had to whisper the words to him.",
+    "Phil": "",
+    "Bob": "Had to step in and whisper Terrapin lyrics to Jerry, helping keep the song moving.",
+    "Keys": "Organ/keyboard work noted positively (review title “love that organ”).",
+    "Drums": "Drum solo captured the motorcycle revving on stage; post‑drums jam is missing but overall drum performance praised."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Never Trust A Woman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T14:36:31.234608+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-09-13.wise.munder.7092.sbeok.shnf"
+}

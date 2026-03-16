@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording of a killer ’83 Greek show, highlighted by a scorching Know You Rider, jazzy Eyes, and an epic Throwing Stones.",
+  "review": "The performance is praised as “firing on all cylinders,” with Jerry’s guitar soaring on Know You Rider, Eyes of the World, and an unusually long Throwing Stones. The audience‑sourced tape is noted for its great clarity and a mix that lets Phil’s bass shine, making it a highly listenable document of an early‑summer night at the Greek.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviewers are strongly positive, emphasizing both superb playing and good sound quality; consistent praise yields a high confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Great clarity for an audience recording; Phil’s bass is prominent in the mix, no major drop‑outs or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Know You Rider",
+      "Eyes of the World",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Even though the set list isn’t called spectacular, the band’s breezy, tight playing creates a relaxed early‑summer vibe that flows smoothly from song to song."
+  },
+  "band_member_comments": {
+    "Jerry": "Ripping guitar on Know You Rider, jazzy Eyes of the World, and an unusually long Throwing Stones.",
+    "Phil": "Very present in the mix; his bass work is highlighted throughout the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:37:10.316450+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-05-13.nak700.mccue.32809.sbeok.flac16"
+}

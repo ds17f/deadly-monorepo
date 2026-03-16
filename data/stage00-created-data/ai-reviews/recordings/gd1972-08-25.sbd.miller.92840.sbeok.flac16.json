@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard recording captures a stellar August ’72 Berkeley show with standout Truckin’ → The Other One, Black Peter and a scorching Friend of the Devil.",
+  "review": "The performance is widely praised as one of the band’s finest of 1972 – tight, focused, and full of magical moments, especially the powerful Truckin' → The Other One transition, a blistering Friend of the Devil, and an immaculate Black Peter. The Betty (soundboard) source is described as pristine, balanced and crystal‑clear with only minor crackles or a quieter segment on the rare Frozen Logger track. Overall the show and its mix are regarded as top‑tier Dead listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over twenty detailed reviews consistently praise both musical performance and soundboard recording quality; the show is described as exemplary with only minor quirks, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, full‑balanced mix with clear vocals and great stereo separation; a few tiny crackles and one noticeably quieter segment (Frozen Logger) but overall pristine and professional sounding."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin' > The Other One",
+      "Friend of the Devil",
+      "Black Peter",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Donna's contribution (vocals)"
+    ],
+    "setlist_flow": "The set is described as well‑rehearsed, composed yet intense, with a strong first half of darker material followed by an extended, flowing second half highlighted by the Truckin'/Other One jam and tight transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for top‑form guitar work and vocal presence – described as 'singing into my ear' and 'top form'.",
+    "Phil": "Noted for a lengthy bass solo on Truckin', an octave effect used throughout the show, and solid overall playing.",
+    "Bob": "Highlighted for cool, well‑mixed guitar work on Friend of the Devil; his guitar is singled out as a rare treat in the mix.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin' > The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Donna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T16:34:00.738377+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-25.sbd.miller.92840.sbeok.flac16"
+}

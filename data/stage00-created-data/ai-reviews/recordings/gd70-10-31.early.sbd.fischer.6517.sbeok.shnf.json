@@ -1,0 +1,87 @@
+{
+  "summary": "Good‑quality soundboard capture of a solid early Stony Brook matinee, highlighted by the fiery Viola Lee Blues → Cumberland Blues jam and strong Hard to Handle and Dark Hollow performances.",
+  "review": "The tape delivers decent soundboard clarity with occasional muffled spots, but it’s generally listenable. Musically the show is an upbeat warm‑up set – not a classic, yet it shines on the Viola Lee → Cumberland blues jam, Hard to Handle, Dark Hollow and The Other One drums. Opinions are split: many fans rave about the energy while others find the performance uneven compared with later 1970 shows.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Wide spread of reviewer scores (average ~3 ★) and mixed comments; strong positives for several jams offset by notable criticisms of song execution and occasional poor sound."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the audio as clear or good, though a few call it muffled or “lackluster.” Overall the tape is listenable with occasional sound bumps."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues → Cumberland Blues",
+      "Hard to Handle",
+      "Dark Hollow",
+      "The Other One (drums)",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Till The Morning Comes",
+      "Me and My Uncle (often skipped in some ears)",
+      "Uncle John's (mixed reception)"
+    ],
+    "setlist_flow": "Early‑day matinee that serves as a warm‑up for the evening gig; solid pacing with a few high‑energy jams but lacking the sustained brilliance of later ’70 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching lead work on Cumberland Blues and overall “shredding,” yet some note off‑key “clams” and an indifferent mood.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s playing described as both “good form” and at times over‑playing; his work on The Other One highlighted as fantastic."
+  },
+  "song_mentions": {
+    "Viola Lee Blues → Cumberland Blues": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Hard to Handle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dark Hollow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Till The Morning Comes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T00:21:37.111151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-10-31.early.sbd.fischer.6517.sbeok.shnf"
+}

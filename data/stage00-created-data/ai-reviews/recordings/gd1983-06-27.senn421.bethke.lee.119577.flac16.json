@@ -1,0 +1,81 @@
+{
+  "summary": "Clear, slightly hissing audience tape captures a stellar 1983 summer show highlighted by a soaring Space > Other One and fiery Scarlet Fire.",
+  "review": "The recording, while bearing the expected tape hiss of a Bethke audience source, presents each instrument with surprising clarity. Musically the concert shines with standout performances of Birdsong, Sugaree, Scarlet Fire, an 18‑minute Space > The Other One jam, and high‑energy Wheel > Good Lovin' and US Blues, making it one of the era’s best shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive, praising both the performance (notably the Space > Other One and Scarlet Fire) and the surprisingly clear tape recording despite minor hiss."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear instrument separation with a bit of tape hiss; captures the band well for an audience recording and is considered an upgrade over other circulating sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Sugaree",
+      "Scarlet Fire",
+      "Space",
+      "The Other One",
+      "Wheel",
+      "Good Lovin'",
+      "US Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set delivers strong moments with Birdsong and Sugaree, while the second set builds momentum through a hot Scarlet Fire and maintains energy into an epic Space > The Other One, then wraps up with high‑octane Wheel > Good Lovin' and a spirited US Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocal strength is highlighted and his guitar tone noted as solid.",
+    "Phil": "A hearty Phil Lesh bass intro before The Other One is specifically praised.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:20:14.236534+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-27.senn421.bethke.lee.119577.flac16"
+}

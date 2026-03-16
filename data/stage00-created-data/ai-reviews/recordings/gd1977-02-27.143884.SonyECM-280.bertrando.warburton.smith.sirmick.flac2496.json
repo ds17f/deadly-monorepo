@@ -1,0 +1,37 @@
+{
+  "summary": "A sparkling audience recording despite a clipped start to St. Stephen, with a solid set that includes an encore JBG.",
+  "review": "The audience tape captures the concert with bright, lively sound and only a minor clipping issue at the very beginning of St. Stephen. Reviewers praise the overall sparkle of the AUD and appreciate the taper work, while noting some mis‑labeling in the track list but no major performance flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers are favorable; one highlights excellent audio quality aside from a small glitch, while the other simply expresses gratitude to the taper. Limited detail on musical performance keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Overall sparkling AUD; beginning of St. Stephen clipped, but otherwise clear and lively."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Track list mis‑labels (St. Stephen, Drums, Terrapin, Dew, Sugar Magnolia, JBG) but the performance flows well and ends with a satisfying encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:28:32.529751+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-02-27.143884.SonyECM-280.bertrando.warburton.smith.sirmick.flac2496"
+}

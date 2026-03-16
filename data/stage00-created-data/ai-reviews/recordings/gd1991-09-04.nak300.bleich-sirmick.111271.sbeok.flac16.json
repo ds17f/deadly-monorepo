@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent early‑sampling soundboard recording with a standout Fire performance and overall fabulous concert",
+  "review": "The reviewer hails this tape for its superb fidelity, calling the early‑sampling sound “outstanding” and praising the entire concert as fabulous. The highlight noted is an exceptional rendition of “Fire,” and the set even produced what they consider the greatest “Scarlet” later in the tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Single five‑star review lauds both performance and sound quality, indicating a top‑tier show with excellent recording; limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer emphasizes great sound and outstanding general quality throughout the tape, suggesting a clean, well‑balanced capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall described as a fabulous concert with strong momentum; no negative comments on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:48:14.303320+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-04.nak300.bleich-sirmick.111271.sbeok.flac16"
+}

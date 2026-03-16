@@ -1,0 +1,92 @@
+{
+  "summary": "High‑energy 1978 Providence show captured on a good‑quality audience recording, with smoking Eyes of the World, Let It Grow and Cassidy performances despite a few mic‑balance quirks.",
+  "review": "The performance is widely praised for its fiery first‑set highlights (Half‑Step, Looks Like Rain) and an explosive second set featuring standout Eyes of the World, Let It Grow and Samson & Delilah. Reviewers note Jerry’s soaring guitar work and Phil’s incendiary intro to NFA, while the audience (AUD) recording is generally clear but suffers from a lopsided microphone mix and occasional drum length issues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, emphasizing strong musical moments; recording is good but not flawless, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable AUD mix; two different microphone tracks cause a slight lopsided stereo effect and some reviewers note long drum sections detract slightly. No major drop‑outs, but mic balance could be improved."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Looks Like Rain",
+      "Let It Grow",
+      "Cassidy",
+      "Half-Step",
+      "Samson and Delilah",
+      "Ship of Fools"
+    ],
+    "poor_songs": [
+      "US Blues"
+    ],
+    "setlist_flow": "The first set builds nicely with Half‑Step, LLR and Cassidy, while the second set maintains high energy through Samson & Delilah, Let It Grow and an incendiary Eyes of the World; overall pacing is praised as tight and uplifting."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as haggard but powerful; guitar tone sharp and lead‑centric with several soaring solos (Eyes, LLR, Let It Grow).",
+    "Phil": "Phil’s intro to NFA called “tears the intro” and his bass‑bombs add depth throughout.",
+    "Bob": "Bass noted for colorful fills in Samson & Delilah and a big presence on Eyes of the World; solid rhythm foundation.",
+    "Keys": "Keith’s broken‑chord placements and keyboard colors highlighted during Samson and NFA sections.",
+    "Drums": "Long drum passages mentioned as a minor detractor; two mic setup creates lopsided effect, with some reviewers preferring an AUD mix over SBD drums."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half-Step": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "US Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:54:38.302792+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-14.sony.vernon.7639.sbeok.shnf"
+}

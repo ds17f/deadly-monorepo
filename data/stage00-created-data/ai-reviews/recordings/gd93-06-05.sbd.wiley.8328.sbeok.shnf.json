@@ -1,0 +1,82 @@
+{
+  "summary": "Crisp soundboard recording captures a solid mid‑summer ’93 set with a monster 14‑minute Sugaree and tight Scarlet > Fire, though the overall performance is judged average.",
+  "review": "The sbd source delivers a clear, beefy mix that lets listeners enjoy strong moments like the extended Sugaree and the fiery Scarlet > Fire transition. The first set is generally solid, but the second set loses momentum after Fire, with some songs slipping into mediocrity. Overall the show is considered decent‑average, punctuated by a few standout jams.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Many reviewers note good to excellent sound quality (30% weight) while the musical performance is described as average with a handful of highlights (70% weight), yielding an overall rating around 3.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the sound \"superb\", \"crispy and beefy\" and note a clear mix; one comment mentions an ear‑monitor/IEM mix for vocals, but no major dropouts or distortion are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree (14 min version)",
+      "Scarlet > Fire",
+      "The Other One",
+      "Easy Answers (debut)",
+      "Eternity"
+    ],
+    "poor_songs": [
+      "Stella (sloppy)",
+      "Way to Go (energy drop)",
+      "Crazy Fingers (energy drop)"
+    ],
+    "setlist_flow": "First set is described as solid and energetic; the second set opens strong with Scarlet > Fire but loses steam after Fire, especially during Way to Go and Crazy Fingers. The debut of Easy Answers in the middle of Music Never Stopped is a surprising move that divides opinion."
+  },
+  "band_member_comments": {
+    "Jerry": "Early equipment problems forced a guitar switch; strong solos on Fire; fuzzy guitar tone noted on Eternity; occasional jarring delivery on Easy Answers.",
+    "Phil": "",
+    "Bob": "Vocal processing on The Other One is audible in the audience mix (IEM/monitor flavor).",
+    "Keys": "Vince (keyboard/sax) is mentioned as being present throughout the night, but no specific performance notes.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Answers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eternity": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Way to Go": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:26:28.107530+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-05.sbd.wiley.8328.sbeok.shnf"
+}

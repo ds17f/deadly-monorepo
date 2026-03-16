@@ -1,0 +1,39 @@
+{
+  "summary": "Fair‑quality recording of an otherwise generic show, highlighted by a memorable “Spanish Theme” jam and Mickey’s brass‑bowl drumming.",
+  "review": "The reviewer attended the concert and describes it as largely routine except for the standout “Spanish Theme,” which they even use as a phone‑answering background. No specific comments are made about the audio fidelity, so the recording quality can only be judged as average. Overall sentiment is mixed – the show isn’t terrible but offers few unique moments beyond the noted jam and quirky drum work.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Only one detailed review; it rates the performance as average with a single highlight and gives no clear assessment of sound quality, leading to a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not discuss clarity, mix or source type, so recording quality cannot be firmly judged."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Theme"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a fairly generic set with the exception of the “Spanish Theme” jam and an unusual drumming texture from Mickey."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s use of brass bowls is specifically noted as a memorable moment."
+  },
+  "song_mentions": {
+    "Spanish Theme": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:49:43.901333+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-04.nak300.morris.102050.sbeok.flac16"
+}

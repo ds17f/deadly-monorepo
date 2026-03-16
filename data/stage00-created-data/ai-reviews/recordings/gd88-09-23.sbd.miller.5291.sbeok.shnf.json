@@ -1,0 +1,106 @@
+{
+  "summary": "Good‑to‑great 1988 MSG show with solid setlist and standout Dupree's, Take You Home and US Blues; recording is a decent matrix mix, not pristine soundboard but listenable.",
+  "review": "The performance captures a relaxed yet energetic second half of the 1988 Madison Square Garden run – fans rave about Jerry’s soaring lines on “Dupree’s Diamond Blues”, the heartfelt “Take You Home” moment with Brent’s daughters, and a powerful US Blues encore. The sound is a matrix‑type capture that many describe as good, though it lacks the crispness of top‑tier soundboard tapes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3–4 stars and highlight several strong songs; recording quality is generally described as good but not exceptional, leading to an overall rating in the high‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note clear enough sound for enjoyment, though one points out heavy audience bleed and another says it isn’t a true soundboard tape; overall mix is acceptable with occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dupree's Diamond Blues",
+      "Take You Home",
+      "Let the Good Times Roll",
+      "Hell in a Bucket",
+      "Samson & Delilah",
+      "Ship of Fools",
+      "U.S. Blues",
+      "Cold Rain and Snow",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Loser",
+      "Promised Land",
+      "Foolish Heart"
+    ],
+    "setlist_flow": "The first set is described as shaky at times but picks up, while the second set settles into a relaxed groove with strong mid‑set jams and an uplifting encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp, expressive leads on Dupree's and overall solid playing later in the show; early set guitar work noted as weak by some.",
+    "Phil": "Mixed feedback – thumping bass line called out as overly prominent in one review, but later praised for good embellishments.",
+    "Bob": "Forgot a verse in \"Promised Land\" and had off‑key moments on \"Loser\", though his vocal energy was noted positively on other songs.",
+    "Keys": "Brent’s daughters appeared during \"Take You Home\"; keyboard jams leading into drums were highlighted as effective, though one reviewer mentions Brent’s playing being affected by personal issues.",
+    "Drums": "Started strong but later described as sounding “electronic” and more of a backup role rather than painting textures."
+  },
+  "song_mentions": {
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let the Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Take You Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T14:23:06.451524+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-23.sbd.miller.5291.sbeok.shnf"
+}

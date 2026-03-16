@@ -1,0 +1,69 @@
+{
+  "summary": "Box of Rain → Shakedown combo shines; first set uneven, second set solid",
+  "blurb": "The Boston Garden show delivers a standout Box of Rain into Shakedown Street and a rare Goin' Down The Road Feeling Bad segue. Jerry’s guitar erupts on the American‑Beauty cuts while Phil’s bass provides a punchy foundation. Recording quality varies, but the Miller soundboard capture is the clearest listening experience.",
+  "review": "On October 3, 1994 at Boston Garden the Dead offered a mixed bag that leans heavily toward the memorable. The first set stumbles a bit—Touch of Grey suffers lyrical slips and Bird Song feels uneven in some ears—but highlights like Loose Lucy and Bird Song still sparkle. The second set is where the night truly clicks: Box of Rain rolls straight into Shakedown Street, leading into Cassidy and a rare Goin' Down The Road Feeling Bad (GDTRFB) run that keeps momentum high. Drums → Space erupts with kinetic energy before the band rides through The Wheel, Watchtower, Attics Of My Life and closes with Around & Around, followed by an emotionally charged Brokedown Palace encore.\n\nJerry’s playing is a study in contrasts: on the Miller soundboard he shreds with gritty distortion on the American‑Beauty numbers, yet other audience tapes capture him forgetting lyrics to Touch of Grey and sounding choked. Phil’s bass shines throughout, turned up loud enough to “make the balcony shake,” anchoring the band even when the guitars wobble. Bill Kreutzmann drives the drums with rapid fills that lift the Drums → Space sequence, while Bob Weir supplies solid rhythm work—though one audience recording notes a harsh wireless tone. Vince Welnick’s keyboards sit in the mix without drawing special attention. Overall, the show is worth hunting for its strong second‑set highlights and the excellent Miller soundboard source.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the set flow and standout songs; two others are mixed, noting lyrical slips, uneven first‑set energy, and tonal issues. The overall sentiment leans positive but is tempered by consistent criticisms, resulting in a moderate +1.0 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.0 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-10-03.136890.sbd.miller.flac",
+    "reason": "Excellent soundboard source with crisp, well‑balanced mix and no dropouts; captures the band’s tight transitions and high‑energy moments."
+  },
+  "key_highlights": [
+    "Box of Rain → Shakedown Street segue with seamless flow",
+    "Rare Goin' Down The Road Feeling Bad (GDTRFB) sequence in second set",
+    "Drums → Space improvisation showcases Bill Kreutzmann’s dynamic playing",
+    "Strong bass presence from Phil, especially on Box of Rain"
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Box of Rain",
+    "Shakedown Street",
+    "Cassidy",
+    "Drums",
+    "Space"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia alternates between fiery, distortion‑laden shredding on the American Beauty cuts and moments of lyrical slip‑ups (Touch of Grey) with a generally choked tone on some audience tapes.",
+    "Phil": "Lesh delivers a powerful, punchy bass line that drives the band; reviewers note his volume was turned up nicely, making the balcony shake.",
+    "Bob": "Weir provides solid rhythmic support and flags down the Space segment, though one recording criticizes a harsh wireless‑induced guitar tone.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Bill Kreutzmann’s drumming shines on Touch of Grey and the Drums → Space sequence, offering rapid fills and frenetic energy."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-19T02:23:18.816152+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Cassidy",
+      "Goin' Down The Road Feeling Bad",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "All Along The Watchtower",
+      "Attics Of My Life",
+      "Around & Around"
+    ]
+  ]
+}

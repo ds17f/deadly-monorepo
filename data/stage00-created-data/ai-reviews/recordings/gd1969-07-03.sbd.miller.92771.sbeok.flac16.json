@@ -1,0 +1,74 @@
+{
+  "summary": "Soundboard capture with decent clarity (occasional distortion) showcases a stellar performance highlighted by an epic He Was A Friend of Mine solo, strong Morning Dew and country‑flavored jams.",
+  "review": "The July 3 1969 Reed's Ranch show is widely praised for its energetic early‑jam vibe, long opening solo on “He Was A Friend of Mine,” and memorable renditions of “Morning Dew,” “Green Green Grass of Home” and the pedal‑steel‑laden “Slewfoot.”  While most listeners find the soundboard recording clear enough to enjoy the band’s improvisations, a few note ragged starts, occasional distortion, and tuning hiccups that slightly mar an otherwise excellent night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Majority of reviews are 4‑5 stars praising the performance; recording quality is generally good with minor issues, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear board sound on most tracks, especially He Was A Friend of Mine; some listeners report distortion and raggedness early in the set, plus occasional tuning problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He Was A Friend of Mine",
+      "Morning Dew",
+      "Green Green Grass Of Home",
+      "Slewfoot"
+    ],
+    "poor_songs": [
+      "High Time"
+    ],
+    "setlist_flow": "The concert opens with a country‑flavored jam that some find ragged but quickly settles into tight improvisations; a marathon opening solo on He Was A Friend of Mine sets the tone, and despite late‑night start and occasional tuning slips the second half maintains strong momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work is repeatedly praised—especially his soaring solo on He Was A Friend of Mine and overall solid tone.",
+    "Phil": "Phil’s bass was noted as out‑of‑tune early, requiring a retune; he also humorously asked for coffee mid‑show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He Was A Friend of Mine": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Green Green Grass Of Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slewfoot": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cosmic Charley": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sittin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:58:47.054959+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-07-03.sbd.miller.92771.sbeok.flac16"
+}

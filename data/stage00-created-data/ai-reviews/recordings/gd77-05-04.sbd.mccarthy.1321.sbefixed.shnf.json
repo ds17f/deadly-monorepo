@@ -1,0 +1,79 @@
+{
+  "summary": "Soundboard recording shines on a legendary second set – Scarlet > Fire, Estimated, Playing‑in‑the‑Band and Comes‑a‑Time are stellar, though the first half suffers from muddy sound.",
+  "review": "The show is celebrated for its Dream‑Set jam (Estimated → Scarlet > Fire → Terrapin → Playing) and a rare, beautiful Comes‑a‑Time. Reviewers rave about Jerry’s improvisational fire, Keith’s keyboard work on Half‑Step, and Bob’s surprise China Cat lick in Scarlet Begonias. The soundboard source is crystal clear for the second set but the first half is described as muffled or even unlistenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance (many 4‑5★ reviews, standout songs) weighted heavily; recording quality is good for the second set but poor on the first half, pulling the overall score slightly down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Second‑set sound is crisp and well balanced. First‑set suffers from muffled, noisy pickup and occasional drop‑outs; reviewers note it as “awful” or “unlistenable,” but the rest of the tape restores clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Estimated",
+      "Playing in the Band",
+      "Comes a Time",
+      "Half-Step",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is uneven (some weak playing and poor audio) but the second set forms a continuous, dreamy jam‑marathon that defines May ’77’s peak performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring improvisation, “crackling with tears and joy,” and top‑form guitar tone throughout the second set.",
+    "Phil": "",
+    "Bob": "Noted for slipping a China Cat Sunflower lick into Scarlet Begonias solo – a rare Easter egg that fans love.",
+    "Keys": "Keith’s work on Half‑Step highlighted as “stellar”; keyboards generally described as tight and supportive.",
+    "Drums": "Band tightness repeatedly mentioned; drums keep the marathon jams flowing without dragging."
+  },
+  "song_mentions": {
+    "Half-Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Comes a Time": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-24T22:28:38.799790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-04.sbd.mccarthy.1321.sbefixed.shnf"
+}

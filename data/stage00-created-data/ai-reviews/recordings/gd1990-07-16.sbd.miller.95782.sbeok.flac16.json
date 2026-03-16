@@ -1,0 +1,103 @@
+{
+  "summary": "Excellent soundboard recording of a tight summer‑’90 show with standout performances of Loose Lucy, Truckin' and Wharf Rat.",
+  "review": "Fans rave about the crisp, clean soundboard capture despite minor vocal‑mix quirks, calling it one of the best recordings from the ’90 tour. The concert itself is praised for a solid first set that quickly locks in and a second set packed with monster jams—especially Loose Lucy, Truckin', Scarlet (despite a missed verse) and an unforgettable Wharf Rat. Overall the show is remembered as a high‑energy highlight of the Buffalo summer run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars and overwhelmingly positive about both performance and sound quality; only a few low‑star outliers mention minor issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with a slightly forward vocal balance; no major dropouts or noise reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "Blow Away",
+      "Truckin'",
+      "Wharf Rat",
+      "Scarlet",
+      "High Time",
+      "Sugar Magnolia",
+      "Brokedown"
+    ],
+    "poor_songs": [
+      "Scarlet (transition to Fire was missed)"
+    ],
+    "setlist_flow": "The first set starts a bit sloppy but quickly finds its groove, leading into a second set that builds momentum with soaring jams and tight transitions, culminating in an uplifting encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly praised for shredding, rock‑hard solos and making up missed verses; his stage presence (purple light, wind‑blown hair) is highlighted.",
+    "Phil": "Phil's bass is mixed loudly, which many reviewers say they love; no specific performance criticism noted.",
+    "Bob": "",
+    "Keys": "Brent's last appearance is noted—some reviewers sensed a negative vibe that night, but later reflect on his contributions and mourn his loss.",
+    "Drums": "The post‑drum jam is called \"fantastic\" and a highlight of the second set; Bill’s drumming is described as fun and energetic."
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brokedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "SSDD": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:53:58.019761+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-16.sbd.miller.95782.sbeok.flac16"
+}

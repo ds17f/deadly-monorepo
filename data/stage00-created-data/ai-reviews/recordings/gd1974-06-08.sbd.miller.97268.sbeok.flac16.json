@@ -1,0 +1,81 @@
+{
+  "summary": "A pristine soundboard capture of the classic June 8 1974 Oakland Coliseum show, highlighted by a monster Playing‑in‑the‑Band/Wharf‑Rat sandwich and fiery jams.",
+  "review": "The Miller‑remastered soundboard delivers crisp, immersive audio that puts listeners back in the stadium, with only occasional tuning quirks. Musically the performance is tight and inspired – the legendary Playing > Wharf Rat > Playing sequence, soaring China Cat Sunflower, blazing Eyes of the World and punchy Scarlet Begonias make this a standout 1974 concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All ten reviews are overwhelmingly positive (9‑star, 1 four‑star) and praise both the musical performance and the high‑quality soundboard remaster; minor tuning/vocal issues do not detract from the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered by Charlie Miller, crisp and balanced with good audience immersion; a few reviewers note occasional guitar tuning slip or harsh Donna Jean wails but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Wharf Rat",
+      "China Cat Sunflower",
+      "Eyes of the World",
+      "Scarlet Begonias",
+      "Sugar Magnolia",
+      "Big River",
+      "The Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic 1974 set with seamless segues, especially the unique Playing‑in‑the‑Band → Wharf Rat → Playing sandwich; pacing stays tight and energetic throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for wild, experimental playing – feedback sections, slide work on \"Wolf\" and overall high energy.",
+    "Phil": "Described as tight, inspirational, with standout bass leads in the PITB sandwich and strong vocal contributions.",
+    "Bob": "His on‑stage banter is noted as relaxed and non‑chalant, adding to the laid‑back vibe.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Wharf Rat": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T20:15:34.401500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-08.sbd.miller.97268.sbeok.flac16"
+}

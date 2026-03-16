@@ -1,0 +1,68 @@
+{
+  "summary": "Crystal‑clear soundboard captures an intimate 1984 show with a smoking Scarlet > Fire and standout Minglewood, though Jerry’s vocals sit low in the mix for some listeners.",
+  "review": "The recording is a full‑show SBD that most fans describe as crisp and well balanced, delivering the relaxed intimacy of a small Marin venue. Musically the night shines on the Scarlet > Fire sequence, a fiery Minglewood/Dupree’s, and a powerful He's Gone, while occasional mix quirks (Jerry buried, heavy reverb) keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average rating across ~25 reviews is 4.28; the majority praise both performance and soundboard quality, with only a few dissenting comments about mix issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the SBD \"crisp\", \"crystal clear\" and compliment the clean mix; a handful note muffled sections, low Jerry vocal level, and occasional reverb over‑use."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Minglewood (Dupree's Diamond Blues)",
+      "He's Gone",
+      "The Stranger",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the set as relaxed and intimate, with a smooth first set that builds into a high‑energy second set highlighted by extended jams on Scarlet > Fire and Minglewood. The overall pacing is praised despite occasional vocal mix issues."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work is praised; vocals are often noted as low or thin in the mix, though some find his tone still solid.",
+    "Phil": "Bass described as \"sonic\" and heavy in the mix during this period.",
+    "Bob": "Bobby's guitar contributions are generally positive, adding texture to jams; a few reviewers mention occasional screeching but no major complaints.",
+    "Keys": "Brent Mydland receives strong praise for his organ/piano textures on Minglewood and Scarlet > Fire; some criticize over‑use of effects/reverb.",
+    "Drums": "Drumming is noted as steady with an occasional \"Egyptian flair\"; no major negative comments."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Minglewood (Dupree's Diamond Blues)": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:56:44.290676+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-03-31.sbd.nawrocki.14078.sbeok.shnf"
+}

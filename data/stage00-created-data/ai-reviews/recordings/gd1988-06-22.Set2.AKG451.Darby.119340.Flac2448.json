@@ -1,0 +1,50 @@
+{
+  "summary": "A muddled second set with sloppy playing; recording quality not discussed.",
+  "review": "The reviewer praises the first set but describes the second set as a disaster, citing drunken‑slurred vocals from Jerry and a broken‑down \"Stella Blue\" that ruined the flow. No comments are made about the tape source or sound clarity, so the technical side remains unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "One detailed but low‑star review highlights a poor musical performance; with no recording info, the rating leans toward the lower end of the scale."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention soundboard or audience clarity, so technical quality cannot be assessed beyond being unremarkable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "I Will Take You Home",
+      "Stella Blue"
+    ],
+    "setlist_flow": "First set described as solid; second set started okay with Foolish Heart into Scarlet Begonias but quickly deteriorated after a sentimental I Will Take You Home, a cold‑start Drums segment, and a disastrous Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds drunk and slurs lyrics during the second set, especially on Stella Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Cold start and ragged feel noted in the transition to Drums."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:54:33.415089+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-22.Set2.AKG451.Darby.119340.Flac2448"
+}

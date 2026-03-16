@@ -1,0 +1,103 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy ’92 Oakland show highlighted by a scorching Shakedown Street and standout performances of Casey Jones, Stuck Inside of Mobile, Row Jimmy, Let It Grow and Dark Star.",
+  "review": "The recording is a clean two‑track SBD from Stonebear that delivers crystal‑clear instrument separation and no noticeable dropouts. Musically the show is charged with the band “on” – Jerry’s guitar tone and vocals sparkle, Phil opens Shakedown Street with authority, Brent (Bobby) adds fiery keyboard riffs, and the setlist flows from a tight first set into a second half that peaks on Casey Jones and an incandescent Dark Star. While a few reviewers note a lukewarm Samson, the consensus is that this is one of the most memorable 1992 Bay Area dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average user rating ~4.1 combined with an excellent soundboard recording and predominantly positive comments about the performance yields a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Stonebear two‑track SBD is crisp, well‑balanced and free of major glitches; reviewers cite good matrix sources and no noticeable dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Casey Jones",
+      "Stuck Inside of Mobile",
+      "Row Jimmy",
+      "Let It Grow",
+      "Dark Star",
+      "Brown Eyed Women",
+      "Feel Like a Stranger"
+    ],
+    "poor_songs": [
+      "Samson"
+    ],
+    "setlist_flow": "A tight, clean first set builds momentum that erupts in a second‑set high point with Casey Jones and an inspired Dark Star; the band feeds off each other and the audience throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeated praise for his guitar tone, solos (especially on Row Jimmy) and vocal performance; noted as ‘on’ all night.",
+    "Phil": "Opening notes on Shakedown Street highlighted as a strong start.",
+    "Bob": "Brent \"Bobby\" Mydland’s keyboard work described as fiery, with sick riffs and creative synth textures.",
+    "Keys": "Keyboards praised for their energy and experimentation (MIDI smears into Dark Star).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stuck Inside of Mobile": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:05:57.124803+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-16.sbd-2track.stonebear.5551.sbeok.shnf"
+}

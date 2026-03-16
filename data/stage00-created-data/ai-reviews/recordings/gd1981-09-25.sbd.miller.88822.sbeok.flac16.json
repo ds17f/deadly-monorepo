@@ -1,0 +1,93 @@
+{
+  "summary": "A marathon 1981 show bursts with a scorching Scarlet > Fire and soaring Terrapin Station, caught on an uneven but listenable soundboard tape.",
+  "review": "The performance is widely praised for its energy and standout moments – especially the explosive Scarlet > Fire, tight Terrapin Station, and a fiery Black Peter – making it one of the more memorable long shows of the era. The soundboard source sounds good in the first set (loud, rich and upfront) but grows thin and noisy toward the second half, which keeps the overall listening experience from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers laud the musical performance (70% weight) while noting a mix of good early sound and later deterioration (30% weight), yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Early tracks are described as crisp, loud and rich with some hiss; the board becomes thin, flat‑sounding and even “frying bacon”‑like in the later second set, leading to a noticeable drop in clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Terrapin Station",
+      "Black Peter",
+      "Cumberland Blues",
+      "Peggy O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An unusually long, five‑hour set that rides a high‑energy first half into a second set that, despite some recording woes, maintains strong jams and memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as blazing; he flubs the first line of Fire but recovers, and his interplay with Brent on several songs is highlighted.",
+    "Phil": "Lesh gets a nod for an early descending bass line in Birdsong that steers the jam forward.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are called both \"ballistic\" and \"bizarre-sounding,\" but overall his playing fuels the band’s energy.",
+    "Drums": "The drummers step up nicely, with a brief off‑tempo hiccup on Friend of the Devil that tightens after the first verse."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Post-Space run": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:45:48.028310+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-25.sbd.miller.88822.sbeok.flac16"
+}

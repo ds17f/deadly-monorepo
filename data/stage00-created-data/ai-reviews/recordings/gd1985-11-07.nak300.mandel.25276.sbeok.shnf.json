@@ -1,0 +1,45 @@
+{
+  "summary": "Solid Dead show with a standout High Time and Beat It On Down The Line, though the recording source and quality are not described.",
+  "review": "Both reviewers enjoyed this performance, noting an energetic first set and a memorable second‑set High Time. The show is described as solid with highlights like Beat It On Down The Line, but no details about the audio source or fidelity were provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Two positive reviews (4‑ and 5‑star) focus on strong musical moments; lack of recording details prevents a higher rating, resulting in an overall ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer commented on soundboard, audience mix, clarity or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Beat It On Down The Line"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set leading into a strong second set highlighted by High Time; overall solid pacing and vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:01:47.379221+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-07.nak300.mandel.25276.sbeok.shnf"
+}

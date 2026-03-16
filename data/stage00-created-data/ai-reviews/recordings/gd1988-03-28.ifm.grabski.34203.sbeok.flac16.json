@@ -1,0 +1,69 @@
+{
+  "summary": "Crispy, high‑energy set with sparkling Stranger, Franklin's Tower, Bird Song, Truckin', Dark Star and The Other One, though marred by noticeable static.",
+  "review": "The performance shines on tracks like Stranger, Franklin's Tower, Bird Song and the seamless Truckin' → Dark Star → Other One sequence, earning high praise from reviewers. Recording quality is generally crisp, but persistent static noise detracts from an otherwise clean capture.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Reviewer gave 4 stars, highlighted many standout songs, and only noted static as a drawback; limited data (single review) leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Static noise is problematic, but overall the sound is crisp and clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Franklin's Tower",
+      "Bird Song",
+      "Truckin'",
+      "Dark Star",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong flow with a highlighted Truckin' → Dark Star → Other One sequence and consistent sparkle throughout the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:16:05.619077+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-28.ifm.grabski.34203.sbeok.flac16"
+}

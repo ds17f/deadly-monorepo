@@ -1,0 +1,45 @@
+{
+  "summary": "Fair audience recording captures a very good Charlotte show highlighted by an instrumental Dark Star and a standout Satisfaction encore.",
+  "review": "Fans recall the June 18 Charlotte Coliseum concert as an \"A\"‑level performance, with a memorable Dark Star jam and a rousing Satisfaction encore that many still talk about. The tape – likely an audience recording from the venue’s “taper section” – is decent but not pristine; some listeners note heat‑induced hiss and a less than ideal PA mix. Overall the show shines despite the mixed audio quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance highly (A‑show, Dark Star and Satisfaction praised) while recording comments are split between decent and sub‑par sound, yielding a combined weighted score around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tape recorded in the Coliseum’s taper section; described as \"pretty good\" with possible hypercardiods, but also noted heat‑related noise and a weak PA sound in the venue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second night of a two‑night run; described as a relaxed, well‑played set that built to an instrumental Dark Star and closed with a high‑energy Satisfaction encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned positively (\"Jerry on stage\") but no specific performance details.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T07:15:21.503047+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-18.schoeps.wier.4674.sbeok.shnf"
+}

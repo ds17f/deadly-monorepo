@@ -1,0 +1,80 @@
+{
+  "summary": "Good‑quality audience tape of a lively Dayton show with standout Let It Grow, The Other One and a killer Estimated Prophet > Eyes of the World > Drums sequence, but the infamous Mack the Knife falls flat.",
+  "review": "Fans rave about the intimate arena vibe and several high‑energy moments – especially Let It Grow, The Other One, Wharf Rat/Sugar Mag and a superb Estimated Prophet/Eyes of the World/Drums stretch.  The hand‑held audience recording is generally crisp and bouncy, though it has occasional “thick” spots and a weak opening that some listeners note.  Overall the performance shines despite the widely‑criticized Mack the Knife.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4–5 stars and praise many songs, indicating a strong show; recording is described as good but with minor flaws, pulling the overall rating slightly below the top tier."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Hand‑held FOB tape praised for being crisp and bouncy; some listeners note ‘thick’ spots and a lame start, and several wish for a cleaner soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "The Other One",
+      "Estimated Prophet > Eyes of the World > Drums",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Mack the Knife"
+    ],
+    "setlist_flow": "Intimate, dance‑floor oriented show with a strong second set; the opening is described as shaky but quickly lifts into high‑energy jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight his diabolical guitar tone and soaring riffs, especially on The Other One.",
+    "Phil": "",
+    "Bob": "Mentioned warbling on Mack the Knife; otherwise not noted.",
+    "Keys": "",
+    "Drums": "The Drum segment in the Estimated Prophet > Eyes of the World > Drums sequence is praised as ‘fabulous’."
+  },
+  "song_mentions": {
+    "Mack the Knife": {
+      "positive_mentions": 3,
+      "negative_mentions": 4,
+      "total_mentions": 7
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet > Eyes of the World > Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:28:25.570714+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-11-30.nak300.munder.9591.sbeok.shnf"
+}

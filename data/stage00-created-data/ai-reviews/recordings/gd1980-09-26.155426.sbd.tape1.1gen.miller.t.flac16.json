@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive feedback; reviewer only asks for a correct date rename",
+  "review": "The sole review gives the recording zero stars and simply requests that the file be renamed to reflect the correct 1980 date. No comments are provided about the audio quality, source type, or musical performance, leaving both the recording and show unassessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating; no details on performance or sound quality, so rating is based solely on the expressed dissatisfaction."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer did not mention any aspects of sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on the set or performance; reviewer only noted a naming issue."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T03:38:26.710088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-26.155426.sbd.tape1.1gen.miller.t.flac16"
+}

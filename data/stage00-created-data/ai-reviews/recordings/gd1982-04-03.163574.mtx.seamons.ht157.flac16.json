@@ -1,0 +1,114 @@
+{
+  "summary": "Matrix recording praised as crystal‑clear while the Norfolk show offers dazzling Scarlet Begonias, Eyes of the World and Peggy‑O amid a mixed overall performance.",
+  "review": "The matrix source is lauded with five‑star sound quality, delivering a clear and well‑balanced capture of the Dead’s lone Norfolk gig. Musically the night shines on the quadfecta (Scarlet Begonias → Fire → Estimated Prophet → Eyes of the World) and tight renditions of Peggy‑O, Bird Song and Althea/Let It Grow, but suffers from a shaky Alabama Getaway start, a weak CC Rider slide and a rushed second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Detailed review gives strong praise for the recording (5 ★) and several standout songs, but notes multiple performance lapses; weighted average yields an overall ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Five‑star matrix sound; crystal‑clear mix with no reported dropouts or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Eyes of the World",
+      "Peggy-O",
+      "Bird Song",
+      "Althea > Let It Grow",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Alabama Getaway",
+      "CC Rider",
+      "Space"
+    ],
+    "setlist_flow": "The first set builds momentum but stumbles early with a mic‑less Alabama Getaway and a lackluster CC Rider. The quadfecta in the second set is the high point, yet the band rushes through Space and the final sequence, ending on a serviceable Stella > Saturday Night > U.S. Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "Hypnotic arpeggios on Scarlet Begonias praised; momentarily thrown off during Eyes of the World but recovers; vocal mic missing on Alabama Getaway.",
+    "Phil": "",
+    "Bob": "Locks in tightly with Jerry and Mydland during the quadfecta, providing solid rhythm support.",
+    "Keys": "Mydland quickly joins the jam on the quadfecta, adding cohesive keyboard textures.",
+    "Drums": "Mickey broke a bass‑drum head early, contributing to a brief Space segment."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "CC Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:11:53.324033+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-03.163574.mtx.seamons.ht157.flac16"
+}

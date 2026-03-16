@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent soundboard capture of a stellar Dec 86 show, featuring the flawless Dancin'→Black Muddy River transition, soaring Comes‑a‑Time and the only full Playing In the Band sandwich.",
+  "review": "The recording is consistently praised as one of the best Healy soundboard tapes – clear, balanced, with a surprisingly fresh Jerry vocal. Musically the concert shines with standout moments like the Dancin' into Black Muddy River segue, an exquisite Comes A Time, and the unique full Playing In The Band sandwich that ties the set together.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over ten enthusiastic reviews highlight both superb performance and high‑quality soundboard recording, with no negative comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Repeatedly described as one of the best Healy recordings; clear mix, fresh Jerry vocals, no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' > Black Muddy River",
+      "Comes a Time",
+      "Bird Song",
+      "Playing In The Band sandwich"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth transitions throughout, highlighted by the full Playing In The Band sandwich and a balanced mix of new material and classic ballads/rockers."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds fresh and surprisingly clear for a post‑coma show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band sandwich": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:00:02.023908+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-27.sbd.miller.77443.flac16"
+}

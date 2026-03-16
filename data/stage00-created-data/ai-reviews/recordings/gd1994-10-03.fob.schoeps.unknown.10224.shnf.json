@@ -1,0 +1,63 @@
+{
+  "summary": "Cloudy audience recording with a harsh Bob Weir tone, but Touch, Lucy and Bird Song shine amid an uneven set.",
+  "review": "The FO‑B/Schoeps capture is quite cloudy – guitars cut through while everything else sounds muffled and the tracks are mislabeled. Jerry’s playing is described as restrained and his synth‑like tone odd, and Bob Weir’s guitar is harsh, yet the band delivers solid moments on Touch, Lucy and Bird Song, with a mixed second set that recovers somewhat after a disappointing Attics jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it criticizes the recording quality (cloudy, unclear) and notes uneven performance, though a few songs are praised. Weighted estimate yields a below‑average combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Cloudy, muffled sound with poor clarity except for guitars; tracks mislabeled; harsh wireless‑induced tones; overall a clunky box recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "Lucy",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Attics"
+    ],
+    "setlist_flow": "First set generally weak and under‑driven, second set contains some good parts but is marred by a sloppy Attics performance; track mislabeling adds to the confusion."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone described as choked/synth‑like and not tearing it up; overall negative.",
+    "Phil": "",
+    "Bob": "Harsh, jarring tone from his wireless system; terrible in reviewer’s view.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Childhood's End": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:21:06.909560+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-03.fob.schoeps.unknown.10224.shnf"
+}

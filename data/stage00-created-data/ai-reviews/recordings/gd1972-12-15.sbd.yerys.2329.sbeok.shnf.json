@@ -1,0 +1,87 @@
+{
+  "summary": "Soundboard recording with a little hiss and vocal balance quirks captures a late‑'72 show that shines on the Playin’ → Truckin’ > Dark Star > Dew sequence.",
+  "review": "The performance is strong, especially the extended Playin’ in the Band jam and the meat‑sequence Truckin’ > Dark Star > Dew, which several reviewers call a highlight.  The soundboard source is generally clear but suffers from hiss, occasional vocal level issues and a few tape cuts that affect a handful of songs.  Overall the musical payoff outweighs the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise its jams; recording issues are noted but not severe enough to outweigh the strong musical performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Light hiss throughout, vocals (Bob) a touch low and Jerry slightly high in mix; several tape cuts (Promised Land, Candyman) and a brief SQ glitch during China>Rider; overall clarity is solid for the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Truckin'",
+      "Dark Star",
+      "Dew"
+    ],
+    "poor_songs": [
+      "Promised Land (cut)",
+      "Candyman (cut)",
+      "Sugaree (slow/country feel)",
+      "Greatest Story Ever Told (muted energy)"
+    ],
+    "setlist_flow": "The first set takes a while to find its footing, but gains momentum by the second set where the Truckin' > Dark Star > Dew ‘meat‑sequence’ steals the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Edgy themes, Santana‑style bends and strong noodling drive the jams; occasional vocal mix quirk noted.",
+    "Phil": "Provides implosive, psychedelic bass work especially in the Truckin'/Dark Star transition; early tape damage muffles his sound until later.",
+    "Bob": "His vocals sit low in the mix on some tracks and he mis‑sings lyrics, but his rhythm guitar adds shimmering texture behind Jerry.",
+    "Keys": "Keith’s keyboards add shimmering rushes, plinks, brief ‘chopsticks’ moment and pushes Jerry higher toward the end of the set.",
+    "Drums": "Bill's drumming is audible later in the show; early sections sound a bit muted, with one low‑level drum note noted."
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:44:20.123252+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-12-15.sbd.yerys.2329.sbeok.shnf"
+}

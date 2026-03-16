@@ -1,0 +1,72 @@
+{
+  "summary": "Crisp 1969 soundboard captures a relaxed, mellow set highlighted by a sparkling Morning Dew and the debut of Easy Wind.",
+  "review": "The August‑21‑1969 Green Lake show is praised for its laid‑back vibe and strong performances – early jammy Casey Jones, a soaring Morning Dew, the first-ever Easy Wind and memorable renditions of Minglewood and China Cat with flute added.  The audience‑sourced soundboard recording is described as crisp and full of detail (with only slight tape hiss), making it an excellent entry point for new listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about both the musical performance and the soundboard quality across many detailed reviews; weighted average yields a strong 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix that captures bells, whistles and stage ambience; occasional slight tape hiss but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Easy Wind",
+      "Minglewood",
+      "The Other One > Dark Star > Cosmic Charlie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, meandering flow typical of late‑summer ’69 – mellow first set leading into a cozy second set with smooth transitions and plenty of improvisational space."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is noted as beautiful (especially on “Doin’ That Rag”) and his guitar tone is praised for clarity.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Kreutzmann and Hart’s drumming mechanics are highlighted as balanced and smooth, providing a solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T16:47:22.032423+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-08-21.sbd.cotsman.13850.sbeok.shnf"
+}

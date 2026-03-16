@@ -1,0 +1,112 @@
+{
+  "summary": "Good soundboard transfer with lively mix, but a low‑energy show that shines on Cumberland, Good Lovin’/Lovelight and Bird Song while stumbling on Hard to Handle and King Bee.",
+  "review": "The recording is a mostly clean SBD capture (though a few channel swaps and pitch tweaks are noted) that lets the band’s nuances come through, even if Phil’s bass sits low. Musically the concert is widely regarded as the weakest of the six‑night run – the first set offers highlights like Cumberland and Me & My Uncle, but overall energy is subdued and several songs (Hard to Handle, King Bee, Minglewood Blues) fall flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is generally viewed as below average with many negative comments, while the soundboard recording is praised as clear and lively despite minor technical quirks; combined rating lands around the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Lively mix with clear instrument separation; Phil’s bass is recessed. Some reviewers note channel swaps, pitch‑correction needs and occasional source inconsistencies (Betty Board vs SBD), but overall the transfer is considered solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland",
+      "Good Lovin'",
+      "Lovelight",
+      "Bird Song",
+      "Me & My Uncle",
+      "Johnny B. Goode",
+      "Goin' Down the Road"
+    ],
+    "poor_songs": [
+      "Hard to Handle",
+      "King Bee",
+      "Minglewood Blues",
+      "Truckin'",
+      "Casey Jones",
+      "Playin'"
+    ],
+    "setlist_flow": "First set is generally stronger with several high points, while the second set is uneven and suffers from low energy; overall the concert feels listless compared to earlier shows in the run."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as choppy on the Bird Song outro but he pushes harder on Minglewood Blues and Goin' Down the Road, providing some of the few energetic moments.",
+    "Phil": "Bass often sits low in the mix; reviewers note it’s not prominent early on but later ‘steps up’ during certain numbers, though overall his presence is muted.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s absence is felt – the drummers sound listless and only regain some momentum when trying to segue back into Not Fade/Truckin' themes."
+  },
+  "song_mentions": {
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "King Bee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:17:48.432907+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-24.sbd.cantor-crouch-diebert-gmb.87570.sbeok.flac16"
+}

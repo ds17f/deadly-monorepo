@@ -1,0 +1,39 @@
+{
+  "summary": "Jerry sounds great after laryngitis and the performance is praised; recording quality isn’t described.",
+  "review": "The reviewer highlights a strong vocal recovery from Jerry, noting his great sound and expressing love for the rendition of “Row Jimmy.” No specific comments are made about the tape source or audio fidelity, so the technical side remains unclear. Overall the show is remembered fondly as a nice late‑80s performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one review, but it is enthusiastic about the musical performance (especially Jerry’s voice) while offering no information on recording quality; weighted estimate gives a solid show rating with neutral recording assumption."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not mention any aspects of sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on pacing; reviewer simply notes the show was nice overall."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounding great after recovering from laryngitis.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:17:40.297016+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-07.125775.AT835.flac16"
+}

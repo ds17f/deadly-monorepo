@@ -1,0 +1,83 @@
+{
+  "summary": "Good soundboard capture of a vibrant show highlighted by a soaring Comes A Time and tight Miracle jam.",
+  "review": "The second‑set recording is a solid soundboard source that, while missing the first set and showing some minor mix quirks, still delivers clear instrument separation and lively left‑right panning. Musically the concert shines with an inspired Comes A Time, a fiery Scarlet > Fire > Estimated sequence, and standout performances of Loose Lucy, Jack Straw and Miracle, earning enthusiastic praise from most reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and highlight several exceptional performances; recording comments note only modest issues and a missing first set, leading to an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with decent stereo panning (Hamza El Din), but reviewers note missing first‑set audio, minor sound complexities and a desire for an improved copy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Scarlet > Fire > Estimated",
+      "Loose Lucy",
+      "Jack Straw",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a powerful second set with seamless segues (Scarlet‑Fire‑Estimated‑Comes) and high energy jams, making the concert feel tight and polished despite some venue‑related frustrations."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ‘Crying Jerry Guitar’, perfect tone on Comes A Time and overall stellar lead work.",
+    "Phil": "One reviewer calls Phil’s bass a ‘bomb’ in Jack Straw, indicating a perceived weakness there.",
+    "Bob": "",
+    "Keys": "Mixed comments – some criticize Vince/Brent’s contribution while others note no specific keyboard highlights for this show.",
+    "Drums": "Hamza El Din’s chanting during drums was highlighted as a beautiful, memorable moment."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:46:24.229670+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-12-27.set1-akg-set2-sbd.miller.21928.sbeok.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Good-quality audience tape featuring a strong selection of rare tracks like Jack‑A‑Roe, Ship of Fools, Spoonful and China Doll.",
+  "review": "The recording is praised as the best‑quality audience source among the handful available for the September 14 1991 show, offering clear sound despite being an audience capture. Reviewers also highlight the setlist’s appeal, noting the inclusion of several seldom‑played songs that make this performance a worthwhile listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "A single 4‑star review emphasizes both good tape quality and an appealing, rare song selection, leading to a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as the best‑quality audience tape for this date; clear relative to other crowd recordings but still an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-A-Roe",
+      "Ship of Fools",
+      "Spoonful",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review highlights the varied setlist and inclusion of lesser‑played numbers; no comments on pacing or performance issues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:00:02.544512+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-14.nak300.bleich-sirmick.111250.sbeok.flac16"
+}

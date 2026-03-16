@@ -1,0 +1,31 @@
+{
+  "summary": "The tape is plagued by sound problems, but the concert still delivers a few decent moments.",
+  "review": "Reviewers note that this recording suffers from significant audio issues—likely stemming from either the taper's equipment or the venue’s live mix—making the listening experience rough. Despite the technical flaws, the performance itself has some good spots, though no specific songs are highlighted.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the show modestly (some good parts) but criticizes the recording heavily, leading to a middling combined score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer reports fraught sound problems, possibly from taper equipment or live system; overall audio is unreliable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; reviewer simply notes that 'some of the show is good.'"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T09:44:08.182481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-02-22.116143.NeumannKMF4.daweez.d5scott.flac16"
+}

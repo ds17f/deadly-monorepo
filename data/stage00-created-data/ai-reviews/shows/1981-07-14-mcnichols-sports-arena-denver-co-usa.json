@@ -1,0 +1,80 @@
+{
+  "summary": "Rare Bird Song→Lost Sailor segue, strong Truckin'/Eyes jam",
+  "blurb": "First set builds solid momentum highlighted by the rare Bird Song → Lost Sailor transition and a tight early run of Cold Rain And Snow and To Lay Me Down. The second set ignites with a smoking Truckin' into Eyes Of The World stretch, though drum gaps and a few rough segues keep things imperfect. Overall a solid ’81 show with standout moments despite some vocal and technical hiccups.",
+  "review": "On July 14, 1981 at McNichols Sports Arena the Dead delivered a performance that captures the restless energy of their early‑’80s touring schedule. The first set rolls out strong, opening with a crisp “Cold Rain And Snow” and moving through an inspired “To Lay Me Down,” before treating fans to the coveted Bird Song → Lost Sailor segue that segues into “Saint Of Circumstance” and “Don’t Ease Me In.” Jerry’s guitar shines brightest in the second‑set Truckin' → Eyes Of The World jam, where his solo is described as “smoking,” while Brent adds tasteful color early on. The later stretch of “The Other One” and “Wharf Rat” retains the band’s improvisational fire, even as drum dropouts during the “Drums” segment and a muffed “High Time” moment blemish the flow. Bob’s vocals wander off‑key toward the end, but the overall setlist momentum and those rare moments make this show worth a listen, especially for fans chasing that elusive Bird Song transition.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "One recording praised the performance (positive) while another noted mixed aspects such as vocal off‑key moments and technical glitches, resulting in a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd81-07-14.aud.munder.9794.sbeok.shnf",
+    "reason": "Audience capture with clear arena sound, includes the rare Bird Song → Lost Sailor segue and strong Truckin'/Eyes stretch despite occasional pitch issues."
+  },
+  "key_highlights": [
+    "Rare Bird Song → Lost Sailor transition early in Set 1",
+    "Smoking Truckin' into Eyes Of The World jam in Set 2",
+    "Strong first‑set momentum with Cold Rain And Snow and To Lay Me Down",
+    "The Other One and Wharf Rat provide a solid second‑set finish despite drum gaps"
+  ],
+  "song_highlights": [
+    "Cold Rain And Snow",
+    "To Lay Me Down",
+    "Bird Song",
+    "Lost Sailor",
+    "Saint Of Circumstance",
+    "Don't Ease Me In",
+    "Truckin'",
+    "Eyes Of The World",
+    "The Other One",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a powerful solo between Truckin' and Eyes, overall decent night though slips on lyrics early before warming up.",
+    "Phil": "",
+    "Bob": "Vocals become off‑key and overly shouted later in the set; occasional lyric changes are distracting.",
+    "Brent": "Plays tastefully in first‑set jams, but his presence doesn’t fully drive the second‑set Shakedown Street.",
+    "Mickey": "Drum section suffers a severe gash/dropout during the Drums segment and muffled High Time, affecting overall flow.",
+    "Billy": "Shares the drum issues noted above, with gaps that interrupt the continuity of the second set."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-13T13:18:58.307184+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cold Rain And Snow",
+      "New Minglewood Blues"
+    ],
+    [
+      "To Lay Me Down",
+      "Me And My Uncle",
+      "Mexicali Blues"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Don't Ease Me In"
+    ],
+    [
+      "Truckin'",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Good Lovin'"
+    ]
+  ]
+}

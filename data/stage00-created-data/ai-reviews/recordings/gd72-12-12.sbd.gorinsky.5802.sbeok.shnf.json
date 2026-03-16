@@ -1,0 +1,69 @@
+{
+  "summary": "A crisp‑mix recording captures a stellar 12/12/72 show with soaring vocals, tight harmonies and a magical The Other One.",
+  "review": "Reviewers rave about the pristine vocal blend—Donna’s lead is in tune and perfectly mixed—and highlight standout moments like Bird Song, Playin', Box of Rain and an especially transcendent The Other One. The recording is praised for its clear balance (keyboards up front, drums solid) though one listener wishes Phil’s bass were a bit louder. Overall the performance is described as one of the band’s best vocal outings with a consistently high‑energy flow after a slightly sloppy start.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers comment positively on both musical performance and sound quality; the only outlier is a zero‑star rating that contains praise, so the weighted average leans strongly toward a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is clear and well balanced—vocals, keyboards and drums are highlighted; bass noted as slightly recessed but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Playin'",
+      "The Other One",
+      "Box of Rain",
+      "Sing Me Back Home",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early set starts a bit sloppy but quickly gains momentum with Box of Rain, leading into an uplifting second half anchored by The Other One and soaring vocal performances."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass interaction praised but listeners wish it were louder in the mix.",
+    "Bob": "Vocals (Donna) are described as perfectly in tune and mixed; Bob’s screams on Sugar Magnolia are noted as executed exactly as intended.",
+    "Keys": "Keith's keyboards are brought forward in the mix, receiving specific praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:39:49.527414+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-12-12.sbd.gorinsky.5802.sbeok.shnf"
+}

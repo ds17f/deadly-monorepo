@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture of a spring ’87 show with scorching “He’s Gone”, fiery “The Other One” and a ripping second set.",
+  "review": "The Joe D’Amico recording delivers crystal‑clear, well‑balanced sound that lets the band’s high energy shine through. Reviewers rave about Garcia’s wailing solos on “He’s Gone” and “The Other One,” Phil’s 1973‑style bass drive, Brent’s inspired keys, and a second set that bursts with power from “Shakedown” to “Wharf Rat.” The first set is solid but only truly ignites after “Loser.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently glowing 5‑star reviews praise both the musical performance and the superb soundboard quality; recording is described as crisp, clean and better than other sources."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Praised as crystal‑clear, tight, with clean vocals and no noticeable dropouts; captures the band’s energy beautifully."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "The Other One",
+      "Shakedown",
+      "Truckin'",
+      "Wharf Rat",
+      "St. of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but only catches fire after “Loser.” The second set explodes with momentum, delivering a classic sequence from “He’s Gone” through “Wharf Rat,” highlighted by powerful jams and tight band interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia wails like a god on “He’s Gone” and “The Other One,” delivering soaring solos that define the night.",
+    "Phil": "Phil Lesh plays with 1973‑level intensity, driving the groove especially during “Truckin'” and “The Other One.”",
+    "Bob": "",
+    "Keys": "Brent Mydland stretches out his keyboard solos more than ever, adding extra color (notably in the post‑space jam).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T20:10:47.857849+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-30.nak300.damico.89341.sbeok.flac16"
+}

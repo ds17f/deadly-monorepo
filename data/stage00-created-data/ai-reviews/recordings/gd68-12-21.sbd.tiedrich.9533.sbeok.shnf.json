@@ -1,0 +1,62 @@
+{
+  "summary": "Fair‑quality soundboard capture of a low‑level, hissy 1968 set highlighted by a scorching Alligator → Caution jam and high‑energy The Eleven, with memorable moments from Feedback and Pigpen.",
+  "review": "Even though the tape suffers from low levels and noticeable hiss, the performance shines.  The band delivers an intense, fast‑paced show with the Alligator > Caution sequence (and possibly The Eleven) standing out, and Pigpen even adds a fun cameo.  Listeners who love ’68 will find the music more than makes up for the modest sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average 4.5 stars) while noting only moderate recording flaws, leading to a weighted rating around 4.0."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Low volume throughout, noticeable hiss and some degradation, but still listenable for a 1968 SBD source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator > Caution",
+      "The Eleven",
+      "Feedback",
+      "Bid You Goodnight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fast‑paced, intense early‑’68 vibe with seamless segues (Alligator → drums → The Eleven) and high energy throughout; the show feels like a classic ‘gap’ performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar work is described as intense and central to the Alligator/Caution jam.",
+    "Phil": "Phil’s bass is highlighted, especially on the vocal sections of \"And We Bid You Goodnight\".",
+    "Bob": "Weir provides a brief vocal cameo toward the end of the show.",
+    "Keys": "",
+    "Drums": "The drumming is praised for its intensity and a notable outro during the Bid You Goodnight segment."
+  },
+  "song_mentions": {
+    "Alligator > Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feedback": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pigpen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T10:05:44.536576+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-12-21.sbd.tiedrich.9533.sbeok.shnf"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard capture with generally good clarity (despite early digi‑noise and a mic‑plug hiccup) and standout performances of Black Peter, Baby Blue and Jerry’s countrified guitar work.",
+  "review": "The recording is a soundboard source that sounds clearer than many audience tapes, though listeners note some digital hiss on the opening numbers and a loose 1/8\" mic plug that muddies the first couple of songs. Musically the show shines with Jerry Garcia’s beautiful pedal‑steel‑like guitar on tracks like Cumberland Blues, Black Peter and Baby Blue, plus a warm Pigpen organ presence throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise the performance; technical flaws are mentioned but do not dominate, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and balanced for most of the set, but early tracks suffer from digi‑noise on \"Me & My Uncle\"/\"Casey Jones\" and a poorly seated 1/8\" mic plug makes the first two songs muddy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Baby Blue",
+      "Cumberland Blues",
+      "Hurts Me Too"
+    ],
+    "poor_songs": [
+      "Me & My Uncle",
+      "Casey Jones"
+    ],
+    "setlist_flow": "A warm, country‑tinged vibe runs through the set, closing with the poignant \"All Over Now Baby Blue\" that many note as a prophetic pre‑Altamont moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sublime countrified guitar tone and beautiful pedal‑steel‑like sounds.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ is described as sweet, audible on every song, with a notable howl during \"Hurts Me Too\".",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:26:04.302312+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-12-05.sbd.cotsman.11256.sbeok.shnf"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "Excellent soundboard capture of a stellar second‑set highlighted by a flawless Morning Dew → Playing In The Band flow and superb Garcia guitar work.",
+  "review": "Reviewers rave about the high‑quality soundboard recording, noting crisp clarity and the massive “Wall of Sound” that handled the venue’s acoustics beautifully. The second set is praised for its natural transitions – Morning Dew into Playing In The Band, Uncle John’s Band and a soaring Wharf Rat – making it a must‑listen despite the missing first set. Overall the performance is described as tight, motivated and featuring Garcia at an “unbelievable” level.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and overwhelmingly positive comments about both the music and recording quality drive a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with natural ambience; Wall of Sound system captured well. Minor issue: a short 10–20 s gap before “Fly Away” but no audible distortion or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Wharf Rat",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set only but flows seamlessly – Dew → Playing In The Band → Uncle John’s Band → Mississippi Half‑Step → He's Gone → Truckin' → Wharf Rat. Reviewers highlight the natural transitions and overall tight, motivated performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is called “unbelievable” with perfect tone; his vocal on Wharf Rat noted as strong.",
+    "Phil": "Bass (the “Phil Zone”) is described as prominent in the mix by several listeners.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s jazzy groove on Mississippi Half‑Step praised; drumming overall regarded as solid."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playing In The Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:02:00.826260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-11-01.sbd.parrillo.8834.sbeok.shnf"
+}

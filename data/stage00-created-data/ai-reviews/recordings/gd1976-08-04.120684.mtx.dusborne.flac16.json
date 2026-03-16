@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent matrix recording captures a classic August 1976 show with standout Scarlet Begonias and an epic Help‑Slip‑Frank sequence.",
+  "review": "All four reviewers hail this release as the definitive version of the 4‑August‑1976 concert, praising the long, flowing renditions of Scarlet Begonias and the monumental Help > Slip > Frank. The matrix source delivers a lively crowd presence that fuels the band, while the overall sound remains clear enough to make it a must‑listen despite not matching a pure SBD in fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Consistently 5‑star reviews emphasize both an exceptional performance and a high‑quality recording; the show is described as definitive with standout jams, and the matrix mix is praised for its energy."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to hear every instrument; crowd ambience adds excitement. Noted that a pure soundboard (SBD) version sounds slightly cleaner, but the matrix mix is still highly enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Help > Slip > Frank"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows superbly, with a long Scarlet Begonias segueing into an almost 30‑minute Help > Slip > Frank that showcases the band's improvisational peak."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass is gut‑shaking and a bit overwhelming, but fans of Phil Lesh consider it a treasure and a highlight of the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Frank": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T07:11:57.084613+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-08-04.120684.mtx.dusborne.flac16"
+}

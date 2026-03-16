@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard‑derived recording sounds muffled/commercial; reviewers recommend the audience version for a more authentic live experience.",
+  "review": "Both reviewers criticize this release, saying it was produced from a commercial source that makes the music hard to hear. One even suggests grabbing an audience recording instead, noting it captures the live vibe better. No comments on the performance itself were provided.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "medium",
+    "rationale": "The two reviews consistently complain about poor audio quality and give no positive remarks about the music, resulting in a low overall rating with moderate confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Derived from a commercial recording; muffled and lacking clarity. Reviewers advise using an audience tape for better live sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T06:22:18.525784+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-29.sbd.murphy.1858.shnf"
+}

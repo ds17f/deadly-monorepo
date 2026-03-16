@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard recording of a mixed‑quality 1994 show – strong Uncle John’s/Standing on the Moon segues but hampered by poor Bob Weir guitar tone.",
+  "review": "The performance captures some classic early‑Fall ’94 moments, notably an exploratory Uncle John’s Band segue into a sweet Standing on the Moon and solid China>Rider. However, reviewers repeatedly cite the unlistenable Bobby guitar sound and mix issues that make the recording only fairly listenable overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show has several highlights (UJB, SOTM, China>Rider) but many reviewers note poor guitar tone and mix problems; overall rating falls in the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is criticized for an overly distorted Bob Weir guitar (digital‑pedal sound) making parts unlistenable; otherwise typical soundboard clarity but overall listening experience is compromised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Standing on the Moon",
+      "Lightning Bolt",
+      "Stranger",
+      "Truckin'",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Exploratory segues (UJB → Drumz → Watchtower → SOTM) give the show a fluid, improvisational feel, but uneven guitar tones and occasional lackluster moments keep the overall flow from reaching greatness."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Multiple reviewers describe Bob Weir's guitar tone during this era as essentially unlistenable, likening it to a cheap digital distortion pedal.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lightning Bolt": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:36:52.218717+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-09-27.136852.sbd.miller.flac1648"
+}

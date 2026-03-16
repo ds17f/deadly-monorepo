@@ -1,0 +1,59 @@
+{
+  "summary": "Top‑notch Miller soundboard transfer with crystal‑clear mix; a spirited 1987 show highlighted by a soaring Iko Iko and Touch of Grey, though Jerry’s flub on the Brokedown Palace encore mars an otherwise sweet performance.",
+  "review": "The recording is praised across the board as an excellent soundboard capture – Miller’s transfer delivers a clean, well‑balanced mix with bass and drums sitting perfectly. The concert itself is described by many as one of the first great shows of ’87, featuring standout moments like Iko Iko (with the Dirty Dozen) and Touch of Grey, but it isn’t without blemishes: Jerry’s tone is called out as shot in places and a noticeable flub on the Brokedown Palace encore draws criticism. Overall the setlist’s unique flow keeps the energy high despite occasional rough edges.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently rated excellent, boosting the overall score; show quality receives mixed feedback (strong positives on several songs but notable performance flaws), resulting in a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller’s transfer praised as crystal‑clear, with great bass/drum mix and overall crispness; no major dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Touch of Grey",
+      "Quinn the Eskimo"
+    ],
+    "poor_songs": [
+      "Brokedown Palace (encore flub)",
+      "Iko Iko (messy in one review)"
+    ],
+    "setlist_flow": "Unique and energetic setlist with a Quinn the Eskimo opener, Half‑Step > Promised Land sequence, and Throwing Stones > Touch transition; spirit high despite occasional rough playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Divisive remarks – some love his tone while others say he sounds shot and note a flub on the Brokedown Palace encore.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bass and drums receive consistent praise for their mix and presence."
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Quinn the Eskimo": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:06:46.990034+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-03.sbd.walker-scotton.miller.82726.sbeok.flac16"
+}

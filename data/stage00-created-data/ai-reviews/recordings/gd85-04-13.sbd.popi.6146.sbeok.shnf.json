@@ -1,0 +1,109 @@
+{
+  "summary": "Soundboard recording of good quality captures a high‑energy 1985 show with standout performances of Peggy‑O, Terrapin, Deal and an intense Space jam.",
+  "review": "The show is praised for its fiery second set, soulful Jerry Garcia vocals (despite occasional cracks), tight rhythm section and memorable keyboard work by Brent. Recording-wise the soundboard source is clear overall, with only minor static blips and a brief cut at the start of Terrapin, making it very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and numerous positive comments about both performance and sound quality; minor recording glitches do not detract from the overall experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced, with occasional static jolts, a brief glitch here and there, and the front few seconds of Terrapin cut off."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Terrapin",
+      "Deal",
+      "Jack Straw",
+      "Bertha",
+      "Crazy Fingers",
+      "Truckin'",
+      "Space"
+    ],
+    "poor_songs": [
+      "Do It In The Road",
+      "Red Rooster"
+    ],
+    "setlist_flow": "A concise first set that builds momentum into a longer, jam‑heavy second set; the band stays tight while exploring extended improvisations and delivering several emotional high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice cracks and occasional lyric slips noted, but his guitar work, soulful solos and overall playing are praised.",
+    "Phil": "Bass is described as locked in and intense, contributing to the tight feel of the performance.",
+    "Bob": "Vocal contributions receive mixed notes (some feeble slide on Red Rooster) yet his passionate singing and leads are highlighted positively.",
+    "Keys": "Brent Mydland receives repeated praise for creative vamps, humor, and strong keyboard presence throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Do It In The Road": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:46:49.586391+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-13.sbd.popi.6146.sbeok.shnf"
+}

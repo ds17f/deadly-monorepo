@@ -1,0 +1,105 @@
+{
+  "summary": "Good matrix recording captures a solid 1988 show with standout Franklin’s Tower, Terrapin Station and Throwing Stones.",
+  "review": "The tape is a well‑mixed audience/matrix capture that sounds clear and lively, preserving Brent’s subtle synth textures. Musically the concert delivers strong moments – a soaring Franklin’s Tower, a tight Terrapin Station, a dance‑inducing Throwing Stones and an upbeat Mighty Quinn – though “Touch” falls short and Lovelight feels dated.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Three detailed reviews rate the show 3‑4 stars, praising many songs and vocal performances; recording is described as good/matrix sounding great, yielding a combined weighted score around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix capture using Scheops CMC4 / mK4 capsules and Sony PCM‑F1; reviewers note clear sound, good balance, and that the audience portion sounds great. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Terrapin Station",
+      "Samson",
+      "Throwing Stones",
+      "Mighty Quinn",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Touch",
+      "Lovelight",
+      "Miracle",
+      "Space",
+      "Drums"
+    ],
+    "setlist_flow": "First set is mixed with a few weaker moments (notably Touch), while the second set climbs to an above‑average level, delivering multiple climaxes and a high‑energy encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds stronger and on key; vocal performance praised throughout, especially on Franklin's Tower and Mighty Quinn.",
+    "Phil": "Bass work noted on Throwing Stones and overall solid playing; highlighted as a highlight by one reviewer.",
+    "Bob": "Sings well on this era’s material; vocal on Mighty Quinn described as fresh, but his rendition of Lovelight is considered lackluster.",
+    "Keys": "Brent adds hushed, magical synth work that colors Franklin's Tower and the encore; keyboard textures praised for adding poignancy.",
+    "Drums": "Drum segment noted but not particularly striking; reviewers felt it lacked excitement compared to other parts."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:07:03.674305+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-02-14.sbd.patched.miller.23533.sbeok.shnf"
+}

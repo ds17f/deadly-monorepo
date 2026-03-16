@@ -1,0 +1,87 @@
+{
+  "summary": "Solid soundboard recording with clear crowd energy, highlighted by a smoking Help>Slip>Franklin’s and a soaring Terrapin Station",
+  "review": "The DP‑17 soundboard capture is generally clean and lets the Boston Garden audience’s excitement shine through, though a few reviewers note occasional odd keys and minor sloppiness. Musically the show shines in its first‑set sequence Help → Slipknot! → Franklin's Tower and an epic Terrapin Station jam, while later moments like Not Fade Away and That Would Be Something also draw praise; a handful of critics point out rough spots such as Crazy Fingers and some lyrical flubs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.1/5, with strong positive comments on key performances and generally good soundboard quality; the mix of high‑praise and notable criticisms yields a solid but not flawless score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear DP sound with good crowd ambience; occasional odd keyboard tones (Crazy Fingers) and minor mix quirks noted by a few reviewers but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Terrapin Station",
+      "That Would Be Something",
+      "Not Fade Away",
+      "It Must Have Been The Roses"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "Queen Jane Approximately",
+      "Music Never Stopped"
+    ],
+    "setlist_flow": "First set builds strong momentum with the Help‑Slip‑Franklin sequence and tight mid‑set jams; second set starts unevenly but recovers with a monster Terrapin Station, a solid That Would Be Something, and a rousing Not Fade Away that lifts the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for intense, soaring lead guitar—especially during Terrapin and the Help>Slip>Franklin sequence; also noted cutting off a keyboardist on Queen Jane.",
+    "Phil": "Generally mentioned as being fired up by Hornsby’s solos; no specific critique beyond that.",
+    "Bob": "Only briefly noted for limited vocal contribution early in the first set (only one song in first six tracks).",
+    "Keys": "Mixed feedback: keyboards deliver dark, trippy textures and strong moments on Terrapin, but Crazy Fingers suffered from weird key choices and sloppy playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "That Would Be Something": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It Must Have Been The Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:58:44.852418+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-25.nak.dodd.16667.sbeok.shnf"
+}

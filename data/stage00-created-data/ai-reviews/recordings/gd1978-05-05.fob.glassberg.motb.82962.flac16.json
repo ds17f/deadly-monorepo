@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording of a solid, if unremarkable, show highlighted by strong Estimated Prophet and Stella Blue jams.",
+  "review": "The Glassberg AUD captures the concert with impressive room ambience, wide stereo spread, and clear instrument separation, making it one of his best field recordings. Musically the night is described as standard‑fare with a few peaks – notably an engaging Estimated Prophet jam and a very good Stella Blue – while some listeners note weak moments such as Bob Weir’s slide work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Four detailed reviews consistently praise the recording quality (excellent) and rate the performance as decent to good; weighted average of show (≈3.5) and recording (≈4.5) yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Great room sound, wide stereo effect, clear drum echo and booming bass; field work praised as outstanding despite the era's limitations."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a fairly standard set with few peaks; solid playing with a rough edge and tenacity but nothing jaw‑dropping."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Booming, thumping bass noted positively.",
+    "Bob": "Criticized for incompetent slide guitar that detracted from songs.",
+    "Keys": "",
+    "Drums": "Echoes nicely in the room sound, adding depth."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:05:28.662434+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-05.fob.glassberg.motb.82962.flac16"
+}

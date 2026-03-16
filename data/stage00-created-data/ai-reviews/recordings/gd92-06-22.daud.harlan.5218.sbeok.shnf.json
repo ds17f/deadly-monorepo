@@ -1,0 +1,99 @@
+{
+  "summary": "Decent sound‑board capture of the June 22 1992 Pittsburgh show, highlighted by a scorching Spanish Jam and memorable Dark Star despite uneven playing.",
+  "review": "The recording is a solid (though not pristine) soundboard source that conveys the energy of the night, with the Spanish Jam and a brief but magical Dark Star standing out.  The band swings between inspired moments – Jerry’s fire solo, a tight Scarlet→Fire transition and a heartfelt Black Peter – and sections where the playing feels flat, especially early in the first set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise key performances, but several note sub‑par playing and a thin mix, pulling the overall score just under 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally decent soundboard capture; some reviewers mention thin keyboards, smeared bass and occasional reverberation, but overall clear enough for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam",
+      "Dark Star (part 2)",
+      "Fire",
+      "Scarlet > Fire",
+      "Stella Blue",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Loser",
+      "Must've Been",
+      "Ramble On",
+      "Deal"
+    ],
+    "setlist_flow": "First set feels work‑like with a few weaker numbers, while the second set lifts off with strong transitions (Scarlet→Fire) and extended jams; the encore (Knockin' on Heaven's Door) caps a night remembered more for its atmosphere than flawless execution."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Fire is praised as memorable, but several reviewers note he sounded 'phoned‑in' early on and seemed eager to leave the stage after Dark Star.",
+    "Phil": "Bass was described as thin and not projecting well; some reviewers barely heard him due to venue acoustics.",
+    "Bob": "His vocals are called passionate yet not his best, with a few moments of enthusiasm noted.",
+    "Keys": "Vince’s keyboards were described as thin and at times mistaken for a female voice; overall keyboard tone is considered weak in the mix.",
+    "Drums": "The drum segment (Drums) received high marks for intensity and was highlighted in the Dark>Drums>Space sequence."
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Must've Been": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble On": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:30:33.470636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-22.daud.harlan.5218.sbeok.shnf"
+}

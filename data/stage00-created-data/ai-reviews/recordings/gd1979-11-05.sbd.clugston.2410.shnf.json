@@ -1,0 +1,106 @@
+{
+  "summary": "High‑fiving soundboard capture of a wildly unique setlist with a standout Eyes > Estimated > Franklin’s run, despite minor dropouts and some mix quirks.",
+  "review": "The recording is a soundboard source that generally sounds good, though listeners note occasional drop‑outs, channel switches and pitch tweaks. Musically the show delivers an out‑of‑the‑box setlist highlighted by the marathon Eyes‑Estimated‑Franklin’s sequence, strong Althea opener, soaring Space, and a bouncy Casey Jones encore, while a few first‑set cuts feel dry or flat. Overall fans are enthusiastic about the unique song flow but acknowledge uneven moments in both performance and tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One five‑star glowing review and one three‑star mixed review average to a solid four; the show has many high points but the recording has noticeable technical flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Minor dropouts noted, some channel/pitch correction needed, occasional buzzing and muffled guitars in early China Cat; overall mix is listenable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Estimated Prophet > Franklin's Tower",
+      "Althea",
+      "Easy to Love",
+      "Space",
+      "Saint",
+      "Sugar Magnolia",
+      "Casey Jones",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Stagger Lee",
+      "Passenger",
+      "I Know You Rider",
+      "China Cat"
+    ],
+    "setlist_flow": "A daring, out‑of‑the‑box sequence that strings together rare pairings (Eyes‑Estimated‑Sailor‑Saint‑Franklin’s) and strong second‑set momentum, though the first set suffers from a few dry or flat moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocal phrasing is praised as mesmerizing yet slightly fragile; his guitar work is solid overall but gets lost at the start of China Cat.",
+    "Phil": "Phil Lesh is described as \"dropping bombs\" and shaking free, providing strong bass foundation throughout.",
+    "Bob": "Bob Weir contributes backing vocals and leads on Althea (which some find vapid), and adds vocal texture on several numbers.",
+    "Keys": "Keyboardist Brent Mydland is highlighted for heavy involvement—backing Bobby, delivering powerful solos on Easy to Love and driving the jam sections.",
+    "Drums": "The drummers (Bill & Mickey) are noted for taking over in Space and adding punctuation; no specific performance issues mentioned."
+  },
+  "song_mentions": {
+    "Eyes > Estimated Prophet > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Easy to Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:09:22.776810+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-05.sbd.clugston.2410.shnf"
+}

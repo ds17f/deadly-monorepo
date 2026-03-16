@@ -1,0 +1,91 @@
+{
+  "summary": "Solid late‑1979 Denver show featuring a debut of Brent’s “Easy to Love You”, fiery “Samson & Delilah” and a monster “Playing in the Band” jam; audience recording is good for its era though slightly slow.",
+  "review": "The performance shines with standout moments – the first outing of Brent Mydland’s “Easy to Love You”, an intense “Samson & Delilah”, tight “Ship of Fools”, and a spectacular “Playing in the Band” sequence that many reviewers call the night’s best jam. The audience tape captures the band well given 1979 technology, offering clear enough sound but requiring a modest speed‑up to correct pitch issues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical set (especially second‑set jams) and rate the recording as superior for an audience source; a few note pitch/tempo quirks, pulling the overall score slightly down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear analog capture for its time; praised as “superior audience recording” but noted to be a bit slow and needing ~+1 % pitch correction. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah",
+      "Playing in the Band",
+      "Easy to Love You",
+      "Ship of Fools",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Stagger Lee",
+      "Terrapin Station"
+    ],
+    "setlist_flow": "First set is described as average/average‑warmup, while the second set delivers the high points – a tight “Promised Land”, an uplifting “Ship of Fools”, a powerful “Samson & Delilah” jam, and the show‑defining “Playing in the Band”. Overall pacing improves dramatically after the midway break."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for taking the horns on ‘Samson & Delilah’, delivering his best work on the final minutes of ‘Stella Blue’, and leading the jam on ‘Playing in the Band’.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mention of Brent Mydland’s brand‑new composition “Easy to Love You”, indicating keyboard contribution, but no specific playing critique.",
+    "Drums": "Mickey Hart praised for an extended, “sidereal” Space section; drums transition noted as remarkable in the Terrapin > Playing sequence."
+  },
+  "song_mentions": {
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:39:07.394106+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-14.senn.eaton.miller.93047.sbeok.flac16"
+}

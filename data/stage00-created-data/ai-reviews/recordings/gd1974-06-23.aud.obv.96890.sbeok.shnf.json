@@ -1,0 +1,31 @@
+{
+  "summary": "Muffled audience recording with poor clarity; the only positive note is a heartfelt tribute to Jerry Moore.",
+  "review": "The show itself isn’t described, but one reviewer offers a loving “R I P Jerry Moore” comment and gives it five stars. Another criticizes the audio as overly Dolby‑like, muffled and lacking separation, especially obscuring Brent/Keith’s piano runs, resulting in a low rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Only two reviews; one praises the tribute but gives no recording detail, while the other flags serious audio problems. With limited show information and a poor‑quality recording, the overall rating is low to moderate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muffled, Dolby‑like sound; piano runs nearly inaudible; lack of instrument separation; attempts at noise removal make it sound like noise."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T21:35:36.755453+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-23.aud.obv.96890.sbeok.shnf"
+}

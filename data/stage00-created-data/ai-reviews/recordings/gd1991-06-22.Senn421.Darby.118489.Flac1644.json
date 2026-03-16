@@ -1,0 +1,45 @@
+{
+  "summary": "Audience recording with wind noise captures a strong show highlighted by a stellar Shakedown and powerful Let It Grow, though the audio quality is only fair.",
+  "review": "Fans rave about this performance, especially the blazing Shakedown and the intense Let It Grow that many thought was missed on the soundboard. The AUD source suffers from excessive wind and limited fidelity, but it remains the only decent audience capture of this show, making it a valuable listen despite its technical shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "The musical performance is praised highly (standout songs, enthusiastic comments) while the recording suffers from wind and low fidelity; overall rating balances strong show with fair audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Excessive wind noise and limited rig usage make the sound muddy; no main mix present, but it is the only AUD available for this concert."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the entire show as enjoyable and note no major pacing issues; the set flows well enough to keep listeners engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentions Jerry's personal situation and his loss, but no specific performance critique.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:17:09.159723+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-22.Senn421.Darby.118489.Flac1644"
+}

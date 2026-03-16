@@ -1,0 +1,100 @@
+{
+  "summary": "Sparkling soundboard mix of a flow‑iest ’90 tour show, highlighted by Shakedown Street, Little Red Rooster, Looks Like Rain and an otherworldly Spoonful.",
+  "review": "The recording is a clean, correctly pitched soundboard capture that lets every nuance of the band shine.  The concert itself is praised as the most consistently above‑average set of the spring ’90 run, with a flowing first set and a second set packed with standout moments from Shakedown Street to Spoonful.  Reviewers especially note Jerry’s experimental tones, Phil’s bass dominance, and Brent’s keyboard polish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "One detailed 5‑star review praises both the musical performance (standout songs, tight flow) and the recording quality (sparkling, correctly pitched soundboard), indicating an exceptional show despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as complete, sparkling, correctly pitched; the Miller truck‑mix provides a clean and balanced mix with no noted dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Little Red Rooster",
+      "Stagger Lee",
+      "Just a Little Light",
+      "Music Never Stopped",
+      "Iko Iko",
+      "Looks Like Rain",
+      "He's Gone",
+      "Spoonful",
+      "Watchtower"
+    ],
+    "poor_songs": [
+      "US Blues"
+    ],
+    "setlist_flow": "Review calls the concert the ‘flowiest’ of the tour, noting above‑average whole sets that transition smoothly from a bluesy opener to a tightly knit second set with strong improvisational passages."
+  },
+  "band_member_comments": {
+    "Jerry": "Experimental tones highlighted – slide solo, Tijuana Brass MIDI on Mexicali, and an ‘arc plasma’ burst on Friend; also teases Spoonful while blending into Truckin'.",
+    "Phil": "Bass carries the low‑end, mid‑range and high‑end; adds “bombs and brains” throughout, especially in Looks Like Rain.",
+    "Bob": "",
+    "Keys": "Brent’s playing praised on Iko Iko, Looks Like Rain (polished as a Swiss doorknob), and Spoonful (devilish).",
+    "Drums": "Bill and Mickey noted for tight drumming; drums described as tight in Looks Like Rain."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:55:20.126615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-18.139225.sbd.miller.truck-mix.flac"
+}

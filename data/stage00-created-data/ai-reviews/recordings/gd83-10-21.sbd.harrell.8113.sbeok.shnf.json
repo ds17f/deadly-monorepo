@@ -1,0 +1,82 @@
+{
+  "summary": "Crisp soundboard recording (with a too‑loud left‑channel kick drum) captures an inspired show highlighted by Big Railroad Blues and a seamless Scarlet > Fire transition.",
+  "review": "The performance is praised as one of the band’s all‑time favorites, featuring Jerry in top form, a soaring Space jam, and a fire‑on‑the‑mountain to Truckin' segue that many reviewers call flawless. The soundboard source is generally clear and balanced, though several listeners note an overpowering kick drum on the left side that detracts from an otherwise excellent mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Strong musical praise across most reviews (70% weight) combined with generally good but imperfect sound quality (30% weight) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and balanced overall, but the left‑channel kick drum is excessively loud; occasional hum noted by one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Railroad Blues",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Space",
+      "Truckin'",
+      "Brother Esau",
+      "TMNS"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "First set builds with an inspired Railroad Blues and a seamless Scarlet > Fire transition that flows into a stellar Space jam and into Truckin'. The second set maintains relentless energy, though the Touch of Grey is viewed as a weak spot."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for nonstop playing, crafty lead work, roof‑screaming jams on Fire, and an unforgettable triplet figure with Brent.",
+    "Phil": "",
+    "Bob": "Great on Brother Esau and adds unique backup guitar riffs during the Scarlet/Fire jam.",
+    "Keys": "Brent Mydland’s seamless keyboarding and tight triplet figures are highlighted as a high point.",
+    "Drums": "Bill and Mickey provide solid, driving kick drums, though the mix makes the left‑channel kick overly loud."
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "TMNS": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T13:31:38.964224+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-21.sbd.harrell.8113.sbeok.shnf"
+}

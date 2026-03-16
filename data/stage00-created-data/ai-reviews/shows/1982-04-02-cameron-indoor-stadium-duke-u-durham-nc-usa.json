@@ -1,0 +1,81 @@
+{
+  "summary": "Hot Duke show with smoking Sugaree and monster He's Gone > Truckin' > Other One",
+  "blurb": "The April 2, 1982 Duke performance is a high‑energy set highlighted by a smoking Sugaree, sweet Candyman, and the classic China Cat Sunflower → I Know You Rider segue. The second half builds to an explosive He's Gone → Truckin' → The Other One sequence, with tight rhythm section work throughout.",
+  "review": "On April 2, 1982 at Cameron Indoor Stadium, the Dead turned a college gym into a furnace of improvisational fire. The first set opened with a gritty New Minglewood Blues and quickly found its stride on Sugaree, where Jerry’s sweet, front‑center guitar cut through the swapped channel mix, and Candyman shone with his characteristic vocal warmth. The band kept the momentum rolling through a seamless China Cat Sunflower → I Know You Rider transition that reviewers called “pretty” and “joyful,” while Little Red Rooster erupted into a blues‑laden jam powered by Brent’s jazzy piano textures and Jerry’s dancing solos. \n\nThe second set delivered one of the night’s most memorable arcs: after a solid Samson & Delilah, the band launched into an intense He's Gone → Truckin' → The Other One stretch that several fans described as “monstrous” and “high‑energy.” Bill and Mickey’s drums locked in with fierce precision, feeding a spacious Space that propelled The Other One into a wild, free‑form excursion. The set closed on a spry Sugar Magnolia, leaving the audience buzzing. Across all available tapes—especially the soundboard recording gd82-04-02.sbd.clugston.7221.sbeok.shnf—the performance feels tight, joyous, and emblematic of the Dead’s spring‑82 surge.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 23,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Four of the five recordings are explicitly positive, praising the high‑energy playing, standout transitions (China Cat > Rider) and the monster He's Gone → Truckin' → Other One sequence. The lone mixed review still notes many highlights while only flagging a few weak songs, so overall sentiment remains strongly positive.",
+      "final_calculation": "2.5 + 0.2 + 1.5 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd82-04-02.sbd.clugston.7221.sbeok.shnf",
+    "reason": "Good soundboard source with clear instrument separation; despite channel swaps it captures the full band balance and is consistently praised as the most listenable version."
+  },
+  "key_highlights": [
+    "Smoking Sugaree and sweet Candyman performances.",
+    "Monstrous He's Gone → Truckin' → The Other One jam.",
+    "High‑energy Little Red Rooster and The Other One improvisations.",
+    "Beautiful China Cat Sunflower → I Know You Rider segue."
+  ],
+  "song_highlights": [
+    "Sugaree",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Candyman",
+    "Little Red Rooster",
+    "The Other One",
+    "He's Gone",
+    "Truckin'",
+    "Samson & Delilah"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers sweet, front‑center guitar on Sugaree and Candyman, then launches into free‑form, dancing solos on Little Red Rooster and The Other One, keeping the show fiery throughout.",
+    "Phil": "Lesh provides a steady, sub‑sonic bass foundation that tightens up after the stage‑position swap, anchoring the high‑energy jams.",
+    "Bob": "Weir’s rhythm guitar is solid and well‑balanced in the left channel; his vocal contributions are consistently good.",
+    "Brent": "Mydland’s keyboards drive the bluesy jams with jazzy piano texture, add scat vocals on Little Red Rooster, and lead a slide‑jam feel in Samson & Delilah.",
+    "Mickey": "Hart’s drumming locks in fiercely with Bill during the Drums → Space → Other One segment, adding dynamic power to the second‑set climax.",
+    "Billy": "Kreutzmann matches Mickey’s intensity, delivering a fierce, propulsive backbeat that fuels the monster jam sequence."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-13T19:03:30.926088+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "New Minglewood Blues",
+      "Sugaree"
+    ],
+    [
+      "Looks Like Rain",
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Loser",
+      "Little Red Rooster"
+    ],
+    [
+      "He's Gone",
+      "Truckin'",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    [
+      "Samson & Delilah"
+    ]
+  ]
+}

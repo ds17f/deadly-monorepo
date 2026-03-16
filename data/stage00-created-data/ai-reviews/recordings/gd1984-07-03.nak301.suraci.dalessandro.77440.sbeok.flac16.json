@@ -1,0 +1,31 @@
+{
+  "summary": "High‑quality audience recording where the crowd sits nicely under the mix, capturing a damn fine show.",
+  "review": "Both reviewers gave this set four stars, noting that despite being an audience (AUD) source the crowd noise is well‑balanced and doesn’t drown out the music. The performance itself is praised as “a damn fine show,” even though no specific songs are called out. Overall it’s a solid listening experience with good sound for an AUD recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviews are positive (4‑star) and highlight a strong show and surprisingly good audience recording quality; limited detail lowers confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crowd noise is buried in the music rather than overwhelming it, resulting in clear instrument balance for an AUD source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers simply describe the overall performance as fine."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T19:37:49.735022+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-03.nak301.suraci.dalessandro.77440.sbeok.flac16"
+}

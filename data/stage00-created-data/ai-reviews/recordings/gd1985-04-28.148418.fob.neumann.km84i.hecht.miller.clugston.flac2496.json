@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality unclear, but reviewers rave about a high‑energy 1985 show highlighted by an emotional \"She Belongs To Me\" performance.",
+  "review": "The lone fan review is overwhelmingly positive, calling the 1985 summer tour one of the band’s best years and describing the night as “firing on all cylinders.” The reviewer especially praises Jerry Garcia’s vocal delivery on “She Belongs To Me” and notes a strong two‑song encore. No concrete details about the recording source or sound quality are provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one highly positive review (5 stars) focusing on performance; no information on recording quality, so rating leans toward show strength but with uncertainty about audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not comment on soundboard vs. audience or clarity; cannot assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "She Belongs To Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a consistently strong performance throughout the night with an enthusiastic two‑song encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for breaking out vocally in 1985 and delivering a moving rendition of \"She Belongs To Me\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "She Belongs To Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:21:42.155986+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-28.148418.fob.neumann.km84i.hecht.miller.clugston.flac2496"
+}

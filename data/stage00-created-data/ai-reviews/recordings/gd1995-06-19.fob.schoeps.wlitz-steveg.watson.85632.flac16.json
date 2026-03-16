@@ -1,0 +1,86 @@
+{
+  "summary": "Decent audience recording with crisp FOB sound, highlighted by a heartfelt Ramble on Rose and emotional farewell performances despite Jerry’s waning energy.",
+  "review": "The recording captures the show with good clarity for an audience tape, especially showcasing the standout “Ramble on Rose” and strong rhythm section work. While Jerry Garcia was visibly ill and his guitar work uneven, the set still delivers moving moments like “Iko,” “Unbroken Chain,” and a poignant “Stella Blue/Brokedown Palace.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Three reviews provide a blend of positive emotional praise and criticism of Jerry’s playing; recording quality is generally good, leading to an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FOB with Schoeps mics yields clear, crisp sound for a crowd tape; reviewers note it’s solid but not as pristine as a DAT or professional soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble on Rose",
+      "Iko",
+      "Unbroken Chain",
+      "Stella Blue",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Big River",
+      "Stella Blue (as performed in one review)"
+    ],
+    "setlist_flow": "The concert has an uneven first half due to Jerry’s weakened performance, but the second half picks up with strong rhythm section energy and emotionally resonant moments, especially around Ramble on Rose and the closing ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "Criticized for lacking fiery licks and appearing sick, yet praised for his emotional farewell presence on songs like Stella Blue and Brokedown Palace.",
+    "Phil": "",
+    "Bob": "Acknowledged for keeping the flame alive and contributing solid guitar work despite the overall band fatigue.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann receives praise for a catchy riff during space and for helping keep the show moving forward."
+  },
+  "song_mentions": {
+    "Ramble on Rose": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Morning Little School Girl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Matilda": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:18:41.023311+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-19.fob.schoeps.wlitz-steveg.watson.85632.flac16"
+}

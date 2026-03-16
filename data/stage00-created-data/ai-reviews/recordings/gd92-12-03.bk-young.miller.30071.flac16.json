@@ -1,0 +1,75 @@
+{
+  "summary": "Warm but distant audience tape captures a high‑energy second set with standout Terrapin, Corrina and Eyes of the World, though vocal woes on The Other One and Gloria hold it back.",
+  "review": "The show is remembered for its fiery second set – a soaring Terrapin Station jam, masterful renditions of Corrina, Eyes of the World and a memorable Rain encore – but the recording is a far‑field audience capture that sounds warm yet muffled and often requires volume/EQ tweaks as the crowd swallows the mix.  Vocal performance by Bob Weir draws criticism on The Other One and Gloria, while Jerry Garcia’s guitar work is generally praised though occasionally mixed down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Eight reviews give an average of ~2.6 stars; many praise the performance but note serious recording limitations and vocal problems, leading to a middling overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Distant microphone pickup makes the sound warm but somewhat muffled; frequent volume/EQ adjustments needed as audience often overpowers the band; occasional technical glitches and drop‑outs noted in the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Corrina",
+      "Eyes of the World",
+      "Rain"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Gloria"
+    ],
+    "setlist_flow": "First set described as mellow and cool; second set high‑energy with a powerful Terrapin jam, soaring Eyes of the World and an epic Rain encore, all amplified by a snow‑filled, 11‑degree Denver night atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for solid, professional guitar work; occasional notes about his tone being turned down during later jams.",
+    "Phil": "",
+    "Bob": "Criticized for strained, “shot” vocals on The Other One and Gloria; some comments about his guitar being off or muted.",
+    "Keys": "",
+    "Drums": "Drums/Space highlighted for a swirling front‑to‑back sound effect and high energy in the second set."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Corrina": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gloria": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:28:30.527560+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-03.bk-young.miller.30071.flac16"
+}

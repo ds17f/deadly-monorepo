@@ -1,0 +1,72 @@
+{
+  "summary": "Crisp soundboard capture of a high‑energy 1984 Meadowlands set with a soaring Help > Slipknot! > Franklin’s and fiery Terrapin, though Jerry’s vocals wobble later.",
+  "review": "The recording is a clean soundboard source that lets listeners hear the band’s intense second‑set flow – from an expansive Help‑on‑the‑Way > Slipknot! > Franklin’s to a peak Terrapin Station and a wild Other One/Truckin' jam. While most fans praise Jerry’s guitar work and the overall fire of the performance, a few note vocal strain and occasional distortion that temper the otherwise excellent show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for musical performance and mostly favorable comments about a crisp soundboard recording outweigh the few criticisms of vocal strain and occasional distortion."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced board capture praised as 'crispy' and 'great sound quality'; a couple of reviewers note the mix can be very loud/distorted in places but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Terrapin Station",
+      "The Other One",
+      "Goin' Down the Road Feeling Bad",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "The Other One (first verse slip)",
+      "Truckin' (usual spot & transition issues)",
+      "Terrapin Station (vocal strain at end)"
+    ],
+    "setlist_flow": "A high‑energy second set with tight transitions, especially the Help‑Slipknot‑Franklin’s sequence and a jam‑heavy Other One > Truckin' segment; post‑space jams flow into Stella Blue and finish strong despite some vocal wobble."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful guitar work and memorable moments (Help, Slipknot!, Terrapin), but noted to have strained vocals later in the set.",
+    "Phil": "Highlighted for dominating the Slipknot! jam alongside Jerry and contributing heavily throughout the second set.",
+    "Bob": "Mentioned for a slip‑up on the first verse of The Other One and the usual spot in Truckin', though his whistle saved the transition.",
+    "Keys": "Brent (keyboards) receives specific kudos on Stella Blue; no other keyboard comments noted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:01:38.331746+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-17.set2-sbd.ladner.21783.sbeok.shnf"
+}

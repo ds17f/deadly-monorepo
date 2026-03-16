@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent 1969 soundboard recording with superb performance, highlighted by a moving Death Don't Have No Mercy and crystal‑clear mix.",
+  "review": "The three reviewers rave about this show, calling it the best ’69 they’ve heard and praising the “finger‑lickin’ good” sound that captures every nuance on stage. The performance is described as consistently superb with an especially emotional rendition of Death Don't Have No Mercy and powerful drum work during the jams, though one notes that Lovelight is cut from the tape.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All reviews are 5‑star, emphasizing both outstanding musical performance and near‑perfect soundboard quality; only a minor issue (missing Lovelight) is noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, detailed mix that lets listeners hear everything on stage between tunes; the only drawback mentioned is that the Lovelight track is cut."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Death Don't Have No Mercy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy from start to finish with intense jam sections; drums are particularly noted for their powerful presence, creating an overall superb flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums praised for their crazy, powerful work during the jams."
+  },
+  "song_mentions": {
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:18:46.515004+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-07-11.123417.sbd.latvala.lee.smith.flac24"
+}

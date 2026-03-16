@@ -1,0 +1,87 @@
+{
+  "summary": "A superb soundboard recording (with a touch of FM fuzz) that captures an all‑time great set highlighted by a smoking Me & My Uncle and an epic Dark Star → The Other One suite.",
+  "review": "Fans rave about this November 7, 1971 Harding Theatre show as one of the finest of ’71 – the band rides a wave of high energy, flawless transitions (NFA → Good Times Bad Times → NFA, Dark Star/Other One, Me & My Uncle) and even a gorgeous Comes‑a‑Time.  The SBD source is generally clear, though reviewers note occasional FM‑broadcast interference, dropouts and slight keyboard distortion; the musical performance more than outweighs those minor flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic 5‑star reviews praise the show’s performance and only cite modest, sporadic recording blemishes; the weight of musical excellence pushes the overall rating into the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Minor FM‑broadcast interference makes parts a bit fuzzy; occasional dropouts and slight keyboard distortion are mentioned, but overall the mix is clear and captures the band’s dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Me & My Uncle",
+      "Dark Star → The Other One",
+      "Not Fade Away → Good Times Bad Times → Not Fade Away",
+      "Comes a Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert bridges the raw 1970 vibe with the smoother 1972‑74 sound, featuring seamless jams and high‑energy transitions that keep the momentum rolling from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His ’57 Strat is described as ‘guttural’, attacking listeners’ solar plexus – a scorching, fully exposed tone throughout.",
+    "Phil": "Noted for witty banter (the “pit stop” comment) and his steady bass foundation during the long jams.",
+    "Bob": "Mentioned for loquacious jokes with Jerry and Phil and overall showmanship onstage.",
+    "Keys": "Keith’s early piano work is praised as a highlight, though some reviewers note occasional distortion in the keyboard mix.",
+    "Drums": "Bill Kreutzmann’s drumming provides the rhythmic backbone; no specific criticism was made."
+  },
+  "song_mentions": {
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star → The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Not Fade Away → Good Times Bad Times → Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Times Bad Times": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Day Tripper": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "White Rabbit": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T09:15:38.982090+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-11-07.sbd.lai.2580.shnf"
+}

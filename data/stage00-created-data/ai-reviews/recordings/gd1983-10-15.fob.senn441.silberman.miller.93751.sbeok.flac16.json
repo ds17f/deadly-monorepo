@@ -1,0 +1,86 @@
+{
+  "summary": "Phenomenal front‑of‑house audience recording of an electric 1983 show highlighted by a roaring St. Stephen and tight first‑set classics.",
+  "review": "The performance is consistently praised – Jerry’s lead work, Brent’s keyboards and the whole band are described as “on fire,” with standout moments like Brown Eyed Women, Let It Grow, China→Rider and an unforgettable Space→Spanish Jam→St. Stephen sequence. The FOB/AUD capture is lauded for its crystal‑clear, full‑stereo sound (even if a touch low in level), making this one of the most vivid recordings of that era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (12/14 five‑star) emphasize both superb musicianship and excellent audio fidelity; only a few outlier comments detract, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, full‑stereo front‑of‑house mix with great clarity and spaciousness; some listeners note the overall level is a bit low but easily corrected in playback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Brown Eyed Women",
+      "Big River Blues",
+      "Let It Grow",
+      "China Cat Sunflower → Rider",
+      "Space",
+      "Spanish Jam",
+      "The Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans cite a tight, energetic first set and an even stronger second set with seamless transitions, especially the Space→Spanish Jam→St. Stephen sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for leading the band with fire‑brand guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards highlighted as a key part of the night’s fire.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower → Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:30:36.119846+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-15.fob.senn441.silberman.miller.93751.sbeok.flac16"
+}

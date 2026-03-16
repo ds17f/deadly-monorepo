@@ -1,0 +1,45 @@
+{
+  "summary": "A fantastic show featuring fan‑favorite Corrina and Wharf Rat; recording source not specified but the performance shines.",
+  "review": "The reviewer raves about this concert as a perfect introduction, highlighting an excellent setlist with Corrina and Wharf Rat standing out. No details are given about the audio source or fidelity, so while the music is clearly beloved, the technical quality of the recording remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one highly positive review focusing on the show; no information on recording quality, so rating reflects strong performance but uncertain audio fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Corrina",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the setlist as great and notes that \"the music never stopped,\" indicating a strong, continuous flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:52:41.732529+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-18.111290.nak300.bleich-sirmick.sbeok.flac16"
+}

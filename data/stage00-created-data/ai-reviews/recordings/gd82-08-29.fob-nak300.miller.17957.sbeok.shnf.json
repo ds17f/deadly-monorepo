@@ -1,0 +1,51 @@
+{
+  "summary": "Good‑quality audience recording of a short, mixed‑energy '82 show with tight playing and standout “He’s Gone” and “Sugar Magnolia”, but the setlist feels generic.",
+  "review": "The front‑of‑house audience tape captures a surprisingly clear sound for an AUD source, especially in the high‑end sparkle noted by listeners. Musically the band is focused and Jerry’s voice is strong for ’82, with “He’s Gone” and a fiery “Sugar Magnolia” highlighted, yet many reviewers find the overall setlist short and dull. The show sits squarely in the middle of the Dead’s summer 1982 performances – solid but not spectacular.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Show quality is mixed (average to good) while recording quality is generally good for an audience source; the weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FOB audience tape praised for being clearer than expected, with crisp high‑end sparkle; some listeners note occasional annoyance in the mix but overall it is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Sugar Magnolia",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Short, generic setlist that feels dull to many, though the band stays tight and focused throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Good vocal performance noted as rare for ’82; guitar work described as solid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) was \"on fire\" according to a reviewer.",
+    "Drums": "Post‑drums segment highlighted as especially good and intense."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:31:45.054044+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-08-29.fob-nak300.miller.17957.sbeok.shnf"
+}

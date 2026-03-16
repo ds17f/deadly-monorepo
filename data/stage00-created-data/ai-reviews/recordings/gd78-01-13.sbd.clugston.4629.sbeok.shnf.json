@@ -1,0 +1,72 @@
+{
+  "summary": "Good‑sound soundboard capture of a loose but energetic show – the fiery Half‑Step opener, blazing It’s All Over Now and solid Truckin’ shine, though the second set feels more like a rehearsal.",
+  "review": "The recording is a clean soundboard source that lets the band’s high‑energy first set come through clearly; Jerry’s raspy voice and guitar work are front‑and‑center despite his recent laryngitis. Highlights include the half‑step opener, a powerful It’s All Over Now, and a strong Truckin’, while the second set drifts into a looser, rehearsal‑like feel with Dancin’ never fully clicking.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "The majority of reviewers praise the soundboard quality and several standout moments, but many note a loose second set and occasional performance glitches, yielding an overall rating between good show and decent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear overall; a few reviewers mention hiss or minor drop‑outs and that Phil’s bass sits high in the mix, but the soundboard capture is generally reliable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step opener",
+      "It’s All Over Now",
+      "Truckin’",
+      "Broke In Down The Line (BIODTL)",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Dancin’ (second set never gels)",
+      "Brown Eyed Woman (full version missing / info error)",
+      "Wharf Rat (narrator segment weak)"
+    ],
+    "setlist_flow": "First set bursts with hot energy and tight playing; the second set feels more relaxed and rehearsal‑like, slowing the momentum but still offering moments of fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Raspy voice recovering from laryngitis, yet his guitar is “on fire” and he cranks up BIODTL; vocal challenges noted but overall strong presence.",
+    "Phil": "Bass solid throughout, though some reviewers note Phil sits high in the mix on this tape.",
+    "Bob": "",
+    "Keys": "Keith’s chords sometimes grind off Phil; a desire for more keyboard runs was expressed, but overall keyboard work is solid.",
+    "Drums": "Drumming praised on Dancin’ into drums and “drumz” moments; occasional pounding noted."
+  },
+  "song_mentions": {
+    "Half-Step": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "It’s All Over Now": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin’": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Broke In Down The Line": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin’": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Woman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:06:49.040810+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-13.sbd.clugston.4629.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording with generally good sound despite occasional digi‑noise, highlighted by a soaring Dark Star and an inspiring Turn On Your Lovelight.",
+  "review": "The set starts out with several early filler tracks that suffer from power‑out drops, but once the band hits Dark Star the performance lifts to classic ’69 intensity. The recording is mostly clear – soundboard quality is praised throughout, though a few reviewers note digi‑noise and deterioration in the latter half of Dark Star. The final four songs, especially Dark Star, The Eleven and Turn On Your Lovelight, are consistently singled out as standout moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers are enthusiastic, many give 4‑5 stars and highlight exceptional jams; recording is described as good to excellent with only isolated noise issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard mix praised, but several comments note digi‑noise around the 18‑minute mark of Dark Star and a deterioration after ~12 minutes. Early set suffers from power‑out dropouts that cause brief gaps."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Turn On Your Lovelight",
+      "The Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First six tracks are considered filler and are marred by equipment glitches; after the power outages the band rolls into a powerful Dark Star that carries the show, followed by strong performances of The Eleven and an inspiring Lovelight to close."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s amp is described as turned up loud, delivering a powerful tone that shines on Dark Star and Lovelight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 3,
+      "total_mentions": 10
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T14:23:37.456663+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-05-10.sbd.tzuriel.1336.sbeok.shnf"
+}

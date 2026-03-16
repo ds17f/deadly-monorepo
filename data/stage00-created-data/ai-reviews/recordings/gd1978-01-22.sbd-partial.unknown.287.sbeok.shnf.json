@@ -1,0 +1,45 @@
+{
+  "summary": "Outstanding soundboard recording of a stellar show, highlighted by a must‑listen The Other One > … > U.S. Blues sequence in the second set.",
+  "review": "Both reviewers rave about this performance, calling the first set solid and the second set spectacular, especially the The Other One → … → U.S. Blues stretch. The partial soundboard source is praised as outstanding despite a few dead‑air moments and some missing tracks that can be sourced elsewhere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Two enthusiastic 5‑star reviews emphasize an excellent musical performance and a high‑quality soundboard recording, yielding a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, outstanding board capture; minor dead‑air/banter at ends of first‑set tracks and four songs missing (Bertha, Ship Of Fools, Samson, Good Lovin') which can be sourced elsewhere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid ('sold'), second set praised for its momentum and the The Other One → … → U.S. Blues sequence, making the show a must‑listen."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:42:34.057208+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-22.sbd-partial.unknown.287.sbeok.shnf"
+}

@@ -1,0 +1,82 @@
+{
+  "summary": "Fair‑quality recording of a mixed‑feel show – highlighted by strong vocals on Iko, Dire Wolf and Foolish Heart, but marred by erratic drumming and controversial Dylan appearances.",
+  "review": "The performance delivers several memorable moments – Jerry and Bob’s vocal chemistry, a standout Iko Iko, Dire Wolf and an enthusiastic Foolish Heart – yet the show is uneven, with Mickey Hart’s off‑beat drumming and Dylan’s guest spots drawing sharp criticism. No concrete information on the source type was given, so the audio is assumed to be listenable but not exceptional.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Four reviews provide a balanced view: two strong positives about vocals and song choices, two negatives focusing on drumming and Dylan's contribution. Recording quality is undocumented, pulling the overall rating toward the middle."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers comment directly on soundboard or audience source; no specific audio issues mentioned beyond general listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Dire Wolf",
+      "Memphis Blues",
+      "Foolish Heart",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [
+      "Alabama",
+      "Monkey and the Engineer",
+      "The Mobile"
+    ],
+    "setlist_flow": "First set includes early numbers like Monkey & the Engineer, followed by a stronger second set featuring Dire Wolf and memorable vocal moments; overall pacing is uneven with a botched close."
+  },
+  "band_member_comments": {
+    "Jerry": "Singing praised as outstanding; muffled vocals on Alabama but compensated by solid guitar work.",
+    "Phil": "",
+    "Bob": "Vocals on Memphis Blues highlighted as superb; noted for refusing the mic at one point.",
+    "Keys": "",
+    "Drums": "Mickey Hart’s drumming described as erratic and off‑beat throughout most of the show."
+  },
+  "song_mentions": {
+    "Monkey and the Engineer": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Mobile": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:53:17.901744+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-02-12.lai.429.sbefail.shnf"
+}

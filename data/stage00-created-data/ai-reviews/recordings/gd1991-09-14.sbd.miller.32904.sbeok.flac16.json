@@ -1,0 +1,49 @@
+{
+  "summary": "Clear soundboard capture of a solid NYC show where the second set smokes, highlighted by a haunting China Doll.",
+  "review": "The recording is praised for its very nice, clean sound – likely a sound‑board source – and the performance is described as solid with a particularly smoking second set. Reviewers love Jerry’s guitar work and Bruce Hornsby’s keyboards, calling the China Doll “haunting,” while noting a few overplayed classics. Overall the show feels energetic and enjoyable despite one low‑rating, terse comment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Three detailed 4‑star reviews highlight strong playing and good sound quality; the lone zero‑star review adds little weight, leading to a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as \"very nice\" and clear with no reported dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid; second set “smokes,” giving the concert a strong upward momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for rocking, stellar tune selection and playing his heart out.",
+    "Phil": "",
+    "Bob": "Described as having \"meh\" tune selection.",
+    "Keys": "Bruce Hornsby (and Brent Hornsby) called terrific and rocking.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:58:47.740136+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-14.sbd.miller.32904.sbeok.flac16"
+}

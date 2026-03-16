@@ -1,0 +1,39 @@
+{
+  "summary": "Audience tape captures a classic mid‑80s Dead vibe with a killer Tom Thumb performance; sound is crisp to some listeners but flat and bass‑light to others.",
+  "review": "The show is remembered as an “April Fool’s party” night with strong energy, snow falling after the set and a standout rendition of Tom Thumb. Recording quality is debated – several fans describe it as surprisingly clear and crispy, while others complain of flatness and weak low end typical of many AUD sources.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and atmosphere, giving high star scores; recording quality receives mixed feedback but leans toward acceptable, resulting in an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note a crisp, detailed sound that captures the band’s mid‑80s tone, though some describe it as flat, distant and lacking bass typical of audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tom Thumb"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1985 midsize‑venue set with an upbeat, party‑like atmosphere; the show flows naturally and is remembered for its snow‑covered finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Tom Thumb guitar work praised as 'awesome'.",
+    "Phil": "Vocals highlighted as awesome on at least one song.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tom Thumb": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:45:54.571392+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-01.oade-schoeps.sacks.23659.sbeok.flacf"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Matrix source with flat, airy sound, yet a solid show highlighted by an energetic Crazy Fingers > Playin > Uncle John's > Playin second‑set sequence.",
+  "review": "Both reviewers agree the recording sounds like a Healy matrix – audible audience bleed and a slightly flat, ‘airy’ mix that isn’t pristine. The performance itself is described as solid but unspectacular, with the second set stealing the show thanks to the high‑energy Crazy Fingers/Playin/Uncle John's sequence and a soaring “Dew”, while Garcia’s slip on “West L.A.” is noted as a minor blemish.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Two moderate‑rated reviews (both 3★) point to an average musical performance and a recording that is usable but not high‑fidelity, leading to an overall middle‑of‑the‑road rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Healy matrix with noticeable audience bleed; sound described as flat and overly airy, not a clean soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers > Playin > Uncle John's > Playin",
+      "Dew"
+    ],
+    "poor_songs": [
+      "West L.A."
+    ],
+    "setlist_flow": "Overall solid but unspectacular; the second set lifts the concert with high energy and strong transitions, while the first set is more routine."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia flubs a little on “West L.A.”",
+    "Phil": "Heavy Phil presence noted in the energetic second‑set sequence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers > Playin > Uncle John's > Playin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:10:09.312024+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-23.aud.ladner.10261.sbeok.shnf"
+}

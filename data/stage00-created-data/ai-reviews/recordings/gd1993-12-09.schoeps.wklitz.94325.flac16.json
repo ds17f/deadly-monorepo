@@ -1,0 +1,51 @@
+{
+  "summary": "Stunning 1993 show with Ornette Coleman guest, highlighted by a blazing Space→Other One and classic China>Rider, captured in an audience recording of decent quality.",
+  "review": "The concert is remembered as one of the best of ’93, driven by high‑energy first set and an old‑school second set that featured a magical Space > The Other One with Ornette Coleman, plus standout China > Rider and Estimated. Reviewers rave about Jerry Garcia’s inspired riff trades with the sax legend, though no specific technical details about the tape are provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive (4‑5 stars) and emphasize exceptional musical moments; recording quality is not discussed, so rating reflects strong show performance with assumed decent audience source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound clarity or mix; reviewers focus on the live experience, implying an audience tape of acceptable but unverified quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space > The Other One",
+      "China > Rider",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set followed by an old‑school second set; the flow is praised for its excitement and seamless transitions, especially the Space > Other One segment with Ornette Coleman."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his inspired riff trading with Ornette Coleman and overall stellar playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space > The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:27:25.773407+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-09.schoeps.wklitz.94325.flac16"
+}

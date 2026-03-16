@@ -1,0 +1,80 @@
+{
+  "summary": "Strong mid‑set gems, mixed guitar tone, solid rhythm section",
+  "blurb": "The Warfield show shines on Ripple, Brown Eyed Women, All Over Now and a fiery Wharf Rat. Jerry’s early guitar tone is fuzzy but improves by the second set, highlighted by a soaring China Cat Sunflower solo. Overall performance is solid despite occasional vocal slips.",
+  "review": "September 29, 1980 at the Warfield Theater delivered a night of classic Dead storytelling with high points that still resonate for fans. The first set’s acoustic intimacy gave way to a few vocal missteps—Bob stumbled on “Dire Wolf” and Jerry’s guitar sounded thin early on—but the band quickly found its groove. By the second set the mix settled, letting Brent’s keys sit under Phil’s solid low‑end bass while Mickey and Bill kept the rhythm tight; highlights include a soaring China Cat Sunflower > I Know You Rider pair, “Brown Eyed Women,” and an inspired “It’s All Over Now.” The third set built to a powerful climax: a contemplative Terrapin Station segue into a crisp Drums intro, an expansive Space, then a gritty “Wharf Rat” that caps the night. The soundboard recording (gd80-09-29.sbd.hinko…) captures most of these moments with crystal‑clear clarity, though occasional audience mic chatter and a fuzzy early guitar tone remind listeners of the era’s technical quirks. For anyone wanting the definitive Warfield experience, this tape offers the best balance of performance and audio fidelity.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "One recording was clearly positive (audience tape praised the third set and soaring solo) while the other was mixed, noting both strong song performances and equipment‑related flaws (fuzzy guitar, vocal slips). The overall sentiment leans moderately positive, warranting a +0.9 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.9 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-09-29.sbd.hinko.21926.sbeok.shnf",
+    "reason": "Soundboard source provides the most complete set with crystal‑clear moments, despite some audience mic chatter; it captures the band’s performance best."
+  },
+  "key_highlights": [
+    "Strong performances of Ripple, Brown Eyed Women, All Over Now and Wharf Rat.",
+    "Intimate acoustic opening that transitions into a tight second set with soaring China Cat Sunflower solo.",
+    "Third‑set power: Terrapin Station segue, crisp Drums intro, expansive Space and fiery ending.",
+    "Soundboard recording offers crystal‑clear audio for most of the show, though early guitar tone is fuzzy and there are occasional mic chatter artifacts."
+  ],
+  "song_highlights": [
+    "Ripple",
+    "Brown Eyed Women",
+    "It's All Over Now",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Wharf Rat",
+    "Candyman",
+    "Space"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar was a mixed bag—early in the show his tone sounded fuzzy and he struggled with vocals on Bird Song, but by the second set his playing cleared up, delivering a soaring solo on China Cat Sunflower and solid leads thereafter.",
+    "Phil": "Phil’s bass provided a solid low‑end foundation throughout, anchoring the band even when the mix leaned high‑end.",
+    "Bob": "Bob had a couple of vocal slips during the acoustic numbers but otherwise stayed on point.",
+    "Brent": "",
+    "Mickey": "Mickey delivered tight drumming and opened the post‑Terrapin segment with an incisive drum intro.",
+    "Billy": "Bill’s drumming stayed solid and supportive throughout, complementing Mickey’s fills."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-13T03:47:52.607531+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Oh Babe, It Ain't No Lie",
+      "Ripple"
+    ],
+    [
+      "Brown Eyed Women"
+    ],
+    [
+      "It's All Over Now"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Wharf Rat",
+      "Around & Around",
+      "Johnny B. Goode"
+    ],
+    [
+      "Candyman"
+    ]
+  ]
+}

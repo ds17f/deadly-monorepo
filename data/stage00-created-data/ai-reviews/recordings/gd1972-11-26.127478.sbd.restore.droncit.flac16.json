@@ -1,0 +1,87 @@
+{
+  "summary": "Restored soundboard captures a youthful, high‑energy 1972 performance with standout Dark Star, GDTRFB and Playin’ in the Band, despite occasional muffled artifacts.",
+  "review": "The show is praised for its vigor – Jerry powers up late in the first set, Phil delivers a tasteful solo and a marching bass line on Casey Jones, and Keith adds jazzy flair to Playin' in the Band. The restored soundboard sounds much clearer than previous copies, though listeners note some noise‑reduction artefacts and occasional muffling that keep it from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance highly (5★) while noting only minor recording imperfections; weighted average of show (≈4.5) and recording (≈3.8) yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Restoration dramatically improves clarity; some reviewers mention noise‑reduction artefacts, occasional muffling before Jack Straw, and the need for EQ tweaks, but overall the audio is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Get Down To The River (GDTRFB)",
+      "Playin' in the Band",
+      "Bird Song",
+      "Box of Rain",
+      "Around and Around",
+      "Casey Jones",
+      "Big River",
+      "Me & Bobby McGee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set builds into a jazzy, improvisational second set with seamless transitions – highlights include Dark Star into Me & Bobby McGee and a fiery Playin' in the Band."
+  },
+  "band_member_comments": {
+    "Jerry": "Picks up steam late in the first set and dives into maelstrom‑like improvisations during Dark Star and other jams.",
+    "Phil": "Delivers a tasteful solo on Dark Star, provides a walking bass line on Casey Jones; benefits from a slight EQ boost to bring out his tone.",
+    "Bob": "Tears into Around and Around with enthusiasm.",
+    "Keys": "Keith’s jazzy playing shines on Playin' in the Band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Get Down To The River (GDTRFB)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:20:40.162848+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-26.127478.sbd.restore.droncit.flac16"
+}

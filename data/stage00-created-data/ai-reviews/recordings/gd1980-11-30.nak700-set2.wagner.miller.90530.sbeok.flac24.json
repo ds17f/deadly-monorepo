@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording with crystal‑clear ambience, a standout drums‑into‑The Wheel segue and overall great second set despite a few speed‑related quirks.",
+  "review": "Fans rave about the vivid soundstage of this Miller audience tape – the mix is spot‑on, capturing the band's ambiance while only occasional feedback noise shows through. The performance shines especially in the second set, highlighted by a deliberate jam after the drums that blossoms into a superb rendition of “The Wheel” (and an adventurous “Space”).",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance and recording quality across five reviews, with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, immersive mix that captures band ambience; occasional feedback “space” noise noted, and one reviewer mentioned a perceived slow playback speed which another dismissed as a non‑issue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is the highlight, flowing smoothly from a tight drum segment into an inspired The Wheel jam; overall pacing feels deliberate and grooving."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s noodling after the drums is described as deliberate and perfectly placed, showing his keen sense of direction.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum break leading into The Wheel (and Space) is praised for its solid foundation and creative transition."
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T06:19:27.950368+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-30.nak700-set2.wagner.miller.90530.sbeok.flac24"
+}

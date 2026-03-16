@@ -1,0 +1,77 @@
+{
+  "summary": "Uneven second set with strong drums but Garcia off",
+  "blurb": "First set delivers solid renditions of Peggy-O, El Paso and Loose Lucy. The second set feels rushed and uneven, with Jerry struggling and Vince's keyboards over‑busy, though the drummers roar and Truckin' shines. Highlights include Here Comes Sunshine and Liberty.",
+  "review": "On June 15 1995 the Dead took the runway at Franklin County Airport and gave fans a mixed bag. The opening set was tight and familiar – Touch of Grey rolled into a rollicking Wang Dang Doodle, then Peggy‑O, El Paso and a seamless Loose Lucy → The Promised Land kept the energy high. By the second set the vibe shifted: Here Comes Sunshine opened strong, but Jerry was clearly under the weather, described by several listeners as ‘smacked out’ and struggling through the extended jams. Vince’s keyboards turned overly busy, muddying the texture while Mickey and Bill supplied thunder‑ous drumming that kept the space flights alive. Truckin' managed to cut through the haze, earning a lone positive shout‑out, and the show closed on a hopeful note with Liberty. For those willing to wade through the unevenness, the first‑set gems and powerhouse percussion make it worth a listen.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 80,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "Two recordings explicitly label the show as negative, noting Jerry’s illness and uneven second‑set performance; a third offers mixed feedback, while only one provides a positive comment about Truckin'. The predominance of negative sentiment outweighs the single positive note, leading to a modest negative adjustment.",
+      "final_calculation": "2.5 + 0.4 - 0.5 = 2.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-06-15.sbd.unknown.shibata.35212.flac16",
+    "reason": "Decent audience recording that captures the full set, provides detailed performance notes, and is the most complete source despite challenging venue conditions."
+  },
+  "key_highlights": [
+    "Strong, ‘out of control’ drumming from Mickey and Bill drives the second‑set jams.",
+    "Solid first‑set performances of Peggy‑O, El Paso and Loose Lucy keep the momentum high.",
+    "Truckin' stands out as a bright spot in an otherwise uneven second set.",
+    "Jerry’s health issues affect the overall quality, but Here Comes Sunshine and Liberty still shine."
+  ],
+  "song_highlights": [
+    "Peggy-O",
+    "El Paso",
+    "Loose Lucy",
+    "Here Comes Sunshine",
+    "Liberty",
+    "Truckin'"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia was noticeably under the weather, described as ‘smacked out’ and struggling throughout the second half, though he still managed to carry parts of the first set.",
+    "Phil": "",
+    "Bob": "Bob’s slide solo was singled out as a low point, with reviewers calling it one of the weaker moments.",
+    "Brent": "Vince’s keyboards were considered over‑busy and at times detracted from the music, despite occasional okay spots.",
+    "Mickey": "Mickey Hart delivered powerful, ‘out of control’ drumming that propelled the second‑set jams.",
+    "Billy": "Bill Kreutzmann’s drumming was similarly strong, contributing heavily to the high‑energy space and drum sections."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-19T09:54:22.350170+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Peggy-O"
+    ],
+    [
+      "El Paso"
+    ],
+    [
+      "Loose Lucy",
+      "The Promised Land"
+    ],
+    [
+      "Here Comes Sunshine"
+    ],
+    [
+      "Liberty"
+    ],
+    [
+      "Truckin'",
+      "Rollin' & Tumblin'",
+      "That Would Be Something",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "Box of Rain",
+      "Standing On The Moon",
+      "Sugar Magnolia"
+    ]
+  ]
+}

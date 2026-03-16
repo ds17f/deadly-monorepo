@@ -1,0 +1,50 @@
+{
+  "summary": "Stellar audience recording of a hot show highlighted by an epic Morning Dew and a soaring Bobby jam.",
+  "review": "Both reviewers rave about the exceptional audio quality for an audience (AUD) source, calling it one of the best ever heard. The performance is described as high‑energy throughout with Morning Dew singled out as a standout moment and the post‑Saint Bobby jam likened to classic Heaven Help the Fool improvisation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Reviews are uniformly enthusiastic about both the musical performance and the audience recording quality, but only two reviews limit certainty."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Praised as one of the best audience recordings ever; crisp, full‑range capture with no noted flaws, making it comparable to a soundboard for most listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Bobby Jam (post‑Saint)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, hot show from start to finish; the set flows naturally with a particularly fiery second half highlighted by the Bobby jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby Jam (post‑Saint)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:04:34.891223+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-24.147991.fob.akg.d330bt.senn421.hecht.miller.clugston.flac2496"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Epic Death Don't solo, high‑energy second set, rare Franklin's Tower",
+  "blurb": "The show shines with an unforgettable 'Death Don\\'t Have No Mercy' solo and a powerful second‑set flow that rockets from 'Playing In The Band' into 'Terrapin Station'. Brent’s vocal work on the title track and tight rhythm section give the night extra fire. Highlights also include a rare live version of 'Franklin's Tower' and a soaring encore of 'The Mighty Quinn'.",
+  "review": "Shoreline Amphitheatre on September 29, 1989 delivered one of those late‑80s Dead nights that still gets fans talking. The first set warmed up nicely with the bluesy swing of \"Let The Good Times Roll\" and a crisp, melodic take on \"Feel Like A Stranger\" before diving into a surprise appearance of \"Franklin's Tower\", a rarity for this era that instantly became a fan‑favorite moment.  \n\nThe second set was where the magic truly unfolded: after a bright \"China Cat Sunflower > I Know You Rider\" the band built momentum through \"Blow Away\" and launched into an explosive \"Playing In The Band → Terrapin Station\" sequence that segued into a deep, space‑filled jam.  From there came the night’s centerpiece – Jerry Garcia’s Hendrix‑level solo on \"Death Don\\'t Have No Mercy\", repeatedly called \"epic\" and \"one of the best in Dead history\" across multiple sources. Brent Mydland’s haunting vocal verse added an extra chill, while Phil Lesh’s steady low‑end and the twin‑drum attack from Mickey and Bill kept the groove locked.  The set closed with a jubilant \"Sugar Magnolia\" and a rousing encore of \"The Mighty Quinn\", leaving the crowd dancing into the night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 29,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings label the show as positive, praising the 'Death Don't' solo, strong second‑set flow and Brent's vocals; two are mixed but note only minor mix issues, never critiquing the performance itself. No recording reports consistent negative performance comments, so a solid positive adjustment is applied.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd89-09-29.sbd.17703.sbeok.shnf",
+    "reason": "Solid soundboard capture with good clarity, minimal drop‑outs, and the most complete presentation of the iconic 'Death Don\\'t Have No Mercy' solo."
+  },
+  "key_highlights": [
+    "Jerry Garcia’s epic, Hendrix‑level solo on 'Death Don't Have No Mercy'",
+    "High‑energy second set featuring a seamless 'Playing In The Band → Terrapin Station' jam",
+    "Rare live performance of 'Franklin's Tower' in the first set",
+    "Strong dual‑drum attack and Brent Mydland’s chilling vocal verse on 'Death Don't'"
+  ],
+  "song_highlights": [
+    "Death Don't Have No Mercy",
+    "Franklin's Tower",
+    "China Cat Sunflower",
+    "Bird Song",
+    "Terrapin Station",
+    "Playing In The Band",
+    "We Can Run",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers an unforgettable, Hendrix‑level solo on 'Death Don't Have No Mercy' and maintains stellar tone throughout; his playing is repeatedly called epic and a high point of the night.",
+    "Phil": "Lesh provides solid, effortless bass support especially in the second set, holding down the groove even after a brief strap mishap during Terrapin.",
+    "Bob": "Weir’s contributions are mixed – an early‑verse jump receives mild criticism and his vocal delivery is noted as trite by one reviewer, but no major faults are highlighted.",
+    "Brent": "Mydland shines with chilling vocals on 'Death Don't' and strong, Leslie‑driven keyboard solos; his overall performance is described as solid and “on”, despite some listeners disliking synthetic MIDI tones elsewhere.",
+    "Mickey": "Hart’s drumming is praised for intensity and driving the second‑set momentum, though a few mix notes mention drums sounding overly loud.",
+    "Billy": "Kreutzmann delivers punchier drums that stand out in the matrix recording; overall percussion work receives strong commendations."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T23:15:58.383020+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Death Don't Have No Mercy",
+      "Sugar Magnolia"
+    ],
+    [
+      "Feel Like A Stranger",
+      "Franklin's Tower"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Bird Song",
+      "The Promised Land"
+    ],
+    [
+      "We Can Run"
+    ]
+  ]
+}

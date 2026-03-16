@@ -1,0 +1,57 @@
+{
+  "summary": "Good soundboard capture of a 1978 show with strong Deal and Samson performances, though Keith's keyboard work and mix balance detract at times.",
+  "review": "The recording is generally clear and listenable, praised as a solid sound‑board source, but several reviewers note that drums and piano sit too forward in the mix and Keith’s organ can become monotonous and overpowering. Musically the night shines on Deal, Samson and the Scarlet‑Fire pair, with Garcia delivering memorable solos, while the early part of the set feels less integrated.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Four reviews give an average of ~3.75 stars; most comments are positive about specific songs and the soundboard quality, with consistent criticism of keyboard monotony and mix balance, leading to a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall capture praised as a good soundboard, but drums/piano are overly forward and Keith's organ can dominate, causing occasional loss of Garcia's guitar detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Samson",
+      "They Love Each Other",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early tunes feel a bit thin and the mix is less cohesive, while later numbers (especially Samson) tighten up; the Scarlet‑Fire couplet provides the high point of the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Loose, free playing with fast muted noodling early; strong third run on Deal and a soaring solo on Fire.",
+    "Phil": "",
+    "Bob": "Weir's voice dominates early; delivers a tasteful slide solo during the Fire section.",
+    "Keys": "Keith often sounds monotonous, hits too many chords, gets louder as the show progresses and at times drowns out Garcia.",
+    "Drums": "Drums are mixed too far forward, making the overall balance feel off."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:13:20.441411+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-16.psbd.wiley.11486.sbeok.shnf"
+}

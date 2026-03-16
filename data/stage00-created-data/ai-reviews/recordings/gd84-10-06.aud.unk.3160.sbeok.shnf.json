@@ -1,0 +1,63 @@
+{
+  "summary": "High‑fidelity soundboard capture of a powerhouse ’84 show highlighted by an epic Scarlet Begonias → Fire on the Mountain stretch.",
+  "review": "The recording is consistently praised as crystal‑clear, with Sennheiser‑based mic work and ample low‑end that puts it among the top audience‑style tapes on the Archive. Musically the concert shines in the second set – a marathon Scarlet Begonias/Fire on the Mountain jam, sizzling Playing‑in‑the‑Band, and an inspired Space – while the first set is solid but divisive for some listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers award 4–5 stars, lauding both the superb recording fidelity and the standout second‑set performances; only minor criticisms of the first set appear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note A+ audio quality, Sennheiser 421 mic chain, clear mids, strong bass and very little noise; a few compare it unfavorably to higher‑budget Nak CM300 tapes but overall deem it top‑tier."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Playing in the Band",
+      "Space"
+    ],
+    "poor_songs": [
+      "L.L. Rain"
+    ],
+    "setlist_flow": "First set is described as solid and conventional, though a handful of listeners found it dull; the second set erupts into three massive jams (Scarlet/Fire, Playing, Space) that define the concert’s legacy."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead work is called ‘hardcore’ on Scarlet > Fire, he breaks a string and still drives the jam; his amp fails during Space but he returns for Throwing Stones.",
+    "Phil": "Praised for “clicking unreal” with Brent, dropping “ferocious bombs,” taking a short solo on Minglewood, and steering the jams when Jerry’s gear falters.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is highlighted as ‘sick’, with marimba‑style lines and a Caribbean flavor that fuels the Scarlet/Fire stretch.",
+    "Drums": "The drummers (Bill/Mickey) are noted for deep, resonant Space passages and driving the second‑set energy."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "L.L. Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:13:30.709091+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-06.aud.unk.3160.sbeok.shnf"
+}

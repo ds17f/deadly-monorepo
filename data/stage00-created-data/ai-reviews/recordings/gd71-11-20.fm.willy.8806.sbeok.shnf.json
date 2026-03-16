@@ -1,0 +1,51 @@
+{
+  "summary": "Poor‑quality soundboard recording but a hot show highlighted by stellar jams on The Other One, Ramble On and Sugar Magnolia.",
+  "review": "Despite the weak FM‑sourced sound quality that many reviewers label as muddy or downright bad, the performance shines with hot playing and memorable improvisations, especially the three‑song stretch of The Other One → Ramble On → Sugar Magnolia. The first set is described as uneven, but the overall energy and historic vibe (early Keith era, no Pigpen) make it a fan favorite.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Show quality is praised with standout jams (70% weight), while recording quality is consistently called poor (30% weight), yielding an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers call the FM‑sourced soundboard tape 'bad', 'pretty poor', and 'muffled'. No specific dropouts noted, but overall clarity is lacking."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Ramble On",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as uneven – a weak first set followed by an incredible three‑song jam sequence that lifts the performance. Energy remains high throughout despite recording flaws."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith was fairly new to the band at this time.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T09:53:55.478096+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-11-20.fm.willy.8806.sbeok.shnf"
+}

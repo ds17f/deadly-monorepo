@@ -1,0 +1,88 @@
+{
+  "summary": "Good‑quality recording of an upbeat early‑80s show with a standout Mississippi Half‑Step → Franklin’s Tower and strong Althea, despite minor track‑listing quirks",
+  "review": "The tapes capture a generally clear sound that most listeners describe as “pretty good,” and the performance is lively with several high points – notably the Mississippi Half‑Step into Franklin’s Tower, an emotive Althea, and a hypnotic Saint of Circumstance jam. While the set list is a bit uneven (the slow Friend of the Devil drew some criticism) the overall vibe is upbeat and danceable, earning mostly positive reactions from reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews are 4‑5 stars and praise both the music and the sound; only one low‑star, likely spam, drags down the average. The show is judged solid with several standout moments and the recording is described as clear, justifying a rating above four."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the sound is generally clear and well‑balanced; no major audio defects are mentioned, though several reviewers point out track‑listing errors."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step > Franklin's Tower",
+      "Althea",
+      "Saint of Circumstance"
+    ],
+    "poor_songs": [
+      "Friend of the Devil"
+    ],
+    "setlist_flow": "The set blends upbeat, dance‑able numbers with a few slower moments; reviewers appreciate the varied pacing and the way the second‑set jams keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo work is highlighted as sweet, cosmic and emotionally resonant; his “dirges” receive special praise.",
+    "Phil": "",
+    "Bob": "Bob Weir is noted for solid rhythm work that meshes well with Jerry’s lead guitar.",
+    "Keys": "",
+    "Drums": "The drummers are described simply but positively – “drumz were drumz” and the rhythmic flow into jams is praised."
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:08:21.540665+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-07.aud.unknown.sirmick.repitch-8448.79857.sbeok.flac16"
+}

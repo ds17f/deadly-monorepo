@@ -1,0 +1,87 @@
+{
+  "summary": "Soundboard recording with a bit of hiss still delivers a scorching Scarlet > Fire, fiery Spanish Jam and soaring second‑set highlights, making this 1981 European show a standout performance.",
+  "review": "The show shines thanks to Jerry’s incendiary leads on Althea, Franklin’s Tower and the legendary Scarlet > Fire, while Brent’s Hammond drives the jams and Phil drops bomb‑like bass lines. Although the soundboard tape suffers from pervasive hiss and an over‑forward mix that buries Bob at times, the musical energy outweighs the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong musical praise across 15 reviews with only moderate recording complaints yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Noticeable hiss throughout and Brent’s keyboards sitting too forward in the mix (Bob often buried); occasional drop‑outs mentioned, but overall clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Spanish Jam",
+      "The Other One",
+      "Franklin's Tower",
+      "Sailor > Saint"
+    ],
+    "poor_songs": [
+      "Althea",
+      "Let It Grow",
+      "Mexicali Blues"
+    ],
+    "setlist_flow": "First set offers strong moments (Althea, Let It Grow) but the real highlight is a powerhouse second set – a blistering Scarlet > Fire segue into Sailor > Saint, a spirited Other One and an unforgettable Spanish Jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work described as shredding, scorching, on fire and his vocals smooth and confident throughout.",
+    "Phil": "Phil’s bass noted as heavy, clear and ‘dropping bombs’ especially during the Passenger and other jams.",
+    "Bob": "",
+    "Keys": "Brent's Hammond is prominently forward – praised for growling, tasty licks that drive the music, though sometimes too loud in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:15:56.006103+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-19.sbd.macdonald.7914.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Enthusiastic fans hail this recording as a peak performance with a nice, clear stream, though one reviewer gave it no rating.",
+  "review": "The show is described by reviewers as a “peak among peaks” and praised for keeping the spirit of Jerry alive through classic jams. The streaming quality is noted as pleasant, suggesting a clean source, even if the exact recording type isn’t identified. With two strong positive ratings and one neutral/negative comment, overall sentiment leans positive but remains mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Two reviewers gave high marks (5 and 4) praising the performance and stream quality, while a third gave a zero rating with no detail; averaging these yields about 3.0, but positive comments on sound push the estimate to ~3.5."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer mentions a \"nice stream\" indicating clear audio; no complaints about dropouts or muddiness are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers focus on the overall vibe and jam spirit rather than specific set structure, noting that the music keeps the dream alive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:42:11.362638+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-12-28.sbd.unknown.tetzeli.fix-3914.75302.reflac.flac16"
+}

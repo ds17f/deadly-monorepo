@@ -1,0 +1,106 @@
+{
+  "summary": "Matrix‑sourced recording with lively hall ambience captures a strong first set highlighted by Shakedown, Samson and a soaring Looks Like Rain → He's Gone sequence.",
+  "review": "The dusborne matrix mix offers a spacious, crowd‑filled listening experience that lets the band’s energy shine, especially on the first set where Shakedown, Samson and the boosted Looks Like Rain into He’s Gone stand out. The second set is less consistent—Drums>Space feels flat and some guitar parts drop in the mix—but overall the show delivers sharp gusto from the whole crew.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star scores and praised the performance while noting a few mix hiccups; the show is solid with notable highlights, and the matrix recording is enjoyable though not flawless."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix mix creates an engaging hall‑space feel and captures crowd reactions well. Some volume fluctuations are noted (Bobby’s guitar mixed out in Sugar Mag, occasional EQ quirks), but overall the sound is clear and lively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Samson",
+      "Looks Like Rain → He's Gone",
+      "Knockin'"
+    ],
+    "poor_songs": [
+      "Drums>Space",
+      "The Last Time",
+      "Sugar Mag (mix issues)"
+    ],
+    "setlist_flow": "First set is tight and full of golden pairings; the second set starts strong but loses a bit of focus, with some uneven transitions and mixed‑out instrumentation."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar shines on Shakedown and the MIDI‑enhanced sections, though his parts dip in the later Sunshine Daydream jam.",
+    "Phil": "Lesh delivers a standout bass performance on Me & My Uncle.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s piano drives Samson and adds sparkle to Looks Like Rain; his guitar is occasionally buried (e.g., Sugar Mag).",
+    "Drums": "Mickey Hart gets special mention for tom work on Knockin', but the Drums>Space segment feels flat compared to earlier ’90 shows."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "See, See Rider Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lot to Laugh Train to Cry": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Mag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knockin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:47:36.164472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-22.134354.mtx.dusborne.flac16"
+}

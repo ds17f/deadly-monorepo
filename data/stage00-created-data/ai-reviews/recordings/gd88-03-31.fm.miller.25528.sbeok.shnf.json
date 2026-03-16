@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy spring ’88 show, highlighted by a blazing Scarlet > Fire sequence and the seamless Space → Dark Star > Truckin' > Fire transition.",
+  "review": "The recording is praised for its crystal‑clear, well‑balanced soundboard quality that lets every instrument shine, from Brent’s bright keyboards to Mickey’s padded drums. Musically the night bursts with energy – standout moments include the scorching Scarlet > Fire, Terrapin Station, and the Space into Dark Star > Truckin' > Fire sequence, all driven by Jerry’s shredding lead work. Minor complaints focus on mis‑labelled track titles rather than performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars, highlighting superb playing and a high‑quality recording; only a few note labeling errors, so the overall assessment is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly call the sound fine/excellent, noting crisp clarity, bright keyboard palette and well‑balanced mix; no major audio flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Terrapin Station",
+      "Dark Star > Truckin' > Fire on the Mountain",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, especially in the second set; seamless transitions such as Space into Dark Star > Truckin' > Fire keep the momentum toe‑tapping and “taint‑tingling.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for shredding lead guitar, perfect tone, strong cues and vitality.",
+    "Phil": "",
+    "Bob": "Weir described as a force, adding powerful rhythm/vocal energy.",
+    "Keys": "Brent’s keyboard palette noted as broad and bright; Mickey’s pad work also highlighted.",
+    "Drums": "Mickey’s drumming praised for its pads and high‑energy feel, with short post‑drum moments forgiven."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star > Truckin' > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-16T07:29:11.445127+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-03-31.fm.miller.25528.sbeok.shnf"
+}

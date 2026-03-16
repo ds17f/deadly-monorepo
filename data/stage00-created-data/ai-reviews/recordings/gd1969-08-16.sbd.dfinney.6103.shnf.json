@@ -1,0 +1,52 @@
+{
+  "summary": "Soundboard capture of the chaotic Woodstock set with a monster Turn On Your Lovelight and mixed performance quality.",
+  "review": "The recording is a sound‑board feed that, despite occasional microphone hiss and power glitches, delivers an exceptionally clear picture of the August 16 1969 Woodstock show. Musically the band swings between brilliance – a near‑40‑minute Turn On Your Lovelight and a memorable Dark Star – and rough spots such as the aborted St. Stephen and general stage confusion.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the historic performance and the soundboard’s clarity, but many note technical mishaps and uneven playing; weighted average of show (≈3) and recording (≈4) yields ~3.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard feed with occasional hum, microphone feedback and power‑out glitches; audience mix is well balanced, giving a vivid live feel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn On Your Lovelight",
+      "Dark Star"
+    ],
+    "poor_songs": [
+      "St. Stephen"
+    ],
+    "setlist_flow": "Typical Dead set hampered by on‑stage technical chaos; the first half feels distracted, while the second half builds into a legendary Lovelight jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Suffered a microphone incident that knocked him back and bruised his lip, which impacted his playing early in the set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T16:41:28.788939+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-16.sbd.dfinney.6103.shnf"
+}

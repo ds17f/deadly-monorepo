@@ -1,0 +1,73 @@
+{
+  "summary": "Good‑quality audience tape with a warbly start but solid later sound; the show shines thanks to a rare Werewolves of London and strong performances of Not Fade Away, Terrapin Station and Franklin’s Tower.",
+  "review": "The recording is an audience capture that suffers from an early warble on “Tennessee Jed” before settling into clear, listenable sound. Musically the concert is celebrated for its rare inclusion of Zevon’s Werewolves of London and tight renditions of Mississippi, Samson & Delilah, Not Fade Away and a soaring Franklin’s Tower, earning consistently high praise from reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight multiple standout songs; the only technical drawback is a brief warble, so overall rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Early tape warble on “Tennessee Jed” noted, but sound clears up and remains listenable for the remainder of the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Werewolves of London",
+      "Not Fade Away",
+      "Terrapin Station",
+      "Franklin's Tower",
+      "Mississippi"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows naturally with high energy early, a memorable rare encore (Werewolves), and strong second‑set momentum highlighted by the transition into Franklin’s Tower."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for solid guitar work on Werewolves of London and overall tight playing.",
+    "Phil": "Noted that his strings were cut mid‑show, an unusual incident remembered by attendees.",
+    "Bob": "",
+    "Keys": "Keith’s solo after the Not Fade Away intro is highlighted as a cool, intense moment.",
+    "Drums": "Bass drum punctuates transitions with intensity, especially during the NFA intro."
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves of London": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:07:32.925530+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-17.akg.weiner.8334.sbeok.shnf"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an otherwise solid 1976 show, highlighted by a strong Other One and a tight Phil‑led segue into Music.",
+  "review": "The recording is praised as “truly incredible,” offering a crisp, high‑fidelity soundboard experience with only minor speed/helium‑voice quirks. Musically the concert redeems Garcia after the previous night’s shaky performance; the band feels tight and delivers standout moments like The Other One and the Phil‑led transition into Music, though the fast rendition of Eyes and a sped‑up Wharf Rat draw some criticism.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Both reviewers rate the set highly (5 and 4 stars) and note excellent sound quality plus strong performances, offset only by minor song‑specific critiques."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with incredible fidelity; a few listeners note possible tape speed issues on Wharf Rat and a slightly helium‑like vocal tone for Garcia."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Music"
+    ],
+    "poor_songs": [
+      "Eyes",
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Overall tight performance with a solid band groove; the Phil‑led segue into Music provides a satisfying set closer despite some uneven tempos on Eyes and Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Redemptive performance after previous night; strong tone, solid playing, though his voice sounds slightly helium‑like.",
+    "Phil": "Leads a smooth segue into Music, adding to the set’s cohesion.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:19:57.839021+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-14.153042.sbd.koda.miller.flac2496"
+}

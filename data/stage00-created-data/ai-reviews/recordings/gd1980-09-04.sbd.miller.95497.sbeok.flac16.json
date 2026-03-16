@@ -1,0 +1,109 @@
+{
+  "summary": "Soundboard recording captures a strong late‑summer 1980 show with blazing Jerry solos, standout Supplication and Eyes of the World jams, though some tracks suffer from muddy SBD playback.",
+  "review": "Both reviewers praise this late‑summer ’80 performance as a hidden gem, highlighting Jerry Garcia’s fire, the epic Supplication jam and a soaring version of Eyes of the World. The Charlie Miller soundboard source is generally praised for its clarity, but several songs (Althea, Dire Wolf, Far From Me) are noted as sounding thin or muddy, making the matrix backup preferable for those cuts.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two detailed reviews show a high‑quality performance with many standout moments (70% weight) but mixed opinions on the soundboard’s consistency (30% weight), yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller SBD is described as stellar and crisp, yet several tracks are reported as muddy or having pitch/speed issues; a Seamons matrix version is recommended for the first song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Supplication",
+      "Eyes of the World",
+      "Going Down the Road",
+      "Feel Like a Stranger",
+      "Peggy-O",
+      "Althea",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Dire Wolf",
+      "Far From Me",
+      "China Cat"
+    ],
+    "setlist_flow": "The first set is praised for its consistency and strong song choices, while the second set builds with a powerful Supplication jam, hyper‑active Eyes of the World, and an inspired Wharf Rat > Goin' Down the Road pairing despite a few awkward segues."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as \"on fire\" all night, delivering blur‑fast solos on Supplication, Eyes of the World and Going Down the Road.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum section noted for expanded use of chimes in 1980."
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Going Down the Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:01:50.403239+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-04.sbd.miller.95497.sbeok.flac16"
+}

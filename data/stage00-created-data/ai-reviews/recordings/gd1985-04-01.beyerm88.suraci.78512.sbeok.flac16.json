@@ -1,0 +1,31 @@
+{
+  "summary": "Recording quality unknown; the show is described as a very normal set list during an era of growing experimentation.",
+  "review": "The sole review provides no information about the audio source or its clarity, leaving the recording quality indeterminate. It characterizes the concert as a routine set list for a period when the Dead were beginning to experiment with new material, offering little insight into performance highlights or issues.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating and no concrete details on either the music or the recording, leading to a low confidence assessment that both aspects are likely subpar."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality, clarity, or mix were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer calls the set list \"very normal\" for a time when the band was starting to experiment with new songs."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T02:47:08.419595+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-01.beyerm88.suraci.78512.sbeok.flac16"
+}

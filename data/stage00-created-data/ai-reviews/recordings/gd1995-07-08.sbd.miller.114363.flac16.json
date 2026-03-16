@@ -1,0 +1,51 @@
+{
+  "summary": "Solid Miller soundboard capture of a mixed‑quality show, highlighted by a standout Visions of Johanna and strong second‑set jams.",
+  "review": "The Miller SBD provides clear, well‑balanced audio that lets the band’s late‑’90s nuances shine, though Garcia’s voice shows some wear. Fans rave about the magical moments – especially Visions of Johanna and the China Cat Sunflower → I Know You Rider transition – while others find the overall performance uneven, noting a few lackluster stretches.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (soundboard, crisp), but show assessments split between enthusiastic and critical, yielding an overall middle‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix with occasional vocal wobble; no major dropouts reported. Reviewers repeatedly thank Charlie Miller for the “terrific” soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "China Cat Sunflower > I Know You Rider",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as having flashes of magic—particularly in the second set’s extended jams—but also moments that felt flat or “average,” leading to a mixed overall impression."
+  },
+  "band_member_comments": {
+    "Jerry": "Some reviewers note Jerry resurfaces with inspiring leads, while others point out shaky vocals and occasional lyrical slips near the end of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s playing on “It’s All Too Much” is mentioned as decent but not a highlight; no strong praise or criticism overall.",
+    "Drums": "The dual‑drummer section receives praise for an energetic 15‑minute stretch that lifts the second set."
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T12:14:00.095975+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-08.sbd.miller.114363.flac16"
+}

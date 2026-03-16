@@ -1,0 +1,56 @@
+{
+  "summary": "Clear early‑80s audience tape captures a high‑energy show with an electrifying He's Gone → Truckin' jam and standout Scarlet‑Fire.",
+  "review": "The recording is a solid early‑80s audience capture that outshines many older tapes, with only the usual crowd ambience and occasional drill noise during Space. Musically the concert shines – the post‑He's Gone segment into Truckin' is described as the most intense jamming of the New Year's run, Scarlet‑Fire crackles with electricity, and Jerry’s arpeggios are praised as beautiful and dire.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviews overwhelmingly praise the performance (high energy, intense jams) and note good audio quality for an audience tape; only one low‑star placeholder does not reflect content."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to beat older tapes, some unavoidable crowd noise, occasional drill sounds during Space; overall a well‑balanced audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Truckin'",
+      "Scarlet Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy opening that builds into an intense mid‑set jam after He's Gone, leading into a powerful Truckin' and an electric Scarlet Fire; the show maintains momentum despite occasional on‑stage technical tinkering."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for beautiful, dire arpeggios after He's Gone.",
+    "Phil": "",
+    "Bob": "Made a humorous \"day at the dentist\" comment during the show.",
+    "Keys": "",
+    "Drums": "Bill’s drumming highlighted with notable arpeggio patterns and drill sounds during Space."
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:27:33.324569+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-26.nak700-martin.23897.sbeok.flacf"
+}

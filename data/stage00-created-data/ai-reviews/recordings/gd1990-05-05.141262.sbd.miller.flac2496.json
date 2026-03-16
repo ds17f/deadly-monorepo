@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard capture of a sloppy performance; Loose Lucy shines while Help and the road jam stumble.",
+  "review": "The reviewers note that despite a strong setlist, the night suffered from out‑of‑sync drumming, erratic tempos, lyrical slips and misplaced MIDI use by Jerry. Loose Lucy is highlighted as the sole high point, whereas Help falls apart and the Goin' Down the Road Feelin' Bad segment only barely comes together. No specific comments on audio fidelity were made, but the source appears to be a typical soundboard recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one low‑star review, focusing on poor musical performance; recording quality is unaddressed but assumed average for a soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention clarity or mix issues; assumed typical soundboard fidelity without notable problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy"
+    ],
+    "poor_songs": [
+      "Help",
+      "Goin' Down the Road Feelin' Bad"
+    ],
+    "setlist_flow": "Setlist was strong on paper, but performance suffered from sloppy execution, erratic tempos and out‑of‑sync drumming."
+  },
+  "band_member_comments": {
+    "Jerry": "Uses MIDI inappropriately; lyrics off more than usual.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's playing noted as flawed.",
+    "Drums": "Drummers are out of sync throughout the show."
+  },
+  "song_mentions": {
+    "The Race Is On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feelin' Bad": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:43:10.526594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-05-05.141262.sbd.miller.flac2496"
+}

@@ -1,0 +1,97 @@
+{
+  "summary": "A solid soundboard recording of the Sep‑20‑88 MSG show with crisp audio and standout performances of Peggy‑O, Looks Like Rain and Terrapin Station.",
+  "review": "The sbd capture is generally very clear – reviewers rave about the “very good” mix and audible bass, though a few note a rough start to Disc 2. Musically the concert shines on tracks like Peggy‑O, Looks Like Rain, Terrapin Station, Althea and Bertha>Cumberland, while Louie‑Louie and Mama Tried draw mixed reactions. Overall the show is regarded as one of the better 1988 dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (9/10) give 4‑5 stars and praise both performance and sound quality; only a handful note minor flaws, leading to a strong positive composite rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced mix with clear bass; occasional early‑Disc 2 hiccup and one reviewer mentions a slight drop‑out, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Looks Like Rain",
+      "Terrapin Station",
+      "Althea",
+      "Bertha > Cumberland Blues"
+    ],
+    "poor_songs": [
+      "Louie Louie",
+      "Mama Tried",
+      "Morning Dew"
+    ],
+    "setlist_flow": "The set opens with a quirky Star‑Spangled‑Banner tease and a long tuning, then settles into tight mid‑tempo numbers that keep the crowd moving. The second set is highlighted by an unusual Bertha>Cumberland segue and a powerful Terrapin Station, though some feel the later part (Louie Louie, GDTRFB) loses focus."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal phrasing on Althea is called “delightful”; guitar work described as solid, not spectacular but definitely not bad.",
+    "Phil": "Bass is praised for being “really good” and easily heard; several reviewers note a hot, sweaty lay‑down throughout the show.",
+    "Bob": "",
+    "Keys": "Brent (keyboard) gets credit for adding brass/woodwind texture during the second set and generally holding his own.",
+    "Drums": "No major complaints about Bill’s drumming; one reviewer mentions “post‑drums problems” but another says they noticed none."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha > Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Louie Louie": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Fought the Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:09:59.602107+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-20.sbd.jeff.2422.sbeok.shnf"
+}

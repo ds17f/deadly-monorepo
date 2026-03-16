@@ -1,0 +1,39 @@
+{
+  "summary": "Outstanding audience recording with a superb mix that captures a killer show, highlighted by an incredible 'Rider' performance.",
+  "review": "The audience‑sourced tape is praised as the best sounding crowd recording available, offering crystal‑clear instruments and just the right amount of ambience to convey the live vibe.  The musical performance is described as fantastic, with the 'Rider' singled out as a must‑hear moment that epitomizes why this concert is a classic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "A single detailed 5‑star review emphasizes both superb show quality and excellent audience recording, leading to a high combined rating but limited review count reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix with appropriate crowd ambience between songs; no reported flaws or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth flow with natural crowd breaks that enhance the live concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:23:49.925029+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-10.139020.FOB.Beyer.billydee.Sellars.Noel.t.flac24"
+}

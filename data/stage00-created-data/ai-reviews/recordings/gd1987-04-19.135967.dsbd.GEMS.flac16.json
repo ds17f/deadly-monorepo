@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard capture of an unforgettable Easter Sunday show at Irvine Meadows, highlighted by Jerry’s soaring guitar on “Black Muddy River”.",
+  "review": "Both reviewers rave about the concert – a magical Easter‑Sunday night in Irvine where the sunset fell over the second set and the crowd was buzzing. The recording is praised as sounding even better than being there live, indicating a crisp, clear soundboard source. Jerry’s guitar work, especially on the improvisational “Black Muddy River”, is singled out as a standout moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Both reviews are glowing (5 stars) and highlight both an exceptional performance and a high‑quality recording, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No complaints; reviewers say the archive sound is clearer than the live experience, implying crisp, balanced mix with no noticeable drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Muddy River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Easter Sunday ambience with a sunset ending the second set created a gorgeous, memorable flow; reviewers emphasize the overall vibe rather than specific set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his unique “black muddy river” tone and guitar work that only he could deliver.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:02:06.713966+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-19.135967.dsbd.GEMS.flac16"
+}

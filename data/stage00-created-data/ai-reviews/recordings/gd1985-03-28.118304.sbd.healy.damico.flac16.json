@@ -1,0 +1,57 @@
+{
+  "summary": "Good‑quality soundboard recording that shines on the first set and a smoking Truckin' > Smokestack Lightning > High Time sequence, but the second set splits opinion.",
+  "review": "The source sounds solid overall, though one reviewer notes a phase‑inverted channel that creates an odd stereo image. The first set is widely praised while opinions on the second set range from disappointing to highlighting the Looks Like Rain/Scarlet‑Fire jam as the show’s high point. Guest harmonica on Smokestack Lightning adds a special treat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is mixed (strong first set, divided second set) and recording is generally good but has a notable phase‑inversion flaw; the combined weighted score lands in the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound, but one channel is phase‑inverted causing an odd stereo effect; otherwise a nicely balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Smokestack Lightning",
+      "High Time",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is consistently praised; second set is controversial, with some listeners disliking the LLR segment while others hail it as the highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T02:15:48.155138+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-28.118304.sbd.healy.damico.flac16"
+}

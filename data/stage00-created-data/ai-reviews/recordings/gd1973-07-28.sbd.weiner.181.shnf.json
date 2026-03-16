@@ -1,0 +1,63 @@
+{
+  "summary": "Matrix‑sourced recording of the July 28 1973 Watkins Glen show is generally good despite occasional distortion, highlighted by an electrifying Mountain Jam and a strong setlist.",
+  "review": "The performance is praised for its historic vibe and standout moments like the soaring Mountain Jam, Here Comes Sunshine and a powerful China > Rider sequence. The audio is a hybrid of soundboard and audience tapes; it’s listenable but suffers from static on Truckin', spliced audience cuts and occasional diginoise that require EQ tweaking. Overall the show shines musically even if the recording isn’t pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and describe it as a solid performance; recording issues are noted but not severe enough to outweigh the musical strengths."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Hybrid soundboard/audience source. Reviewers note static/distortion on Truckin', audience cuts spliced into Row Jimmy, diginoise in He's Gone/Truckin' and the need for EQ adjustments; overall still listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mountain Jam",
+      "Here Comes Sunshine",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "A historic two‑day run with strong first‑set material and a second set that builds into an expansive Mountain Jam; the flow is praised despite some recording hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight his adventurous playing on Mountain Jam, noting a 'Duane' inspired vibe.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith is praised for his keyboards; several reviewers note the presence of a second keyboardist (likely Garth Hudson) during Around & Around.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mountain Jam": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:01:19.458131+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-28.sbd.weiner.181.shnf"
+}

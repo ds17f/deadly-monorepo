@@ -1,0 +1,76 @@
+{
+  "summary": "High‑energy Hampton night with a solid setlist and decent arena sound despite unknown recording source.",
+  "review": "Both reviewers rave about the show – a strong first set packed with favorites like C.C. Rider, Brown Eyed Women, Esau and Let It Grow, followed by an equally kicking second set highlighted by Morning Dew and Baby Blue. The only sore spot is the Brent‑written “Don’t Need Love,” which one reviewer disliked. Sound-wise, the audience notes praise for the arena’s speaker system and Healy’s mix work, though no concrete details about the recording source are given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly positive (4‑5 stars) and focus on excellent performance; recording quality is praised in general terms but not described in detail, leading to a strong show rating with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers compliment the arena speaker setup and Healy's mix work, indicating a listenable recording, but no specifics about soundboard vs. audience source are provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "C.C. Rider",
+      "Brown Eyed Women",
+      "Esau",
+      "Let It Grow",
+      "Morning Dew",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Don’t Need Love"
+    ],
+    "setlist_flow": "A solid, fan‑favorite first set followed by a powerful second set; overall pacing and song choices keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reviewer loves Brent Mydland’s playing overall but dislikes his contribution “Don’t Need Love.”",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don’t Need Love": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:40:50.115466+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-14.nak700.unknown.12572.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of a stellar show highlighted by a smoking Truckin' > The Other One > Comes a Time sequence.",
+  "review": "The reviewer gives the entire performance and its sound a perfect five‑star rating, noting that the recording is crystal clear. Musically the standout moment is the seamless Truckin' → The Other One → Comes a Time suite, which they say epitomizes what it means to be a Deadhead.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single glowing review rates both the show and the sound as flawless, leading to a high overall score but limited confidence due to only one source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the sound as five‑star quality with no issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Comes a Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show flows powerfully through the Truckin' → The Other One → Comes a Time sequence, which is highlighted as defining Deadhead experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:37:16.013115+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-26.136637.sbd.mr.sirmickflac1648"
+}

@@ -1,0 +1,88 @@
+{
+  "summary": "Good soundboard capture of a solid 1979 show with standout Shakedown Street, superb Space and strong jams, despite some vocal hiccups.",
+  "review": "The recording is a Charlie Miller sound‑board that sounds clear and well‑balanced for most of the set, allowing the band’s tight playing to shine. Highlights include a funky Shakedown Street, an inspired Space with a calypso vibe, and strong performances of The Miracle and Jack Straw, while vocal moments on Deal and Terrapin draw criticism. Overall the show is enjoyable and worth repeated listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All five reviewers gave 4‑5 stars and praised the musical performance, noting only minor vocal flaws; recording quality is consistently described as good, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced Charlie Miller soundboard; occasional vocal imbalance and a few shrieking moments at the end of Deal, but no major dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Space",
+      "The Miracle",
+      "Jack Straw",
+      "Row Jimmy",
+      "Playing"
+    ],
+    "poor_songs": [
+      "Deal",
+      "Terrapin Station",
+      "Casey Jones"
+    ],
+    "setlist_flow": "First set is tight and to the point, while the second set explores more adventurous jams; transitions (e.g., Miracle → Shakedown) are praised, though vocal delivery wanes on some ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as sublime throughout the show, but his vocals are noted as weak or lackluster on several numbers.",
+    "Phil": "",
+    "Bob": "Bob's occasional high‑pitched shrieking at the end of Deal is called out negatively.",
+    "Keys": "Keith’s keyboard contributions receive strong praise, especially during Space and throughout the set.",
+    "Drums": "The drumming is highlighted as tribal and eight‑limbed, adding a fun, spacey feel to the jams."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "The Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:16:01.468056+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-15.sbd.miller.102389.flac16"
+}

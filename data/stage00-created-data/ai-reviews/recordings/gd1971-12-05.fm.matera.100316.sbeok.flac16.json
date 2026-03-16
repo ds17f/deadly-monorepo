@@ -1,0 +1,103 @@
+{
+  "summary": "Crystal‑clear FM broadcast captures an all‑time great ’71 show highlighted by a legendary Truckin’ jam, soaring Comes A Time and a superb Bertha performance.",
+  "review": "The recording is an audience capture of the original FM simulcast and is praised for its crisp, clean sound that far exceeds old tape or radio copies.  The concert itself is repeatedly called a favorite – with Jerry’s vocal on Comes A Time, the monster Truckin’ jam, Phil’s storytelling in Bertha and tight first‑set renditions of Jack Straw, Tennessee Jed and more earning universal acclaim.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic reviews (mostly 5 stars) highlight both an excellent performance and a high‑quality recording, with only minor complaints about early‑show mix static."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the audio as crisp, clear and far superior to old tape or broadcast copies; occasional static/weak mix at the very start is noted but does not detract from overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Comes a Time",
+      "Bertha",
+      "Muddy Water",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is praised for flawless, fresh renditions of new material while the second set delivers classic jams (Truckin’, Dark Star) and heartfelt ballads, creating a balanced, high‑energy performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his soaring vocals on Comes A Time and stellar phrasing throughout; guitar tone described as perfect.",
+    "Phil": "His storytelling in Bertha is highlighted as a unique, standout moment despite an early‑show mix weakness.",
+    "Bob": "Vocals praised (e.g., Saturday Night) and overall rhythm work noted as solid.",
+    "Keys": "Keith's playing shines on Pigpen‑led numbers like Sugar Magnolia; keyboards described as “great” alongside Pig.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes a Time": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Muddy Water": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road with China Cat tease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T10:25:09.870459+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-05.fm.matera.100316.sbeok.flac16"
+}

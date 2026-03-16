@@ -1,0 +1,31 @@
+{
+  "summary": "Brilliant second set praised; recording quality not discussed",
+  "review": "The reviewer rates this show a perfect five stars, highlighting an outstanding second set while suggesting the first set could be skipped. No comments are made about the source or sound quality of the recording, so its technical merit remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only a single, highly positive review mentions the musical performance (brilliant second set) but gives no information on recording quality, leading to a strong show rating with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as brilliant; first set deemed skippable by the reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T15:04:03.032740+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-26.aud.tobin.80665.sbeok.flac16"
+}

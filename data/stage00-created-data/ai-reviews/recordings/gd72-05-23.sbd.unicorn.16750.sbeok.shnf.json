@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard mix with a standout Dark Star → Morning Dew sequence; minor speed‑correction quirks but overall great performance.",
+  "review": "The recording captures the May 23, 1972 show on a clean soundboard source, praised for its excellent mix and relatively forward vocals, though a slight speed correction introduces a tiny pitch shift and a hint of tape hiss. Musically the night shines thanks to an iconic Dark Star that flows into a flawless Morning Dew, with Jerry’s guitar accents and Phil’s bass tone highlighted, plus a superb Two Souls in Communion. Overall the show is regarded as one of the era’s best despite a few technical nitpicks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Three strong positive reviews (two 4‑star, one 5‑star) praise both performance and recording; only a single low‑rating meta comment does not detract from the overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix described as excellent with less distant vocals; minor speed‑correction (~1% fast) causes slight pitch/intona­tion shift and a bit of tape hiss/distortion, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "Two Souls in Communion"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its seamless segue from Dark Star into Morning Dew and a consistently strong performance throughout the show."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar accents and solo on Dark Star are highlighted as exemplary, reinforcing his status as a great lead guitarist/singer.",
+    "Phil": "Bass tone on Dark Star receives special praise for its clarity and musicality.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Two Souls in Communion": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T14:22:38.485017+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-05-23.sbd.unicorn.16750.sbeok.shnf"
+}

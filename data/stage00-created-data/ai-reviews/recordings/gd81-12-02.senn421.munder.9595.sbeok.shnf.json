@@ -1,0 +1,57 @@
+{
+  "summary": "High‑energy early‑80s show captured on a decent audience tape that sounds best with a midrange/bass EQ boost.",
+  "review": "The concert is praised for its blazing energy, tight playing and strong vocals, with particular love for Brent’s “Good Times” and the seamless flow of Stella → Round & Round into Good Lovin’. Although it isn’t a soundboard source, listeners find the audience recording clear enough and note that adding some mid‑range and bass makes it very enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Multiple detailed 5‑star reviews highlight an outstanding performance and a listenable audience recording; weighted combination of show (≈4.5) and recording quality (≈3.5) yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape with a thin mid‑range/bass response; reviewers recommend EQ boost for mids and bass but overall clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Times",
+      "Stella",
+      "Round & Round",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as blazing, tight and vocal‑rich, with a smooth sequence (Stella → Round & Round → Good Lovin') that keeps the momentum high despite a few ragged moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work and vocals on “Good Times” are singled out as exceptional.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Round & Round": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:36:13.371041+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-02.senn421.munder.9595.sbeok.shnf"
+}

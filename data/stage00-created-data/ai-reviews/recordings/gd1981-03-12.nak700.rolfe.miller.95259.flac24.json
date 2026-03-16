@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality audience tape captures an energetic show highlighted by a Terrapin Station opener and Dark Star teases.",
+  "review": "The recording, sourced from the crowd and praised for its solid fidelity thanks to Charlie Miller, delivers a lively performance with plenty of energy. Reviewers point out a strong second set that opens with Terrapin Station and note intriguing Dark Star teases that make the show worth acquiring.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviewers rate 4‑5 stars, describe an energetic performance with standout moments, and note a good‑quality audience recording; the consensus is clearly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape recorded by Charlie Miller; generally clear with typical crowd ambience but no major dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic throughout, with a cool second‑set opener featuring Terrapin Station and several Dark Star teases that keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T09:35:42.435385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-12.nak700.rolfe.miller.95259.flac24"
+}

@@ -1,0 +1,37 @@
+{
+  "summary": "Review offers poetic musings with no concrete details on recording or performance, rating suggests dissatisfaction",
+  "review": "The sole review is an imaginative poem that references “Valley Road” and broader cosmic imagery but provides no specifics about the audio source, sound quality, or musical execution. With a zero‑star rating the reviewer appears dissatisfied, though the text itself does not articulate clear complaints.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one review, which gives a 0‑star rating but contains no concrete performance or technical commentary; therefore the overall assessment is uncertain and leans negative."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Valley Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:28:10.099880+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-13.AKG451.Darby.120149.Flac2448"
+}

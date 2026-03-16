@@ -1,0 +1,66 @@
+{
+  "summary": "Dark Star blaze, flawless Eleven and tight group interplay",
+  "blurb": "Features a scorching Dark Star, an immaculate Eleven, and a powerful Other One. Jerry’s guitar soars while Phil’s bass locks in, and the drummers are superb through most of the set. Highlights include Death Don't Have No Mercy and Cryptical Envelopment.",
+  "review": "On October 13, 1968 at San Francisco's Avalon Ballroom the Dead delivered one of their quintessential late‑'60s outings. The first set erupts with a smoking Dark Star that showcases Garcia’s blazing tone and soaring improvisation, segues into Saint Stephen and then rolls straight into a flawless Eleven where Phil’s bass locks tightly with Bill and Mickey’s drums. Death Don't Have No Mercy follows as a soulful, gut‑wrenching ballad. The second set builds an electric arc: Cryptical Envelopment opens the set, giving way to a tight drum duo that fuels a monstrous Other One, before diving back into another Cryptical Envelopment and a surprisingly bright New Potato Caboose. The night ends with a wild Caution jam and feedback outro, leaving the band feeling locked‑in and the audience electrified.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 46,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All six recordings describe the show in overwhelmingly positive terms, repeatedly praising Dark Star, The Eleven and overall tight interplay. No negative comments appear, indicating strong consensus of a stellar performance.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1968-10-13.sbd.miller.owen.7772.sbeok.shnf",
+    "reason": "Excellent soundboard capture with crystal‑clear mix, minimal splice, and the most consistent praise for both audio fidelity and musical performance."
+  },
+  "key_highlights": [
+    "Smoking Dark Star with masterful Garcia solo",
+    "Flawless, tightly locked Eleven jam",
+    "Powerful Other One and soulful Death Don't Have No Mercy",
+    "Cryptical Envelopment sequence that drives the second‑set arc"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "The Eleven",
+    "Death Don't Have No Mercy",
+    "The Other One",
+    "Cryptical Envelopment",
+    "New Potato Caboose"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers masterful, soaring guitar work on Dark Star and a soulful solo on Death Don't Have No Mercy, feeding off the band's energy throughout.",
+    "Phil": "Lesh’s bass lines lock in tightly with the dual drummers, driving the brilliance of The Eleven and underpinning the group's tight interplay.",
+    "Bob": "Weir’s vocal contribution shines on The Eleven, adding a bright counterpoint to the instrumental intensity.",
+    "Brent": "",
+    "Mickey": "Hart is fabulous in the early set, syncing perfectly with Bill; his later drum segment is less engaging but still solid.",
+    "Billy": "Kreutzmann’s drumming is superb through most of the concert, especially during the Eleven and Other One, though the isolated drums segment loses some momentum."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-24T09:36:23.209157+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Death Don't Have No Mercy"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "New Potato Caboose",
+      "Drums",
+      "Caution (Do Not Stop On Tracks) Jam",
+      "Feedback"
+    ]
+  ]
+}

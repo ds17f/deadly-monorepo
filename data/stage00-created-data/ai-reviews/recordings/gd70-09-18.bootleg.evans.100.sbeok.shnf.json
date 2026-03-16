@@ -1,0 +1,50 @@
+{
+  "summary": "High‑energy Sept 18 1970 show with a smoking Dark Star and flowing teases; audience recording is decent though not pristine.",
+  "review": "Fans rave about the marathon midnight‑to‑sunrise performance, highlighting an epic Dark Star and the weaving of teases that culminate in St. Stephen. The recording captures the vibe but suffers from modest sound quality and a few misplaced tracks, making it good but not flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance across seven reviews (average ~5 stars) with only minor criticism of sound quality, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Sound is generally clear enough to enjoy the show, but several reviewers note it isn’t great—some muddiness and misplaced tracks (e.g., Dark Star not from this set, Sugar Magnolia from another source)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows beautifully with endless teases and weaving that build into extended improvisations, creating a seamless midnight‑to‑sunrise experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:53:02.133369+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-09-18.bootleg.evans.100.sbeok.shnf"
+}

@@ -1,0 +1,97 @@
+{
+  "summary": "Soundboard recording captures a high‑energy 1974 UCSB concert, highlighted by a smoking China Cat > Rider and blistering Truckin' jams.",
+  "review": "The show is widely praised for its upbeat setlist, tight playing and memorable moments such as the top‑10 China Cat > Rider, soaring Truckin', and a fiery Scarlet Begonias. The soundboard mix is generally clear and lively, though a few reviewers note an early muted guitar and a brief bass dip. Overall the performance and recording make this a must‑listen 1974 gem.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) and enthusiastic comments about both the music and the soundboard mix outweigh a few minor complaints, yielding an overall rating in the excellent range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced; occasional early muted guitar on U.S. Blues and a brief bass volume dip noted, but overall clear and lively sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat > Rider",
+      "Truckin'",
+      "Scarlet Begonias",
+      "Wharf Rat",
+      "Big River",
+      "U.S. Blues",
+      "Jack Straw",
+      "Deal",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets keep the momentum high; the first set opens strong with U.S. Blues and maintains energy through Jack Straw, Scarlet, and Truckin', while the second set delivers a jam‑heavy climax highlighted by China Cat > Rider and an exuberant close."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring leads and “crackles” on China Cat > Rider; a few notes about his axe being muted at the start of U.S. Blues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s jazzy improvisations noted especially during Big River and China Cat > Rider, adding extra sparkle to the jams.",
+    "Drums": "Billy Kreutzmann described as “on fire,” delivering perfect snare work and driving energy throughout."
+  },
+  "song_mentions": {
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Let it Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Big River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T20:06:56.527680+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-05-25.sbd.moog.2635.sbeok.shnf"
+}

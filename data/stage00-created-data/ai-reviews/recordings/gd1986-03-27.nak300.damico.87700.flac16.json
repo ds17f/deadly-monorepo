@@ -1,0 +1,46 @@
+{
+  "summary": "Solid show highlighted by the rare Revolutionary Horsesh*t Blues jam, captured on a well‑regarded Joe recording.",
+  "review": "The concert is generally praised as a good to solid performance, with fans especially noting the one‑off Revolutionary Horsesh*t Blues improvisation. Recording quality receives a positive nod from at least one reviewer who calls Joe's tape \"rock,\" though no technical details are given. A single negative comment points to an unnamed song that felt like a waste of time.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show positively (solid/good) and at least one explicitly praises the recording, leading to an overall rating around four stars despite limited detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer says \"Joe's recordings rock,\" indicating a clear, enjoyable tape; no specific issues or source type mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Revolutionary Horsesh*t Blues"
+    ],
+    "poor_songs": [
+      "Unspecified song described as a waste of time"
+    ],
+    "setlist_flow": "Overall solid performance with a memorable one‑off jam, though at least one track was perceived as weak."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Revolutionary Horsesh*t Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unspecified song described as a waste of time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:02:41.017388+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-27.nak300.damico.87700.flac16"
+}

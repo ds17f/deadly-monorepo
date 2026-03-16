@@ -1,0 +1,90 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy 1988 Chicago show featuring standout Bird Song, Box of Rain and Iko Iko performances.",
+  "review": "The Miller‑crafted soundboard mix is praised as crystal‑clear and balanced, letting Jerry’s powerful vocals and Brent’s keyboards shine. Musically the concert is described as a solid, fire‑filled run with an especially strong second set – Bird Song, Box of Rain, Iko Iko, Not Fade Away and the Estimated > Eyes sequence receive repeated accolades.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating (≈4.2) combined with overwhelmingly positive comments about both performance and sound quality; >10 detailed reviews give a robust consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note the mix is superb, vocals clear, Brent’s keys present, and Miller’s mastering makes the venue ambience work without mudding the sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Box of Rain",
+      "Iko Iko",
+      "Not Fade Away",
+      "Estimated > Eyes of the World",
+      "The Wheel > Gimme Some Lovin'",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A marathon 50‑song run praised for its pacing; a tight first set capped by Bird Song → Promised Land, followed by an energetic second set that builds through Iko Iko into Estimated > Eyes and finishes with a rousing Muddy River encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently described as strong, spirited and powerful on vocals and guitar; his tone is highlighted as “fantastic” and “funk‑filled”.",
+    "Phil": "Noted for a more subtle bass tone on the new instrument this year; fewer big ‘bombs’ but adds nuanced support.",
+    "Bob": "Praised for a Buddy Holly‑style vocal impression on Not Fade Away and tasteful playing throughout.",
+    "Keys": "Brent’s keyboards receive specific praise – “going off”, “great mix” and “doing what they do best”.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Iko Iko": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Box of Rain": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated > Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel > Gimme Some Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:50:38.324607+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-14.sbd.miller.91248.sbeok.flac16"
+}

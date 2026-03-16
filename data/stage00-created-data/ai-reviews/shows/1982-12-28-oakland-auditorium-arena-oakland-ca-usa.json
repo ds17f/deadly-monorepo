@@ -1,0 +1,67 @@
+{
+  "summary": "Energetic Oakland show with killer Lazy Lightning > Supplication jam",
+  "blurb": "The second half of the first set erupts with a tight Lazy Lightning → Supplication sequence and a heartfelt Morning Dew close. Shakedown Street delivers a funky, keyboard‑laden jam that lifts the second set. Overall the band is locked in despite a few vocal slips.",
+  "review": "December 28, 1982 at the Oakland Auditorium Arena captured the Dead in a late‑year surge of energy. The first set rolls smoothly from Jack Straw into a standout Lazy Lightning → Supplication pair, showcasing Brent’s swirling fills and Phil’s propulsive bass groove. Jerry’s guitar shines on Shakedown Street, delivering a fiery solo that many reviewers called “brilliant” even as his vocals slipped on a few verses. The second set builds through Samson & Delilah into a soaring Terrapin Station, followed by a crisp, high‑octane finish with Throwing Stones, Not Fade Away and an emotionally charged Morning Dew that closes the night on a high note. While some listeners found the latter portion of the second set a bit sleepy, the overall performance is vibrant and memorable, especially for fans who love late‑’80s funk‑rock hybrids.\n\nAudio-wise the Chris Chappell front‑of‑board matrix (gd1982-12-28.mtx.chappell.sb18b.34715.sbeok.flac16) is the clear winner: crisp, well‑balanced mids and sparkling cymbal definition let every nuance of Brent’s keyboards and the dual‑drum interplay shine through. For anyone looking to experience this era of the Dead, that matrix capture offers the most immersive listening experience.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings are clearly positive (matrix captures, moving Morning Dew, strong Shakedown Street jam) while two are mixed but not negative. No recording reports consistent criticism of the band's playing, so a moderate positive adjustment (+1.4) reflects the overall enthusiastic consensus.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1982-12-28.mtx.chappell.sb18b.34715.sbeok.flac16",
+    "reason": "Excellent front‑of‑board matrix with crisp, clear balance; captures the energy of Lazy Lightning > Supplication and a moving Morning Dew without dropouts."
+  },
+  "key_highlights": [
+    "Tight Lazy Lightning → Supplication jam that drives the first set",
+    "Funky Shakedown Street segment with Brent’s psychedelic keyboards and Phil’s bass groove",
+    "Heartfelt, crowd‑loving Morning Dew finale",
+    "Terrapin Station performance praised in matrix recording"
+  ],
+  "song_highlights": [
+    "Lazy Lightning",
+    "Supplication",
+    "Shakedown Street",
+    "Terrapin Station",
+    "Morning Dew",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a fiery guitar solo on Shakedown Street and strong leads throughout, though vocal flubs appear on Shakedown and Terrapin Station.",
+    "Phil": "Provides a deep, funky bass groove that drives the Shakedown Street jam, keeping the band locked in.",
+    "Bob": "Solid rhythm work with occasional lyrical slips (notably on Samson); adds humor with his sudden shift into Samson.",
+    "Brent": "Adds psychedelic texture and swirling fills, especially prominent during Shakedown Street, enhancing the jam’s intensity.",
+    "Mickey": "Cymbal definition shines in the front‑of‑board matrix; ride bell is audible throughout, adding sparkle to the percussion.",
+    "Billy": "Locks into a deep, funky groove on Shakedown Street but some listeners note a slightly sluggish feel in later second‑set passages."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-14T03:45:15.001787+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lazy Lightning",
+      "Supplication",
+      "Deal"
+    ],
+    [
+      "Shakedown Street",
+      "Samson & Delilah"
+    ],
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Throwing Stones",
+      "Not Fade Away",
+      "Morning Dew"
+    ]
+  ]
+}

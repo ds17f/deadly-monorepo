@@ -1,0 +1,102 @@
+{
+  "summary": "Soundboard‑sourced tape with great clarity and strong performances of Roses, Stella Blue, Touch and Ship of Fools, though the vocal delivery is a bit hoarse at times.",
+  "review": "The recording delivers crisp, well‑balanced sound that lets the band’s tight playing shine. Highlights include an energetic Touch, a chilling Ship of Fools and standout renditions of Roses, Stella Blue and To Lay Me Down, while Jerry’s voice sounds a little rough in places. Overall the show is solid and enjoyable despite a few uneven moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show quality is generally good with several standout songs, while the recording is praised for its clarity; mixed comments on vocals and a few song weaknesses lower the overall score slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note great sound quality and crispness, especially on drums and percussion; one reviewer mentions a \"shaky\" start but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Roses",
+      "To Lay Me Down",
+      "Stella Blue",
+      "Touch",
+      "Ship of Fools"
+    ],
+    "poor_songs": [
+      "Ship of Fools",
+      "Truckin'",
+      "Watchtower"
+    ],
+    "setlist_flow": "The first set drifts a bit with a hoarse vocal start but stays cohesive; the second set is energetic (Touch, Ship of Fools) though some songs feel over‑played. A birthday tribute adds a fun moment before closing with Brokedown."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone and energy are praised (especially on Touch), but his voice sounds hoarse early on; later he smiles into the final chorus of Ship of Fools and improves on The Wheel.",
+    "Phil": "",
+    "Bob": "Bobby's vocal performance on Watchtower is criticized as “stinkin’ up the place,” yet his birthday serenade is described as sweet and silly.",
+    "Keys": "Brent’s subtle keyboard phrasing gets a positive nod in the early part of the show.",
+    "Drums": "Mickey’s percussion receives strong praise for its surround‑sound presence; both drummers are celebrated on their birthdays."
+  },
+  "song_mentions": {
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:32:57.746788+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-11.sbd.bennett.10157.sbeok.shnf"
+}

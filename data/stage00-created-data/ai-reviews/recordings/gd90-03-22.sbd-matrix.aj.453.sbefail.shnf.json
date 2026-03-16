@@ -1,0 +1,67 @@
+{
+  "summary": "A high‑energy matrix recording that captures an all‑time great Scarlet > Fire transition and Jerry’s incendiary guitar work.",
+  "review": "The show is widely praised for its fire‑filled second set, especially the legendary Scarlet > Fire segue and a soaring Truckin' → Drums → Space → The Other One stretch. Reviewers love the matrix mix for its vivid crowd ambience, though a few note a volume dip in the second set and occasional track‑title errors. Overall the performance outweighs any technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (≈80%) award 4–5 stars and highlight exceptional playing, especially Jerry’s guitar and the Scarlet > Fire transition; recording quality is praised as vivid matrix sound with only minor volume‑level issues."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Crisp matrix mix that captures crowd ambience and instrument detail; a few listeners report a noticeable drop in volume during the second set and mismatched track titles from the previous night."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Truckin' > Drums > Space > The Other One"
+    ],
+    "poor_songs": [
+      "Hey Jude"
+    ],
+    "setlist_flow": "The set flows powerfully, with a high‑octane first half and an especially electrifying second set; the only blemish is occasional uneven volume that slightly muddies the later songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for incendiary guitar work, dazzling MIDI effects on Scarlet > Fire and Fire solos, and overall 'on fire' performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent is described as magical on most songs but criticized for a botched Hey Jude where his playing falters.",
+    "Drums": "Billy Kreutzmann and Mickey Hart receive praise for tight, energetic drumming that fuels the Scarlet > Fire transition."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 1,
+      "total_mentions": 13
+    },
+    "Hey Jude": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Truckin' > Drums > Space > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Believe It Or Not": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T04:41:58.583754+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-22.sbd-matrix.aj.453.sbefail.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture of a rare pre‑1970 set, highlighted by first performances of Clementine, Spanish Jam and Born Cross‑Eyed with flawless transitions.",
+  "review": "The recording is praised as crystal‑clear and fully balanced, letting every instrument—from Pigpen’s keyboards to Jerry’s spacious New Potato guitar—shine through. The show itself is described as a treasure trove of rarities with smooth segues that make it one of the band’s most compelling pre‑Anthem of the Sun performances. Overall fan sentiment is overwhelmingly positive despite a lone complaint about missing track information.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Reviews overwhelmingly praise both the musical performance (rare songs, tight transitions) and the audio quality (excellent soundboard), yielding a high combined score; confidence is medium because detailed technical comments come from only one review."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Audio described as excellent, crisp and clear with every instrument audible; smooth mix and no reported drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Clementine",
+      "New Potato",
+      "Born Cross-Eyed",
+      "Spanish Jam",
+      "Caution",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Transitions called \"effortless\" and among the smoothest in Dead history; rare jams flow seamlessly from one to another."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for spacious New Potato guitar work and lead vocals on Clementine.",
+    "Phil": "Highlighted for writing Clementine and his Coltrane influence; noted as a major contributor.",
+    "Bob": "",
+    "Keys": "Pigpen on keyboards described as being at his best throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Clementine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Potato": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Born Cross-Eyed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T07:10:21.956030+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-01-20.sbd.abe.4990.sbeok.shnf"
+}

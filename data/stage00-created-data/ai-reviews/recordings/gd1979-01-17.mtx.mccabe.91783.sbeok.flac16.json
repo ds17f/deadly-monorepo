@@ -1,0 +1,39 @@
+{
+  "summary": "A terrible matrix recording plagued by flanging, yet the second set delivers a killer Scarlet Begonias → Fire on the Mountain.",
+  "review": "The performance itself gets nods for a solid show and an especially smoking Scarlet>Fire sequence, with one reviewer calling the second set “nice.” However, the matrix source suffers from severe phase‑flanging and digital breakdowns that render large portions unlistenable. The recording quality drags the overall experience down despite the decent playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show is praised (4‑star comments) while recording is condemned (2‑ and 0‑star comments). Weighted 70% show quality vs 30% recording gives a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "poor",
+    "technical_notes": "Severe flanging/phase issues from mixed sources make the matrix sound unmusical; reviewers describe digital disgrace and breakdowns throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as enjoyable; overall show considered decent despite technical flaws in the recording."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:33:22.501971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-17.mtx.mccabe.91783.sbeok.flac16"
+}

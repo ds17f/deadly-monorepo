@@ -1,0 +1,105 @@
+{
+  "summary": "High‑quality soundboard capture of the Feb 22 1974 Winterland run, with rich bass and generally crisp mix (despite some cymbal‑mic quirks), featuring smoking Playin', Eyes, China Doll, Wharf Rat and a standout Slipknot jam.",
+  "review": "The recording is a solid SBD source that most reviewers describe as clear, warm and well‑balanced, though a few note weak overheads on Bill Kreutzmann’s cymbals and distant vocals. Musically the show is widely praised – Garcia “on fire,” a fiery Playin' with Slipknot riffs, superb Eyes, China Doll/Wharf Rat stretch and an upbeat Nobody's Fault make it a must‑listen for 1974 fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9/11) are 4‑5 stars and highlight both strong performance and good soundboard quality; only a few note minor recording quirks, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Bass is rich and highs decent; mix generally crisp. Some reviewers complain of low overhead mics on Bill’s cymbals and reduced ambience, plus one note about distant vocals due to reverse‑polarity mics. Overall the transfer is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "Eyes",
+      "China Doll",
+      "Wharf Rat",
+      "Nobody's Fault",
+      "Lucy",
+      "Jack Straw",
+      "T.L.E.O.",
+      "Big River",
+      "Must Have Been the Roses",
+      "US Blues",
+      "Ship of Fools"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a solid, consistent set with the first half laying down blues‑rock foundations and the second half soaring through extended jams (Playin', Eyes) and tight song transitions; the show maintains energy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is repeatedly called “on fire,” with inventive Slipknot‑style riffs and soaring leads.",
+    "Phil": "",
+    "Bob": "Weir sits unusually high in the mix, making his rhythm guitar and vocals more prominent than usual.",
+    "Keys": "One reviewer dislikes Keith's electric‑piano tone on newer material, but overall keyboard work is not a major complaint.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Nobody's Fault": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "T.L.E.O.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Must Have Been the Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:54:34.508351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-02-22.sbd.gans-latvala.samaritano.26763.shnf"
+}

@@ -1,0 +1,101 @@
+{
+  "summary": "High‑quality soundboard capture of a memorable ’94 MSG night featuring a soaring 25‑minute Eyes of the World, fiery Watchtower and an emotional Morning Dew.",
+  "review": "The SBD recording is clear and detailed (aside from occasional drum‑mix quirks), making the show very listenable. Musically the concert shines with a marathon Eyes of the World, a blistering Watchtower, a heartfelt Morning Dew and a Dylan‑stamped Rainy Day Women encore; the first set is solid but less energetic than the second. Overall fans rave about the emotional intensity and song selection despite a few rough spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 30 reviews consistently praise the performance (especially Eyes, Watchtower, Morning Dew) and note good‑to‑excellent soundboard quality; a few minor criticisms do not outweigh the strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD with crisp guitar and vocal detail; occasional drum mix quirks and occasional muddiness noted, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Watchtower",
+      "Morning Dew",
+      "Midnight Hour",
+      "Rainy Day Women"
+    ],
+    "poor_songs": [
+      "Friend of the Devil (sloppy in some reviews)",
+      "Estimated (clunky for several reviewers)"
+    ],
+    "setlist_flow": "First set is solid but lacks the high energy of later shows; the second set explodes with a marathon Eyes, tight transitions into The Wheel and Watchtower, and finishes emotionally on Morning Dew before a Dylan‑enhanced encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar tone, breaking a string during Eyes yet keeping it going, powerful vocals on Morning Dew (even teary), and overall masterful improvisation.",
+    "Phil": "Noted as friendly backstage, front‑row presence; no specific musical critique beyond that.",
+    "Bob": "Strong vocal performance on Watchtower and Midnight Hour; praised for Pigpen‑style growl on Midnight Hour.",
+    "Keys": "Vince (keyboards) shines on Friend of the Devil and refuels Morning Dew toward its climax; overall keyboard work highlighted as a strength.",
+    "Drums": "Mickey adds congas on Eyes; some reviewers mention drum mix being off or low in the mix, but rhythm section generally holds together."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Morning Dew": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Watchtower": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Rainy Day Women": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Midnight Hour": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Eternity": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:38:25.121135+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-17.sbd.carr.14615.sbeok.shnf"
+}

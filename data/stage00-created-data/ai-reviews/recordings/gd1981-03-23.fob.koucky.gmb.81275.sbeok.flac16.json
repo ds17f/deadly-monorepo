@@ -1,0 +1,57 @@
+{
+  "summary": "Round, up‑close audience tape captures a rare second‑set Birdsong and strong jams, delivering a solid performance despite B‑grade recording quality.",
+  "review": "The show is highlighted by an early‑set Birdsong – one of only three times it opened a second set in 1981 – and extended jams on Playing in the Band and The Other One. Reviewers praise Jerry’s clear leads and the overall vibe, while noting the tape is a boom‑box audience recording with a warm, round sound that lacks high‑end crispness but remains very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly and describe strong performances; recording is a decent B‑grade audience tape, yielding an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Boom‑box/fob capture with a warm, round up‑close sound; high‑end less crisp and slightly flat compared to other sources but pleasant and fully listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Playing in the Band",
+      "The Other One",
+      "Lazy Lightnin' > Supplication"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rare Birdsong opens a second set, setting an uplifting vibe; the show balances tight, melodic numbers with expansive jams, maintaining strong momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Leads are clear, deliberate and crisp as the crowd quiets.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums and space sections praised as great and soulful."
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:11:05.056825+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-23.fob.koucky.gmb.81275.sbeok.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard source with pitch quirks and occasional mic issues, but captures a lively set highlighted by Wharf Rat and Broken Arrow despite mixed performance.",
+  "review": "The recording is a sound‑board capture that suffers from occasional pitch problems and microphone glitches, likely amplified by the acoustically challenging Sports Arena. Musically the show swings between a hot first set and a second set that many describe as “nicely weird,” with standout moments like Wharf Rat and Broken Arrow, while songs such as Wave to the Wind draw criticism.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~3.8; show quality is mixed but leans positive, while recording quality shows noticeable flaws that lower the overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch problems on the soundboard, occasional mic failure (Jerry's vocal mic), venue‑induced acoustic quirks; generally clean and listenable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Broken Arrow"
+    ],
+    "poor_songs": [
+      "Wave to the Wind"
+    ],
+    "setlist_flow": "First set described as hot and energetic; second set becomes “nicely weird” with disjointed jams for some listeners, but still contains memorable peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice weakening and occasional mic issues noted; leads are praised on several jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:26:40.854144+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-09.sbd.vernon.7312.sbeok.shnf"
+}

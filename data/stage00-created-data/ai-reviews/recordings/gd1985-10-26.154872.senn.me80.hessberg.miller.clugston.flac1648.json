@@ -1,0 +1,39 @@
+{
+  "summary": "Decent recording that captures a standout Phil Lesh performance on Throwing Stones",
+  "review": "The sole reviewer gives the show four stars, highlighting Phil Lesh’s “serious bombs” during Throwing Stones. While no specific comments about the audio source are provided, the recording is evidently clear enough to hear the bass work. Overall it’s a solid show with a notable moment for Lesh.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review, but it is positive (4 ★) and emphasizes a strong Phil Lesh performance; recording quality not discussed, so rating leans on show strength."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit remarks about sound clarity or mix; assumed acceptable since bass details are audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as delivering \"serious bombs\" on Throwing Stones, indicating a powerful bass performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:41:50.649522+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-26.154872.senn.me80.hessberg.miller.clugston.flac1648"
+}

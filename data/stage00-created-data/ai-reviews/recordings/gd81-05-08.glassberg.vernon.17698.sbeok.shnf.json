@@ -1,0 +1,76 @@
+{
+  "summary": "High‑energy performance with standout Stella Blue and Let It Grow; recording is solid though source type is unknown.",
+  "review": "Fans rave about the inspired set, highlighting a superb version of Stella Blue, a soaring Let It Grow, and strong renditions of Peggy‑O and Jack Straw. The sound is generally praised as clean and powerful (especially Phil’s bass), but one reviewer criticizes Jerry’s playing and calls Shakedown Street and Terrapin lackluster, giving the overall impression of a mixed‑feel show despite most listeners being enthusiastic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average user rating is 4.3 stars; overwhelmingly positive comments about the performance offset by a single strongly negative review, leading to an overall strong but slightly tempered score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity or mix; reviewers note powerful low‑end (\"Phil bombs\") suggesting a robust recording, with no reported drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Let It Grow",
+      "Peggy-O",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Shakedown Street",
+      "Terrapin",
+      "Playing in the Band"
+    ],
+    "setlist_flow": "Most reviewers describe the show as inspired from start to finish, though one notes a weaker second set and a lack of spark from Jerry on certain jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for commanding presence and a killer Stella Blue; however, one reviewer says he was \"not with it\" and added little to the jam.",
+    "Phil": "His bass \"bombs\" are highlighted as especially intense in the second set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:13:35.672724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-08.glassberg.vernon.17698.sbeok.shnf"
+}

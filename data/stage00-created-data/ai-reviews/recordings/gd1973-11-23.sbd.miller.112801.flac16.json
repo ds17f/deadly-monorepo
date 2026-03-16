@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy El Paso show, highlighted by a stellar Eyes of the World and fiery Jack Straw.",
+  "review": "The audience gets an ultra‑clear soundboard capture that many reviewers call “off the charts” and “superior,” perfect for blasting loud. Musically the concert shines with a dynamite first set – especially Eyes of the World, Jack Straw, Big River and Sugaree – while the second set stays relaxed yet powerful.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All ten reviews are 4‑5 stars with consistent praise for both performance and recording; average reviewer rating is 4.4, indicating a strong show on an excellent soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with superior balance; reviewers recommend listening loud or with headphones to appreciate the detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Jack Straw",
+      "Big River",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as dynamite and high‑energy; second set a bit more laid‑back but still strong, with the Eyes of the World jam noted as first‑rate."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being 'in control' during Jack Straw and delivering tight playing throughout.",
+    "Phil": "Repeatedly highlighted; his bass is said to elevate the music and move listeners physically.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:17:37.587815+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-23.sbd.miller.112801.flac16"
+}

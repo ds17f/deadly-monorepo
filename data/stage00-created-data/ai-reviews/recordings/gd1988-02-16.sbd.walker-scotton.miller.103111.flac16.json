@@ -1,0 +1,51 @@
+{
+  "summary": "Balanced matrix recording with a hot, upbeat show highlighted by a stellar Fadeaway and soaring Bird Song",
+  "review": "Fans rave about the energetic performance – especially the West LA Fadeaway, a pre‑drums tease before Iko, and a soaring Bird Song – while noting that the tape is actually a soundboard‑matrix rather than a pure SBD. The recording is fairly clear but suffers from occasional mix quirks (vocals less forward, bass light), making it listenable though not pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is praised highly across multiple reviews; recording quality is mixed with some criticism about source labeling and mix balance, yielding a solid but not outstanding overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Labelled as soundboard on the site but listeners hear matrix characteristics – vocals less front‑center, bass a bit light, occasional mix quirks. Overall listenable and fairly balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fadeaway",
+      "Bird Song",
+      "Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Upbeat, flowing set with a pre‑drums tease before Iko and plenty of drum highlights; the vibe is described as hot, smoky and 'big easy.'"
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals noted as less harsh/more listenable; Jerry’s energy captured in the upbeat vibe.",
+    "Phil": "",
+    "Bob": "Weir described as feisty and energetic.",
+    "Keys": "Brent Mydland praised for rising to the occasion on keyboards.",
+    "Drums": "Drums galore – pre‑drums before Iko and overall strong percussion presence."
+  },
+  "song_mentions": {
+    "Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:13:01.399675+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-02-16.sbd.walker-scotton.miller.103111.flac16"
+}

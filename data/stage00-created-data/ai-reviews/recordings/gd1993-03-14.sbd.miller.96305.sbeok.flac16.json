@@ -1,0 +1,57 @@
+{
+  "summary": "Clear soundboard recording of a snow‑bound Dead show that shines on Terrapin Station, Stella Blue and a powerful Touch of Grey.",
+  "review": "The SBD capture is generally clear with only occasional comments about muffled venue acoustics, making the performance easy to enjoy. Fans rave about the soaring Terrapin Station, the buttery Stella Blue, Lazy River Road and Jerry’s especially strong vocal on Touch of Grey, while a few note that the overall set felt average or bland. The unique Blizzard‑era atmosphere at the Holiday Inn adds an unforgettable backdrop.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and highlight several standout songs; recording is a soundboard with generally good clarity, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard source; reviewers note occasional muffled venue sound but overall clear and balanced audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Stella Blue",
+      "Lazy River Road",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a mix of old and new material with an uplifting vibe despite the blizzard; the set felt warm and communal, though some found the song selection bland."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers praise Jerry’s vocal on Touch of Grey and his overall presence, calling it one of the strongest they’ve heard.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:16:21.701148+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-14.sbd.miller.96305.sbeok.flac16"
+}

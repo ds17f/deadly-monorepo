@@ -1,0 +1,45 @@
+{
+  "summary": "Good show highlighted by a Pittsburgh jam and a strong Not Fade Away; recording quality not detailed.",
+  "review": "The sole reviewer gave the recording four stars, calling it a good show and pointing out the standout Pittsburgh jam and a solid performance of Not Fade Away. No comments were made about the source or sonic clarity, so the technical quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one moderately‑high rating (4 stars) focusing on musical highlights; lack of recording details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound quality or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Pittsburgh Jam",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer noted the show was good overall, highlighting a jam segment and Not Fade Away but gave no further set‑list analysis."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Pittsburgh Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:46:30.304892+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-05.128378.senn421.wise.minches.flac16"
+}

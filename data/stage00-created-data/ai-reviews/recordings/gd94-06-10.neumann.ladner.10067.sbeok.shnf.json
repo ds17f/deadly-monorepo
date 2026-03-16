@@ -1,0 +1,94 @@
+{
+  "summary": "Clean audience tape captures a solid Dead show with standout moments like Wharf Rat and The Other One, but the second set feels uneven.",
+  "review": "The audience recording is praised as crisp and even better than many soundboard sources, delivering clear guitar and drum work. Highlights include powerful renditions of Wharf Rat, Looks Like Rain, The Other One and a soaring Here Comes Sunshine, while the second set draws mixed reactions for being at times listless and “mail‑in”. Overall the performance is strong but not uniformly great.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate 4–5 stars for recording quality and several songs, but a few low‑star reviews criticize the second‑set flow, pulling the average to a solid but mixed rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape described as clean, crystal‑clear and sometimes better than board recordings; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Cold Rain",
+      "Looks Like Rain",
+      "The Other One",
+      "Victim",
+      "Here Comes Sunshine",
+      "Lazy River Road",
+      "Loser"
+    ],
+    "poor_songs": [
+      "Don't Ease Me In",
+      "Brokedown Palace"
+    ],
+    "setlist_flow": "First set generally praised, second set divided—some find it fun and space‑filled while others call it disjointed or listless."
+  },
+  "band_member_comments": {
+    "Jerry": "Nailed the end of Looks Like Rain, delivered a strong Here Comes Sunshine vocal/guitar performance and is noted for his stage presence.",
+    "Phil": "Thunderous on The Other One and stomped out a bomb during Victim, providing powerful bass moments.",
+    "Bob": "Wanted to take Victim out of space; his enthusiasm is highlighted.",
+    "Keys": "",
+    "Drums": "Bone‑chilling drum/space sections praised for intensity."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:01:17.264077+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-10.neumann.ladner.10067.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Composite matrix recording that some praise as one of the best ’70‑’72 tapes, while others deem it sub‑par due to audience bleed.",
+  "review": "The tape is a mixed soundboard/audience (matrix) source; one reviewer calls it crystal‑clear and among the finest from the early ’70s, but another criticizes the audience portion as substandard. No comments were made about the musical performance itself, so listeners’ opinions focus entirely on the audio quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Three reviews give divergent scores (4, 0, 2). Positive remarks about soundboard clarity are offset by complaints of poor audience recording, yielding a middling overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Composite of soundboard and audience; the soundboard portion is praised as crisp, but the audience bleed is described as subpar, leading to an uneven listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not discuss the musical set or performance details."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T17:31:07.133585+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-16.sbd.cotsman.9247.sbeok.shnf"
+}

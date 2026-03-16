@@ -1,0 +1,58 @@
+{
+  "summary": "Soundboard recording with a forward‑mix but clear sound captures a stellar second set highlighted by an epic The Other One and a beautiful Morning Dew.",
+  "review": "The October 21 1972 Vanderbilt show is praised for its flowing second set, where Truckin', The Other One and a soaring Morning Dew shine. While the performance is described as “beautiful” and “golden,” the mix leans heavily toward guitar, bass and drums, making other instruments sit low in the blend. Overall the recording is clean enough to enjoy despite the balance quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑5 stars and highlighted strong musical moments; the soundboard source is clear but has mix imbalances, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall fidelity but noticeably unbalanced – guitar and Phil's bass sit high in the mix, vocals low; occasional equipment glitch during Bird Song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Morning Dew",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Bird Song"
+    ],
+    "setlist_flow": "First set rolls through classic material; the second set is praised as a “golden slice” with seamless jams and strong transitions, especially into The Other One and Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar often too forward in the mix but his playing and tone are praised (even compared to Zappa).",
+    "Phil": "Bass is front‑and‑center, described as fat, round and “amazing”; many reviewers love hearing Phil’s 1972 four‑string sound.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann sits low in the mix, making it a good practice track for drummers; performance itself is solid."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:35:42.915070+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-21.sbd.pset2.91505.flac16"
+}

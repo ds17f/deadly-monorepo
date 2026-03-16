@@ -1,0 +1,75 @@
+{
+  "summary": "Matrix recording delivers crystal‑clear sound while the 8/5/1974 show dazzles with a smoking China Cat > I Know You Rider, epic Truckin', and a standout Seastones.",
+  "review": "The August 5 1974 Philadelphia concert is hailed as one of the band’s finest – tight timing on China Cat Sunflower into I Know You Rider, a head‑y “Scarlet Begonias” jam, an almost 31‑minute Truckin’ that many call insane, and a mesmerizing Seastones segment. The AUD+SBD matrix source is praised as the best‑sounding version of this show, offering clear instrument separation and enough audience ambience to feel the room without muddying the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All nine reviews are overwhelmingly positive, highlighting both superb musical performance and an excellent matrix recording; the weighted average of show (≈4.8) and recording (≈4.5) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "The AUD+SBD matrix blends audience ambience with clean soundboard clarity; reviewers note it “pumps life” into the SBD and is the best‑sounding version despite pure AUD being weak."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Truckin'",
+      "Scarlet Begonias",
+      "Seastones",
+      "Brow-Eyed Women",
+      "Must Have Been the Roses",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight first set with strong jams, followed by a second‑set marathon that builds from China Cat into an expansive Truckin’, punctuated by an experimental Seastones interlude and capped by a soaring Scarlet Begonias."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for “awesome” tone, lighting up songs like Promised Land and weaving expertly with Bob and Keith.",
+    "Phil": "Described as “on point” and central to the Seastones improvisation; his bass work is highlighted as a highlight of the night.",
+    "Bob": "Noted for tight rhythmic interplay on Scarlet Begonias, adding distinctive fills in unison with Jerry and Keith.",
+    "Keys": "Keith’s keyboard textures are praised for weaving around Jerry and Bob during Scarlet Begonias; Ned Lagin’s electronic contributions receive special acclaim in the Seastones segment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Seastones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brow-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Must Have Been the Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:45:24.612976+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-08-05.131660.mtx.dusborne.flac16"
+}

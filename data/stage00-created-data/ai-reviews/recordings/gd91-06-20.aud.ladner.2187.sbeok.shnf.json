@@ -1,0 +1,91 @@
+{
+  "summary": "Stunning audience tape of the 6/20/91 Pine Knob show with crystal‑clear mix and a super‑charged set highlighted by Standing on the Moon, Peggy‑O and a magical Throwin'→Iko transition.",
+  "review": "The recording is widely praised as an excellent‑sounding audience (AUD) source that captures the band’s high energy and tight playing; Phil’s bass is especially prominent while the keyboards occasionally dominate. Musically the concert is considered one of the best of ’91, with standout moments from Standing on the Moon, Peggy‑O, Maggie’s, Birdsong, a spectacular Throwin'→Iko segue, Miracle and Wharf Rat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic reviews (mostly 4‑5 stars) praise both the performance and the audio quality; only one outlier negative review exists, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, powerful mix that sounds almost matrix‑like; Phil’s bass is clear and forward. Some listeners note occasional keyboard overload and a single complaint about accordion volume, but overall the tape is balanced and very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing On The Moon",
+      "Peggy-O",
+      "Throwin'",
+      "Iko Iko",
+      "Miracle",
+      "Wharf Rat",
+      "Maggie's",
+      "Birdsong"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Although the song order looks odd on paper, reviewers say it flows superbly, especially the second‑set sequence Throwin' into Iko and the seamless transition from The Wheel into Miracle and Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for heartfelt vocals, magical soloing and stage presence; one reviewer felt he was drowned out by keyboards.",
+    "Phil": "Repeatedly described as hot, strong, clear in the mix and delivering bass \"bombs\" throughout the show.",
+    "Bob": "",
+    "Keys": "Mixed feedback – Bruce Hornsby’s piano/accordion work is noted (some love it, others think the accordion is too loud), and overall keyboards were sometimes said to dominate the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Standing On The Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Maggie's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:00:34.631496+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-20.aud.ladner.2187.sbeok.shnf"
+}

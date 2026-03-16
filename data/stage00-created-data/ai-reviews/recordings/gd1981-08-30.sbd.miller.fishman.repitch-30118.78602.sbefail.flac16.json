@@ -1,0 +1,45 @@
+{
+  "summary": "A stellar 1981 performance highlighted by an outstanding \"Cumberland Blues\" and a ripping \"Estimated Prophet,\" recorded from the soundboard with clear, vibrant sound despite some early flubs and EQ quirks.",
+  "review": "The three reviewers unanimously award five stars, praising Jerry’s ferocious guitar work and a consistently high‑energy set that includes a legendary rendition of Cumberland Blues and an emphatic Estimated Prophet. The SBD source is described as crisp and sparkling, though one reviewer notes early feedback hiccups, pitch mismatches and a middle‑rich EQ that benefits from a slight adjustment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "medium",
+    "rationale": "All three reviews are five‑star and focus on superb musical performance with only minor technical caveats, indicating an exceptional show and very good recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Overall clear and sparkling sound; early flubs, feedback problems, and pitch‑mismatch patches noted. EQ is flat and a bit middle‑rich – recommend dialing down mids by ~2 dB and boosting the ends slightly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑octane, consistently tight performance from start to finish; Jerry’s “balls‑to‑the‑walls” playing drives the band forward with relentless energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"balls‑to‑the‑walls, pedal‑to‑the‑metal\" throughout – a ferocious, standout guitar performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:58:55.091260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-30.sbd.miller.fishman.repitch-30118.78602.sbefail.flac16"
+}

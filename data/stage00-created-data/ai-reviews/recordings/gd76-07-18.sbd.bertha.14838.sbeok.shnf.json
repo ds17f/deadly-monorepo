@@ -1,0 +1,76 @@
+{
+  "summary": "Crisp soundboard with a punchy low‑end captures one of ’76’s most heartfelt shows – highlighted by a lazy “St. Stephen”, soaring “Stella Blue” vocals and the kinetic Lazy→Supplication→Let It Grow sequence.",
+  "review": "The Bertha‑remastered SBD delivers a clean, bass‑rich sound that many reviewers say outshines other sources, despite occasional hiss in the first set. Musically the concert is repeatedly called a top‑flight ’76 performance, with standout moments like the lazy rendition of “St. Stephen”, an unforgettable “Stella Blue” vocal showcase and a second‑set suite (Lazy Lightning → Supplication → Let It Grow) that fans describe as phenomenal.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average star rating is ~4.1 and the bulk of comments praise both the performance and the remastered soundboard; only a few notes mention hiss or bass over‑drive, so the overall assessment is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp low end and clear vocals; many say it beats other SBD versions. Some listeners note extra hiss in first‑set songs and occasional over‑driven bass, but overall the mix is clean and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen (lazy version)",
+      "Stella Blue",
+      "Lazy Lightning > Supplication > Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is praised for its tightness and classic gems, while the second set showcases inventive sequencing (MAW, Sansom, Lazy Lightning → Supplication → Let It Grow → Drumz) that gives the night a high‑energy, triumphant feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals on “Stella Blue” are described as crystal clear and one of Garcia’s best vocal performances; his ballad work is also highlighted.",
+    "Phil": "Bass is repeatedly called fatback and a highlight of the show, though a few note it can be overly bass‑heavy in spots.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TMNS": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:54:36.508153+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-18.sbd.bertha.14838.sbeok.shnf"
+}

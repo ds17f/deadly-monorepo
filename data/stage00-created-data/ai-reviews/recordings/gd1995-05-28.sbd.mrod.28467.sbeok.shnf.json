@@ -1,0 +1,82 @@
+{
+  "summary": "Clear sound‑board capture of a late‑1995 Portland show that many find musically uneven, with highlights like Peggy‑O and Black Peter but a generally under‑cooked performance.",
+  "review": "The SBD source is crisp and well‑balanced, letting listeners hear the nuances of the band even when the playing feels sluggish.  Reviewers note several bright spots – Peggy‑O, Black Peter, Box of Rain and a strong Crazy Fingers stretch – but most lament a plodding tempo, distracted drums and a wan Jerry Garcia.  The show divides fans: some defend it as a worthwhile late‑era document, others deem it one of the weaker shows of ’95.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Recording quality is generally praised (good soundboard), but musical performance receives mixed to negative feedback, pulling the overall rating toward the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the SBD clear and crisp; no major drop‑outs are mentioned. A few note occasional wind or ambient noise, but overall the mix is balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Black Peter",
+      "Box of Rain",
+      "Crazy Fingers",
+      "Row Jimmy"
+    ],
+    "poor_songs": [
+      "Let It Grow",
+      "Way To Go Home",
+      "Jack Straw"
+    ],
+    "setlist_flow": "The set drifts with uneven tempos – slower, plodding numbers in the first set and a safer, more predictable second set. Highlights break through the overall sluggishness."
+  },
+  "band_member_comments": {
+    "Jerry": "Most reviewers describe Garcia as lacking gusto, playing sloppy solos and sounding exhausted; a few note he still managed decent moments on Peggy‑O.",
+    "Phil": "Mentioned only in passing – seen looking over at Jerry, offering encouragement; no specific musical comments.",
+    "Bob": "Briefly noted as watching Jerry; no detailed critique of his guitar or vocals.",
+    "Keys": "Vince (keyboards) is referenced during the “Watchtower” and space sections; otherwise keyboards receive little comment.",
+    "Drums": "Bill/Mickey are called out for being conspicuous, distracting, and sometimes struggling to lock into slower tempos."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Way To Go Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T09:05:51.248862+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-28.sbd.mrod.28467.sbeok.shnf"
+}

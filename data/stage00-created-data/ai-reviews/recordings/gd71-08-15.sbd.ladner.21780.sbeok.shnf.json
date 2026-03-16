@@ -1,0 +1,98 @@
+{
+  "summary": "A crisp sound‑board capture of the historic Berkeley ’71 shows, highlighted by incendiary Other One jams and a tight rhythm section despite occasional mix quirks.",
+  "review": "These recordings from August 14‑15 1971 at the Berkeley Community Theatre deliver a strong performance with standout moments like The Other One, Wharf Rat, Cumberland Blues and a smoking Truckin’/Other One sequence.  Reviewers praise the overall soundboard quality – crisp and detailed – though they note occasional balance problems (Jerry buried in the left channel, Phil’s bass forward, Bob’s guitar dropping out).  The show is generally regarded as a high‑water mark of the Summer ’71 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars and highlight exceptional musical moments; recording quality is described as crisp with only minor mix issues, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, detailed soundboard capture.  Mix anomalies: left channel low on Jerry, Phil’s bass overly forward, Bob Weir’s guitar disappearing in parts (Not Fade Away jam).  Some reviewers needed pitch correction for speed, but overall clarity is high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat",
+      "Cumberland Blues",
+      "China Cat Sunflower > I Know You Rider",
+      "Casey Jones",
+      "Truckin'",
+      "Turn On Your Lovelight"
+    ],
+    "poor_songs": [
+      "Not Fade Away",
+      "Boss Man"
+    ],
+    "setlist_flow": "The shows flow with a tight first set and an explosive second set dominated by extended jams (Other One, Me & My Uncle, Wharf Rat).  The rhythm section is praised as tight; the band’s energy builds especially after the mid‑set transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Often buried in the left channel; tone described as thin (Strat/Les Paul debate) but still “kickin’”.",
+    "Phil": "Bass sits forward in the mix and shines on the Other One jams; praised for brilliance.",
+    "Bob": "Guitar disappears at points (Not Fade Away jam), reducing rhythmic glue.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "White Rabbit": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Boss Man": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:44:43.314596+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-08-15.sbd.ladner.21780.sbeok.shnf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard capture of a fiery 5/25/72 show with standout Uncle John's Band, Good Lovin' and an epic China Cat Sunflower > I Know You Rider sequence.",
+  "review": "The recording is a high‑quality soundboard source that delivers crisp mix and plenty of instrument separation despite the inevitable tape age. Musically the concert shines on tracks like Uncle John's Band, Good Lovin', Wharf Rat and a soaring China Cat > Rider stretch, with Jerry Garcia’s lead work hailed as one of his finest. The only real drawback is the missing portion of the second set, which leaves the performance slightly incomplete.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (15+ out of 18) award 4‑5 stars and praise both performance and sound, with only a few mixed/negative comments focused on specific songs or the missing second‑set ending."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly note a great mix, crisp clarity and strong instrument balance. The tape is old (~38 years) but still sounds clean; the only technical limitation is that a chunk of the second set is missing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Good Lovin'",
+      "Wharf Rat",
+      "China Cat Sunflower > I Know You Rider",
+      "Sittin' On Top of the World"
+    ],
+    "poor_songs": [
+      "Dark Star",
+      "Casey Jones"
+    ],
+    "setlist_flow": "The first set starts a bit slow but builds momentum by mid‑set, leading to a high‑energy second set that is praised for its jams and emotional peaks. Missing ending of the second set slightly disrupts the overall arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his 'finest' guitar tone in 1972, emotive vocals at the close, and powerful solos throughout.",
+    "Phil": "Generally praised for interplay with Keith and Billy during jams, though one reviewer felt he never 'unleashed real muscle' on Dark Star.",
+    "Bob": "Commended for strong rhythm guitar work, notable leads (especially on Good Lovin') and overall energy.",
+    "Keys": "Keith's piano described as grand, adding final touches; Pigpen’s organ highlighted for fiery counterpoint.",
+    "Drums": "Bill Kreutzmann noted in jam interplay but no specific critiques or praise beyond standard solid drumming."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sittin' On Top of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T14:33:50.589184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-25.sbd.miller.87682.sbeok.flac16"
+}

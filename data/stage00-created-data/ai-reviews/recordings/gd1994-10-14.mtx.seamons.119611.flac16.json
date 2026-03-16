@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent matrix recording captures an intimate 1994 show highlighted by a soaring Scarlet > Fire and stellar El Paso performance.",
+  "review": "The matrix source provides clear, well‑balanced sound that lets the band’s tight yet exploratory playing shine. Reviewers rave about the 22‑minute Scarlet > Fire, the acoustic brilliance of El Paso, and strong renditions of Ramble On Rose and Liberty, while noting a few wobblier moments in Samba and Corrina. Overall the performance feels mature and engaging, and the recording quality is more than adequate for repeated listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both musical performance (70% weight) and matrix sound quality (30% weight) across multiple detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Outstanding sounding source; crisp, balanced mix though some reviewers note the mix is merely 'fair' and Jerry's guitar a bit light. Overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "El Paso",
+      "Ramble On Rose",
+      "Liberty"
+    ],
+    "poor_songs": [
+      "Corrina"
+    ],
+    "setlist_flow": "Tight and mature with a touch of wandering in the extended Fire and Samba sections; overall intimate vibe that rewards attentive listening."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone described as light but solid; vocals on Ramble On Rose sharp.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick's keyboards hot, though his vocal contributions can be overbearing at times.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:22:39.227742+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-14.mtx.seamons.119611.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard capture with crystal‑clear stage banter, highlighted by Jerry's energetic riffs and a standout Supplication.",
+  "review": "The recording is a pristine soundboard source that even picks up Jerry cueing the band with a quiet command just as Keith begins his solo, giving listeners an intimate feel. Musically the show isn’t deemed “the best” of its era, but it’s undeniably fun, especially the fiery ending where Jer’s wailing riffs shine and the Supplication segment stands out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is good but not exceptional (≈3.5/5) while recording quality is excellent (≈4.8/5); weighted average yields ~3.9."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix that captures stage banter (e.g., Jerry saying “quiet”) and instrument detail; no reported dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Supplication"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a fun performance with an especially energetic closing section; while not the night’s pinnacle, the energy stays high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His wailing riffs toward the end are highlighted as noteworthy and energetic; also heard cueing “quiet.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:03:24.560000+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-28.sbd.clugston.tetzeli.fix-7487.35159.reflac.flac16"
+}

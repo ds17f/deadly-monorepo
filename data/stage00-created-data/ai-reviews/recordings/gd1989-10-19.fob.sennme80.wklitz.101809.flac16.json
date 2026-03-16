@@ -1,0 +1,31 @@
+{
+  "summary": "Vague but enthusiastic review with no specific details on recording or performance",
+  "review": "The sole reviewer gives a glowing five‑star rating, praising the concert in poetic terms but offering no concrete information about sound quality, setlist flow, or individual performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one highly positive review with no technical details; rating leans on the five‑star sentiment but lacks evidence for recording or show quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided by reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T00:57:49.643369+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-19.fob.sennme80.wklitz.101809.flac16"
+}

@@ -1,0 +1,79 @@
+{
+  "summary": "High‑energy Alpine Valley set with soaring Let It Grow and tight Music → Sugaree → Music",
+  "blurb": "The show opens with a fiery Music → Sugaree → Music sequence that launches a tight first set featuring Althea and Let It Grow. The second set delivers classic China Cat Sunflower → I Know You Rider into an expansive Playing In The Band > Space > Wheel sandwich, culminating in a soaring Morning Dew and One More Saturday Night.",
+  "review": "On August 7‑th, 1982 the Dead turned Alpine Valley into a sonic playground. Jerry’s voice was “on, on, on,” even venturing into a “ninth dimension” as he led an electrifying opener that stitched The Music Never Stopped into Sugaree and back again. The first set stayed tight, with Althea’s lyrical swagger and the anthem‑like Let It Grow showcasing Garcia’s soaring vocals and Brent’s supportive keys. The second half was pure classic Dead: a seamless China Cat Sunflower → I Know You Rider launch, a playful Man Smart, Woman Smarter, then a marathon Playing In The Band > Drums > Space > The Wheel > Playing In The Band that let the rhythm devils drive the band into ecstatic territory. Brent’s keyboards added texture in Space and the Playin’ sandwich, while Mickey and Bill kept the groove fierce. The night closed with a heartfelt Morning Dew and a rollicking One More Saturday Night before a jubilant U.S. Blues encore – a set that still feels fresh and thrilling today.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 58,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Five recordings are explicitly positive and one mixed, with consistent praise for the Music> Sugaree>Music opener, Let It Grow, Althea, China Cat Sunflower > I Know You Rider, and the Playing In The Band > Space > Wheel sequence. No recurring negative comments about performance quality appear, so a strong positive sentiment adjustment is applied.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd82-08-07.sbd.serafin.7720.sbeok.shnf",
+    "reason": "Soundboard source with clear, balanced audio that captures the full show and the high‑energy performance while preserving the venue’s natural roar."
+  },
+  "key_highlights": [
+    "Music → Sugaree → Music opener energizes the crowd",
+    "Althea and Let It Grow showcase Garcia’s soaring vocals",
+    "China Cat Sunflower → I Know You Rider transition shines",
+    "Playing In The Band > Space > Wheel sandwich with Brent’s keyboards drives second‑set intensity"
+  ],
+  "song_highlights": [
+    "The Music Never Stopped",
+    "Sugaree",
+    "Althea",
+    "Let It Grow",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Playing In The Band",
+    "Space",
+    "The Wheel",
+    "Morning Dew",
+    "One More Saturday Night"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s voice is on fire, hitting a ninth‑dimension peak; his guitar work is front‑and‑center and drives the Let It Grow and Playin’ jams with ecstatic energy.",
+    "Phil": "Lesh provides a solid bass foundation despite occasional muddiness noted on audience tapes; overall his low‑end anchors the band’s groove.",
+    "Bob": "",
+    "Brent": "Mydland’s keyboards sparkle in Space and the Playin’ sandwich, adding texture and melodic counterpoint that lifts the second‑set improvisations.",
+    "Mickey": "Hart delivers fierce, propulsive drumming that fuels the high‑energy moments throughout both sets.",
+    "Billy": "Kreutzmann matches Hart’s intensity with tight, driving rhythms, especially during the Drum/Space sections."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-13T23:43:30.790348+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "The Music Never Stopped",
+      "Sugaree",
+      "The Music Never Stopped"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Playing In The Band",
+      "Morning Dew",
+      "One More Saturday Night"
+    ]
+  ]
+}

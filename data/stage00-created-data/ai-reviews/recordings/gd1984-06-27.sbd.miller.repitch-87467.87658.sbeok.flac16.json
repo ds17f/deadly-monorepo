@@ -1,0 +1,100 @@
+{
+  "summary": "Excellent soundboard remix captures a high‑energy 1984 show highlighted by a smoking Help>Slip>KFranklin’s and a soaring Morning Dew",
+  "review": "The Miller‑remastered SBD delivers crystal‑clear, Grade‑A audio that lets the band's tight interplay shine.  The performance is widely praised for its powerful first set and an almost flawless second set, with standout moments on Help > Slipknot > Franklin’s, Estimated > Eyes, Morning Dew and Jack Straw, while a few reviewers note a weaker Friend of the Devil.  Overall the show is considered one of the best of the year.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "13 detailed reviews, average star rating ~4.4, strong consensus on both superb musical performance and high‑quality soundboard recording"
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller remaster of an already clean SBD; reviewers describe it as crisp, exquisite, Grade A with no significant dropouts or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Morning Dew",
+      "Estimated > Eyes",
+      "Jack Straw",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Friend of the Devil"
+    ],
+    "setlist_flow": "Tight, energetic first set that builds into a seamless, uninterrupted second set; jams flow naturally and keep the audience dancing throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring leads, warm clean tone, powerful riffs and melodic solos.",
+    "Phil": "Noted for several bass ‘bombs’; some reviewers call them spectacular, others describe a deep‑sea “whale” vibe.",
+    "Bob": "",
+    "Keys": "Brent’s organ and piano work highlighted on Loser, Dew and the Help>Slip sequence; described as soulful and comparable to Keith’s 1977 playing.",
+    "Drums": "Generally praised for tight, driving rhythms that lock in with the rest of the band."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Do It in the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T19:08:09.002622+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-27.sbd.miller.repitch-87467.87658.sbeok.flac16"
+}

@@ -1,0 +1,114 @@
+{
+  "summary": "Soundboard capture of a stellar Feb‑73 show with an epic Dark Star/Eyes/Half‑Step and sizzling Big Railroad Blues, though the mix has Billy’s Ride overly forward.",
+  "review": "The performance is widely praised – Jerry is described as “extremely inspired,” the Dark Star > Eyes of the World > Half Step stretch is called “great,” and highlights like China Cat Sunflower > I Know You Rider, Playing in the Band and Big Railroad Blues are repeatedly lauded.  The SBD source is generally clear but several listeners note that Billy Kreutzmann’s ride cymbal sits too far forward in the right channel and that a few tracks are missing from the archive copy.  Overall the show ranks among the best of Winter ’73 despite those technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong, consistent praise for musical performance (70% weight) and a decent soundboard source with only mix‑level issues (30% weight) yields an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD capture, but Billy's ride cymbal is mixed too loud in the right channel and some songs are missing from the archive version, causing occasional listening fatigue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Eyes of the World > Half Step",
+      "China Cat Sunflower > I Know You Rider",
+      "Playing In The Band",
+      "Greatest Story Ever Told (Donna)",
+      "Big Railroad Blues",
+      "Row Jimmy",
+      "They Love Each Other",
+      "Going Down The Road Feeling Bad"
+    ],
+    "poor_songs": [
+      "Tennessee Jed (Phil missed cues)",
+      "Not Fade Away (mix issues, unlistenable ending)"
+    ],
+    "setlist_flow": "A long, varied first set followed by a high‑energy second set; the flow is praised for its momentum despite a few missing tracks in the archived version."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as extremely inspired; solos on Greatest Story and Big Railroad Blues are highlighted as beauties.",
+    "Phil": "Generally solid bass work but missed two cues during Tennessee Jed, causing a brief stumble.",
+    "Bob": "Praised for sharp playing and vocal contributions throughout the show.",
+    "Keys": "",
+    "Drums": "Billy Kreutzmann’s ride cymbal is mixed too loud in the right channel, making it tedious at times."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Greatest Story Ever Told (Donna)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Going Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:48:33.650201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-02-26.sbd.kaplan.1208.sbeok.shnf"
+}

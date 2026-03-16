@@ -1,0 +1,39 @@
+{
+  "summary": "Good soundboard recording of an all‑around solid show, highlighted by a flawless Des Desolation Row.",
+  "review": "The SBD capture from Charlie Miller is generally very clear with only a little crowd bleed that adds ambience. The performance itself is described as “good” and “all‑around good,” with one reviewer calling the Des Desolation Row rendition flawless, though several listeners note no standout moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑star or higher and praise both the show and the soundboard quality; a few give low or no star ratings and note lack of highlights, pulling the overall impression toward a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very good SBD clarity with slight crowd noise bleed; no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally described as a solid, all‑around good show without any glaring weak spots, though some listeners felt there were no particular highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:08:37.215179+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-06.sbd.miller.27750.sbeok.flacf"
+}

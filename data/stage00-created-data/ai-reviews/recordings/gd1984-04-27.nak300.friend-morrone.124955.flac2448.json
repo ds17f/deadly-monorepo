@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording capturing a tight, fluid rendition of 'Playing in the Band'.",
+  "review": "The audience tape is praised as very nice, delivering clear sound and lively crowd ambience. Musically the show shines with a tightly executed, flowing version of \"Playing in the Band\" that keeps listeners smiling from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both the performance (tight, fluid PITB) and the audience recording are highly praised; limited review count lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very nice audience tape with clear instrument separation and good crowd ambience; no major flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening with a concise yet fully expressed 'Playing in the Band' sets an upbeat, smile‑inducing tone for the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Continues his preferred segue of China Doll or Crazy Fingers after PITB.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:20:15.380422+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-27.nak300.friend-morrone.124955.flac2448"
+}

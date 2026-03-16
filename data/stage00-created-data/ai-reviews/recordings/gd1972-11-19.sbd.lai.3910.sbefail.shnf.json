@@ -1,0 +1,66 @@
+{
+  "summary": "Soundboard capture that leans bass‑heavy but delivers a standout Box of Rain, Bird Song and Dark Star performance.",
+  "review": "The show is praised for its jazzy interplay—especially the Bird Song and an inspired Dark Star with a Phil solo into a Weather Report vibe—and a beloved rendition of Box of Rain.  The recording is a soundboard source that many find overly bass‑y and slightly off‑mix, though several listeners say it sounds better than any other copy they own.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical performance (standout songs, inventive playing) outweighs modest recording flaws; weighted average yields a solid >4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is noticeably bass‑heavy and slightly off‑balance for some listeners; Lesh's bass sits forward in the mix, but overall clarity remains acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Bird Song",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through a lush, jazzy Bird Song and builds into an extended Dark Star that showcases tight improvisation; the performance feels cohesive despite mixed opinions on overall inspiration."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's phrases are described as endlessly inventive and full of passion during Dark Star.",
+    "Phil": "Phil Lesh takes a memorable solo out of Dark Star into a Weather Report‑style section.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:03:44.467924+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-19.sbd.lai.3910.sbefail.shnf"
+}

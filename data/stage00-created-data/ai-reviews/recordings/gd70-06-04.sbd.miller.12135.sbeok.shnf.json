@@ -1,0 +1,61 @@
+{
+  "summary": "Excellent soundboard snippet with crisp drums and front‑center guitars, highlighted by a stellar St. Stephen jam, funky Midnight Hour and a soulful It’s All Over Now Baby Blue.",
+  "review": "The recording captures the June 4, 1970 Fillmore West show with outstanding clarity – guitars are upfront, drums are crisp and Pigpen's organ is lush. Musically the band is in top form; reviewers rave about a full‑on St. Stephen jam, a rolling Midnight Hour that weaves into China Cat Sunflower/I Know You Rider, and an especially moving Baby Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4‑5 stars) and repeated praise for both performance and audio quality push the rating into the good‑to‑excellent range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Guitars out front, drums crisp, organ clear; a few pauses noted but overall clean mix with no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Midnight Hour",
+      "It’s All Over Now Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers love the seamless flow of jams – Midnight Hour drifting into I Know You Rider and back, plus a powerful St. Stephen segment that keeps the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery is noted as soulful, especially when paired with Pigpen's organ on Baby Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s (organ) playing described as churchy and powerful; overall keyboard texture praised.",
+    "Drums": "Drums are described as crisp and tight."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "It’s All Over Now Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:26:48.104616+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-06-04.sbd.miller.12135.sbeok.shnf"
+}

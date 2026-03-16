@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic five‑star review but provides no details on recording or performance",
+  "review": "The lone reviewer gives the recording a glowing five‑star rating, describing a highly personal and positive experience, yet offers no concrete information about the sound quality, setlist, or musical performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review; rating is high but lacks any substantive comments on audio or show quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No technical details mentioned in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments about set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T11:15:59.805263+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-08.139413.set2.aud.schley.flac2448"
+}

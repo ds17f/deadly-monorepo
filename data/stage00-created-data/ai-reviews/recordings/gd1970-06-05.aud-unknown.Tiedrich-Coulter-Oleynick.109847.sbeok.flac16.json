@@ -1,0 +1,51 @@
+{
+  "summary": "Mediocre recording of an average show with a few bright spots, notably Bob's performance on Me & My Uncle.",
+  "review": "The tape isn’t the sharpest nor does the concert rank among the Dead’s finest, but it offers some enjoyable moments—Bob’s vocal and guitar work on “Me & My Uncle” stands out. The reviewer also highlights “The Other One” and “Hard to Handle” as worthy enough to feature on a radio show, suggesting occasional high points despite overall modest quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; it describes both the show and recording as average with a few positives, leading to an overall middle rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer says the recording is “not the greatest,” implying mediocre clarity and mix; no specific details on soundboard or audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Me & My Uncle",
+      "The Other One",
+      "Hard to Handle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall an unremarkable set with occasional highlights; lacks a strong, cohesive flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Nice moments especially on Me & My Uncle.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:35:39.597146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-05.aud-unknown.Tiedrich-Coulter-Oleynick.109847.sbeok.flac16"
+}

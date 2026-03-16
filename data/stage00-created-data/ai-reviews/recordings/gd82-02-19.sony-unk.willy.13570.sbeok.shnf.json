@@ -1,0 +1,39 @@
+{
+  "summary": "Muddy audience recording from a distant mic, but the show has an energetic jam with a hint of Terrapin flavor.",
+  "review": "The source is clearly an audience tape recorded from far away – at times only Jerry's guitar cuts through and the mix sounds muffled.  Despite the lo‑fi sound, reviewers note a unique pre‑drums jam that carries a Terrapin‑Station vibe and adds extra energy compared with other copies of this show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is judged moderate to good (energy, unique jam) while recording quality is rated fair/poor due to distant mics; weighted average yields ~3.2 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Distant parking‑lot microphones, muffled mix, often only Jerry's guitar audible; occasional clearer sections before drums but overall lacking clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic performance with a notable pre‑drums jam that recalls the 4‑17‑82 era; despite audio flaws the band’s flow adds a distinct flavor not found on other copies."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is often the only clear instrument early in the set; later sections feature a 'jerryless' groove.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:27:31.612710+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-02-19.sony-unk.willy.13570.sbeok.shnf"
+}

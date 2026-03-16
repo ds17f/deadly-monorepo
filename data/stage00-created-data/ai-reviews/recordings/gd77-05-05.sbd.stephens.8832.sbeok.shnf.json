@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent Betty Cantor soundboard captures a stellar May ’77 show highlighted by an iconic Peggy‑O and soaring Scarlet > Fire.",
+  "review": "The 5/5/77 New Haven recording is a superb example of the band’s peak year – crystal‑clear Betty‑board fidelity lets every nuance shine, from Jerry’s searing Peggy‑O solo to the blazing Scarlet > Fire jam.  The setlist flows effortlessly, with first‑set gems like Sugaree and Music Never Stopped leading into a second‑set packed with Estimated, St. Stephen and other fan‑favorite improvisations.  While a few reviewers note that Fire and Lazy Lightning are weaker points, the overwhelming consensus is that this performance ranks among the best of the ’77 run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over 70 reviews, the vast majority are 5‑star with consistent praise for both performance and sound quality; only a handful of mild criticisms exist."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty Cantor’s board work is praised as crystal‑clear, well‑balanced, with superb separation and minimal tape noise; occasional minor warble/dropout noted on other versions but not on the primary SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Sugaree",
+      "Scarlet>Fire",
+      "St. Stephen",
+      "Music Never Stopped",
+      "Looks Like Rain",
+      "Estimated"
+    ],
+    "poor_songs": [
+      "Fire",
+      "Lazy Lightning"
+    ],
+    "setlist_flow": "A tight first set that builds momentum with Sugaree and MNS, followed by a second‑set jam marathon (Estimated → Scarlet>Fire → St. Stephen) that epitomizes the fluid, experimental vibe of spring 1977."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his soaring solos on Peggy-O, Sugaree and St. Stephen; described as “on fire” and emotionally powerful.",
+    "Phil": "Praised for thumping bass lines and tight rhythmic foundation throughout the night.",
+    "Bob": "His vocal delivery and guitar interplay with Jerry are highlighted as a highlight of the performance.",
+    "Keys": "Keith’s piano/organ work is noted positively (especially on Estimated and Scarlet>Fire) though a few reviewers wish for more prominent keys.",
+    "Drums": "Bill and Mickey receive brief nods for tight, thundering drumming that drives the jams."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 35,
+      "negative_mentions": 0,
+      "total_mentions": 35
+    },
+    "Sugaree": {
+      "positive_mentions": 30,
+      "negative_mentions": 0,
+      "total_mentions": 30
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 25,
+      "negative_mentions": 0,
+      "total_mentions": 25
+    },
+    "St. Stephen": {
+      "positive_mentions": 20,
+      "negative_mentions": 0,
+      "total_mentions": 20
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Estimated": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 5,
+      "total_mentions": 7
+    }
+  },
+  "processed_date": "2025-09-24T22:41:07.667513+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-05.sbd.stephens.8832.sbeok.shnf"
+}

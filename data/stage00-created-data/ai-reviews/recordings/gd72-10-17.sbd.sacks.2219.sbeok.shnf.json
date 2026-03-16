@@ -1,0 +1,82 @@
+{
+  "summary": "Clear soundboard recording captures a high‑energy show highlighted by a monster Playing in the Band, soaring Sugar Magnolia and an epic Half‑Step/Not Fade Away jam.",
+  "review": "The sbd source delivers crisp, well‑balanced audio with only a brief cut in Black Peter, making it very listenable. Musically the night is a standout – Jerry’s solos are on fire, Phil rides high, Bob throws tasty licks and the band rolls through a superb Playing in the Band, Sugar Magnolia and a 10‑minute Half‑Step/Not Fade Away sequence. Missing a few songs from the setlist doesn’t detract from the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4‑5 stars), strong praise for performance highlights and clear soundboard audio outweigh the few technical cuts."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with no major SQ issues; a short cut in the middle of Black Peter noted but otherwise very clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Sugar Magnolia",
+      "Half‑Step > Not Fade Away > Good Times Bad Times > Not Fade Away",
+      "Cumberland",
+      "China Cat Sunflower",
+      "Bird Song",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": "First set is jam‑heavy and tightly sequenced, second set leans more toward song‑focused playing; overall pacing feels cohesive despite a few missing tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers call his solos “great”, “on fire”, “noodling blows my mind” and praise his tone throughout.",
+    "Phil": "Highlighted as “on fire”, “in great form”, and the star of several jams; Keith’s keyboards also get special mention.",
+    "Bob": "Praised for tasty licks and strong vocal delivery, though one reviewer notes a slightly annoying quasi‑falsetto on a song.",
+    "Keys": "Keith is singled out as the star of the GSET version; no other keyboardist specifically mentioned.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half‑Step > Not Fade Away > Good Times Bad Times > Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T00:21:16.085589+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-17.sbd.sacks.2219.sbeok.shnf"
+}

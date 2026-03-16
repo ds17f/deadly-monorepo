@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording of a flawless second set, highlighted by a mellow “Stranger” and a fine “Peggy‑O”, with Brent’s snaky keyboards shining.",
+  "review": "Both reviewers rave about the show, calling the second set perfect on paper and sounding great on this tape. The audio is praised as the best they’ve heard, even preferred over soundboard sources, and Brent Mydland’s keyboard work receives special love. Standout moments include a mellow “Stranger” groove and a solid “Peggy‑O” in the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Two 5‑star reviews consistently praise both performance and sound quality; weighting shows (70%) and recording (30%) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp sound; reviewer says this audio surpasses all other sources including soundboard recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as perfect and flowing flawlessly; first set noted for a fine “Peggy‑O” and overall great performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's snaky keyboard lines are praised, adding a distinctive flavor to the groove.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:33:08.742813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-04.134382.aud.bernstein.flac1644"
+}

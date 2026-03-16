@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from mislabelled second set and missing 16‑kbps/44 kHz files, with no clear comment on performance quality",
+  "review": "The sole review points out that the second set is mislabeled and that the expected 16/44 versions are absent from the archive. No musical or audio fidelity details are provided, making it hard to assess the show itself.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating focusing on labeling and missing files; no positive aspects mentioned."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Second set mislabeled; 16/44 bitrate versions not available on the archive."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes a mislabeling issue with the second set but gives no feedback on musical flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T12:46:40.154847+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-18.AKG451.Currier.Keo.131909.Flac2496"
+}

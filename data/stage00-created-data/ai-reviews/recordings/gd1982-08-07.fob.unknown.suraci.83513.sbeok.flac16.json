@@ -1,0 +1,64 @@
+{
+  "summary": "Audience recording with crisp front‑stage capture (Jerry loud, some bass muddiness) of a classic August ’82 show highlighted by Let It Grow, Morning Dew and Althea.",
+  "review": "The tape delivers an energetic late‑summer ’82 performance where Jerry’s guitar soars on Let It Grow and the band rides a soaring Morning Dew. The audience recording is surprisingly clear—Jerry dominates the mix while Phil’s low end can turn muddy, especially at the start of set 2—but overall it captures the joyous flow of the setlist.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise its musical moments; recording quality is good with only occasional bass muddiness, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑stage capture is crisp and Jerry is very forward in the mix. Phil’s bass is sometimes muddy or overly loud (distortion at start of set 2). Overall depth and clarity are above average for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Morning Dew",
+      "Althea",
+      "China > Rider",
+      "Playin' in the Band > Wheel",
+      "Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds nicely into a classic second‑set arc, with a strong Althea opener, a tight China > Rider transition, spacey jams and a soaring Let It Grow finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for an ecstatic, front‑and‑center guitar on Let It Grow and overall 'hangs out' vibe.",
+    "Phil": "Bass is audible but often muddy or overly loud; one reviewer notes low‑end distortion at the start of set 2.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "General appreciation for the ‘rhythm devils’ and overall drive, no specific drummer named."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' in the Band > Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T23:39:24.375563+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-07.fob.unknown.suraci.83513.sbeok.flac16"
+}

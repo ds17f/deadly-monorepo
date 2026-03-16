@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed reactions – one fan gives it five stars while another rates it zero, with the only concrete song reference being a hot “Fire”.",
+  "review": "The two reviews provide little detail beyond strong emotional language. One reviewer gushes about an unheard‑like experience and awards five stars, whereas the other disparages the performance despite calling the Fire “hotter than Cornell”, resulting in a zero‑star rating. No concrete information is given on recording source or overall sound quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only two brief, contradictory reviews; one highly positive and one strongly negative, with no technical details to guide a more precise rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No information provided on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:16:29.286119+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-11.141775.sbd.betty.dalton.miller.sirmick.flac1644"
+}

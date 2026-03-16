@@ -1,0 +1,71 @@
+{
+  "summary": "Muddy matrix recording of a strong 1987 Chicago run featuring a standout Scarlet Begonias → Fire on the Mountain transition and a soaring China Doll.",
+  "review": "The show is widely praised as one of the best of the three‑night ‘El’ run, with a tight first set and an epic second‑set suite that highlights the classic Scarlet Begonias → Fire on the Mountain segue, Playing in the Band and a glowing China Doll.  The source is a matrix mix that suffers from muddiness and lacks the clarity of a clean soundboard, but the performance energy more than makes up for the technical shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average star rating from reviewers is ~4.2 and most comments are enthusiastic about the music; recording quality is noted as muddy, pulling the overall score down slightly."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners describe the sound as very muddy with no cleaner soundboard release available; overall listenable but lacks clarity and detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias → Fire on the Mountain",
+      "Playing in the Band",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise first set followed by a massive second‑set suite (PITB→UJB→d/s→China Doll→Playing Jam→Greatest Rockin' Texas Fun Bowl→Sugar Magnolia) that keeps the momentum high, though some reviewers note the ending feels a bit rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as healthy and back in form; strong vocals on China Doll and solid guitar tone throughout.",
+    "Phil": "",
+    "Bob": "Bobby (Brent) is noted as fired up and energetic, though his song \"Never Trust a Woman\" lacked the excitement of earlier versions.",
+    "Keys": "Brent (keyboardist) praised for getting more comfortable and delivering strong parts on Good Time Blues and Far from Me.",
+    "Drums": "Bill Kreutzmann’s drumming is highlighted in a ~15‑minute drums/space segment; overall energy noted as youthful."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Never Trust a Woman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Far from Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Time Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:23:16.525118+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-09.sbd-mtx.miller.90477.sbeok.flac16"
+}

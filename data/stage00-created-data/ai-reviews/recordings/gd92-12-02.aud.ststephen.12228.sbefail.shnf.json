@@ -1,0 +1,31 @@
+{
+  "summary": "Poor‑quality audience recording of a moody first post‑illness show with overly bright drums and generally low fidelity.",
+  "review": "The tape suffers from very low fidelity – recorded from the back of the venue with a harsh, high‑drum mix that makes it hard to enjoy. The performance itself was the band’s first gig after Jerry Garcia’s illness, described as mellow and a bit moody, but no specific songs stand out in the reviews.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "high",
+    "rationale": "All three reviewers give low star ratings (1–2) and consistently complain about poor sound quality and a lackluster performance, giving high confidence in a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Low fidelity tape recorded from the back of the venue; muddy overall sound with drums mixed excessively high, making listening unpleasant."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "First show after Jerry's sickness and a rainy night; reviewers note a mellow, moody vibe but give no specific song highlights or criticisms."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as moody and still recovering from illness, seemed disengaged.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mix is too high, detracting from enjoyment."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T08:21:11.187120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-02.aud.ststephen.12228.sbefail.shnf"
+}

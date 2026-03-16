@@ -1,0 +1,45 @@
+{
+  "summary": "Clear front‑of‑board capture of a classic ’94 show with a standout Lovelight / Stella Blue sequence and crisp Jerry Garcia licks.",
+  "review": "The recording was made from the front‑of‑board seats in the 18th row, delivering a surprisingly clear audience source that lets listeners hear Jerry’s “hot licks” on Lovelight. Fans highlight the Lovelight → Stella Blue → Lovelight flow as a high point of the performance, and overall the show is praised despite the lack of an official soundboard mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews consistently note good audio quality from a front‑of‑board audience source and praise the musical moments, especially Lovelight and Stella Blue; limited number of reviews keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded from front‑of‑board (FOB) in the 18th row, providing clear instrument detail and stage proximity with typical audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers single out the Lovelight → Stella Blue → Lovelight sequence as a highlight, noting smooth transitions and strong energy in that portion of the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Seen smiling hard while stomping his distortion pedal; hot licks during Lovelight 1 are praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:23:00.146614+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-21.110568.bk.schmit.sbeok.flac16"
+}

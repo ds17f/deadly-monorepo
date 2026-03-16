@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive feedback; recording source and quality are unknown and likely poor.",
+  "review": "The sole review provides no details—only a dash for body and title—and assigns zero stars, indicating strong dissatisfaction but offering no insight into the performance or audio. With no descriptive comments, both the show and recording qualities remain indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one empty review with a zero‑star rating; insufficient information to assess quality beyond likely dissatisfaction."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No technical commentary provided; the 0‑star rating suggests the reviewer found the recording unsatisfactory."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T14:18:34.524567+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-22.Nak300CP4.Fitzy.Keo.124921.Flac2496"
+}

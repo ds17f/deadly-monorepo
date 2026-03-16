@@ -1,0 +1,56 @@
+{
+  "summary": "Highly praised performance highlighted by an epic Standing on the Moon, with a decent but unremarkable recording quality.",
+  "review": "Fans rave about this show’s powerful second‑set energy, especially Jerry Garcia’s soaring vocals and guitar on Standing on the Moon, plus strong renditions of Cumberland Blues and The Wheel. While the audio source isn’t identified and listeners note no specific sound‑quality issues, the musical delivery makes it a standout 1994 concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars and focus on exceptional playing, especially the SOTM performance; recording quality is not discussed, so a moderate rating is applied to that aspect."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not mention soundboard, audience bleed, or clarity; no explicit comments on audio fidelity were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Cumberland Blues",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first set closed by a powerful Promised Land, followed by an especially energetic second set where the Cumberland Blues and The Wheel light show stood out; overall pacing is described as soulful and emotionally resonant."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his vocal intensity and guitar work on Standing on the Moon (\"goes OFF\", \"single best song\"); a few reviewers note later‑year rehearsed feeling but still view it positively.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:36:46.989184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-04-06.schoeps.ladner.10311.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent performance highlighted by a stellar I Know You Rider and an epic Jerry‑Bob post‑show interview; recording quality isn’t discussed but is presumed solid.",
+  "review": "Both reviewers rave about the concert, calling it “wicked” and praising the rendition of I Know You Rider. The only technical comment is a mention of a memorable Jerry‑Bob interview after the show, with no complaints about sound quality, suggesting the recording is at least listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5‑star ratings and focus on strong musical moments; lack of recording details prevents a higher confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments about soundboard, audience mix, or audio clarity; reviewers’ enthusiasm implies the recording is acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the show as “wicked” and enjoyable from start to finish, but give no detailed comments on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned in a post‑show interview described as epic; no specific playing remarks.",
+    "Phil": "",
+    "Bob": "Referenced in the same interview with Jerry; no performance details provided.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:11:49.781244+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-10.fob.french.brown.83792.sbeok.flac24"
+}

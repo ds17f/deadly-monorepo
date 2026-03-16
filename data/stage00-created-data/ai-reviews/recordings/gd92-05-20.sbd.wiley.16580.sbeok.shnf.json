@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard recording with noticeable static; first set sizzles (Brown Eyed Women, Desolation Row) while the second half settles into an average cruise.",
+  "review": "The show opens with a high‑energy first set that fans single out for Brown Eyed Women, Desolation Row and a tight Box of Rain. Jerry and Bobby deliver lively vocals on Jack Straw, Bertha and Stagger Lee, and Mickey & Bill’s drumming is praised though at times overly loud. The second half, however, fades into a cruise‑mode feel and the tape suffers from static and occasional volume spikes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviews are split between enthusiastic 4‑star comments about the first set and several 2‑3‑star notes calling the overall show average; a single complaint about static lowers the recording score, yielding an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Static is evident on the tape (one reviewer called it 'too much static'), and rear‑speaker volume can be excessive during drums, but overall the soundboard source is usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown Eyed Women",
+      "Desolation Row",
+      "Box of Rain",
+      "Jack Straw",
+      "Bertha",
+      "Stagger Lee",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong, fast‑paced first set leads into a decent start to the second set (Box of Rain, drums) before settling into an unremarkable cruise mode that leaves some listeners wanting more."
+  },
+  "band_member_comments": {
+    "Jerry": "High‑energy vocals on Jack Straw, Bertha, Desolation Row and Stagger Lee; generally praised.",
+    "Phil": "",
+    "Bob": "Shares high‑energy vocal duties with Jerry on several songs; positive mentions.",
+    "Keys": "",
+    "Drums": "Mickey and Bill are described as tight and ripping it up, though the drum volume was sometimes painfully loud."
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:30:34.012306+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-05-20.sbd.wiley.16580.sbeok.shnf"
+}

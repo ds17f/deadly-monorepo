@@ -1,0 +1,56 @@
+{
+  "summary": "Fair‑quality tape of a 1969 show shines on High Time, Lovelight and a wild Me & My Uncle tease, though the first set falters and the recording has some cuts.",
+  "review": "The second set delivers the highlights – a scorching \"High Time\", a rocking \"Lovelight\" and an exciting tease at the end of \"Me and My Uncle\". The first set is considered weak and the lack of a Dark Star disappoints some listeners, while the tape suffers from occasional cuts and awkward track gaps. Overall the performance is enjoyable but the technical imperfections keep it from being a top‑tier recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Reviews praise several standout songs and the second set, but note first‑set weakness, missing Dark Star and tape cut/track‑gap issues; combined show (70%) and recording (30%) weighting yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Tape has noticeable cuts (e.g., \"Too bad for the cut\"), silent gaps between tracks, but Pigpen's Fender keys are clear and overall sound is acceptable for a 1969 source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Lovelight",
+      "Me and My Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised as strong; first set deemed uninteresting ('Don't bother with the first'). Listeners note the absence of a Dark Star and minor track‑spacing issues between China Cat Sunflower and I Know You Rider."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's Fender keyboards are highlighted as prominent and enjoyable.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:17:07.843936+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-11-21.set2.sbd.gmb.96580.flac16"
+}

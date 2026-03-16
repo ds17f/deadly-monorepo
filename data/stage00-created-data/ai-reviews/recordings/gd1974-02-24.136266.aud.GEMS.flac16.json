@@ -1,0 +1,31 @@
+{
+  "summary": "Top‑notch show with great sound and clean track tagging",
+  "review": "The reviewer describes the performance as fantastic and the audio as sounding great, noting that every moment was enjoyable. The recording is praised for its high‑quality sound and the helpful ID tags that label each song, album, and band name.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single positive review (4 stars) highlights both an excellent performance and good sound quality; lack of detail on source type keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Audio described as sounding great with no noted issues; tracks are well‑tagged with song titles, album, and band name."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer reports consistent enjoyment throughout, implying a smooth and engaging set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T18:33:21.918387+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-02-24.136266.aud.GEMS.flac16"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Exceptional audience recording of a spring‑80 show with crisp sound and solid playing, highlighted by Sailor > Saint and Good Lovin', though Jerry’s Terrapin draws mixed remarks.",
+  "review": "The Glassberg audience tape is praised as one of the best‑sounding recordings from 1980, delivering clear, balanced audio that captures the crowd’s energy. Musically the show is enjoyable – the Sailor > Saint sequence and a lively Good Lovin' closer stand out – but Jerry’s performance on Terrapin receives criticism, and Bob’s take on Minglewood is noted as weak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ≈ 4.3) with strong praise for the audience recording and several standout songs, offset only by a few negative comments about specific performances."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Barry Glassberg’s audience capture is described as crystal‑clear, exceptionally balanced and among the best auds of the era; no significant dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sailor > Saint",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Minglewood"
+    ],
+    "setlist_flow": "A concise spring‑80 set with short, Arista‑era songs that stay energetic; the second set is noted as particularly danceable and features a long post‑Terrapin jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Criticized for zoning out and muddling his Terrapin performance, though overall playing is deemed competent.",
+    "Phil": "",
+    "Bob": "Flubs the Minglewood solo, described as 'flubbing' by a reviewer.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:10:41.693354+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-04-29.glassberg.lutch.5455.sbeok.shnf"
+}

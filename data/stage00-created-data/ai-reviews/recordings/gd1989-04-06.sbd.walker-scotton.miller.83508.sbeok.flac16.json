@@ -1,0 +1,63 @@
+{
+  "summary": "Solid late‑80s show with clean soundboard recording, highlighted by Masterpiece, Althea and a standout Playing in the Band → Built to Last transition.",
+  "review": "The performance is a dependable 1989 set that delivers strong versions of Masterpiece and Althea, plus an inspired segue from Playing in the Band into Built to Last. The Charles Miller soundboard capture is praised for its clarity, though one reviewer notes Jerry’s guitar sits low in the mix on a few numbers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Two detailed positive reviews praise both musical moments and excellent soundboard quality, while one review points out weak guitar balance and lack of exploratory jams; overall the show is solid with a high‑quality recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, clear mix; each band member audible. No major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Masterpiece",
+      "Althea",
+      "Playing in the Band > Built to Last"
+    ],
+    "poor_songs": [
+      "Playing in the Band"
+    ],
+    "setlist_flow": "Typical late‑80s set of solid tunes that flows well, especially the seamless transition from Playing in the Band into Built to Last."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer finds Jerry's guitar too quiet in the mix (especially on The Other One), while others appreciate the overall balance and clarity.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Built to Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:54:22.407854+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-06.sbd.walker-scotton.miller.83508.sbeok.flac16"
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "A strong soundboard capture of a rare 1970 show that shines with Pigpen’s fire, Jerry’s sweet vocals on Deep Elem, Candyman and Black Peter, plus an inspired acoustic set.",
+  "review": "The recording (a 1970‑era soundboard) is generally clear and well‑balanced, with only occasional buzzing in the acoustic portion and praised pitch accuracy. Musically the show is a highlight of the year – Pigpen dominates his numbers, Jerry delivers unusually sweet vocals on Deep Elem, Candyman and Black Peter, and the band locks into a tight groove throughout the rare acoustic set that includes the first performances of Candyman and Friend‑of‑the‑Devil.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All eight reviews are 4–5 stars, consistently praising both performance and sound quality; the weighted average of show (70 %) and recording (30 %) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and strong for the era; occasional buzzing in the acoustic set and minor tape‑age artifacts, but pitch is spot‑on and the mix is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deep Elem Blues",
+      "Candyman",
+      "Black Peter",
+      "Good Lovin'",
+      "Lovelight",
+      "Not Fade Away",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through a rare acoustic segment featuring first‑time performances of Candyman and Friend of the Devil, then erupts into high‑energy electric numbers where Pigpen, Jerry and Phil are tightly locked in."
+  },
+  "band_member_comments": {
+    "Jerry": "Sweet vocal delivery on Deep Elem, Candyman and Black Peter; guitar work noted as very good.",
+    "Phil": "Amazing bass playing throughout, especially in lock‑step with Jerry.",
+    "Bob": "Weir’s rhythm guitar/vocals praised for honoring Pigpen during Good Lovin' and Lovelight.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deep Elem Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Katie Mae": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:56:45.814102+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-04-03.sbd.cotsman.4283.sbefail.shnf"
+}

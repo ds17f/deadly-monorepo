@@ -1,0 +1,31 @@
+{
+  "summary": "A deeply personal, highly‑rated performance; recording source and sound quality are not specified.",
+  "review": "The reviewer gives the show a five‑star rating, recalling how it marked a full‑circle moment in their Dead‑taping journey. No technical details about the audio are provided, so the recording’s sound quality remains unknown, but the emotional impact of the concert is clearly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one detailed review, all positive about the performance but no information on recording quality; rating reflects strong show appreciation while accounting for unknown audio fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were given in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific remarks about set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T14:59:58.705420+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-26.152508.beyer201prescott-holbrook.flac2448"
+}

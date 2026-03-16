@@ -1,0 +1,74 @@
+{
+  "summary": "Superb soundboard capture of a classic ’69 set with a smoking Dark Star, The Eleven and an epic That's It For The Other One suite.",
+  "review": "The recording is praised for its crystal‑clear soundboard fidelity, with only minor mix quirks (a slightly high harmonica on Schoolgirl). Musically the show shines – Jerry’s guitar roars through one of the era’s best Dark Stars, the band stretches out on The Eleven and delivers a legendary That's It For The Other One/TIFTOO suite, plus standout moments from Death Don't Have No Mercy and Lovelight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.7, overwhelming positive comments on both performance and sound quality; only one outlier low‑star review."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, superb sounding with great fidelity; minor volume issue noted on Schoolgirl harmonica but overall clear mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Death Don't Have No Mercy",
+      "That's It For The Other One"
+    ],
+    "poor_songs": [
+      "Schoolgirl"
+    ],
+    "setlist_flow": "Typical 1969 set with a strong first half, a second set that builds through Dark Star into The Eleven and then the epic TIFTOO suite; transitions are fluid and keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his incendiary guitar work – jamming, two soaring solos, picking described as ‘buzzes and stings like an angry hornet’.",
+    "Phil": "Bass highlighted on The Eleven (‘great Philbass comin’ through’) and overall solid foundation.",
+    "Bob": "Steps up when Jerry has equipment trouble; provides strong rhythm and jam support.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "That's It For The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Schoolgirl": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:25:25.483741+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-03-28.sbd.miller.81543.sbeok.flac16"
+}

@@ -1,0 +1,106 @@
+{
+  "summary": "Bright, crystal‑clear soundboard capture of a superb early‑’78 show highlighted by a smoking Scarlet > Fire and a soaring Terrapin suite",
+  "review": "The recording is a pristine soundboard source that delivers bright, focused audio with only occasional diginoise on “Let It Grow.” Musically the concert shines – fans rave about the blazing Scarlet > Fire, the epic Terrapin‑>Playin’‑>Black Peter‑>Truckin' suite and the tight Let It Grow, while even the weaker moments (Tennessee Jed, Candyman) are noted. Overall it’s a top‑tier early‑1978 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (13/18) award 4–5 stars and praise both the musical performance and the sound quality; only a few lower scores mention minor vocal or tape noise issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Bright, focused and crystal‑clear throughout; reviewers call it “crisp” and “superb.” A few note slight diginoise on Let It Grow and occasional tape hiss, but nothing that detracts from overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Terrapin Station",
+      "Let It Grow",
+      "They Love Each Other",
+      "Minglewood"
+    ],
+    "poor_songs": [
+      "Tennessee Jed",
+      "Candyman"
+    ],
+    "setlist_flow": "Strong, hook‑laden first set with a bright opener (Half‑Step) and a high‑energy closer. The second set is the centerpiece—a near‑hour long suite Terrapin→Playin'→Drums/Space→Black Peter→Truckin'→Good Lovin' that keeps the momentum rolling without an encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Raspy vocals from laryngitis are noted, but his guitar work remains “on fire,” prominent in the mix and especially powerful on Terrapin and Let It Grow.",
+    "Phil": "Frequently mentioned as being “up in the mix” with a heavy bass presence; praised for singing (rare) and delivering strong melodic lines throughout.",
+    "Bob": "Vocals from Bob Weir are referenced positively, adding solid harmony alongside Donna’s lead parts.",
+    "Keys": "Keith is highlighted as sounding interested and contributing to the jam feel, especially on Scarlet > Fire and Let It Grow.",
+    "Drums": "The drum/space segment receives enthusiastic remarks, noted as a “great mini‑drum” that fuels the extended second‑set suite."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "They Love Each Other": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:00:24.894333+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-31.sbd.miller.32256.sbeok.flac16"
+}

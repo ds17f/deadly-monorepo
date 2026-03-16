@@ -1,0 +1,63 @@
+{
+  "summary": "Exceptional matrix mix with lush Lesh presence and a standout Playin' sandwich jam, delivering a passionate May ’77 show.",
+  "review": "The Dusborne matrix delivers crystal‑clear soundboard clarity blended with just enough audience ambience to give the Coliseum space without crowd distraction.  Highlights include a rare Jack‑A‑Roe, a beautifully rendered High Time and an otherworldly Playin' sandwich jam, while the first set shines and the second set is uneven – Garcia slips out of tune and Donna’s vocals wobble for some listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Six detailed reviews, five 5‑star praises and one moderate 3‑star note; recording is technically excellent and the musical performance is largely praised with only minor setbacks."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptionally balanced matrix blend of soundboard and audience, strong Lesh bass presence, clear mids for guitars and vocals, ideal for headphones; no crowd over‑powering the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-A-Roe",
+      "High Time",
+      "Playin' sandwich",
+      "Wharf Rat",
+      "Minglewood"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as great and tight; the second set loses focus with some out‑of‑tune moments, but still contains high points like the Playin' sandwich jam and a powerful drum‑into‑Wharf Rat transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar shines on the Playin' sandwich (adds an extra bar on the fly) but is noted as out of tune during parts of the second set.",
+    "Phil": "Lesh’s bass is highlighted for its “glorious” presence throughout the mix.",
+    "Bob": "Weir’s vocals are praised on Minglewood and generally solid throughout.",
+    "Keys": "",
+    "Drums": "The drum work into Wharf Rat receives enthusiastic praise."
+  },
+  "song_mentions": {
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' sandwich": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T01:27:58.342381+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-17.121485.mtx.dusborne.flac16"
+}

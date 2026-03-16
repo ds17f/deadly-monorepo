@@ -1,0 +1,84 @@
+{
+  "summary": "Excellent sound quality captures a mixed‑quality 1994 show with strong Tom Thumb's Blues, Way To Go Home and Stuck On The Moon but a shaky first set.",
+  "review": "The recording is praised as crystal‑clear, letting listeners hear the nuances of the performance. While the first set falters – notably Jerry’s struggling on So Many Roads – the second half shines with a powerful Tom Thumb's Blues, a tight Way To Go Home and an inspired Stuck On The Moon. Overall it’s a decent show marred by uneven moments but preserved in superb audio.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviewers note excellent recording quality (high score) but give low‑mid ratings for the musical performance, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Sound quality described as excellent; clear and crisp with no reported dropouts or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tom Thumb's Blues",
+      "Way To Go Home",
+      "Stuck On The Moon",
+      "Brokedown Tonight"
+    ],
+    "poor_songs": [
+      "So Many Roads"
+    ],
+    "setlist_flow": "First set starts promising but loses steam, especially on So Many Roads; second set recovers with strong post‑space playing and tight transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Struggles early (especially on So Many Roads) then delivers a solid performance later in the show.",
+    "Phil": "Brings the band back together with an excellent Tom Thumb's Blues, helping lift the first set.",
+    "Bob": "",
+    "Keys": "Vince cranks up the organ throughout, adding texture especially when Jerry deals with rig issues.",
+    "Drums": "A notable drum intro on Victim or the Crime is highlighted; overall solid drumming."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Tonight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Way To Go Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stuck On The Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:30:06.643618+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-17.schoeps.wklitz-cubby-carrioncrow.91363.flac16"
+}

@@ -1,0 +1,101 @@
+{
+  "summary": "Excellent soundboard recording of a mellow, jazzy 1973 show highlighted by a soaring Dark Star/MLB sequence and crisp Here‑Comes‑Sunshine opening.",
+  "review": "The Miller‑remastered SBD captures a laid‑back yet richly musical late‑'73 performance. Reviewers rave about the long Dark Star→Mind Left Body jam, the sparkling Here Comes Sunshine, and one of the best Eyes of the World renditions of the year, while noting occasional sluggish moments (Rider, Looks Like Rain) and a faint tape‑noise artifact in the mix. Overall the sound is clear and well balanced, making this a top‑tier listening experience for fans who enjoy the jazzy, space‑filled side of the Dead.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and praise both performance and sound quality; a few note mellowness or minor tape noise, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced guitars and keyboards with minimal hiss; occasional high‑pitched tape “kettle” noise and a brief patch/tape‑flip, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Mind Left Body",
+      "Here Comes Sunshine",
+      "Eyes of the World",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Looks Like Rain",
+      "Rider"
+    ],
+    "setlist_flow": "A relaxed, jazzy first set that builds into a soaring second‑set meat sequence (Dark Star→MLB→Dark Star→Stella→Eyes). The pacing is mellow and space‑y, with occasional slower moments but overall cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s leads are described as “hot,” “beautiful,” full of harmonics and soaring solos; only a brief out‑of‑tune moment on Looks Like Rain.",
+    "Phil": "Phil’s bass is praised for deep, booming notes and prominent roles in Dark Star and the MLB jam.",
+    "Bob": "Bob Weir gets credit for solid rhythm work and tasteful background voicings throughout the jams.",
+    "Keys": "Keith’s organ/keyboard adds a big‑band texture; occasionally repetitive but generally enhances the jazzy vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mind Left Body": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T17:00:05.976703+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-30.sbd.miller.32367.sbeok.flac16"
+}

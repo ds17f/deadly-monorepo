@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy 1991 Shoreline show highlighted by a monster Samson and a smoking Train/It Takes a Lot to Laugh sequence.",
+  "review": "The tape captures an electrifying early‑'90s performance, with Bruce Hornsby’s piano driving the band through a blistering set that includes a legendary Samson, a soaring It Takes a Lot to Laugh…Train, and tight jams on Deal, Half Step and Stranger. The soundboard source is crisp and well‑balanced, though a few listeners note a slightly low overall volume. Overall the show is regarded as one of the band’s standout nights of the summer run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (≈85%) rate the concert 5 stars, praising both performance and sound quality; a few mixed/negative notes are outweighed by consistent praise, yielding a high‑confidence rating in the upper‑range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as crisp, top‑notch and obvious awesome; only minor complaints about slightly low volume on some tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson",
+      "It Takes a Lot to Laugh, It Takes a Train to Cry",
+      "Deal",
+      "Half Step",
+      "Stranger",
+      "Brokedown on the Door",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The setlist is high‑energy from start to finish, with an unusual but effective second set that avoids repeats and keeps the momentum of a first‑set feel while delivering fresh song choices."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful guitar work and energetic leads; a few notes mention his volume being slightly low on certain songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby receives abundant praise for pounding the keys, driving the band and adding excitement throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Samson": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "It Takes a Lot to Laugh, It Takes a Train to Cry": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown on the Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T23:30:49.462620+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-08-18.sbd.nawrocki.21349.sbeok.shnf"
+}

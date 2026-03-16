@@ -1,0 +1,107 @@
+{
+  "summary": "Good soundboard capture of a mixed‑quality show; the first set is uneven but the second set shines with spacey jams and a soaring Casey Jones.",
+  "review": "The recording is a cleaned‑up soundboard tape that sounds clear overall, though a few mix quirks remain. Musically the concert starts flat – rough versions of Mexicali, Maggie’s Farm and Row Jimmy – but after Space the band lifts off, delivering a trippy second set highlighted by Casey Jones, Crazy Fingers and ethereal keyboard moments. Listeners who love the 1992‑era experiments will find plenty to enjoy despite the uneven first half.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Three detailed reviews give a balanced picture: solid soundboard quality (good) but a show that is uneven (average to good). Weighted combination yields a rating just under four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Leavy’s fix cleared most anomalies; cymbals are crisper but occasional mix drop‑outs (Jer disappearing, PA level cuts) remain. Reviewers suggest a matrix would be ideal, but the fixed SBD is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "Space",
+      "Crazy Fingers",
+      "Uncle John's",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Mexicali",
+      "Maggie's Farm",
+      "Row Jimmy"
+    ],
+    "setlist_flow": "First set feels rote and occasionally chaotic, with several songs sounding thin or over‑mixed. After Space the band clicks, delivering a spacious second half that builds into an exciting Casey Jones finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring, marimba‑like blasts during Space; also noted to disappear from the mix early in the first set before returning strongly later.",
+    "Phil": "Lesh’s bass is described as ‘whale songs’; Phil is said to funk up after Jerry leaves on Uncle John's and adds a memorable “Same as it ever was” line at the show’s close.",
+    "Bob": "",
+    "Keys": "Vince/Hornsby dominate early with accordion and Bach‑like figures; keyboard textures are highlighted during the space jam and Shenandoah quote.",
+    "Drums": "Billy & Mickey use train‑air‑horn arrays throughout Drums; their playing is energetic but occasionally over‑processed."
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shenandoah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:23:36.331666+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-20.sbd.fix.leavy.93996.sbeok.flac16"
+}

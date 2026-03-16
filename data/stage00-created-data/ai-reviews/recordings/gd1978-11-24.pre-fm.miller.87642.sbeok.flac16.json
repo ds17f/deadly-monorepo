@@ -1,0 +1,112 @@
+{
+  "summary": "Good‑quality soundboard capture of a hot 11/24/78 show with standout Sugaree, I Need a Miracle and a jazzy Friend of the Devil→Estimated Prophet→Shakedown Street sequence.",
+  "review": "The pre‑FM Miller SBD delivers a clear mix that lets Keith’s keyboards shine, though occasional muddiness and right‑channel dropouts are noted. Musically the concert is a strong outing – Jerry was ill but still powerful, and the band rolls through highlights like Sugaree, Big River, New Minglewood Blues and an inspired second‑set medley. Overall fans praise the tight, jazzy flow despite one weaker moment on Passenger.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.4/5; most comments are enthusiastic about performance and sound, with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear mix with prominent keyboards; some reviewers note muddy mids and occasional FM dropouts on the right channel, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Me & My Uncle",
+      "Big River",
+      "Stagger Lee",
+      "New Minglewood Blues",
+      "Heart of Me",
+      "Promised Land",
+      "I Need a Miracle",
+      "Estimated Prophet",
+      "Shakedown Street",
+      "Fire on the Mountain",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Passenger"
+    ],
+    "setlist_flow": "Brisk, tight first set followed by a jazzy second set; the Friend of the Devil→Estimated Prophet→Shakedown Street sequence is highlighted for its pocket‑driven improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice was thin and he was sick, but he still delivered strong leads and even a great moment before collapsing after the show.",
+    "Phil": "",
+    "Bob": "Bob stepped up on Promised Land with an explosive second solo.",
+    "Keys": "Keith’s keyboards are front‑and‑center, especially on I Need a Miracle and Shakedown Street, rescuing a mix that often buried him in this era.",
+    "Drums": "The drummers kept solid pockets throughout, notably during Shakedown Street and the jazzy second‑set passages."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heart of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:01:18.707799+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-24.pre-fm.miller.87642.sbeok.flac16"
+}

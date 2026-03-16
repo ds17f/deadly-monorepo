@@ -1,0 +1,56 @@
+{
+  "summary": "Crisp soundboard capture of a quirky night featuring a standout Truckin' → Smokestack Lightning and Victim or the Crime sequence",
+  "review": "The recording (sound‑board) is fairly crisp and clear, making the odd, shade‑less parking‑lot show quite listenable. Reviewers highlight the energy of the Truckin' > Smokestack Lightning transition and the opening Victim or the Crime, while noting Brent's last performance and a string of four consecutive Weir songs. Sentiment is mixed overall, with one reviewer rating it highly and another giving it a zero.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "One positive 4‑star review praises the crisp soundboard and good performance; another gives a 0 rating, pulling the average down. Weighted toward show quality (70%) but tempered by mixed feedback yields a mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as 'fairly crisp' with clear mix; no major dropouts or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Smokestack Lightning",
+      "Victim or the Crime"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Noted for an unusual parking‑lot atmosphere and a string of four consecutive Weir tunes, giving the show a unique pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Mentioned in context of Brent's stress ('sorry bob!'), but no direct performance comment.",
+    "Keys": "Brent's final show referenced; his song 'Never Trust A Woman' noted as possibly significant.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim or the Crime": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Never Trust A Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:01:47.919565+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-23.sbd.chaser.7417.shnf"
+}

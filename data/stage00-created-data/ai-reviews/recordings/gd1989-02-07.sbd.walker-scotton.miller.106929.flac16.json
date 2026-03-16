@@ -1,0 +1,75 @@
+{
+  "summary": "A solid West Coast show with a standout Victim and an inspired second‑set UJB/Dark Star jam, captured on a clean soundboard recording.",
+  "review": "The concert is praised for its strong second set – especially the powerful Victim performance and an extended Uncle John’s Band into a purposeful Dark Star. Reviewers note Brent Mydland’s organ presence and overall good band chemistry, while the soundboard source delivers clear separation with no major audio flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show positively (4‑star comments) and mention good sound quality; a few note rhythm issues and drum tempo problems, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No significant complaints; reviewers comment on excellent separation and clean capture, indicating a clear soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim",
+      "Uncle John's Band",
+      "The Wheel",
+      "Throwing Stones",
+      "Dark Star",
+      "Bird Song",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as a bit ragged with some new‑tune hiccups, but the second set shifts mood dramatically – Victim opens a powerful stretch that flows into an extended Uncle John’s Band/Dark Star sequence praised for its purpose and intensity."
+  },
+  "band_member_comments": {
+    "Jerry": "Backed up Bob on vocals and added strong backing vocal harmonies; his tone is noted as solid throughout.",
+    "Phil": "",
+    "Bob": "His lead vocals are supported by Jerry’s backup; no specific criticism.",
+    "Keys": "Brent Mydland's organ work is highlighted repeatedly – described as a major influence and “outstanding” on the recording.",
+    "Drums": "Mixed feedback: some feel Bill or Mickey struggled to lock in on Victim, suggesting tempo issues."
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:26:10.568158+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-02-07.sbd.walker-scotton.miller.106929.flac16"
+}

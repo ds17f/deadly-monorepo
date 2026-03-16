@@ -1,0 +1,39 @@
+{
+  "summary": "Clear soundboard capture of a steady first set and a second set that shines up through Space before tapering off, with an unremarkable encore.",
+  "review": "The recording offers clear enough audio, likely from the soundboard, letting the band’s energy come through. The first set is described as solid, while the second set dazzles up to the Space segment and then loses some momentum; the encore receives no special praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers rate the show highly (4‑5 stars) and note good sound clarity, indicating a strong performance with decent technical quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sound is described as clear enough; no major issues or dropouts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Steady first set, second set brilliant up to Space then less compelling afterward; encore nothing special."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer notes Jerry's voice is present and sounds good.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:22:38.790888+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-28.nak300.barfield-lane.103184.flac24"
+}

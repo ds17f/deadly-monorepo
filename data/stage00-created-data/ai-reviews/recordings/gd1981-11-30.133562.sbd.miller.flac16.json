@@ -1,0 +1,63 @@
+{
+  "summary": "Pristine soundboard recording of a solid 1981 show with razor‑sharp Jerry, strong Brent, and standout jams on The Other One → Wharf Rat → Sugar Magnolia.",
+  "review": "The performance is praised across the board – Jerry Garcia’s guitar and vocals are described as razor sharp and full of ideas, Brent Mydland delivers nuanced keyboard interplay, and the post‑space sequence (The Other One → Wharf Rat → Sugar Magnolia) is highlighted as terrific. The Miller‑taped soundboard source is called “pristine” with excellent sound quality, making the show a highly enjoyable listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are largely positive, emphasizing both strong musical performance and high‑quality soundboard recording; consistent praise yields a confident high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the Miller sbd \"pristine\" and note the sound quality as excellent, with no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Let It Grow",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers love the post‑space flow (Other One → Wharf Rat → Sugar Magnolia) and note a fun encore; overall pacing is described as tight and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Razor‑sharp guitar, brimming with energy and ideas; vocals strong and clear‑eyed.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland delivers a strong outing with nuanced interplay throughout the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:26:59.642749+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-11-30.133562.sbd.miller.flac16"
+}

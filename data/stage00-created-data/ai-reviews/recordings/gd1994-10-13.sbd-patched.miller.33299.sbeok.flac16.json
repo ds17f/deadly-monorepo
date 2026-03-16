@@ -1,0 +1,81 @@
+{
+  "summary": "Soundboard recording captures an upbeat first set and classic second set with highlights like Loser, Masterpiece and a stellar Uncle John's Band, delivering solid overall sound.",
+  "review": "Reviewers praise this fall‑94 show for its energetic first set and a well‑executed second half that includes standouts such as Loser, Masterpiece, Foolish Heart and a powerful Uncle John's Band segue. The patched soundboard source is regarded as clean enough to enjoy the performance, though no specific technical issues are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 3‑4 stars and highlight many strong musical moments; recording quality is presumed good (soundboard) with no complaints, yielding an overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound clarity or mix; reviewers focus on performance, implying the patched soundboard is listenable and free of major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Masterpiece",
+      "Dupree's Diamond Blues",
+      "Let It Grow",
+      "Foolish Heart",
+      "Playing in the Band",
+      "Uncle John's Band",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Upbeat, well‑played first set followed by a classic‑feeling second set that builds energy and ends with a favorite encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals on Foolish Heart are highlighted as lyrically stronger than the Boston performance; his overall presence is praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A five‑minute jam into drums in the PITB>UJB sequence is noted as a high point."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:11:16.779706+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-13.sbd-patched.miller.33299.sbeok.flac16"
+}

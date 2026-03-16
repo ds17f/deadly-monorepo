@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent soundboard capture of a fiery 1974 performance with standout Weather Report Suite > Little India, Spanish Jam into Eyes of the World, and a monster Other One.",
+  "review": "The show is hailed as a high‑water mark – Jerry’s solos are described as transcendent, Phil rides a deep “Phil Zone” especially in the Eyes jam, and the second set delivers a scorching Weather Report Suite > Little India, Spanish Jam, and an epic Other One. The soundboard recording is praised for its clarity, instrument separation and superb EQ, with only occasional edginess noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All seven reviews are overwhelmingly positive (average ~4.9 stars), highlighting both an exceptional performance and a high‑quality soundboard recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix with excellent instrument separation and EQ; a few reviewers note occasional edginess but no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Weather Report Suite > Little India",
+      "Spanish Jam",
+      "Eyes of the World",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set shines with extended jams and seamless transitions; first set also receives praise for maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos are called 'un‑real', 'peak Garcia', and a soulful highlight (China Doll).",
+    "Phil": "Described as 'outstanding', in the \"Phil Zone\", bent and sinister during the Spanish Jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Weather Report Suite > Little India": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:24:36.883866+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-19.sbd.gans-finney.217.sbeok.shnf"
+}

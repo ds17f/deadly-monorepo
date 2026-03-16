@@ -1,0 +1,45 @@
+{
+  "summary": "A ferocious three‑set performance highlighted by a monster \"The Other One\", captured on a lower‑grade audience taping.",
+  "review": "Fans rave about the tight, high‑energy playing and several wow moments, especially the blistering The Other One and an electrifying Casey Jones opener. The recording is an audience source with noticeable tape limitations and occasional song cuts, but the drum sound remains unmistakable. Overall the show shines despite its modest technical capture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (mostly 5‑star comments) while recording quality is noted as lower‑grade with cuts, pulling the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Lower‑grade audience taping with reduced clarity and occasional song cuts; drums are clear and unmistakable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set concert (electric, acoustic with New Riders, electric) with strong crowd vibe; tight playing throughout and several “wow” moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "drums noted as unmistakable, tight and driving the show"
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T21:42:31.117222+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-24.aud.cooper.coopernicus.32710.flac16"
+}

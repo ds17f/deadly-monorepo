@@ -3,14 +3,15 @@ package com.grateful.deadly.core.network.github.api
 import com.grateful.deadly.core.network.github.model.GitHubRelease
 import okhttp3.ResponseBody
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Streaming
 import retrofit2.http.Url
 
 interface GitHubReleasesApi {
-    
-    @GET("repos/ds17f/dead-metadata/releases/latest")
-    suspend fun getLatestRelease(): GitHubRelease
-    
+
+    @GET("repos/ds17f/deadly-monorepo/releases/tags/{tag}")
+    suspend fun getReleaseByTag(@Path("tag") tag: String): GitHubRelease
+
     @Streaming
     @GET
     suspend fun downloadFile(@Url url: String): ResponseBody

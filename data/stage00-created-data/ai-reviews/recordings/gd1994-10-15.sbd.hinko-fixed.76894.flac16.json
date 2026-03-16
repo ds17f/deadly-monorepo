@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording of fair quality; the show is uneven with a weak \"I Want To Tell You\" and generally lackluster feel, though drums/space receive praise.",
+  "review": "The SBD capture is praised by some listeners for its clarity, but others describe it as thin and lifeless. Musically the performance falls short – \"I Want To Tell You\" is singled out as terrible and Jerry's vocals are called hauntingly off, while a brief nod to strong drumming and space offers a small bright spot. Overall the set feels disappointing despite occasional highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "medium",
+    "rationale": "Reviews are split between positive remarks about the upload/recording and strong negative comments on performance, leading to a below‑average combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Some reviewers say it sounds great, but others note a thin, lifeless texture as if the air has been let out of the tires."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "I Want To Tell You"
+    ],
+    "setlist_flow": "Overall flow is described as lackluster and disappointing, with only brief praise for drums and space."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as oddly haunting and overall performance deemed lackluster.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "One reviewer highlighted the drumming and space segment positively."
+  },
+  "song_mentions": {
+    "I Want To Tell You": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:29:19.415050+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-15.sbd.hinko-fixed.76894.flac16"
+}

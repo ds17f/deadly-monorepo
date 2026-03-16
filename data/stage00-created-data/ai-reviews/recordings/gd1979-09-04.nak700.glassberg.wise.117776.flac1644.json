@@ -1,0 +1,62 @@
+{
+  "summary": "Well‑recorded front‑of‑board capture of an average, somewhat boring setlist.",
+  "review": "The recording is praised for its clear front‑of‑board sound and perfect ambient balance, requiring no EQ tweaks. The performance itself is viewed as merely average – a few enjoyable moments like the He's Gone jam and Wharf Rat are noted, but overall the setlist feels unexciting. Reviewers are split between a very negative take on the song selection and an appreciative note on the tape quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average/boring while recording quality is rated good; weighted combination yields a middle‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑board (FOB) capture praised for clear ambient sound and balanced mix; reviewer notes it needs no EQ adjustments, though another upload is described as brighter."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone > Jam",
+      "Wharf Rat",
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall set considered boring and average, despite a few strong moments in the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:13:17.171225+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-04.nak700.glassberg.wise.117776.flac1644"
+}

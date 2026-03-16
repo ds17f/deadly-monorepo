@@ -1,0 +1,63 @@
+{
+  "summary": "A solid recording captures a fiery late‑80s Dead show, highlighted by an electrifying Morning Dew and a standout Desolation Row.",
+  "review": "The performance is a typical late‑80s set with high energy and strong playing, especially Jerry’s guitar work and Bobby’s vocals on Desolation Row. While the vocal delivery from Jerry is ragged and some jams feel abbreviated, the recording itself is clear enough to enjoy the standout moments like Morning Dew. Overall fans love the vibe but note a few uneven spots.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two highly positive reviews and one mixed review give an overall good‑to‑great show with solid playing, but vocal issues and abbreviated jams keep the rating from higher levels; recording quality is assumed adequate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not comment on audio flaws, implying the tape is at least listenable with no major issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Desolation Row"
+    ],
+    "poor_songs": [
+      "Eyes of the World",
+      "Bertha"
+    ],
+    "setlist_flow": "A strong, typical late‑80s setlist with high energy; the second‑set jam (Scarlet Begonias → Fire on the Mountain) feels abbreviated, and vocal delivery is uneven, but the overall pacing keeps the show engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as ragged and awful, but guitar work praised as fiery, gorgeous, and strong throughout.",
+    "Phil": "",
+    "Bob": "Energetic vocals on Desolation Row and LLR; later falsetto considered weak.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:54:28.446437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-15.prefm.leeds.tetzeli.fix-17010.74165.flac16"
+}

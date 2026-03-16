@@ -1,0 +1,75 @@
+{
+  "summary": "High‑quality soundboard captures a solid Summer ’93 show highlighted by Jerry’s clean tone and standouts like Let It Grow, Bertha and Here Comes Sunshine.",
+  "review": "The recording is a clean, well‑balanced soundboard capture that lets Jerry’s sharp guitar tone and Vince’s keyboard flourishes shine. Fans rave about the first‑set gems (Let It Grow, Ramble on Rose, Broken Arrow) and the energetic opening with “Here Comes Sunshine,” while the second set is remembered more for its space/drums vibe than specific songs. Overall the performance feels strong and the tape sounds great.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and multiple comments praising both musical performance and soundboard clarity indicate a strong show with good recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the guitar tone as clean, sharp and lively; Vince’s keyboards are clear; no major drop‑outs or muddiness reported – overall a solid, well‑balanced tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Bertha",
+      "Masterpiece",
+      "Ramble on Rose",
+      "Broken Arrow",
+      "Here Comes Sunshine",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set receives strong praise for its song selection and energy; the second set is less detailed but remembered for a powerful Space segment. The concert flows smoothly with an uplifting opening."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as clean, sharp and lively throughout; highlighted on multiple tunes.",
+    "Phil": "Noted as “all over the place” especially during Bertha.",
+    "Bob": "",
+    "Keys": "Vince adds sweet flourishes on many tunes (e.g., Let It Grow).",
+    "Drums": "Space/drums segment praised for its trance‑like vibe."
+  },
+  "song_mentions": {
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:31:39.423201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-06.sbd.gustin.tetzeli.fix-34835.100023.flac16"
+}

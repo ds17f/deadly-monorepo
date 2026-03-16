@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording of an energetic West L.A. show, highlighted by Jerry's tight guitar and Brent's organ on the standout \"Rooster\" track.",
+  "review": "The performance delivers great energy, with reviewers praising Jerry Garcia’s exciting, tight guitar work and Brent Mydland’s organ on “Rooster,” which they deem essential listening. Bob Weir’s slide on the same song is noted as ear‑piercing in a positive sense. While the recording source is a soundboard, no specific audio issues are mentioned, resulting in an overall solid but not extraordinary capture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Only one moderate‑rating review; the show is described positively but without standout brilliance, and recording quality is implied good (soundboard) but not explicitly praised."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on clarity or mix; assumed decent soundboard quality based on source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rooster"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review mentions great overall energy and tight playing, suggesting a well‑paced set despite lack of detailed flow commentary."
+  },
+  "band_member_comments": {
+    "Jerry": "Exciting and tight guitar playing noted.",
+    "Phil": "",
+    "Bob": "Slide on \"Rooster\" described as ear‑piercing (positive).",
+    "Keys": "Brent's organ on \"Rooster\" highlighted as worth listening to.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:12:08.804045+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-11-08.122167.sbd.miller.flac16"
+}

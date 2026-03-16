@@ -1,0 +1,60 @@
+{
+  "summary": "Jazzy 1968 set shines with Clementine, New Potato & Spanish Jam",
+  "blurb": "The show delivers a seamless jazz‑fusion flow highlighted by the debut of \"Clementine\" and a scorching \"Spanish Jam.\" Garcia’s spacious guitar on \"New Potato Caboose\" and Pigpen’s organ at his peak drive the set. Recording quality is crystal‑clear, making this a must‑listen for early Dead fans.",
+  "review": "On January 20 1968 at Eureka Municipal Auditorium the Grateful Dead served up a rare, jazzy masterpiece that still feels fresh today. The set opens with a loose jam before launching into the newly penned \"Clementine,\" where Jerry’s vocal delivery is as confident as his spacious, Coltrane‑inflected guitar lines on the ensuing \"New Potato Caboose.\" Phil’s bass work underpins the whole affair, adding that unmistakable jazzy swing he helped write into \"Clementine\". Pigpen’s organ shines throughout, especially during the explosive \"Spanish Jam,\" which many reviewers call a “tube‑glowing” showcase of his best playing. The transitions flow effortlessly – from \"New Potato Caboose\" into \"Born Cross‑Eyed,\" then into the swirling \"Spanish Jam,\" and even the brief “Caution (Do Not Stop On Tracks)” feels like part of a cohesive suite. Mickey and Bill provide tight, propulsive rhythms that keep the momentum rolling. Though the set includes truncated moments of \"Caution\" and a fragmentary \"Dark Star,\" the overall performance is a high‑water mark for the band’s early improvisational explorations. All five soundboard sources capture this magic with crisp, clear fidelity, but the Clugston SBD (gd1968-01-20.sbd.clugston.5181.sbeok.shnf) stands out as the definitive listening experience.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 88,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All four recordings are uniformly positive, praising the soundboard clarity, seamless transitions, and standout performances (Garcia’s guitar tone, Pigpen’s organ, Phil’s bass). Consistent language such as “excellent,” “crisp,” “spacious,” and “at his best” across multiple sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1968-01-20.sbd.clugston.5181.sbeok.shnf",
+    "reason": "Crystal‑clear soundboard capture with crisp mix, no dropouts, and the most detailed articulation of the jazzy transitions."
+  },
+  "key_highlights": [
+    "First-ever performance of \"Clementine\" – a jazzy composition written by Phil.",
+    "\"Spanish Jam\" erupts as a high‑energy centerpiece showcasing Pigpen’s organ at its peak.",
+    "Seamless, swing‑filled segues between \"New Potato Caboose,\" \"Born Cross‑Eyed,\" and the jam sections.",
+    "Exceptional soundboard quality across all sources; Clugston SBD is the clearest."
+  ],
+  "song_highlights": [
+    "Clementine",
+    "New Potato Caboose",
+    "Born Cross-Eyed",
+    "Spanish Jam",
+    "Caution (Do Not Stop On Tracks)",
+    "Dark Star"
+  ],
+  "band_performance": {
+    "Jerry": "Spacious, deliberate guitar on \"New Potato Caboose\" and strong lead vocals on \"Clementine,\" with a tube‑glowing solo tone that drives the set.",
+    "Phil": "Wrote \"Clementine\" and provides a Coltrane‑inspired bass approach that fuels the jazzy vibe throughout.",
+    "Bob": "",
+    "Pigpen": "Organ work is described as being at his best, delivering rich textures especially during the \"Spanish Jam.\"",
+    "Mickey": "Drumming praised as some of the finest of the era – tight, propulsive rhythms that lock into the fusion feel.",
+    "Billy": "Alongside Mickey, delivers crisp, driving beats that keep the set’s momentum flowing."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-24T07:12:57.667238+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jam",
+      "Clementine",
+      "New Potato Caboose",
+      "Born Cross-Eyed",
+      "Feedback",
+      "Spanish Jam",
+      "Caution (Do Not Stop On Tracks)",
+      "Dark Star"
+    ]
+  ]
+}

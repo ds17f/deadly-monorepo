@@ -1,0 +1,111 @@
+{
+  "summary": "High‑quality audience tape captures a stellar spring‑'73 show with smoking China Cat→Rider, Playin’ in the Band and a ripping Dark Star→Truckin’→Morning Dew.",
+  "review": "The recording (a Betty Reel audience source) is clear and well‑balanced, letting listeners hear every instrument and even the crowd banter. Musically the night shines – Jerry’s guitar tone and solos are repeatedly praised, Phil’s deep‑zen bass underpins a tight rhythm section, and the band delivers classic jams from China Cat→Rider through Playin’ in the Band and a soaring Dark Star sequence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, most rating 4‑5 stars, uniformly praising both performance and sound quality; only one low star relates to streaming issues, not the show itself."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Betty Reel source noted as clear, crisp and well‑balanced; no major dropouts or muddiness reported. Some users mention buffering when streaming but the file itself is praised as ‘perfect sounding’."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Playin' in the Band",
+      "Dark Star > Truckin' > Morning Dew",
+      "Bird Song",
+      "Box of Rain",
+      "Sugar Magnolia",
+      "Greatest Story Ever Told",
+      "The Promised Land > Bertha > Greatest Story"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with the China‑Rider sandwich (including the Feelin’ Groovy jam), a first‑set climax on Playin’, and a second set that builds through The Promised Land → Bertha → Greatest Story into an epic Dark Star sequence. Transitions are praised as tight and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone, wah‑wah work, and vocal deliveries (especially on Dew and Loser) receive constant praise; his solos are called ‘amazing’ and ‘mind‑melting.’",
+    "Phil": "Phil’s bass is described as deep‑zen, supportive backbone of the jam; some fans love his playing but wish he’d stay out of vocals.",
+    "Bob": "Weir’s rhythm guitar and vocal interplay (notably on China Cat→Rider) are highlighted as a ‘dialogue’ and a key part of the show’s energy.",
+    "Keys": "Keith’s keyboards spar with Jerry, adding balance; his contributions in the jams are noted as essential.",
+    "Drums": "Bill (and later Mickey) drumming is called driving, primal, and crucial to the power of Playin' and the Dark Star jam."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Truckin'": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Morning Dew": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Box of Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Promised Land > Bertha > Greatest Story": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feelin' Groovy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:07:04.428156+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-03-16.sbd.hamilton-jackson.167.14770.sbefail.shnf"
+}

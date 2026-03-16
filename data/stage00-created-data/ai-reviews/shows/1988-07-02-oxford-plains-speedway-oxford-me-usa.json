@@ -1,0 +1,68 @@
+{
+  "summary": "Energetic second set with Terrapin, Jack Straw and soaring Morning Dew",
+  "blurb": "The show delivers a powerhouse second set highlighted by Terrapin Station, an explosive Crazy Fingers → Playing In The Band segue, and heartfelt renditions of Jack Straw and Morning Dew. Jerry’s guitar is on fire while Phil drops bass bombs throughout. Crystal‑clear soundboard recordings make this a must‑listen for ’88 fans.",
+  "review": "On July 2, 1988 at Oxford Plains Speedway the Dead surged through a blistering setlist that captured the late‑80s energy of the band. The first set warmed up with tight renditions of Iko Iko, Jack Straw and a soulful Foolish Heart, but it was the second set that truly ignited the night – a seamless Crazy Fingers → Playing In The Band flow that launched into an inspired Uncle John’s Band, a towering Terrapin Station, and a post‑space journey through Drums, Space and The Wheel before closing with All Along The Watchtower, Morning Dew and Sugar Magnolia. Jerry Garcia rode the highs with heavy gain and soaring solos on Watchtower and Terrapin, trading fiery licks with Phil Lesh’s “dropping bombs” bass lines that many reviewers called Coltrane‑style. Brent Mydland’s piano added depth throughout, especially on Row Jimmy and Foolish Heart, while the dual drummers kept a relentless pulse. The crystal‑clear Miller soundboard capture (gd1988-07-02.sbd.miller.86817.sbeok.flac) showcases every nuance, making this performance one of the era’s standout documents.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 111,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive sentiment across the majority of recordings (10 positives, 1 mixed, 2 negatives). Multiple sources repeatedly praise Terrapin Station, Jack Straw, Morning Dew and the Crazy Fingers → Playing In The Band sequence, describing the band as \"on fire,\" with \"soaring solos\" and \"dropping bombs\". Consistent acclaim for Jerry’s guitar fireworks and Phil’s thundering bass justifies a high positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1988-07-02.sbd.miller.86817.sbeok.flac",
+    "reason": "Crystal‑clear soundboard capture with excellent levels, no hiss or dropouts, and the most detailed representation of the band’s high energy."
+  },
+  "key_highlights": [
+    "Terrapin Station with post‑space jam that lifts the second set to another level",
+    "Crazy Fingers → Playing In The Band segue that ignites a fireworks display",
+    "Jack Straw and Morning Dew showcase Jerry’s soaring guitar and Phil’s bass bombs",
+    "Crystal‑clear Miller SBD provides an audiophile‑grade listening experience"
+  ],
+  "song_highlights": [
+    "Crazy Fingers",
+    "Playing In The Band",
+    "Terrapin Station",
+    "Jack Straw",
+    "Morning Dew"
+  ],
+  "band_performance": {
+    "Jerry": "Heavy gain and soaring solos on Watchtower, Terrapin and Morning Dew; digs deeper than usual and trades fiery licks with Phil throughout the show.",
+    "Phil": "Drops bass bombs and Coltrane‑style riffs during Playing In The Band; thundering, prominent bass that drives the jams, especially on Jack Straw and Morning Dew.",
+    "Bob": "Adds tasteful fills and chipping‑in nicely during jams such as Uncle John's Band and Terrapin Station.",
+    "Brent": "Piano adds depth on Row Jimmy, animates Foolish Heart and supports the Terrapin jam; strong presence on Sugar Magnolia and GSL.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 12,
+  "processed_date": "2025-09-16T11:13:29.858638+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Crazy Fingers",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Wheel"
+    ],
+    [
+      "Iko Iko",
+      "Jack Straw"
+    ],
+    [
+      "Gimme Some Lovin'",
+      "All Along The Watchtower",
+      "Morning Dew",
+      "Sugar Magnolia"
+    ]
+  ]
+}

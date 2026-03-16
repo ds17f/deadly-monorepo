@@ -1,0 +1,96 @@
+{
+  "summary": "Soundboard recording with noticeable mix glitches but a strong Las Vegas set highlighted by a smoking Help‑On‑The‑Way/Slipknot!/Franklin’s Tower and an eclectic song list.",
+  "review": "The performance is praised for its diverse, well‑chosen setlist and a particularly inspired second set, yet the recording suffers from in‑ear monitoring problems and mic‑gate issues that often bury Garcia's guitar and vocals. While the mastering by Charlie Miller restores much of the clarity, listeners still encounter frequent drop‑outs and uneven vocal levels, making the show enjoyable but technically inconsistent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers love the setlist and second‑set energy (70% weight), but several note serious sound‑mix problems that keep the recording from being excellent (30% weight). The average star rating (3.5) combined with strong positive comments about the music yields a solid 4.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Remastered from a soundboard source; praised for mastering clarity but plagued by in‑ear system glitches, mic gate cut‑offs on vocals/guitar, and occasional drop‑outs that make Garcia’s guitar hard to hear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help On The Way > Slipknot! > Franklin's Tower",
+      "So Many Roads",
+      "Attics Of My Life",
+      "Spoonful",
+      "The Other One",
+      "Morning Dew",
+      "Baba O'Riley",
+      "Tomorrow Never Knows"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A wildly varied setlist that keeps the momentum high; first set suffers from sound glitches, but the second set recovers with tight transitions and a superb sequence of classics."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing shines when audible, but many reviewers note his guitar and vocals disappear due to in‑ear/mic‑gate issues and occasional lyric slips.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bob Bralove’s MIDI patches are criticized as sounding like 'yacht rock', detracting from the keyboard texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help On The Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been The Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Attics Of My Life": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baba O'Riley": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tomorrow Never Knows": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:19:51.949494+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-31.sbd.miller.92388.sbeok.flac16"
+}

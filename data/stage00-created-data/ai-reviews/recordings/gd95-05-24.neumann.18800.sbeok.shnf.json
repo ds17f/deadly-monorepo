@@ -1,0 +1,68 @@
+{
+  "summary": "Fair‑quality recording of a middling ’95 show, highlighted by a stellar Bird Song and a soaring Estimated Prophet amid uneven set performance.",
+  "review": "The tape captures an uneven 1995 concert that swings between bright moments – a “tremendous” Bird Song, a “stunning” Estimated Prophet and a solid Touch of Grey opener – and lackluster stretches such as a disappointing Wharf Rat. Reviewers note no obvious sound‑board or audience issues, so the audio is assumed to be merely adequate. Overall the performance feels uneven, earning mixed reactions from listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Many low‑star reviews point to a subpar show, but several reviewers highlight strong songs; recording quality is unspecified, so the rating reflects an average musical performance with uncertain audio fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience mix, or clarity; therefore recording quality cannot be judged beyond being passable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Estimated Prophet",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "The set is described as uneven – strong jams and a great opener are offset by misfires, forgotten lyrics, and overall “cylinders misfiring,” leading to an inconsistent concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers tasty, Sharrock‑style lines in the Bird Song jam but forgets half of Touch of Grey's lyrics; he also rallies on Estimated Prophet.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Want to Tell You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T08:41:53.843007+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-05-24.neumann.18800.sbeok.shnf"
+}

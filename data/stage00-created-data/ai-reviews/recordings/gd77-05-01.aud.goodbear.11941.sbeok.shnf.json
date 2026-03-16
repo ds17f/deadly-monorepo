@@ -1,0 +1,75 @@
+{
+  "summary": "A clear, energetic audience tape of a May‑1977 show that shines on an explosive The Other One and soaring Tennessee Jed.",
+  "review": "The audience recording is surprisingly clear for a crowd source, with occasional sections where the crowd swells over the mix. Musically the concert delivers strong jams – especially The Other One, Tennessee Jed, Brokedown Palace, Playing in the Band and Comes‑a‑Time – though a brief Sunrise and a short‑running Other One are noted as minor blemishes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑5 stars, praising the performance and noting a clear audience recording; weighted average of show (≈4.3) and recording quality (≈4.0) yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and not muddy, solid tape; occasional moments where the crowd is overly loud but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Tennessee Jed",
+      "Brokedown Palace",
+      "Playing in the Band",
+      "Comes a Time"
+    ],
+    "poor_songs": [
+      "Sunrise"
+    ],
+    "setlist_flow": "Reviewers describe a strong sense of tension and release, with an energetic opener, powerful mid‑set jams and a crowd‑driven second half that keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Energetic playing noted by several reviewers; opener described as \"just so damn, well, Jerry!\"",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T22:06:06.545730+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-01.aud.goodbear.11941.sbeok.shnf"
+}

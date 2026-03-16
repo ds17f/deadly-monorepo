@@ -1,0 +1,52 @@
+{
+  "summary": "Excellent soundboard capture of a mixed‑quality show, highlighted by powerful jams on Playing in the Band and The Wheel.",
+  "review": "The recording is praised for its crystal‑clear soundboard transfer – reviewers call it “phat” and note the successful PCM restoration of an otherwise weak source. Musically the performance is seen as uneven; while Jerry’s playing is described as uninspired, the band shines on Playing in the Band, The Wheel and a strong PITB jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Recording quality is rated excellent (high praise from three reviewers) while show quality is mixed/average (one reviewer calls it so‑so and notes weak moments). Weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers highlight the phat, crisp sound and commend the PCM transfer that salvages an originally poor source; no major dropouts or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Overall a so‑so performance with moments of brilliance; the second‑set jams (PITB) stand out, but some sections feel sloppy and lack direction."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer felt Jerry's playing was uninspired.",
+    "Phil": "Phil is noted as present but receives no specific praise or criticism.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:33:54.596808+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-12-27.set2.sbd.miller.95954.sbeok.flac16"
+}

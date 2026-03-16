@@ -1,0 +1,81 @@
+{
+  "summary": "Good audience‑sourced mix captures a high‑energy Hartford 3/14/81 set with standout versions of Stella Blue, Peggy‑O and China Cat > Rider.",
+  "review": "The recording delivers a solid, well‑balanced mix that lets Jerry’s guitar leap out while preserving the live ambience. The first set shines – Stella Blue (with its Bach tease), Peggy‑O, Sugaree and Lost/Saint are repeatedly praised – though several reviewers note the second set loses a bit of momentum. Overall fans consider this one of the better shows from the early ’81 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "13 reviews, most giving 5 stars and highlighting strong performances and a good mix; only a few note a weaker second set, so the weighted average leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Mix is described as great/clear with Jerry’s guitar prominent; no major drop‑outs or muffiness reported, and the tape still sounds good after decades."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Peggy-O",
+      "China Cat Sunflower > I Know You Rider",
+      "Althea",
+      "Passenger",
+      "Sugaree",
+      "Lost Sailor / Saint of Circumstance",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised for high energy and tight jams; second set is described as hit‑or‑miss, with some feeling the band lost momentum after the opening numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently dialed‑in; guitar jumps out, Bach tease before Stella Blue noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor / Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:47:45.141427+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-14.aud.hayum.7217.sbeok.shnf"
+}

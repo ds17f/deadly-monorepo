@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic five‑star rating but no details on sound or performance",
+  "review": "The sole review gives the recording a perfect five‑star score and calls it “awesome,” indicating strong overall approval. No specific comments about audio fidelity, setlist, or individual performances are provided, so the quality of the recording and show cannot be assessed from this feedback.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only one brief five‑star review; positive sentiment but insufficient detail to gauge musical or technical quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No technical comments were made in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T05:31:06.229893+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-28.sbd.nawrocki.4685.shnf"
+}

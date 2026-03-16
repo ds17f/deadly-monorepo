@@ -1,0 +1,88 @@
+{
+  "summary": "Fair soundboard recording of an uneven show – highlights include a lengthy Jack‑a‑Roe, dynamic Jack Straw and a strong Terrapin Station amid some pitch and mastering issues.",
+  "review": "The patched SBD source is the only fully corrected version, but it still suffers from mastering errors, pitch problems and balance quirks that keep the technical quality at a fair level. Musically the concert is mixed: the first set wanders with off‑key moments, while the second set delivers long jams and standout performances of Jack‑a‑Roe, Jack Straw, Deal and Terrapin Station. Overall the show earns a middling three‑star rating from reviewers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a balanced 3‑star overall score; the performance has several high points but is offset by uneven playing and notable recording flaws, leading to a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Patched SBD is correctly pitched, yet all official releases suffer from mastering errors: slow playback, pitch offsets (+2‑3%), uneven balance and missing portions of Space. Overall clarity is acceptable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-a-Roe",
+      "Jack Straw",
+      "Deal",
+      "Terrapin Station",
+      "Candyman",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Good Lovin'",
+      "Promised Land",
+      "Alabama"
+    ],
+    "setlist_flow": "First set is uneven with timing slips and a few average renditions, while the truncated second set compensates with extended jams (21‑min \"Playing\") and stronger moments, especially in the middle."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is highlighted for taking the lead on Jack-a-Roe, delivering a dynamic Jack Straw for Clive, and being 'struck by a mood' during Deal.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:17:17.960707+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-06.137296.sbd.GEMS.flac16"
+}

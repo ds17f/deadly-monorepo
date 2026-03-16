@@ -1,0 +1,31 @@
+{
+  "summary": "Average show with no notable highlights; recording quality unclear",
+  "review": "The sole review rates this performance as an average concert, explicitly stating there are no highlights. No information is given about the source or clarity of the recording, leaving the technical quality indeterminate.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; it describes the show as average and provides no recording details, leading to a neutral overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the concert as average with no standout moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T06:38:21.957250+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-18.sbd.miller.91157.sbeok.flac16"
+}

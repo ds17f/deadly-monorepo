@@ -1,0 +1,99 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1981 show with smoking Birdsong > Let It Grow, powerhouse China Cat Sunflower > I Know You Rider, and tight jams throughout.",
+  "review": "The tape delivers crystal‑clear audience sound despite being hand‑held, letting the band's raw energy shine.  Highlights include a blistering China Cat Sunflower > I Know You Rider, a soaring Birdsong > Let It Grow, plus killer renditions of Cumberland, Big Railroad Blues and Shakedown > Lost Sailor > Saint.  Overall the performance is tight, joyous and showcases Jerry’s ferocious solo work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Across 14 reviews the average rating is ~4.7 with consistent praise for both show and sound; weighting 70 % performance and 30 % audio yields a strong 4.6."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean capture with good instrument separation; occasional hand‑held crowd noise and minor glitches noted by one reviewer but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Birdsong > Let It Grow",
+      "Cumberland",
+      "Big Railroad Blues",
+      "Shakedown",
+      "Lost Sailor",
+      "Saint",
+      "The Wheel",
+      "Playin' in the Band",
+      "Sugar Magnolia",
+      "Alabama Getaway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set builds into a jam‑heavy second set; transitions are smooth and the band maintains momentum from opener through extended jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching solos, powerful lead work and overall ‘ripping’ performance; one note of vocal miscues but no impact on instrumental praise.",
+    "Phil": "Mentioned as driving force alongside Jerry on Cumberland and other jams.",
+    "Bob": "Referenced humorously with Mickey & Bill “messing with his head”; no specific musical critique.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Birdsong > Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:54:43.067661+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-05.aud.unknown.miller.80290.sbeok.flac16"
+}

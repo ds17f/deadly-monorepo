@@ -1,0 +1,86 @@
+{
+  "summary": "Good‑sound soundboard capture of a high‑energy Philadelphia show highlighted by a sublime “To Lay Me Down” and ripping second set, despite some hiss and thin bass.",
+  "review": "The May 4‑1981 Spectrum performance shines with powerful renditions of “Bertha,” “China Cat Sunflower > I Know You Rider,” and an especially moving “To Lay Me Down.” Reviewers note the soundboard source is generally clear, though a bit hissy on the first set and thin without a sub‑woofer. Overall the band delivers tight playing and memorable moments like Jerry’s shredding solo and Brent’s harmonies.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈75 %) are 4‑5 stars, praising the performance and songs; recording issues are mentioned but not severe enough to outweigh the strong musical content."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and sweet soundboard mix; first set described as flat/wacky with a little hiss, thin bass on systems without sub‑woofer, occasional digital glitches, and missing drums/space for ~20 s of “Playin'”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down",
+      "Bertha",
+      "China Cat Sunflower > I Know You Rider",
+      "Playin'",
+      "Nobody's Fault"
+    ],
+    "poor_songs": [
+      "Sailor > Saint",
+      "Nobody's Fault But Mine"
+    ],
+    "setlist_flow": "Reviewers praise a well‑mixed setlist with an odd opener/closer on the first set but a strong, fast‑tempo second set; transitions are generally smooth except for the over‑played Sailor > Saint segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently lauded for blazing guitar tone (\"purple lightning bolt\", shredding six‑minute solo) and youthful sound; a few notes of him dropping out during a peak in the China Cat jam.",
+    "Phil": "",
+    "Bob": "Mixed feedback – hoarse voice seen as an improvement by some, but also criticized for jumping the gun on the China Cat jam and singing ahead of Jerry’s break.",
+    "Keys": "Brent's harmonies are highlighted as solid; keyboards noted as following the band well without any major issues.",
+    "Drums": "Mickey is remembered standing next to Jerry (\"pizza‑shaped drum\"); drums/space were missing early but otherwise solid."
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Nobody's Fault": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:52:20.947246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-04.sbd.clugston.2250.sbeok.shnf"
+}

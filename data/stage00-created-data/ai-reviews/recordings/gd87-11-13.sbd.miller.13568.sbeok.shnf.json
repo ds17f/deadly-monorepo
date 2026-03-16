@@ -1,0 +1,69 @@
+{
+  "summary": "Crystal‑clear soundboard captures a fiery Long Beach run highlighted by a soaring Estimated Prophet, a stellar Bertha and a smoking Minglewood Blues.",
+  "review": "The show is repeatedly praised as a “tremendous joy” with standout moments – an exuberant Estimated Prophet jam, a brisk and delightful Bertha, and a kicking Minglewood Blues that even the drums get special mention for.  The recording is a sound‑board capture noted for its crisp mix, sparkling keyboards and Jerry’s perfect guitar tone, making it highly listenable despite a few minor subjective quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 4‑5 stars and describe both the performance and the soundboard recording in glowing terms; only a single low‑star outlier exists, so the combined show (70 %) and recording (30 %) rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with balanced instruments; Jerry’s guitar described as perfectly crisp, Brent’s keyboards sparkle, and no significant drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Ship of Fools",
+      "Bertha",
+      "Minglewood Blues",
+      "Sugaree",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as a fitting three‑night opener that builds energy, while the second set maintains high momentum with brisk renditions and strong jams; the encore finishes on a heartfelt Dylan cover."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone was called “crisp” and every note perfect.",
+    "Phil": "Phil’s bass was praised for “throwing bombs,” delivering powerful low‑end energy.",
+    "Bob": "Bobby (Weir) is noted for energetic, almost frantic vocals – “spitting” and getting “downright Weir’d.”",
+    "Keys": "Brent’s keyboards are described as on fire, twinkling fingers, and fairydust synths that carry the music.",
+    "Drums": "Mickey’s electronic drums and talking‑drum sections (especially toward the end of Minglewood) received special mention."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:16:47.085579+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-11-13.sbd.miller.13568.sbeok.shnf"
+}

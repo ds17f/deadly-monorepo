@@ -1,0 +1,31 @@
+{
+  "summary": "A solid early‑'90s show with decent playing; recording quality seems acceptable but isn’t described in the reviews.",
+  "review": "Both reviewers rate the performance positively (4–5 stars), noting that it’s a “pretty good” concert from 1991 and correcting the keyboard lineup to Steve Welnick rather than Bruce Hornsby. No specific comments on sound quality are provided, so the recording is presumed listenable but its source type remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two reviews give high star ratings and speak favorably about the show; lack of recording‑quality details prevents a higher confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not mention any audio issues, implying the tape is at least listenable, but no specifics on soundboard vs. audience were given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set pacing; reviewers simply describe the overall show as decent."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby was not playing; keyboards were handled by Steve Welnick.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T17:33:55.529538+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-29.149075.ultra.fixed.miller.clugston.flac24"
+}

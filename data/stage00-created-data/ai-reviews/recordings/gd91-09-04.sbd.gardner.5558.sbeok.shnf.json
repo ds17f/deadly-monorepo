@@ -1,0 +1,97 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy Richfield show highlighted by an unforgettable Scarlet > Fire and scorching Promised Land.",
+  "review": "The September 1991 Richfield performance is consistently praised for its blistering first‑set power and a second set that erupts with one of the most celebrated Scarlet > Fire jams ever.  The SBD capture is crisp, well balanced and loud enough to hear every nuance, while the band delivers locked‑in playing – Jerry’s leads are soaring, Bruce pushes the keys, Phil stays in the pocket and Bob’s rhythm guitar sits front‑and‑center.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 4–5 stars, highlighting both superb musical performance and a clean soundboard source; only a handful of low‑star outliers keep the rating from reaching perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp SBD with good separation; mix is slightly front‑heavy on Bob’s guitar but overall clear, loud and well balanced. No major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Promised Land",
+      "Cold Rain",
+      "Jack Straw",
+      "China Doll"
+    ],
+    "poor_songs": [
+      "Walkin' Blues",
+      "Tennessee Jed",
+      "Black Throated Wind"
+    ],
+    "setlist_flow": "A rare ten‑song first set keeps the momentum high, closing with a fiery Cold Rain → Promised Land.  The second set launches into an explosive Scarlet > Fire and stays tight through space, drums and a smooth China Doll → The Wheel transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being 'locked in', delivering soaring leads, ripping solos and even giving the crowd a wave after the epic Scarlet > Fire.",
+    "Phil": "Generally described as interested and solid; a few notes of occasional plodding but overall supportive bass work.",
+    "Bob": "His rhythm guitar is highlighted for being loud and front‑of‑mix, with memorable moments like catching Bill’s dropped stick and strong playing on Jack Straw and Jack‑A‑Row.",
+    "Keys": "Bruce (keys) gets credit for pushing Jerry, delivering powerful Walkin' Blues chords and adding harmonic depth throughout the set.",
+    "Drums": "Bill's drumming is noted for an inspiring post‑drums segment, a dramatic stick‑drop recovery, and an “Indian‑like” drum meditation that blew listeners away."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "Promised Land": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Cold Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Jack A Row": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-17T23:45:33.010480+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-04.sbd.gardner.5558.sbeok.shnf"
+}

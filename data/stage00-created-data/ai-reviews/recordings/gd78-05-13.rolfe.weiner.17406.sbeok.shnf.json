@@ -1,0 +1,63 @@
+{
+  "summary": "A high‑energy Philly show highlighted by Jack Straw, Terrapin Station and Good Lovin', captured on a solid audience tape.",
+  "review": "Fans rave about the strong performances – Jerry’s gritty vocals on Candyman, a powerful Terrapin Station, and an electric Good Lovin' that even newcomers remember. The audience recording is praised for its full, rich sound despite being a crowd source, making the show enjoyable to listen to.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and cite standout songs and good sound; only one mixed review lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent audience tape with full, rich sound (rated ~4.5 by a reviewer); minor crowd noise but generally clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Terrapin Station",
+      "Good Lovin'",
+      "One More Saturday Night",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows naturally, opening with strong numbers like Jack Straw and building to a memorable Terrapin Station, while the encore delivers an uplifting One More Saturday Night."
+  },
+  "band_member_comments": {
+    "Jerry": "His ‘moaning’ vocal style is highlighted on Candyman; fans love his gritty delivery.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:48:43.853245+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-13.rolfe.weiner.17406.sbeok.shnf"
+}

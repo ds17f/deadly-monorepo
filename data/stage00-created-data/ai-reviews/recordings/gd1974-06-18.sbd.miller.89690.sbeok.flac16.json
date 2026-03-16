@@ -1,0 +1,126 @@
+{
+  "summary": "High‑quality soundboard tape of a legendary 1974 show – crisp overall sound with a few early balance quirks and a second set that dazzles from Eyes of the World to a soaring Morning Dew.",
+  "review": "The gd1974-06-18.sbd.miller recording captures one of the band’s peak ’74 performances.  Reviewers rave about Jerry’s searing lead work, Keith’s piano interplay and Phil’s “bombs,” especially on the meat‑sequence (Weather Report Suite → Let It Grow → The Other One → It's a Sin Jam) and the closing Morning Dew.  The soundboard source is mostly clear; the opening Promised Land has some rough balance that settles quickly, leaving an overall very listenable document.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the musical performance (standout second‑set, iconic jams) and note only minor early sound issues; weighted average of show (≈4.6) and recording (≈4.0) yields a strong 4.4 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced; the first song (The Promised Land) suffers from rough circulation source and early balance problems, but levels normalize by the end of the set. No major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes Of The World",
+      "The Other One",
+      "It's A Sin Jam",
+      "Stella Blue",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Loose Lucy",
+      "Row Jimmy"
+    ],
+    "setlist_flow": "First set is a bit uneven (prominent highlight: Eyes > China Doll), but the second set is a tour‑de‑force—meat sequence, energetic El Paso, and a climactic Morning Dew that leaves listeners breathless."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring lead tone, inventive solos (especially on Eyes, The Other One, and the jam), and even a hidden quote of “My Old Kentucky Home” in Beat It On Down The Line.",
+    "Phil": "Noted for solid bass foundation, “bombs” that drive the jams forward, and a strong opening note on Morning Dew.",
+    "Bob": "Commended for vocal harmonies and rhythm‑guitar work; his presence helps keep the set tight.",
+    "Keys": "Keith’s piano interplay is highlighted as a key element of the Eyes/China Doll duo and throughout the second‑set jams, with occasional “lounge riffs” that Jerry pushes back against to keep the funk alive.",
+    "Drums": "Bill Kreutzmann (referred to as “Bobby”) gets 110 % on Around And Around and provides a propulsive backbone for the extended improvisations."
+  },
+  "song_mentions": {
+    "Eyes Of The World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Around And Around": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Loose Lucy": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Weather Report Suite Prelude": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "It's A Sin Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T20:41:01.342367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-18.sbd.miller.89690.sbeok.flac16"
+}

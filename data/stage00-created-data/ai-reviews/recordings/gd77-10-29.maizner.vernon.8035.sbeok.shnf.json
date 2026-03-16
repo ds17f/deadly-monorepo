@@ -1,0 +1,73 @@
+{
+  "summary": "A high‑energy 1977 show with a smoking Eyes jam and ripping guitar work; the audience tape captures the excitement with good clarity.",
+  "review": "Fans rave about this Dekalb/NIU concert, highlighting Jerry’s wailing wah‑filled solos on Eyes, a blistering Bertha, Let It Grow and an unforgettable Sugar Magnolia. The recording—an audience (AUD) source—is praised for being faithful and lively, with only minor sound‑level quirks noted by a few reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average user rating is ~4.7/5, overwhelming positive language about both performance and recording; ample reviews provide consistent feedback."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively with faithful capture of the band’s dynamics; a couple of reviewers note slight volume inconsistencies or minor sound‑level issues, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Bertha",
+      "Let It Grow",
+      "Jack Straw",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid and tight; second set “smoked” with high energy, especially the Eyes jam and Bertha opening, keeping the crowd on its feet."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for locked‑in playing, wailing wah tones, and soaring solos on Eyes, Bertha, Let It Grow and Sugar Magnolia.",
+    "Phil": "Noted for melodic bass lines that complement Jerry’s improvisations during the slower Eyes tempo.",
+    "Bob": "Mentioned as pairing well with Jerry on Let It Grow, adding vocal power.",
+    "Keys": "",
+    "Drums": "A brief drum break between Sugar Magnolia and SSDD highlighted; overall rhythm section praised for driving the show."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T05:43:38.148550+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-10-29.maizner.vernon.8035.sbeok.shnf"
+}

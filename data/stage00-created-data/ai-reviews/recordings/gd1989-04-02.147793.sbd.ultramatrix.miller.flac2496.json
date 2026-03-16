@@ -1,0 +1,70 @@
+{
+  "summary": "Good‑balanced ultramatrix recording of a solid show with highlights like Iko Iko, Dire Wolf and a rocking Lovelight",
+  "review": "The ultramatrix capture blends soundboard clarity with just enough audience ambience for an enjoyable listening experience. The performance is generally upbeat – Jerry’s “rowdy” opener, Brent’s organ work and several standout numbers (Iko Iko, Dire Wolf, Fantasy, Hey Jude, Lovelight) are praised, though the ballad We Can Run is noted as thin on jam space and the encore average.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the recording and many songs but also calls parts of the show average, leading to a modest overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer says “Good sound with just enough crowd but not overwhelming the mix” and notes lack of Healy reverb – clear balance between board and audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Dire Wolf",
+      "Fantasy",
+      "Hey Jude",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "We Can Run"
+    ],
+    "setlist_flow": "Show feels lively with a strong opener and several dance‑able numbers; the second set includes long drum space and an average encore, giving a mixed but enjoyable pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as having a “rowdy” opener and noted for his string bends throughout.",
+    "Phil": "",
+    "Bob": "Weir’s vocals likened to old‑school Stones style on at least one number.",
+    "Keys": "Brent Mydland gets praise for organ work, scats and the lack of Healy reverb making the mix easier on the ears.",
+    "Drums": "Long drum “space” segment (about 20 min) is highlighted; pre‑drum sections described as not very deep."
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Can Run": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:31:37.316926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-02.147793.sbd.ultramatrix.miller.flac2496"
+}

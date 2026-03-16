@@ -1,0 +1,97 @@
+{
+  "summary": "Soundboard recording with solid clarity captures a storm‑charged Chicago show highlighted by scorching “Sugaree,” “Stagger Lee,” and an electrifying “Watchtower → China Doll” sequence.",
+  "review": "The soundboard source delivers a clear, well‑balanced mix that lets the band’s performance shine despite occasional rain‑induced ambience. Fans rave about the first‑set firepower (Sugaree, Stagger Lee) and the second‑set storm‑matched jams—especially Watchtower into China Doll—while noting a few rough spots like an off‑key Box of Rain and a wandering Drums/Space. Overall the show is remembered as a magical, weather‑enhanced experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈80%) are 4–5 stars and praise both the performance and recording; a few mixed comments lower the average only slightly, yielding an overall rating in the “good‑to‑great” range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and well‑balanced soundboard dub; listeners note “nice sound,” “crisp,” and “excellent fidelity,” with no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Stagger Lee",
+      "Watchtower → China Doll → Lovelight",
+      "Uncle John's Band",
+      "Iko Iko",
+      "Liberty"
+    ],
+    "poor_songs": [
+      "Box of Rain",
+      "Drums/Space (aimless segment)"
+    ],
+    "setlist_flow": "First set is described as tight and fiery, leading into a storm‑enhanced second set where the band rides the thunder with extended jams; the encore (“Liberty”) caps the night on an uplifting note."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring solos (Stagger Lee, Queen Jane, China Doll) and a “spot‑on” tone that connected with the crowd.",
+    "Phil": "Noted for getting funky on Lovelight and providing solid bass foundation throughout the set.",
+    "Bob": "Vocal performance described as raspier than usual but still powerful; his presence felt strong in the encore.",
+    "Keys": "",
+    "Drums": "Drums/Space received mixed feedback – some found it aimless, while others appreciated its atmospheric tie‑in with the storm."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Watchtower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Liberty": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T14:33:13.031490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-18.sbd.miller.13784.sbeok.shnf"
+}

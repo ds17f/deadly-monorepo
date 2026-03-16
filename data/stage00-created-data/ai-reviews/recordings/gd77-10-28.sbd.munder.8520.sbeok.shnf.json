@@ -1,0 +1,68 @@
+{
+  "summary": "Excellent Betty soundboard recording of a classic ’77 show, highlighted by a smoking New Fluorescent Acid > Stella Blue > Goin' Down the Road Feeling Bad sequence and an epic Casey Jones.",
+  "review": "The recording is a well‑preserved Betty Board with generally crisp sound, only a minor clipping on the opening of \"Promised Land\" and occasional audience chatter. Musically the concert shines – reviewers rave about the NFA → Stella Blue → GDTRFB stretch, a soaring \"He's Gone\", and a ferocious \"Casey Jones\", making it one of the stronger 1977 outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (4‑5 stars) praise both performance and sound quality; standout songs are repeatedly highlighted while only isolated minor issues are noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp Betty Board with excellent balance; a brief clipping on the intro of \"Promised Land\" and one reviewer notes occasional non‑crispness and an audience member yelling throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Fluorescent Acid",
+      "Stella Blue",
+      "Goin' Down the Road Feeling Bad",
+      "He's Gone",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a strong first set and an especially flowing second set where momentum shifts beautifully, highlighted by the NFA‑Stella‑GDTRFB sequence and a powerful encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Fluorescent Acid": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:26:24.523758+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-10-28.sbd.munder.8520.sbeok.shnf"
+}

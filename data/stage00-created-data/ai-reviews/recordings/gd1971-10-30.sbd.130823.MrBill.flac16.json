@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality source captures an excellent show highlighted by a stellar Comes A Time and a fun, joke‑filled Truckin' featuring Jerry’s witty banter.",
+  "review": "Both reviewers rave about the performance, calling it one of the best shows they’ve heard with standout moments on Comes A Time and a lively Truckin' that showcases Jerry Garcia’s humor and pedal‑steel work during the NRPS set. The recording is praised implicitly – no audio flaws are mentioned – suggesting a clean, listenable source even though its exact origin isn’t specified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on the musical performance (70% weight) and no reported audio problems (30% weight) lead to a high overall rating despite limited detail about the recording source."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not note any sound issues; they refer to half‑track tapes as the likely source, implying decent fidelity but no explicit description of soundboard or audience mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The evening is described as an excellent, merriment‑filled performance with smooth transitions and memorable moments, especially Jerry’s witty remarks and pedal‑steel work."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for wry comments, sarcastic string scratching before Truckin', and excellent pedal‑steel guitar work during the NRPS set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T08:59:54.013733+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-10-30.sbd.130823.MrBill.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Audience tape recorded with high‑end Sennheiser mics and cassette gear, but no performance details available",
+  "review": "The sole review focuses on the recording setup – two Sennheiser MKH404 microphones fed into a Teac PC10 with Dolby B onto TDK C90 cassettes – indicating an audience capture rather than a soundboard source. No comments are made about the musical performance, setlist flow, or individual band members, so the show quality cannot be assessed from this data.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one neutral‑toned review describing recording equipment; no insight into musical performance, leading to a modest rating weighted toward the limited recording information."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Uses two Sennheiser MKH404 mics, Teac PC10 with Dolby B, recorded onto TDK SA C90 cassettes – decent gear for a balcony audience tape but no subjective sound quality comments."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T08:01:55.836460+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-11.aud.unknown.89475.sbeok.flac16"
+}

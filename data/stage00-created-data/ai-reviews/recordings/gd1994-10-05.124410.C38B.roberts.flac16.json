@@ -1,0 +1,49 @@
+{
+  "summary": "Fair audience recording captures a decent set with solid energy, though only the Space segment truly shines.",
+  "review": "The performance is generally energetic with good playing from the whole band and a stronger second set, but the show falls short of an \"on\" night for many listeners, with Space being the lone standout. The audience (AUD) source sounds only fair—better than some dry soundboard tapes but not pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 3‑star ratings; the show has decent playing but limited highlights, and the audience recording is only fair."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Only fair sound for this AUD source; clearer than very dry soundboard tapes but still exhibits some dryness and lack of definition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first half with a stronger second set, but overall the concert lacks the consistency expected of an \"on\" night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (Vinny) adds some cartoonish keyboard tone during Queen Jane but shows decent chops.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blues for Allah": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:35:06.207004+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-05.124410.C38B.roberts.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Awesome recording praised by the reviewer, though no specific show details are provided.",
+  "review": "The lone review is extremely positive, awarding five stars and calling the recording \"awesome\". While the sound quality appears to be highly regarded, the reviewer offers no insight into the performance itself or any standout moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the recording but provides no detail on the show, leading to a high rating for audio quality but low confidence due to limited information."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as \"awesome\" with no further technical commentary."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T18:34:52.334234+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-28.nak300.andrewf.119326.flac2448"
+}

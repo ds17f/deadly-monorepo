@@ -1,0 +1,77 @@
+{
+  "summary": "Excellent soundboard capture of an epic 1978 second set, highlighted by fire performances of Bertha > Good Lovin', Terrapin, Truckin' and a soaring Sunshine Daydream.",
+  "review": "The recording is a pristine SBD mix that lets every instrument shine, from Keith's lively piano to the dual‑drummer intensity. The show itself bursts with energy—Bertha into Good Lovin' erupts, Terrapin roars, Truckin' stretches out, and Sunshine Daydream closes on a high note—making it one of the standout 1978 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviewers praise both the musical performance and the sound quality, with no negative comments; the show is described as epic and the SBD source as fantastic."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix praised as fantastic and amazing by multiple reviewers; no dropout or muffling issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha > Good Lovin'",
+      "Terrapin Station",
+      "Truckin'",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is described as epic and high‑energy, with seamless transitions (e.g., Bertha into Good Lovin') and extended jams that keep the crowd dancing; the first set is also noted as strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Fierce guitar work, vocalizing praised, described as pure joy like a kid playing with a toy truck.",
+    "Phil": "Leads on Truckin', high‑intensity bass lines, front‑stage presence highlighted.",
+    "Bob": "",
+    "Keys": "Keith is \"not asleep\" at the piano—vivid, lively keyboard work noted.",
+    "Drums": "Both drummers deliver high intensity; Rhythm Devils segment praised for its power."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mags": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:47:48.390693+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-13.sbd.set2.miller.116978.flac16"
+}

@@ -1,0 +1,93 @@
+{
+  "summary": "Crisp, high‑fidelity audience cassette captures a stellar upstate performance with soaring Jerry guitar and standout versions of Shakedown Street, Bird Song and the band’s deep‑cut gems.",
+  "review": "The recording is an exceptionally clear audience tape – a Chris Beach cassette master blended from three mics that delivers crisp, detailed sound without noticeable dropouts. The show itself is praised as one of the best upstate Dead concerts, featuring fire‑filled renditions of Shakedown Street, Wang Dang Doodle, Bird Song, Candyman and a soaring finale with Throwing Stones and Revolution.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are highly favorable; the musical performance is described as outstanding and the recording quality consistently called crisp, clear and technically impressive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, detailed audio from a Chris Beach cassette master recorded with a 2‑cardioid + 1‑omni capsule blend through an MX‑100; no major dropouts, very clear mids and highs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Wang Dang Doodle",
+      "Bird Song",
+      "Candyman",
+      "Minglewood Blues",
+      "China Cat Sunflower",
+      "Terrapin Station",
+      "The Wheel",
+      "Throwing Stones",
+      "Revolution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a seamless, high‑energy flow with strong first‑set momentum and a second set that builds into ecstatic jams and tight transitions, especially the bridge from China Cat Sunflower into Rider and the climactic encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as soaring, nuanced and command‑driven; solos are highlighted as wildly exciting.",
+    "Phil": "Bass is audible and praised for its presence; a brief missed cue early in the show is quickly recovered and overall performance lauded.",
+    "Bob": "Bob Weir’s vocals and rhythm playing are noted as heartfelt and powerful, especially on Women and other deep cuts.",
+    "Keys": "Brent Mydland’s B3 organ work is singled out as amazing, adding depth and presence throughout the set.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive high praise for excellent, driving drumming that anchors the performance."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Revolution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T13:49:29.398887+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-22.sennheiser.dodd.10547.sbeok.shnf"
+}

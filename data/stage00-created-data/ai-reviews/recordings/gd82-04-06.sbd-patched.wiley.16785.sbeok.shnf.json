@@ -1,0 +1,74 @@
+{
+  "summary": "Fair‑quality soundboard recording of a classic early‑80s Spectrum show, famed for a blistering Shakedown Street and a monster The Other One.",
+  "review": "The performance is widely praised – the second set with Shakedown Street, Lost Sailor / Saint of Circumstance, Terrapin and an epic The Other One ranks among the tour’s highlights.  Technically the SBD suffers from noticeable saturation and occasional high‑frequency distortion, but most listeners find it still listenable and enjoy the energy of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average user rating is ~4.1 stars; most comments are enthusiastic about the show despite consistent complaints about distortion, yielding a strong positive overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Saturated mids and occasional high‑frequency distortion on louder passages; some clicks/pops and hot recording levels, but overall the tape remains listenable and captures the band's energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Lost Sailor > Saint of Circumstance",
+      "The Other One",
+      "Terrapin",
+      "Cold Rain and Snow",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is repeatedly called the best of the year, with a high‑energy flow that builds through Shakedown Street into The Other One; the overall pacing keeps the audience engaged from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for spot‑on tone and fiery playing; one reviewer notes he “gets ignorant with the funk.”",
+    "Phil": "Bass highlighted as driving, especially during Truckin' where Phil “swoops down like a B‑47.”",
+    "Bob": "",
+    "Keys": "Brent (keyboard) lauded for “killing” on Shakedown Street and matching Jerry’s leads.",
+    "Drums": "Bill's drumming described as moving the crowd, with space jams noted as especially fun."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:31:23.872027+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-06.sbd-patched.wiley.16785.sbeok.shnf"
+}

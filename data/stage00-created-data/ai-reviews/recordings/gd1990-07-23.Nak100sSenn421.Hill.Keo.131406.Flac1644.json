@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive feedback on the recording or performance – reviewer posted unrelated YouTube links.",
+  "review": "The lone review provides a playlist of external songs and a dedication, without any comment on the Grateful Dead show itself or the audio quality. With a zero‑star rating and no relevant details, it offers no insight into the musical or technical merits of this recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating and no usable information about performance or sound quality; thus the overall assessment defaults to very low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on source type, clarity, or mix; zero‑star rating suggests reviewer was dissatisfied, but reasons are unspecified."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T11:05:21.017532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-23.Nak100sSenn421.Hill.Keo.131406.Flac1644"
+}

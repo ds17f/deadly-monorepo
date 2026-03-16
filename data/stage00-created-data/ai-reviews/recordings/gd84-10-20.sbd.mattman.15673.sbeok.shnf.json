@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent sound‑board capture of a high‑energy 10/20/84 Syracuse show highlighted by a monster Jack Straw, ripping Shakedown Street and an unforgettable second set.",
+  "review": "The recording is a solid SBD that preserves the band’s raw power despite the Carrier Dome’s notorious reverb.  Fans rave about a blistering Jack Straw, a funk‑filled Shakedown Street and a soaring second‑set climax (Bird Song → The Other One → Black Peter).  Jerry’s guitar work shines, Brent’s keyboards add sparkle, and Phil’s bass drives the groove, even if a few vocal flubs and the dome’s acoustics temper perfection.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 50 reviews overwhelmingly praise the performance (standout Jack Straw, Shakedown, Bird Song) and note a good‑to‑excellent soundboard source; only minor complaints about vocal strain or dome acoustics keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear guitar and keyboard mix, noticeable dome reverb and occasional vocal flubs; no drop‑outs.  Listeners note a pleasant delay on Garcia’s vocals and a generally balanced SBD despite the venue’s acoustics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Shakedown Street",
+      "Bird Song",
+      "The Other One",
+      "Black Peter",
+      "He's Gone",
+      "Samson",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Revolution"
+    ],
+    "setlist_flow": "First set builds from tight Bertha/West LA into a soaring Bird Song; second set ignites with Shakedown Street, then a monster Jack Straw that fuels an extended jam leading through The Other One and Black Peter before closing on a heartfelt Lovelight."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for searing guitar tone on Jack Straw, wah‑rich solos on Shakedown, and emotional vocals (though some note vocal strain).",
+    "Phil": "Consistently lauded for driving bass lines (‘bomb zone’) that lock the rhythm section together.",
+    "Bob": "Mentioned for solid rhythm work and occasional piano/organ contributions; praised on Bird Song and Samson.",
+    "Keys": "Brent Mydland highlighted for funky wah‑effects, jazz‑fusion piano on Shakedown, and tasteful delay vocals.",
+    "Drums": "Bill Kreutzmann and Mickey Hart noted for ferocious, steady beats that power the high‑energy second set."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Shakedown Street": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Bird Song": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "The Other One": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Black Peter": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "He's Gone": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Samson": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Revolution": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T23:18:18.963818+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-20.sbd.mattman.15673.sbeok.shnf"
+}

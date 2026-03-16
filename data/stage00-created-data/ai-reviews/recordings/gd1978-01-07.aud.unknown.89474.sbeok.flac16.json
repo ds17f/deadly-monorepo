@@ -1,0 +1,64 @@
+{
+  "summary": "Audience cassette capture with decent fidelity showcases a rare all‑Bob Weir show, highlighted by Jerry’s incendiary guitar and standout performances of Sunrise, Let It Grow and Passenger.",
+  "review": "The recording is an audience (AUD) tape taken on high‑quality Sennheiser mics to cassette; it sounds clear enough for the era with a bit of EQ tweaking needed. Musically the concert is unique – Jerry was out with laryngitis so Bob sang almost the entire set, and reviewers rave about his vocal delivery and Jerry’s scorching guitar work, especially on Sunrise, Let It Grow and Passenger, though a few find the Disco Dancin’ jam weak.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers (12 of 16) give 4‑5 stars and praise the performance despite Jerry’s vocal loss; recording quality is consistently described as good, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded on two Sennheiser MKH 404 mics to a Teac PC‑10 with Dolby B onto TDK C90 cassettes. Sound is clear for an AUD tape, though some listeners suggest EQ adjustments; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sunrise",
+      "Passenger",
+      "Let It Grow",
+      "LIG"
+    ],
+    "poor_songs": [
+      "Disco Dancin'"
+    ],
+    "setlist_flow": "A unique all‑Bob (Bobby) set that compensates for Jerry’s lack of vocals; the band maintains energy throughout, with fiery guitar work and strong vocal performances, though a few jams (notably Disco Dancin’) are viewed as weaker."
+  },
+  "band_member_comments": {
+    "Jerry": "Suffering from laryngitis, no vocals but his guitar was described as incendiary and on fire all night.",
+    "Phil": "",
+    "Bob": "Took the lead on vocals for an almost entirely Bob‑Weir set; praised for hot vocal delivery and song selection (Sunrise, Passenger, etc.).",
+    "Keys": "",
+    "Drums": "Drummers were noted as very energetic throughout the show."
+  },
+  "song_mentions": {
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Disco Dancin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "LIG": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:44:04.577931+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-07.aud.unknown.89474.sbeok.flac16"
+}

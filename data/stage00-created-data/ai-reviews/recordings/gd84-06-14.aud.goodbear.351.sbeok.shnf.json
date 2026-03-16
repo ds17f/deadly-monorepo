@@ -1,0 +1,31 @@
+{
+  "summary": "Classic audience‑recorded tape that elicits mixed reactions – some enjoy the vintage GD sound while others find it lacking.",
+  "review": "The recording is an audience (AUD) source that captures the characteristic Grateful Dead live ambience. Reviewers are split: one praises its classic feel, another calls it subpar, and a third gives a neutral 3‑star rating without detail. No musical performance details were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Three reviews with divergent star ratings (5, 3, 1) and limited commentary result in an average rating of about three stars; confidence is medium due to the small sample size and mixed feedback."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Described as a nice classic GD AUD tape but not a 'killer' recording; another reviewer says it is not good, indicating inconsistent perceived clarity and fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or musical performance were provided in the reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T18:20:49.309383+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-14.aud.goodbear.351.sbeok.shnf"
+}

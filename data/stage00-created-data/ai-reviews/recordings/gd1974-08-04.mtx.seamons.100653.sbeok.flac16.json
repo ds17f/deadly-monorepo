@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent Seamons matrix capture of a classic ’74 show highlighted by a ripping Playing in the Band jam.",
+  "review": "Fans rave that this is the best available version of the concert, noting the crisp Seamons matrix mix and the high‑energy vibe typical of 1974 shows. The jam on Playing in the Band (and the referenced WRS segment) are singled out as standout moments, with no complaints about sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All three reviewers gave high marks (4‑5 stars), praising both the recording’s fidelity and the performance, resulting in a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best version available; no reported dropouts or muddiness – a clean, well‑balanced matrix mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical high‑energy 1974 set with strong improvisational jams and a particularly fiery Playing in the Band segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T23:34:29.722792+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-08-04.mtx.seamons.100653.sbeok.flac16"
+}

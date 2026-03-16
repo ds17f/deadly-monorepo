@@ -1,0 +1,105 @@
+{
+  "summary": "High‑energy 1987 Hampton show captured on a Healy matrix with vibrant crowd noise, featuring an unforgettable Terrapin Station and a blazing second set.",
+  "review": "The performance is widely praised for its fiery first set and an even hotter second set highlighted by a monster Terrapin Station, scorching Jack Straw, and soaring solos from Jerry. The recording is a Healy Ultramatrix – audience‑rich with decent clarity, though Jerry sits a bit low in the mix and Phil’s bass can overload without adjustment. Overall the show is considered one of the best of the 1987 spring run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Multiple detailed 5‑star reviews praise both musical performance and recording; only minor mix issues are noted, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Healy Ultramatrix captures a huge dose of audience energy. Sound is generally clear but Jerry’s guitar is slightly low in the mix and Phil’s bass can saturate, requiring EQ adjustments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Jack Straw",
+      "Candyman",
+      "Loser",
+      "Minglewood",
+      "Gimme Some Lovin'",
+      "Black Muddy River",
+      "Wharf Rat",
+      "Not Fade Away",
+      "Brokedown Palace",
+      "Let It Grow",
+      "Mr. Fantasy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is tight and energetic, building momentum that bursts open in a second set with an unexpected Gimme Some Lovin' opener followed by classic jams and a soaring Terrapin Station finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly lauded – especially the scorching Terrapin solo – though reviewers note his guitar sits low in the mix.",
+    "Phil": "Phil’s bass work is praised (\"drops bombs\") but several reviewers suggest turning him down to avoid saturation on this matrix recording.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s organ receives special mention for adding texture and taking solo spots, enhancing songs like Candyman and Mr. Fantasy.",
+    "Drums": "The drums are described as thunderous, pounding, and a driving force especially during Let It Grow and the second‑set jams."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Muddy River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T19:33:14.655359+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-24.sbd.milller.94349.sbeok.flac16"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "A clear audience recording captures a high‑energy 9/24/76 William & Mary show, highlighted by the iconic Playin’→Supplication→Playin’ sandwich and a blistering Help‑Slip‑Franklin’s sequence.",
+  "review": "This AUD tape delivers surprisingly good clarity for an audience source while preserving the raw excitement of the September 1976 concert. The performance shines on the Playin’‑Supplication‑Playin’ sandwich, the extended Help‑Slip‑Drums‑Slip‑Franklin’s run and a fiery Music Never Stopped, though Stella Blue feels a bit flat and the mix sometimes buries Phil and Jerry. Overall the show is regarded as one of the standout mid‑70s outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars, praising key jams and overall energy; recording quality is good for an audience tape with occasional mix issues, yielding a combined weighted score around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear for an AUD source; crowd ambience captured well. Some reviewers note flatness and low levels on Jerry and Phil, but overall the tape is listenable with decent stereo separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' > Supplication > Playin'",
+      "Help on the Way",
+      "Slipknot!",
+      "Franklin's Tower",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "The first set opens with the unique Playin‑Supplication sandwich, leading into a solid mid‑set. The second set builds to a peak with the Help‑Slip‑Drums‑Slip‑Franklin’s sequence and finishes strong on Music Never Stopped, despite a few average moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching Slipknot! licks and overall guitar fire; some notes of his mix being low in the audience tape.",
+    "Phil": "Described as “thunder juice” by one reviewer but noted as barely audible or flat in a few comments.",
+    "Bob": "Mentioned as belaying/challenging with affection, adding energy to the performance.",
+    "Keys": "Keith Godchaux’s piano receives high praise for improvisational runs on H>S>F and his “staccato” lead into Franklin's; highlighted as a standout element.",
+    "Drums": "Bill and Mickey lauded for thunderous power; drums split during Slipknot transition noted as both a hiccup and an interesting change."
+  },
+  "song_mentions": {
+    "Playin' > Supplication > Playin'": {
+      "positive_mentions": 12,
+      "negative_mentions": 1,
+      "total_mentions": 13
+    },
+    "Help on the Way": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Slipknot!": {
+      "positive_mentions": 7,
+      "negative_mentions": 3,
+      "total_mentions": 10
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:21:08.410296+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-09-24.aud.unknown.16901.sbeok.shnf"
+}

@@ -1,0 +1,55 @@
+{
+  "summary": "Poorly mixed soundboard capture of an electrifying 1984 Greek show highlighted by a scorching Scarlet Begonias → Touch of Grey → Fire on the Mountain sequence and a rare Dark Star encore.",
+  "review": "The performance is widely praised for its high‑energy jam, especially the unprecedented Scarlet>Touch>Fire run and the historic Dark Star played as an encore.  However, listeners repeatedly note that the SBD tape suffers from a disastrous front‑of‑house mix – missing Bob’s guitar and vocals, faint Phil bass, and muffled drums – making many sections difficult to hear despite later fixes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers love the musical moments (≈4.5/5) but criticize the recording mix heavily (≈2/5). Weighted 70 % show + 30 % recording yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Front‑of‑house mix is terrible: Bob Weir’s guitar and vocals are often absent, Phil Lesh’s bass is faint, drums sound muffled. Some matrix/AUD versions improve the balance, but the original SBD remains largely unusable without heavy EQ and fixes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Touch of Grey > Fire on the Mountain",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is steady and builds, second set erupts into a high‑octane jam that peaks with the Scarlet>Touch>Fire sequence and ends with an unforgettable Dark Star encore; overall pacing is praised despite technical setbacks."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for his fiery lead work in ’84, though a few reviewers note he ‘lags’ or sounds strained due to health issues.",
+    "Phil": "His rhythmic foundation is highlighted as essential to the jam, but the mix often buries his bass.",
+    "Bob": "Sharp rhythm guitar and vocals when audible; many complaints that his parts are missing from the mix.",
+    "Keys": "Brent’s keyboards are noted as coming into his own and dominate the soundstage, especially in the poor‑mix sections.",
+    "Drums": "Both drummers receive compliments for ‘cool fresh sounds’, yet the FOH mix frequently drowns them out."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Touch of Grey > Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:10:43.023321+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-13.sbd.ferguson.joshd.fix-353.90464.flac16"
+}

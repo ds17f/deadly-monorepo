@@ -1,0 +1,69 @@
+{
+  "summary": "A memorable Irvine show with standout Box of Rain, Desolation Row and a killer Lazy Lightnin'→Let It Grow transition, but marred by Jerry’s abrupt exit from Terrapin Station; the recording is fair with a brief crowd intro and an odd cut‑off at the end of Lovelight.",
+  "review": "The performance shines on the first set – Box of Rain, Desolation Row and the surprising Lazy Lightnin' jam into Let It Grow are repeatedly praised – yet the second half is haunted by Jerry walking off mid‑Terrapin Station, leaving only a brief Lady With A Fan fragment before drums and Brent’s “Don’t Need Love”.  The source sounds like an audience/soundboard hybrid: it starts with about a minute of crowd noise and inexplicably drops the final seconds of Lovelight, giving the tape a fair but imperfect listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Ten detailed reviews give a clear picture: strong musical moments offset by the disruptive Terrapin incident and minor recording glitches, leading to an overall moderate‑to‑good rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Starts with ~1 min of crowd ambience; cuts off the final part of Lovelight; no explicit comments on clarity or mix, suggesting a mixed audience/soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Desolation Row",
+      "Lazy Lightnin'",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "First set flows strongly with fan‑favorite numbers and a praised Lazy Lightnin'→Let It Grow transition; second set is disrupted when Jerry leaves mid‑Terrapin, leading to an abrupt shift into Drums and Brent’s “Don’t Need Love”, making the overall pacing uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his sudden departure during Terrapin Station, mention vocal decline and health concerns, but also acknowledge competent playing on other songs.",
+    "Phil": "",
+    "Bob": "Bobby (Weir) steps up for lead parts after Jerry’s exit; a brief rap in Lovelight is mentioned.",
+    "Keys": "Brent takes over with “Don’t Need Love” and provides a more aggressive keyboard approach during the interruption.",
+    "Drums": "Mickey & Bill deliver a harsher entry into Drums following Jerry’s walk‑off."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightnin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:55:19.114644+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-04-13.schoeps.eD.13513.sbeok.shnf"
+}

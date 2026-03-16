@@ -1,0 +1,56 @@
+{
+  "summary": "Soundboard recording is a bit muddy and bass‑heavy, but the show shines with a smoking Jack Straw and energetic Promised Land/Bertha performances.",
+  "review": "The May 3 1977 set captures a comfortable, laid‑back band that delivers standout moments – especially a scorching Jack Straw and lively renditions of Promised Land and Bertha.  The SBD source suffers from muddy mids and an over‑prominent bass, with a brief tape‑flip gap that loses part of Row Jimmy, but the musical payoff outweighs the technical flaws for most listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (standout songs, good band interaction) while recording quality draws repeated criticism for muddiness and bass heaviness; the weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Overall muddy sound with high bass levels; some sections crisp early in the set, but later a funky mid‑range and a ~2‑minute loss of Row Jimmy due to tape‑flip.  Cross‑fade helps but the SBD is not as clear as an available audience (AUD) recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Promised Land",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band settles into a relaxed, comfortable stride with a strong double‑opener (Promised Land → Bertha), a lively Jack Straw that ignites the crowd, and an engaging second‑set interloper that keeps momentum without sandbagging."
+  },
+  "band_member_comments": {
+    "Jerry": "Quick, ascending scalar runs and soulful licks are highlighted despite occasional drag in tempo.",
+    "Phil": "",
+    "Bob": "His vocal blend with Donna and Jerry on slower numbers is praised as beautiful.",
+    "Keys": "Keith's energetic keyboard work is noted especially on Promised Land and Bertha.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T22:18:16.679226+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-03.set1-sbd.miller.21646.sbeok.shnf"
+}

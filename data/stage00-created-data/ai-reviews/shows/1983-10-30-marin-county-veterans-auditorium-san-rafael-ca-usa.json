@@ -1,0 +1,55 @@
+{
+  "summary": "Solid rain‑soaked set with energetic second half",
+  "blurb": "The band delivered a solid, above‑average performance despite a rainy night. Highlights include an upbeat first‑set opener and a high‑energy second set featuring Playing In The Band into drums and space. Recording quality varies; one mix is muddy while another captures the show clearly.",
+  "review": "On October 30, 1983 at the Marin County Veterans Auditorium, the Dead rode out a rain‑soaked evening with a performance that most fans remember as solid and surprisingly lively for a late‑peak show. The first set kicked off with a bright Alabama Getaway and moved through familiar terrain without any glaring missteps, while the second set built momentum from a buoyant Bertha into a flowing Playing In The Band that segued into an extended Drum/Space stretch before launching back into Truckin', Spoonful, Black Peter and a jubilant Sugar Magnolia. Though the show’s musical flow was consistently above‑average, listeners will notice a stark contrast in recording quality: one soundboard source is notoriously muddy—burying Jerry’s lead lines and muffling Bob’s vocals—while another capture offers clear, “great aud” sound that lets the band’s energy shine through.\n\nFor Deadheads looking to experience this night, the clearer audience‑type recording provides the most enjoyable listening window into a set that, despite the weather and some technical hiccups, showcases Brent’s steady keyboards, Phil’s anchoring bass, and a tight dual‑drum groove from Mickey and Billy. It may not rank among the era’s classics, but it stands as a respectable snapshot of the band’s resilience and groove in the early ’80s.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 6,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "One recording praised the high‑energy, solid performance (positive sentiment) while the other noted a muddy mix but still called the show just above average (mixed sentiment). The overall consensus leans positive about the musical execution, yielding a moderate +0.8 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1983-10-30.fob.realistic.andrewf.92382.shnf",
+    "reason": "Clearer sound that captures the high‑energy set; preferable to the muddy SBD mix."
+  },
+  "key_highlights": [
+    "Above‑average performance despite rain‑soaked conditions",
+    "Energetic second‑set jam starting with Playing In The Band into drums and space",
+    "Recording quality varies: one muddy soundboard, another clear audience capture"
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Truckin'",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers his usual fluid phrasing and melodic leads, though the muddy board sometimes buries his guitar.",
+    "Phil": "Provides a steady, supportive bass foundation that keeps the groove tight throughout both sets.",
+    "Bob": "Vocals are generally on point; however, the SBD mix mutes and distorts them on several numbers.",
+    "Brent": "Lays down consistent keyboard textures and occasional vocal harmonies, reinforcing the band's dynamics.",
+    "Mickey": "Locks in with Billy to drive the rhythmic pulse, especially effective during the Drum/Space segment.",
+    "Billy": "Maintains a solid groove and adds dynamic accents that propel the second‑set improvisations."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-14T13:57:11.763189+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Spoonful",
+      "Black Peter",
+      "Sugar Magnolia"
+    ]
+  ]
+}

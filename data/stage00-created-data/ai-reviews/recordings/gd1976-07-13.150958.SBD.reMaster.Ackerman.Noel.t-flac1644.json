@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard mix is solid, but the performance is judged “pretty awful” by the reviewer.",
+  "review": "The remastered soundboard capture is praised for a good mix, and the band managed to start and finish songs—a step up from earlier shows. However, the lone reviewer rates the concert with one star, calling it “pretty awful” despite those technical positives, indicating strong disappointment with the musical performance.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only a single review is available; it praises recording quality but rates the show poorly (1 star). Weighted heavily toward show quality, the overall rating falls near the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the mix is good; no complaints about clarity or balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The reviewer mentions that the band could start and finish songs, but overall feels the concert was disappointing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:14:54.776782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-13.150958.SBD.reMaster.Ackerman.Noel.t-flac1644"
+}

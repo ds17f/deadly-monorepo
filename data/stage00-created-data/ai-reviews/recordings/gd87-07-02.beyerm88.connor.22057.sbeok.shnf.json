@@ -1,0 +1,107 @@
+{
+  "summary": "Solid late‑80s hometown show with strong moments (Black Muddy River, He's Gone, Cassidy) captured on a decent soundboard recording that suffers from occasional pitch and mix quirks.",
+  "review": "The July 2, 1987 Rochester concert delivers an energetic, \"meat‑and‑potatoes\" performance – the band rolls through highlights like Black Muddy River, He's Gone, China, Rider and Looks Like Rain with plenty of late‑show jamming. The soundboard source is generally clear but shows a high‑pitched tilt and some muted drum/space sections that keep it from being pristine. Overall fans find the show enjoyable and recommend it despite its technical imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Average user rating is ~3.7/5; most comments praise the playing and setlist while noting only modest recording flaws, yielding a solid combined score around 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture with decent balance; however the pitch is slightly high on some tracks, drums/space are muted, and a few listeners note occasional glitches or a \"weird\" mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Muddy River",
+      "He's Gone",
+      "Cassidy",
+      "Looks Like Rain",
+      "China",
+      "Rider"
+    ],
+    "poor_songs": [
+      "Push",
+      "Samson"
+    ],
+    "setlist_flow": "A lively first set with strong energy followed by a jam‑heavy second set; the show feels like a classic late‑80s upstate Dead gig – long, cohesive and full of fan‑favorite moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised – well‑formed lines, wah on He’s Gone, and strong interplay with Brent.",
+    "Phil": "Lesh’s bass stepping back is highlighted as fine; Phil adds harmonies (e.g., on \"Tons\") and gets a shout from the crowd.",
+    "Bob": "Bobby’s vocals draw mixed reactions – his songs are loved but some reviewers note over‑singing and vocal strain.",
+    "Keys": "Brent’s keyboards are described as subdued at times, with occasional nice spots (3:40‑3:52) and a dated synth effect on \"Stella\"; overall interplay with Jerry is positive.",
+    "Drums": "The drums/space segment is noted as muted but pleasant; no major complaints beyond the general mix quirks."
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tons": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:53:17.006928+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-07-02.beyerm88.connor.22057.sbeok.shnf"
+}

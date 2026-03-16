@@ -1,0 +1,57 @@
+{
+  "summary": "Decent but average show with a few highlights (Far From Me, Let It Grow) and a good soundboard‑like recording that has Jerry’s guitar low in the mix.",
+  "review": "The performance is viewed as an average outing with only modest moments of excitement – Far From Me and Let It Grow stand out in set 1 while China Cat Sunflower > I Know You Rider and Gimme Some Lovin' provide some fun in set 2. The recording is decent, though listeners note that Jerry’s guitar sits a bit low in the mix, suggesting it isn’t a pristine soundboard capture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "One review gives a middle‑of‑the‑road rating (3 stars); the show is described as average with a few highlights, and the recording is decent but has mix issues."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear enough, but Jerry’s guitar is noticeably low in the mix; no major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Far From Me",
+      "Let It Grow",
+      "China Cat Sunflower > I Know You Rider",
+      "Gimme Some Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set has a couple of bright spots (Far From Me, Let It Grow) but overall lacks conviction; second set is light on jamming with only routine fun from China/Rider and Gimme."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar is a bit low in the mix; reviewer notes he took a long nap early in the show.",
+    "Phil": "Sings early on Gimme Some Lovin', which is highlighted as enjoyable.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:37:14.290366+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-02.pzm.russjcan.94115.sbeok.flac16"
+}

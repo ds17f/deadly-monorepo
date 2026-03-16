@@ -1,0 +1,45 @@
+{
+  "summary": "Mixed‑quality recording of a show that shines on Lesh and The Other One but suffers from harsh pan and uneven performance.",
+  "review": "The concert is praised for Phil Lesh’s lush runs, solid harmonies and a standout rendition of “The Other One,” while one reviewer finds the overall performance underwhelming and notes a harsh stereo pan and thin vocals that required post‑mix remediation. Recording quality is not definitively identified but appears fair, with some mix issues noted alongside generally decent sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Three reviews give mixed signals (two 4‑star positives, one 2‑star negative) and comment on both strong musical moments and recording mix problems, leading to a middle‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer mentions a harsh pan and “iffy” vocals that needed added reverb; no explicit soundboard/audience note, but overall sound is passable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Stars & Stripes Forever"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist is considered solid and well‑chosen, but the performance feels uneven—highlights like Lesh’s playing and The Other One contrast with a generally lackluster vibe noted by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally regarded as solid; one reviewer notes “great jerry time” from earlier years.",
+    "Phil": "Highlighted as the standout of the night – lush runs, fills and strong presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stars & Stripes Forever": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:10:34.405845+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-09.mtx.seamons.bertrando.103311.flac16"
+}

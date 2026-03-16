@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1968 performance, highlighted by a classic Dark Star, tight Eleven and soaring Other One despite Pigpen’s organ absence.",
+  "review": "The show shines with an inspired first set—Dark Star, Saint Stephen, The Eleven and Death Don’t Have No Mercy are all praised for their intensity and musicianship. The second set delivers a powerful Other One suite and a memorable New Potato solo from Phil, though the lack of keyboards and a weak drum segment are noted. The stereo soundboard recording is crisp and well‑panned, offering superb clarity with only minor mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance (Dark Star, Eleven, Other One) combined with multiple mentions of excellent soundboard quality outweighs only minor criticisms about missing organ and a weak drum segment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear stereo mix with impressive panning; occasional high percussion (guiro) in the mix and noticeable absence of Pigpen’s organ on New Potato, but overall superb clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "The Other One",
+      "Death Don't Have No Mercy",
+      "Saint Stephen"
+    ],
+    "poor_songs": [
+      "New Potato (rough transition, missing keyboards)",
+      "Drums (weak segment)"
+    ],
+    "setlist_flow": "First set is widely regarded as stronger, delivering tight jams and high energy; the second set maintains momentum with a strong Other One suite but suffers from a few rough transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Great vocal performance on Dark Star and Death Don't Have No Mercy; guitar tone praised throughout.",
+    "Phil": "Astonishing Thirteens‑style solo during New Potato, highlighted as a peak moment.",
+    "Bob": "Nice vocal contribution on New Potato.",
+    "Keys": "Pigpen’s organ absent, making the New Potato transition feel thin; occasional high percussion in the mix noted.",
+    "Drums": "Weak drum segment mentioned; overall percussion described as shakey but well‑panned."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Saint Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "New Potato": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:25:16.696494+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-10-12.sbd.gans.miller.owen.9385.shnf"
+}

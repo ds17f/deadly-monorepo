@@ -1,0 +1,68 @@
+{
+  "summary": "Beautiful soundboard capture of a solid 1992 show highlighted by a smoking Help>Slip>Franklins opener and a tight second set.",
+  "review": "The recording is praised as a beautiful sound‑board source with generally clear audio, though some reviewers note the vocals are slightly distant. Musically the concert is regarded as a strong performance – Jerry’s post‑Brent ballads shine, Help>Slip>Franklins opens the night with fire, and the second set delivers standout moments like Casey Jones, Smokestack Lightning and an inspired New Speedway Boogie.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most substantive reviews are highly positive about both the performance (standout songs, tight set) and the sound‑board recording quality; only minimal technical quibbles were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as a beautiful sound board with clear mix overall; some mention voices slightly distant in the mics. Track‑list errors are noted but do not affect audio quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklins",
+      "New Speedway Boogie",
+      "Casey Jones",
+      "Smokestack Lightning",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opens with a fiery Help>Slip>Franklins sequence, maintains momentum through the first set, and delivers a solid second set despite some track‑order labeling errors."
+  },
+  "band_member_comments": {
+    "Jerry": "His post‑Brent ballads shine; fine form throughout and delivers an especially strong New Speedway Boogie.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help>Slip>Franklins": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:04:00.150584+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-28.dsbd.miller.32550.sbeok.flac16"
+}

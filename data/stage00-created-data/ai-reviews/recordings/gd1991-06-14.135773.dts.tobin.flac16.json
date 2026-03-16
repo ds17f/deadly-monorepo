@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is plagued by hiss on every track, making it essentially unlistenable; no show details available.",
+  "review": "The sole reviewer reported that the download was unusable due to pervasive hiss across all tracks, indicating a very poor recording. No comments were made about the musical performance or setlist, so the quality of the show cannot be assessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 1‑star rating; reviewer cites severe hiss and download failure, providing no positive aspects."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "All tracks contain noticeable hiss; the download did not work properly for the reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the performance or setlist."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T21:04:26.864973+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-14.135773.dts.tobin.flac16"
+}

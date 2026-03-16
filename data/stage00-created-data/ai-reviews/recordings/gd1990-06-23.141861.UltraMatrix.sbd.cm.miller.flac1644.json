@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent matrix recording captures a killer show highlighted by an outstanding 'Eyes of the World'.",
+  "review": "The UltraMatrix source delivers crystal‑clear audio with a punchy Phil Lesh bass that sits front and center, making the entire performance sound vibrant. Reviewers single out the rendition of \"Eyes of the World\" as absolute perfection, and describe the whole concert as “kicks ass”. The recording quality is praised as excellent, matching the high energy of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single five‑star review emphasizes both an exceptional performance (especially 'Eyes of the World') and excellent recording quality, warranting a high rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Review notes crisp, punchy sound with Phil's bass front‑and‑center; no issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout with a particularly unforgettable 'Eyes of the World' moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Punchy bass front and center, highlighted by reviewers.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:09:30.397018+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-23.141861.UltraMatrix.sbd.cm.miller.flac1644"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Epic Dark Star > High Time, first Uncle John's Band, organ‑rich set",
+  "blurb": "The concert features a soaring 30‑minute Dark Star that segues into High Time and the debut recording of \"Uncle John’s Band\". Jerry’s youthful voice and Tom Constanten’s organ drive an early‑’69 energy, while the rhythm section tightens after a ragged opening.",
+  "review": "On December 4, 1969 at the Fillmore West, the Grateful Dead delivered a historically significant set that still thrills listeners. The highlight is undoubtedly the 30‑minute Dark Star – described as “soaring” and “spooky” – which flows seamlessly into High Time, showcasing Garcia’s newly adopted Stratocaster tone and an organ backdrop that Tom Constanten kept bubbling throughout the night. Equally noteworthy is the appearance of \"Uncle John’s Band,\" captured for the first time on tape, adding a fresh acoustic‑folk flavor to the set. While early moments suffer from tape hiss, occasional feedback, and a briefly out‑of‑tune Strat, the band quickly finds its groove; Phil Lesh’s “slugging” bass anchors the sound, and the dual drummers move from a seesaw feel into a tighter swing. Pigpen’s vocal and organ contributions also stand out, adding gritty soul to the mix. Overall, despite technical imperfections, the performance is energetic, historically rich, and offers several classic Dead moments in one compact show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings report mixed sentiment (highlighting both strong Dark Star and technical flaws) while one is positive; consistent praise for Dark Star, Constanten's organ, and Jerry's playing yields a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-12-04.sbd.wizard.23975.sbeok.shnf",
+    "reason": "Fair‑sounding soundboard that captures the historic set, includes the first recorded Uncle John's Band and a powerful Dark Star despite some tape hiss."
+  },
+  "key_highlights": [
+    "30‑minute Dark Star that segues into High Time",
+    "First ever recorded performance of \"Uncle John’s Band\"",
+    "Tom Constanten’s organ drives the early‑’69 energy throughout",
+    "Jerry’s youthful vocals and strong Strat tone on the jam"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "High Time",
+    "Good Lovin'",
+    "Uncle John's Band",
+    "Black Peter"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers a powerful, youthful vocal and a bright Strat tone on Dark Star; a brief tuning slip is noted but overall his playing shines.",
+    "Phil": "Lesh provides a slugging, Jack‑Casady‑like bass that underpins the set with solid low‑end foundation.",
+    "Bob": "",
+    "Tom": "Constanden’s organ fills are prominent on every song, giving the show its distinctive early‑’69 texture; Pigpen’s vocal and harmonica work also receive praise.",
+    "Mickey": "Hart contributes atmospheric percussion that helps transition from the ragged opening into a tighter groove later in the set.",
+    "Billy": "Kreutzmann’s seesaw‑style drumming at the start settles into a more cohesive rhythm as the show progresses."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T18:25:04.100496+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "High Time"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Uncle John's Band"
+    ],
+    [
+      "Black Peter"
+    ]
+  ]
+}

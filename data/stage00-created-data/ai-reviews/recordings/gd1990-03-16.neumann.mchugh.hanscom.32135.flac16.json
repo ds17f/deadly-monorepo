@@ -1,0 +1,58 @@
+{
+  "summary": "Clear audience recording of a mixed‑quality show with strong Touch of Grey and Birdsong but overall uneven performance.",
+  "review": "Both reviewers agree this is the best‑sounding audience source for the March 1990 show, noting its clarity and expansive soundstage. The musical performance is divisive – one fan calls it the weakest night of the tour while another finds it solid, highlighting a great Touch of Grey and Birdsong but noting weaker moments on Ship of Fools and Man Smart (Woman Smarter).",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised as clear and expansive, while opinions on the show's musical strength are split, yielding an overall middling rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and expansive soundstage; praised as the best‑sounding audience source for this show with minimal muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Birdsong"
+    ],
+    "poor_songs": [
+      "Ship of Fools",
+      "Man Smart (Woman Smarter)"
+    ],
+    "setlist_flow": "First set contains highlights like Touch of Grey and Birdsong, but the overall show feels uneven with some weaker moments; reviewers note the tour improves after this date."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:49:13.377250+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-16.neumann.mchugh.hanscom.32135.flac16"
+}

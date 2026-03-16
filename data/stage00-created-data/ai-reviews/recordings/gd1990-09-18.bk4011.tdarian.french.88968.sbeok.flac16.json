@@ -1,0 +1,67 @@
+{
+  "summary": "Loud but clear audience recording captures a rapturous set with standout Promised Land, The Other One and Sugar Magnolia performances.",
+  "review": "The three reviewers rave about the show’s energy – Jerry’s epic scatting on Promised Land, Bobby’s ferocious lead‑in, and an inspired jam that morphs into a superb Other One before rolling into Wheel.  Despite being an audience tape, tdarian’s recording is unusually crisp with strong bass/kick presence and surprisingly balanced keyboards, making the listening experience feel like you’re right in the throng.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "All three reviews are highly positive about both performance and recording; the show is described as exceptional while the audience source is praised for its clarity, yielding a rating in the top tier."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very loud (-33 dB) but clear; bass and kick are well‑represented, keyboards slightly subdued yet still colorful.  Overall a crisp audience capture that avoids the typical muffiness of many crowd recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land",
+      "The Other One",
+      "Wheel",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds from tight, punchy numbers into an expansive second‑set jam that weaves through The Other One and culminates in a joyous Wheel before closing with Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Epic shouting, scatting and soloing on Promised Land; stamps his foot during the song and drives the climax of the show.",
+    "Phil": "Dances into the break, adding kinetic energy to the jam.",
+    "Bob": "Furiously thrashing, launches the band into a high‑octane Promised Land and rides the jam out of control.",
+    "Keys": "Vince’s keyboards are subdued but add tasteful color; described as measured, studious and occasionally finger‑banging chordal magic.",
+    "Drums": "Mickey and Billy lock in perfectly; multiple drum moments create a spacey, syncopated feel."
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:45:59.308664+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-18.bk4011.tdarian.french.88968.sbeok.flac16"
+}

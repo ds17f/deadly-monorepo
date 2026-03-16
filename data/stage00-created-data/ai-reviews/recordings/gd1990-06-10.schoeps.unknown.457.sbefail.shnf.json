@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent audience recording captures a stellar \"Eyes of the World\" and solid Space segment despite some filler tracks.",
+  "review": "The show is praised as one of the era’s finest, highlighted by an almost‑15‑minute “Eyes of the World” with a great intro and a strong Space/“Gimme Some” stretch. The audience recording is described as very nice with clear ambience, though there are indexing quirks (Crazy > Playin' > Drums > Space) and uncertain filler material at the end.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "A single detailed 5‑star review praises both the musical performance and the audience sound quality, indicating a top‑tier show with excellent recording despite minor indexing issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience capture is very nice and clear; minor indexing problem where Crazy > Playin' > Drums > Space occupies one track slot, but overall sound is clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a significant show with strong jams; minor concerns about filler material at the end and track‑indexing quirks, but the flow remains compelling."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T07:35:08.488932+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-10.schoeps.unknown.457.sbefail.shnf"
+}

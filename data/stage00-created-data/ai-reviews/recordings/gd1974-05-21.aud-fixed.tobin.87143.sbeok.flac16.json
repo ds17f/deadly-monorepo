@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording with crystal‑clear sound despite occasional mix dips, featuring a blistering 46‑minute Playing in the Band and a standout Money performance.",
+  "review": "The tape, captured by Pat Lee and lovingly restored by Kevin Tobin, delivers surprisingly high‑fidelity audio for an audience source, though Bob and Keith can slip into the background at moments. Musically the show is a fire‑storm, highlighted by a marathon 46‑minute Playing in the Band and a superb run of three consecutive Money renditions. Overall the performance and its presentation are highly recommended.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average 4.5) with praise for both musical performance and audio quality; minor mix issues do not detract from overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Pat Lee’s original aud capture is surprisingly clean; Kevin Tobin restored missing sections after battery‑saving cuts. Reviewers note the sound is crisp and perfect overall, with only occasional moments where Bob's bass and Keith's keys get slightly lost in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Money"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert blazes from start to finish, featuring an extended exploratory jam (46‑minute PITB) and a rare three‑song Money sequence that keeps the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Gets a little lost in the mix at times.",
+    "Keys": "Gets a little lost in the mix at times.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Money": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T19:55:31.428248+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-21.aud-fixed.tobin.87143.sbeok.flac16"
+}

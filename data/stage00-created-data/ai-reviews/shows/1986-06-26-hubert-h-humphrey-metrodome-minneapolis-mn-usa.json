@@ -1,0 +1,63 @@
+{
+  "summary": "Mixed show with bright Terrapin>Estimated Prophet segue and solid jams",
+  "blurb": "The set features a strong Terrapin Station segue into Estimated Prophet along with highlights like Mexicali Blues and Sugar Magnolia. Jerry’s guitar work is decent despite the dome's muddy acoustics, while Phil’s bass disappears in the mix and the drums sound echo‑laden. Overall the performance feels hesitant and uneven.",
+  "review": "June 26, 1986 at the Hubert H. Humphrey Metrodome was a one‑set affair that never quite found its groove. The band opened with a quirky Dylan/Petty interlude before slipping into their own material, and while the setlist includes several classics, the show feels disjointed. Terrapin Station launches into an inspired Estimated Prophet transition that shines as the night’s high point, and Mexicali Blues offers a brief burst of energy. Jerry Garcia delivers moments of decent‑to‑mesmerizing playing—his opening “killer” solo is noted—but the dome’s severe echo drags down the overall clarity. Phil Lesh’s bass gets buried under the reverberation, and both Mickey Hart and Bill Kreutzmann suffer from a muddy, echo‑filled drum sound. Bob Weir sounds muddled early on, briefly lifts during the Petty interlude, then falls back into the general flatness. Brent Mydland is largely unremarked upon in the reviews, suggesting his contributions were neither a highlight nor a detriment. In short, the night offers flashes of brilliance amid a generally hesitant performance, making it more of a curiosity than a must‑listen show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.8,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.1,
+      "sentiment_rationale": "All three recordings are described as 'mixed' – a few reviewers note bright moments (Terrapin Station, Estimated Prophet) while others call the set hesitant and flat; overall sentiment leans slightly positive due to recurring standout song mentions.",
+      "final_calculation": "2.5 + 0.2 + 0.1 = 2.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1986-06-26.139268.partial.sbd.miller.flac24",
+    "reason": "Excellent soundboard clarity captures the highlight moments vividly, making it the most enjoyable listen despite being incomplete."
+  },
+  "key_highlights": [
+    "Terrapin Station > Estimated Prophet transition stands out as a bright moment",
+    "Mexicali Blues provides an energetic lift early in the set",
+    "Sugar Magnolia closes the second set with classic jam energy",
+    "Jerry’s opening solo is described as \"killer\" even amid poor dome acoustics"
+  ],
+  "song_highlights": [
+    "Terrapin Station",
+    "Estimated Prophet",
+    "Mexicali Blues",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Decent overall with occasional mesmerizing playing; opening solo praised as \"killer\" despite the poor sound environment.",
+    "Phil": "Bass frequently lost in the mix and noted for a brief, theatrical moment on scaffolding; no strong musical highlights recorded.",
+    "Bob": "Muddled early, improves briefly during the Petty interlude, then slips back into flatness.",
+    "Brent": "",
+    "Mickey": "Drums suffer from echoing, muddy sound and lack of clarity throughout the show.",
+    "Billy": "Same as Mickey – drum articulation lost in dome reverberation, making rhythm section hard to follow."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-15T16:28:34.164391+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Terrapin Station",
+      "Estimated Prophet",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Truckin'",
+      "Black Peter",
+      "Around & Around",
+      "Sugar Magnolia"
+    ],
+    [
+      "Me And My Uncle",
+      "Mexicali Blues"
+    ]
+  ]
+}

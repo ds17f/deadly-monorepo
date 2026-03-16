@@ -1,0 +1,66 @@
+{
+  "summary": "High‑energy Boston show with epic Uncle John’s > Playin’ sandwich and Weather Report Suite",
+  "blurb": "The second set delivers a marathon Playing In The Band → Uncle John's Band → Playing In The Band sandwich that many fans call “marathon” material. Garcia is on fire, delivering crisp solos on Uncle John's Band and Casey Jones, while Keith’s keyboards anchor the early set. The soundboard recordings capture the band at a peak, making this a go‑to version of the December ’73 run.",
+  "review": "December 1, 1973 at Boston Music Hall finds the Dead in top form, cruising through a setlist that balances tight songcraft with sprawling improvisation. The first set rolls from a punchy The Promised Land into a bright Mexicali Blues and a soaring Weather Report Suite (Prelude → Part 1 → Let It Grow) that showcases Keith’s “hot‑rod” keyboard work and Garcia’s fluid phrasing. Highlights include a fiery Casey Jones where Jerry’s tone is described as perfect, and an early‑set burst of energy on Big River.\n\nThe second set is the show’s centerpiece: a three‑song sandwich—Playing In The Band → Uncle John's Band → Playing In The Band—that builds into a marathon jam praised across multiple soundboard sources. The band stays “on fire” throughout, with Phil laying down a healthy bass foundation and Bill adding his trademark drive. The Weather Report Suite and the later Dark‑Star‑ish excursion captured on the matrix mix add extra depth, but it’s the crystal‑clear SBD capture (Clugston #6648) that best delivers the nuance of this high‑energy performance. For anyone hunting a definitive December ’73 experience, this show is a must‑listen.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Multiple recordings (two strong positives, one negative, and several mixed) consistently praise the Uncle John's Band/Playing‑In‑The‑Band sandwich, Garcia’s solo work, and high energy throughout. Positive language such as \"on fire\", \"crystal‑clear\", \"stellar\" appears across at least three soundboard sources, outweighing isolated criticism of audience tapes.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1973-12-01.sbd.clugston.6648.sbefail.shnf",
+    "reason": "Crystal‑clear soundboard capture with excellent instrument separation; includes the epic Uncle John's Band finish and marathon Playin' UJB jam, delivering the most faithful representation of the show’s energy."
+  },
+  "key_highlights": [
+    "Epic Playing In The Band → Uncle John's Band → Playing In The Band sandwich",
+    "Weather Report Suite (Prelude + Part 1) that builds into Let It Grow",
+    "Garcia’s scorching solos on Uncle John's Band and Casey Jones",
+    "High‑energy second set with a marathon jam that keeps momentum rolling"
+  ],
+  "song_highlights": [
+    "Uncle John's Band",
+    "Playing In The Band",
+    "Weather Report Suite Prelude",
+    "Weather Report Suite Part 1",
+    "Casey Jones",
+    "Mexicali Blues"
+  ],
+  "band_performance": {
+    "Jerry": "On fire and patient, delivering perfect tone and standout solo moments on Uncle John's Band, Casey Jones, and Mexicali Blues.",
+    "Phil": "Very healthy bass work, especially in the Uncle John's Band outro; provides a solid, calming foundation throughout.",
+    "Bob": "Forceful drumming with aggressive shouts during Me And My Uncle, backing Keith’s hot‑rod keyboard lines.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-24T03:41:30.851091+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Playing In The Band"
+    ],
+    [
+      "Weather Report Suite Prelude",
+      "Weather Report Suite Part 1",
+      "Let It Grow"
+    ],
+    [
+      "Casey Jones"
+    ],
+    [
+      "Mexicali Blues"
+    ]
+  ]
+}

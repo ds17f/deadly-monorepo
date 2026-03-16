@@ -1,0 +1,57 @@
+{
+  "summary": "High‑energy Chinese New Year show captured on a crisp audience tape; standout Truckin' crowd moment and fiery Hell In A Bucket.",
+  "review": "The recording is an audience source that many reviewers say sounds better than the contemporary soundboard version, delivering clear, immersive ambience. The concert itself buzzes with post‑bust excitement – the crowd erupts on the “BUSTED” line in Truckin', Jerry’s guitar stays wildly spirited throughout, and Hell In A Bucket ignites with Bobby’s fireworks. While Phil’s bass is occasionally described as “bombing,” the overall vibe is upbeat and memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Show quality is solid with many praised moments, recording quality is consistently noted as good‑to‑excellent; weighted average yields a near‑4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the audience cassette captures the HJK sound clearly, better than the SBD version, with no major glitches reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Bird Song",
+      "Hell In A Bucket",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert rides a wave of post‑bust excitement, with high crowd interaction on Truckin', tight transitions into Bird Song and Hell In A Bucket, and an upbeat Johnny B. Goode encore that caps the energetic set."
+  },
+  "band_member_comments": {
+    "Jerry": "Spirited, energetic guitar work throughout, especially during Johnny B. Goode.",
+    "Phil": "Often “bombing” his bass but launches strong lines in Hell In A Bucket.",
+    "Bob": "Delivers fireworks on Hell In A Bucket and leads an improvised Iko jam.",
+    "Keys": "",
+    "Drums": "Dragon Dance percussion segment with Chinese Symphony Orchestra adds a unique flavor."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:48:14.516544+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-02-19.fob.mccue.82946.sbeok.flac16"
+}

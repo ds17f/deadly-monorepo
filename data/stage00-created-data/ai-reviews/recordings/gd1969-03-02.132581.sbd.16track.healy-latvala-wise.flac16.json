@@ -1,0 +1,70 @@
+{
+  "summary": "Near‑perfect soundboard capture of the Fillmore West run, highlighted by a soaring Dark Star and classic Eleven despite occasional pitch wobble.",
+  "review": "The 16‑track Healey mix delivers crystal‑clear instrument separation that lets Jerry’s lead and Tom Constanten’s keyboards shine, especially on the epic Dark Star and The Eleven. While most listeners rave about the performance, one reviewer notes pitch‑speed fluctuations in some sections and calls a few cuts (Doin’ That Rag, Caution) weaker than the rest of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Six out of seven reviews give five stars and praise both the musical performance and the high‑quality soundboard source; only one review is more critical, keeping the overall weighted rating in the excellent range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptionally clear mix with superb instrument separation; minor pitch‑speed waver issues noted in some multi‑track versions but the Healey 16‑track is the cleanest transfer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "That's it for the Other One"
+    ],
+    "poor_songs": [
+      "Doin' That Rag",
+      "Caution",
+      "Alligator (overlong suite)"
+    ],
+    "setlist_flow": "Late‑night Fillmore West show that leans on extended improvisations; the first set opens with a fresh Dark Star featuring Tom Constanten, while the second set delivers a massive Alligator suite and a wild Other One, though some cuts feel less tight than earlier nights."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for perfect tone and dynamic interplay with Tom Constanten on Dark Star.",
+    "Phil": "Mentioned in post‑drums jam sections; no specific performance praise or criticism.",
+    "Bob": "",
+    "Keys": "Tom Constanten highlighted for adding fresh sounds on Dark Star and other jams.",
+    "Drums": "Noted for strong post‑drums jam sections and driving the Alligator suite."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That's it for the Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:13:23.650177+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-03-02.132581.sbd.16track.healy-latvala-wise.flac16"
+}

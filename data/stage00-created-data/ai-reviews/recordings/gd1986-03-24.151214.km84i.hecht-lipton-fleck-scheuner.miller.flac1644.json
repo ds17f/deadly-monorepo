@@ -1,0 +1,39 @@
+{
+  "summary": "Highly praised by the lone reviewer despite no concrete details on audio or performance; only a brief nod to “Friend of the Devil.”",
+  "review": "The single five‑star review is enthusiastic but largely incoherent, offering no useful information about recording fidelity or overall musicianship. The only specific musical reference is a fleeting mention of “Friend of the Devil,” which the reviewer seems to recall fondly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one review, but it rates the show five stars; lacking technical detail forces a cautious rating that leans on the positive sentiment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments about sound quality, clarity, or mix are provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:41:24.807995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-24.151214.km84i.hecht-lipton-fleck-scheuner.miller.flac1644"
+}

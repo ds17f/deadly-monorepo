@@ -1,0 +1,127 @@
+{
+  "summary": "Excellent audience tape of a tight ’74 show, highlighted by a soaring Jack Straw, an epic Playing in the Band marathon and a superb Weather Report Suite (Let It Grow).",
+  "review": "The concert is praised for its tight playing and fluid feel, with several reviewers calling it one of the better 1974 performances. The Jerry Moore audience recording is noted as clear and sharp, delivering the Wall‑of‑Sound ambience without major flaws. Standout moments include a funky Bertha opener, an electrifying Jack Straw, a marathon Playing in the Band, and a soaring Weather Report Suite.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (tight band, standout jams) and recording quality is described as clear, sharp and excellent; weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call this AUD tape the clearest and sharpest of the available sources; no major drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Jack Straw",
+      "El Paso",
+      "Row Jimmy",
+      "Playing in the Band",
+      "Weather Report Suite (Let It Grow)",
+      "Me & My Uncle",
+      "Ship of Fools",
+      "Big River",
+      "Loose Lucy",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias",
+      "Brown Eyed Women"
+    ],
+    "setlist_flow": "The first set starts funky and a bit stiff early (Scarlet, Brown‑Eyed Women) but lifts off with Jack Straw and rides a strong groove through El Paso and Row Jimmy. The second set is more experimental – a stop/start feel that builds into an iconic 26‑minute Playing in the Band and a beautifully unfolding Weather Report Suite."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is described as wild, hyper and “way cool” on songs like Mexicali, El Paso and Row Jimmy; his playing drives the high energy of the jams.",
+    "Phil": "Phil’s bass is noted as being prodded by Garcia’s hyper moments, contributing to the tight rhythm section.",
+    "Bob": "",
+    "Keys": "Keith Hartley gets praise for a great performance on Ship of Fools and overall keyboard work throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Weather Report Suite (Let It Grow)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:36:02.920455+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-08-04.aud.moore.weiner.gdADT.9112.sbeok.shnf"
+}

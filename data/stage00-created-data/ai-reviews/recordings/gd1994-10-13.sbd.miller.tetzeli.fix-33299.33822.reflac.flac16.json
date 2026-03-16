@@ -1,0 +1,100 @@
+{
+  "summary": "Clear soundboard capture of a solid 1994 performance, highlighted by Playin', Let It Grow, Wharf Rat, Baby Blue and an inventive The Other One MIDI jam.",
+  "review": "The recording is a clean sound‑board mix that lets the band’s late‑90s energy shine through. Reviewers rave about the tight jams on Playin', Let It Grow, Wharf Rat and a memorable The Other One experiment, while noting some vocal slippage from Jerry and over‑distorted guitar at times. Overall the show is considered one of the stronger 1994 outings despite a few minor flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise both performance and sound quality; only a couple of moderate critiques keep the rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Vocals and instruments are generally clear with good separation; occasional mumbled lyrics from Jerry but no major drop‑outs or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "Let It Grow",
+      "Wharf Rat",
+      "The Other One",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Foolish Heart"
+    ],
+    "setlist_flow": "Strong opening set with tight jams and energetic openers, followed by a deeper second set that builds into extended improvisations and a satisfying Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is praised (e.g., wailing on Loser) but his vocals are noted as mumbled or off at times.",
+    "Phil": "",
+    "Bob": "Over‑uses distortion and whammy bar, playing effects more than notes according to one reviewer.",
+    "Keys": "Vince’s organ work is highlighted as a major strength, especially on Wang Dang Doodle and throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:08:11.852586+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-13.sbd.miller.tetzeli.fix-33299.33822.reflac.flac16"
+}

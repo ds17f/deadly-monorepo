@@ -1,0 +1,92 @@
+{
+  "summary": "Good‑quality audience tape of a solid 1981 show – Shakedown and Playing in the Band shine while the mix is clear but occasionally muddy.",
+  "review": "The recording captures an engaging performance with the opening \"Shakedown\" delivering a spine‑tingling vibe and a classic second‑set \"Playing in the Band\" that many reviewers call a highlight.  Sound quality is generally clean and up‑close (audience source), though a few listeners note slowdown or mud from conversion issues.  Overall the show is praised for its groove, with standout moments like the Around > Johnny B. Goode > U.S. Blues finale and strong transitions into China Doll, while Lazy Light/Supplication and some later jams are viewed as weaker.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (15+) give 4‑5 stars and highlight strong performances, especially Shakedown and Playing in the Band; recording is described as clear but with occasional muddiness, leading to a solid overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, clean mix with an up‑close feel (heavier on Phil's bass). Some listeners report slowdown/slow‑motion artifacts from DAT→CD conversion and occasional muddiness, but overall the tape is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Playing in the Band",
+      "Around > Johnny B. Goode > US Blues",
+      "Cassidy",
+      "China Doll",
+      "Playing > Jamming"
+    ],
+    "poor_songs": [
+      "Lazy Light / Supplication",
+      "Early part of Shakedown (anemic start)"
+    ],
+    "setlist_flow": "First set starts a bit slow and anemic, but gains groove; second set builds momentum with a superb Playing in the Band sequence, strong transitions into China Doll and a rousing Around/Johnny B. Goode/US Blues finale, though later jams lose some focus."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tight playing on Shakedown (nice plucking), solid tone on Althea, and overall high energy; occasional comment that he never 'takes off' fully.",
+    "Phil": "Bass is highlighted as up‑close and powerful, with occasional \"sonic quark\" drops; several reviewers note the mix leans heavy on Phil.",
+    "Bob": "",
+    "Keys": "Keyboard presence noted as lighter than the bass in the mix; Brent’s playing mentioned but not a focus.",
+    "Drums": "Drums>Space segment gets enthusiastic yells and Indian calls, described as a blast."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 6,
+      "negative_mentions": 3,
+      "total_mentions": 9
+    },
+    "Playing in the Band": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Around > Johnny B. Goode > US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Light / Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing > Jamming": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "R&R > Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:27:47.086211+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-02.wagner.munder.9511.sbeok.shnf"
+}

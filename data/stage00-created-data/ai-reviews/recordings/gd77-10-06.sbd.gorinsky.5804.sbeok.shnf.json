@@ -1,0 +1,105 @@
+{
+  "summary": "Crispy soundboard recording but a patchwork of multiple shows; solid playing on several tracks yet many songs are mis‑dated.",
+  "review": "The sbd captures a clear, balanced mix with bright guitars and punchy drums, though the drum level can be a touch high. Listeners love the energy on Promised Land, Tennessee Jed, Let It Grow and Around & Around, but the show is marred by obvious splice‑ins from 10/29/77 (Jack Straw, Estimated Prophet, Eyes of the World, etc.) that make the set feel disjointed. Overall the performance is enjoyable for deadheads who can overlook the authenticity issues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Many reviewers praise the sound quality and a handful of standout songs, but a large portion flags serious source‑integrity problems that lower the overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crispy and clear mix with good guitar balance; drums a bit loud. However, multiple reviewers note splices/patched sections from other dates, which creates inconsistencies in the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land",
+      "Tennessee Jed",
+      "Let It Grow",
+      "Around & Around"
+    ],
+    "poor_songs": [
+      "Loser",
+      "Jack Straw",
+      "Dire Wolf",
+      "Looks Like Rain",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Black Peter"
+    ],
+    "setlist_flow": "The set feels like a collage, jumping between material from 10/6/77, 10/29/77 and even 10/1/77, which disrupts pacing despite strong individual performances."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is highlighted as wild and jam‑filled (e.g., the crazy jam before tape runs out) and generally tight, though one reviewer notes Bob and Keith lose the thread during his Loser solo.",
+    "Phil": "A single comment mentions Phil's bass being a bit low in the mix; otherwise not specifically addressed.",
+    "Bob": "Criticized for “forgetting how the song goes” during the fast Loser performance.",
+    "Keys": "Keith is mentioned positively for keyboard presence, though one reviewer feels his contribution is slightly under‑represented.",
+    "Drums": "Drums are described as punchy but occasionally too loud; also noted that drum tracks may be sourced from a different date."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T04:32:09.719924+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-10-06.sbd.gorinsky.5804.sbeok.shnf"
+}

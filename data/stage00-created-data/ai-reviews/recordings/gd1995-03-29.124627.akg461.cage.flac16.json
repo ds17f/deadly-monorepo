@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality (source unknown) recording of an entertaining 1995 show highlighted by a stellar Walking Blues solo.",
+  "review": "The reviewer gave the set five stars, calling it interesting, fun and one of the better shows from ’95 despite noting a few “Jerry lapses.” The performance is praised especially for the Walking Blues guitar solo, and the overall vibe is described as the band listening to each other and constantly making things happen. No specific technical issues are mentioned, suggesting the audio is at least listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong positive show feedback with a standout solo and high rating; recording quality not detailed but no complaints, yielding an overall high score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer does not comment on technical aspects; enjoyment suggests the audio is clear enough for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walking Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as entertaining and cohesive, with the band “listening to each other” and constantly creating momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer notes some “lapses” in Jerry’s playing but overall still enjoys the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Walking Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:16:01.601381+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-29.124627.akg461.cage.flac16"
+}

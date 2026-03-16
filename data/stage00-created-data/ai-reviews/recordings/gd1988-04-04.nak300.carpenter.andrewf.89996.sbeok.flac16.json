@@ -1,0 +1,39 @@
+{
+  "summary": "Amazing Hartford 1988 show featuring a uniquely brilliant performance of \"Looks Like Rain\", though recording details are not described.",
+  "review": "The sole fan review is glowing, calling the concert an amazing show and highlighting what they consider the most unique version of “Looks Like Rain” they've ever heard. No information about the source or technical quality of the recording is provided, so listeners should expect an unknown sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the musical performance strongly, but provides no insight into recording quality, leading to a high show rating offset by uncertainty about the audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention any aspects of sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure; reviewer focuses solely on the uniqueness of \"Looks Like Rain\"."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:59:53.030320+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-04.nak300.carpenter.andrewf.89996.sbeok.flac16"
+}

@@ -1,0 +1,46 @@
+{
+  "summary": "Good matrix recording of a rough Shoreline show, highlighted by Brent's erratic keys and a quirky Hey Pocky Way → Aiko jam.",
+  "review": "The UltraMatrix source captures the performance with clear sound quality despite the chaotic start, but the concert itself is considered below average. Reviewers note Brent’s over‑driven keyboard work and a strange Saint of Circumstance set, while Jerry’s segue into Hey Pocky Way → Aiko provides the only real bright spot.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is good (≈4/5) but the musical performance is rated poorly (≈2.5/5); weighted average yields a ~3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the sound as fine/excellent quality board with no major issues; clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way > Aiko"
+    ],
+    "poor_songs": [
+      "Saint of Circumstance"
+    ],
+    "setlist_flow": "Three consecutive openers at the start due to technical gremlins made for a rough beginning; overall performance felt disjointed."
+  },
+  "band_member_comments": {
+    "Jerry": "Bails out the set by leading Hey Pocky Way into Aiko, providing a rare highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's playing is described as hard and erratic ('wasted'), detracting from the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hey Pocky Way > Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:41:45.510807+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-06-18.164169.UltraMatrix.sbd.cm.miller.t.flac1644"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Good matrix recording of a solid show featuring a cool “Half‑Step”, “Rooster” and a great “Cassidy”, plus a rockin’ second set.",
+  "review": "The matrix capture is praised as nice and listenable, delivering clear enough sound to enjoy the performance. Fans highlight standout moments like the cool Half‑Step jam, Rooster, and a superb rendition of Cassidy, and note that the second set stays energetic throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "One detailed 4‑star review emphasizes strong musical moments and an acceptable matrix sound; limited data keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Review calls it a “nice work” matrix, implying clear enough mix with no major issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half‑Step",
+      "Rooster",
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall nice show with a particularly rockin' second set; transitions and energy keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half‑Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:54:56.787295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-05.mtx.sirmick.92785.sbeok.flac16"
+}

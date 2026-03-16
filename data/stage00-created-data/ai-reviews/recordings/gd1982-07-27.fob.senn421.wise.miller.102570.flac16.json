@@ -1,0 +1,45 @@
+{
+  "summary": "Top‑notch handheld audience recording of a rainy Red Rocks night with Phil’s thunderous bass and an uplifting overall performance.",
+  "review": "The show is remembered for its wet, atmospheric vibe and strong playing – especially Phil Lesh’s booming low end on “Playing In The Band” and the climactic “Other One.”  Jim Wise’s FOB hand‑held capture delivers surprisingly clear fidelity despite rain, with only a brief cut at the outro crowd.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance and the recording quality; the weighted average (70% show, 30% recording) yields a rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Hand‑held FOB capture by Jim Wise is described as top‑notch clarity and fidelity, with close‑in whooping; rain adds ambience but the outro crowd is cut early."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A wet, “wet night” atmosphere at Red Rocks gave the set a relaxed yet energetic flow, highlighted by Phil’s massive bass moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Big, booming bass notes heard even from far away; described as “big fat bass chords” despite standing in a puddle.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:58:00.376118+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-27.fob.senn421.wise.miller.102570.flac16"
+}

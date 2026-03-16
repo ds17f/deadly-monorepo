@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording of a classic 1974 show with standout versions of Row Jimmy, Roses, Ship of Fools and Scarlet Begonias",
+  "review": "The tape is praised as an upgrade over circulating audience sources – minimal crowd bleed but noticeable room reverb gives it a live feel. Reviewers rave about the performance, calling it an all‑time classic with particularly beautiful renditions of Row Jimmy, Roses, Ship of Fools and Scarlet Begonias. No major flaws are noted, making both the music and the audio highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviewers give 5‑star ratings and highlight a superb performance plus high‑quality audience recording; limited number of detailed reviews yields medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Minimal audience intrusion, noticeable room acoustics/reverb adds ambience but overall clarity is strong; considered a significant upgrade over other audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Row Jimmy",
+      "Roses",
+      "Ship of Fools",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic Europe ’74 set flow with seamless transitions; the spare arrangement lets key songs shine."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:24:00.829635+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-11.131901.aud.unk.flac16"
+}

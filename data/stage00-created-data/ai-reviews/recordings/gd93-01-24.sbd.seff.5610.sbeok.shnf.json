@@ -1,0 +1,93 @@
+{
+  "summary": "Good soundboard capture of a mellow early‑'90s show, highlighted by an outstanding Black Peter and strong Samson/He’s Gone jam.",
+  "review": "The recording is a clean soundboard source that presents the band in a laid‑back early‑1993 mood. While the set isn’t wildly adventurous, Black Peter shines as the centerpiece, and the later Samson → He’s Gone sequence delivers a memorable jam; Jack Straw, Bird Song and a powerful Heaven’s Door also stand out. The performance is solid but occasionally flat, with some sloppy moments in Playing‑in‑the‑Band and Sugaree.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers note a decent show with several strong songs (especially Black Peter) and praise the soundboard quality; however, many also point out flatness and sloppy moments, pulling the overall impression to a mixed‑positive middle ground."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced soundboard capture; crisp overall with only minor occasional muffling or drop‑outs noted by a few reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Samson > He's Gone",
+      "Heaven's Door",
+      "Bird Song",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Playing in the Band (early part)",
+      "Sugaree",
+      "Playin' > Crazy",
+      "Space"
+    ],
+    "setlist_flow": "A mellow opening set typical of early‑90s runs, followed by a decent second set that builds momentum with Black Peter and an explosive Samson → He’s Gone jam; overall pacing is relaxed rather than high‑energy."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice sounds mostly together and he sings slower material; reviewers note both engaging moments (e.g., animated playing on Samson) and occasional auto‑pilot feeling.",
+    "Phil": "Hard to hear early in the show until Bird Song; some feel he isn’t fully listening to the band during the performance.",
+    "Bob": "Prominent in the mix with a tone reminiscent of 12/6/92; occasionally overplays, interfering with Jerry’s solos on Sugaree.",
+    "Keys": "Vince Welnick delivers solid piano work (especially on Black Peter and Heaven's Door) though backing vocals are sometimes weak.",
+    "Drums": "Bill Kreutzmann’s drumming starts strong but later drifts into a more experimental, less focused feel; generally described as unmemorable."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson > He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Heaven's Door": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playin' > Crazy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:20:56.461798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-01-24.sbd.seff.5610.sbeok.shnf"
+}

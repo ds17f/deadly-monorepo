@@ -1,0 +1,45 @@
+{
+  "summary": "Juicy soundboard recording with crystal‑clear guitars, a smoking Bertha and an awesome Truckin', though Bob’s rhythm is a bit loud and Jerry sits low in the mix.",
+  "review": "Both reviewers rave about the musical performance – Bertha “smokin’” and Truckin' described as “awesome” – while praising the overall clarity of the soundboard source. The mix is generally excellent, with crystal‑clear guitars and solid bass, but one reviewer notes Bob Weir’s rhythm guitar is overly forward and Jerry Garcia’s lead can disappear in places.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong show with standout songs and mostly excellent soundboard quality; minor mix imbalances keep the rating just below top‑tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Guitars crystal clear, bass solid, vocals slightly back; overall mix is strong but Bob's rhythm guitar sits a bit too loud and Jerry's lead can be buried, creating occasional harshness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers focus on individual song highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is less audible in the mix, seeming buried at times.",
+    "Phil": "",
+    "Bob": "Rhythm guitar is prominent and loud with clear picks and slides, though can sound harsh on some numbers.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:29:29.865864+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-08.sbd.unknown.14397.shnf"
+}

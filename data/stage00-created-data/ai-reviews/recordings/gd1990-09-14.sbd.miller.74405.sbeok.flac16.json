@@ -1,0 +1,82 @@
+{
+  "summary": "Clear soundboard capture of a high‑energy MSG show with standout Fire, Terrapin and Scarlet jams.",
+  "review": "The Miller soundboard tape is praised for its clarity and balanced mix, putting Jerry’s lead guitar front‑and‑center while still sounding clean. The concert shines in the second set – Fire, Scarlet Begonias, Terrapin and Other One receive glowing mentions, though a few reviewers note vocal issues on Cassidy and some late‑era keyboard quirks. Overall the performance is viewed as one of the stronger early‑1990 MSG dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight a superb recording and an exciting second set, with only occasional criticism of vocals or later‑era keyboard sounds; weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as clear, well‑balanced and better than typical audience tapes; Jerry’s guitar is prominent but the mix remains clean. No major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire",
+      "Scarlet Begonias",
+      "Terrapin Station",
+      "The Other One",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Ramble on Rose"
+    ],
+    "poor_songs": [
+      "Cassidy"
+    ],
+    "setlist_flow": "First set is described as solid and enjoyable, while the second set builds momentum with powerful jams that lift the crowd; the show is often cited as a defining early‑1990 MSG performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar leads are strong and front‑and‑center in the mix; some note his voice sounding strained later in the run but overall he drives the band.",
+    "Phil": "His bass is praised as \"crushing\" during the Fire jam, providing a lift that many reviewers highlighted.",
+    "Bob": "",
+    "Keys": "Vince’s Casio‑violin keyboard tone receives criticism; otherwise keyboards are not heavily discussed.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:00:24.850294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-14.sbd.miller.74405.sbeok.flac16"
+}

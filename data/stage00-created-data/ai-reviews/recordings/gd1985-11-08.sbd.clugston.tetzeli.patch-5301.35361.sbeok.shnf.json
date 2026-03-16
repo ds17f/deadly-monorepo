@@ -1,0 +1,100 @@
+{
+  "summary": "Soundboard‑derived recording (patched) sounds thin compared to the board, but the Fall ’85 East Coast show bursts with energy – standout Iko, Peggy‑O, Revolution and a fire‑stoked Other One.",
+  "review": "The performance is praised for its high‑octane first set (Jerry’s soaring Iko, Peggy‑O and B.E. Woman) and a second half that delivers a smoking Revolution, Eyes of the World, The Other One → Miracle and an exuberant Sugar Magnolia encore. Reviewers note a few timing hiccups at the start of B.E. Woman and a lackluster Brent Mydland‑led song, while the patched soundboard transfer is described as sounding “way below” the board level.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Enthusiastic musical appraisal with many standout moments outweighs modest recording quality concerns; two reviews (one detailed) give a clear picture."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Patched transfer of Scott's soundboard source; reviewers say the audio sounds far below board level, indicating reduced clarity and presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Rider",
+      "Peggy-O",
+      "Revolution",
+      "Eyes of the World",
+      "The Other One",
+      "Miracle",
+      "She Belongs to Me",
+      "Sugar Magnolia",
+      "Satisfaction"
+    ],
+    "poor_songs": [
+      "B.E. Woman (timing issue at start)",
+      "Brent Mydland’s 'Baby Why You Want' (lacked umph)"
+    ],
+    "setlist_flow": "First set described as a standard, high‑energy selection with gusto; second set builds momentum with fast‑paced jams and a strong encore, overall a “hot” show despite minor timing slips."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring leads on Iko, Peggy-O and B.E. Woman, carrying the band through early timing lapses.",
+    "Phil": "",
+    "Bob": "Weir noted for bringing ‘the Rooster’ energy; vocal/guitar contributions highlighted positively.",
+    "Keys": "Brent Mydland adds lyrical blush and twist, though his ‘Baby Why You Want’ felt under‑driven.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "B.E. Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Revolution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:10:58.951318+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-08.sbd.clugston.tetzeli.patch-5301.35361.sbeok.shnf"
+}

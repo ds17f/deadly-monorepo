@@ -1,0 +1,64 @@
+{
+  "summary": "A psychedelic Red Rocks second set with a stellar Terrapin and Playin' jam, captured on a soundboard that suffers from early hiss and uneven instrument levels.",
+  "review": "The show is widely praised for its intimate rainy atmosphere and an exceptional second set featuring a beautiful Terrapin, soaring Brent keyboards, and a gorgeous Stella Blue reprise. While the performance consistently receives five‑star accolades, listeners note that the soundboard recording starts with noticeable hiss and has a low‑mid balance (Jerry buried, Brent high), though it clears up later in the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews overwhelmingly celebrate the musical performance (average ~4.7) while noting consistent but not fatal recording flaws (average ~3), yielding a weighted overall rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Early‑set hiss, fluctuating levels on Jack Straw, Jerry's guitar often buried, Brent's keyboards overly bright; sound improves after the first half and cleans up by the end of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Playin'",
+      "Stella Blue",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "Second set flows seamlessly from psychedelic beginnings through a nuanced Terrapin, into an expansive Playin' jam and finishes with a heartfelt Stella Blue reprise; overall pacing is praised as one of the finest GD performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Great playing but his solos are often buried or low in the mix.",
+    "Phil": "Bass is high and vibrant, delivering standout moments especially on The Other One.",
+    "Bob": "",
+    "Keys": "Brent's keyboards dominate the mix—often too high—but provide thrilling improvisations throughout the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:51:15.045467+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-27.sbd.clemens.78746.sbeok.flac16"
+}

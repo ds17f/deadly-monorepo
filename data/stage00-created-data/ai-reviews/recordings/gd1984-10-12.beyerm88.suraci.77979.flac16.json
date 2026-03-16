@@ -1,0 +1,39 @@
+{
+  "summary": "Outstanding 1984 Augusta show featuring a smoking Morning Dew and an excellent recording hailed as the best of the year.",
+  "review": "All three reviewers give this performance five‑star praise, calling it one of the finest shows of the ’84 tour and highlighting Jerry Garcia’s inspired playing. The recording is described as “excellent” and “the best I have heard from ’84,” with no technical complaints. Morning Dew receives special acclaim as a career‑high moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "Consistently five‑star reviews emphasizing both a stellar performance and top‑tier recording quality lead to an almost perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as excellent with no noted flaws; no specific source (soundboard/audience) mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Praised as a high‑energy, tightly flowing concert that captures the band at peak form during the 1984 tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is noted as being 'really on' with inspired guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:21:09.030081+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-12.beyerm88.suraci.77979.flac16"
+}

@@ -1,0 +1,49 @@
+{
+  "summary": "Good‑quality 80s sound with clear instrument separation and lively audience participation, highlighted by a standout China Doll.",
+  "review": "The recording captures the era’s warm 80s tone, letting individual instruments shine while preserving the crowd’s energy. Reviewers especially praise the vibrant China Doll performance and note that Jerry’s guitar sounds solid throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4 stars) points to a good show with clear recording; limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Clear instrument separation, audience participation audible and well‑balanced; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic mid‑set with strong audience interaction; China Cat/Rider versions noted as rocking."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar sounds good and is clearly heard.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:33:11.238737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-15.138812.set2.FOB.Beyer.billydee.Sellers.Noel.t-flac24.fix"
+}

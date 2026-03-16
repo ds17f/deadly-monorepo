@@ -1,0 +1,31 @@
+{
+  "summary": "A decent audience recording of an uneven, storm‑soaked show that’s remembered more for its ambience than musical brilliance.",
+  "review": "Listeners note a solid sound capture – the audience recording is praised as clear and easy to stitch together – but the performance itself is described as mediocre, with a slow start, some noodling, and overall only average playing. The concert’s memorable context (traffic jams, lightning‑filled sky) adds nostalgic value despite the lack of standout musical moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is generally rated around average (3‑4 stars) while recording quality receives slightly higher praise; combined weighted rating yields a modest 3.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers compliment the sound and note that discs can be joined seamlessly, indicating clear and usable audience capture with no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The concert started slowly with some noodling, never fully gaining momentum; overall it is remembered as an average performance despite the dramatic weather and venue atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T11:59:43.048865+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-07-05.naks.1819.sbeok.shnf"
+}

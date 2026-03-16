@@ -1,0 +1,40 @@
+{
+  "summary": "Excellent audience recording captures a surprisingly stellar Ventura performance with standout China Doll and Jerry’s soaring guitar work.",
+  "review": "The tape, recorded on a Sony D5 cassette with EC‑220 mics, is praised as pristine and atmospheric despite the windy, dusty conditions of the night. Listeners repeatedly note that the show morphs from a rough start into a memorable set – highlighted by an inspired China Doll and Jerry Garcia’s growling guitar solos. Overall the performance and the recording are regarded as a hidden gem of the early‑80s era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (6 out of 7) give 4–5 stars and specifically praise both the musical performance and the high‑quality audience recording; only one low‑rating comment mentions wind challenges, so the combined show/recording assessment is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Pristine cassette capture with EC‑220 mics; reviewers call it superb and smooth despite wind, dust and intense sun. Atmospheric ambience is preserved, making the recording stand out among Ventura tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Run Run Run (Jerry’s guitar solo)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert starts a bit rough but quickly morphs into an engaging, “other‑world” performance; the band appears to have been especially inspired by playing in Ventura."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his growling tone and soaring solos (e.g., \"Jerry GROWL Run Run Run\").",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:32:15.568647+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-07-30.fob.sony220t.keshavan.miller.96401.sbeok.flac16"
+}

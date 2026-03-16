@@ -1,0 +1,107 @@
+{
+  "summary": "Excellent soundboard‑plus‑audience matrix capture of a stellar 1976 show, highlighted by a soaring Eyes → Music Never Stopped sequence and a superb Other One/Comes A Time stretch.",
+  "review": "The recording is primarily a clean Charlie Miller SBD that’s been patched with audience (AUD) material where the board drops out – still very listenable and praised as “very good” despite occasional patch roughness. Musically this night shines, especially the second set: Eyes into Music Never Stopped, The Other One flowing into an emotional Comes A Time, plus standout moments from Samson & Deliah, He’s Gone, Franklin’s Tower and a fiery Sugaree.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over a dozen reviews rate the show 4‑5 stars, consistently praising the second‑set performance while noting only minor AUD patch issues; the blend of strong musical content and good technical quality yields a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Primary Charlie Miller soundboard source, with audience (AUD) patches for missing sections. Aud patches are described as “less appealing” but not enough to spoil the listening experience; overall crisp and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Music Never Stopped",
+      "The Other One",
+      "Comes A Time",
+      "Franklin's Tower",
+      "Samson & Deliah",
+      "He's Gone",
+      "Supplication",
+      "Sugaree",
+      "Lazy Lightning"
+    ],
+    "poor_songs": [
+      "Might As Well (mixed opinions)",
+      "Promised Land (average)",
+      "Lazy Lightning (technical drop‑out noted)"
+    ],
+    "setlist_flow": "First set is solid but uneven, with a few average cuts; the second set is a seamless, high‑energy journey where songs flow into one another (Eyes → Music Never Stopped, The Other One → Comes A Time, etc.), delivering the show’s emotional peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as excellent throughout; his guitar work and trading licks with Keith are highlighted.",
+    "Phil": "Bass work praised, especially on Eyes (“throwing down”) and leading the transition into Music Never Stopped.",
+    "Bob": "",
+    "Keys": "Keith’s keyboard contributions noted as “amazing” and he trades licks with the drummers; overall keyboards praised.",
+    "Drums": "Solid drum foundation with a brief drum break mentioned; no major complaints."
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson & Deliah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Comes A Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:32:11.865697+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-15.sbd.miller.84260.sbeok.flac16"
+}

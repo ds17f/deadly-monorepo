@@ -1,0 +1,106 @@
+{
+  "summary": "A well‑balanced soundboard/matrix capture of a May ’77 show featuring a behemoth Sugaree and stellar Samson & Delilah, with solid audio quality despite occasional pitch quirks.",
+  "review": "The performance shines with towering moments – a three‑jam Sugaree, a tight Estimated Prophet solo, and a scorching Samson & Delilah that keep the set flowing. The source is a high‑grade matrix/soundboard mix that sounds clear and balanced, though a few tracks run slightly fast and need pitch correction. Overall the show is praised as an underrated gem from one of the band’s peak months.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Three detailed, mostly 4‑5 star reviews highlight strong musical performance and good recording quality; only minor technical complaints keep the rating just below top‑tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear piano and balanced mix; matrix elements praised as solid gold. Minor issues: Dancing in the Street runs slightly fast and needs pitch correction; occasional speed anomalies but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Samson & Delilah",
+      "Estimated Prophet",
+      "Loser",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "Passenger",
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "The set flows smoothly with a strong first half and a relaxed yet engaging second set; a few wandering moments give the show unique charm without breaking momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted as tight, soulful and especially stellar on Sugaree and the Estimated Prophet solo.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux’s piano is noted for its clarity, particularly early in the set where it shines on the soundboard recording.",
+    "Drums": "The drums are described as rarely exciting for this era but solid enough to drive The Wheel and support the overall relaxed vibe."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T01:57:44.352134+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-19.139377.sbd.latvala.miller.sirmick.flac1648"
+}

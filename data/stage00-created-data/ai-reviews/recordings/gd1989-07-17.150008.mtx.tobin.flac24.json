@@ -1,0 +1,31 @@
+{
+  "summary": "Matrix recording sounds great even though the reviewer noted a confusing set list.",
+  "review": "The lone review praises the overall sound of the performance, calling the show \"great\" despite confusion over the setlist. No specific songs or player details are mentioned, but the positive tone and four‑star rating indicate both the music and the matrix recording were well received.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the show 4 stars, highlights good sound quality and enjoyment, leading to a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer states \"the show sounds great\" with no reported issues; implies clear, listenable matrix mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes the set lists are completely different, suggesting a confusing or unexpected set order."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T21:38:39.743589+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-17.150008.mtx.tobin.flac24"
+}

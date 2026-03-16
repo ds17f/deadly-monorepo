@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent soundboard recording of a mixed‑quality show featuring standout Queen Jane and The Other One, with solid sound but uneven performance",
+  "review": "The SBD capture by Miller is praised for its crystal‑clear, majestic mix, making the set highly listenable despite occasional comments about dull moments. Musically the concert delivers highlights like a top‑tier Queen Jane, an inspiring The Other One and a soulful Looks Like Rain, while tracks such as Fire and Hell fell flat for some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Multiple reviewers praise the soundboard quality (excellent) and several highlight strong performances, but a few note dull or weak songs; overall weighted average yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, majestic soundboard mix with clear instrument separation; no reported dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Queen Jane",
+      "Looks Like Rain",
+      "The Other One",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Fire",
+      "Hell"
+    ],
+    "setlist_flow": "First set opens mellow and relaxed, second set varies in energy; overall pacing described as well‑paced but with a few songs that felt flat to listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Briefly mentioned as 'smart' in a political comment, no specific performance note.",
+    "Phil": "Praised for a great funky riff opening 'Music' and noted as present on The Other One.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums sequence noted (some cuts reported) but no detailed critique of the drummers."
+  },
+  "song_mentions": {
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hell": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:43:56.368734+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-08.sbd.miller.20994.sbeok.shnf"
+}

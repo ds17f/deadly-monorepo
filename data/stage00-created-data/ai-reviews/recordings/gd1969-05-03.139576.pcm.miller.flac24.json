@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience stereo capture with killer sound, highlighted by standout versions of He Was a Friend of Mine and The Other One.",
+  "review": "The tape was recorded with a stereo microphone just off the stage, delivering a clear and immersive audience mix that reviewers call \"killer sound.\" Performances of He Was a Friend of Mine and The Other One are praised as great, though Jerry's guitar and the vocals sit a bit low in the mix. Overall the show and recording are deemed excellent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Single detailed 5‑star review notes superb audience recording quality and strong performances, leading to a high combined rating despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Stereo mic off‑stage provides clear, immersive sound; Jerry's guitar and vocals are slightly low in the mix but overall tape is excellent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He Was a Friend of Mine",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review emphasizes strong performances with no noted issues; set feels solid and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar is a tad low in the mix, but performance praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He Was a Friend of Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:16:05.962474+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-03.139576.pcm.miller.flac24"
+}

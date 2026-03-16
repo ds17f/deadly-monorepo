@@ -1,0 +1,63 @@
+{
+  "summary": "Good front‑of‑house soundboard capture of an emotionally charged second set featuring Rider, L.L. Rain and a tease of Speedway Boogie, though the new keyboardist draws mixed reactions.",
+  "review": "The recording delivers a solid FOH mix that lets listeners hear the heartfelt second set – Rider’s impact on Jerry, plaintive renditions of L.L. Rain and He’s Gone, plus an inspiring Spoonful jam and a preview of the upcoming Speedway Boogie. While fans miss Brent’s classic fills and criticize Vince’s early‑show presence, the overall performance is praised and earns a four‑star rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the show highly (emotional second set, standout songs) but notes keyboard issues. Recording quality is assumed decent, leading to an overall 4‑star estimate."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit audio complaints; presumed clear front‑of‑house mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rider",
+      "L.L. Rain",
+      "He's Gone",
+      "Spoonful (jam)",
+      "Speedway Boogie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set built around themes of loss and transition, moving from Rider through L.L. Rain and He’s Gone into a jam that teases the new Speedway Boogie material."
+  },
+  "band_member_comments": {
+    "Jerry": "Rider visibly affected Jerry, highlighting an emotional moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's fills and harmonies missed; Vince appears lost on stage and is criticized as a bad hire, while Bruce later provides relief.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.L. Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful (jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:48:47.233822+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-11.146063.FOB.BK4011.Brotman.Metchick.Miller.Noel.t-flac1648"
+}

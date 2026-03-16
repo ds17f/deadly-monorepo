@@ -1,0 +1,59 @@
+{
+  "summary": "Solid soundboard capture with a smoking Help‑Slip‑Franklin into drums, but the overall show is uneven.",
+  "review": "The recording is a clean sound‑board source that reproduces the band well, aside from a few minor glitches. Musically the night shines during the Help > Slip > Franklin sequence, yet the first set and several other numbers (Watchtower, Days Between) suffer from sloppy execution and tempo problems. Listeners get a nostalgic Deer Creek atmosphere but should temper expectations for repeated listening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Recording quality is good (soundboard, minor glitches) while the performance is uneven – strong highlight vs. several weak sections – yielding a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and well‑balanced overall; reviewers note it sounds better than other copies and only mention occasional minor glitches. No major dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin (into drums)",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [
+      "First set overall",
+      "Watchtower",
+      "Days Between"
+    ],
+    "setlist_flow": "The concert is inconsistent – the first set is described as poorly executed, the early second‑set songs are lackluster, but the Help > Slip > Franklin segment erupts into a high point before slipping back into uneven playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar shines during the Help‑Slip‑Franklin jam; reviewers note he 'tears it up' and his digital forays are praised.",
+    "Phil": "Phil’s bass receives a brief nod of appreciation ('loved Phil's ...') but no detailed critique.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment after Franklin’s Tower is highlighted as a memorable transition; the band’s on‑stage banter about the venue adds character."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin (into drums)": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:56:51.204083+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-21.sbd.ladner.12322.sbeok.shnf"
+}

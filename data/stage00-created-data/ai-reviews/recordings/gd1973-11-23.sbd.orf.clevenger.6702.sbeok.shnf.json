@@ -1,0 +1,69 @@
+{
+  "summary": "Pristine soundboard capture of a smooth, high‑energy El Paso show with standout versions of “He's Gone,” “Eyes,” and “The Other One.”",
+  "review": "Fans rave about the relaxed, fluid playing and strong vocals on this fall‑’73 El Paso concert, highlighting Jerry’s soaring guitar on “He’s Gone” and an intense jam on “The Other One.” The soundboard source is described as pristine despite a few mixed comments about keyboard levels, making the recording both clear and enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews award 4‑5 stars, praising both performance and audio quality; only one outlier rating (0) relates to metadata, not the music."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as pristine and crystal‑clear. A few reviewers note ambiguity about keyboard presence, but overall mix is balanced with good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Eyes",
+      "Casey Jones",
+      "The Other One",
+      "Bobby McGee",
+      "Race Is On"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth, relaxed first set followed by a high‑energy second set; cowboy‑themed numbers get extra flair and the show builds to powerful jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fine form on “He's Gone” and shredding intense leads during “The Other One.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboard presence is debated – some hear Keith clearly, others think the mix muffles him; overall interplay remains strong.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Race Is On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:16:46.645046+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-23.sbd.orf.clevenger.6702.sbeok.shnf"
+}

@@ -1,0 +1,106 @@
+{
+  "summary": "Soundboard recording that’s guitar‑forward but crisp, capturing a high‑energy 4/10/71 show with stellar Good Lovin', Cumberland Blues, Loser and a fire‑filled second set.",
+  "review": "The archive’s soundboard capture is clear and lively, though the mix pushes Jerry’s lead guitar to the left channel and drowns the vocals a bit. Musically the concert shines – fans repeatedly cite Good Lovin’, Cumberland Blues, Loser, Deal, Truckin’, China Cat Sunflower, Sugar Magnolia, Midnight Hour and Uncle John’s Band as highlights, while Casey Jones and Bertha receive lukewarm remarks. Overall the performance is praised for its enthusiasm and tight jams despite occasional sloppy moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) are 4‑5 stars praising the music; recording comments note a few mix quirks but overall clarity, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Guitar-heavy mix with Jerry panned hard left; vocals and drums sit lower. Early seconds of Truckin' have a brief drop‑out, but overall crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Cumberland Blues",
+      "Loser",
+      "Deal",
+      "Truckin'",
+      "China Cat Sunflower",
+      "Sugar Magnolia",
+      "Midnight Hour",
+      "Uncle John's Band",
+      "Hard to Handle"
+    ],
+    "poor_songs": [
+      "Casey Jones",
+      "Bertha"
+    ],
+    "setlist_flow": "First set builds nicely with strong openings (Good Lovin', Cumberland Blues) and solid jams; the second set is described as “on fire,” delivering extended improvisations on Loser, Hard to Handle and a soaring Midnight Hour."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for playing his ‘ass off’; guitar dominates the mix (left channel) and is highlighted on Good Lovin', China Cat, Sugar Magnolia, etc.",
+    "Phil": "Noted for adding intensity to jams; bass work mentioned positively in several reviews.",
+    "Bob": "Commended for ripping riffs on China Cat Sunflower and overall rhythm work.",
+    "Keys": "Pigpen’s organ/keyboard praised as “in terrific form” and “free advice,” especially early in the set.",
+    "Drums": "Bill Kreutzmann’s funky groove highlighted; one reviewer notes Mickey was absent but still solid."
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:34:16.241333+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-04-10.sbd.willy.8674.sbeok.shnf"
+}

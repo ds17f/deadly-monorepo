@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard capture with modest hiss delivers a smoking Dancin' in the Streets jam, stellar Franklin's Tower and a powerful slow Not Fade Away.",
+  "review": "The recording is a decent sound‑board source – clear enough to hear the band’s interplay despite some hiss, buzzing interference and occasional tape‑cut glitches. Musically the show shines with an extended Dancin' in the Streets that rolls into a superb drum‑space segment, a soaring Franklin's Tower, a memorable slow Not Fade Away and strong moments from Black Peter and Shakedown. While a few reviewers note a sloppy Half Step and some bass distortion, the overall vibe is energetic and quintessentially Winterland.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews are 4–5 stars praising the performance; recording quality is good but not flawless, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard mix with occasional hiss, buzzing interference and a brief tape cut in the Drum segment; overall listenable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' in the Streets",
+      "Franklin's Tower",
+      "Not Fade Away (slow)",
+      "Black Peter",
+      "Shakedown"
+    ],
+    "poor_songs": [
+      "Half Step"
+    ],
+    "setlist_flow": "First set described as solid but unremarkable; second set builds a massive jam from Dancin' into Drums/Space, then rolls through Franklin's Tower and finishes with energetic closers. The pacing is praised for its extended improvisations despite occasional sluggish moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s fanning guitar work, soaring arpeggios, Roy Buchanan‑style harmonics and spirited vocals on Franklin's and the jam sections.",
+    "Phil": "Mixed feedback – some note a ‘burpy’ or distorted bass sound that was distracting, while others praise his lead on Not Fade Away and overall presence.",
+    "Bob": "Mentioned briefly as fanning away alongside Jerry during Franklin's Tower; no major critique.",
+    "Keys": "Keith’s keyboards are praised for being well integrated into the mix and adding depth to the performance.",
+    "Drums": "The drum/space segment is repeatedly called one of the best ever, with powerful, funky grooves that drive the Dancin' jam."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Not Fade Away (slow)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T15:43:45.221642+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-10-20.sbd.lai.4159.sbeok.shnf"
+}

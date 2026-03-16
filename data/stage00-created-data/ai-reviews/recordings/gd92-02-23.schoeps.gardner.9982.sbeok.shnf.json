@@ -1,0 +1,80 @@
+{
+  "summary": "Echo‑ey matrix recording with uneven mix, yet the first-ever Corrina and a standout Not Fade Away keep the show memorable.",
+  "review": "The performance swings between highs and lows – fans rave about the historic first rendition of Corrina and Jerry’s soaring work on Not Fade Away, while the second set drifts after a marathon Drums‑Space segment and suffers from mix problems that bury the guitars. The source is a matrix‑type capture with noticeable echo and uneven levels, making parts of the show sound thin despite the strong moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews are split: several 5‑star fans love the setlist highlights, but detailed criticism of the mix and overall performance drags the average down; weighting show (70%) vs. recording (30%) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is described as echo‑y and thin, with little Jerry in the front‑of‑house feed; some sections sound distorted or muffled, especially on the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Corrina",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Way to Go Home",
+      "Black Throated Wind",
+      "Terrapin",
+      "Throwing Stones"
+    ],
+    "setlist_flow": "First set starts strong with the debut Corrina but loses momentum; second set stretches out with a long Drums‑Space segment that flags later, ending on a high note with Not Fade Away."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing shines on Not Fade Away and some jams, but the mix often buries his guitar and he loses his place during Terrapin.",
+    "Phil": "Bass is audible only faintly ('Phil rumbles') due to the uneven front‑of‑house balance.",
+    "Bob": "",
+    "Keys": "New ear monitors led to a weird, echo‑laden sound; keyboards are sometimes lost in the mix.",
+    "Drums": "Drummers appear disengaged at times; Baba Olatunji’s percussion adds a jungle vibe but overall the drum/space segment feels over‑extended."
+  },
+  "song_mentions": {
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Way to Go Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:25:54.444148+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-02-23.schoeps.gardner.9982.sbeok.shnf"
+}

@@ -1,0 +1,116 @@
+{
+  "summary": "A high‑quality audience tape that captures the warm ’76 wooden sound, highlighted by a jam‑filled second set featuring Lazy Lightnin' > Supplication, an epic Playing in the Band, and an 18‑minute Wharf Rat.",
+  "review": "The Wise‑taped audience recording is praised as the best source for this 1976 show, delivering the characteristic wooden tone despite some crowd chatter and occasional dropouts that benefit from a light EQ touch. Musically the concert shines – a tight first set gives way to a second‑set brimming with standout moments like Lazy Lightnin' > Supplication, a sprawling Playing in the Band, an 18‑minute Wharf Rat, and a solid Sugar Magnolia encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All six reviews are 4 + stars; reviewers consistently praise the performance and consider this tape the best source despite minor technical quirks, indicating a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Captures the coveted '76 wooden sound; crowd conversation is audible (left/right split) and can be distracting. Some listeners note occasional dropouts (Deal, PitB, Wharf) and balance/eq issues that benefit from a light boost on lows/highs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin' > Supplication",
+      "Playing in the Band",
+      "Wharf Rat (18 min)",
+      "Might as Well",
+      "Samson & Delilah",
+      "U.S. Blues",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Tennessee Jed",
+      "Big River",
+      "Loser",
+      "Candyman",
+      "Around & Around"
+    ],
+    "setlist_flow": "A solid, song‑dense first set builds momentum that erupts into a jam‑heavy second set. The show is praised as a hidden gem with creative segues, extended improvisations, and an energetic double encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia (Jer) is described as understated yet original early on, then excites the crowd with slide work and a fiery Wharf Rat; his interplay throughout the night is highlighted as a major strength.",
+    "Phil": "Phil Lesh earns kudos for \"Philonius Funk\" during the long jams, especially on Playing in the Band and the extended Wharf Rat groove.",
+    "Bob": "Bob Weir (Bobby) shines on Lazy Lightnin' > Supplication, though he flubs a few notes on Around & Around; his vocal energy is noted as strong overall.",
+    "Keys": "Keith Hartley gets credit for owning 'They Love Each Other', delivering a memorable solo section in Playing in the Band and adding a cool bridge during Goin' Down the Road Feeling Bad.",
+    "Drums": "Mickey Hart’s intricate drumming is praised, particularly on the sprawling Playing in the Band jam; his rhythmic drive helps sustain the long improvisational passages."
+  },
+  "song_mentions": {
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:02:11.665122+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-08-02.132697.aud.gatto.wise.flac16"
+}

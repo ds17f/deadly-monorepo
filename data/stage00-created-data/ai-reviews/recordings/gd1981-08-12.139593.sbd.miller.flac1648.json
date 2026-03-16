@@ -1,0 +1,31 @@
+{
+  "summary": "Great performance marred by a faulty left channel in the soundboard recording",
+  "review": "The concert itself is praised as an excellent show, but the recording suffers from a serious left‑side audio problem that makes this version unlistenable. The source appears to be a soundboard tape, yet the channel issue outweighs the musical strengths for most listeners.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the show highly but flags a severe recording defect, leading to an overall moderate rating after weighting performance (70%) and audio quality (30%)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Left channel is corrupted or missing; causes imbalance/muddiness that renders the recording unusable despite otherwise decent source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T13:26:08.210902+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-12.139593.sbd.miller.flac1648"
+}

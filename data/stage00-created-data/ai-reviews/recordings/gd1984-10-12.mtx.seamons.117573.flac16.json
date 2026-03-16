@@ -1,0 +1,110 @@
+{
+  "summary": "A solid matrix recording captures the Oct 12 1984 show with minor glitches but delivers a high‑energy performance highlighted by a scorching “Don’t Need Love”, an epic UJB/Drums/Space sandwich and a soaring Dew finale.",
+  "review": "The J.H. Seamon matrix mix is generally clean, with only occasional buzzing or airy audience‑only patches that don’t detract from the listening experience. Musically the night shines – the first set “smokes”, the second set delivers a monster UJB → Drums → Space → PITB reprise and a blistering Dew, while rare gems like “Don’t Need Love” and “It Must Have Been the Roses” earn high marks. Overall the performance is praised for its power, emotion and tight interplay despite a few uneven moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "15 detailed reviews averaging 4.4 stars; most praise both the show and the matrix recording, with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound with occasional buzzing during Cold Rain & Snow and Sailor>Saint, some airy audience‑only patches, brief static dropouts; mastering by Hunter S. praised as excellent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Don't Need Love",
+      "Uncle John's Band > Drums > Space > PITB Reprise > Uncle John's Band",
+      "Dew",
+      "Cold Rain & Snow",
+      "Feel Like a Stranger",
+      "It Must Have Been the Roses",
+      "On The Road Again",
+      "Jack-a-Roe",
+      "Cumberland Blues",
+      "Good Lovin"
+    ],
+    "poor_songs": [
+      "Saint of Circumstance"
+    ],
+    "setlist_flow": "First set rolls smoothly and “smokes” from start to finish; second set builds with a massive UJB/Drums/Space sandwich, delivering high energy and emotional peaks, ending with an uplifting Dew and a rousing Good Lovin encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone and vocals are repeatedly praised – described as crisp, powerful, emotionally charged and “sweet” despite his physical decline.",
+    "Phil": "Phil’s bass work shines especially on \"Cumberland Blues\", providing a strong low‑end foundation.",
+    "Bob": "Weir contributes solid rhythm guitar and vocal harmonies throughout the show.",
+    "Keys": "Brent Mydland receives high marks for piano/organ, particularly on “Don’t Need Love”, UJB and the extended jam sections.",
+    "Drums": "Bill Kreutzmann’s drumming and Mickey Hart’s space passages are highlighted as energetic and well‑executed, especially in the long drum/space segment."
+  },
+  "song_mentions": {
+    "Don't Need Love": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Uncle John's Band > Drums > Space > PITB Reprise > Uncle John's Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dew": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "On The Road Again": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T22:17:29.666497+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-12.mtx.seamons.117573.flac16"
+}

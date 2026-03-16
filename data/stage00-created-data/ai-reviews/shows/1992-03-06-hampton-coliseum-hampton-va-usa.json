@@ -1,0 +1,68 @@
+{
+  "summary": "Strong Bird Song & Wharf Rat amid uneven set, solid horns.",
+  "blurb": "The show delivers standout performances of Bird Song, New Speedway Boogie and an inspired encore with The Weight. Jerry’s guitar shines though his stamina wanes at times, while Bruce Hornsby adds vibrant keyboard work. Overall the set is uneven but offers several memorable moments.",
+  "review": "On March 6, 1992 the Grateful Dead took the stage at the Hampton Coliseum for a night that oscillated between brilliance and wobble. The first set opened with a tight Feel Like A Stranger and built momentum into a soaring Bird Song where Jerry Garcia unleashed thrilling octave blasts – even if a few listeners noted he sounded a bit fatigued. Bruce Hornsby was “in his element,” peppering the set with lively keyboards and vocal harmonies that lifted numbers like New Speedway Boogie and the soulful encore, The Weight, which came through crystal‑clear on the soundboard capture. The second set hit high points with Crazy Fingers’ jazzy improvisation and an unusually long, electro‑textured drum intro that segued into Space, giving Mickey and Bill a chance to stretch out. Not every moment landed; Truckin' sagged in energy and some transitions felt uneven, leaving the overall flow a bit unpredictable. The best listening experience comes from the soundboard recording (gd1992-03-06.131577.sbd.healy.wise.flac1648), which captures the band’s nuances without the boominess of audience tapes while preserving the show’s raw, in‑the‑moment vibe.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings are mixed and one is positive; reviewers consistently praise Bird Song, New Speedway Boogie, Crazy Fingers and Hornsby’s playing while noting uneven energy in Truckin' and occasional fatigue from Jerry. This yields a modest positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1992-03-06.131577.sbd.healy.wise.flac1648",
+    "reason": "Soundboard source praised as sounding great with clear detail, capturing the band’s performance better than audience tapes."
+  },
+  "key_highlights": [
+    "Bird Song's soaring delivery and Jerry’s octave blasts",
+    "Bruce Hornsby’s vibrant keyboards throughout, especially on The Weight",
+    "Intriguing drum intro with electro‑type textures leading into Space",
+    "Strong encore performance of The Weight"
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Wharf Rat",
+    "The Weight",
+    "New Speedway Boogie",
+    "Crazy Fingers",
+    "Drums"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers thrilling octave blasts but shows signs of fatigue, with some reviewers noting his poor condition on stage.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Bruce Hornsby shines, described as 'in his element' both on keys and vocals, adding a vibrant texture to the set.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-18T04:09:12.292658+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Picasso Moon",
+      "Bird Song"
+    ],
+    [
+      "New Speedway Boogie",
+      "Truckin'",
+      "Crazy Fingers",
+      "Corinna",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    [
+      "The Weight"
+    ]
+  ]
+}

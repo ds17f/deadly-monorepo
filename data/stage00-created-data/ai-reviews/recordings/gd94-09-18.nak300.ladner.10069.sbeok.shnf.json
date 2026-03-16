@@ -1,0 +1,58 @@
+{
+  "summary": "High‑energy Shoreline show with a legendary “So Many Roads” and solid Days Between; audience recording is decent but not pristine.",
+  "review": "The performance shines thanks to an electrifying rendition of “So Many Roads” (widely called the best ever) and strong versions of “Days Between,” “Throwing Stones,” and other classics.  The taper used a NAK‑300 mic, yielding an audience‑type recording that is listenable and above average for the era, though it suffers from occasional cuts (notably in “Space”) and lacks the clarity of later Schoeps/DSDB tapes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise the musical performance (especially “So Many Roads”) while noting only moderate recording flaws; the weighted average of show (≈70%) and tape quality (≈30%) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded with a NAK‑300 mic; clarity is decent for an audience capture but not as clean as Schoeps/DSDB sources.  Minor issues: a large cut in “Space” and occasional muffling, yet overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Days Between",
+      "Throwing Stones"
+    ],
+    "poor_songs": [
+      "Space"
+    ],
+    "setlist_flow": "The set builds to a powerful emotional peak with the soaring “So Many Roads” and stays tight through “Days Between.”  Aside from the truncated “Space,” the flow feels cohesive and resonant, especially for fans who cherish late‑’90s Shoreline shows."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is described as weary in a few early reviews, yet most listeners hail his vocal delivery on “So Many Roads” as soulful and his guitar solo as thunderous.  Overall Jerry’s performance is seen as the emotional core of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "One reviewer likens the drum sound at the climax to “shoes in a dryer,” indicating a harsh mix; otherwise drums are not heavily commented on."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 15,
+      "negative_mentions": 1,
+      "total_mentions": 16
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:32:35.960700+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-09-18.nak300.ladner.10069.sbeok.shnf"
+}

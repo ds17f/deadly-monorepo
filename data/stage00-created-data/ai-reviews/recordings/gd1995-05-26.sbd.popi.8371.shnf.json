@@ -1,0 +1,70 @@
+{
+  "summary": "Up‑front soundboard captures a rare, high‑energy 1995 show highlighted by a scorching Help>Slip>Franklin's and an epic Scarlet Fire.",
+  "review": "The performance is praised as one of the best of the final tour, with standout moments like Help>Slip>Franklin's, Scarlet Fire, Vince’s lively playing on The Same Thing, and a surprisingly engaging jam at the end of Eternity. Reviewers note the recording sounds more forward than other boards, delivering excellent clarity despite a few minor vocal miscues and the occasional “cheesy answers” section.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Consistently high praise for both musical performance (majority 5‑star show comments) and recording quality (noted as the best, up‑front soundboard), with only minor performance hiccups lowering the overall score slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Up‑front mix described as clearer and more forward than other boards; no major dropouts or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's Tower",
+      "Scarlet Fire",
+      "The Same Thing",
+      "Loose Lucy",
+      "Eternity (jam at the end)"
+    ],
+    "poor_songs": [
+      "Cheesey Answers"
+    ],
+    "setlist_flow": "Strong setlist with rare energy for the era; song selection kept momentum high and the second half built to an epic climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Lively and spry on Loose Lucy, overall energetic playing.",
+    "Phil": "",
+    "Bob": "Occasional misstep noted as “cheesy answers” during a spacey section.",
+    "Keys": "Vince’s keyboard work shines on The Same Thing and adds to the show’s energy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help>Slip>Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity (jam at the end)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cheesey Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T09:01:35.925956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-26.sbd.popi.8371.shnf"
+}

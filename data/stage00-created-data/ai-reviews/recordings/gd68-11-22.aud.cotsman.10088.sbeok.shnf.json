@@ -1,0 +1,51 @@
+{
+  "summary": "Muddy audience recording of an epic late‑68/early‑69 show, highlighted by a searing Morning Dew and classic Dark Star.",
+  "review": "The performance is widely praised – Jerry’s guitar is described as on fire, the band rides a powerful Dark Star and delivers a top‑notch Morning Dew, with New Potato adding extra sparkle. The AUD source is notoriously muffled and lacking clarity, though recent remastering has warmed it up enough to be listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Reviews consistently laud the musical performance (≈4/5) while repeatedly criticizing the audience‑recording quality (≈2½/5). Weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muffled, muddy and limited clarity typical of 1968 AUD tapes; some reviewers note occasional improvement after remastering but overall the sound remains poor compared to soundboard sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Dark Star",
+      "New Potato"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑era set with high energy, improvisational guitars and driving drums; the show builds from a strong opener into extended jams, maintaining momentum despite the small audience."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for searing, on‑fire guitar work and powerful solos throughout the night.",
+    "Phil": "Bass is noted as sometimes muddled; his commentary on the show appears in Phil Lesh’s book.",
+    "Bob": "",
+    "Keys": "Keyboards are described as limited or background (Pigpen’s organ low on mix); Tom Constanten may have been present but not audible.",
+    "Drums": "Conflicting reports: some say both Mickey and Bill played, others claim Billy was absent – Mickey’s power percussion is highlighted as a driving force."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "New Potato": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:51:22.915433+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-11-22.aud.cotsman.10088.sbeok.shnf"
+}

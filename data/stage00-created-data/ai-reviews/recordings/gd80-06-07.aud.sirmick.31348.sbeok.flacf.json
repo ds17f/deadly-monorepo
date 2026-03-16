@@ -1,0 +1,118 @@
+{
+  "summary": "Stellar audience tape of a fiery, tight early‑80s Dead show – Jerry on fire, standout Stranger, Deal and Saint of Circumstance.",
+  "review": "The audience (AUD) recording is praised as top‑notch, often described as clearer than many soundboard tapes. Musically the concert shines with an energetic first set and a second set highlighted by a smoking \"Stranger\", a magical \"Deal\" and the unique uptempo \"Saint of Circumstance\" jam, all driven by Jerry’s on‑fire guitar work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance (tight playing, many standout songs) and recording quality (top‑notch AUD), with only minor mixed comments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers call the tape \"top‑notch\", \"better than a SBD\" and \"quite listenable\"; a few note it as just OK or with typical AUD noise, but overall the mix is clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Jack Straw",
+      "Friend of the Devil",
+      "El Paso",
+      "Mama Tried",
+      "Passenger",
+      "Loser",
+      "Feel Like a Stranger",
+      "Deal",
+      "Saint of Circumstance",
+      "Alabama",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [
+      "Bertha (average)",
+      "Far From Me (low point)"
+    ],
+    "setlist_flow": "A brisk, uptempo first set that builds momentum into a second set featuring the unique \"Saint of Circumstance\" jam and a double encore; overall described as a tight, high‑energy performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called 'on fire', energetic, magical on Deal and other solos.",
+    "Phil": "Noted for powerful bass bombs and thundering low end that shook the stadium.",
+    "Bob": "Brief mention of a lyrical slip in \"Passenger\"; otherwise not highlighted.",
+    "Keys": "Brent (keyboards) praised for great show, adding x‑factor and helping drive the uptempo vibe.",
+    "Drums": "Bill's hyper‑tempo drumming noted on tracks like \"Mama Tried\" and throughout the set."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:12:03.245787+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-07.aud.sirmick.31348.sbeok.flacf"
+}

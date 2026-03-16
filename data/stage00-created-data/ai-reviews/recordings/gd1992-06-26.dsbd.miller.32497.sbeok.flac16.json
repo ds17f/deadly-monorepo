@@ -1,0 +1,58 @@
+{
+  "summary": "Clear soundboard capture of a solid summer ’92 show with a standout Wharf Rat jam and strong Crazy Fingers, though Loose Lucy falters.",
+  "review": "The board recording is noticeably clearer than the audience copies, delivering a clean mix that lets Jerry’s passionate guitar on Wharf Rat shine. Musically the concert delivers several highlights – especially Wharf Rat’s jam and a tasty Crazy Fingers – but suffers from a few missteps such as Loose Lucy falling apart and Jerry forgetting lyrics in Uncle John’s. Overall it’s a decent mid‑tour performance with enough good moments to make it worth listening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the recording and several songs, while a few note notable slip‑ups; the weighted average of show and recording feedback lands in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear board mix praised as much better than audience copies; no major dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [
+      "Loose Lucy",
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "Set includes solid jams and familiar tunes, but a few songs stumble; overall a decent mid‑tour performance with memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His passionate playing shines on Wharf Rat; he forgets lyrics in Uncle John's Band and appears exhausted later in the run.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:56:27.936354+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-26.dsbd.miller.32497.sbeok.flac16"
+}

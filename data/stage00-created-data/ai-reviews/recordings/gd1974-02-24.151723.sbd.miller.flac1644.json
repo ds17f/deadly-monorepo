@@ -1,0 +1,45 @@
+{
+  "summary": "Great‑sounding home‑town show with a standout Dark Star → Morning Dew sequence captured on a soundboard recording",
+  "review": "Both reviewers praise the concert’s generous, hometown‑charged sets and note that the sound is “great,” especially highlighting the Bill Graham intro and the Dark Star into Morning Dew jam. The recording appears to be a clean soundboard source, though no technical specifics are given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Limited but consistently positive comments about both performance and audio quality lead to an overall solid rating despite the lack of detailed metrics."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the sound as great/clear; no issues or mix problems are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generous, home‑town crowd vibe with Bill Graham introductions; the Dark Star → Morning Dew transition is highlighted as a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:29:56.099769+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-02-24.151723.sbd.miller.flac1644"
+}

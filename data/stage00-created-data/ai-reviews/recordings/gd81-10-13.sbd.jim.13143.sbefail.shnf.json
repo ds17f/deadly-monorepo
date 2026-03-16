@@ -1,0 +1,78 @@
+{
+  "summary": "High‑energy Europe ’81 show with a fiery second set and crisp soundboard recording despite occasional cuts.",
+  "review": "The performance shines especially in the second half, delivering scorching Spanish Jam, a standout Satisfaction encore, and punchy Black Peter while the mix keeps drums and Brent’s keyboards front‑and‑center. The soundboard source is generally clear and well balanced, though a few listeners note brief drop‑outs toward the end.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong musical praise (standout songs, high energy) combined with generally good soundboard quality; only minor recording glitches keep it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clear and well‑balanced board mix – drums praised as perfect in the mix, Brent’s keyboards highlighted. A few reviewers mention occasional cuts/funky drop‑outs near the ending."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam",
+      "Satisfaction",
+      "Black Peter",
+      "Sugar Magnolia",
+      "Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set ramps up intensity with seamless transitions (e.g., Spanish Jam into Wheel, Wheel into Sugar Magnolia) and a high‑energy Satisfaction encore; overall pacing is varied and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Over‑the‑top on Black Peter and pushes the tempo up a notch on Sugar Magnolia.",
+    "Phil": "",
+    "Bob": "Strong vocal performance, especially paired with Brent on Satisfaction.",
+    "Keys": "Brent’s keyboard tone is praised as great; his work on Lost Sailor noted as evocative.",
+    "Drums": "Drums are described as perfect in the mix and drive the high‑energy feel."
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:49:23.670510+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-13.sbd.jim.13143.sbefail.shnf"
+}

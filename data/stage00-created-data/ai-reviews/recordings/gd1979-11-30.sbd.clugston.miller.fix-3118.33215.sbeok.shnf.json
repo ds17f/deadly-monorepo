@@ -1,0 +1,69 @@
+{
+  "summary": "Fantastic soundboard capture of a high‑energy 1979 show with standout Dancin’ in the Streets, Scarlet > Fire and a sweet Playin’.",
+  "review": "The recording is a crystal‑clear soundboard mix that lets every nuance of the band shine, while the performance itself is classic late‑'79 energy – a hopping first set highlighted by an extended “Dancin’ in the Streets,” and a second set that builds into a gorgeous Scarlet > Fire transition, a soaring Playin’, and a tight spacey outro jam.  Even the occasional vocal wobble on Terrapin Station can’t dull the overall brilliance of this show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 5‑star ratings, praising both the musical performance and the recording quality; the consensus is uniformly enthusiastic."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Fantastic clarity and balance throughout; minimal deviation from optimal sound, no noticeable drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' in the Streets",
+      "Scarlet > Fire",
+      "Playin'",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "First set bounces with high‑energy hops and a marathon Dancin', while the second set builds a pre‑drums run that culminates in a spacey yet tight outro jam, delivering classic 1979 momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for superb guitar work in Scarlet/Fire transition and an outstanding Playin'; vocal hiccups noted on Terrapin Station.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drums run and outro jam described as tight, spacey and a true work of art."
+  },
+  "song_mentions": {
+    "Dancin' in the Streets": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:25:11.071557+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-30.sbd.clugston.miller.fix-3118.33215.sbeok.shnf"
+}

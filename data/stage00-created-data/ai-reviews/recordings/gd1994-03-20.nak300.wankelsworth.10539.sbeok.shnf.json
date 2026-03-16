@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality audience tape captures a vibrant spring‑94 show with standout performances of “All Over Now” and “Let It Grow.”",
+  "review": "Both reviewers rave about this recording, noting the Nakamichi 300 source provides clear sound with just enough crowd chatter to retain atmosphere while avoiding the heavy distraction of other audience tapes. The concert itself is remembered fondly, especially for the first‑set renditions of “All Over Now” and “Let It Grow,” making it a must‑listen for fans of the 1994 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviews award 5 stars and highlight excellent performance and solid recording quality; limited to two detailed reviews, giving moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Nakamichi 300 cassette capture praised for reduced crowd noise, clear instrument separation, and a pleasant balance of conversation ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "All Over Now",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic recollection of a spring‑94 set, with the first set highlighted for its tight playing and memorable song choices."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:15:59.130713+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-20.nak300.wankelsworth.10539.sbeok.shnf"
+}

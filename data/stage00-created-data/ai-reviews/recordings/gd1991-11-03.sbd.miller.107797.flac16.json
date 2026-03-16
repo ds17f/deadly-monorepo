@@ -1,0 +1,70 @@
+{
+  "summary": "Fair soundboard capture of a largely underwhelming Bill Graham tribute set, with The Other One standing out amid mix problems and uneven guest collaborations.",
+  "review": "The miller_107797 SBD recording is the cleanest source available but still suffers from monitor‑heavy mix issues that make the band sound muffed at times. Musically the show feels more like a soundcheck than a full concert, with only nine Dead songs and several tentative guest spots; The Other One shines as the sole highlight while many other numbers are described as tepid or poorly executed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Detailed critique points to a weak performance (average‑to‑poor show) and only fair recording quality, yielding an overall low rating despite a few positive notes."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Monitor mix is heavy on keyboards, causing cracks and muffed sound; Phil loses place in sections, but the SBD source is still the best available compared with FM or audience feeds."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Touch of Grey",
+      "Rider",
+      "Wang Dang Doodle",
+      "Sunshine Daydream"
+    ],
+    "setlist_flow": "Essentially a sound‑check with nine Dead songs interspersed with guest spots; the flow is disjointed, the band sounds tentative and several transitions are shaky."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers some nice licks and warns the band on tempo, but overall his playing feels caught off‑guard.",
+    "Phil": "Loses his place in \"Rider\" and jumps ahead with lyrics before being cued; perks up later during Fogerty jam.",
+    "Bob": "Out of tune on several songs, notably low on \"Truckin'\", off‑mic moments, and generally shaky throughout.",
+    "Keys": "Vince's keyboard is front‑and‑center in the mix, often overpowering other instruments but also providing the strongest musical moments.",
+    "Drums": "Mickey keeps solid time, offers occasional teasing remarks, but overall the rhythm section is hampered by the poor monitor balance."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:49:12.873604+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-11-03.sbd.miller.107797.flac16"
+}

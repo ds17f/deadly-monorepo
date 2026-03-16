@@ -1,0 +1,82 @@
+{
+  "summary": "Solid soundboard tape of a famously problematic 1985 Boreal Ridge show – decent recording but the performance is marred by equipment woes, with a few bright spots like West LA Fadeaway and a blistering China‑Rider.",
+  "review": "The SBD source captures the concert clearly enough for most listeners, though the first set sounds tinny because of monitor and PA failures. Musically the night is infamous for bad sound, Bobby’s amp trouble and Jerry’s sour mood, yet there are moments of high energy – a hot West LA Fadeaway, a tight China‑Rider, strong drumming and an inspired He's Gone. Overall the show sits in the middle of the Dead’s mid‑80s “rough” era.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70 %) rate the show poorly because of technical and performance problems, but a substantial minority praise specific songs and note that the SBD tape is surprisingly listenable. The weighted average places the recording at “good” quality and the show at “fair‑to‑poor”, yielding an overall rating just under 3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD tape; occasional tinny first‑set sound and a few drop‑outs, but overall listenable. No major distortion – most complaints focus on the live PA, not the tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West LA Fadeaway",
+      "China Cat > I Know You Rider",
+      "He's Gone",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Friend of the Devil",
+      "Day Tripper",
+      "Hell in a Bucket",
+      "Minglewood"
+    ],
+    "setlist_flow": "First set suffers from monitor and PA problems – guitars out‑of‑tune, Bobby’s amp buzzing, and a generally disjointed feel. After a long break the band regroups for a stronger second set; tempos pick up, China‑Rider blazes, drumming tightens, but the set ends with a sloppy Day Tripper encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Often described as sour‑mood and off‑key; his guitar work on West LA is praised, but he frequently cuts Bobby off and seems disengaged.",
+    "Phil": "Struggles to lock in due to monitor issues; occasionally cusses and appears frustrated.",
+    "Bob": "Equipment problems dominate – amp buzzes, kicks it, loses power, causing multiple stoppages.",
+    "Keys": "Brent (keyboards) does his best under the circumstances, sings on a few numbers, but is largely drowned out by the chaos.",
+    "Drums": "Mickey and Bill receive strong praise; many reviewers call the drumming inventive and one of the highlights of the night."
+  },
+  "song_mentions": {
+    "West LA Fadeaway": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat > I Know You Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Day Tripper": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Drums": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-15T07:57:44.717009+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-08-24.sbd.vernon.13991.sbeok.shnf"
+}

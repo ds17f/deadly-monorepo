@@ -1,0 +1,82 @@
+{
+  "summary": "High‑energy 1984 Augusta show captured on a mostly soundboard source; stellar vocals and soaring Morning Dew offset by occasional audience patch glitches.",
+  "review": "The performance is widely praised for its raw power – Jerry’s voice on the Dew, Phil’s booming bass, Brent’s rare “Don’t Need Love” moment and an unforgettable second‑set flow that builds from Stranger through a blazing Sailor > Saint into a soaring Uncle John’s Band → Jam → Morning Dew.  The tape is primarily a master soundboard cassette but contains an audience‑sourced patch for the latter part; reviewers note some left‑channel static, missing drums in the space segment and occasional hiss, yet most consider it a good‑to‑excellent listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews (4‑5 stars) celebrate the musical performance, especially the second set and Morning Dew, while technical complaints are limited to patch quality and minor noise – a classic 70 % show / 30 % recording weighting yields a rating in the strong‑good range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Primarily master soundboard cassette (MSC) with an audience (AUD) patch from mid‑UJB to end; reviewers note occasional left‑channel static, a hiss, missing drums/space in the patched segment and a brief dropout, but overall clarity is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Stranger",
+      "Cold Rain & Snow",
+      "Jack-a-Roe",
+      "Sailor > Saint",
+      "Uncle John's Band",
+      "On the Road Again"
+    ],
+    "poor_songs": [
+      "Don't Need Love"
+    ],
+    "setlist_flow": "First set builds momentum with a fiery Stranger and tight Cold Rain & Snow; second set erupts into a high‑energy marathon – Jack‑a‑Roe, Sailor > Saint, a soaring UJB → Jam → Morning Dew – delivering the “post‑drums” climax that many fans cite as the show’s defining moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s voice described as powerful, soulful and ‘like a mushroom cloud’; his guitar tone on the Dew is praised; occasional vocal strain noted but largely revered.",
+    "Phil": "Phil’s bass bombs are highlighted as shaking rafters; sustained notes give depth to the mix.",
+    "Bob": "Bob’s backing vocals and “Bobby licks” receive compliments, especially on rare electric version of On the Road Again.",
+    "Keys": "Brent (Leslie) gets credit for ‘Don’t Need Love’ riff and vocal support; keyboards noted as adding color throughout.",
+    "Drums": "Drumming is praised early on but missing in the space segment due to the AUD patch; overall drum work considered tight."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Stranger": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Don't Need Love": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "On the Road Again": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T22:02:12.928273+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-12.sbd.clugston.5585.sbeok.shnf"
+}

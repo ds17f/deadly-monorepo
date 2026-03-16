@@ -1,0 +1,31 @@
+{
+  "summary": "Muddy audience recording but a solid, inspired performance with top‑notch song selection.",
+  "review": "The audio is described as muddy and difficult to equalize, making it unsuitable for casual MP3 listening. However, the concert itself shines – the setlist ranks a perfect 5 and the playing earns a 4.5, indicating an inspired and enjoyable show despite the recording flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Review rates song selection and performance very highly (≈4.8/5) but audio quality low (2/5). Weighted average (70% show, 30% recording) yields ~3.9 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muddy sound, difficult to EQ, not suitable for MP3 player; overall low fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or flow; reviewer only notes excellent song selection."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T03:18:38.430114+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-04.aud.vernon.8034.sbeok.shnf"
+}

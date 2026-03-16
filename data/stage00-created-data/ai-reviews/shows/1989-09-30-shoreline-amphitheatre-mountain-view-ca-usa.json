@@ -1,0 +1,70 @@
+{
+  "summary": "Solid Shoreline set with standout West L.A. Fadeaway and Estimated Prophet",
+  "blurb": "The show opens strong with a lively Bertha and delivers highlights like West L.A. Fadeaway, Estimated Prophet and Touch of Grey. The mix is thin, burying Bob's guitar and vocals, but the band’s energy remains solid through the encore U.S. Blues.",
+  "review": "On September 30, 1989 at Shoreline Amphitheatre the Dead delivered a respectable performance that, while not earth‑shattering, offered several memorable moments. The first set kicked off with an upbeat Bertha and featured a crisp West L.A. Fadeaway that many reviewers singled out as a high point. A quieter turn came with Queen Jane Approximately and Let It Grow before diving into the second set, where Estimated Prophet shone alongside a tight Touch of Grey and a rousing U.S. Blues encore. The band stayed locked in, but the prevailing soundboard mix is dry and overly compressed, leaving Bob Weir’s guitar and vocals almost inaudible – a drawback noted across multiple recordings. Still, Jerry’s lead work, Phil’s steady bass, Brent’s supportive keys, and the dual drumming of Mickey and Bill keep the show moving forward with the typical Dead groove.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0,
+      "sentiment_rationale": "The recordings show mixed sentiment overall – one positive, three mixed, and one negative review. No consistent praise or criticism across multiple sources, so no adjustment is applied.",
+      "final_calculation": "2.5 + 0.1 + 0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd89-09-30.sbd.8964.sbeok.shnf",
+    "reason": "Only soundboard with detailed notes; despite its thin mix it captures the standout West L.A. Fadeaway and Estimated Prophet performances."
+  },
+  "key_highlights": [
+    "Bertha opener sets an energetic tone",
+    "West L.A. Fadeaway and Estimated Prophet are performance peaks",
+    "Touch of Grey provides a solid second‑set centerpiece",
+    "U.S. Blues encore ends the night on a high note despite mix issues"
+  ],
+  "song_highlights": [
+    "Bertha",
+    "West L.A. Fadeaway",
+    "Estimated Prophet",
+    "Touch of Grey",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry delivers his usual fluid leads and steady rhythm, anchoring the set with characteristic phrasing.",
+    "Phil": "Phil provides a solid bass foundation throughout, keeping the groove tight even when other elements are buried in the mix.",
+    "Bob": "Bob's guitar and vocal parts are largely inaudible due to a dry, compressed soundboard mix, limiting his contribution on this recording.",
+    "Brent": "Brent supplies tasteful keyboard textures that complement the jams without standing out.",
+    "Mickey": "Mickey's percussion adds depth and drive, maintaining the rhythmic flow during drums and space sections.",
+    "Billy": "Bill (Kreutzmann) locks in with Mickey, delivering reliable drumming that supports the band's dynamics."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T23:19:31.544061+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha",
+      "Greatest Story Ever Told"
+    ],
+    [
+      "West L.A. Fadeaway"
+    ],
+    [
+      "Estimated Prophet",
+      "Truckin'",
+      "Smokestack Lightning",
+      "Drums",
+      "Space",
+      "I Will Take You Home",
+      "The Wheel",
+      "All Along The Watchtower",
+      "Touch of Grey"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

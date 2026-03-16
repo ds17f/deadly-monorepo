@@ -1,0 +1,39 @@
+{
+  "summary": "Very good show overall with a disappointing Broken Down Palace segment; recording quality not discussed",
+  "review": "The concert is praised as a very good performance, though the guest accordionist 'Horsnby' detracts from what could have been an excellent rendition of Broken Down Palace. No comments were made about the source or fidelity of the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Based on a single 4‑star review that rates the show highly despite one negative musical comment; no information about recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review provides no details on soundboard, audience mix, clarity or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Broken Down Palace"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Down Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:13:10.222804+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-26.schoeps.andrewf.84853.sbeok.flac16"
+}

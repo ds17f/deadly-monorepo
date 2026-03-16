@@ -1,0 +1,125 @@
+{
+  "summary": "Excellent soundboard capture of the July‑22‑1990 Tinley Park show where Brent’s keyboards and Jerry’s soaring solos shine; standout performances include Loser, Estimated Prophet→Eyes, and a marathon Samson/Hey Pocky Way sequence.",
+  "review": "The recording is crystal‑clear with crisp highs and deep bass, delivering an immersive listening experience despite a slight echo on the second set. Musically the concert builds momentum, featuring fiery Brent solos, Jerry’s “screeching” leads, and several fan‑favorite moments such as Loser, Estimated Prophet into Eyes, and a 40‑minute jam that weaves Samson, Hey Pocky Way, and The Wheel. Overall reviewers rave about the energy and musicianship, calling it one of the best shows of the summer run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.1/5; comments are overwhelmingly positive about both performance and sound quality, with detailed praise from multiple reviewers."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp high‑end, clear bass, overall terrific sound; a bit of echo appears in the second set around Eyes but does not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Estimated Prophet → Eyes of the World",
+      "Samson",
+      "Hey Pocky Way",
+      "The Wheel",
+      "Good Lovin' -> Stella Blue -> Throwing Stones -> Lovelight",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set gains steam, featuring a long, flowing jam stretch (Samson → Hey Pocky Way → Estimated/Eyes) and an expansive third quarter that showcases deep improvisation before closing with a powerful Heaven’s Door."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight his soaring, ‘screeching’ solos and note occasional “bumps” that add excitement to the performance.",
+    "Phil": "Praised for vocal presence on Box of Rain, Far From Me and Lovelight; described as ‘really into’ the set and sounding great in the mix.",
+    "Bob": "Mentioned briefly singing from an echo chamber at the end of Bucket, adding a humorous touch.",
+    "Keys": "Brent shines on B3 organ throughout – especially on Stranger, Hey Pocky Way and his scat during Knockin' on Heaven's Door; credited with many of the show’s high points.",
+    "Drums": "Generally praised for spacey jams, though one reviewer felt the rhythm section was slightly out of sync later in the set."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet → Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:39:50.196457+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-22.sbd.walker-scotton.miller.95870.sbeok.flac16"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Crisp soundboard capture of a solid 1991 show with standout renditions of Scarlet>Fire, Peggy‑O and Big River.",
+  "review": "Both reviewers describe this 1991 recording as a decent performance that isn’t epic but still delivers several memorable moments. The soundboard source is noted as crisp and clean, while the band rolls through highlights like Scarlet>Fire, Peggy‑O, Big River and Masterpiece despite occasional sloppy playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Two reviews give a moderate to good impression (3–4 stars). Show quality is solid with several praised songs, and the recording is described as crisp, leading to an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer calls the SBD \"crisp and nice\"; no major drop‑outs or balance issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Peggy-O",
+      "Big River",
+      "Masterpiece"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid set with energetic jams; occasional sloppy moments are noted but do not detract from the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:50:04.522280+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-13.sbd.hinko.31244.sbeok.flacf"
+}

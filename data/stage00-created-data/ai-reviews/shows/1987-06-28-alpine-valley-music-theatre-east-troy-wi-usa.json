@@ -1,0 +1,60 @@
+{
+  "summary": "High‑energy Jack Straw & Althea, solid second set with mixed moments",
+  "blurb": "The first set builds to a fiery Jack Straw and a standout Althea featuring Garcia on fire. The second set delivers strong performances of Mississippi Half‑Step Uptown Toodeloo and Man Smart, Woman Smarter, though some transitions feel under‑whelming. Recording quality ranges from good soundboard to excellent matrix, with occasional technical hiccups.",
+  "review": "Alpine Valley on June 28, 1987 delivered a punchy first set that peaks with a rousing Jack Straw and an Althea where Jerry Garcia’s tone is described as “across the Rio Grande” and “on fire.” Phil Lesh stays in the background while Bob Weir’s equipment woes add a humorous moment mid‑show. The second set keeps the momentum with a tight Mississippi Half‑Step Uptown Toodeloo and a playful Man Smart, Woman Smarter, before diving into an extended drum/space sequence that leaves listeners “in the drummy mood.” While the performance is generally solid, The Dew falls short of the band’s usual vigor. Recording-wise, the best‑available source (gd87-06-28.bille.kerbel.8140.sbeok.shnf) offers good clarity despite a few technical glitches; the matrix capture shines with crisp front‑of‑PA sound but suffers from mislabeled tracks, and one soundboard version runs fast and needs pitch correction.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Two recordings are clearly positive (Jack Straw, Althea highlights; enthusiastic show vibe), one is negative (zero‑star rating with no detail), and two are mixed (good quality but technical issues). The preponderance of modest praise outweighs the negatives, yielding a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.7 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd87-06-28.bille.kerbel.8140.sbeok.shnf",
+    "reason": "Good‑quality soundboard capture with clear instrument separation; despite minor technical hiccups it provides the most reliable overall listening experience."
+  },
+  "key_highlights": [
+    "Jack Straw closes the first set with high‑energy momentum.",
+    "Althea showcases Garcia’s fiery solo work and tonal brilliance.",
+    "Second set delivers solid jams on Mississippi Half‑Step Uptown Toodeloo and Man Smart, Woman Smarter.",
+    "Recording quality varies: matrix source is excellent but mislabeled; soundboard needs pitch correction."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Althea",
+    "Mississippi Half-Step Uptown Toodeloo",
+    "Man Smart, Woman Smarter"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers scorching solos on Althea and throughout the set, with his tone praised as “across the Rio Grande” and consistently “on fire.”",
+    "Phil": "Phil’s bass work is largely unremarked in the reviews, appearing solid but without standout moments.",
+    "Bob": "Weir deals with equipment trouble mid‑show, adding a humorous mic intro; musical contributions are otherwise routine.",
+    "Brent": "",
+    "Mickey": "Mickey provides steady, propulsive drumming that keeps the groove tight, especially noted during The Dew’s “drummy mood.”",
+    "Billy": "Bill Kreutzmann complements Mickey with solid rhythmic support throughout both sets."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-15T23:35:37.453957+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo"
+    ],
+    [
+      "Man Smart, Woman Smarter"
+    ]
+  ]
+}

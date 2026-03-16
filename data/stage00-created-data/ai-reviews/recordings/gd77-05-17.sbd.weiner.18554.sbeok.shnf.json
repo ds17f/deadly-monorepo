@@ -1,0 +1,100 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a blistering May ’77 Alabama show – tight playing, killer Half‑Step and legendary Scarlet > Fire, plus an all‑time great Terrapin/Playin’/Wharf Rat sequence.",
+  "review": "The gd77‑05‑17.sbd.weiner recording is a high‑fidelity soundboard source that lets the band’s May‑1977 fire shine through – every instrument sits in the mix and the bass is deep without being muddy.  Listeners rave about the incendiary Mississippi Half‑Step, one of the best Scarlet > Fire stretches ever, a jaw‑dropping Jack‑a‑Roe, and a majestic second‑set flow (Samson > Delilah → Estimated Prophet → Terrapin Station → Playin’ → Wharf Rat).  Jerry’s tone and solos are described as “perfect” and “on fire,” Phil’s fretless bass grooves are highlighted repeatedly, Keith’s keyboards are “in the pocket,” and the drums (Bill & Mickey) are praised for power and swing.  A handful of reviewers note minor tonal quirks (deep bass boost, a slightly fast second set) but overall the performance is rated as one of the top Spring‑’77 concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 80 % of the 120+ reviews are 4–5 stars, with consistent praise for both musical performance and soundboard quality.  The show is repeatedly called a “must‑listen” and “top‑10/5” Dead concert, while recording comments describe it as “crisp,” “clear,” or “excellent.”  This yields a high composite rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Soundboard mix is clean and well‑balanced; reviewers note crisp highs, strong midrange, deep but controlled bass.  A few mention a slight speed/pitch issue on the matrix version and minor hiss, but overall the audio is described as “crisp,” “beautiful,” and “very good.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Scarlet>Fire",
+      "Jack-a-Roe",
+      "Samson > Delilah",
+      "Estimated Prophet",
+      "Terrapin Station > Playin' > Wharf Rat",
+      "High Time",
+      "Brown Eyed Women",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Sunrise (mixed reception)",
+      "Passenger (some dislike the disco‑ish feel)"
+    ],
+    "setlist_flow": "First set is a tight, high‑energy launch with strong vocal harmonies and tight rhythm; second set builds into expansive jams – Samson > Delilah sets the tone, followed by a flawless Estimated → Terrapin/Playin’/Wharf Rat suite that many cite as one of the best May ’77 second‑set sequences."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ‘perfect’ tone, soaring solos (especially on Scarlet, Jack‑a‑Roe and Terrapin), and tight vocal harmonies with Donna.",
+    "Phil": "Noted for “great bass licks” on Mississippi Half‑Step, solid groove throughout, and standout moments in the second set; described as “on fire” and “in sync” with Jerry.",
+    "Bob": "His vocals are highlighted as “sweet,” especially on Jack Straw, Brown Eyed Women, and as a harmonic partner to Donna’s voice.",
+    "Keys": "Keith (and later Brent) are called “right on” for fills, “in the pocket” during Half‑Step and high‑energy jams; his playing is described as “finest hour.”",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive praise for powerful, swinging drumming – especially on Good Lovin’, the second‑set transitions, and the Wharf Rat crescendo."
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 28,
+      "negative_mentions": 2,
+      "total_mentions": 30
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 26,
+      "negative_mentions": 0,
+      "total_mentions": 26
+    },
+    "Samson > Delilah": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Terrapin Station > Playin' > Wharf Rat": {
+      "positive_mentions": 18,
+      "negative_mentions": 0,
+      "total_mentions": 18
+    },
+    "High Time": {
+      "positive_mentions": 14,
+      "negative_mentions": 0,
+      "total_mentions": 14
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Sunrise": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 4,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-25T01:26:17.421381+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-17.sbd.weiner.18554.sbeok.shnf"
+}

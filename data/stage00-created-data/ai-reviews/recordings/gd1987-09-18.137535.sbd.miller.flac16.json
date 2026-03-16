@@ -1,0 +1,90 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy 9/18/87 MSG show with standout Hell in a Bucket, Candyman and a blistering Watchtower → Morning Dew sequence.",
+  "review": "The three fan reviews unanimously praise this 1987 Madison Square Garden performance as one of the year’s top shows, highlighting an electrifying first set and a second‑set suite that rockets from Space into Goin' Down the Road → Good Lovin', Watchtower and Morning Dew. The Miller SBD source is described as the most complete and dynamic version available, delivering crisp, balanced audio with only minor mix quirks, making it arguably the best‐sounding Dead recording in the archive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are very positive (5‑star, 5‑star, 4‑star) and emphasize both superb musical performance and excellent soundboard audio; the weighted average yields a rating well above 4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "The Miller SBD is praised as the most complete, dynamic and crisp version (previous copies were boomy, brick‑walled or clipped). Mix is generally balanced though a few notes mention the guitar being a bit light on certain tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket",
+      "Candyman",
+      "Goin' Down the Road > Good Lovin'",
+      "Watchtower",
+      "Morning Dew",
+      "Terrapin Station",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid and energetic with strong openings (Bucket, Candyman, Bird Song). After a tight Space, the second set launches into one of the most celebrated sequences of the era—Goin' Down the Road into Good Lovin', followed by a soaring Watchtower → Morning Dew suite that drives the show to a thrilling climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his stellar guitar tone and extra‑measure playing, though one mentions the mix being slightly light on him in a few spots.",
+    "Phil": "Praised for his “rumblings” that propel Terrapin Station and provide kinetic energy throughout the set.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is highlighted as top‑5 during Watchtower and praised for the encore Knockins.",
+    "Drums": "Bill (and Mickey) receive kudos for edgy, post‑apocalyptic sounding drumming that drives the high‑energy flow."
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T03:45:36.296859+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-18.137535.sbd.miller.flac16"
+}

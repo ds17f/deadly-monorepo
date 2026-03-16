@@ -1,0 +1,81 @@
+{
+  "summary": "Soundboard capture of a tight early‑80s show with standout performances (Candy Man, Cumberland Blues, etc.) despite a slightly thin Phil Lesh mix.",
+  "review": "The recording is a soundboard source that delivers clear overall balance, though several listeners note the bass sits a bit low in the mix. Musically the concert shines – reviewers point out high‑energy renditions of Candy Man, Cumberland Blues, Ship Of Fools and an inspiring Drums > Space segment, making it a must‑listen for fans of this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Both reviewers gave 5‑star ratings and highlighted strong playing; the only technical gripe is a low Phil mix, which does not significantly detract from enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound, but bass (Phil) is under‑represented in the mix, especially noticeable during the China>Rider transition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candy Man",
+      "Cumberland Blues",
+      "Ship Of Fools",
+      "Estimated Prophet",
+      "Good Times Blues",
+      "Drums > Space",
+      "Not Fade Away",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A well‑balanced set that moves smoothly through acoustic numbers, mid‑tempo rockers and a powerful second‑set jam (Drums > Space), reflecting the tight early‑80s chemistry."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass is too low in the mix for some listeners; reviewer says 'not enough Phil in the mix'.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Drums > Space segment is highlighted as a strong moment."
+  },
+  "song_mentions": {
+    "Candy Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship Of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Times Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:45:37.336482+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-12.sbd.128591.MrBill.flac16"
+}

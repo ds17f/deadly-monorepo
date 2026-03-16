@@ -1,0 +1,81 @@
+{
+  "summary": "Clear Sennheiser audience tape that captures a superb show – the second set shines with a smoking Eyes of the World, killer Scarlet > Fire and an ripping Althea.",
+  "review": "Fans rave about this early‑80s Norfolk concert, calling the second set “epic” and highlighting Eyes, Scarlet > Fire, CC Rider, Althea, Stella Blue and Not Fade Away as stand‑outs. The audience (AUD) recording is praised for its front‑of‑house clarity despite a few mic drop‑outs, making it an enjoyable listen even if a soundboard source would be ideal.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) give 4–5 stars and praise both the performance and recording; technical comments are mostly positive with only minor issues, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑house Sennheiser mics provide clear overall sound; some reviewers note occasional mic drop‑outs (Jerry's vocal mic) and a slightly uneven mix, but the tape is generally crisp and captures the crowd energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Scarlet>Fire",
+      "Althea",
+      "CC Rider",
+      "All Over Now",
+      "Estimated Prophet",
+      "Stella Blue",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set starts a bit rough but smooths out; the second set is consistently high‑energy with seamless transitions (e.g., CC Rider into Fire) and an especially tight jam on Scarlet > Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for shredding solos, quick tempos, and overall guitar work; a few notes about his vocal mic cutting out early in the first verse.",
+    "Phil": "Mentioned mainly for the side‑swap excitement and fans wishing they could hear more of his bass – recording limits his presence but his playing is still regarded as solid.",
+    "Bob": "Bobby rhythm guitar gets special love, described as \"absolutely ripping\" and a key driver of the show’s power.",
+    "Keys": "Brent (keyboards) highlighted for interstellar interplay with Jerry; overall keyboard sound is good though some wish for a clearer bass‑keyboard balance.",
+    "Drums": "Drumming praised, especially on Not Fade Away and the “no‑fade” ending; fans note the energetic groove throughout the set."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CC Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-13T19:08:52.626302+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-03.sennheiser.fishman.23824.sbeok.shnf"
+}

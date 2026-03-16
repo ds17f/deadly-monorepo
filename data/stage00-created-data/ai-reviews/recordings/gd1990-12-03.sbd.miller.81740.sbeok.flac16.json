@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard capture with occasional mix quirks; the show has mixed performance, highlighted by a rare US‑only “Stander” and strong “China Doll/Feel Like A Stranger” jams.",
+  "review": "The recording is a generally clear soundboard source, though listeners note some level inconsistencies (Vince’s keyboards sit high and occasional first‑set dropouts). Musically the concert swings between lackluster moments – several reviewers felt the band sounded disengaged – and bright spots such as the only U.S. performance of “Stander,” a standout “China Doll,” and an inspired “Feel Like A Stranger” jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Reviews range from high praise for specific songs and the recording’s clarity to strong criticism of overall band energy; average star rating ~3.3 reflects a show that is above‑average but uneven, with decent but not flawless sound quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and harmonically balanced; Vince’s keyboards are a bit high in the mix and there are occasional in‑and‑out level shifts or dropouts in the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stander",
+      "China Doll",
+      "Feel Like A Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is widely regarded as weak and uninspired, while later moments (especially the rare “Stander” performance and the jam on “Feel Like A Stranger”) lift the concert. Overall pacing feels uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – praised for beginning to turn a corner with his playing and for lush chord work, but also criticized as sounding tired and unable to deliver.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (keyboards) noted as prominent but sometimes too high in the mix; Bruce Hornsby’s piano praised for strong presence and vocal contribution.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stander": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:47:38.043160+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-03.sbd.miller.81740.sbeok.flac16"
+}

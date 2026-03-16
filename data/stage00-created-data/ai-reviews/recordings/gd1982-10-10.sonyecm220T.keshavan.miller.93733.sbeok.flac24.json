@@ -1,0 +1,76 @@
+{
+  "summary": "Warm, crystal‑clear audience recording captures a high‑energy 10‑Oct‑82 Frost show with a standout Crazy > Lost > Saint sequence and a killer Throwing Stones jam.",
+  "review": "This fan‑taped AUD from the Frost Amphitheatre is praised for its pure, full‑bodied sound despite cheap Sony ECM‑220T mics, delivering a vivid listening experience. The performance shines especially in the second set – Crazy Fingers into Lost Sailor into Saint of Circumstance and an electrifying Throwing Stones – though Touch feels flat and Jerry’s vocals are uneven on a few numbers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive comments about both the musical performance and the surprisingly excellent audience recording outweigh a handful of minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Warm, pure and PHAT sound; crisp overall with a little background chatter and an occasional cough, but the cheap Sony mics captured the band’s energy remarkably well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Lost Sailor",
+      "Saint of Circumstance",
+      "Throwing Stones",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Touch",
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "A conventional setlist that bursts with electricity; the first set builds nicely and the second set delivers a memorable Crazy > Lost > Saint sequence, solid jams, and a strong encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar work (e.g., Playin', Throwing Stones) and moments of brilliance, but his vocals are noted as weak and low‑confidence on some tracks.",
+    "Phil": "",
+    "Bob": "Weir’s rhythm guitar and vocal contributions are highlighted as a saving grace, especially on Baby Blue and the overall feel of the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:57:11.708293+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-10.sonyecm220T.keshavan.miller.93733.sbeok.flac24"
+}

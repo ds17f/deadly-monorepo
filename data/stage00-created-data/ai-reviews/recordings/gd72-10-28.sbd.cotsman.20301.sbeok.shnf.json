@@ -1,0 +1,80 @@
+{
+  "summary": "A legendary 1972 Dark Star and tight drum mix lift this show, but uneven soundboard balance leaves some instruments buried.",
+  "review": "The performance is highlighted by a wildly praised Dark Star and an excellent Billy‑Hart drum mix that makes the band feel right in the room.  While many fans rave about the energy, jam flow, and standout moments like Attics of My Life and He's Gone, several reviewers note that the soundboard source is uneven – Jerry’s guitar can disappear and some songs suffer from cuts or muffled mids.  Overall the show shines musically despite a mixed recording quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating across 18 reviews is ~4.1; most comments praise the musical performance (especially Dark Star) while noting both strong and weak aspects of the soundboard recording, leading to a solid but not flawless overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Fantastic drum mix (Billy Hart) is frequently praised; however listeners report muffled Jerry Garcia guitar, occasional vocal over‑power, missing sections and cuts, and an overall uneven balance that varies song‑to‑song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Attics of My Life",
+      "He's Gone",
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Box of Rain"
+    ],
+    "setlist_flow": "A jam‑heavy fall‑72 set with a high‑energy first half and a second set that builds into the epic Dark Star, punctuated by solid mid‑tempo numbers; occasional mix problems interrupt flow but the musical momentum remains strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for his soaring lead work, especially on Dark Star, though one reviewer complains his guitar is buried and muffled in parts of the tape.",
+    "Phil": "Mentioned for a standout bass chording “Philo Stomp” during Dark Star; another note suggests a slight EQ tweak could improve his presence.",
+    "Bob": "",
+    "Keys": "Keith’s piano described as wonderfully subdued, but several reviewers lament the absence of organ and occasional lack of keyboard presence.",
+    "Drums": "Billy Hart's drum mix is repeatedly called “fantastic” and a key reason the show feels intimate."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 9,
+      "negative_mentions": 2,
+      "total_mentions": 11
+    },
+    "Attics of My Life": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T01:01:31.941614+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-28.sbd.cotsman.20301.sbeok.shnf"
+}

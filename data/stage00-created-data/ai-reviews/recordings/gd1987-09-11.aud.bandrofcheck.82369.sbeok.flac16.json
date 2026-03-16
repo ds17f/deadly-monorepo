@@ -1,0 +1,31 @@
+{
+  "summary": "Decent audience recording from a less‑than‑ideal venue; the show is rated as average.",
+  "review": "The audience tape captures a surprisingly clean sound despite the venue’s acoustic shortcomings, though it still retains some tinny character. The concert itself is viewed as an average performance (around a 3½‑4 out of 5) with no particular standout or weak moments noted by the reviewer.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review (3 stars) mentioning both modest sound quality and an average show, leading to a blended rating slightly above the midpoint."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Less tinny than typical audience tapes; venue acoustics were not optimal, but overall the recording is clean enough for dancing."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer gave the show a rating of about 3.75/5 but offered no specific comments on song flow or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T02:59:29.663645+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-11.aud.bandrofcheck.82369.sbeok.flac16"
+}

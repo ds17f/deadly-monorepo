@@ -1,0 +1,57 @@
+{
+  "summary": "A very strong performance highlighted by The Other One, China Rider, Wharf Rat and Rain – reviewers call the whole show \"sick,\" though recording source details are not provided.",
+  "review": "Fans rave about this concert, calling it \"very strong\" with a monster The Other One and tight renditions of China Rider, Wharf Rat and Rain. No specific comments on the recording technique are given, but the enthusiastic five‑star rating suggests the audio is at least listenable and captures the energy of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Single five‑star review emphasizes excellent show performance; lack of technical detail keeps confidence from being high."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on soundboard, audience mix, or clarity; reviewers' enthusiasm implies the recording is acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Rain",
+      "China Rider",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review does not discuss set structure; focus is on overall strength of the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:27:26.979442+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-21.senn421.mccue.ford.33949.sbeok.flac16"
+}

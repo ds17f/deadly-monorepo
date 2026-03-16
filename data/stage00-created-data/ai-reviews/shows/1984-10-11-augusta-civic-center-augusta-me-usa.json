@@ -1,0 +1,71 @@
+{
+  "summary": "High‑energy Augusta show with stellar Shakedown Street and Peggy‑O",
+  "blurb": "The first set launches with a marathon Shakedown Street that sets a fiery tone, highlighted by a soaring Peggy‑O. The second half delivers an intense Playing In The Band sequence feeding into Dear Mr. Fantasy and a powerful Black Peter. Jerry’s guitar is fierce, Phil’s bass drives the jams, and Brent’s keys add color throughout.",
+  "review": "On October 11 1984 the Grateful Dead took the Augusta Civic Center by storm. Opening with an expansive 15‑minute Shakedown Street, the band immediately established a high‑octane vibe that only grew tighter as they moved through classics like Greatest Story Ever Told and Peggy‑O. The second set was a masterclass in late‑‘80s improvisation – a thunderous Playing In The Band segued into a soaring Space, then into the debut of Dear Mr. Fantasy, before rolling into a gritty Black Peter that led straight into a jubilant Sugar Magnolia. Jerry Garcia’s lead work was raw and “banging it out,” occasionally slipping on vocals but never losing his improvisational spark; Phil Lesh laid down punchy, thumping bass especially on Shakedown Street, while Brent Mydland supplied lush, melodic keyboards that shone on Dear Mr. Fantasy and the extended jams. The show’s energy never waned, making it a standout entry in the fall ’84 tour.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 41,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "The majority of recordings (10+) describe the performance in glowing terms – 'high‑energy', 'stellar', 'intense jam', and highlight multiple songs across both sets. Positive descriptors are consistent across audience, matrix, and soundboard sources, outweighing a few mixed notes about isolated song slips. This strong consensus warrants a robust positive sentiment boost.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd84-10-11.oade.sacks.17411.sbeok.shnf",
+    "reason": "Audience tape with clear, deep bass and defined cymbals; captures the show’s high‑energy vibe and standout tracks (Peggy‑O, Shakedown Street) despite a minor hi‑freq whine."
+  },
+  "key_highlights": [
+    "Marathon 15‑minute Shakedown Street that drives the first set",
+    "Peggy‑O shines with soaring vocals and tight band interplay",
+    "Intense Playing In The Band jam leading into Dear Mr. Fantasy",
+    "Debut of Dear Mr. Fantasy adds historic significance"
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Peggy-O",
+    "Dear Mr. Fantasy",
+    "Playing In The Band",
+    "Black Peter",
+    "Hell In A Bucket",
+    "Touch of Grey"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers hard‑driving leads and a fierce, ‘banging it out’ guitar tone; occasional vocal slips add raw human edge but never diminish his improvisational fire.",
+    "Phil": "Provides punchy, thumping bass that anchors the long Shakedown Street jam and propels the band through the set with steady power.",
+    "Bob": "",
+    "Brent": "Lush keyboard textures lift the music, especially on Dear Mr. Fantasy and throughout the extended jams, adding melodic depth to the high‑energy performance.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 13,
+  "processed_date": "2025-09-14T21:54:12.432202+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Peggy-O"
+    ],
+    [
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Dear Mr. Fantasy",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    [
+      "Hell In A Bucket"
+    ],
+    [
+      "Touch of Grey"
+    ]
+  ]
+}

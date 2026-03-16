@@ -1,0 +1,91 @@
+{
+  "summary": "A muffled matrix recording that still captures a legendary second set – Ship of Fools and Estimated Prophet blaze while the band rides a tight, jam‑filled groove.",
+  "review": "Fans rave about this June 13 1987 show, especially the smoking second set with Ship of Fools, Estimated Prophet, Push Comes to Shove and a soaring Morning Dew. The tape is a matrix source that sounds a bit muffled and benefits from EQ, but it preserves the excitement and strong playing throughout. Overall the musical performance outweighs the modest audio flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews praise the show’s energy, standout songs and tight jams (70% weight). Recording is described as muffled and needing EQ (30% weight), lowering the overall score slightly."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Slightly muffled, not true soundboard; needs EQ to clear up wavering mic‑matrix quirks. Pitched correctly and patched, but overall audio is modest."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "Estimated Prophet",
+      "Push Comes to Shove",
+      "Friend of the Devil",
+      "Let It Grow",
+      "Eyes of the World",
+      "The Other One",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, high‑energy second set that builds momentum with tight jams and strong transitions; first set solid but the magic truly lifts after the break."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia receives multiple accolades – his guitar work on Ship of Fools, Push solo and overall vocal presence are highlighted as superb.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s piano/keys are praised for staying on piano early in the set and delivering powerful solos (e.g., Row Jimmy, Walkin' Blues).",
+    "Drums": "The drum‑>Space segment is noted as less thrilling than previous shows; no strong praise or criticism otherwise."
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:46:19.987344+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-13.sbd.walker-scotton.miller.83752.sbeok.flac16"
+}

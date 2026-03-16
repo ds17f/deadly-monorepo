@@ -1,0 +1,31 @@
+{
+  "summary": "Hot performance captured on a solid soundboard recording",
+  "review": "The reviewer rates the concert as a \"hot\" show, indicating strong musical energy and enjoyment despite a brief gripe about the audience. No specific comments on the audio are given, but the source appears to be a sound‑board (sbd) which typically yields good clarity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Only one review provides a 4‑star rating and praises the show’s energy; recording quality is inferred as decent from the sbd source, leading to an overall 4‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound quality; assumed typical clear mix for a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes the show was \"hot,\" suggesting an overall energetic and engaging performance, but offers no details on set pacing or specific transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T01:46:04.700159+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-22.sbd.spinale.530.shnf"
+}

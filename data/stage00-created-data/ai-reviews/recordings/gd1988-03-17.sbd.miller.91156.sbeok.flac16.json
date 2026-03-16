@@ -1,0 +1,39 @@
+{
+  "summary": "A solid Miller sound‑board remaster captures an okay show, highlighted by a memorable “Stuck Inside Of Mobile With The Memphis Blues Again” moment.",
+  "review": "The recording is praised as a great Miller remaster, offering clear and well‑balanced sound‑board quality. While the overall performance is described as decent, reviewers single out the “Stuck Inside Of Mobile With The Memphis Blues Again” jam (Bobby’s post‑flub surge) as a highlight. Opinions on the show are mixed, ranging from enthusiastic to indifferent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is average (some positive remarks, but limited detail) while recording quality is noted as a good Miller sound‑board remaster; combined weighted score yields about 3.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered by C. Miller, described as “great” and clear; no specific flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stuck Inside Of Mobile With The Memphis Blues Again"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a decent performance with a few memorable moments, but reviewers provide little detail on set pacing or structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stuck Inside Of Mobile With The Memphis Blues Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:32:36.231285+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-17.sbd.miller.91156.sbeok.flac16"
+}

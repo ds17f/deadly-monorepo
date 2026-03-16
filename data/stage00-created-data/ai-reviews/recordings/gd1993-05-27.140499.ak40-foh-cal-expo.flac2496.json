@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent front‑of‑house recording captures a fiery 1993 show with standout performances of Loose Lucy, Eyes and Truckin', plus crystal‑clear Phil and thunderous drums.",
+  "review": "Both reviewers rave about the high‑resolution FOB mix, noting its crispness, clear bass and powerful drum presence despite a minor volume glitch on one song. The concert itself is praised for Jerry’s fierce playing, tight ensemble work, and memorable moments such as Loose Lucy, Eyes, Looks Like Rain, Truckin' and an outstanding Beatles‑cover encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5 stars and highlight an exceptional performance and a high‑quality front‑of‑house recording; with only two detailed reviews confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "FOB mix described as crisp, clear, and immersive; minor volume glitch on 'Way to Go Home' but otherwise superb soundstage and balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "Let It Grow",
+      "Don't Ease",
+      "Eyes",
+      "Looks Like Rain",
+      "Truckin'",
+      "Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as enjoyable and rock‑driven; second set builds into a magical, lush performance with strong transitions and an inspiring encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Raged every night and played with fierce intensity, laying down powerful guitar work.",
+    "Phil": "Bass is clear and loud, standing out throughout the show.",
+    "Bob": "His voice was unusually raspy during 'Looks Like Rain', reflecting recent vocal‑node surgery.",
+    "Keys": "",
+    "Drums": "Exceptional drum performance with Mickey's beam playing and Bill (Bralove) adding extra energy."
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:05:22.317121+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-27.140499.ak40-foh-cal-expo.flac2496"
+}

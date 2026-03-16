@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording delivers a silky, loud Jerry Garcia on Black‑Throated Wind",
+  "review": "The fan notes a smooth, silk‑like quality to the tape and highlights Jerry’s guitar soaring loudly on Black‑Throated Wind. No technical complaints are mentioned, suggesting a clear, well‑balanced soundboard source. Overall the performance is praised for its lush tone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Enthusiastic 4‑star review with strong praise for the guitar tone and no reported audio flaws; limited data yields a solid but not high‑certainty rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as silky and clear; no issues or dropouts noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black-Throated Wind"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar kicks in loud on Black‑Throated Wind and is described as silky and amazing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:39:57.136686+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-12.139183.sbd.miller.flac24"
+}

@@ -1,0 +1,88 @@
+{
+  "summary": "Tinny radio‑broadcast recording but a high‑energy first set that shines on Touch of Grey, Stagger Lee and Minglewood.",
+  "review": "The tape sounds a bit tinny and hissy – typical of an old radio broadcast – yet it’s clear enough to enjoy the night’s relentless energy.  Fans rave about the monster first set with a soaring Touch of Grey (“the Dew”), raucous Stagger Lee, a beefier West LA Fadeaway and an extended Minglewood, while the second set is solid but less memorable.  Overall the performance outweighs the modest sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise the musical energy; recording comments are uniformly about mild hiss/tinny sound, pulling the weighted average down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Typical radio‑broadcast fidelity – a bit tinny and hissy, occasional compression artifacts, but overall intelligible and usable for this high‑energy show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Stagger Lee",
+      "West LA (Fadeaway)",
+      "Minglewood",
+      "Box of Rain",
+      "Mighty Quinn"
+    ],
+    "poor_songs": [
+      "Hell in A Bucket",
+      "Bertha",
+      "Ship of Fools"
+    ],
+    "setlist_flow": "First set is the clear highlight – muscular, full‑bodied playing that keeps the crowd dancing.  Second set stays competent with a decent Box of Rain and encore Mighty Quinn but lacks the spark of the opener."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice a little ragged but compensated by energetic, country‑flavored guitar work; laughs loudly during Stagger Lee.",
+    "Phil": "Only noted for joking with the crowd; no specific musical critique.",
+    "Bob": "Bobby (Brent) flubs the start of Hell in A Bucket and restarts, providing a funny moment; praised for his growl on later numbers.",
+    "Keys": "Brent Mydland’s keyboards feed into climactic moments, especially during the Dew and Space sections.",
+    "Drums": "Drums/Space described as marching and more muscular than usual."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West LA (Fadeaway)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in A Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:16:06.629550+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-07.fmsbd.neo_levo.19284.sbeok.shnf"
+}

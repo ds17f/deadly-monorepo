@@ -1,0 +1,39 @@
+{
+  "summary": "Rough FM tape with uneven mix but an energetic spring‑groove show that shines on a fiery Alligator performance.",
+  "review": "The recording is an FM broadcast source that sounds rough and a bit muddy, though the mix clears up in spots. Musically the band is high‑energy, featuring extra percussion (more drums, more cowbell) and a standout rendition of \"Alligator\" with Garcia’s guitar described as progressive and relentless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Review praises the performance (≈4/5) but notes a rough, uneven recording (≈2.5/5); weighted average yields ~3.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "FM broadcast tape is rough and noisy; occasional clean mix moments but overall uneven levels and hiss."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Spring‑groove vibe with guest musicians from Santana, heavy percussion section early on, maintains high energy through the set."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work called \"progressive\" and praised for nonstop intensity during the percussion ensemble.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Extra drums and cowbell highlighted; percussion section described as a major feature of the show."
+  },
+  "song_mentions": {
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:27:53.048740+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-11.158656.FM.miller.flac1648"
+}

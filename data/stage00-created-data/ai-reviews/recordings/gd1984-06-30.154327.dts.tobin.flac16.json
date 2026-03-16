@@ -1,0 +1,57 @@
+{
+  "summary": "Fun, high‑energy show with a standout Lost Sailor → Saint of the Circumstance sequence and whistle‑topped Truckin', captured in an unknown‑quality recording",
+  "review": "The reviewer describes a lively, dance‑filled performance at a small venue, highlighting a funky Shakedown Street that segued into Playin' and a memorable whistle intro by Bob on Truckin'. No specific comments about the audio source are given, so the technical quality remains unclear, but the musical experience is clearly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "A single enthusiastic 4‑star review praises the performance heavily; lacking recording details keeps confidence at medium and pulls the overall rating slightly below the top tier."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor > Saint of the Circumstance",
+      "Shakedown Street",
+      "Playin'",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flowed organically, with a funky Shakedown Street that drifted into Playin' and an exciting whistle‑led Truckin', creating a dance‑party atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Reviewer loved Bob’s whistle intro on the Truckin' opening.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lost Sailor > Saint of the Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:26:53.662390+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-30.154327.dts.tobin.flac16"
+}

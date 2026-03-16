@@ -1,0 +1,81 @@
+{
+  "summary": "Crystal‑clear audience recording that captures a high‑energy 1983 show highlighted by a rare Crazy Fingers, a killer Day Job opener and an electrifying second set.",
+  "review": "The Sennheiser 441‑mic audience tape is unusually crisp and front‑of‑stage, giving listeners the feel of being right in the Coliseum.  The performance shines with a fiery opening “Stranger,” a standout Crazy Fingers jam, and what many call the best Day Job of the tour, while Jerry’s vocals and Bob’s guitar work are repeatedly praised.  Overall the show flows smoothly from an engaging first set into a powerful, tightly‑paced second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) and enthusiastic comments about both the audio clarity and the musical performance indicate a strong show with an excellent audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, frosty sound; front‑of‑stage feel; Sennheiser 441 mics praised for balance and detail. Reviewers note the tape is crisp, well‑balanced and captures crowd ambience without excessive muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Day Job",
+      "Stranger",
+      "Friend of the Devil",
+      "West L.A.",
+      "Deal",
+      "Playing in the Band",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with “Stranger,” solid first‑set work, then a high‑octane second set anchored by Crazy Fingers and a superb Day Job that keeps the momentum rolling into Truckin' and other classics."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotive, powerful vocals; guitar tone described as “sick” and “nice long time finishing” on Crazy Fingers.",
+    "Phil": "",
+    "Bob": "Strong rhythm guitar work and vocal presence noted throughout the set.",
+    "Keys": "",
+    "Drums": "Mickey Hart’s cowbell highlighted in the intro; drums roll into Truckin' praised as tight and muscular."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Day Job": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:55:09.701179+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-08.senn441.silberman.miller.97883.sbeok.flac16"
+}

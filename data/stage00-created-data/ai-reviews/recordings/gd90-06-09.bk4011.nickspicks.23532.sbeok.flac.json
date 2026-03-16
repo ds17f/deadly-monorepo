@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent audience recording of a scorching June 1990 Cal Expo run, highlighted by a superb second set featuring Dear Mr. Fantasy, Watchtower and The Stranger",
+  "review": "Fans rave about the crystal‑clear audience tape captured on the BK‑4011 recorder, calling it one of the best‑sounding crowd recordings ever released. The show itself is praised for its high energy, especially the pre‑drums second set with Dear Mr. Fantasy, Watchtower and a blazing rendition of The Stranger, while the post‑drums segment loses a bit of steam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ~4.4) and overwhelmingly positive comments about both performance and sound quality justify a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the tape as \"best sounding audiences\", \"excellent AUD recording\" and \"very fine audience tape\" with no noted drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr. Fantasy",
+      "Watchtower",
+      "The Stranger",
+      "Cassidy",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "The pre‑drums second set is highlighted as a high point with seamless segues and tight grooves, while the post‑drums portion feels a little tired compared to the earlier energy."
+  },
+  "band_member_comments": {
+    "Jerry": "A fan recalls a crowd member grabbing Jerry's guitar during the Watchtower climax; Jerry kept playing calmly.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bells heard during Looks Like Rain are praised, indicating strong keyboard texture.",
+    "Drums": "Drummers lock into a delicious groove after the transition from LTGTR to The Stranger; later post‑drums set feels a bit fatigued."
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Victim or the Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T07:17:34.773498+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-06-09.bk4011.nickspicks.23532.sbeok.flac"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent audience recording of a fiery ’73 show with standout Bird Song, Let It Grow and Eyes of the World, and generally good sound quality despite some early‑set hiccups.",
+  "review": "Fans rave about this 9/7/73 performance, highlighting the soaring Bird Song, the monster Let It Grow jam, the classic HCSS sequence and a phenomenal stretch from Truckin' into Eyes of the World. The audience tape is unusually clear with near‑perfect instrument separation, though the opening minutes are a bit slow and there’s occasional static on Jerry’s guitar.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.75/5, with consistent praise for both the musical performance and the surprisingly clean audience recording; only minor technical complaints keep it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear instrument separation, outstanding Bird Song capture; early set sounds slow to start, occasional static/fuzz on Jerry's guitar, and minor background noises (snoring, audience chatter)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Playin'",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Let It Grow",
+      "Truckin'",
+      "Eyes of the World",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second half erupts with high‑energy jams; first set is a bit sluggish but still solid, leading into an exceptional second‑set sequence that many fans cite as one of ’73’s best."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing is described as powerful (especially on Here Comes Sunshine) and the jam dynamics are praised, though some note occasional fuzz/static from equipment issues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums sound fabulous to listeners; no major complaints beyond typical board‑mix loudness comments that don’t affect this audience tape."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T16:56:26.210956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-09-07.aud-moore.weiner.18854.sbeok.shnf"
+}

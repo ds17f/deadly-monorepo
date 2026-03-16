@@ -1,0 +1,67 @@
+{
+  "summary": "Pedal‑steel Hard To Handle, monster Dupree’s and epic Alligator jam",
+  "blurb": "The set is anchored by a soaring Hard To Handle with Garcia on pedal‑steel, a monster Dupree's Diamond Blues and a relentless Alligator jam that flows into Death Don't Have No Mercy. Pigpen’s organ and vocals add blues grit while the drums drive powerful jams throughout.",
+  "review": "July 11 1969 at the NY State Pavilion captures the Dead in full, early‑Dead glory. Garcia dazzles with pedal‑steel on Hard To Handle (and a soulful Dire Wolf), while his guitar solos stay hot all night. Pigpen’s crunchy organ and raw vocal power shine on Casey Jones and throughout the set, giving it that quintessential blues soul. The band rides a monster Dupree's Diamond Blues into a soaring High Time, then launches an epic Alligator jam that segues into Death Don't Have No Mercy and a wild Jam/Other One stretch before closing with Turn On Your Lovelight. Though the matrix source has hiss and a few drop‑outs, its completeness and the sheer energy of the performances make it the go‑to version for this legendary summer show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Three recordings are clearly positive, praising pedal‑steel, monster Dupree's, Alligator jam and Pigpen’s organ; one recording is mixed but no consistent negatives appear. The strong, repeated commendations warrant a high positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-07-11.sbd.hanno.4644.sbeok.shnf",
+    "reason": "Most complete source with every song present; despite fair matrix quality, it captures the full set and key moments better than the cut‑off SBDs."
+  },
+  "key_highlights": [
+    "Garcia’s pedal‑steel on Hard To Handle and Dire Wolf adds a unique sparkle.",
+    "Monster Dupree's Diamond Blues and soaring High Time jam showcase the band’s early‑Dead power.",
+    "Epic Alligator jam that flows into Death Don't Have No Mercy and an extended Jam/Other One sequence."
+  ],
+  "song_highlights": [
+    "Dupree's Diamond Blues",
+    "Hard To Handle",
+    "Alligator",
+    "Death Don't Have No Mercy",
+    "High Time",
+    "Dire Wolf"
+  ],
+  "band_performance": {
+    "Jerry": "Pedal‑steel shines on Hard To Handle and Dire Wolf; melodic leads and energetic guitar solos dominate the night.",
+    "Phil": "Provides a solid bass foundation, occasional vocal on Mama Tried, and becomes clearer later in the set.",
+    "Bob": "Opens with priceless jokes, delivers strong vocals on Mama Tried and offers supportive backing throughout.",
+    "Brent": "Pigpen’s organ and bluesy vocals drive songs like Casey Jones and add vital texture; his presence is described as crunchy and essential to the early‑Dead sound.",
+    "Mickey": "Drums are powerful and crazy, with top‑hat tapping and cowbell adding excitement; praised for a killer board mix.",
+    "Billy": "Shares the thunderous drum work, delivering a fantastic mix that fuels the long jams and keeps the momentum high."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-24T16:22:13.199485+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dupree's Diamond Blues",
+      "Dire Wolf"
+    ],
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Alligator",
+      "Death Don't Have No Mercy",
+      "Drums",
+      "Jam",
+      "The Other One",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "High Time"
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording that smooths the harsh ’82 soundboard edge, capturing a generally smoking 1982 show but leaving some listeners unimpressed by early country‑flavored moments.",
+  "review": "The three fan comments describe an overall lively 1982 performance – one reviewer calls the shows \"smoking\" and another praises how the audience tape mellows the typical sharpness of ’82 soundboards. A third listener, however, was disappointed by a sudden country turn with “El Paso,” indicating the set’s mood wasn’t consistent for everyone.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only three reviews; one clear 4‑star rating, two with no meaningful star value and mixed comments about the show and recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note that this audience source smooths the usual harshness of ’82 soundboards, making for a more pleasant listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "El Paso"
+    ],
+    "setlist_flow": "Generally energetic and \"smoking\" early in the set, but an unexpected country‑style number (El Paso) disrupted the vibe for at least one listener."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:12:47.502092+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-14.121944.akg414.streeter.miller.flac16"
+}

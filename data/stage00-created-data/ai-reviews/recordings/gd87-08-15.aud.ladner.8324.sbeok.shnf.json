@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent audience recording that captures a high‑energy Telluride show with standout performances of Scarlet Begonias, Uncle John’s Band/Big River and Eyes of the World.",
+  "review": "The Aug 15‑16 1987 Telluride shows are praised for their intense vocals, crisp playing and memorable moments – especially the scorching Scarlet Begonias, a killer Uncle John’s > Big River segue and deep renditions of Eyes of the World. Reviewers repeatedly note that this is one of the best audience tapes from ’87, with clear, top‑notch sound despite a few comments about occasional mud or long Franklin’s Tower intros.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (10/12) are 4‑5 stars and highlight strong musical moments; recording quality is repeatedly called “top notch” or “best audience recording,” outweighing the single lower‑rated comment about modest sound."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers call it the best ’87 audience tape – crisp, clear and well balanced. One reviewer notes the quality isn’t perfect but overall the mix is solid with minimal dropout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Uncle John’s Band > Big River",
+      "Eyes of the World",
+      "Fire on the Mountain",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "First set described as a bit slow (notably an extended Franklin’s Tower), but the second set erupts with high energy, tight transitions and powerful vocal performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for strong, intense playing – especially on Scarlet Begonias and the Fire sequence.",
+    "Phil": "Highlighted as “so strong” in several reviews; his bass work is noted as a driving force throughout the shows.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John’s Band > Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:55:55.867454+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-08-15.aud.ladner.8324.sbeok.shnf"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Crisp soundboard recording of a high‑energy ’78 show highlighted by a smoking Terrapin Station and an unforgettable Scarlet > Fire sequence.",
+  "review": "The recording is clean and well‑balanced, delivering the full punch of the band’s 1978 energy. Reviewers rave about the Terrapin Station performance, the seamless Scarlet > Fire > Good Lovin' flow, and Jerry’s howl on Werewolves of London, while noting a few worn‑out moments in The Promised Land. Overall the show feels dynamic, fluid and exceptionally enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, praising both the musical performance (standout sequences, high energy) and the clear soundboard capture; only minor criticism of one song’s repetitiveness."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with no reported drop‑outs or muffling; reviewers repeatedly call the sound ‘crisp’ and ‘excellent’. No major technical flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Scarlet > Fire",
+      "Good Lovin'",
+      "Werewolves of London",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "The Promised Land"
+    ],
+    "setlist_flow": "Reviewers describe a fluid set with dynamic tension, seamless transitions (especially Scarlet > Fire > Good Lovin'), and an energetic encore that keeps the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his soaring lead on Terrapin Station, his interplay with Bob during Scarlet/Fire, and his iconic howl on Werewolves of London.",
+    "Phil": "",
+    "Bob": "Noted for strong interplay with Jerry during the Scarlet > Fire sequence; contributes to the band’s tight feel.",
+    "Keys": "",
+    "Drums": "Creative drum segment highlighted as a standout moment early in the show."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves of London": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:57:39.504367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-24.sbd.miller.32899.flac16"
+}

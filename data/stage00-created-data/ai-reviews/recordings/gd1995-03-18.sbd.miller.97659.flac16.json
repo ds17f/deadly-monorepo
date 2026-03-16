@@ -1,0 +1,91 @@
+{
+  "summary": "A solid Charlie Miller sound‑board capture that shines on It’s All Too Much, Iko Iko and Visions of Johanna, but the overall performance is uneven.",
+  "review": "The Miller SBD transfer is generally praised for its clarity and balance, though a few reviewers note channel swaps and a tiny pitch correction needed. Musically the show delivers several high points – the rare It's All Too Much, an inspired Iko Iko, a moving Visions of Johanna and a fiery Ramble On Rose – but technical glitches and Jerry’s guitar hiccups keep it from being a classic night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (average‑to‑good) while the recording is widely regarded as good to excellent; combined weighted rating yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller's transfer is praised as superb and very clear, but a few users mention swapped channels, a -1% pitch correction needed on the first set and tiny gaps in Space/Playing. Overall the mix is balanced with excellent instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It's All Too Much",
+      "Visions of Johanna",
+      "Iko Iko",
+      "Ramble On Rose",
+      "Space"
+    ],
+    "poor_songs": [
+      "Hell in a Bucket (guitar issues)",
+      "Uncle John's Band (transition less exciting for some)"
+    ],
+    "setlist_flow": "First set is described as solid but uneven, with a few technical hiccups; the second set builds momentum through It’s All Too Much and Space before a slightly ragged finish. Highlights are scattered throughout rather than forming a consistent arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Struggles with guitar (broken string on Hell in a Bucket, tangled cords) but praised for his vocal delivery on Visions of Johanna and a strong solo on Ramble On Rose.",
+    "Phil": "Briefly mentioned in jokes about birthdays; no specific bass commentary beyond occasional audience shout‑outs.",
+    "Bob": "Noted for adding rhythmic licks on Ramble On Rose and delivering good humor between songs.",
+    "Keys": "Vince (keyboards) receives strong praise, especially on It’s All Too Much and the Space jam.",
+    "Drums": "Mickey Hart and Bill Kreutzmann's drumming/space segment is highlighted as a peak of the show; one reviewer complains that Mickey “put away the bone.”"
+  },
+  "song_mentions": {
+    "It's All Too Much": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Visions of Johanna": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:54:25.808141+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-18.sbd.miller.97659.flac16"
+}

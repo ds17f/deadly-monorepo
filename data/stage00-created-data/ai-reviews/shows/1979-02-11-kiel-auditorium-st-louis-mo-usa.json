@@ -1,0 +1,55 @@
+{
+  "summary": "Not Fade Away > Stella Blue shines; overall set mixed but solid",
+  "blurb": "The second set delivers a standout transition from Not Fade Away into Stella Blue, highlighted by Phil’s deep bass grooves and Jerry’s audible guitar despite occasional lyrical slips. The first set suffers from thin sound and uneven delivery on tracks like Sugaree and The Promised Land. Recommended for fans who enjoy the dreamy second‑set jam.",
+  "review": "On February 11, 1979 at St. Louis’ Kiel Auditorium the Dead offered a night of mixed fortunes. While the opening half of the show is hampered by thin, murky audience recording quality and occasional slip-ups—Garcia missed a few lyric lines on “Sugaree” and “The Promised Land,” and the drums are buried—the band still managed to lay down solid foundations, with Phil’s thick bass grooves anchoring the set. The real highlight arrives in the second set: a seamless jam that flows from “Not Fade Away” straight into an emotive “Stella Blue,” creating a dream‑like atmosphere that many reviewers cite as the show’s high point. A newly remastered audience tape captures this segment with crystal‑clear clarity, making it the preferred listening source for anyone wanting to experience the night’s most magical moments.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 7,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "One recording is positively praised for its excellent remastered audio, while the other offers a mixed view—highlighting strong second‑set jams but noting thin sound and occasional sloppy playing. The overall sentiment leans mildly positive, warranting a modest +0.5 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1979-02-11.155704.aud.remaster.acetboy.flac16",
+    "reason": "Remastered audience tape with excellent sound quality, delivering clear capture of the standout second‑set performance."
+  },
+  "key_highlights": [
+    "Dreamy transition from Not Fade Away into Stella Blue in the second set.",
+    "Phil Lesh’s thick bass grooves provide depth despite thin overall tape.",
+    "Jerry Garcia’s guitar remains audible and engaging even with occasional lyric slips.",
+    "Excellent remastered audience recording offers clear sound for listening."
+  ],
+  "song_highlights": [
+    "Not Fade Away",
+    "Stella Blue"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia was occasionally sloppy, missing a few lyric lines, though his playing remained audible throughout.",
+    "Phil": "Lesh laid down thick, groovy bass that added depth even on the thin tape.",
+    "Bob": "Weir’s rhythm guitar stayed clear and steady, despite a couple of lyrical slips.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-25T20:29:00.368319+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Not Fade Away",
+      "Stella Blue",
+      "I Need A Miracle",
+      "Good Lovin'"
+    ]
+  ]
+}

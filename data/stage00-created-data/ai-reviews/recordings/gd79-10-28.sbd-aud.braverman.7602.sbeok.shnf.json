@@ -1,0 +1,93 @@
+{
+  "summary": "A high‑quality matrix recording captures a legendary 1979 Cape Cod show with scorching China Cat > I Know You Rider, Passenger / Ramble / Music Never Stopped and an epic Mississippi Half Step.",
+  "review": "This two‑night run at the Cape Cod Coliseum is consistently praised for its inspired jams – the Passenger→Ramble on Rose→Music Never Stopped sequence, a soaring China Cat → I Know You Rider segue, a monster Half Step, and beautiful renditions of Stella Blue and Franklin’s Tower.  The source is a soundboard‑plus‑audience matrix; the mix is clear for most of the set with only a slight drop in fidelity when it flips to pure audience tape in the second half.  Overall the performance and recording combine to make this one of the stand‑out shows of the late ’70s.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews are overwhelmingly positive, highlighting both exceptional musical moments and generally good sound quality; minor source‑switch issues keep the recording rating just below flawless."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard capture for most of the set; second set switches to pure audience (AUD) tape, which some reviewers found a bit less crisp but still conveys the live energy. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Passenger > Ramble on Rose > Music Never Stopped",
+      "China Cat > I Know You Rider",
+      "Mississippi Half Step",
+      "Franklin's Tower",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds with tight transitions and the Passenger‑Ramble‑Music sequence; second set maintains momentum with a powerful China Cat → I Know You Rider segue, Playin' In The Band, drums/space jam, and a soaring close. Energy stays high despite the source change."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for wailing guitar tones, ripping solos and a beautiful ballad performance on Stella Blue.",
+    "Phil": "Noted for booming bass and delivering what many call the best Half Step jam of his career.",
+    "Bob": "",
+    "Keys": "Brent's keyboard work shines, especially his interplay with Jerry and organ textures on Franklin's Tower.",
+    "Drums": "The drum solo is highlighted as a surprise highlight; overall drumming keeps the set driving."
+  },
+  "song_mentions": {
+    "Mexicali Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat > I Know You Rider": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Playin' In The Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-26T00:21:26.810063+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-10-28.sbd-aud.braverman.7602.sbeok.shnf"
+}

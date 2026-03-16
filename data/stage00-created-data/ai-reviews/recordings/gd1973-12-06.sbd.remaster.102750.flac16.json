@@ -1,0 +1,85 @@
+{
+  "summary": "Loud, crystal‑clear soundboard recording of a 1973 show that dazzles with a monster Dark Star, soaring Here Comes Sunshine and a standout China > Rider jam.",
+  "review": "The remastered soundboard source is praised as louder, cleaner and “golden” – an excellent listening experience despite a few reviewers calling it crunchy‑warm. Musically the night shines on Dark Star, Here Comes Sunshine and the major‑key China > Rider segment, though one critic finds the first set sluggish and the 44‑minute Dark Star over‑extended.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 5‑star, highlighting superb performance and a high‑quality soundboard source; only one reviewer is critical, yielding an average rating above 4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note the tape is louder, cleaner and “golden” with crisp highs; a few describe it as crunchy‑warm but still very listenable. No major dropouts or balance issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Here Comes Sunshine",
+      "China > Rider",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Good Sun (GSET)"
+    ],
+    "setlist_flow": "The first set is described by one reviewer as sluggish and under‑driven, while the second set delivers a marathon Dark Star, a superb HCS and tight jams like Ramble On Rose; overall the concert is viewed as a high‑energy, fun ’73 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for lyrical delivery on Ramble On Rose, soaring solos in Dark Star and interplay with Bob; one critic notes his playing can be outshone by Keith at times.",
+    "Phil": "Commended for driving the Dark Star (“Phil brings it”) and occasional bass “bombs” that try to lift the jam, though a dissenting reviewer felt his effort was fleeting.",
+    "Bob": "Highlighted for strong interplay with Jerry on Here Comes Sunshine and solid rhythm work; praised on Deal and Greatest Story by one reviewer.",
+    "Keys": "Keith Godchaux receives glowing remarks – “Godchaux’s playing outshines Garcia,” warm, crunchy tones that add depth to the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Sun (GSET)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:03:12.724526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-06.sbd.remaster.102750.flac16"
+}

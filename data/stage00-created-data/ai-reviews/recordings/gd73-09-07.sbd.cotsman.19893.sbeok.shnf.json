@@ -1,0 +1,71 @@
+{
+  "summary": "A solid soundboard capture of a 1973 Nassau show that shines thanks to an epic Eyes of the World and the debut of Let It Grow, despite a few rough edges.",
+  "review": "The recording is generally clear and well‑balanced (soundboard with good AUD patches), letting the band’s 1973 energy come through.  Highlights include the first-ever performance of “Let It Grow,” a soaring Wolf‑guitar solo, and an almost 20‑minute “Eyes of the World” that many reviewers call one of the year’s finest jams.  The show does have moments of sloppiness and occasional miscues, especially early in the set, but overall it is praised as a must‑listen for ’73 fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (20+) are 4–5 stars and focus on strong musical moments; recording quality is consistently described as good to excellent, giving a combined high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp soundboard mix with solid AUD patches; occasional tape‑player wobble noted but overall balance of bass, drums and guitar is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Let It Grow",
+      "The Other One",
+      "Playin' in the Band",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [
+      "Let It Grow (tentative spots)",
+      "Playin' in the Band (miscues noted by a few reviewers)"
+    ],
+    "setlist_flow": "First set is classic ’73 fare that tightens toward the close; second set erupts into extended jams, with the Let It Grow debut leading into a monster Truckin’ → Drums → Other One → Eyes of the World sequence that carries the show to its peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s Wolf guitar debut gets high praise; his solos on Eyes and the jam after Let It Grow are described as “exploratory” and “in the stratosphere,” though a few reviewers note occasional lost moments early in the set.",
+    "Phil": "Phil’s bass is highlighted for solid, rhythmic drive (especially during The Other One) and for stepping forward with melodic lines in the jam sections.",
+    "Bob": "Weir’s distorted rhythm work is called “lovely mud” that complements Garcia; his vocal interplay on songs like Bird Song and Playin' receives positive nods.",
+    "Keys": "Keith’s keyboard tone stands out – a B‑3 organ appears on Truckin’ and adds texture throughout, with many reviewers noting the rare organ presence in ’73.",
+    "Drums": "Bill Kreutzmann’s deep, dirty kick drum is praised for anchoring the jams; drumming overall is described as solid and driving."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Let It Grow": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T16:54:51.190256+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-09-07.sbd.cotsman.19893.sbeok.shnf"
+}

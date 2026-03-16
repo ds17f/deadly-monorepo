@@ -1,0 +1,80 @@
+{
+  "summary": "A superb matrix recording that captures a high‑energy Uptown show highlighted by an epic Terrapin Station, blazing Jerry Garcia leads and tight jams on Althea, Let It Grow and more.",
+  "review": "The matrix source delivers crystal‑clear sound with excellent balance, allowing the band’s 1981 Uptown performance to shine. Reviewers repeatedly praise the soaring Terrapin Station, powerful Jack Straw, and the dreamy Althea while noting only minor vocal front‑loading early in the set. Overall the show is regarded as one of the best of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight both outstanding musical moments and excellent matrix sound quality; only one low‑star review detracts minimally."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear matrix mix with superb instrument separation. Slight vocal forwardness at the start and Phil's bass a bit buried initially, but overall balanced and very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Althea",
+      "Candyman",
+      "Jack Straw",
+      "Let It Grow",
+      "Ship of Fools",
+      "Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set rolls smoothly into a dreamy ‘One’ transition and builds into extended jams that culminate in a powerful second‑set climax, delivering strong continuity throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as blazing, locomotive‑powerful and crystalline—especially on Terrapin Station and Let It Grow.",
+    "Phil": "Bass occasionally buried early in the show but solid overall, providing a firm foundation for the jams.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment is praised for its energy and seamless integration into the jam flow."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:18:01.132340+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-02-28.mtx.chappell.sb02c.28398.sbefail.flac16"
+}

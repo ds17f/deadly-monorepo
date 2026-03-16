@@ -1,0 +1,39 @@
+{
+  "summary": "Solid '74‑style show with standout Truckin', captured on a mono audience recording that limits clarity.",
+  "review": "Fans rave about the high‑energy performance and classic ’74 vibe, singling out Truckin' as a quick‑fix highlight. The recording is an audience (AUD) tape that sounds decent but suffers from mono left‑channel playback and typical crowd ambience, making the listening experience only fair despite the great jamming.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (good jamming, classic ’74 feel) while recording quality is mixed (audience mono left‑only), leading to a strong but not flawless overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Recorded in mono with sound only on the left channel; typical audience ambience and wind‑distorted live sound noted by reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed setlist commentary, but reviewers describe the show as a solid, jam‑heavy performance with classic ’74 energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:55:00.925044+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-05-12.aud.vernon.10529.sbeok.shnf"
+}

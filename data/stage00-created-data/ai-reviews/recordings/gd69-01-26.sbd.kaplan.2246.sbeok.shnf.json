@@ -1,0 +1,74 @@
+{
+  "summary": "A clean‑sounding soundboard capture of a wild 1969 show, with The Eleven, Lovelight and an unforgettable Clementine jam stealing the spotlight.",
+  "review": "The recording is a solid soundboard source that’s praised for its clarity and lack of harsh high‑end distortion, though a few reviewers note occasional mix wobble and treble‑mud. Musically the performance is described as “lunatic” energy, highlighted by an inspired Eleven → Lovelight stretch, a powerful Death Don't Have No Mercy, and a uniquely adventurous Clementine jam that many call one of the best of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over twenty reviews overwhelmingly rate the show 4‑5 stars, praising both performance and overall sound; only a single mixed‑rating comment mentions recording flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, clean mix with missing high‑end 'crunch' that some like; occasional early‑set treble muddiness and brief mix fluctuations, but generally balanced and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Lovelight",
+      "Clementine",
+      "Death Don't Have No Mercy",
+      "Dark Star (short version)",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about a set that flows naturally from the opening into extended jams, noting creative transitions (e.g., William Tell → St. Stephen → The Eleven) and an overall high‑energy arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for tearing up his Gibson with ferocious tone; highlighted on Lovelight and the overall wild playing.",
+    "Phil": "Described as a ‘beast’; notable bass line from So What in Clementine, strong presence throughout, and even gives a spoken invocation during Lovelight.",
+    "Bob": "Mentioned for joining Jerry in the Spoonful interlude within Lovelight.",
+    "Keys": "Pigpen’s organ work is noted as well‑recorded and balanced; no specific comment on Keith/Brent/Vince beyond general keyboard presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Eleven": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Clementine": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:46:28.819748+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-01-26.sbd.kaplan.2246.sbeok.shnf"
+}

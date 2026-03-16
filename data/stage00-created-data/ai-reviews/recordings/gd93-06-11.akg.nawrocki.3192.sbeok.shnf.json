@@ -1,0 +1,60 @@
+{
+  "summary": "Warm audience recording that’s a bit distant yet captures the relaxed, jam‑heavy vibe of a late‑90s show highlighted by a groovy Corrina jam and an explosive Eyes → Playing In The Band → Uncle John’s Band opening.",
+  "review": "The performance is praised for its loose, comfortable feel with new‑song integration and a standout Corrina jam, while the second set erupts into an unforgettable Eyes‑PITB‑UJB sequence that got the crowd in a solid groove. The audience recording offers warmth but suffers from distance and EQ issues, making it a fair‑quality capture of a mixed‑sentiment show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (strong new‑song flow and explosive second set) while recording quality is described as warm yet distant with some EQ problems, leading to an overall solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Warm, slightly distant sound; one reviewer calls it \"un‑EQable\" indicating EQ issues, while another notes the recording feels truer than hyper‑digital boards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Corrina",
+      "Eyes → Playing In The Band → Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows relaxed and open, folding newer material (Foolish Heart, Lazy River Road, So Many Roads) into the mix. First set is enjoyable; second set launches with an insane Eyes‑PITB‑UJB sequence that drives a rock‑solid groove."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"full of Jerry noodles\" and dreamy during the Corrina jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are noted for lifting off into a groovy feel and anchoring the solid crowd groove in the second set."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes → Playing In The Band → Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T13:56:58.364580+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-11.akg.nawrocki.3192.sbeok.shnf"
+}

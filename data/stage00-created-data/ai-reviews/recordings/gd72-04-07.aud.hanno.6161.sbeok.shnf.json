@@ -1,0 +1,116 @@
+{
+  "summary": "Terrible audience recording of a legendary Europe‑'72 show, but the performance is stellar – The Other One/Truckin’/El Paso sequence shines.",
+  "review": "The audio is an awful two‑track audience tape that most listeners describe as unlistenable, yet the music itself is frequently hailed as one of the best from the opening night of Europe ’72. Reviewers rave about a smoking The Other One → Wharf Rat suite, a ferocious Truckin’ → Drums → The Other One → El Paso segment and standout renditions of China Cat > Rider, Sugaree and Greatest Story Ever Told.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show performance is rated very high by many reviewers (≈4.5/5) while the recording quality is uniformly poor (≈1.5/5). Weighted average (70 % show, 30 % tape) yields about a 4‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Both audience sources are described as horrendous, muffled, like ‘taped from the bottom of a pool’, with severe distortion, drop‑outs and no usable instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Truckin'",
+      "El Paso",
+      "Wharf Rat",
+      "China Cat > Rider",
+      "Sugaree",
+      "Greatest Story Ever Told",
+      "Me & My Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set bursts with energy (Greatest Story, Chinatown Shuffle, China > Rider, Me & My Uncle). Second set delivers the classic ‘meat’ sequence – Truckin' → Drums → The Other One → El Paso → The Other One → Wharf Rat – highlighted as one of the best of the tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly praised (especially on Truckin' and The Other One).",
+    "Phil": "Phil’s bass work gets high marks, noted for a ‘caution tease’ in The Other One and overall driving grooves.",
+    "Bob": "Bob’s vocals described as ‘on fire’, with enthusiastic mentions on Loser, Big Boss Man and Me & My Uncle.",
+    "Keys": "Keyboard/organ comments are mixed – some enjoy Pigpen’s organ, others find it less appealing; no specific Keith/Kent mention beyond general jam support.",
+    "Drums": "Bill Kreutzmann’s drumming is highlighted as ‘other‑worldly’ and a key driver of the intense meat sequence."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Boss Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T15:52:37.235848+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-07.aud.hanno.6161.sbeok.shnf"
+}

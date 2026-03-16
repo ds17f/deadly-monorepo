@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard‑style recording of a rare Reuben and Cherise performance, with standout keyboard work and extra‑special playing by Jerry",
+  "review": "Fans rave about this March 1991 Nassau show, calling the Reuben & Cherise segment chilling and noting Vince Welnick’s muscular keyboards and an unforgettable outro that closed the first set. The recording is praised as the better of the two available versions, offering clear sound that lets listeners enjoy the rare gems like Stella Blue and Box of Rain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive, highlighting a rare setlist and solid sound quality; the show performance outweighs any minor recording uncertainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note that this version has noticeably better sound quality than the alternative March 17 show, with no specific complaints about clarity or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Reuben and Cherise",
+      "Stella Blue",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First night of a three‑night Nassau run; the first set ends with an extended Reuben outro, followed by strong second‑set moments and a memorable Stella Blue/Box of Rain encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Played extra special for the island crowd, especially during the Reuben outro.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince flexes keyboard muscle throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Reuben and Cherise": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:20:55.772824+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-27.aud.eD.9189.sbeok.shnf"
+}

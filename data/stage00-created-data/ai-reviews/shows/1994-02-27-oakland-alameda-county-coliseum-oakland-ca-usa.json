@@ -1,0 +1,69 @@
+{
+  "summary": "Powerful second set jams, controversial Cosmic Charlie tease",
+  "blurb": "The second set delivers soaring jams on Uncle John's Band, Samson & Delilah, and The Other One, while the Cosmic Charlie tease divides opinion. Jerry’s guitar is sharp and lyrical, Phil lays down thunder‑perfect bass, and the drums/space segment shines.",
+  "review": "Feb 27, 1994 at the Oakland Coliseum captured a show that veered between brilliance and debate. After a modest first set, the band exploded on the second half: a daring Cosmic Charlie tease that morphed into Wharf Rat sparked mixed reactions, but it was quickly followed by an inspired Uncle John's Band and a monster Samson & Delilah that reminded listeners of the band's early‑90s resurgence. The improvisational peak continued through a thunderous Drums/Space, a fiery run on The Other One, and a soaring Wharf Rat that many reviewers still cite as a highlight. Closing with Turn On Your Lovelight and a heartfelt Rain, the night ended on a high note despite the occasional lyrical slip‑up.\n\nJerry’s playing was described as “fast, on‑point, lyrical when needed,” recapturing his classic tone while delivering playful teases. Phil’s bass work earned adjectives like “bombs” and “thunder perfect,” especially on Tennessee Jed and The Other One. Bob’s vocal harmonies were tight, complementing the guitar work throughout. Vince’s keyboards added just enough texture without overwhelming the mix, and the dual‑drum assault from Mickey and Bill was praised as a reunion of two estranged wolf packs during the Drums/Space segment. Overall, the show is a solid 1994 entry—highly recommended for fans who appreciate deep jams and don’t mind a polarizing tease.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 29,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Multiple recordings (matrix, Schoeps, and soundboard fixes) are explicitly positive, praising jams, guitar tone, and overall energy. Three mixed reviews note controversy over the Cosmic Charlie tease but still highlight strong moments. The net sentiment is moderately positive, justifying a +1.0 adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.0 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-02-27.mtx.tetzeli.32637.flac16",
+    "reason": "Matrix mix offers thick, full sound with clear instrument separation and captures the energetic jams without major drop‑outs, making it the clearest representation of the show."
+  },
+  "key_highlights": [
+    "Second‑set jam marathon featuring Samson & Delilah, Uncle John's Band, and The Other One",
+    "Controversial Cosmic Charlie tease that split opinion but added drama",
+    "Powerful Drums/Space segment described as a reunion of two estranged wolf packs",
+    "High‑energy performances of Wharf Rat and Turn On Your Lovelight"
+  ],
+  "song_highlights": [
+    "Uncle John's Band",
+    "Wharf Rat",
+    "Samson & Delilah",
+    "The Other One",
+    "Mama Tried",
+    "Touch of Grey"
+  ],
+  "band_performance": {
+    "Jerry": "Sharp, lyrical guitar with a fast, on‑point tone; delivers playful Cosmic Charlie tease and soaring solos throughout the set.",
+    "Phil": "Thunder‑perfect bass lines, especially on The Other One and Tennessee Jed; provides a thick foundation for the jams.",
+    "Bob": "Tight vocal harmonies that blend seamlessly with Jerry’s lead, adding power to the 'Cowboy' songs and other sections.",
+    "Brent": "",
+    "Mickey": "Drums/Space highlighted as an inspired rhythmic excursion, showcasing his dynamic interplay with Bill.",
+    "Billy": "Drums segment praised for its energy; together with Mickey forms a powerful dual‑drum backbone during the improvisational peaks."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-18T19:28:23.721316+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Uncle John's Band",
+      "Corinna",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Mama Tried",
+      "Mexicali Blues"
+    ],
+    [
+      "Touch of Grey"
+    ]
+  ]
+}

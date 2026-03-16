@@ -1,0 +1,45 @@
+{
+  "summary": "Stunning soundboard recording of a rare Alaska show with standout Sugaree and Truckin' performances",
+  "review": "The tape delivers an exceptionally warm, well‑balanced analog sound that many reviewers call \"stunning\" and the best of the three‑night Alaskan run. Musically the concert is praised for its unique setting, a powerful Sugaree opener and a memorable Truckin' with an Alaska reference, making it a must‑listen despite only modest star ratings from one reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance (mostly 4–5 stars) and the recording quality (described as excellent), yielding a weighted rating well above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great mix, clear presence and levels, warm analog tape sound retained after digital remaster; clean copy with minimal noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unique Alaskan venue adds excitement; reviewers highlight the energetic opener and a memorable Truckin' that references the location."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T01:17:07.444331+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-21.sbd.samaritano.27448.sbeok.flacf"
+}

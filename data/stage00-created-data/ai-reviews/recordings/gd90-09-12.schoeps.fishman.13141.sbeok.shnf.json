@@ -1,0 +1,51 @@
+{
+  "summary": "Good‑quality recording of a jam‑heavy show with standout Althea, Uncle John’s Band and High Time, though some fans note the set was uneven.",
+  "review": "Listeners rave about the extended jams – especially the sweet ending to Althea and an inspired run through Uncle John’s Band and High Time – and praise Jerry’s soaring guitar work. Recording details are scarce, but no major technical complaints surface, suggesting a listenable source despite uncertainty about its exact origin.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and highlight strong jams, while a few note mediocrity or possible confusion about the venue; recording quality is not explicitly discussed, keeping the overall confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on clarity, mix, or source type; reviewers did not report major audio problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Uncle John's Band",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as very jammy with strong highlights, though a few listeners felt parts of the show were mediocre or uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for shining guitar work and “magic” that had the audience gasping.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) is noted as shining on the night.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:54:14.369763+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-12.schoeps.fishman.13141.sbeok.shnf"
+}

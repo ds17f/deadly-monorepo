@@ -1,0 +1,70 @@
+{
+  "summary": "Audience‑sourced recording of mixed clarity captures a laid‑back yet uneven 1995 show with strong moments like Row Jimmy, Brown Eyed Women and Black Peter, but hampered by flat performances and frequent flubs.",
+  "review": "The tape is an audience recording that sounds decent for its era, though it suffers from occasional muddiness and crowd noise. Musically the concert swings between solid highlights—Row Jimmy, Brown Eyed Women, Black Peter, Peggy O—and a number of lackluster or off‑key moments, most notably Crazy Fingers and several vocal flubs. Overall the performance feels tired, reflecting the band's late‑career slump despite some enjoyable songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews rate the show poorly (1–2 stars) and criticize both performance and recording, but a few note strong song moments and acceptable audience‑recording quality, leading to an overall low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape with decent capture for the 1990s; some reviewers call it \"good for an audience recording,\" while others describe it as muddy or \"dog shit.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Row Jimmy",
+      "Brown Eyed Women",
+      "Black Peter",
+      "Peggy O",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "A relaxed, breezy set that drifts between tight moments and sloppy sections; the first set is generally okay, while the second set ranges from inspiring to mediocre."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note flubs and weak vocal/guitar work (e.g., \"Jerry blows every verse\"), though a few mention he was in decent form for his age.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Praised as \"awesome\" by at least one reviewer, providing an energetic backbone."
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:07:12.164758+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-05-28.schoeps.9992.sbeok.shnf"
+}

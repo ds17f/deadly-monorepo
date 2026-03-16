@@ -1,0 +1,63 @@
+{
+  "summary": "High‑quality soundboard recording of a strong show highlighted by powerful Eyes, a stellar The Other One and an epic Sugar Magnolia.",
+  "review": "The performance is praised for Jerry’s beautiful vocal phrasing, a ripping \"Eyes of the World\" and one of the best renditions of \"The Other One\" on the archive.  The show closes with an unforgettable Sugar Magnolia and a solid Casey Jones, while the recording is generally clean though occasional high‑note distortion is noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is described as excellent with several standout songs; recording is good but has minor distortion issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced soundboard source; a few reviewers note occasional high‑note guitar distortion/clipping."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "The Other One",
+      "Sugar Magnolia",
+      "Casey Jones",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist is considered solid though not spectacular; strong closing with Sugar Magnolia and Casey Jones gives the show a memorable arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for beautiful vocal enunciation and note‑holding; occasional distortion when hitting high notes noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:51:10.335465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-10-29.sbd.sacks.1014.sbefail.shnf"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Fun snow‑bound show with Terrapin Station and Brown Eyed Women standing out, but the recording is only fair.",
+  "review": "The concert is remembered for its high energy despite a blizzard – fans rave about an awesome Terrapin Station, crowd‑loving Brown Eyed Women, and a memorable Throwing Stones where Bob Weir even spit on a fan. Recording quality is described as merely adequate (no soundboard praise, only a note of a crisp FM broadcast), so the tape sounds decent but not exceptional.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about the performance (standout songs, atmosphere) combined with only modest recording praise leads to a strong show rating tempered by fair audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit soundboard description; one reviewer mentions a crisp FM broadcast, another says the sound wasn’t the best they've heard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Brown Eyed Women",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑night snow‑delayed show with high anticipation; the crowd’s excitement carried through a solid set, highlighted by Terrapin Station and energetic mid‑set numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Spat on a fan during Throwing Stones; noted for his stage presence.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fought The Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:17:07.019338+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-14.akg.brown.4703.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Great‑sounding soundboard marred by amplified crowd noise and long tuning breaks; Morning Dew shines.",
+  "review": "The recording is a soundboard source that suffers from jarring, over‑amplified audience sections between tracks and excessive on‑stage tuning (15–20 minutes in set 1). Musically the show has moments – notably a stellar “Morning Dew” – but the constant retuning interrupts the flow. Overall the technical flaws outweigh the performance strengths for most listeners.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one review, rating 2 stars; shows a decent performance but recording issues dominate, leading to an overall low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Amplified crowd noise inserted between songs with fade‑ins/outs, causing jarring transitions; long tuning periods (15–20 min) interrupt the music."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Interrupted by frequent and lengthy on‑stage tunings; crowd noise edits break continuity, making the set feel disjointed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:44:26.087421+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-27.167534.fm.glassberg.smith.clugston.flac1648"
+}

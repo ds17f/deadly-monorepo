@@ -1,0 +1,74 @@
+{
+  "summary": "An outstanding matrix recording of the legendary spring‑77 show, highlighted by a soaring Morning Dew and blistering Dancin'/Saint Stephen sequence.",
+  "review": "The gd1977-05-08.mtx.dan capture is universally praised for its crystal‑clear soundboard‑audience blend, deep low end and warm analog feel that makes the performance feel like you’re right there.  Musically the show shines with a monumental second set—Morning Dew, Dancin', Saint Stephen, Not Fade Away and Jack Straw are repeatedly called out as unforgettable moments—while a few listeners note the first set isn’t quite as strong as other spring ’77 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 20 reviews, almost all five‑star, consistently laud both the musical performance and the matrix recording quality; only one mixed rating mentions a weaker first set, so the combined show (70%) + recording (30%) score is very high."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Praised for deep ‘bottom for days’, pristine bass detail, warm analog sound, clear vocals and guitar, and a seamless blend of audience ambience with the soundboard. No significant flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Dancin'",
+      "Saint Stephen",
+      "Not Fade Away",
+      "Jack Straw",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as a force of nature, climaxing with Morning Dew; transitions through Dancin' and Saint Stephen are highlighted as seamless, while the first set is noted by some as less remarkable than other spring‑77 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals and guitar tone receive high praise – back‑channel reinforcement gives chills.",
+    "Phil": "Bass is repeatedly called out for its depth, clarity and audible finger work; the low end is a defining feature of this mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T23:49:55.692040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.mtx.dan.35086.flac24"
+}

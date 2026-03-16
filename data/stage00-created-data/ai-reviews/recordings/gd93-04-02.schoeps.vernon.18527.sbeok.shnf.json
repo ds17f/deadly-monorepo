@@ -1,0 +1,63 @@
+{
+  "summary": "A solid audience recording captures a fire‑filled second set highlighted by a smoking Help > Slipknot > Franklin’s sequence, despite occasional tape roughness.",
+  "review": "Listeners rave about the strong setlist and especially the blazing second set featuring a standout Help > Slipknot > Franklin's Tower run, along with scorching Scarlet Begonias, Fire on the Mountain and Terrapin Station. The audience‑sourced tape is generally praised as clear and enjoyable, though one reviewer finds the audio quality merely average. Overall the performance is celebrated as a memorable Dead show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Eight reviews overwhelmingly positive about both performance and recording, with only one low‑rating comment on audio; average rating ~4.3–4.5 supports a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape with decent clarity; several reviewers call it excellent, while one notes it isn’t a keeper, typical crowd ambience present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot > Franklin's Tower",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Terrapin Station",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as \"on fire\" with a great flow; crowd singing adds to the live atmosphere and the overall setlist is praised as one of the best."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slipknot > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:09:40.575604+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-04-02.schoeps.vernon.18527.sbeok.shnf"
+}

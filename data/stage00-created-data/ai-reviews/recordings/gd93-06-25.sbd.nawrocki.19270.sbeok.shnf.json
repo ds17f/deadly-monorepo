@@ -1,0 +1,61 @@
+{
+  "summary": "Great soundboard capture with a brief source‑switch hiccup, highlighted by a smoking China > Rider > Saint > Uncle John’s Band sequence and a killer Uncle John's Band jam.",
+  "review": "The show is praised for its consistently high energy, especially the second set where China, Rider, Saint and Uncle John's Band flow together flawlessly and end with an unforgettable UJB jam. The SBD sounds generally clear and balanced, though several listeners note a source change after “Corinna” that introduces audience bleed and a tinny hi‑hat. Overall the performance is considered one of the stronger 1993 outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews highlight strong musical performance and only minor recording issues, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and well‑balanced SBD for most of the show; however reviewers mention a source change after “Corinna” that adds audience bleed, a tinny hi‑hat and reduced clarity in the latter portion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland",
+      "China > Rider > Saint > Uncle John's Band",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as enthusiastic and tight; second set especially strong with seamless segues (notably China into Rider) and a powerful UJB jam to close. A brief on‑stage tension between Bob Weir and Jerry Garcia during the China→Rider transition adds character."
+  },
+  "band_member_comments": {
+    "Jerry": "Opening notes praised as great; overall playing described as high‑level and powerful, though one reviewer notes he was \"in and out\" later in the show.",
+    "Phil": "",
+    "Bob": "Voice strained from polyps but still delivered strong vocals and driving riffs on UJB; interaction with Jerry during China→Rider noted as humorous.",
+    "Keys": "Vince’s piano praised as classy; Hornsby’s accordion kept low in the mix, though some reviewers criticize his comments and feel the accordion added little musically.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T15:20:52.216058+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-25.sbd.nawrocki.19270.sbeok.shnf"
+}

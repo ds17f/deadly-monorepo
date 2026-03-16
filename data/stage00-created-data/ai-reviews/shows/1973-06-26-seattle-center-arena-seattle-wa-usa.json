@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy marathon with stellar Truckin' > Drums > Other One",
+  "blurb": "The Seattle Center Arena show delivers a nonstop three‑hour surge of classic ’73 material, highlighted by a monster Truckin' → Drums → The Other One sandwich and inspired performances of Jack Straw and Here Comes Sunshine. Jerry’s guitar shines on the bluesy numbers while Phil provides a rock‑solid bass foundation.",
+  "review": "June 26, 1973 at Seattle Center Arena captures the Grateful Dead at peak ’73 momentum. Over thirty songs flow with relentless drive, from an upbeat first set that rolls through China Cat Sunflower → I Know You Rider into a soaring Playing In The Band, to a second‑set marathon where the band builds into one of their most memorable sandwich—Truckin' into Drums and out the other side into The Other One, extending into a fiery Me And Bobby McGee jam before closing with Sugar Magnolia. Standout moments include Jerry’s scorching tone on Jack Straw and bright leads on Here Comes Sunshine, Keith’s textured Rhodes work during The Other One, Phil’s “monster” bass lines that anchor the jams, and Bill’s punchy kick drum that fuels the high‑octane rhythms. While a few matrix recordings suffer from patchwork sources, the best‑available warm matrix blend (gd1973-06-26.mtx.seamons.100024.sbeok.flac16) presents the full set with clear, enjoyable sound, making this show a must‑listen for fans of the band’s high‑energy ’73 era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 27,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.3,
+      "sentiment_rationale": "Four of six recordings are marked positive and two mixed, with consistent praise for the Truckin' → Drums → Other One sandwich, Jack Straw, Here Comes Sunshine, and strong band cohesion. No recurring negative comments about performance quality were found, just occasional recording flaws, warranting a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.3 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1973-06-26.mtx.seamons.100024.sbeok.flac16",
+    "reason": "Warm matrix blend offers full‑show coverage with good clarity and minimal technical issues, making it the most enjoyable listening source."
+  },
+  "key_highlights": [
+    "Monster Truckin' → Drums → The Other One sandwich that drives the second set.",
+    "Jerry’s scorching guitar on Jack Straw and bright leads on Here Comes Sunshine.",
+    "Phil’s “monster” bass lines underpinning The Other One and Playin' In The Band.",
+    "Keith’s textured Rhodes work during The Other One jam and overall keyboard color."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Here Comes Sunshine",
+    "The Other One",
+    "Truckin'",
+    "Greatest Story Ever Told",
+    "He's Gone"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers strong tonal work, especially on Jack Straw and Here Comes Sunshine; occasional moments where his presence fades but overall guitar shines.",
+    "Phil": "Provides a rock‑solid, “monster” bass foundation throughout, highlighted on The Other One and Playin' In The Band.",
+    "Bob": "Shows silky‑smooth rhythm/lead playing on China Cat Sunflower, adding lift to the first‑set flow.",
+    "Keith": "Offers rich keyboard textures, perfect Rhodes on He's Gone and driving comping during The Other One; occasional brief disappearances but overall positive contribution.",
+    "Mickey": "",
+    "Billy": "Kick drum adds extra ‘umph’, especially in the Truckin' → Drums → The Other One segment, supporting the high‑energy groove."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-22T15:16:01.487040+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Here Comes Sunshine"
+    ],
+    [
+      "He's Gone",
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Me And Bobby McGee",
+      "The Other One",
+      "Sugar Magnolia"
+    ],
+    [
+      "Casey Jones",
+      "Greatest Story Ever Told"
+    ]
+  ]
+}

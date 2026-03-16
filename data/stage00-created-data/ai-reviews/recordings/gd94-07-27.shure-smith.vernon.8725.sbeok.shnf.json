@@ -1,0 +1,68 @@
+{
+  "summary": "A solid audience recording that delivers a jam‑laden set highlighted by an epic Corrina and a standout Ramble On Rose.",
+  "review": "The show is praised for its long, flowing jams – especially the 20‑minute Corrina, a soaring Ramble On Rose, and a feel‑good Here Comes Sunshine – with Jerry Garcia’s tone evoking his acoustic‑era warmth. The audience source sounds surprisingly clear for an AUD recording, earning reviewers’ approval despite the unknown venue date.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently strong show comments (multiple standout songs) combined with good‑to‑excellent audience sound quality yield a rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the recording is above‑par for a 1994 audience tape, with clear mids and no major dropouts; overall sound is crisp enough to enjoy the extended jams."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Corrina",
+      "Ramble On Rose",
+      "Here Comes Sunshine",
+      "Days Between",
+      "The Last Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A seamless, jam‑heavy flow that moves from the sprawling Corrina into an extended Drumz segment and then through The Last Time into a haunting 14‑minute Days Between, giving the set a relaxed acoustic vibe despite the rainy start."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is described as ‘age‑laden’ yet sublime, recalling his acoustic‑era sound.",
+    "Phil": "",
+    "Bob": "Bob’s vocal snippet (‘Coree‑’) during Corrina is highlighted as a memorable moment.",
+    "Keys": "Vince (keyboards) is noted for bringing back songs like HCS and is suggested could have taken on more singing duties.",
+    "Drums": "The 30‑minute Drumz segment receives praise for its jam quality."
+  },
+  "song_mentions": {
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drumz": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:22:41.432224+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-27.shure-smith.vernon.8725.sbeok.shnf"
+}

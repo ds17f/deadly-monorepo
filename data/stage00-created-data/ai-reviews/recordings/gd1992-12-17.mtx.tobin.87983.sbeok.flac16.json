@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent matrix recording captures a high‑energy Oakland show highlighted by a soaring \"Touch\" and the fresh \"Here Comes Sunshine\" while still receiving criticism for pitch issues.",
+  "review": "The December 1992 Oakland performance is praised for its upbeat vibe, standout moments like \"Touch\", \"Loser\", \"Queen Jane\" and the debut of \"Here Comes Sunshine\", and a matrix mix that many consider top‑notch. However, at least one listener notes severe pitch problems in the recording, leading to mixed overall impressions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three reviews provide a clear picture: two are strongly positive about performance and matrix sound, while one flags serious pitch issues. The weighted average of show (70%) and recording (30%) yields a solid 4‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer calls the matrix mix \"as good as you can get\", while another demands drastic pitch correction, indicating inconsistent perception of sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "Loser",
+      "Queen Jane",
+      "Here Comes Sunshine",
+      "Playin' Reprise",
+      "The Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band opened with a playful \"Touch\" that set a good‑mood tone, carried momentum through strong first‑set cuts like \"Loser\" and \"Queen Jane\", and delivered an adventurous second set featuring the new \"Here Comes Sunshine\" and a tight Pre‑Drums Playin' Reprise."
+  },
+  "band_member_comments": {
+    "Jerry": "Shot Phil a look at the end of \"Touch\", indicating a playful onstage mood.",
+    "Phil": "Responded with a tasteful, exuberant nudge into the final line of \"Touch\".",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' Reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:14:23.847591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-17.mtx.tobin.87983.sbeok.flac16"
+}

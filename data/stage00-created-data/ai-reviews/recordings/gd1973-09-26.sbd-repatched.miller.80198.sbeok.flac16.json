@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard recording that captures a strong second set with a standout “Loser” performance.",
+  "review": "The repatched SBD source sounds crisp and well‑balanced, delivering the concert with clear instrumentation. Reviewers rave about the second set – especially the rendition of “Loser” – while noting the first set is less compelling, but overall the show is judged excellent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are highly positive (4‑5 stars). The recording is praised as a “very nice board rendering,” and the show is described as excellent with a highlighted second set, justifying a rating in the high‑range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Board rendering noted as very nice; clean, crisp mix with no reported dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is singled out as the highlight of the night; first set deemed less interesting but does not detract from the overall excellence of the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T15:03:14.662532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-26.sbd-repatched.miller.80198.sbeok.flac16"
+}

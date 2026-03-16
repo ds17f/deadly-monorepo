@@ -1,0 +1,45 @@
+{
+  "summary": "Decent recording captures a great show highlighted by an opening Cold Rain and Snow and a jam‑filled Cosmic Charlie in the second set.",
+  "review": "The three reviewers agree the performance is solid, especially praising the second‑set flow and the cosmic jam on \"Cosmic Charlie\". While no detailed technical notes are given, the recording is described as decent enough to enjoy the show, with the opening of \"Cold Rain and Snow\" after a humorous audience request noted as a fun moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong praise for the musical performance (especially the second set) combined with only a generic 'decent' comment on recording quality yields an overall high rating, but limited technical detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Described as a decent recording; no specific issues such as dropouts or muddiness were mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow",
+      "Cosmic Charlie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set noted as solid but unremarkable; second set praised for its song selection, progression, and jammy space/Spanish sections."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for the humorous request snub and overall vibe ('you th' man jerry').",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:33:02.845653+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-16.aud.menke.10377.sbeok.shnf"
+}

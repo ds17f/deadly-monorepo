@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear front‑of‑house recording captures a terrific show highlighted by a soaring Drum > Space segment and a beautiful Wheel jam.",
+  "review": "Both reviewers rave about the exceptionally clean and crisp sound, noting fine instrument separation that makes the band feel right there. The performance is praised for its powerful drums‑>space excursion, an inspired Wheel jam, and a standout Bird Song in the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews emphasize both superb recording quality and strong musical moments, yielding a near‑top rating despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as extremely clean, crisp, with fine separation of instruments; feels like the band is 'right there'."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Drums > Space",
+      "The Wheel",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review highlights a tight first‑set jam (Bird Song) and an especially powerful second‑set drum/space segment leading into a beautiful Wheel improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Terrific drumming noted, especially the Drum > Space sequence."
+  },
+  "song_mentions": {
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:09:44.866055+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-08-30.fob.senn441.mccue.LMPP.96349.flac24"
+}

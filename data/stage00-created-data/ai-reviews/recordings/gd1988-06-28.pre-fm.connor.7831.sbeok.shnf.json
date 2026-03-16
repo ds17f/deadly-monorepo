@@ -1,0 +1,57 @@
+{
+  "summary": "Lively outdoor performance highlighted by a classic Scarlet > Fire > Estimated Prophet sequence; recording quality not detailed but the vibe is praised.",
+  "review": "Fans rave about the hot‑and‑humid Toga show, calling the Hell in the Bucket opener and the Scarlet > Fire > Estimated Prophet stretch “classic” and recalling a rain‑soaked, dancing afternoon. No technical complaints are mentioned, so while the exact source is unknown, the overall experience is described as very positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Consistently high praise for the performance (70% weight) and no negative comments about sound, leading to a strong combined rating despite unknown recording specifics."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviews focus on atmosphere and setlist; no specific comments on clarity, mix or source type, implying the audio is at least listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire > Estimated Prophet",
+      "Hell in the Bucket",
+      "Foolish Heart",
+      "Victim Or The Crime"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opened with a hot, humid vibe, moved into a rain‑soaked second half, and maintained high energy throughout, especially during the Scarlet>Fire sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire > Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in the Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim Or The Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:39:36.838632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-28.pre-fm.connor.7831.sbeok.shnf"
+}

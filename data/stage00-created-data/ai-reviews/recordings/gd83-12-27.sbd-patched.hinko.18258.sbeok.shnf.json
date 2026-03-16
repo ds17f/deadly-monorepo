@@ -1,0 +1,45 @@
+{
+  "summary": "A fire‑hot show highlighted by a scorching Scarlet Begonias and a tight Cold Rain opener, but the soundboard is riddled with clipping, static and an inconsistent mix.",
+  "review": "Fans rave that this concert ranks among their favorites – Scarlet Begonias “cooks” and Jerry Garcia shreds on the Cold Rain & Snow opener. Unfortunately the patched SBD source is plagued by severe clipping, high‑/low‑range noise and a wildly uneven stereo mix, making the audience recording a far better listen.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show performance is praised strongly while multiple reviewers condemn the recording quality; weighting the excellent show (≈4.5) against a poor recording (≈2) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Severe clipping, static in both high and low frequencies, frequent digi‑noise pops and crackles, and an inconsistent stereo mix make the board difficult to enjoy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Cold Rain & Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy show with a hot first half; the Scarlet Begonias segment and Cold Rain opener receive particular praise."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work on the Cold Rain opener is highlighted as ‘rocking’ by reviewers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:10:26.504979+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-12-27.sbd-patched.hinko.18258.sbeok.shnf"
+}

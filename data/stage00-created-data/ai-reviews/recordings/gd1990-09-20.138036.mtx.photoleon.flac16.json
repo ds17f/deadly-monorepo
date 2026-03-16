@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix source captures a smoking 9/20/90 show with Bruce Hornsby’s standout playing on “I Know You Rider”.",
+  "review": "Both reviewers gave the recording five stars, praising its unique performance featuring Bruce Hornsby throughout and especially his work on “I Know You Rider.” The matrix mix is clear enough to identify Hornsby’s keyboards, and no technical flaws were reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Both reviews are enthusiastic (5‑star) and highlight a great performance with no noted recording problems, but only two brief reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to distinguish Bruce Hornsby’s piano on “I Know You Rider”; no dropout or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or flow were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s keyboard work is highlighted, especially on “I Know You Rider.”",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:17:27.061767+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-20.138036.mtx.photoleon.flac16"
+}

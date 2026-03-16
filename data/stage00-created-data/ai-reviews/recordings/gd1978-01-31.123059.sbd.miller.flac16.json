@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent Betty‑Cantor‑Jackson soundboard recording featuring a powerhouse second set and standout renditions of Scarlet Fire, Terrapin Station and Black Peter.",
+  "review": "The Miller‑digitized Betty board captures the 1978 show with remarkable clarity, warmth and very few audible glitches.  Jerry Garcia’s guitar is on fire throughout – from Half‑Step to Tennessee Jed, Let It Grow and Fire – while the band delivers a heavy‑hitter second set that many reviewers call “dream‑like”.  Minor hiccups (a patch on Candyman and an off‑kilter Passenger) don’t detract from the overall brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently glowing reviews praise both the musical performance (standout songs, high energy) and the superb Betty‑board sound quality; only minor recording glitches are noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty Cantor‑Jackson mix provides crisp, warm, well‑balanced audio; occasional patch needed for \"playin\" and an AUD patch on Candyman, but overall stellar clarity with minimal drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Terrapin Station",
+      "Black Peter",
+      "Half Step",
+      "Tennessee Jed",
+      "Let It Grow",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Passenger",
+      "Candyman"
+    ],
+    "setlist_flow": "Second set described as a dream‑like, heavy‑hitter that lifts the entire concert; overall pacing is energetic with classic 1978 ebbs and flows."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly praised – blowing the joint on multiple songs and even singing Terrapin well, a rare 1978 moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:55:13.925782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-31.123059.sbd.miller.flac16"
+}

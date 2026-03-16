@@ -1,0 +1,67 @@
+{
+  "summary": "Rough audience tape that still captures an emotional Dear Mr. Fantasy > Hey Jude and a standout Built to Last performance.",
+  "review": "The recording is an audience source with generational copies, giving it a fairly lo‑fi but listenable sound. Musically the show is uneven – the first set drifts, while the second delivers highlights like Dear Mr. Fantasy > Hey Jude, Built to Last and a tight Cold Rain > Minglewood segue – with Jerry’s voice noted as being in good shape. Fans’ reactions range from high enthusiasm to disappointment, making the overall impression mixed but leaning positive.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise several songs despite noting a lo‑fi audience source; the weighted blend of decent musical moments (70%) with fair recording quality (30%) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Rough audience tape, multi‑generation copies; occasional hollowness and lo‑fi character but captures the emotional peaks of the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr. Fantasy > Hey Jude",
+      "Built to Last",
+      "Cold Rain > Minglewood",
+      "China > Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as sleepy and unfocused; the second set lifts off with Built to Last and several tight segues, delivering a mixed‑but‑memorable overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is praised as being in good shape and his tone/emotion on Dear Mr. Fantasy > Hey Jude noted as outstanding.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy > Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain > Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:19:24.419109+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-10-20.aud.dogman.gems.105858.flac16"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "High‑energy set with soaring Sugaree and tight second‑set jams",
+  "blurb": "The show delivers a scorching opener with \"In The Midnight Hour\" and strong performances of \"Sugaree,\" \"Broken Arrow\" and \"Estimated Prophet.\" The second set flows beautifully through drums, space and a powerful \"The Other One,\" closing with an uplifting encore of \"Liberty.\"",
+  "review": "April 4, 1993 at Nassau Coliseum captured one of the Dead’s most vibrant shows of the early ’90s. From the moment the band ripped into Wilson Pickett’s “In The Midnight Hour,” Jerry Garcia’s clean, smooth solos and thoughtful phrasing set a high‑octane tone that never let up. Highlights like \"Sugaree,\" \"Bird Song\" and the soaring “Broken Arrow” showcase Phil Lesh’s vocal harmonies and bass drive, while the second‑set sequence—\"Estimated Prophet\" into an inspired drums/space segment and then into a thunderous \"The Other One\" followed by “Attics Of My Life”—demonstrates the group’s telepathic cohesion. Guest percussionist Sikiru Adepoju adds extra sparkle as Mickey Hart locks in, even as Bill Kreutzmann steps back for part of the night. The encore “Liberty” caps a show that feels both tightly structured and wildly improvisational, making it a standout entry in the 1993 tour.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.3,
+      "sentiment_rationale": "Four recordings are clearly positive, praising the set’s energy and specific song performances; one mixed review still notes strong moments; only a single negative comment appears. The overwhelming positive sentiment across multiple sources warrants a solid +1.3 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.3 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-04-04.sbd.hinko.27976.sbeok.flacf",
+    "reason": "Soundboard source with clear, even mix (only low‑level gain needed) and captures the full energy of the performance; consistently praised as the clearest representation of this show."
+  },
+  "key_highlights": [
+    "Scorching opener \"In The Midnight Hour\" sets a high‑energy tone.",
+    "\"Estimated Prophet\" → drums/space → \"The Other One\" creates second‑set fireworks.",
+    "Guest percussionist Sikiru Adepoju adds extra sparkle to the drum segment.",
+    "Encore \"Liberty\" delivers a triumphant close."
+  ],
+  "song_highlights": [
+    "In The Midnight Hour",
+    "Sugaree",
+    "So Many Roads",
+    "Eternity",
+    "Bird Song",
+    "Eyes Of The World",
+    "Broken Arrow",
+    "The Other One",
+    "Attics Of My Life",
+    "Throwing Stones",
+    "Liberty"
+  ],
+  "band_performance": {
+    "Jerry": "Clean, smooth solos with thoughtful phrasing; magical emotional connection noted across recordings.",
+    "Phil": "Strong vocal contributions on Broken Arrow and other tunes; bass \"bombs\" drive the vibe, especially during the opening hour.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Locks in tight grooves alongside guest percussionist Sikiru Adepoju; drum/space segment praised for its soaring, primitive energy.",
+    "Billy": "Sits out part of the night per one source but otherwise provides solid rhythmic foundation."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-18T12:20:00.239758+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "In The Midnight Hour"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "So Many Roads"
+    ],
+    [
+      "Eternity",
+      "Bird Song"
+    ],
+    [
+      "Eyes Of The World",
+      "Samson & Delilah"
+    ],
+    [
+      "Broken Arrow"
+    ],
+    [
+      "Estimated Prophet",
+      "Drums*",
+      "Space",
+      "The Other One",
+      "Attics Of My Life",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Liberty"
+    ]
+  ]
+}

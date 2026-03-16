@@ -1,0 +1,113 @@
+{
+  "summary": "Solid soundboard recording (good quality, occasional clipping) of a hot 1983 Carrier Dome show highlighted by a smoking Shakedown opener and stellar China > Rider/Terrapin stretch.",
+  "review": "The concert captures the high‑energy vibe of the early‑80s Dead with a fiery Shakedown opening, a superb China > Rider transition, Terrapin jam and inspired Birdsong. Reviewers praise Jerry’s vocal work on Candyman and strong playing from Phil, Bob and Brent, while noting that the mastering is a bit hot and introduces some clipping and tape hiss.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight many standout performances; recording is generally praised though a few note hot mastering, yielding an overall weighted score around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall solid soundboard capture with clear mix, but the master is overly hot causing occasional clipping and noticeable tape‑hiss; a few listeners mention muffled sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "China > Rider",
+      "Terrapin",
+      "Birdsong",
+      "Candyman",
+      "Throwing Stones",
+      "Wheel",
+      "Hell in a Bucket"
+    ],
+    "poor_songs": [
+      "St Stephen"
+    ],
+    "setlist_flow": "First set cooks with a strong Shakedown opener, second set builds momentum through China > Rider and a jam‑filled Terrapin, followed by an expansive space/Drums segment and a tight encore, delivering classic 80s Dead pacing despite the Dome's acoustic limitations."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong vocal performance on Candyman and overall solid guitar work throughout the show.",
+    "Phil": "Loud and present in the mix, especially on Throwing Stones; noted as powerful but also mentioned walking off stage during a problematic St Stephen attempt.",
+    "Bob": "Described as delivering a clinic‑level guitar performance, energizing the band (e.g., \"Bobby gets ya goin\").",
+    "Keys": "Brent’s comping described as mellow, jazzy and supportive of the jam sections; no complaints about keyboard balance.",
+    "Drums": "Bill's drumming noted as continuous post‑drum segment with an apocalyptic feel on Throwing Stones; generally positive."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Birdsong": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Throwing Stones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Revolution": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "St Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Women are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T13:47:48.234558+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-22.sbd.drgseeds.17274.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "High‑energy show with a memorable power‑out moment; clean soundboard source makes it very listenable.",
+  "review": "Both reviewers gave the recording five stars, praising the overall vibe despite an unexpected power cut that halted Lovelight mid‑song. The soundboard capture is assumed solid, and the band’s ability to keep drumming through the outage adds a unique live moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews highlight an exciting performance and no complaints about audio, suggesting both show and recording are excellent; limited number of reviews lowers confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio issues mentioned; reviewers' high ratings imply a clear, balanced soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "The set was interrupted by a power outage during Lovelight, but the band kept the momentum going with the drums continuing, creating an unforgettable live hiccup."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Review notes that the drummers kept playing after the power was cut."
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:29:52.404024+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-01-24.sbd.miller.109640.flac16"
+}

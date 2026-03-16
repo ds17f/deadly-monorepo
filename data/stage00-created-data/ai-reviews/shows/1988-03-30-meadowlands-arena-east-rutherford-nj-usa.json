@@ -1,0 +1,76 @@
+{
+  "summary": "Scorching Bertha opener, soaring Looks Like Rain and emotional Morning Dew.",
+  "blurb": "The first set kicks off with a high‑energy Bertha > Greatest Story Ever Told > Hey Pocky Way sequence and builds through West L.A. Fadeaway into a tight second set. Highlights include a fiery Looks Like Rain, the post‑drums Wheel/Gimme Some Lovin' jam and an emotional Morning Dew that caps a powerful show.",
+  "review": "On March 30, 1988 at Meadowlands Arena the Dead delivered one of their tighter late‑80s outings. The night opened with a blistering Bertha > Greatest Story Ever Told > Hey Pocky Way stretch that set a joyous tone, and the band never lost momentum. Jerry’s licks on Looks Like Rain were repeatedly praised as “tasty” and his vocal delivery on Morning Dew was described as soaring and emotional. Brent’s keyboards shone throughout, especially in the jam‑heavy transitions from Uncle John’s Band into Playing In The Band and the post‑drums sequence that rolled into The Wheel > Gimme Some Lovin' > Morning Dew. Mickey added a tasteful accent at the end of Looks Like Rain, while both drummers kept a solid, punchy foundation. Though the soundboard source carries some static and occasional muddiness—particularly on West L.A. Fadeaway—the mix remains usable and captures the crowd’s East Coast energy. The encore’s Black Muddy River provides a fitting, reflective close to an otherwise high‑octane night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 34,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Multiple recordings laud the same moments—Looks Like Rain, Morning Dew and the post‑drums Wheel/Gimme sequence—with descriptors like \"tasty licks,\" \"soaring guitar,\" and \"emotional\". Positive language appears in at least three sources, while criticism is limited to recording quality rather than performance, yielding a solid positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.2 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-03-30.sbd.lai.408.sbefail.shnf",
+    "reason": "Full‑set soundboard capture with the strongest overall mix despite some static; it preserves the band’s energy and includes all key highlights."
+  },
+  "key_highlights": [
+    "Fire‑starter Bertha > Greatest Story Ever Told > Hey Pocky Way opener.",
+    "Looks Like Rain delivers a soaring, vocal‑rich performance from Jerry.",
+    "Post‑drums jam: Drums → Space → The Wheel → Gimme Some Lovin' → Morning Dew.",
+    "Emotional Morning Dew and reflective encore Black Muddy River."
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Greatest Story Ever Told",
+    "Hey Pocky Way",
+    "Looks Like Rain",
+    "Morning Dew",
+    "Turn On Your Lovelight",
+    "The Wheel",
+    "Gimme Some Lovin'",
+    "Black Muddy River"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers tasty licks on Looks Like Rain, swinging solos in the jams and a powerful vocal delivery on Morning Dew.",
+    "Phil": "Provides solid bass foundation; a brief “Sunshine of Your Love” riff is noted before Queen Jane.",
+    "Bob": "Vocals are full‑throttle, especially on Looks Like Rain, letting it all hang out throughout the set.",
+    "Brent": "Keyboard work is sweet and essential, driving the jam sections and stepping forward as a front‑man on several numbers.",
+    "Mickey": "Adds an enthusiastic accent at the end of Looks Like Rain; overall drum sound is solid and punchy.",
+    "Billy": "Provides steady, powerful drumming that underpins the high‑energy second set and post‑drums sequence."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T07:25:30.612897+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha",
+      "Greatest Story Ever Told",
+      "Hey Pocky Way"
+    ],
+    [
+      "Shakedown Street",
+      "Looks Like Rain"
+    ],
+    [
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Gimme Some Lovin'",
+      "Morning Dew",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Black Muddy River"
+    ]
+  ]
+}

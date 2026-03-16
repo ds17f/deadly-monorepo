@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality matrix mix captures a sublime 'He’s Gone' and the band’s 1973 brilliance, though a few hear slapback‑delay artifacts.",
+  "review": "The show is widely praised for its extraordinary performance, especially the soaring version of “He’s Gone,” with listeners noting the added spatial bass, atmospheric audience ambience and even brass that give the 1973 concert a lush feel. The matrix recording is generally regarded as clear and immersive, but one reviewer feels it suffers from an unwanted slap‑back delay compared to the plain soundboard source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews highlight exceptional musical performance and mostly positive recording impressions, while a single 0‑star review points to a noticeable mix issue; weighted averaging of show (≈4.5) and recording (≈3.0) yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners appreciate the crisp board clarity, added audience ambience and spatial bass; however, one reviewer reports a slap‑back delay effect that detracts from the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He’s Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall performance described as long, beautiful and near‑perfect for the era, with no specific pacing issues noted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He’s Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T15:03:44.788625+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-26.sbd.mtx.tobin.82879.sbeok.flac16"
+}

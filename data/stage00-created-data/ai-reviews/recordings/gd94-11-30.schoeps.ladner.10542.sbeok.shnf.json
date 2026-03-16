@@ -1,0 +1,70 @@
+{
+  "summary": "Fair audience recording with a mixed performance – Jerry is often off but Loose Lucy, Lazy River and Liberty shine.",
+  "review": "The tape captures an audience‑sourced sound that is at best fair – the taper was apparently shivering by the door and the mix leans heavy on Vince’s keyboards. Musically the show is uneven: the first set is solid while Jerry struggles on Terrapin Station, Crazy Fingers and Estimated Prophet, yet songs like Loose Lucy, Lazy River and Liberty deliver strong moments, and the drums receive a positive nod.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers note a mediocre show with several criticisms of Jerry’s playing, balanced by occasional song highlights; recording quality is described as fair to decent, leading to an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Taper was standing in the cold near the door, resulting in a muffled ambience; mix is a bit Vince‑keyboard heavy and occasionally unbalanced, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "Lazy River",
+      "Liberty"
+    ],
+    "poor_songs": [
+      "Terrapin Station",
+      "Crazy Fingers",
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "First set is described as solid with a short jam in Cassidy; second set suffers from lyric slips and uneven keyboard solos, making the overall pacing uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently called unfocused, off‑key and struggling with lyrics (Terrapin, Crazy Fingers), though one reviewer praised his vocals on the “standing on the moon” line.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s keyboard presence is heavy; his solo on Estimated Prophet is noted as unpleasant to the ears.",
+    "Drums": "Positive comment noting nice drum work."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:03:18.453292+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-11-30.schoeps.ladner.10542.sbeok.shnf"
+}

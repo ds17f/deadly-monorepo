@@ -1,0 +1,91 @@
+{
+  "summary": "Clear soundboard recording captures a solid 1994 show highlighted by Bird Song, Black Peter and an outstanding Iko Iko, though the set’s close on Throwing Stones draws criticism.",
+  "review": "The SBD capture is generally clean and well‑balanced, letting Jerry’s “tasty” guitar work shine through especially on Black Peter and the Iko Iko.  Fans praise several jams – Bird Song, Estimated Jam and The Other One – but note a tired feel from Garcia and a disappointing Throwing Stones finale that leaves the second set feeling uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance positively (5‑star) while a few note fatigue and weak moments; recording quality is consistently described as good to excellent, yielding an overall rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear, well‑balanced SBD capture with no major dropouts; several reviewers call the recording “excellent” or “great.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Black Peter",
+      "The Other One",
+      "Iko Iko",
+      "Estimated Jam"
+    ],
+    "poor_songs": [
+      "Throwing Stones",
+      "Fingers"
+    ],
+    "setlist_flow": "First set described as tighter and focused, second set looser with a strong early half‑step opener but a weaker close on Throwing Stones; overall song selection is solid though some feel the show lacks extra “umph.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s firing‑off, tasty lead work and dexterity, especially on Black Peter’s coda and the Estimated jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s keyboards receive praise for staying in check and adding pleasant texture; one reviewer calls his playing a “nice surprise.”",
+    "Drums": "Drummers sound good, with a short drum segment noted as appropriate for the period."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy > Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle > Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:30:14.203094+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-04.sbd.sailor_saint.33697.flac16"
+}

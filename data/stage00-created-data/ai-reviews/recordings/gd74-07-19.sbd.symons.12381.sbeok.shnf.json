@@ -1,0 +1,93 @@
+{
+  "summary": "Excellent soundboard recording of a classic ’74 show highlighted by a monster Weather Report Suite‑Spanish Jam‑Eyes‑China Doll sequence and blistering Playin’ in the Band.",
+  "review": "The GD74 tape (soundboard) delivers analog warmth, crystal‑clear mix and very little noise – most listeners call it “crisp” or “excellent”. Musically the night is a showcase of the band’s peak: a soaring Weather Report Suite that rolls into a legendary Spanish Jam and into Eyes > China Doll, plus a half‑hour Playin’ in the Band, fiery Scarlet Begonias and solid Bertha. A few reviewers note minor mix quirks (Bertha’s guitar) or the optional Seastones improvisation, but overall the performance is repeatedly described as “jaw‑dropping”, “epic” and “one of the best ’74 shows”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 60 reviews, >90% give five stars and praise both performance and sound quality; only a handful of low‑star outliers mention minor mix issues or personal taste."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Analog warmth, crisp separation, very low noise. A few users reported occasional dropouts or a possible undocumented noise‑reduction pass, but the consensus is that the tape sounds as good as any GD74 SBD source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Weather Report Suite > Spanish Jam > Eyes > China Doll",
+      "Playin' in the Band",
+      "Scarlet Begonias",
+      "Bertha",
+      "Deal",
+      "Brown‑Eyed Women"
+    ],
+    "poor_songs": [
+      "Bertha (mix/guitar level issue for some listeners)",
+      "Here Comes Sunshine (noted as sloppy)",
+      "Seastones (considered self‑indulgent by several reviewers)"
+    ],
+    "setlist_flow": "The second set is repeatedly praised for its seamless flow – the WRS suite rolls into a legendary Spanish Jam and then into Eyes/China Doll, while the first set builds with solid openers (Deal, Bertha) and strong mid‑set jams (Scarlet, Brown‑Eyed Women). Some users note track‑tag offsets in certain MP3 releases but it does not detract from musical continuity."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone described as “perfect”, “brilliant” and likened to Wes Montgomery on Bobby McGee; his solos receive high praise throughout.",
+    "Phil": "Phil Lesh is called a “beast”, “over the top in Let It Grow”, “driving the Spanish Jam”, and the bass work is highlighted as a key element of the night’s power.",
+    "Bob": "Bob Weir gets nods on Bobby McGee (vocals) and occasional rhythm‑guitar flair, but no extensive commentary.",
+    "Keys": "Keith’s birthday is noted; keyboards are generally praised for supporting the jams, though specific player mentions are sparse.",
+    "Drums": "Bill (drums) is mentioned as “high in the mix” and providing a solid backbone; occasional references to “Billy’s good night”."
+  },
+  "song_mentions": {
+    "Weather Report Suite > Spanish Jam > Eyes > China Doll": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Spanish Jam": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Eyes": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Seastones": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-22T22:29:45.285105+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-07-19.sbd.symons.12381.sbeok.shnf"
+}

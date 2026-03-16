@@ -1,0 +1,45 @@
+{
+  "summary": "Decent tape with strong The Other One and Casey Jones performances, but the recording includes an unexpected duplicate of Casey Jones at the end.",
+  "review": "The show is praised for its renditions of The Other One and Casey Jones, which reviewers flag as highlights. However, listeners note a puzzling extra copy of Casey Jones after what should be the final track, suggesting a possible edit or source‑order issue. No specific comments on sound clarity were made, leaving the recording quality ambiguous.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Three reviews give an average of 3.7 stars; positive remarks focus on two standout songs while a technical glitch (duplicate track) drags the rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "An extra duplicate of Casey Jones appears after the last track, indicating a possible editing or source‑order problem; no comments on overall clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers are confused by the track ordering, noting an unexpected reprise of Casey Jones after the set's end and some uncertainty about song sequencing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T02:10:20.400919+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-01-21.131516.aud.miller.flac24"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Lost Sailor → Saint Of Circumstance medley & strong Terrapin Station",
+  "blurb": "The show delivers a compelling Lost Sailor → Saint Of Circumstance sequence and an energetic Terrapin Station. Brent Mydland’s keyboards shine on Never Trust A Woman while the second set keeps high momentum despite a rushed Franklin’s Tower.",
+  "review": "On December 2, 1981 at Assembly Hall in Champaign, the Dead rolled out a set that balances tight ensemble work with moments of pure improvisational spark. The first set opens with familiar barn‑burners and builds to a standout Lost Sailor → Saint Of Circumstance medley that many listeners cite as the night’s high point, carried forward by a muscular Terrapin Station in the second quarter. Brent Mydland adds a bright touch on Never Trust A Woman, his vocal and keyboard textures cutting through the mix. While Jerry Garcia’s friendly banter and opening jams set an upbeat tone, the ultra‑fast Franklin’s Tower feels rushed to some, briefly interrupting the otherwise smooth flow. The audience‑tape captures the raw energy of the early‑’80s crowd, especially the blistering Good Lovin' sequence, whereas the soundboard recording offers a clear, well‑balanced picture of the band’s dynamics. Overall, the concert is an energetic snapshot of the era, with enough highlights to merit repeated listening.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings (audience, matrix) are clearly positive, highlighting Lost Sailor/ Saint Of Circumstance and Brent's keyboards; one soundboard recording is mixed, noting a rushed Franklin’s Tower but still praising many songs. The overall pattern leans strongly positive with minor criticism, justifying a +1.0 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-12-02.sbd.miller.108842.flac16",
+    "reason": "Good‑quality soundboard capture that is clear and well‑balanced, preserving the key highlights (Lost Sailor/ Saint Of Circumstance, Terrapin Station, Brent's work) while avoiding major dropouts."
+  },
+  "key_highlights": [
+    "Lost Sailor → Saint Of Circumstance medley shines",
+    "Terrapin Station delivers a powerful performance",
+    "Brent Mydland’s keyboards and vocals shine on Never Trust A Woman",
+    "High‑energy second set despite a too‑fast Franklin’s Tower"
+  ],
+  "song_highlights": [
+    "Lost Sailor",
+    "Saint Of Circumstance",
+    "Terrapin Station",
+    "Never Trust A Woman",
+    "Passenger",
+    "Stella Blue",
+    "Around & Around",
+    "Good Lovin'"
+  ],
+  "band_performance": {
+    "Jerry": "Friendly interaction and strong opening jams; the rushed Franklin’s Tower limited his usual improvisational space.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Keyboard work and vocals on Never Trust A Woman stand out as a high point, adding bright color throughout the set.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-13T16:38:38.115132+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Not Fade Away",
+      "Stella Blue",
+      "Around & Around",
+      "Good Lovin'"
+    ],
+    [
+      "Never Trust A Woman"
+    ],
+    [
+      "Passenger"
+    ]
+  ]
+}

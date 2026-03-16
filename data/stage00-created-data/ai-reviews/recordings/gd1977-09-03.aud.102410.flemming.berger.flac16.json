@@ -1,0 +1,81 @@
+{
+  "summary": "Good‑quality audience tape captures a high‑energy 1977 show with a smoking Truckin' and sweet Eyes of the World.",
+  "review": "The concert is widely praised for its electric set‑list – Jerry’s opening Promised Land, a blistering Truckin', a gorgeous Eyes of the World and a powerful Terrapin Station make this a fan favorite.  The recording is an audience (radio broadcast) source that sounds solid for its era, with enough clarity to enjoy the performance despite occasional hiss or muffled moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviewers are enthusiastic about the musical performance; only one notes modest recording flaws, so the show quality drives a high rating while the tape’s decent but not pristine sound brings it just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear for an old radio‑broadcast audience tape; listeners note good balance and presence, with some hiss/muffled sections that keep the rating from being 'excellent'."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Eyes of the World",
+      "Promised Land",
+      "Terrapin Station",
+      "He's Gone",
+      "Loser",
+      "Mississippi Half‑Step",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy, tight transitions (e.g., into Truckin' and the Eyes of the World), and a strong second half that keeps momentum through Terrapin and Loser."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his relentless energy, shredding guitar work, and driving the show’s excitement.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mention of a limited Donna (Jean) presence, but keyboards still support the band well.",
+    "Drums": "Mickey Hart described as 'healing' and providing a solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half‑Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T03:57:00.648737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-09-03.aud.102410.flemming.berger.flac16"
+}

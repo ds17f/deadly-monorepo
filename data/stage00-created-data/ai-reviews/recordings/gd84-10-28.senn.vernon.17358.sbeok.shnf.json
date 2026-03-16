@@ -1,0 +1,51 @@
+{
+  "summary": "A clear audience tape of a solid mid‑run 1984 show, highlighted by a soaring Bird Song jam and a fiery China Doll transition.",
+  "review": "The recording is an audience source with surprisingly clean sound that lets the band’s tight playing shine.  Highlights include a dreamy Bird Song improvisation, a smoking Deal, and a standout China Doll → jam sequence backed by a killer drum groove.  Though the set is relatively short, the second half delivers strong momentum and keeps the listener hooked.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise both performance (strong jams, standout songs) and sound quality (nice AUD), yielding a high combined score; the weightings give an overall rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers note a nice, clear audience mix with minimal hiss; no major drop‑outs are mentioned, though it isn’t described as studio‑level crispness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Deal",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short but tight show; the first set builds nicely and the second set shines with a powerful China Doll jam and strong drum work, giving the concert a satisfying mid‑run momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his dreamy, space‑y playing during the Bird Song jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Highlighted as having a great beat that added icing on the cake to the China Doll jam."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T23:32:53.068997+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-28.senn.vernon.17358.sbeok.shnf"
+}

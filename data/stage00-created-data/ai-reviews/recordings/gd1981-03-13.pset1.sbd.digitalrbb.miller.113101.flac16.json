@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of the Utica show with a funky Shakedown‑Minglewood transition and standout Althea and Cassidy performances.",
+  "review": "The recording delivers crystal‑clear sound that lets the band’s funkiness shine, especially on the seamless Shakedown > Minglewood segue. Reviewers highlight expressive Garcia vocals on Althea and a particularly nice rendition of Cassidy, calling the overall musical experience excellent despite only a partial first set being present.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives 4 stars, praising both the performance (standout jams and vocals) and the excellent soundboard quality; limited data points keep confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Review mentions crystal‑clear sound and no technical issues; the digital SBD source provides a clean, balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Minglewood",
+      "Cassidy",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth transition from Shakedown into Minglewood without a pause, creating a funky, well‑developed jam; overall set feels lively and expressive."
+  },
+  "band_member_comments": {
+    "Jerry": "Lyrics slightly strained but delivered coolly; Garcia’s vocal expression noted as very expressive.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reference to Brent era songs (Althea) being among the better tunes, implying strong keyboard contribution.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:42:58.049402+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-13.pset1.sbd.digitalrbb.miller.113101.flac16"
+}

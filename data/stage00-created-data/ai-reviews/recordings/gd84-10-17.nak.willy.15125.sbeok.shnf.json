@@ -1,0 +1,31 @@
+{
+  "summary": "Killer show with excellent performance but only fair audience‑type recording",
+  "review": "The concert is praised as a “killer” performance, earning the reviewer a full five stars for the music. The audio, however, receives a modest 3.5‑star rating and is noted to be inferior to another audience (AUD) source the reviewer possesses.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Show quality is rated 5/5 (70% weight) and recording quality 3.5/5 (30% weight), yielding a weighted average of ~4.6. Only one review limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer gives the recording 3.5 stars and mentions having a better AUD source, implying this version is of moderate clarity and not optimal."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T23:02:30.290311+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-17.nak.willy.15125.sbeok.shnf"
+}

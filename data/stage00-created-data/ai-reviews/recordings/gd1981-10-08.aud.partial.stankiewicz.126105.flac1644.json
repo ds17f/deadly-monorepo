@@ -1,0 +1,51 @@
+{
+  "summary": "A superb Aud recording delivers crystal‑clear fidelity that eclipses the soundboard, capturing a warm, relaxed Copenhagen show highlighted by Jerry’s soaring Fire on the Mountain and Brent’s shimmering Hammond work.",
+  "review": "The three reviewers rave about the tape’s extraordinary clarity – the Aud source places you right in the theater with minimal muddiness and beats the SBD version. Musically the concert is described as a laid‑back, cozy performance that builds into a driving first set featuring standout moments like Althea, Truckin’ and an inspired Fire on the Mountain, with Brent on keyboards and the whole band clicking together.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews are highly favorable (4‑5 stars), praising both the exceptional recording fidelity and the strong, relaxed musical performance; the consistency across multiple detailed comments yields a high confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note the Aud tape’s astonishing fidelity—crisp, clear sound that puts the listener “right there” in the theater, even describing the venue as hollow and empty in a pleasing way. It is repeatedly said to surpass the SBD version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Truckin'",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is portrayed as a warm, almost sluggish start that gradually gains momentum, delivering an organic and dynamic first set that builds to high points, followed by a beautifully flowing second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Soars on Fire on the Mountain; guitar work praised for its lift.",
+    "Phil": "Provides solid bass foundation, “breaks it down” during key moments.",
+    "Bob": "Acts as glue holding the band together throughout.",
+    "Keys": "Brent shines on Hammond organ with unique playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:35:24.622437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-08.aud.partial.stankiewicz.126105.flac1644"
+}

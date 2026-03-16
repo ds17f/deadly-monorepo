@@ -1,0 +1,75 @@
+{
+  "summary": "Energetic set with sharp vocals, standout Scarlet>Fire and solid jams",
+  "blurb": "The show delivers a tight, business‑like flow with crisp solos and strong vocal delivery. Highlights include Franklin's Tower, Friend of the Devil, Althea, The Music Never Stopped and a fiery Scarlet Begonias → Fire on the Mountain sequence. Phil's bass is thin in the mix, but the overall performance stays engaging.",
+  "review": "May 30, 1980 at Milwaukee Auditorium captures the Dead in a high‑energy stride. Jerry Garcia rides the night with a sharp tone and confident vocals, laying down solos that never sound phoned‑in. Bob Weir’s rhythm work and harmonies are solid throughout, while Bill Kreutzmann anchors the groove and shines during an especially powerful Rhythm Devils segment. Brent Mydland provides his usual tasteful keyboards, though none of the reviews called out a particular moment. The setlist rolls smoothly from a punchy Jack Straw into classics like Franklin's Tower and Althea, then erupts with the quintessential Scarlet Begonias → Fire on the Mountain transition that fans adore. Despite the thin low‑end in the soundboard mix that buries Phil Lesh’s bass, the show remains enjoyable and showcases the band locked in during a busy tempo.\n\nFor listeners seeking the clearest window into this performance, the Miller soundboard recording (gd1980-05-30.sbd.miller.92217.sbeok.flac16) is recommended. It captures the band's tightness and vocal clarity despite its weak bass response, offering a more balanced listening experience than the audience tapes, which suffer from muffling or hall‑hollow acoustics.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings label the show as positive, highlighting strong vocals, tight playing and standout songs; one recording is mixed but does not criticize performance quality. No recordings report consistent negative comments about the band's playing, so a moderate positive adjustment (+1.2) is applied.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1980-05-30.sbd.miller.92217.sbeok.flac16",
+    "reason": "Soundboard source with decent clarity, captures sharp vocals and tight playing despite thin bass; superior to audience recordings."
+  },
+  "key_highlights": [
+    "Tight, energetic performance with strong vocal delivery and crisp solos.",
+    "Standout sequence: Scarlet Begonias → Fire On The Mountain.",
+    "Powerful Rhythm Devils segment highlighted by Bill Kreutzmann's drumming.",
+    "Thin low‑end mix leaves Phil Lesh’s bass barely audible."
+  ],
+  "song_highlights": [
+    "Franklin's Tower",
+    "Friend Of The Devil",
+    "Althea",
+    "The Music Never Stopped",
+    "Scarlet Begonias",
+    "Fire On The Mountain"
+  ],
+  "band_performance": {
+    "Jerry": "Sharp, clear tone and strong vocals all night; solos appear everywhere and never sound phoned‑in.",
+    "Phil": "Virtually absent from the mix – bass is inaudible, removing a key bottom layer.",
+    "Bob": "Consistently solid rhythm guitar and vocal harmonies throughout the show.",
+    "Brent": "",
+    "Mickey": "Provides steady foundation alongside Bill, contributing to the powerful Rhythm Devils segment.",
+    "Billy": "Bill Kreutzmann is on point; his drumming drives the set and shines during Rhythm Devils."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-13T00:02:02.023015+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw",
+      "Franklin's Tower"
+    ],
+    [
+      "Friend Of The Devil",
+      "Passenger"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "The Music Never Stopped"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Not Fade Away",
+      "Black Peter",
+      "Goin' Down The Road Feeling Bad",
+      "Good Lovin'"
+    ]
+  ]
+}

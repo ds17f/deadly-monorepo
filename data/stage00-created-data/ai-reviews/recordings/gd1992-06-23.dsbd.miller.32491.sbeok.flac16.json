@@ -1,0 +1,58 @@
+{
+  "summary": "A solid soundboard capture of an uneven 1992 show that shines on So Many Roads and the Big Railroad>Memphis Blues>Boogie sequence despite a shaky start.",
+  "review": "The recording is a well‑balanced soundboard tape with clear instrument separation, though a few reviewers note minor technical quirks. Musically the concert is mixed – highlights include a soaring So Many Roads, a killer Big Railroad → Memphis Blues → Boogie run and a beautiful Brokedown Palace, while the early Help → Slip → Franklin's segment and Jerry’s timing at the outset draw criticism.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Reviews are split between strong praise for certain songs and sound quality versus notable criticisms of early performance; the weighted average of show (≈3.5) and recording (≈4.0) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the tape as clear, well‑balanced and “great sound,” with only occasional comments about minor technical imperfections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Big Railroad > Memphis Blues > Boogie",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower"
+    ],
+    "setlist_flow": "The concert starts rough – Jerry’s timing and the Help‑Slip‑Franklin's transition are widely criticized – but it improves later, delivering strong second‑set moments and a memorable SMR climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback: early in the show his timing is off and his Slipknot riffs are called “pathetic,” yet later he delivers an emotional So Many Roads moment and his guitar sits prominently in the mix.",
+    "Phil": "Generally praised; reviewers note Phil’s bass as solid and part of a tight rhythm section.",
+    "Bob": "Positive mention – Bobby (drums) is described as “spot on” alongside Bill/Mickey.",
+    "Keys": "Vince Welnick’s frequent tone changes are called distracting by one reviewer, otherwise keyboards receive no strong comments.",
+    "Drums": "Both drummers are highlighted as “spot on” and keeping the groove steady."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Big Railroad > Memphis Blues > Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:43:04.473570+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-23.dsbd.miller.32491.sbeok.flac16"
+}

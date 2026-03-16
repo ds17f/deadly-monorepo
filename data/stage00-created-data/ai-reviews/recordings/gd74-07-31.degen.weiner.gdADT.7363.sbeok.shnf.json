@@ -1,0 +1,80 @@
+{
+  "summary": "Classic 1974 three‑set show with standout Truckin, Mind‑Left‑Body jam and Jerry’s soaring solo; audience recording is mixed but acceptable for the era.",
+  "review": "The performance is widely praised as a quintessential ’74 concert – the Truckin jam, Mind‑Left‑Body improvisation, I Know You Rider and the emotive To Lay Me Down solo are repeatedly highlighted. The source is an audience tape (AUD) that many find listenable despite sneezes, wind noise, occasional muffled spots and missing opening tracks; a few listeners deem it terrible, but most consider it fair to good for its time.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (70% weight) while recording quality is split between acceptable and poor (30% weight), leading to a solid but not stellar overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sneezes, wind/rustling noise, occasional muffled spots and cuts; first three songs missing; overall ambience captured well with good drum presence but some listeners report it as barely listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin",
+      "Mind Left Body Jam",
+      "I Know You Rider",
+      "Mississippi Half‑Step Uptown Toodeloo (opening)",
+      "Eyes -> China Doll",
+      "Wharf Rat Suite",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set marathon typical of 1974, with a strong first set opener, an expansive second set jammed with improvisations, and a powerful third set that closes the night."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone and solo on To Lay Me Down are repeatedly praised.",
+    "Phil": "Noted as shining along with Bob in several reviews.",
+    "Bob": "Praised for strong rhythm/vocal work throughout the show.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s dynamics and cymbal work are highlighted, especially in audience capture."
+  },
+  "song_mentions": {
+    "Truckin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half‑Step Uptown Toodeloo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes -> China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T23:25:59.878322+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-07-31.degen.weiner.gdADT.7363.sbeok.shnf"
+}

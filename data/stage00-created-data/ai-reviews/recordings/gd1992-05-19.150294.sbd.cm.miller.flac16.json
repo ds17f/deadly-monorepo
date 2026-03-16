@@ -1,0 +1,31 @@
+{
+  "summary": "No detailed feedback on recording quality or performance",
+  "review": "The only review submitted is a brief friendly note with no commentary on the audio source, sound clarity, setlist, or musicianship, leaving the quality of both the recording and the show undocumented.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "A single non‑informative review with a zero‑star rating provides insufficient data to evaluate either the performance or the recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard vs. audience, clarity, mix balance, or any technical issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T05:25:38.115549+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-19.150294.sbd.cm.miller.flac16"
+}

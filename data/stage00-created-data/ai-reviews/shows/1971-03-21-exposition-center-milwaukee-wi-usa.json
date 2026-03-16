@@ -1,0 +1,40 @@
+{
+  "summary": "Fragmentary audience tape, incomplete set, modest sound",
+  "blurb": "The recording captures a truncated portion of the March 21 1971 show, beginning after the opening number. Only seven songs are present and fidelity is limited, leaving no clear musical highlights to recommend.",
+  "review": "This March 21, 1971 Exposition Center performance survives only as a brief audience excerpt recorded on a cheap portable Panasonic mono tape recorder. The tape starts mid‑set, omitting the opening numbers and cutting the flow short, which makes it hard to gauge the band's momentum that night. Audio quality is fair at best—narrow frequency range and modest clarity obscure the nuances of Jerry’s guitar, Phil’s bass, and Pigpen’s organ. Because there are no standout moments identified in the available material, listeners should treat this as a historical curiosity rather than a definitive representation of the era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "low",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 5,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "The sole recording analysis is marked 'mixed' with no strong praise or criticism; therefore sentiment adjustment is neutral.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd71-03-21.aud.cotsman.12074.sbeok.shnf",
+    "reason": "Only recording available; despite modest fidelity and incomplete set, it is the sole source of this show."
+  },
+  "key_highlights": [
+    "Only a fragment of the set is captured, starting after the opening number.",
+    "Audio fidelity is modest due to cheap mono recorder.",
+    "No clear musical highlights identified in the surviving material."
+  ],
+  "song_highlights": [],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-20T03:42:49.696971+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed"
+}

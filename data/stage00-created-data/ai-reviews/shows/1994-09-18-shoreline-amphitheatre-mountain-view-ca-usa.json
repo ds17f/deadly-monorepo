@@ -1,0 +1,59 @@
+{
+  "summary": "Powerful So Many Roads, strong Days Between, uneven pacing",
+  "blurb": "The second set shines with a soulful \"So Many Roads\" and a chilling \"Days Between,\" while the closing \"Not Fade Away\" keeps the energy high. The first set runs tight but some vocal wear on Garcia adds a bittersweet edge.",
+  "review": "Shoreline Amphitheatre on September 18, 1994 delivered a night of late‑90s Dead magic that still feels vivid today. The show opens with upbeat classics like \"Touch of Grey\" and \"The Music Never Stopped,\" then pivots in the second set to a soaring \"So Many Roads\" where Jerry’s weary voice somehow becomes the emotional core, backed by a thunderous solo. \"Days Between\" follows with a chilling, introspective vibe that many listeners cite as a highlight, while the groove‑driven \"Throwing Stones\" and an energized \"Not Fade Away\" close the set on a high note. A truncated \"Space\" and occasional vocal sluggishness keep things from being flawless, but overall the performance is solid, especially for fans who love the raw, late‑90s Shoreline energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Both recordings praise the standout \"So Many Roads,\" \"Days Between,\" and \"Throwing Stones\" while noting a few drawbacks—Jerry's slower vocal on \"So Many Roads,\" a cut in \"Space,\" and an uneven first‑set pacing. The balance of strong positive language with some mixed comments yields a moderate positive boost.",
+      "final_calculation": "2.5 + 0.2 + 0.8 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-09-18.136849.sbd.miller.flac16",
+    "reason": "Clear soundboard capture reveals detail in Garcia's slide work and drums, offering the most complete and listenable version despite a slightly harsh mix on Weir."
+  },
+  "key_highlights": [
+    "\"So Many Roads\" delivers soulful vocals and a thunderous guitar solo.",
+    "\"Days Between\" stands out as a chilling, introspective moment.",
+    "The high‑energy close with \"Not Fade Away\" caps the night nicely.",
+    "Audience energy is strong, though the cut in \"Space\" slightly mars the flow."
+  ],
+  "song_highlights": [
+    "So Many Roads",
+    "Days Between",
+    "Throwing Stones",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia's voice sounds weary yet soulful on \"So Many Roads,\" adding a bittersweet edge; his guitar solo is thunderous and slide work stays strong throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Vince": "",
+    "Mickey": "Drum sound at the climax was described as “shoes in a dryer,” indicating a harsh mix, but otherwise no major issues noted.",
+    "Billy": "Shares the same drum commentary; overall percussion drives the set effectively despite occasional harshness."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T01:35:29.015649+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "So Many Roads"
+    ],
+    [
+      "Samson & Delilah",
+      "Drums",
+      "Space",
+      "Days Between",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

@@ -1,0 +1,64 @@
+name: Data Release
+
+on:
+  push:
+    tags:
+      - "data-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - name: Extract version from tag
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#data-v}" >> "$GITHUB_OUTPUT"
+
+      - name: Download stage01 cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd data
+          gh release download data-stage01-v1 \
+            --repo "${{ github.repository }}" \
+            --pattern 'stage01-collected-data.zip' \
+            --output /tmp/stage01-collected-data.zip
+          unzip -q /tmp/stage01-collected-data.zip -d stage01-collected-data
+          rm /tmp/stage01-collected-data.zip
+          echo "stage01 restored: $(du -sh stage01-collected-data | cut -f1)"
+
+      - name: Setup Python
+        uses: actions/setup-python@39cd14951b08e74b54015e9e001cdefcf80e669f # v5.1.1
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r data/scripts/requirements.txt
+
+      - name: Generate stage02
+        working-directory: data
+        run: |
+          make generate-recordings
+          make integrate-shows
+          make process-collections
+
+      - name: Package data.zip
+        working-directory: data
+        run: |
+          python scripts/package_datazip.py --version ${{ steps.version.outputs.version }} --output data.zip --verbose
+          echo "Package size: $(du -sh data.zip | cut -f1)"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            data/data.zip \
+            --repo "${{ github.repository }}" \
+            --title "Data ${{ steps.version.outputs.version }}" \
+            --notes "Data pipeline release v${{ steps.version.outputs.version }}. Contains show metadata, recordings, and collections for all platforms."

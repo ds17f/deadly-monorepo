@@ -1,0 +1,99 @@
+{
+  "summary": "High‑quality soundboard recording captures a short but fiery 1985 show highlighted by scorching Tennessee Jed, Cumberland, Bucket, Miracle and a smoking Crazy Fingers.",
+  "review": "The performance is widely praised for its energy – the second set opening with Tennessee Jed and Cumberland, plus standout renditions of The Bucket, Sugaree, El Paso, Dupree’s, Miracle and Crazy Fingers.  The soundboard source is generally clean, though a few listeners note tonal shifts from warm to bright, giving it an overall good‑to‑excellent listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (12 of 15) give 4‑5 stars and highlight strong musical moments; recording quality is described as good with only minor tonal variation, leading to a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean and balanced soundboard tape; some reviewers note the mix shifts between warm and bright tones but never becomes unlistenable. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Bucket",
+      "Sugaree",
+      "El Paso",
+      "Dupree's",
+      "Tennessee Jed",
+      "Cumberland",
+      "Miracle",
+      "Crazy Fingers",
+      "Comes a Time",
+      "Gimme Some Lovin'",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is unusually short; the second set opens with Tennessee Jed and Cumberland, a surprise that many fans loved. Overall pacing is high‑energy with strong vocal rap moments (Phil/Brent) and a solid post‑drum jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone praised; he cuts off the jam to launch into Truckin'.",
+    "Phil": "Phil Lesh delivers a notable vocal rap with Brent and sings along on several tunes.",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) highlighted for his vocal contributions in the closing rap.",
+    "Drums": "Drummers receive praise for a powerful post‑drum jam; one reviewer notes a 27‑minute pre‑drum segment."
+  },
+  "song_mentions": {
+    "The Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:39:54.087417+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-16.sbd.18374.sbeok.shnf"
+}

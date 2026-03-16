@@ -1,0 +1,31 @@
+{
+  "summary": "Fantastic recording captures an energetic but somewhat rough show",
+  "review": "The reviewer rates the performance 4 stars, noting that the concert is lively and fun even though it has many rough moments. The high praise is directed at the “fantastic” recording quality, which makes the flaws more tolerable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One review gives a solid 4‑star rating; the reviewer praises the recording as fantastic (excellent) while calling the show energetic but rough, leading to an overall weighted estimate of ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as fantastic with no specific technical complaints."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and fun overall, but punctuated by many rough moments according to the reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T08:17:18.307276+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-07.141713.5-1.tobin.flac1648"
+}

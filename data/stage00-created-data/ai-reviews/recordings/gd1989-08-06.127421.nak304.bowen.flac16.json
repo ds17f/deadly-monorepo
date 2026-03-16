@@ -1,0 +1,39 @@
+{
+  "summary": "A stellar Cal Expo show captured on a quirky shotgun‑mic audience tape.",
+  "review": "The reviewer hails the concert as the peak of the tour, praising the venue vibe and the band's performance despite a lone weak Brent Mydland song. The recording is described as “weird” due to shotgun microphones, giving it an off‑kilter but listenable sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Show is rated extremely high (peak performance), but the recording quality is noted as odd, pulling the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Shotgun microphones used for audience capture result in a strange, uneven sound; not clear but still intelligible."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "I will bum you out"
+    ],
+    "setlist_flow": "High‑energy set with excellent vibes throughout; the only dip noted is Brent's song which felt out of place."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Negative comment on Brent Mydland's \"I will bum you out\" as one of the worst songs.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I will bum you out": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:36:38.080306+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-06.127421.nak304.bowen.flac16"
+}

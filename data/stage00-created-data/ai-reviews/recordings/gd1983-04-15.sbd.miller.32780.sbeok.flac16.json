@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent soundboard remaster captures a tight 1983 show highlighted by Shakedown, Brother Esau and the funky Bob Star jam.",
+  "review": "The Miller‑remastered soundboard is praised as crisp and clear, delivering an enjoyable listening experience. Musically the concert shines with a killer groove on “Shakedown,” strong performances of early “Brother Esau,” and a memorable “Bob Star” segment, though “Maybe You Know” drew mixed reactions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and strong positive comments about both performance and recording quality across >10 reviews."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered soundboard praised as crisp, clear and well‑balanced; no notable dropouts or muddiness mentioned. Some reviewers reference a “matrix” feel, but overall the audio is deemed superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Brother Esau",
+      "Samson",
+      "He's Gone",
+      "Bob Star"
+    ],
+    "poor_songs": [
+      "Maybe You Know"
+    ],
+    "setlist_flow": "The set is described as tight and energetic, with a unique second‑set sequence (Maybe You Know → He's Gone → Bob Star → Drumz) that keeps the momentum high. Overall pacing is praised as cohesive despite occasional vocal missteps."
+  },
+  "band_member_comments": {
+    "Jerry": "Intro chords on “Goin' Down The Road Feeling Bad” noted for perfection; overall guitar work admired.",
+    "Phil": "",
+    "Bob": "His vocal intensity shines on “Stranger” and he’s highlighted as feeling the music during the “Bob Star” jam.",
+    "Keys": "Keyboard tones at the opening of “Shakedown” described as sweet and impressive.",
+    "Drums": "Drum & Space sections received positive remarks for solid playing and atmospheric depth."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Brother Esau": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bob Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Maybe You Know": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:15:18.228736+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-15.sbd.miller.32780.sbeok.flac16"
+}

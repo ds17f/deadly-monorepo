@@ -1,0 +1,52 @@
+{
+  "summary": "Clear audience tape with solid sound but a hurried performance; Jerry shines on Eyes of the World while Help‑Slip feels rushed.",
+  "review": "The recording captures a fairly clear PA mix that balances Brent’s keyboards better than many soundboard tapes, though Jerry is low in the mix. Musically the show runs at breakneck speed – the Help > Slip sequence feels overly rushed and Bob Weir struggles with lyrics on Saturday Night, but the band stretches out nicely on Eyes of the World with a stellar Jerry solo.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is moderate (rushed tempo, mixed performance) while recording quality is good/clear; weighted average yields ~3.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Great overall sound with a clear PA mix; emphasizes Brent Mydland on keyboards and down‑mixes Jerry, but remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Help on the Way > Slipknot!",
+      "Saturday Night"
+    ],
+    "setlist_flow": "The set races at a high tempo, making Help‑Slip feel rushed and vocals tight, but eases into a relaxed jam on Eyes of the World that showcases Jerry's improvisational skill."
+  },
+  "band_member_comments": {
+    "Jerry": "Stellar solo on Eyes of the World; however his guitar is low in the PA mix.",
+    "Phil": "",
+    "Bob": "Struggles with lyrics on Saturday Night, sounding rushed.",
+    "Keys": "Brent Mydland is prominent in the mix, providing a more balanced keyboard presence than typical SBDs.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:23:05.801313+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-14.beyer160.quirk.perez.32093.sbeok.flac16"
+}

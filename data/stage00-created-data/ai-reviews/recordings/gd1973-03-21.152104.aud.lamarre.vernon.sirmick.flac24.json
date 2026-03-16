@@ -1,0 +1,42 @@
+{
+  "summary": "Decent 1973 audience recording captures a great show, though Sugar Magnolia and Casey Jones are omitted from this share.",
+  "review": "The reviewer rates the performance highly, calling it a great show, and notes that the audience tape sounds pretty decent for its era. The only drawback mentioned is that two songs (Sugar Magnolia and Casey Jones) are missing from this particular file, though they appear on the CD‑ready version.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One solid 4‑star review praises the musical performance and finds the audience recording acceptable for 1973, offset only by the omission of two tracks."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity for a 1973 audience tape; no major distortion reported but two songs are missing from this share."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Show is described as great overall, though the shared file lacks Sugar Magnolia and Casey Jones."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:22:26.584889+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-21.152104.aud.lamarre.vernon.sirmick.flac24"
+}

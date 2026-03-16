@@ -1,0 +1,80 @@
+{
+  "summary": "Clean soundboard capture of a solid Bruce Hornsby era show, highlighted by Terrapin Station and strong first‑set numbers, though the accordion on Stella Blue draws criticism.",
+  "review": "The recording is a clean SBD that presents a generally strong performance from the early ’90s Bruce Hornsby run. Reviewers praise energetic renditions of Minglewood Blues, Maggie's Farm, Picasso's Dream and a Terrapin Station‑centered second set with great Jerry/Bruce interplay, while the use of accordion on Stella Blue (referred to as “baby blues”) is widely disliked.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and recording highly (4‑star), with one strong negative comment about a specific song arrangement; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as a clean board recording; no major technical issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Stella Blue",
+      "Minglewood Blues",
+      "Maggie's Farm",
+      "Picasso's Dream"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "First set praised as very good; second set builds around Terrapin Station with strong transitions through Playing in the Band and Uncle John's Band, ending with a brief but effective Bobby L."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive remarks about his guitar interplay with Bruce during the Terrapin jam.",
+    "Phil": "Noted for providing plenty of bass support in the second‑set jams.",
+    "Bob": "",
+    "Keys": "Accordion on Stella Blue criticized as detracting from the song's mood.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso's Dream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bobby L.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:37:39.196563+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-18.sbd.hinko.28162.sbeok.flacf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Audio sounds great, but the streaming player has the tracks out of order.",
+  "review": "The reviewer praises the recording itself as high‑quality, yet is frustrated that the streaming interface scrambles the track order, making playback difficult. No musical performance details are provided, so the show’s artistic merit cannot be assessed from this review.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one highly critical review (0 stars) mentioning a serious usability issue; no positive comments on the performance to offset it."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes excellent audio fidelity, but tracks are misordered in the streaming player, causing listening problems."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on performance or set pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T07:14:37.061528+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-26.127564.beyer.stankiewicz.flac2496"
+}

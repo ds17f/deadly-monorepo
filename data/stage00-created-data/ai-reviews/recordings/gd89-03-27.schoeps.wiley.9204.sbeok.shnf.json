@@ -1,0 +1,70 @@
+{
+  "summary": "High‑energy Spring ’89 show with a smoking Scarlet > Fire and solid audience recording despite occasional dropouts",
+  "review": "The performance captures the excitement of the Dead’s early‑Spring ’89 tour – Jerry is on fire, the band drives through new material while delivering a standout Scarlet Begonias → Fire sequence and a bright Standing on the Moon. The audience tape is generally clear and lively, though listeners note occasional right‑channel dropouts and a few muddy sections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.0 with many 4–5‑star comments praising the setlist, energy and Jerry’s performance; recording issues are mentioned but do not dominate the overall impression."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear audience mix with good crowd presence; occasional right‑channel dropout early in Half Step and some muddiness on a few tracks. Mickey’s percussive “clap” is audible and sometimes described as electronic."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire",
+      "Standing on the Moon",
+      "Touch",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "Built to Last",
+      "We Can Run"
+    ],
+    "setlist_flow": "First set rolls out new material (Mississippi, Built to Last, We Can Run) with high crowd energy; the second set builds momentum into a fiery Scarlet > Fire jam and carries through with strong Lovelight and Standing on the Moon. Overall flow is upbeat, though a few new songs feel tentative."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal and guitar work are especially lively on Scarlet > Fire and Touch; reviewers note his animated stage presence and powerful vocal shouts.",
+    "Phil": "Bass is solid and occasionally highlighted for its low‑end power; Phil is mentioned laughing with Bobby during Lovelight.",
+    "Bob": "Bobby (Weir) delivers a strong Lovelight performance and memorable on‑stage antics, including moving between the drums and audience.",
+    "Keys": "Brent (keyboardist) adds background vocal harmonies on Lovelight; occasional missed lyric moments on new songs are noted.",
+    "Drums": "Mickey’s percussive claps (including an electronic “clap”) are frequently mentioned; drum work described as fluid and tribal during the jam."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "We Can Run": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:00:08.248357+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-03-27.schoeps.wiley.9204.sbeok.shnf"
+}

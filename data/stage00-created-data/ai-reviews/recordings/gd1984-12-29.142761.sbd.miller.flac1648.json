@@ -1,0 +1,57 @@
+{
+  "summary": "Recording quality not specified, but the show shines with a smoking Samson, Terrapin Station and an extended Space jam.",
+  "review": "All three reviewers praise this late‑1984 performance as one of their favorites, noting a well‑played set that includes a scorching \"Samson & Delilah,\" a soaring \"Terrapin Station\" and a long, atmospheric Space. The concert is described as emotionally resonant—particularly the tear‑jerking \"Brokedown Palace\" after news of Steve Parish’s family tragedy—and features standout drumming throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong, consistent praise for the musical performance (70% weight) combined with no specific recording comments leads to an overall high rating despite uncertain technical quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not mention sound clarity, mix balance, or source type, so recording quality cannot be assessed from the comments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah",
+      "Terrapin Station",
+      "Brokedown Palace",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the entire concert as well‑played with strong pacing, noting a somber yet powerful second set and extended improvisational sections."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Long drum jams highlighted; reviewers note amazing playing and extended drums during Space."
+  },
+  "song_mentions": {
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:17:37.844783+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-12-29.142761.sbd.miller.flac1648"
+}

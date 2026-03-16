@@ -1,0 +1,39 @@
+{
+  "summary": "Very good show overall, but guest accordion player detracts from a potentially beautiful Broken Down Palace; recording quality not discussed",
+  "review": "The performance is rated very good by the reviewer, though the aggressive, loud accordion work of guest Horsnby is criticized for ruining what could have been an excellent rendition of \"Broken Down Palace.\" No comments are made about the audio source or its fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the show overall (4‑star rating) but notes a specific performance issue. No recording quality feedback, so rating leans on show assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer comments regarding sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Broken Down Palace"
+    ],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Down Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:15:11.978940+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-26.fob.bk4011.brennecke-young.gems.101443.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Unknown‑source recording captures a standout 80s performance highlighted by a smoking Smokestack Lightning and a fun Spoonful tease, though technical details are scarce.",
+  "review": "Both reviewers agree this show ranks among the best of the 1980s, pointing out a memorable Spoonful tease at the start and an especially powerful Smokestack Lightning that leads into an intriguing jam. Jerry’s brief nod to Jefferson Airplane’s Good Shepherd during the post‑Smokestack jam adds a unique flavor, but no one comments on the sound quality, leaving the recording fidelity unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (one 4‑star review) balanced by a neutral/observational second review and no concrete info on recording quality, yielding an overall solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": ""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "The Spoonful"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features a notable jam between Smokestack Lightning and the Drum segment, with Jerry slipping in a Good Shepherd melody that adds an unexpected twist."
+  },
+  "band_member_comments": {
+    "Jerry": "During the post‑Smokestack jam he plays a full 90‑second rendition of Jefferson Airplane's Good Shepherd on guitar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:44:48.345393+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-04.148583.neumann.km84i.hecht.miller.clugston.flac1648"
+}

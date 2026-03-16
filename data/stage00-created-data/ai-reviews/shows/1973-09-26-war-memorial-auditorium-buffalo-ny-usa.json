@@ -1,0 +1,69 @@
+{
+  "summary": "Jazzy ’73 show with expansive Weather Report Suite and strong second set",
+  "blurb": "The night glows on an experimental Weather Report Suite that lets the horn guests stretch out, while Loser pops as a first‑set highlight. The second set is brilliant, featuring a soaring He’s Gone and tight band interplay throughout.",
+  "review": "September 26, 1973 at Buffalo’s War Memorial Auditorium captures the Grateful Dead in a wonderfully jazzy mood. A loose‑feeling soundboard still manages to convey the horn‑enhanced improvisations that lift the Weather Report Suite (Prelude*, Part 1, Let It Grow) into an expansive centerpiece, and Jerry’s guitar weaves through it with his characteristic lyrical phrasing. The first set offers solid moments—Here Comes Sunshine opens the show bright, Loser delivers a punchy, almost rock‑blues surge, and China Cat Sunflower > I Know You Rider rolls smoothly into the groove. The second set truly shines: He’s Gone unfolds with that 1973 melancholy intensity, Truckin’ and Eyes of the World roll seamlessly into the suite, and Sugar Magnolia closes the night on a high‑energy note. Across all recordings the band feels locked in, the horns add color without overwhelming the core sound, and the performance stands out as a vivid snapshot of the Dead’s early‑‘70s exploratory period.\n\nFor listeners seeking the clearest window into this night, the Miller‑patched soundboard (gd1973-09-26.sbd-repatched.miller.80198.sbeok.flac16) offers an excellent, clean mix with no dropouts, making it the most reliable source for both the nuanced first‑set moments and the soaring second‑set energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings describe the show positively (highlighting Weather Report Suite, Loser, and He’s Gone) while one is mixed but not negative; overall consensus is strong praise across multiple sources, warranting a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1973-09-26.sbd-repatched.miller.80198.sbeok.flac16",
+    "reason": "Excellent soundboard clarity with a clean, crisp mix and no reported dropouts; captures the strong second‑set energy and standout tracks vividly."
+  },
+  "key_highlights": [
+    "Expansive Weather Report Suite with horn‑enhanced improvisation",
+    "Loser stands out as a punchy first‑set highlight",
+    "Sublime He’s Gone showcases the band’s 1973 brilliance"
+  ],
+  "song_highlights": [
+    "Here Comes Sunshine",
+    "Loser",
+    "He’s Gone",
+    "Weather Report Suite Prelude*",
+    "Weather Report Suite Part 1",
+    "Let It Grow",
+    "China Cat Sunflower",
+    "I Know You Rider"
+  ],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-23T15:05:43.580698+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Here Comes Sunshine"
+    ],
+    [
+      "Loser"
+    ],
+    [
+      "He's Gone",
+      "Truckin'",
+      "Eyes Of The World",
+      "Weather Report Suite Prelude*",
+      "Weather Report Suite Part 1",
+      "Let It Grow"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ]
+  ]
+}

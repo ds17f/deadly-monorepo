@@ -1,0 +1,69 @@
+{
+  "summary": "Pristine soundboard capture of the Jan‑30 1978 Uptown Theater show, highlighted by a scorching Eyes→Stella→Franklin’s Tower sequence and flawless Charlie Miller remastering.",
+  "review": "The performance shines especially in the second set where Jerry’s soaring lead on Stella Blue and the extended Eyes‑Stella‑Franklin’s Tower jam electrify listeners. Charlie Miller’s SBD remaster delivers a clean, balanced mix that lets every instrument breathe, though a few reviewers note Keith’s percussive keyboard tone as a minor blemish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.31/5 across 16 reviews, with strong praise for both the music (notably the second‑set jams) and the high‑quality soundboard remaster."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Charlie Miller’s SBD remaster is described as ‘super cleaned up’, ‘crisp’ and well‑balanced; a few comments note Keith’s keyboard being overly percussive, but overall the mix is clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Stella Blue",
+      "Franklin's Tower",
+      "Lazy Lightning > Supplication",
+      "Bertha > Good Lovin'",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but a bit uneven; the second set delivers a spectacular, flowing jam (Eyes→Stella→Franklin’s) that many fans cite as the highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for transcendent lead work on Stella Blue and the extended Eyes‑Stella‑Franklin’s sequence.",
+    "Phil": "Noted for sounding great on Lazy Lightning and providing a solid, supportive bass foundation throughout.",
+    "Bob": "",
+    "Keys": "Several reviewers complain about Keith's overly percussive keyboard tone and occasional duplication of Jerry’s melodic lines, which detracts from otherwise stellar moments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:50:29.090203+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-30.sbd.miller.32255.sbeok.flac16"
+}

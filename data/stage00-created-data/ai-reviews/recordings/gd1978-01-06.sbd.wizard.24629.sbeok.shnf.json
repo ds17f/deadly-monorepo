@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a tight 1978 show highlighted by an epic Playin' in the Band and soaring Truckin' jams.",
+  "review": "The recording is praised as perfect, delivering crystal‑clear soundboard quality that lets listeners enjoy a tightly executed set. The band stretches out on a 22‑minute \"Playin' In The Band\" and delivers three peak cycles on \"Truckin',\" while Jerry Garcia pushes his vocals to the limit and doubles down on guitar when his voice cracks. Minor hiccups like Phil's broken string are noted but don’t detract from the overall flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is generally strong with standout jams and enthusiastic performance notes, while the recording is described as perfect; weighting yields a high‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "One reviewer calls the recording \"perfect,\" indicating clear, balanced sound with no reported issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' In The Band",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly with long improvisational stretches before the drums, a tight overall performance despite occasional string breaks and vocal strain."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals are described as pushing to the limit (\"sings until there is nothing left\") and even crashing, but he compensates with powerful guitar work and a quick riff before \"Dire Wolf.\"",
+    "Phil": "Phil breaks a string toward the end of the show and later fixes it, prompting jokes from the MC.",
+    "Bob": "Bob Weir delivers his usual late‑arrival humor; no specific musical critique noted.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:38:58.385644+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-06.sbd.wizard.24629.sbeok.shnf"
+}

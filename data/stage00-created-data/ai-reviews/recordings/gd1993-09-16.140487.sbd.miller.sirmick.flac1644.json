@@ -1,0 +1,69 @@
+{
+  "summary": "Good soundboard capture of the MSG opening night featuring a lovingly‑performed first set and standout moments like Cold Rain & Snow, Queen Jane and Eternity.",
+  "review": "The recording (a soundboard source) is praised as clear and free of noticeable flaws. Reviewers love this opening show of the six‑night Madison Square Garden run, highlighting a beautifully played Queen Jane, soaring Cold Rain & Snow, Althea, Eternity and the fresh additions Way To Go Home and Days Between. The second set mixes greatest‑hits with those new tunes, keeping the flow energetic and satisfying.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show highly (4/5) and mentions no recording problems, suggesting a good‑to‑great performance captured on a clean soundboard."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints; reviewers imply the audio is clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow",
+      "Queen Jane",
+      "Althea",
+      "Eternity",
+      "Way To Go Home",
+      "Days Between"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised for its warm, rain‑soaked vibe and strong performances; the second set blends classic hits with new material (Way To Go Home, Days Between) for an engaging, varied show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way To Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:02:02.762757+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-16.140487.sbd.miller.sirmick.flac1644"
+}

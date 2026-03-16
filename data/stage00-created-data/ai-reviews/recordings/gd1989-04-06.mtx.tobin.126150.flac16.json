@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent matrix recording of a jam‑heavy second set featuring standout Scarlet Begonias and Playing in the Band",
+  "review": "The reviewer praises the high‑quality remastered matrix source, calling it great throughout. The second‑set performance is highlighted for tight jams on Scarlet Begonias and Playing in the Band, especially a sweet build into Fire, making this show highly recommended.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "A single five‑star review emphasizes both superb recording quality and an exceptional second‑set performance, warranting a high rating but limited confidence due to the small sample size."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer notes great recording/remastering with no identified flaws; matrix source captures both clarity and ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set flows smoothly with extended jams on Scarlet Begonias leading into a powerful transition toward Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:56:14.473066+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-06.mtx.tobin.126150.flac16"
+}

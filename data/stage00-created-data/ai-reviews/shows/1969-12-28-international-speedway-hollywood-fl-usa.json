@@ -1,0 +1,56 @@
+{
+  "summary": "Fiery Pigpen showcase with standout Mason's Children jam",
+  "blurb": "The set bursts with high‑octane Pigpen numbers, highlighted by a blistering Mason’s Children and a gritty Hard To Handle. Jerry delivers an all‑time great solo on Mason’s Children while Phil anchors the jam with solid bass and vocal harmonies. The performance is energetic despite occasional distortion in the monitor mix.",
+  "review": "On December 28, 1969 the Grateful Dead rolled into International Speedway in Hollywood, FL for a raw, festival‑style set that leaned heavily on Ron “Pigpen” McKernan’s blues‑rock swagger. Pigpen led the charge with a raucous Hard To Handle and a soulful Turn On Your Lovelight, but it was Mason’s Children that stole the show – Jerry’s gritty, hard‑rock tone produced what reviewers call an \"all‑time great solo,\" and Phil’s high harmonies and rock‑steady bass gave the jam a solid foundation. While the monitor mix runs hot and introduces occasional distortion and pitch wobble, the energy of the night shines through, making this performance a must‑listen snapshot of the band’s early‑year fire.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.3,
+      "sentiment_rationale": "Consistently positive language across recordings – two reviews label the show 'fiery' and praise Mason's Children, Jerry's solo, and Pigpen’s energy; only one mixed review notes recording issues but not performance flaws. This yields a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.3 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-12-28.sbd.cotsman.8999.sbeok.shnf",
+    "reason": "Capture retains the live energy and highlights Mason's Children despite occasional distortion; community consensus marks it as the most representative version."
+  },
+  "key_highlights": [
+    "High‑octane Pigpen showcase featuring Hard To Handle and Turn On Your Lovelight",
+    "Jerry’s legendary, gritty solo on Mason’s Children",
+    "Strong vocal harmonies and bass foundation on Mason’s Children",
+    "Raw monitor mix conveys the concert’s energy, though with occasional distortion"
+  ],
+  "song_highlights": [
+    "Mason's Children",
+    "Hard To Handle",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers an all‑time great solo on Mason's Children with a gritty, hard‑rock tone throughout the set.",
+    "Phil": "Provides high harmonies on Mason's Children and solid bass foundation during the intense jams.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T19:24:40.154758+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Mason's Children"
+    ],
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

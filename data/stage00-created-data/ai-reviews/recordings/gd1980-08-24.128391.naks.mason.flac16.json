@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience capture of a smoking 1980 show, highlighted by a spectacular China > Rider sequence.",
+  "review": "Fans rave about the strong performance from this unknown‑date 1980 concert, especially the blazing China into Rider transition. The Mason Taylor taping is praised for its clear dynamics and Jerry’s vocal presence, with only occasional comments about distance affecting intimacy. Overall the recording delivers a very enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (6 out of 7) are highly positive, noting both superb musical moments and an excellent recording; only one low‑rating comment is unrelated, so the combined show and recording quality merit a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear dynamics and vocal presence praised; a few listeners noted occasional distance issues that made parts feel less intimate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China",
+      "Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly with the highlight being the China > Rider transition; overall energy is described as “smoking” from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals shine and are highlighted by reviewers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:06:07.351520+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-24.128391.naks.mason.flac16"
+}

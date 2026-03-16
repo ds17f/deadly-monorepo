@@ -1,0 +1,69 @@
+{
+  "summary": "Great soundboard recording of a high‑energy Greensboro show with a monster Hey Pocky Way and soaring Morning Dew, despite a few minor audio quirks.",
+  "review": "The digital source is a clean sound‑board (SBD) that most listeners describe as clear and enjoyable, though a couple note the original PA was a bit buggy. Musically the night shines – the second set erupts with an epic Terrapin Station jam, a legendary Hey Pocky Way (prompted by Brent), and a soaring Morning Dew, while only Peggy‑O draws mixed comments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 reviews, the vast majority are 4–5 stars and praise both performance and sound quality; only a few minor complaints keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp overall, but a few listeners mention PA glitches or earlier audience‑only copies being inferior; the released SBD is regarded as solid and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way",
+      "Morning Dew",
+      "Terrapin Station",
+      "Post Terrapin Jam"
+    ],
+    "poor_songs": [
+      "Peggy-O"
+    ],
+    "setlist_flow": "The first set opened strong and built momentum, while the second set delivered a powerful climax with Terrapin Station leading into an unforgettable post‑Terrapin jam; audience interaction (especially around Brent) added extra excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching solos on Morning Dew, playful interaction with Brent, and overall high energy throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are highlighted – fans loved his contribution to Hey Pocky Way and lamented his later loss.",
+    "Drums": "Mickey’s drumming is noted for energizing the crowd, especially during the Terrapin jam where he pointed drumsticks at fans."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Post Terrapin Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T17:18:59.878255+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-03-31.sbd.eD.16666.sbeok.shnf"
+}

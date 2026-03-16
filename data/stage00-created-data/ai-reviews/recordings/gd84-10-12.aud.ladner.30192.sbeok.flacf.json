@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent audience recording of the legendary 10‑12‑84 Augusta show, highlighted by a soaring Morning Dew and tight Uncle John’s reprise.",
+  "review": "The tape captures an iconic 1984 performance with Jerry’s blistering riffs on Morning Dew, a primal pre‑drums jam and a memorable Uncle John’s/Playing‑in‑the‑Band reprise that many fans cite as the night’s high point.  Technically it is a very clean audience (AUD) source – warm, balanced and surprisingly detailed for an AUD – though a few listeners note the vocals on Good Lovin' sound forced.  Overall the show is praised as one of the band’s best late‑’80s outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average user rating ~4.56 ★, with 15/18 reviews praising both performance and sound quality; strong consensus makes the estimate reliable."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, warm and well‑balanced AUD tape; presence of “3D ambience”, good high‑end punch, minimal muddiness. Some note it’s not a true matrix but the audience capture is superior to many Oade recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Uncle John's Reprise",
+      "Playing in the Band / Playing Reprisal"
+    ],
+    "poor_songs": [
+      "Good Lovin'",
+      "Morning Dew (some reviewers felt vocal delivery was forced)"
+    ],
+    "setlist_flow": "Fans rave about the seamless transition into Morning Dew, the pre‑drums jam and the uplifting Uncle John’s reprise.  One reviewer suggests moving the disc break after Cold Rain & Snow for smoother flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly praised for scorching guitar work on Morning Dew and energetic stage presence; a few notes mention his vocals sounded forced on Good Lovin' but overall his performance is a highlight.",
+    "Phil": "Bass work described as solid and “speaker‑blowing”; no major criticisms noted.",
+    "Bob": "Bob Weir’s vocal on Good Lovin' called \"wacky\" by one reviewer, otherwise his rhythm guitar contribution is unremarkable in the comments.",
+    "Keys": "Brent Mydland’s keyboard reverb is noted as prominent (a true AUD trait) and generally adds depth to the mix; no negative remarks.",
+    "Drums": "The pre‑drums jam is called “primal” and the overall drum work receives praise for driving the set’s energy."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 9,
+      "negative_mentions": 2,
+      "total_mentions": 11
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Uncle John's Reprise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "On The Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:04:03.063019+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-12.aud.ladner.30192.sbeok.flacf"
+}

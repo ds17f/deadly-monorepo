@@ -1,0 +1,63 @@
+{
+  "summary": "Audience recording with cavernous low levels but strong highs captures a solid show highlighted by an epic mid‑set jam, stellar Maggie’s Farm and powerful Uncle John’s Band.",
+  "review": "The audience tape is surprisingly clean of hiss yet sounds a bit like being inside a cavern – the high end shines while the overall level sits low, so listeners will want to boost volume and bass. Musically the night delivers a standout extended jam around the 8:40 mark, plus strong renditions of Maggie’s Farm, Black Peter, Crazy Fingers (with Jerry’s briefly off‑key solo) and an unusually long Uncle John’s Band, although the first set loses momentum after its early promise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a solid 4‑star rating; the show has several high points and only minor recording quirks, leading to an overall strong but not flawless score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "No hiss, but low overall levels give a cavernous feel; strong high‑end presence, requires volume and bass/mid boost for balanced listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Maggie's Farm",
+      "Black Peter",
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Unnamed Jam (around 8:40 mark)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set starts well then sags after the early songs, while the second set kicks off with a mellow Crazy Fingers and builds into an exceptional mid‑set jam and several high‑energy numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Off‑key moment in his Crazy Fingers solo but quickly recovers; overall guitar work praised as fantastic.",
+    "Phil": "",
+    "Bob": "Introduces Maggie's Farm with a Farm Aid plug, showing enthusiasm for the song.",
+    "Keys": "",
+    "Drums": "Mickey begins warming up the Beam early, producing strange textures that become wilder later in the jam."
+  },
+  "song_mentions": {
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:58:48.346139+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-19.134925.bltz.flac2496"
+}

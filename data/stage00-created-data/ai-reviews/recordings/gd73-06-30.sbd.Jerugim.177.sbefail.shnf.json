@@ -1,0 +1,88 @@
+{
+  "summary": "Soundboard capture of a mellow 1973 set featuring a stellar Dark Star → Eyes → Stella Blue suite and crisp, well‑balanced audio.",
+  "review": "The recording presents a smooth, early‑70s Dead show that rewards listeners with an exceptional Dark Star → Eyes → Stella Blue sequence, plus standout renditions of Cumberland Blues, Bird Song, Black Peter and Playin'.  The soundboard source is clear and spacious – the Wall of Sound comes through nicely despite a faint hiss and occasional mix quirks (Jerry’s guitar sometimes low).  Overall the performance is praised as a delicate masterpiece rather than a barn‑burner.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars, highlighting superb musical moments and generally high‑quality soundboard audio; only a few minor criticisms (mix balance, US Blues) keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and spacious with the Wall of Sound audible; slight tape hiss noted; occasional mix imbalance (Jerry low in the mix) but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Eyes > Stella Blue",
+      "Cumberland Blues",
+      "Bird Song",
+      "Black Peter",
+      "Playin'",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "U.S. Blues",
+      "Beat It On Down The Line",
+      "Playin' (for some listeners who found it sleepy)"
+    ],
+    "setlist_flow": "A mellow first set that eases into a powerful second set; the Dark Star/Eyes/Stella Blue suite provides the high point, while the early songs stay relaxed and beautifully phrased."
+  },
+  "band_member_comments": {
+    "Jerry": "In top form – soulful guitar tone and vocal delivery praised, though a few reviewers note his mix level is low at times.",
+    "Phil": "Classic, warm bass work highlighted as a hallmark of the era.",
+    "Bob": "Occasional off‑key moment on \"Beat It On Down The Line\" noted; otherwise no specific comments.",
+    "Keys": "Keith’s electric piano grooves and interplay with Jerry receive strong praise throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Eyes": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:22:27.413990+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-06-30.sbd.Jerugim.177.sbefail.shnf"
+}

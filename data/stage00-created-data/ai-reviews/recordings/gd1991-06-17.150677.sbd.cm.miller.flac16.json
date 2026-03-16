@@ -1,0 +1,76 @@
+{
+  "summary": "Clear 48‑track soundboard mix captures an above‑average 1991 show highlighted by a stellar Eyes of the World, Walkin' Blues and a year‑best Truckin'.",
+  "review": "The SBD (soundboard) source provides a dynamic, multi‑track clarity that lets the band’s interplay shine, despite occasional artificial audience level jumps. Musically the concert is above average for the era – the first set grooves with an exciting Eyes of the World and Walkin' Blues, while the second set delivers a standout Truckin' and strong jams, though Saint and Space fall a bit flat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The detailed review praises both the performance (above‑average show with several highlights) and the recording (clear multi‑track sound), yielding a strong combined score; only one substantive review limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "48‑track SBD mix offers excellent image and clarity of a multitrack, though audience volume is raised artificially in the OFF sections; overall dynamic and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Walkin' Blues",
+      "Truckin'",
+      "Ship of Fools",
+      "New Speedway"
+    ],
+    "poor_songs": [
+      "Saint",
+      "Space"
+    ],
+    "setlist_flow": "First set rolls strong with tight two‑key interplay; second set varies – smooth jams and a superb Truckin' contrast with a few flatter moments, ending on a solid Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers great solos (notably on Loose Lucy) and leads several Dark Star teases.",
+    "Phil": "Sounds in good form throughout the night.",
+    "Bob": "Guides early Dark Star tease and later unique UJB jam, keeping energy high.",
+    "Keys": "Dual‑keyboard setup shines; Brent (and guest) provide rich textures.",
+    "Drums": "Both drummers have a strong night, delivering an absorbing Drum segment."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:34:32.498042+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-17.150677.sbd.cm.miller.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "A juicy performance with a distinctly different take on Good Lovin' and solid recording quality.",
+  "review": "The reviewer raves about the show, giving extra bonus points for a uniquely performed Good Lovin' and calling the set a \"juicy\" addition to the 30‑Days‑of‑Dead series. While no specific technical details are mentioned, the enthusiasm suggests the recording is at least good enough to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Single enthusiastic 5‑star review highlights a standout song and overall enjoyment; lack of concrete recording comments limits certainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit remarks on sound clarity or mix; presumed listenable based on positive overall impression."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer expresses strong enthusiasm but does not comment on pacing or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:57:31.707034+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-29.123075.sbd.miller.flac16"
+}

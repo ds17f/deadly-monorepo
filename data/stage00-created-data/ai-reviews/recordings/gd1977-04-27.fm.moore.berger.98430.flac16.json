@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience tape of the April 27‑'77 show with superb sound and standout Scarlet > Fire, Good Lovin', and a titanic Terrapin > Dew.",
+  "review": "The recording is praised as crystal‑clear and “superb” by multiple listeners, capturing Jerry’s tone and Keith’s space‑synth riffs with remarkable fidelity. Musically the second set shines – Scarlet > Fire, Good Lovin', Estimated, Sugaree and a monumental Terrapin > Dew are repeatedly highlighted as peak moments, though a few note the set’s flow isn’t perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance (standout second‑set jams) and recording quality (crisp, superb tape), yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the tape \"very good\", \"superb\" and note no drop‑outs or muffiness; captured by Jerry Moore with clear instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Good Lovin'",
+      "Terrapin > Dew",
+      "Estimated",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is widely praised for its energy and jams, though a few listeners feel the overall flow of songs could be tighter."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's tone is repeatedly described as perfect or masterful.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s synth‑like space riffs on Estimated are highlighted, with a brief note of occasional keyboard weirdness.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin > Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:42:55.141940+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-27.fm.moore.berger.98430.flac16"
+}

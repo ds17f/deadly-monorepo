@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed performance with occasional high moments; recording source and quality are unclear.",
+  "review": "The show elicits divergent opinions – some listeners recall a spectacular vibe that grew into a decent set after a rusty start, while others describe Jerry’s playing as exhausted and the overall band as lackluster. No reviewer comments on the audio fidelity, leaving the recording quality unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Reviews are split between high (4‑star) and low (1‑2‑star) scores; performance is judged average to below average, while no technical audio feedback means recording quality cannot boost the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not discuss sound clarity, mix, or source type; therefore recording quality is assumed to be unremarkable but listenable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "First few songs are described as rusty, then the band finds its stride for some listeners; others feel the entire set remains lackluster."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly criticized – hand barely moving, solos sound exhausted and piecemeal.",
+    "Phil": "",
+    "Bob": "Described as sounding tired.",
+    "Keys": "",
+    "Drums": "Bruce (the drummer) is noted as the only saving grace."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:32:49.003297+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-12.schoeps.gardner.9476.sbeok.shnf"
+}

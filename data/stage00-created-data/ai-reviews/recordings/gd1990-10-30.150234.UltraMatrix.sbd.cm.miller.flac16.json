@@ -1,0 +1,39 @@
+{
+  "summary": "Great show with a standout Werewolves of London encore; recording source unclear but likely matrix with no reported issues",
+  "review": "The reviewer rates the performance highly, calling it a great show and specifically praising the Werewolves of London encore (even though it was sourced from the Halloween show). No comments are made about the audio quality, so the technical side remains uncertain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Strong positive feedback on the musical performance (70% weight) but no information on recording quality (30% weight), leading to a solid but not exceptional overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or any technical issues; source likely UltraMatrix but unconfirmed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Werewolves of London"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall praised as a great show; the only notable comment is that the encore was taken from the Halloween concert rather than this date."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Werewolves of London": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:36:50.260335+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-30.150234.UltraMatrix.sbd.cm.miller.flac16"
+}

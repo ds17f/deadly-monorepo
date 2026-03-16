@@ -1,0 +1,80 @@
+{
+  "summary": "Fiery Hard To Handle, soaring Truckin'>Other One jam, strong Uncle John's Band",
+  "blurb": "The show bursts with high‑energy rock – a blistering Hard To Handle and a ripping Truckin' into The Other One sequence. Good Lovin' and Sugar Magnolia showcase Jerry’s searing guitar while the rhythm section locks tight. The encore caps it off with an uplifting Uncle John's Band.",
+  "review": "On October 23, 1970 at Georgetown University’s McDonough Arena the Dead delivered a raging electric set that still feels fresh today. From the opening smash of Casey Jones through a punchy Mama Tried, the band built momentum into a scorching Hard To Handle that had the crowd on its feet. Jerry Garcia’s guitar was in top form – wah‑wah licks on Sugar Magnolia, incendiary leads on Good Lovin', and a transparent solo that set up an explosive Truckin' → The Other One marathon, highlighted by tight drumming and a memorable drum solo. Phil Lesh’s bass sat clear and balanced in the mix, anchoring the high‑octane jams while Mickey Hart and Bill Kreutzmann traded inventive rhythms, especially on Good Lovin' and Casey Jones. The night closed with an uplifting Uncle John's Band that left the arena buzzing. All three audience recordings capture the show’s energy; the \"motb-0004\" tape offers the clearest mix, making it the go‑to source for reliving this fiery performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 39,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Across three recordings, two are marked positive and one mixed; no negative performance comments appear. Reviewers repeatedly praise Jerry’s guitar, the Truckin'→Other One jam, and strong rhythm section work, yielding a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-10-23.aud.wolfson.motb-0004.85071.flac16",
+    "reason": "Clearest audience mix with strong bottom end, intelligible vocals and minimal wobble; captures the full set and encore without major drop‑outs."
+  },
+  "key_highlights": [
+    "Electrifying Hard To Handle that launches the high‑energy set.",
+    "Truckin' > The Other One sequence showcases deep improvisational chemistry.",
+    "Jerry’s wah‑wah guitar on Sugar Magnolia and searing leads throughout.",
+    "Tight drumming with a standout solo during Good Lovin' and rhythmic flair on Casey Jones."
+  ],
+  "song_highlights": [
+    "Hard To Handle",
+    "Good Lovin'",
+    "Sugar Magnolia",
+    "Truckin'",
+    "The Other One",
+    "Not Fade Away",
+    "Uncle John's Band",
+    "Casey Jones",
+    "Candyman"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivered scorching, transparent guitar work – wah‑wah on Sugar Magnolia, incendiary leads on Good Lovin', and a fierce solo that propelled the Truckin' → The Other One jam.",
+    "Phil": "Lesh’s bass was clear, well‑balanced and provided a solid foundation for the high‑octane set.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Hart added inventive percussive textures and helped drive the rhythmic momentum, especially on Good Lovin' and Casey Jones.",
+    "Billy": "Kreutzmann’s tight drumming anchored the groove, highlighted by a memorable solo during Good Lovin' and dynamic interplay with Hart."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T23:53:51.298969+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Sugar Magnolia"
+    ],
+    [
+      "Truckin'",
+      "The Other One",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away"
+    ],
+    [
+      "Uncle John's Band"
+    ],
+    [
+      "Casey Jones"
+    ],
+    [
+      "Candyman"
+    ]
+  ]
+}

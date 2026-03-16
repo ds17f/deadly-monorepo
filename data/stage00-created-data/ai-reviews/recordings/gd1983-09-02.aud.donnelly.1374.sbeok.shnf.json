@@ -1,0 +1,39 @@
+{
+  "summary": "High‑energy 1983 show with a killer Help / Slip / Franklin's sequence, captured on an audience tape that is clear on vocals but suffers from occasional bass distortion and level clipping.",
+  "review": "The performance is praised for its nonstop energy, strong first‑set renditions and a standout Help > Slip > Franklin's Tower in the second set – many reviewers call it one of their favorite shows. The source is an audience recording; while vocal clarity exceeds other tapes, listeners note high levels and bass distortion that detract from an otherwise decent sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (high energy, excellent set pieces) while recording quality receives mixed feedback (clear vocals but noticeable distortion and level issues). Weighted combination yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Vocals are clearer than other sources, but the tape suffers from occasional bass distortion and overly high levels that cause clipping; overall sound is okay but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert maintains a high‑energy momentum from the opening number through an excellent first set and carries that drive into a second set highlighted by a killer Help/Slip/Frank sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong presence noted ('Jerry is on!'), implying solid guitar work and vocals.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:37:36.297571+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-02.aud.donnelly.1374.sbeok.shnf"
+}

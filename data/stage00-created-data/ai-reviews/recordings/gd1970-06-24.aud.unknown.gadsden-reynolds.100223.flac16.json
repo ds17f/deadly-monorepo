@@ -1,0 +1,39 @@
+{
+  "summary": "Sub‑par audience recording of an uneven show, with the St. Stephen performance drawing mixed reactions.",
+  "review": "The recordings capture a rough audience tape that suffers from limited clarity, yet it conveys the crowd’s energy during St. Stephen. Reviewers clash over the song – one calls it the worst version ever while another defends its improvisational section – highlighting an overall uneven performance. No other songs or band moments are noted.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.2,
+    "confidence": "medium",
+    "rationale": "Three brief reviews with divergent opinions (1‑star, 3‑star, and an unscored comment) point to a generally weak show and low‑fidelity recording, yielding a below‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound quality described as 'not too good' – muffled, low fidelity, but still captures audience enthusiasm."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "St. Stephen"
+    ],
+    "setlist_flow": "No detailed comments on overall set structure; focus is solely on the contentious St. Stephen performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T21:43:42.592410+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-24.aud.unknown.gadsden-reynolds.100223.flac16"
+}

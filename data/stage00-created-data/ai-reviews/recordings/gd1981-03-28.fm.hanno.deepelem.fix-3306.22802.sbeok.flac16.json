@@ -1,0 +1,39 @@
+{
+  "summary": "Outstanding recording that likely contains the definitive version of LLR, praised as unbeatable by the reviewer.",
+  "review": "The sole review gives this tape a perfect five‑star rating, insisting there’s no better rendition of LLR anywhere. While no technical details are offered, the enthusiasm suggests both the performance of that song and the overall sound quality meet or exceed expectations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single 5‑star review strongly praises the LLR performance, implying high show and recording quality, but lack of additional data keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "No explicit comments on soundboard vs. audience; reviewer’s enthusiasm indicates the audio is clear enough to be considered top‑notch."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "LLR"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not discussed in the review"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "LLR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:21:01.265279+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-28.fm.hanno.deepelem.fix-3306.22802.sbeok.flac16"
+}

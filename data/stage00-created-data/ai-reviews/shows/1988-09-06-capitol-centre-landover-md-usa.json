@@ -1,0 +1,68 @@
+{
+  "summary": "Solid two‑set show with flawless Desolation Row and strong Throwing Stones jam",
+  "blurb": "Features a pristine Desolation Row and a powerful Throwing Stones/NFA stretch in the second set. Jerry’s guitar recovers after early tone issues while Phil endures a broken string but keeps the groove. Overall an all‑around solid performance with good set flow.",
+  "review": "On September 6, 1988 at the Capital Centre, the Dead delivered a reliably tight two‑set outing that rewards patient listening. The first set opens with a warm “Jack Straw” and rolls through classics before hitting a standout moment on “Desolation Row,” which many fans describe as flawless – a rare highlight for this era. A brief hiccup in Jerry’s tone early in the night gives way to a confident ride through the “Not Fade Away”‑powered Throwing Stones/NFA wave, where Brent’s keyboards and the dual drummers lock into an infectious groove. The second set’s climax with “The Other One” and a soaring “Throwing Stones” showcases the band’s improvisational chemistry, while the encore “Brokedown Palace” closes on a gentle, reflective note.\n\nWhile the Miller soundboard capture (gd88-09-06.sbd.miller.27750.sbeok.flacf) offers clear SBD fidelity with only slight crowd bleed, an audience tape (gd88-09-06.aud.ingle.9984.sbeok.shnf) adds a sense of live energy despite its tinny quality and occasional vocal muffs. Together they paint a picture of a solid performance that may lack the fireworks of a legendary night but still provides plenty of moments worth revisiting for any Deadhead.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Both recordings describe the show as solid with clear positives (flawless Desolation Row, strong Throwing Stones/NFA stretch) and minor negatives limited to recording quality and a brief guitar tone issue. The overall sentiment leans slightly positive across multiple sources, justifying a modest +0.5 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-09-06.sbd.miller.27750.sbeok.flacf",
+    "reason": "Good soundboard source with clear capture, minimal drop‑outs and the only recording praised for its flawless Desolation Row."
+  },
+  "key_highlights": [
+    "Flawless performance of \"Desolation Row\" in the first set",
+    "\"Throwing Stones\"/\"Not Fade Away\" wave delivers a powerful second‑set climax",
+    "Strong improvisation on \"The Other One\" and seamless segues throughout",
+    "Overall solid set flow with no glaring weak spots"
+  ],
+  "song_highlights": [
+    "Desolation Row",
+    "Jack Straw",
+    "Throwing Stones",
+    "The Other One",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Early in the show his guitar tone wavered and vocals were muffled, but he recovers and rides the NFA wave effortlessly later.",
+    "Phil": "Suffers a broken string on bass during the first set yet maintains a solid groove throughout.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Drums are described as quiet and breathy during the space segment, contributing to a more subdued percussion texture.",
+    "Billy": "Percussion follows the same quiet, breathy character in space, keeping the overall rhythm low‑key."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-16T13:11:53.614005+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Desolation Row"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "Estimated Prophet",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Crystal‑clear front‑of‑house audience tape captures a sunny, high‑energy set with standout Here Comes Sunshine and an uplifting second half.",
+  "review": "The recording offers a remarkably crisp, in‑your‑face audience sound that makes you feel right on the floor, while the performance radiates sunshine‑filled energy—from a bright opening of “Here Comes Sunshine” through a rousing closer “I Fought the Law.”  Reviewers note an especially strong second set that lifts the show beyond its occasional first‑set dips.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews are uniformly enthusiastic about both performance and sound; weighted average of strong show (≈4) and excellent recording (≈4.5) yields a 4.2 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "FOB‑style audience capture that is crisp, clear and highly immersive; no reported muddiness or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "I Fought the Law",
+      "China Cat Sunflower > I Know You Rider",
+      "Schoolgirl > Smokestack"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A bright, high‑energy first set with a few average moments gives way to a tighter, more uplifting second set that leaves the audience buzzing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Schoolgirl > Smokestack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:46:36.949983+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-21.fob-schoeps.evans-waddell.87291.flac16"
+}

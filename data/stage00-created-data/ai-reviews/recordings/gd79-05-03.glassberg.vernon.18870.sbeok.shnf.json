@@ -1,0 +1,96 @@
+{
+  "summary": "A tight, energetic show with standout Stagger Lee, All Over Now and Row Jimmy, captured on a clear audience tape that does suffer a bit of crowd noise.",
+  "review": "The performance is praised as solid and under‑rated, featuring tight first‑set cuts and an inspired second set highlighted by Stagger Lee, All Over Now, Terrapin and a long Playin' jam. Brent’s Hammond work is repeatedly noted as a refreshing upgrade to the keyboards, while the recording – sourced from the audience – is generally clear with good detail despite occasional crowd‑noise bleed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about the music (many 3–4 star reviews) and a generally good audience recording give the show a solid rating; weighting 70% performance and 30% sound quality yields ~3.9/5."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, detailed capture from a sweet‑spot mic; some reviewers note a bit too much crowd noise but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee",
+      "All Over Now",
+      "Row Jimmy",
+      "Terrapin",
+      "Playin'",
+      "Samson"
+    ],
+    "poor_songs": [
+      "Tennessee"
+    ],
+    "setlist_flow": "First set described as tight and energetic; second set builds with strong Terrapin/Playin' flow, smooth transitions into NFA and a humorous monitor‑buzz incident that added to the night’s vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for blazing guitar work and shredding on Samson/Delilah; also joins in the laughter when Bobby's monitor fails.",
+    "Phil": "Mentioned delivering a joke on stage; no specific performance critique beyond that moment.",
+    "Bob": "Vocals described as “impressive, virile”; involved in the monitor buzz incident but took it in stride.",
+    "Keys": "Brent’s Hammond playing and harmonies are highlighted as a major improvement over the previous keyboard era, quickly jelling with the band.",
+    "Drums": "Generally standard and patient; one reviewer felt the drum sections were a bit long."
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "All Over Now": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stagger Lee": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Samson": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:55:11.306295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-03.glassberg.vernon.18870.sbeok.shnf"
+}

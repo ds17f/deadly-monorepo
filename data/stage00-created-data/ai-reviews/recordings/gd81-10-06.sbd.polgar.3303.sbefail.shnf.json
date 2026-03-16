@@ -1,0 +1,58 @@
+{
+  "summary": "A solid 1981 Dead show with strong setlist highlights, but the SBD suffers from noticeable hiss and a thin low end.",
+  "review": "The performance is praised for its tight playing, standout moments like the powerful 'He's Gone' and the funky Brent‑driven 'Sugar Magnolia', and an engaging second‑set jam. The soundboard source delivers decent clarity, yet the tape has a persistent hiss—especially between songs—and lacks low‑frequency punch, which some listeners find distracting.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the musical performance highly (4–5 stars) while consistently noting hiss and limited bass, leading to a good‑show/average‑recording blend that averages around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Noticeable tape hiss, especially between songs; slightly light low end but overall mix and clarity are acceptable for an SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Blues for Allah Jam",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "High Time"
+    ],
+    "setlist_flow": "Reviewers describe the setlist as solid and well‑balanced, with an engaging second set that builds into a memorable jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Solo work is highlighted as strong, though his High Time solo was cut; overall praised for energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards are noted as great and funky, especially on Sugar Magnolia.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blues for Allah Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T15:25:41.496915+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-06.sbd.polgar.3303.sbefail.shnf"
+}

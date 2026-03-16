@@ -1,0 +1,39 @@
+{
+  "summary": "Terrific performance highlighted by a standout \"The Other One\", though recording details are unspecified.",
+  "review": "The lone five‑star review praises the rendition of \"The Other One\" as terrific, indicating a high level of enjoyment with that segment of the show. No information is given about the source or clarity of the audio, so the recording quality cannot be assessed from this feedback.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single enthusiastic five‑star review focuses on a strong performance of \"The Other One\" but provides no recording details, leading to a high show rating with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention any aspects of sound quality, clarity, or mixing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on overall set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:55:03.548858+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-28.143133.s2.partial.gastwirt.sirmick.miller.flac1648"
+}

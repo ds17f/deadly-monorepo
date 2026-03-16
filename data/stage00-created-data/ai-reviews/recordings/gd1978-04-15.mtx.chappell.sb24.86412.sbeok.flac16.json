@@ -1,0 +1,80 @@
+{
+  "summary": "Superb matrix recording that captures a high‑energy William & Mary show highlighted by Let It Grow, Morning Dew and the opening Half Step.",
+  "review": "The matrix feed delivers crystal‑clear sound with a vivid “being there” feel, though a splice and occasional flutter in the Not Fade Away/Dawn segment are noted. Musically the band rides an infectious wave of excitement from the half‑step opener through standout performances of Let It Grow, Morning Dew and a scorching Half Step, making this one of the year’s most celebrated shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive fan feedback (nine 4‑5★ reviews) praises both performance and matrix sound quality; only one low rating cites vocal and splice issues, so the combined show/recording score is very high."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix with strong ambience; reviewers rave about “mirror finish” and remastering. One detailed review mentions a noticeable AUD splice in the Not Fade Away segment and a brief flutter on one channel that required manual correction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Morning Dew",
+      "Half Step",
+      "Not Fade Away",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [
+      "Around and Around"
+    ],
+    "setlist_flow": "The concert bursts out of the gate with an inspired half‑step, sustains momentum through a first‑set highlight (Let It Grow) and builds to a powerful second set where Not Fade Away segues into a scorching Dew. Energy stays high throughout, only a brief vocal dip on Around and Around is noted."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for electrifying guitar tone and boundless energy; one reviewer calls his vocals “awful” due to post‑laryngitis issues.",
+    "Phil": "",
+    "Bob": "His lead vocal work on El Paso and Let It Grow is highlighted as excellent, plus backing vocals on Bertha are noted positively.",
+    "Keys": "Criticized for disappearing in the mix or offering only chordal support; a reviewer misses Keith’s earlier creativity.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:51:22.133554+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-15.mtx.chappell.sb24.86412.sbeok.flac16"
+}

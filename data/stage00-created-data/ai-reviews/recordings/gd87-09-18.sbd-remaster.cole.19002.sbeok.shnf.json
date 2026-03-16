@@ -1,0 +1,76 @@
+{
+  "summary": "Stunning soundboard recording with crystal‑clear audio and an all‑time great 1987 MSG show highlighted by a legendary Morning Dew and the Good Lovin → La Bamba → Good Lovin sandwich.",
+  "review": "The MattMan remaster of the 9/18/87 Madison Square Garden set is widely praised for its pristine soundboard quality – many call it the best‑sounding copy available. Musically the concert is a fan favorite: a short but punchy first set gives way to a second set that erupts with Shakedown, Terrapin, Watchtower and an unforgettable Morning Dew topped by the Good Lovin/La Bamba medley. Jerry Garcia’s guitar work and vocals are described as “on fire,” Brent’s keyboards sparkle (though a few note his voice sits low in the mix), and the rhythm section drives the band with relentless energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over 60 reviews, the vast majority 5‑star, repeatedly praise both performance and audio quality; only a handful of mixed or low comments exist, so the combined show (70 %) + recording (30 %) score is near‑perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, clear and the best‑sounding copy; a few notes about Brent’s vocal level being low in the mix but no dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Good Lovin > La Bamba > Good Lovin",
+      "Shakedown",
+      "Terrapin",
+      "Watchtower",
+      "Hell in a Bucket"
+    ],
+    "poor_songs": [
+      "La Bamba"
+    ],
+    "setlist_flow": "First set is short but tight; the second set launches with Shakedown and builds through Terrapin, Watchtower and an explosive Dew. Transitions (e.g., Good Lovin → La Bamba) are highlighted as seamless, creating a high‑energy arc that many reviewers call “the best second set of the era.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar solo on the Dew and his vocal performance (including the La Bamba interlude) are repeatedly called perfect, fiery and emotionally cathartic.",
+    "Phil": "Generally solid bass work; one reviewer notes “Phil's good anyway,” no major complaints.",
+    "Bob": "Weir gets kudos for a wild intro (“levitate” joke) and strong rhythm playing, though equipment hiccups during Birdsong are mentioned in one review.",
+    "Keys": "Brent Mydland’s B‑3 organ and backup vocals receive high praise; a couple of reviewers note his vocal presence is lower than usual in the mix.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are lauded for powerful, “Bonham‑like” drumming that drives songs like Hell in a Bucket and Watchtower."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "Good Lovin > La Bamba > Good Lovin": {
+      "positive_mentions": 12,
+      "negative_mentions": 1,
+      "total_mentions": 13
+    },
+    "Shakedown": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Terrapin": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Watchtower": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "La Bamba": {
+      "positive_mentions": 10,
+      "negative_mentions": 2,
+      "total_mentions": 12
+    }
+  },
+  "processed_date": "2025-09-16T03:41:45.528807+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-18.sbd-remaster.cole.19002.sbeok.shnf"
+}

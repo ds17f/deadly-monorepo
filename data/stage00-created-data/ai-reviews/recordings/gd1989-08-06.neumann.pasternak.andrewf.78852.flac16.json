@@ -1,0 +1,91 @@
+{
+  "summary": "Clear soundboard recording with a slightly distant mix, showcasing a scorching Scarlet > Fire and an outstanding Fire that rank among the year’s best.",
+  "review": "The performance is praised for its high energy and exceptional moments – especially the blistering Scarlet > Fire, a top‑ten Fire, and a standout Ship of Fools.  The soundboard capture is generally clear but a bit distant with thin bass and some unnecessary MIDI overdubs, which keeps the technical rating solid rather than stellar.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews overwhelmingly highlight strong musical moments (70% weight) while noting decent but not perfect recording quality (30% weight), yielding an overall rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity with occasional distance; vocals and instruments clear, but bass feels one‑dimensional and MIDI embellishments are considered unnecessary by some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Fire",
+      "Ship of Fools"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set through Fire leading into a second set highlighted by Scarlet > Fire; the pacing keeps momentum high and the transitions are praised as strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for playing an old Stratocaster with great tone, heavy‑metal style stage moves, and prominent background vocals on several numbers.",
+    "Phil": "",
+    "Bob": "Leads the charge on The Bird Song jam and cooks along during Samson; his vocal presence is highlighted positively.",
+    "Keys": "MIDI garnishments deemed unnecessary and a Brent keyboard tune criticized as weak.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Great Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "JB Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T22:36:03.540206+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-06.neumann.pasternak.andrewf.78852.flac16"
+}

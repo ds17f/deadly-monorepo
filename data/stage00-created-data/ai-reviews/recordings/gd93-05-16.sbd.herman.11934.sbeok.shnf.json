@@ -1,0 +1,91 @@
+{
+  "summary": "Excellent soundboard capture of a 1993 Vegas show where the second set – especially Help > Slip > Franklin’s and The Other One – shines, despite Bob’s hoarse vocals.",
+  "review": "The recording is remarkably clear and well‑balanced, delivering the full impact of Jerry’s exuberant playing and Vince’s adventurous keyboards.  Fans rave about a second set that turns a short first half into a classic, highlighted by Help > Slip > Franklin’s, The Other One, Althea and Row Jimmy.  Bob’s vocal strain is noted but doesn’t detract from the overall magic of the performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over twenty reviews overwhelmingly praise the musical performance and note excellent soundboard quality; only a few moderate/negative comments keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound crisp, well‑balanced and “near perfect”.  A handful mention a slight bass distortion for Phil or minor FM broadcast quirks, but overall the mix is clear with Jerry’s guitar upfront."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "The Other One",
+      "Althea",
+      "Row Jimmy",
+      "Terrapin Station",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Slipknot!"
+    ],
+    "setlist_flow": "First set is brief but contains solid gems (Althea, Row Jimmy, Cassidy).  The second set erupts into a marathon of jams, with Help > Slip > Franklin’s as the centerpiece and The Other One delivering a soaring climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being “on” all night, delivering joyous solos, breaking strings mid‑song and generally driving the show’s energy.",
+    "Phil": "Generally noted as present and solid; a few listeners heard slight bass distortion but overall his playing is supportive.",
+    "Bob": "Vocals described as ragged or hoarse throughout, yet many felt his strained voice added character to songs like Looks Like Rain.",
+    "Keys": "Vince’s keyboard work receives strong admiration—especially on Slipknot, Row Jimmy and the spacey sections—though a few call the “toy piano” moments odd.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 9,
+      "negative_mentions": 1,
+      "total_mentions": 10
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Row Jimmy": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Cassidy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Slipknot!": {
+      "positive_mentions": 7,
+      "negative_mentions": 3,
+      "total_mentions": 10
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:38:44.997526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-16.sbd.herman.11934.sbeok.shnf"
+}

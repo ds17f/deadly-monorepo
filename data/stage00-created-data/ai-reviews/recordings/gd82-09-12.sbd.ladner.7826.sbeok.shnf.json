@@ -1,0 +1,45 @@
+{
+  "summary": "Crisp soundboard capture of a rare 1982 show featuring standout Not Fade Away and Morning Dew, with strong vocals and a great second set.",
+  "review": "The performance is praised for its solid first set, an especially exciting second set, and memorable moments like Brent's B3 organ on Not Fade Away and the rare Morning Dew. The soundboard recording is generally clear and well‑balanced, though one listener notes the playback runs slightly fast. Overall the show is considered a collector’s gem with high vocal energy from Jerry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong musical performance; recording quality is described as crisp though with a minor speed issue, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and well‑balanced mix with clear vocals; a few listeners note the playback is sped up, affecting pitch perception."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid and no‑slouch, second set highlighted as particularly great; overall flow praised by reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as strong and expressive, though occasionally sounding tired; guitar tone noted positively.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's B3 organ work on Not Fade Away is singled out as a highlight, showing his adventurous playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T01:01:02.219718+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-12.sbd.ladner.7826.sbeok.shnf"
+}

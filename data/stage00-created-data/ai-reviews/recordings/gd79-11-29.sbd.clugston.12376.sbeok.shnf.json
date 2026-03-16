@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of a tight Fall ’79 show highlighted by a spectacular Eyes of the World and a crisp U.S. Blues encore.",
+  "review": "The recording is a superb SBD mix – every instrument is defined, crisp and balanced – making the performance shine. Musically the show is solid throughout, with a tight Shakedown Street jam, an inspired second‑set featuring Eyes of the World, and Jerry Garcia adding a special twist to the U.S. Blues encore. Fans repeatedly note the energetic vocals and strong Brent‑Jerry interplay.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the soundboard quality (crisp, defined mix) and musical performance (tight jams, standout songs), with only a single unrelated metadata complaint."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Super mix; instruments are clear and crisp, no reported drop‑outs or distortion. Reviewers describe it as “very nice sounding SBD” and “every instrument defined.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "U.S. Blues",
+      "Eyes of the World",
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first set with a tight Shakedown Street jam, followed by an especially high‑energy second set highlighted by Eyes of the World and a memorable U.S. Blues encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia shines throughout; adds a special twist to the U.S. Blues encore and delivers great interplay with Brent around the 18‑minute mark.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is praised, especially his chemistry with Jerry during extended jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:17:06.524931+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-29.sbd.clugston.12376.sbeok.shnf"
+}

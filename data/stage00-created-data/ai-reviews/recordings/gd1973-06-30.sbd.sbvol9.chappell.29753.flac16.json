@@ -1,0 +1,72 @@
+{
+  "summary": "Matrix blend delivers crystal‑clear sound while the June ’73 set dazzles with a soaring Dark Star and stellar Playing in the Band.",
+  "review": "The matrix mix of soundboard and audience creates a beautifully balanced recording – crisp drums, deep bass and a warm keyboard texture that lets the band breathe. Musically the show shines with a sweet Dark Star, an outstanding Playing in the Band, and powerful renditions of Sugar Magnolia and Stella Blue, making it one of the stronger 1973 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both the performance and the matrix recording indicate an exceptional show with excellent audio quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced soundboard/audience blend; nice overall mix, deep bass, crisp Bill Kreutzmann rhythm, not overly bright but very listenable. Reviewers note “beautiful”, “magnificent” and “very good quality”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Playing in the Band",
+      "Sugar Magnolia",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as well‑played with an outstanding Playing in the Band and strong country‑rockabilly flavor; second set shorter but still delivers highlights like Dark Star, Eyes of the World and a powerful encore. Overall flow praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals highlighted as great on Black Peter and other numbers; wah‑wah peaks noted during Dark Star.",
+    "Phil": "Bass described as deep and very good for a ’73 recording.",
+    "Bob": "Vocal fireworks and stellar contributions praised, especially in the first set.",
+    "Keys": "Keith's keyboard work stands out – Moog (though debated) and Rhodes tones are singled out as wonderful texture.",
+    "Drums": "Bill Kreutzmann’s rhythm called crisp and tight."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:20:00.444539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-30.sbd.sbvol9.chappell.29753.flac16"
+}

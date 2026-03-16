@@ -1,0 +1,31 @@
+{
+  "summary": "Fans rave about a beautiful, groove‑filled performance, yet the recording is condemned as poorly captured.",
+  "review": "One reviewer gushes over the music’s soul‑touching groove and calls the show resplendent, while another decries the terrible sound quality that makes the set nearly unlistenable. The consensus is that the performance shines, but the audio fidelity severely detracts from the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Positive comments highlight a strong musical show (≈4‑star equivalent), whereas the recording is described as badly recorded (≈2‑star). Weighted combination (70% show, 30% recording) yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer calls the recording 'badly recorded' and 'terrible', indicating low clarity, likely muffled or noisy audio."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers only speak in general terms about the overall vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T05:30:19.651140+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-26.aud.seff.4778.shnf"
+}

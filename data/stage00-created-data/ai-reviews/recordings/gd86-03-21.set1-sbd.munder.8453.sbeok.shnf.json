@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience‑type recording captures a bouncy mid‑80s first set highlighted by Roadrunner, Let It Grow and Dupree’s Diamond Blues.",
+  "review": "The four fan reviews describe an energetic, “bouncy” first set that rockets from the opening note of Roadrunner through a spirited Let It Grow and a memorable Dupree's Diamond Blues.  While the performance is praised for Jerry’s surprisingly strong vocals and Phil’s thunderous bass, the tape sounds more like a quality audience recording than the advertised sound‑board source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Reviews are generally positive about the musical performance (70% weight) and note an acceptable, audience‑style recording quality (30% weight); average user rating is ~3.75, leading to a solid 4‑star overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note the tape sounds like an audience (AUD) recording despite the SBD label; clarity is decent and the mix captures the live atmosphere, though no sound‑board crispness is reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Roadrunner",
+      "Let It Grow",
+      "Dupree's Diamond Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as continuously bouncing from start to finish, delivering a mid‑80s energy that feels both tight and uplifting."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice called “pudding” but praised for strength and conviction throughout the set.",
+    "Phil": "Bass noted as rattling the chest cavity, providing powerful low‑end drive.",
+    "Bob": "",
+    "Keys": "Healy’s pedal work (keyboard) highlighted as a notable element of the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Roadrunner": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:16:24.432350+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-21.set1-sbd.munder.8453.sbeok.shnf"
+}

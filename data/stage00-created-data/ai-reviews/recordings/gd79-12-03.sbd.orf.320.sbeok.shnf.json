@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard source with low levels and abrupt fades, but fans rave about the show’s energy",
+  "review": "The performance is judged as merely okay by one reviewer who complains about very low volume, sudden tape starts and quick fade‑ups that make the recording only fair. Another fan declares the concert “goddamn dynamite,” giving it a perfect five‑star rating despite no details on the audio. Overall the show is liked, but the technical quality of this SBD file leaves much to be desired.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "One enthusiastic five‑star review boosts the show rating while a three‑star review highlights serious recording issues; weighted average yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Very low overall levels, abrupt tape starts and quick fade‑ups; the source sounds under‑powered and poorly mastered."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers only note general performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T02:49:18.611838+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-03.sbd.orf.320.sbeok.shnf"
+}

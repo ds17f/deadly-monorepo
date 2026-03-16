@@ -1,0 +1,51 @@
+{
+  "summary": "Good audio captures a memorable show featuring standout performances of Little Red Rooster, Candyman, and Black Peter.",
+  "review": "The recording is praised for its clear, enjoyable sound despite the lack of detailed source information. Fans highlight the emotive delivery of Little Red Rooster, Candyman, and Black Peter as the night’s high points, making it a worthwhile listen even though overall enthusiasm varies between reviewers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers note positive aspects (strong song highlights and good audio) with one giving a perfect rating; the limited number of reviews and modest detail yields a moderate confidence level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers mention the audio is good/clear, no specific issues or source type identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Little Red Rooster",
+      "Candyman",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No explicit comments on pacing; reviewers focus on individual song highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:00:14.406742+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-02.me80.hessberg.miller.124587.flac16"
+}

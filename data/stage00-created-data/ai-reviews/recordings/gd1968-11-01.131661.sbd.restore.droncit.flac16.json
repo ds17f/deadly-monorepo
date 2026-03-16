@@ -1,0 +1,42 @@
+{
+  "summary": "Soundboard capture of a strong late‑'68 set, but marred by severe signal cuts in one section.",
+  "review": "The performance is praised as an awesome snapshot of the Dead in November 1968, with fans lamenting only the missing “New Potato” track. The restoration makes the recording somewhat listenable, yet a badly attenuated segment suffers dramatic drops that undermine the flow, though it does preserve extra minutes of the Alligator jam into “Caution.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Show quality is regarded as good/awesome, but recording suffers major signal loss; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Section with attenuated signal is heavily cut and “hacked up,” making it difficult to listen despite restoration; some extra jam content (Alligator into Caution) is retained."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Overall an awesome late‑'68 show, though the omission of “New Potato” and the garbled recording segment interrupt the experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Potato": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:46:08.018899+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-11-01.131661.sbd.restore.droncit.flac16"
+}

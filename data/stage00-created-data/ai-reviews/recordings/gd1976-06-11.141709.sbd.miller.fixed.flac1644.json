@@ -1,0 +1,57 @@
+{
+  "summary": "Solid soundboard recording with a chilled West Coast vibe, highlighted by a smoking Help > Slip > Franklin’s performance.",
+  "review": "The show delivers solid playing and an especially strong second set, where the Help‑Slip‑Franklin’s sequence shines alongside memorable renditions of The Wheel, Lightning and Supplication. The soundboard source is generally full‑bodied, though listeners note a faint tape‑recorder whirr and frequent tuning breaks that detract slightly from an otherwise clean mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "High show quality (standout songs, strong second set) weighted at 70% and decent but not flawless soundboard recording (minor tape noise, tuning pauses) weighted at 30% yields a combined rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Full‑sound board capture with clear overall mix; occasional whirring tape recorder noise in quiet passages and noticeable tuning breaks between songs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "The Wheel",
+      "Lightning",
+      "Supplication"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed West Coast vibe carries the set, with a particularly strong second half that builds momentum through tight interplay and vocal contributions from Donna Jean."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:53:17.920858+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-11.141709.sbd.miller.fixed.flac1644"
+}

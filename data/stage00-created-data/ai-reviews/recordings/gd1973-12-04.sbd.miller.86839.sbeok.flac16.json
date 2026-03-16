@@ -1,0 +1,75 @@
+{
+  "summary": "A solid Charlie Miller sound‑board transfer captures an average ’73 show with standout moments like a blistering Eyes of the World jam, Big River and Me & My Uncle.",
+  "review": "The recording is a well‑preserved SBD that many reviewers rate highly for mix and transfer quality, though it contains a few tuning edits and minor missing sections. Musically the concert sits in the middle of the 1973 era – rough at the start but redeemed by highlights such as Big River, Me & My Uncle, and an especially adventurous Eyes of the World > Sugar Magnolia sequence.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality averages around three stars (average 1973 performance) while recording quality is praised as good‑to‑excellent; weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp Charlie Miller transfer with minor tuning edits and a brief missing segment in the second set; overall mix praised as excellent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Big River",
+      "Me & My Uncle",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "Sugaree"
+    ],
+    "setlist_flow": "Late start (5‑hour delay) made the first set uneven, but it tightened around Me & My Uncle and Big River. The shortened second set delivers a long, exploratory Eyes of the World jam that flows into Sugar Magnolia before ending."
+  },
+  "band_member_comments": {
+    "Jerry": "Weaves his frets through the extended Eyes jam; ideas noted as among the year's best.",
+    "Phil": "Steers and drives the band during Eyes of the World, making the crowd vibrate; highlighted as a standout performance.",
+    "Bob": "",
+    "Keys": "Keith is praised as great on keyboards throughout the show.",
+    "Drums": "Bill briefly stops during the improv then re‑enters, adding dynamic contrast."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:56:27.527787+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-04.sbd.miller.86839.sbeok.flac16"
+}

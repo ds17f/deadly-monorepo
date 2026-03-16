@@ -1,0 +1,45 @@
+{
+  "summary": "Distorted audience recording from Portland's Coliseum, but the show bursts with energy – a pulsing first set and standout Sugar Magnolia plus a memorable Portland Jam.",
+  "review": "The performance is widely praised for its high‑energy first set and several highlight moments such as Sugar Magnolia and an improvised Portland Jam. However, the tape suffers from noticeable distortion at the beginning and overall under‑par sound quality, likely due to over‑recording on an audience source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show is rated highly by most reviewers (average ~4 stars) while the recording quality is judged poor (≈2 stars); weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Awfully distorted at the start, likely from over‑recording; overall reasonable later but never reaches good clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Portland Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as pulsing with energy; second set a bit more relaxed yet still very good, with passages of excellence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Portland Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:33:33.532798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-15.severson.munder.11022.sbeok.shnf"
+}

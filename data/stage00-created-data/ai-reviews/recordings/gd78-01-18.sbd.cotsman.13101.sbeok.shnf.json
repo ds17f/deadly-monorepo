@@ -1,0 +1,69 @@
+{
+  "summary": "Decent matrix recording with occasional mud and audience patches, but a mellow 1978 show highlighted by Terrapin‑Sugar Magnolia, Half‑Step and an inspired Playin’ jam.",
+  "review": "The tape is a mixed‑source (soundboard plus audience) that sounds generally on‑point but suffers from some muddiness and patchy sections, especially around the Playin' → Passenger stretch. Musically the concert is praised for its relaxed vibe, strong jams – notably Terrapin through Sugar Magnolia, a fiery Half‑Step, and a spooky Playin’ jam – though a few listeners note lazy moments and vocal strain on Stella Blue.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show receives solid praise for several standout jams (70% weight) while the recording quality is uneven with mud and patches (30% weight), leading to an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear soundboard core, but some sections are muddy and contain audience‑patch glitches (notably Playin' > Passenger and Estimated)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station > Sugar Magnolia",
+      "Half Step",
+      "Playin'",
+      "Stella Blue",
+      "Space",
+      "Lost Letter > Supplication"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, mellow set with long improvisational stretches; the first half builds gently while the second delivers a deep Playin' jam that is occasionally interrupted by patchy audio."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is praised (majestic return during Playin'), but his vocals are noted as strained or ‘lazy’ on Stella Blue; overall his playing remains heartfelt.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station > Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Letter > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:25:33.669305+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-18.sbd.cotsman.13101.sbeok.shnf"
+}

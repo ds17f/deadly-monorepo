@@ -1,0 +1,57 @@
+{
+  "summary": "Audience recording with a low‑mix guitar but captures delicate \"Women Are Smarter\" and soft \"He's Gone\", plus a notable Alabama > Greatest Story sequence.",
+  "review": "The audience tape is decent overall, though reviewers note Jerry’s guitar sits too far back in the mix. Musical highlights include an especially delicate rendition of \"Women Are Smarter,\" a quietly beautiful \"He's Gone,\" and a strong Alabama > Greatest Story run that even made it onto a radio show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rating review; the performance is described as interesting with several positive song mentions, but the recording suffers from a low guitar mix, leading to an average overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Nice audience ambience, but Jerry’s guitar is noticeably low in the mix; otherwise clear enough to hear delicate passages."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Women Are Smarter",
+      "He's Gone",
+      "Alabama",
+      "Greatest Story"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review mentions a soft opening space before \"The Wheel\" and highlights the Alabama > Greatest Story sequence, indicating a smooth but understated set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar is low in the mix, though delicate playing is evident on several songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:01:50.854657+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-18.schoeps.crandel.32059.flac16"
+}

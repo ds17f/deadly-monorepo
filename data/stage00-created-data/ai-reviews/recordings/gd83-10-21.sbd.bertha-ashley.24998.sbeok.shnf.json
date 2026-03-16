@@ -1,0 +1,63 @@
+{
+  "summary": "Super‑crisp soundboard recording of an electric 1983 show, highlighted by a scorching Scarlet→Fire and blistering Big Railroad Blues.",
+  "review": "The SBD capture is lauded as crystal‑clear, hot‑bottomed and one of the best early‑80s tapes, while the performance dazzles from the opening “Music Never Stopped” through an incendiary second set featuring a legendary Scarlet→Fire‑Uncle John’s sequence.  Jerry’s guitar tone, Brent’s fresh keyboards and a tight, punchy rhythm section keep the energy soaring throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.43 with >20 consistent positive comments on both music and sound quality; strong weighting toward show excellence pushes the AI score into the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly describe the tape as crisp, hot‑bottomed and “super‑crisp” SBD; a few note personal preference for less bass or brighter highs, but no major dropouts or hiss are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland",
+      "Big Railroad Blues",
+      "Scarlet > Fire",
+      "Uncle John's Band",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy opener (Music Never Stopped) carries momentum into a first set that builds toward Big Railroad Blues, then erupts in the second set with Scarlet→Fire and Uncle John’s, delivering seamless transitions and sustained excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for “perfect” tone, soaring leads and vocal effects; his noodling on Truckin' noted as tasteful.",
+    "Phil": "Solid bass foundation highlighted (“gorgeous one‑note‑at‑a‑time salvos,” occasional big drops), generally praised.",
+    "Bob": "",
+    "Keys": "Brent’s playing is a focal point – many love the fresh tones and new colors, though one reviewer felt his lines sometimes copied Garcia too closely.",
+    "Drums": "Tight, drummer‑led groove from the start; kick drum described as “outlandish” in a good way, with both drummers clearly present."
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Cumberland": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T13:28:46.320071+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-21.sbd.bertha-ashley.24998.sbeok.shnf"
+}

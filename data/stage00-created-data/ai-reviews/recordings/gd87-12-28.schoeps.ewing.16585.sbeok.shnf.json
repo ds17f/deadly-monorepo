@@ -1,0 +1,99 @@
+{
+  "summary": "Mid‑quality audience recording of a fun show with strong openers and a firefly‑filled second set featuring standout Stranger, Franklin’s Tower, Minglewood and Sugar Magnolia.",
+  "review": "The three fan reviews describe an enjoyable concert with energetic jams, memorable moments like the firefly haloes during Sugar Magnolia and solid performances from Jerry Garcia and Brent Mydland. The recording is an all‑audience tape that sounds decent but a bit tinny and in need of EQ, making it listenable though not hi‑fi.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers gave 4‑star ratings and praised the musical performance; recording quality is only average, pulling the weighted score down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "All‑audience tape described as mid‑quality with some tinny character and a need for EQ; no soundboard source available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Franklin's Tower",
+      "Minglewood",
+      "Sugaree",
+      "China > The Rider",
+      "Truckin' > Smokestack Lightning",
+      "Black Peter",
+      "Sugar Magnolia",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [
+      "Cumberland"
+    ],
+    "setlist_flow": "The show opens strong with Stranger and a smiling Franklin’s Tower, builds momentum through the first set, and delivers an energetic second set highlighted by China > The Rider, Truckin' > Smokestack, and a firefly‑filled Sugar Magnolia that caps a memorable night."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s distortion on Minglewood, trade‑offs with Brent on Franklin's Tower and solid guitar work on Sugaree are praised.",
+    "Phil": "One reviewer wishes for more Phil Lesh tunes, but no specific performance comments are made.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s organ solo in Minglewood and cascading piano in Sugar Magnolia receive high praise; his overall presence is highlighted as a show‑stealer.",
+    "Drums": "A brief note that the drums came in a little early on one song, otherwise the rhythm section is energetic."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin' > Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:42:00.258716+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-12-28.schoeps.ewing.16585.sbeok.shnf"
+}

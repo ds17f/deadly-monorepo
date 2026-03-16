@@ -1,0 +1,86 @@
+{
+  "summary": "Superb soundboard capture of a heartfelt May 12 1981 show highlighted by an unforgettable He's Gone tribute and a soaring Althea.",
+  "review": "The recording is praised for its crystal‑clear soundboard quality, delivering every nuance of the band’s performance. Musically the concert shines on He’s Gone, Althea, China > Rider and the tight L.L. Rain jam, though the first set suffers from a weary Jerry vocal and a lackluster Red Rooster. Overall listeners describe the show as emotionally charged and one of the stronger early‑'80s outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ~4) and multiple reviewers praising both performance and soundboard quality, with only isolated criticism of the first set."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, balanced mix with no reported drop‑outs; reviewers repeatedly note great or superb soundboard fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Althea",
+      "China Cat Sunflower > I Know You Rider",
+      "Little Lights (L.L. Rain)",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [
+      "Red Rooster",
+      "Shakedown Street"
+    ],
+    "setlist_flow": "First set is solid but uneven, with some fatigue in vocals and a weak Red Rooster; the second half picks up dramatically, delivering powerful jams and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery guitar work (wah/mu‑tron), breath‑taking He's Gone, and overall on‑point playing after the first set; a few reviewers note tired vocals early on.",
+    "Phil": "Mentioned positively as locking in with Jerry during the second half.",
+    "Bob": "Vocals described as strained but holding up on Wharf Rat; generally solid rhythm guitar work.",
+    "Keys": "Brent (keyboards) lauded for his presence from the first note and tight playing, though one reviewer disliked a lite‑rock setting that dulled China Cat.",
+    "Drums": "Second‑half drumming called stellar; no negative remarks."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Little Lights (L.L. Rain)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Red Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T11:36:53.850251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-12.sbd.jeffm.1664.sbeok.shnf"
+}

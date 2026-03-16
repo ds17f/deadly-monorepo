@@ -1,0 +1,79 @@
+{
+  "summary": "Clear soundboard capture of a lethargic 1978 performance, highlighted by a scorching NFA → Black Peter and an inspired Playing in the Band despite overall sluggish playing.",
+  "review": "The SBD source delivers crisp, two‑track clarity that many listeners praise as “terrific” and superior to cassette copies. Musically the show is widely regarded as flat and out of sync – Jack Straw and JB Goode are cited as disastrous – yet a few moments shine, especially the NFA→Black Peter sequence and a powerful Playing in the Band jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised (≈4½/5) while show performance is generally judged poor (≈2½/5); weighted average yields ~3.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp two‑track SBD; some reviewers note Keith low in the mix but overall excellent fidelity compared to cassette masters."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "NFA > Black Peter"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "JB Goode",
+      "Terrapin"
+    ],
+    "setlist_flow": "The concert is described as sluggish and out of sync, especially early songs like Jack Straw; the second set recovers with spacey jams and a strong Playing in the Band climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Often off‑key and lethargic; occasional guitar flubs noted on Jack Straw and JB Goode.",
+    "Phil": "Sounds out of tune at times, particularly during Jack Straw.",
+    "Bob": "His “Hammer in time” comment is mentioned as a quirky moment; otherwise not highlighted.",
+    "Keys": "Keith is described as low or inaudible in the mix, giving the impression he isn’t fully present.",
+    "Drums": "Bill’s drumming is called out as possibly sluggish or drug‑affected."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "JB Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "NFA > Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:44:08.205357+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-07.sbd.connor.10208.sbeok.shnf"
+}

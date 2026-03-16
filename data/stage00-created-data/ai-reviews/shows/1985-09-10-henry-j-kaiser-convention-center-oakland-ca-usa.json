@@ -1,0 +1,77 @@
+{
+  "summary": "Strong opener, jazzy mid‑set jam, soaring second set highlights",
+  "blurb": "The show kicks off with a punchy Jack Straw and tight Peggy‑O before Brent’s jazzy Never Trust A Woman/Good Time Blues excursion. Highlights include a soaring Sugar Magnolia, an emotive China Doll and standout moments from Cassidy and Stagger Lee.",
+  "review": "September 10, 1985 at the Henry J. Kaiser Convention Center captures a quintessential mid‑'80s Dead show—solid, energetic, and peppered with memorable peaks. The first set opens fire with Jack Straw and Peggy‑O, then slides into a jazzy Never Trust A Woman/Good Time Blues jam where Brent Mydland’s keyboards take the spotlight. While one board cut notes a brief stumble on that tune, the band quickly regains its stride, delivering a relaxed Cassidy and a gritty Stagger Lee that showcases Jerry’s slightly higher‑pitched vocals (likely tape speed). The second set builds momentum through China Cat Sunflower → I Know You Rider into an expansive Estimated Prophet → Eyes Of The World suite, culminating in a soaring Sugar Magnolia where Bob Weir climbs the scaffolding for added visual flair. A beautifully rendered China Doll and the classic closing medley of Goin’ Down The Road Feeling Bad → Around & Around → Sugar Magnolia round out a night that feels both tight and adventurous. The best‑sounding source is the Harrison soundboard (gd85-09-10.sbd.harrison.10092.sbeok.shnf), offering clear timbre and minimal technical hiccups, making it the go‑to recording for anyone wanting to experience this vibrant Oakland performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings (Miller, Senn421, and the unknown‑source) are clearly positive, praising Jerry’s soaring guitar on Sugar Magnolia, Brent’s jazzy jam, and standout China Doll. Two other sources are mixed but note only minor slip‑ups (tempo tug‑of‑war on Never Trust A Woman). No recordings contain consistent negative criticism of the performance itself, so a moderate positive adjustment (+1.4) is applied.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-09-10.sbd.harrison.10092.sbeok.shnf",
+    "reason": "Clear soundboard capture with good timbre, minimal drop‑outs, and a balanced mix that showcases the band’s tight playing."
+  },
+  "key_highlights": [
+    "Punchy Jack Straw opener sets an energetic tone.",
+    "Brent’s jazzy Never Trust A Woman/Good Time Blues jam adds a distinctive mid‑set flavor.",
+    "Soaring Sugar Magnolia with Bob’s on‑stage scaffolding antics.",
+    "Emotive China Doll performance praised for its clarity and feeling."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Peggy-O",
+    "Never Trust A Woman",
+    "Cassidy",
+    "Stagger Lee",
+    "Sugar Magnolia",
+    "China Doll"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers strong, soaring guitar work throughout—especially on Sugar Magnolia and Cassidy—while his voice sounds slightly higher on one tape‑speeded source.",
+    "Phil": "",
+    "Bob": "Weir adds visual excitement by climbing scaffolding during Sugar Magnolia; his rhythm playing remains solid.",
+    "Brent": "Mydland leads a jazzy improvisational jam on Never Trust A Woman/Good Time Blues and provides tasteful keyboard echo on China Doll.",
+    "Mickey": "Hart initially resists the early tempo of Never Trust A Woman, creating a brief tug‑of‑war feel before settling into the groove.",
+    "Billy": "Kreutzmann mirrors Hart’s initial hesitation on Never Trust A Woman but quickly locks in once the band finds its stride."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-15T09:11:27.169291+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw",
+      "Peggy-O"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Never Trust A Woman",
+      "Drums",
+      "Space"
+    ],
+    [
+      "Cassidy",
+      "Don't Ease Me In"
+    ],
+    [
+      "Stagger Lee"
+    ],
+    [
+      "China Doll",
+      "Goin' Down The Road Feeling Bad",
+      "Around & Around",
+      "Sugar Magnolia"
+    ]
+  ]
+}

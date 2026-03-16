@@ -1,0 +1,76 @@
+{
+  "summary": "Soundboard source with fair tape‑speed issues; a mixed show that shines on Loser, Just A Little Light and Foolish while stumbling on Jack and Memphis.",
+  "review": "The recording is a soundboard capture that suffers from noticeable speed/pitch problems – listeners report it sounds slow and needs correction, though some note moments of warm, punchy clarity. Musically the concert is uneven: early‑set songs like Loser and the debut of Just A Little Light are praised, Foolish stands out as a highlight, but several numbers (Jack, Memphis, the drum segment) fall flat, giving the overall performance a mixed vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality averages around “good‑to‑average” with several standout moments but many inconsistencies; recording quality is hampered by tape‑speed issues, lowering the overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners repeatedly mention the tape runs slow and needs pitch correction; some describe a warm, thick sound when adjusted, but overall the speed problem makes the mix sound droned and muffled. No clear audience bleed noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Just a Little Light",
+      "Foolish",
+      "Good Lovin"
+    ],
+    "poor_songs": [
+      "Jack",
+      "Memphis",
+      "Drums"
+    ],
+    "setlist_flow": "The first set is described as slow, methodical and at times disjointed, with a few bright spots (Loser, Just A Little Light). The second set continues the uneven feel but contains a strong Foolish/Good Lovin segment. Overall the concert feels scattered and inconsistent despite occasional high points."
+  },
+  "band_member_comments": {
+    "Jerry": "His lyrics are described as \"ON\" and his voice on Loser is highlighted; however, he also appears to be slightly out of sync with the tape speed.",
+    "Phil": "Briefly noted joining later in the set; no specific performance comments.",
+    "Bob": "Mentioned as possibly having had a bit too much to drink and forgetting lyrics early on, but his guitar tone later in the show is praised as \"really cool\".",
+    "Keys": "Brent's keyboards receive mixed remarks – dark, troubled songs, Hammond flourishes, synth “puppet‑string” textures, and occasional experimental sounds.",
+    "Drums": "Mickey’s drumming is called \"nuts\" and exciting in one spot, yet the drum segment overall is criticized as semi‑ear‑splitting and foreign."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Memphis": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:24:50.641571+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-02-07.sbd.wiley.9202.sbeok.shnf"
+}

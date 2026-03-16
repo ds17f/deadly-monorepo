@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent audience recording with crystal‑clear sound captures a stellar fall ’77 show highlighted by soaring Jerry solos on Mississippi Half‑Step and a powerhouse second set.",
+  "review": "Fans rave about the high‑fidelity audience tape – described as clean, warm and top‑shelf – that lets the band’s energy shine through. The performance is praised throughout, especially Jerry Garcia’s four blistering solos on Mississippi Half‑Step, standout renditions of Jack Straw, The Deal, Sugar Magnolia, Eyes of the World and a jam‑heavy second set. Minor grumbles about audience clapping aside, the overall sentiment is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance and recording quality across many detailed reviews; show quality dominates with numerous standout song mentions, while the audience source is rated excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as clean, warm, FOB‑like placement near the board with minimal crowd bleed; listeners note it outshines the DP soundboard version and is considered a keeper."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half Step",
+      "Jack Straw",
+      "The Deal",
+      "Sugar Magnolia",
+      "Eyes of the World",
+      "Candyman",
+      "The Other One",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set highlighted as a showcase – Phil’s solo opens, followed by a whimsical 'take a step back' jam, then a slinky Eyes of the World, an expansive Other One space, and a rousing Sugar Magnolia closer with a Saturday Night encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia receives glowing praise for multiple soaring solos, especially four stellar leads on Mississippi Half‑Step and overall 'glorious runs' throughout the show.",
+    "Phil": "Phil Lesh’s solo at the start of the second set is singled out as a whimsical highlight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers are noted for driving the groove, with a ‘Samson beat’ that pounds into the Eyes of the World jam."
+  },
+  "song_mentions": {
+    "Mississippi Half Step": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T06:44:14.445639+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-11-05.aud.clugston-alternate.3293.sbeok.shnf"
+}

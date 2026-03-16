@@ -1,0 +1,31 @@
+{
+  "summary": "A high‑energy May 1969 Dead show that suffers from a low‑fidelity cassette source and questions of authenticity.",
+  "review": "Reviewers consistently praise the band’s excitement and overall performance, calling it a fun and rocking 1969 set. However, many note that the recording sounds “skeevy,” likely two generations removed on tape, and some even question whether the material is from the advertised date at all. The sound quality issues dominate the technical assessment while the musical content remains positively remembered.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers applaud the show’s energy (average show rating ≈4) but criticize the recording fidelity (average recording rating ≈2). Weighted together (70 % show, 30 % recording) yields a ~3.4‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple reviewers report at least two cassette generations resulting in muffy, low‑fidelity sound; one reviewer calls it the best available copy of this show despite those issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific set‑list comments; reviewers generally describe the performance as energetic and enjoyable, though some note confusion about the exact date/location."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as disgusted with the poor PA system and unable to hear his own drums, leading to onstage frustration.",
+    "Phil": "Mentioned drinking Tequila backstage and driving a Pontiac; no direct musical appraisal.",
+    "Bob": "Quoted in a narrative about leaving the venue; no performance comment.",
+    "Keys": "",
+    "Drums": "Mickey is quoted with sardonic remarks about “fucking up for an audience”; Bill Kreutzmann referenced regarding travel woes, but no specific drumming assessment."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T14:49:47.844602+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-05-29.sbd.jim.14018.sbeok.shnf"
+}

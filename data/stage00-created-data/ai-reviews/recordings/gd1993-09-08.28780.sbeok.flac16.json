@@ -1,0 +1,77 @@
+{
+  "summary": "Decent soundboard capture with solid moments like Foolish Heart and a rare Standing On The Moon jam, though the mix suffers from EQ glitches and Jerry’s playing is uneven.",
+  "review": "The recording is a fairly clean sound‑board source, but listeners note a poorly EQ’d drum glitch and occasional drops in crowd level when vocal mics are turned down. Musically the show has bright spots – Peggy‑O, Wang Dang Doodle, Brown Eyed Women, Foolish Heart and an unexpected Standing On The Moon jam – yet many feel Jerry’s guitar is either over‑driven or half‑present, making the overall performance feel average to mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Show quality is mixed (average‑good) while recording quality is good with some technical glitches; weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard, but suffers from a poorly EQ'd drum glitch common on ’93 boards and occasional quiet crowd sections when vocal mics are turned down."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Standing On The Moon Jam"
+    ],
+    "poor_songs": [
+      "Standing On The Moon Jam"
+    ],
+    "setlist_flow": "First set feels like a classic Richfield‑era mix with strong treats (Peggy‑O, Wang Dang Doodle, Brown Eyed Women). Second set delivers the unique Standing On The Moon jam and a solid Foolish Heart, but overall the band’s energy is uneven, especially Jerry’s guitar work."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is turned up high on several numbers (Peggy‑O), showcases a new lightning‑bolt tone, yet many reviewers call his playing half‑present, missing or overly sluggish.",
+    "Phil": "",
+    "Bob": "Bob’s vocals are described as fresh and enthusiastic, helping lift the performance despite other issues.",
+    "Keys": "Vince’s keyboard work is noted as lacking chemistry with Jerry on this night, contributing to a weaker overall feel.",
+    "Drums": "The drum track has an EQ glitch that sounds poorly balanced; elsewhere drumming is described as spacey and atmospheric."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Estimated Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Standing On The Moon Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:20:58.705212+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-08.28780.sbeok.flac16"
+}

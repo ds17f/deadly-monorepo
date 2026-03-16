@@ -1,0 +1,61 @@
+{
+  "summary": "Excellent soundboard‑with‑audience bleed capture of a strong “Playing > Cosmic Charlie” jam from the Orpheum run, highlighted by tight transitions and inspired improvisation.",
+  "review": "The recording is praised for its clear soundboard source with just enough audience ambience to add atmosphere, delivering a crisp mix that lets every instrument shine. Musically the show shines on the “Playing > Cosmic Charlie” sandwich and the Wheel‑to‑Playin transition, with Phil’s daring 7/4 riff attempts and Jerry’s signature licks adding extra flavor, even if a few reviewers note it falls short of the legendary ‘75 versions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both the performance and the sound quality push the rating into the good‑to‑great range; recording quality is described as excellent, while show quality is strong with only minor comparative criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great, clear soundboard mix with a subtle audience layer that adds ambience but does not muddy the instruments; no dropout or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing > Cosmic Charlie",
+      "The Scarlet",
+      "Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set jam sandwich (Playin → Cosmic Charlie) and the Wheel‑to‑Playin transition are highlighted as fluid and exciting, though a few reviewers feel an elusive “x‑factor” is missing compared to other nights."
+  },
+  "band_member_comments": {
+    "Jerry": "His signature licks weave through the jam; reviewers note he tinkers around the theme with classic ’75‑style phrasing.",
+    "Phil": "Attempts a daring 7/4 riff during the “Stronger Than Dirt”‑styled section, which several fans point out as a bold but not fully realized moment.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing > Cosmic Charlie": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stronger Than Dirt": {
+      "positive_mentions": 1,
+      "negative_mentions": 5,
+      "total_mentions": 6
+    },
+    "The Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-23T06:24:49.012516+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-16.set-2.sbd.bertha-ashley.27488.sbeok.shnf"
+}

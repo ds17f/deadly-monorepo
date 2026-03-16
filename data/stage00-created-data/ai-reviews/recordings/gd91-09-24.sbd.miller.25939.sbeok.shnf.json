@@ -1,0 +1,63 @@
+{
+  "summary": "Clean soundboard mix captures a fiery Boston ’91 run with standout China > Rider, Dark Star and Desolation Row performances",
+  "review": "The recording is a well‑remastered soundboard source with a very clean mix that some listeners note needs a volume boost. The show itself is praised as one of the best of the 1991 Boston stretch – an explosive first set and a second set full of energy, highlighted by China > Rider, a hot Dark Star, Foolish Out Of Space and a soaring Desolation Row.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and describe the performance as exceptional; recording comments are uniformly positive aside from occasional volume‑level notes, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clean mix and good remaster; some listeners mention the need for a higher playback volume but no major distortion or drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > The Rider",
+      "Dark Star",
+      "Desolation Row"
+    ],
+    "poor_songs": [
+      "Foolish Out Of Space"
+    ],
+    "setlist_flow": "First set described as strong and fire‑filled; second set equally sizzling with high energy throughout the Boston run."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar work is highlighted – his “crazy midi‑fied solos” almost melted listeners’ heads and his stage look over the glasses was noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (referred to as Bruce) is said to be all over the keyboards, contributing heavily to the texture of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China > The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Out Of Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:51:00.615729+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-24.sbd.miller.25939.sbeok.shnf"
+}

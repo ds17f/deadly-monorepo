@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording with restored clarity captures a spooky Dark Star and strong late‑set material, though early tape hiss and technical glitches temper the overall fidelity.",
+  "review": "The show is praised for its dark, hypnotic Dark Star and a powerful second half that includes High Time, Schoolgirl, Good Lovin' and Uncle John's Band. Reviewers note an early ragged start and occasional tape‑hiss or tape defects, but the recent restoration makes the recording much clearer than previous cassette versions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight strong musical moments and a solid late‑set performance (70% weight), while recording quality is described as mixed—some tape defects vs. a well‑restored soundboard source (30% weight). The combined assessment yields an overall rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Restored from degraded cassette; early portion shows tape hiss and occasional defects, but the majority of the set (especially Dark Star onward) is clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "High Time",
+      "Schoolgirl",
+      "Good Lovin'",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": "The concert starts a bit ragged and technical, but from Dark Star onward the performance becomes primal Dead, delivering a seamless second half with strong jams and vocal highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "His newly‑adopted Stratocaster shines on Dark Star; reviewers praised his tone and guitar work throughout.",
+    "Phil": "Bass described as slugging and Jack Casady‑like, providing a solid low‑end foundation.",
+    "Bob": "",
+    "Keys": "Tom Constanten’s keyboard fills are highlighted, especially during the Dark Star and later jams.",
+    "Drums": "Seesaw‑style drumming noted in early portions, contributing to the ragged feel before settling into a tighter groove."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Schoolgirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:22:26.832201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-12-04.141723.sbd.fowler.sirmick.flac1644"
+}

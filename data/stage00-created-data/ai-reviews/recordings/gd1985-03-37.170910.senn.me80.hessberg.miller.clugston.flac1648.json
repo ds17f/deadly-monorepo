@@ -1,0 +1,31 @@
+{
+  "summary": "Recording speed may be off; no clear information on audio or performance quality",
+  "review": "The sole reviewer questions whether the tape is playing too fast, indicating a possible speed issue with this recording. No details are provided about the source type, sound clarity, or the musical performance, making it difficult to assess the show itself.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief review expressing concern about speed; no positive comments or detailed assessment of sound or performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer suspects the playback speed is incorrect, suggesting a possible mastering or tape‑speed error. No other audio quality details are provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information available about set structure or song performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T02:10:51.053912+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-37.170910.senn.me80.hessberg.miller.clugston.flac1648"
+}

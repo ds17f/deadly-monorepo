@@ -1,0 +1,61 @@
+{
+  "summary": "Roomy, well‑balanced audience remix with a mind‑blowing second set highlighted by Scarlet > Fire, Stella > Not Fade Away and an epic Saint Stephen jam.",
+  "review": "The Charlie Miller‑remastered tape smooths out the harsh treble of the original Bob Wagner source, delivering a roomy, less scratchy sound that most reviewers rate five stars. Musically the show shines—especially the second set where Scarlet Begonias segues into Fire on the Mountain, Stella Blue flows into Not Fade Away, and a massive Saint Stephen jam caps the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (all 4‑5 stars) praise both the improved recording quality and an exceptional second‑set performance, with no notable criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Remix is roomier and more balanced than the raw Bob Wagner tapes; bass and treble flow together, less scratchy/clippy. One reviewer notes a lingering harshness in the high frequencies that can cause listener fatigue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Stella Blue > Not Fade Away",
+      "Saint Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as mind‑blowing with seamless segues, especially the slide into Not Fade Away and a monumental Saint Stephen jam that builds to the final NFA chorus."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:39:20.910491+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-19.aud.wagner.bertrando.121963.flac16"
+}

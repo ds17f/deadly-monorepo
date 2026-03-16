@@ -1,0 +1,31 @@
+{
+  "summary": "The lone review is incoherent and offers no useful details on the recording or performance.",
+  "review": "Only a single, cryptic comment was left for this tape, providing no concrete information about sound quality, source type, or musical highlights. The reviewer gave it zero stars, indicating strong dissatisfaction, but does not describe specific issues.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.8,
+    "confidence": "low",
+    "rationale": "A single review with a 0‑star rating and no substantive content leads to a low overall assessment; insufficient data for higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on clarity, mix, or source; review provides no technical information."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No meaningful commentary on set structure or performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T08:09:14.993841+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-08-30.138385.sbd.miller.flac24"
+}

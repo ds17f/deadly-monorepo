@@ -1,0 +1,63 @@
+{
+  "summary": "Good (source unknown) recording of a high‑energy show highlighted by Dark Star, Shakedown Street and Foolish Heart.",
+  "review": "Fans rave about the performance, calling the second‑half Dark Star into Miracle a tour highlight and praising the tight “Foolish Heart” and hard‑hitting Shakedown Street jams. While no reviewer comments on the technical side of the recording, the overall vibe is that the audio is at least listenable and the show itself is a standout for this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive feedback on musical performance (multiple 4‑5 star reviews) offset by lack of concrete recording‑quality details, leading to a solid but not certain overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not mention soundboard vs. audience source or any audio flaws; no specific comments about clarity or mix, implying the recording is at least acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Shakedown Street",
+      "Foolish Heart",
+      "He's Gone",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Listeners note a creative set that book‑ends with Dark Star, flows into a powerful Miracle segment, and includes hard‑driving Shakedown Street jams; overall pacing described as red‑hot and tightly executed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vinny (keyboardist) is singled out for killing it on his own, indicating a strong keyboard contribution.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:31:46.411349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-14.sbd.miller.89127.sbeok.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "A poorly captured soundboard riddled with hiss, yet the second set delivers loose, spacey Spanish Jam and a favored UJB jam.",
+  "review": "The recording suffers from heavy hiss and an unbalanced mix that even colors the drum treble, making it difficult to enjoy. On the musical side, listeners rave about the free‑form Spanish Jam and the standout UJB segment in an otherwise jam‑laden second set, though a few moments are described as lame.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality receives high praise for the second‑set jams while recording quality is consistently criticized; weighted average yields an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Extreme hiss throughout, unbalanced mix, and a harsh treble hiss on the drums that detracts from clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam",
+      "UJB"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as loose jam bliss with spacey improvisations, though some moments are considered lame, leading to an uneven overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum tracks suffer from a harsh treble hiss that makes listening difficult."
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "UJB": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:42:57.422197+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-23.sbd.miller.32240.sbeok.flac16"
+}

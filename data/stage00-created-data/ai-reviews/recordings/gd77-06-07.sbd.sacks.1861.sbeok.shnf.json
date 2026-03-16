@@ -1,0 +1,88 @@
+{
+  "summary": "Soundboard recording of decent quality captures a mixed‑quality show highlighted by an outstanding Terrapin > Morning Dew second set and strong first‑set moments.",
+  "review": "The SBD capture is generally clear with only occasional glitches (Peggy‑O cuts out, some out‑of‑tune notes). Musically the concert swings between a weaker overall vibe – noted by a few reviewers – and high points such as Terrapin > Morning Dew, Peggy‑O, Friend of the Devil and an inspired Estimated Prophet/He's Gone jam. The second set shines while the first set is solid but not flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Eight detailed reviews give a balanced view: strong musical highlights offset by noted performance flaws and minor recording glitches, resulting in an overall good‑to‑very‑good rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced; a few issues reported such as Peggy‑O cutting out at the solo climax and occasional out‑of‑tune guitar notes, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin > Morning Dew",
+      "Peggy-O",
+      "Friend of the Devil",
+      "Good Lovin'",
+      "Estimated Prophet",
+      "He's Gone",
+      "Dark Star",
+      "Around and Around"
+    ],
+    "poor_songs": [
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "First set is a solid 1977‑style opener with strong tunes but some flubs; the second set delivers a gem in Terrapin > Morning Dew and an adventurous jam sequence, making the concert feel like a high‑energy hometown show."
+  },
+  "band_member_comments": {
+    "Jerry": "Beautiful vocal on Friend of the Devil; occasional out‑of‑tune or mis‑played notes (Uncle John's Band) and a coda during He's Gone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "No specific keyboard comments noted.",
+    "Drums": "Short drum segment (<3 min) but still energetic; mention of Sampson coming out of drums."
+  },
+  "song_mentions": {
+    "Terrapin > Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T03:07:43.898848+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-06-07.sbd.sacks.1861.sbeok.shnf"
+}

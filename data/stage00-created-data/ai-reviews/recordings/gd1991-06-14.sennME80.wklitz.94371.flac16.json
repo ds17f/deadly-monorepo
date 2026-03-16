@@ -1,0 +1,57 @@
+{
+  "summary": "A solid but occasionally muddy recording captures a soaring 1991 show highlighted by a blistering Slipknot and a stellar Help‑Slip‑Franklin sequence.",
+  "review": "Fans rave about the high energy of this summer‑'91 performance, especially the focused Slipknot jam and the magical Help > Slip > Franklin’s stretch that launched the second set. The recording is generally good, though several listeners note muddy bass and distant instrument placement that let crowd noise intrude at times.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show quality is praised across most reviews (5‑star comments) while recording quality receives mixed feedback (good to muddy). Weighted average yields a strong rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear, but bass is described as muddy and distant; crowd cheering can drown the band in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Dark Star",
+      "Jack-a-Roe"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set built good momentum; second set erupted with a powerful slip‑knot opening, flowing seamlessly into Help‑Slip‑Franklin and a soaring Dark Star, keeping the audience bouncing."
+  },
+  "band_member_comments": {
+    "Jerry": "Focused playing and great tone noted during Slipknot.",
+    "Phil": "Solid bass foundation despite some muddiness in the recording.",
+    "Bob": "",
+    "Keys": "Presence of Brent (referred to as Bobby) acknowledged; no specific performance comment.",
+    "Drums": "Drums were on point, driving the energy throughout especially in the second set."
+  },
+  "song_mentions": {
+    "Slipknot": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T21:04:08.049861+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-14.sennME80.wklitz.94371.flac16"
+}

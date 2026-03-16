@@ -1,0 +1,59 @@
+{
+  "summary": "Clear sound‑board capture of a solid 1994 MSG show, highlighted by stellar Duprees, Baby Blue and Foolish Heart performances.",
+  "review": "The recording is a decent sound‑board source that presents the band’s 1994 October 13 set with good clarity, though occasional synth/MIDI artifacts from Vince are audible. Musically the night shines on the first‑set gems—Duprees, Loose Lucy and a soaring Baby Blue—and delivers a heartfelt Foolish Heart in the second set, while The Other One is divisive because of keyboard clutter. Overall the show feels energetic and memorable despite some mixed feelings about the keyboards.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise key performances, while a few note keyboard/MIDI issues and give lower scores; the soundboard is generally good, yielding an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced sound‑board capture; occasional synth/MIDI noise from Vince's keyboards noted, but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Duprees",
+      "Baby Blue",
+      "Foolish Heart",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "A punchy first set with Duprees, Loose Lucy and strong vocal work builds into a steady second set that climaxes with JBG and a beautiful Baby Blue; overall pacing is smooth despite mixed feelings about The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for sweet guitar tone and powerful vocals, especially on Baby Blue and Foolish Heart.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's synth/MIDI contributions are described as grating and detracting from The Other One.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Duprees": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Baby Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-19T03:09:58.916579+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-13.sbd.wiley.7800.sbefail.shnf"
+}

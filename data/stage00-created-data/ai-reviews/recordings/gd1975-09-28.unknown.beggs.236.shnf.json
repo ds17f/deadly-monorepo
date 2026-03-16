@@ -1,0 +1,39 @@
+{
+  "summary": "A decent matrix recording with good sound quality captures a weird‑wonderful, timeless set highlighted by King Solomon’s Marbles.",
+  "review": "Listeners rave about the magical vibe of this unknown‑date show, calling the set “weird and wonderful” and noting that it stands the test of time. The recording, likely a Hunter matrix mix, is praised for its sound quality compared with other versions, though a few note minor technical imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on the performance (70% weight) and generally good but not flawless recording quality (30% weight) lead to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Sound quality is appreciated versus other versions; a few reviewers note it isn’t technically perfect. One reviewer wonders if it’s audience‑only, suggesting some ambiguity about the source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "King Solomon's Marbles"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as magical, weird and wonderful, with a timeless feel that keeps listeners engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "King Solomon's Marbles": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T02:52:37.359863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-09-28.unknown.beggs.236.shnf"
+}

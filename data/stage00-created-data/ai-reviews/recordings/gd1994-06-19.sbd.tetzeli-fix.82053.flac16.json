@@ -1,0 +1,80 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a sun‑splashed Eugene show highlighted by soaring Bird Song, a fiery Scarlet / Fire stretch and an epic Playing→UJB→Other One sequence.",
+  "review": "The June‑19‑1994 Eugene concert is praised for its vibrant first set and a second set that rockets through Bird Song, a blistering Scarlet / Fire jam, and one of the decade’s finest Playing > Uncle John’s Band > Other One medleys.  The Tetzeli‑fix soundboard source is generally crisp, with only occasional static on the opening Touch, making the performance fully enjoyable for listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Multiple detailed five‑star reviews celebrate an exceptional musical performance; recording quality is described as near‑perfect with only minor static, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall crisp and balanced soundboard mix; occasional static on the early Touch segment that can be patched from an audience source, but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Scarlet > Fire",
+      "Playing > Uncle John's Band > Other One",
+      "Wharf Rat",
+      "Good Lovin'",
+      "Knockin' on Heaven's Door",
+      "Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, upbeat first set builds into a slower‑paced but emotionally rich Scarlet / Fire transition, then launches into long, exploratory jams that culminate in an epic Other One and uplifting encores."
+  },
+  "band_member_comments": {
+    "Jerry": "His soaring vocals and emotive solos are repeatedly highlighted as outstanding throughout the show.",
+    "Phil": "Praised for deep, space‑y bass intros—especially on the Other One—and solid interplay with the rest of the band.",
+    "Bob": "Noted for cool soundscapes in the jam endings and strong vocal delivery on Good Lovin' and Knockin'.",
+    "Keys": "Mixed commentary: Vince Welnick’s playing is described as less polished than earlier keyboardists, while Bruce Hornsby receives harsh criticism; nonetheless his presence is acknowledged.",
+    "Drums": "Bill (Kreutzmann) and Mickey (Hart) are said to “up the ante,” providing powerful, driving rhythms that enhance the deep jams."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing > Uncle John's Band > Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-18T22:33:51.300113+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-06-19.sbd.tetzeli-fix.82053.flac16"
+}

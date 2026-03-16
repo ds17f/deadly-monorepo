@@ -1,0 +1,82 @@
+{
+  "summary": "Rich audience recording that captures a fun summer‑81 show highlighted by the UJB/Playin’/China Doll sandwich, rare Casey Jones and an inspired Estimated→Eyes stretch.",
+  "review": "The behind‑the‑stage AUD tape is surprisingly clear and full‑bodied, with just a touch of excess high‑end that doesn’t detract from the listening experience. Musically the concert is uneven – a modest first set followed by a second half that many fans describe as “on fire,” especially the UJB/Playin’/China Doll sandwich, Casey Jones rarity and the Estimated→Eyes transition. Overall the show feels like a joyous throw‑back to early‑80s Dead, even if a few moments (e.g., Althea) fall flat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "30+ detailed reviews give a clear picture: the recording is good‑to‑excellent and the performance, while mixed in places, is praised by the majority of reviewers for its energy and memorable moments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as crisp, rich and surprisingly clear for an audience tape; a few notes about slightly bright/high‑end tone but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band > Playin' In The Band > China Doll sandwich",
+      "Casey Jones",
+      "Estimated > Eyes of the World",
+      "Sugaree",
+      "Don't Ease Me My Friend",
+      "Mama Tried > Mexicali",
+      "Loser"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "Reviewers note a modest first set that builds into a second‑set firestorm, with the post‑drums sandwich and the UJB/Playin’/China Doll sequence serving as the high point; overall vibe is fun and relaxed despite occasional limp moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Jerry’s guitar tone, his vocal “rubber band” stretching, and a late‑set spark that drives the Estimated→Eyes jam.",
+    "Phil": "",
+    "Bob": "One reviewer mentions Bob jumping over the end of Playin’ and disrupting the Wheel/China Doll flow; otherwise no specific comments.",
+    "Keys": "Brent’s early‑'80 keyboard sound is highlighted – both praised for its liquid quality and noted for a few first‑set hiccups.",
+    "Drums": "The post‑drums segment receives strong praise, with the drum solo seen as a catalyst for the second‑set energy."
+  },
+  "song_mentions": {
+    "Uncle John's Band > Playin' In The Band > China Doll sandwich": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Casey Jones": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Estimated > Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Don't Ease Me My Friend": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mama Tried > Mexicali": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T13:00:11.758097+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-10.nak300.munder.7314.sbeok.shnf"
+}

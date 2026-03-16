@@ -1,0 +1,39 @@
+{
+  "summary": "Poor soundboard recording plagued by a dropout during Peggy‑O",
+  "review": "The sole reviewer flags a noticeable drop‑out in the Peggy‑O segment (around 1:05‑1:06) and notes that this version was never meant to circulate. No musical commentary is provided, so the performance itself cannot be evaluated beyond the technical flaw.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review focusing on a recording glitch; insufficient data for a robust assessment of musical quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Drop‑out in Peggy‑O at ~1:05‑1:06, described as an unintended source that shouldn't have circulated."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Peggy-O"
+    ],
+    "setlist_flow": "No information provided about overall set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:04:02.419659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-01.137352.SBD.PCM.Gans.Minches.Miller.flac1644"
+}

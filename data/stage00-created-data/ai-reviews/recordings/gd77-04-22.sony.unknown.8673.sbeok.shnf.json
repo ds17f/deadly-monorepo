@@ -1,0 +1,52 @@
+{
+  "summary": "Audience tape with low level, hiss and occasional cuts but surprisingly clear moments; the show is uneven – a fun Dancin'>Mojo>Dancin' and a great Wheel transition contrast Jerry’s missed cue on Must Have Been the Roses.",
+  "review": "The recording is an audience source that suffers from low volume, hiss and some song‑to‑song drops, yet listeners note periods of full‑bodied, clear sound. Musically the concert is mixed: the first set grooves while the second set has lyrical slip‑ups and a missed cue on Must Have Been the Roses, but highlights like Dancin'>Mojo>Dancin' and an excellent transition into The Wheel keep it interesting.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (some strong moments, some noticeable flaws) and recording quality ranges from poor to fair; the combined weighted assessment lands just above average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Low recording level, noticeable hiss and occasional song cuts; some listeners report distant sound but also periods of clear, full‑bodied audio. Could benefit from a matrix mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Dancin'>Mojo>Dancin'"
+    ],
+    "poor_songs": [
+      "Must Have Been the Roses"
+    ],
+    "setlist_flow": "First set rolls along, second set becomes spotty with lyrical lapses and a missed cue, yet energy remains high and transitions (e.g., into The Wheel) are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Missed the cue to end his solo on Must Have Been the Roses and improvised a lead on the spot; otherwise his playing is noted as energetic.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Must Have Been the Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dancin'>Mojo>Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:04:58.240436+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-04-22.sony.unknown.8673.sbeok.shnf"
+}

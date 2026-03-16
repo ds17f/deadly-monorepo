@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fan praises the show as a great performance with an assumed solid recording, though no specifics are given.",
+  "review": "The lone review is highly enthusiastic, calling the concert \"what A show!\" and awarding four stars. No details about the audio source or song list are provided, so the recording appears satisfactory but unverified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief, upbeat review with a 4‑star rating; lacks detail on performance and sound quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer did not mention any audio characteristics; the rating is inferred from overall positive sentiment."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T11:13:18.456553+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-27.pmz-nak.holtz.92185.flac16"
+}

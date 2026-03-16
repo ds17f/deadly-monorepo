@@ -1,0 +1,82 @@
+{
+  "summary": "An excellent matrix captures a spirited 1978 show with soaring Jerry Garcia, lush keyboards and standout performances of Peggy‑O, Bertha > Good Lovin' and a heartfelt Wharf Rat.",
+  "review": "Both reviewers award five stars, praising the superb matrix blend of soundboard and audience that delivers crystal‑clear instrument separation, intelligible vocals and prominent drums. The performance is described as spirited and dynamic, with highlights including Peggy‑O’s triple‑guitar solo, a powerful Bertha > Good Lovin' sequence, a sweet Wharf Rat and an energetic Truckin’/U.S. Blues segue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic 5‑star reviews highlight both an excellent matrix recording and a high‑energy, dynamic performance."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Blend of soundboard and audience provides superb instrument separation, bright tonal balance, clear vocals and lyrics; both drummers and keyboards are prominent. Minor dropouts noted for Wharf Rat and Around & Around but do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Bertha > Good Lovin'",
+      "Truckin' (with Wharf Rat)",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic second set with seamless segues (e.g., Wharf Rat into U.S. Blues) and dynamic contrasts that keep the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Roaring guitar work, triple‑guitar solo on Peggy‑O, powerful vocals and emotive delivery highlighted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano shines—electric piano is glorious, grand piano resonant; keyboards are lush and front‑center.",
+    "Drums": "Both drummers are prominent and drive the dynamic shifts."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:30:30.778416+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-12.134566.mtx.tobin.flac16"
+}

@@ -1,0 +1,47 @@
+{
+  "summary": "Good recording but uneven performance – standout Peggy‑O and strong second set, while Weir’s vocals are a major drawback",
+  "review": "The show is praised for its solid setlist, especially the second set (minus Corrina) and a beautiful rendition of Peggy‑O in the first set. However, reviewers note that Bob Weir’s voice was “totally shot,” making his numbers hard to enjoy. The recording itself is described as good, though not exceptionally deep, with no clear indication of source type.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (one strong positive review vs two negative comments about vocals), while the recording is deemed good; the limited number of reviews yields moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a good recording but notes it lacks depth; no details on whether it’s soundboard or audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Corrina",
+      "Weir vocal tunes"
+    ],
+    "setlist_flow": "Overall setlist praised, with a strong second set (except Corrina) and a beautiful Peggy‑O in the first set; however Weir’s vocals detract from his numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir's voice is described as totally shot, making his songs unlistenable.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:26:48.288432+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-03.fob.schoeps.evans.gems.82352.sbeok.flac16"
+}

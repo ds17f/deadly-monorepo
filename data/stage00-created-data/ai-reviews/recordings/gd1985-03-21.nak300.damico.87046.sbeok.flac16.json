@@ -1,0 +1,51 @@
+{
+  "summary": "Spacious, well‑captured Hampton Coliseum show with melting Jerry jams and solid drum‑bass interplay",
+  "review": "The recording captures the roomy acoustics of the Virginia Hampton Coliseum, delivering clear, spacious sound that lets the band’s heady jams shine. Reviewers rave about Jerry’s soaring solos on “China Cat Sunflower,” the epic Wheel > The Other One sequence and a soulful Wharf Rat, while praising Bill and Mickey’s drumming and Phil’s bass foundation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers give four‑star ratings and highlight strong musical moments with no major recording complaints; the show is praised highly while the recording is noted as good but not explicitly labeled “excellent.”"
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "The taper captured the venue’s large, bouncing acoustics, giving a roomy and clear sound; no drop‑outs or major flaws were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Wheel > The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a fluid flow of improvisational jams, with Jerry’s lead guitar, Bill & Mickey’s drums and Phil’s bass creating an immersive, heady experience."
+  },
+  "band_member_comments": {
+    "Jerry": "His \"face‑melting\" solos on China Cat Sunflower are highlighted as a major highlight.",
+    "Phil": "Bass described as \"heady space\" that underpins the jams.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill and Mickey’s drumming is praised for its interplay with Phil’s bass."
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:28:07.228999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-21.nak300.damico.87046.sbeok.flac16"
+}

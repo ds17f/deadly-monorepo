@@ -1,0 +1,31 @@
+{
+  "summary": "Poor recording quality and an unappealing performance that reviewers liken to meaningless noise",
+  "review": "The sole review is highly critical, describing the audio as nothing more than incoherent noises and dismissing any musical value. No positive aspects of the show or its recording are mentioned, leaving both the sound quality and performance in a negative light.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Based on a single 0‑star review that complains about the audio and performance, indicating both are unsatisfactory."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer describes the sound as 'jerk off noises' with no discernible musical content."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T09:29:24.738079+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-15.150272.set2.senn421.lukosky.blackwood.flac2496"
+}

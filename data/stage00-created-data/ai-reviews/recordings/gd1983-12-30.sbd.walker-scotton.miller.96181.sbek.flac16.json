@@ -1,0 +1,82 @@
+{
+  "summary": "Excellent C. Miller‑remastered soundboard captures a strong first set with standout jams like Mind Left Body Jam and a high‑energy Wharf Rat > Good Lovin",
+  "review": "The show is praised for its powerful first set – “LL Rain,” Deal, Shakedown Street and the short but sweet Mind Left Body Jam are highlighted as gems, and the Wharf Rat > Good Lovin transition is called a must‑listen. Recording quality is lauded as an excellent C. Miller remaster, delivering clear, crisp sound despite only two brief reviews.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings and emphasized strong musical moments plus an excellent remastered soundboard, suggesting a solidly good performance with high‑quality audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered by C. Miller; reviewers note crisp, clean sound and no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "LL Rain",
+      "Deal",
+      "Shakedown Street",
+      "Women",
+      "Terrapin Station",
+      "Mind Left Body Jam",
+      "Wharf Rat > Good Lovin"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "First set described as very strong and tightly developed, with smooth jams leading into a high‑energy second half; only minor hiccup noted when Phil fell out of sync before Truckin'."
+  },
+  "band_member_comments": {
+    "Jerry": "Starts the Mind Left Body Jam solo; praised for beautiful tone.",
+    "Phil": "Seems out of sync during the jam, leading to a quick dissolve into Truckin'.",
+    "Bob": "Enters subtly and adds beauty to the jam.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "LL Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat > Good Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:25:58.103654+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-30.sbd.walker-scotton.miller.96181.sbek.flac16"
+}

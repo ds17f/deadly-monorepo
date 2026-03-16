@@ -1,0 +1,93 @@
+{
+  "summary": "Soundboard recording captures a solid ’81 show with standout Bird Song, Let It Grow/Deal sequence and strong Garcia work despite a mixed‑feel second set.",
+  "review": "The performance is praised for hot renditions of Friend of the Devil, CC Rider, Mexicali and an especially tight Bird Song → Let It Grow → Deal trio. Reviewers note excellent soundboard clarity, though some feel the second set is shorter and less adventurous than other ’81 dates.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars highlighting strong playing and excellent recording; a few note set length and a weak Lost Sailor, yielding an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the recording 'excellent' or 'very good'; no complaints about muddiness, drop‑outs, or balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Bird Song",
+      "Let It Grow",
+      "Deal",
+      "CC Rider",
+      "Mexicali",
+      "Stella Blue",
+      "Terrapin"
+    ],
+    "poor_songs": [
+      "Lost Sailor"
+    ],
+    "setlist_flow": "The set is described as energetic and well‑flowing, especially the Bird Song → Let It Grow → Deal sequence, but some feel the second half is shorter and less exploratory than typical 1981 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia receives praise for ripping Friend of the Devil, strong solos on Mexicali and high‑energy moments throughout.",
+    "Phil": "",
+    "Bob": "Bob’s slide solo on CC Rider is highlighted positively; he stays in sync with the band.",
+    "Keys": "Brent’s keyboard scan during his solo on CC Rider is noted as a highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CC Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:44:47.922867+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-13.sbd.miller.86780.sbeok.flac16"
+}

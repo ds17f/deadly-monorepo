@@ -1,0 +1,57 @@
+{
+  "summary": "Warm‑sounding soundboard capture of a 1972 European show with slight top‑end hiss, highlighted by the Truckin' → The Other One → Dark Star jam sequence.",
+  "review": "The recording delivers a full, robust low end and an upfront, hot mix despite a faint hiss on the highs, indicating a solid soundboard source. Musically the concert shines – reviewers point to the seamless flow from Truckin' into The Other One, then into Dark Star and back into The Other One before closing with Sing Me, calling it one of the best Europe ’72 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviewers gave high marks (4‑5 stars) and praised both the musical flow and the overall sound quality, with only minor comments about hiss, leading to a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight high‑frequency hiss noted, but low end is full and robust; mix described as upfront, hot and clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Dark Star",
+      "Sing Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight the seamless jam chain Truckin' → The Other One → Dark Star → The Other One → Sing Me, calling it a top‑tier Europe ’72 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T14:50:12.075213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-26.sbd.smith.94452.sbeok.flac16"
+}

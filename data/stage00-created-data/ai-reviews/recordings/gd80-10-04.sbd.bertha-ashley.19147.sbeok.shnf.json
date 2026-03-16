@@ -1,0 +1,111 @@
+{
+  "summary": "Crisp soundboard recording of an outstanding 1980 Warfield show with stellar acoustic set and highlight‑filled electric set despite a few glitches",
+  "review": "The Bertha‑Ashley SBD capture delivers crystal‑clear audio, deep bass and immaculate piano, letting the band’s acoustic brilliance shine on Dark Hollow, Rosalie McFall and To Lay Me Down. The electric half is strong – Candyman, Franklin’s Tower and Estimated Prophet sparkle – though occasional dropouts and balance quirks (early Bobby loud, bass drum up) keep it from being perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.3; most comments praise both performance and sound quality, with only a few noting glitches, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with deep bass and immaculate piano; occasional dropouts on Alabama/Greatest Story and a few balance issues (early Bobby loud, bass drum slightly high). Overall the soundboard source is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Hollow",
+      "Rosalie McFall",
+      "To Lay Me Down",
+      "Deep Elem Blues",
+      "Candyman",
+      "Franklin's Tower",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Alabama (dropouts)",
+      "Greatest Story (flat)",
+      "Mama Tried (flat)"
+    ],
+    "setlist_flow": "The acoustic first set is praised as pure joy, while the electric second and third sets deliver many highlights despite some recording hiccups; overall pacing feels strong with a memorable blend of upbeat uptempo numbers and thoughtful ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for ripping solos on Candyman, sparkling acoustic work on To Lay Me Down and overall being in his element.",
+    "Phil": "Monitor balance noted as low early; deep bass praised which underpins Phil’s playing.",
+    "Bob": "Briefly mentioned jokingly with a slide of Bob clowning around; no specific performance comment.",
+    "Keys": "Piano highlighted as 'dig the piano' and 'immaculate'; Brent's keyboards barely audible in later portions.",
+    "Drums": "Early Bobby (Bill) a little loud, bass drum slightly up; overall rhythm section solid."
+  },
+  "song_mentions": {
+    "Dark Hollow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rosalie McFall": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Alabama": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:05:31.624611+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-04.sbd.bertha-ashley.19147.sbeok.shnf"
+}

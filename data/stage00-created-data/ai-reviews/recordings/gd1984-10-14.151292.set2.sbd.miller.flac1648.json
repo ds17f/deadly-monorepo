@@ -1,0 +1,45 @@
+{
+  "summary": "Sharp recording of a fun but sloppy Sunday night show with standout \"Eyes of the World\" and \"I Need a Miracle\"",
+  "review": "The set captures an entertaining performance that, despite a messy second set, shines thanks to Jerry Garcia’s inventive leads and a highlight‑worthy rendition of Eyes of the World. The recording is described as pretty sharp, making it an enjoyable listen for fans looking for a solid late‑‘80s Dead show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one review (4 stars) notes both positives (sharp recording, strong first‑set songs) and negatives (sloppy second set), leading to a moderately high rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls the recording \"pretty sharp\" with no major issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "I Need a Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for surprising moments; second set described as messy, with house lights coming up during Lovelight and no clear encore, contributing to a long but uneven show."
+  },
+  "band_member_comments": {
+    "Jerry": "Abundance of ideas and thoughts infusing his leads, noted positively.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:32:05.350612+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-14.151292.set2.sbd.miller.flac1648"
+}

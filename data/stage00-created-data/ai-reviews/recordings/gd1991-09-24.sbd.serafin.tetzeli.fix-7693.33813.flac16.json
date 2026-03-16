@@ -1,0 +1,31 @@
+{
+  "summary": "Positive short review with a 4‑star rating but no specific details on performance or recording quality.",
+  "review": "The lone reviewer gave the recording a solid four stars and called it “Nice work” and “Sweet!!”, indicating an overall positive impression. No comments were made about sound source, mix clarity, setlist flow, or individual band members, so the musical and technical qualities remain unspecified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review; rating is based solely on the 4‑star score with no detailed feedback."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": ""
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T01:53:44.314547+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-24.sbd.serafin.tetzeli.fix-7693.33813.flac16"
+}

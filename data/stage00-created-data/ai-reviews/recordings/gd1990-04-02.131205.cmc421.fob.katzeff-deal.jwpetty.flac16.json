@@ -1,0 +1,31 @@
+{
+  "summary": "Nice FLAC recording praised for its clarity, though no performance details are given.",
+  "review": "The single reviewer rates the recording highly, calling it a very nice capture and thanking the source. No comments on the concert’s musical performance or specific songs are provided, leaving show quality unassessed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic 5‑star review mentions a very nice recording; no information on the live performance, so rating leans on recording quality alone."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as \"very nice,\" implying clear and pleasant sound despite lack of technical detail."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T06:21:48.131601+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-02.131205.cmc421.fob.katzeff-deal.jwpetty.flac16"
+}

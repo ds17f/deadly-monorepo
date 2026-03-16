@@ -1,0 +1,69 @@
+{
+  "summary": "Vibrant summer show captured on a lively audience tape; great performance with standout Deal, Samson, Ship of Fools and Wharf Rat despite minor sound flaws.",
+  "review": "The concert is praised as being in top form, delivering a laid‑back first set that builds into a classic second set highlighted by Deal, Samson, Ship of Fools, Estimated > Eyes and a beautiful Wharf Rat. Reviewers note the audience recording (AUD) has some minor clarity issues early on but the natural venue reverb and crowd ambience more than compensate, making it an enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Three reviews are largely enthusiastic (two 5‑star, one 3‑star); the show is described as excellent while the audience recording is noted to have minor flaws but overall sounds good."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Minor sound‑quality flaws early in the set; improves as show progresses. Natural venue reverb and crowd noise add warmth, making the tape enjoyable despite being an AUD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Samson",
+      "Ship of Fools",
+      "Estimated",
+      "Eyes",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is laid‑back but not lazy, gradually building energy. Second set is classic with smooth transitions (Deal → Samson → Ship of Fools → Estimated > Eyes) leading into an extended bass/drums jam and a beautiful Wharf Rat, keeping the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:49:54.365741+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-05.fob.knight.motb-0070.91786.flac24"
+}

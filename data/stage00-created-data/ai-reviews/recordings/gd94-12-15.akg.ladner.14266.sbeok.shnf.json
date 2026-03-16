@@ -1,0 +1,97 @@
+{
+  "summary": "Decent audience recording that captures an electric show highlighted by a monster Shakedown Street and soaring Foolish Heart, but suffers from uneven keyboard mix and occasional slip‑ups.",
+  "review": "The concert bursts with high energy – Shakedown Street stretches over fifteen minutes, Foolish Heart soars in the second set, and classics like Promised Land and Row Jimmy fire up the crowd.  Recording-wise it’s an audience capture that is generally listenable but marred by a thin mix, too‑forward Vince keyboard level and missing soundboard clarity, leaving the overall experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "high",
+    "rationale": "Seven detailed reviews give a balanced picture: strong musical moments offset by noticeable recording flaws; weighted average of show (≈70%) and tape quality (≈30%) lands around three stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Mostly audience mic capture – decent clarity on the stage but suffers from thin mix, overly bright Vince keyboard/vocal level and lack of soundboard depth; some reviewers call it ‘stinky’ or note missing SBDs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Foolish Heart",
+      "Promised Land",
+      "Row Jimmy"
+    ],
+    "poor_songs": [
+      "Morning Dew",
+      "Way to Go",
+      "Corrina > Uncle John's Band",
+      "Liberty"
+    ],
+    "setlist_flow": "First set builds electric momentum with Shakedown Street, Wang Dang and Lazy River Road; second set launches strong on Foolish Heart before slipping a bit on Way to Go and Corrina, ending on an uplifting Last Time."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping the Shakedown Street opener and delivering powerful leads on Promised Land and Row Jimmy, though occasional lyric flubs and ‘clam‑filled’ solos were noted.",
+    "Phil": "Delivered a bombastic bass climax at the show’s close, earning specific shout‑out praise.",
+    "Bob": "",
+    "Keys": "Vince's keyboards draw criticism for being too high in the mix and lacking the energy of earlier eras; several reviewers call his playing ‘MIA’ or clunky on Morning Dew.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Way to Go": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Corrina > Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Liberty": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Wang Dang": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T04:29:15.847400+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-15.akg.ladner.14266.sbeok.shnf"
+}

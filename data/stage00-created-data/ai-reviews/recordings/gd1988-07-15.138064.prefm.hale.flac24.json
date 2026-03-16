@@ -1,0 +1,39 @@
+{
+  "summary": "Nice audience recording that captures a solid show with Bob Weir’s standout performance on Walkin' Blues.",
+  "review": "The audience tape is praised as pleasant and clear enough to enjoy, especially highlighting Bobby (Bob Weir) sounding great on his rendition of \"Walkin' Blues.\" No major flaws are mentioned, making it an appealing listen for fans who want that particular moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review; the reviewer is enthusiastic about the song and calls the recording nice, suggesting a good show and acceptable audio quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience source deemed \"nice\" by the reviewer; no specific issues with clarity or balance were noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walkin' Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on overall set flow; only a positive mention of the Walkin' Blues performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby sounds great on Walkin' Blues – an excellent version.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:28:41.255056+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-15.138064.prefm.hale.flac24"
+}

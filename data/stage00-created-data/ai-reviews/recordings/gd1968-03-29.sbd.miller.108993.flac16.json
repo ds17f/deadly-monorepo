@@ -1,0 +1,67 @@
+{
+  "summary": "A superb early GD‑created matrix capture with crystal‑clear sound, highlighted by an incendiary New Potato Caboose and soaring Dark Star.",
+  "review": "The March 29 1968 Carousel Ballroom show shines thanks to Jerry Garcia’s sublime solos on New Potato Caboose, Dark Star and Death Don't Have No Mercy, while the crowd‑friendly ambience of the matrix recording makes the performance feel vivid and immediate.  Charlie Miller’s remaster brings out an open, lively soundstage that even captures the quirky announcer moments after Morning Dew.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews praise both the musical performance and the exceptional matrix recording, with only a few isolated complaints about crowd chatter or missing tracks."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Early GD‑created soundboard/stage‑mic matrix; crystal‑clear on Dark Star and keyboards, open feel that places the listener in the ballroom. Some hall echo and crowd chatter are audible but do not detract from overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Potato Caboose",
+      "Dark Star",
+      "Death Don't Have No Mercy",
+      "Good Morning Little Schoolgirl"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set swings hard with strong transitions; an announcer interlude after Morning Dew suggests a possible two‑set structure but overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are described as sublime, top‑of‑the‑line guitar work on New Potato and Dark Star, and generally “exploring” the material.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboard/organ sound noted as crystal clear (scratchboard on Dark Star) and even Pigpen’s organ cursing is audible in a Lovelight excerpt.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Potato Caboose": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Born Cross Eyed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:03:51.246879+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-03-29.sbd.miller.108993.flac16"
+}

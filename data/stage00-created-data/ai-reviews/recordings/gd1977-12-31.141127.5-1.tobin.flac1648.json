@@ -1,0 +1,31 @@
+{
+  "summary": "Mediocre performance with plenty of energy, recording quality not specified",
+  "review": "The sole review calls the playing mediocre yet notes a high‑energy vibe, suggesting an average musical showing. No details are given about the source or clarity of the audio, so the recording quality remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review that mixes criticism of playing with praise for energy; no recording details provided."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer mentions mediocre playing but high energy; no further commentary on set pacing or song flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T07:33:57.206459+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-12-31.141127.5-1.tobin.flac1648"
+}

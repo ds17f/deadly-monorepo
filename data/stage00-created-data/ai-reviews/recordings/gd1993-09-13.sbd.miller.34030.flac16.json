@@ -1,0 +1,88 @@
+{
+  "summary": "Pristine soundboard capture of a fire‑filled 1993 Spectrum show featuring scorching Terrapin Station, blazing Scarlet Begonias and a standout Easy Answers/Space sequence.",
+  "review": "The recording is a clean soundboard source with only minor skips and a pronounced kick drum that fades into the background after a few listens. Musically the night shines thanks to Jerry’s Lightning‑Bolt tone on Scarlet, a ripping Terrapin Station, tight Playing in the Band → Dark Star transitions and an inspired Easy Answers that launches into a memorable Space jam, though a couple of reviewers note the lack of flow between songs and mixed feelings about Easy Answers and Days Between. Overall the performance is celebrated as one of the strongest 1993 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 5‑star, praising both the musical highlights and the soundboard quality; only a single low‑rating review points out minor song‑specific dislikes, resulting in an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as pristine and crisp with occasional skips/dropouts (e.g., Dire Wolf ending) and a very pronounced kick drum; otherwise clear, balanced mix that captures the Spectrum ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Scarlet Begonias",
+      "Playing in the Band",
+      "Dark Star",
+      "Easy Answers",
+      "Days Between",
+      "Space"
+    ],
+    "poor_songs": [
+      "Easy Answers",
+      "Days Between"
+    ],
+    "setlist_flow": "One reviewer notes abrupt transitions and a loss of the old‑school spontaneity, but most fans feel the second set flows powerfully, especially the PITB → Dark Star → Terrapin segment and the Space jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Lightning‑Bolt guitar tone praised as stimulating, confident, liquid and ‘ripping’ on Scarlet and Terrapin; strong runs throughout.",
+    "Phil": "Mentioned roaring out the bottom on “I Fought The Law”; generally solid bass foundation noted.",
+    "Bob": "Bobbie’s rhythm guitar described as prominent and similar in texture to Vince’s parts, holding its own throughout.",
+    "Keys": "Vince’s keyboards called ‘pretty damn good’ with a lush space jam; occasional reference to a Vince/Jerry jam resembling Tubular Bells.",
+    "Drums": "Billy's kick drum noted as very pronounced (initially annoying); Mickey’s drumming on the Beam highlighted during the space section."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "I Fought The Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:44:09.674899+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-13.sbd.miller.34030.flac16"
+}

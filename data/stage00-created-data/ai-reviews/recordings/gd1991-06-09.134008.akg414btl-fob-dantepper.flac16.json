@@ -1,0 +1,45 @@
+{
+  "summary": "Good show with a sweaty first set and an amazing second set, recording source unknown",
+  "review": "The concert is remembered fondly for its early‑June atmosphere, with a warm, sweaty first set and a particularly strong second set where the transition from \"Playing in the Band\" into \"Going Down The Road Feeling Bad\" was highlighted. No information about the audio source or sound quality is provided, other than a correction of the venue location.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one gives a solid 4‑star rating praising the show, while the other only corrects metadata and offers no quality assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard or audience recording; reviewers did not discuss clarity, mix, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Going Down The Road Feeling Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as warm and sweaty; second set praised as amazing with a notable \"Playing/Gone\" transition."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T20:38:01.574294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-09.134008.akg414btl-fob-dantepper.flac16"
+}

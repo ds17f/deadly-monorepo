@@ -1,0 +1,110 @@
+{
+  "summary": "Good audience tape of the electrifying Dec 12 1980 Swing Auditorium show, highlighted by a blistering “Alabama” and a seamless second set featuring Estimated → He's Gone → Eyes.",
+  "review": "The recording captures an intense, high‑energy performance from the December 12, 1980 San Bernardino Swing Auditorium show. Reviewers rave about the fiery “Alabama” coda, the flawless flow of the second set and standout moments like Estimated into He’s Gone into Eyes, while noting the tape is a decent‑sounding audience source with strong room presence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive (average 4.6 stars) and emphasize both superb musical performance and acceptable recording quality, leading to a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent‑sounding audience tape with good room presence; reviewers note it could benefit from a matrix blend but there are no major clarity issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama",
+      "Estimated",
+      "He's Gone",
+      "Eyes",
+      "Peggy-O",
+      "Promised Land",
+      "Space",
+      "Truckin'",
+      "Wharf Rat",
+      "Friend of the Devil",
+      "Althea",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its nonstop energy and a seamless second half that flows from Estimated through He’s Gone into Eyes, with high‑octane jams in Space and Truckin' keeping the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's blistering guitar work (Alabama coda, solos on Great Story Ever Told, Friend of the Devil, Mexicali, etc.) and his emotional playing throughout.",
+    "Phil": "Phil’s bass “bombs” are noted on Althea, Tennessee Jed, Truckin' and Wharf Rat.",
+    "Bob": "Bob Weir's slide work receives praise on Althea, Rooster (Roo), and Tennessee Jed, plus his extended Truckin' coda jam.",
+    "Keys": "Brent’s keyboards are lauded for lilting solos on Friend of the Devil, Rooster and a majestic presence on Wharf Rat.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:43:38.331475+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-12-12.set1-aud.vernon.16906.sbeok.shnf"
+}

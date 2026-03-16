@@ -1,0 +1,93 @@
+{
+  "summary": "Excellent FM‑broadcast recording with crisp sound and a legendary Estimated > Shakedown, Jack Straw and Sugaree despite Garcia’s raspy voice",
+  "review": "The show captures one of the Dead’s high‑energy late‑1978 performances – a blistering first set highlighted by Jack Straw and Sugaree and a second set dominated by an unforgettable Estimated > Shakedown leading into Fire on the Mountain.  The FM broadcast source is clean enough for modern ears, though a brief cut in Shakedown and occasional vocal strain are noted; overall the music more than makes up for any technical hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (30+) are 4‑5 stars, praising both the performance and the FM broadcast sound; only a few note minor flaws, giving the recording an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "FM broadcast mix is clear and well balanced – reviewers call it “great sound” and “sound is everything I desired.”  A few mention a brief cut in the Shakedown intro and occasional drop‑outs, but no major distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated > Shakedown",
+      "Jack Straw",
+      "Sugaree",
+      "Fire on the Mountain",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set launches with a punchy Jack Straw and Sugaree; the second set builds momentum with an iconic Estimated > Shakedown, followed by a soaring Fire on the Mountain and other classics.  Energy stays high throughout despite Garcia’s hoarse vocals."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s voice is described as raspy, congested or “shot,” but his guitar work and leads (especially on Passenger and Sugaree) are praised as stellar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Guest percussionist Hamza al‑Din receives strong praise for his tight drumming during the Drums, Ollin Arranged, and Fire segments."
+  },
+  "song_mentions": {
+    "Estimated > Shakedown": {
+      "positive_mentions": 11,
+      "negative_mentions": 2,
+      "total_mentions": 13
+    },
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugaree": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend Of The Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_places": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:58:19.466877+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-24.sbd.prefm.13948.sbefail.shnf"
+}

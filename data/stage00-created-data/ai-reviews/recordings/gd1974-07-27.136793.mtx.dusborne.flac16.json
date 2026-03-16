@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording with crystal‑clear instrument mix and a standout U.S. Blues jam that makes this 1974 show a must‑listen.",
+  "review": "The matrix source is praised for its superb clarity, balanced vocals and minimal flaws, delivering an engaging listening experience. Musically the concert shines with a monster \"Playing in the Band\" finish to set 1, a fiery U.S. Blues jam that flows into Promised Land, and strong overall set‑list variety despite the absence of big jams like The Other One.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All detailed reviews are highly positive about both performance (standout songs, strong set) and technical quality (well‑done matrix, clear mix). The only non‑rating is a zero‑star comment with no substantive criticism, so the weighted rating leans heavily toward a high score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix blend described as very well done, great sound and instrument clarity, only one minor recording flaw that was handled well; vocals clear with no excessive reverb needed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "U.S. Blues",
+      "Promised Land",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid 1974 set‑list with a monster \"Playing in the Band\" closing set 1, varied second set and an especially exciting U.S. Blues > Promised Land jam; reviewers note the show feels peppy and well‑balanced despite lacking longer jams like The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's voice is highlighted as being in especially good form tonight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:06:12.368525+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-27.136793.mtx.dusborne.flac16"
+}

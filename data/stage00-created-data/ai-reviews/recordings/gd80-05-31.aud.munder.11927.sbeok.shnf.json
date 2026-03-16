@@ -1,0 +1,61 @@
+{
+  "summary": "Boomy audience recording captures a high‑energy show with a smoking Wharf Rat → Other One sequence and fire‑blazing Jerry solos.",
+  "review": "Fans rave about the concert’s nonstop juice, especially the inventive jam between Wharf Rat and The Other One and the scorching guitar work from Jerry (with Bob matching his intensity). The audience tape is a bit boomy and recorded from under the stage, but it remains listenable enough to make this show a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for the musical performance and only moderate criticisms of audio quality lead to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Boomy low‑mid response and some under‑stage ambience, but still clear enough for enjoyment; no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "The Other One",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set flows into an unusual inverted middle (Wharf Rat → Other One before Drums, Miracle → Bertha after) that keeps the momentum rising and ends with a powerful second half of rockers."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as on fire with solid, creative soloing; tone praised despite typical squeaking elsewhere.",
+    "Phil": "",
+    "Bob": "Bobby (Bob) was noted as sounding as good as Jerry that night.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:03:52.949608+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-31.aud.munder.11927.sbeok.shnf"
+}

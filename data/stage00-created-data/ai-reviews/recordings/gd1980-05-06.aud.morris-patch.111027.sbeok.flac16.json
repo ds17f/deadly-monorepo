@@ -1,0 +1,44 @@
+{
+  "summary": "Unique Feel Like A Stranger → He's Gone transition highlighted; recording source and quality not specified",
+  "review": "The reviewer points out that this show features the only known instance of a Feel Like A Stranger into He's Gone segue, noting the band’s habit of swapping setlist material between first‑ and second‑set slots. No comments are made about the audio fidelity, leaving the recording source and quality unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one review with no star rating; shows an interesting setlist moment but provides no information on sound quality, so a moderate score is assigned with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments regarding clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like A Stranger > He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes odd combinations and the swapping of second‑set material into the first set, making the setlist structure unusual and noteworthy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:40:27.168223+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-06.aud.morris-patch.111027.sbeok.flac16"
+}

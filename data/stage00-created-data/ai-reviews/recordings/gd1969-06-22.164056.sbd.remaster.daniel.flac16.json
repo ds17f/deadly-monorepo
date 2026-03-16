@@ -1,0 +1,39 @@
+{
+  "summary": "Recording source unknown with no audio comments; the show features a uniquely arranged, standout performance of Casey Jones.",
+  "review": "The reviewer highlights this being the first recorded version of \"Casey Jones\" at NYC's Central Park Bandshell and praises its unique instrumental arrangement and intense buildup, despite noting some pacing issues. No details about the recording quality are provided, leaving the source type and fidelity unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "low",
+    "rationale": "Only a single, low‑star review is available; it praises the performance of one song but offers no information on audio quality, leading to an overall modest rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not discuss sound clarity, mix, or source; no technical assessment can be made."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer focuses solely on the uniqueness of \"Casey Jones\" and offers no broader commentary on set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:45:48.915484+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-06-22.164056.sbd.remaster.daniel.flac16"
+}

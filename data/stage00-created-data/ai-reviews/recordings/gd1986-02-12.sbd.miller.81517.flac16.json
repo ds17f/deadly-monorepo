@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of an energetic Mardi Gras show with standout Hey Bo Diddley and Hand Jive jams and superb drum performance.",
+  "review": "The recording is praised as flawless, crisp and high‑fidelity, reflecting its soundboard source. The concert itself is highlighted for its high energy, especially the second‑set collaboration with the Neville Brothers, the fiery Hey Bo Diddley/Hand Jive sequence and a drum section that many reviewers called “excellent.” While a couple of low‑rated comments note a dip in overall energy, the consensus is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4–5 stars and praised both performance and audio quality; only two low‑star comments were present, so the overall rating leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the sound as crisp, great, flawless and very good; no major issues or drop‑outs are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Bo Diddley",
+      "Hand Jive"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy Mardi Gras show with a particularly strong second set featuring the Neville Brothers; drums and jam sections receive special praise, though a few note a slight energy dip later in the run."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are highlighted as excellent and especially enjoyable by reviewers."
+  },
+  "song_mentions": {
+    "Hey Bo Diddley": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hand Jive": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:46:04.969801+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-02-12.sbd.miller.81517.flac16"
+}

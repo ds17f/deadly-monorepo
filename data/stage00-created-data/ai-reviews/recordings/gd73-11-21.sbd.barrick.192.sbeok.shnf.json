@@ -1,0 +1,76 @@
+{
+  "summary": "Crystal‑clear soundboard recording of a 1973 classic, anchored by the legendary Playin' > El Paso > Wharf Rat > Morning Dew marathon and soaring Here Comes Sunshine.",
+  "review": "The show shines from start to finish with an almost flawless set flow; the first set delivers bright energy while the second set builds into one of the most celebrated jam sandwiches ever recorded.  The soundboard source is remarkably clean – listeners note crisp instrument separation, a forward Garcia mix and a tight drum snap, with only minor pitch‑shift quirks.  Highlights include the Playin'‑El Paso‑Wharf Rat‑Morning Dew sequence, Here Comes Sunshine, Half Step and a beautifully voiced Weather Report Suite.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise the musical performance (standout jams, set flow) and describe the recording as crystal clear; only occasional minor issues are noted, yielding a rating in the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly call the audio crisp, clean and well‑separated.  A few mention a slight pitch shift and occasional splices/level tweaks, but these do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' > El Paso > Playin' > Wharf Rat > Playin' > Morning Dew",
+      "Here Comes Sunshine",
+      "Half Step",
+      "Weather Report Suite",
+      "Big River"
+    ],
+    "poor_songs": [
+      "El Paso (mentioned as slightly out of place by one reviewer)",
+      "Playin' (two reviewers called it ordinary)"
+    ],
+    "setlist_flow": "The set is praised for its near‑perfect 1973 flow, with the first set’s bright energy leading into a second‑set jam marathon; only one comment notes the Weather Report Suite was mis‑ordered in the stream."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is described as exploratory, inventive and forward‑in‑the‑mix, though a few reviewers note missed notes on some tunes.",
+    "Phil": "Lesh receives kudos for tight bass duets (e.g., Looks Like Rain) and his “fuzzy‑fat” tone that adds depth to the low end.",
+    "Bob": "Weir is highlighted for strong rhythm guitar solos, vocal presence and near‑solo moments on tracks like Big River.",
+    "Keys": "Keith Godchaux’s piano breaks and overall keyboard texture are praised for adding color and balance; his playing is called ‘great’ throughout.",
+    "Drums": "Bill Kreutzmann’s drumming gets compliments for a crisp snap, solid groove and excellent separation in the mix."
+  },
+  "song_mentions": {
+    "Playin' > El Paso > Playin' > Wharf Rat > Playin' > Morning Dew": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "El Paso": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:09:17.328115+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-11-21.sbd.barrick.192.sbeok.shnf"
+}

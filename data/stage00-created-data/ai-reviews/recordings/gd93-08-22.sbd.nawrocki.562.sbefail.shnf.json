@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal‑clear soundboard capture of the legendary 8/22/93 Eugene shows, highlighted by a smoking Help > Slip > Franklin’s and an epic Jack Straw jam.",
+  "review": "The SBD recording is exceptionally clean – crisp highs, solid mids and a surprisingly tight low end for a 1993 tape.  Musically the two‑night run is celebrated for Jerry’s inspired playing (despite mixed feelings about his new “Lightning Bolt” guitar), an unforgettable Help/Slip/Franklin’s sequence, a blistering Jack Straw jam and standout renditions of Broken Arrow, Music Never Stopped and Days Between the Lines.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4‑5 stars praising both performance and audio quality; only a handful of low or critical notes exist, giving an overall weighted rating around 4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly note crystal‑clear mix, superb balance and “studio‑like” clarity; a few mention slightly thin bass on some systems but no major dropouts. One reviewer flagged a broken file, otherwise the source is considered top‑shelf."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's",
+      "Jack Straw (extended jam)",
+      "Broken Arrow",
+      "Music Never Stopped",
+      "Days Between the Lines"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds steadily, highlighted by a fiery Jack Straw that segues into an extended jam; second set opens with a legendary Help/Slip/Franklin’s and rides a wave of energy through Broken Arrow, Music Never Stopped and Days Between, delivering a cohesive, high‑energy arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for “ballistic” playing and pure tone, though his new Lightning Bolt guitar divides opinion – some love the acoustic‑ish bite, others find it flat.",
+    "Phil": "Featured on the banner “Let Phil Sing”; his vocal work on Broken Arrow is called flawless by several reviewers, with a single note of strain mentioned.",
+    "Bob": "Infamous for leaving stage during Jack Straw due to guitar problems; fans love the drama and the way the band carried on, noting his rhythm chops when he returned.",
+    "Keys": "Vince (keyboards) described as “lost but keeping chords” in some reviews; synth tones are noted as being lower in the mix – a welcome change for some listeners.",
+    "Drums": "Bill and Mickey receive praise for tight, energetic playing; one reviewer calls Mickey’s drumming “electric” and highlights the power of the drum‑solo sections."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Jack Straw": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Broken Arrow": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Days Between the Lines": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-18T15:55:37.300120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-08-22.sbd.nawrocki.562.sbefail.shnf"
+}

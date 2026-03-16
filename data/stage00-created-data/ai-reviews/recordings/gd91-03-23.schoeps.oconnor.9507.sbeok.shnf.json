@@ -1,0 +1,57 @@
+{
+  "summary": "Poor audience‑recorded tape of a high‑energy Albany show that shines on Jack Straw, Watchtower and an unforgettable Morning Dew.",
+  "review": "The performance is remembered for its wild energy – Jerry’s shredding on Watchtower, a soaring Jack Straw, and what many call the best ever rendition of Morning Dew, with Phil’s Space notes shaking the crowd. Unfortunately the recording quality is described as terrible by multiple reviewers, who request an SBD source. The show still earns praise despite the bad tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show receives generally positive remarks (4‑5 stars) while recording is consistently rated very low; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers call the sound horrible, terrible, and bad, noting lack of clarity and asking for an SBD (soundboard) version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Watchtower",
+      "Morning Dew",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set with icy, adrenaline‑fueled vibe; second set continues the excitement but includes vocal flubs and occasional missteps."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for shredding on Watchtower and delivering a soaring guitar line throughout Morning Dew.",
+    "Phil": "His bass work during Space is highlighted as physically shaking listeners.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T16:59:07.984971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-23.schoeps.oconnor.9507.sbeok.shnf"
+}

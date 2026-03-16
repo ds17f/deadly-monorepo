@@ -1,0 +1,53 @@
+{
+  "summary": "Extended Spanish Jam crowns a raw early‑Dead set",
+  "blurb": "The concert builds to an 18‑minute Spanish Jam that blends flamenco flair with snappy, tight drumming and soaring guitars. Phil’s bass sits unusually high in the mix, adding extra punch, while Bob’s rhythm work shines through. The performance captures a vivid snapshot of the band’s experimental early period.",
+  "review": "On January 27, 1968 at Seattle’s Eagle's Auditorium the Grateful Dead delivered a set that veered into uncharted territory with an almost cinematic Spanish Jam lasting over eighteen minutes. The jam’s flamenco‑inflected interplay showcases Jerry’s wild, intense guitar work—described by listeners as “freaking wicked”—while Bob Weir’s tone and shakers add texture. Phil Lesh’s bass is pushed forward in the mix, giving the low end a pronounced presence that underpins the improvisation, and Bill Kreutzmann and Mickey Hart provide snappy, tight drumming that drives the piece forward. Though the rest of the set wanders through early staples like “Cryptical Envelopment” and “The Other One,” it’s the Spanish Jam that leaves the strongest impression, making this show a compelling glimpse into the Dead’s experimental evolution.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "One recording is clearly positive about the Spanish Jam and overall performance, while the second is mixed but still praises the jam’s intensity; the net sentiment leans moderately positive, warranting a +0.8 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1968-01-27.sbd.miller.97344.sbeok.flac16",
+    "reason": "Clearer tape with less wear, good soundboard fidelity, and captures the full set including the standout Spanish Jam."
+  },
+  "key_highlights": [
+    "Extended 18‑minute Spanish Jam with flamenco interplay as the climax",
+    "Snappy, tight drumming throughout the jam",
+    "Phil’s bass prominence adds extra punch to the improvisation"
+  ],
+  "song_highlights": [
+    "Spanish Jam"
+  ],
+  "band_performance": {
+    "Jerry": "His guitar work on the Spanish Jam is wild, intense and described as \"freaking wicked\".",
+    "Phil": "Bass sits noticeably higher in the mix, adding presence and punch to the jam.",
+    "Bob": "Guitar tone and shakers are highlighted during the Spanish Jam, contributing texture.",
+    "Brent": "",
+    "Mickey": "Snappy, tight drumming praised throughout the extended jam.",
+    "Billy": "Provides solid, driving rhythm that fuels the flamenco‑flavored improvisation."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T07:15:49.094344+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Clementine",
+      "New Potato Caboose",
+      "Born Cross-Eyed",
+      "Spanish Jam"
+    ]
+  ]
+}

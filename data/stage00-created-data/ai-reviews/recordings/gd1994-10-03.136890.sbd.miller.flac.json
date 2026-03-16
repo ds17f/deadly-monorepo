@@ -1,0 +1,74 @@
+{
+  "summary": "Excellent soundboard captures a stellar Boston Garden show featuring Bird Song, Box of Rain, Shakedown Street, Cassidy and the rare GDTRFB.",
+  "review": "The October 3‑1994 Boston Garden performance is hailed by fans as a high‑water mark of the ’94 run – a tight first set that ends with a soaring Bird Song and a second set packed with Box of Rain, Shakedown Street, Cassidy, a rare GDTRFB and an inspired Drums→Space segment.  The Miller SBD source is described as crisp, well‑balanced and even echo‑rich in a way that recalls classic ’77 Betty boards, making the recording as enjoyable as the music.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently glowing comments about both the musical performance (standout songs, tight set flow) and the soundboard recording (crisp, balanced, excellent mix) lead to a high weighted rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix with a slight pleasant echo reminiscent of the May ’77 Betty board; no reported dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Box of Rain",
+      "Shakedown Street",
+      "Cassidy",
+      "GDTRFB",
+      "Drums > Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note a solid, front‑to‑back first set and an adventurous second set with rare song combos (Box → Shakedown → Cassidy → GDTRFB) that keep the momentum high and showcase tight transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as shredding with distortion, delivering two standout American‑Beauty selections and driving the post‑Space climax.",
+    "Phil": "Phil’s bass volume is praised for being turned up nicely, providing a strong foundation throughout.",
+    "Bob": "Bob Weir’s rhythm work is highlighted when his guitar “flags down” the Space segment, adding melodic direction.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming on Touch of Grey and the Drums→Space sequence is called exceptional, with rapid fills and a powerful, frenetic energy."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "GDTRFB": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:17:35.176485+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-03.136890.sbd.miller.flac"
+}

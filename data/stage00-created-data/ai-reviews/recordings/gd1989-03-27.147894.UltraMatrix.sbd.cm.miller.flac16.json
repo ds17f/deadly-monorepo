@@ -1,0 +1,69 @@
+{
+  "summary": "Good‑energy show with strong second set and solid UltraMatrix mix",
+  "review": "The reviewer finds the concert well‑inspired, highlighting a punchy first‑set opener and an especially vibrant second set that includes standout versions of Scarlet Begonias, Fire on the Mountain, Estimated Prophet → Eyes of the World, and an emotional Standing on the Moon. No specific recording complaints are made, suggesting the UltraMatrix (matrix) source is listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed review praises the musical performance heavily and gives no technical criticism; rating reflects strong show quality with an assumed decent matrix recording."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound issues; reviewer does not mention any flaws, implying a satisfactory mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step Opener",
+      "Across the River",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Estimated Prophet → Eyes of the World",
+      "Standing on the Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as standard but well‑played; second set praised for its energy, seamless transitions and a strong jam leading into Fire on the Mountain."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive remarks about his solos and especially his vocals, noted as some of the best of ’89‑’90.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mentioned that the drummers were using larger drums for a bigger sound, typical of ’89."
+  },
+  "song_mentions": {
+    "Half-Step Opener": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Across the River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet → Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:00:42.720718+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-03-27.147894.UltraMatrix.sbd.cm.miller.flac16"
+}

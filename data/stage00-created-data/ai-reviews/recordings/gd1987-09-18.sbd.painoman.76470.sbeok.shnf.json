@@ -1,0 +1,39 @@
+{
+  "summary": "Solid soundboard recording with extra bass and clear mix, featuring a well‑received Terrapin Station performance.",
+  "review": "Reviewers praise the soundboard source for its fuller low end and cleaner texture compared to matrix versions, noting only minor audience noise. The concert itself is regarded as a five‑star show with Terrapin Station highlighted as a standout moment, though specific song details are sparse.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Two strong positive reviews (5 and 4 stars) focus on good soundboard quality and overall show excellence; the third review offers technical discussion but does not detract from the positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "More bass and cleaner than matrix mixes, slight flat/dry character, some audience noise present but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not detail set pacing, but the performance is broadly praised as a five‑star show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:46:49.411208+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-18.sbd.painoman.76470.sbeok.shnf"
+}

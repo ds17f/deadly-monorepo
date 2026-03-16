@@ -1,0 +1,63 @@
+{
+  "summary": "Decent audience recording (needs EQ tweaks) of a fiery 1983 Red Rocks show highlighted by scorching Supplication/Slipknot jam and a soaring Peggy‑O solo.",
+  "review": "The tapes capture an electrifying late‑summer ’83 performance with a blistering second set – the Supplication > Slipknot sequence, Dupree’s, Bird Song and an extended Peggy‑O solo are repeatedly praised.  While the audience source is generally solid, listeners note mid‑range muddiness, occasional drop‑outs (the peak of Bird Song is cut) and recommend a flat EQ to tame the typical “Dead Wave” sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with many standout moments outweighs modest recording flaws; overall enjoyment remains high despite a tape glitch."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear for an audience tape, but some reviewers note mid‑range muddiness and that EQ flattening improves it; one tape cut removes the peak of Bird Song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Supplication",
+      "Slipknot!",
+      "Dupree's",
+      "Bird Song",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely into a powerful second set; the jam on Supplication/Slipknot and the soaring Peggy‑O solo are highlighted as high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching tone on Supplication/Slipknot jam, first night of RR ’83, and an extended, delightful solo in Peggy‑O.",
+    "Phil": "Thanked for his contribution; no specific instrumental detail mentioned.",
+    "Bob": "Mentioned as shellshocked after Jerry's jam, but no direct performance comment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:00:54.763161+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-06.111866.senn-421.grabski.shnf"
+}

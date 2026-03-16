@@ -1,0 +1,51 @@
+{
+  "summary": "Positive show with great energy and tight playing on standout versions of Touch, Scarlet Begonias and Bertha; recording quality not discussed",
+  "review": "Reviewers rave about the high‑energy performance and tight musicianship, especially highlighting excellent renditions of Touch, Scarlet Begonias and Bertha. No information is provided about the source or fidelity of the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single enthusiastic review; strong praise for the performance but no data on audio quality, so rating leans on show strength while acknowledging limited evidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention any details about soundboard vs. audience source or clarity; assumed average due to lack of information."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "Scarlet Begonias",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes great energy and tight playing throughout, suggesting a well‑flowing set with strong momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:25:39.474837+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-16.nakcm304.suraci.82365.sbeok.flac16"
+}

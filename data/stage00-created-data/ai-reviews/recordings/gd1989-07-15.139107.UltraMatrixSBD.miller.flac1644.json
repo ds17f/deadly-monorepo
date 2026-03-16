@@ -1,0 +1,96 @@
+{
+  "summary": "A crisp UltraMatrix matrix mix showcases a solid first set and a mixed second set, highlighted by an electrifying Truckin' and smoky Smoke while some songs stumble.",
+  "review": "The recording delivers clear, well‑balanced sound thanks to the upgraded matrix mix, letting listeners enjoy strong moments like Bird Song, Truckin' > Smokestack Lightning and the expansive Space jam. The show itself is a roller‑coaster: the first set rolls smoothly with powerful jams, but the second set veers between brilliance (Truckin', Smoke) and weaker spots (Crazy Fingers, China Doll, Watchtower).",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is uneven (good first set, spotty second set) while the matrix recording is generally good; combined weighting yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners rave about the crispness of the UltraMatrix mix, though some note occasional SBD drum distortion and oversaturation in certain versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Smokestack Lightning",
+      "Bird Song",
+      "Space"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "China Doll",
+      "Watchtower"
+    ],
+    "setlist_flow": "First set flows tightly with strong jams and solid solos; second set bursts with high‑energy Truckin' and Smoke but later loses focus, resulting in a uneven but memorable performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia shines on Truckin' and Smoke, delivering rare phrasing and MIDI quotes, though his mix can be buried at times.",
+    "Phil": "Phil's bass work is highlighted in the Brokedown segment and generally solid throughout.",
+    "Bob": "Bob’s vocals are strong on Watchtower for some listeners but stumble during that song for others; he also adds texture to China Doll.",
+    "Keys": "Brent (keys) experiments during introductions, occasionally cuts into solos, and can be loud in the mix.",
+    "Drums": "The drum section is energetic with a fun Space jam; SBD versions show some level distortion, prompting some listeners to switch to AUD."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim or the Crime": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:26:17.665722+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-15.139107.UltraMatrixSBD.miller.flac1644"
+}

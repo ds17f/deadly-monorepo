@@ -1,0 +1,102 @@
+{
+  "summary": "A solid soundboard capture (slight tape hiss and occasional speed quirks) that delivers a memorable Cornell‑era show highlighted by a smoking Playing In The Barn → Terrapin Station transition and a strong second set.",
+  "review": "Fans rave about the high energy of this unknown‑date Cornell return, noting Jerry’s quirky Cornell alma mater solo in Take A Step Back, Brent’s keyboard fire on Feel Like A Stranger, and an especially killer second‑set sequence with Saint Of Circumstance and Black Peter. The Miller soundboard tape is generally clear and well balanced, though listeners flag a faint hiss, occasional feedback squeals and the need for minor pitch correction.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over twenty detailed reviews average ~4.2 stars; comments are overwhelmingly positive about performance while noting only modest technical flaws, giving a clear consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight tape hiss and occasional feedback squeals; some reviewers note the tape runs slightly fast/slow and needs minor pitch correction. Mix quirks (drums low on “Bertha”) are mentioned, but overall clarity is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Barn",
+      "Terrapin Station",
+      "Take A Step Back",
+      "Saint Of Circumstance",
+      "Black Peter",
+      "Feel Like A Stranger",
+      "Althea",
+      "Shakedown",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly, with a notable transition from Playing In The Barn into Terrapin Station and a second‑set that builds to a powerful climax featuring Saint Of Circumstance and Black Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his Cornell alma mater solo in Take A Step Back, solid vocals (especially on Black Peter), and tasteful wah‑filtered guitar on Feel Like A Stranger; occasional missing vox noted on Shakedown and Alabama Getaway.",
+    "Phil": "",
+    "Bob": "Bobby’s slide work and vocal quirks are highlighted; his antics receive a dedicated star of praise.",
+    "Keys": "Brent (keyboardist) is singled out as “killing it” on Feel Like A Stranger; overall keyboard work described as top‑notch.",
+    "Drums": "Mix issues noted (drums buried on ‘Bertha’) and occasional feedback squeals; the drum‑>space transition is praised."
+  },
+  "song_mentions": {
+    "Playing In The Barn": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Take A Step Back": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint Of Circumstance": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-12T22:44:33.664199+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-07.sbd.miller.26349.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience recording captures a decent show with a nice Black‑Throated Wind and a rare second‑set closer, though the performance isn’t top‑tier.",
+  "review": "The audience tape is praised for its clear, present sound that feels like you’re in the venue—far more listenable than the pinched board sources. The concert itself is described as “not the best show,” but it does feature a solid Black‑Throated Wind and an unusual rarity to end the second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one brief review; recording quality is praised (good) while show quality is noted as merely average, leading to a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and immersive sound; more listenable than the pinched‑sounding board copies, with no mention of skips or major glitches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black-Throated Wind"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a middling performance, but highlighted by a strong Black‑Throated Wind and a rare closing piece that give the second set some shine."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:23:33.371299+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-04-05.139693.fob.schoeps.wise.clugston.flac1648"
+}

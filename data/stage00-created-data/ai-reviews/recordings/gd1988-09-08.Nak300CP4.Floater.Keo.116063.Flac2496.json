@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fan review praises this random show and its recording, though details are scarce",
+  "review": "The lone reviewer gave the recording a full five‑star rating, saying they were \"stoked\" after listening to the set. No specific comments about sound quality or particular songs were provided, but the overall sentiment is clearly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one brief review, but it is a enthusiastic 5‑star endorsement; limited detail lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio fidelity; reviewer’s positive reaction suggests the recording is at least listenable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific feedback on set structure or pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T13:15:07.999896+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-08.Nak300CP4.Floater.Keo.116063.Flac2496"
+}

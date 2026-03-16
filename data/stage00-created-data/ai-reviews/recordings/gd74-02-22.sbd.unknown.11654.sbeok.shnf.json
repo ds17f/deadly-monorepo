@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard recording with a slightly muddy mix and low vocal levels, but the show shines thanks to standout performances of Eyes, China>Rider, Slipknot! tease and other classic ’74 moments.",
+  "review": "The three‑disc set captures a solid 1974 performance that’s heavy on first‑time song debuts and deep jams. While the soundboard source suffers from a muddy overall balance and vocals that sit too low, the music more than makes up for it – especially the mesmerizing Eyes>China sequence, the flowing China>Rider transition, and an upbeat Slipknot! tease. Fans repeatedly praise Jerry’s lead on Eyes and Phil’s bass work during China Cat Sunflower.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Six detailed reviews (average 4.2 stars) highlight strong musical moments despite consistent comments about a muddy mix and low vocal levels, yielding an overall positive assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is described as muddy and vocals sit too low, making the balance frustrating for some listeners; otherwise the soundboard capture is clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "China>Rider",
+      "Truckin'>Nobody's Fault",
+      "Slipknot! tease (Playin')",
+      "Must Have Been The Roses",
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard first set with several debut tracks, a strong second set where China flows into Rider and the Eyes>China jam stands out; third set continues the momentum despite missing the final song and encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised heavily – fans shout “GO JERRY!!” and note his lead on the Eyes jam.",
+    "Phil": "His bass on China Cat Sunflower is highlighted as hair‑raisingly good.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China>Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'>Nobody's Fault": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot! tease (Playin')": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Must Have Been The Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:52:42.571679+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-02-22.sbd.unknown.11654.sbeok.shnf"
+}

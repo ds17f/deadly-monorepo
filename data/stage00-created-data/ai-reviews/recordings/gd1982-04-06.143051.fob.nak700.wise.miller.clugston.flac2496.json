@@ -1,0 +1,31 @@
+{
+  "summary": "A 5‑star review that shares a travel tale but offers no details on the music or recording.",
+  "review": "The reviewer recounts a personal road‑trip story leading up to the concert and awards the tape five stars, yet provides no commentary on the performance, song selections, band members, or audio quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Only one highly‑rated review is present and it contains no substantive information about show or recording quality, so a moderate rating with medium confidence reflects the positive sentiment but lack of detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound source, clarity, mix, or any technical issues were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T19:32:13.775827+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-06.143051.fob.nak700.wise.miller.clugston.flac2496"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Decent recording that captures a solid 1993 show highlighted by Bird Song and a monster Days Between jam.",
+  "review": "The performance is praised for its well‑chosen first set and an almost 75‑minute second‑set suite where the Days Between sequence is described as a “monster” with Garcia wailing on his “magic wand.” Recording quality isn’t discussed in detail, but no complaints suggest it’s at least listenable. Overall the show feels strong despite one terse negative comment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Two detailed positive reviews emphasize standout songs and a superb second‑set jam, while a single zero‑star review is vague; recording quality appears adequate, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints about sound clarity or mix were mentioned, implying the recording is at least satisfactory for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Days Between",
+      "Spoonful"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for its song selection and tight playing; the second set features a nearly 75‑minute jam suite (Terrapin → Drumz → The Last Time → Days Between → Throwing Stones → OMSN) that is highlighted as a monster sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is lauded, especially his “wailing on the magic wand” during the Days Between jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby appears on accordion; reviewer notes he doesn’t always love that sound but says the show never disappoints because of it.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:35:32.388377+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-26.sbd.miller.110520.flac16"
+}

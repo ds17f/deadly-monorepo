@@ -1,0 +1,83 @@
+{
+  "summary": "A stellar 1974 Philly two‑night show featuring a killer China>Rider and epic Truckin' jam, captured on a clear soundboard mix (with minor hiss/speed quirks).",
+  "review": "The performance is widely praised for its soaring China>Rider transition, monstrous He's Gone → Truckin' → Jam sequence and one of the best Truckin' jams of ’74. Reviewers note Jerry’s peak chops, Phil’s “possessed” bass work and Keith’s jazzy keyboards, while the soundboard source is generally clear though a few note hiss and a slight speed issue. Overall sentiment is highly positive despite some uneven moments in the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight exceptional musical moments; recording quality is mostly good with only minor complaints, yielding a combined rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑mixed (several reviewers praise the crisp mix), but one reviewer notes hiss, slight out‑of‑balance and a ~1 % speed issue in this SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "He's Gone > Truckin' > Jam > Space",
+      "Truckin'",
+      "Half-Step > Roses",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Dire Wolf",
+      "Tennessee",
+      "Jack Straw",
+      "Scarlet Begonias"
+    ],
+    "setlist_flow": "The first set is a mix of solid classics and a few uneven moments (repeats, sloppy starts), while the second set builds to a high‑water mark with the China>Rider climax and an expansive He's Gone → Truckin' jam that defines the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is repeatedly called out as peak ‘74 – pushing limits on China>Rider, delivering a rare slide in He’s Gone, and driving the long Truckin' jam with ferocious chops.",
+    "Phil": "Phil Lesh is described as “possessed” on China>Rider and praised for jazzy, Weather‑Report‑like bass interplay throughout the set.",
+    "Bob": "",
+    "Keys": "Keith’s keyboards receive accolades for their jazziness and tight measures that lift songs like Half-Step > Roses and Big River.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone > Truckin' > Jam > Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Half-Step > Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:40:52.146135+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-08-05.sbd.sacks.1826.sbeok.shnf"
+}

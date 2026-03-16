@@ -1,0 +1,82 @@
+{
+  "summary": "Matrix recording delivers clear nuance on a solid second set highlighted by Eyes, Samba and Wharf Rat, despite weaker moments on Good Lovin' and LSD.",
+  "review": "The matrix source is praised for its clarity and subtle detail, making the 1994 show one of the stronger outings of that year. The second‑set shines with an inspiring Eyes, a fiery Samba, and a soaring Wharf Rat, while Good Lovin' and LSD suffer from lackluster vocals. Overall the performance earns a solid rating, buoyed by Branford Marsalis’ contributions despite occasional lapses.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality averages around 3.5/5 with several standout songs; recording quality is rated near‑excellent (≈5/5). Weighted combination yields ~4 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix sound described as 'great' and the go‑to source for this show, with subtle nuances captured; only minor complaint about Vince's vocals being high in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Samba",
+      "He's Gone",
+      "Space",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Good Lovin'",
+      "LSD"
+    ],
+    "setlist_flow": "Second set opens with Eyes, flows into a jam‑heavy Samba and He's Gone, moves through Space into a decent The Other One, then soars on Wharf Rat before closing with weaker Good Lovin' and LSD."
+  },
+  "band_member_comments": {
+    "Jerry": "A bit off at points but still delivers jazzy riffs and takes the reins during several jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Branford Marsalis adds excitement on Eyes, Samba, and Wharf Rat; his contribution is less noticeable on The Other One.",
+    "Drums": "Both drummers seem to be rushing tempos slightly throughout the set."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samba": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "LSD": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:37:07.152115+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-12-16.set2.mtx.hansokolow.100297.flac16"
+}

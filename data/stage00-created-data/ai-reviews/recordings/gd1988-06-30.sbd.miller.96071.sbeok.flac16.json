@@ -1,0 +1,88 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a rain‑kissed Rochester show, highlighted by a stellar Box of Rain opener and blazing Green Onions/China Cat > Rider sequence.",
+  "review": "The recording is an ultra‑premium soundboard mix that delivers crisp, balanced audio with only occasional quirks (a brief electronic drum glitch). The performance itself is high‑energy – the band rides a rainy start into a flawless first set and a second set that shines on Green Onions, China Cat > Rider and a psychedelic The Other One, making it one of 1988’s standouts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~3.9/5, but the overwhelming majority praise both the show and the soundboard quality; weighting toward performance (70%) pushes the overall AI score into the very good range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with superb instrument separation. Reviewers repeatedly call it “ultra‑premium” and note only minor oddities such as a brief electronic drum effect at the start of Samson."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Cold Rain and Snow",
+      "The Other One",
+      "Green Onions",
+      "China Cat > Rider",
+      "Believe It Or Not",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Believe It Or Not",
+      "The Other One"
+    ],
+    "setlist_flow": "Rain‑stopped just as Box of Rain opened, setting a magical mood. The first set stayed tight and song‑focused, while the second set “shines” with Green Onions, China Cat > Rider and an intense The Other One jam, delivering a consistent high‑energy arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp, blazing tone; even noted wearing a blazer. Delivers “sweet Jerry tunes” and strong vocal delivery.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboards) singled out as being on his A‑game – Far From Me solo, Green Onions groove, overall stellar playing.",
+    "Drums": "Generally solid; a brief comment about experimental electronic effects at the start of Samson but otherwise “blazing” especially in the Green Onions → Drums transition."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Green Onions": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Believe It Or Not": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:46:48.117884+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-30.sbd.miller.96071.sbeok.flac16"
+}

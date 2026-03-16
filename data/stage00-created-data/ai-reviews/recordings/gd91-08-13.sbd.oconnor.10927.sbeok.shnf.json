@@ -1,0 +1,94 @@
+{
+  "summary": "A high‑energy show with standout performances of Sugar Magnolia, Smokin' Sugaree and Watchtower, captured on a generally clear soundboard recording that suffers from occasional glitches and mix imbalances.",
+  "review": "The concert is praised for its nonstop excitement – Jerry’s slide solo on Smokin’ Sugaree, fiery renditions of Watchtower and Black Peter, and strong second‑set moments like Foolish, Sugar Magnolia and a memorable end to Picasso Moon. The soundboard source is mostly clear with Phil’s bass prominent, but several reviewers note Hornsby sitting too high in the mix and intermittent drop‑outs that mar the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight exceptional musical moments (show quality ~4.5/5) while noting recurring recording glitches and mix issues (recording quality ~3.5/5); combined weighting yields a solid 4.2‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced with strong instrument separation; Hornsby’s keyboards sit high in the mix like a monitor feed, and there are several channel drop‑outs/skips especially in the second set and on the Picasso Moon track."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Smokin' Sugaree",
+      "Watchtower",
+      "Black Peter",
+      "Foolish",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the set as a front‑to‑back screamer with an especially powerful second set; pre‑drums (Foolish) and post‑drums (Black Peter, Sugar Magnolia) receive high marks, and transitions are praised despite occasional tape glitches."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for being on fire – slide solo on Smokin' Sugaree, soaring lead lines on Watchtower and Black Peter, and a loose, joyous interaction with Bruce Hornsby.",
+    "Phil": "His bass is noted as coming through clearly and adding depth to the mix.",
+    "Bob": "",
+    "Keys": "Hornsby's keyboards are described as overly forward in the mix (monitor‑like) – some enjoy the prominence, others find it detracts from balance.",
+    "Drums": "Foolish (pre‑drums) highlighted as a standout moment; post‑drums sections featuring Black Peter and Sugar Magnolia also receive praise."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokin' Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let it Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:57:59.274428+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-08-13.sbd.oconnor.10927.sbeok.shnf"
+}

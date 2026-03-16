@@ -1,0 +1,65 @@
+{
+  "summary": "Solid early‑'90s set with standout Stranger intro and Sugaree",
+  "blurb": "The show opens strong with a crisp Feel Like A Stranger and a soaring Sugaree, despite a PA outage that cuts the first set short. The second set delivers New Speedway Boogie into Truckin' and a well‑played Wharf Rat, though some moments feel uneven.",
+  "review": "On March 29, 1991 at Nassau Coliseum the Dead delivered a solid early‑’90s performance that’s worth a spin for fans of that era. A clean soundboard capture shows Jerry Garcia riding a lively Feel Like A Stranger intro and taking the band through a beautifully voiced Sugaree; Vince Welnick’s opening notes on Stranger are described as crystal‑clear, and the post‑Brent keyboard work shines on Wharf Rat. Technical woes—right‑channel winces and a brief PA outage during When I Paint My Masterpiece—forced the first set to end early, leaving out Bird Song, but the band kept the energy up. The second set builds momentum with New Speedway Boogie flowing into Truckin', highlighted by tight chemistry between Jerry and the rhythm section, followed by an expansive The Other One/Wharf Rat sequence that many reviewers praised despite mixed feelings about overall consistency. While a few listeners noted uneven moments, the show’s high points make it a worthwhile listen, especially for those who enjoy Vince’s subtle keys and the band’s resilient vibe after technical hiccups.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.3,
+      "sentiment_rationale": "Four of six recordings are explicitly positive, praising Jerry's chemistry, standout songs (Stranger intro, Sugaree, New Speedway Boogie), and solid keyboard work; one mixed review notes technical issues but still calls the set solid; a single negative zero‑star review is an outlier. The predominance of positive language yields a moderate +1.3 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.3 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-03-29.sbd.wiley.8232.sbeok.shnf",
+    "reason": "Well‑balanced soundboard capture with crisp keyboards and clear guitar; despite PA hiccups it delivers the strongest representation of the show’s highlights."
+  },
+  "key_highlights": [
+    "Crystal‑clear Vince Welnick intro on Feel Like A Stranger and strong keyboard work on Sugaree and Wharf Rat.",
+    "New Speedway Boogie seamlessly transitions into Truckin', showcasing tight band chemistry.",
+    "PA outage cuts first set short, but the band maintains energy and delivers solid second‑set jams."
+  ],
+  "song_highlights": [
+    "Feel Like A Stranger",
+    "Sugaree",
+    "New Speedway Boogie",
+    "Truckin'",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s playing is lively and chemistry‑driven, sounding good on the standout tracks and keeping the band moving despite technical setbacks.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Keyboard duties split between Vince Welnick and Bruce Hornsby; Vince’s early notes on Stranger are praised as crystal‑clear, and the overall keyboard work on Wharf Rat and Sugaree receives commendation.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-17T17:36:40.065903+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Saint Of Circumstance",
+      "New Speedway Boogie",
+      "Truckin'",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Touch of Grey"
+    ]
+  ]
+}

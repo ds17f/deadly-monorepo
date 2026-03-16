@@ -1,0 +1,31 @@
+{
+  "summary": "A gritty 1985 Dead show with mixed performance opinions and an unknown recording source that seems adequate but unremarked.",
+  "review": "One reviewer finds the concert devolving into sloppy, sludge‑filled playing after a decent first set, while another praises the hot, dirty energy and Jerry's pre‑coma guitar work. Neither review mentions the tape source, leaving the technical quality unclear, though the show is generally regarded as an uneven representation of the 1985 era.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Two reviews give divergent scores (2 and 4 stars); performance quality is split, and no recording details are provided, resulting in a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not comment on soundboard or audience mix; the tape is assumed acceptable but its clarity and balance are not described."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer #1 says the concert starts well then drags into sloppiness, while Reviewer #2 feels the energy builds to a climactic, hot second set."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer notes Garcia \"gasping for air\" and sloppy playing; another calls it \"pre‑coma Jerry\" with raw, dirty energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T03:40:25.349293+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-08.nak300.damico.87465.sbeok.flac16"
+}

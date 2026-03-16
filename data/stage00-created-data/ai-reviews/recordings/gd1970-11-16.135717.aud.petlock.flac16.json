@@ -1,0 +1,39 @@
+{
+  "summary": "Decent recording with clear sound and a solid Good Lovin’ jam, though the performance is only average.",
+  "review": "The tape captures a fairly clean mix – Jerry, Bob, Phil and guest fiddler Papa John Creach come through loud and clear, even if Jorma and Jack are absent. Musically the show is okay, highlighted by a strong late‑1970 Good Lovin’ jam, but otherwise it isn’t spectacular. The recording’s clarity makes it listenable despite the modest overall performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One substantive review rates the show 3 stars and notes decent sound quality; combined with a clear but unremarkable performance, the weighted average falls in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Main instruments (Jerry, Bob, Phil) and guest Papa John Creach are loud and clear; no mention of major distortion or dropouts. Absence of Jorma/Jack noted but likely due to lineup, not recording flaw."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Late‑1970 set with a strong Good Lovin’ jam; overall the performance is competent but not remarkable."
+  },
+  "band_member_comments": {
+    "Jerry": "Clear and present in the mix, guitar tone noted as audible.",
+    "Phil": "Bass comes through clearly.",
+    "Bob": "Vocals and rhythm guitar are loud and clear.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:22:26.580032+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-16.135717.aud.petlock.flac16"
+}

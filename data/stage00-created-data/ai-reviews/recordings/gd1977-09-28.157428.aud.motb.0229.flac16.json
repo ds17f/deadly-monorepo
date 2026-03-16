@@ -1,0 +1,94 @@
+{
+  "summary": "Clear audience mix captures a strong Seattle debut night with standout Jack Straw, Bertha and Dire Wolf, though drums are subdued.",
+  "review": "The audience recording is praised for its good clarity, balanced band mix and reduced drum heaviness compared to typical soundboard tapes. The show itself is lauded as an exciting first‑night return, highlighted by ripping performances of Jack Straw, Bertha, Good Lovin', Dire Wolf, Estimated Prophet, Eyes of the World and a beautiful Wharf Rat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews emphasize a high‑energy performance with many standout songs while noting the recording is solid though not flawless; combined weight yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Aud mix is clear and well balanced, preferred over drum‑heavy soundboard tapes; some audience clapping audible but overall good band‑mix and crowd presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Bertha",
+      "Good Lovin'",
+      "Dire Wolf",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Not Fade Away",
+      "Wharf Rat",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Passenger"
+    ],
+    "setlist_flow": "First set described as strong with a good groove; second set praised for its flow and jam highlights, making the whole night enjoyable despite an overall ‘rough’ feel compared to other shows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Spoken interjection near encore: \"at least it ain't the NFL\" (followed by audience banter).",
+    "Bob": "Vocals and playing praised as a great night for Bobby (Bob Weir).",
+    "Keys": "Keith's electric piano noted as ‘pretty dope’; keyboards received positive mention.",
+    "Drums": "Recording is less drum‑heavy than typical soundboard mixes, which some reviewers preferred."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:03:49.170067+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-09-28.157428.aud.motb.0229.flac16"
+}

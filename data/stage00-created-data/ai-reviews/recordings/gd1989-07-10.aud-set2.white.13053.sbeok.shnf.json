@@ -1,0 +1,45 @@
+{
+  "summary": "Great audience recording of a rain‑soaked 1989 show, with the band staying tight and delivering memorable moments like “Music Never Stopped” and “Don’t Ease Me In”.",
+  "review": "All three reviewers rave about the wild weather that turned the concert into an unforgettable experience, noting lightning, torrential rain and even a nearby tornado while praising the Dead for keeping it together. The set is highlighted by strong performances of “Music Never Stopped” and “Don’t Ease Me In”, and the audience tape is described as a great recording with no noticeable flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Three consistent, high‑star reviews praise both the performance and the recording; average reviewer rating is 4.67, indicating a strong show with solid audio quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers call it a great recording with no complaints; likely captures crowd ambience but remains clear enough for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped",
+      "Don’t Ease Me In"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Despite extreme weather (lightning, rain, nearby tornado), the band maintained tight playing and delivered an energetic set that kept the audience engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don’t Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:00:53.484987+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-10.aud-set2.white.13053.sbeok.shnf"
+}

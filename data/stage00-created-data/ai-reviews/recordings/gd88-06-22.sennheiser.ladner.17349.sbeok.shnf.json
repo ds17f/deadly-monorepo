@@ -1,0 +1,74 @@
+{
+  "summary": "Fair audience recording of a shaky show where Stella Blue flops but the first set grooves and Foolish Heart shines.",
+  "review": "The tape is an audience (AUD) capture that many listeners find muddled and spotty, with uneven balance and occasional drop‑outs. Musically the concert is an off‑night – Jerry struggles through Stella Blue and the ill‑placed debut of I Will Take You Home, yet the first set retains a solid groove and tracks like Scarlet Begonias and Foolish Heart provide bright spots.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "high",
+    "rationale": "Most reviewers criticize both the recording quality (fair audience source) and the performance, especially Stella Blue, yielding a low‑mid average; occasional positive notes on first‑set groove keep the overall rating from dropping further."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers call the AUDs \"rough\" and \"not hot,\" noting muddled mids, occasional drop‑outs, and a generally spotty mix that hampers clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Foolish Heart",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "I Will Take You Home"
+    ],
+    "setlist_flow": "First set is praised for its groove, but the second set suffers from a confusing song order and a flubbed Stella Blue that drags the overall momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Struggles with lyrics and timing on Stella Blue, appears confused at the start, but still has fun and shows his usual flair later.",
+    "Phil": "",
+    "Bob": "Vocals described as excellent by one reviewer.",
+    "Keys": "Brent's vocal delivery on I Will Take You Home is called rushed; keyboards otherwise not highlighted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 6,
+      "total_mentions": 6
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:51:47.128835+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-22.sennheiser.ladner.17349.sbeok.shnf"
+}

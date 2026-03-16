@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience recording of a trippy, amazing show—though Bob Weir's guitar is faint on the soundboard.",
+  "review": "The reviewer, who attended the concert, hails it as an amazing and trippy performance and praises this audience tape for capturing the entire show brilliantly. They note that Bob Weir’s guitar is almost non‑existent in the soundboard feed, but the crowd recording compensates with excellent overall clarity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "One detailed 5‑star review highlights a superb performance and an excellent audience recording; limited sample size keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience tape praised as brilliant; captures the whole performance despite soundboard lacking Bob Weir's guitar."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Described as a trippy, energetic concert that flows well and is faithfully reproduced by the audience recording."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir's guitar is almost non‑existent on the soundboard, though present in the audience mix.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T15:35:53.582937+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-08.152229.sonyecm.g.flac1644"
+}

@@ -1,0 +1,94 @@
+{
+  "summary": "Solid soundboard recording with decent mix (though a bit high on Brent) and a strong show highlighted by Bird Song, Playing in the Band, China>Rider and a moving Other One.",
+  "review": "The performance is praised for its powerful first set and an inspired second‑set opener of China Cat Sunflower into Riders, with long, wandering jams on Playing in the Band that lead into a heartfelt Wheel and The Other One. Recording quality is generally good – Charlie’s tape work captures the band clearly – but several listeners note Brent’s keyboards sit too high in the mix and Jerry’s guitar a touch low.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars, citing strong musical moments; recording is described as good with only minor balance issues, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear sound and Charlie's tape work praised; some listeners find the mix a bit sterile at times and Brent’s keyboards too forward while Jerry sits low in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Playing in the Band",
+      "China Cat Sunflower > Riders on the Storm",
+      "The Other One",
+      "Feel Like a Stranger",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong first set with highlights like Mexicali and Loser, followed by an exciting second‑set opener (China>Rider) that expands into extended jams on Playing, the Wheel, and The Other One, ending with a lyrical Baby Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for interacting with the drummers and strong playing on the Wheel; some note his guitar sits low in the mix and a few lyrical flubs at the end.",
+    "Phil": "",
+    "Bob": "His songs are considered fine but not particularly quirky by one reviewer.",
+    "Keys": "Brent delivers wonderful playing (especially on Stella Blue) but is often too high in the overall mix.",
+    "Drums": "Mickey and Bill’s interplay during Drums is highlighted as a standout, with the drum space described as very good."
+  },
+  "song_mentions": {
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > Riders on the Storm": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T14:16:31.191490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-28.sbd.walker-scotton.miller.96172.sbeok.flac16"
+}

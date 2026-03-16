@@ -1,0 +1,73 @@
+{
+  "summary": "Great audience (AUD) recording with occasional crowd interruptions, highlighted by a stellar second set featuring rare Railroad Blues, a monster Playin' in the Band and the first Samba in the Rain.",
+  "review": "The tape captures a solid 1994 performance; while the AUD source is generally excellent, it’s punctuated by garbled cheers from a drunken gate‑crasher. Set 1 is described as unremarkable with Jerry staying back, but set 2 delivers the goods – rare Railroad Blues, an outstanding Playin' in the Band, a superb Uncle John’s Band, and the first Samba in the Rain, plus a top‑notch rendition of I Fought the Law. Drums>Space is noted as boring, and Vince’s keyboards step up to fill the gaps.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it praises many second‑set moments but gives a modest 3‑star overall rating and notes some recording interruptions, leading to an average‑to‑good combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear AUD sound with occasional garbled crowd noise from a drunken gate‑crasher interrupting the flow."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Railroad Blues",
+      "Playin' in the Band",
+      "Uncle John's Band",
+      "Samba In The Rain (First Samba In The Rain)",
+      "I Fought the Law"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 1 deemed unremarkable with Jerry subdued; Set 2 shines with rare and high‑energy jams, though the Drums>Space segment is described as boring."
+  },
+  "band_member_comments": {
+    "Jerry": "Not really taking the lead in set 1.",
+    "Phil": "",
+    "Bob": "Decent singing throughout; Cassidy (vocals) is pretty okay.",
+    "Keys": "Vince does his best to make up for the lack of Jerry's lead.",
+    "Drums": "Drums>Space segment described as boring."
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samba In The Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:52:19.849667+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-06-08.fob.schoeps.litzenberger-jones.85117.flac16"
+}

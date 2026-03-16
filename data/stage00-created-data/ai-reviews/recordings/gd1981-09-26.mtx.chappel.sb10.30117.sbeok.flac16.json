@@ -1,0 +1,94 @@
+{
+  "summary": "Excellent matrix recording of a high‑energy 1981 show with scorching Shakedown and Playin' in the Band jams",
+  "review": "The matrix mix is praised as warm, clear and full‑bodied, delivering an almost studio‑like presence that lets every instrument shine. Musically the band is described as tightly together, launching a fiery set that kicks off with a superb Shakedown and builds through standout renditions of Playin' in the Band, Let It Grow, Morning Dew and a ripping Bertha, only letting Not Fade Away slip a bit.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All but one reviewer gave five stars; the show is repeatedly called “smoking”, “awesome” and “one of the best ever,” while the matrix sound quality is described as fantastic with no complaints."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note a warm, crisp mix with great depth; board/audience blend is praised for clarity and lack of audible glitches or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Playin' in the Band",
+      "Let It Grow",
+      "The Other One",
+      "Morning Dew",
+      "Bertha",
+      "Prophet",
+      "Jack-a-Roe",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Not Fade Away"
+    ],
+    "setlist_flow": "The band opens with a tight Shakedown that sets an upbeat vibe, moves through spacey jams (Playin' in the Band) and segues smoothly into classic favorites; energy stays high throughout both sets with only the NFA transition noted as less cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is repeatedly called “liquid,” “on fire,” and “ripping”; many reviewers say he leads the jams with superb creativity.",
+    "Phil": "",
+    "Bob": "Bob’s rhythm work and vocal interplay are highlighted, especially his smooth transition into \"CC Rider\" and his chemistry with Jerry during Playin'.",
+    "Keys": "Brent (keyboards) gets credit for boosting DEMI and providing spacey textures that enhance the overall vibe.",
+    "Drums": "The drums are described as “very well down” and “spacey,” adding to the cosmic feel of the performance."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:58:04.258017+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-26.mtx.chappel.sb10.30117.sbeok.flac16"
+}

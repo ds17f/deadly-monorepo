@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp soundboard capture of a mixed‑quality show highlighted by a fiery New Speedway Boogie and a tight Baba O'Reilly > Tomorrow Never Knows encore.",
+  "review": "The recording is a clean, clear soundboard source that lets the band’s energy shine through. While some listeners find the first set unforgettable and praise standout moments like New Speedway Boogie, Attics of My Life and the Baba O'Reilly/Tomorrow Never Knows encore, others describe the performance as middle‑of‑the‑road with few truly exceptional moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised (good to excellent), but show assessments range from enthusiastic to lukewarm, yielding an overall middle‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the soundboard crisp and clear; no major dropouts or balance issues are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Speedway Boogie",
+      "Attics of My Life",
+      "Baba O'Reilly > Tomorrow Never Knows",
+      "Tom Thumb Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as strong and unforgettable by some, with a solid Tom Thumb Blues; the second set delivers highlights like New Speedway Boogie and Attics of My Life, but overall the show is viewed by several listeners as an average‑mid‑range Dead performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ripping guitar work and lighting up especially during New Speedway Boogie and the encore.",
+    "Phil": "Noted positively on his playing during Tom Thumb Blues.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tom Thumb Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Attics of My Life": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baba O'Reilly > Tomorrow Never Knows": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-18T05:49:31.041971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-05-25.sbd.wiley.16469.sbeok.shnf"
+}

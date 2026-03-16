@@ -1,0 +1,69 @@
+{
+  "summary": "Clean SBD capture of a quirky 1984 set featuring a sprawling Uncle John's Band and the rare Only A Fool, though the mix is occasionally muddy.",
+  "review": "The second set from April 23 1984 delivers a memorable 17‑minute Uncle John’s Band jam and the one‑off Only A Fool performance, with Brent’s organ work shining throughout. Reviewers praise the soundboard source as generally clear, but note typical ‘84 board muddiness on parts of the mix. Musically the show is uneven – high points are offset by occasional looseness and vocal wear from Garcia.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight strong musical moments and a good‑ish soundboard recording, but several note muddiness and uneven playing, pulling the overall score below a solid four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean SBD with crisp instrument separation; some reviewers mention typical 1984 board mud and occasional Miller transfer artifacts, but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Only A Fool",
+      "Sailor > Saint",
+      "Jack Straw",
+      "Sugaree",
+      "Dupree's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Eclectic early‑set with grungy Iko Iko and a long Sailor > Saint, leading into an expansive second set where the Uncle John's Band jam dominates; overall flow is uneven but the unique jams make it a noteworthy 1984 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Leads on the 17‑minute Uncle John’s Band are praised, though some note vocal decline and occasional below‑standard playing.",
+    "Phil": "Described as dropping bombs and providing an asymmetrical melodic effort; generally positive mentions.",
+    "Bob": "Mentioned as careful and cautious during the more experimental sections; no major complaints.",
+    "Keys": "Brent’s organ work is highlighted as trippy, heavy, and central to the Only A Fool and other jams.",
+    "Drums": "Dual drummers are praised for creative space/experimental sections but occasionally noted as out of sync."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Only A Fool": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:42:13.374694+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-23.set2-sbd.miller.14949.sbeok.shnf"
+}

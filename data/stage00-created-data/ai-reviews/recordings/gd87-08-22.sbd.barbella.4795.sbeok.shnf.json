@@ -1,0 +1,64 @@
+{
+  "summary": "Good soundboard recording captures a high‑energy show highlighted by Santana‑boosted performances of Midnight Hour and Schoolgirl, though the early set feels subdued.",
+  "review": "The show shines when Carlos Santana joins the Dead – reviewers rave about a smoking Midnight Hour and an electrifying Schoolgirl that lift the concert’s energy. The soundboard source is generally clear and balanced, with only occasional comments about low volume, making it quite listenable. While the first set is described as a bit mellow until the guest appearance, the second set holds its own, though some feel the momentum wanes toward the end.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑star ratings and praise the performance (especially Santana’s contributions) while noting decent sound quality; a few lower scores are outliers, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; some listeners note the volume is low in places but no major dropouts or distortion are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Midnight Hour",
+      "Schoolgirl",
+      "Watchtower"
+    ],
+    "poor_songs": [
+      "Rooster",
+      "Bird"
+    ],
+    "setlist_flow": "First set starts a bit mellow and low‑energy until Santana joins for Schoolgirl and Midnight Hour, which injects excitement. The second set stays solid but some reviewers feel the momentum fades toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry sounded a tad weak early on, but his playing brightened after Santana’s solo; praised for tone during Midnight Hour.",
+    "Phil": "",
+    "Bob": "Bob's slide solo on Rooster described as atrocious; otherwise noted for decent baritone lines.",
+    "Keys": "",
+    "Drums": "Drums were highlighted as deep and solid, contributing strong rhythmic drive."
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Schoolgirl": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:24:22.635598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-08-22.sbd.barbella.4795.sbeok.shnf"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "An average‑quality recording of a sloppy show that’s redeemed by an outstanding Jack Straw performance.",
+  "review": "The concert is generally described as uneven, with several songs labeled sloppy or even train‑wrecks, but reviewers unanimously praise the second‑set opener Jack Straw as one of the best versions ever heard. Recording details are scarce, so the audio quality can only be assumed to be modestly listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Three moderate reviews point to a middling performance (show weight) with no clear recording feedback, yielding an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not mention the audio source, clarity, or mix, so no specific technical assessment can be made."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "MNS",
+      "Dancin'"
+    ],
+    "setlist_flow": "A lengthy first set followed by a second set that opens strongly with Jack Straw; overall the performance is considered sloppy and uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "MNS": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:10:20.114417+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-10.148538.betty.dalton.miller.sirmick.flac16"
+}

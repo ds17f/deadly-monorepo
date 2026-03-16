@@ -1,0 +1,61 @@
+{
+  "summary": "Strong audience tape with solid sound despite a dropout, highlighted by a smoking Althea and the unique Alabama → Stranger → Eyes sequence",
+  "review": "The audience recording captures a generally clear and lively performance from spring‑summer 1980, though a noticeable drop‑out near the end of “Music Never Stopped” can be heard. Fans rave about Jerry’s adventurous guitar work, especially on Althea and the Alabama → Stranger → Eyes segue, while the first set is praised for its tight playing; one dissenting reviewer finds the second set lackluster.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and recording highly (4‑5 stars) noting excellent performance and good audio, with only one strongly negative review; minor drop‑out issues keep the rating from being higher."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear audience tape with well‑balanced mix; a significant drop‑out occurs near the end of “Music Never Stopped” and occasional synth noise, but overall the recording is listenable and captures the band’s energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Minglewood",
+      "Alabama > Stranger > Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid and well‑played; the second set features an unusual but praised Alabama → Stranger → Eyes segue that some fans love while one reviewer felt it was rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for shredding, adventurous tone work and effect experiments (especially on Althea and the new songs); one reviewer complained his playing seemed sloppy due to health issues.",
+    "Phil": "",
+    "Bob": "Mentioned as delivering good licks and contributing strong rhythm work in the second set.",
+    "Keys": "Brent is noted for a brief synth‑noise glitch that fades, but otherwise supports the band well.",
+    "Drums": "The drum solo received high praise for rescuing a perceived weak moment in the second set."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama > Stranger > Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ball-Crushing Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:21:18.528610+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-02.fob.beyer.morris.99952.sbefail.flac16"
+}

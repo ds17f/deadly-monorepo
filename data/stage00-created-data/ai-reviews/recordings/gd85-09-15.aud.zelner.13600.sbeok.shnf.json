@@ -1,0 +1,75 @@
+{
+  "summary": "High‑energy 1985 outdoor field show with a crisp audience tape; standout Scarlet Fire, She Belongs to Me and an inspiring second‑set space → Scarlet Fire sequence.",
+  "review": "The recording captures an exuberant afternoon at a small college field. Reviewers rave about the tight playing, especially the smoking Scarlet Fire/Space transition, heartfelt She Belongs to Me and a sweet Comes a Time, while noting the tape’s clear stereo mix that even outshines many soundboards. The only minor gripe is an initially low volume on the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 detailed reviews overwhelmingly praise both performance and tape quality; show quality scores near 5 ★ and recording quality consistently described as clear and lively."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear stereo audience tape with crisp instrument separation; a few reviewers note the first‑set volume was low at the start, but overall mix is better than many soundboard releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "She Belongs to Me",
+      "Comes a Time",
+      "Around & Round",
+      "Space",
+      "US Blues",
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set followed by an unusual placement of drums after Space; the second‑set space → Scarlet Fire transition is highlighted as a high point, with seamless segues into US Blues and Satisfaction that kept the vibe flowing."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as wailing on the guitar and delivering high‑spirited, energetic leads throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bobby (Brent) is clearly audible and “playing up a storm”; one reviewer missed a hoped‑for Brent solo but overall keyboard work was praised.",
+    "Drums": "Drums were noted for their placement after Space; some early low volume was corrected by the taper."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Round": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "US Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T09:25:10.724921+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-15.aud.zelner.13600.sbeok.shnf"
+}

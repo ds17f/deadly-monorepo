@@ -1,0 +1,97 @@
+{
+  "summary": "Decent sound with some muddy moments, but a strong second set highlighted by Shakedown, Terrapin and an Iko Iko > Black Peter sequence.",
+  "review": "The recording is generally listenable though a few reviewers note mud on the Shakedown and occasional mic‑clap bleed, suggesting a mixed‑quality source. Musically the show shines in its second set – Jerry’s funky Shakedown solo, a solid Terrapin, and an energetic Iko Iko → Black Peter → Round & Round stretch receive high praise, while some feel the early jams drag.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight strong performances and several standout songs (Shakedown, Terrapin, Iko Iko sequence), but recurring comments about muddy sound and uneven set flow lower the overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Occasional mud on the Shakedown, mic‑clap bleed noted; overall decent clarity but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Terrapin",
+      "Playin > Drums > Space",
+      "Iko Iko > Black Peter > Round & Round"
+    ],
+    "poor_songs": [
+      "Samson",
+      "From the Heart of Me",
+      "Space (to some)",
+      "Iko Iko (mixed opinions)"
+    ],
+    "setlist_flow": "First set is missing for some listeners, but the second set delivers high energy peaks with Shakedown and Terrapin before a dip at Iko, then recovers with the Black Peter/Round & Round stretch."
+  },
+  "band_member_comments": {
+    "Jerry": "Funky, out‑of‑this‑world solo on Shakedown praised; some listeners note his guitar is missing in two songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith and Donna receive positive remarks for their keyboards throughout the show.",
+    "Drums": "Drums segment noted for a late ‘procession’ feel and enjoyed as part of Playin>Drums>Space."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin > Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Round & Round": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:06:56.519472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-02-04.nak700.glyde.18888.sbeok.shnf"
+}

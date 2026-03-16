@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1982 show with standout performances of Lazy Lightning, Supplication, Deal and High Time",
+  "review": "The recording is a high‑quality soundboard source that delivers a close yet loose, “slippery” sonic vibe, despite the first couple of songs being cut off. The concert itself shines with massive crowd energy in Virginia and highlights such as Lazy Lightning → Supplication → Deal and a killer High Time, making it a must‑listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 4–5 stars, praising both the musical performance and the soundboard quality; only minor issues (missing intro tracks) keep it just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, close‑mic feel described as \"very close yet loose and slippery\"; high‑fidelity soundboard with only the first couple of songs cut off."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightning",
+      "Supplication",
+      "Deal",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, high‑energy performance with a massive crowd; the first set suffers only from missing opening tracks in the recording but otherwise flows powerfully."
+  },
+  "band_member_comments": {
+    "Jerry": "Enthusiasm for Virginia noted; no specific guitar critique but his presence is highlighted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:10:18.981911+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-14.155665.sbd.set1p.set2.patched.miller.flac1644"
+}

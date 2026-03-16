@@ -1,0 +1,47 @@
+{
+  "summary": "Recording quality isn’t discussed, but the show delivers a solid first set with a standout Wharf Rat while slower tempos and listless moments hold it back.",
+  "review": "The performance is a mixed bag – Jerry Garcia’s melodic playing and strong vocals shine on songs like Wharf Rat, yet the band’s ultra‑slow tempo makes portions such as “Dancin’ in the Streets” feel listless. Reviewers note that the first set stays solid and the second picks up after the Help/Slip/Frank's sequence, but overall the show drifts between confidence and laziness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Both reviewers are lukewarm (2‑3 stars) and focus more on musical pacing than audio fidelity; the show has clear highlights but also noticeable drawbacks, leading to an average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews contain no remarks about sound clarity, mix balance, or audience bleed, so recording quality cannot be assessed beyond a neutral “fair” estimate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Help > Slip > Frank's"
+    ],
+    "poor_songs": [
+      "Dancin' in the Streets"
+    ],
+    "setlist_flow": "First set is described as solid; after the Help/Slip/Frank's sequence the band regroups and ends the second set on a stronger note, though overall pacing suffers from overly slow tempos."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s slow‑tempo playing is praised for its melodic articulation and strong vocal delivery, though some moments feel as if he’s nodding off.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Two drummers are noted, highlighting the challenge of maintaining cohesion at the band’s slower tempos."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:06:33.555522+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-12.150658.sbd.c1stGen.miller.flac16"
+}

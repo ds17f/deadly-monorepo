@@ -1,0 +1,81 @@
+{
+  "summary": "A mixed‑quality matrix recording captures a jam‑heavy fall‑'76 show with standout performances of Crazy Fingers, Scarlet Begonias, the St. Stephen > The Other One medley and an inspired Music Never Stopped/Mind Left Body jam.",
+  "review": "Fans rave about the deep, improvisational vibe of this late‑1976 set – highlighting a marathon Crazy Fingers, a hopping Scarlet Begonias, a fiery St. Stephen > The Other One/Wharf Rat medley and the rare dual Music Never Stopped/Mind Left Body jam.  The source is a patchwork of audience tape with some sound‑board splices, giving it a marginal but listenable clarity.  Overall the musical payoff outweighs the uneven recording fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show positively (4‑5 stars) and praise several jams, while recording quality is described as marginal or mixed; weighting performance higher yields a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note decent sound on the AUD portion, but others describe distance, muffled hand‑held capture and marginal overall fidelity; a few minutes of soundboard are spliced in."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Scarlet Begonias",
+      "St. Stephen > The Other One",
+      "Wharf Rat",
+      "Morning Dew",
+      "Peggy-O",
+      "Music Never Stopped",
+      "Mind Left Body Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The intimate Mershon venue encouraged a laid‑back, jam‑focused atmosphere; fans note the gradual tightening of the band in late ’76 with seamless transitions and extended improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen > The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:47:25.218721+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-09-30.fob-patched.unknown.11939.sbeok.shnf"
+}

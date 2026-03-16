@@ -1,0 +1,63 @@
+{
+  "summary": "Great‑sounding audience tape captures a fiery fall ’72 set with extended jams on Playin’, Truckin’ and The Other One plus an impassioned Stella Blue and a plucky Stars & Stripes encore.",
+  "review": "The three reviewers all praise the show’s hot, long jams – especially the stretched‑out Playin’, Truckin’ and The Other One – and note a particularly heartfelt rendition of Stella Blue and a brief Stars & Stripes after the encore.  The audience recording is generally clear and lively, though quiet passages mute the keyboards slightly.  Overall the performance is rated as an excellent example of a fall‑1972 Dead show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (extended jams, strong vocal performances) and recording is described as great overall with only minor muffling of keyboards, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Great overall clarity and lively ambience; louder sections come through very well.  Quiet passages – especially the keyboards during Playin' – are a bit mushy, causing some loss of detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Truckin'",
+      "The Other One",
+      "Stella Blue",
+      "Stars & Stripes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows with long, hot jams that build momentum through the first set and carry into an expansive second set; extended improvisations on Playin', Truckin' and The Other One keep energy high, while the brief encore and post‑encore Stars & Stripes provide a satisfying close."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar is prominent throughout, contributing to the hot jams and the plucky Stars & Stripes finale.",
+    "Phil": "Phil is absent for most of the show, with reviewers noting his disappearance after the encore.",
+    "Bob": "Bob (Bobby) is mentioned as part of the post‑encore jam but receives no specific critique.",
+    "Keys": "Keith’s keyboards are audible in louder sections but get lost in the mush during quiet moments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stars & Stripes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:11:31.980441+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-09.aud.sirmick.32036.flac16"
+}

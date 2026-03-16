@@ -1,0 +1,85 @@
+{
+  "summary": "High‑quality soundboard recording of a quintessential ’76 Boston run with superb Scarlet, St. Stephen, Dancin’ and Sugar Mag → Eyes sequences",
+  "review": "Fans rave about the fluid, laid‑back groove of this June 1976 Boston show, highlighting scorching performances of Scarlet Begonias, St. Stephen, Dancin’, Sugaree and the magical Eyes → Stella Blue transition. The soundboard source (often called a “Betty Board”) is praised as clear and crisp despite occasional channel‑swap quirks, making the music shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, most 4‑5 stars, repeatedly cite outstanding playing and excellent soundboard quality; only minor technical complaints (channel swap, tiny cuts) keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, Betty‑Board style mix praised as “incredible”; a few reviewers note left/right channel swap (piano/Mickey on opposite sides) and occasional tiny cuts, but overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "St. Stephen",
+      "Dancin'",
+      "Sugaree",
+      "Sugar Magnolia",
+      "The Eyes",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with a relaxed ’76 groove, moving from the tight funk of Scarlet into a soaring St. Stephen jam, then a flawless Dancin’ transition into Music and the second‑set highlight of Sugar Mag → Eyes → Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Garcia’s stripped‑down solos, jaw‑dropping runs on St. Stephen and Samson, and his mellow tone throughout.",
+    "Phil": "Phil’s descending bass line in Samson and the “mad” scarlet runs are singled out as highlights; his bass is described as “sick” and “mad”.",
+    "Bob": "",
+    "Keys": "Keith’s piano shines on the Eyes → Stella Blue transition, adding a lush layer to the climax.",
+    "Drums": "Mickey’s cowbell and drumming are noted (channel‑swap comment); his playing is described as fluid, weaving with Bill Kreutzmann’s beats."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "St. Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:50:41.213490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-11.sbd.jmason.7824.sbeok.shnf"
+}

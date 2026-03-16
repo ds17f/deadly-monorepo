@@ -1,0 +1,70 @@
+{
+  "summary": "Clean soundboard recording with decent audio, but an average‑to‑weak 1995 show that shines on Playing > UJB and The Last Time while Jerry’s guitar is often off‑kilter.",
+  "review": "The GD‑95‑02‑20 tape captures a very clean soundboard mix (minor buzz and occasional venue echo aside) that most listeners praise. Musically the concert sits in the middle of the band’s mid‑90s era – the second set delivers a solid Playing > UJB and The Last Time, but many note Jerry’s playing slipping on songs like El Paso and Bertha, and overall the show feels average with a few standout moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (≈4/5) while show performance receives mixed to below‑average scores (≈2.8/5). Weighted combination yields a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clean mix, crisp instrument separation; occasional buzz noted, and a few reviewers complained about venue acoustics (roof echo) but the tape itself is free of major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Uncle John's Band",
+      "The Last Time",
+      "Rain"
+    ],
+    "poor_songs": [
+      "El Paso",
+      "Bertha",
+      "Eyes"
+    ],
+    "setlist_flow": "Set 1 is uneven, with a few lackluster moments; Set 2 picks up thanks to the strong Playing > UJB sequence and The Last Time, but overall the concert feels like an average mid‑90s performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently described as out of sync, losing his way in jams (Cassidy, El Paso) and sounding ‘off’ or ‘scratching’; a few fans still express love for him despite the decline.",
+    "Phil": "Praised on the Rain performance and noted as the strongest core member during this era.",
+    "Bob": "Mixed remarks – some note his mix being too loud; occasional criticism of leadership in jams, but no strong positive comments.",
+    "Keys": "References to Vince, Brent (and “ultra‑cheese” keyboards) are largely negative, calling the keyboard contributions lame or poorly mixed.",
+    "Drums": "Generally praised; drums and post‑drum jam described as fun and well‑balanced."
+  },
+  "song_mentions": {
+    "Playing in the Band > Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:57:29.891255+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-02-20.sbd.1297.sbeok.shnf"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Good‑quality soundboard capture of a fast‑paced ’81 show with standout Eyes of the World and high energy from the 80s era",
+  "review": "The recording is a solid soundboard source, though some reviewers note vocals a bit forward and Jerry’s guitar disappearing until Tennessee Jed. Musically the show shines with blistering Eyes of the World, a lively Sugaree, strong Fire on the ... and Space, making it a must‑listen for fans of the early‑80s Dead. Overall the performance is energetic and enjoyable despite occasional tempo excess.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~3.9, but most comments highlight strong performances and only minor mix quirks; weighting favors the show quality, yielding a solid 4‑star recommendation."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture with nice bass presence; some listeners find vocals a little front‑heavy and Jerry’s guitar low or absent in the early mix, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Sugaree",
+      "Friend of the Devil",
+      "Space",
+      "The Other One",
+      "Let It Grow",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fast, high‑energy 1981 vibe; the set moves quickly with a particularly scorching Eyes of the World and tight transitions, though a few think the tempo runs a touch too fast."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar often low or missing in the mix early on, but pushes the pace on Eyes of the World when audible.",
+    "Phil": "Bass praised as unusually solid for fall‑81 Europe; Space highlighted as a strong Phil moment.",
+    "Bob": "Vocals/lyrics described as “blowing right and left,” indicating a weaker lyrical delivery.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T15:39:13.401826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-10.sbd.jim.12998.sbefail.shnf"
+}

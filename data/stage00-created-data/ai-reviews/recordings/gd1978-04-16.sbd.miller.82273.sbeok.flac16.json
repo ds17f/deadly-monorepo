@@ -1,0 +1,82 @@
+{
+  "summary": "Excellent soundboard capture of a fiery April ’78 show, highlighted by an unforgettable Peggy‑O and tight Scarlet > Fire/Estimated > Eyes sequences.",
+  "review": "The recording is a crystal‑clear soundboard tape that lets the listener feel like they’re onstage, with no noticeable drop‑outs or muddiness. Musically the concert shines – Peggy‑O receives rave praise for Jerry’s soaring vocal and searing solo, the first‑set climax of Scarlet > Fire and the second‑set Estimated > Eyes are described as explosive, and the show stays cohesive from Jack Straw through a punchy U.S. Blues encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All eight reviews are strongly positive (average 4.6★), highlighting both an excellent soundboard capture and a high‑energy performance with multiple standout moments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with fantastic fidelity; listeners repeatedly note the recording sounds \"fantastic\" and \"listenable\" with no complaints about drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Scarlet > Fire",
+      "Estimated > Eyes",
+      "Iko Iko",
+      "U.S. Blues",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Jack Straw (opening)",
+      "Sugar Magnolia (ending)"
+    ],
+    "setlist_flow": "The set flows tightly, opening strong with Jack Straw, building through Scarlet > Fire and an early Drums‑Space, then launching into a fiery second set highlighted by Estimated > Eyes and closing with a concise Iko Iko → Sugar Magnolia → U.S. Blues encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for emotive vocals on Peggy-O, a \"monster\" solo in the middle of the song, and tight, rapid guitar work that rescued the Jack Straw opening.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux is noted for stepping up during the Estimated > Eyes jam, adding depth to the improvisation.",
+    "Drums": "Early Drums‑Space segment described as listenable and cohesive; drums drive the show’s momentum."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T11:04:59.153363+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-16.sbd.miller.82273.sbeok.flac16"
+}

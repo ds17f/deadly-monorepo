@@ -1,0 +1,80 @@
+{
+  "summary": "Great soundboard capture of a classic ’70 show – Easy Wind and Big Railroad Blues shine, with only minor speed/clarity quirks.",
+  "review": "The performance is consistently praised for its relaxed vibe and several standout moments, especially an inspired Easy Wind jam (with Bobby Weir on fire) and a rousing Big Railroad Blues. The soundboard source is generally clear but a few reviewers note slight speed‑related oddities and occasional muffling, which don’t detract from the overall enjoyment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong musical moments; recording issues are mentioned but are minor, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard mix, though some note slight speed/tempo oddities and occasional muffled sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Wind",
+      "Big Railroad Blues",
+      "Frozen Logger"
+    ],
+    "poor_songs": [
+      "Cold Rain and Snow",
+      "Minglewood",
+      "Casey Jones"
+    ],
+    "setlist_flow": "A relaxed, classic 1970‑era set that builds a mellow groove; fans note the jam on Beat It On Down The Line as hot, while a few slower‑tempo numbers feel dragged."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby (Bob Weir) is highlighted as 'ON' during the Easy Wind jam.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Frozen Logger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Till the Morning Comes": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:47:36.289708+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-12-26.sbd.miller.22369.sbeok.shnf"
+}

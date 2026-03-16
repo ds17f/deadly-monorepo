@@ -1,0 +1,37 @@
+{
+  "summary": "Soundboard recording is mixed – decent overall sound but plagued by a bad kick‑drum mic, while the show delivers solid playing and a fan‑favorite Brown Eyed Women.",
+  "review": "The performance was generally lively, with reviewers noting the band “firing on all cylinders” and praising the upbeat rendition of Brown Eyed Women. However, the soundboard suffers from a notorious bad kick‑drum cable that muddies Bill’s low end and causes vocal cut‑offs, leading to mixed opinions about the audio quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is decent with some standout moments, but recording issues (bad drum mic, vocal gating) lower overall enjoyment; mixed reviewer scores support a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally good sound, but a bad kick‑drum cable on Bill and overly aggressive gating by Healy cause muddy lows and cut‑offs in vocals."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The band opened strong and kept energy high, though some listeners felt Jerry’s playing slipped later; overall the set was enjoyable despite no specific song criticisms."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as energetic with a new 'Cripe' effect and the band “firing on all cylinders,” though one reviewer sensed he was slipping up later in the tour.",
+    "Phil": "",
+    "Bob": "Mixing problems were noted that cut off parts of his vocal lines, but no direct performance complaints.",
+    "Keys": "",
+    "Drums": "Bill's kick drum suffered from a bad cable, resulting in muddy low‑end and detracting from the otherwise solid drumming."
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:44:21.004889+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-13.sbd.miller.91960.sbeok.flac16"
+}

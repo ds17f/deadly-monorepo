@@ -1,0 +1,96 @@
+{
+  "summary": "High‑energy ’73 show with smoking He’s Gone/Truckin’/Other One jams and solid soundboard recording",
+  "review": "The concert is a jam‑fest from the spring of 1973, highlighted by an unstoppable sequence of He’s Gone → Truckin′ → The Other One → Spanish Jam plus standout TLEO and Playin’ moments. Reviewers rave about Jerry’s tone and solos (especially on Tennessee Jed), Phil’s bass drive and the overall tight, high‑energy vibe, while noting the soundboard source is clear with only minor hiss or occasional tuning pauses.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars and praise both performance and recording; a few minor complaints do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced, described as crisp or excellent for ’73; a few listeners note slight hiss and occasional tuning delays but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Truckin'",
+      "The Other One",
+      "Spanish Jam",
+      "TLEO (The Light That Enters O)",
+      "Playin' In The Band",
+      "El Paso",
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Jam‑heavy second set that builds momentum from He’s Gone into Truckin', then explodes through The Other One and Spanish Jam; the first set is praised for tight playing, with Playin' and TLEO providing high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as “on” and “top form”; spectacular solos on Tennessee Jed and throughout the jams.",
+    "Phil": "Bass “tear[s] it up,” solid foundation for the long improvisations.",
+    "Bob": "Noted playing a figure in the right channel before He’s Gone; occasional vocal mix complaints about Donna but no criticism of his guitar work.",
+    "Keys": "Keith briefly joins on a jam, otherwise keyboards not singled out.",
+    "Drums": "Bill’s drumming praised as “excellent” and drives the extended jams."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Truckin'": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "The Other One": {
+      "positive_mentions": 14,
+      "negative_mentions": 0,
+      "total_mentions": 14
+    },
+    "Spanish Jam": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "TLEO (The Light That Enters O)": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Playin' In The Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "El Paso": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "I Know You Rider": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Race Is On": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    }
+  },
+  "processed_date": "2025-09-22T07:17:27.612991+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-03-31.sbd.yerys.2237.sbeok.shnf"
+}

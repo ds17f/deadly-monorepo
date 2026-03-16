@@ -1,0 +1,51 @@
+{
+  "summary": "Rough acoustic audience recording of a unique all‑acoustic set, but the performance shines – especially Cassidy, To Lay Me Down and an exuberant Oh Boy!",
+  "review": "The show captures a rare acoustic benefit with Brent Mydland on piano, John Kahn on bass and both Bill Kreutzmann and Mickey Hart driving the rhythm. Reviewers rave about Jerry’s guitar tone, the jam‑heavy Cassidy, the extraordinary “To Lay Me Down”, and the infectious “Oh Boy!” while noting that the source is not a soundboard and sounds a bit rough.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise the musical performance; only a few note recording shortcomings, leading to an overall good‑to‑great rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Not a soundboard – described as rough and “pretty rough”, but the mix is decent enough to enjoy the acoustic set; some listeners note good drum presence and clear piano runs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "To Lay Me Down",
+      "Oh Boy!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A compact, all‑acoustic benefit set with Brent Mydland’s piano opening, John Kahn on bass (less obtrusive than Phil), and strong percussion from Bill & Mickey; the flow feels intimate and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for being “on” with a great guitar tone and high‑mixed presence.",
+    "Phil": "Not present – reviewers note his absence and that John Kahn filled in on bass.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s acoustic piano runs are highlighted as sparkling and supportive of Jerry.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive strong compliments for “ripple” drum work and great percussion."
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Oh Boy!": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-13T12:17:01.024120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-22.nak300.walker.scotton.miller.95938.sbeok.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Solid soundboard recording (a bit tinny early) captures a high‑energy 1987 show highlighted by a soaring Cassidy, transcendent China Doll and Brent’s fireworks on The Greatest Story > Devil > Molly > Devil.",
+  "review": "The performance is generally praised for its energy and several standout moments – especially Jerry’s celestial lead on China Doll, the epic Cassidy, and a spectacular keyboard‑driven sequence of The Greatest Story > Devil > Molly > Devil.  While the board sound is clear and punchy overall, listeners note a tinny, distant quality in the first set and that the Wheel segment loses momentum toward the end.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers (6 of 8) give 4‑5 stars and highlight strong musical moments; recording is described as good to excellent despite minor tinny first‑set issues, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and punchy SBD, but the first set sounds a bit tinny and distant; occasional vocal flubs and minor fade‑out on Wheel noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "China Doll",
+      "The Greatest Story > Devil > Molly > Devil"
+    ],
+    "poor_songs": [
+      "Wheel"
+    ],
+    "setlist_flow": "High‑energy throughout with a particularly tight first half of the second set; momentum dips after the Wheel segment, but overall pacing remains strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for near‑religious lead guitar on China Doll and overall soaring playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work highlighted as \"pure Brent greatness\" on The Greatest Story > Devil > Molly > Devil.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story > Devil > Molly > Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "WLA Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:48:48.325367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-09.sbd.miller.106823.flac16"
+}

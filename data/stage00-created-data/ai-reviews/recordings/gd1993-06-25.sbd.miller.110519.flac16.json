@@ -1,0 +1,80 @@
+{
+  "summary": "A solid summer‑'93 show captured in a clean CM soundboard transfer with crisp Jerry tones and strong Vince keys, though the added accordion distracts many listeners.",
+  "review": "The performance is generally praised for its energy, with standout moments like \"Cumberland Blues,\" \"Saint,\" and an enthusiastic Uncle John’s Band, plus Jerry Garcia’s bright guitar tone and Vince’s piano‑style keyboards. The CM soundboard transfer is noted as clear and well‑balanced, but several reviewers lament the pervasive accordion that they feel muddies songs such as \"I Need a Miracle\" and \"Sugar Magnolia.\" Overall sentiment is mixed, reflecting both strong musical moments and notable instrumentation issues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the playing and transfer highly, but a few give zero stars due to the accordion, pulling the average down; recording quality is consistently praised while show quality is mixed."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "CM soundboard (SBD) transfer described as crisp and clear with no reported drop‑outs or distortion; overall listening experience is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "Saint",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "I Need a Miracle",
+      "Sugar Magnolia",
+      "Promised Land"
+    ],
+    "setlist_flow": "The set flows with high energy typical of the 1993 summer tour, highlighted by strong renditions of blues‑based numbers and tight keyboard work. However, the constant presence of accordion in several tunes is felt as a distraction, affecting the overall cohesion for some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a crisp, shredding tone; reviewers note he was \"still Jerry\" during this period.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's piano‑style keyboard playing and solos are highlighted positively; the accordion (not part of the core band) is criticized for cluttering the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:19:43.918556+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-25.sbd.miller.110519.flac16"
+}

@@ -1,0 +1,53 @@
+{
+  "summary": "Good‑quality soundboard capture of a legendary June 6 1969 show highlighted by an epic 47‑minute Turn on Your Lovelight and fiery Smokestack Lightnin' with guest Elvin Bishop.",
+  "review": "The recording is generally clear and listenable for its era, though a few listeners note a possible splice in the middle of the Lovelight and some uneven sections. Musically the night is celebrated for the marathon Lovelight jam, the rare Smokestack Lightnin' featuring Bishop, and an adventurous Beat It On Down The Line (though that tune suffers from a sloppy execution). Overall the performance is praised as a historic, psychedelic high‑water mark despite occasional rough edges.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight standout performances; recording is deemed good with only minor technical complaints, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable for a late‑60s soundboard tape; some users mention a splice/tonal change in the Lovelight and uneven sound in places, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn on Your Lovelight",
+      "Smokestack Lightnin'",
+      "Beat It On Down The Line"
+    ],
+    "poor_songs": [
+      "Beat It On Down The Line"
+    ],
+    "setlist_flow": "The set is dominated by a marathon Lovelight that stretches into psychedelic territory, punctuated by a rare Smokestack Lightnin' with guest guitarist Elvin Bishop and an adventurous (if uneven) Beat It On Down The Line. Guest appearances and the acid‑filled atmosphere give the night a wild, improvisational feel, though occasional sloppy moments and possible tape edits break the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed reports: some note his late arrival or possible absence on portions of the show, but most praise his guitar work on the epic Lovelight.",
+    "Phil": "Mentioned in stories about the massive LSD dose; a few reviewers feel his bass is less driven than usual that night.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Turn on Your Lovelight": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Smokestack Lightnin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T15:06:58.057028+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-06.sbd.jupile.9494.sbeok.shnf"
+}

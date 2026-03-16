@@ -1,0 +1,63 @@
+{
+  "summary": "A clear audience‑recorded tape (with a touch of high‑end distortion) captures a tight 5/8/77 show highlighted by a flawless Scarlet Begonias → Fire on the Mountain transition and a killer Dancing in the Street.",
+  "review": "The AUD source delivers surprisingly good clarity for an audience recording – the crowd is present but never overpowers the mix, and only the highs are a bit harsh. Musically the concert is praised as one of the band’s most consistent, with standout moments like the seamless Scarlet Begonias‑Fire on the Mountain segue, a superb Dancing in the Street, and Jerry’s pinch‑harmonic fireworks on Loser and Not Fade Away.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers (5 of 7) give 4–5 stars and highlight strong performance and good recording; only minor high‑frequency distortion is noted, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall with slight high‑end distortion and reduced low‑end compared to soundboard; crowd ambience present but well‑balanced; no audible burp between songs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Dancing In The Street",
+      "Loser",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth flow praised especially for the seamless transition between Scarlet Begonias and Fire on the Mountain; overall tight, consistent set with hypnotic long jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Energetic lead work with pinch‑harmonic solos (notably on Loser and Not Fade Away) and a cavernous presence in the hall.",
+    "Phil": "Reviewer missed his low‑frequency \"phretless\" slides, implying they are less evident in this AUD.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing In The Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T23:51:21.473845+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.aud.moore.cribbs.28301.shnf"
+}

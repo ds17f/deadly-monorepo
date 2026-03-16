@@ -1,0 +1,124 @@
+{
+  "summary": "Clear soundboard recording captures a strong late‑'70s show highlighted by an epic Estimated Prophet → The Other One → Eyes of the World sequence and heartfelt Wharf Rat.",
+  "review": "The SBD capture is bright and clear, especially on guitar and vocals, though the mix occasionally drowns Keith’s solo and the drums feel slightly out of sync. Musically the concert shines in the second‑set suite (Estimated Prophet, The Other One, Eyes of the World) while the first set starts a bit loose but recovers with It Must Have Been the Roses and solid jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings, praising the performance (especially the second set) and noting good but not perfect recording clarity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear guitar and vocal detail; brighter than official releases. Keith’s keyboard solo is mixed low, drums slightly out of sync, occasional off‑key vocal moments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "The Other One",
+      "Eyes of the World",
+      "It Must Have Been the Roses",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Good Lovin'",
+      "Deal",
+      "Space",
+      "Terrapin Station",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "First set opens shaky (missing intro, sloppier Good Lovin' and Deal) but tightens around It Must Have Been the Roses. Second set delivers a legendary sequence—Estimated Prophet into The Other One, then Eyes of the World, Drums and Space—finishing with strong finishes despite a weak Space jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar clarity praised; strong jams on Estimated Prophet and Eyes of the World; occasional vocal misstep on Dire Wolf but overall heartfelt playing.",
+    "Phil": "Bass described as wonderful throughout, especially on Sampson & Delilah and Wharf Rat.",
+    "Bob": "",
+    "Keys": "Twinkling keys noted on Bertha; Keith’s solo present but mixed too low to hear clearly.",
+    "Drums": "First review calls drum sequence excellent; second notes drummers out of sync yet Drums segment still good for a ’78 show."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves of London": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:23:14.889643+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-08.sbd.tobin.91871.flac16"
+}

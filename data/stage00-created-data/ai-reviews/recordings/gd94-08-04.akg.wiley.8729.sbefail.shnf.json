@@ -1,0 +1,89 @@
+{
+  "summary": "A fair‑quality audience tape of the Aug 4 1994 Meadowlands show captures a mixed performance with strong Deal and Eternity moments, but uneven sound and low‑energy playing keep it from shining.",
+  "review": "The recording is an audience‑sourced capture that is listenable yet uneven – occasional drop‑outs and muddiness prevent it from being crisp. Musically the band delivers highlights like a soaring Deal, spooky Eternity, and a spirited China Cat > Rider/Days Between stretch, but overall energy is low and Jerry’s playing is described as sloppy on several occasions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Average star rating across 19 reviews (~2.7) combined with mixed comments about both performance and recording quality yields a below‑average overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Many reviewers call the tape \"poor\" or note drop‑outs, while a few praise its clarity; overall sound is uneven with occasional muddiness but generally listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Eternity",
+      "China Cat > Rider",
+      "Days Between",
+      "Box of Rain",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opens with a solid Box‑of‑Rain/Jack Straw pair, drifts into a tired first set, then regains momentum in the second set—especially after Hornsby joins—for extended jams and an uplifting encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly described as sloppy, weak, or off‑key on several songs, yet his soulful playing shines on Deal and Eternity for some listeners.",
+    "Phil": "",
+    "Bob": "Noted looking unhappy on stage in one review; otherwise not specifically mentioned.",
+    "Keys": "Hornsby’s keyboard/accordion work is highlighted as a positive addition to the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eternity": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Deal": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:16:26.497690+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-08-04.akg.wiley.8729.sbefail.shnf"
+}

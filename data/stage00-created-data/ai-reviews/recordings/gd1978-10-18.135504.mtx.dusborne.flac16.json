@@ -1,0 +1,112 @@
+{
+  "summary": "Matrix recording praised for depth and clarity, but the show is uneven with strong first‑set moments and a tired second set.",
+  "review": "The MTX matrix source delivers a surprisingly deep and clear sound that even outshines the best soundboard tapes, giving listeners a vivid picture of the Winterland night. Musically the concert is mixed – highlights like “Looks Like Rain” and “The Music Never Stopped” shine, while the second set feels fatigued with several loose performances. Overall the recording is worth hearing for its sonic quality despite the uneven playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Recording quality is rated excellent, but show performance is below average; weighted combination yields a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Dave's MTX mix adds depth and surpasses the best soundboard sources; clear, well‑balanced with added ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "The Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "From the Heart of Me",
+      "Terrapin",
+      "Wharf",
+      "Truckin'",
+      "Miracle"
+    ],
+    "setlist_flow": "First set offers scattered strong moments but feels experimental; second set drags, with tired playing and a lack of spark despite occasional jam highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for adding color on ‘Looks Like Rain’ and leading improvisational sections; his tone noted as vibrant.",
+    "Phil": "Joins the Space jam briefly; no specific comment on bass performance.",
+    "Bob": "Vocals described as tired, especially on ‘Miracle’; leads teases and jams but overall energy is low.",
+    "Keys": "",
+    "Drums": "Drummers provide the backbone of the extended jam sections; Lee Oskar’s harmonica cameo noted during Drums."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:39:46.207761+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-10-18.135504.mtx.dusborne.flac16"
+}

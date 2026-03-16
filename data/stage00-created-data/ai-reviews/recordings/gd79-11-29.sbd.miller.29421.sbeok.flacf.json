@@ -1,0 +1,58 @@
+{
+  "summary": "Rich soundboard capture of a solid fall ’79 show highlighted by a monster 'The Other One' and an epic 20‑minute 'Eyes of the World', despite a shaky 'Around and Around'.",
+  "review": "All three reviewers praise the recording’s full, rich sound and note that this source sounds better than other board options. Musically the concert is strong – The Other One and a near‑20‑minute Eyes of the World receive high marks, while the only real blemish is an off‑key start by Bob on Around and Around.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently positive 4‑star reviews emphasize good soundboard quality and a strong performance with only one minor song issue, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the sound as full, rich and better than other board sources; no technical flaws or drop‑outs are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Estimated Prophet",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Around and Around"
+    ],
+    "setlist_flow": "Solid fall ’79 performance with a smooth transition from Estimated Prophet into an epic Eyes of the World; overall set is tight except for a mis‑step on Around and Around."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Starts off‑key on 'Around and Around', hurting that song's impact",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:17:46.492956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-29.sbd.miller.29421.sbeok.flacf"
+}

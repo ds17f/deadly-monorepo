@@ -1,0 +1,110 @@
+{
+  "summary": "Good audience recording captures a mixed‑quality show that shines on Franklin's Tower, Let It Grow and Never Trust A Woman despite a shaky start.",
+  "review": "The tape – recorded from the 9th‑row center of the house – is generally clear and listenable, though early parts suffer from mic placement bumps. Musically the concert is uneven: the first set stumbles on Half‑Step and lyric clarity, but the second half sparkles with strong performances of Franklin's Tower, Let It Grow, Never Trust A Woman and a solid post‑Space groove.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers praise several songs and the overall listenability of the audience tape, but notable criticisms of the first set and a few weak moments bring the average rating to the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Sound is described as very good overall; occasional bumps, mic‑stand issues and lyric drop‑outs in the openers but the tape remains listenable throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "El Paso",
+      "Althea",
+      "Let It Grow",
+      "Never Trust A Woman",
+      "Samson",
+      "Around"
+    ],
+    "poor_songs": [
+      "Good Lovin'",
+      "Half Step",
+      "Black Peter",
+      "Truckin'"
+    ],
+    "setlist_flow": "First set opens shaky with a flubbed Half‑Step and muffled lyrics, but improves after the early glitches. The second set glows, highlighted by Franklin's Tower, Let It Grow, Never Trust A Woman and an uplifting post‑Space stretch."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently noted for hot licks and enthusiastic singing; a few reviewers point out a flubbed line on Half‑Step but overall his playing is praised.",
+    "Phil": "",
+    "Bob": "Mentioned briefly as being backed up by Brent during the chorus of He's Gone.",
+    "Keys": "Brent’s organ work gets specific shout‑outs – high‑note scream in Around, scat‑sing on Rooster, and a solid effort despite quitting briefly during Good Lovin'.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Never Trust A Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:51:50.339969+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-11.fob-senn421-wise.sacks.6959.sbefail.shnf"
+}

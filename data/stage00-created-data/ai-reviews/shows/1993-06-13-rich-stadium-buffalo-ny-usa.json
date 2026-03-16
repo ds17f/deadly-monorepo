@@ -1,0 +1,78 @@
+{
+  "summary": "Solid summer ’93 set with fiery Looks Like Rain, The Other One & tight jams",
+  "blurb": "The show delivers strong performances of Looks Like Rain, The Other One and Loser, with Jerry’s ferocious tone and Vince’s keyboard highlights. A few numbers like Samba and Truckin’ stumble, but the second‑set energy stays high and the pacing remains tight.",
+  "review": "On June 13, 1993 at Rich Stadium the Dead brought a quintessential summer ’93 set that still feels fresh. The first set rolls through Touch of Grey and New Minglewood Blues into a scorching Loser before slipping into an acoustic‑electric hybrid on Looks Like Rain – a moment reviewers call “magical” thanks to Jerry’s ferocious tone and Bob’s vocal nuance. After a brief lull with Samba, the second half truly shines: Vince Welnick’s “crazy good” keys lift Broken Arrow, while The Other One erupts into an extended jam that rides through Days Between into a rousing Johnny B. Goode. Sting even made a guest appearance, adding a special spark to Jerry’s lead work. Though Truckin’ suffers from a vocal slip and Samba falls flat, the overall flow is tight, energetic, and captured brilliantly on the Miller soundboard, which offers crystal‑clear clarity despite stadium size.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Three recordings label the show as positive and highlight multiple standout songs (Looks Like Rain, The Other One, Broken Arrow) with consistent praise for Jerry’s tone, Phil’s bass presence, and Vince’s keyboards; only one recording is mixed, no negative consensus appears, yielding a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1993-06-13.sbd.miller.105491.flac16",
+    "reason": "Excellent soundboard capture with crisp, clear mix that showcases the band’s tight playing and highlights the standout songs."
+  },
+  "key_highlights": [
+    "Looks Like Rain delivers an acoustic‑electric showcase with Jerry’s ferocious lead.",
+    "The Other One extends into a marathon jam that rides through Days Between.",
+    "Vince Welnick’s keyboard work shines on Broken Arrow and Way To Go Home.",
+    "Miller soundboard provides crystal‑clear audio despite the large stadium environment."
+  ],
+  "song_highlights": [
+    "Looks Like Rain",
+    "The Other One",
+    "Loser",
+    "Cassidy",
+    "Deal",
+    "Broken Arrow",
+    "Days Between",
+    "New Minglewood Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone is described as ferocious and magical, especially during the Sting guest spot; his licks on Broken Arrow and acoustic work on Looks Like Rain draw high praise.",
+    "Phil": "Phil delivers a loud, crunchy bass tone and steps up as a leader in this summer ’93 run, providing a solid foundation throughout.",
+    "Bob": "Bob’s vocals slip on Truckin' but he shines on the acoustic rendition of Looks Like Rain and contributes strong vocal energy overall.",
+    "Vince": "Vince’s keyboard contributions are “crazy good,” highlighted on Broken Arrow and Way To Go Home; occasional Brent‑style tones are noted, though Samba receives criticism unrelated to his playing.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-18T14:13:10.748484+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Looks Like Rain"
+    ],
+    [
+      "Truckin'",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Days Between",
+      "Johnny B. Goode"
+    ],
+    [
+      "Loser"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Deal"
+    ],
+    [
+      "Broken Arrow"
+    ],
+    [
+      "New Minglewood Blues"
+    ]
+  ]
+}

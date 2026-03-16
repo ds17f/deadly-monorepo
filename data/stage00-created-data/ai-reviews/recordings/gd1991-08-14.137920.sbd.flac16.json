@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard recording hampered by a muddy mix that buries Jerry's vocals and overloads the sound with keyboards.",
+  "review": "The only review notes significant mixing problems – Jerry’s vocal line is almost lost under Bob’s louder singing and an excess of keyboard layers, making for a frustrating listening experience. The source appears to be a soundboard recording, but the balance issues detract from any enjoyment of the performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review (3 stars) focusing on poor mix quality; no positive comments about the show, leading to a low overall rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix issues: Jerry's vocals are buried, Bob's vocals dominate, and an excess of keyboards creates a cluttered sound; listener turned off before drums."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are half as loud as Bob's and get lost in the mix.",
+    "Phil": "",
+    "Bob": "Bob's vocals are louder than Jerry's, standing out in the mix.",
+    "Keys": "Too many keyboards crowd the sound, creating a 'Caliope' overload.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T23:08:46.094149+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-14.137920.sbd.flac16"
+}

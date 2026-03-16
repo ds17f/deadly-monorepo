@@ -1,0 +1,95 @@
+{
+  "summary": "Stellar audience tape that captures a fire‑filled ’78 show with smoking Candyman, Estimated > Eyes and a superb Ship of Fools.",
+  "review": "The recording is an exceptionally clear audience capture that lets the crowd’s excitement shine through while still delivering a well‑balanced mix of guitars, keys and drums. Musically the night is packed with highlights – a blazing Candyman solo, tight Estimated > Eyes, one of the best Ship of Fools ever heard and inspired Garcia overdrive on GDTRFB – making it a must‑listen for any ’78 fan.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews praise both the performance (many standout songs, high energy) and the recording quality (clear audience tape with excellent crowd capture). The few minor criticisms do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear tape recorded on a Nakamichi 300; captures full band mix and audience ambience with minimal noise or dropouts. Vocals, especially Donna’s, are well‑presented and the crowd energy is vivid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Estimated > Eyes",
+      "Ship of Fools",
+      "Bertha",
+      "GDTRFB"
+    ],
+    "poor_songs": [
+      "Sugaree"
+    ],
+    "setlist_flow": "The first set builds from a solid opening into a high‑octane stretch (Candyman → Passenger). The second set launches with Estimated > Eyes and stays on fire, ending with a raucous NFA > GDTRFB > Johnny B. Goode sequence that keeps the momentum to the close."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is in overdrive – standout solos on Candyman and GDTRFB; his turnaround after four minutes is highlighted as brilliant.",
+    "Phil": "",
+    "Bob": "Bob’s rhythm work is mentioned as tightening up after an unusually fast Sugaree, helping the band regain its groove.",
+    "Keys": "Donna Jean Godchaux’s voice shines on From The Heart Of Me and adds beauty to the overall sound.",
+    "Drums": "Short but sweet drum segment and space are praised for their tightness and flow."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Delia-D": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "From The Heart Of Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "GDTRFB": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA > GDTRFB > Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:09:13.788470+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-14.nak300.rolfe.miller.100205.sbeok.flac16"
+}

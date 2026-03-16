@@ -1,0 +1,101 @@
+{
+  "summary": "High‑quality soundboard capture of a fiery 1991 Greensboro show, highlighted by an epic Eyes of the World → Playin' sequence and soaring Jerry tones.",
+  "review": "The recording delivers clear, well‑separated sound that lets you hear each member—Bob in the left channel, Hornsby’s piano front‑and‑center, and the dual‑guitar interplay. Musically the night shines with a monster Eyes of the World that rolls into a marathon Playin' jam, peppered with Dark Star licks, while the first set builds from a tentative start to solid grooves. A few mix hiccups (Samson & Delilah) and a shaky opening don’t detract from an overall vibrant performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising both the musical flow (Eyes → Playin' → Dark Star) and the clear soundboard mix; only a few note minor mix or performance glitches."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp stereo separation (Bob highlighted in left channel), strong presence of keyboards and guitars, occasional early‑set muddiness and a poorly mixed Samson & Delilah segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Playin'",
+      "Dark Star",
+      "The Wheel",
+      "Around & Around"
+    ],
+    "poor_songs": [
+      "Half-step Mississippi",
+      "Samson & Delilah"
+    ],
+    "setlist_flow": "First set starts tentative but gains momentum after four songs; second set explodes with the 23‑minute Eyes of the World that flows into a 38‑minute Playin' jam and Dark Star teases, delivering the night’s high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Soaring, midi‑enhanced guitar tone praised throughout; especially strong during the Eyes/Playin'/Dark Star passages.",
+    "Phil": "Described as “mega‑toned” and “quaking away,” providing a solid, energetic bass foundation under rapid drum turnarounds.",
+    "Bob": "Left‑channel placement highlighted his excellent rhythm‑guitar work; listeners note clear presence.",
+    "Keys": "Hornsby receives abundant praise for piano virtuosity, heavy midi textures, and creative contributions on Eyes, Playin' and the jam sections.",
+    "Drums": "Rapid turnabouts and dynamic fills praised early on, though a few reviewers felt the drummers “dozed off” later in the set."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pitcha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-step Mississippi": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:49:06.275640+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-31.sbd.unknown.31955.sbeok.shnf"
+}

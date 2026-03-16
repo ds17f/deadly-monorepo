@@ -1,0 +1,31 @@
+{
+  "summary": "Review provides no substantive details about the recording quality or musical performance.",
+  "review": "The sole review is a poetic piece unrelated to the Grateful Dead concert and does not mention any aspect of sound quality, setlist, or band performance. Consequently, there is insufficient information to assess either the recording or the show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one review was provided and it contains no relevant commentary on music or audio quality, making any rating highly speculative."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments regarding soundboard, audience mix, clarity, or other technical aspects were made."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information about the setlist or performance flow was provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T14:37:08.784375+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-31.139125.aud.liff.lamarre.berger.flac1648"
+}

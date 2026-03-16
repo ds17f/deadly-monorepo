@@ -1,0 +1,31 @@
+{
+  "summary": "A great 1982 performance hampered by a thin, lifeless soundboard recording.",
+  "review": "Fans agree the concert itself was strong—typical of a solid 1982 Dead show—but the Miller‑sourced digital soundboard (dsbd) capture is criticized for lacking reverb, sustain and overall fullness, especially on Brent's organ. One reviewer praises the balance and gives it five stars, while another finds the audio unsatisfying and rates it one star, resulting in mixed feelings about this release.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality is viewed positively but without detailed highlights; recording quality receives conflicting feedback, with a strong negative note about thin sound. The mixed input from only two reviews yields an average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Criticized for lack of reverb, sustain and fullness; organ sounds thin with no impact. One reviewer mentions good balance, but overall the audio is described as lifeless compared to other sources."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers simply note the show is a solid 1982 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Organ (Brent) described as thin and lacking sustain.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T20:24:44.937790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-17.146324.dsbd.miller.flac1644"
+}

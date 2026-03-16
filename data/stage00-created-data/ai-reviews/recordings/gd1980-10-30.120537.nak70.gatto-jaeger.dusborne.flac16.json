@@ -1,0 +1,31 @@
+{
+  "summary": "Decent front‑logement audience recording captures the show with acceptable clarity",
+  "review": "The reviewer was sitting just left of the soundboard in the front loge and recorded the concert (despite getting busted). The tape streams well enough for background listening, indicating a reasonably clear audience capture, though no musical details are mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one moderately positive review (4 stars) with limited detail; recording seems usable but show performance is not described, leading to a cautious rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded from front loge near the soundboard; likely clear enough for streaming with typical audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T05:43:03.531080+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-30.120537.nak70.gatto-jaeger.dusborne.flac16"
+}

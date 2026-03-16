@@ -1,0 +1,93 @@
+{
+  "summary": "Crisp soundboard capture of an intense 1993 Oakland show featuring the Wolf guitar, Ornette Coleman guest jam and standout renditions of Brokedown Palace, The Other One and Johnny B. Goode.",
+  "review": "The recording is a high‑quality soundboard source that many reviewers describe as crisp, super‑clean and well‑balanced, though a few note cassette‑generation hiss and a slightly quiet Phil mix. Musically the show shines with Jerry’s sparkling Wolf tone, ferocious solo on Johnny B. Goode, and an unforgettable second set where Ornette Coleman fuels wild jams through The Other One, Lovelight and Playin' in the Band. Overall sentiment is strongly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.3 with consistent praise for both performance and sound quality; enough reviews (23) to give a solid high‑confidence estimate."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Super‑crispy mix praised by many; some mention cassette‑generation hiss and occasional quietness in Phil's bass and drum balance, but overall clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "The Other One",
+      "Lovelight",
+      "Johnny B. Goode",
+      "Playin' in the Band",
+      "Iko",
+      "Corrina",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Space"
+    ],
+    "setlist_flow": "A vivid first set followed by a marathon second‑set parade and Ornette Coleman guest jam; the band rides through intense improvisations (The Other One, Playin' in the Band) before closing with high‑energy rockers like Johnny B. Goode."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as having a clean, rich tone on his Wolf guitar; soulful jazz playing, ferocious solo on Johnny B. Goode and overall crisp, melodic lead work.",
+    "Phil": "Bouncey, resonant bass highlighted on Cold Rain and Lovelight; some reviewers note his voice/percussion presence, but the mix can render Phil surprisingly quiet.",
+    "Bob": "",
+    "Keys": "Vince (Brent) praised for precise integration during Playin' in the Band and other jams, adding unusual keyboard textures.",
+    "Drums": "Mardi Gras drum parade into Iko lauded; didgeridoo and percussion add color, though a few note drums don't sound as optimal in the mix."
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:48:01.521958+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-02-23.sbd.hall.1611.sbeok.shnf"
+}

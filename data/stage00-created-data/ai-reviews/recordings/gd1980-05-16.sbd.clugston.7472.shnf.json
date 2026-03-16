@@ -1,0 +1,55 @@
+{
+  "summary": "Recording source unknown, but the show dazzles with inventive song pairings like Stranger > Althea and St. of circumstance > Eyes.",
+  "review": "The reviewer is exuberant about the experimental sequencing, highlighting unexpected transitions such as Stranger into Althea and St. of circumstance flowing into Eyes. No details are given on the audio source or mix quality, leaving the recording side undefined while the musical flow receives strong praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Enthusiastic comments about song placement suggest a high‑quality performance, but with only one brief review and no recording details the rating stays moderate with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger > Althea",
+      "St. of circumstance > Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features experimental song sequencing and unexpected transitions that keep the performance fresh and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. of circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:49:44.174944+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-16.sbd.clugston.7472.shnf"
+}

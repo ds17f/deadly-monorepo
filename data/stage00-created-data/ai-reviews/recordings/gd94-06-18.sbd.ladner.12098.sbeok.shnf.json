@@ -1,0 +1,98 @@
+{
+  "summary": "Excellent soundboard capture with a smoking Sugaree, but an overall uneven 1994 Eugene show that drifts after Easy Answers.",
+  "review": "The recording is praised for its crystal‑clear soundboard quality, making the performance easy to enjoy despite occasional mix quirks. Musically the night shines on tracks like Sugaree, Jack Straw → Sugaree and Candyman, yet the set loses steam after Easy Answers, with several songs (China > Rider, Corrina, Out of Space) falling flat for many listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently rated excellent (≈4‑5 stars), while show quality averages around 2½–3 stars across the many detailed reviews, yielding a combined rating of about 3.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the sound \"excellent\" and note no major drop‑outs; the mix is clear and balances guitars, keys and drums well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Jack Straw > Sugaree",
+      "Candyman",
+      "Days Between"
+    ],
+    "poor_songs": [
+      "Easy Answers",
+      "China > Rider",
+      "Corrina",
+      "Out of Space",
+      "Women"
+    ],
+    "setlist_flow": "First set starts high‑energy and peaks with Sugaree, but drops after Easy Answers; the second set is described as solid yet uninspiring, never fully recapturing the early momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone on Sugaree and Jack Straw is praised (\"blue Hawaii slack‑key\", \"strumming furiously\"), but his playing slips on Easy Answers and Days Between where he mangles verses.",
+    "Phil": "Phil’s bass work gets a shout‑out for thundering on Maggie's Farm (MAMU) and keeping the groove alive early in the set.",
+    "Bob": "Weir’s vocal banter is noted, especially the back‑and‑forth yelling of \"Corrina\" with Jerry; no specific guitar comments.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 4,
+      "total_mentions": 5
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Out of Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:27:06.291882+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-18.sbd.ladner.12098.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear soundboard recording of a high‑energy ’82 show with a standout Crazy Fingers, but playback runs slightly fast and Jerry’s mix is a bit low.",
+  "review": "The performance is widely praised as one of the best from 1982, highlighted by a perfect Crazy Fingers and an early Touch of Grey, plus a tight opening four‑song sequence. The soundboard source is generally crisp, though several listeners note that the tape plays a half‑step fast and Jerry Garcia’s guitar/voice sits low in the mix, requiring pitch correction for optimal listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and rave about the musical execution; recording quality is praised as clear but with minor speed/mix issues, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crystal‑clear clarity and excellent balance for most of the set; occasional ragged mix, Jerry’s guitar/voice low in the mix, and playback runs ~½ step fast (pitch up). Some users recommend NT Pitch correction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Touch of Grey",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, fast‑paced opening four‑song sequence with solid first set; new ’82 material flows well and the energy stays high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone on Crazy Fingers is praised as perfect, but one reviewer notes his guitar sits low in the mix and his voice sounds “helium‑like” due to the fast playback speed.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s piano contribution on Crazy Fingers is highlighted as a standout moment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T02:08:18.269948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-21.sbd.perkins.13306.sbeok.shnf"
+}

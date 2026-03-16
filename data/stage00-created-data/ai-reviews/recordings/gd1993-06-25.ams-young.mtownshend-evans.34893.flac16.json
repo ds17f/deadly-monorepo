@@ -1,0 +1,80 @@
+{
+  "summary": "A high‑energy show highlighted by Althea, Promised Land and a soaring China Cat Sunflower > I Know You Rider, captured on an unknown‑source recording that fans find enjoyable.",
+  "review": "Fans describe this concert as a memorable night filled with dancing, powerful moments from Althea, Cumberland Blues, Promised Land and a blistering China‑Rider sequence. Although the reviews give no technical details about the tape, the overall feeling is that the performance shines and the recording is listenable enough to relive those feelings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "All three reviewers give high star ratings (4‑5) and praise the musical performance; no recording issues are mentioned, so the show quality dominates the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not comment on soundboard vs. audience or clarity; they focus on the concert experience, implying the audio is at least acceptable for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Cumberland Blues",
+      "Promised Land",
+      "China Cat Sunflower > I Know You Rider",
+      "Wharf Rat",
+      "The Weight",
+      "Half-Step"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a seamless, high‑energy flow—from the opening Half‑Step through Althea and the jammed Cumberland Blues, culminating in an uplifting Promised Land and a climactic China‑Rider sequence—leaving the crowd buzzing."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry's guitar work, describing his chords as dancing off the strings and providing the night’s emotional core.",
+    "Phil": "Phil is mentioned by name and praised for being part of the glowing stage presence.",
+    "Bob": "Bob (referred to as Bobby) is highlighted in the visual lighting description, indicating a strong stage presence.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:24:11.520529+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-25.ams-young.mtownshend-evans.34893.flac16"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Excellent audience recording of the 1971‑08‑06 show, highlighted by a ferocious Cumberland Blues and a smoking Hard to Handle.",
+  "review": "The remastered tape captures one of the band’s tightest early‑'71 performances, with standout moments like a raging Cumberland Blues, a powerful Hard to Handle, and a poignant Brokedown Palace.  While a few opening tracks suffer from pitch‑shift issues, most reviewers praise the raw, gritty audience sound as being on par with many soundboard tapes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Across 16 reviews the average rating is 4.56; comments overwhelmingly praise both the musical performance and the (remastered) audience recording, with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Remaster fixes original half‑step speed issues for most of the set; a few early tracks still sound slightly slow.  Overall the audience tape is clear, gritty and often praised as better than many soundboard sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Cumberland Blues",
+      "Brokedown Palace",
+      "Bobby McGee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a tight, focused set with concise jams and seamless transitions (e.g., Truckin' → Drums → The Other One), capturing the raw energy of early‑'71."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead work is praised throughout, especially soaring solos, though his Brokedown Palace solo drew a humorous “pathetic” comment.",
+    "Phil": "Bass bombs and tight groove are highlighted; reviewers note his strong presence and reference the Phil Zone version.",
+    "Bob": "Solid rhythm on Bobby McGee and a quirky boogaloo attack; praised for solving the ‘Bobby problem’.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming is singled out as essential to the band’s tightness, with drum breaks in Truckin' highlighted."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:25:56.229776+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-08-06.aud.sirmick.30224.sbeok.flacf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Blazing Scarlet>Fire, tight jams and standout Bird Song",
+  "blurb": "The Spectrum show delivers a scorching Scarlet Begonias → Fire on the Mountain segue and an energized Estimated Prophet. Candyman, Althea and Bird Song shine with solid rhythm work from Mickey, Bill and Brent's bluesy keys. A few lyrical slips keep it from being flawless but overall it's a strong early‑'80 performance.",
+  "review": "On May 2, 1981 at The Spectrum, the Dead unleashed one of their most electrifying second‑set bursts of the era. The highlight is an incendiary Scarlet Begonias into Fire on the Mountain that rolls straight into a tight Estimated Prophet, while Brent Mydland’s gritty keyboards and the dual‑drum frenzy from Mickey Hart and Bill Kreutzmann keep the momentum roaring. First‑set gems like Candyman and Althea showcase Jerry’s expressive guitar work—though his voice wavers slightly on Althea—and Bob Weir’s slide adds texture, especially on Not Fade Away. Bird Song soars in the early part of the night, and Stella Blue provides a soaring close to a setlist that otherwise stumbles only on a few lyrical missteps (Terrapin Station) and occasional drop‑outs in the less polished recordings. Overall, the performance is tight, adventurous, and worth revisiting for any Deadhead looking for a vivid snapshot of the early ’80s era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 32,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Multiple recordings praise the Scarlet>Fire sequence, Bird Song and Estimated Prophet with consistent positive language (\"blazing\", \"soaring\", \"strong\"). Though three analyses are mixed, there is no recurring negative criticism of the musical performance; positives outweigh the mixed notes, warranting a moderate +1.2 sentiment boost.",
+      "final_calculation": "2.5 + 0.3 + 1.2 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd81-05-02.sbd.samaritano-miller.22310.sbeok.shnf",
+    "reason": "Good soundboard source with clear, balanced mix; captures the strong performances while only having minor drop‑outs that don’t detract from the music."
+  },
+  "key_highlights": [
+    "Scarlet Begonias → Fire on the Mountain segue ignites the second set.",
+    "Estimated Prophet rolls tightly into a powerful jam and drum/space section.",
+    "Bird Song delivers soaring melodic interplay early in the show.",
+    "Brent's blues‑y keyboard work adds depth to post‑drum jams."
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Estimated Prophet",
+    "Candyman",
+    "Althea",
+    "Bird Song",
+    "Stella Blue",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers strong, expressive guitar work on Bird Song and Scarlet>Fire; vocal moments shine on Candyman and Althea despite a slight off‑key slip on the latter and lyric flubs on Terrapin Station.",
+    "Phil": "Provides a solid, clear bass foundation that anchors the band, especially evident in the matrix recording’s crisp mix.",
+    "Bob": "Showcases dynamic slide work and inventive chord explorations, notably on Not Fade Away and during mid‑set jams with Brent.",
+    "Brent": "Bluesy, dynamic keyboard playing drives the post‑drum jam sections and adds tasteful color throughout the set.",
+    "Mickey": "Creates a pure, simple frenzy in the drum segment, fueling the high‑energy flow of Scarlet>Fire and Estimated Prophet.",
+    "Billy": "Locks in with Mickey for a powerful dual‑drum foundation, keeping the rhythmic pulse tight across both sets."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-13T10:49:33.554591+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Not Fade Away",
+      "Stella Blue",
+      "Around & Around",
+      "Good Lovin'"
+    ],
+    [
+      "Candyman",
+      "New Minglewood Blues"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Bird Song"
+    ]
+  ]
+}

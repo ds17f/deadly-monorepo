@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard source is plagued by a half‑tone low pitch, yet the acoustic set—particularly the acoustic \"Truckin'\"—offers tasty moments.",
+  "review": "The recording suffers from a noticeable pitch problem that leaves it sounding flat and inferior to the Sirmick remaster, making the technical side poor. On the musical front, listeners appreciate the acoustic portion of the show, especially the acoustic rendition of \"Truckin'\" and Bob Weir’s vocal delivery. Overall the performance has highlights but the flawed audio limits its appeal.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is praised by one reviewer (4★) while two reviewers give very low ratings (0★ and 1★) due to pitch and overall sound issues; weighted average yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Pitch is about half‑tone low, making the mix sound flat; several reviewers note this version sounds worse than the Sirmick remaster."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin' (Acoustic)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic portion is highlighted as tasty, with particular love for the acoustic \"Truckin'\" and a nice train‑whistle intro before \"Casey Jones\"."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Good to hear Bobby grind those lyrics (positive vocal note).",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:25:20.264304+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-20.sbd.smith.97364.sbeok.flac16"
+}

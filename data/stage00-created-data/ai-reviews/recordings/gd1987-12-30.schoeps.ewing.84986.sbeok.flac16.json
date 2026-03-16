@@ -1,0 +1,45 @@
+{
+  "summary": "Terrific playing highlighted by soulful back-to-back Ship of Fools and He's Gone, but the soundboard recording is considered subpar.",
+  "review": "The show features strong musicianship with a memorable second‑set pairing of Ship of Fools and He's Gone that many fans recall for its style and soul. However, listeners note the soundboard capture is among the poorest they've heard, detracting from the overall listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show performance receives high praise (5‑star), while recording quality is heavily criticized (2‑star); weighted average yields ~4.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer calls it the worst soundboard ever, citing poor clarity and overall low fidelity; no specific details on drop‑outs but general negative impression of the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual second set with back‑to‑back Ship of Fools and He's Gone, creating a soulful highlight; overall playing described as terrific."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocally scratchy and lyrically forgetful at times, though his guitar work contributes to the terrific overall playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:48:43.807052+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-30.schoeps.ewing.84986.sbeok.flac16"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "A warm, richly captured audience tape that showcases a stellar 1973 set – soaring Bird Song, a monster He's Gone/The Other One jam and inspired Jerry solos.",
+  "review": "The recording is an audience (AUD) source that most listeners describe as surprisingly clear, full‑bodied and “rich,” with only occasional early‑set drop‑outs or tape hiss. Musically the show is repeatedly called one of the band’s best of ’73 – highlighted by a blazing He's Gone → The Other One sequence, a legendary Bird Song, and standout performances of Looks Like Rain, Row Jimmy and Box of Rain. Overall the performance outweighs the minor audio blemishes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 5‑star, praising both the music and the surprisingly good audience recording; only a handful of low‑star outliers note minor audio flaws."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm, full‑room sound with excellent instrument separation; occasional early‑set volume fades (Bertha), brief tape hiss and a few cut‑outs, but overall considered “rich” and “clear” for a 1973 AUD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "The Other One",
+      "Bird Song",
+      "Looks Like Rain",
+      "Row Jimmy",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Bertha (inconsistent start)",
+      "China Cat Sunflower (missing from setlist)"
+    ],
+    "setlist_flow": "The set flows seamlessly with a laid‑back first half that builds into an explosive second‑set jam; the He’s Gone → The Other One sequence is described as “monster,” and the Bird Song is repeatedly called one of the best ever."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soulful, inspired solos and overall guitar tone throughout the show.",
+    "Phil": "Noted for a powerful re‑entry in the jam (The Other One) and a “divinely futuristic” bass line.",
+    "Bob": "",
+    "Keys": "Keith’s jazzy, Chick‑Corea‑esque piano circles are highlighted during the second‑set jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:55:35.204907+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-06-22.aud.weiner.gdADT19.16889.sbeok.shnf"
+}

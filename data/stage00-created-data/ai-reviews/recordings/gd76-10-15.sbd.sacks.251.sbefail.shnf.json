@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard tape is a bit muddy but still listenable, capturing an incendiary 1976 Shrine show highlighted by blazing 'Sugaree', soaring 'Eyes' and a monster 'The Other One'.",
+  "review": "The performance is widely praised – the second‑set jams after \"He's Gone\" are described as magical, with \"Sugaree\", \"Lazy Lightning\", \"Eyes\", \"Row Jimmy\" and especially \"The Other One\" standing out.  The SBD source is noted as occasionally muffled or lifeless compared with an audience tape, but overall it delivers a solid listening experience of one of the band’s classic LA runs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and rave about the musical performance; recording quality receives mixed but generally acceptable comments, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several listeners note muddiness, sluggishness or a lifeless feel in places, while others call the board crisp; overall the tape is usable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Eyes",
+      "The Other One",
+      "Lazy Lightning",
+      "Row Jimmy",
+      "Samson"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "The first set builds with strong jams (notably a lengthy 'Might As Well'), while the second set delivers fire – a soaring \"Eyes\" suite, intense post‑'He's Gone' jam, and a marathon \"Other One\" that many cite as one of the band’s best."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar on \"Music Never Stopped\" is described as floating like a bird; he urges the band during the second‑set jams.",
+    "Phil": "Briefly mentioned as being “brought in tow” by Billy when steering the ship, no detailed critique.",
+    "Bob": "",
+    "Keys": "Keith is praised for his work on \"Row Jimmy\" (with Donna).",
+    "Drums": "Bill and Mickey receive strong commendations – ‘spritel y Lazy Lightning’, tight work on “Samson”, and overall powerful driving in the second set."
+  },
+  "song_mentions": {
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T08:33:30.190787+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-15.sbd.sacks.251.sbefail.shnf"
+}

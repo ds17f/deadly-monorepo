@@ -1,0 +1,69 @@
+{
+  "summary": "Energetic show with a scorching second set and standout performances of Morning Dew, The Other One and Sugar Magnolia; recording is decent but not high‑fidelity.",
+  "review": "Fans rave about the intensity of the second set – Phil’s “bombs,” a Spanish‑jam drum/space excursion, and soaring renditions of Morning Dew, The Other One, Sugar Magnolia and High Time.  The recording captures the concert’s energy but falls short of matrix‑level fidelity, with occasional clipping and a modest mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently glowing comments about the musical performance (70% weight) combined with mixed but generally acceptable remarks on audio quality (30% weight) yield a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note that this tape is inferior to a 4‑source matrix and exhibits some clipping and limited fidelity, but the energy of the performance still comes through clearly enough for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "The Other One",
+      "Sugar Magnolia",
+      "High Time",
+      "Eyes of the World",
+      "Goin' Down the Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as marginal; the second set erupts with intense drums/space, a Spanish jam, Phil’s “bombs,” and several high‑energy peaks that many reviewers call legendary."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals on Morning Dew are highlighted as moving; fans feel his presence strongly throughout the show.",
+    "Phil": "Phil Lesh receives repeated praise for ‘dropping major bombs,’ intense bass work, and driving the second‑set intensity to a level that allegedly clipped the PA.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum/space segment is called “intense,” with a Spanish‑style jam that fuels the set’s momentum."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:39:02.491062+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-17.aud.lai.2577.sbefail.shnf"
+}

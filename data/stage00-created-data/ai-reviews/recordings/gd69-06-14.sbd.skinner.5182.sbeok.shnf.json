@@ -1,0 +1,80 @@
+{
+  "summary": "High‑energy 1969 show captured on a decent soundboard tape, highlighted by an incendiary Eleven and multiple Lovelight jams.",
+  "review": "The performance is widely regarded as one of the band’s most charged shows of ’69 – the Eleven erupts with blistering Jerry runs, the opening and reprise Lovelights are called “the greatest ever,” and Dark Star, St. Stephen and Pigpen’s He Was A Friend Of Mine all get strong praise.  The soundboard source is a bit muddy (B+) and suffers occasional drop‑outs and track‑order quirks, but the mix is balanced enough to let the manic jams shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over three dozen reviews are overwhelmingly positive about the musical performance (many 4‑5 stars) while noting only modest recording imperfections; weighted scoring yields a ~4.5 overall."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "B+ sound – generally well‑balanced but a little muddy, brief dropout in St. Stephen, occasional track‑order confusion and not the clearest board; still listenable and captures band dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Lovelight (multiple parts)",
+      "Dark Star",
+      "He Was A Friend Of Mine",
+      "St. Stephen"
+    ],
+    "poor_songs": [
+      "Dire Wolf"
+    ],
+    "setlist_flow": "Opener Lovelight, then Me & My Uncle → Doin' That Rag → He Was A Friend Of Mine → Dire Wolf → Dark Star → St. Stephen → The Eleven → Lovelight reprise (plus a compact drum solo).  Reviewers note the “Lovelight sandwich” and an almost relentless jam flow that builds to a manic climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly described as possessed, with mind‑melting runs on the Eleven, Dark Star and throughout; praised for creativity and nonstop intensity.",
+    "Phil": "Noted for tight, rhythmic bass work especially during the Eleven and St. Stephen; “sparkling runs” mentioned.",
+    "Bob": "His vocal performance on He Was A Friend Of Mine and the Lovelight jams is highlighted as a standout Pigpen moment.",
+    "Keys": "Tom’s B3/backup keyboard noted as sounding out of place in parts, but overall keyboards are considered fine.",
+    "Drums": "A compact drum solo is mentioned; occasional feedback noted but generally solid."
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "Lovelight": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Dark Star": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "He Was A Friend Of Mine": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "St. Stephen": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Me And My Uncle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T15:29:58.972367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-14.sbd.skinner.5182.sbeok.shnf"
+}

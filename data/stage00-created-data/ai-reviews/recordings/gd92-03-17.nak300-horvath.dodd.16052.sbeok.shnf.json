@@ -1,0 +1,75 @@
+{
+  "summary": "Decent audience recording of a low‑energy St. Patrick’s Day show, with a few bright moments like Box of Rain and Sugar Magnolia but overall lackluster performance.",
+  "review": "The tape captures an audience‑sourced sound that is clear enough for listening, though the hall was unusually quiet. Musically the concert falls short – Jerry only sings four songs, the band sounds tired, and many fans recall a perfunctory set, with only a handful of tracks (Box of Rain, Sugar Magnolia, Loser, Miracle) standing out.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "high",
+    "rationale": "15 reviews give a consistent picture: the performance is widely regarded as poor (average user rating ~1.9), while the recording itself is described as acceptable to good, leading to an overall weighted score around 2½‑3 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape with generally clear mix; no major dropouts noted. The venue volume was low, making the overall level quiet but still listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Sugar Magnolia",
+      "Loser",
+      "Miracle",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Way to Go Home"
+    ],
+    "setlist_flow": "A short, low‑energy first set with only four Jerry vocal numbers and minimal jamming in the second set. Crowd enthusiasm was present but the band’s playing felt perfunctory."
+  },
+  "band_member_comments": {
+    "Jerry": "Sings only four songs; appears ill or exhausted, vocal strain noted during Sugar Magnolia.",
+    "Phil": "",
+    "Bob": "Strained his voice trying to be heard over the crowd on Sugar Magnolia.",
+    "Keys": "Vince's keyboard work described as 'lame‑ass' and lacking the spark Brent provided; backstage anecdotes note his limited impact.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way to Go Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:48:38.332097+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-17.nak300-horvath.dodd.16052.sbeok.shnf"
+}

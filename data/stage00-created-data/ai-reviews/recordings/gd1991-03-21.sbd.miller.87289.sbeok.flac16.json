@@ -1,0 +1,81 @@
+{
+  "summary": "Hot digital soundboard captures a stellar 1991 Cap Center show with standout Victim, Scarlet→Fire and an incendiary Fire.",
+  "review": "The performance is praised for its laid‑back vibe and strong song selection – the opening Victim flows effortlessly into a tight Scarlet → Fire pairing, while Fire is called one of the best heard from this era. The soundboard recording is described as hot, digital‑sounding and Welnick‑heavy (though some prefer the audience mix), delivering clear and enjoyable listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Three detailed, high‑star reviews highlight exceptional musical moments and a solid soundboard source; only one irrelevant low‑star comment does not affect the overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Hot digital sounding mix, described as Welnick‑heavy; generally clear and well balanced, though a few listeners note a preference for the audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim",
+      "Scarlet → Fire",
+      "Fire",
+      "Birdsong",
+      "Mississippi Half-Step",
+      "Candy Man",
+      "Stir It Up Jam",
+      "Foolish"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is noted for a relaxed, Cap Center feel with an excellent first‑set selection highlighted by a spacey Birdsong. The second set opens strongly with Victim and slides seamlessly into Scarlet→Fire, followed by surprising jams like the Stir It Up Jam and a scorching Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia finds the pocket effortlessly on Fire and shows tight interplay with Welnick in Not Fade Away.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby's absence is mentioned as a positive for Fire; keyboards are described as Welnick‑heavy in this mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candy Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stir It Up Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:51:57.193340+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-21.sbd.miller.87289.sbeok.flac16"
+}

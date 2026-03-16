@@ -1,0 +1,65 @@
+{
+  "summary": "Mixed pacing; St. Stephen, Eyes of the World & Mission shine",
+  "blurb": "The first set drags a bit but the second set lifts the night with a fiery Saint Stephen‑Not Fade Away run and an inspired Eyes Of The World jam. Highlights include Mission In The Rain, Sugar Magnolia and a rousing U.S. Blues. Overall performance is uneven, though several moments are truly memorable.",
+  "review": "June 18, 1976 at the Capitol Theater captures the Dead in a classic mid‑’70s groove—if you can forgive the occasional sluggishness of the opening set. Jerry’s voice and lead guitar cut through a muddy mix on Saint Stephen, where his teasing solo earned praise, while his improvisations during Eyes Of The World were described as “magical” and among his best of the year. Phil’s bass work added the usual vintage weave that lifted the band, even when the rhythm section sounded like it was recorded in a bathroom or “laundry room.” The second set really kicks into gear with a seamless Saint Stephen → Not Fade Away → Saint Stephen → Eyes Of The World sequence, followed by a powerful Drum‑The Wheel segue and an exuberant Sugar Magnolia. Mission In The Rain stands out as a rare gem that some recordings treat as the night’s star. Though the keyboards are largely buried under hiss and distortion, occasional solid playing on Row Jimmy shines through. Fans should expect a mixed‑quality tape—some sections sound like a “fair” soundboard with constant hiss, while an audience recording is praised for its spacious, vintage depth—but the musical peaks more than compensate for the technical flaws.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Two recordings are positive (highlighting magical solos and a star‑lit performance) while two are mixed, giving an overall tilt toward praise but with notable inconsistencies in set flow and sound quality. Consistent commendation of Eyes Of The World, Saint Stephen run and Mission In The Rain justifies a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.7 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd76-06-18.warburton.vernon.14449.sbeok.shnf",
+    "reason": "Only soundboard source; despite hiss and recessed drums it captures the key highlights (St. Stephen, Eyes Of The World, Mission In The Rain) with clearer vocals and guitar than other tapes."
+  },
+  "key_highlights": [
+    "Saint Stephen → Not Fade Away sequence ignites the second set",
+    "Eyes Of The World jam praised as magical and among Garcia’s best",
+    "Mission In The Rain stands out as a rare, star‑lit moment"
+  ],
+  "song_highlights": [
+    "Saint Stephen",
+    "Not Fade Away",
+    "Eyes Of The World",
+    "Mission In The Rain",
+    "Sugar Magnolia",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "His voice and lead guitar cut through the muddy mix; teasing on Saint Stephen is praised, and his solo on Eyes Of The World is called magical, though some notes describe a more laid‑back, less lead‑filled vibe in parts of the show.",
+    "Phil": "Provides his signature vintage bass weave throughout, adding depth and space that many reviewers highlighted as a strong point of the performance.",
+    "Bob": "Rhythm guitar often disappears in the mix but still delivers \"cooking cowboy\" flavor on early songs; overall presence is limited by recording quality.",
+    "Brent": "",
+    "Keith": "Keyboards are largely buried under hiss, making them virtually nonexistent for most of the night; a brief solid moment on Row Jimmy is noted but otherwise low in the mix.",
+    "Mickey": "Drums sound recessed and “bathroom‑like” on the soundboard recording, yet the live energy shines through in the second set jams.",
+    "Billy": "Together with Mickey, drumming is described as loose—\"in the laundry room\" during Samson—and occasionally off‑beat, but they drive the high‑energy moments of the second set."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-23T04:49:23.357847+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Saint Stephen",
+      "Not Fade Away",
+      "Saint Stephen",
+      "Eyes Of The World",
+      "Drums",
+      "The Wheel",
+      "Sugar Magnolia"
+    ],
+    [
+      "Mission In The Rain"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

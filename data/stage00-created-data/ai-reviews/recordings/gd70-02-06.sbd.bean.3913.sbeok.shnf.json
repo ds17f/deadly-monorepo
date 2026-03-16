@@ -1,0 +1,61 @@
+{
+  "summary": "Crisp early‑70 soundboard recording with a few cuts, highlighted by a thunderous The Other One and strong Pigpen‑driven numbers.",
+  "review": "The show captures the transitional 1970 vibe – country‑rock blends with lingering psychedelia – and fans rave about The Other One, Good Lovin' and High Time.  The soundboard source is generally clear and balanced, though several reviewers note misplaced cuts that interrupt a few songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (average ~4.2) while noting solid but imperfect recording quality due to cuts (~3.8). Weighted combination yields about a 4.1‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, balanced mix with clear vocals and bright guitars; Bob's guitar especially crisp.  However multiple reviewers point out misplaced cuts (e.g., in Dancing in the Street, Cryptical, High Time) that make the download less than perfect."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Good Lovin'",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long early‑70 set that smoothly blends country‑rock tunes with lingering psychedelic jams, featuring subtle transitions such as Cryptical into Black Peter and strong Pigpen moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as spot‑on; singing his heart out throughout the show.",
+    "Phil": "",
+    "Bob": "Guitar noted as crisp in the mix and playing great.",
+    "Keys": "",
+    "Drums": "Drums sound great; drum work praised especially during extended sequences."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Cryptical": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:36:21.659396+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-06.sbd.bean.3913.sbeok.shnf"
+}

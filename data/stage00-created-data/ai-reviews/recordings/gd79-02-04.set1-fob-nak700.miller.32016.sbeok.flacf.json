@@ -1,0 +1,62 @@
+{
+  "summary": "Audience tape of decent clarity captures a scorching first set highlighted by Lazy Lightnin' > Supplication and a fiery Franklin’s Tower.",
+  "review": "The reviews rave about the high‑energy first set, especially the blistering Lazy Lightnin' > Supplication segue and Jerry Garcia’s soaring solos on Franklin’s Tower.  While the recording is an audience tape – not a pristine soundboard – listeners describe it as “just fine” and note that the early half‑step intro sounds beautiful, making the performance enjoyable despite modest fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise the musical execution; recording quality is noted as audience‑sourced but acceptable, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Not a soundboard tape – several reviewers call it an audience recording that is \"just fine\". One mentions the sound wasn’t perfect due to cold winter conditions, but the first note and overall mix are praised as clear enough for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin' > Supplication",
+      "Franklin's Tower",
+      "Me and My Uncle",
+      "Half Step"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as hot, solid and tightly jammed, with the band riding a high‑energy groove throughout; no second‑set material is discussed."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being \"in a groove\", tearing it up on Franklin's Tower and Supplication, and delivering beautiful tone.",
+    "Phil": "Noted as doing \"good stuff\" and contributing to the bouncing feel of the performance.",
+    "Bob": "",
+    "Keys": "Keith is mentioned bouncing around with Jerry on the Franklin's solos, adding excitement to the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T20:05:31.920740+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-02-04.set1-fob-nak700.miller.32016.sbeok.flacf"
+}

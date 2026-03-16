@@ -1,0 +1,98 @@
+{
+  "summary": "Crisp soundboard capture of an electrifying 1978 show highlighted by a legendary Mississippi Half‑Step, soaring Let It Grow and a soulful Morning Dew.",
+  "review": "The recording is a clean sound‑board source that reproduces the band’s high energy on this spring‑day 1978 performance.  Reviewers rave about Jerry’s animated solos and vocal fire, Keith’s tasteful keyboards, and the tight rhythm section, while noting a few rough spots (Brown Eyed Women, occasional feedback).  Standout moments include the half‑step jam, Let It Grow, Morning Dew and a silky Bertha.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over thirty reviews, most 4–5 stars, praise the musical performance (standout jams, strong band chemistry) and describe the recording as crisp soundboard; only a handful of minor criticisms keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as crisp, clear and well‑balanced. A few reviewers note occasional feedback/buzz in later songs but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half‑Step",
+      "Let It Grow",
+      "Morning Dew",
+      "Bertha",
+      "Candyman",
+      "El Paso",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Brown Eyed Women",
+      "Sunrise"
+    ],
+    "setlist_flow": "The show is described as a high‑energy spring day set with the half‑step opening, a tight first set featuring Let It Grow and Bertha, and a second set that builds to an emotional Morning Dew. Reviewers note a consistent 1978 vibe—tight playing, vivid improvisations and a lively crowd."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called animated, white‑hot from the first chords, delivering ferocious warbles, soaring solos and even playing drums on a segment; vocal performance noted as above average.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith is praised for being active yet delicate, ‘flying together’ with Jerry on jams; Brent’s later contributions are mentioned positively in older‑era comparisons.",
+    "Drums": "Bill Kreutzmann and Mickey Hart described as swinging arms, “spinning on stools,” delivering solid drumming throughout."
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Let It Grow": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Morning Dew": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T10:49:56.287159+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-15.sbd.cotsman.7047.sbefail.shnf"
+}

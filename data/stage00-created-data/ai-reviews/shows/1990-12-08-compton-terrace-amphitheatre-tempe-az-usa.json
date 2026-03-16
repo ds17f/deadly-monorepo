@@ -1,0 +1,66 @@
+{
+  "summary": "Heartfelt desert set with standout Victim > Foolish transition",
+  "blurb": "The show delivers a solid second‑set flow highlighted by an intense Victim → Foolish segue and a heartfelt post‑concert Imagine sing‑along. Jerry’s guitar shines and the band stays tight throughout, making it a worthwhile listen for any Deadhead.",
+  "review": "On December 8 1990 at the Compton Terrace Amphitheatre in Tempe, AZ, the Grateful Dead offered a warm, outdoor performance that feels both intimate and energetic. The first set rolls through familiar folk‑rock fare before the second set erupts with a powerful Victim Or The Crime → Foolish Heart transition that reviewers called “intense” and “excellent instrument separation.” From there the band rides a classic groove into Playing In The Band, Uncle John’s Band, a long Jam, and a soaring All Along The Watchtower before winding down with Black Peter, Around & Around and a rousing One More Saturday Night. After the lights came up the crowd joined in an emotional post‑concert Imagine sing‑along—a moment that many fans cite as the night’s highlight. Jerry’s shredding yet loose guitar work sits perfectly in the mix, while Bruce Hornsby’s keyboards are “on fire,” adding a bright, melodic edge to the newer material. The rhythm section—Phil on bass and Mickey & Billy on drums—provides a steady foundation that lets the improvisations breathe. Though not as explosively legendary as some 1990 dates, this show is solid, heartfelt, and captures the band in good form.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Two recordings are clearly positive (highlighting the Victim → Foolish transition and strong overall flow) while one is mixed but still notes a solid performance. The preponderance of praise across multiple sources justifies a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.9 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd90-12-08.sbd.hollister.472.sbeok.shnf",
+    "reason": "Good soundboard capture with crisp mix, includes the post‑concert Imagine sing‑along and balances all instruments nicely."
+  },
+  "key_highlights": [
+    "Emotional post‑concert Imagine sing‑along that captures audience participation",
+    "Intense Victim Or The Crime → Foolish Heart transition with superb instrument separation",
+    "Strong second‑set flow featuring Playing In The Band, Uncle John’s Band and a soaring All Along The Watchtower",
+    "Clear, well‑balanced recording that lets Jerry’s guitar and Bruce’s keyboards shine"
+  ],
+  "song_highlights": [
+    "Victim Or The Crime",
+    "Foolish Heart",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "All Along The Watchtower",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Loose, shredding guitar work that sits perfectly in the mix and drives the set.",
+    "Phil": "Steady bass foundation that underpins the jams without drawing specific attention.",
+    "Bob": "",
+    "Bruce": "Keyboard presence is \"on fire,\" adding bright melodic texture to the newer songs.",
+    "Mickey": "Solid percussion work that supports the rhythmic flow, especially during the extended jam.",
+    "Billy": "Provides a tight drum backbone, keeping the energy steady through the set."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-17T14:59:36.367479+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Victim Or The Crime",
+      "Foolish Heart",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Jam",
+      "Drums",
+      "Space",
+      "All Along The Watchtower",
+      "Black Peter",
+      "Around & Around",
+      "One More Saturday Night"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

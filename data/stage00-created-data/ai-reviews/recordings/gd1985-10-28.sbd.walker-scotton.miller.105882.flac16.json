@@ -1,0 +1,62 @@
+{
+  "summary": "A hot 1985 show captured on soundboard with great energy – standout performances of Kansas City, Stella Blue and Scarlet>Touch – though the mix is a bit treble‑heavy, bass‑light and has occasional clipping.",
+  "review": "Listeners rave about the fiery performance, especially the rare Kansas City outing and the gorgeous rendition of Stella Blue, while the soundboard transfer is generally praised despite some tonal imbalance and brief clipping. The set flows smoothly with strong segues, making it a favorite '85 show for many fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (most stars 5) while recording quality is good overall but notes tonal imbalance and clipping, yielding a weighted rating around 4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and enjoyable soundboard capture; noted slight treble‑high / bass‑low tilt and occasional clipping in places; track labeling after \"Promised Land\" is inaccurate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Kansas City",
+      "Stella Blue",
+      "Scarlet Begonias > Touch",
+      "Round > Good Lovin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A hot, energetic performance with a strong second set and seamless segues; the show maintains momentum despite a modest first set."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work is highlighted as haunting on Stella Blue and generally praised throughout the show.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocals are noted for breaking out the stops on Round > Good Lovin and sharing vocal interplay with Brent.",
+    "Keys": "Brent Mydland contributes notable vocal interchange (especially on Women Are Smarter) and keyboards.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Kansas City": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Round > Good Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:45:16.096975+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-28.sbd.walker-scotton.miller.105882.flac16"
+}

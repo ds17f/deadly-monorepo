@@ -1,0 +1,31 @@
+{
+  "summary": "Fans express enthusiastic love for the band, but give no concrete details on recording fidelity or performance specifics.",
+  "review": "The lone review is a heartfelt tribute to the Grateful Dead and its members, especially noting the keyboards with reverent language. No information is provided about the source of the audio, sound quality, setlist, or individual song performances, leaving the technical and musical assessment largely unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one vague five‑star review; while sentiment is clearly positive, there is insufficient detail to gauge recording or show quality, so a moderate rating with low confidence is assigned."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix balance, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The review does not discuss the setlist, song flow, or any performance issues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reviewer praises the keyboards and mentions them as transcendent.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T06:14:31.473039+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-13.150753.sbd.miller.fixed.flac2448"
+}

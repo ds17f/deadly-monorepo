@@ -1,0 +1,90 @@
+{
+  "summary": "Solid 1995 performance captured from an unknown source, featuring standout jams on Ramble On Rose, It's All Too Much and a wild Playin>Space>Uncle Johns.",
+  "review": "The show is praised for its adventurous second‑set flow – long, bouncy Aiko, rare It’s All Too Much with Vince on fire, and an eccentric Playin>Space>Uncle Johns that dissolves into delightful chaos.  While the first set is called “blase” and The Last Time receives a lukewarm nod, overall the band’s energy shines through, and the recording is clear enough to enjoy despite no explicit source details.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a 3‑star rating; the performance has several high points but also noted weak moments and an unspecified recording source."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer does not comment on sound issues, implying the audio is at least clear enough for musical appreciation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "It's All Too Much",
+      "Aiko",
+      "Playin>Space>Uncle Johns",
+      "Rain"
+    ],
+    "poor_songs": [
+      "The Last Time"
+    ],
+    "setlist_flow": "Second set ignites early with Vince‑fronted It’s All Too Much and a fun Aiko, followed by an experimental Playin>Space>Uncle Johns that resolves into a solid Uncle John’s; typical Drums>Space leads into a gritty Bob vamp before closing with mixed‑feel songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Dual lead work with Vince, uses MIDI trombone to support the Uncle John’s section.",
+    "Phil": "",
+    "Bob": "Starts a “nasty, down‑and‑dirty” vamp during Drums>Space that becomes a memorable moment.",
+    "Keys": "Vince shines on vocals and keyboards, especially on It’s All Too Much and Promised Land; provides dual leads throughout the set.",
+    "Drums": "Typical drums>space segment preceding Bob’s vamp."
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Too Much": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin>Space>Uncle Johns": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John’s": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Visions of Johanna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:57:05.974219+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-18.123337.crupi.flac16"
+}

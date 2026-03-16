@@ -1,0 +1,102 @@
+{
+  "summary": "A mixed‑quality matrix recording of an above‑average show – first set tight, second set run‑of‑the‑mill, with highlights like Hell, Sugaree and Gimme but a subpar mix.",
+  "review": "The performance delivers a strong first set featuring Hell, Sugaree and Uncle John's Band, while the second set drifts into average territory with Terrapin and Throwing Stones feeling routine. The source is a matrix derived from a soundboard cassette that many listeners find lacking in clarity, which dampens the overall enjoyment despite some standout moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews show mixed feelings: solid musical performance (average‑to‑good) but a poorly executed matrix recording that limits listenability."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Derived from Master Soundboard Cassette → PCM → DAT → CDR; reviewers call it deceptive and not very good, indicating muddiness and uneven mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell",
+      "Sugaree",
+      "Uncle John's Band",
+      "Row",
+      "Gimme"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Throwing Stones",
+      "The Other One (Dew)"
+    ],
+    "setlist_flow": "First set is tight and energetic with a focused rhythm section; second set feels cluttered and runs of the mill, lacking the narrative drive of classic shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – praised for bluesy work on Lovelight but criticized for vocal 'croak' on Terrapin.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's songwriting presence noted but not highlighted; overall keyboard work not specifically commented.",
+    "Drums": "Standard drumming; a broken snare drum was fixed early in the show."
+  },
+  "song_mentions": {
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One (Dew)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:54:39.023687+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-18.sbd.clugston.11882.sbeok.shnf"
+}

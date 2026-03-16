@@ -1,0 +1,80 @@
+{
+  "summary": "High‑fidelity crowd‑heavy audio captures a stellar late‑'70s performance featuring Lazy Lightnin/Supplication, Jack Straw and a seamless Dancing → Franklin’s Tower segue.",
+  "review": "The show is praised for its tight first set with Lazy Lightnin/Supplication and a powerhouse Jack Straw, then launches into an inspired second set highlighted by the smooth transition from Dancing in the Streets into Franklin's Tower, a Caution jam off He's Gone, and a rousing Wharf Rat. The recording boasts excellent fidelity despite being very crowd‑heavy, with hand‑claps and handheld mic noise adding atmosphere but not detracting from the overall listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong positive comments about both performance (standout songs, seamless segues) and recording quality (high fidelity), weighted toward a high‑quality show with good but crowd‑heavy audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, high‑fidelity sound noted as ‘damn good’, but very crowd‑heavy with handheld mic clapping and occasional audience noise throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin",
+      "Supplication",
+      "Jack Straw",
+      "Dancing in the Streets",
+      "Franklin's Tower",
+      "He's Gone (Caution)",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong with Lazy Lightnin/Supplication and Jack Straw; second set flows smoothly through Dancing into Franklin’s Tower, includes a Caution jam from He's Gone and ends with an energetic Wharf Rat encore. Seamless segues are repeatedly highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds good and sings well; notable vocal draw on the ‘everyone saaaaid’ line in Wharf Rat and overall strong tone for ’79.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Standard playing until after Drums/Space, then they pull out all the stops; drums praised in transition."
+  },
+  "song_mentions": {
+    "Lazy Lightnin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone (Caution)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:40:07.017983+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-09.aud-unknown.andrewf.79702.flac16"
+}

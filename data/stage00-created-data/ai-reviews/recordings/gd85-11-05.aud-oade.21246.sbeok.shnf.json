@@ -1,0 +1,94 @@
+{
+  "summary": "Outstanding Oade AUD capture of a high‑energy show highlighted by a smoking Shakedown and stellar Bird Song, with crisp, deep sound quality.",
+  "review": "The audience PCM recorded by the Oade brothers delivers crystal‑clear, resonant audio that many reviewers rate as better than most SBDs.  Musically the concert shines on the first set – especially Shakedown, TLEO and Bird Song – while the second set has mixed moments (a strong start with Shakedown and Women but a dip with Ship of Fools and Supplication).",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) praise both the audio fidelity and the performance, with only a few moderate critiques of the second set."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Praised as crisp, tight, bright and deep; many say it surpasses typical SBDs. No major drop‑outs or noise reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Bird Song",
+      "Hell In a Bucket",
+      "TLEO",
+      "Kansas City",
+      "C.C. Rider",
+      "Little Red Rooster"
+    ],
+    "poor_songs": [
+      "Ship of Fools",
+      "Supplication Jam",
+      "I Don't Need Love"
+    ],
+    "setlist_flow": "First set is consistently strong and energetic; second set opens well with Shakedown and Women but loses momentum after Ship of Fools, ending with an unremarkable post‑drums segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Mid‑range leads and a sweet ‘Tiger’ tone are highlighted; vocal issues noted but guitar work praised.",
+    "Phil": "Thundering bass described as resonant and powerful throughout the room.",
+    "Bob": "",
+    "Keys": "Brent’s descanting arpeggios over Jerry’s leads on Bird Song receive specific praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell In a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TLEO": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Kansas City": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Supplication Jam": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Don't Need Love": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:55:24.621102+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-05.aud-oade.21246.sbeok.shnf"
+}

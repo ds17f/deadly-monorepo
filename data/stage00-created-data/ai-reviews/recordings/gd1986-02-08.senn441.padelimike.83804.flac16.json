@@ -1,0 +1,39 @@
+{
+  "summary": "Outstanding audience tape captures a high‑energy 1986 Bay Area show with bouncy “Franklin’s” and ferocious drumming.",
+  "review": "The recording, taken from the famed Batman tapes, is praised as crystal‑clear and outstanding, making the performance easy to enjoy. The band delivers an edgy, reckless energy that stands out for a Bay Area night—even if Jerry occasionally forgets lyrics—highlighted by a bouncy “Franklin’s” and “insane vibraphone drums.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers are enthusiastic (average 4.5 stars). Show quality is described as energetic and tightly played, while the recording is repeatedly called outstanding, justifying a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note ‘outstanding’ and ‘no doubts about quality’ of Batman’s tape, indicating crisp, clear audio with no reported flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers feel the band ‘got it together’ and delivered an edgy, reckless energy throughout, making for a strong, flowing performance despite occasional lyric slips."
+  },
+  "band_member_comments": {
+    "Jerry": "Had trouble remembering lyrics on this night but his playing remained solid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Described as ‘insane vibraphone drums’, indicating powerful and dynamic drumming."
+  },
+  "song_mentions": {
+    "Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:32:18.470320+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-02-08.senn441.padelimike.83804.flac16"
+}

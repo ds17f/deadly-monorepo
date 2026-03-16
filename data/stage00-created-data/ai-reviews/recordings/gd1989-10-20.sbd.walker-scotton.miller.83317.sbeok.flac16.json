@@ -1,0 +1,88 @@
+{
+  "summary": "Good‑quality soundboard recording of a long ‘89 Philly show with solid playing and standout moments like “Greatest Story” and “California Earthquake,” though the performance is uneven.",
+  "review": "The tape captures a crisp, well‑mixed soundboard source that most listeners find clear and enjoyable. Musically the concert is a mixed bag – the first set is hit‑or‑miss while the second set delivers highlights such as a smoking “Greatest Story,” the historic “California Earthquake,” and an inspiring later version of “The Other One,” but suffers from sloppy spots like “Fire on the Mountain” and a rambling “Truckin’.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the recording quality and several songs, but many note uneven playing and specific performance flaws, yielding a solid‑but‑not‑stellar overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear mix praised by several reviewers; some mention the Miller source sounds best and that a matrix version adds ambience, but no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Greatest Story Ever Told",
+      "California Earthquake",
+      "Scarlet Begonias",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Fire on the Mountain",
+      "Truckin'",
+      "Sugar Magnolia",
+      "Touch",
+      "Picasso"
+    ],
+    "setlist_flow": "A marathon show with a tentative first set and a more rewarding second set that features a 35‑minute Space/Drums jam; overall flow is uneven, with the latter half providing most of the highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "His leads trade well with Brent later in the show; early parts are noted as out‑of‑sync but he recovers for the strong second‑set jams.",
+    "Phil": "Less prominent – his usual rumble on “The Other One” is missing, leading to a weaker rendition of that jam.",
+    "Bob": "Mixed remarks: solid work on several numbers but struggles on “Sugar Magnolia” and occasional timing slips on “Greatest Story.”",
+    "Keys": "Brent Mydland receives high praise for his keyboard leads and solos, especially on the later jams.",
+    "Drums": "Both drummers are described as ‘shoes‑in‑the‑dryer,’ with timing issues and flubs that affect several songs."
+  },
+  "song_mentions": {
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "California Earthquake": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Picasso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:03:08.869890+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-20.sbd.walker-scotton.miller.83317.sbeok.flac16"
+}

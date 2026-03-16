@@ -1,0 +1,77 @@
+{
+  "summary": "High‑energy Greek Theatre show with standout RR Blues and ferocious jams, captured on an excellent soundboard recording.",
+  "review": "The concert is celebrated for its electric atmosphere – the opening Jack Straw, blistering Brent‑keyed jams, and a particularly powerful rendition of RR Blues are repeatedly praised. Recording quality is described as very high and clear, typical of a soundboard source, though a few reviewers found certain song transitions muddled.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Recording is widely praised for fidelity while the musical performance receives both high praise and strong criticism, resulting in a balanced overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note the recording’s very high fidelity and clarity; no significant drop‑outs or noise were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "RR Blues",
+      "Estimated",
+      "Jack Straw",
+      "Truckin'",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Help > Slip > Franklin's",
+      "Eyes",
+      "Estimated (vocals)"
+    ],
+    "setlist_flow": "A high‑energy set with a powerful Jack Straw opener, strong mid‑set jams and a soaring second half; some listeners felt the Help/Slip/Franklin’s segue was muddled."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for energetic jams in early remarks but criticized on this show for being barely present during key songs.",
+    "Phil": "Encouraged crowd chanting and was noted positively by a reviewer.",
+    "Bob": "Oversinging mentioned as a negative point, though audience shout‑outs to Weir were also recorded.",
+    "Keys": "Brent Mydland’s keyboard work highlighted as ferocious and a major highlight of the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "RR Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:22:08.880753+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-14.sbd.walker-scotton.miller.77326.sbeok.flac16"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Vibrant spring ’89 show with standout Louie Louie and Brent solos",
+  "blurb": "The night delivers a punchy Louie Louie, a soaring Walkin' Blues keyboard solo, and a moving Stella Blue vocal. Jerry’s guitar work stays solid while Brent Mydland dominates the mix with jazzy, over‑driven keys. Overall a high‑energy Kentucky performance worth revisiting.",
+  "review": "April 9, 1989 at Freedom Hall in Louisville captured one of the spring ’89 tour’s most spirited outings. The set opened strong with Hell In A Bucket and Sugaree before Brent’s piano‑driven momentum took over on Walkin' Blues – a solo that multiple reviewers called “intense” and “ON!!!!”. From there the band rolled through It Must Have Been The Roses, Big River and a tight Ramble On Rose, but it was the second set that truly lifted off. A raucous Louie Louie (the version most fans point to as a highlight) segued into a blistering Foolish Heart where Brent’s “atomic” synth textures shone, followed by an inspired Stella Blue vocal that had the crowd hanging on every phrase. The show closed with a soaring Sugar Magnolia and a heartfelt Knockin' On Heaven's Door encore, leaving the audience buzzing long after the lights went down.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 47,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Seven of nine recordings are clearly positive, praising Brent's keyboards, Louie Louie, Walkin' Blues solo and Stella Blue vocal; only two are mixed with no consistent negative remarks about performance. This strong consensus yields a solid +1.4 sentiment boost.",
+      "final_calculation": "2.5 + 0.4 + 1.4 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1989-04-09.147845.sbd.ultramatrix.miller.flac24",
+    "reason": "Ultra‑matrix source praised as \"incredible\" and a \"must‑listen\", offering excellent matrix quality that captures the full show with superb clarity."
+  },
+  "key_highlights": [
+    "Louie Louie delivers an energetic, crowd‑pleasing peak",
+    "Brent Mydland’s explosive Walkin' Blues keyboard solo drives the second half",
+    "Stella Blue showcases a moving vocal performance from Jerry",
+    "Foolish Heart features fiery, over‑driven keyboards that lift the jam"
+  ],
+  "song_highlights": [
+    "Louie Louie",
+    "Walkin' Blues",
+    "Stella Blue",
+    "Foolish Heart"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers solid lead guitar throughout and a standout vocal on Stella Blue that many reviewers called \"a moment unto itself\".",
+    "Phil": "Lays down thunderous, syncopated bass lines that lock tightly with the drums, providing a deep groove especially during the Walkin' Blues jam.",
+    "Bob": "Provides crisp rhythmic chops that cut through the mix like “trumpets”, keeping the band’s drive steady and energetic.",
+    "Brent": "Dominates the night with vibrant keyboards – jazzy flute‑like patches, over‑driven synth solos on Walkin' Blues and Foolish Heart, and an overall \"atomic\" presence that fuels the show’s energy.",
+    "Mickey": "His drumming is described as \"chimes of freedom\" with a marching‑into‑heaven feel, adding lift especially during Sugar Magnolia.",
+    "Billy": "Pairs with Mickey to drive the rhythm section forward; his steady beats underpin the high‑energy jams and keep the momentum rolling."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-16T18:23:17.897452+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Louie Louie"
+    ],
+    [
+      "Walkin' Blues"
+    ],
+    [
+      "Ship Of Fools",
+      "Estimated Prophet",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Foolish Heart"
+    ]
+  ]
+}

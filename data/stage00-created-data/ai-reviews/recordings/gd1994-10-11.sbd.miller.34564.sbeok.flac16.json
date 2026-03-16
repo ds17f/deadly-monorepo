@@ -1,0 +1,103 @@
+{
+  "summary": "Soundboard capture of a 1994 show that swings between strong moments (China Doll, Eyes, Women are Smarter) and uneven performances, with modest audio fidelity.",
+  "review": "The recording is a sound‑board source that many listeners find only fair in clarity – the USAir Area shows are noted for sub‑par tape quality. Musically the concert is mixed: Jerry Garcia shines on several numbers (Jack‑A‑Row, High Time, Deal) and the second set delivers a soaring 21‑minute Eyes and an emotional China Doll, but the first set suffers from weak Bobby tunes like Easy Answers and the new Phil piece If the Shoe Fits, and the LSD encore is widely regarded as a flop.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Reviews are split between praise for specific highlights and criticism of overall performance and tape quality; weighted average (70 % show, 30 % recording) yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers mention the tape quality for these USAir Area dates is not great, describing it as “not good” or “mediocre,” though no specific drop‑outs are cited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Eyes",
+      "Women are Smarter",
+      "Picasso Moon (party‑powder version)",
+      "All Over Now"
+    ],
+    "poor_songs": [
+      "Easy Answers",
+      "If the Shoe Fits",
+      "Lucy in the Sky With Diamonds",
+      "Picasso Moon (rushed version)"
+    ],
+    "setlist_flow": "First set is uneven, mixing weak new Bobby tunes with a few high‑energy numbers; second set builds momentum with a marathon Eyes and ends on an emotional China Doll, though the encore falls flat."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is praised for hitting all cylinders on several songs and for an engaging vocal presence, but some reviewers note occasional timing slips and a rushed feel on Picasso Moon.",
+    "Phil": "His new song ‘If the Shoe Fits’ is mentioned as a weak addition; no specific praise of his bass playing.",
+    "Bob": "",
+    "Keys": "Reference to “the requisite Vince tune,” indicating Vince Welnick’s presence, but no detailed comment on keyboard performance.",
+    "Drums": "Jerry stays on stage for drums and noodling; the Drums>Space segment is noted as part of a decent second‑set flow."
+  },
+  "song_mentions": {
+    "Picasso Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-A-Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "If the Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Women are Smarter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lucy in the Sky With Diamonds": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:02:19.299947+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-11.sbd.miller.34564.sbeok.flac16"
+}

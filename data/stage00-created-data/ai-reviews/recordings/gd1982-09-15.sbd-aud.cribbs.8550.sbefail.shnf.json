@@ -1,0 +1,82 @@
+{
+  "summary": "A stellar late‑'82 Cap Centre performance captured on a half‑audience/half‑soundboard matrix with crisp sound after an early rough patch, highlighted by the Playin > Crazy Fingers combo and the first ever Touch of Grey.",
+  "review": "The show is consistently praised for its high energy first set, superb Playin > Crazy Fingers sequence, and historic Touch of Grey encore, with many reviewers calling it a must‑have. The recording is a matrix (SBD‑AUD) that sounds crisp once the mix settles about halfway through, though the opening moments are a bit muddy. Overall the musical performance outweighs any minor technical hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers (12/14) give 4–5 stars and rave about the performance; recording is generally good with only early‑set issues, yielding a weighted rating around 4.4."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Described as crisp and great quality after the first few minutes; early portion noted as rough/muddy but improves dramatically around the Crazy Fingers segment. Half audience / half soundboard mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' > Crazy Fingers",
+      "Touch of Grey (first ever live performance)",
+      "Let It Grow",
+      "Shakedown",
+      "Saint of Circumstance",
+      "Good Lovin'",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Shakedown"
+    ],
+    "setlist_flow": "Reviewers highlight a unique set‑list with the Playin/Crazy Fingers/Playing Jam sequence weaving through both sets, a high‑energy first set and a solid second set featuring strong solos and vocal improv."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his “noodles” on Let It Grow and Shakedown, calling them excellent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is lauded as hitting his stride, though one reviewer criticizes his tone on Shakedown.",
+    "Drums": "Pre‑drums segment noted as “sick”; no further specific comments."
+  },
+  "song_mentions": {
+    "Playin' > Crazy Fingers": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey (first ever live performance)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:20:16.615737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-15.sbd-aud.cribbs.8550.sbefail.shnf"
+}

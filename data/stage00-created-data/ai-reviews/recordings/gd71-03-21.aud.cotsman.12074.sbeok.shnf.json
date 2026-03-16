@@ -1,0 +1,37 @@
+{
+  "summary": "Fragmentary audience tape with modest fidelity; the set is incomplete and historically oversold, leaving no clear musical highlights.",
+  "review": "The archive recording is an audience‑sourced mono capture that starts mid‑set (after “Me and My Uncle”) and omits the opening of “Cold Rain and Snow,” so listeners only get a partial performance. Reviewers focus more on the chaotic, oversold concert circumstances than on any standout musical moments, noting that the show was likely cut short by authorities.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers criticize the incomplete, low‑fidelity source and the chaotic event context; a few give moderate scores, yielding an overall low‑to‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Recorded on a cheap portable Panasonic mono tape recorder; missing the first part of the set and limited to a narrow frequency range, resulting in modest clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The concert was heavily oversold, possibly cut short by fire officials, and the archived audio begins after the opening number, making the set appear truncated and disrupting any natural flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:41:48.969799+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-03-21.aud.cotsman.12074.sbeok.shnf"
+}

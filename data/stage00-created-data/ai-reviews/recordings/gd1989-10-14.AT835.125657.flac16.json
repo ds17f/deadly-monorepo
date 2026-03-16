@@ -1,0 +1,39 @@
+{
+  "summary": "Outstanding show highlighted by a rare Help > Slip > Franklin's sequence; recording source and quality not specified",
+  "review": "The lone fan review gives the concert a perfect five‑star rating, singling out the first‑set Help on the Way → Slipknot! → Franklin’s Tower as a standout moment that appears in fewer than 800 shows. No details about the audio source or fidelity are provided, so listeners should assume the recording quality is unknown. Overall the performance is praised highly despite the lack of technical commentary.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 5‑star review emphasizes a rare, high‑impact song sequence, indicating an excellent performance; however, the absence of any recording‑quality comments limits confidence in rating the audio aspect."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit remarks about sound clarity, mix, or source type were made in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer highlights the first‑set inclusion of Help > Slip > Franklin’s as a notable and rare moment; no other set‑list commentary provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:19:55.800485+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-14.AT835.125657.flac16"
+}

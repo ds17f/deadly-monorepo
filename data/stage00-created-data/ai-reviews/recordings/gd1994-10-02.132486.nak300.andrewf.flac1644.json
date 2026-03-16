@@ -1,0 +1,39 @@
+{
+  "summary": "Clear recording highlights a standout “Days Between” performance",
+  "review": "The sole fan review is enthusiastic, giving the show five stars and specifically noting how crystal‑clear the “Days Between” segment sounds. While no details about the source are provided, the comment suggests the audio quality is very good, and the song itself is highlighted as a highlight of the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one review (5‑star) praising clarity on a specific song; no negative comments, but limited data prevents higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer mentions the sound is very clear for “Days Between,” indicating a clean and well‑balanced capture despite lack of source details."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:13:19.904869+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-02.132486.nak300.andrewf.flac1644"
+}

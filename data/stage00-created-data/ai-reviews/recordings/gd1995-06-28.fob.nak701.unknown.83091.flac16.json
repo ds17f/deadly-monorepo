@@ -1,0 +1,31 @@
+{
+  "summary": "A poorly received recording with no notable musical highlights noted by reviewers",
+  "review": "Both reviewers expressed strong dissatisfaction, indicating this version falls short of other available archive recordings and offering no specific praise for the performance. No details about sound quality, setlist flow, or individual band members were provided.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Both reviews gave extremely low ratings (1 and 0) and offered no positive comments; limited data prevents a more precise assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers implied this version is inferior to other archive releases, but gave no concrete details on soundboard vs. audience or specific audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments provided about the set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T11:18:39.763567+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-28.fob.nak701.unknown.83091.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent pre‑section recording captures a killer 1984 Dead show with standout performances of “I Need A Miracle”, “Bertha” and “China Doll”.",
+  "review": "Fans rave about this unknown‑date 1984 concert, calling it a “killer” performance with Jerry Garcia playing flawlessly. The recording is praised as a perfect pre‑section capture that delivers clear, balanced sound throughout the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviews are strongly positive (average 4.5 stars), highlighting superb playing and a high‑quality recording; the consistency across reviewers gives high confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the pre‑section recording as perfect, crisp and great for an ’84 summer show with no noted drop‑outs or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Need A Miracle",
+      "Bertha",
+      "China Doll",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set followed by a spectacular second‑set opener (I Need A Miracle > Bertha > China Doll) that keeps the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Flawless, kicks ass, and praised for perfect guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Need A Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:00:01.615275+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-09.nak.willy.14565.sbeok.shnf"
+}

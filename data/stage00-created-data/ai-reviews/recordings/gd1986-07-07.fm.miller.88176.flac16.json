@@ -1,0 +1,73 @@
+{
+  "summary": "Good‑quality FM matrix recording captures a historic but uneven 1986 show, highlighted by powerful Baby Blue, Desolation Row, Satisfaction and Wharf Rat performances despite Jerry Garcia’s frail condition.",
+  "review": "The FM broadcast (matrix) source is generally clear with only minor buzz between tunes, making the set listenable. The concert is remembered for its historic context – it was played just days before Garcia fell into his diabetic coma – and features standout moments like Baby Blue, Desolation Row, Satisfaction and a soaring Wharf Rat, though Jerry’s playing swings from shaky to magical. Overall the show feels uneven but emotionally resonant.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Weighted average of strong historical interest and several praised songs (show quality ~3.5) with a generally good FM matrix recording (~4.0) yields an overall rating around 3.6."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear FM broadcast with occasional low‑level buzz between tracks; no major dropouts, overall balanced mix that captures both band and ambient crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Baby Blue",
+      "Desolation Row",
+      "Satisfaction",
+      "Box of Rain",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A very short, five‑song first set (heat‑driven) gives way to a longer second set energized by Dylan’s guest appearance; the flow feels uneven but builds into memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviews note his near‑death state and uneven playing—some call it stumbling and off‑key, while others praise occasional magical solos and strong vocals.",
+    "Phil": "Several reviewers compliment his bass work and vocal presence on Box of Rain and other tunes.",
+    "Bob": "Weir’s intro on Satisfaction is repeatedly praised; his vocals on Desolation Row receive positive remarks.",
+    "Keys": "Brent Mydland’s keyboard slashing and backing vocals are highlighted as strong, especially during the Dylan segment.",
+    "Drums": "Bill Kreutzmann’s drumming gets modest praise, noted for solid beats and big‑drum energy."
+  },
+  "song_mentions": {
+    "Baby Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Desolation Row": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Satisfaction": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T17:25:29.341516+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-07.fm.miller.88176.flac16"
+}

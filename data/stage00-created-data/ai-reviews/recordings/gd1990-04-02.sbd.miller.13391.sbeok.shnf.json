@@ -1,0 +1,39 @@
+{
+  "summary": "Good soundboard capture with a bit of tape hiss, highlighted by an outstanding performance of \"The Weight\" featuring memorable Jerry leads.",
+  "review": "Fans rave about the strong playing on this show, especially the version of \"The Weight\" where Jerry’s lead lines shine. The soundboard recording is generally clear and well‑balanced, though a slight tape hiss and some early‑stage feedback are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show receives high praise (5‑star review) with a standout song, while the recording is described as good despite minor hiss; overall rating reflects strong performance and decent audio quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound with slight tape hiss noted; Phil's bass sits high in the mix, occasional feedback at the start of \"The Weight\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Weight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on overall set flow; focus is on the highlighted encore‑type performance of \"The Weight\"."
+  },
+  "band_member_comments": {
+    "Jerry": "Leads before the final verse of \"The Weight\" are praised.",
+    "Phil": "Bass is described as nice and high in the mix.",
+    "Bob": "",
+    "Keys": "Presence of Brent (keyboardist) noted, though no performance comment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:18:27.489976+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-02.sbd.miller.13391.sbeok.shnf"
+}

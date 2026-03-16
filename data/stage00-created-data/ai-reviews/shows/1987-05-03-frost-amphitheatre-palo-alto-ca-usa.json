@@ -1,0 +1,71 @@
+{
+  "summary": "Up‑beat first set with solid The Other One; guitar uneven at times",
+  "blurb": "The show delivers a lively opening half highlighted by Row Jimmy, Peggy‑O and a fiery The Other One. Brent’s keyboards add sparkle on Touch and Good Times Blues, while Phil’s bass anchors the groove. Overall performance is strong but marred by occasional tuning slips.",
+  "review": "On May 3 1987 at Frost Amphitheatre the Dead rolled out an energetic first set that kicked off with a crisp Touch of Grey and kept the momentum through Row Jimmy, Peggy‑O and Cassidy. Jerry’s guitar shines in moments—especially on the high‑quality Walker‑Scotton soundboard where his tone is described as “killer”—but suffers noticeable detuning on Row Jimmy in other sources, creating an uneven feel. Brent Mydland steps forward with vocal flair on the quirky Little Bunny Foo Foo break and solid keyboard work on Touch and Good Times Blues, while Phil Lesh’s bass is praised for its rumbling presence, particularly on audience recordings. The second set builds a spacious vibe, culminating in a scorching The Other One that many listeners cite as a highlight despite a slight pitch anomaly. Though the show has standout jams, intermittent out‑of‑tune moments and mixed instrumental tightness keep it from being a classic.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 22,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Positive comments appear in two recordings (killer playing, strong bass, vivid keyboards) while negative notes about tuning and flat moments appear in two others; three recordings are mixed. The net sentiment is mildly positive, warranting a modest +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.6 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1987-05-03.sbd.walker-scotton.miller.83738.sbeok.flac16",
+    "reason": "High‑quality soundboard capture with clear, well‑balanced mix and minimal issues; praised as one of the best Frost recordings."
+  },
+  "key_highlights": [
+    "Killer Little Bunny Foo Foo/Row Jimmy energy on top‑tier SBD",
+    "Brent’s vocal and keyboard work shines on Good Times Blues and Touch",
+    "Fiery, immersive The Other One despite slight pitch anomaly",
+    "Phil’s massive, rumbling bass especially evident on audience tape"
+  ],
+  "song_highlights": [
+    "Row Jimmy",
+    "Peggy-O",
+    "Cassidy",
+    "Iko Iko",
+    "The Other One",
+    "Black Peter"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers moments of brilliance with a killer tone, but suffers noticeable out‑of‑tune issues on Row Jimmy in some recordings, making his performance uneven overall.",
+    "Phil": "Provides solid, rumbling bass that anchors the groove; praised as massive and vivid, though a few sources note quieter passages.",
+    "Bob": "Shows strong rhythm work on Row Jimmy and adds playful vibe despite occasional electronic glitches and out‑of‑tune moments reported by several reviewers.",
+    "Brent": "Shines with vocal leads on the Little Bunny Foo Foo break and solid keyboard contributions on Touch and Good Times Blues, highlighting his emerging presence.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-15T22:22:02.403049+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Row Jimmy"
+    ],
+    [
+      "Peggy-O"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Iko Iko"
+    ],
+    [
+      "Estimated Prophet",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Black Peter",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

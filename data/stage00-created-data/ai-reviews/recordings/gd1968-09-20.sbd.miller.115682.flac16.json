@@ -1,0 +1,31 @@
+{
+  "summary": "A modest 4‑star rating suggests a solid show with decent sound, though reviewers provide no specific details.",
+  "review": "The sole review gives the recording a four‑star score, indicating generally positive feelings about both performance and audio quality. However, the reviewer offers no commentary on song selection, band playing, or technical aspects, leaving the specifics of the show and recording unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating; no qualitative comments to refine the score, so we reflect the numeric rating directly but note low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific remarks about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details on set structure or performance quality were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T09:14:27.389401+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-09-20.sbd.miller.115682.flac16"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "Strong first set jams, mixed second set with highlights Wheel & Bird Song",
+  "blurb": "The first set delivers tight playing and standout performances of The Wheel, I Need a Miracle, and Bird Song. The second set includes solid jams on China > Rider and Playing In The Band > Terrapin Station but drags in places, with a missed solo in Stella Blue. Overall the show offers memorable moments despite uneven pacing.",
+  "review": "On August 12, 1991 at Cal Expo, the Dead kicked off with a punchy first set that showcased Jerry’s soaring lead on The Wheel after Space and an inspired I Need a Miracle featuring a rare Vince‑Bruce keyboard swap. Bird Song rose as a high point, its improvisational sweep buoyed by Phil’s beefy bass that shone through the soundboard mix. The second set opened strong with the classic China > Rider segue and a flowing Playing In The Band > Terrapin Station, but momentum waned as Stella Blue suffered from a skipped solo and the set overall felt uneven, leaving some listeners describing it as “lame.” A bright encore of The Weight closed the night on a hopeful note. While the performance isn’t uniformly stellar, the show captures several quintessential Dead moments that make it worth a listen, especially for fans who appreciate the first‑set firepower.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Three recordings describe mixed sentiments with both praise (Bird Song, Wheel, Miracle) and criticism (Stella Blue solo omission, second‑set drag). One recording is clearly positive. The overall balance tilts slightly positive, warranting a modest +0.4 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-08-12.sbd.fishman.8109.sbeok.shnf",
+    "reason": "Good soundboard capture with strong, beefy mix; highlights Wheel, Miracle and Bird Song clearly and is the cleanest SBD among available sources."
+  },
+  "key_highlights": [
+    "The Wheel after Space erupts with soaring guitar and tight rhythm section.",
+    "Bird Song shines with vivid improvisation and a prominent bass line.",
+    "I Need a Miracle features a unique Vince/Bruce keyboard swap adding fresh texture.",
+    "Second set drags, notably due to a missed solo in Stella Blue."
+  ],
+  "song_highlights": [
+    "The Wheel",
+    "I Need A Miracle",
+    "Bird Song",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Playing In The Band",
+    "Terrapin Station",
+    "Althea"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers energetic leads on Wheel, Miracle and Bird Song but omits his solo during Stella Blue, leaving a noticeable gap.",
+    "Phil": "Bass is front‑and‑center, providing a solid, beefy foundation that carries the jams.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Provides steady dual‑drum support; pit recordings note drums sit forward in the mix but remain tight throughout.",
+    "Billy": "Locks in with Mickey for a reliable rhythmic backbone, maintaining drive even when the set drags."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-17T22:55:59.802920+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "I Need A Miracle",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Bird Song",
+      "The Promised Land"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Althea"
+    ]
+  ]
+}

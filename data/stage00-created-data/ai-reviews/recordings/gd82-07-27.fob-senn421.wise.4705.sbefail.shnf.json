@@ -1,0 +1,85 @@
+{
+  "summary": "A solid Red Rocks audience tape with bright Jerry guitar and a smoking China > Rider, Playin’ in the Band and The Other One that make the show shine despite some mic‑placement quirks.",
+  "review": "The recording is an audience (AUD) capture that’s generally clear but has occasional microphone‑proximity issues – Garcia’s guitar sits forward and the mix leans heavily on his sound. Musically the concert is a highlight of the summer‑82 run, featuring a blistering China > Rider, an inspired Playin’ in the Band (complete with Bob’s rare scat), a thunderous Terrapin and one of the most memorable Other One jams of the era. Overall the performance outweighs the modest technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (standout jams, strong set flow) while noting only moderate recording imperfections; the weighted average of show (≈4.6) and tape quality (≈4.0) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear Red Rocks ambience, but mic placement puts Garcia’s guitar forward and causes occasional level spikes; some reviewers note drop‑outs or uneven balance between instruments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Know You Rider",
+      "Playin' in the Band",
+      "The Other One",
+      "Terrapin Station",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Peggy-O"
+    ],
+    "setlist_flow": "First set rolls smoothly with tight tempos and solid versions of On the Road Again, Must Have Been Roses and a powerhouse China > Rider. The second set opens unusually with Playin' in the Band, builds into Terrapin and The Other One before closing with an emotive Stella Blue – a sequence praised for its energy despite a brief, sloppy encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is very bright and often the loudest element; reviewers love his tone and occasional extra licks.",
+    "Phil": "Praised for booming bass bombs on The Other One and a new four‑string slap technique that adds intensity, especially during Terrapin.",
+    "Bob": "Noted for an electrifying solo on Must Have Been Roses and a rare scat vocal over the Playin' jam.",
+    "Keys": "Brent’s organ work is highlighted on Terrapin and throughout the set; keyboards are described as fuller in the audience mix.",
+    "Drums": "Bill's drum break before the Rhythm Devils shout is called thrilling; some note the drums‑> Space transition sounds a bit off in certain mixes."
+  },
+  "song_mentions": {
+    "China > Know You Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "On the Road Again": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Must Have Been Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T21:57:06.987630+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-07-27.fob-senn421.wise.4705.sbefail.shnf"
+}

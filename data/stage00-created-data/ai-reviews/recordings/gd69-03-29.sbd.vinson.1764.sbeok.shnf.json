@@ -1,0 +1,63 @@
+{
+  "summary": "Fair‑quality soundboard tape of a classic 1969 Las Vegas show with strong Dark Star/Eleven sequences but noticeable mud, hiss and splices.",
+  "review": "The recording captures the early Dead at the Ice Palace in March 1969 on Owsley’s reel‑to‑reel – a historic soundboard source that is unfortunately muddy, hissing and suffers from splice gaps. Musically the show shines with a powerful Dark Star second half, a fiery Eleven and a beautiful Doin’ That Rag, earning high praise despite the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Average star rating (≈3.3) combined with many positive comments about performance but consistent complaints about tape mud, hiss and splices leads to a modest overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Tape sounds muddy like an old Ampex 60, noticeable hiss, several splice cuts (especially in Dark Star), and some missing bits; however the overall mix is usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Doin' That Rag",
+      "St. Stephen",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A classic early‑psychedelic set with a strong second half; the Holy Trinity (Dark Star → St. Stephen → The Eleven) is highlighted, though splice edits interrupt the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil sounds great – booming bass bombs noted by several reviewers.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:33:27.873590+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-03-29.sbd.vinson.1764.sbeok.shnf"
+}

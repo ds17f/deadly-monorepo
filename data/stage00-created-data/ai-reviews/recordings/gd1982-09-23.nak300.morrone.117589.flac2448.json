@@ -1,0 +1,31 @@
+{
+  "summary": "An excellent performance is praised, though the recording source and sound quality are not detailed.",
+  "review": "The lone review rates the show as outstanding, highlighting a highly enjoyable concert experience. No information about the recording method or audio fidelity was provided, so listeners should expect an unknown level of technical quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the show strongly, but provides no details on recording quality, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound clarity, mix, or source were mentioned in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The review did not discuss set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T02:17:35.022484+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-23.nak300.morrone.117589.flac2448"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "A dusty soundboard of a high‑energy early‑Dead show with standout Cream Puff War and rare blues gems, captured in a mixed‑quality but cleaned‑up recording.",
+  "review": "The performance captures the raw excitement of the Dead’s 1966 Matrix gig – Garcia’s solo on Cream Puff War and Pigpen‑driven blues like Death Don't Have No Mercy shine, while a handful of rarities (Betty & Dupree, Big Boy Pete) add historic flavor. The soundboard source is uneven – some copies suffer corruption, pitch errors and hiss, but the cleaned‑up version offers decent balance and enough clarity to enjoy the set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (many 4–5 star comments) while noting significant but fixable recording issues; weighted average yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cleaned‑up version reduces hiss, but original SHN files show corruption, pitch errors and occasional drop‑outs. Listeners report needing EQ adjustments; overall balance is decent but clarity is lower than later 66 shows."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cream Puff War",
+      "Death Don't Have No Mercy",
+      "Betty & Dupree",
+      "Big Boy Pete",
+      "Down So Long"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A blues‑heavy early set packed with rare treats; while the pacing is energetic, some repetitions make parts feel redundant and the fragmented source can feel disjointed."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo on Cream Puff War is described as stellar; his vocals and guitar on Death Don't Have No Mercy are highlighted as a show highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ work is noted as a driving force behind the R&B feel of the set.",
+    "Drums": "Billy (Kreutzmann) receives praise for an almost “fourth‑arm” performance on several tracks."
+  },
+  "song_mentions": {
+    "Cream Puff War": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Betty & Dupree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boy Pete": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Down So Long": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "You Don't Love Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T06:09:19.821666+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd66-12-01.sbd.sirmick.26968.sbeok.shnf"
+}

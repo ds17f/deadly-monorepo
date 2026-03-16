@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording highlighting standout renditions of Candyman, Half-Step, and Wharf Rat.",
+  "review": "The reviewer praises this AUD (audience) tape as amazing, noting the high‑quality capture of the performance. Specific songs called out are Candyman, Half‑Step, and Wharf Rat, which are presented as the show’s highlights. No technical or musical shortcomings are mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only a single five‑star review is available; it is overwhelmingly positive about both the recording and the performance, leading to a high rating but low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the AUD recording as 'amazing' with no noted issues; suggests very clear and enjoyable capture for an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Half-Step",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review highlights specific songs but does not comment on overall pacing or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:46:40.218654+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-24.148853.fob.senn.me80.hessberg.miller.clugston.flac2496"
+}

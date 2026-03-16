@@ -1,0 +1,45 @@
+{
+  "summary": "Fun, dance‑filled show with a lively Peggy‑O and heartfelt Eyes, though recording details are unclear",
+  "review": "The reviewer had a great time at the Dark Star Orchestra Fillmore concert, highlighting the energy of Peggy‑O and the emotional impact of Eyes. No specific comments about the audio source or mix were provided, so the technical quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single positive review (4 stars) emphasizes an enjoyable performance; lack of recording details keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes a fun, dance‑friendly vibe with strong emotional moments, but provides no detailed set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:33:42.849511+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-17.sbd.mhg.77208.flac16"
+}

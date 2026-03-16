@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy show highlighted by Jerry’s fiery solos and standout renditions of Touch of Grey, Samson, Uncle John’s Band → Morning Dew and Johnny B. Goode.",
+  "review": "The tape, lovingly remastered from an audience source, sounds clean and vibrant, letting the band’s performance shine.  The second set is described as one of the top three ever heard – Jerry’s solos are buzzing with purpose, the drums pound straight‑ahead, and songs like Touch of Grey, Samson, Uncle John’s Band → Morning Dew and a scorching Johnny B. Goode soar.  Overall the concert is praised for its excitement and solid musicianship.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviews are strongly positive (4‑5 stars).  Reviewers praise both the musical performance—especially Jerry’s solos and the second‑set flow—and the high‑quality audience remaster, leading to a rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered audience tape noted as clean and sweet; no dropouts or major muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Samson",
+      "Cumberland Blues",
+      "Uncle John's Band > Morning Dew",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as uneven, but the second set is hailed as a top‑three performance with relentless energy, tight transitions and no over‑processed drum effects."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight his buzzing, purposeful solos and extra edge on this night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy and Mickey praised for straight‑ahead pounding and spacious feel; no “computer‑mutated” sounds."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band > Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:58:57.955088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-27.ecm220t.keshavan.miller.106796.flac16"
+}

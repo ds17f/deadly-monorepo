@@ -1,0 +1,51 @@
+{
+  "summary": "Recording quality unknown, but the tape delivers an unhinged psychedelic blues set with standout Dark Star and The Eleven.",
+  "review": "The performance bursts with 1969 energy, featuring a spirited Eleven, a dark‑but‑slightly uneven Dark Star, and Pigpen’s humor‑filled second Lovelight. Reviewers are enthusiastic about the music yet give no concrete details on the audio source, leaving the recording quality uncertain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the musical performance despite lacking any recording‑quality comments; with only two reviews confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentions soundboard, audience bleed, or clarity; therefore recording quality cannot be assessed beyond being adequate for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short, classic 1969 set that feels exploratory and psychedelic, with high‑energy jams despite a few uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as playing excitedly and fast during The Eleven; Dark Star noted as slightly below average for ’69.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:31:23.303821+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-06-14.150775.SBD.DAT.Bear.Latvala.Pollack.Miller.Noel.t-flac1648"
+}

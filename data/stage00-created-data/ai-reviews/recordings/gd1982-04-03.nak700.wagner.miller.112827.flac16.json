@@ -1,0 +1,65 @@
+{
+  "summary": "Stellar audience capture of an ’82 show highlighted by a scorching Scarlet / Fire segue and Brent’s standout Never Trust A Woman performance.",
+  "review": "The three reviewers all rave about the recording, calling it crisp, vivid and “fabulous” for an audience source. Musically the show is praised as one of the band’s best of 1982, with particular love for the Scarlet Begonias → Fire on the Mountain transition and Brent Mydland’s superb Never Trust A Woman. No serious flaws are noted, making both the performance and the tape highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews award 4‑5 stars, praising both the musical set (strong show rating) and the audience recording quality (described as stellar). The consistency and detail give high confidence in a near‑excellent overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience capture is described as crisp, vivid and “fabulous”, with no major noise or drop‑outs noted despite not being a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias → Fire on the Mountain",
+      "Never Trust A Woman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers mention a solid first set and an especially strong pre‑drums segment, with seamless transitions that keep the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s playing on Never Trust A Woman is highlighted as possibly his best performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Never Trust A Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    }
+  },
+  "processed_date": "2025-09-13T19:12:53.246864+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-03.nak700.wagner.miller.112827.flac16"
+}

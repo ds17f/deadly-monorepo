@@ -1,0 +1,81 @@
+{
+  "summary": "High‑energy 1991 show captured on solid front‑of‑house matrix recording; the band is in top form with a smoking \"Same Thing\" and strong second set.",
+  "review": "Fans rave about this December 28‑91 concert as one of the best of the ’90s, highlighting Jerry’s soaring guitar, Phil’s romping bass, Brent’s rollicking keys and a standout performance of The Same Thing that had the crowd in awe.  The recording is an audience (FOB) matrix source – clear enough to enjoy the full band dynamics with only occasional mild drop‑outs noted by a few reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews are strongly positive about the performance, and most comment that the front‑of‑house recording is good to excellent; weighted combination yields a rating above 4.5."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑house matrix capture using B&K 4011 cardioids and a Neumann BS‑48i; reviewers call it \"very quality FOB sound\" and praise the mix, though one notes the sound is about 3.5–4/5 with occasional mild drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Same Thing",
+      "Jack Straw",
+      "Uncle John's Band",
+      "Playing in the Band",
+      "One More Saturday Night",
+      "Throwing Stones"
+    ],
+    "poor_songs": [
+      "Foolish Heart"
+    ],
+    "setlist_flow": "The show opens with a seamless jam that melts into Jack Straw, builds through a powerful second‑set climax centered on The Same Thing, and closes with high‑energy encores like One More Saturday Night and U.S. Blues, delivering an exciting, well‑paced arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"screaming and swooping\", delivering outrageous double‑timed runs and a soaring vocal on Uncle John's Band; overall his playing is highlighted as the night’s high point.",
+    "Phil": "Praised for romping all night long, especially during the Minglewood jam, showing strong bass presence throughout.",
+    "Bob": "Mentioned slipping a lyric early but quickly finding his voice; credited as the \"glue\" holding the set together and delivering solid rhythm work.",
+    "Keys": "Brent Mydland (Vinny) noted for rollicking, perfect keyboard textures that added depth to the jams.",
+    "Drums": "Both Mickey Hart and Bill Kreutzmann are said to have \"banged and drove it\" especially on Uncle John's Band, providing a tight rhythmic foundation."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Same Thing": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:01:51.737452+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-12-28.bk4011.unknown.4534.sbeok.shnf"
+}

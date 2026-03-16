@@ -1,0 +1,69 @@
+{
+  "summary": "A hiss‑filled, muddy soundboard recording that still delivers a stellar show highlighted by a monster Jack Straw, soaring Stella Blue and a killer Jerry solo.",
+  "review": "Even though the sbd source is plagued by noticeable tape hiss and a muddy mid‑range, the performance shines. Reviewers rave about an inspired Jack Straw, a passionate rendition of Stella Blue, and strong versions of Sugaree, Miracle, Estimated Prophet and Casey Jones, with many calling Jerry’s solo on Straw one of his best. The musical strengths easily outweigh the technical shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (multiple 4‑5 star comments) while acknowledging moderate recording flaws; the weighted average leans strongly toward a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss throughout, especially between songs, and a muddy, slightly oversaturated board mix. Some reviewers find it acceptable compared to other late‑70s sbd tapes, while others suggest an audience recording would be cleaner."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Stella Blue",
+      "Sugaree",
+      "Miracle",
+      "Estimated Prophet",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as solid and cohesive, with several songs singled out as “great versions.” Transitions are smooth enough that the show feels like a continuous, high‑energy experience despite the tape’s limitations."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an all‑time best solo on Jack Straw; one reviewer notes Bob stepping on his solo, but overall his playing is highlighted as a major strength.",
+    "Phil": "",
+    "Bob": "Mentioned for a lyric change and for unintentionally stepping on Jerry’s solo during Jack Straw.",
+    "Keys": "Keith's playing described as “clunky” at times, likely affected by the tape quality rather than performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T18:58:13.517509+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-11.sbd.miller.102430.flac16"
+}

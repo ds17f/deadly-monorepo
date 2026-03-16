@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality audience tape captures a fiery Lost Sailor > Saint > Deal medley and tight Ramble On Rose, with the band on fire all night.",
+  "review": "The recording – an audience source praised for its surprisingly clear sound – delivers one of the hottest Lost Sailor > Saint > Deal jams ever heard, plus a scorching Ramble On Rose and a kicking Shakedown Street. Reviewers rave that the first set was “incredible” and the band was fully on‑the‑money throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic reviews highlight a standout performance (show rating ~4.5) and good‑to‑excellent audience recording quality (~4.0), yielding an overall weighted score around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape but praised for high sound quality; clear enough to hear Jerry’s guitar shredding and tight band interplay despite typical ambient noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor > Saint > Deal",
+      "Ramble On Rose",
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as incredible; second set opened strong with a kicking Shakedown Street, maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s “belting” and nonstop shredding during the Deal jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lost Sailor > Saint > Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:23:07.330437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-30.aud.set1.cole.18559.sbeok.shnf"
+}

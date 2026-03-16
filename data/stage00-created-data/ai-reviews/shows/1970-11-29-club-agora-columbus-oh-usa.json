@@ -1,0 +1,55 @@
+{
+  "summary": "Fiery The Other One and upbeat Good Lovin' amid uneven set",
+  "blurb": "The show delivers a scorching \"The Other One\" and an energetic \"Good Lovin'\", but the energy wavers at times. It's captured on a decent audience tape that conveys the live vibe despite some muddiness.",
+  "review": "On November 29, 1970 at Club Agora in Columbus, the Dead rolled out a single long set after New Riders of the Purple Sage. The night is best remembered for a fiery stretch through \"The Other One\" and an upbeat, crowd‑pleasing \"Good Lovin'\", both of which rise above an otherwise uneven performance that slips into tired moments. The audience recording (gd70-11-29.aud.hanno.7592.sbeok.shnf) is only fair in fidelity – muddy at times and lacking the clarity of a soundboard – yet it manages to capture the raw, room‑filled atmosphere of a ’70 club gig. Jerry’s pedal steel sits front‑and‑center in the mix, adding an unusual texture to his guitar work, while the rest of the band holds down a solid, if occasionally uneven, foundation.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "The analysis describes mixed sentiment: strong praise for \"The Other One\" and \"Good Lovin'\" but also notes uneven energy and tired moments, leading to a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-11-29.aud.hanno.7592.sbeok.shnf",
+    "reason": "Only available tape; decent audience capture that preserves the show's atmosphere despite limited fidelity."
+  },
+  "key_highlights": [
+    "Fiery, extended \"The Other One\" showcases the band's improvisational edge.",
+    "\"Good Lovin'\" brings high energy and audience interaction.",
+    "Solid setlist performance with occasional uneven or tired moments.",
+    "Audience tape conveys live club ambience even though sound is muddy."
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Good Lovin'"
+  ],
+  "band_performance": {
+    "Jerry": "His pedal steel is prominent and loud in the mix; otherwise no specific guitar commentary.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-20T01:35:47.501697+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Me And My Uncle"
+    ],
+    [
+      "Good Lovin'"
+    ]
+  ]
+}

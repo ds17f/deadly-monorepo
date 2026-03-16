@@ -1,0 +1,100 @@
+{
+  "summary": "Excellent matrix recording of a hot 1978 Vermont show, highlighted by smoking Big River, Looks‑Like‑Rain and a fire‑filled Jerry Garcia throughout.",
+  "review": "The tape captures a high‑energy 1978 UVM performance that fans repeatedly call a “hot little show” with standout renditions of Big River, Peggy‑O, Loser, Looks Like Rain, Playin’ in the Band and Me & My Uncle.  The mix is a sweet late‑70s soundboard paired with an intimate audience feed, delivering warm, full‑bodied sound that many describe as heavenly despite occasional keyboard burying.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average user rating is ~4.7/5; reviewers overwhelmingly praise the performance and the recording quality, with only minor complaints about keyboard presence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Sweet warm late‑70s soundboard (SBD) is full and clear; audience portion adds intimate raw intensity.  Overall mix is crisp, though keyboards can be buried in the AUD track and occasional minor boominess is noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big River",
+      "Peggy-O",
+      "Loser",
+      "Looks Like Rain",
+      "Playin' in the Band",
+      "Me & My Uncle",
+      "Drums > Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as fast and punchy, second set slows into classic Dead grooves with strong jams; pacing praised for keeping momentum while allowing deep improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly called “on fire”, perfect tone and soaring leads throughout the show.",
+    "Phil": "Bass gets positive nods – reviewers ask Phil to turn it up, noting his solid support.",
+    "Bob": "",
+    "Keys": "Keyboard presence is spotty; several listeners note Keith (or Brent) missing or buried in the mix, especially on the audience portion.",
+    "Drums": "The drum work shines, with “Drumz > Wharf Rat” highlighted as intense and driving."
+  },
+  "song_mentions": {
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:11:46.659753+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-06.sbd-aud.cotsman.13726.sbeok.shnf"
+}

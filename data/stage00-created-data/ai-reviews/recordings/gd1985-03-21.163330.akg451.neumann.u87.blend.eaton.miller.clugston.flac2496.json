@@ -1,0 +1,39 @@
+{
+  "summary": "Amazing sound quality captures a lively Hampton 3‑21‑85 show with an energetic Alabama Getaway despite pre‑show drama.",
+  "review": "The reviewer praises the recording as \"amazing,\" indicating a clear, well‑balanced mix that makes the performance enjoyable. Although the concert was preceded by a chaotic seat‑dispute and a glow stick incident involving Phil, the music itself – highlighted by an upbeat Alabama Getaway opener – is described as solid and not a bad show overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single five‑star review emphasizes excellent audio quality and an acceptable performance, leading to a high rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer specifically calls the recording \"amazing,\" suggesting clear, crisp sound with good balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Despite a disruptive pre‑show incident, the concert proceeded smoothly and maintained energy from the opener onward."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:28:32.054596+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-21.163330.akg451.neumann.u87.blend.eaton.miller.clugston.flac2496"
+}

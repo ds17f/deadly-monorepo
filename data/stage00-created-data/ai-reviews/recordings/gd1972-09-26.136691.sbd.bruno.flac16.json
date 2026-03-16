@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from a right‑hand channel problem and is of poor quality; no musical details are available.",
+  "review": "The sole reviewer notes a noticeable issue with the RHT (right) channel, which makes the audio sound unbalanced and detracts from listenability. No comments on the performance itself were provided, leaving the show quality indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating highlighting a serious recording flaw; no positive information about the performance to offset the poor audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Right‑hand channel (RHT) has problems, causing imbalance/muted sound on that side of the mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-21T04:04:51.534135+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-26.136691.sbd.bruno.flac16"
+}

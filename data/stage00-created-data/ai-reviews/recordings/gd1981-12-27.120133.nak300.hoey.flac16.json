@@ -1,0 +1,31 @@
+{
+  "summary": "Recording plagued by upload errors – file names altered, first‑set list truncated and the second set missing \"Space\"; audio quality cannot be assessed.",
+  "review": "The reviewer notes that the uploader changed the original file names and that the displayed first‑set list is cut off. Additionally, the second set is missing the \"Space\" segment, making the setlist incomplete. No comments were made about the actual sound or performance.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review with a zero‑star rating focusing on metadata/upload problems; no positive information about music or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Uploader altered file names and the setlist display is truncated; second set missing \"Space\". No audio quality comments provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Setlist appears incomplete – first‑set list cut off and \"Space\" omitted from the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T17:36:49.207363+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-27.120133.nak300.hoey.flac16"
+}

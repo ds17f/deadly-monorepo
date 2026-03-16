@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent free soundboard of a ’69 Dark Star that reviewers say can’t be beat.",
+  "review": "The single five‑star review praises the downloadable SBD of the 1969 Dark Star, implying both a high‑quality recording and a standout performance. No technical flaws are noted, and the Dark Star is singled out as the highlight of the show. Overall sentiment is overwhelmingly positive despite the lack of detailed commentary.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "A single enthusiastic 5‑star review indicates an excellent performance and a satisfactory soundboard recording; limited data keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer mentions a free downloadable SBD with no complaints, suggesting acceptable clarity and mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only Dark Star is specifically praised; other parts of the set are not discussed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:34:08.944203+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-03-29.135885.teute.d1t04fix.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent sound captures a blistering Terrapin > Dark Star > The Other One performance.",
+  "review": "The reviewer raves that the recording sounds great and rates the show five stars, highlighting a spectacular Terrapin Station into Dark Star into The Other One sequence. No technical flaws are mentioned, suggesting a clean source, while the musical flow is described as “off the charts.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review; both performance and recording are praised heavily, leading to a high rating but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer notes “Great Sound!” with no complaints about clarity or balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Dark Star",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy sequence (Terrapin > Dark Star > The Other One) singled out as a peak moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:50:30.853424+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-05-08.172138.5-1.tobin.flac1648"
+}

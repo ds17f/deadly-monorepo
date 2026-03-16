@@ -1,0 +1,39 @@
+{
+  "summary": "A standout acoustic show with great performances (especially “Caution”) but captured on a stealth‑rig audience source that has modest balance and clarity issues.",
+  "review": "Reviewers rave about the quality of the music – the acoustic set, Phil Lesh’s solid bass work and the superb rendition of “Caution” are highlighted as superior to many other 1970 shows. The recording comes from a hidden stage rig, so while it avoids major drop‑outs, listeners note minor imperfections, occasional warble fixes, and an uneven mix that tames Pigpen’s harp/vocals while pushing the organ forward.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The show receives enthusiastic 5‑star praise for performance, especially acoustic numbers, but multiple reviewers flag recording balance and clarity problems, pulling the overall rating down to a solid 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Stealth‑rig audience taping with occasional location changes; minor audio imperfections noted, warbled middle sections improved versus other sources, but Pigpen's harp/vocals are reduced and organ is unnaturally boosted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Caution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set praised for its smooth flow; improved transition into “Caution” highlighted, overall pacing described as excellent despite the lack of detailed song list."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil Lesh is noted to be on bass and performing solidly in this acoustic setting.",
+    "Bob": "",
+    "Keys": "Organ work is unusually prominent in this mix, likely due to the recording’s processing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T23:24:38.993326+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-20.135798.sbd.smith.droncit.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of a soulful 1973 show featuring standout performances of Brown‑Eyed Women, Beat It On Down the Line and The Race Is On.",
+  "review": "Both reviewers rave that this concert is one of the best set‑lists ever, praising its soulful playing and flawless execution. Highlights mentioned include Brown‑Eyed Women, Beat It On Down the Line and their country cover The Race Is On. Although no technical details are given, the .sbd FLAC source implies a high‑quality soundboard recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Two consistent 5‑star reviews lauding the performance; recording inferred to be a pristine soundboard FLAC, leading to an overall near‑perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No explicit technical comments; filename indicates a high‑resolution soundboard FLAC and reviewer enthusiasm suggests clear, well‑balanced audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown-Eyed Women",
+      "Beat It On Down the Line",
+      "The Race Is On"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as one of the best set‑lists ever with soulful, flawless playing throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Race Is On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:56:08.024357+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-20.144265.sbd.boswell.smith.miller.clugston.flac1648"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 80’s show with Stephen Stills, standout China Cat > Rider and Black Queen, captured in a generally excellent recording that has a tiny gap between drums and Black Queen.",
+  "review": "The concert is remembered for its lively vibe – a superb China Cat > Rider segue into a raw, crunchy Black Queen (with Iko following) and a special Stephen Stills guest spot. Reviewers rave about the sound quality, calling it “so good,” though one notes a brief missing segment at the drum‑to‑Black Queen transition. Overall the performance and recording are praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4–5 stars, highlighting strong musical moments and a very good‑to‑excellent sound despite a minor recording glitch."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the audio as exceptionally clear and enjoyable; one reviewer mentions a tiny missing piece during the drum‑to‑Black Queen transition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat > Rider",
+      "Black Queen",
+      "Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well with strong transitions, especially China Cat > Rider into Black Queen; only a brief gap is noted between the drum segment and Black Queen."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment (drumz) is highlighted, though a recording hiccup occurs right after it."
+  },
+  "song_mentions": {
+    "China Cat > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Queen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:31:18.870699+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-16.fob-miller.set2.23851.sbeok.shnf"
+}

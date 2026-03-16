@@ -1,0 +1,75 @@
+{
+  "summary": "Solid UltraMatrix mix that’s generally clear, capturing a strong 1987 Red Rocks show with standout performances of High Time, Playin’/China Doll and the spring‑summer classics.",
+  "review": "The recording (an UltraMatrix blend of soundboard and audience) is mostly clean and well‑balanced, though a few listeners note a slight muddiness. Musically the concert shines – Jerry’s guitar work is praised, Brent’s keyboards intertwine beautifully, and songs like High Time, Playin’ / China Doll, Cold Rain/Rooster and the spring‑summer staples Tons of Steel and Push Comes to Shove are highlighted as highlights despite Garcia’s occasionally rough vocals.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The show receives consistently high praise for performance and setlist, while recording quality is generally good with a few minor complaints, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the sound as crisp, fine and well‑remastered (Miller’s work). A couple note a muddy or less warm tone and that Jerry sits low in the mix on the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Playin' / China Doll",
+      "Cold Rain/Rooster",
+      "Crazy",
+      "Samson",
+      "Tons of Steel",
+      "Push Comes to Shove"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly with a high‑energy first half and a solid second set; transitions such as Playin’ into China Doll are highlighted, and the crowd’s enthusiasm is noted throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is praised and his vocal delivery is called rough or 'out of it' in places, with some mixes pulling him low.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keys) receives strong compliments for backing Jerry and creating beautiful interplay, especially on High Time.",
+    "Drums": "The drumming features heavy‑hitting moments and unusual sounds that excite the crowd; audience reaction to drum/space sections is noted."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' / China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain/Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tons of Steel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:33:26.473327+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-11.sbd.gans.miller.92056.sbeok.flac16"
+}

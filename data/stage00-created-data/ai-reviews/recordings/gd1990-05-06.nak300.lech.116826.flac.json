@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fans hail the show and Brent Mydland's playing, but recording details are not provided.",
+  "review": "The lone review bursts with excitement, calling the concert a \"Holy Cow\" experience and singling out Brent Mydland as the best. No specifics about the performance setlist or audio fidelity are given, leaving the recording quality unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the show and Brent's keyboard work; without any technical feedback the rating leans on the high enthusiasm but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not mention sound quality, clarity, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or song flow was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland receives enthusiastic praise as \"the best\".",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T06:58:31.382542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-05-06.nak300.lech.116826.flac"
+}

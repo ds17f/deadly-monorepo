@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard capture of a superb March ’81 show, highlighted by Althea, Jack Straw and a tight China Rider transition.",
+  "review": "The recording delivers crystal‑clear soundboard quality with balanced bass, drums and vocals, only an occasional vocal level spike early in the second set. Musically the concert shines – Althea is singled out as a highlight, the Jack Straw performance is strong and the China Rider segue flows beautifully.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance and the soundboard recording; only one low‑star outlier, so overall rating is high with strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix with excellent bass and drums; vocals sit nicely except a brief moment early in the second set where Bob’s voice is a little too forward."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Jack Straw",
+      "China Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth transitions, especially the China Rider segue and the move from “Sun Gonna Shine” into “Headlight,” keeping the energy steady throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil’s bass work is highlighted with double‑ and triple‑stops, contributing to a strong rhythmic foundation.",
+    "Bob": "Bob’s slide guitar shows noticeable improvement; his vocal level briefly spikes early in the second set but settles quickly.",
+    "Keys": "",
+    "Drums": "The drums are consistently solid and well‑captured."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sun Gonna Shine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:02:59.235978+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-21.sbd.walker-scotton.miller.106778.flac16"
+}

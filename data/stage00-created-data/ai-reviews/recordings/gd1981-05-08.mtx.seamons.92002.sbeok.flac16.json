@@ -1,0 +1,70 @@
+{
+  "summary": "An outstanding matrix captures a fire‑filled early‑80s show highlighted by a legendary Shakedown Street jam and superb sound quality.",
+  "review": "The matrix work on this 1981 recording is praised as smooth, well‑balanced and almost \"you are there,\" delivering crystal‑clear audio that lets the band’s energy shine through. Fans rave about the extended Shakedown Street, Samson, Let It Grow and Terrapin performances, though the first set loses steam and Brent’s vocal mix is faint on a few tracks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (12/15) give 4‑5 stars, highlighting both an excellent matrix and strong musical moments; only a few note average set pacing or missing vocals, so the weighted score is high with strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Smooth, balanced sound that blends audience ambience with soundboard clarity; reviewers describe it as \"crisp,\" \"draws you in,\" and \"sounds like you're there.\" No major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Samson",
+      "Let It Grow",
+      "Terrapin",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "The show launches with a high‑tempo Jack Straw that keeps energy high into Uncle John's Band and Big River, but momentum tapers toward the end of the first set and never fully recovers in the second, leaving the early‑80s magic most evident during the extended Shakedown Street jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for slaying guitar work and soaring above the mix.",
+    "Phil": "Noted for \"thumping\" bass that drives the groove.",
+    "Bob": "Mentioned as part of the rhythm section driving the jams alongside Brent.",
+    "Keys": "Brent's keyboard playing is solid, but several reviewers complain his vocals are missing or very faint on this recording.",
+    "Drums": "Bill Kreutzmann and Mickey Hart described as providing a scorching, boogie‑inducing tempo."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:12:16.598306+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-08.mtx.seamons.92002.sbeok.flac16"
+}

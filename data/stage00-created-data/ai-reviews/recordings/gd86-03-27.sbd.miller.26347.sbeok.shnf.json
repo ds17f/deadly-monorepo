@@ -1,0 +1,80 @@
+{
+  "summary": "Clear soundboard capture with a crisp first set (Jack Straw, Peggy‑O, Bertha) but a rushed, out‑of‑tune second set that leaves the show feeling mixed.",
+  "review": "The SBD source is generally clear – reviewers can make out lyrics and praise Jerry’s solo on Bertha – but occasional patch problems and a whole‑step sharp second set detract from the listening experience. The first set is highlighted as solid and fun, while the second half is described as speedy, poorly transitioned and sometimes out of tune, with only a few bright spots such as the Eyes jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Eight detailed reviews show a blend of strong musical moments (mostly first‑set) and notable performance/recording flaws (second set, tuning, patch issues); the average star rating is 3.75, rounded to 3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and legible with good vocal definition; some reviewers note patch‑related muffiness and occasional drop in fidelity on the second set, plus a tuning drift that makes the second half sound sharp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "Bertha",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Supplication > Promised Land transition"
+    ],
+    "setlist_flow": "First set flows smoothly and is praised for its energy; second set feels hurried, with a rough transition from Supplication to Promised Land, tuning issues, and an overall ‘speedy’ vibe that undercuts the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry ripping solos on Bertha and delivering an expressive jam at the end of Eyes.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "One reviewer mentions Brent (My­dland) reworking his parts between ’86‑’89, indicating keyboard work is present but not a focal point of criticism.",
+    "Drums": "The drummers are highlighted in the Eyes jam where they create a notable improvisational segment."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication > Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hamstrung Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T13:56:23.891161+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-27.sbd.miller.26347.sbeok.shnf"
+}

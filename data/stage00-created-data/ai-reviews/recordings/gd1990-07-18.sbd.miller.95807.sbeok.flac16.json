@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent matrix recording captures a legendary summer‑90 show with a smoking Help > Slipknot! > Franklin’s, soaring Peggy‑O and epic Terrapin/Other One jams.",
+  "review": "The performance is consistently praised as one of the top shows of the 1990 summer run – the opening H>S>F sequence, a blistering Peggy‑O, and second‑set highlights like China‑Rider, Terrapin Station, The Other One and Morning Dew are described as magical.  The source is a soundboard‑plus‑audience matrix that listeners say sounds clear, crisp and full of venue ambience, with only minor vocal miscues noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over ten reviews give 4‑5 stars, all extolling the musical peaks and noting excellent sound quality; the weighting heavily favors show excellence with solid recording fidelity."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the sound \"awesome\", \"crisp\" and note a pleasant blend of board clarity with audience ambience (a matrix feel).  A few mention slight vocal miscues, but overall the mix is clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot! > Franklin's",
+      "Peggy-O",
+      "China > Rider",
+      "Terrapin Station",
+      "The Other One",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Deal"
+    ],
+    "setlist_flow": "A strong, anticipatory first set opens with H>S>F and builds through Peggy‑O and New Minglewood Blues.  The second set launches with a fiery China‑Rider, rolls into an expansive Terrapin jam, then peaks on The Other One and a soaring Morning Dew before closing with The Weight."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for emotive solos (e.g., the ending solo on Morning Dew) and adventurous tonal choices during The Other One.",
+    "Phil": "Highlighted for leading the opening of The Other One, tight interplay with Jerry throughout the second set, and his “charge” melody before Cassidy.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work described as \"ballistic\", sweet intros (Easy to Love You), cascading B3 on Morning Dew, and overall timeless artistry.",
+    "Drums": "Noted for tribal drum rolls, laughter effects in space jams, and a lean‑into‑kits approach that drives the second‑set intensity."
+  },
+  "song_mentions": {
+    "Help > Slipknot! > Franklin's": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Peggy-O": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Morning Dew": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Weight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:03:21.739823+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-18.sbd.miller.95807.sbeok.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Nice matrix recording with an awesome jam between Saint of Circumstance and Drums",
+  "review": "The matrix source is praised for its clear assembly, delivering a solid listening experience. Reviewers highlight the superb jam that bridges Saint of Circumstance into the Drum segment, marking it as a show highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one review (4 stars) mentions good recording quality and an excellent jam; limited data leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a 'nice recording' and compliments the matrix mix, indicating clear but not exceptional fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint of Circumstance",
+      "Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth transition with a highlighted jam between Saint of Circumstance and the Drum segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:53:14.805419+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-02.152533.mtx.photoleon.flac1644"
+}

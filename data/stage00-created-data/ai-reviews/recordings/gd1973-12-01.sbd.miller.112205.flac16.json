@@ -1,0 +1,68 @@
+{
+  "summary": "Crisp soundboard capture of a solid ’73 Dead show with standout Uncle John’s Band/Playing‑in‑the‑Band sandwich and a beautiful Brokedown Palace.",
+  "review": "The Charlie Miller transfer delivers clear, well‑balanced audio that lets the vocals and instruments shine, though a few listeners note occasional graininess and low volume. Musically the concert is enjoyable – fans rave about the Uncle John’s Band sandwich, the Playing‑in‑the‑Band sequence, Me & My Uncle banter and a mellow Brokedown Palace – even if some feel the overall pacing is a bit sluggish compared to the surrounding dates.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the sound quality and key performances, with only a handful of criticisms about pacing or volume; the weighted average lands in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as crisp, clear and top‑notch; a few comments mention slight graininess, low overall volume, but no major dropouts or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Playing in the Band",
+      "Me and My Uncle",
+      "Brokedown Palace",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is noted for lively second‑set banter (Bobby & Phil clearing aisles, a comedic rattlesnake vamp) and a memorable Playing‑in‑the‑Band > Uncle John’s Band > Playing‑in‑the‑Band sandwich; overall pacing is described as solid but a bit sluggish by some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Calmer approach after Me and My Uncle, helped sway disobedient heads back to their seats.",
+    "Bob": "Screamed twice at the audience during Me and My Uncle, an unusually aggressive moment for the drummer.",
+    "Keys": "",
+    "Drums": "Same as Bob – Bobby (Bill Kreutzmann) was notably forceful on stage, shouting \"Get back!\" during Me and My Uncle."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:36:06.633719+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-01.sbd.miller.112205.flac16"
+}

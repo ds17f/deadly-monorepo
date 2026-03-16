@@ -1,0 +1,51 @@
+{
+  "summary": "Acoustic gems like Box of Rain and a soaring Dark Star shine despite a muffled, audience‑heavy recording.",
+  "review": "The performance is highlighted by rare acoustic moments – an intimate Box of Rain, acoustic Truckin' and a beautiful Dark Star – that many reviewers rank among the show’s best.  The source appears to be an audience tape with heavy crowd noise and a muffled, low‑fidelity mix, which detracts from enjoyment but does not erase the musical strength of the set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show’s acoustic highlights while consistently noting poor, muffled audience‑sourced sound; weighting the strong musical performance (70%) against the weak recording (30%) yields a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muffled mids, heavy audience chatter, occasional tape cuts and low‑fidelity mix; no soundboard source available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain (acoustic)",
+      "Dark Star",
+      "Truckin' (acoustic)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through an intimate acoustic block that many fans cite as a highlight, though tape edits interrupt the continuity in places."
+  },
+  "band_member_comments": {
+    "Jerry": "Plays piano on the acoustic Box of Rain and adds pedal‑steel touches; praised for vocal work.",
+    "Phil": "Delivers strong vocals on Box of Rain and contributes acoustic guitar; highlighted positively.",
+    "Bob": "Participates in the acoustic set with rhythm guitar and vocals; mentioned favorably.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain (acoustic)": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin' (acoustic)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:45:42.914786+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-09-17.aud.warner.16090.sbeok.shnf"
+}

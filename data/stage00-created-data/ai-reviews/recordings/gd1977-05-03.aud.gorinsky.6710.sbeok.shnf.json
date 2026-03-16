@@ -1,0 +1,39 @@
+{
+  "summary": "Jerry’s quirky vocal crack turns into a shredding Bertha; recording quality not discussed but the performance is praised.",
+  "review": "The sole reviewer loved this show, highlighting Jerry Garcia’s brief voice‑crack on “Bertha” that quickly turned into a fiery guitar solo. No details about the source or clarity of the audio were given, so the technical side remains unknown, but the musical moment was clearly a high point.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one 5‑star review focuses on a standout performance of Bertha; no recording details are provided, so rating leans heavily on the positive show impression."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about soundboard vs. audience or clarity; assumed listenable based on overall high rating."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient information to evaluate set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice crack around 2:20 on Bertha, then a shredding guitar solo praised as amazing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T22:18:38.519428+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-03.aud.gorinsky.6710.sbeok.shnf"
+}

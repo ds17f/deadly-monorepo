@@ -1,0 +1,72 @@
+{
+  "summary": "Solid performance highlighted by an epic Terrapin‑Days jam; recording source and sound quality are not described.",
+  "review": "The concert features a short first set that gains momentum with Loser and a fresh arrangement of It’s All Over Now, while the second set delivers a massive Terrapin through Days suite that reviewers cite as the night’s highlight. No specific comments about the audio source or fidelity are provided, leaving the recording quality unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review praises the musical performance; a second vague 0‑star entry adds uncertainty, resulting in an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention any details about sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Days"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "First set is brief and starts slow (Jack Straw) but picks up with Loser and a new arrangement of It’s All Over Now; the second set is highlighted by an expansive Terrapin‑through‑Days jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Sounds good on Tom Thumb's Blues.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Songs": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:57:48.888524+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-23.137351.sbd.miller.flac1648"
+}

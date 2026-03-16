@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent audience recording of the Dec 16 1992 show with high energy and standout performances of Stella Blue, Row Jimmy, Shakedown Street and a powerful second set.",
+  "review": "The audience‑sourced tape is praised as one of the best for this era, delivering clear, lively sound that captures the band feeding off each other. Musically the concert shines with Jerry’s soaring solos on Row Jimmy, a fiery Shakedown Street, beautiful Stella Blue and strong group jamming throughout, though a few reviewers note an early entrance into Good Lovin' as a minor slip.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and describe the audience recording as excellent, outweighing a few negative comments about transitions."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, lively capture praised as the best audience version; no significant drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Row Jimmy",
+      "Shakedown Street",
+      "Playing in the Band",
+      "Let It Grow",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Good Lovin'"
+    ],
+    "setlist_flow": "The set flows with high energy, especially a strong second half; band members feed off each other and maintain tight transitions despite occasional early entrances."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and vocals are praised; his solos on Row Jimmy and overall playing are highlighted as superb.",
+    "Phil": "",
+    "Bob": "Weir is both criticized for stepping over Stella Blue into Good Lovin' early, but also credited with strong rhythm riffs later in the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stuck Inside of Mobile": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:08:38.591854+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-16.fob.neumann.copeland.gems.79547.sbeok.flac16"
+}

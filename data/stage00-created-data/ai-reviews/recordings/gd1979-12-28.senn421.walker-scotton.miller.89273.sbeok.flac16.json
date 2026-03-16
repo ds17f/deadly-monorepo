@@ -1,0 +1,45 @@
+{
+  "summary": "Clear audience recording captures a spirited show highlighted by a soaring Casey Jones and vibrant All Over Now, though fans are split on its overall greatness.",
+  "review": "The tape offers a surprisingly clear audience mix that many listeners describe as ‘swell sounding’ and superior to some soundboard sources. While several fans rank the performance among their favorites – citing an electrifying Casey Jones and an energetic All Over Now – others find the show overrated, calling parts of it sloppy. Overall it delivers solid enjoyment but provokes mixed opinions on its place in the canon.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the recording and highlight strong moments, yielding a good‑to‑great show rating; one strongly negative review drags the average down but not enough to lower the overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers compliment the clear, well‑balanced mix and note it sounds better than many soundboard releases; no major distortion or drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "All Over Now"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for a strong finish and memorable second encore, though some listeners feel overall pacing is uneven and the show may be overrated compared to other classics."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:01:44.588114+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-28.senn421.walker-scotton.miller.89273.sbeok.flac16"
+}

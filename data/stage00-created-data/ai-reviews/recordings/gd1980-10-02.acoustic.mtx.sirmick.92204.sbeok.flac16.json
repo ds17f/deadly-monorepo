@@ -1,0 +1,37 @@
+{
+  "summary": "Excellent acoustic performance but the matrix recording suffers from out‑of‑sync latency.",
+  "review": "Both reviewers agree the show itself is an excellent acoustic set, even calling it a \"pretty pipey‑sounding\" performance. The recording, however, is a matrix that has noticeable latency between its two sources, making the sound feel out of sync. Overall enjoyment is mixed because the music shines while the technical flaws distract.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Show quality is rated very high (excellent acoustic set) while recording quality is downgraded by sync issues; weighted average yields ~3.9 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Two sources are out of sync, causing latency; overall matrix sounds \"pipey\" but is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set praised as excellent despite recording flaws; no specific set‑list comments provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack-a-Roe": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:57:07.178992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-02.acoustic.mtx.sirmick.92204.sbeok.flac16"
+}

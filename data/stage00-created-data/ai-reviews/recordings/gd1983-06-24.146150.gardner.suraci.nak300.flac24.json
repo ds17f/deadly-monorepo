@@ -1,0 +1,39 @@
+{
+  "summary": "Outstanding second‑set Morning Dew jam that gave the reviewer goose bumps; recording quality not described.",
+  "review": "The attendee raves about a superb performance, especially Jerry Garcia’s “Morning Dew” jam toward the end of a tighter‑than‑usual second set. No details are given about the audio source or fidelity, so the recording is assumed to be listenable but uncharacterized.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "The single review rates the show 5 stars and highlights a standout jam, indicating an excellent musical performance. Lack of any recording‑quality commentary forces a conservative rating for the audio side."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention sound quality, clarity, or mix; no assessment possible beyond it being presumably listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set builds toward a powerful, intimate jam of Morning Dew with a smaller audience adding to the vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as delivering an unbelievable jam on Morning Dew that gave goose bumps.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:03:32.876280+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-24.146150.gardner.suraci.nak300.flac24"
+}

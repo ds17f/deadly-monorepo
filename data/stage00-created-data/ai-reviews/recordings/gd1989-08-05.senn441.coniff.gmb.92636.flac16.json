@@ -1,0 +1,54 @@
+{
+  "summary": "Excellent Senn‑mic audience capture of a tight, adventurous show highlighted by a smoking Pocky → Playin' → Rider → Terrapin sequence.",
+  "review": "The performance is described as phenomenally tight with an adventurous “River City” feel; the Pocky>Playin'>Rider>Terrapin medley is singled out as the show’s high‑point, and Jerry’s guitar work on Rider earns special praise. The Sennheiser‑mic audience recording is noted as crystal‑clear and far more separated than other tapes of this concert, making it an ideal listen for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Two detailed 5‑star reviews praise both the musical performance and the recording quality; a third review is unrelated, giving enough consistent positive feedback for a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, full‑spectrum capture with great instrument separation; markedly clearer than other available tapes of this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Playin' > Rider > Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, adventurous playing throughout; song selection feels like a relaxed backyard summer party, with seamless transitions especially in the highlighted medley."
+  },
+  "band_member_comments": {
+    "Jerry": "Instrumental follow‑up on Rider praised as a ‘headlight delivery’.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:26:48.113378+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-05.senn441.coniff.gmb.92636.flac16"
+}

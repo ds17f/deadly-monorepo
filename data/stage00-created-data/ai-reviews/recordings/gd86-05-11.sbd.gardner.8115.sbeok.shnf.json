@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture of a solid ’86 show with killer drums and a smoking He’s Gone → Smokestack sequence, but tape‑hiss from multiple cassette generations dulls the warmth.",
+  "review": "The performance is praised for its tight rhythm section, especially Mickey Hart’s intricate drumming that turned many listeners onto the band’s later drum work. Jerry’s “crazy fingers” solo and the seamless He’s Gone → Smokestack Lightning transition are highlighted as stand‑outs, while Phil Lesh’s bass shines on The Other One. The recording is a soundboard source that suffers from noticeable hiss and loss of warmth due to several cassette generations, making it fair rather than pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "The show is regarded as strong with several standout moments (≈4/5), but the recording quality is degraded by hiss and generational loss (≈3/5). Weighted combination yields ~3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Originally a crisp soundboard tape, but multiple cassette generations introduced strong hiss and reduced warmth/clarity; some patch problems may be present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone → Smokestack Lightning",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall strong set with tight rhythm section; the transition from He’s Gone into Smokestack is praised as slinky and unique, and The Other One builds momentum after a quiet intro."
+  },
+  "band_member_comments": {
+    "Jerry": "His “crazy fingers” solo is described as sweet and full‑bodied.",
+    "Phil": "His bass entry on The Other One is highlighted as powerful and immediate.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s intricate rhythms and post‑drum energy are singled out as a major highlight."
+  },
+  "song_mentions": {
+    "He's Gone → Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:56:57.047594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-05-11.sbd.gardner.8115.sbeok.shnf"
+}

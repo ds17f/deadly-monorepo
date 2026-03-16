@@ -1,0 +1,51 @@
+{
+  "summary": "Monitor‑mix soundboard with some static and a thin Phil bass, but the show shines thanks to Truckin > Bird Song, Estimated Prophet and a nostalgic Little Red Rooster vibe.",
+  "review": "The recording appears to be a monitor mix from the soundboard, resulting in noticeable static and a barely audible Phil Lesh, which limits its technical appeal. Musically, fans highlight the soaring Truckin > Bird Song sequence, an energetic Estimated Prophet with memorable clapping, and the rare Little Red Rooster moment that gives the show personal resonance. Overall the performance is praised despite the imperfect audio.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high by two reviewers (4–5 stars) while recording quality receives a lower rating (3 stars); weighted combination yields a solid 4‑star overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Likely a monitor mix; static present, Phil Lesh's bass almost inaudible, overall less clear than a proper soundboard recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin > Bird Song",
+      "Estimated Prophet",
+      "Little Red Rooster"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the set as groovy and memorable, with strong audience interaction (especially during Estimated Prophet) and a standout Truckin > Bird Song transition."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Scarcely heard; bass is buried in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin > Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:10:27.188903+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-17.sbd.macdonald.7915.sbeok.shnf"
+}

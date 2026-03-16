@@ -1,0 +1,118 @@
+{
+  "summary": "High‑energy 1978 UCLA show with a monster second set and solid soundboard tape that’s good despite occasional blips.",
+  "review": "Fans rave about the nonstop, jam‑filled second set – from I Need A Miracle → Bertha → Good Lovin' through Scarlet → Fire → Playing > Shakedown > Drums > Ollin > Space > St. Stephen and beyond – calling it “sick” and one of the best ’78 performances.  The SBD source is generally praised as clear and full‑bodied, though a few reviewers note drops, patches and minor tape noise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly positive about the music (especially the second set) and most describe the soundboard as good; a handful of low‑star comments note minor tape glitches, keeping the overall rating in the strong‑good range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and full‑bodied with good instrument separation; occasional audio blips, drops and patchy sections noted by a few reviewers but not enough to mar the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Need A Miracle > Bertha > Good Lovin'",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Playing in the Band > Shakedown Street > Drums > Ollin Arranged > Space > St. Stephen",
+      "Sugaree",
+      "They Love Each Other"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as solid but uneven; the second set rolls nonstop with long jams and seamless transitions, creating a party‑like atmosphere that many fans cite as the highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring solos (St. Stephen intro, arpeggios on Scarlet/Fire) and energetic guitar work; vocals described as strong.",
+    "Phil": "",
+    "Bob": "Mentioned for vocal contributions and the quirky “we used to play for Clive” line in Jack Straw; overall performance viewed positively.",
+    "Keys": "Keith’s playing is criticized in later reviews as boring/monochromatic, especially on piano during early songs; otherwise keyboards are not a focus.",
+    "Drums": "The drum segment (Drums > Ollin) is highlighted as a strong, jam‑driven moment."
+  },
+  "song_mentions": {
+    "I Need A Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ollin Arranged": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "They Love Each Other": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-25T18:11:11.999804+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-30.sbd.miller.18092.sbeok.shnf"
+}

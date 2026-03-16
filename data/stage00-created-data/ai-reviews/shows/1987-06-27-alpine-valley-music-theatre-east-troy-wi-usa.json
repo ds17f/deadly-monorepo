@@ -1,0 +1,71 @@
+{
+  "summary": "Stellar Let It Grow and epic Uncle John's > Playing > Terrapin suite",
+  "blurb": "The show kicks off with a lively Iko Iko and builds to a soaring Let It Grow. The second set delivers an over‑the‑top Uncle John’s Band → Playing In The Band → Terrapin Station suite, capped by a powerful Terrapin Station jam and a heartfelt Wharf Rat. Highlights also include Brent’s organ work on New Minglewood Blues and the closing Black Muddy River.",
+  "review": "Alpine Valley on June 27, 1987 opened with an exuberant Iko Iko that set a bright, bouncing mood for the evening. Jerry’s rhythm chops shone on New Minglewood Blues while his lead on Let It Grow was described as “soaring,” and even when he slipped a lyric on Wharf Rat the band kept the energy high – Phil’s crowd‑chant and quick‑witted banter only added to the fun. The second set is where this night truly shines: an over‑the‑top Uncle John’s Band → Playing In The Band → Terrapin Station sequence that fans call legendary, flowing seamlessly into a thunderous Terrapin Station > Drums > Space jam before launching into Truckin’, The Other One and a soulful Wharf Rat. Brent’s Hammond organ added color on Minglewood and his “fiddlish synth” solo on Friend of the Devil was a standout moment. The night closed with an uplifting Black Muddy River, leaving the audience buzzing under the summer sky.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Five recordings are clearly positive, praising the Let It Grow performance, the Uncle John’s > Playing > Terrapin suite and overall energy; one mixed review notes solid playing despite minor speed issues, while a single negative review is an outlier. The strong consensus of praise yields a moderate‑high sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd87-06-27.bille.kerbel.8139.sbeok.shnf",
+    "reason": "Most complete audience tape with decent balance; captures the standout Let It Grow and Terrapin moments despite fair clarity, making it the go‑to reference for this show."
+  },
+  "key_highlights": [
+    "Soaring Let It Grow early in Set 1",
+    "Over‑the‑top Uncle John’s Band → Playing In The Band → Terrapin Station suite",
+    "Powerful Terrapin Station > Drums > Space jam leading into Truckin’/The Other One and Wharf Rat",
+    "Energetic Iko Iko opener and closing Black Muddy River"
+  ],
+  "song_highlights": [
+    "Iko Iko",
+    "Let It Grow",
+    "Uncle John's Band",
+    "Playing In The Band",
+    "Terrapin Station",
+    "Wharf Rat",
+    "Black Muddy River"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a strong rhythm foundation on New Minglewood Blues, leads an inspiring Let It Grow, and despite a lyric slip on Wharf Rat keeps the vibe high.",
+    "Phil": "Gets a crowd chant of “We want Phil,” adds witty banter during Tom Thumb Blues, and helps cue Jerry’s lyric reminder on Wharf Rat.",
+    "Bob": "",
+    "Brent": "Hammond organ shines on New Minglewood Blues; his ‘fiddlish synth’ solo on Friend Of The Devil is highlighted as a high point of the night.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-15T23:30:57.239405+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Iko Iko"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Black Muddy River"
+    ]
+  ]
+}

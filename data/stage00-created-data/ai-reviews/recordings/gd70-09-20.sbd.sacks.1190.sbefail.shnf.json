@@ -1,0 +1,93 @@
+{
+  "summary": "Soundboard recording with noticeable hiss and level issues, but a stellar late‑'70 show highlighted by an epic Not Fade Away jam and superb acoustic set.",
+  "review": "Fans rave about the performance – the acoustic set (Working Man’s Dead, Uncle John’s Band, Ripple, Lay Me Down) and electric jams like Not Fade Away → Caution/Feedback and a legendary Easy Wind – despite the tape hiss, occasional distortion and level fluctuations that come from mixed soundboard sources. The show is consistently praised as one of the best of 1970, while the audio quality is deemed listenable but far from pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise the musical performance with only mixed comments on sound quality; weighted scoring (70 % show, 30 % recording) yields a solid >4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Tape hiss throughout, occasional high‑level distortion (especially on Caution), level fluctuations and a few cuts. Mixed sources cause some vocal/mix changes, but the recording remains listenable for its age."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Caution",
+      "Feedback",
+      "Easy Wind",
+      "Workingman's Dead",
+      "Uncle John's Band",
+      "Ripple",
+      "Lay Me Down",
+      "Truckin'",
+      "Big Railroad Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A beautiful acoustic set transitions into a high‑energy electric second half; jams flow naturally (Not Fade Away → Caution/Feedback) and the band maintains momentum despite the recording’s flaws."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp guitar tone and leading the show; described as 'Jerrbear at the helm' with solid solos.",
+    "Phil": "",
+    "Bob": "Weir gets a shout‑out for an excellent solo on Easy Wind.",
+    "Keys": "A few reviewers hear piano/organ (likely Pigpen) early on, but no detailed keyboard critique.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Caution": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feedback": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Wind": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Workingman's Dead": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ripple": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lay Me Down": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:14:11.216816+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-09-20.sbd.sacks.1190.sbefail.shnf"
+}

@@ -1,0 +1,90 @@
+{
+  "summary": "High‑energy ’80 show with a smoking second set and standout Jerry solos, captured on a noisy but atmospheric audience mix.",
+  "review": "The performance is praised for its relentless energy – the second set “smokes”, Brokedown Palace and Comes A Time receive glowing remarks, and Jerry’s solo is called an all‑time favorite. The recording is an audience (AUD) tape that many find gritty and occasionally muffled, yet it adds a live ambience that most reviewers enjoy despite its flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews (7 of 9) give 4‑5 stars and highlight strong musical moments; recording quality is mixed but still listenable, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Noisy AUD tape with occasional muddiness and grating highs; some reviewers note the SBD version sounds sterile while the audience mix adds atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Comes A Time",
+      "Truckin'",
+      "Greatest Story > Uncle John's",
+      "Althea"
+    ],
+    "poor_songs": [
+      "Tennessee"
+    ],
+    "setlist_flow": "Second set is highlighted as a nonstop high‑energy stretch, though the transition from Truckin' into drums feels a bit rough; first set is solid with several tight jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his aggressive tone and an all‑time‑favorite solo; his playing is described as bright, far‑reaching, and heartfelt.",
+    "Phil": "Bass noted as rich; a double‑time shuffle on drums highlighted Phil’s rhythmic drive, though some felt he didn’t step up during Brokedown Palace.",
+    "Bob": "Bobby's rhythm work praised, especially his backing behind Jerry’s solos and the quirky vocal moment when Garcia’s gear was pulled.",
+    "Keys": "Brent (keyboards) receives praise for a solid pocket on Far From Me and overall good mesh with the band; keyboards are called pleasant.",
+    "Drums": "Bill/Mickey’s drumming gets a nod for double‑time shuffle, but the drum transition after Truckin' is cited as less smooth."
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:32:42.376037+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-31.set1-senn-set2-sbd.miller.26353.sbeok.shnf"
+}

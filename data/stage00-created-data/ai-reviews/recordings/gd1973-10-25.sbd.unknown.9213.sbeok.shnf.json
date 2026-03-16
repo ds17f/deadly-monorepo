@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent second‑set jam fest highlighted by Dark Star and Mind Left Body Jam, captured on a soundboard recording that's generally good though a bit thin.",
+  "review": "The concert is celebrated for its soaring improvisations – a delicate Dark Star, a mind‑blowing Mind Left Body Jam, plus stellar Playing In The Band and the Let It Grow → GDTRFB sequence that lift the second set. Reviewers note the soundboard source sounds a little thin but remains clear enough to enjoy the music, and the first set is seen as weaker than the electrifying second half.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for musical performance (70% weight) with minor recording thinness noted (30% weight); average user star rating is 4.0, pushing rating slightly higher due to strong show quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture but described as a bit thin by one reviewer; no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Mind Left Body Jam",
+      "Playing In The Band",
+      "Let It Grow > GDTRFB",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set seen as slower to start, but second set delivers a powerful release with extended jams and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow > GDTRFB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:33:34.439657+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-25.sbd.unknown.9213.sbeok.shnf"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Clean soundboard capture of a solid 1995 RFK show – Jerry’s playing is uneven but shines on Wharf Rat and Brokedown Palace, with Bruce Hornsby adding tasteful color.",
+  "review": "The recording is a well‑preserved sound‑board source that sounds clean overall, only occasional static or sharp cuts. Musically the night is an up‑and‑down affair typical of ’95 – early set moments are thin, but the second half delivers strong performances of Wharf Rat, Brokedown Palace, Jack‑a‑Roe and Loose Lucy, while Shakedown Street divides opinion.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Over fifty reviews give a coherent picture: the audio is generally good (soundboard, clean) and the performance, though uneven, has enough standout moments to merit a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers note clear, clean board sound with only minor static or occasional sharp cuts; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Brokedown Palace",
+      "Jack-a-Roe",
+      "Loose Lucy",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Shakedown Street",
+      "Picasso Moon"
+    ],
+    "setlist_flow": "The first set is described as uneven and at times flat, but the band finds its footing after Shakedown. The second set generally maintains momentum with strong mid‑show jams, though energy dips toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – early set weak and subdued, but delivers powerful vocals on Wharf Rat and solid solos on Jack‑a‑Roe; overall less prominent than earlier years.",
+    "Phil": "Generally praised for steady bass work, especially on Box of Rain; no major complaints.",
+    "Bob": "Mentioned positively for clear vocal presence (e.g., on Truckin') and energetic stage presence later in the night.",
+    "Keys": "Bruce Hornsby adds a pleasant feel without overpowering the mix; his piano/keys are noted as tasteful but not front‑and‑center.",
+    "Drums": "Bill Kreutzmann receives compliments for solid, “great” work on the second set and overall tight rhythm section."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 4,
+      "total_mentions": 9
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loose Lucy": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Box of Rain": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:01:06.724609+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-25.sbd.2236.sbefail.shnf"
+}

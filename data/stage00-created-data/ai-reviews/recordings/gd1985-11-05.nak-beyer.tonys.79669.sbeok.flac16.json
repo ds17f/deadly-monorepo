@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent, crystal‑clear recording of a solid show highlighted by a standout \"Looks Like Rain\" and a debated \"Good Lovin'\" performance.",
+  "review": "Listeners rave about the razor‑sharp sound quality – calling it the “toastiest” and “crispiest” copy of the 11‑05 concert – while the musical content is generally well received. Highlights include an enthusiastic \"Looks Like Rain\" and a polarizing rendition of \"Good Lovin'\", with most fans praising the performance despite one reviewer preferring other Pigpen versions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The majority of reviews praise the recording’s clarity and overall show quality, but contradictory opinions on \"Good Lovin'\" and a single low‑star rating lower the average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the sound as crisp, toasted, and great on their home systems; no major dropouts mentioned, though one notes occasional difficulty hearing vocals at the end of \"Looks Like Rain\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers focus mainly on individual song performance and overall sound quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob’s vocal at the end of \"Looks Like Rain\" is hard to hear for some listeners, but his passion is noted.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:53:57.047727+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-05.nak-beyer.tonys.79669.sbeok.flac16"
+}

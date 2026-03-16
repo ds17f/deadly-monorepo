@@ -1,0 +1,31 @@
+{
+  "summary": "Fantastic intimate show captured in an unknown‑quality recording",
+  "review": "The reviewer, who attended the concert at a small Binghamton University arena, calls it a fantastic performance and even got Jerry’s autograph after the show. No specific comments on the audio source are provided, so the technical quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the concert heavily; recording quality is unknown, so rating leans on show strength with modest confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Positive energy in a small arena; reviewers highlight the intimate atmosphere rather than specific set details."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer mentions meeting Jerry after the show and getting his autograph.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T04:57:21.997125+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-12.140047.set2.sbd.pcm.gans.miller.clugston.flac1644"
+}

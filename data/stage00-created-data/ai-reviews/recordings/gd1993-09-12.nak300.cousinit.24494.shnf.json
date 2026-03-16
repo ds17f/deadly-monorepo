@@ -1,0 +1,31 @@
+{
+  "summary": "Review points out incorrect set‑list metadata; no information on audio or performance quality",
+  "review": "The sole reviewer flags that the track listing appears to belong to a different show (9‑14‑93) and suggests files may be misplaced. No comments are made about the recording’s sound quality or the musical performance, leaving those aspects indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating and no substantive discussion of music or sound quality; rating reflects the reviewer’s dissatisfaction with metadata."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No remarks on audio clarity, mix, or source type – reviewer only mentioned set‑list inaccuracies."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer indicates the posted set list is likely wrong and may belong to a different date; no assessment of musical flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T16:39:46.865727+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-12.nak300.cousinit.24494.shnf"
+}

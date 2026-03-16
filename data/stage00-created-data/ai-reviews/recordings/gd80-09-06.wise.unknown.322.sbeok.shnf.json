@@ -1,0 +1,89 @@
+{
+  "summary": "Warm audience‑sourced tape that captures a high‑energy Lewiston ’80 show packed with standout Sugaree, Shakedown Street and Althea moments.",
+  "review": "The September 6 1980 Lewiston concert is consistently praised for its infectious energy, tight jams and memorable second‑set transitions (Playin’ → Uncle John’s → The Wheel). Reviewers love Jerry’s “attacking” guitar work and Phil’s booming bass, while the audience‑recorded tape offers a vivid live atmosphere despite occasional wind distortion and low‑end boominess. Overall the performance shines and the recording is good enough to feel like you’re there.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈85 %) are 4‑5 stars and focus on the show’s energy, song selection and strong playing; recording comments are mostly positive with only a few technical complaints, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm, immersive ambience with clear instrument separation; occasional wind‑noise distortion and excessive low‑end boominess (especially Phil’s bass) noted. Crowd clapping can be intrusive but adds to the live feel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Feel Like a Stranger",
+      "Shakedown Street",
+      "Althea",
+      "Saint of Circumstance",
+      "The Wheel",
+      "Space",
+      "China Cat Sunflower > I Know You Rider",
+      "Playin' in the Band > Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Feel Like a Stranger (jam deemed meandering by one reviewer)"
+    ],
+    "setlist_flow": "First set builds solidly with upbeat rockers and a relaxed ‘Fire On The Mountain’; second set erupts with powerful transitions (Playin' → Uncle John’s, Not Fade → Wheel) and a soaring closing sequence that keeps the crowd on its feet."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for “tearing up” the tunes, attacking every song, and delivering superb guitar tone.",
+    "Phil": "Described as hot, loud and often the driving force of the night; a few reviewers note his bass makes the tape sound boomy.",
+    "Bob": "Mentioned briefly – Bob’s vocals are noted as hoarse but passionate; no specific guitar/solo comments.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming is highlighted as solid, especially in post‑drum “space” sections and the high‑energy second set."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Shakedown Street": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Althea": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' in the Band > Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-13T03:19:59.527507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-06.wise.unknown.322.sbeok.shnf"
+}

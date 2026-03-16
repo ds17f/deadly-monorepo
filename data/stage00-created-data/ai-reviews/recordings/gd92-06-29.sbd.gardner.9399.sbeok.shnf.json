@@ -1,0 +1,85 @@
+{
+  "summary": "A mixed‑quality audience recording of a low‑energy show, with occasional highlights like So Many Roads and Desolation Row",
+  "review": "Most listeners find this Deer Creek performance flat and lacking energy, citing weak vocals and a short first set. A few songs—So Many Roads, Desolation Row, Deal, Althea, Ship of Fools, The Other One and Brokedown Palace—stand out for some fans, and the mix is described as crisp by a minority, while others complain of hiss and poor audio quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (1‑2 stars) criticize the show’s energy and performance, but several reviewers note strong moments in specific songs and occasional good mix quality, leading to a low‑mid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Comments are split: some praise a crisp mix and clear Vince keyboard presence, while others report heavy hiss and overall bad quality, indicating an uneven audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Desolation Row",
+      "Deal",
+      "Althea",
+      "Ship of Fools",
+      "The Other One",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a very short first set (only six songs) and a second set with lackluster song selection, contributing to the overall feeling of low energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – vocals described as weak by some, but his solo on Desolation Row praised by others.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Positive remarks about Vince's groove and moments of a crisp keyboard mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Desolation Row": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T08:08:53.036934+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-29.sbd.gardner.9399.sbeok.shnf"
+}

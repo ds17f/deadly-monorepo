@@ -1,0 +1,39 @@
+{
+  "summary": "Poor recording quality with hollow sound throughout, only Ripple sounds decent",
+  "review": "Both reviewers complain that the audio is generally lousy and hollow‑sounding, making most of the concert difficult to enjoy. One note mentions Ripple as a relatively good‑ sounding track, but no other musical highlights are discussed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "medium",
+    "rationale": "Two reviews consistently criticize the sound quality; there is virtually no information on performance quality, leading to a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers describe the audio as hollow, muffled and generally lousy; only the song Ripple is noted as sounding decent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:41:13.353004+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-27.sbd.clugston.11590.sbeok.shnf"
+}

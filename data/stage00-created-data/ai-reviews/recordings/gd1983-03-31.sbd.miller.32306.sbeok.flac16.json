@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture of a solid 1983 show, highlighted by the Brother Esau performance",
+  "review": "Both reviewers rave about this recording, calling it a high‑quality upgrade that sounds like a Swiss watch and praising the overall strength of the 1983 concert. The soundboard source delivers crisp, clean audio, and while no specific instrumental feats are noted, the Brother Esau rendition is singled out for its lyrical interest.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Both reviews give 5 stars and praise both the performance and recording quality, but only two brief reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the recording as high‑quality and crisp; no issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brother Esau"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific criticisms; reviewers view the show as a solid, well‑executed 1983 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:23:06.708854+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-03-31.sbd.miller.32306.sbeok.flac16"
+}

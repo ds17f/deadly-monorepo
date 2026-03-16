@@ -1,0 +1,101 @@
+{
+  "summary": "Fair soundboard‑derived recording with a solid second set – Bird Song and The Other One shine – but overall an average New Year's Eve performance.",
+  "review": "The tape is a mix of FM broadcast, matrix feeds and the SBD PCM Miller source (the best sounding part, covering only the second set), giving a generally fair‑to‑good audio picture with noticeable gaps in the first set. Musically the show sits around “C” grades – the first set is serviceable while the second set delivers highlights like Bird Song, The Other One and a decent Dark Star, though some numbers (Big River, Promised Land, Johnny B. Goode) feel perfunctory. Overall the performance is mixed, with strong moments offset by unevenness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show around C‑grade and notes variable recording quality, leading to a modest overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple sources: FM broadcast, Healy mic‑matrix feeds and an SBD PCM Miller track (best sounding but only covers second set). First‑set audio is thin/muffled; second‑set soundboard capture is clear. Overall listening experience is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "The Other One",
+      "Dark Star",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Big River",
+      "Promised Land",
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "A short NYE show with a double encore; the first set is consistently average, while the second set stretches out with fireworks, a long drum segment and several high‑energy peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia steers the band, revisits themes solidly, hits alternate verses and teases 'The Other One' near the end.",
+    "Phil": "Lesh delivers bouncy arpeggios on Row Jimmy, a smooth key change on Wang Dang, and shines on The Other One.",
+    "Bob": "Weir (Bruce) digs into the uptempo Jack‑a‑Roe groove with Garcia.",
+    "Keys": "",
+    "Drums": "Hamza El‑Din leads an extended drum segment after about 6½ minutes."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:06:32.177798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-31.140720.set2.sbd.pcm.miller.flac1644"
+}

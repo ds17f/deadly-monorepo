@@ -1,0 +1,72 @@
+{
+  "summary": "Crisp Oade soundboard captures a lively ‘84 show with standout Let It Grow, Samson→Terrapin→Playin' sequence and solid second‑set jams.",
+  "review": "The recording is praised for its crisp Oade soundboard quality, delivering clear and energetic audio. Musically the concert shines on Let It Grow, the Samson–Terrapin–Playin’ suite and a liquid second set featuring Playin' into Truckin', though one reviewer notes a subdued atmosphere due to external tragedy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance and recording highly (4‑star reviews) but one gives a low show rating, resulting in an overall mixed impression; solid recording quality pushes the average toward a strong 3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp Oade soundboard capture described as clear, detailed and “great recording”; no dropout or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Samson → Terrapin → Playin'",
+      "Big Railroad Blues",
+      "Playin' → Dark Star → Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set noted as lively and energetic for ’84, while the second set is described as “liquid” with focused jamming (Playin' into Truckin'). One reviewer felt the overall vibe was subdued because of a recent tragedy."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for pushing his guitar work forward on the Big Railroad Blues and generating crowd excitement.",
+    "Phil": "Mentioned returning to regular vocals with a new mic, though the show’s mood felt heavy.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:19:29.704533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-12-29.oade-schoeps.ladner.24294.sbeok.shnf"
+}

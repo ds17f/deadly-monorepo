@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording captures a spacey, mellow 1973 Hamilton show highlighted by an epic 28‑minute Dark Star and soaring Stella.",
+  "review": "The consensus among reviewers is that this 10/30/73 Hamilton performance is a hidden gem with a wonderfully mellow, otherworldly vibe. Standout moments include a drippy, 28‑minute Dark Star and an inspiring Stella, all delivered on superb sound that many call “the best AUD” of the era. The audience recording is clear and spacious, making the show highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All reviews are overwhelmingly positive (mostly 5‑star) and praise both the musical performance and the audio quality, with multiple callers calling it superb or brilliant."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the recording as crystal‑clear, superb sounding, and the best audience (AUD) source from the ’70s; no dropouts or muffiness are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Stella"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A mellow, space‑filled set that drifts into long improvisations; the flow is praised for its relaxed vibe and seamless transitions, especially during the extended Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:56:19.819326+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-10-30.sbd.hamilton.969.sbeok.shnf"
+}

@@ -1,0 +1,54 @@
+{
+  "summary": "Crisp audience recording with occasional low‑level issues; the show shines especially on a stellar Crazy Fingers jam.",
+  "review": "The performance is praised for its clean, crisp feel and an inspired Crazy Fingers improvisation, while listeners note that the audio drops in level—especially China and Rider in the second set—and even a brief cut‑out around 4:15. Overall the show is enjoyable, but the recording would benefit from a remaster to balance the volumes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Positive comments about the musical performance offset by several reviewers reporting low levels and audio glitches; with mixed feedback the rating lands in the good‑to‑average range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Clean and crisp overall, but set 1 levels are low, China/Rider barely audible in set 2, and a brief sound cut‑out around 4:15–4:20. Reviewers suggest a remaster to even out the volume."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The setlist flows well, though listeners note that the second‑set mix is quieter; Truckin' picks up a bit of volume but overall the performance remains strong."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:14:48.677942+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-02-19.132350.aud.mattes.petty.flac16"
+}

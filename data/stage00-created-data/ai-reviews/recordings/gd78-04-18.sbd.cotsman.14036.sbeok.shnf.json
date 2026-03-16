@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard tape with a muddy mix, but the second‑set jam from Scarlet Begonias into Dancin’ and Samson shines.",
+  "review": "The show is praised for its unique, sprawling second set – a blistering Scarlet Begonias → Dancin' → 18‑minute drum break → Samson sequence that Deadheads cite as the main reason to seek this recording.  The soundboard source is notably muddy, sounding more like an audience tape and even described as “recorded inside of a plastic bag,” though one reviewer notes decent patching work.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (especially the second‑set jam) balanced against consistently poor sound quality yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy, lo‑fi mix that sounds more like an audience recording; some reviewers mention plastic‑bag‑like compression and overall lack of clarity, though patching was done to improve continuity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Dancin'",
+      "Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is the highlight, featuring an extended jam that flows from Scarlet Begonias into Dancin', a long drum segment and then Samson; the first set is less discussed but overall the concert is considered lively and unique."
+  },
+  "band_member_comments": {
+    "Jerry": "Seen running around on stage, adding cowbell and other odd percussive sounds during the drums.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith (keyboard) provides faint hints of a Fire transition early in Scarlet, but never fully commits.",
+    "Drums": "A notable 18‑minute drum passage with suggestions at the 11‑minute mark and an overall powerful rhythmic drive."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:21:39.835809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-18.sbd.cotsman.14036.sbeok.shnf"
+}

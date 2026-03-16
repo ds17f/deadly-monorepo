@@ -1,0 +1,45 @@
+{
+  "summary": "Great audience recording with stellar sound quality and a nonstop second set highlighted by Scarlet Fire and a marathon Truckin'",
+  "review": "The audience tape delivers impressive, clear sound that captures the band's energetic first set of up‑tempo tunes. The second set is praised as non‑stop brilliance, opening with a fantastic Scarlet Fire segue into an epic 17‑minute Truckin' before closing on a climactic high, and Brent Mydland’s keyboards are noted for really coming alive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed review rates the show 4 stars, highlighting both excellent performance (especially the second set) and high‑quality audience recording; limited data yields medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the sound quality 'really great' with no noted flaws, indicating a clear, well‑balanced capture despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set packed with up‑tempo numbers; second set runs nonstop from a superb Scarlet Fire into a 17‑minute Truckin', delivering an energetic, climactic finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent 'really came to play tonight' and is especially missed by the reviewer.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:11:05.059039+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-20.aud.rumrunners.99071.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Powerful Feb ’70 show with The Eleven → Caution and tight jams",
+  "blurb": "The February 5, 1970 Fillmore West set delivers a soaring The Eleven into Caution sequence, a fiery Mason’s Children instrumental, and an emotional Uncle John’s Band encore. Jerry’s guitar is on fire throughout, while the rhythm section locks in with bright, crisp drumming and solid bass.",
+  "review": "On February 5, 1970 at the Fillmore West the Dead turned the early‑’70 studio sensibility into a live tour de force. The first half meanders through acoustic fillers before exploding into a seamless jam chain: The Eleven bursts into Caution (Do Not Stop On Tracks), rolls straight into Not Fade Away and then into a blistering Cumberland Blues, all underscored by a rat‑tat groove that showcases Mickey and Billy’s tight interplay. Mason’s Children receives an inspired second instrumental, highlighted by Pigpen’s rare, moving organ swell on The Eleven. Uncle John’s Band closes the set with poignant guitar work from Jerry and a heartfelt encore that feels both exploratory and deeply rooted in the band’s emerging sound. Across all three recordings – a solid matrix, a good soundboard, and an exceptionally clear audience tape – the consensus is clear: this is a standout early‑’70 performance where the group was locked in, pushing the boundaries of their improvisational language.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 30,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All three recordings are uniformly positive, repeatedly praising the The Eleven → Caution sequence, Mason's Children instrumental, and overall tight band interplay. No negative comments appear, indicating strong consensus on performance quality.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-02-05.sbd.hanno.9184.sbefail.shnf",
+    "reason": "Solid matrix with good‑to‑great sound, captures the standout jams clearly and is the most complete source."
+  },
+  "key_highlights": [
+    "The Eleven → Caution seamless jam chain",
+    "Mason's Children instrumental (second take)",
+    "Uncle John's Band emotional encore",
+    "Bright, crisp drum work driving the rat‑tat groove"
+  ],
+  "song_highlights": [
+    "The Eleven",
+    "Caution (Do Not Stop On Tracks)",
+    "Mason's Children",
+    "Not Fade Away",
+    "Cumberland Blues",
+    "Uncle John's Band"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar shines, delivering a new Speedway Boogie‑style jam inside Big Boss Man and soaring solos on The Eleven → Caution and Uncle John’s Band.",
+    "Phil": "Lesh’s bass is low in the mix but his insistent riff on Caution and tight interplay during the jams earn high praise; attempts to re‑enter Caution after NFA are noted but don’t detract from overall strength.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Delivers bright, crisp tom work and drives the rat‑tat groove in the closing jam.",
+    "Billy": "Locks in tightly with Mickey, providing a solid backbeat that propels The Eleven → Caution sequence."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T15:34:16.154351+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "The Eleven",
+      "Caution (Do Not Stop On Tracks)",
+      "Not Fade Away",
+      "Cumberland Blues",
+      "Uncle John's Band"
+    ],
+    [
+      "Mason's Children"
+    ]
+  ]
+}

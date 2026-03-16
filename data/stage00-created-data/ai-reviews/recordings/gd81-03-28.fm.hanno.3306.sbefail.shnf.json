@@ -1,0 +1,93 @@
+{
+  "summary": "High‑quality soundboard capture of a legendary 1981 Rockpalast show with smoking Sugaree, Shakedown Street and Althea performances.",
+  "review": "The recording is generally praised as a clean soundboard source (some callers note occasional tinny echo), making the music easy to hear.  Musically the concert shines – the first set is called a “gem” thanks to a soaring Sugaree, tight Shakedown Street and a ripping Deal, while the second set delivers an epic Althea, The Other One and a powerful Estimated → He’s Gone sequence.  Pete Townshend’s guest spots are widely regarded as a footnote rather than a detriment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈4.0, with 70 % weight on overwhelmingly positive musical comments and 30 % on generally good soundboard quality; the large number of consistent reviews yields high confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the mix as clear, with a nice balance of instruments. A few note a tinny or echo‑ey character compared to other SBDs, but overall the audio is listenable and captures detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Shakedown Street",
+      "Althea",
+      "The Other One",
+      "Estimated > He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is repeatedly called a “gem” with tight transitions; second set builds intensity with strong segues (Althea → Shakedown → Little Red Rooster, Estimated → He's Gone) and a memorable post‑drums jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring solos on Sugaree, Deal and The Other One; his tone and vocal clarity are highlighted.",
+    "Phil": "Noted for punchy bass that drives the groove; several reviewers mention hearing his low‑end detail clearly.",
+    "Bob": "Generally mentioned as solid rhythm guitar and vocals; a few note he helps bury Townshend’s parts.",
+    "Keys": "Brent Mydland lauded on organ during Little Red Rooster; keyboards are described as well‑balanced in the mix.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive accolades for an energetic post‑drums jam and the Karamazov Brothers juggling interlude."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Shakedown Street": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Althea": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated > He's Gone": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T10:19:22.399185+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-28.fm.hanno.3306.sbefail.shnf"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Soundboard capture with occasional mix hiccups, but a strong early‑1971 set highlighted by a mammoth “Other One” and Pigpen’s soaring organ.",
+  "review": "The recording is a stereo sound‑board source that suffers from intermittent glitches, an overly forward organ mix and lower volume on the final three tracks, yet it remains listenable. Musically the show shines – fans rave about a colossal \"The Other One,\" a punchy \"Good Lovin'\" and the energetic presence of Pigpen’s Hammond, making it a worthwhile 1971 performance despite its technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (many 4‑5 star comments) while noting consistent recording issues; weighting 70 % show quality and 30 % audio quality yields a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Occasional glitches and dropouts, organ (Pigpen) sits high in the mix, volume dip and tape hiss on the last three tracks, a few cuts that lose the opening bass line of \"The Other One\". Overall listenable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Good Lovin'",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical early‑1971 flow with a strong second set; minor interruptions between tracks (e.g., drums → The Other One) are noted, but the overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and whah‑whah pedal work get mentions; one reviewer notes distortion on \"Wharf Rat\" while another praises his Les Paul.",
+    "Phil": "No direct comments about Phil’s bass, aside from a cut that omits the opening bass line of \"The Other One\".",
+    "Bob": "",
+    "Keys": "Pigpen’s organ is highlighted throughout – both for its prominence (sometimes too forward) and for delivering standout moments on \"Truckin'\", \"The Other One\" and \"Bertha\".",
+    "Drums": "Bill Kreutzmann receives praise, especially for his work on the drum break leading into \"The Other One\"."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T03:24:09.687194+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-03-03.sbd.lai.6248.sbefail.shnf"
+}

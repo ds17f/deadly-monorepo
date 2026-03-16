@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording delivers a high‑energy 1986 West Coast show where One More Saturday Night and Space are the standout moments.",
+  "review": "The tape captures an enthusiastic 1986 concert that opened unusually with a blazing One More Saturday Night, featuring a hot Brent keyboard solo and over‑the‑top Bob lyrics. Highlights also include a soaring Space segment, a tight Playing in the Band > Drumz > UJB sequence and a heartfelt Box of Rain encore. Recording quality is solid – a clear SBD with no reported flaws – while the performance is praised for its vigor despite a few minor hiccups (broken strings, brief low‑energy stretch).",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight strong musical moments; recording is described as a clear soundboard with no issues, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the SBD is clear and well‑balanced; no complaints about dropouts or muddiness were mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "One More Saturday Night",
+      "Space",
+      "Playing in the Band",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opened with an atypical OMSN that set a high‑energy tone, followed by long, fiery jams (Playin>Drumz>Space>UJB) and a rain‑soaked encore. A brief low‑energy stretch later in the show was noted, but overall the pacing remained lively."
+  },
+  "band_member_comments": {
+    "Jerry": "Broken two strings during Sugar Magnolia/Sunshine Daydream; grimly smiled at the rain while singing \"pray for better weather\".",
+    "Phil": "Described as having his mind blown after Jerry’s broken strings; otherwise no specific comments.",
+    "Bob": "Delivered over‑the‑top lyrics on OMSN and a quirky rap on Good Lovin., noted by fans.",
+    "Keys": "Brent (Keith) gave a hot keyboard solo during the opening OMSN.",
+    "Drums": "Mickey and Bill were seen tossing drumsticks high; reviewers mention close encounters and energetic drumming throughout."
+  },
+  "song_mentions": {
+    "One More Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:44:01.584481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-05-04.sbd.miller.12088.sbeok.shnf"
+}

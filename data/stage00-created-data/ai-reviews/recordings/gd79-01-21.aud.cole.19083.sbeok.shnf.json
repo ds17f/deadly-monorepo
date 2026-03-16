@@ -1,0 +1,69 @@
+{
+  "summary": "Audience recording is muddy but the show shines, especially the Terrapin > Playing stretch and a fiery second set from Garcia.",
+  "review": "Fans agree the performance was upbeat and memorable – the second‑set Terrapin into Playing (and highlights like Sugaree and Good Lovin') are repeatedly praised. The audience tape, however, is frequently described as muddy, noisy and “crunchy,” making it a fair‑quality listen only for die‑hard collectors.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality scores high (many 4–5 star comments) while recording quality is consistently called poor or only listenable, yielding a weighted average around the mid‑3 range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple reviewers call the tape \"bad,\" \"muddy,\" \"crunchy\" or \"pretty bad,\" though a few note it is listenable with minimal chatter and that Garcia's guitar sits up front."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Playing",
+      "Sugaree",
+      "Good Lovin.",
+      "Estimated",
+      "Stella"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as solid but the second set steals the show, especially the Terrapin > Playing sequence that many reviewers call \"very nice\" or \"gorgeous.\" Overall vibe is upbeat and intimate."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is praised for being up‑front, on fire in the second set, with a strong guitar tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A comment about \"droplets emerging from the drummers' faucet\" suggests competent drum work; no major complaints."
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:53:58.481669+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-21.aud.cole.19083.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Nice audience recording that captures a solid Dylan/Dead collaboration with a standout Chimes of Freedom.",
+  "review": "The audience‑sourced tape is praised as one of the better Dylan/Dead recordings, offering clear and enjoyable sound. Reviewers highlight Jerry's prompting of Dylan and note that the performance of \"Chimes of Freedom\" was a memorable moment. Overall the show is viewed positively despite limited detail on set flow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single positive review (4 stars) emphasizes good audio quality and an enjoyable performance, leading to a solid rating but low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a nice aud recording and one of the better Dylan/Dead live recordings; no specific issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Chimes of Freedom"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; overall impression is positive."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned for prompting Dylan ('Jerry's prodding'), indicating active involvement.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Chimes of Freedom": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:02:29.008297+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-12.aud.unknown.rumrunners.106804.flac16"
+}

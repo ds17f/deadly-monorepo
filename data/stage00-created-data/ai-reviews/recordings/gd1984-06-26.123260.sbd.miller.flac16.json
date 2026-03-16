@@ -1,0 +1,39 @@
+{
+  "summary": "Crystal‑clear soundboard recording of an uneven 1984 show – Jerry’s voice shines and “He’s Gone” is the lone highlight.",
+  "review": "The Miller‑sourced FLAC captures a pristine mix with crisp instrument separation and a powerful vocal from Jerry, earning high marks for audio quality. However, two long‑time fans note that the band was generally off‑kilter, describing most of the set as “chaff” with only the “He’s Gone” jam standing out. The result is a technically superb document of a musically uneven performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is judged low by two reviewers (≈2.5/5) while recording quality is praised as excellent (≈4.5/5). Weighted combination (70% show, 30% recording) yields an overall rating around 3.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, expertly mixed soundboard capture; reviewers highlight clarity and strong vocal presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall performance described as sloppy and off‑beat, with most of the set feeling lackluster except for the praised “He’s Gone” jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as awesome and a highlight of the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T18:59:25.865297+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-26.123260.sbd.miller.flac16"
+}

@@ -1,0 +1,40 @@
+{
+  "summary": "Early Dead set hampered by poor audio, hard to assess performance",
+  "blurb": "The show runs a classic early‑Dead set with tracks like Hard To Handle, Truckin', and the China Cat Sunflower > I Know You Rider segue. Recording quality is very low, making the music difficult to hear. Listeners should be aware that the source is of uncertain provenance.",
+  "review": "On November 12, 1970 at Brooklyn’s 46th Street Rock Palace the Dead delivered a straight‑ahead early‑period setlist—Hard To Handle, Truckin', New Minglewood Blues, China Cat Sunflower into I Know You Rider, Sugar Magnolia and more. Unfortunately the only available recording (gd1970-11-12.136653.aud.weinberg.flac16) is of poor fidelity; reviewers describe it as hard to listen to and question its provenance. Because the audio is so degraded, any assessment of Jerry’s guitar work, Phil’s bass lines, or Pigpen’s keyboards is speculative at best. For collectors interested in documenting every night, this tape has historical value, but for anyone looking to enjoy the music it falls short.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.0,
+    "confidence": "low",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 2,
+      "review_count_boost": 0.0,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "All available analysis expresses negative sentiment due to poor audio quality and uncertain provenance, with no positive remarks about the musical performance.",
+      "final_calculation": "2.5 + 0.0 - 0.5 = 2.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-11-12.136653.aud.weinberg.flac16",
+    "reason": "Only recording available, but quality is poor and provenance uncertain; no better alternative exists."
+  },
+  "key_highlights": [
+    "Classic early‑Dead repertoire throughout the set",
+    "China Cat Sunflower > I Know You Rider segue noted in setlist",
+    "Recording suffers from very low fidelity, limiting enjoyment"
+  ],
+  "song_highlights": [],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-20T01:18:48.970408+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed"
+}

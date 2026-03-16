@@ -1,0 +1,31 @@
+{
+  "summary": "Warm, playfully organized show but plagued by a noticeable speed/recording issue",
+  "review": "The concert is praised for its warm vibe and unusually well‑organized setlist that makes it an inviting introduction to the Dead experience. However, one listener reports the recording plays slower than expected, suggesting possible tape‑speed or battery problems that detract from the audio quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high (5 stars) while recording quality is rated low (1 star); weighted average yields ~3.8 with limited data (2 reviews)."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Playback appears slower than normal, possibly due to tape‑speed or dying battery issues; no explicit source type mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Unusually organized setlist with a warm, playful feel that makes the show suitable for newcomers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T22:26:13.731907+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-09.fob.senn2002.corso.ford.130885.sbeok.flac16"
+}

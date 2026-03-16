@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy ’85 show with standout Estimated Prophet and Iko Iko",
+  "blurb": "The second set builds a tight groove highlighted by an electrifying Estimated Prophet and She Belongs To Me. Jerry’s lead work shines on the opener Iko Iko, while Phil lays down a funky bass line that drives the jam. The encore Satisfaction caps a night of solid playing despite a few rough spots.",
+  "review": "On November 8 1985 the Grateful Dead turned Rochester’s Community War Memorial Auditorium into a rolling furnace of rock‑and‑roll. The first set opened with a raucous Iko Iko that set the tone, and although songs like Revolution showed a bit of vocal wobble from Jerry, the band quickly recovered. Highlights poured out of the second set: a tight, funk‑laden Estimated Prophet that had Phil’s bass front‑and‑center, a soaring She Belongs To Me where Jerry’s guitar was “one of his best,” and an exuberant The Other One that kept the crowd on its feet. Bob Weir’s antics during Satisfaction added extra fireworks, and the dual drummers stayed locked in throughout. While the soundboard source has occasional tape‑cut glitches, the overall performance is high‑energy, memorable, and a solid representation of the Dead’s late‑‘80s live power.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 36,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "All six recordings are overwhelmingly positive, with five marked 'positive' and one 'mixed'. Reviewers repeatedly praise the same songs (Estimated Prophet, She Belongs To Me, Iko Iko) and highlight strong playing from Jerry, Phil and Bob. No consistent negative commentary about overall performance appears, so a strong positive sentiment adjustment is applied.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-11-08.sbd.clugston.5301.sbeok.shnf",
+    "reason": "Good‑quality soundboard capture with clear, balanced mix; best overall fidelity despite minor tape cuts."
+  },
+  "key_highlights": [
+    "High‑energy second set anchored by a tight Estimated Prophet and She Belongs To Me.",
+    "Opening Iko Iko and Peggy‑O deliver punchy, crowd‑pleasing moments.",
+    "Bob Weir’s electrifying performance on (I Can't Get No) Satisfaction and The Other One.",
+    "Phil Lesh’s funky bass solo during Jack Straw adds a standout improvisational burst."
+  ],
+  "song_highlights": [
+    "Iko Iko",
+    "Peggy-O",
+    "Estimated Prophet",
+    "She Belongs To Me",
+    "Sugar Magnolia",
+    "(I Can't Get No) Satisfaction",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s vocals stumble on Revolution, but his lead guitar shines on Iko Iko and She Belongs To Me; overall he sounds committed and delivers one of his best solo performances of the night.",
+    "Phil": "Lesh provides a tight, funky groove on Estimated Prophet and steps forward with a memorable bass solo during Jack Straw; his “bomb‑laden” playing on Satisfaction is also noted.",
+    "Bob": "Weir brings high energy to the stage, especially on Satisfaction and The Other One, with vocal grit and guitar enthusiasm that lift the set.",
+    "Brent": "Mydland appears only briefly (a few bars of Baby What You Want Me To Do?) and otherwise stays in the background; his contributions are modest but add a subtle lyrical touch.",
+    "Mickey": "The dual‑drum interplay after Estimated Prophet is described as tight, keeping the rhythmic drive solid throughout both sets.",
+    "Billy": "Keeps the pulse steady alongside Mickey, contributing to the overall locked‑in drum sound that underpins the show’s high energy."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-15T11:13:40.045036+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Iko Iko",
+      "Little Red Rooster",
+      "Peggy-O"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Other One",
+      "I Need A Miracle",
+      "She Belongs To Me",
+      "Sugar Magnolia"
+    ],
+    [
+      "(I Can't Get No) Satisfaction"
+    ]
+  ]
+}

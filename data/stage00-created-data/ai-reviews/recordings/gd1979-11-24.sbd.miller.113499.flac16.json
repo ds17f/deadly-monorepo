@@ -1,0 +1,86 @@
+{
+  "summary": "High‑fidelity soundboard capture of a late‑1979 show with scorching China Rider, Alabama > Greatest transitions and a soaring Passenger, all backed by crystal‑clear mastering.",
+  "review": "The recording is praised for its immaculate mastering and pristine sound quality, delivering every nuance of the band’s November ’79 performance.  Highlights include blistering versions of China Rider, the Alabama > Greatest segue, Lost > Saint, and a fiery Passenger solo, while Jerry’s Tiger‑era guitar tone shines throughout.  The set flows smoothly with strong jams into drums, though a few moments such as Althea are noted as less inspired.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and recording 4‑5 stars, highlighting superb performance and excellent soundboard mastering; only a couple of moderate/negative comments lower the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Mastered by Charlie with two patches done flawlessly; reviewers call the sound crisp, perfect throughout, and note the mix balances all instruments beautifully."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Rider",
+      "Alabama > Greatest",
+      "Lost > Saint",
+      "Passenger",
+      "Terrapin",
+      "Sailor > Saint"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "The set is praised for seamless transitions (e.g., Alabama into Greatest, Sailor into Saint) and a particularly engaging jam into drums that recalls the band’s classic exploratory moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His Tiger‑era guitar tone is described as biting yet clean; solos on Passenger and Terrapin are highlighted as soaring and dance‑inducing.",
+    "Phil": "Bass work is noted as ‘churning’ and solid, especially during Sailor > Saint.",
+    "Bob": "Rhythm guitar praised for bright clicking attacks and strong representation in the mix.",
+    "Keys": "Brent’s B‑3 organ and custom Rhodes add color; keyboards are described as power‑soaked and vital to arrangements.",
+    "Drums": "Drummers are in fine form, delivering big drum openings and an exploratory jam into space."
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama > Greatest": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drumz > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:57:45.577724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-24.sbd.miller.113499.flac16"
+}

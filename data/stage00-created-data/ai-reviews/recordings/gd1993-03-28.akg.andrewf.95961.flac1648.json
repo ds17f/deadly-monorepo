@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fan praises a great show and an awesome recording.",
+  "review": "The single five‑star review gushes about both the performance and the sound, calling the show \"great\" and the recording \"awesome.\" No specific songs, set details, or technical notes are provided, but the overall tone is highly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only one review, but it rates the show and recording at the highest level (5 stars) with enthusiastic language, suggesting an excellent experience despite lack of detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as \"awesome\" but offers no specific technical commentary."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer expresses enthusiasm for the overall show but provides no details on set pacing or song flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T11:46:49.223801+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-28.akg.andrewf.95961.flac1648"
+}

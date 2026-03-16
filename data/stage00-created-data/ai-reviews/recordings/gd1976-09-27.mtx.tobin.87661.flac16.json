@@ -1,0 +1,39 @@
+{
+  "summary": "A matrix recording that leans toward audience ambience yet captures a strong, slow rendition of “Loser” highlighted by the Godchauxs.",
+  "review": "The show is praised for its top‑notch performances, especially a mellow take on “Loser” with Keith and Donna Godchaux shining. Opinions differ on the matrix mix: some hear it as overly audience‑heavy, while others appreciate the added sense of space and echo that mimics a concert hall. Overall the music outweighs the recording quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised, but recording quality receives mixed feedback; the average rating falls in the good range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Mix described as a blend of audience and soundboard; some listeners find it too audience‑heavy, others enjoy the distance/echo that adds hall ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers focus on individual song performance rather than overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's bass is noted as missing from the audience portion, leading to a perceived lack of low‑end in the mix.",
+    "Bob": "",
+    "Keys": "Keith Godchaux provides a nice keyboard performance on the slow version of “Loser”.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:34:39.851796+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-09-27.mtx.tobin.87661.flac16"
+}

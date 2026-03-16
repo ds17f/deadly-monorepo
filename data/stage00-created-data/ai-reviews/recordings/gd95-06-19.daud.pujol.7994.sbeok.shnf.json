@@ -1,0 +1,50 @@
+{
+  "summary": "A poorly recorded show riddled with sound problems and a lackluster performance, with the Unbroken Chain notably disastrous.",
+  "review": "The audience tape (or unknown source) captures a night where Jerry Garcia’s guitar was virtually absent and the band struggled with heat‑induced fatigue, making the overall musical experience disappointing. Reviewers consistently cite muddied audio and bad mixes, although a few nostalgic fans still recall personal highlights from the evening.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are negative about both performance (poor playing, missing guitar) and recording quality (messy, bad mix). Weighted scoring yields a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers call the tape a 'mess', cite muddy or unintelligible sound, and note occasional drop‑outs. One reviewer says the Aud is merely okay, but overall consensus points to a subpar recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Unbroken Chain",
+      "Big River"
+    ],
+    "setlist_flow": "Heat onstage (102 °F) drained energy; the second set suffered from Garcia’s sound trouble, leading to a generally uneven and uninspired performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly described as barely audible or possibly not playing at all due to sound issues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samba in the Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:17:20.046819+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-19.daud.pujol.7994.sbeok.shnf"
+}

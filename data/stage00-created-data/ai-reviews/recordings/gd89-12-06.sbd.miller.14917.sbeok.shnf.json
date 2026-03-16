@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture of an emotionally charged post‑quake benefit show, highlighted by a soaring “Standing on the Moon” and a daring Shakedown Street opener.",
+  "review": "The SBD recording is crisp and well‑balanced, often called “excellent” or “perfect” by reviewers.  The concert itself is remembered for its powerful second set – especially “Standing on the Moon,” an inventive Shakedown opener, Terrapin Station and a horn‑enhanced Black Muddy River – and for the cathartic drum/space earthquake segment that resonated with fans after the Loma Prieta quake.  While a few listeners note a thin Phil bass mix or dislike Clarence Clemons’ sax, the overall feeling is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews are 4–5 stars and praise both the performance (especially the second set) and the soundboard quality; occasional criticisms are minor and do not outweigh the strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix praised as “great,” “perfect,” and “one of the best quality mixes.” Minor complaints about Phil’s bass presence but no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Shakedown Street (opener)",
+      "Terrapin Station",
+      "Black Muddy River",
+      "Ship of Fools",
+      "Drums/Space (earthquake effects)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a turning‑point, benefit atmosphere with an average first set and a legendary second set that built emotional momentum through Terrapin into the drum/space climax, making the show especially memorable after the Bay Area earthquake."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his screaming guitar on “Standing on the Moon,” inventive playing on the Shakedown opener and overall high energy.",
+    "Phil": "One reviewer notes a surprisingly thin bass presence, wondering if it’s a recording issue; otherwise no major comments.",
+    "Bob": "A few mentions of tension with Jerry during tuning, but no specific performance criticism beyond that interpersonal note.",
+    "Keys": "Brent (keyboard) highlighted for trying interesting things on the Shakedown arrangement; overall keyboards considered solid.",
+    "Drums": "The drum segment is repeatedly called “awesome,” especially the earthquake‑effect ending; many reviewers point out it as a highlight."
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown Street (opener)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Muddy River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums/Space (earthquake effects)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T01:52:55.266407+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-12-06.sbd.miller.14917.sbeok.shnf"
+}

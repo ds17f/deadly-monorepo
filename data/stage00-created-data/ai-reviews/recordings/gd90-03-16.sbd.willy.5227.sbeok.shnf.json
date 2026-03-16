@@ -1,0 +1,75 @@
+{
+  "summary": "Matrix‑sourced recording with minor glitches captures a high‑energy spring ’90 show highlighted by a soaring Blow Away and a fan‑favorite Black Throated Wind.",
+  "review": "The performance is widely praised for its electric second set, especially the blistering Blow Away, the revived Black Throated Wind, and inventive jams like Women Are Smarter.  The tape is generally clear—crisp soundboard with audience bleed—but a few drop‑outs and occasional muddiness keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers celebrate the musical peaks (especially Blow Away and Black Throated Wind) while noting only minor recording glitches; the weighted average of show (≈4.3) and recording (≈3.8) yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Crisp soundboard core with audience bleed gives a lively atmosphere; a handful of drop‑outs and occasional glitches are mentioned, but overall clarity is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away",
+      "Black Throated Wind",
+      "Women Are Smarter Jam",
+      "Scarlet Begonias > Estimated Prophet"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Stella Blue"
+    ],
+    "setlist_flow": "Strong first set leads into a high‑octane second set; the band strings together extended jams (Women Are Smarter, Eyes of the World) and closes with an epic Blow Away that many reviewers cite as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ripping guitar tones, powerful vocals (especially on Scarlet Begonias), and leading the jam energy.",
+    "Phil": "",
+    "Bob": "Vocals on Black Throated Wind and overall stage presence highlighted as especially emotive.",
+    "Keys": "Brent’s keyboard work is lauded as a driving force; his solos and vocal contributions receive multiple shout‑outs.",
+    "Drums": "Pre‑drums/space segment described as spectacular; drummers noted for maintaining the show’s momentum."
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 12,
+      "negative_mentions": 1,
+      "total_mentions": 13
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Women Are Smarter Jam": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet Begonias > Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T03:43:36.128870+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-16.sbd.willy.5227.sbeok.shnf"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Clear audience capture with a bright, slightly hiss‑y edge delivers an incendiary 1981 performance highlighted by Shakedown, El Paso and a blazing Bird Song.",
+  "review": "The show is widely praised for its high‑energy first set – Shakedown, El Paso, Bird Song, Cassidy and the epic China Cat > Rider flow seamlessly into a scorching second set with Scarlet>Fire. Reviewers rave about Jerry Garcia’s “on fire” playing and Brent Mydland’s bright keyboards, while the audience recording is generally deemed clear and well‑balanced despite occasional high‑end brightness and hiss from the cassette source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (12/14) are strongly positive about both performance and recording; only a few note technical flaws. Weighted scoring gives a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear audience tape with good balance, but exhibits bright high‑end boost (likely Dolby B not fully decoded) and audible hiss. Some listeners note low‑end muddiness when Dolby is applied; overall fidelity is solid for a 1981 cassette capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "El Paso",
+      "Bird Song",
+      "Cassidy",
+      "Looks Like Rain",
+      "China Cat > Rider",
+      "Scarlet>Fire",
+      "Estimated > Eyes > Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, high‑energy first set builds momentum into a powerful second set; transitions (e.g., Shakedown → Bird Song → Cassidy → China Cat > Rider) are praised for their seamless flow and the band’s relaxed yet adventurous jam approach."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as being in peak form, “on fire,” delivering scorching solos and driving the band’s energy throughout.",
+    "Phil": "",
+    "Bob": "Phil (Bob) Lesh’s bass work is noted for matching Garcia’s intensity and providing cool, supportive grooves.",
+    "Keys": "Brent Mydland’s keyboards are present with a brighter tonal quality characteristic of early‑80s shows; his playing adds color without overwhelming the mix.",
+    "Drums": "The drumming, especially in the second set, is called “tasty” and contributes significantly to the show’s high energy."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated > Eyes > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:26:52.377752+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-12.nak700.wagner.miller.105584.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "A highly praised show labeled a 'certified killer' despite no details on recording source or sound quality.",
+  "review": "The sole reviewer gave the recording four stars and enthusiastically called it a certified killer, indicating strong enjoyment of the performance. No specific comments were made about the audio source, mix, or individual songs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single positive 4‑star review suggests a good show; lack of technical detail limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer did not discuss set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T14:16:45.114179+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-09.120958.barry.smith.AUD-fob.flac1644"
+}

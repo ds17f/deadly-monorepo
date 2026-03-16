@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent performance highlighted by Jerry's flawless playing; recording quality not specified",
+  "review": "The reviewer raves about the show, calling it \"EXCELLENT\" and noting that Jerry Garcia never missed a beat. No details are given about the source or sonic fidelity of the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review; strong praise for the performance but no information on recording quality, leading to a high show rating and an assumed decent technical capture."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "Described as flawless; \"does not miss a beat\"",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T03:31:12.322915+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-15.nak300.bleich.LMPP.96457.sbeok.flac16"
+}

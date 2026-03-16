@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp soundboard capture of an expansive 1972 show highlighted by a soaring Dark Star and strong second‑set performance.",
+  "review": "The recording is a clean, crisp soundboard source with only occasional skips that don’t detract from the overall listening experience. Musically the concert is praised for its length, abundant banter, and standout moments like Dark Star → Comes a Time, Stella Blue and a ripping second set driven by Jerry’s guitar work. Fans also note memorable highlights such as Greatest Story Ever Told and the band’s candid reference to Pigpen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All substantive reviews are 4‑5 stars, emphasizing strong performance and mostly good recording quality; only minor skip issues were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall crisp and clear soundboard audio; a few sections exhibit audible skips/dropouts but remain listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Comes a Time",
+      "Stella Blue",
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for its marathon length, abundant crowd‑band banter, and a high‑energy second set that many reviewers describe as the peak of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry Garcia delivers powerful guitar work, especially highlighted on the second set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T15:49:20.502821+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-07-26.sbd.GEMS.87034.flac16"
+}

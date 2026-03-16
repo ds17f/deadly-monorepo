@@ -1,0 +1,86 @@
+{
+  "summary": "Great audience recording of a sun‑splashed Ventura show with a killer first set (Truckin’, Tennessee Jed) and a fiery Playin’ > China Cat Sunflower > I Know You Rider sequence, though the second half loses some steam.",
+  "review": "The tape captures an exhilarating California beach gig – the first set bursts with energy, highlighted by a soaring Truckin' and a tight Tennessee Jed, while the second set opens with a superb Playin'>China Cat Sunflower>I Know You Rider jam. The audience‑sourced recording is clear enough to enjoy the nuances, but the show’s momentum tapers in the later part of the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (8/10) give 4‑5 stars and praise both performance and sound; only one low rating focuses on performance issues, while the audio is consistently described as good."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call it a \"wonderful sounding AUD\" or \"very good recording\"; no major drop‑outs or distortion are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Tennessee Jed",
+      "Playin' > China Cat Sunflower > I Know You Rider",
+      "Estimated Prophet",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "Around and Around",
+      "The Other One (unfinished)"
+    ],
+    "setlist_flow": "First set is tight and high‑energy, ending with a killer Truckin'; the second set starts strong with the Playin' jam but gradually loses steam toward its end."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for nuanced chord soloing in Rider and great work on The Wheel; generally highlighted as solid throughout.",
+    "Phil": "Mixed – some reviewers feel his playing becomes oddly dissonant and over‑playing later in the show.",
+    "Bob": "Noted for a raspy vocal tone and different vocal approaches on the Reprise and Around.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:31:55.483796+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-07-17.sennheiser.willy.8483.sbeok.shnf"
+}

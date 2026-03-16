@@ -1,0 +1,64 @@
+{
+  "summary": "Relaxed Red Rocks second‑set shines with World‑to‑Give, Eyes, and Aiko",
+  "blurb": "The band delivers a laid‑back performance highlighted by the rare “If I Had The World To Give” segue into “Iko Iko”. Jerry’s guitar tone and vocal phrasing stand out, while Phil’s bass blooms in the Space segment. The second set is captured crystal‑clear on soundboard recordings, though first‑set material suffers from mix issues on audience tapes.",
+  "review": "Red Rocks on August 30, 1978 offered a relaxed yet inspired second set that has become a touchstone for fans of this era. The show’s crown jewel is the seldom‑heard “If I Had The World To Give” flowing into an uplifting “Iko Iko”, punctuated by Jerry’s heart‑wrenching solo and vocal phrasing that many reviewers called ‘asleep in the best possible way’. A seamless Estimated Prophet → The Other One → Eyes Of The World jam showcases the band’s tight interplay, with Phil’s bass humming like a low‑frequency bomb in Space and Keith’s keyboards weaving fine solos into the tapestry. Bob’s slide work adds sparkle throughout, while the drum duo—Mickey and a one‑handed Billy—delivers energetic bursts, especially during the climactic drum jam at the end of World To Give. Although the first set is marred by mix glitches on audience recordings (a blown speaker on Jerry’s guitar and muffled sections), the second‑set soundboard capture is squeaky‑clean, making this show a must‑listen for its rare moments and overall relaxed vibe.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 33,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Two recordings are mixed (pointing out both strong jams and mix issues) while one soundboard recording is clearly positive, praising the performance especially on World To Give, Eyes, Estimated Prophet and Aiko. The overall consensus leans modestly positive, warranting a moderate +0.7 sentiment boost.",
+      "final_calculation": "2.5 + 0.3 + 0.7 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd78-08-30.set2-sbd.barbella.8038.sbeok.shnf",
+    "reason": "Crystal‑clear soundboard capture of the entire second set, featuring the rare World‑to‑Give → Iko Iko sequence and flawless instrument separation."
+  },
+  "key_highlights": [
+    "Rare “If I Had The World To Give” → Iko Iko segue with a soaring solo",
+    "Estimated Prophet > The Other One > Eyes Of The World jam is tight and exploratory",
+    "Phil’s bass shines in Space, described as humming bombs",
+    "Excellent soundboard audio of the second set despite missing first‑set material"
+  ],
+  "song_highlights": [
+    "If I Had The World To Give",
+    "Eyes Of The World",
+    "Estimated Prophet",
+    "The Other One",
+    "Iko Iko",
+    "I Need A Miracle"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar tone is praised as crystal‑clear on the SBD, with a heart‑wrenching solo on World To Give; his vocals on the title track are highlighted despite occasional mix loss in audience tapes.",
+    "Phil": "Lesh’s bass work receives kudos for booming presence in Space and solid foundation throughout, though some recordings note it gets buried by poor mix.",
+    "Bob": "Weir’s slide licks are singled out as a highlight of the set, and his rhythm playing remains steady.",
+    "Brent": "",
+    "Keith": "Keyboard contributions are described as fine work with notable solos leading into Aiko/Iko jams.",
+    "Mickey": "Hart adds energy in the extended drum/space sections, especially during the final jam after World To Give.",
+    "Billy": "Kreutzmann’s drumming is impacted by a pre‑show wrist injury, resulting in occasional one‑handed playing, yet still delivers powerful moments in the climactic drum jam."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-25T14:36:30.318140+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Estimated Prophet",
+      "The Other One",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "If I Had The World To Give",
+      "Iko Iko",
+      "Around & Around"
+    ],
+    [
+      "I Need A Miracle"
+    ]
+  ]
+}

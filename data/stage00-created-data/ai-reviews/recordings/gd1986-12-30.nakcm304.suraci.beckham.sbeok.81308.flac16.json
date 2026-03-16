@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy show with a blistering “Music Never Stopped” and a fun Neville Brothers cameo, recording quality not described but presumed adequate.",
+  "review": "Reviewers rave about the ferocious pace of this December 30, 1986 performance – calling it possibly the fastest take of “Music Never Stopped” ever heard – and praise Jerry’s soaring guitar work that carries the band through a few lyrical hiccups from Bob. The second set even features a surprise guest spot by the Neville Brothers on “Cool Aiko” leading into “Man Smart.” No specific recording‑quality comments were made, so the audio is assumed to be listenable but unverified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly positive (4–5 stars) and focus on strong musical performance; lack of recording‑quality details keeps the rating from reaching the highest tier."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on soundboard, audience mix, clarity or any audio issues, so recording quality cannot be assessed definitively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped",
+      "Cool Aiko",
+      "Man Smart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fast‑paced, high‑energy first and second sets with a guest appearance by the Neville Brothers; overall flow described as “fire on all cylinders.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for rising to the challenge and delivering delightful, soaring guitar takes during the fast rendition of “Music Never Stopped.”",
+    "Phil": "",
+    "Bob": "Noted that Bob (referred to as Bobby) struggled with lyrics on a couple of verses.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cool Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:14:29.827475+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-30.nakcm304.suraci.beckham.sbeok.81308.flac16"
+}

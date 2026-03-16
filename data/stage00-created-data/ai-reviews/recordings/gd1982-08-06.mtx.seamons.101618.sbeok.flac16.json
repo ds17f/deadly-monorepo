@@ -1,0 +1,76 @@
+{
+  "summary": "Stunning Hunter Seamons matrix captures an electrifying show highlighted by soaring Bird Song, Scarlet > Fire and a fiery Lazy Lightning > Supplication combo.",
+  "review": "The performance is praised across the board – both sets are described as wonderful with standout moments like Bird Song, Scarlet > Fire and a scorching Lazy Lightning > Supplication sequence. The matrix recording is lauded for its clarity and vivid audience presence, though a bit of echo on Lazy Lightning is noted. Overall the show and its capture deliver an exhilarating listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for musical performance (multiple 5‑star comments) combined with strong remarks about the matrix recording quality; minor echo issue does not detract from overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced matrix with vivid audience reaction and pleasing reverb on Supplication; a noticeable amount of echo on Lazy Lightning slightly muddies that moment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Scarlet > Fire",
+      "Lazy Lightning > Supplication",
+      "El Paso",
+      "Tennessee Jed",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Lazy Lightning"
+    ],
+    "setlist_flow": "Both sets are described as wonderful – the first set nearly flawless aside from Lazy Lightning, while the second set “rips” and maintains high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly noted as being \"on fire\" and delivering a moment where he \"totally nails it\"; his guitar work is highlighted as a key driver of the show's excitement.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Supplication": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:21:33.016385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-06.mtx.seamons.101618.sbeok.flac16"
+}

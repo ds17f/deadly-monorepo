@@ -1,0 +1,31 @@
+{
+  "summary": "Positive brief review with no details on recording or performance",
+  "review": "The lone reviewer gave the recording a five‑star rating and simply expressed that they liked it. No specific comments were made regarding the audio source, sound quality, or particular performances, leaving the musical and technical merits unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single enthusiastic five‑star comment suggests a favorable impression, but lack of any detail about sound quality or show performance limits confidence in the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T01:40:26.943118+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-19.112531.sbd.BEAR.partial.twotapesides.flac24"
+}

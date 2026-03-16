@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix‑style audience recording of a classic 1982 concert, featuring a standout Tennessee Jed and a tight, well‑played first set.",
+  "review": "The audience source is very good, with the music sitting front‑and‑center and only a low, acceptable crowd level. Reviewers note that the mix benefits from excellent sounding soundboard elements, delivering an overall crisp and present listening experience. Musically the show shines – the first set is described as fantastic and tight, while the second set delivers a superb Tennessee Jed along with strong performances of Playing in the Band and Crazy Fingers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single detailed 5‑star review praises both the musical performance and the recording quality, indicating an outstanding show with excellent matrix (soundboard + audience) sound."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Music is very present; audience level low/acceptable; praised for crisp mix combining strong soundboard and audience elements."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Playing in the Band",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set called fantastic and very tight; second set highlighted by a nice Playing in the Band and Crazy Fingers, maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:02:55.057024+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-10.123624.senn421.gans.miller.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Nice audience recording of a great 1982 show.",
+  "review": "The reviewer rates the performance highly, calling it a \"great show,\" and specifically praises the quality of the audience tape, noting it is \"really nice.\" No detailed comments on individual songs or band members are provided, but the overall impression is positive despite the limited information about the setlist.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) mentions a good audience recording and an enjoyable show; lacking detailed musical analysis, the rating reflects a solid but not exceptional assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the audience tape as \"really nice,\" indicating clear and listenable sound despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer calls the concert a great show but gives no specifics on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T03:11:46.399007+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-17.150661.aud.cm.miller.flac16"
+}

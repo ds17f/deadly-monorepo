@@ -1,0 +1,82 @@
+{
+  "summary": "Excellent soundboard transfer captures a stellar late‑January 1969 Avalon show, highlighted by blistering Clementine, powerful Death Don't Have No Mercy and soaring The Eleven.",
+  "review": "The recording is praised as one of the best transfers on the Archive – crystal‑clear soundboard audio with just a few minor mix dips. Musically the concert shines in its second set, especially the extended Clementine/Death Don’t sequence, an inspired Eleven and a fiery Lovelight, while Dark Star and St. Stephen are seen as merely average for the period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Average user rating is ~4.85/5; most comments celebrate the performance and audio quality with only occasional minor criticisms, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Fresh transfer praised as crisp and clear; Tom Constanten’s keyboards are front‑and‑center. A few reviewers note early mix dips or minor balance issues, but overall the sound is considered among the best on the Archive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Clementine",
+      "Death Don't Have No Mercy",
+      "The Eleven",
+      "Lovelight",
+      "Other One"
+    ],
+    "poor_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "OO Suite"
+    ],
+    "setlist_flow": "The first set is noted as short, but the second set builds a powerful psychedelic arc with intense drumming and soaring organ work, delivering a quintessential early‑’69 vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s bluesy lead on Death Don't and his raw vocal delivery are highlighted; some note his vocals sound less polished but emotionally potent.",
+    "Phil": "Phil's bass is praised for driving the Clementine riff recap and anchoring jams; a few mention his compositional role in Clementine.",
+    "Bob": "",
+    "Keys": "Tom Constanten receives strong kudos for arpeggios, trippy organ tones, and being well‑balanced in the mix.",
+    "Drums": "The drummers are described as pounding and driving the intensity, especially during the second set."
+  },
+  "song_mentions": {
+    "Clementine": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "OO Suite": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:44:32.284945+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-01-26.sbd.miller.109642.flac16"
+}

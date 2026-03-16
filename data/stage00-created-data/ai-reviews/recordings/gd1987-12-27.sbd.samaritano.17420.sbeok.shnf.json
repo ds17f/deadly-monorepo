@@ -1,0 +1,39 @@
+{
+  "summary": "Mediocre show with a decent setlist hampered by Bob's over‑dramatic vocals on Estimated Prophet; recording source unknown",
+  "review": "The concert features a solid 1987 setlist, but reviewers are disappointed by Bob Weir’s exaggerated vocal delivery, especially on \"Estimated Prophet,\" which they feel ruins the performance. No details about the recording quality are provided, leaving the audio source and fidelity unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only a single review (3‑star) focusing on vocal performance; no information on recording quality, so rating reflects an average show with notable vocal issues."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type were given in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "Reviewer notes the setlist is decent for a 1987 show but does not elaborate on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Criticized for over‑dramatic, \"emphatic\" singing that they feel ruins songs, citing Estimated Prophet as a prime example.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:36:37.133387+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-27.sbd.samaritano.17420.sbeok.shnf"
+}

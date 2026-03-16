@@ -1,0 +1,88 @@
+{
+  "summary": "High‑energy 1991 Omni show captured on a soundboard with solid playing and standout jams, though the transfer suffers from pitch/speed anomalies.",
+  "review": "The performance is widely praised – Shakedown, Deal, the Terrapin > Stir It Up jam and an explosive Other One > Wharf Rat sequence are repeatedly called “smoking” or “insane.”  The band sounds tight, Hornsby’s piano is fully integrated and the overall vibe is electric.  Technically the SBD is listenable but many fans note a noticeable pitch‑shift/speed issue that makes parts sound fast or out of key.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Show quality averages near‑5 stars across >30 reviews, while recording quality is downgraded by consistent pitch/speed complaints; weighted average yields a strong 4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD but several listeners report pitch‑shift, possible speed‑up and DAT→CDR conversion artifacts; occasional muddiness but overall audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Deal",
+      "Terrapin > Stir It Up",
+      "The Other One > Wharf Rat",
+      "Mexicali Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, high‑energy flow with fluid Hornsby integration; second set described as “smoking” and the band sustains a powerful groove from opener through an epic jam sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for killer guitar tone and strong vocals (though some note pitch anomalies that may be recording‑related).",
+    "Phil": "Bass lines on the end of Terrapin highlighted as “surreal.”",
+    "Bob": "Out of tune at the start of Shakedown but quickly recovers; overall energetic playing.",
+    "Keys": "Hornsby’s piano praised for depth and nuance; Vince’s synth/keyboard work draws mixed reactions – some find it noisy or out of place, others note he was limited by Bob Bralove’s samples.",
+    "Drums": "General praise for the “drums/space” moments and overall rhythmic drive; no specific critiques."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Deal": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin > Stir It Up": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:25:53.275691+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-05.sbd.gardner.4162.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Matrix recording delivers a clear, energetic Barcelona performance highlighted by a superb Jack Straw → Franklin's segue and a bouncy Don't Ease Me In.",
+  "review": "The audience‑sourced matrix capture is praised for its pleasant clarity and the way it conveys the crowd’s excitement in Spain. Musically the show shines with an engaging first set, a hot second set that flows into a lively Don't Ease Me In, and a standout Jack Straw → Franklin's transition. Reviewers rank it among their top Dead shows, noting both great sound and memorable energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviewers give high marks (4‑5 stars) and comment positively on both performance and sound; limited number of reviews lowers confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the matrix as very enjoyable with clear, great‑sound quality that captures crowd energy; no major flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Franklin's Tower",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set followed by a hot second set that flows naturally into a bouncy Don't Ease Me In, creating an overall wonderful night in Spain."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:16:52.976185+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-19.131801.mtx-fix.dusborne.flac16"
+}

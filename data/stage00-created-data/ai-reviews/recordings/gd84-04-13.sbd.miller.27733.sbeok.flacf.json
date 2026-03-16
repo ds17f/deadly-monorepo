@@ -1,0 +1,63 @@
+{
+  "summary": "Miller‑recorded soundboard delivers crystal‑clear audio of a fiery 4/13/84 Hampton show, highlighted by a scorching Scarlet>Fire and standout Brent keyboard scat.",
+  "review": "The performance shines with an explosive Scarlet>Fire that many reviewers call “fat and juicy,” while Phil’s funky bucket work and Brent’s dazzling scat on All Over Now add extra sparkle. The Miller soundboard mix is praised as full, crisp and exceptionally balanced, making the show a must‑listen despite a single lukewarm Day Job opener.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews overwhelmingly praise both the musical performance (standout jams, strong second set) and the high‑quality Miller soundboard recording, yielding a top‑tier combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, full and nicely balanced; no dropouts or major issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Estimated",
+      "All Over Now"
+    ],
+    "poor_songs": [
+      "Day Job"
+    ],
+    "setlist_flow": "Opening night of the tour features a strong first set and an especially powerful second set; jams flow organically with Phil’s funk, Brent’s marimba‑like keyboards and Jerry’s shining lead on Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Shines during Fire, building the jam foundation and delivering standout leads.",
+    "Phil": "Very active and funky in the bucket, threading parts together especially on Scarlet>Fire.",
+    "Bob": "",
+    "Keys": "Brent delivers impressive scat vocals and adds marimba‑style keyboard textures that enhance the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:23:46.416506+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-13.sbd.miller.27733.sbeok.flacf"
+}

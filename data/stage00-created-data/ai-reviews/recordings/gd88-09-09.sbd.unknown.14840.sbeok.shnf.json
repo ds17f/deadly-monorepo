@@ -1,0 +1,62 @@
+{
+  "summary": "Good soundboard capture with crisp mix, highlighted by a stellar \"Believe It Or Not\" and a fiery China Cat solo despite some tracking hiccups.",
+  "review": "The show is widely praised for its tight playing and standout moments like the soaring \"Believe It Or Not\" and Jerry’s explosive China Cat solo. The recording is generally clear and punchy, though several listeners note uneven tracking and occasional drop‑outs that detract from an otherwise solid performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars for performance, while recording issues and a few lukewarm comments pull the average down to around 3.4; weighting performance higher yields an overall rating near 3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix with strong instrument separation; however listeners report uneven tracking, occasional song‑break dropouts, and a slightly flat low‑end compared to other SBDs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Believe It Or Not",
+      "China Cat"
+    ],
+    "poor_songs": [
+      "Sugaree"
+    ],
+    "setlist_flow": "Standard late‑80s setlist but the second set shines; the first set is solid while the second delivers high energy and memorable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work and vocals receive consistent praise, especially his solo on China Cat and driving presence throughout.",
+    "Phil": "Phil’s bass is noted as crisp in the mix, standing out more than usual for ’88 recordings.",
+    "Bob": "Bob Weir’s rhythm work is mentioned positively on Minglewood; no major criticisms.",
+    "Keys": "Brent Mydland’s keyboards are highlighted as a key texture, with synth layers adding depth to songs like China Cat.",
+    "Drums": "The drum and space segments get occasional shout‑outs, but no specific drummers are singled out."
+  },
+  "song_mentions": {
+    "Believe It Or Not": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T13:21:23.778901+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-09.sbd.unknown.14840.sbeok.shnf"
+}

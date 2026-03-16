@@ -1,0 +1,87 @@
+{
+  "summary": "High‑energy summer ’91 show with scorching Scarlet > Fire and soaring Comes A Time, captured on a crisp soundboard recording.",
+  "review": "The performance is widely praised for its blazing second set – especially the marathon Scarlet > Fire and an emotive Comes A Time – plus strong moments from Candyman, Memphis Blues and Jack Straw > Sugaree.  The SBD source is generally described as clear and “top‑notch,” though a few listeners note occasional keyboard over‑mixing or a low Jerry level.  Overall the show feels like one of the standout Summer ’91 concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (20+) give 4‑5 stars and highlight strong playing and excellent sound; only a few note mix issues, giving an overall very positive impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, top‑notch SBD capture praised by many; occasional complaints about keyboards drowning the mix and one note of Jerry being low in the mix, but no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Comes A Time",
+      "Candyman",
+      "Memphis Blues",
+      "Jack Straw > Sugaree",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Good Lovin'",
+      "Truckin'"
+    ],
+    "setlist_flow": "The set flows hot and steady – a vibrant first set that builds into an epic second set, highlighted by the long Scarlet > Fire segue and a heartfelt Comes A Time emerging out of space."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fiery solo on Scarlet > Fire, clear vocals and energetic playing; one reviewer mentions his mix being low but overall he’s the driving force.",
+    "Phil": "Only minor mention (standing by during Good Lovin'); no strong positive or negative comments.",
+    "Bob": "Negative note about his performance of Good Lovin' that irritated Jerry; otherwise not highlighted.",
+    "Keys": "Mixed – several reviewers criticize Bruce Hornsby’s accordion/keyboard over‑mix, calling it “kinda fuck it up” and even saying Vince “sucks,” while a few simply note the dual‑keyboard swirl as characteristic of the era.",
+    "Drums": "Positive nods: drums highlighted as a highlight for rhythm lovers and praised in at least one review."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Comes A Time": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw > Sugaree": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T22:37:16.548650+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-25.sbd.miller.26350.sbeok.shnf"
+}

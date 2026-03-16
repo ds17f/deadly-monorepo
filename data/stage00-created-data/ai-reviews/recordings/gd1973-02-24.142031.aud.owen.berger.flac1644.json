@@ -1,0 +1,45 @@
+{
+  "summary": "A wildly impressive performance highlighted by a spooky Truckin' jam and a confident Wave That Flag, but the audience recording is rough with jarring soundboard patches.",
+  "review": "Both reviewers rave about the night’s musical magic – noting an \"off‑the‑charts\" show, a beautiful spook‑filled Truckin', and perhaps the most coherent rendition of Wave That Flag yet. The audio, however, is primarily an audience tape that suffers from poor clarity and awkward transitions when the brief soundboard snippet is mixed in.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high (enthusiastic praise, standout jams) while recording quality is rated low (poor audience tape, jarring SBD patch). Weighted average yields ~3.9 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Mainly an audience tape with limited clarity; a brief soundboard snippet is crisp but its integration feels jarring, leading to overall rough listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Wave That Flag"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers focus on the high‑energy jam sections rather than overall pacing; no specific comments on set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Second review notes a \"Phil heavy\" February ’73 jam, indicating strong bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave That Flag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:44:23.084183+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-24.142031.aud.owen.berger.flac1644"
+}

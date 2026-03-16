@@ -1,0 +1,63 @@
+{
+  "summary": "Clear soundboard recording captures a stellar 1972 performance highlighted by a thunderous 'Playing in the Band' jam and an epic The Other One/Black Peter sandwich.",
+  "review": "The SBD source delivers clean, well‑balanced audio that lets the band’s tight interplay shine.  Highlights include a blazing 'Playin'' intro, Keith’s Rhodes work and pedal wizardry on The Other One, and a memorable Too > Black Peter > Too sandwich, while Donna’s vocal quirks spark debate but don’t detract from the overall brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise the musical peaks; recording quality is consistently described as good to nice, yielding an overall strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice, clear sound quality with crisp instrument separation; no major drop‑outs or muddy sections reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "The Other One",
+      "Black Peter",
+      "Truckin'",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through several classic sandwiches (Too > Black Peter > Too, The Other One > Black Peter > The Other One) and a spacey second half, delivering strong jams and memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Several reviewers note Phil dropping “bombs” and delivering beautiful harmonies early in the set.",
+    "Bob": "Bob’s guitar intro on 'Playing in the Band' is singled out as powerful and unusually forward‑in‑the‑mix.",
+    "Keys": "Keith’s Rhodes work is praised, and his wa‑wa pedal shines during The Other One jam.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T15:57:28.830888+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-08-12.sbd.hamilton.3327.sbeok.shnf"
+}

@@ -1,0 +1,37 @@
+{
+  "summary": "Fair soundboard capture of a lackluster night, with only Garcia's vocals on “Stagger Lee” sounding decent through good earbuds.",
+  "review": "Both reviewers found the performance underwhelming – one even gave it zero stars – noting that the band \"kinda did this night.\" The soundboard source is generally clear, but the only positive note is that Garcia’s vocals on “Stagger Lee” are tolerable with decent headphones. Overall the show is judged poor despite an acceptable recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "medium",
+    "rationale": "Show quality is rated low by both reviewers, while the soundboard recording is at least listenable; combined score yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Clear enough for a typical SBD, but no special fidelity noted; vocals only come through decently with good earbuds."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure; reviewers imply overall weak performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals are described as merely decent on “Stagger Lee” and require good earbuds to hear well.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:58:12.978700+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-21.sbd.braverman.9406.shnf"
+}

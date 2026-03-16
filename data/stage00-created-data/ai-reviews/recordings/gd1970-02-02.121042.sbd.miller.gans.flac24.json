@@ -1,0 +1,44 @@
+{
+  "summary": "High‑quality soundboard capture of a standout Dark Star performance, with noticeable improvement over previous releases.",
+  "review": "The recording is praised for its clear, improved sound quality compared to earlier versions of this show, indicating a solid soundboard source. Musically the highlight for reviewers is the Dark Star, which many cite as exceptional despite some criticism of vocal delivery and overall stylistic direction.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical focus on a celebrated Dark Star and positive comments on the sound quality outweigh the few negative remarks about vocals and style."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a noticeable improvement over previous releases, describing the audio as clearer and better balanced; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Limited detail on set structure; the consensus centers on Dark Star as the key moment of the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cryptical": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:20:12.413569+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-02.121042.sbd.miller.gans.flac24"
+}

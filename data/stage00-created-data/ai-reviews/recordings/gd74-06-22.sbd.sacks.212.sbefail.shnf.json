@@ -1,0 +1,103 @@
+{
+  "summary": "Clear soundboard capture (a bit drummy and hissy) paired with a show that shines on the Eyes → Wharf Rat transition and one of the best China → Rider jams.",
+  "review": "The SBD source is generally clear and well‑balanced, though several listeners note an overly‑drum‑heavy mix and occasional hiss. Musically the concert is uneven – the first set wanders, but the second set delivers highlights like a superb Eyes > Wharf Rat jam, a legendary China > Rider segue, and strong performances of Scarlet Begonias and Greatest Story Ever Told.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑5 stars and praise key jams, while a few call it uneven; recording quality is described as good to fair, giving an overall solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard is clear and crisp for the most part; some reviewers mention minor hiss, a heavy drum mix, and low‑level vocals, but overall it remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Wharf Rat",
+      "China > Rider",
+      "Scarlet Begonias",
+      "Greatest Story Ever Told",
+      "Loose Lucy"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Bertha",
+      "Deal",
+      "Bobby McGee"
+    ],
+    "setlist_flow": "First set is uneven and at times sloppy, but the second set picks up momentum with strong transitions (Eyes > Wharf Rat, China > Rider) and a generally higher level of conviction."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is high in the mix; his solo on \"Greatest Story\" gets praise for unusual fast repeated notes, but some feel he sounds tentative or ‘reinventing’ himself.",
+    "Phil": "Phil’s bass is thunderous at the start of PITB and shines on GSET; a few reviewers note his jam after verses in Eyes feels off, yet overall his playing is highlighted as a strong point.",
+    "Bob": "Bob’s vocal presence is described as low on some tracks (e.g., El Paso), but no major criticisms of his guitar work appear.",
+    "Keys": "Keyboard mix varies – Keith/Brent sometimes sit low in the mix, though the overall keyboard contribution is not heavily critiqued.",
+    "Drums": "Drum sound is described as overly‑drummy and occasionally sloppy (e.g., \"Bertha\" intro), contributing to a less cohesive feel on certain songs."
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Bobby McGee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes > Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T21:10:13.249110+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-22.sbd.sacks.212.sbefail.shnf"
+}

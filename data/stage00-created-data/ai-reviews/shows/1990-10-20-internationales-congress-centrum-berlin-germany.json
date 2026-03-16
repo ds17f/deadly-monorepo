@@ -1,0 +1,74 @@
+{
+  "summary": "Soaring Dark Star, tight Half‑Step, magical Hornsby jam",
+  "blurb": "The show delivers a soaring Dark Star → Drums → Space → Dark Star sequence and a fiery Mississippi Half‑Step Uptown Toodeloo. Jerry’s vocals are crisp with a standout Hornsby piano jam into Let It Grow → Box of Rain. The second set builds strong momentum before a solid drum solo, making it essential early‑90s listening.",
+  "review": "On October 20, 1990 at Berlin’s Internationales Congress Centrum the Grateful Dead turned in one of their most exhilarating European performances of the era. Kicking off with “Jack Straw” and a blistering “Mississippi Half‑Step Uptown Toodeloo,” the first set kept the energy high all the way through a seamless Let It Grow → Box of Rain transition, highlighted by Bruce Hornsby’s magical piano that lifted the band into an uplifting jam. The second set was a tour‑de‑force: “Eyes Of The World” flowed straight into “Samson & Delilah,” then exploded into a double‑dark‑star extravaganza bookended by a thunderous drum‑and‑space interlude, before wrapping with “Throwing Stones” and “Not Fade Away.” Jerry’s voice was strong early on (and noticeably crisp after the matrix restoration), Phil’s bass rang open and freed from muddiness, while Bill Kreutzmann’s snare snap and Mickey Hart’s power drove the improvisations. Bob Weir stayed mostly in the background, especially during the Hornsby jam, but the collective chemistry kept the show soaring throughout.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 34,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Five of six recordings are strongly positive, repeatedly praising the Dark Star sequence, Half‑Step, Hornsby piano jam and overall band tightness; only one negative comment concerns recording metadata, not performance.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd90-10-20.dsbd-matrix.dieter.12931.sbefail.shnf",
+    "reason": "Crystal‑clear matrix capture with full, crisp sound; highlights Dark Star > Drums > Space > Dark Star and the Hornsby jam while preserving audience ambience."
+  },
+  "key_highlights": [
+    "Soaring Dark Star → Drums → Space → Dark Star sequence",
+    "Magical Bruce Hornsby piano jam transitioning Let It Grow into Box of Rain",
+    "Tight, energetic Mississippi Half‑Step Uptown Toodeloo opening and strong second‑set momentum"
+  ],
+  "song_highlights": [
+    "Mississippi Half-Step Uptown Toodeloo",
+    "Dark Star",
+    "Drums",
+    "Space",
+    "Let It Grow",
+    "Box of Rain",
+    "Eyes Of The World"
+  ],
+  "band_performance": {
+    "Jerry": "Strong early vocals and a crisp, clear delivery after matrix restoration; a few vocal flubs on Let It Grow but overall solid performance.",
+    "Phil": "Excellent bass work, freed from low‑frequency muddiness; provides a solid foundation throughout the set.",
+    "Bob": "Generally subdued, with one note of laying out during the Hornsby jam; otherwise supportive rhythm guitar.",
+    "Brent": "",
+    "Keith": "",
+    "Vince": "Balanced organ tone that sits well in the mix; complements Hornsby's piano nicely.",
+    "Bruce": "Magical piano playing that drives the Let It Grow → Box of Rain transition and adds sparkle to jams.",
+    "Mickey": "Powerful drumming with spectacular snare snap; strong throughout first half of second set, momentum eases after drum solo.",
+    "Billy": "Spectacular power on drums, especially during Dark Star sections; snare work praised as among the era’s best."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-17T13:57:24.914321+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Walkin' Blues"
+    ],
+    [
+      "Dark Star",
+      "Drums",
+      "Space",
+      "Dark Star",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Let It Grow",
+      "Jam",
+      "Box of Rain"
+    ],
+    [
+      "Eyes Of The World",
+      "Samson & Delilah"
+    ]
+  ]
+}

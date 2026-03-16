@@ -1,0 +1,45 @@
+{
+  "summary": "Great soundboard mix captures an epic 20‑minute Playing in the Band with a rare post‑drums Terrapin Station",
+  "review": "The recording is praised for its clean, nicely balanced mix, likely a soundboard source, that lets listeners hear the band’s extended improvisations clearly. Musically the show shines with a monster Playing In The Band (≈20 min) and a surprising post‑drums Terrapin Station, though a few reviewers felt the overall vibe wasn’t “hot.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate 4–5 stars and highlight outstanding performances and good sound quality; a single low rating and a lukewarm comment keep the overall sentiment from being fully positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers note a nice‑sounding, clear mix with good balance; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station (post‑drums)",
+      "Playing In The Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features a surprise post‑drums Terrapin Station and an extended, epic Playing In The Band that showcases the band’s improvisational peak; overall pacing is praised despite one comment calling the show “not such a hot show.”"
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is highlighted as epic during the long Playing In The Band jam.",
+    "Phil": "Phil's bass is noted as all‑over the performance, especially in the extended improvisations.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T16:00:01.803635+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-30.sbd.miller.119696.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality front‑row capture of a vibrant mid‑90s show highlighted by a sublime Throwing Stones.",
+  "review": "The recording delivers a clear, front‑row audience sound that lets listeners hear the band’s energy, especially in the latter part of the set. Reviewers rave about Jerry Garcia hitting every note and cite the soaring performance of \"Throwing Stones\" as a standout moment. Overall the show is praised for its excitement and strong finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviews are highly positive (5, 4, 5 stars) and comment on both the energetic performance and good recording quality, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑row audience capture with a strong USB/NFA feed; clear enough to hear instrument detail and overall band balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energy builds throughout the set, peaking toward the end for an especially powerful finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for hitting every note and delivering a flawless performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:45:40.150537+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-18.akg460.flaschner.sobel.85384.flac16"
+}

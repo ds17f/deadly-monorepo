@@ -1,0 +1,107 @@
+{
+  "summary": "Soundboard capture with good clarity showcases a stellar late‑1989 Shoreline show highlighted by an epic Death Don't Have No Mercy and tight sets featuring Bird Song, Terrapin Station, Playing in the Band and more.",
+  "review": "The recording (stereo soundboard) is generally clear and well‑balanced, though listeners note a five‑minute dead‑air gap after “Blow Away” and some harsh MIDI synth tones that muddy the mix. Musically the band is praised for an inspired performance – Brent’s keyboards are on fire, Jerry delivers one of his most searing solos on “Death Don't Have No Mercy,” and the second set rolls through classics like “Terrapin Station,” “Playing in the Band” and “Sugar Magnolia.” Overall fans feel the show shines despite a few technical hiccups.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (5‑star) rave about the performance and overall sound, while several note recording gaps, MIDI synth issues, and equipment problems that keep the rating from perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and well‑balanced for most of the show; a long dead‑air gap after “Blow Away,” occasional harsh MIDI synth tones, and a mix where drums can sound overly loud."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Death Don't Have No Mercy",
+      "Terrapin Station",
+      "Playing in the Band",
+      "Bird Song",
+      "We Can Run",
+      "China Cat Sunflower > I Know You Rider",
+      "Sugar Magnolia",
+      "Promised Land",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is relaxed and exploratory with slower tempos, building detail; the second set bursts forward with high energy, tight transitions and a memorable “Playing in the Band” → “Terrapin Station” climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for stellar tone and an epic solo on “Death Don't Have No Mercy”; also noted using a MIDI rig that some find fatiguing.",
+    "Phil": "Mentioned as shining on bass in the second set, providing effortless low‑end support.",
+    "Bob": "A minor blemish noted where he jumped into his verse early; another reviewer called his vocal delivery trite.",
+    "Keys": "Brent is highlighted as “on” with strong, mellow vocals and powerful Leslie‑driven solos, though some dislike the synthetic MIDI sounds.",
+    "Drums": "Mickey’s playing is generally praised for intensity, but one review complains that drums are too loud in the mix."
+  },
+  "song_mentions": {
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "We Can Run": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Blow Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stuck Inside Mobile": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T23:08:10.576480+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-09-29.sbd.walker-scotton.miller.81704.sbeok.flac16"
+}

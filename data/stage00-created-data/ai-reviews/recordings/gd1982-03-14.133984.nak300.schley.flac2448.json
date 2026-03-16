@@ -1,0 +1,45 @@
+{
+  "summary": "A solid audience recording of a fan‑favorite show, highlighted by a tribal Rhythm Devils stretch and standout Not Fade Away and Sugaree performances.",
+  "review": "The tape delivers surprisingly clear audience sound that lets the band’s energy shine through. Reviewers love this particular concert, especially the heavy Phil‑side Not Fade Away and the bouncy Sugaree, and they note the “tribal” Rhythm Devils segment as a memorable drum showcase. While not a pristine soundboard, the recording is good enough to earn four stars.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) praising both performance and audio quality; rating reflects combined show and recording assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape is surprisingly clear and listenable, with no major dropouts or muddiness noted by the reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows through a strong first set and builds into a tribal Rhythm Devils segment, with Not Fade Away highlighted as Phil‑heavy and Sugaree described as bouncy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Not Fade Away is noted as heavy on the Phil side, showcasing his prominent role.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Rhythm Devils portion is called \"tribal\" and praised for its driving beat."
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:55:20.930033+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-03-14.133984.nak300.schley.flac2448"
+}

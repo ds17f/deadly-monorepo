@@ -1,0 +1,31 @@
+{
+  "summary": "Review provides no information on the music or recording quality and assigns a zero‑star rating.",
+  "review": "The sole submission is an unrelated poem rather than a concert assessment, offering no details about soundboard vs. audience source, clarity, performance, or setlist. With a 0‑star rating, the sentiment is clearly negative, but there are no concrete comments to evaluate technical or musical quality.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review, which does not discuss the show or recording and gives a zero‑star rating; insufficient data for a precise rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No audio‑related comments provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T23:13:16.109245+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-18.nak300.morris.crazyfingers.106651.flac16"
+}

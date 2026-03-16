@@ -1,0 +1,61 @@
+{
+  "summary": "High‑resolution matrix capture of an ’82 show with a standout second set (Scarlet > Fire, Estimated > He's Gone, beautiful Morning Dew).",
+  "review": "The tape, mastered by Charlie Miller, delivers crystal‑clear, high‑bit‑depth sound that lets the band’s nuanced playing shine. The concert is remembered for an exceptional second set—especially the Scarlet Begonias → Fire on the Mountain sequence and a mellow Morning Dew—while the first set is viewed as solid but less memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Reviews are overwhelmingly positive (3×5★, 1×3★) praising both the superb matrix recording and the strong second‑set performance; only minor criticism of the first set lowers the overall average slightly."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Masterful matrix mix by Charlie Miller, high‑resolution 24‑bit/96 kHz version praised as crisp and clear; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Estimated Prophet > He's Gone",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set shines with fluid transitions and standout jams; first set is solid but some listeners find it less compelling."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is highlighted as beautiful, especially on the mellow Morning Dew and in the drum/keyboard interplay.",
+    "Drums": "The drumming is praised throughout the second set, noted for its strength and chemistry with Brent."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T20:14:17.402172+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-15.set2.sonyECM220t.kirschner.miller.95434.sbeok.flac16"
+}

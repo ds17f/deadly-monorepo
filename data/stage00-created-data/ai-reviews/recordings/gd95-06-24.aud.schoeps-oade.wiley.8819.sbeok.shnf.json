@@ -1,0 +1,56 @@
+{
+  "summary": "Listen‑able but mix‑limited recording of a mixed‑quality show highlighted by a superb Black Muddy River and Days Between.",
+  "review": "The tape is decent enough to enjoy, though many listeners note that Jerry’s lead guitar often disappears in the mix and a true SBD/Matrix would be ideal. Musically the concert has its high points – an emotional Black Muddy River, a stellar Days Between, and a moving That‑Would‑Be‑Something – but the second set is described as lacking power and overall the performance feels uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality shows both strong moments (several praised songs) and notable weaknesses (second‑set flatness, mix problems). Recording is only fair, leading to an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Lead guitar often buried in the mix; reviewers wish for a Super‑Bitrate Digital (SBD) or matrix source. Still considered listenable despite these limitations."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Muddy River",
+      "Days Between",
+      "That Would Be Something"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set has a few nice numbers (Jack Straw, Red Rooster, Iko, New Speedway) but the second set is described as lacking power. The concert’s emotional peaks revolve around Black Muddy River and Days Between."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead guitar often gets lost in the mix, yet his performance on Black Muddy River and Days Between receives high praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby is on grand piano for the entire show; his presence is noted as a positive addition to the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Muddy River": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "That Would Be Something": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "SMR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:43:50.982329+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-24.aud.schoeps-oade.wiley.8819.sbeok.shnf"
+}

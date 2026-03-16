@@ -1,0 +1,95 @@
+{
+  "summary": "Crisp soundboard capture of a summer‑93 Buckeye gig with punchy Phil bass and standout renditions of Jack Straw, Foolish Heart, Eyes > Playin’, Black Peter and a soaring Brokedown Palace.",
+  "review": "The show is praised for its high energy and tight playing, especially the opening jack‑straw/foolish‑heart combo, the seamless Eyes → Playin' transition and a powerful Black Peter that drove the crowd. The SBD source is generally clear and punchy, though listeners note a persistent pop on Bill Kreutzmann’s kick drum caused by a bad mic cable. Overall the performance shines despite a few uneven moments such as an uninspired Wheel.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight strong musical moments; recording is described as crisp soundboard with only minor kick‑drum pop issues, leading to a combined high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear SBD with punchy bass; however a faulty kick‑drum mic cable causes a popping artifact in the left channel throughout the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Foolish Heart",
+      "Eyes > Playin' > Uncle John's Band",
+      "Black Peter",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Wheel"
+    ],
+    "setlist_flow": "The set opens strong with a raging Jack Straw into Foolish Heart, flows smoothly through Eyes → Playin' → Uncle John’s with tight transitions, and closes the first set on a high note. The second set maintains momentum despite a weaker Wheel, delivering a powerful Black Peter and an uplifting Brokedown Palace encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Crisp guitar tone and strong lyrical delivery praised; energetic solos throughout.",
+    "Phil": "Punchy bass highlighted on “Masterpiece” and overall outstanding performance noted.",
+    "Bob": "Fun, lively playing especially on Sugar Magnolia noted as enjoyable.",
+    "Keys": "Vince’s boogie‑woogie piano runs on Promised Land and solid organ work on Black Peter received positive remarks.",
+    "Drums": "Bill & Mickey using conga toms added texture; a bad kick‑drum mic cable caused noticeable popping in the left channel."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes > Playin' > Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drumz": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T14:04:38.918637+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-11.sdb.tetzeli-fix-19217.34399.shnf"
+}

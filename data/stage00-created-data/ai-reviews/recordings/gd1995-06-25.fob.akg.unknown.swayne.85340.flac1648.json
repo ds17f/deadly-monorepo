@@ -1,0 +1,50 @@
+{
+  "summary": "Excellent front‑of‑house soundboard capture of an electric 1995 show featuring Jerry’s inspired playing and a fiery Shakedown Street opener.",
+  "review": "The recording is a high‑fidelity FOB mix (AKG SE300B chain) with clear band balance, even adding hand‑held mics for the encore. Fans rave about the night’s energy, Jerry Garcia’s standout performance and memorable moments like Shakedown Street and Broken Down, making it one of the most cherished 1995 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All four reviews are overwhelmingly positive about both performance and sound; minor vocal criticism is outweighed by strong praise, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded via AKG SE300B → active cable → CK91 → Aerco → TEAC DAP20 chain; front‑of‑house mix with hand‑held mics for the encore, resulting in clear and balanced audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Broken Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy show with an exciting Shakedown Street opener and sustained momentum through the set, amplified by Jerry’s inspired playing and the crowd’s front‑row enthusiasm."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's inspired guitar work and stage presence, noting he was especially feeling it that night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:04:34.994429+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-25.fob.akg.unknown.swayne.85340.flac1648"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Jam‑focused performance highlighted by an extended New Potato; recording source isn’t specified but the show is praised as very good.",
+  "review": "Both reviewers gave the recording five stars, emphasizing a strong, jam‑oriented set that benefited from the one‑hour Avalon time limit. The extended version of “New Potato” is singled out as a sweet highlight, while no specific comments on sound quality were provided, leaving the technical side unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews are five‑star and focus on excellent musical performance; lack of recording‑quality details keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewers mentioned sound clarity, mix, or source type; rating inferred from overall positive assessment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Potato"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The one‑hour set limit at the Avalon prompted tighter pacing toward the end, but reviewers felt it kept the music flowing and resulted in strong jam sections."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Potato": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:29:27.519120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-01-24.sbd.kaplan.2370.sbefail.shnf"
+}

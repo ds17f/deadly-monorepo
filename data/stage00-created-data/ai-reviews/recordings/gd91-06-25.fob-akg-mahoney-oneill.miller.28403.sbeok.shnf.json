@@ -1,0 +1,39 @@
+{
+  "summary": "Nice‑sounding FOB recording highlighted by an outstanding Comes A Time performance",
+  "review": "The front‑of‑house (FOB) mix is described as very nice sounding, offering clear and balanced audio. Reviewers especially praise the rendition of \"Comes A Time,\" calling it one of their all‑time favorite moments. Overall sentiment is positive despite limited commentary on other parts of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single review (4 stars) mentions both good recording quality and a standout song, leading to a rating that mirrors the reviewer’s score but with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very nice sounding FOB mix; clear and well‑balanced with no reported issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing or flow"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:40:17.706111+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-25.fob-akg-mahoney-oneill.miller.28403.sbeok.shnf"
+}

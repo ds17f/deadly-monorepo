@@ -1,0 +1,87 @@
+{
+  "summary": "A clean vinyl‑sourced rip captures an early‑’66 set bursting with a fiery I Know You Rider, smoking Lindy and Baby Blue, plus a standout Midnight Hour.",
+  "review": "The recording is praised for its low‑noise, well‑balanced vinyl transfer, despite slightly lower levels and occasional pitch quirks. Musically the show is celebrated as an early‑career high point, with Jerry’s soaring solos, exuberant Lindy, and a blistering I Know You Rider, though a few tracks suffer from editing or missing intros. Overall the energy and joy of the band shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rave about the performance and give high star ratings; recording comments note excellent vinyl clarity with only minor level/pitch issues, leading to a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very clean vinyl rip with minimal surface noise; slightly lower overall levels and wider channel separation give it a balanced but less punchy feel. Some reviewers mention pitch‑correction needs for perfect speed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Rider",
+      "Midnight Hour",
+      "Lindy",
+      "Baby Blue",
+      "The Same Thing",
+      "Stealin'"
+    ],
+    "poor_songs": [
+      "Dancing in the Streets",
+      "Midnight Hour"
+    ],
+    "setlist_flow": "Early‑'66 material is played with loose, joyous energy; the set swings from tight blues numbers to playful folk‑rock jams, keeping the crowd fully engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight his incendiary solos, high‑speed scales and emotive vocal on Baby Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboard work is noted as “great keys” that complement the band’s dynamics.",
+    "Drums": "The drum/lead guitar/pig ad‑libs are praised for their tight interplay and driving energy."
+  },
+  "song_mentions": {
+    "I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lindy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Same Thing": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stealin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Morning Little School Girl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T05:40:25.511636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-09-16.117435.vinyl.sbd.indidarkstar.flac24"
+}

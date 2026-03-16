@@ -1,0 +1,98 @@
+{
+  "summary": "Excellent soundboard capture of a standout Spring ’90 show featuring a soaring Music Never Stopped and a classic China Cat Sunflower > I Know You Rider.",
+  "review": "The performance is hailed as the best of the three‑night Omni run, with first‑set highlights like Touch of Grey and Music Never Stopped and a second set that delivers a memorable Ship of Fools into a potent Dewey Mann & Mrs. Miller sequence ending in a swelling Stella Blue.  The recording is sourced from a corrected SBD (with an excellent matrix version also available), offering crystal‑clear sound and faithful representation of the band’s dynamics.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Both reviewers praise the musical performance (tour‑best set, strong song flow) and note high‑quality soundboard/matrix sources; weighted average yields a near‑excellent rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Pitch‑corrected SBD praised as the best for Phil’s bass and image; matrix version noted as sounding great, overall crisp and clear with no significant dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Music Never Stopped",
+      "China Cat Sunflower > I Know You Rider",
+      "Ship of Fools",
+      "Dewey Mann & Mrs. Miller",
+      "Dear Mr. Fantasy > Hey Jude",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Victim",
+      "Truckin'"
+    ],
+    "setlist_flow": "First set delivers solid, consistent ’90 material with a few uneven moments; the second set builds momentum through strong transitions (Ship of Fools → Dewey Mann → Mr. Fantasy) and closes with an expansive Stella Blue, making for a well‑paced, memorable concert."
+  },
+  "band_member_comments": {
+    "Jerry": "MIDI surprise on To Lay Me Down and a Dylan riff intro on Ship of Fools are highlighted; his tone is praised throughout.",
+    "Phil": "The SBD version is noted as the best for Phil’s bass presence and imaging.",
+    "Bob": "",
+    "Keys": "Loss of Brent Mydland mentioned as changing the show’s intimacy and sound, but no specific keyboard playing comments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dewey Mann & Mrs. Miller": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy > Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:08:27.219770+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-01.135535.sbd-pc.miller.flac16"
+}

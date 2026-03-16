@@ -1,0 +1,83 @@
+{
+  "summary": "Stellar Playing In The Band sandwich, soaring Comes A Time solo",
+  "blurb": "Features a flawless Dancin' → Black Muddy River transition and an inspired Playing In The Band sandwich. Jerry’s guitar work shines throughout, especially on the breathtaking Comes A Time solo.",
+  "review": "The December 27, 1986 Oakland show delivers a tight, high‑energy set that feels like a well‑crafted collage of the mid‑80s Dead catalog. Kicking off with a powerful Playing In The Band, the band rolls through classics such as Bertha and Ramble On Rose before slipping into a gorgeous Bird Song. Set two showcases the hallmark Dancin' In The Street → Black Muddy River segue, a full‑blown Playing In The Band sandwich, and an exuberant Mighty Quinn that drives the crowd wild. Jerry’s voice is unusually fresh post‑coma, his solo on Comes A Time described as “some of his most perfect picking ever,” while Brent’s keyboards sit perfectly under the mix. Drummers Mickey and Billy lock in a solid groove that keeps the momentum flowing, even when the mix gets a little treble‑heavy on one recording. The show caps off with an uplifting Push Comes To Shove encore, leaving listeners with a sense of both completeness and lingering excitement.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 23,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings are clearly positive, two are mixed but contain no negative criticism of the performance. Consistent praise for the Dancin' > Black Muddy River segue, Comes A Time solo, and the full Playing In The Band sandwich yields a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1986-12-27.sbd.miller.77443.flac16",
+    "reason": "Excellent soundboard capture with crystal‑clear mix, flawless Dancin' → Black Muddy River transition, soaring Comes A Time solo and the only full Playing In The Band sandwich on tape."
+  },
+  "key_highlights": [
+    "Flawless Dancin' > Black Muddy River segue",
+    "Soaring Comes A Time solo",
+    "Full Playing In The Band sandwich framing the show",
+    "High‑energy Mighty Quinn and uplifting Push Comes To Shove encore"
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Ramble On Rose",
+    "Bird Song",
+    "Dancin' In The Street",
+    "Black Muddy River",
+    "Comes A Time",
+    "The Mighty Quinn (Quinn The Eskimo)",
+    "When Push Comes To Shove"
+  ],
+  "band_performance": {
+    "Jerry": "Fresh, crystal‑clear vocals and tip‑top guitar work; highlighted by a breathtaking solo on Comes A Time and high‑energy playing throughout.",
+    "Phil": "Creative bass lines noted, providing solid foundation for the band's tight flow.",
+    "Bob": "Usual bold, brash style but occasional lyric slips (e.g., forgetting words during Ramble On Rose).",
+    "Brent": "Understated yet spot‑on keyboard work that supports the set without overpowering it.",
+    "Mickey": "Solid percussion; drummers described as having ‘figured it out,’ keeping a steady, driving groove.",
+    "Billy": "Consistently tight drums complement Mickey’s playing, contributing to the show’s overall momentum."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-15T18:05:06.579552+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Bertha"
+    ],
+    [
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Smokestack Lightning",
+      "Comes A Time",
+      "Around & Around",
+      "Playing In The Band"
+    ],
+    [
+      "Ramble On Rose"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Dancin' In The Street",
+      "Black Muddy River",
+      "Playing In The Band Jam",
+      "I Need A Miracle"
+    ],
+    [
+      "The Mighty Quinn (Quinn The Eskimo)"
+    ],
+    [
+      "When Push Comes To Shove"
+    ]
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "summary": "Audience tape with clear sound captures a solid 1986 spring show highlighted by a sweet \"He's Gone > Smokestack\" sequence and gentle Stella Blue.",
+  "review": "The recording is an audience source that manages to stay clean and listenable despite limited dynamic range. The performance isn’t Jerry’s peak year, but the extended \"He's Gone > Smokestack\" stretch and Bob's strong playing give the show its shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "One detailed review rates the set 4 stars, noting good audience sound quality and several musical highlights while also pointing out modest performance issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and clean tape for an audience recording; dynamic range limited but overall listenable with minimal ambient noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone > Smokestack Lightning",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Late‑tour barn show; Jerry’s playing is modest but the extended \"He's Gone > Smokestack\" sequence and Bob’s strong rhythm give a satisfying arc despite some lack of fire compared to earlier nights."
+  },
+  "band_member_comments": {
+    "Jerry": "Not his best year, but delivers a sweet, soft extended solo on \"He's Gone > Smokestack\"; overall solid if not spectacular.",
+    "Phil": "",
+    "Bob": "Plenty strong rhythm and vocal work, providing the main lift for the set.",
+    "Keys": "Missed Brent is noted with affection, though no specific performance details are given.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:45:44.590170+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-04.nak300.pasternak.mallick.103228.flac16"
+}

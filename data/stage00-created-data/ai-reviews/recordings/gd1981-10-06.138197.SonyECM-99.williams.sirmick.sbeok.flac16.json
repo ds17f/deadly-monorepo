@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience transfer captures a high‑energy show with standout renditions of Shakedown Street, Althea, Looks Like Rain and Stella Blue.",
+  "review": "The SIRmick transfer is praised as flawless and crystal‑clear, delivering an enjoyable listening experience. The concert never lets up – from a rousing Shakedown Street opener through brilliant Althea, rain‑kissed Looks Like Rain, a soaring Stella Blue and an electrifying Daydream, capped by two powerful Jerry solos.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Single detailed review overwhelmingly positive about both performance and sound quality; weighted heavily toward show excellence with an excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the transfer \"awesome\" and notes no issues – clear, well‑balanced audio that faithfully captures the energy of the night."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Althea",
+      "Looks Like Rain",
+      "Stella Blue",
+      "Daydream"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently high‑energy flow from start to finish, with smooth transitions and a powerful two‑solo close that leaves the audience buzzing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for beautiful 'raindrop' notes on Looks Like Rain and two soaring solos at the end.",
+    "Phil": "",
+    "Bob": "Described as \"bobby\" with great energy, ready to drive the next sets.",
+    "Keys": "Brent Mydland highlighted for being in awesome form throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:27:47.873378+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-06.138197.SonyECM-99.williams.sirmick.sbeok.flac16"
+}

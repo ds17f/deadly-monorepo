@@ -1,0 +1,64 @@
+{
+  "summary": "Soundboard recording with solid clarity (minor bass‑drum fuzz and occasional cuts) captures a scorching Smokestack Lightning and strong Pigpen‑fronted set.",
+  "review": "The show is widely praised for its blues‑heavy vibe, highlighted by an incendiary Smokestack Lightning, a monster The Other One > Mexicali Blues > The Other One medley, and a punchy Truckin' lead that showcases Jerry’s BB‑King‑style tone.  Recording quality is generally good – the soundboard feed is clear, though listeners note some bass‑drum mic distortion and a few song‑to‑song cuts.  Overall the performance outweighs the technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4–5 stars) and strong praise for multiple songs indicate an excellent performance; recording issues are noted but not severe enough to outweigh the musical strengths."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix with occasional bass‑drum mic 'funk' and piano distortion peaks; a few reviewers mention audible cuts between songs that disrupt the concert flow."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "The Other One > Mexicali Blues > The Other One",
+      "Truckin'",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "Setlist deviates from the typical ’71 format, with some ordering quirks noted by listeners, but the energy stays high and the blues‑rock focus holds together the show."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone on Truckin' is praised as ‘BB‑King on a windowpane’, indicating a standout lead performance.",
+    "Phil": "Bass work described as powerful (‘pounding on his bass’) despite a reported battery/mic issue; overall strong playing noted.",
+    "Bob": "",
+    "Keys": "Keith’s integration into the band is highlighted positively; piano distortion peaks are mentioned but don’t detract from the vibe.",
+    "Drums": "Bass‑drum microphone occasionally produces a funk/distorted sound, and there are reports of pedal mic vibration."
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One > Mexicali Blues > The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T10:18:20.307890+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-12-04.sbd.lai.6256.sbefail.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "A clear audience recording captures an emotionally charged show featuring standout versions of Eyes, Loose Lucy and Not Fade Away.",
+  "review": "Fans rave about this concert as many’s final experience with Jerry Garcia, highlighting fiery performances of “Eyes,” a legendary “Loose Lucy,” and a powerful “Not Fade Away.” The audience‑sourced tape is praised for its clarity and restrained crowd noise, making the musical moments easy to hear. Overall the show feels both historic and musically satisfying.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Consistently high praise for the performance (multiple 5‑star reviews) combined with comments that the audience recording sounds very good; limited technical detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very clear for an audience tape – low crowd noise, balanced mix, no major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Loose Lucy",
+      "Not Fade Away",
+      "Corrina",
+      "Unbroken Chain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans emphasize the emotional weight of this being many’s last show with Jerry, noting a smooth flow that builds through powerful numbers and an unforgettable drum solo."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly referenced as his final show for many fans; praised for his presence and memorable guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum solo was described as mind‑blowing, with the sound system delivering a visceral impact."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T08:13:21.461776+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-07.fob.schoeps.clete.92108.flac16"
+}

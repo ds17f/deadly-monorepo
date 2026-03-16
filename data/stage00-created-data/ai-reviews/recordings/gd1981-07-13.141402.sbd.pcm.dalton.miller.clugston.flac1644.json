@@ -1,0 +1,64 @@
+{
+  "summary": "Fair‑soundboard recording of a mixed‑quality show, highlighted by a raucous Feel Like a Stranger opener and a strong Black Peter despite pervasive equipment glitches.",
+  "review": "The SBD capture suffers from distortion, saturation and pitch‑speed issues that make the first set sound muddy, but it clears up somewhat in the second half. Musically the concert is uneven – the opening Feel Like a Stranger and El Paso are high‑energy standouts, while Terrapin flubs and overall clunkiness hold the show back.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the performance as average (3 stars) and notes significant recording flaws, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Distortion and saturation throughout first set, muffled sections, pitch runs ~1.5% fast (needs correction), EQ problems; improves somewhat in second set but remains uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "El Paso",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Deal"
+    ],
+    "setlist_flow": "First set is plagued by equipment glitches and a generally shaky, clunky feel; second set tightens up with better jams and a stronger finish, leaving the audience happier."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone often lost or distorted (Deal, Jack‑a‑Roe), flubs verses on Terrapin, but delivers manic energy on El Paso.",
+    "Phil": "Provides \"chord bombs\" that lift Satisfaction; otherwise not specifically noted.",
+    "Bob": "Offers rhythmic space for Jerry on El Paso and contributes to overall uptempo feel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:12:36.473600+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-13.141402.sbd.pcm.dalton.miller.clugston.flac1644"
+}

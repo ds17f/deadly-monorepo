@@ -1,0 +1,67 @@
+{
+  "summary": "Mixed‑bag show with strong Eyes and Terrapin jam",
+  "blurb": "The night swings from a slow, soulful \"Eyes Of The World\" into an intense post‑Terrapin improvisation before winding down with a heartfelt \"Stella Blue\". Jerry’s guitar shines but vocal flubs and uneven pacing mar the second set.",
+  "review": "April 7 1994 at Miami Arena delivers a curious blend of highs and lows. The first set stumbles out of the gate with a flat \"Shakedown Street\" and a tentative \"Walkin' Blues,\" but quickly recovers as the band settles into a beautifully restrained \"Eyes Of The World.\" Jerry’s lead lines soar, and his interplay with Brent (Vince) and Phil provides a warm cushion for the song. The second set builds momentum with a ferocious \"Terrapin Station\" jam that feels like a mini‑suite, highlighted by Mickey Hart’s expressive tom‑mallet work. However, the flow sputters after the jam; vocal missteps surface on \"Playing In The Band,\" and the transition into the drum break feels clumsy. Despite these slips, the band pulls together for an emotionally resonant \"Stella Blue\" and a breezy “Sugar Magnolia,” before closing with the rare acoustic encore \"Liberty.\" The audience‑recorded version captures the room’s energy but suffers from off‑kilter playing, while the mixed‑source SBD (gd94-04-07.dsbd.hinko.20187.sbeok.shnf) offers clearer sound and preserves the night’s standout moments. For listeners seeking the best representation of this uneven yet memorable performance, the SBD recording is recommended.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "Both recordings describe a mixed night: one praises the slow Eyes and ferocious Terrapin jam while noting vocal flubs and a weak second set; the other calls the band \"off\" overall with only an iconic Jerry stare as a highlight. Consistent criticism of vocal issues and uneven pacing outweighs isolated positives, leading to a small negative adjustment.",
+      "final_calculation": "2.5 + 0.1 - 0.5 = 2.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-04-07.dsbd.hinko.20187.sbeok.shnf",
+    "reason": "Good‑quality mixed source that captures the standout Eyes and Terrapin jam with clear instrument separation; fewer drop‑outs than audience version."
+  },
+  "key_highlights": [
+    "\"Eyes Of The World\" delivered in a slow, soulful tempo that lets Jerry stretch out.",
+    "Terrapin Station segue into an intense jam showcases Mickey’s tom‑mallet work.",
+    "\"Stella Blue\" provides a heartfelt moment despite overall vocal flubs.",
+    "Encore \"Liberty\" offers a rare acoustic close to the night."
+  ],
+  "song_highlights": [
+    "Eyes Of The World",
+    "Terrapin Station",
+    "Stella Blue",
+    "Liberty",
+    "Friend Of The Devil"
+  ],
+  "band_performance": {
+    "Jerry": "Shines on Eyes and the Terrapin jam with expressive lead guitar, but his vocals are inconsistent – flubbing Shakedown Street and sounding strained later; also noted for an iconic stare.",
+    "Phil": "Provides solid bass foundation throughout; contributes a supportive line on Stella Blue.",
+    "Bob": "Makes a decent contribution during the set (briefly mentioned in a 'Might Not Stop' moment), but no detailed commentary.",
+    "Brent": "",
+    "Mickey": "Tom‑mallet work stands out, especially driving the Terrapin Station jam; drum transition into Playing In The Band felt clumsy.",
+    "Billy": "Drumming generally solid but not highlighted beyond the uneven second‑set flow."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-18T21:46:15.273818+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Eyes Of The World",
+      "Playing In The Band",
+      "Terrapin Station",
+      "Jam",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Liberty"
+    ],
+    [
+      "Friend Of The Devil",
+      "Queen Jane Approximately"
+    ]
+  ]
+}

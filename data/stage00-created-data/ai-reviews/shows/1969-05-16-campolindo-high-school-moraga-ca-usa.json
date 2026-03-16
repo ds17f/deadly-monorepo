@@ -1,0 +1,53 @@
+{
+  "summary": "Ragged high‑school set with bright Lovelight and School Girl moments",
+  "blurb": "A short ~55‑minute set cut short by a curfew shows uneven playing, but Good Morning Little School Girl and the two‑part Turn On Your Lovelight shine. Bob Weir's vocals and rhythm guitar lift the latter half, while Jerry sounds out of sync. Overall the show feels unfocused with only a few bright spots.",
+  "review": "On May 16, 1969 the Grateful Dead took the stage at Campolindo High School for a brief, curfew‑limited set that never quite found its groove. The first half drifts, with Jerry Garcia described as “out of sync and uncommitted,” and even the classic blues rocker Hard To Handle falling flat. By contrast, Bob Weir’s strong vocals on Good Morning Little School Girl and his inventive rhythm guitar work helped pull the second half together, culminating in a surprisingly spirited Turn On Your Lovelight encore that glimmers through the hissy soundboard tape. Pigpen’s organ adds a soulful undercurrent on the audience recording, but overall the performance is uneven and lacks the tight energy of later shows. Listeners who want to hear the highlights should gravitate toward the SBD capture (gd69-05-16.sbd.clugston.6316.sbeok.shnf), which, despite its “hissy” quality, presents the most complete picture of this early‑Dead moment.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 27,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": -0.4,
+      "sentiment_rationale": "Both recordings note a largely uninspired, ragged performance with repeated criticism of Jerry’s playing and overall lack of energy; the negative language outweighs the few positive mentions, leading to a modest negative adjustment.",
+      "final_calculation": "2.5 + 0.2 - 0.4 = 2.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-05-16.sbd.clugston.6316.sbeok.shnf",
+    "reason": "Soundboard source is the most complete and clear version despite hiss; it captures the full set and the standout Lovelight encore."
+  },
+  "key_highlights": [
+    "Turn On Your Lovelight shines as a bright, energetic encore.",
+    "Good Morning Little School Girl (aka School Girl) provides one of the few strong vocal moments.",
+    "Bob Weir’s vocals and rhythm guitar help rescue the second half of an otherwise ragged set."
+  ],
+  "song_highlights": [
+    "Good Morning Little School Girl",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Often out of sync and uncommitted, with only occasional nice guitar lines.",
+    "Phil": "",
+    "Bob": "Strong vocals and creative rhythm‑guitar work that saved the performance.",
+    "Brent": "Ron \"Pigpen\" McKernan's organ adds soulful touches despite the rough overall show.",
+    "Mickey": "Timing criticized on several tracks, though a couple of interesting grooves appear.",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T14:35:05.336326+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Good Morning Little School Girl"
+    ],
+    [
+      "Turn On Your Lovelight",
+      "Drums",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "Clean soundboard capture of a relaxed New Year's run with strong renditions of Bertha, Terrapin Station and a standout Mind Left Body Jam.",
+  "review": "The recording is praised for its clean, crisp mix and clear keyboards, making it an easy listen even late at night. The show itself is described as smooth and relaxed, featuring highlights such as Bertha, Terrapin Station, the Mind‑Left‑Body jam and a smoking Truckin', though some listeners note a generally low‑energy vibe. Overall the performance is solid and enjoyable, if not deemed essential.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both the sound quality and key performances; only one outlier is highly negative, so the weighted average leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean and clear overall mix; keyboards especially crisp. No major glitches or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Terrapin Station",
+      "Mind Left Body Jam",
+      "Truckin'",
+      "Wharf Rat",
+      "Good Lovin'",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, low‑energy first set with a few solid moments (Friend of the Devil). The second set picks up momentum, delivering strong jams and classic Dead staples that keep the flow lively."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for awesome (if slightly sloppy) leads on Terrapin Station and generally energizing the band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboards are described as clear; Brent's playing on Friend of the Devil highlighted as a high point.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:24:25.556632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-12-30.sbd.dodd.10280.sbeok.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard recording of an early‑mid‑80s pinnacle show, highlighted by a smoking Crazy Fingers → Drums jam and standout Hell in a Bucket and Sailor > Saint performances.",
+  "review": "The tape captures the Grateful Dead at a creative peak in the autumn of ’85, with Brent Mydland firmly in the mix and Jerry Garcia back on solid vocal form. Reviewers rave about the second‑set flow—especially the Crazy Fingers into Drums sequence, the expansive Space/Wheel stretch, and Bobby’s iconic scream on Hell in a Bucket—while noting the crystal‑clear soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All five reviews give 5‑star ratings, praising both the musical performance (standout jams and tight band play) and the pristine soundboard audio, leaving no contradictory feedback."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as “great sound” and “crisp”; no complaints about dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Drums",
+      "Space",
+      "Wheel",
+      "Hell in a Bucket",
+      "Sailor > Saint"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as a showcase, with seamless transitions from Crazy Fingers into Drums and an expansive Space/Wheel segment; overall pacing described as a quintessential early‑mid‑80s Dead experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals had recovered after a rough summer, contributing to the strong performance.",
+    "Phil": "",
+    "Bob": "Bobby's scream after the bridge of Hell in a Bucket is singled out as classic and thrilling.",
+    "Keys": "Brent Mydland has asserted himself on keyboards, adding depth to the band’s sound.",
+    "Drums": "The drum work is praised as great, especially during the Drums/Space/Wheel stretch."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:56:29.255277+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-29.sbd.fix-shnid-33704.tetzeli.76118.flac16"
+}

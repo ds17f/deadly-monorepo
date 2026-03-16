@@ -1,0 +1,63 @@
+{
+  "summary": "Mixed sound quality but a killer Help‑Slip‑Franklin's sequence makes this fall ’89 show a fan favorite.",
+  "review": "The performance shines on the soaring Help > Slipknot! > Franklin’s Tower and a standout Scarlet → Truckin' stretch, capturing the high‑energy vibe of the ’89 fall run. Recording-wise the soundboard source is patched with audience material, resulting in uneven levels and occasional cuts despite moments of spot‑on clarity. Overall fans are divided – the music thrills most listeners while the technical glitches hold back a perfect rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Two reviews praise both show and recording, one heavily criticizes performance and audio patches; weighted blend of strong musical moments with fair‑to‑poor technical quality yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Patch from audience (AUD) fills missing bits; several reviewers note level issues, solo cuts and occasional drop‑outs, though some describe the sound as 'spot on' in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Scarlet Begonias > Truckin'"
+    ],
+    "poor_songs": [
+      "Touch of Grey",
+      "Foolish Heart"
+    ],
+    "setlist_flow": "First set improves over earlier nights and builds to a superb Help‑Slip‑Franklin’s sequence. The second set loses some momentum after the first few numbers, but recovers with Scarlet and an exploratory Space > Drums > Space segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers fiery leads on Slipknot! and Friend of the Devil, but flubs several songs in the second set according to one reviewer.",
+    "Phil": "",
+    "Bob": "Bobby's slide work is highlighted; his lyrical nod on One More Saturday Night receives praise.",
+    "Keys": "Brent’s solo is completely cut from this release, though he shines on the Help‑Slip segment before being edited out.",
+    "Drums": "The dual drummers create a notable Space>Drums>Space passage that adds excitement to the second set."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:18:08.924545+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-14.sbd.miller.25319.sbeok.shnf"
+}

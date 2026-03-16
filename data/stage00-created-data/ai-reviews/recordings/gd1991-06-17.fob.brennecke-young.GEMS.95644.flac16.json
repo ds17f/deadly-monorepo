@@ -1,0 +1,50 @@
+{
+  "summary": "A rain‑soaked 1991 peak performance captured on a first‑rate audience tape that delivers crystal‑clear stadium sound and standout Hornsby‑era moments.",
+  "review": "The show is hailed as one of the high points of the Brent Hornsby era, with an adventurous setlist highlighted by a soaring Eyes of the World and a rare New Speedway Boogie.  The Brennecke‑Young audience recording is repeatedly described as superb—clear, well‑balanced, and even better than many soundboard tapes—though one reviewer notes occasional muddiness.  Overall the performance and tape combine to give an exhilarating, rain‑battered stadium experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (6/8) are five‑star and praise both the musical performance and the audience recording; only one review cites muddiness and a shambolic set, keeping the overall rating very strong."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as first‑rate stadium audience tape with great pull (B&K's), crisp instrumentation and bright vocals; one reviewer called the sound muddy, but this is an outlier."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "New Speedway Boogie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Adventurous and well‑measured setlist for the Hornsby era; rain added drama, and the band’s tight ensemble kept momentum despite no Dark Star tease."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s songwriting is praised (New Speedway Boogie) and his evolving tone is noted as a highlight of this period.",
+    "Phil": "Repeatedly lauded for his “almighty” bass tone, described as unique to the early‑'90s era.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:38:11.178626+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-17.fob.brennecke-young.GEMS.95644.flac16"
+}

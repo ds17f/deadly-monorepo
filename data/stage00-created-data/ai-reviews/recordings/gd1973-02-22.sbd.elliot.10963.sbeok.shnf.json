@@ -1,0 +1,70 @@
+{
+  "summary": "Tremendous soundboard capture of a high‑energy 1973 show highlighted by a blistering Playing in the Band and stellar Dark Star/Eyes of the World, with only minor glitches.",
+  "review": "The recording is a clean soundboard source that lets every instrument shine – even Donna’s often‑subtle keyboards come through clearly. Musically the concert bursts with fire: the uptempo Playing in the Band, an out‑there Dark Star paired with a soaring Eyes of the World, plus early‑era gems like They Love Each Other and Me & My Uncle dominate the set. A few technical hiccups (a glitch in Dark Star and a brief cut on Goin’ Down the Road) and a weaker Wave That Flag keep it from perfection, but the overall performance is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Five reviews give an average of 4.4★; most praise both the show and the clear soundboard recording, with only isolated technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clarity is praised as 'tremendous' and instruments are well‑balanced; a glitch at ~4:42 in Dark Star and a slight cut on the first verse of Goin' Down the Road are the only noted issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Dark Star",
+      "Eyes of the World",
+      "They Love Each Other",
+      "Me & My Uncle"
+    ],
+    "poor_songs": [
+      "Wave That Flag"
+    ],
+    "setlist_flow": "First set builds from a warm Promised Land into strong mid‑set moments (They Love Each Other, Box of Rain), while the second set ramps up with aggressive Playing in the Band and a memorable Dark Star/Eyes of the World sequence; occasional technical drops slightly mar the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Donna's keyboard parts are audible and praised for their quality.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave That Flag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:36:08.487298+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-22.sbd.elliot.10963.sbeok.shnf"
+}

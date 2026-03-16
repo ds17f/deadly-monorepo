@@ -1,0 +1,57 @@
+{
+  "summary": "Matrix recording with a sublime acoustic soundboard captures the rare Cowboy jam and a fiery 'Other One', but later electric material suffers from audio issues.",
+  "review": "The tape offers an excellent acoustic SBD that showcases the legendary Cowboy improvisation and a thrilling Other One, while the audience‑mixed sections bring early‑70 ambience. However, the electric portion is described as muddy with several dropouts, leading to mixed impressions of the overall show quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the acoustic soundboard and standout jams (show quality ~4), while noting noticeable recording flaws in later sections (recording quality ~3.5). Weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Acoustic soundboard portion is described as sublime and clear; audience mix adds ambience but introduces occasional muffling, dropouts, and overall inconsistency in the electric set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Cowboy Song",
+      "It's A Man's World",
+      "The Other One",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic first set matches DeadBase and is highly praised; the electric second set is reported as uneven, with some listeners finding it “horrible” or bored, while others note a strong jam in the Cowboy improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Cowboy Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's A Man's World": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T18:02:04.037274+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-04-09.sbd.hanno.6157.sbeok.shnf"
+}

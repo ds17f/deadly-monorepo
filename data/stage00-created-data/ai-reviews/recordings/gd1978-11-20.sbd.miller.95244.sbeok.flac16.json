@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard source with occasional drop‑outs captures a soaring second set highlighted by Franklin’s Tower, Jack‑a‑Roe and a vulnerable Garcia.",
+  "review": "The show is praised as one of the best of ’78, especially the free‑form jams of the second set – half‑step (The Other One), Franklin’s Tower and a freight‑train‑like “Jack‑a‑Roe” are called out as standout moments.  The SBD recording is generally good but suffers from some late‑set board drop‑outs, likely inherited from the original cassette source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Three solid positive reviews (4–5 stars) highlight a strong performance and only minor recording flaws; rating reflects high show quality with good but not flawless sound."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear SBD capture, but reviewers note occasional board drop‑outs toward the end of the set; original cassette source shows age."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "The Other One (Half Step)",
+      "Jack-a-Roe"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set jamming soars despite Bob’s illness; free‑form, studio‑feel improvisations dominate and keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as “vulnerable” on WTG, indicating a deeply emotive guitar/vocal performance.",
+    "Phil": "",
+    "Bob": "Bob was reportedly sick and missed the start of the second set, affecting the band’s lineup for that portion.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One (Half Step)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:35:00.371633+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-20.sbd.miller.95244.sbeok.flac16"
+}

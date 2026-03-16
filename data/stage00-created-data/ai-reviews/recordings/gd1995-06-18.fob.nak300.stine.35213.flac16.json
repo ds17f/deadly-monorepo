@@ -1,0 +1,64 @@
+{
+  "summary": "Audience recording of a bittersweet 1995 show, highlighted by Same Thing/China>Rider and a Spanish Jam even as Jerry’s health was waning.",
+  "review": "Fans remember this concert for its emotional weight and a few standout moments – the tight Same Thing into China Cat Sunflower > I Know You Rider sequence, a breezy Spanish jam and an uplifting Eyes of the World.  The tape is an audience (AUD) source that “holds up,” but listeners note Jerry’s exhausted playing and a weak Wharf Rat, giving the show a mixed musical impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Show quality is average‑to‑good with several praised songs but notable performance issues; recording is an audience tape that is acceptable but not pristine, leading to a combined rating around the low‑mid 3s."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience (AUD) source; listeners say it “holds up” despite wishing for a soundboard, no major clarity complaints noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Same Thing",
+      "China Cat Sunflower > I Know You Rider",
+      "Spanish Jam",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Setlist remembered fondly with strong transitions on the highlighted numbers, but overall energy is uneven due to Jerry’s deteriorating condition."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeated references to his exhaustion and rough playing; fans note he gave his best despite looking unwell.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:04:14.887211+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-18.fob.nak300.stine.35213.flac16"
+}

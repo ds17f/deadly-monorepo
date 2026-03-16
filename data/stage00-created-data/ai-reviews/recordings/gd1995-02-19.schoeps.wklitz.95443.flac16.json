@@ -1,0 +1,70 @@
+{
+  "summary": "A high‑energy 1995 Dead show with aggressive, front‑mix Jerry and a surprisingly clear audience recording that delivers a solid, vocal‑driven performance.",
+  "review": "The concert is praised for Jerry Garcia’s powerful vocals and guitar work, especially on “I Know You Rider” and the climactic “Walkin Blues,” while the band stays tight throughout. The audience tape, captured with high‑quality Schoeps mics, sounds clear and balanced despite a light low‑end, giving listeners a vivid live experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (5‑star) and highlight strong performance; recording quality is consistently described as clear and good, yielding an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear vocal presence and front‑mix Jerry, slight bass lightness noted; some reviewers mention a hint of soundboard mixed in, but overall the tape is crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Rider",
+      "Walkin Blues"
+    ],
+    "poor_songs": [
+      "Alabama Getaway",
+      "If The Shoe Fits",
+      "Jack Straw",
+      "Sugaree"
+    ],
+    "setlist_flow": "First set builds strong momentum with aggressive playing; second set maintains energy with a lengthy pre‑drums section and an expansive, spiraling jam toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Aggressive, front‑mix guitar and crystal‑clear vocals praised throughout; occasional minor timing slips noted.",
+    "Phil": "",
+    "Bob": "Recognized for keeping the band moving forward and reinventing song tempos; positive nods to his rhythm work.",
+    "Keys": "Vince Welnick’s piano/organ work is highlighted as imaginative, top‑of‑his‑game with fun solos and strong vocal harmonies.",
+    "Drums": "Bill (or Bill Kreutzmann) gets a shout‑out for a long pre‑drums section and driving the second‑set energy."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Walkin Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "If The Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:54:00.453764+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-19.schoeps.wklitz.95443.flac16"
+}

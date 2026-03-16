@@ -1,0 +1,119 @@
+{
+  "summary": "Good audience‑sourced tape of an energetic 1989 show featuring a fiery Bertha and standout Jack Straw, though the mix is only fair.",
+  "review": "The concert is remembered as a high‑energy performance with a superb first set (Bertha, Jack Straw, Bird Song/Promised Land) and several highlight moments such as Knockin' on Heaven's Door, Looks Like Rain and a powerful Drum/Space segment. Recording quality is decent for an audience capture – clear enough to enjoy but not the pristine sound a soundboard would provide. Overall fans are enthusiastic about the music despite occasional listless spots (China Cat → Rider) and minor recording hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show’s energy and specific song performances, while recording comments are mixed but lean toward solid audience quality; the weighted average yields a strong‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note the sound is solid/okay and clearer than older tapes, though one calls it “sucks” and another mentions occasional dropouts. Not a board recording – decent clarity but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Jack Straw",
+      "Knockin' on Heaven's Door",
+      "Looks Like Rain",
+      "Blow Away",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Stella Blue",
+      "Bird Song"
+    ],
+    "setlist_flow": "First set bursts with high‑octane numbers (Bertha, Jack Straw, Bird Song/Promised Land) and stays tight; the second set delivers big moments (LLR peak, Drums/Space, The Other One) but has a few listless passages (China Cat→Rider) that slightly dent the flow. Overall pacing is exciting and satisfying."
+  },
+  "band_member_comments": {
+    "Jerry": "Early 2nd‑set guitar troubles noted, but his tone recovers strongly; vocals praised on this tour; delivers powerful leads in Space and The Other One.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards add excitement (Simon Says, “excites the crowd”), though occasional tuning mismatches with drums are mentioned.",
+    "Drums": "Mickey’s thunderous playing highlighted (great at end of LLR, creative xylophone work), but a few timing hiccups noted."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:13:43.729211+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-03-30.sennheiser-fob.ingle.10059.sbeok.shnf"
+}

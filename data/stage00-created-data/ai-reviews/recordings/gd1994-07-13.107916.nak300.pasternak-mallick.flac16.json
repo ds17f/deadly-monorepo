@@ -1,0 +1,31 @@
+{
+  "summary": "Positive personal tribute with no specific recording or musical details provided",
+  "review": "The sole reviewer gives the recording a glowing five‑star rating, focusing on sentimental reasons rather than any assessment of sound quality or performance. No concrete information about the audio source, mix, or standout songs is mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review; rating reflects strong personal sentiment but lacks technical or musical detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound quality, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details about the setlist or performance flow are mentioned in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T23:19:19.082543+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-13.107916.nak300.pasternak-mallick.flac16"
+}

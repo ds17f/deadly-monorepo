@@ -1,0 +1,92 @@
+{
+  "summary": "A lively audience recording that captures an electrifying Alpine Valley ‘87 show, highlighted by the legendary China Cat → Rider → Estimated → Eyes run and a soaring second‑set energy.",
+  "review": "The performance is consistently praised as one of the band’s late‑’80s peaks – the second set’s China Cat/Rider/Estimated/Eyes sequence, Watchtower, Gimme Some Lovin' into The Wheel and the Around→Sugar Magnolia burst are repeatedly called “smoking” or “mind‑blowing.”  The tape is an audience (aud) source with occasional drop‑outs, edits and a few glitches, but most listeners deem it good enough to enjoy the show’s intensity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the musical performance (average ~4.8) while noting only moderate recording flaws (average ~3.8). Weighted 70/30 gives a combined rating around 4.5."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively, but several reviewers note glitches, tape cuts, drop‑outs and occasional editing issues (e.g., abrupt fades). Some describe it as sounding like a matrix or FOB despite being an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat > Rider",
+      "Estimated",
+      "Eyes",
+      "Watchtower",
+      "Gimme Some Lovin'",
+      "The Wheel",
+      "Around > Sugar Magnolia",
+      "Cassidy > Deal",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about the second‑set momentum – a high‑energy China Cat/Rider/Estimated/Eyes run that builds into Watchtower, then a powerful Gimme Some → Wheel transition and an explosive Around→Sugar finish. The first set is described as solid with strong openers like Stranger and Franklin’s Tower."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his vocal “Northbound Train” line during China Cat/Rider, tight guitar work, and enthusiastic stage presence.",
+    "Phil": "",
+    "Bob": "Mentioned positively for his rhythm work on Row Jimmy and overall vocal contributions.",
+    "Keys": "Brent’s Kurzweil synth (sax‑like) textures on China Cat and the “Gloria” tease are highlighted; Vince is briefly criticized by one reviewer but otherwise keyboards are seen as solid.",
+    "Drums": "Bill’s drumming described as tight and in sync, especially during Drumspace/Space sections."
+  },
+  "song_mentions": {
+    "China Cat > Rider": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Estimated": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Eyes": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Watchtower": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "The Wheel": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Around > Sugar Magnolia": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cassidy > Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T23:22:10.055240+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-26.bille.kerbel.8138.sbeok.shnf"
+}

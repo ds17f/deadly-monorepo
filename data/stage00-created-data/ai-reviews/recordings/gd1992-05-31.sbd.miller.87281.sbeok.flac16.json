@@ -1,0 +1,111 @@
+{
+  "summary": "Soundboard capture with mixed audio fidelity but a stellar late‑90s set highlighted by Help>Slip>Franklin’s and an epic Spoonful→Other One→Morning Dew sequence",
+  "review": "The show is widely praised for its inspired setlist, tight playing and memorable segues – especially the Help on the Way > Slipknot! > Franklin's Tower suite and the long Spoonful → The Other One → Morning Dew jam. Recording quality is uneven: some listeners describe it as “great sound,” while others report severe in‑ear system problems that muffle Garcia’s guitar, most notably on “Picasso Moon.” Overall the performance shines despite these technical hiccups.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and praise the setlist and playing; a minority note serious sound issues, pulling the overall weighted rating to ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mixed reports – some describe crisp, great‑sound audio, while others cite in‑ear monitoring problems that make Garcia’s guitar barely audible and cause sedated passages, especially on “Picasso Moon.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "It Must Have Been The Roses",
+      "Queen Jane Approximately",
+      "Spoonful > The Other One > Morning Dew",
+      "Baba O'Riley > Tomorrow Never Knows",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "The set flows through classic pairings and long jams, with a particularly strong second set. A few transitions are described as unadventurous, but overall the pacing keeps the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for near‑flawless playing; however several reviewers note his guitar is often buried or silent due to sound problems (e.g., on “Picasso Moon”).",
+    "Phil": "",
+    "Bob": "Bob’s rhythm work and vocal on “Queen Jane Approximately” highlighted as a strong point of the show.",
+    "Keys": "Vince’s keyboards are mentioned as solid and contributing to the good‑vibed atmosphere.",
+    "Drums": "Bill and Mickey provide steady, energetic drumming that underpins the band’s tight performance."
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been The Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics Of My Life": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baba O'Riley": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tomorrow Never Knows": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:18:05.774554+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-31.sbd.miller.87281.sbeok.flac16"
+}

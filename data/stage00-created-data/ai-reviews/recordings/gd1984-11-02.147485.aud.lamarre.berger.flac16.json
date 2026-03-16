@@ -1,0 +1,69 @@
+{
+  "summary": "Good-quality recording with a few tape‑speed blips, showcasing an inspired set highlighted by Wharf Rat > Gimme and a soaring Bertha > Good Lovin'",
+  "review": "The reviewer praises the overall sound of the 441‑tape source despite minor speed‑related blips in the Help>Slip sequence, calling the recording good. Musically the show is described as a delightful mix of inspired moments and flubby playing, with standout performances of Wharf Rat > Gimme, Playin Reprise, Bertha > Good Lovin' and a fitting Casey Jones finale.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Strong positive comments about the performance and generally good recording quality, tempered by minor tape‑speed issues; only one detailed review limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Overall great recordings from the 441 tapes, but Help>Slip shows a few blips due to speed and the first Gimme Some Lovin is messy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat > Gimme",
+      "Playin Reprise",
+      "Bertha > Good Lovin'",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Gimme Some Lovin"
+    ],
+    "setlist_flow": "A night full of surprises with a mix of inspired and flubby playing; strong space leading into beautifully developed sequences and an energetic finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Positive mention of Phil leading a bust‑out segment, prompting the reviewer for more.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat > Gimme": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playin Reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:00:04.976370+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-11-02.147485.aud.lamarre.berger.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Generally enjoyable show marred by a pitch‑dropping Shakedown; recording source unknown and sound quality uneven.",
+  "review": "The concert is praised as a nice performance overall, but the recording suffers from a noticeable pitch drop on \"Shakedown\" after Jerry's tease at the end of \"Playing in the Band,\" making that segment nearly unlistenable. Aside from this flaw, listeners find the show satisfactory.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rating review; positive comments about the show are offset by a serious recording defect on a key song."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch drop on \"Shakedown\" after Jerry's tease makes that portion almost unlistenable; otherwise no specific comments about clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Shakedown"
+    ],
+    "setlist_flow": "No detailed commentary on set structure; reviewer only notes a problem with one song."
+  },
+  "band_member_comments": {
+    "Jerry": "Teases at end of \"Playing in the Band\" is noted, but pitch issue on subsequent \"Shakedown\" overshadows his part.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:12:58.567649+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-02.aud.unknown.sirmick.80289.sbeok.flac16"
+}

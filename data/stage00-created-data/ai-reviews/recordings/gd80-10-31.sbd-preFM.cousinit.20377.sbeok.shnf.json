@@ -1,0 +1,75 @@
+{
+  "summary": "A strong Radio City performance with hypnotic acoustic numbers and a brilliant electric finale, but the pre‑FM SBD suffers from hiss and uneven EQ.",
+  "review": "The show is widely praised for its tight acoustic set (Cassidy, Birdsong) and a superb second half highlighted by Jack Straw, Cold Rain & Snow, Franklin’s Tower and an unforgettable Space → Fire on the Mountain sequence.  While many listeners love the musical flow, the recording itself is inconsistent – the SBD has noticeable hiss, occasional distortion and uneven EQ that can require EQ tweaks to enjoy fully.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance highly (4‑5 stars) while the recording receives mixed scores (mostly 3‑4).  Weighting show quality at 70 % and recording at 30 % yields an overall rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note hiss, muffled or muddy sections, and uneven EQ that varies song‑by‑song; occasional crowd bleed in the acoustic set.  The recording is listenable but often needs EQ adjustment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Birdsong",
+      "Jack Straw",
+      "Cold Rain & Snow",
+      "Franklin's Tower",
+      "Space > Fire on the Mountain",
+      "Little Sadie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A gentle acoustic opening that builds into a powerful electric second set; unconventional placement of Franklin’s and Fire creates an especially satisfying climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about Jerry's guitar work, calling it amazing and a highlight of the night.",
+    "Phil": "One reviewer emphasizes the importance of Phil's bass, noting that \"Bass is an essential part of music.\"",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drumming is praised as tasteful and intricately supportive throughout the performance."
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Sadie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:50:26.950606+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-31.sbd-preFM.cousinit.20377.sbeok.shnf"
+}

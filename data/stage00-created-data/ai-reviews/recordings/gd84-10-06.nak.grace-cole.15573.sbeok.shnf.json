@@ -1,0 +1,74 @@
+{
+  "summary": "A high‑energy Richmond show captured on an audience cassette – solid, slightly uneven mix but packed with a killer Scarlet > Fire, epic Playing‑in‑the‑Band and soaring China Doll.",
+  "review": "Fans rave about the performance: the second set erupts with a smoking Scarlet Begonias → Fire on the Mountain transition, an inspired Playing in the Band, a bright Space jam and a soulful China Doll. The tape is an audience (NAK) recording that sounds good overall, though some listeners note high‑end loss, a heavy Brent mix and occasional vocal imbalance. Despite those quirks the show’s intensity and memorable solos make it a standout 1984 Richmond concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars and highlight exceptional musical moments; recording comments are mixed but generally positive, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Cassette‑derived audience tape (NAK) with decent clarity and balance; some reviewers note missing high‑end, occasional hiss, an over‑present Brent keyboard mix and vocals that can be loud or muffled."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Playing In The Band",
+      "Space Jam",
+      "China Doll",
+      "Throwing Stones (GTRFBD)",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but occasionally described as dull; the second set builds momentum with flawless transitions, especially Scarlet > Fire into Playing and a high‑octane Space/China Doll sequence that keeps the energy soaring."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar solos are repeatedly called \"the best\" of the night; vocals are noted as strained but still effective.",
+    "Phil": "Bass thumping is highlighted as a driving force, especially during Space and the jam sections.",
+    "Bob": "Praised for stellar rhythm work on Scarlet > Fire and contributing to the Space jam.",
+    "Keys": "Brent Mydland gets strong mentions – both praised for bright improvisation and critiqued for being overly prominent in the mix.",
+    "Drums": "Bill Kreutzmann’s double‑time feel on Scarlet is called “ripping”; drums are described as powerful throughout, especially in Space."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Playing In The Band": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Space Jam": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Doll": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Throwing Stones (GTRFBD)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T21:15:27.982546+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-06.nak.grace-cole.15573.sbeok.shnf"
+}

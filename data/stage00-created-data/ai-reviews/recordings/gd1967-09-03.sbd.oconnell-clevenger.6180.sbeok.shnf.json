@@ -1,0 +1,50 @@
+{
+  "summary": "Fair soundboard capture of a raw 9/3/67 show with standout Viola Lee Blues and Midnight Hour jams.",
+  "review": "The performance is prized for its historic, exploratory vibe – especially the extended Viola Lee Blues jam and the marathon Midnight Hour that showcase the early Dead’s psychedelic growth. The soundboard source suffers from noticeable cuts, occasional phasing and a generally muddy mix typical of ’67 recordings, but it remains one of the better archival versions available.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews are overwhelmingly positive about the musical content (standout jams, historic value) while consistently noting recording flaws; weighting shows higher than recording gives a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several cuts and occasional phasing‑flutter; overall muddy/rough sound typical of 1967 board tapes, but considered the best available source for this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "Midnight Hour"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A raw, exploratory early‑Dead set with long improvisational stretches; the band sounds relaxed yet still relying on repetitive riffs, making the historic jams feel both youthful and pioneering."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is praised as soulful and driving, especially during the Viola Lee Blues jam.",
+    "Phil": "Phil’s bass work is described as relaxed; he contributed the Dark Star lyric and remembered the gig fondly years later.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ (P.P.) provides a gritty backbone throughout, highlighted in the Viola Lee Blues section.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Two Souls": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:28:22.584984+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-09-03.sbd.oconnell-clevenger.6180.sbeok.shnf"
+}

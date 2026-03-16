@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording captures the cold‑dark Kaiser atmosphere with standout Gimme Some Lovin' and The Other One jams, despite unusually short sets.",
+  "review": "The tape is praised as a great audience source that conveys the wintry vibe of the Kaiser venue. Reviewers highlight the jam on Gimme Some Lovin' and the Other One > Sat Night as high points, though they note the sets are exceedingly brief. Overall the performance is enjoyable but not enough to earn higher than a mixed rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; positive remarks about recording quality and specific jams offset the comment about short sets, leading to an average‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear audience capture that conveys venue atmosphere; no technical flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gimme Some Lovin'",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Exceedingly short sets with a wintry, dark ambience; jams on Gimme Some Lovin' and The Other One are highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:03:07.546328+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-02-13.sen441.andrewf.96634.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Clear, well‑balanced audience recording of a hot ’89 show highlighted by an incendiary The Other One and trippy Help>Slip sequence.",
+  "review": "Both reviewers praise the tape’s surprisingly clear audience sound despite a low recording level that forces the listener to turn up the volume. Musically the concert shines with a blistering The Other One and a nicely psychedelic Help > Slipknot! > Franklin's Tower, plus solid first‑set moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently strong show comments (standout jams) and good‑ish recording quality (clear AUD with only low‑level issue) across two detailed 4‑star reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear sound with minimal crowd chatter; however the tape was recorded at a very low level, requiring volume boost for comfortable listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Help on the Way > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set offers several highlights; second set builds into a scorching The Other One and a trippy Help>Slip sequence, giving the show strong momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s run of ascending chromatic chords in counterpoint is singled out as a scream‑worthy moment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:58:28.639230+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-12-08.aud.wiley.8961.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed audio fidelity—some squashed Dolby and phone‑booth intro versus clean sections—but the show shines, highlighted by a stellar Space featuring Jerry and Bob's guitar duet.",
+  "review": "The recording swings between overly compressed, Dolby‑like sound that many reviewers wish could be stripped away and surprisingly clean passages that capture the band’s energy. Despite these audio quirks, fans recall the concert fondly, especially praising the space jam as a pinnacle of Jerry Garcia and Bob Weir's 1980s guitar interplay.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show performance is generally praised (memorable set, standout Space) while recording quality receives both strong criticism and high praise, resulting in a middling overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note heavy Dolby/NR compression and an odd phone‑booth intro that squash dynamics; others describe this source as clean compared to alternative audience recordings. Overall the audio is uneven, with both muddy and crisp sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers focus on overall enjoyment and memories rather than sequence, noting that early recording oddities give way to a rewarding performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his guitar work in the Space—a “sweet gooey noodle” duet with Bob—though one reviewer mentions a phone‑booth vocal effect at the start.",
+    "Phil": "",
+    "Bob": "Highlighted alongside Jerry for an exceptional guitar duet during the Space jam.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T10:01:33.887632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-06.111711.Sennheiser421.daweez.d5scott.flac16"
+}

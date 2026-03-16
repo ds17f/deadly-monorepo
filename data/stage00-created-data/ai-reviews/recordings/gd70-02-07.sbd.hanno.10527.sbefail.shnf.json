@@ -1,0 +1,92 @@
+{
+  "summary": "Mixed sound quality – muddy early mix and balance issues – but the show shines on country‑flavored gems like Sawmill, a smoking China Cat > I Know You Rider, and a tight Black Peter.",
+  "review": "The performance offers several highlights, especially the pedal‑steel‑driven country numbers (Sawmill, Seasons of My Heart) and an exciting second‑set stretch with China Cat Sunflower into I Know You Rider and a buttery Black Peter. Recording quality is uneven: the first songs suffer from muddy, boomy audio and late mic switches, while later tracks settle into a decent soundboard mix, though occasional cuts remain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show contains notable high points but overall is average; recording quality is uneven with frequent mud and balance problems, pulling the combined rating down."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Early songs sound muddy and boomy, mic switches from audience to stage mics occur a minute into tracks; later portions (China Cat onward) improve to a clearer soundboard mix. Balance problems noted on the hanno_10527 source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sawmill",
+      "China Cat Sunflower > I Know You Rider",
+      "Black Peter",
+      "Uncle John's Band",
+      "High Time"
+    ],
+    "poor_songs": [
+      "Hard to Handle",
+      "Cold Rain and Snow",
+      "Good Lovin'"
+    ],
+    "setlist_flow": "A country‑heavy first half with pedal‑steel covers that some find “blah,” followed by a more engaging second set where the mix improves; the show feels long but gains momentum after the brief set break."
+  },
+  "band_member_comments": {
+    "Jerry": "Joyous pedal‑steel work on Sawmill and other country tunes; begins to explore new solo ideas in Uncle John's Band.",
+    "Phil": "Bass described as too boomy on Hard to Handle, with early mix issues affecting clarity.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sawmill": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:41:31.813189+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-07.sbd.hanno.10527.sbefail.shnf"
+}

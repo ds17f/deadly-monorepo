@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp FLAC soundboard capture of an explosive 4/20/84 show highlighted by a scorching Scarlet Begonias → Fire on the Mountain and a monster Cumberland jam.",
+  "review": "The April‑20‑1984 performance is repeatedly called a “smoking” or “high‑tempo” set, with Jerry Garcia’s guitar work singled out as ferocious across dozens of songs – especially the iconic Scarlet/Fire transition, the relentless Cumberland jam and a powerhouse Let It Grow. The SBD FLAC source is praised for its bright, crystal‑clear clarity (though a few reviewers note it benefits from a light EQ), making this recording one of the standouts from the 1984 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten detailed, mostly 5‑star reviews praise both the musical performance and the soundboard recording; any minor critiques are outweighed by overwhelming enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "FLAC SBD is crisp, bright and very clear; a few listeners mention high guitar output and recommend a light EQ to tame the brilliance, but overall the mix is clean and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Cumberland Jam",
+      "Feel Like a Stranger",
+      "Cold Rain and Snow",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Morning Dew"
+    ],
+    "setlist_flow": "First set packed with classic Jerry‑lead tunes; second set builds into an explosive Scarlet/Fire sequence and a marathon Cumberland jam, keeping the tempo high and energy relentless throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is described as intense, urgent, aggressive and “on fire” – many reviewers call his solos the highlight of the night.",
+    "Phil": "Phil Lesh gets big praise for “bombing the stage” with a powerful bass foundation.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) is noted for locking step with Jerry on the Stranger and providing tight, melodic support.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cumberland Jam": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:11:44.893733+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-20.sbd.miller.27775.sbeok.flacf"
+}

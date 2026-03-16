@@ -1,0 +1,94 @@
+{
+  "summary": "Clear soundboard capture of a high‑energy 1988 show with standout Sugaree, Desolation Row and an electrifying Mexicali Blues solo.",
+  "review": "The recording is a solid soundboard source that delivers clear instrument separation, though occasional gurgles are noted. The performance bursts with energy – the first set shines on Sugaree, Desolation Row and Deal, while the second set builds momentum through Crazy Fingers, Play‑in/Uncle and a blistering Mexicali Blues solo. Overall the concert is praised as a strong example of the band’s late‑80s power despite a few uneven moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑star ratings and highlight both excellent soundboard quality and high musical energy; only a handful of criticisms (vocals, isolated song slips) keep the score just above a solid ‘good’ rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced sound; reviewers note clear vocals and instruments. Minor issues include occasional gurgles on “Cassidy” and a brief interruption in the first set, but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Desolation Row",
+      "Deal",
+      "Crazy Fingers",
+      "Playin > Uncle > Playin",
+      "Mexicali Blues"
+    ],
+    "poor_songs": [
+      "Samson (not registering)",
+      "Uncle (sedated solo)",
+      "Lovelight (lacks fireworks)",
+      "Cassidy (sound gurgles)"
+    ],
+    "setlist_flow": "Both sets are short but packed with energy; the first set delivers strong, concise performances while the second set maintains focus and builds intensity, especially after a high‑octane “Crazy Fingers” → “Playin/Uncle” sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar on Sugaree and an extended solo on Mexicali Blues; some reviewers note vocal strain on Crazy Fingers and a cracked voice during the encore.",
+    "Phil": "Highlighted for his spoken “Phil Speaks” moment and solid bass work on Desolation Row; listeners can hear his line clearly in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are described as clear and present throughout, though one reviewer wonders about occasional trash‑can sounds during the jam."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Desolation Row": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Playin > Uncle > Playin": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:49:29.642285+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-15.sbd.barbella.5068.sbeok.shnf"
+}

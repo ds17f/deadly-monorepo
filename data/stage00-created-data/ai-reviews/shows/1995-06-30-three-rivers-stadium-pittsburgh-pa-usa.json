@@ -1,0 +1,76 @@
+{
+  "summary": "Rain-soaked magic with Terrapin Station & soaring Bird Song",
+  "blurb": "The second set rides a rain‑filled vibe, featuring a seamless Rain → Box of Rain → Looks Like Rain flow and an epic Terrapin Station. The first set kicks off strong with Hell In A Bucket, Candyman and a vibrant Bird Song, though the Samba In The Rain solo is noticeably absent.",
+  "review": "On June 30, 1995 at Three Rivers Stadium the Dead conjured a truly atmospheric night that many fans still talk about. The rain that began in set one didn’t just stay outside—it seeped into the music, turning the second half into a moody journey through Rain, Box of Rain and Looks Like Rain before exploding into a towering Terrapin Station that felt like the last SOTM ever. Jerry’s guitar painted the stormy backdrop perfectly, even if his solo on “Samba In The Rain” never materialized. Highlights from set one include a punchy Hell In A Bucket opener, the sweet swing of Candyman and an uplifting Bird Song that kept the crowd dancing under the clouds. While a few listeners found the rain‑song block a bit repetitive, the overall energy stayed high, capped off by a breezy Gloria encore.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 92,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Three recordings are clearly positive, praising Terrapin Station, Bird Song and the rain‑filled atmosphere; three others are mixed but only note minor monotony or vague split opinions, with no strong negative language about playing. The balance of praise versus mild critique yields a moderate +1.2 sentiment boost.",
+      "final_calculation": "2.5 + 0.4 + 1.2 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-06-30.fob.schoeps.evans.GEMS.83144.flac16",
+    "reason": "Excellent audience capture—clean, loud and clear with no dropouts; consistently cited as the best available source for this show."
+  },
+  "key_highlights": [
+    "Terrapin Station performance described as epic and possibly the last SOTM ever",
+    "Rain‑filled second set creates a unique atmospheric flow (Rain → Box of Rain → Looks Like Rain)",
+    "Bird Song shines with high energy, and Hell In A Bucket launches an upbeat first set",
+    "Excellent audience recording quality makes this show especially listenable"
+  ],
+  "song_highlights": [
+    "Hell In A Bucket",
+    "Candyman",
+    "Bird Song",
+    "Terrapin Station",
+    "Standing On The Moon",
+    "Rain",
+    "Box of Rain",
+    "Looks Like Rain"
+  ],
+  "band_performance": {
+    "Jerry": "Creates a vivid rain atmosphere throughout the second set, though his solo is missing on \"Samba In The Rain\".",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-19T11:35:00.358496+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hell In A Bucket"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Bird Song",
+      "The Promised Land"
+    ],
+    [
+      "Looks Like Rain",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Standing On The Moon"
+    ],
+    [
+      "Rain"
+    ],
+    [
+      "Box of Rain"
+    ]
+  ]
+}

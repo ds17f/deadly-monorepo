@@ -1,0 +1,51 @@
+{
+  "summary": "Matrix recording with excellent sound captures a laid‑back West Coast show that’s praised for its flow and standout renditions of Loose Lucy, SSDD and Brokedown Palace.",
+  "review": "The matrix source delivers crystal‑clear audio that many reviewers call “excellent,” preserving the relaxed vibe of this Eugene concert. While one fan found the performance merely average, two others highlighted a smooth, river‑like set with strong moments from Loose Lucy, SSDD and a sublime Brokedown Palace solo by Jerry. Overall the show is regarded as a pleasant, family‑friendly West Coast outing with solid musicianship.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two reviewers rate the show and recording highly (4–5 stars) emphasizing great sound and standout songs, while one gives a modest 3‑star rating noting average musical impact; combined weighting yields a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers praise the matrix mix as crystal‑clear and highly recommend it for sound quality; no major flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "SSDD",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as laid‑back and flowing like a river, with a relaxed second‑set vibe that kept the audience mellow yet engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone and solo on Brokedown Palace are highlighted as sublime; also noted waiting in line between sets.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Last West Coast appearance for Brent Mydland, who provided solid keyboard work throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "SSDD": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:24:22.463684+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-24.mtx.hansokolow.108329.flac16"
+}

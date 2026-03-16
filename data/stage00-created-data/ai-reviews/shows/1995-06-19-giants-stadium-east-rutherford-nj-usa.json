@@ -1,0 +1,65 @@
+{
+  "summary": "Weak Garcia leads to uneven set; flashes of Brokedown Palace & Stella Blue.",
+  "blurb": "Jerry’s low volume and lackluster second‑set drag the concert, but tender moments like Brokedown Palace and soulful Stella Blue provide bright spots. Vince adds vigor in the first half while Bill Kreutzmann’s drumming keeps the rhythm solid throughout.",
+  "review": "Giants Stadium on June 19 1995 was a night where the Dead struggled to find their spark. Jerry Garcia’s playing sounded faded, especially in the second set, leaving songs such as Cold Rain And Snow and Throwing Stones feeling drained. Despite the overall slump, there were genuine highlights: the band delivered an emotionally resonant Brokedown Palace at the encore, and Stella Blue shone with a quiet intensity that hinted at Garcia’s lingering heart‑on‑sleeve vibe. Vince Welnick’s keyboards added much‑needed vigor early on, and Bill Kreutzmann’s rhythmic drive during the space segment helped keep momentum alive. Bob Weir’s vocals pushed through the fatigue, while Phil Lesh appeared placid yet supportive, occasionally showing frustration on Unbroken Chain. The set closed on a bittersweet note, making it an uneven but historically interesting performance for Deadheads tracking the band’s later‑year form.\n\nFor listeners seeking the clearest capture of this mixed night, the matrix recording (gd95-06-19.naks.10934.sbeok.shnf) offers the best balance of sound quality and completeness. While it can’t hide the show’s weaker moments, its brighter mix and minimal drop‑outs let the few standout passages shine through more clearly than the poorer audience tapes.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 45,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": -0.6,
+      "sentiment_rationale": "Two of the three recordings are described with negative sentiment (faded Garcia, poor sound) and the third is mixed; consistent criticism of Jerry’s volume and overall energy outweighs isolated positive notes, leading to a modest negative adjustment.",
+      "final_calculation": "2.5 + 0.3 - 0.6 = 2.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd95-06-19.naks.10934.sbeok.shnf",
+    "reason": "Clearer matrix mix with good fidelity and full set coverage; best captures the few strong moments despite overall weak performance."
+  },
+  "key_highlights": [
+    "Brokedown Palace delivers an emotional farewell vibe.",
+    "Stella Blue shines as a soulful, quieter highlight.",
+    "Vince adds vigor on vocals and keys in the first set.",
+    "Bill Kreutzmann’s drumming keeps the rhythm tight, especially during space."
+  ],
+  "song_highlights": [
+    "Brokedown Palace",
+    "Stella Blue",
+    "Ramble On Rose",
+    "Corinna"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s playing is muted and low‑energy for most of the night, with a notably thin solo on Cold Rain And Snow; however his emotional delivery on Stella Blue and Brokedown Palace provides brief moments of depth.",
+    "Phil": "Lesh remains placid throughout, showing visible frustration during Unbroken Chain but stays engaged, smiling between songs and holding down the low end.",
+    "Bob": "Weir works to inject energy with vocal effort and solid guitar work despite overall band fatigue, keeping the set moving forward.",
+    "Brent": "",
+    "Vince": "Welnick adds vigor on vocals and keyboards in the first set, lifting the band's dynamic when Garcia’s presence wanes.",
+    "Mickey": "Hart’s drumming is steady with no major issues noted; contributes to the overall rhythmic foundation without standing out.",
+    "Billy": "Kreutzmann delivers a catchy riff during space and helps maintain momentum throughout the uneven performance."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T10:20:32.225083+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Brokedown Palace"
+    ],
+    [
+      "Corinna",
+      "Matilda, Matilda",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Throwing Stones",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Ramble On Rose"
+    ]
+  ]
+}

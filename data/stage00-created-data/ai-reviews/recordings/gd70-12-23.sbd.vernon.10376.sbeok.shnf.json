@@ -1,0 +1,50 @@
+{
+  "summary": "Crystal‑clear soundboard snippet with excellent vocals and a standout Uncle John’s Band/Me & My Uncle performance.",
+  "review": "The recording is a short but pristine soundboard excerpt from the mysterious 12/23/70 session, praised for its crisp mix, rich reverb and crystal‑clear vocals.  Musically the set delivers solid playing – Jerry’s lead on “Me & My Uncle” and a classic rendition of “Uncle John’s Band” shine – though the incomplete nature of the source prevents a full assessment of the show’s flow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight superb recording quality and several strong performances; only minor criticisms about incompleteness keep the rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Extremely clear mix with excellent vocal presence and pleasant room reverb; one note of Garcia being low in the mix on “Hard to Handle” but otherwise perfect for the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Me & My Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short excerpt rather than a full concert; the tracks that survive are well‑performed but the missing material makes it hard to judge overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for top‑notch picking on “Me & My Uncle”; noted as low in mix only on one tune.",
+    "Phil": "Mentioned as a driving force (via Lesh) and positively referenced on four‑string bass in later comments.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T01:42:27.149539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-12-23.sbd.vernon.10376.sbeok.shnf"
+}

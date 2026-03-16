@@ -1,0 +1,52 @@
+{
+  "summary": "Good 1978 show with solid Jack Straw and Cold Rain openings; the audience recording is a bit stark but improves with added reverb, though Jerry’s vocals sound thin and Round & Round falls short.",
+  "review": "The performance is generally enjoyable – highlights include the opening Jack Straw and Cold Rain & Snow, and a respectable Black Peter.  The fan‑recorded tape sounds a little harsh out of the box, but a touch of reverb and extra bass make it more listenable; Jerry’s voice is marginally thin and the Round & Round jam disappoints for some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings, praising the show but noting vocal and recording flaws; weighting show (70%) and recording (30%) yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as 'a bit stark' with room‑tone issues; adding reverb and extra bass improves clarity and warmth."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [
+      "Round & Round"
+    ],
+    "setlist_flow": "Strong openings and solid middle set, but the ending jam (Round & Round) is viewed as a letdown."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are marginally thin; barely holding it together tonally.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Round & Round": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:04:51.050176+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-07.fob.knight.motb-0071.91793.flac16"
+}

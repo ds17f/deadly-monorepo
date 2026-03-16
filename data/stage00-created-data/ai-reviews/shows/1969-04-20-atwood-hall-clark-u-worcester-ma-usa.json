@@ -1,0 +1,63 @@
+{
+  "summary": "Mellow ’69 set with stellar Dark Star and spacey jams",
+  "blurb": "The show delivers a relaxed yet exploratory vibe, highlighted by an epic Dark Star and soaring Mountains Of The Moon. Jerry’s guitar tone and vocals dominate, while the rhythm section locks into smooth transitions. Standout moments include Doin' That Rag, Death Don't Have No Mercy, and Saint Stephen.",
+  "review": "On April 20, 1969 at Atwood Hall, Clark University, the Dead rolled out a mellow, early‑’69 set that feels both laid‑back and adventurous. Four consecutive Dark Stars stretch out into spacey improvisations, with Garcia’s tone and vocal power taking center stage—fans describe his solo as “stellar” and “on fire.” The band slides effortlessly from Doin' That Rag into the iconic Dark Star, then on through Saint Stephen before a brief stumble on The Eleven, which is noted as the only weak spot. The second‑set encore of Dupree's Diamond Blues segues into a soaring Mountains Of The Moon that caps the night with pure melodic lift. Two recordings capture this performance: an excellent soundboard source that offers crystal‑clear clarity, and a good audience tape whose hiss and low volume are outweighed by its historic vibe. Both agree the musical quality is high, making this show a must‑listen for fans of the Dead’s early psychedelic era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Both recordings are uniformly positive, repeatedly praising the Dark Star performance, overall psychedelic flow, and relaxed yet adventurous vibe. No negative comments appear across analyses; the only criticism is a minor edit issue on Eleven, which does not affect overall show quality.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-04-20.sbd.lutch.4992.sbeok.shnf",
+    "reason": "Audience tape captures the full ambience and relaxed vibe despite some hiss; it includes all songs with only minor editing issues, making it the most complete representation of the show."
+  },
+  "key_highlights": [
+    "Epic Dark Star jam that serves as the high point of the set.",
+    "Four consecutive Dark Stars create a seamless, space‑filled improvisational journey.",
+    "Mountains Of The Moon encore delivers soaring melodic closure."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Mountains Of The Moon",
+    "Doin' That Rag",
+    "Death Don't Have No Mercy",
+    "Saint Stephen"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar tone and vocals dominate; his solo on Dark Star is described as stellar and on fire.",
+    "Phil": "",
+    "Bob": "Bob’s vocal contributions are noted as nice, adding to the relaxed vibe of the set.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T13:33:01.677756+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven"
+    ],
+    [
+      "Dupree's Diamond Blues",
+      "Mountains Of The Moon"
+    ],
+    [
+      "Doin' That Rag"
+    ],
+    [
+      "Death Don't Have No Mercy"
+    ]
+  ]
+}

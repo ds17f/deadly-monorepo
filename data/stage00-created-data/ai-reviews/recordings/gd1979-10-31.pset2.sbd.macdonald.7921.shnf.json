@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording that captures a fiery Jerry Garcia performance on Eyes of the World",
+  "review": "The sole reviewer gushes over Jerry’s incendiary playing about eight minutes into “Eyes of the World,” calling him ‘Gar‑baby’ and saying he’s ‘on fire.’ No complaints are made about the tape itself, and the .sbd. tag suggests a clean soundboard source, making this a solid listen for fans who love Garcia’s lead work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Positive show feedback (Jerry’s standout playing) combined with an implied good soundboard source; limited data (single review) keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific technical comments; assumed clear and balanced due to soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not mentioned in the review"
+  },
+  "band_member_comments": {
+    "Jerry": "Gar‑baby is on fire from about the 8‑minute mark into Eyes of the World.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:31:28.227493+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-31.pset2.sbd.macdonald.7921.shnf"
+}

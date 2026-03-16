@@ -1,0 +1,31 @@
+{
+  "summary": "Playback issues with the archive.org .m3u playlist are reported; no comments on audio or performance quality.",
+  "review": "Both reviewers focus on technical problems related to the generated playlist links rather than the music itself. One user experiences linking errors (3★) while another reports successful playback using a different browser/OS (5★), leaving the actual recording and show quality unaddressed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Only two brief reviews, both about playlist linking rather than sound; average star rating is 4 but there is insufficient information on musical or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "Reviewers note problems with relative .m3u links causing playback failures in some browsers; no comments on audio clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T20:21:54.943778+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-07.AKG451.Darby.118760.Flac1644"
+}

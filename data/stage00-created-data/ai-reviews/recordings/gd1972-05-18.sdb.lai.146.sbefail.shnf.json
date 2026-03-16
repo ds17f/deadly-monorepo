@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent show praised by reviewer, but recording details are unspecified",
+  "review": "The lone review rates the performance five stars and calls it \"excellent,\" indicating strong enthusiasm for the music. No specific comments are made about the sound source or audio fidelity, leaving the recording quality unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one brief review; it is highly positive about the show but gives no information on recording quality, so rating leans toward a strong show with uncertain audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments regarding soundboard vs. audience or clarity; cannot assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer provides no detail on set structure or specific moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T14:10:19.992807+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-18.sdb.lai.146.sbefail.shnf"
+}

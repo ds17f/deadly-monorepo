@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear recording (likely matrix) captures an electrifying 1985 first set with standout China Rider and surprise harp by Matt Kelly.",
+  "review": "Fans rave about the pristine, crunchy sound of this 1985 show—described as crystal clear and “the way it should sound”—even if the exact source (soundboard vs. matrix) is debated. The performance is hailed as the year’s favorite, with an especially fun first set, a wild China Rider moment, and an unexpected harp cameo that lifts the night to psychedelic fire.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All four reviews are highly positive (4‑5 stars), praising both the musical excitement and the audio clarity; any source‑type uncertainty does not detract from overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crystal clear, crunchy, and “the way it should sound” for ’85. One reviewer suspects a matrix blend but reports no audible flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Rider",
+      "Smokestack"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is highlighted as a fan‑favorite, delivering high energy and memorable moments that kept the crowd dancing all night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:21:37.470357+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-28.mtx.fix-shnid-77465.griesman.89074.flac16"
+}

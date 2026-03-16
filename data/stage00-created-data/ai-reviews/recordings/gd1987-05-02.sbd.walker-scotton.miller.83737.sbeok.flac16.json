@@ -1,0 +1,107 @@
+{
+  "summary": "Good‑quality soundboard tape of a stellar Spring ’87 Frost show, highlighted by fiery Playin' / Morning Dew and a soaring second set.",
+  "review": "The recording captures the energy of the May 2 1987 Frost Amphitheater gig with decent clarity; while the mix is a bit distant and not studio‑perfect, the ambience of the outdoor crowd adds to the experience. Musically the show shines – Jerry’s guitar is on fire throughout Playin' and Morning Dew, the first set builds strong momentum with Jack Straw and Push, and the second set delivers a classic China > Rider → Terrapin sequence plus space‑filled jams that many reviewers call among the best of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 4–5 stars and praise both performance and recording; weighted average (70 % show, 30 % tape) yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to enjoy, but the mix sits slightly distant with some crowd bleed; not A‑level studio sound but pleasant and faithful to the live vibe."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Morning Dew",
+      "China Cat Sunflower > I Know You Rider",
+      "Terrapin Station",
+      "Truckin'",
+      "Push",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Far From Me"
+    ],
+    "setlist_flow": "First set launches with high‑octane numbers (Jack Straw, Push) and solid transitions; the second set escalates into space‑heavy improvisations, a flawless China > Rider → Terrapin run, and a powerful closing with Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for crisp, inventive, high‑energy guitar work – especially on Playing in the Band, Morning Dew and the space jams.",
+    "Phil": "Noted as driving the low end loudly and clearly; highlighted for tight counterpoint with Jerry during China > Rider.",
+    "Bob": "Complimented for a competent slide solo on Rooster and solid rhythm throughout.",
+    "Keys": "Brent Mydland’s funky B3 organ solos (e.g., on Push) are singled out, as is the overall richer keyboard texture from the Miller upgrade.",
+    "Drums": "Bill Kreutzmann’s driving beat praised, with heavy Mickey sub‑tones emphasized during space sections."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Push": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:08:04.153405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-02.sbd.walker-scotton.miller.83737.sbeok.flac16"
+}

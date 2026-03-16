@@ -1,0 +1,89 @@
+{
+  "summary": "Soundboard recording of solid ’71 performance – clear overall sound with a little hiss, highlighted by stellar Wharf Rat, Hard to Handle and The Other One.",
+  "review": "The concert is widely praised for its energetic playing, especially Jerry Garcia’s soaring leads on Wharf Rat and Hard to Handle, the tight “Other One” jam, and Pigpen’s powerful presence. While most listeners find the soundboard source clean and intimate, a few note a faint hiss that varies with venue wiring. Overall the show is considered one of the standout early‑’70s dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average user rating ~4.6 ★, with consistent praise for musical performance and generally good soundboard quality; only minor complaints about hiss keep it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the audio as clear, tight and intimate. One reviewer mentions noticeable hiss due to venue electrical issues; another notes occasional volume spikes on Pigpen’s guitar."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Hard to Handle",
+      "The Other One",
+      "Casey Jones",
+      "Good Lovin'",
+      "Goin' Down The Road Feelin' Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set one builds with strong blues‑rock numbers (Casey Jones, Truckin) and a soaring “Other One” midway; the second set delivers classic jams (Wharf Rat, Good Lovin’ → NFA → GDTRFB) and finishes relaxed with Me & Bobby McGee."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for sparkling leads on Wharf Rat, lightning‑fast picking on Hard to Handle, strong vocal phrasing and overall “new heights” of playing.",
+    "Phil": "Acknowledged for solid bass work – “drives the Bertha,” and noted as flying through tunes in several reviews.",
+    "Bob": "His lyrical contributions are highlighted (e.g., “A lot of poor men make a $5 bill”), and his vocal parts receive nods.",
+    "Keys": "Pigpen’s organ/harp work is called out as a centerpiece, with mentions of his singing on Cumberland and other songs.",
+    "Drums": "Bill Kreutzmann (Billy) described as “on fire,” delivering wild‑man antics and powerful drum breaks."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Hard to Handle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down The Road Feelin' Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & Bobby McGee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:17:39.792338+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-04-21.sbd.kaplan.8227.sbeok.shnf"
+}

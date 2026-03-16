@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture of an all‑magic 1989 show, highlighted by killer Looks Like Rain, a super Terrapin Station and soaring Crazy Fingers.",
+  "review": "The recording delivers crystal‑clear soundboard quality (aside from a left/right channel swap) that lets listeners hear every nuance of the band’s magical performance. Reviewers rave about Jerry’s soaring lead on \"Looks Like Rain\", a bubbling \"Terrapin\" and a transcendent \"Crazy Fingers\", while the first‑set trio of \"Row Jimmy\", \"Masterpiece\" and \"Built To Last\" is praised as perfect bedtime listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 5‑star) and uniformly glowing comments about both the musical performance and the sound quality indicate an outstanding show with excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix throughout; only issue noted is left/right channel reversal causing Brent’s organ to be heard from the opposite speaker."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Terrapin Station",
+      "Crazy Fingers",
+      "Row Jimmy",
+      "Masterpiece",
+      "Built To Last"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the concert as a seamless, unhurried journey that feels like \"smooth as a rhapsody,\" with magical moments building from the first set into an expansive second‑set groove."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead on \"Looks Like Rain\" is called “killer” and given new meaning by his tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s B3 organ is likened to an octopus playing an underwater pipe‑organ, a highlight of the night.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built To Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:45:29.032284+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-18.sbd.4796.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Audience‑sourced tape captures a stellar Dark Star performance, but the recording suffers from poor sound quality.",
+  "review": "Both reviewers agree this 4/29/72 show is a classic ’72 set with an especially ripping Dark Star that ranks alongside legendary performances. The tape is an audience recording, which gives it a unique vibe, yet one reviewer flags the overall sound as very poor, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Show quality is praised highly (≈4.5/5) while recording quality is criticized sharply (≈2/5); weighted average yields ~3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "One reviewer calls the sound \"very poor,\" noting typical audience tape limitations; no specific clarity issues are described beyond overall poor fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1972 set with a strong, memorable Dark Star that elevates the whole performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his \"great Gar\" tone and the thundering ending of Dark Star.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:46:49.161295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-29.sbd.cousinit.18523.sbeok.shnf"
+}

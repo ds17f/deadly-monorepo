@@ -1,0 +1,73 @@
+{
+  "summary": "Smoky Passenger, debut Tiger guitar; solid second set despite mix",
+  "blurb": "The show delivers a smoking Passenger and an expansive Playing In The Band that lift the second set. Jerry debuts his custom “Tiger” guitar with strong tone, while Brent shines on Althea and Shakedown Street. Mix is muddied in the soundboard source, but the performance remains compelling.",
+  "review": "August 4 1979 at the Oakland Auditorium Arena finds the Dead rolling into a fresh era of songs with confidence. The first set showcases new material—Althea, Lost Sailor and a jaunty Deal—but it’s the second set that truly shines: Passenger roars, Shakedown Street grooves into a soaring Playing In The Band, and the band rides an expansive jam through Drums, Space and a soulful Stella Blue before closing with Sugar Magnolia. Jerry’s long‑awaited “Tiger” guitar makes its debut on Althea and again on Passenger, offering a bright, cutting tone that many reviewers called “sweetest Garcia.” Brent Mydland is front‑and‑center in the mix, delivering crisp keyboards on Shakedown Street and adding depth to Althea. While the soundboard tape is noted as muddy—vocals sometimes buried and a brief glitch—the musical chemistry outweighs the technical flaws, making this a must‑listen performance for fans of the late‑‘70s era.\n\nThe audience recordings capture the same energy with clearer ambience but lack the detail of the SBD source. Overall, the show stands as a solid entry in the 1979 catalog: strong song choices, a noteworthy guitar debut, and tight rhythm section work, even if the mix occasionally clouds the nuance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 36,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Across five recordings, two are clearly positive (praising Althea, Lost Sailor and the Tiger guitar) while three are mixed (highlighting strong moments but noting mix issues and occasional weak solos). The preponderance of praise for key songs and the debut guitar outweighs the technical criticisms, yielding a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 0.9 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd79-08-04.sbd.munder.9578.sbeok.shnf",
+    "reason": "Only soundboard source; despite a muddy mix it captures the full show and the debut Tiger guitar, making it the most complete representation of the performance."
+  },
+  "key_highlights": [
+    "Smoking Passenger that propels the second set",
+    "Expansive Playing In The Band segue with jam and drums/space",
+    "Jerry's debut of the custom ‘Tiger’ guitar on Althea and Passenger",
+    "Brent’s prominent keyboards on Shakedown Street and Althea"
+  ],
+  "song_highlights": [
+    "Passenger",
+    "Playing In The Band",
+    "Althea",
+    "Lost Sailor",
+    "Shakedown Street",
+    "Tennessee Jed",
+    "Stella Blue"
+  ],
+  "band_performance": {
+    "Jerry": "Debuts the ‘Tiger’ guitar with a bright, cutting tone; tentative on Stella Blue solo but otherwise strong throughout.",
+    "Phil": "",
+    "Bob": "Off‑key on Lost Sailor in one account, but generally solid rhythm work.",
+    "Brent": "Keyboard work shines on Althea and Shakedown Street, prominently featured in the mix.",
+    "Mickey": "Drums solid and supportive throughout the set.",
+    "Billy": "Provides a steady backbone; overall drum performance described as fine."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-25T22:15:07.359763+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Passenger"
+    ],
+    [
+      "Shakedown Street",
+      "Playing In The Band",
+      "Jam",
+      "Drums",
+      "Space",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Lost Sailor",
+      "Deal"
+    ],
+    [
+      "Tennessee Jed"
+    ]
+  ]
+}

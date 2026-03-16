@@ -1,0 +1,81 @@
+{
+  "summary": "Good‑quality recording of a solid Shoreline ’93 show highlighted by stellar Stella Blue, Crazy Fingers and an unforgettable Rain cover.",
+  "review": "Listeners rave about the performance – especially Jerry’s crisp guitar work on Stella Blue, Crazy Fingers and Peggy‑O, plus Phil’s vocal moment on He’s Gone and a soaring Rain encore. The recording is generally clean with no reported flaws, making the strong first set and energetic moments of the second set easy to enjoy despite a slight dip in momentum later on.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars and praise specific songs and musicians; no technical complaints were noted, so the show scores high on performance and decent on recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit audio issues mentioned; reviewers note clear instrument separation (e.g., Jerry’s guitar) suggesting an adequate mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "He’s Gone",
+      "Wang Dang Doodle",
+      "Crazy Fingers",
+      "Rain",
+      "Around And Around",
+      "Peggy-O",
+      "Way To Go Home"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as great and tight; second set loses a bit of energy but still contains highlights like Wang Dang Doodle, Crazy Fingers and the Rain encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for crisp, haunting guitar tone and spirited solos (Stella Blue, Crazy Fingers, Peggy-O).",
+    "Phil": "Noted singing on He’s Gone around 8:30.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He’s Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around And Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way To Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:07:10.616255+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-08-26.sbd.pujol-wiley.11499.sbeok.shnf"
+}

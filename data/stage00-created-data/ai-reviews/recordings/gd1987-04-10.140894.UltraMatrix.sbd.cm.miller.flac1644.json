@@ -1,0 +1,76 @@
+{
+  "summary": "A solid matrix recording that sounds great, capturing a tight Shakedown Street first set and standout performances of He's Gone, The Other One and Baby Blue.",
+  "review": "Both reviewers praise the audio – the UltraMatrix soundboard‑matrix feed is described as sounding great with no noticeable flaws. Musically the night shines with a crisp first set highlighted by Shakedown Street and Looks Like Rain, while the second set delivers an extended He's Gone, powerful drumming, and a fiery The Other One leading into a heartfelt Baby Blue encore. Jerry’s vocals and guitar are noted as being in good spirits, Phil drops “bombs,” and Brent takes a bold solo on Around and Around.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with many highlighted songs and a clean matrix recording; minor uncertainty due to limited number of reviews."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers say the sound \"sounds great\" and note no drop‑outs or muddiness; UltraMatrix sbd source provides clear, balanced audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Looks Like Rain",
+      "He's Gone",
+      "The Other One",
+      "Around and Around",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Peter"
+    ],
+    "setlist_flow": "First set is short, tight and in‑sync; second set builds momentum with a pumped crowd, strong transitions (He's Gone → drums → The Other One) and a warm encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Announces the set break, appears on the mend and in good spirits; his ballads sound especially strong for this period.",
+    "Phil": "Drops \"bombs\" early in the second set, delivering powerful bass work.",
+    "Bob": "Leads a bluesy duo closeout with gritty vocals; fans love his screechy tone.",
+    "Keys": "Brent (keyboards) goes all‑in on an Around and Around solo.",
+    "Drums": "Eleven‑minute drum segment praised for its intensity."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:31:11.802964+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-10.140894.UltraMatrix.sbd.cm.miller.flac1644"
+}

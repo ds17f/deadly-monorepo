@@ -1,0 +1,45 @@
+{
+  "summary": "Outstanding audience recording of a historic show featuring the first live Ripple and Truckin', expertly curated for optimal listening.",
+  "review": "Both reviewers rave about this tape, calling it the definitive version on the Archive and highlighting its historic first‑time performances of \"Ripple\" and \"Truckin'\". The audience capture is praised as clear and well‑balanced, preserving the joy of a great crowd while the show itself delivers memorable acoustic and electric sets.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong enthusiasm for unique first‑time song performances and a well‑curated, high‑quality audience recording; limited to two detailed reviews, so confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Curated from the best available sources on the Archive; clear capture of crowd ambience and instrument balance, no reported drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set followed by an electric set; reviewers note a fragmentary NRSP segment that could be inserted between them."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned positively as part of \"Jerry & Co.\" sharing joy with the world.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:30:27.370880+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-08-18.142417.aud.knudsen.gems.FIXED.flac2448"
+}

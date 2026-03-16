@@ -1,0 +1,45 @@
+{
+  "summary": "Very good recording with sweet‑spot sound and beloved Uncle John’s Band performance, but limited commentary leaves overall impression mixed.",
+  "review": "Reviewers praise the tape’s sweet‑spot positioning and describe the audio as very good, especially highlighting Uncle John's Band (and a “baby blue” moment). Aside from a brief, non‑descriptive low‑rated comment, there is little detail on the musical flow, leaving the overall sentiment mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "One clear positive review (4★) notes excellent recording quality and favorite songs; a second very brief review rates it 0★, giving mixed signals. Limited detail on performance keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls the tape \"very good\" and mentions a sweet‑spot sound, but gives no specifics about soundboard vs. audience or mix clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:09:33.466151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-25.senn421.bethke.118900.flac16"
+}

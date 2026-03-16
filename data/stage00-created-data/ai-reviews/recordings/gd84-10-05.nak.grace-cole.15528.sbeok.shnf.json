@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard capture of a lively 1984 Charlotte show – great second‑set jams like China Cat Sunflower/I Know You Rider and The Other One, but the first set suffers from venue echo and a half‑off sound system.",
+  "review": "The performance is widely praised for its high energy, especially the China Cat Sunflower → I Know You Rider sequence, a monster The Other One, and Brent Mydland’s soaring solo on Johnny B. Goode.  Recording-wise it’s a soundboard source that sounds decent overall, yet listeners note an echo‑filled first set and a missing half of the PA, giving it a somewhat uneven sonic picture.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and highlight several standout performances; recording issues are noted but not severe enough to outweigh the musical strengths."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First set suffers from a half‑off PA system and pronounced echo in the old Coliseum; some reviewers compare SBD vs audience sources, noting this SBD is better than the audience mix but still imperfect."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "The Other One",
+      "Johnny B. Goode",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but hampered by sound issues; the second set is described as both \"great\" and, by one reviewer, a bit sloppy, resulting in mixed impressions of its pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s “bangin’” playing (especially on Stranger) and his high‑energy jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland receives specific praise for a stellar solo on Johnny B. Goode.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:06:47.150441+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-05.nak.grace-cole.15528.sbeok.shnf"
+}

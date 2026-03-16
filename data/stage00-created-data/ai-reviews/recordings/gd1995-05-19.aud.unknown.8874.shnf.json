@@ -1,0 +1,56 @@
+{
+  "summary": "Fun Las Vegas show with a solid Deal closing and strong second‑set drum/space jams; recording quality not discussed but presumed adequate.",
+  "review": "The crowd‑filled Vegas performance is remembered for its festive atmosphere, a short first set, and a second set that bursts into sonic drum‑space explorations highlighted by a smoking Deal closer and lively Playing in the Band jams. Reviewers make no specific comments about the audio source, suggesting the recording is at least listenable, while opinions on song flow range from enthusiastic to mildly disappointed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Three reviews give a spread of 4‑star, 3‑star and 2‑star scores; the show is praised for its vibe and second‑set jams but critiqued for a short first set and inconsistent song flow. No recording‑quality details were provided, so rating leans on musical impressions."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not mention sound clarity, mix or source type, implying no major audio problems but also providing no evidence of high‑fidelity soundboard recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Althea",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as short with some lulls, while the second set shines with expansive drum/space jams and a memorable Deal closer; encore was energetic and got the crowd (and Jerry) really excited."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos on Althea are noted for rising intensity, and his grin after the encore is highlighted as a rare, joyful moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T08:18:05.876064+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-19.aud.unknown.8874.shnf"
+}

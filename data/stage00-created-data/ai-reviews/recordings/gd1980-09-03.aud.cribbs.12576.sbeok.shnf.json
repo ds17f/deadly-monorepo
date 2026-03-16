@@ -1,0 +1,75 @@
+{
+  "summary": "Good‑quality audience tape of a hot Summer ’80 show, marred by early left‑channel fade but featuring standout performances of Half Step, Franklin's, Stranger and High Time",
+  "review": "The performance is widely praised – fans call it an underrated barn‑burner with strong first‑set moments (Half Step > Franklin’s, Let It Grow) and a second set highlighted by Stranger and High Time. Recording-wise the Jim Wise audience tape suffers from left‑channel drop‑outs early on, but clears up halfway through and is otherwise vivid, making it an enjoyable listen despite its flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (5‑star) and note strong musical moments; recording issues are noted but not enough to outweigh the performance quality, yielding a solid 4+ rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Early portion fades in/out on the left channel, making Franklin's hard to follow; sound improves markedly after the Half Step and remains clear for the rest of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Franklin's",
+      "Stranger",
+      "High Time",
+      "Sailor > Saint",
+      "Let It Grow",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy Summer ’80 set with a tight first half (Half Step → Franklin's → Let It Grow) and a second half that shines on Stranger and High Time, keeping the audience buzzing throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:50:49.946986+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-03.aud.cribbs.12576.sbeok.shnf"
+}

@@ -1,0 +1,96 @@
+{
+  "summary": "Excellent audience recording with a rare Uncle John's Band > Playin' opener and blazing Tennessee Jed, Samson & Delilah, Eyes of the World and Alabama Getaway, though Saint of Circumstance falls flat.",
+  "review": "The show is remembered for its unique opening sandwich (Uncle John’s Band → Playin’ → Uncle John’s Band) and a hot second set that delivers Tennessee Jed, Samson & Delilah, Eyes of the World, Sugar Magnolia and a soaring Alabama Getaway.  Recording quality is solid for an audience source, with several AUD versions praised for clarity despite minor balance/pitch quirks.  The only real blemish is the lackluster Saint of Circumstance that dampened the momentum.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong performances; recording is described as good with a few technical notes, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and enjoyable AUDs; some versions note balance issues and slight pitch drift early in the set but overall a listenable mix for a crowd recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band > Playin' > Uncle John's Band",
+      "Tennessee Jed",
+      "Samson & Delilah",
+      "Estimated Eyes of the World",
+      "Sugar Magnolia",
+      "Alabama Getaway"
+    ],
+    "poor_songs": [
+      "Saint of Circumstance"
+    ],
+    "setlist_flow": "A rare Uncle John's Band sandwich opens the first set, followed by high‑energy numbers; the second set stays consistently uptempo with strong jams despite a weaker Saint of Circumstance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly praised – his Tennessee Jed solo is called “magic” and his Alabama Getaway roar is highlighted.",
+    "Phil": "Phil Lesh gets glowing remarks for booming presence, inspired bass work and a standout jam during Uncle John’s Band.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers are noted for an odd, energy‑killing Saint of Circumstance, but otherwise provide solid drive throughout the set."
+  },
+  "song_mentions": {
+    "Uncle John's Band > Playin' > Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T00:18:53.495115+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-08.eaton.tome.7193.sbefail.shnf"
+}

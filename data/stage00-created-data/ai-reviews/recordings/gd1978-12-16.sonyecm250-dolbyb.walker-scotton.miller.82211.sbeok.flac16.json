@@ -1,0 +1,63 @@
+{
+  "summary": "A high‑energy 1978 show captured on a well‑restored audience tape, featuring epic performances of Sugaree, He's Gone, Scarlet Fire and the final Travis Bean guitar appearance.",
+  "review": "The concert is praised as one of the band’s finest of ’78, with an especially long, soaring Sugaree that opens the set and a monster 17‑minute He’s Gone. The second set delivers a scorching Scarlet Fire, a sweet The Other One and a stellar Wharf Rat, all highlighted by Jerry Garcia’s last use of his Travis Bean guitar. The audience recording is described as “pretty good” for an AUD source and benefits from careful restoration, making the show both musically and technically enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the performance across all five reviews and a generally favorable comment on the audience recording quality lead to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Restored audience tape; clear enough for an AUD source with typical ambient crowd noise but no major drop‑outs or distortion noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "He's Gone",
+      "Scarlet Fire",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A marathon first set opens with a blistering, extended Sugaree that sets the momentum; the second set continues the high energy with Scarlet Fire, The Other One and a heartfelt Wharf Rat, delivering an overall seamless and powerful show."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong start on Sugaree, beautiful tone throughout, and noted as the last show featuring his Travis Bean guitar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:24:59.910221+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-16.sonyecm250-dolbyb.walker-scotton.miller.82211.sbeok.flac16"
+}

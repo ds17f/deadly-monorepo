@@ -1,0 +1,68 @@
+{
+  "summary": "Crystal‑clear audience recording of a relaxed late‑spring 1978 show highlighted by a scorching Sugaree and a soaring Deal",
+  "review": "The tape captures the concert with exceptional audience clarity – crowd reactions are present but never overpowering, giving it a vivid live feel. Musically the band is in top form: Jerry’s guitar soars on Sugaree and his space‑filled solos delight, Phil’s bass shines in the Grand Unction outro, and the setlist flows with an upbeat, relaxed vibe that many reviewers cite as unique for the spring ’78 run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.1 ★, with consistent praise for both sound quality (often called \"best aud recording\") and performance (standout Sugaree, Deal, Grand Unction). Minor negatives focus only on Donna’s backing vocals, so overall the show/recording merit a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear audience tape; crisp instrument separation, balanced crowd ambience. Occasional crowd shouting (“sit down”) noted but not detrimental. No dropout or muffled sections reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Deal",
+      "Grand Unction",
+      "Rain",
+      "Fennario"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a unique, quick‑moving set list that feels relaxed and fun; the band rides a smooth groove through the evening with strong transitions and an overall upbeat pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching guitar tone on Sugaree, jazzy space jams, envelope‑wah textures, and overall superb soloing.",
+    "Phil": "Bass work lauded in the Grand Unction (Phil Terrapin) outro – described as “crazy counterpoint slices” and “upper‑register flurries.”",
+    "Bob": "Noted for trying to cover for Donna’s weak backing vocals; otherwise no specific drumming critique.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fennario": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Grand Unction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:13:28.782008+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-06.rolfe.vernon.6711.sbeok.shnf"
+}

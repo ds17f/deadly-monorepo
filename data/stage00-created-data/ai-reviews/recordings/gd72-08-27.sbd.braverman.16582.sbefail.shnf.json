@@ -1,0 +1,76 @@
+{
+  "summary": "Crystal‑clear Betty board capture of a legendary ’72 show with smoking Playin’, Dark Star, China > Rider and Bird Song",
+  "review": "The soundboard (Betty) source is praised as crisp, balanced and virtually free of hiss – the banter and stage chatter are intact and add atmosphere. Musically the concert is hailed as one of the band’s finest: a blistering second set highlighted by an epic Playin’ in the Band, a transcendent Dark Star, a flawless China Cat → Rider and a soaring Bird Song, with Keith’s keyboards and Jerry’s guitar on fire throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over 50 reviews overwhelmingly rate the show 5‑stars, repeatedly call it a top‑tier performance and describe the recording as pristine; both show quality (≈70%) and recording quality (≈30%) are exceptional."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty board SBD praised for crystal‑clear mix, superb instrument separation, minimal hiss, full stage banter embedded in tracks and no noticeable drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Dark Star",
+      "China Cat > Rider",
+      "Bird Song",
+      "Bertha",
+      "Mexicali Blues"
+    ],
+    "poor_songs": [
+      "El Paso"
+    ],
+    "setlist_flow": "The set flows flawlessly, especially the second set where Playin’, Dark Star and China > Rider cascade into each other; reviewers note a tight, energetic pacing that never lags."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly described as ‘on fire’, shredding with perfect tone, delivering soaring solos especially in Dark Star and the China/Rider transition.",
+    "Phil": "Bass praised for being tight, melodic and “nasty” during Playin’ and Bird Song; several reviewers call his playing a highlight.",
+    "Bob": "Rhythm guitar noted for strong presence (especially on Bertha) and occasional playful banter.",
+    "Keys": "Keith's keyboards open the Playin’, add cavernous depth throughout, and are called “cavernous romp” and “brilliant”.",
+    "Drums": "Bill’s drumming lauded as powerful, pounding, and driving the jam in Playin’; multiple reviewers cite the drums as a standout element."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Dark Star": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Bird Song": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Bertha": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T16:50:27.857945+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-08-27.sbd.braverman.16582.sbefail.shnf"
+}

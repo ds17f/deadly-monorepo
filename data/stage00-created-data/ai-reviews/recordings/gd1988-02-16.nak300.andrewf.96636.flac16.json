@@ -1,0 +1,31 @@
+{
+  "summary": "Grateful Dead recording appreciated by the reviewer despite lack of detailed feedback",
+  "review": "The lone review expresses gratitude and a positive impression, but offers no specifics on performance or audio fidelity. Consequently, both the musical and technical qualities remain indeterminate.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single brief thank‑you note with a five‑star rating; no concrete information on show or recording quality to justify a higher score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T06:15:35.814800+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-02-16.nak300.andrewf.96636.flac16"
+}

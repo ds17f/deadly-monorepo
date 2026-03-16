@@ -1,0 +1,76 @@
+{
+  "summary": "Clear soundboard capture showcases a soaring second set with a legendary Morning Dew, but uneven moments in Stagger Lee and Crazy Fingers temper the excitement.",
+  "review": "The gd1993‑09‑09 recording is praised for its solid soundboard mix that delivers good clarity, though a few listeners note a lack of punch on certain tracks. Musically the show shines in the second set – especially the emotive Morning Dew, Terrapin Station and Saint of Circumstance – while some fans criticize sloppy vocals and mangled performances of Stagger Lee and Crazy Fingers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Weighted analysis (70 % show quality, 30 % recording) yields a solid but not flawless rating; many reviewers award high marks for the performance and soundboard clarity, while several call out notable flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced SBD; a few comments about missing bass on Stagger Lee and occasional lack of punch, but overall considered a solid recording for the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Terrapin Station",
+      "Saint of Circumstance",
+      "Victim"
+    ],
+    "poor_songs": [
+      "Stagger Lee",
+      "Crazy Fingers",
+      "Here Comes Sunshine"
+    ],
+    "setlist_flow": "Second set is highlighted as the high point with strong transitions and emotional peaks; first set suffers from a few lyric slips and vocal miscues."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – early lyric stumbles on Here Comes Sunshine and Stagger Lee, but later praised for powerful playing during Morning Dew and overall fire.",
+    "Phil": "Noted absence of bass on Stagger Lee by some listeners; also credited with “evil thunder sounds” during the Dew.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 4,
+      "total_mentions": 5
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:25:13.421999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-09.28781.sbeok.flac16"
+}

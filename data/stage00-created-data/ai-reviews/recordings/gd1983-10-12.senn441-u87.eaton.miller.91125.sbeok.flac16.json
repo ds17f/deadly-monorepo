@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a super‑charged Oct 12 1983 show, highlighted by a smoking Help‑Slip‑Franklin sequence and strong renditions of Revolution, St. Stephen and Here Comes Sunshine.",
+  "review": "The recording, sourced from Rob Eaton’s high‑quality soundboard feed, delivers crystal‑clear audio that lets the band’s 1983 MSG energy shine through. Fans rave about the inspired playing—especially the Help→Slip→Franklin’s Tower suite, a fiery Revolution cover and memorable St. Stephen—while the overall set is described as on fire from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both performance and audio quality; recording is noted as excellent soundboard, and the show receives multiple high‑star ratings with only one outlier low rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Audio described as \"awesome\", \"crisp\" and reflecting the supercharged nature of the band; no complaints about drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Revolution",
+      "St. Stephen",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is portrayed as high‑energy from the opening band through a memorable first set, building to an especially fire‑filled second set with classic sequences and tight transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Revolution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:04:34.413209+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-12.senn441-u87.eaton.miller.91125.sbeok.flac16"
+}

@@ -1,0 +1,89 @@
+{
+  "summary": "Exceptional audience recording of a high‑energy spring ’85 show, highlighted by a smoking China > Rider, soaring Bird Song and a rare Tom Thumb’s Blues duet.",
+  "review": "The Oades‑brothers AUD captures the night with crystal‑clear ambience that makes you feel like you’re in the front row.  Musically the band is on fire – the second set rolls flawlessly from China > Rider into an inspired Estimated > Eyes, a blistering Other One and a beautiful Stella Blue, while Tom Thumb’s Blues features a unique vocal duet with Phil.  Minor slips (a rushed Estimated and a couple of missteps in Might As Well) don’t dent the overall brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All 11 reviews are 4‑5 stars, praising both performance and sound; the show is repeatedly called a spring ’85 highlight and the AUD is described as exceptional."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "AUD capture is crisp, immersive and balances crowd ambience with instrument detail; reviewers note no drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "China > Rider",
+      "Estimated > Eyes",
+      "The Other One",
+      "Stella Blue",
+      "Around > NFA",
+      "Tom Thumb's Blues",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Might As Well",
+      "Estimated > Eyes (rushed)"
+    ],
+    "setlist_flow": "First set solid but uneventful; second set drives the show with seamless segues and high‑energy jams, delivering a satisfying arc that ends on a joyous Around > NFA."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as rugged or not at its best yet powerful; fluid guitar playing praised, solos called “extra good”, and he sings a duet with Phil on Tom Thumb’s Blues.",
+    "Phil": "Delivers the classic April Fools joke after Tom Thumb’s Blues, enjoys the spotlight during that song and joins Jerry in vocal duet.",
+    "Bob": "Passionate vocals highlighted on Estimated > Eyes, adding intensity to the performance.",
+    "Keys": "Brent Mydland’s organ tone called sweet and a key element of the show’s sound throughout.",
+    "Drums": "Bill Kreutzmann and Mickey Hart get extra time after the set; Drums>Space segment noted as strong."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around > NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:45:11.398601+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-01.oade.connor.8521.sbeok.shnf"
+}

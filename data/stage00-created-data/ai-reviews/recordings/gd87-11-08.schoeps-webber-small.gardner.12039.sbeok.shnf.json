@@ -1,0 +1,95 @@
+{
+  "summary": "Audience‑sourced recording of fair clarity captures a birthday night where The Other One, Stella Blue and Tom Thumb’s Blues shine.",
+  "review": "Fans rave about the festive atmosphere and standout moments – The Other One “rocked,” Stella Blue felt intimate, and Tom Thumb’s Blues was a special treat.  The recording is described as remote and low‑fidelity, giving it a fair but listenable sound.  Overall sentiment is positive despite mixed comments on drum work and occasional weak performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around 4.2/5 based on multiple enthusiastic reviews, while recording quality averages about 3/5 due to comments about it being remote and low‑fidelity; weighted combination yields ~3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note the recording sounds remote, low‑fidelity and lacks clarity; some describe it as “low sound” or “muffled,” but it remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Stella Blue",
+      "Tom Thumb's Blues"
+    ],
+    "poor_songs": [
+      "Rooster",
+      "Iko",
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "The concert opened with a festive Iko and maintained a upbeat flow through classics like Mexicali and Big River.  The second set featured an extended The Other One, a joyous China, and a strong Rider, ending with a rare Tom Thumb's Blues encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistent slight riffing noted on “Little Light,” adding a touching feel.",
+    "Phil": "Steps front‑and‑center for the rare Tom Thumb's Blues encore.",
+    "Bob": "His screeching on “Crazy Fingers” was criticized as removing emotional integrity.",
+    "Keys": "",
+    "Drums": "First‑set drumming described as bland, while the Drum/Space segment created an atmospheric mood; rhythm section receives mixed remarks."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:11:36.341985+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-11-08.schoeps-webber-small.gardner.12039.sbeok.shnf"
+}

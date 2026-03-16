@@ -1,0 +1,69 @@
+{
+  "summary": "Warm, breathy audience tape captures a 1976 show packed with monster jams – Playin' in the Band → Wheel → Good Lovin' → Comes‑a‑Time sequence shines.",
+  "review": "The composite AUD recording is praised for its warm, slightly “breathy” sound and crystal‑clear piano moments, making it one of the better audience tapes from ’76. Musically the show is highlighted for an epic second‑set stretch (Playin' in the Band → Drums → The Wheel → Good Lovin' → Comes A Time → Dancing In The Streets) that several fans rank among the band’s top jam segments, even if the overall energy isn’t the most intense of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most substantive reviews (≈10) give 4‑5 stars and emphasize standout jams and a solid audience recording; only a few low‑star or spam entries detract minimally."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm, breathy AUD tape praised for clarity (especially piano before Comes A Time); one reviewer rates sound an 8/10. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "The Wheel",
+      "Good Lovin'",
+      "Comes A Time",
+      "Dancing In The Streets",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set flow is a seamless jam marathon, with the Playin' → Drums → Wheel → Good Lovin' → Comes A Time segment highlighted as one of the band’s top 50 jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as delivering sweet lead work, stepping back and forward with expressive phrasing.",
+    "Phil": "",
+    "Bob": "Weir’s vocal‑driven Good Lovin' noted for its unique arrangement and early‑year style.",
+    "Keys": "Keith's piano before Comes A Time likened to a “Take Five” moment; praised despite occasional medication‑related drowsiness.",
+    "Drums": "The drum segment is singled out as a key component of the outstanding jam stretch."
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancing In The Streets": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:09:37.920598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-03.sbd-aud.cotsman.12832.sbeok.shnf"
+}

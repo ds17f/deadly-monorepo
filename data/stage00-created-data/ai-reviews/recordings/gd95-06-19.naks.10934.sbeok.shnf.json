@@ -1,0 +1,117 @@
+{
+  "summary": "A clearer matrix recording captures a lackluster Giants Stadium show where Jerry’s fading playing overshadows occasional highs like Brokedown Palace and Stella Blue.",
+  "review": "The source is noticeably brighter and clearer than other available versions, though the crowd noise is prominent. Musically the concert is generally disappointing – Jerry’s guitar is often inaudible and his solo on Cold Rain & Snow is a mis‑step, making the second set feel dull, with only a few redeeming moments such as Corrina, Brokedown Palace and an inspiring Stella Blue. The first set fares better with solid performances of Schoolgirl, Ramble On Rose and It’s All Over Now.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews criticize the performance (70% negative) while a few note decent sound quality; weighting show quality (70%) and recording quality (30%) yields an overall rating around 2‑star level."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Brighter, clearer mix than other versions with more crowd presence; no major dropouts reported, generally crisp but the audience ambience is noticeable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Stella Blue",
+      "Corrina",
+      "Ramble on Rose"
+    ],
+    "poor_songs": [
+      "Cold Rain & Snow",
+      "Unbroken Chain",
+      "Throwing Stones",
+      "The Other One"
+    ],
+    "setlist_flow": "First set holds together with a few solid numbers, but the second set drags and feels uninspired, largely due to Jerry’s low volume and lack of energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently described as inaudible or turned down low in the second set; his Cold Rain solo is a clear mis‑step, though later moments like Stella Blue and Brokedown Palace receive praise.",
+    "Phil": "Noted as placid on Unbroken Chain and visibly frustrated (hands down) during the show, but also remembered for smiling at fans between songs.",
+    "Bob": "Bobby’s vocal effort is mentioned as trying to inject energy into a weak set; no specific guitar commentary.",
+    "Keys": "Vince (keyboardist) is praised for adding vigor on vocals and instruments in the first set.",
+    "Drums": "Drums/Space segment is acknowledged as fine; no major drum complaints."
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Schoolgirl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Don't Ease Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Matilda": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:16:22.667195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-19.naks.10934.sbeok.shnf"
+}

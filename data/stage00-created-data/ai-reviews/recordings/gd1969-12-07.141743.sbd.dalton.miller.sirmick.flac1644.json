@@ -1,0 +1,80 @@
+{
+  "summary": "Soundboard recording with slight hiss captures a powerful single‑set show featuring standout jams on Black Peter, Dancin', The Eleven > Love Light and Pigpen’s top‑form blues numbers.",
+  "review": "The performance is praised for its raw energy and tight segues – highlights include the rare Black Peter opener, a Dark‑Star‑like jam in Dancin’, and the primal Eleven→Love Light sequence. The soundboard source is generally clear despite a brief hiss at the beginning, making the show enjoyable for fans who appreciate 1969 Dead intensity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews overwhelmingly highlight strong musical moments and only note minor hiss in the recording; weighted average of show (≈4.5) and recording (≈4.0) yields a solid 4.3 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight hiss at the start of the Black Peter opener, but overall a clear and well‑balanced mix with no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Hard To Handle",
+      "Easy Wind",
+      "Mama Tried",
+      "Dancin'",
+      "Good Lovin'",
+      "The Eleven > Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A single‑set show that weaves blues numbers and jam sequences together; transitions such as Mama Tried→Easy Wind and The St. Stephen→The Eleven→Love Light are highlighted for their fluidity."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar shines, especially the Dark‑Star‑like solo in Dancin' and the opening of The Eleven > Love Light.",
+    "Phil": "",
+    "Bob": "Weir’s vocal performance on Mama Tried receives special mention.",
+    "Keys": "Tom Constanten’s organ adds melodic texture, noted as a highlight of the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard To Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Wind": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Eleven > Love Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T18:31:50.381561+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-12-07.141743.sbd.dalton.miller.sirmick.flac1644"
+}

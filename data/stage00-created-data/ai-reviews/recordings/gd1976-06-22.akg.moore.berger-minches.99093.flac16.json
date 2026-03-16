@@ -1,0 +1,31 @@
+{
+  "summary": "Moore's superb soundboard capture offers clear, low‑crowd audio, but the concert itself feels modest with few standout moments.",
+  "review": "The recording is praised for its excellent sound quality – a clean Moore soundboard mix with noticeably less crowd noise than other sources. While a couple of songs spark energy, reviewers generally describe the performance as lackluster and lacking memorable peaks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently rated high (fantastic soundboard), but show performance receives mixed to lukewarm comments, resulting in a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note the mix is clean and less crowded; Moore's recording praised as fantastic with minimal ambient distraction."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; overall impression is that only a few numbers captured the band’s energy, making the show feel somewhat lackluster."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith played a grand piano with a ‘steal your face’ flag draped over it, adding a unique blues opening.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T05:08:38.952042+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-22.akg.moore.berger-minches.99093.flac16"
+}

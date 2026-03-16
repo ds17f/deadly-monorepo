@@ -1,0 +1,63 @@
+{
+  "summary": "Mixed recording quality with muffled audio, but a solid spring‑92 show highlighted by So Many Roads, Black Peter and a strong SMR debut.",
+  "review": "Fans recall a warm, laid‑back Atlanta night that opened the 1992 spring tour. The performance is praised for standout moments like So Many Roads, Black Peter, Stuck Inside of Mobile Homes and a rocking Picasso Moon, while keyboard work from Vince (and Bruce’s presence) receives kudos. Recording-wise opinions diverge – some describe it as a little muffled or even terrible, indicating only fair sound quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is generally positive (good song choices and band energy) but recording issues are noted by several reviewers; the combined weighted estimate lands in the low‑mid‑3 range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Several listeners call the audio muffled or terrible, though one notes it becomes acceptable after adjusting. No clear indication of soundboard vs audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Black Peter",
+      "Stuck Inside of Mobile Homes",
+      "LWTGH",
+      "Picasso Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, laid‑back opening to the spring tour with a well‑received second set; fans note good momentum despite modest excitement levels."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery on So Many Roads is praised and overall presence is celebrated.",
+    "Phil": "Bass work described as shaking the upper sections like ocean waves – very positive.",
+    "Bob": "",
+    "Keys": "Vince’s vocals/keys get attention; Bruce’s continued presence noted positively.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stuck Inside of Mobile Homes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LWTGH": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:39:54.368571+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-01.schoeps.gardner.4736.sbeok.shnf"
+}

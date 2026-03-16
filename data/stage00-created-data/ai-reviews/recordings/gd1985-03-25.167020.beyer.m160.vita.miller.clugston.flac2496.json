@@ -1,0 +1,31 @@
+{
+  "summary": "Recording appears to be mislabeled with an incorrect date and provides no information on sound quality or performance",
+  "review": "Both reviews focus solely on the metadata error, indicating that the tape is not from March 25‑1985 as labeled. No comments are made about the audio source, mix, or musical execution, leaving the recording and show qualities indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews address a labeling mistake; there is no data on performance or sound quality to justify a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "Reviewers did not discuss audio clarity, mix, or source type—only the incorrect date is mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the setlist or flow of the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T01:59:31.380657+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-25.167020.beyer.m160.vita.miller.clugston.flac2496"
+}

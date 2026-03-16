@@ -1,0 +1,80 @@
+{
+  "summary": "Shakedown Street opener, fiery Scarlet>Fire, tight jams all night",
+  "blurb": "The NYE show bursts out with a monster Shakedown Street and a scorching Scarlet Begonias → Fire on the Mountain. Jerry’s vocals and solos are on fire while Brent lays down lush keys. Highlights include Spanish Jam, Peggy‑O, Jack Straw into Bird Song and an uplifting Baby Blue.",
+  "review": "December 31, 1984 at the San Francisco Civic Auditorium proved to be one of the Dead’s most electrifying New Year’s Eve outings. The first set launches with a high‑octane \"Shakedown Street\" that sets a jubilant tone for the night, and the band never lets up – Brent Mydland is in fine form on organ and vocal harmonies, while Jerry Garcia delivers anguished, “monster” licks especially on the soaring \"Fire On The Mountain\". The second set is a masterclass in segues: \"Scarlet Begonias → Fire\" erupts with primal bombs from Phil’s bass, Mickey and Bill lock into a driving groove that fuels the expansive Space‑Spanish‑Wheel suite, and \"Peggy‑O\" showcases heartfelt vocals. The third set closes on a high note with a rousing \"Baby Blue\" and tight renditions of \"Uncle John's Band\" and \"Around & Around\". Across the board, reviewers praise the band’s tight rhythm work, Brent’s lush keyboards, and the powerful dual‑drum attack that propels the jams forward. Even though some recordings suffer minor tape hiss or a cut in \"Fire\", the performance itself is consistently described as inspired, emotional, and “killer”.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 56,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.8,
+      "sentiment_rationale": "Out of twelve analyses, eleven are positive and repeatedly highlight the same standout moments – Shakedown Street, Scarlet Begonias → Fire on the Mountain, Spanish Jam, and Baby Blue. Multiple reviewers use superlatives like “monster”, “scorching”, “ferocious” and note consistent high energy throughout the three sets. Only one recording notes a cut in \"Fire\"; no recurring performance criticism appears, so a strong positive sentiment adjustment is warranted.",
+      "final_calculation": "2.5 + 0.4 + 1.8 = 4.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1984-12-31.fm.menke.miller.32347.sbeok.flac16",
+    "reason": "Excellent soundboard source with crystal‑clear, balanced mix and big low end; captures the full energy of the night without dropouts, making it the most listenable version."
+  },
+  "key_highlights": [
+    "Monster Shakedown Street opener that drives the whole show",
+    "Scorching Scarlet Begonias → Fire on the Mountain jam praised by multiple reviewers",
+    "Space‑Spanish‑Wheel suite delivering a primal, bomb‑filled second set",
+    "Emotional Baby Blue and tight third‑set closing with Uncle John's Band"
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Spanish Jam",
+    "Peggy-O",
+    "Jack Straw",
+    "Uncle John's Band",
+    "It's All Over Now Baby Blue"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers anguished vocals and monster guitar licks, especially on Fire and Baby Blue; described as ‘in command’ from the first song with ferocious solos throughout.",
+    "Phil": "Provides a solid, primal bass foundation with well‑articulated picking; praised for “bombs” in Scarlet, Space and Wheel and strong work on Peggy-O and Around & Around.",
+    "Bob": "Locks into tight rhythm work, contributes to the Spanish jam sections and adds full‑harmony vocals on Uncle John's Band.",
+    "Brent": "In fine form with lush organ textures and vocal harmonies, particularly shining on Peggy-O; his keyboards drive the jams forward.",
+    "Mickey": "Locks into a primal, driving beat, adding marimba‑like textures in Space and relentless propulsion during the jam sequences.",
+    "Billy": "Pairs with Mickey for a solid dual‑drum attack that underpins the high‑energy set, highlighted in the Drums → Space transition."
+  },
+  "processed_recordings": 11,
+  "processed_date": "2025-09-15T00:39:36.903634+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Sugar Magnolia",
+      "Scarlet Begonias",
+      "Fire On The Mountain",
+      "Man Smart, Woman Smarter",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "The Wheel",
+      "Throwing Stones",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Peggy-O"
+    ],
+    [
+      "Jack Straw",
+      "Bird Song"
+    ],
+    [
+      "Gimme Some Lovin'",
+      "Uncle John's Band",
+      "Around & Around",
+      "It's All Over Now Baby Blue"
+    ]
+  ]
+}

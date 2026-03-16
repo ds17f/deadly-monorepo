@@ -1,0 +1,75 @@
+{
+  "summary": "Fair soundboard capture of a mellow 1969 outdoor set, highlighted by strong Pigpen vocals and a standout \"Death Don't\" performance.",
+  "review": "The recording offers a decent but somewhat hazy soundboard image of the New York State Pavilion show – early hiss and limited instrument separation make the mix only fair, though solos and Pigpen’s harmonica come through clearly. Musically the concert is laid‑back yet memorable, with praised moments like Casey Jones organ work, Mama Tried vocals, and especially a powerful rendition of Death Don't that stands out as the show's high point.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Single detailed review rates the show 4 stars; performance is praised while recording quality is only fair, leading to an overall strong but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Slight hiss early on, limited instrument separation due to outdoor pavilion acoustics; solos and Pigpen’s vocals are clear, but overall mix is muddy at times."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Death Don't",
+      "Casey Jones",
+      "Mama Tried",
+      "Hard to Handle",
+      "Silver Threads"
+    ],
+    "poor_songs": [
+      "High Time"
+    ],
+    "setlist_flow": "A relaxed, outdoors‑influenced vibe with a slower start hampered by tuning issues that gives way to stronger jams later, culminating in an extended jam hinting at The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for energetic guitar solos and backup vocals; lets loose on \"Sitting on Top of the World\" segment.",
+    "Phil": "Bass is hard to hear early on but becomes clearer later in the set.",
+    "Bob": "Praised for vocal work on \"Mama Tried\" and supportive backing vocals.",
+    "Keys": "Organ work highlighted on \"Casey Jones\"; overall keyboard presence noted as modest due to mix limitations.",
+    "Drums": "Top‑hat tapping and cowbell mentioned; drummers provide a steady, if not crystal‑clear, foundation."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Silver Threads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:20:14.641637+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-07-11.123418.sbd.latvala-lee-smith.flac16"
+}

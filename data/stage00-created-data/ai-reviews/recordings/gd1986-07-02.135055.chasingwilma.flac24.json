@@ -1,0 +1,51 @@
+{
+  "summary": "Audience‑sourced recording with decent clarity captures a solid summer‑86 set highlighted by Candyman, Desolation Row and Sugar Magnolia.",
+  "review": "The three reviews paint a picture of an enjoyable mid‑summer ’86 performance that fans remember for strong renditions of Candyman, Desolation Row and Sugar Magnolia.  The source is an audience (AUD) pull from the Rubber Bowl, and while no detailed technical critique is offered, listeners find it clear enough to be worth sharing.  Overall sentiment is upbeat, with two enthusiastic five‑star endorsements and one moderate three‑star note.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two highly positive reviews (5 ★) highlight the show’s musical strengths, while a third gives an average rating but still notes song highlights; recording quality is acceptable though not deeply described."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Identified as an AUD pull from the Rubber Bowl; reviewers do not report major flaws, implying a listenable but not audiophile‑grade capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Desolation Row",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviews focus on individual song highlights rather than set structure, suggesting a generally well‑flowing performance that resonated with listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:58:17.816526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-02.135055.chasingwilma.flac24"
+}

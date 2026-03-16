@@ -1,0 +1,39 @@
+{
+  "summary": "Fans rave about this early‑1969 show—especially a strong rendition of The Eleven—with decent cassette sound despite no detailed technical notes.",
+  "review": "Both reviewers give the recording high marks, highlighting the electrifying vibe of the 1969 performance and noting that the version of “The Eleven” holds up against some of the era’s best shows. While one reviewer simply celebrates the show, the other mentions it comes from a first‑generation cassette copy, suggesting the tape may have imperfections but overall remains listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the performance (70% weight) and generally acceptable cassette sound quality (30% weight) lead to a high rating despite limited technical detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer notes it is a first‑gen cassette copy with possible tape‑cut issues, but overall the sound is described as comparable to other top recordings of the period; no explicit mix or clarity comments were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers feel the show ranks among the best of its era, though specific set‑list pacing details are not mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T11:23:52.219615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-02-15.166421.sbd.remaster.miller.flac1644"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Jerry delivers a fiery performance on \"Loser\"; recording quality not specified",
+  "review": "The sole reviewer raves about Jerry Garcia’s incendiary playing, especially on the song “Loser,” giving the show a strong musical highlight. No details are provided about the source or clarity of the recording, so its technical quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "A single 4‑star review praises Jerry’s playing and a specific song, indicating a good show; lack of recording comments limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality, clarity, or mix were made in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only \"Loser\" is mentioned; reviewer highlights Jerry’s fire on that track without commenting on overall set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry is described as “on fire,” delivering a powerful performance on Loser.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:05:23.684134+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-12.138219.mtx.tobin.flac16"
+}

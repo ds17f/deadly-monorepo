@@ -1,0 +1,39 @@
+{
+  "summary": "Great‑sounding audience recording highlighted by a standout Shakedown performance.",
+  "review": "Both reviewers rave about the audio, calling it an excellent sounding AUD that captures the energy of the show. The only specific musical highlight mentioned is “Shakedown,” which got listeners dancing. No complaints about sound or performance were noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave high star ratings (4 and 5) and praised the audio quality while noting a strong Shakedown performance; limited detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience recording described as 'great sounding' with no reported issues; clear and lively capture of the concert."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No explicit comments on set structure; reviewers focused on overall vibe and dancing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:09:03.982405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-27.nak300.lane-barfield.103144.flac24"
+}

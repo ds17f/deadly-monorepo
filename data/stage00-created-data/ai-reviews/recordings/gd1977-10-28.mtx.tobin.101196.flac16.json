@@ -1,0 +1,52 @@
+{
+  "summary": "Good matrix recording captures a high‑energy first set and solid second half, though pacing feels sluggish to some and keyboards sit low in the mix.",
+  "review": "The matrix tape offers clear sound with an enthusiastic crowd, but reviewers note that Keith’s keyboards (and Brent’s guitar) are buried in the mix. Musically Jerry shines on Candyman and Stella Blue and the first set is high‑energy, yet one listener felt the overall tempo was too slow, giving the show a lifeless feel at times.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings; they praise performance and recording overall but note issues with mix balance and show pacing, leading to a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear matrix tape with good crowd ambience; some listeners feel keyboards/guitar are low in the mix and one reviewer had to speed up the tempo for listening comfort."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Promised Land"
+    ],
+    "setlist_flow": "First set described as high‑energy and vibrant; second set varies in intensity, picking up toward the end, though overall pacing was criticized as too slow by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "In good voice, excellent on Candyman and Stella Blue; highlighted for strong moments.",
+    "Phil": "",
+    "Bob": "Some great Bob moments noted in the second review.",
+    "Keys": "Keyboards (Keith) are reported to sit low in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:28:07.754776+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-28.mtx.tobin.101196.flac16"
+}

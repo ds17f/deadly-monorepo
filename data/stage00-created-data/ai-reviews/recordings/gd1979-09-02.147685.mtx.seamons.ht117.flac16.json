@@ -1,0 +1,108 @@
+{
+  "summary": "Good matrix recording of a laid‑back 1979 show with a standout Terrapin > Let It Grow stretch and sweet Jerry vocals, despite speed quirks and a weak Minglewood Blues.",
+  "review": "The matrix capture is solid and listenable – the reviewer had to speed it up about 5½% and add some reverb to tame a sterile board, but overall the sound is clear with only occasional sound‑board cuts that were deftly patched. Musically the show is relaxed yet engaging, highlighted by Terrapin Station flowing into Let It Grow and a beautiful Stella, while Bob Weir’s Minglewood Blues falls flat and Truckin' suffers some lyrical mishaps.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings, praising the performance and matrix sound while noting a few flaws; this supports a strong but not flawless overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Runs slightly slow at original speed (fixed by ~5.5% increase); sterile soundboard required added reverb; several SBD cuts were hidden by careful matrix syncing; occasional sound‑board dropouts near the end of \"Around and Around\" but overall balanced and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Let It Grow",
+      "Stella",
+      "Me & My Uncle",
+      "Mexicali",
+      "Big River",
+      "Mama Tried"
+    ],
+    "poor_songs": [
+      "Minglewood Blues",
+      "Truckin'"
+    ],
+    "setlist_flow": "A relaxed first set with no rush, featuring classic cowboy‑style tunes; the second set flows smoothly from Terrapin Station into Let It Grow and a superb jam, giving the concert a cohesive, exploratory feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are strong this night – sweet on \"Stella\" and overall solid despite earlier singing struggles.",
+    "Phil": "",
+    "Bob": "His vocal on \"Minglewood Blues\" is described as lifeless and the worst version heard, detracting from that song.",
+    "Keys": "Brent (keys) feels comfortable in jams, adding laid‑back Southern California backing vocals.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:08:42.800917+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-02.147685.mtx.seamons.ht117.flac16"
+}

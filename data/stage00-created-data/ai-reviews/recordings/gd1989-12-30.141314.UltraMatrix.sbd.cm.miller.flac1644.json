@@ -1,0 +1,111 @@
+{
+  "summary": "Good matrix recording of a high‑energy show packed with standout performances like Bertha > Good Lovin’, Masterpiece, Terrapin Station and The Other One.",
+  "review": "The concert captures the band at a peak of energy with solid song choices and memorable moments—from the opening Bertha > Good Lovin’ to a trippy Other One and an extended Terrapin Station. Reviewers praise the overall flow and the band's communication, while noting only minor lyric flubs. The UltraMatrix source delivers a clear enough mix that doesn’t detract from the enjoyment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One detailed positive review highlights many standout songs and strong performance, suggesting a high show rating; recording is described as an UltraMatrix source with no complaints, leading to a good but not exceptional recording score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio issues mentioned; UltraMatrix generally provides a balanced mix of board and audience sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Good Lovin'",
+      "Jack-A-Roe",
+      "Masterpiece",
+      "West LA",
+      "Music",
+      "Jack Straw",
+      "China",
+      "Rider",
+      "Estimated Prophet",
+      "Terrapin Station",
+      "The Other One",
+      "Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review emphasizes a consistently high energy throughout both sets, with smooth transitions (e.g., Jack Straw > China > Rider) and a climactic close that left the crowd ecstatic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob (referred to as 'Bobby') leads the way on Masterpiece, drawing specific praise.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:40:45.258273+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-30.141314.UltraMatrix.sbd.cm.miller.flac1644"
+}

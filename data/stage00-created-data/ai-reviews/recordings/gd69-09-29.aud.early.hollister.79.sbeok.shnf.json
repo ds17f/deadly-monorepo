@@ -1,0 +1,57 @@
+{
+  "summary": "Rare “The Seven” jam shines despite a muddy audience tape, with standout St Stephen > The Eleven and solid band interplay.",
+  "review": "The performance is celebrated for the historic seven‑minute improvisation dubbed “The Seven,” which many reviewers call mind‑blowing, and the tight St Stephen > The Eleven.  While the audience AUD tape is muddy, vocals are often lost and the mix leans heavily toward Bob’s guitar, the music itself outweighs the technical flaws, making this a prized capture for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (rare jam, tight segues) while recording quality is noted as muddy/fair; weighted combination yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy tape from a Maxell UD cassette, vocals often missing or washed out, bright due to Dolby B, lack of EQ; however the mix is surprisingly balanced for an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Seven",
+      "St. Stephen > The Eleven"
+    ],
+    "poor_songs": [
+      "Good Lovin'"
+    ],
+    "setlist_flow": "A short, rare set that flows smoothly with seamless segues (e.g., The Seven into Good Lovin'), highlighted by the historic jam and a crisp St Stephen > The Eleven."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s leads are described as soaring, central to The Seven, and one of the most memorable guitar moments of the era.",
+    "Phil": "Phil’s bass is clearly audible and provides a solid foundation throughout the improvisation.",
+    "Bob": "Bob Weir’s rhythm guitar shines in the mix, often noted as “shimmering” and front‑and‑center.",
+    "Keys": "The organ (Tom Constanten) is buried in the tape hiss and fails to cut through, making it a minor casualty of the recording.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive high praise for tight, high‑speed interplay—described as “two cheetahs sprinting in lockstep.”"
+  },
+  "song_mentions": {
+    "The Seven": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "St. Stephen > The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:26:05.618385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-09-29.aud.early.hollister.79.sbeok.shnf"
+}

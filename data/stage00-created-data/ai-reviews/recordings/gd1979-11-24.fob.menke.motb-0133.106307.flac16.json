@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent Menke audience recording with full‑throated bass, but the show is an average performance aside from a scorching Sugar Magnolia jam and solid Peggy‑O.",
+  "review": "The tape captures crystal‑clear instrument separation and a booming low end that makes this Menke audience recording stand out technically. Musically the concert is viewed as solid yet unremarkable, with a few high points – notably an electrifying Sugar Magnolia segment and a well‑sung Peggy‑O – but generally lacking the usual spark of a great Dead show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Recording quality is praised as excellent, while the musical performance is judged average with only a few standout moments; weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Full‑throated bass and prominent instruments throughout; crisp, well‑balanced sound typical of high‑quality Menke audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall an average set with solid playing but lacking the usual fire; a few peaks (the Sugar Magnolia jam) break up a generally steady, unremarkable flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals praised as strong on Peggy‑O, though some reviewers note occasional lapses in Garcia's playing and missing 'x‑factor'.",
+    "Phil": "His timing on the explosive Sugar Magnolia jam is highlighted as perfect.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:59:56.340593+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-24.fob.menke.motb-0133.106307.flac16"
+}

@@ -1,0 +1,46 @@
+{
+  "summary": "Good audience recording of a solid show highlighted by an excellent So Many Roads performance",
+  "review": "The tape captures a classic Grateful Dead concert with a very good audience sound that lets the vibe shine through. Reviewers praise the rendition of \"So Many Roads\" and overall feel the show exceeds expectations, though one listener notes the absence of \"Terrapin,\" which dampens their enthusiasm.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show is generally praised with a standout performance and decent audience recording, but mixed feedback about a missing song keeps the rating from being higher."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as a very good audience tape; clear enough to enjoy despite typical crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "Fans feel the concert flows well and exceeds expectations, though the missing \"Terrapin\" was a disappointment for at least one listener."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:51:53.156666+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-19.senn441-nak700.morris.106741.flac16"
+}

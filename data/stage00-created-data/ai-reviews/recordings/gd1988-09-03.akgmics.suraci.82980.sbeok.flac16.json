@@ -1,0 +1,45 @@
+{
+  "summary": "Recording source unknown, but the 1988 Capitol Center show shines thanks to an electric Ripple and a soaring Morning Dew.",
+  "review": "Fans rave about the high‑energy vibe of this night, highlighting an electrifying Ripple and a powerful Morning Dew that left lasting impressions. No reviewers comment on the technical side of the recording, so the source type remains unclear but the performance itself is praised as one of the better shows of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the musical performance (Ripple, Morning Dew) and overall energy outweigh the lack of recording‑quality details."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not mention soundboard, audience mix, clarity, or any audio issues, leaving the technical quality indeterminate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as a high‑spirited kickoff to the fall tour, with an especially moving second half featuring Morning Dew and an electric Ripple that kept the crowd buzzing long after lights came up."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:58:33.829782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-03.akgmics.suraci.82980.sbeok.flac16"
+}

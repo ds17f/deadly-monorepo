@@ -1,0 +1,96 @@
+{
+  "summary": "Matrix‑derived mix captures an electrifying 1987 show with Santana‑enhanced jams and a soaring Morning Dew, though the sound isn’t pristine.",
+  "review": "The August 23 1987 concert bursts with high‑energy set two highlights – a blistering Scarlet > Fire > Playin sequence, a guest‑filled Watchtower, and an unforgettable, vocal‑charged Morning Dew. Reviewers rave about Jerry’s confident guitar tone, Brent’s jazzy keyboards and the band’s chemistry, while noting that the matrix recording blends audience ambience with the mix, resulting in good but not immaculate sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews praise the musical performance and specific song moments; only one reviewer notes modest recording flaws, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Crowd is audible throughout; mix is a blend of soundboard and audience that isn’t perfectly balanced (reviewer gave it 4‑star sound quality). Set two sounds clearer than the first, but overall the recording remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Jack Straw",
+      "High Time",
+      "Watchtower",
+      "Scarlet > Fire > Playin",
+      "Morning Dew",
+      "Brokedown",
+      "NFA"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set mixes classic and newer material with solid transitions; guest guitarist Carlos Santana lifts the energy, especially on Watchtower. Set two ramps up with Scarlet‑Fire‑Playin, a tight drums‑Space segment, and builds to an emotional Morning Dew that caps a memorable night."
+  },
+  "band_member_comments": {
+    "Jerry": "Confident, gutsy guitar tone; vocal delivery described as stronger than many mid‑80s shows; clearly having fun especially with Santana.",
+    "Phil": "Praised for strong vocal work on Box of Rain and overall phrasing throughout the show.",
+    "Bob": "",
+    "Keys": "Brent Mydland shines on electric piano, B3 pads and jazzy solos; his presence lifts the mix in the second set.",
+    "Drums": "The rhythm section drives the jams, with a concise drum break leading into an expansive Space."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire > Playin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:31:11.301050+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-23.sbd.miller.103629.flac16"
+}

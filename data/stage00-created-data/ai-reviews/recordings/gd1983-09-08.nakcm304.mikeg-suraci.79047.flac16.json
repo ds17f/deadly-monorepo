@@ -1,0 +1,63 @@
+{
+  "summary": "Outstanding audience recording from Red Rocks captures a high‑energy show highlighted by a smoking Scarlet Begonias → Fire on the Mountain sequence.",
+  "review": "The audience tape is praised as clear, crisp and surprisingly detailed – Phil’s bass comes through loud and Jerry sounds “on fire.”  The concert delivers strong first‑set renditions of Shakedown Street, Big River and Hell in a Bucket, while the second set’s Scarlet Begonias > Fire on the Mountain is described as out‑freakin’‑standing.  The only drawback noted is that a sizable portion of the recording is missing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers agree the performance is excellent and the audience recording sounds great, but the missing section reduces overall enjoyment, leading to a solid but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear and crisp sound; Phil’s bass especially loud and clear.  Noted by one reviewer that much of the later portion (LLR) is missing, but overall tape quality is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Shakedown Street",
+      "Big River",
+      "Hell in a Bucket"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first set with notable renditions, followed by an especially magical second set highlighted by the Scarlet Begonias → Fire on the Mountain sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as “on top of his game” and “on fire” throughout the show.",
+    "Phil": "Bass comes through loud and clear, a standout element of the recording.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:13:07.953739+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-08.nakcm304.mikeg-suraci.79047.flac16"
+}

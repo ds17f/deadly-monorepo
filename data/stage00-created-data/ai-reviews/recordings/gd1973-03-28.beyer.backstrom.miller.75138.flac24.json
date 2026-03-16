@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience recording of a 1973 peak show – killer first set, soaring Dark Star and standout Here‑Comes‑Sunshine, with occasional crowd clatter but overall great sound.",
+  "review": "The performance is widely praised as one of the band’s high points in ’73, featuring a monster first set, a superb 32‑minute Dark Star and highlights like Here Comes Sunshine, Stella Blue and Row Jimmy. The audience tape captures the energy well – clear enough to enjoy the music despite some noticeable clapping and ambient noise that a few listeners found distracting.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Four out of five reviewers give five‑star show praise, noting tight musicianship and memorable jams; recording quality is generally lauded but one reviewer flags excessive audience noise, yielding a high overall rating with moderate confidence due to the divergent audio opinion."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced for an audience tape; some reviewers note pronounced rhythmic clapping and typical crowd ambience, but no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Here Comes Sunshine",
+      "Stella Blue",
+      "Row Jimmy"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower"
+    ],
+    "setlist_flow": "First set described as \"killer\" with strong momentum; second set holds its own with a lengthy Dark Star and solid finishes. Minor criticism of one jam segment, but overall the set pacing is praised for its swing and variety."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work gets special mention – a Crybaby wah‑wah tone, soaring lead on Looks Like Rain and generally tight, trippy playing throughout.",
+    "Phil": "Lesh’s bass is highlighted as atomic and driving, especially during Dark Star; overall rhythm section praised for its tightness.",
+    "Bob": "",
+    "Keys": "Keith’s piano volume‑pedal work noted, along with the classic early‑70s keyboard textures.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T07:09:52.791056+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-28.beyer.backstrom.miller.75138.flac24"
+}

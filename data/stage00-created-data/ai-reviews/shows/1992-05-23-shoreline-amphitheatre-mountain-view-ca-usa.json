@@ -1,0 +1,72 @@
+{
+  "summary": "Balanced set with standout Candyman, Box of Rain & Wheel→Stella Blue",
+  "blurb": "The show delivers strong performances of Candyman, Box of Rain and a seamless Wheel into Stella Blue transition. Jerry’s melodic solos and Phil’s front‑center bass drive the set while the drums provide both subtle texture and powerful peaks. The recording captures the breezy vibe with an exceptionally clear mix.",
+  "review": "May 23, 1992 at Shoreline Amphitheatre was a solid West‑Coast outing that kept the Dead’s summer momentum rolling. The first set opened with the rollicking “Hell In A Bucket” and moved through classics before landing on a particularly potent “Candyman,” where Jerry’s weathered vocals and soaring solo cut through the night air. Phil’s bass sat high in the mix, laying down anticipatory lines that propelled songs like “Box of Rain” and the uplifting “Ship Of Fools.” The second set hit its stride with a concise “Playing In The Band → Uncle John’s Band” segue, then built into a glorious “The Wheel > Stella Blue” stretch highlighted by both Bill’s subtle, tasteful drumming and Mickey’s diagonal chops, culminating in an energetic Drums‑Space burst. Vince’s atmospheric keyboards floated over the groove, adding lush color without overwhelming the texture. The encore closed with a heartfelt “Knockin’ On Heaven’s Door,” leaving the crowd buzzing. Among the available sources, the Miller soundboard (gd1992-05-23.sbd.miller.92271.sbeok.flac16) offers the clearest window into this balanced performance, delivering crisp detail and a well‑balanced mix that showcases every nuance of the night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Three recordings praise the show (positive sentiment) while one is mixed but offers no criticism; no negative remarks appear. Consistent acclaim for standout songs and band playing justifies a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1992-05-23.sbd.miller.92271.sbeok.flac16",
+    "reason": "Excellent soundboard capture with clear mix, prominent Lesh bass and crisp drums; highlights the full set without dropouts."
+  },
+  "key_highlights": [
+    "Candyman shines with Jerry’s potent melodic solo and raw vocals.",
+    "Box of Rain delivers an energetic lead from Jerry and a driving Phil bass line.",
+    "The Wheel → Stella Blue sequence is seamless, featuring powerful drums‑space interplay.",
+    "Vince’s atmospheric keyboard textures add lush layers throughout the show."
+  ],
+  "song_highlights": [
+    "Candyman",
+    "Box of Rain",
+    "Ship Of Fools",
+    "Playing In The Band",
+    "The Wheel",
+    "Stella Blue",
+    "Knockin' On Heaven's Door"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers potent melodic solos and raw, weathered vocals; introspective yet energetic lead work on Candyman, Box of Rain and Ship Of Fools.",
+    "Phil": "Bass sits high in the mix with inventive, anticipatory lines that drive the set; adds lively crowd banter at the start of the second set.",
+    "Bob": "Provides tasteful slide guitar textures that enrich the overall sound without overpowering the mix.",
+    "Vince": "Supplies floaty, atmospheric keyboard pads; occasional over‑doing but generally creates lovely sonic landscapes.",
+    "Mickey": "Adds diagonal chopping and a powerful “beam‑bashing” presence during Drums→Space, elevating the percussion dynamics.",
+    "Billy": "Delivers subtle, tasteful drumming that carries the set’s groove and complements Mickey’s more aggressive moments."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-18T05:44:47.709797+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Candyman"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Ship Of Fools"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Stella Blue",
+      "One More Saturday Night"
+    ],
+    [
+      "Knockin' On Heaven's Door"
+    ]
+  ]
+}

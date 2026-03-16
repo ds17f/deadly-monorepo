@@ -1,0 +1,101 @@
+{
+  "summary": "Solid soundboard capture despite mix quirks, with standout China Cat Sunflower → Cumberland Blues segue and an electrifying Let It Grow.",
+  "review": "The performance is a high‑energy snapshot of the Dead’s 1985 West Coast run – tight jams on Bertha, OMSN, Sugaree and a brilliant Let It Grow that many reviewers flag as the highlight. The SBD source is decent but suffers from treble‑heavy balance and an over‑emphasized kick drum early in the set; it smooths out after the first few songs. Overall the show’s strong song choices and surprising transitions (China Cat > Cumberland, Miracle → Eyes) outweigh the technical blemishes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑5 stars and praise several songs and transitions; recording quality is described as uneven but acceptable, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is treble‑heavy and early sections have too much kick drum with weak bass; balance improves later. Generally better than many 1980s SBD tapes but still sub‑par for modern listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > Cumberland Blues",
+      "Let It Grow",
+      "Sugaree",
+      "Miracle",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Row Jimmy",
+      "Baby Blue"
+    ],
+    "setlist_flow": "Short first set feels a bit weak, but the second set picks up with inventive segues (China Cat → Cumberland, Miracle → Eyes) and sustained energy through Wheel, The Other One and Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp guitar tone, fast soloing on Sugaree and Let It Grow; vocals noted as strong after a brief early mix issue.",
+    "Phil": "Bass often buried in the mix ('not enough Phil'), especially on Row Jimmy.",
+    "Bob": "Weir's vocal echo on Let It Grow highlighted; occasional comment about missing his harmonies on some songs.",
+    "Keys": "Brent Mydland’s aggressive, jazzy keyboard work noted throughout; Merl Saunders guests on drums/keys adding extra texture.",
+    "Drums": "Early mix too kick‑heavy, later balances out; two‑drummer dynamic (Bill & Mickey) described as warm but not overly intense."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > Cumberland Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:59:25.340969+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-09.sbd.miller.104962.flac16"
+}

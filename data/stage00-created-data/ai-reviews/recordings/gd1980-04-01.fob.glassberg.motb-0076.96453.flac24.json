@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent sound quality captures a legendary April Fool’s show with standout Friend of the Devil, Estimated, The Other One and He’s Gone performances",
+  "review": "The recording is praised as punchy and killer, delivering crystal‑clear audio that lets listeners hear every nuance of the band’s raucous April 1st joke set. Musically the night shines with an extended Friend of the Devil solo, a 13‑minute Estimated jam, an 11‑minute The Other One, a soaring He’s Gone and a heartfelt Stella Blue after Space, all wrapped up by a tight Shakedown encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "medium",
+    "rationale": "One detailed 5‑star review highlights an outstanding performance and a high‑quality recording; weighting of show (70%) and audio (30%) yields a near‑perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as \"killer\" and \"punchy raucous\" with no noted flaws; the MOTB crew’s mastering is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Estimated",
+      "The Other One",
+      "He’s Gone",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generous ~60 minutes before Drums, seamless transitions (e.g., Space into Stella), and a concise but sweet post‑Drums segment leading to a satisfying Shakedown encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for his wah‑wah effects and fat tone during jams; stellar solo work on Friend of the Devil.",
+    "Phil": "",
+    "Bob": "Missed his usual cue between Brent and Jerry, leading to an extended Garcia solo on Friend of the Devil.",
+    "Keys": "Brent’s piano highlighted at the start of Estimated.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He’s Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:00:05.309355+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-04-01.fob.glassberg.motb-0076.96453.flac24"
+}

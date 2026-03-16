@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording marred by a noticeable glitch 56 seconds into “They Loved Each Other.”",
+  "review": "The sole reviewer flags a clear audio fault early in the performance of “They Loved Each Other,” suggesting the tape has a drop‑out or distortion at that point. No other musical commentary is provided, so the show’s quality remains unknown beyond this technical issue.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating highlighting a serious recording glitch; no positive information about the performance or other aspects."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Glitch/drop‑out at ~56 seconds into “They Loved Each Other”; otherwise no comments on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "They Loved Each Other"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "They Loved Each Other": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:16:32.144325+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-02-28.151914.sbd.mcgee.chief.miller.clugston.flac16"
+}

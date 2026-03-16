@@ -1,0 +1,69 @@
+{
+  "summary": "Mixed bag with standout King Bee and Rain, but uneven performance",
+  "blurb": "The show delivers high‑energy moments on \"Rain\" and a fiery \"I'm A King Bee\", plus a memorable \"The Last Time\" jam. Jerry’s playing is uneven, while Phil’s bass anchors the band during the tighter tunes. Overall it’s an uneven night with a few real highlights.",
+  "review": "December 8, 1993 at Los Angeles’ Sports Arena offers a quintessential early‑'90s Dead experience – flashes of brilliance amid a generally spotty performance. The set opens strong with \"Rain\" and rolls through classics like \"I'm A King Bee\" and the raucous \"Stagger Lee\", but several tunes (notably \"Picasso Moon\" and \"Way To Go Home\") fall flat, reflecting Jerry’s inconsistent guitar work and vocal wobble. Phil Lesh provides a steady backbone, especially on \"Uncle John's Band\", while Vince Welnick adds tasteful keyboard textures that lift the longer jams. The second‑set Space/Drums segment shines, culminating in an inspired \"The Last Time\" jam that showcases the band’s improvisational chemistry despite the uneven mix. Listeners will find the night worth digging for its high points, but should temper expectations about overall consistency.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 22,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings are described as mixed and one as positive; no consistent negative language appears, so a modest positive adjustment is applied.",
+      "final_calculation": "2.5 + 0.2 + 0.6 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1993-12-08.sbd.miller.83399.flac16",
+    "reason": "Fair‑quality soundboard capture with the clearest representation of the standout tracks (King Bee, Rain) despite an uneven mix."
+  },
+  "key_highlights": [
+    "\"I'm A King Bee\" shines as a high‑energy highlight.",
+    "The \"Rain\" opener sets a strong tone for the night.",
+    "\"The Last Time\" jam stands out as a creative peak.",
+    "Space/Drums segment is inventive and well‑executed."
+  ],
+  "song_highlights": [
+    "Rain",
+    "I'm A King Bee",
+    "Stagger Lee",
+    "The Last Time",
+    "Uncle John's Band"
+  ],
+  "band_performance": {
+    "Jerry": "Present but uneven; off‑notes on \"Playin'\" and shaky vocals on \"Morning Dew\" detract from otherwise solid moments.",
+    "Phil": "Supportive bass work, especially pulling the band through \"Uncle John's Band\" and keeping the groove steady.",
+    "Bob": "Provides reliable rhythm guitar throughout; no major criticisms noted.",
+    "Brent": "Vince delivers tasteful keyboard lines on \"Long Way\", \"Playin' > UJB\" and supports the improvisations with solid texture.",
+    "Mickey": "Drums/Space segment is highlighted as a strong, inventive part of the show, showing tight interplay.",
+    "Billy": "Shares the percussive drive in the Space/Drums jam, contributing to its energetic flow."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-18T18:24:25.384043+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Rain",
+      "Let The Good Times Roll"
+    ],
+    [
+      "I'm A King Bee"
+    ],
+    [
+      "Stagger Lee"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Jam",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Morning Dew",
+      "Sugar Magnolia"
+    ]
+  ]
+}

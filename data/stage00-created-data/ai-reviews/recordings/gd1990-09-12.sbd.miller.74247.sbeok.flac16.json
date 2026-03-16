@@ -1,0 +1,75 @@
+{
+  "summary": "Great soundboard recording with a standout Space → Two Soldiers jam into an emotional Morning Dew and soaring Althea/Let It Grow, despite a few vocal slip‑ups.",
+  "review": "The show is widely praised for its powerful second set – the Space → Two Soldiers jam that morphs into a searing Morning Dew, plus a blistering Althea > Let It Grow sequence. Jerry’s playing is described as midi‑crazy, emotionally charged and full of “handsome cabin boy” moments, while Phil’s deep bass underpins the magic. Recording quality is consistently called crisp and well‑balanced, with only minor vocal mix quirks on Uncle John’s Band.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (9/13) gave 4–5 stars and highlighted exceptional performances and clear soundboard audio; the lone low rating is an outlier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced mix throughout; a few reviewers note vocal slip‑ups on U.J.B., but overall clarity and depth are praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Two Soldiers",
+      "Morning Dew",
+      "Althea",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "First set described as uneven, but the second set is consistently lauded for its deliberate tempo, emotional weight after Brent’s passing and superb improvisational flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Midi‑crazy on Space, “handsome cabin boy” intro into Morning Dew, emotionally charged solo on Morning Dew, pulls out all the stops throughout; also bails out Weir on a forgotten verse.",
+    "Phil": "Deep, resonant bass noted as a key element of Althea > Let It Grow and other jams.",
+    "Bob": "Forgot an entire verse in “Masterpiece” (referred to as a goof), otherwise no major criticism.",
+    "Keys": "Vince’s keyboards described as creepy and “effects‑crazy”; some reviewers felt his playing didn’t fully click, but the space jam adds atmospheric texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Two Soldiers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:53:18.930516+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-12.sbd.miller.74247.sbeok.flac16"
+}

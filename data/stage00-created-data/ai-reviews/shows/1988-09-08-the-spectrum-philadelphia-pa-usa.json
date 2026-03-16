@@ -1,0 +1,68 @@
+{
+  "summary": "Hot Shakedown & Let It Grow jam, uneven second set",
+  "blurb": "The first set sizzles with a fiery Shakedown Street and a standout Let It Grow jam. The second set delivers solid playing but loses some fire, highlighted by Brent's work on the Fantasy / Hey Jude sequence.",
+  "review": "On September 8, 1988 at Philadelphia’s Spectrum the Dead delivered a mixed‑bag performance that still offers moments worth chasing. Jerry ripped through Shakedown Street and helped launch an expansive Let It Grow jam, though his tone slipped into a dull, sometimes struggling quality as the night wore on. Phil’s bass shone brightly during that jam, anchoring the band when the mix grew murky. Bob kept steady rhythm throughout, while Brent Mydland added texture—particularly on Dear Mr. Fantasy into Hey Jude and the Turn On Your Lovelight finale—though his synth could feel a bit intrusive at times. The second set is competent, featuring classic Truckin' and a respectable I Need A Miracle, but it never recaptures the first‑set heat, with Bertha feeling lyrically flat and the Fantasy/Hey Jude medley edging toward overplay.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Mixed sentiment dominates (two mixed, one negative) with only modest positive remarks; overall the show is viewed as uneven but having a few strong highlights, leading to a moderate +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-09-08.sbd.donaldson.1561.sbeok.shnf",
+    "reason": "Clear soundboard source that captures the scorching first set and overall show despite some early‑set muddiness and minor dropouts."
+  },
+  "key_highlights": [
+    "Scorching first set with Shakedown Street and a memorable Let It Grow jam.",
+    "Brent shines on the Fantasy / Hey Jude sequence, adding texture to the finale.",
+    "Solid but uneven second set; classic Truckin' and I Need A Miracle keep momentum."
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Let It Grow",
+    "Loser",
+    "Dear Mr. Fantasy",
+    "Hey Jude Finale",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Rips through Shakedown Street and drives the Let It Grow jam, but his tone becomes dull or ‘struggling’ later in the night.",
+    "Phil": "Provides bright, strong bass lines throughout; especially a standout contribution to the Let It Grow jam.",
+    "Bob": "Steady rhythm work; generally solid and supportive across both sets.",
+    "Brent": "Adds texture on Let It Grow and shines during the Fantasy/Hey Jude/Lovelight sequence, though his synth can be a bit intrusive at times.",
+    "Mickey": "Drum parts are favorable but not especially distinctive; standard contributions throughout.",
+    "Billy": "Provides solid drumming foundation; drum intro into Truckin' noted as routine."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T13:16:48.648074+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let The Good Times Roll",
+      "Shakedown Street"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "Loser"
+    ],
+    [
+      "Truckin'",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Dear Mr. Fantasy",
+      "Hey Jude Finale",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

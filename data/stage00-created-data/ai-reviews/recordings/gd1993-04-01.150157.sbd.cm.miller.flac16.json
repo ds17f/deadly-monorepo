@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard capture of an uneven show – first set shines with Wave to the Wind and Days Between, recording quality unremarked.",
+  "review": "The reviewer praises the first set, highlighting Wave to the Wind, Days Between and the rare Eternity→Liberty segue, while noting the second set falls short. No comments are made about the audio fidelity, so the tape is assumed to be a standard soundboard source of average quality. Overall sentiment is mixed, reflecting strong song choices but an uneven performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Only one review (3‑star) gives a balanced view: positive remarks about specific songs offset by criticism of the second set and lack of recording details, leading to an average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not discuss clarity, mix or any audio issues; therefore quality is assumed to be typical for a soundboard capture but not explicitly praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wave to the Wind",
+      "Days Between",
+      "Eternity → Liberty",
+      "Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as superior, featuring a strong opening and rare selections; second set is considered weaker overall."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity → Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:03:22.146966+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-04-01.150157.sbd.cm.miller.flac16"
+}

@@ -1,0 +1,99 @@
+{
+  "summary": "A solid audience recording that captures a high‑energy Brent‑driven show highlighted by an explosive “Blow Away” and tight second set.",
+  "review": "The tape sounds surprisingly clear for an audience source – many listeners note it beats other known transfers and even rivals the SBD version. Musically the concert shines on Brent Mydland’s fire, especially on “Blow Away,” with a tight second set that includes strong renditions of “Box” and “China Cat.” A few songs (West LA, Queen Jane, Cassidy) fell flat for some fans, but overall the performance is remembered as one of the tour’s high points.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high praise for Brent and key songs across >20 reviews, with mostly positive ratings; recording quality is repeatedly described as good to excellent despite occasional desire for a soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners call it the best‑sounding audience tape, note a SBD remaster exists, and mention crispness that beats other archival sources; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away",
+      "Box (Encore)",
+      "China Cat",
+      "Loser",
+      "Fantasy"
+    ],
+    "poor_songs": [
+      "West LA",
+      "Queen Jane",
+      "Cassidy",
+      "Miracle",
+      "Black Peter"
+    ],
+    "setlist_flow": "Second set is described as extremely tight and high‑energy, with the band locking in especially after “Blow Away”; the first set is seen as solid but less memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for strong solos (e.g., on \"Loser\"), though one reviewer notes his voice was a bit strained.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland receives abundant acclaim – described as “on fire,” “off the charts,” and essential to the show’s energy.",
+    "Drums": "The dual drummers are noted for driving the excitement on tracks like \"China Cat\" and keeping tight rhythms in the second set."
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "West LA": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Box": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:07:50.960737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-08.beyer-fob.conner.7857.sbeok.shnf"
+}

@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent soundboard capture of a solid 1986 show highlighted by Visions of Johanna, Playing In The Band and a standout drums segment.",
+  "review": "The recording is praised for its clear, well‑balanced soundboard mix that finally does justice to an often‑overlooked 1980s performance. Fans repeatedly cite Visions of Johanna, Playing In The Band, China Rider and the drums as high points, while noting a quirky mic issue during Truckin'. Overall the show is regarded as a keeper with strong set flow and memorable jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are favorable, highlighting both the musical performance and the improved soundboard source; no significant complaints were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix with no noticeable dropouts; an improvement over earlier dubious SBD sources and praised as the definitive version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "Playing In The Band",
+      "China Rider",
+      "Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Well‑rounded set with a strong second half; transitions into extended jams like Playing In The Band are smooth and keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob's vocal mic malfunctioned during Truckin', causing visible frustration, but his performance remained spirited.",
+    "Keys": "",
+    "Drums": "The drums segment is highlighted as a standout moment of the show."
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T12:58:24.482135+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-19.nak300.damico.34223.flac16"
+}

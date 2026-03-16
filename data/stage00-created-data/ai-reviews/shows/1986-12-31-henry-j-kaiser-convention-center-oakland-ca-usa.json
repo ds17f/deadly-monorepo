@@ -1,0 +1,92 @@
+{
+  "summary": "Midnight Touch→Let It Grow magic, fiery Gimme Some Lovin', solid jams",
+  "blurb": "The show shines with a seamless midnight Touch → Let It Grow transition and a scorching Gimme Some Lovin' that fires up the crowd. Jerry’s voice is surprisingly warm for late ’86 while Phil delivers booming bass on several numbers. Highlights include Desolation Row, Box of Rain and an energetic second‑set drum segment.",
+  "review": "On New Year's Eve 1986 at the Henry J. Kaiser Convention Center the Dead delivered a three‑set marathon that still feels fresh. The first set opened strong with Jack Straw and Sugaree before moving into a heartfelt Desolation Row and a rousing U.S. Blues. Set two featured a midnight Touch of Grey → Let It Grow segue that reviewers called “magic,” followed by Black Muddy River, Samson & Delilah and an exuberant Terrapin Station that led into the famed Drum‑Space duo and a soaring Wharf Rat/Turn On Your Lovelight finale. The third set closed the night with a blistering Gimme Some Lovin', a tight Box of Rain and a sweet Brokedown Palace, keeping the party spirit alive well past midnight. Across multiple recordings Jerry’s voice sounded better than recent outings and his guitar was “on fire,” while Phil’s bass went “nuts” especially on Gimme Some Lovin'. Brent added subtle texture on the Samson intro, and the dual drummers supplied an overwhelming, energetic pulse that lifted the second set even when it got a bit loose. Overall the performance is a solid 4‑star effort with standout moments that make this NYE show worth revisiting.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Multiple recordings praised the show (positive sentiment on Touch→Let It Grow, Gimme Some Lovin', Desolation Row) with only mixed notes that did not criticize performance quality. Consistent positive language like “scorching,” “hot, powerful,” and “booming bass” across recordings warrants a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1986-12-31.sbd.miller.77447.flac16",
+    "reason": "Excellent Miller soundboard capture; crisp, clean audio with no drop‑outs and highlights the midnight Touch → Let It Grow segue and scorching Gimme Some Lovin'."
+  },
+  "key_highlights": [
+    "Seamless midnight Touch of Grey → Let It Grow transition",
+    "Scorching Gimme Some Lovin' that energizes the crowd",
+    "Strong Desolation Row and Box of Rain performances",
+    "High‑energy drum segment that lifts the second set"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Sugaree",
+    "Desolation Row",
+    "U.S. Blues",
+    "Touch of Grey",
+    "Let It Grow",
+    "Black Muddy River",
+    "Samson & Delilah",
+    "Terrapin Station",
+    "Gimme Some Lovin'",
+    "Box of Rain",
+    "Candyman"
+  ],
+  "band_performance": {
+    "Jerry": "Voice sounded better than recent shows and he played admirably, delivering hot, powerful guitar work that was “on fire” throughout the night.",
+    "Phil": "Bass went ‘nuts’ on Gimme Some Lovin' and provided booming support on Candyman, adding extra excitement to the groove.",
+    "Bob": "Strong vocal performance on Desolation Row and solid contributions elsewhere, though vocals became a bit loose later in the marathon.",
+    "Brent": "Added subtle texture on the Samson & Delilah intro, working around the edges to enhance the jam.",
+    "Mickey": "Energy after the drums helped lift the second set; his playing contributed to an overwhelming drum segment praised by listeners.",
+    "Billy": "Provided a driving, energetic pulse alongside Mickey; occasional looseness in the second‑set drumming noted but overall kept the momentum high."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-15T18:23:51.048312+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw",
+      "Sugaree"
+    ],
+    [
+      "Desolation Row"
+    ],
+    [
+      "U.S. Blues"
+    ],
+    [
+      "Touch of Grey",
+      "Let It Grow"
+    ],
+    [
+      "Black Muddy River",
+      "Samson & Delilah"
+    ],
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Wharf Rat",
+      "Goin' Down The Road Feeling Bad",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Gimme Some Lovin'",
+      "When Push Comes To Shove"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Candyman"
+    ]
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Soundboard recording with generally good clarity, featuring a famously praised but divisive “Morning Dew” and solid Ship of Fools amid an uneven Paris show.",
+  "review": "The SBD source captures the 9‑21‑74 Paris concert with clear, well‑balanced sound overall, though some listeners note a mix that favors Phil’s bass. Musically the show is remembered for a standout Morning Dew (hailed by many as a “bomb” performance) and a solid Ship of Fools, but it is marred by a poorly received Donna Jean interlude and sections where the band sounds rehearsed. Opinions swing between high praise for the rare set‑list moments and criticism of loose interplay, especially from Garcia and the drums.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "12 detailed reviews provide a clear picture: strong soundboard quality and several praised songs lift the rating, but notable performance flaws and mixed reactions to key moments keep it from higher marks."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean and well‑balanced SBD capture; occasional mix imbalance (Phil’s bass prominent, some listeners note Garcia’s guitar buried). No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Ship of Fools"
+    ],
+    "poor_songs": [
+      "Donna Jean"
+    ],
+    "setlist_flow": "Second set is highlighted as a rare “bust‑out” period with strong late‑1970s material; however the mid‑set insertion of Donna Jean disrupts momentum and some sections feel like a rehearsal rather than a tight live performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Criticized for playing slowly, leaving large spaces, and seeming out of sync with the band; occasional drug‑related mellow vibe mentioned.",
+    "Phil": "Widely praised – “bombs” on Morning Dew, outstanding bass line, considered a highlight of the show.",
+    "Bob": "",
+    "Keys": "Keith’s keyboards noted as trying to keep things alive but no specific praise or criticism.",
+    "Drums": "Bill (Mickey) described as over‑playing and pushing ahead of the beat, contributing to a rehearsal‑like feel."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Donna Jean": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:01:51.207134+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-09-21.sbd.eurodead.5649.sbeok.shnf"
+}

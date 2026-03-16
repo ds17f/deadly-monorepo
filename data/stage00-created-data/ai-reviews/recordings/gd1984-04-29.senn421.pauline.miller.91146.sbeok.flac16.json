@@ -1,0 +1,69 @@
+{
+  "summary": "High‑quality audience recording captures an electrifying show with standout performances of Cassidy, Terrapin Station, Sugar Magnolia and more.",
+  "review": "The tape delivers crystal‑clear audience sound that rivals many soundboard releases, letting the band’s high‑energy playing shine through. Highlights include a ripping Jerry Garcia solo, soaring Terrapin Station jams and a freight‑train close with Sugar Magnolia. Fans repeatedly note the inspired vibe and excellent remastering.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All seven reviews are overwhelmingly positive, praising both the musical performance and the superb audience recording/remaster; the consensus points to an exceptional show with excellent audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the tape as a high‑quality audience recording with a clean remaster, crisp clarity and very little ambient noise despite not being a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Ramble On",
+      "China Cat Sunflower > Samson",
+      "Feels Like A Stranger",
+      "Terrapin Station",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑set show packed with high energy; the band rolls like a freight train into a spectacular closing Sugar Magnolia, with strong jams and seamless transitions throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry was \"on fire\" all night, delivering guitar that 'talked' and made the show unforgettable.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feels Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:24:48.684833+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-29.senn421.pauline.miller.91146.sbeok.flac16"
+}

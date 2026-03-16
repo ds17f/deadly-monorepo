@@ -1,0 +1,60 @@
+{
+  "summary": "Solid '92 stadium show with soaring Wharf Rat and tight Crazy Fingers",
+  "blurb": "Energy stays high from start to finish, highlighted by a soaring Wharf Rat and a fiery Crazy Fingers. Jerry’s lead work shines while Vince’s keyboards lock in smoothly; the only dips are Loose Lucy and Uncle John's Band. Overall it’s a solid mid‑tour performance.",
+  "review": "On June 26 1992 the Dead took the massive Soldier Field stage for a quintessential summer stadium outing. The first set rolled along with tight, crowd‑pleasing numbers, but it was the second set that really delivered: a passionate Jerry Garcia on Wharf Rat that builds into an emotional climax, followed by a blistering Crazy Fingers where his lead guitar cuts through the open air like a bolt of lightning. Vince Welnick’s keyboards sit perfectly in the mix, adding color without over‑cooking the sound, and both Mickey Hart and Bill Kreutzmann keep the groove rock solid throughout. A few rough spots – Loose Lucy feels flat and Uncle John’s Band suffers from lyrical slips – prevent this from being a classic, but the overall energy and musicianship make it a worthwhile listen for any Deadhead looking to capture that late‑summer ’92 vibe.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Both recordings consistently praise the Wharf Rat jam and Crazy Fingers performance (+0.5). Minor criticism appears for Loose Lucy and Uncle John's Band, tempering the boost to a modest +0.6 overall.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd92-06-26.aud.harlan.9118.sbeok.shnf",
+    "reason": "Good‑quality audience capture with excellent dynamics for a stadium setting; clear balance makes the performance easy to hear even on large venues."
+  },
+  "key_highlights": [
+    "Wharf Rat jam builds into an emotional climax",
+    "Crazy Fingers delivers tight, high‑energy guitar work",
+    "Vince Welnick’s keyboards gel smoothly with the band",
+    "Loose Lucy and Uncle John's Band stumble but do not derail overall momentum"
+  ],
+  "song_highlights": [
+    "Wharf Rat",
+    "Crazy Fingers"
+  ],
+  "band_performance": {
+    "Jerry": "Shows passionate playing on Wharf Rat and delivers great guitar work on Crazy Fingers, though he forgets lyrics in Uncle John's Band and appears a bit exhausted later.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Vince Welnick’s keyboards gel nicely, adding texture to jams and supporting the band’s dynamics.",
+    "Mickey": "Provides steady, propulsive rhythms that drive the set forward.",
+    "Billy": "Locks in with Mickey, delivering a solid backbeat throughout."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-18T07:58:29.346350+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Corinna",
+      "Crazy Fingers"
+    ]
+  ]
+}

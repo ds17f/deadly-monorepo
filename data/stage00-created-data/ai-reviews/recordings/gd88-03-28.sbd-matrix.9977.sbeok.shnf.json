@@ -1,0 +1,105 @@
+{
+  "summary": "Strong 3/28/88 Hampton show with smoking Stranger > Franklin's and a solid Box of Rain, captured on a matrix mix that’s generally good but suffers some drum distortion.",
+  "review": "The performance is widely praised – the first‑set opener Stranger > Franklin's, a tight Box of Rain, and an intense Other One > Stella Blue sequence are repeatedly highlighted.  Most listeners find the soundboard‑plus‑audience matrix recording clear enough to enjoy, though a few note muffled drums and analog generation loss that keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.2 ★; the show consistently receives high marks for playing and setlist flow, while recording quality is mostly good with a few noted flaws."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear matrix mix (A+ comments) but some reviewers report drum distortion and a slight loss of fidelity due to analog generations."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger > Franklin's",
+      "Box of Rain",
+      "The Other One > Stella Blue",
+      "Truckin'",
+      "Man Smart (Woman Smarter)"
+    ],
+    "poor_songs": [
+      "Not Fade Away"
+    ],
+    "setlist_flow": "First set builds nicely with Stranger > Franklin's and a soaring Box of Rain; the second set delivers a powerful Other One into Stella Blue, keeping momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for \"captain's guitar\" licks, razor‑sharp leads on Fire and Truckin', clean solos on Man Smart, and overall tight playing.",
+    "Phil": "Noted for stable vocal performance on Box of Rain, Roses and Masterpiece; also highlighted for his crowd interaction (the classic \"you can't always get what you want\" moment).",
+    "Bob": "Mentioned playing a pink guitar on Throwing Stones, adding texture to the jam.",
+    "Keys": "",
+    "Drums": "A few reviewers report drum distortion in the matrix mix, though overall drumming is described as strong."
+  },
+  "song_mentions": {
+    "Stranger > Franklin's": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Box of Rain": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Push": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:14:42.360121+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-03-28.sbd-matrix.9977.sbeok.shnf"
+}

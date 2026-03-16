@@ -4,11 +4,12 @@ resource "digitalocean_ssh_key" "deadly" {
 }
 
 resource "digitalocean_droplet" "server" {
-  name     = var.droplet_name
-  region   = var.region
-  size     = var.droplet_size
-  image    = "ubuntu-22-04-x64"
-  ssh_keys = [digitalocean_ssh_key.deadly.fingerprint]
+  name      = var.droplet_name
+  region    = var.region
+  size      = var.droplet_size
+  image     = "ubuntu-22-04-x64"
+  ssh_keys  = [digitalocean_ssh_key.deadly.fingerprint]
+  user_data = file("../cloud-init.sh")
 
   tags = ["deadly", "dev"]
 }

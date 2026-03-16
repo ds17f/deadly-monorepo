@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a tight ’71 set, highlighted by a killer closing sequence and a scorching Other One.",
+  "review": "The six reviewers rave about this February‑1971 Capitol performance, calling it a tight, classic show with a \"show‑stopper\" Not Fade Away → Goin’ Down The Road Feels Bad → Not Fade Away → Love Light run and a blistering Other One.  The soundboard source is praised for its clarity and seamless track handling, though the high‑fidelity mix does expose a few minor tuning quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both performance (standout songs, tight set) and recording quality (excellent soundboard), with only minor technical caveats."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix; track continuity preserved for The Other One. A few slight tuning/wart exposures noted due to the superlative live audio system."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Goin' Down The Road Feels Bad",
+      "Love Light",
+      "The Other One",
+      "Ripple"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a tight, typical 1971 set with an especially killer ending of the first set and a powerful closing sequence that keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down The Road Feels Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Love Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:55:07.387645+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-20.sbd.miller.116617.flac16"
+}

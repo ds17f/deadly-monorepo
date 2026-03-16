@@ -1,0 +1,96 @@
+{
+  "summary": "Fair soundboard recording of an uneven 1989 show, highlighted by Jack‑a‑Roe, Stella Blue and a standout Black Muddy River.",
+  "review": "The patched SBD source is unbalanced and not fully leveled, making the audio only fair, but the performance itself offers several bright spots. Highlights include an arena‑captivating Stella Blue, a powerful Jack‑a‑Roe that lifts the first set, and what may be the year’s best Black Muddy River. The second half improves after the Drums‑>Space segment, though the show overall feels mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "One detailed review gives a mixed 3‑star overall rating; the musical performance is average‑to‑good with strong moments, while the recording quality is only fair."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Tobin's patched and re‑pitched SBD is not balanced or level‑matched like the official release; reviewers suggest the tobin_125281 matrix version has a better mix, while other audience recordings run slow."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-a-Roe",
+      "Stella Blue",
+      "Black Muddy River",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Greatest Story",
+      "Crazy Fingers",
+      "Estimated"
+    ],
+    "setlist_flow": "First set starts shaky (Greatest Story) but gains momentum with Jack‑a‑Roe and solid mid‑set numbers; second set opens with a controversial Blow Away, dips on Estimated and Crazy Fingers, then lifts after Drums>Space into strong performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Arena was hanging on his playing during Stella Blue; he teases GDtRFB and leads the high‑energy moments.",
+    "Phil": "Delivers an above‑average bass performance on Tom Thumb's.",
+    "Bob": "Brent’s keyboard work is histrionic on Estimated, feeble on Crazy Fingers, but shines on Black Muddy River, making it a year‑standout.",
+    "Keys": "Same as Bob – mixed on early second‑set tunes, strong on Black Muddy River.",
+    "Drums": "The Drums>Space segment turns the show around, setting up the stronger second‑half material."
+  },
+  "song_mentions": {
+    "Greatest Story": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:40:00.824526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-03.upg-sbd.tobin.125413.flac16"
+}

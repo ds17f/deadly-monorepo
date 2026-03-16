@@ -1,0 +1,68 @@
+{
+  "summary": "Terrapin jam, High Time rarity, and speaker‑tower Sugar Magnolia",
+  "blurb": "The show shines with a soaring 17‑minute Terrapin Station jam and a rare High Time that ignites the first set. Bobby’s climactic speaker‑tower stunt during Sugar Magnolia caps an energetic second set.",
+  "review": "On November 20, 1985 at the Henry J. Kaiser Convention Center the Dead delivered a high‑octane performance that still feels fresh decades later. The first set builds momentum with a standout High Time and tight group playing, while the second set erupts into a monster Terrapin Station jam—over 17 minutes of Jerry‑Brent interplay that many reviewers called “fiery” and “conversational.” After the jam the band rolls through Don’t Need Love, a plaintive Stella Blue, and culminates in an over‑the‑top Sugar Magnolia where Bob Weir’s speaker‑tower climb sent the house into a frenzy. Jerry’s guitar work is intense—some noted a grizzled “old man” tone at moments but overall his solos drive the show forward. Brent Mydland provides lush keyboards that lock with Jerry and adds solid vocal harmonies, while Phil Lesh and the twin drummers lay down a deep, sometimes tense groove that resolves into primal power as the night unfolds.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four out of six recordings describe the performance in glowing terms—'stellar Terrapin jam', 'high‑time High Time', 'spectacular speaker‑tower climb'—and consistently praise Jerry’s guitar, Brent’s keyboards, and the overall energy. Only one mixed and one negative review focus on recording quality, not musical execution, so positive sentiment dominates.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-11-20.sbd.vernon.15478.sbeok.shnf",
+    "reason": "Clean soundboard capture that preserves the full energy of the Terrapin jam and Bobby’s speaker‑tower stunt without noticeable flaws."
+  },
+  "key_highlights": [
+    "17‑minute Terrapin Station jam with tight Jerry‑Brent interplay",
+    "Rare, high‑energy High Time performance early in Set 1",
+    "Bob Weir’s iconic speaker‑tower climb during Sugar Magnolia",
+    "Strong rhythmic drive from Mickey and Billy after a tense start to the second set"
+  ],
+  "song_highlights": [
+    "Peggy-O",
+    "High Time",
+    "Terrapin Station",
+    "Don't Need Love",
+    "Stella Blue",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers intense, fiery lead guitar—especially on the Terrapin jam and Sugar Magnolia—though a few reviewers note occasional vocal wear and an 'old man' tone.",
+    "Phil": "Provides solid bass foundation; praised as 'on fire' in one review but mentioned arriving late to the second‑set opener.",
+    "Bob": "Steals the spotlight with his speaker‑tower climb on Sugar Magnolia, though some note a slower start to Set 2 and slightly weaker lyric recall later.",
+    "Brent": "Shows conversational keyboard work with Jerry during Terrapin Station and adds strong vocal harmonies throughout.",
+    "Mickey": "Together with Billy creates early second‑set tension that resolves into a driving, primal groove supporting the jam sections.",
+    "Billy": "Partners with Mickey to lay down a powerful rhythmic base; his drumming helps lift the band after the initial lag in Set 2."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-15T11:53:10.669658+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Peggy-O"
+    ],
+    [
+      "High Time"
+    ],
+    [
+      "Iko Iko",
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Terrapin Station",
+      "Jam",
+      "Don't Need Love",
+      "Drums",
+      "Space",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ]
+  ]
+}

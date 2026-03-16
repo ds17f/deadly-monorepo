@@ -1,0 +1,64 @@
+{
+  "summary": "Fair‑quality recording of a hot, high‑altitude summit show with mixed performances – Black Peter shines while Hell in a Bucket and others fall flat.",
+  "review": "The recording captures a summer‑blazing Summit Conference gig where the sound system was uneven (crappy first set) but the ambience adds character. The band’s playing is polarizing: some fans love Jerry’s energy and moments like Black Peter, while others note sluggish tempos, heat‑induced fatigue and weak renditions of Hell in a Bucket, Lovelight and Day Tripper.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality is uneven with many negative performance comments, while recording quality is only vaguely described as fair; the mix of high and low star reviews yields a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers note a crappy sound system during the first set and variable ambience; no clear indication of soundboard vs. audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Hell in a Bucket",
+      "Lovelight",
+      "Day Tripper",
+      "Feel Like a Stranger"
+    ],
+    "setlist_flow": "Reviews focus on the overall atmosphere and heat rather than set structure; no specific comments on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – praised for playing hearts out and high energy, but also described as melting, fatigued, and even walking off stage.",
+    "Phil": "Thanked in one review; no detailed performance comment.",
+    "Bob": "Mentioned positively in a thank‑you note; no specific guitar assessment.",
+    "Keys": "Brent thanked once; no further remarks on keyboard work.",
+    "Drums": "Mickey thanked for his drumming; no explicit evaluation of the drum performance."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Day Tripper": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:59:24.034793+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-08-24.akg.connor.77079.sbeok.flac16"
+}

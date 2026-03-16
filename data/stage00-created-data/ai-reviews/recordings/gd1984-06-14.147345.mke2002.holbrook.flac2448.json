@@ -1,0 +1,31 @@
+{
+  "summary": "Decent audience recording of a strong 1984 setlist at Red Rocks",
+  "review": "The reviewers note a great setlist and commend the audience‑recorded sound, which captures the atmosphere of the Red Rocks venue reasonably well. No specific song or performance issues are mentioned, resulting in an overall mixed but generally positive impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review; the setlist is praised (show quality ~3.5) and the audience recording is described as good (recording quality ~4). Weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience sound captured well for a Red Rocks show; no major flaws noted, but limited detail on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Setlist is described as great; reviewers did not single out individual songs or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T18:22:45.186316+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-14.147345.mke2002.holbrook.flac2448"
+}

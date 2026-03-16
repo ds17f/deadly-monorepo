@@ -1,0 +1,93 @@
+{
+  "summary": "Matrix mix delivers crystal‑clear sound that even beats the 30 Trips box, and the Lakeland show shines with tight sets and standout jams.",
+  "review": "Both reviewers rave about the audio fidelity – one calling it better than the legendary 30 Trips release – while describing a lively two‑set performance packed with classics like Jack Straw, Peggy‑O, Looks Like Rain and a soaring Terrapin > Space sequence. The mix is praised as crisp and well‑balanced, and even the reviewer who gave zero stars notes “Great Sound!” and glowing vocal work from Garcia.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on both sound quality (matrix mix, superior to official release) and musical performance outweigh the anomalous zero‑star rating; limited to two reviews gives medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, detailed mix praised as better than the 30 Trips box set; no noted dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "Fennario",
+      "Looks Like Rain",
+      "Deal",
+      "Terrapin Station",
+      "Space",
+      "Black Peter",
+      "Sugar Magnolia",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two energetic sets with concise first‑set tunes (most under 10 min) that build into a second set featuring the Terrapin > Space jam and a joyous close with Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as shining; guitar work noted as “shreds”.",
+    "Phil": "Mentioned in the “Passenger‑Phil Zone” comment, implying solid bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Described as “Super Sized”, indicating a powerful drum sound."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fennario": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:08:29.336400+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-28.150975.mtx.chappell.sb33b.flac16"
+}

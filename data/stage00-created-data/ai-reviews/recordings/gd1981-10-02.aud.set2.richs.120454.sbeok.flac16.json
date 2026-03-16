@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording sounds wonderful, though no performance details are provided.",
+  "review": "The reviewer praises the audio quality, calling it \"wonderful\" and hoping a master copy exists, which suggests a clear and pleasant audience capture. No comments were made about the musical performance, setlist flow, or individual band members, so those aspects remain unassessed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "A single 4‑star review highlights excellent sounding audio but provides no insight into the show itself; rating reflects strong recording quality with unknown performance merit."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, pleasant sound; reviewer notes no issues and wishes for a master copy, indicating high satisfaction with the capture."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T15:12:32.513246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-02.aud.set2.richs.120454.sbeok.flac16"
+}

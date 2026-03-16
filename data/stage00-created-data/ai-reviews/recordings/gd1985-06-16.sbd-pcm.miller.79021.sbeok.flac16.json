@@ -1,0 +1,62 @@
+{
+  "summary": "Soundboard recording of decent‑good quality captures a stellar second set highlighted by a scorching Scarlet/Fire and a powerful The Other One.",
+  "review": "The show is widely praised for its explosive second set, with the Scarlet>Fire sequence and The Other One receiving glowing remarks. While a few listeners note early‑set tuning issues and minor sound flaws, the overall recording is clear enough to let the 1985‑era energy shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (5 of 7) give 4–5 stars and highlight standout performances; recording is described as decent to excellent with only minor flaws, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear 85‑year sound; a few reviewers note early‑set muddiness and one comment about the band being out of tune, but overall the mix is crisp with tight jazz‑like Scarlet/Fire dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Cryptical Envelopment > That's It For The Other One",
+      "Walkin' Blues",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is consistently praised as outstanding, while the first set provides solid moments (e.g., Walkin' Blues) and sets up a powerful climax."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer notes a humorous lyrical slip in Big River Blues, but overall his playing is part of the praised high‑energy performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Cryptical Envelopment > That's It For The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:03:26.492273+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-16.sbd-pcm.miller.79021.sbeok.flac16"
+}

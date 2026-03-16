@@ -1,0 +1,63 @@
+{
+  "summary": "Acoustic gems like El Paso and Casey Jones shine in a relaxed set",
+  "blurb": "The August‑5, 1970 acoustic show delivers standout renditions of El Paso, Rosalie McFall, Ballad Of Casey Jones, Drink Up And Go Home and A Voice From On High. Jerry’s guitar work is praised while the band keeps a restrained, church‑like flow. The soundboard recording captures the vibe best despite some tape hiss.",
+  "review": "On August 5, 1970 at Golden Hall in San Diego, the Dead presented an all‑acoustic set that feels like a low‑key service rather than a typical rock concert. Highlights include a haunting El Paso, the rare Rosalie McFall, a heartfelt Ballad Of Casey Jones and two uplifting gospel‑flavored numbers – Drink Up And Go Home and A Voice From On High – each delivered with gentle transitions that let the songs breathe. Jerry’s guitar work draws particular praise (“lay me down is so sick”), even as fans debate whether he or David Nelson handled the mandolin parts. Phil’s bass stays low‑key, adding just enough depth to the acoustic texture. The drum mix is a bit confusing – some hear Bill’s jazz‑leaning approach while others think Mickey’s lighter touch shines through – but it never overwhelms the overall relaxed vibe. Of the two existing tapes, the soundboard capture (gd70-08-05.sbd.jupile.17271.sbeok.shnf) offers the clearest window into this unique performance despite its hiss and a muddy mix.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 31,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "One recording is clearly positive, highlighting several standout songs and solid playing; the second is mixed but only flags a single weak moment (Candyman) without detracting from overall performance. The net sentiment is moderately positive.",
+      "final_calculation": "2.5 + 0.3 + 1.0 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-08-05.sbd.jupile.17271.sbeok.shnf",
+    "reason": "Soundboard source with the best overall fidelity; despite hiss it captures the acoustic set clearly and includes all standout songs."
+  },
+  "key_highlights": [
+    "Rare all‑acoustic set with a relaxed, church‑like flow",
+    "Exceptional renditions of El Paso, Rosalie McFall, Ballad Of Casey Jones, Drink Up And Go Home, A Voice From On High",
+    "Jerry’s guitar praised; mandolin duties debated but overall texture praised"
+  ],
+  "song_highlights": [
+    "El Paso",
+    "Rosalie McFall*",
+    "Ballad Of Casey Jones",
+    "Drink Up And Go Home**",
+    "A Voice From On High**"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s acoustic guitar shines, with his solo on “To Lay Me Down” called ‘so sick’; mandolin duties are disputed but his overall contribution is praised.",
+    "Phil": "Lesh provides a restrained bass line that adds just enough weight to the acoustic backdrop without overpowering it.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Drumming is described as lighter than usual; some listeners feel the kit sounds too jazz‑ed out, but it generally sits well in the mix.",
+    "Billy": "Bill’s drumming receives mixed feedback – a few note a ‘too jazzed out’ feel while others think his parts blend into the acoustic texture."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T22:24:25.299363+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "El Paso"
+    ],
+    [
+      "Rosalie McFall*"
+    ],
+    [
+      "Ballad Of Casey Jones"
+    ],
+    [
+      "Drink Up And Go Home**"
+    ],
+    [
+      "A Voice From On High**"
+    ]
+  ]
+}

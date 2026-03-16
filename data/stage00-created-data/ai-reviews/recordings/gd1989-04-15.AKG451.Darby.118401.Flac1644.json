@@ -1,0 +1,45 @@
+{
+  "summary": "Vibrant Milwaukee show with standout Franklin's Tower and Morning Dew; recording quality not detailed but presumed solid.",
+  "review": "The reviewer raves about an electric crowd in Milwaukee, highlighting the breezy vibe and praising Franklin's Tower and Morning Dew as high points. No specific comments on the audio source are given, suggesting the recording is at least listenable. Overall sentiment is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single 5‑star review emphasizes an excellent performance; lack of technical detail limits confidence, but the show appears outstanding and the recording is likely acceptable."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Review does not mention soundboard, audience bleed, or any audio flaws, implying no major issues with the FLAC source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a breezy, high‑energy performance that captured an electric crowd and a strong, rocking vibe throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:46:04.918656+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-15.AKG451.Darby.118401.Flac1644"
+}

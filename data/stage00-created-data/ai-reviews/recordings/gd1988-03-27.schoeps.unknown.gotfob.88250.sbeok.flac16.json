@@ -1,0 +1,57 @@
+{
+  "summary": "A superb front‑of‑house Schoeps recording that captures a loose, dynamic Hampton show highlighted by a nutty So What tease and crystal‑clear guitar tone.",
+  "review": "Fans rave about the rich, detailed FOB capture – the Schoeps spaced‑omni setup delivers exceptional low‑end clarity and a more natural guitar sound than most board tapes. The performance itself is described as loose, dynamic and flowing, with standout moments like the So What tease and a tight second set after the drums. Overall the recording and show are consistently praised across ten reviews.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All ten reviews are strongly positive (average 4.8 stars), praising both the audio fidelity and musical performance; no significant criticisms were noted."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑house capture using Schoeps spaced omni mics, praised for rich detail, superior low‑end response and a guitar tone that is easier on the ears; no dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So What (tease)",
+      "Let It Grow",
+      "Ballad",
+      "Lay Me Down Break Out"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as loose, dynamic and flowing, with a particularly fantastic second‑set after the drums that kept the energy rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone praised for clarity and natural feel, especially compared to board recordings.",
+    "Phil": "One reviewer wished for a bit more Phil, but overall bass was satisfactory.",
+    "Bob": "",
+    "Keys": "Brent's vocal contributions highlighted as great; his playing adds character to the period.",
+    "Drums": "Second‑set post‑drum segment called fantastic, indicating strong rhythmic support."
+  },
+  "song_mentions": {
+    "So What (tease)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ballad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lay Me Down Break Out": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:03:40.584617+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-27.schoeps.unknown.gotfob.88250.sbeok.flac16"
+}

@@ -1,0 +1,94 @@
+{
+  "summary": "Good matrix mix with solid soundboard clarity and a standout Dylan show featuring a mind‑bending Morning Dew, powerful Bertha and an epic Other One segment.",
+  "review": "The recording blends soundboard and front‑of‑house feeds, delivering clear audio for the first two sets and an even better FOB mix on the third. The concert is praised for its strong second‑set opener (Morning Dew), fiery Bertha, a stellar Drums/Space→Other One sequence, and memorable Dylan moments, though some reviewers note an overabundance of \"In the Dark\" material and a mixed‑quality Dylan set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three detailed reviews rate the show between 3–5 stars and highlight strong musical moments; recording quality is consistently described as good to excellent, yielding a combined rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Great soundboard clarity on sets 1‑2; third set uses front‑of‑house mix that sounds better than the circulating board. No major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Loser",
+      "Morning Dew",
+      "The Other One",
+      "Tomorrow Is A Long Time",
+      "John Brown",
+      "Wicked Messenger",
+      "Chimes of Freedom",
+      "Joey"
+    ],
+    "poor_songs": [
+      "In the Dark"
+    ],
+    "setlist_flow": "First set was energetic but cramped; second set opened with a spectacular Morning Dew and stayed tight. The Dylan set had historic significance but felt uneven, while the Drums/Space→Other One segment closed the show on a high note."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his soaring guitar work, pedal‑steel on \"Tomorrow Is A Long Time\", and the visual trails from his playing; also mentioned standing near his side of the stage.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mixed feedback: one reviewer found the drum segment disappointing, another highlighted the powerful Drums/Space→Other One sequence."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "In the Dark": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tomorrow Is A Long Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "John Brown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wicked Messenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Chimes of Freedom": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Joey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:01:12.394793+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-12.sbd-aud.miller.84266.sbeok.flac16"
+}

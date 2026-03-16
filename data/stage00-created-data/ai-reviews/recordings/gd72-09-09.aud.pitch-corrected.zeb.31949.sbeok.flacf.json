@@ -1,0 +1,50 @@
+{
+  "summary": "A lively audience‑recorded show that captures the Southern California crowd vibe and a killer Truckin → The Other One stretch.",
+  "review": "The recording, while not studio‑clear, offers surprisingly decent sound for a 1972 audience tape and lets the enthusiastic crowd roar through every song. Musically the concert shines with Jerry’s on‑point playing, especially the extended Truckin into The Other One that many fans rate above the famed London ’72 performance. Overall it’s a high‑energy show worth revisiting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Multiple 4–5 star reviews praise both the musical performance (standout Truckin/Other One, strong Jerry) and the surprisingly good audience recording quality for its era."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity for a 1972 AUD; not as crisp as soundboard tapes but better than most other ’72 audience recordings. Crowd sounds are vivid and energetic, adding atmosphere despite some mids‑range muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout with a particularly strong second set; the crowd’s enthusiasm is palpable and the band rides that momentum, ending with a fun Teddy Bears Picnic jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being 'completely on' with a wide range of playing during the Truckin → The Other One sequence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Teddy Bears Picnic": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:08:51.894340+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-09.aud.pitch-corrected.zeb.31949.sbeok.flacf"
+}

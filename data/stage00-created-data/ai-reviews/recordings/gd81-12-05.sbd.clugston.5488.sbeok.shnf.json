@@ -1,0 +1,99 @@
+{
+  "summary": "A high‑energy 1981 soundboard capture that shines on blistering C.C. Rider, Let It Grow and The Wheel, recorded in good‑to‑excellent condition.",
+  "review": "This show is repeatedly described as a ‘monster’ – the band rides an intense groove from the first set through a second‑half second set that many fans call one of the best ever, highlighted by C.C. Rider, Let It Grow, The Wheel and soaring Bird Song. The SBD source is clear enough to be called “exquisite” or “great,” though several listeners note it can sound a bit sterile compared with an audience mix. Overall the performance and recording combine for a highly recommended listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 20 detailed reviews uniformly praise the musical performance (top‑10/legendary status) and note a solid, mostly clean soundboard recording; only minor comments about grit or sterility appear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp, described as “exquisite” by several reviewers. A few note a slightly gritty or sterile character and wish for an audience mix, but no major drop‑outs or balance problems are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "C.C. Rider",
+      "Let It Grow",
+      "The Wheel",
+      "Bird Song",
+      "Shakedown",
+      "Cumberland Blues",
+      "Alabama Getaway",
+      "Passenger",
+      "Lost Sailor > Saint",
+      "Playing in the Band",
+      "Sailor > Saint"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about seamless segues, especially the harmonic perfection of the second half of the second set and the fluid transitions into The Wheel and Playing‑in‑the‑Band sandwich."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for incendiary leads, \"Merlin\" guitar work, strong vocals, and building intense intros that drive the show’s energy.",
+    "Phil": "Highlighted for thunderous bass bombs (especially on Passenger) and a “shoot‑down” moment with his guitar; overall described as a driving force.",
+    "Bob": "Noted for enthusiastic vocal shouts on C.C. Rider and interaction with the crowd, plus occasional humorous moments.",
+    "Keys": "Brent’s keyboards described as bright, “tinkle tinkle,” adding subtle waves that complement the high‑octane playing.",
+    "Drums": "The drum/space section called scary, intense, and thundering; drummers praised for tightness and powerful dynamics throughout."
+  },
+  "song_mentions": {
+    "C.C. Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Let It Grow": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Wheel": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor > Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T16:49:23.816022+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-05.sbd.clugston.5488.sbeok.shnf"
+}

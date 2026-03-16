@@ -1,0 +1,31 @@
+{
+  "summary": "Positive show praised as the best of the tour, recording quality unspecified",
+  "review": "The reviewer rates this performance highly, calling it the best they saw on the tour and giving it four stars. No details are provided about the audio source or sound quality, so the recording aspect remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single brief review with a 4‑star rating; positive sentiment about the show but no technical details to assess recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific remarks about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T01:01:29.535803+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-12.sbd-set3.unknown.97491.shnf"
+}

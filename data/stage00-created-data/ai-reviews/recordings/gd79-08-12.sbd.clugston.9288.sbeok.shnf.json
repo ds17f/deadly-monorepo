@@ -1,0 +1,76 @@
+{
+  "summary": "Crisp soundboard capture of a classic Red Rocks show highlighted by an explosive Estimated Prophet → Eyes jam, though occasional buzz and mix quirks keep the recording from being flawless.",
+  "review": "The performance shines especially in the second set where the Estimated Prophet‑>Eyes sequence erupts into a soaring drum‑jam that many reviewers call “out of this world.”  The soundboard source is generally clear with good instrument separation, but a persistent buzz and occasional stereo/pitch issues detract from an otherwise excellent listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70 %) rate the show 4‑5 stars and praise the music, while a few note recording buzz and mix problems; weighting performance (70 %) over audio quality (30 %) yields a solid 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑separated mix with strong piano and guitar presence; however listeners report a low‑level buzzing/hum on the board tape, occasional mono playback, and Phil’s bass being buried or pitch‑shifted after conversion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Eyes",
+      "Brown‑Eyed Women",
+      "China Cat Sunflower > I Know You Rider",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Althea",
+      "Passenger"
+    ],
+    "setlist_flow": "The first set is upbeat but a bit uneven (early wobble, missed lyrics); the second set builds from Estimated Prophet into an incendiary Eyes → Drums/Space sequence with seamless transitions that capture the 1979 Red Rocks magic."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fast‑playing, tremolo work and “noodles” during the jam; a few note his voice sounding high‑pitched on Althea.",
+    "Phil": "Bass often buried in the mix; some reviewers hear booms & whams while others complain he’s barely audible and affected by pitch correction.",
+    "Bob": "Solid rhythm work, slide on Not Fade Away, occasional hoarse throat but overall steady vocal contribution.",
+    "Keys": "Brent’s jangly piano highlighted throughout, especially during the Estimated Prophet transition; keyboards described as “crisp” with nice tremolos.",
+    "Drums": "Bill and Mickey deliver a high‑energy drum solo that “splits the sky,” praised for fast boil and native‑style playing."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Eyes": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:22:43.539319+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-08-12.sbd.clugston.9288.sbeok.shnf"
+}

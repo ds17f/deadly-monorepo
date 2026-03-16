@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience recording with a tinny edge, featuring an awesome Terrapin Station performance",
+  "review": "The audience tape captures a solid show where Terrapin Station shines, earning high praise from listeners despite occasional tinny spots in the audio. Reviewers consider it worth downloading and liken these recordings to “manna from heaven” for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one review, but it gives a perfect 5‑star rating and highlights both strong performance (Terrapin) and minor recording flaws (tinny), leading to a high overall score with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally enjoyable but noted as a little tinny in places; no major dropouts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Limited commentary beyond the standout Terrapin Station; overall performance viewed positively."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:44:56.240134+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-04.nak300.morris.106580.flac16"
+}

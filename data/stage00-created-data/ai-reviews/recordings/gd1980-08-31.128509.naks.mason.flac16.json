@@ -1,0 +1,31 @@
+{
+  "summary": "Severe pitch problems make this recording essentially unlistenable.",
+  "review": "The sole reviewer reports that the tape suffers from major pitch issues, rendering it impossible to listen beyond the first half‑minute. No musical performance details are provided, so the show itself cannot be evaluated.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one extremely negative review focusing on recording defects; no information about the performance to offset the poor audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Severe pitch problems; cannot listen beyond the first 30 seconds of the set."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T02:35:26.380344+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-31.128509.naks.mason.flac16"
+}

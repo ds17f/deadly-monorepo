@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture of a solid 1992 show, highlighted by the standout “So Many Roads” performance.",
+  "review": "The recording is praised as an excellent SBD with crystal‑clear guitar intro and nicely mixed audience ambience. The concert itself gets modest but positive marks, with fans noting the energy of the set and especially loving the rendition of “So Many Roads.” Overall it’s a listenable, well‑balanced document of a decent show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Multiple reviewers commend the soundboard quality (5‑star comments) and give the performance solid marks (mostly 4‑star). Weighted averaging yields a strong 4.3 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp guitar intro confirms board source; audience mixed in but clearly secondary. No reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed setlist comments, but reviewers describe the show as a great time with solid energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:46:36.391342+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-25.sbd.omalley.22794.sbeok.flac16"
+}

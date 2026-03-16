@@ -1,0 +1,104 @@
+{
+  "summary": "High‑quality 1972 audience tape with stellar performances of Bird Song, He's Gone > Other One > Sing Me Back Home and a superb Sugar Magnolia, despite occasional vocal quirks and muffled moments.",
+  "review": "The show is widely praised for its classic ’72 vibe – soaring Bird Song, a ripping Playing In The Band, a monster Other One sequence and an unforgettable Sugar Magnolia solo.  The AUD source is surprisingly clear for its era, though listeners note some speed‑up, occasional vocal hit‑or‑miss and a noisy tambourine that keep it from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "15 detailed reviews overwhelmingly praise the musical performance (many 5‑star show ratings) while acknowledging only modest recording flaws, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively for a 1972 AUD; slight speed‑up noted, occasional vocal inconsistency, muffled moments (notably Truckin'), and prominent tambourine noise, but overall listenable and better than most tapes of the year."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "He's Gone > Other One > Sing Me Back Home",
+      "Playing In The Band",
+      "Sugar Magnolia",
+      "One More Saturday Night",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds with Bird Song, Playing In The Band and a tight Half Step; second set delivers the centerpiece sequence He's Gone → Other One → Sing Me Back Home followed by high‑energy Truckin' and classic closers like Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his soaring tone, especially on the solo within He's Gone > Other One > Sing Me Back Home and the ripping Sugar Magnolia lead.",
+    "Phil": "Noted for a bizarre, synth‑like bass texture at ~30:12 of The Other One – a unique Phil moment that caught reviewers' attention.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone > Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:38:29.341433+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-17.aud-wolfson.minches.28165.shnf"
+}

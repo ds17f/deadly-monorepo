@@ -1,0 +1,86 @@
+{
+  "summary": "Clear soundboard capture of a solid 1993 Giants Stadium set with standout Let It Grow, Good Lovin', and an energetic Playing in the Band, though Corrina and a few vocal woes hold it back.",
+  "review": "The recording is a well‑balanced soundboard mix that most listeners find crisp and listenable, allowing the band's strong moments – especially Let It Grow, Good Lovin' and a soaring 16‑minute Playing in the Band – to shine. The performance is generally solid with Jerry’s guitar work praised and Phil’s “Phil Zone” highlighted, but vocal fatigue from Garcia (and occasional set‑list pacing issues) keep the show from being truly exceptional.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the soundboard quality around 4 stars and the performance between 3‑4 stars; a few lower scores for vocals and specific songs pull the average down, yielding a solid but not outstanding overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear mix with no major drop‑outs; reviewers note it’s superb or excellent for a 1993 board, though some feel the energy dip after certain songs is performance‑related rather than technical."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Good Lovin'",
+      "Playing in the Band",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [
+      "Corrina",
+      "Easy Answers",
+      "Here Comes Sunshine (for one reviewer)"
+    ],
+    "setlist_flow": "The first set opens strong with Here Comes Sunshine and maintains momentum, while the second set loses a bit of focus after Space but recovers with an energetic Attics/Let It Grow segment. Overall pacing is described as “slow‑moving” by some but still enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong guitar work, especially in the Bertha>Good Lovin'>UJB>Playing sequence; noted to be in better form than many shows of the era.",
+    "Phil": "His “Phil Zone” moment with Broken Arrow is highlighted as a high point.",
+    "Bob": "Vocals described as hoarse/rough or even terrible by several reviewers, though some feel the roughness fuels better jams.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:33:33.044891+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-06.sbd.wiley.8329.sbeok.shnf"
+}

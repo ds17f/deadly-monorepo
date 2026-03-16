@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture with quad‑PA immersion, highlighted by stellar Other One, Stir It Up, Shakedown Street and Space Jam performances.",
+  "review": "The recording delivers an epic, four‑channel sound that makes the Healy PA stacks feel like they’re surrounding you, providing crystal‑clear clarity throughout. Musically the show is a pinnacle of the tour, with The Other One, Stir It Up, Shakedown Street and the Space jam all described as out‑of‑this‑world moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the performance and the quad sound quality, indicating an outstanding show and excellent recording; however only two reviews (one non‑informative) limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Quad PA stacks captured from the taper section create immersive, crystal‑clear sound with no reported issues; reviewers note the audio bouncing around corners in a spectacular way."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Stir It Up",
+      "Shakedown Street",
+      "Space Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewed as the tour's pinnacle with a high‑energy flow; standout jams and songs keep the momentum strong throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stir It Up": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:27:14.123329+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-05.132572.sbd.healy.latvala.wise.flac16"
+}

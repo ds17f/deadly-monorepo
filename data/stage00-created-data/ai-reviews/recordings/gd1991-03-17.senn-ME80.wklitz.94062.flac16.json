@@ -1,0 +1,45 @@
+{
+  "summary": "A top‑notch audience recording that captures an insanely excited crowd, highlighted by the debut of new “Speedway Boogie” and a raucous R&C performance.",
+  "review": "Both reviewers rave about the show’s energy – the crowd went nuts for the fresh “Speedway Boogie” and the fiery R&C jam. The audience (AUD) tape is praised as the best of those posted, delivering clear, lively sound that lets listeners feel the excitement despite the unknown venue date.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "High praise for both performance energy and recording clarity; limited to two reviews, so confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls this AUD the best of all posted tapes – clear, lively sound with no noted issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "R&C",
+      "Speedway Boogie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "While the exact setlist isn’t detailed, reviewers emphasize a wildly enthusiastic crowd and strong moments around the new Speedway Boogie and R&C, suggesting an engaging flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "R&C": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:31:35.244715+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-17.senn-ME80.wklitz.94062.flac16"
+}

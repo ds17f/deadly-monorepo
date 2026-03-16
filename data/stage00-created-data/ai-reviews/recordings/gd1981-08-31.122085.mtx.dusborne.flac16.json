@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording captures a great first set with standout performances of Feel Like a Stranger, Let It Grow, and Morning Dew.",
+  "review": "Both reviewers rave about the sound quality, noting that this MTX (matrix) source sounds clean and well‑balanced. The show itself is praised, especially the first set, with Feel Like a Stranger, Let It Grow and Morning Dew highlighted as top moments. No complaints were recorded, making this a highly enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Both reviews are strongly positive (5 and 4 stars) and highlight both recording quality and musical performance, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the MTX as good‑sounding with no noted issues; clear and balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Let It Grow",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set singled out as especially strong; overall show described as great with smooth flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:06:31.570538+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-31.122085.mtx.dusborne.flac16"
+}

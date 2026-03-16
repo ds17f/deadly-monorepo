@@ -1,0 +1,37 @@
+{
+  "summary": "Clear, definition‑rich audience recording captures a hot, high‑energy show, though the finale isn’t quite as smoking as it could be.",
+  "review": "The tape is praised as the best of the three audience recordings, offering more definition and less reverb than the SBD or matrix sources. The performance itself is described as “hot and sultry” with plenty of X‑Factor energy, making for an excellent show despite a slightly underwhelming ending. Minor speed anomalies were noted, requiring slight adjustments in post‑production.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (70% weight) and a good‑quality audience source with clear definition (30% weight); only one review limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "More definition and less reverb than other AUDs; some perceived speed issues requiring slight slowdown in editing, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Manic, fast‑paced performance with high energy throughout; the ending felt a bit less exciting than expected."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:25:33.900688+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-11.nak300.friend.andrewf.107227.flac16"
+}

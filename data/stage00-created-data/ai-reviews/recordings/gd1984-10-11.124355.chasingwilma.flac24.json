@@ -1,0 +1,44 @@
+{
+  "summary": "Good‑sounding recording captures a sweet Playing In The Band with an intriguing One More Cup of Coffee jam.",
+  "review": "The reviewer rates the tape four stars and describes the sound as “sweet,” indicating a pleasing listening experience. The highlight of the performance is a possible One More Cup of Coffee improvisation tucked into the middle of Playing In The Band, showing a moment of spontaneous brilliance from Jerry Garcia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single positive review (4★) points to good audio quality and an interesting musical highlight; limited data keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer mentions a \"sweet sound\" but provides no detailed technical comments; overall impression is that the recording is pleasant and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific commentary on set pacing; focus is on a unique jam within Playing In The Band."
+  },
+  "band_member_comments": {
+    "Jerry": "Possible One More Cup of Coffee jam noted, showing Garcia's improvisational flair.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Cup of Coffee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:50:00.444528+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-11.124355.chasingwilma.flac24"
+}

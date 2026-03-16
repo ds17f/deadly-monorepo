@@ -1,0 +1,44 @@
+{
+  "summary": "High‑quality soundboard capture of a concise 1968 show, highlighted by a ripping \"The Eleven\" jam.",
+  "review": "Fans rave about this short but powerful 1968 performance, especially the scorching \"The Eleven\" that follows an inspired William Tell jam. The Miller soundboard transfer is clear and well‑balanced (with pitch correction applied), making it an enjoyable listen for anyone who loves the early Dead era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive, praising both the musical performance and the clean soundboard source; average reviewer rating is 4.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, balanced Miller sbd transfer; pitch‑corrected but no reported dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise set that builds momentum with a tight William Tell jam leading into a standout \"The Eleven\"; overall flow praised despite the short runtime."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "William Tell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:33:37.709597+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-10-13.sbd.miller.115606.flac16"
+}

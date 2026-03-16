@@ -1,0 +1,61 @@
+{
+  "summary": "Good matrix recording captures a smoking China Cat Sunflower→I Know You Rider set, an uplifting opening Truckin', and tight Scarlet Begonias→Fire on the Mountain.",
+  "review": "The reviewer praises the matrix source as having good sound quality with no notable issues. Musically the show shines with a smoking China Cat Sunflower into I Know You Rider, an energizing opening Truckin', and a nicely executed Scarlet Begonias into Fire on the Mountain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Single detailed positive review highlights strong performance and decent recording quality, leading to an estimated rating above four stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes \"good sound\" with no complaints about clarity or balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Truckin'",
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening with Truckin' sets a positive mood, and seamless transitions through China→Rider and Scarlet→Fire are highlighted as high points."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:20:01.831599+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-28.mtx.griesman.77465.sbeok.flac16"
+}

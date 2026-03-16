@@ -1,0 +1,52 @@
+{
+  "summary": "Decent sound with a standout Brent keyboard showcase – Foolish Heart and an intense Walkin' Blues solo shine, though the Louie Louie rendition draws mixed reactions.",
+  "review": "The performance is praised for Brent’s exuberant keyboards, especially his jam on “Foolish Heart” and a fiery solo during “Walkin' Blues,” making it a must‑hear for fans of his playing. Recording quality is generally good after speed correction, but the infamous “Louie Louie” takes both glowing and harsh criticism, giving the overall impression a mixed vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Three detailed positive reviews highlight strong musical moments while one strongly negative comment on Louie Louie drags the average down; recording quality is acceptable with no major complaints, yielding a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Speed‑corrected version noted; no significant drop‑outs or distortion reported, suggesting a generally clear capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Walkin' Blues"
+    ],
+    "poor_songs": [
+      "Louie Louie"
+    ],
+    "setlist_flow": "Reviewers highlight an energetic middle set with Brent’s keyboard solos driving the momentum; overall the concert feels hot and engaging despite a contentious Louie Louie moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards are the focus – his jam on Foolish Heart and an intense Walkin' Blues solo receive high praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Louie Louie": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T18:19:25.185662+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-09.sbd.tobin.34962.sbeok.flac16"
+}

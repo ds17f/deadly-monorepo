@@ -1,0 +1,116 @@
+{
+  "summary": "Good‑to‑great 1976 Orpheum show with a stellar second set (Cosmic Charlie, Spanish Jam, Stronger Than Dirt) captured on a mixed audience/soundboard source.",
+  "review": "The performance is widely praised for its dreamy, drippy vibe and standout jams – especially Cosmic Charlie, the epic Spanish Jam and a rare Stronger Than Dirt.  Recording-wise the first set’s audience tape is surprisingly rich while the second‑set soundboard feed is clear but has Phil pushed forward in the mix and occasional shakiness.  Overall listeners find the show enjoyable despite some uneven moments in the second half.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average user rating is ~4.2 ★, most reviewers highlight strong musical moments and deem the mixed audience/soundboard recording listenable; only a few note minor mix or performance issues."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First set captured from an audience mic – richer than the SBD but with limited bass and Phil sometimes buried.  Second‑set is a soundboard recording; clear overall but a bit bright on Jerry’s guitar, Phil high in the mix, occasional shakiness and off‑stage mix quirks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cosmic Charlie",
+      "Spanish Jam",
+      "Stronger Than Dirt",
+      "High Time",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [
+      "Playin (meandering)",
+      "Stronger Than Dirt (sloppy rendition)"
+    ],
+    "setlist_flow": "The first set is described as tight and inspiring, while the second set is more exploratory – loved for its jams but noted by a few reviewers as meandering in places."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for hot guitar tone on Scarlet, soaring solo on Big River, and overall strong lead work; occasional comments about his mix being too loud.",
+    "Phil": "Mentioned as high in the SBD mix (good effect) but sometimes buried in the audience tape; also noted for teasing jokes during The Wheel.",
+    "Bob": "Vocals highlighted on The Wheel and general contributions praised, though no specific instrumental commentary.",
+    "Keys": "Keith’s extra flourishes on Looks Like Rain and other tracks are noted; otherwise keyboards receive few comments.",
+    "Drums": "Mickey/Billy drum riffs in the Playing jam get attention; drums described as solid but the second‑set mix sometimes feels thin."
+  },
+  "song_mentions": {
+    "Cosmic Charlie": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stronger Than Dirt": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Spanish Jam": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:32:27.003478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-16.set1aud-set2sbd.miller.23569.sbeok.shnf"
+}

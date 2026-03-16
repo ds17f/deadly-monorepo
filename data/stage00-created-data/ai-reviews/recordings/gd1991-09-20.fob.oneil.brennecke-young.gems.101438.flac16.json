@@ -1,0 +1,58 @@
+{
+  "summary": "Clean front‑of‑house recording of a high‑energy 1991 show with standout Help > Slipknot, Fire and an emotional Morning Dew.",
+  "review": "The audience (FOB) tape is surprisingly clear for a rowdy venue, especially after EQ work, though a stray whistling during Birdsong mars a few seconds. Musically the concert shines – Garcia nails every lyric in Help on the Way and launches into a flawless Slipknot intro, the roof blows off when Fire opens, and Hornsby’s piano on Morning Dew moves listeners to tears.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Four detailed reviews praise the performance (standout songs, strong playing) and note a generally good recording with only minor noise issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Overall clean and well‑EQ'd front‑of‑house capture; occasional intrusive yeller/whistler during Birdsong but crowd ambience is well‑controlled."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot!",
+      "Fire",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Birdsong"
+    ],
+    "setlist_flow": "High‑energy first set leading into a powerful second half; the band rides the crowd’s excitement, culminating in an explosive Fire and a heartfelt Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals are spot‑on for Help on the Way and his guitar sparks the roof‑blowing Fire intro.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby delivers powerful, emotive piano work, especially on Morning Dew.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:30:22.060182+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-20.fob.oneil.brennecke-young.gems.101438.flac16"
+}

@@ -1,0 +1,44 @@
+{
+  "summary": "Superb‑sounding audience tape highlighted by a stellar Dupree's > Cassidy segue in the first set.",
+  "review": "The reviewer praises the recording as “superb,” indicating an unusually clear and well‑balanced audience capture despite being sourced from a NAK700 cassette. Musically, the first‑set transition from Dupree’s Diamond Blues into Cassidy is singled out as a standout moment, suggesting a strong performance even though no other specifics are given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review highlights excellent audio quality and a memorable song segue, giving the show a solid rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as superb; clear, crisp tape sound with good balance for an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dupree's Diamond Blues > Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First‑set transition Dupree's > Cassidy noted as a highlight; overall impression is positive but details are sparse."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:36:29.600551+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-05-06.152043.nak700.severson.miller.clugston.flac1648"
+}

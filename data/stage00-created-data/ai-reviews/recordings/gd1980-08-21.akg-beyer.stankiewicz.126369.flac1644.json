@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience matrix recording of a standout show featuring Shakedown Street, Promised Land and a monster Uncle John’s Band, but the board mix is a bit hot.",
+  "review": "The performance is praised for its rare first‑set ending (Shakedown Street → Promised Land) and an epic thirteen‑minute Uncle John’s Band with a Wheel reprise, making it a memorable show. The recording is a bright FOB audience track blended with a soundboard source that suffers from mic clipping and intrusive hand‑held clapping, limiting its rating despite the strong music.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviewers love the musical moments (high show quality) but note noticeable mix problems; weighted average yields just over 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Bright, full‑sounding audience (FOB) feed; soundboard mix has Jerry’s and Bob’s mics too hot and hand‑held clapping noise that is distracting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Promised Land",
+      "Uncle John’s Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual first‑set close with Shakedown Street → Promised Land, drums kick off the second set and a massive Uncle John’s Band with a Wheel reprise creates an exciting, high‑energy flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Board mix buries Jerry's guitar; louder presence would improve the recording.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums start the second set, noted as a strong transition point."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John’s Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:59:10.593429+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-21.akg-beyer.stankiewicz.126369.flac1644"
+}

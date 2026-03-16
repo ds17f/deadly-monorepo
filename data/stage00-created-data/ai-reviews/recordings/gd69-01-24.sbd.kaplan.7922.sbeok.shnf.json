@@ -1,0 +1,62 @@
+{
+  "summary": "High‑quality soundboard capture of the Jan 24 1969 Avalon show, highlighted by an earth‑shaking New Potato Caboose and a standout Dark Star.",
+  "review": "The recording delivers clear, well‑balanced soundboard audio that lets listeners hear every nuance of the band’s 1969 fire. Musically the night is defined by a thunderous Phil Lesh solo on New Potato Caboose, an exploratory Dark Star, and a dramatic power‑cut during Lovelight, making it a memorable entry in the early‑’69 canon.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9/12) give 4‑5 stars and praise both performance (especially New Potato Caboose, Dark Star and Lovelight) and sound quality; only a few note minor mix issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the audio clear, well‑placed and “excellent,” though one notes the mix is rough at the start and early multitrack quirks are present. Overall the soundboard capture is listenable and lets the instruments shine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Potato Caboose",
+      "Dark Star",
+      "Lovelight",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through a powerful New Potato Caboose, a meandering but compelling Dark Star, and ends abruptly when management pulls the power during Lovelight—Mickey and Bill keep things moving, adding to the night’s legend."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s improvisational jamming after New Potato is praised as “amazing,” with his solo described as “symphonic” and “beautiful.”",
+    "Phil": "Lesh’s solo on New Potato Caboose is repeatedly called thunderous, earth‑shaking, and the highlight of the show; reviewers refer to it as entering the “Phil Zone.”",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart (and Bill Kreutzmann) are noted for stirring things up after the power cut, keeping the rhythm alive despite the outage."
+  },
+  "song_mentions": {
+    "New Potato Caboose": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    }
+  },
+  "processed_date": "2025-09-24T10:28:35.117998+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-01-24.sbd.kaplan.7922.sbeok.shnf"
+}

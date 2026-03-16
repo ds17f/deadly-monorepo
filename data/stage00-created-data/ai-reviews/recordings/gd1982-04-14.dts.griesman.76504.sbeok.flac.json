@@ -1,0 +1,31 @@
+{
+  "summary": "Only a technical question about playing the FLAC files; no insight on recording or performance quality.",
+  "review": "The lone review asks how to play the DTS‑encoded FLAC files rather than commenting on sound quality or the concert itself, indicating frustration with the format rather than the music. No musical or recording details are provided.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review focused on playback issues and giving a 0‑star rating; no information about the show or audio quality to base a higher score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer does not discuss sound clarity, mix, or source type; frustration appears related to playback rather than recording fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T20:10:08.338882+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-14.dts.griesman.76504.sbeok.flac"
+}

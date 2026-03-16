@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording is muddy and needs volume balancing, but the show is remembered as an A‑game Omni performance highlighted by a rare “Long, Long Way To Go Home” moment.",
+  "review": "Listeners report that the audio quality is poor – the mix is uneven and requires extensive volume adjustments to be listenable. Despite the technical flaws, fans who attended rave about the band's energy, especially the emotional second‑set debut of “Long, Long Way To Go Home,” and consider it a top‑tier concert.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show receives very high praise (5 ★) while the recording is judged essentially unlistenable (0 ★). Weighted average of show (70%) and recording (30%) yields ~3.8 ★."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Mix is imbalanced; instruments and mics need volume balancing. Audio is not clear enough to assess performance without corrective processing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Long, Long Way To Go Home"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans recall an energetic Omni show with the band at their A‑game; a memorable second‑set moment featuring the rare “Long, Long Way To Go Home” is highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised emotionally and described as giving his all; fans feel his presence makes even a mediocre night special.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Long, Long Way To Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:40:33.750298+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-01.140221.sbd.miller.flac2496"
+}

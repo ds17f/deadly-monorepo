@@ -1,0 +1,112 @@
+{
+  "summary": "Crisp front‑center soundboard capture of a legendary 1974 Winterland set, highlighted by an iconic “Eyes of the World” and soaring ballads.",
+  "review": "The recording offers a surprisingly clear SBD mix with Jerry’s guitar and Keith’s piano right up front, though occasional clipping and uneven balance keep it from being flawless. Musically the show is celebrated for its powerful vocal performances, the epic “Eyes of the World,” tight ballad work (Roses, To Lay Me Down) and solid jams like Truckin’ and Magnolia/Black Peter. Overall fans rave about the performance despite a few isolated sonic quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (30+) give 4‑5 stars and praise both the music and sound quality; only a handful note distortion or balance issues, so the weighted average leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and front‑loaded mix with vocals, guitar and piano prominent; some listeners report upper‑end clipping, occasional echo/reverb, and uneven balance that can make the drums sound overwhelming."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Uncle John's Band",
+      "Truckin'",
+      "Magnolia",
+      "Black Peter",
+      "Roses",
+      "To Lay Me Down",
+      "Dire Wolf",
+      "Tomorrow is Forever"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is widely praised for its seamless flow and emotional arc, though a few reviewers felt the pacing was uneven or lacked overall momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for warm, melodic guitar tone, strong ballad playing and standout vocals (especially on “Roses” and “To Lay Me Down”).",
+    "Phil": "Mentions of Phil & Ned’s experimental synth/turntablism segment; some found it confusing, but no direct criticism of his bass work.",
+    "Bob": "",
+    "Keys": "Keith Godchaux’s piano is described as upfront and adding depth to the mix.",
+    "Drums": "Bill Kreutzmann’s drumming sometimes described as “head in the kit” or overly loud; overall rhythm praised."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Roses": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tomorrow is Forever": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:36:51.069187+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-10-19.sbd.miller.21927.sbeok.shnf"
+}

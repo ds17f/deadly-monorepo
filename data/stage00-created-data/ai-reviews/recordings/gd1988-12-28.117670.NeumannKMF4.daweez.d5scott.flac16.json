@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality audience transfer that captures a strong New Year's ’88 set highlighted by Jack Straw, Lovelight and Baby Blue.",
+  "review": "This Neumann‑audiotape sourced from Da Weez/D5scott delivers focused, centered bass and clear mids, far surpassing other transfers of the same show. The performance is praised as the best of the 1988 New Year’s run, with a powerful first‑set close on Jack Straw and an explosive post‑Space second set featuring Lovelight and Baby Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Single detailed review rates the show 4 stars, praising both musical moments and sound quality; weighted average yields a strong rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Focused, centered bass with no phase issues; clearer than other transfers (Healy MTX) and sounds crisp throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Lovelight",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first‑set finish with Jack Straw, followed by a powerful post‑Space second set that maintains momentum and showcases tight band interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Highlighted for delivering an excellent ending on Lovelight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:43:12.094809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-12-28.117670.NeumannKMF4.daweez.d5scott.flac16"
+}

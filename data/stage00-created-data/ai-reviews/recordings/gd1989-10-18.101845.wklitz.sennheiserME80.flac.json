@@ -1,0 +1,57 @@
+{
+  "summary": "Decent audience recording of a high‑energy Philadelphia show with a solid first set and standout Bird Song and Black Peter.",
+  "review": "The concert captures the excitement of a late‑80s Philly gig, highlighted by a tight first set that opens with Shakedown Street and rolls into a rousing The Music Never Stopped, plus a superb Bird Song and an unusually bluesy Black Peter in the second set. The audience recording is clear enough to enjoy the full sound, though it isn’t pristine, making the performance the main draw.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Both reviewers give 4‑star ratings and praise the show’s energy and standout songs; the recording is described as decent but not top‑tier, leading to a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape with full sound; not ultimate quality but pleasant and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "The Music Never Stopped",
+      "Bird Song",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A meaty, high‑energy first set that builds momentum into a second set that 'pumps', featuring strong transitions and memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Missed lyric at the end of 'The Music Never Stopped' and gave a funny dirty look.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:46:34.568472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-18.101845.wklitz.sennheiserME80.flac"
+}

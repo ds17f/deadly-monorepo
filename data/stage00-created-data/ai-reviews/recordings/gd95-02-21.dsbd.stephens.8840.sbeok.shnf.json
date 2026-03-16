@@ -1,0 +1,88 @@
+{
+  "summary": "Crisp soundboard capture of a high‑energy 1995 Salt Lake City show, highlighted by a stellar Visions of Johanna and strong first‑set performances.",
+  "review": "The recording is a well‑mastered SBD that sounds clean and crisp despite occasional crackle or static at track ends. Musically the concert shines – the first set rolls with Broken Arrow, Black‑Throated Wind and So Many Roads, while the second half delivers a soaring Visions of Johanna, Foolish Heart, That Would Be Something and a powerful Space/drums stretch. Jerry’s guitar and vocals are largely praised, Vince’s keyboards receive strong nods, and Mickey’s drumming is singled out for its space‑time excursions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 60 reviews with an average rating around 4 – 5 stars; the majority are enthusiastic about both performance and sound quality, giving a clear consensus of a high‑quality show."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the audio as crisp, clean and superb; a few note occasional crackling/pops at track ends but nothing that detracts significantly from listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "Broken Arrow",
+      "Foolish Heart",
+      "That Would Be Something",
+      "So Many Roads",
+      "Black Throated Wind",
+      "Music Never Stopped",
+      "Salt Lake City"
+    ],
+    "poor_songs": [
+      "Samba In The Rain"
+    ],
+    "setlist_flow": "The first set is repeatedly called a ‘monster’ – tight, energetic and song‑rich. The second set builds after the drums/space segment, delivering high points (Visions, Foolish Heart) while some reviewers feel it’s slightly less cohesive than set 1."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong guitar tone, energetic leads on Visions and Foolish Heart, and generally ‘present & accounted for’; a few note early‑show vocal miscues.",
+    "Phil": "Mentioned positively for his Broken Arrow performance; no major criticism.",
+    "Bob": "His vocals on Salt Lake City and overall rhythm work receive commendation; occasional 'nice leads' noted.",
+    "Keys": "Vince is highlighted for solid piano on Friend of the Devil, FOTD and Visions; mixed opinions but many say he ‘shines’ this night.",
+    "Drums": "Mickey’s drumming and space segment are lauded as a highlight, with remarks about his “beam‑head” sounds and overall tightness."
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 32,
+      "negative_mentions": 1,
+      "total_mentions": 33
+    },
+    "Broken Arrow": {
+      "positive_mentions": 18,
+      "negative_mentions": 0,
+      "total_mentions": 18
+    },
+    "Foolish Heart": {
+      "positive_mentions": 14,
+      "negative_mentions": 2,
+      "total_mentions": 16
+    },
+    "That Would Be Something": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "So Many Roads": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Salt Lake City": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Samba In The Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-19T05:10:54.832597+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-02-21.dsbd.stephens.8840.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Clear soundboard recording (with a tiny early hiccup) captures a blistering 1969 show featuring a smoking Dark Star, soaring Other One, scorching Eleven and high‑energy Lovelight.",
+  "review": "The tape is a sound‑board source that sounds crisp after the first few seconds; a handful of listeners note a brief dip at the opening but overall the mix is solid. Musically the concert is hailed as one of the band’s winter‑69 peaks – Dark Star and The Other One (linked into Cryptical) are described as “smoking”, Eleven and Lovelight crackle with intensity, and Jerry Garcia’s guitar work and banter receive glowing praise. The overall vibe is overwhelmingly positive despite a few off‑hand criticisms of the supporting act.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and extol the performance; recording is generally praised as good with only minor flaws, yielding a weighted rating around 4.35 → rounded to 4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sound is clear and wonderful after the opening few seconds; one reviewer mentions a brief dip at the start, another calls it \"slacking\" but the consensus is a crisp, well‑balanced board mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "Cryptical Suite",
+      "Eleven",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set was meant to close with Lovelight, but after Iron Butterfly’s brief disappearance the Dead extended the show with a powerful Cryptical sandwich and an over‑the‑top Other One, creating a high‑energy second half that many fans describe as fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and on‑stage banter are praised; reviewers note his “cool” interaction with the crowd.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann is called \"nuts on the drums\" and Pigpen’s vocals on Lovelight are highlighted as standout moments."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cryptical Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T11:01:59.402342+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-02-06.sbd.cotsman.6284.sbeok.shnf"
+}

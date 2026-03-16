@@ -1,0 +1,31 @@
+{
+  "summary": "Recording sounds good overall but track names are shifted by one, with no details on the performance itself.",
+  "review": "The reviewer notes that the audio quality is solid (“Sounds good though”) despite a technical hiccup where the song titles are offset by one position. No comments are made about the band's playing or specific songs, so the musical assessment remains undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only a single 4‑star review; praise is limited to sound quality and a minor metadata issue, with no insight into the show’s musical merit."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Audio sounds good, but track names are shifted by one due to a labeling error in the FLAC files."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T13:00:35.060166+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-03.136755.5-1.tobin.flac1648"
+}

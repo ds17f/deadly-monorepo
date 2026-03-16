@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audio of a strong second set marred by a poorly received Day Job encore.",
+  "review": "The concert is remembered for an excellent second set that ranks among the best of the spring‑'85 tour, but the encore – a rendition of “Day Job” – fell flat and even sent some audience members walking. No specific comments about the recording’s sound quality were provided, so the audio is presumed listenable but unverified.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Only one review with a 3‑star rating; positive remarks about the second set are offset by strong criticism of the encore, and there is no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention any audio characteristics, so recording quality cannot be assessed beyond being presumably adequate."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Day Job"
+    ],
+    "setlist_flow": "Second set praised as a highlight of the tour; encore considered weak and disruptive to the overall experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:06:51.698150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-10.all.aud-ty.96630.flac1644"
+}

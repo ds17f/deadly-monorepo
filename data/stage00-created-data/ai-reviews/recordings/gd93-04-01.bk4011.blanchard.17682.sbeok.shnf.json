@@ -1,0 +1,70 @@
+{
+  "summary": "Memorable show highlighted by a purple‑Barney‑clad Phil and a smoking Minglewood Blues, with the Rain encore stealing the spotlight; recording quality not discussed.",
+  "review": "Fans recall this concert for its quirky stage moments – Phil’s Barney costume during Iko Iko and an unforgettable Rain encore – and praise first‑set gems like Minglewood, Eternity and Liberty. The second set started strong but slipped into a few dull spots, and reviewers give no details on the audio source, leaving recording quality unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Average star rating is 3.75; most reviewers praise specific songs and moments while noting a weaker second‑set flow, and no recording details are provided."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not mention soundboard or audience quality, clarity, or mix issues; the audio characteristics remain undocumented."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Eternity",
+      "Liberty",
+      "Rain",
+      "Iko Iko (Barney cameo)"
+    ],
+    "poor_songs": [
+      "Wave to the Wind"
+    ],
+    "setlist_flow": "First set is praised for fresh 1993 material and a smoking Minglewood Blues; second set opens with an iconic Barney‑themed Iko Iko but loses momentum later, ending on a high note with the Rain encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil appeared in a huge purple Barney costume during the Iko Iko segment, energizing the crowd.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:02:51.626275+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-04-01.bk4011.blanchard.17682.sbeok.shnf"
+}

@@ -1,0 +1,50 @@
+{
+  "summary": "Above‑average audience recording that captures a 1985 show highlighted by an emotional \"She Belongs to Me\" and a stellar Estimated Prophet jam.",
+  "review": "The Oade Bros’ audience tape offers slightly above‑average sound quality with occasional low‑frequency wind noise on “Let It Grow,” but it remains enjoyable.  Musically the concert shines, especially on “She Belongs to Me” where Jerry’s vulnerable solos are repeatedly praised, and the Estimated Prophet jam is called \"awesome.\"  Overall the performance feels tight and emotionally resonant for a mid‑80s Dead show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong 4‑5 star reviews emphasize superb playing (especially Jerry) and only minor recording quirks, indicating a high‑quality show with good but not perfect audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Slightly above average AUD quality; crisp overall but suffers from low‑frequency wind noise on \"Let It Grow\" and occasional muddiness typical of audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "She Belongs to Me",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows smoothly through the summer/fall ’85 set, with a strong emotional core on \"She Belongs to Me\" and an energetic Estimated Prophet jam that lifts the second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his solos and vocals as emotionally charged, especially on \"She Belongs to Me.\"",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mention of drummers using sample pads (e.g., “Bobby” and kiss samples) adds a quirky texture."
+  },
+  "song_mentions": {
+    "She Belongs to Me": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:12:51.558695+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-08-31.schoeps-oade.sacks.25943.sbeok.flacf"
+}

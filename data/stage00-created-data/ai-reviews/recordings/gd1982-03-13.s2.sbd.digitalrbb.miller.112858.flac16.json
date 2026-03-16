@@ -1,0 +1,60 @@
+{
+  "summary": "Clean soundboard capture of an ’82 set with a smoking Stranger > Franklin’s, stellar Space into The Other One, and crisp Jerry riffs.",
+  "review": "The recording is a very clean sound‑board source that offers distinct instrument separation, making the band's interplay shine. Musically the show is highlighted by a scorching Stranger > Franklin’s sequence, an out‑of‑this‑world Space segue into The Other One, and strong moments from Eyes and Franklin’s throughout. Overall the performance feels looser than ’81 but more focused, with Brent on keys and Phil’s bass adding extra fire.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both the musical performance and the clean soundboard recording; only one low‑rating outlier does not outweigh the consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clean board capture with distinct separation of instruments; reviewers note crispness and great clarity throughout the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger > Franklin's",
+      "Space",
+      "The Other One",
+      "Eyes (slipknot tease)"
+    ],
+    "poor_songs": [
+      "He's Gone (false start)",
+      "Eyes (initial sloppy section)"
+    ],
+    "setlist_flow": "Second‑set flow is praised, especially the transition from Stranger into Franklin's, the space jam that leads into The Other One, and the energetic finish with Eyes."
+  },
+  "band_member_comments": {
+    "Jerry": "Starts “He’s Gone” with a false‑start but quickly recovers; delivers a memorable slipknot riff at the end of “Eyes” and shares great vocal/guitar interplay with Bob on “Stranger”.",
+    "Phil": "His four‑string bass is described as ‘dropping bombs’, adding power to the second‑set energy.",
+    "Bob": "Highlighted for tight vocal and guitar exchange with Jerry during the “Stranger > Franklin's” sequence.",
+    "Keys": "Brent’s electric piano shines, providing texture and depth throughout the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger > Franklin's": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T18:45:07.235163+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-03-13.s2.sbd.digitalrbb.miller.112858.flac16"
+}

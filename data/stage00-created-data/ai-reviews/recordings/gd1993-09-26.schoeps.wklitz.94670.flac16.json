@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent performance with a great Jack Straw opener and high‑energy Iko Iko, captured in an unknown‑type recording",
+  "review": "The reviewer remembers this Fall ’93 show fondly, praising the opening Jack Straw, the wild Iko Iko that “shook the balcony TV monitors,” and even the rain‑themed encore. The only hiccup noted was Jerry Garcia breaking a string during Althea, but it didn’t detract from the overall amazing experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single five‑star review highlights strong musical moments and only a minor performance issue; no recording quality comments, so rating leans heavily on show quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not mention any details about soundboard or audience mix, clarity, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Iko Iko",
+      "Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening with Jack Straw set a strong tone; despite a broken string during Althea the band kept energy high, culminating in an enthusiastic rain‑encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Broke a string during Althea (minor issue), otherwise no negative comments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:54:58.082536+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-26.schoeps.wklitz.94670.flac16"
+}

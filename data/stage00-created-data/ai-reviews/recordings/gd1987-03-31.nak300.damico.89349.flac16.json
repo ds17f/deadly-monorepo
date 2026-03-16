@@ -1,0 +1,97 @@
+{
+  "summary": "An outstanding audience‑recorded tape that captures a solid mid‑80s show highlighted by a scorching Estimated, fiery Jack Straw and gorgeous Stella.",
+  "review": "The Joe D’Amico audience recording is crystal clear—almost as if you were right at the soundboard—and delivers an energetic 1987 performance.  Highlights include a blistering Jack Straw, a fast‑paced Franklin’s Tower, a note‑perfect Terrapin and a soaring Stella, while the first set feels a bit bland and Ramble On Rose loses steam.  Overall the show is well‑played and the tape makes it easy to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic reviews praise both the superb audience recording quality and a strong musical performance with many standout songs."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe it as sounding like being right by the soundboard, crisp and full‑bodied, with no noted dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Franklin's Tower",
+      "Estimated",
+      "Terrapin",
+      "Stella",
+      "A Touch of Grey"
+    ],
+    "poor_songs": [
+      "Ramble On Rose",
+      "Miracle"
+    ],
+    "setlist_flow": "The first set is described as fairly bland, but the second set picks up after A Touch of Grey and maintains momentum with strong jams and tight performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fierce playing on Ramble On Rose, torrential guitar work on Stella, and overall powerful tone throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboards) highlighted for inspired play on Terrapin.",
+    "Drums": "Consistently excellent around this era; drums segment noted as solid."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "A Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:30:07.173172+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-31.nak300.damico.89349.flac16"
+}

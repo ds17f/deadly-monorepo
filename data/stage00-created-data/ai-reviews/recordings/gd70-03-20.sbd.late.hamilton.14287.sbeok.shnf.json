@@ -1,0 +1,81 @@
+{
+  "summary": "A legendary second electric set (Casey Jones, Good Lovin', Viola Lee Blues) shines on a mostly solid but uneven sound‑board recording.",
+  "review": "The show is praised as one of the great sets of ’70 with a bang‑starting Casey Jones, a scorching Good Lovin'/NFA/drums sandwich and standout performances of Viola Lee Blues, High Times and Lovelight. The recording is a soundboard source that sounds excellent in places but suffers from low‑quality sections and mic/level changes early in the set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently high (average ~4.3) while recording quality varies widely (average ~2.5); weighted combination yields a 3.7 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First five tracks are low‑fidelity AUD recordings; later electric set is clear. Mic swaps and level changes cause occasional muddiness, but overall the soundboard captures the atmosphere well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Good Lovin'",
+      "Viola Lee Blues",
+      "High Times",
+      "Lovelight",
+      "We Bid You Goodnight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with Casey Jones, smooth transition into acoustic material, then an electric second set that “smokes” with tight jams and seamless segues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:24:53.310708+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-03-20.sbd.late.hamilton.14287.sbeok.shnf"
+}

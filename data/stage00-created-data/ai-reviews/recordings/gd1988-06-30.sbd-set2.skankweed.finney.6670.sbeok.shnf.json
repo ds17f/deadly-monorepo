@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy second set highlighted by Green Onions, Believe It Or Not and a powerhouse Wharf Rat.",
+  "review": "The set captures the Dead at their most exuberant – opening with a scorching Green Onions, delivering an unforgettable Believe It Or Not, and unleashing a ferocious Wharf Rat that many reviewers call “the most powerful” they’ve heard. The soundboard source is crisp and clean, earning five‑star praise for audio quality despite a minor complaint about missing track labels.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Five of six reviewers give the show 5 stars and laud both performance and sound; only one low rating concerns metadata, not audio, leading to a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with no reported drop‑outs or distortion. One reviewer noted the lack of track numbers/labels, but audio fidelity is praised throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Green Onions",
+      "Believe It Or Not",
+      "Wharf Rat",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set momentum builds from a tight Green Onions opener through soaring improvisations, delivering high drama and seamless transitions that many fans describe as a ‘gem.’"
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple mentions of Jerry’s adventurous playing – goofing with the Chinacat riff at the end of Rider, chasing the music while singing He's Gone, and overall strong, emotive guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Green Onions": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Believe It Or Not": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:49:45.878603+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-30.sbd-set2.skankweed.finney.6670.sbeok.shnf"
+}

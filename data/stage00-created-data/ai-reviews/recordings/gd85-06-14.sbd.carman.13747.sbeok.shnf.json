@@ -1,0 +1,97 @@
+{
+  "summary": "Solid soundboard capture of a classic mid‑’85 Berkeley show – crystal‑clear on the highs with a few mix quirks, highlighted by a smoking Morning Dew, China Doll and Brent’s Hammond fireworks.",
+  "review": "The recording is a well‑balanced SBD with good levels and minimal hiss, though a touch of diginoise in “Morning Dew” and a slightly loud drum mix are noted. Musically the show shines on the second set – Morning Dew opens it, followed by a stellar China Doll/Brent jam and multiple “Keep on Growing” highlights – while the first set is solid but uneven, with “Let It Grow” and “Day Job” receiving mixed reactions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈4.5★; most comments praise the performance and recording, with only a few minor technical or song‑specific critiques, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Levels are solid, little hiss; occasional diginoise in the right channel during “Morning Dew”, brief static at start of set 2, and drums a bit high in the mix according to some reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "China Doll",
+      "Keep on Growing",
+      "Playin'",
+      "Peggy-O",
+      "The Bucket"
+    ],
+    "poor_songs": [
+      "Let It Grow",
+      "Day Job"
+    ],
+    "setlist_flow": "First set is a mixed bag – strong moments (Dancin’, West LA, Peggy‑O) but some uneven spots. The second set is the highlight, opening with an epic “Morning Dew”, flowing through a powerful China Doll/Brent jam and several high‑energy peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is praised for its energy and occasional rough‑edge vocals; his interplay with Brent on the closing jams gets special mention, as does his laugh in the “Sound Montage”.",
+    "Phil": "Phil’s bass is noted for steady work and a memorable chuckle before “West LA Fadeaway”, but otherwise receives few specific comments.",
+    "Bob": "Bob Weir’s guitar squeal and vocal contributions are highlighted as solid throughout, with particular kudos to his presence on “Peggy‑O” and the jam sections.",
+    "Keys": "Brent Mydland’s Hammond is repeatedly called a force – “forceful”, “aggressive”, and central to the China Doll/Drums jam and overall set energy.",
+    "Drums": "The Rhythm Devils get praise for tight work, though one reviewer mentions the drums are a bit high in the mix; the Brent‑drum jam is singled out as a show highlight."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Doll": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Keep on Growing": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T04:30:22.259745+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-14.sbd.carman.13747.sbeok.shnf"
+}

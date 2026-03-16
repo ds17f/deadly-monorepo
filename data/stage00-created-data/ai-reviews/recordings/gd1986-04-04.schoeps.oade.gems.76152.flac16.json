@@ -1,0 +1,70 @@
+{
+  "summary": "Good‑sounding audience matrix recording of a flat, lackluster show with only Dire Wolf standing out",
+  "review": "The recording captures clear instrument separation and decent overall balance, but the performance itself is widely regarded as flat and disengaged. Reviewers note Jerry Garcia’s waning presence, weak vocals on several numbers, and an under‑whelming set that barely lifts off despite a few treat songs like Dire Wolf.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Consistent low ratings for the musical performance (70% weight) outweigh the positive comments about sound quality, resulting in an overall below‑average score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners report clear separation and ability to hear each instrument; no major dropouts or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dire Wolf"
+    ],
+    "poor_songs": [
+      "Box Of Rain",
+      "Crazy Fingers",
+      "Candyman",
+      "Jack Straw",
+      "Smokestack Jam"
+    ],
+    "setlist_flow": "Reviewers describe the set as plodding and flat, with little energy or enjoyment from the band; only a few songs offered brief highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently described as out of it, with barely audible vocals on Crazy Fingers and Candyman, and absent from the mic on Jack Straw.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box Of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Smokestack Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:44:10.692328+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-04.schoeps.oade.gems.76152.flac16"
+}

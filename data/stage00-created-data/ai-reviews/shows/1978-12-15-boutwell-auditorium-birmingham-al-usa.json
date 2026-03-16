@@ -1,0 +1,58 @@
+{
+  "summary": "High‑energy set with soaring Promised Land and emotive Stella Blue",
+  "blurb": "The show delivers a tight, high‑energy first set highlighted by The Promised Land and Shakedown Street, while the second set shines with an inspired Terrapin Station duet and a moving Stella Blue. Keith’s piano interplay adds depth, and the audience recording captures the intimate club feel.",
+  "review": "On December 15, 1978 at Birmingham’s Boutwell Auditorium the Dead rolled out a compact yet potent two‑set marathon. Opening with The Promised Land they set an immediate lift that carried through classics like Shakedown Street and New Minglewood Blues, but it was the second half where the magic truly unfolded – a classical‑style duet between Garcia and Phil Lesh on Terrapin Station, a soaring jam into Playing In The Band, and a heartfelt Stella Blue solo that left listeners breathless. Keith Godchaux’s piano work weaves beautifully through the tapestry, especially during the Terrapin passage, while the audience‑sourced recording captures the club intimacy without sacrificing clarity. Though one review called the performance “standard,” the consensus points to a show that balances tight musicianship with the emotional highs fans cherish.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "One recording offers strong positive language (high‑energy, heartfelt vocals) while the other is mixed/neutral; this yields a modest positive boost rather than a strong consensus.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd78-12-15.sony.wiley.9479.sbeok.shnf",
+    "reason": "Audience recording praised for clear, well‑balanced sound that captures the intimate club vibe and highlights the standout moments."
+  },
+  "key_highlights": [
+    "Earnest vocal delivery and emotional solo on Stella Blue",
+    "Classical‑style duet between Garcia and Phil during Terrapin Station",
+    "Opening energy of The Promised Land sets a high bar",
+    "Keith Godchaux’s piano interplay adds melodic depth"
+  ],
+  "song_highlights": [
+    "The Promised Land",
+    "Terrapin Station",
+    "Stella Blue"
+  ],
+  "band_performance": {
+    "Jerry": "Earnest vocal delivery and a heartfelt solo on Stella Blue; his energy carries the set, especially on The Promised Land opening.",
+    "Phil": "Shares a classical‑style duet with Garcia during Terrapin Station, adding melodic depth to the performance.",
+    "Bob": "",
+    "Brent": "Keith Godchaux’s piano work is praised for its interplay with Garcia and Lesh, enriching the Terrapin Station section.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-25T17:18:31.988649+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "The Promised Land"
+    ],
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Stella Blue",
+      "Truckin'",
+      "Playing In The Band"
+    ]
+  ]
+}

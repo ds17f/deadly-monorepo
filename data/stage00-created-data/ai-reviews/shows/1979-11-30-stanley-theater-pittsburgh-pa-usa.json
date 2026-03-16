@@ -1,0 +1,80 @@
+{
+  "summary": "Stellar late‑'79 energy with historic Scarlet>Fire stack and tight jams",
+  "blurb": "The show bursts open with a punchy Alabama Getaway and stays hot through a fiery first set that includes Friend Of The Devil and Dancin' In The Street. A uniquely stacked second set delivers Scarlet Begonias > Fire On The Mountain, Passenger, Terrapin Station and Playing In The Band back‑to‑back. Brent Mydland’s fresh keyboards and Phil Lesh’s booming ‘Phil Zone’ drive the performance.",
+  "review": "On November 30, 1979 at Pittsburgh’s Stanley Theatre the Dead were in full flight, just weeks into Brent Mydland’s tenure. Jerry’s guitar cut cleanly through a crystal‑clear board mix, from the bright opening jam on Alabama Getaway to his searing lead on the Scarlet Begonias → Fire On The Mountain transition and an inspired solo during Playing In The Band. Phil Lesh owned the low end – reviewers rave about his “Phil Zone” attacking Alabama Getaway and propelling the groove throughout both sets. Brent’s keyboards added a fresh, front‑and‑center texture that lifted songs like Dancin' In The Street and Friend Of The Devil, while Mickey and Billy locked in a powerful dual‑drum foundation that kept the second‑set momentum soaring even through the lengthy Terrapin Station jam. Highlights include the historic stacked sequence of Scarlet Begonias → Fire On The Mountain → Passenger → Terrapin Station → Playing In The Band, a smoking Friend Of The Devil, and a high‑energy Dancin' In The Street that showcases the band’s late‑’70s firepower.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All six soundboard recordings and the matrix source are marked positive, with repeated descriptors such as “stellar,” “smoking,” “fantastic,” and “high‑energy.” Multiple reviewers highlight the same standout songs (Scarlet>Fire stack, Dancin' In The Street, Friend Of The Devil) and consistently praise the tight band interplay, indicating strong, uniform enthusiasm. This warrants a robust positive sentiment boost.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1979-11-30.sbd.miller.95832.sbeok.flac16",
+    "reason": "Crystal‑clear soundboard capture with excellent separation, minimal tape noise and a mix that showcases the full energy of the historic stacked second set."
+  },
+  "key_highlights": [
+    "Historic stacked second‑set sequence: Scarlet Begonias → Fire On The Mountain → Passenger → Terrapin Station → Playing In The Band.",
+    "Smoking Friend Of The Devil and high‑energy Dancin' In The Street jam in the first set.",
+    "Brent Mydland’s fresh keyboard textures lifting the band early in his tenure.",
+    "Phil Lesh’s powerful ‘Phil Zone’ bass driving Alabama Getaway and the entire show."
+  ],
+  "song_highlights": [
+    "Alabama Getaway",
+    "Friend Of The Devil",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Passenger",
+    "Terrapin Station",
+    "Playing In The Band",
+    "Dancin' In The Street"
+  ],
+  "band_performance": {
+    "Jerry": "Clean, bright guitar that sits perfectly in the mix; superb leads on Scarlet>Fire and a standout solo during Playing In The Band.",
+    "Phil": "Front‑and‑center bass dubbed the ‘Phil Zone,’ attacking Alabama Getaway and driving the groove throughout both sets.",
+    "Bob": "Generally solid rhythm work; brief vocal lapse noted on El Paso but no major issues.",
+    "Brent": "Bright, front‑and‑center keyboard textures that add fresh energy to the set, especially on Dancin' In The Street and Friend Of The Devil.",
+    "Mickey": "Powerful drumming that propels the early energy and provides a solid foundation for the second‑set jams.",
+    "Billy": "Tight dual‑drum work with Mickey, delivering a strong backbone especially during the Terrapin Station and Space sections."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-26T02:29:11.782327+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Alabama Getaway",
+      "Greatest Story Ever Told"
+    ],
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Passenger"
+    ],
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Wharf Rat",
+      "Good Lovin'"
+    ],
+    [
+      "Dancin' In The Street",
+      "Deal"
+    ]
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "summary": "Soundboard recording of a magical 1994 show with stellar Peggy‑O, So Many Roads and Terrapin jam, captured in good‑to‑excellent quality.",
+  "review": "Fans repeatedly describe this performance as one of the best of ’94 – a scorching desert night that turned into a soaring second set highlighted by an unforgettable Peggy‑O solo, a soaring So Many Roads, a marathon Terrapin jam and a powerful Morning Dew.  The SBD source is generally praised for clarity, with only occasional complaints about a cut at the end of Dew or brief drop‑outs, so the recording remains very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 4–5 stars and focus on strong musical moments; technical issues are minor, yielding a combined show‑plus‑recording rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners note crisp, well‑balanced sound; occasional mentions of a brief cutoff on Morning Dew and isolated drop‑outs, but overall the mix is clean and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "So Many Roads",
+      "Terrapin Jam",
+      "Morning Dew",
+      "Eyes of the World",
+      "Victim"
+    ],
+    "poor_songs": [
+      "Watchtower",
+      "So Many Roads (vocal flubs noted by a few reviewers)"
+    ],
+    "setlist_flow": "First set described as uneven but solid; second set consistently praised for its energy and improvisational depth, with the heat of the desert giving way to a cooler, more focused late‑night performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for soaring guitar work on Peggy‑O, his emotive solo on So Many Roads, and overall presence; a few reviewers note occasional lyric flubs but consider him 'on top of his game'.",
+    "Phil": "Mentioned for tight bass lines and the ‘Phil zone’ experience; praised for holding down the groove during long jams.",
+    "Bob": "Highlighted for a strong New Minglewood Blues performance and solid vocal contributions.",
+    "Keys": "Vince’s keyboards are noted as taking a back‑seat, which many fans view positively because it lets the other instruments shine; some still miss his more obtrusive style from earlier years.",
+    "Drums": "Bill's drumming receives compliments for power and stamina (20‑minute drum segment) and for keeping the rhythm steady through long spaces."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "So Many Roads": {
+      "positive_mentions": 10,
+      "negative_mentions": 2,
+      "total_mentions": 12
+    },
+    "Terrapin Jam": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 2,
+      "total_mentions": 9
+    },
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-18T22:49:30.047790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-26.sbd.ladner.14943.sbeok.shnf"
+}

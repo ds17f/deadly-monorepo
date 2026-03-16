@@ -1,0 +1,91 @@
+{
+  "summary": "Crisp soundboard recording of the legendary 12/31/90 New Year's show, featuring Branford Marsalis and a monster Bird Song/Dark Star combo.",
+  "review": "The SBD capture is praised as crystal‑clear and superbly mixed, letting listeners hear every nuance of the night’s high‑energy performance.  Highlights include a soaring Bird Song, a smoking Dark Star, standout Eyes of the World, Wang Dang Doodle and The Weight, all buoyed by Branford Marsalis’ guest sax and Bruce Hornsby’s keyboards.  Even with Jerry’s voice a bit ragged, the band’s interplay makes this one of the era’s most beloved shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority are 5‑star and rave about both performance and sound quality; only a few modest 4‑star notes and one outlier low rating do not shift the overall high appraisal."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the mix ‘crisp’, ‘superb’ and ‘beyond crisp’; no significant drop‑outs or muddiness reported. The SBD/SHN source is consistently described as clear and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Dark Star",
+      "Eyes of the World",
+      "Wang Dang Doodle",
+      "The Weight",
+      "Jack‑a‑Roe",
+      "Not Fade Away",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set serves as a warm‑up, but the second half erupts with NFA opening, followed by extended jams – Bird Song and Dark Star dominate, leading into an electrifying Other One and a triumphant Wharf Rat finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as ‘shot’ on some tracks but his guitar work and counting‑off B‑Song are praised; overall still a strong performance.",
+    "Phil": "Bass noted for keeping the pulse especially during Dark Star and Other One; occasional mention of more defined outdoor sound.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s piano/organ shines throughout; Brent Mydland is referenced as missed, highlighting the shift in keyboard texture after his death.",
+    "Drums": "Hamza al‑Din’s talking drum adds tribal flavor; overall drumming praised for high energy and tight groove."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Weight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "B Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:05:10.247378+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-12-31.sbd-satellitefeed.hall.1688.sbeok.shnf"
+}

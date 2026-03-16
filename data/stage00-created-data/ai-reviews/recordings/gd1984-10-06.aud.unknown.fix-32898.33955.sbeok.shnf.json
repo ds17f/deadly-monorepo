@@ -1,0 +1,39 @@
+{
+  "summary": "Recording starts clear but becomes muffled and out‑of‑phase during China Doll, with no musical commentary available.",
+  "review": "The reviewer notes that the audio is pleasant for the first seven minutes before deteriorating into a muffled, out‑of‑phase sound on China Doll. No details are given about the band's performance, leaving the musical quality indeterminate. Overall the listening experience is hampered by significant recording flaws.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief review, which rates the recording poorly due to audio issues; no information on performance quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Sound is clear at first but becomes muffled and out of phase about 7 minutes into China Doll."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "China Doll"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:15:53.985839+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-06.aud.unknown.fix-32898.33955.sbeok.shnf"
+}

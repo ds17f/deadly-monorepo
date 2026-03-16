@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp audience recording of a strong Frost ’83 show featuring a smoking China Cat > The Rider, standout Althea and seamless transitions through Space into The Wheel.",
+  "review": "Fans rave about the musical firepower of this Frost ’83 performance – from a tight Cassidy > Dire Wolf opener to an explosive China Cat > The Rider segue, a soaring Althea, and a superb Space‑into‑Wheel stretch. The audience (AUD) source is praised for its warmth and bass depth, though a few listeners note occasional drop‑outs and limited dynamics on older speakers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised with multiple standout moments; recording quality is generally good but some reviewers report drop‑outs and dynamic issues, leading to a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Many note crispness, warmth and plenty of bass; however, some report drop‑outs and reduced dynamics that can fatigue ears on sub‑par speakers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy > Dire Wolf",
+      "Rooster",
+      "Althea",
+      "China Cat > The Rider",
+      "Space",
+      "The Wheel",
+      "Throwing Stones > Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, energetic flow with seamless transitions – the China Cat > Rider segue and the Space‑into‑Wheel stretch are highlighted as especially fluid."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for putting in extra effort on several songs; guitar work praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy > Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat > The Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones > Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T08:49:20.281217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-08-21.nak300cp4-reutelhuber.miller.23853.sbeok.shnf"
+}

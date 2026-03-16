@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience‑sourced recording captures a nice set highlighted by TLMD and an atmospheric crowd mix.",
+  "review": "The audience‑level recording is well balanced, giving the show a pleasant live feel. Reviewers describe the set as \"nice\" and especially enjoy the moments when TLMD appears, indicating a solid musical performance despite the lack of detailed commentary on individual playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) praising both the set and the audience mix; limited data leads to a modest rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience background level is noted as adding atmosphere, suggesting a clear enough mix without major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "TLMD"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall described as a nice set; reviewers appreciate the flow especially when TLMD is performed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "TLMD": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T13:01:09.030609+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-17.137328.senn421.miller.flac16"
+}

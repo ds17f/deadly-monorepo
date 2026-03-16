@@ -1,0 +1,45 @@
+{
+  "summary": "Great, clean audience recording of a late‑90s show highlighted by a stunning Liberty and an unforgettable Crazy Fingers solo.",
+  "review": "The consensus among reviewers is that this late‑90s Oakland concert captures the band at a creative peak, with three new songs, a breathtaking Liberty performance and Jerry Garcia’s legendary Crazy Fingers solo.  The audience (FOB) tape is described as very good – clear enough to hear crowd reactions and acoustic nuances – though a few listeners note occasional muddiness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating of 4.36 combined with overwhelmingly positive comments about the performance outweighs the few criticisms of a sloppy set, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners praise the clarity and balance of the FOB tape, noting crisp crowd noise and clean acoustic detail; a couple mention intermittent bits but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Liberty",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans highlight the excitement of three brand‑new songs, a relaxed yet engaging second set and a reverent atmosphere that kept the pacing smooth throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his acoustic‑MIDI work, beautiful tone on Liberty and an iconic solo in Crazy Fingers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:39:25.686217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-02-21.aud.seff.1055.sbeok.shnf"
+}

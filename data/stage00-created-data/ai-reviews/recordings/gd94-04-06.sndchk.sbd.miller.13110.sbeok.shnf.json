@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality soundboard capture of a rare Comes A Time soundcheck, highlighted by Jerry’s banter and an outstanding Standing on the Moon take.",
+  "review": "The recording offers a clear board feed of a rehearsal soundcheck that includes a near‑complete, beautiful version of \"Comes A Time\" and what many reviewers call one of the best \"Standing on the Moon\" performances. Jerry’s in‑between jokes add personality, making it a fun listen despite lacking a full concert context.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (4–5) and enthusiastic comments about both the music and the clear soundboard source drive a strong rating; the show is a soundcheck rather than a full concert, tempering the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear board recording with crisp instrument separation and audible stage banter; no reported drop‑outs or major muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Standing on the Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Informal rehearsal flow focused on song run‑throughs; casual transitions and plenty of band chatter rather than a structured set."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his pretty playing, frequent banter, and overall strong tone during the soundcheck.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:35:25.082744+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-04-06.sndchk.sbd.miller.13110.sbeok.shnf"
+}

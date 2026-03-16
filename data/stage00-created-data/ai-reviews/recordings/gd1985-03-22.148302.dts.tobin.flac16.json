@@ -1,0 +1,31 @@
+{
+  "summary": "Recording marred by static, rendering it essentially unlistenable",
+  "review": "The sole review flags pervasive static throughout playback, indicating a severely compromised recording. No musical details are provided, and the show itself cannot be evaluated due to the audio issues.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review reports total static; recording is unusable and no performance information is available, leading to a very low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Playback described as all static; likely corrupted or badly captured audio with no usable clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T01:36:50.320724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-22.148302.dts.tobin.flac16"
+}

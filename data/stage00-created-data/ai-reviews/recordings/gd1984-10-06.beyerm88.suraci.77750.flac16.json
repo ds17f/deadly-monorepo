@@ -1,0 +1,63 @@
+{
+  "summary": "Good audience recording captures a killer new Minglewood Blues and sweet post‑drums segues from Space through Throwing Stones to Goin’ Down the Road Feeling Bad and Saturday Night.",
+  "review": "The tape, sourced from Tony Suraci’s feed (recorded with an Nac 550), sounds clear and lively – the level is hot but retains musical detail. The show shines on a fresh‑cut Minglewood Blues and a beautifully flowing post‑drums sequence that moves from Space into Throwing Stones, Goin’ Down the Road Feeling Bad and Saturday Night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings and praised the performance and sound; no major complaints, but only two reviews limits certainty."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Suraci’s audience tape recorded with a Nac 550, cranked level gives a warm, slightly hot mix but remains clear and sweet throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Space",
+      "Throwin' Stones",
+      "Goin' Down the Road Feeling Bad",
+      "Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong post‑drums flow; the segue from Space into Throwing Stones, then GDTRFB and Saturday Night is highlighted as especially sweet."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil drops in large bass bombs, noted as a highlight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwin' Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:20:05.745085+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-06.beyerm88.suraci.77750.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard soundcheck recording with no clear audio appraisal; reviewer asks for video and gives a zero‑star rating.",
+  "review": "The sole review offers only a brief query about the existence of TV footage for this soundcheck, providing no commentary on the sonic clarity or musical performance. With a zero‑star rating and no descriptive feedback, both the recording quality and show merit remain indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.8,
+    "confidence": "low",
+    "rationale": "Only one review with a zero‑star rating and no substantive comments; suggests dissatisfaction but lacks detail to assess specifics."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit remarks on sound clarity; reviewer’s request for video hints that audio alone may be insufficient or uninteresting."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "It's a soundcheck, not a full concert, so set flow is not applicable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-21T14:21:18.803132+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-21.116404.sbd.berger.sndchk.flac16"
+}

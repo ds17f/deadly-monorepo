@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 1985 Nassau show captured in crisp Oade audience recording, with a smoking Truckin', a hilarious Sugar Magnolia moment and tight overall playing.",
+  "review": "The tape delivers a vivid picture of one of those electric East‑Coast nights – the band is tight, the setlist flows well and songs like Truckin' and China > Rider shine.  The Oade brothers’ field recording is clear and lively, though Jerry’s vocal strain is noticeable.  Overall it’s a solid, high‑energy performance that rewards both listening and dancing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong show comments (tight playing, standout songs) combined with praise for the Oade audience recording give a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear field recording by the Oade brothers; praised as 'super sounding' and 'excellent auds', with no major drop‑outs noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Sugar Magnolia",
+      "China > Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, high‑energy performance with a strong first set that builds into an exciting second set; the East‑Coast crowd adds extra push."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are heavily strained ('toast', 'tuneless rasp'), but overall playing remains tight.",
+    "Phil": "",
+    "Bob": "Funny moment on Sugar Magnolia where Bob 'blows' the verse and the audience sings back.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:17:22.030718+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-28.oade-schoeps.sacks.23443.sbeok.flacf"
+}

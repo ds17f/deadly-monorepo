@@ -1,0 +1,62 @@
+{
+  "summary": "High‑energy Easter set with stellar Stella Blue and rousing Mighty Quinn",
+  "blurb": "The Providence Civic Center show bursts with intensity, highlighted by Jerry’s pre‑coma shredding on Stella Blue and Bob’s driving lead on Throwing Stones. The encore builds into a massive Mighty Quinn and an extended Not Fade Away chant that kept the crowd buzzing.",
+  "review": "On Easter Sunday, March 30 1986, the Grateful Dead turned the Providence Civic Center into a kinetic playground. Set 2 surged forward with a soaring sequence—Why Don't We Do It In The Road into Stella Blue, then Throwing Stones—where Jerry Garcia delivered a pre‑coma solo that left fans breathless and Bob Weir commanded Throwing Stones with palpable gusto. The night climaxed in an unforgettable Mighty Quinn encore, followed by an almost mythic Not Fade Away chant that lingered long after the lights came up. While some recordings note only average playing overall, the energy of the crowd and the standout moments cement this show as a fan favorite from the mid‑’80s era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Two recordings label the performance as positive (highlighting Stella Blue, Throwing Stones, Mighty Quinn and high crowd energy) while the other two are mixed, noting an average overall show but no serious criticism. This yields a modestly positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.7 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd86-03-30.fob-schoeps.miller.25526.sbeok.shnf",
+    "reason": "Fair‑quality tape that captures the high‑energy set and standout songs despite some low‑end limitations, making it the most representative version of the show."
+  },
+  "key_highlights": [
+    "Easter Sunday crowd energy fuels a massive Mighty Quinn encore and extended Not Fade Away chant",
+    "Jerry’s pre‑coma shredding on Stella Blue showcases his fiery late‑period playing",
+    "Bob Weir leads Throwing Stones with gusto, driving the second set forward"
+  ],
+  "song_highlights": [
+    "Stella Blue",
+    "Throwing Stones",
+    "Why Don't We Do It In The Road",
+    "Not Fade Away",
+    "The Mighty Quinn (Quinn The Eskimo)"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a pre‑coma shredding solo on Stella Blue, wearing red and driving the high‑energy vibe of the night.",
+    "Phil": "",
+    "Bob": "Leads Throwing Stones with gusto, keeping the momentum strong through the second set.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-15T14:16:36.674861+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Terrapin Station",
+      "Man Smart, Woman Smarter",
+      "Drums",
+      "Space",
+      "Why Don't We Do It In The Road",
+      "Stella Blue",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Not Fade Away",
+      "The Mighty Quinn (Quinn The Eskimo)"
+    ]
+  ]
+}

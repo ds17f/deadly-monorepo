@@ -1,0 +1,68 @@
+{
+  "summary": "High‑energy Cal Expo show with superb playing and a clean UltraMatrix recording.",
+  "review": "The performance is praised for its joy and tightness – Jerry’s song choices lead a three‑song Jerry run, extended intros on “Eyes of the World” and “The Wheel,” and soaring solos from Brent and Bob. The UltraMatrix (soundboard‑plus‑audience) source sounds clear enough that listeners can appreciate every nuance, making this a must‑hear for fans of the late‑80s/early‑90s era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "One glowing 5‑star review highlights an outstanding musical performance and reports no recording problems, suggesting a near‑perfect show with good technical quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints; UltraMatrix blend is clear enough to hear instrument detail and audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "The Wheel",
+      "Foolish Heart",
+      "Black Peter",
+      "Easy To Love"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set opens with three consecutive Jerry numbers, featuring extended intros and outros that keep the band “ON” and drive the concert forward."
+  },
+  "band_member_comments": {
+    "Jerry": "Fun, inspired playing; song choices were favorites and he led a strong three‑song run.",
+    "Phil": "In tune with the group, supporting the flow of the set.",
+    "Bob": "Playing really well throughout the show.",
+    "Keys": "Brent took great solos, adding sparkle to the jams.",
+    "Drums": "Mickey and Billy locked in tightly, propelling the band."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy To Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T07:10:33.499432+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-08.149702.UltraMatrix.sbd.cm.miller.flac16"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Excellent front‑of‑house soundboard capture of a relaxed Egyptian show with standout Sugaree and Truckin', though Black Peter suffers from audience chatter.",
+  "review": "The recording delivers deep, warm and crystal‑clear audio that makes you feel present at the historic Egypt concerts. Musically the band is ultra‑relaxed, delivering mellow versions of classics like Sugaree and Truckin' while a noisy audience detracts from an otherwise beautiful Black Peter. Bill Kreutzmann’s drumming shines despite a broken wrist, adding to the unique vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both sound quality and performance across five reviews; minor criticisms do not outweigh overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, deep and warm tone with strong bass response; occasional audience chatter on Black Peter and slightly low mic placement noted but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": "A relaxed, late‑night vibe dominates the performance; songs flow smoothly with mellow energy, though the crowd noise interrupts Black Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy Kreutzmann (Bill) plays impressively well despite a broken wrist, adding solid drive to the relaxed set."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:05:23.984027+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-14.fob.sonyecm280.porray.motb-0107.103626.flac24"
+}

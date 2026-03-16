@@ -1,0 +1,45 @@
+{
+  "summary": "A solid audience pull of the first night of the 1993 spring tour, highlighted by an energetic China > Rider jam and a vibrant Playin' in the Band.",
+  "review": "The show is remembered fondly for its high energy, with the second‑set China > Rider described as crowd‑pumping and the opening riffs of Playin' in the Band evoking classic Dead magic. The recording is an audience (AUD) pull that sounds clear enough to enjoy, though it’s not a pristine soundboard capture. Overall the performance and tape are both praised by reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently highlight strong musical moments and deem the tape decent, leading to a combined rating weighted toward show quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience (AUD) pull with decent clarity; no major drop‑outs mentioned but typical crowd ambience present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are described as ‘smokin’’, with one reviewer favoring the first set but still praising the energetic second‑set China > Rider sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Crowd sang along with his vocal line ('I wish I was a headlight on a northbound train'), indicating his strong presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:58:23.990150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-09.sennME80.wklitz.96075.flac16"
+}

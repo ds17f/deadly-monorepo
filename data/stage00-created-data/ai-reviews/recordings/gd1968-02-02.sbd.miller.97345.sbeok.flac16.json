@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal Ballroom’s Feb 2 1968 show shines with blistering Viola Lee Blues and soaring Clementine, captured in an exceptionally clear Charlie‑Miller soundboard transfer.",
+  "review": "The performance is hailed as a jazzy, Coltranesque masterpiece – the band launches into a monster Viola Lee Blues, delivers a breathtaking Clementine and a fiery Other One suite.  The Miller soundboard tape is described as crisp, clean and “stunning”, with only the brief cut‑off of Good Morning Little School Girl noted as a minor blemish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over a dozen reviews give 4–5 stars, consistently praising both the musical execution and the pristine soundboard transfer; only one mixed review tempers the overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with a superb Charlie Miller transfer; occasional comment about Good Morning Little School Girl being cut off early, but no other audio flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "Clementine",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Good Morning Little School Girl"
+    ],
+    "setlist_flow": "The show is described as a jazzy, high‑energy suite – the band takes no prisoners from the opening chords and maintains a raw, primal momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is repeatedly lauded – “insane licks”, “wailing” that gives goosebumps, and a perfect tone on Viola Lee Blues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Clementine": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Morning Little School Girl": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    }
+  },
+  "processed_date": "2025-09-24T07:20:07.962478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-02-02.sbd.miller.97345.sbeok.flac16"
+}

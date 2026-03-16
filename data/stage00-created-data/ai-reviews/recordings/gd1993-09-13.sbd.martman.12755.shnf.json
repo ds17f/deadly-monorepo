@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed reception: decent but unremarkable recording of a 1993 show with brief Dark Star and vague Space vibes.",
+  "review": "The three fan reviews are split – two rate the concert four stars, calling it a solid ’93 performance, while one rates it one star, labeling the show weak and lamenting a five‑minute Dark Star. No reviewer comments on the audio source or mix, so the technical quality remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (two positive, one negative) and there are no concrete recording‑quality comments; weighting gives a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention soundboard or audience source, nor any clarity or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "No specific comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:50:26.898267+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-13.sbd.martman.12755.shnf"
+}

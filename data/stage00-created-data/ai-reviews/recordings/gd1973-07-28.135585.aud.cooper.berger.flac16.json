@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic thank‑you note with no specific details on sound or performance",
+  "review": "The lone reviewer gives a glowing five‑star rating and thanks the archivist, but provides no information about the audio source, mix quality, or musical highlights. Consequently the analysis must infer a positive sentiment without concrete evidence of recording or show quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one five‑star review; positivity is clear but lack of detail prevents precise rating"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T16:04:42.787978+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-28.135585.aud.cooper.berger.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent performance highlighted by a smoking Lazy Lightnin' and heartfelt moments, with a fair‑quality recording that shows some tape‑age distortion.",
+  "review": "Fans rave about the energy of this show—from the wall‑crawling first set ending with Lazy Lightnin' to a memorable second set—while noting the historic significance of Brent's early appearance and Donna & Keith’s final gig. Recording quality is unclear; one reviewer describes an old tape as heavily distorted, but no major audio complaints are made about the current file.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance praised by all three reviewers (70% weight) and an ambiguous but at least listenable recording (30% weight) lead to a solid above‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer mentions a very distorted tape source, but no explicit complaints about the current digital version; recording clarity is not directly addressed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin'",
+      "Supplication",
+      "From the Heart of Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds to a thrilling Lazy Lightnin' climax; second set maintains momentum and includes a memorable lyrical flub moment in 'From the Heart of Me', making for an overall cohesive and exciting show."
+  },
+  "band_member_comments": {
+    "Jerry": "Cited for a candid comment after 'From the Heart of Me' ('We all do it'), adding to the show's genuine feel.",
+    "Phil": "",
+    "Bob": "Weir's vocal struggle on the Lazy Lightnin'/Supplication jam is noted, suggesting some tension in that segment.",
+    "Keys": "Brent's debut (or early) appearance is highlighted with excitement by fans.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightnin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Supplication": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:33:31.293889+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-17.sbd.patched.tobin.105606.flac16"
+}

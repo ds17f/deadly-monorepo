@@ -1,0 +1,108 @@
+{
+  "summary": "High‑voltage guitars and a stellar setlist are captured on an excellent front‑of‑house tape, though some listeners felt Jerry’s performance waned.",
+  "review": "The show is praised for its explosive opener with “Shakedown” and a string of standout jams – Jack‑a‑Roe, Loose Lucy, the Sampson > Ship of Fools > Rollin’ Tumblin’ sequence and a soaring Brokedown Palace. Recording notes describe an AKG SE300b front‑of‑house feed with hand‑held mics for the encore, yielding crisp, well‑balanced sound that many consider “excellent.” However, one reviewer found Jerry’s voice thin and his playing subdued, giving the performance a mixed reception.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is generally praised with several standout songs, though one strong negative comment about Jerry lowers the average; recording quality is consistently described as excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑house (FOB) capture using AKG SE300b, CK91, Aerco cable to a TEAC DAP‑20; hand‑held mics for the encore. Reviewers note crisp clarity and a well‑balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Jack-a-Roe",
+      "Loose Lucy",
+      "Sampson",
+      "Ship of Fools",
+      "Rollin' Tumblin'",
+      "Wharf Rat",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Rollin' Tumblin'"
+    ],
+    "setlist_flow": "The concert launches with a high‑energy “Shakedown,” moves through tight mid‑set jams (Wang‑Dang, Jack‑a‑Roe, acoustic Mama Tried > Mexicali Blues) and builds to an expansive second set highlighted by Sampson > Ship of Fools > Rollin’ Tumblin’, a long Wharf Rat NFA, and a heartfelt Brokedown Palace finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for high‑voltage guitar tone and solid playing in most reviews; one reviewer criticized his voice and felt he was slumped during the show.",
+    "Phil": "His rendition of “Box of Rain” is highlighted as a great moment.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s return on piano is noted as a positive addition to the sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang-Dang": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rollin' Tumblin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:06:00.671274+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-25.fob.akg.unknown.swayne.85622.flac16"
+}

@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard recording with mixed balance issues but a superb second set highlighted by an emotional Black Peter",
+  "review": "The first set suffers from lackluster playing and a soundboard imbalance that lets Jerry’s guitar fade in level, earning it a modest 3.5 rating. In contrast, the second set shines with inspired performance, consistently good sound quality, an unusual pre‑drums sequence, and a standout Black Peter featuring deep emotion and dramatic feedback. China Doll has a vocal flaw, but overall the show is solid.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Review notes strong musical moments in the second set and decent sound quality there, offset by first‑set performance and balance problems; overall rating leans positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First‑set guitar level fades causing imbalance for Jerry; second set sound quality is consistently good with clear mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as lackluster, while the second set delivers inspired playing, an unusual pre‑drums sequence and strong flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar level fades in first set, soloing out front then receding; otherwise part of inspiring second‑set performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:32:47.529277+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-07-30.140317.sbd.eaton.miller.clugston.flac1648"
+}

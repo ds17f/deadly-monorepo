@@ -1,0 +1,87 @@
+{
+  "summary": "Good matrix capture of a rare 1966 show packed with early gems like Me & My Uncle, The Same Thing and Cold Rain & Snow, though the tape runs slightly slow and needs pitch correction.",
+  "review": "The recording is a matrix mix that preserves an extraordinary collection of 1966 rarities—Me & My Uncle, Early Morning Rain, Down So Long and more—making it a must‑listen for archivists. Audio quality is solid overall but the playback is about +1 % off pitch, runs slow and has the stereo channels reversed, requiring a quick fix. The performance itself is praised as one of the year’s best despite missing the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Review gives 4 ★ and highlights many standout songs, indicating a strong show; recording is good but noted pitch/channel issues, lowering the technical score slightly."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix (soundboard + audience) mix with clear instrument separation. Playback runs ~+1 % fast and is a bit slow; channels are swapped and need correction for true concert pitch."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Me & My Uncle",
+      "The Same Thing",
+      "Stealin'",
+      "One Kind Favor",
+      "Early Morning Rain",
+      "Cold Rain & Snow",
+      "Down So Long",
+      "There's Something on Your Mind",
+      "I Just Want to Make Love to You"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second and third sets are a treasure trove of rarities; the first set is missing, but the remaining material flows through obscure covers and early originals with high historical interest."
+  },
+  "band_member_comments": {
+    "Jerry": "Suffers from a cold during the show and asks Phil to take lead vocals.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stealin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One Kind Favor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Early Morning Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Down So Long": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "There's Something on Your Mind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Just Want to Make Love to You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T06:04:32.368268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-11-29.152151.sbd.hance.sirmick.flac16"
+}

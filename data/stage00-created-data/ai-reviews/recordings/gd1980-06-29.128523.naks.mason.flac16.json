@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience recording of a fiery June‑29 1980 show with a scorching Scarlet > Fire and tight Stranger, though the tape lacks high‑end sparkle.",
+  "review": "The Mason audience tape captures an electric 6/29/80 performance – Jerry in hyperdrive on Scarlet > Fire and the band delivering a tribal‑beat‑driven Stranger that fans still cite. The recording isn’t perfect; it’s missing some high‑frequency detail, has a little hiss and a brief cut, but listeners consider it one of the better versions available.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show (4‑5 ★) and highlight standout songs, while noting recording shortcomings; the weighted average yields a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Missing high‑end detail, some hiss, occasional cut but overall clear enough; considered the best available Mason tap of this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as \"full on\" and second set ignited a fired‑up crowd; the energy builds to a climactic Scarlet > Fire that blew the roof off."
+  },
+  "band_member_comments": {
+    "Jerry": "Hyperdrive guitar work on Scarlet > Fire, tight tribal beat on Stranger.",
+    "Phil": "",
+    "Bob": "Airborne vocals and rhythm during the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:25:15.660782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-29.128523.naks.mason.flac16"
+}

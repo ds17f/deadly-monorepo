@@ -1,0 +1,31 @@
+{
+  "summary": "Solid show with a positive fan rating, but recording details are unspecified",
+  "review": "The reviewer attended the concert and gave it a four‑star rating, calling it a great show. No specific comments were made about the performance or the audio quality, leaving the recording characteristics unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating; lacks detail on both musical and technical aspects, so rating is based primarily on the star score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound quality, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed feedback on set structure or pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T17:38:27.367095+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-03.nak300.bleich.sirmick.96796.sbeok.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Audience tape captures a scorching Truckin' → The Other One → Half Step run, though listeners are split on the overall sound quality.",
+  "review": "The performance is highlighted by an incendiary Truckin' into The Other One and a blazing Half Step, earning high praise from several reviewers. While many describe the audience recording as fantastic for a 1972 tape, a few find the mix unbearable or inferior to other sources, leading to mixed feelings about the audio fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show is praised for standout jams and energy (70% weight), but recording quality receives both high praise and criticism, resulting in a balanced overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the tape fantastic and clear for its era, while others describe the sound as unbearable or inferior compared to other versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Half Step"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is noted for a hot sequence of Truckin' into The Other One and then Half Step, providing the main highlight of the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:57:32.038351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-27.sbd-aud.cotsman.10286.sbeok.shnf"
+}

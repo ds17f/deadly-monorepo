@@ -1,0 +1,31 @@
+{
+  "summary": "Decent audience recording with no specific show highlights noted",
+  "review": "The sole review rates the tape 4 stars and describes the audio as \"decent sound for audience,\" indicating a respectable but not exceptional audience source. No details about the performance, setlist, or individual musicians are provided, so the musical quality cannot be assessed from this feedback.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one brief review; it praises the audio as decent and gives a 4‑star rating, but offers no insight into the performance, leading to a modest overall rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the sound is decent for an audience recording; no specific issues such as muddiness or dropouts are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T10:20:28.653140+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-01.cpb.retransfer.32709.sbeok.flac16"
+}

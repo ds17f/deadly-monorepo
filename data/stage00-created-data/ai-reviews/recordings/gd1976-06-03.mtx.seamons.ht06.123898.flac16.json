@@ -1,0 +1,97 @@
+{
+  "summary": "A stellar matrix recording of the June 3 1976 show, with crisp soundboard clarity blended with audience ambience, featuring standout performances of Help‑Slip‑Franklin, Might As Well and a blazing Slipknot.",
+  "review": "The matrix mix is praised by virtually every reviewer for its crystal‑clear vocals and instruments while still retaining the live room vibe. Musically the concert shines – the first set delivers fresh gems like Might As Well, Cassidy and Looks Like Rain, and the second set builds to an unforgettable Help > Slip > Franklin's Tower sequence with a searing Slipknot. Overall the show is described as relaxed yet inspired, capturing the vintage ’76 Dead sound at its best.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All detailed reviews are 4‑5 stars and overwhelmingly praise both performance and recording; only minor issues (tiny drop‑outs, a stumble in Lightning > Supplication) are noted."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Blend of soundboard clarity and audience ambience praised as crisp, warm and rich; occasional tiny drop‑out mentioned but not detrimental."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Might As Well",
+      "Cassidy",
+      "Looks Like Rain",
+      "Scarlet",
+      "Slipknot (within H>S>F)",
+      "Fingers"
+    ],
+    "poor_songs": [
+      "Lightning > Supplication"
+    ],
+    "setlist_flow": "First set rolls smoothly with new 1976 material; second set starts more laid‑back, encounters a brief tuning hiccup, then erupts into the epic Help‑Slip‑Franklin sequence that defines the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for gorgeous, lilting tone and for rescuing the Slipknot jam with masterful guitar work.",
+    "Phil": "Described as rock‑solid on bass, keeping the band tightly in sync.",
+    "Bob": "",
+    "Keys": "Keith is noted for stunning keyboard support that enhances Jerry’s playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lightning > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Slipknot": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:11:08.542284+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-03.mtx.seamons.ht06.123898.flac16"
+}

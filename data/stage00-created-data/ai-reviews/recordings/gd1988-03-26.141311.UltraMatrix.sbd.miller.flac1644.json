@@ -1,0 +1,31 @@
+{
+  "summary": "No detailed feedback; reviewer gave a 0‑star rating with only a brief encouragement.",
+  "review": "The sole review provides no information about the performance or audio quality, offering just a short motivational message and a zero‑star rating, indicating strong dissatisfaction. No songs, set details, or band member remarks are mentioned.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one extremely brief review with a 0‑star rating; no concrete data to assess show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T06:53:37.599323+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-26.141311.UltraMatrix.sbd.miller.flac1644"
+}

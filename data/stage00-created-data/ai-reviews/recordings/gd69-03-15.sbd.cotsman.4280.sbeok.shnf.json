@@ -1,0 +1,64 @@
+{
+  "summary": "Soundboard recording of the March 15 1969 Black & White Ball captures a spectacular Dark Star > St. Stephen > The Eleven > Turn On Your Lovelight run, but an incomplete first set and a shaky Hard‑to‑Handle make it a mixed‑quality release.",
+  "review": "The show shines with an extended Dark Star that flows into St. Stephen, The Eleven and Turn On Your Lovelight, delivering one of the most praised 1969 sequences.  While the soundboard source is generally clear (several reviewers call the mix “crisp” and give it five‑star marks), a few note dropouts and describe parts of the recording as a “train wreck,” and the first Hard to Handle appears uneven.  Overall the performance is strong but the incomplete first set and occasional sonic flaws keep the release in the mixed‑bag territory.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Average to good show quality (strong second‑set sequence, but incomplete first set and problematic Hard to Handle) combined with generally good soundboard recording that some listeners found flawed."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers praise the mix (5‑star mix, crisp and clear), though a few call it a “train wreck” or note occasional dropouts and an overall uneven sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "The Eleven",
+      "Turn On Your Lovelight"
+    ],
+    "poor_songs": [
+      "Hard to Handle"
+    ],
+    "setlist_flow": "First set is only partially represented, missing several tunes; the second half delivers a powerful Dark Star > St. Stephen > The Eleven > Turn On Your Lovelight sequence that many consider a highlight of the 1969 run."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is highlighted as alive and his Gibson SG work on Dark Star receives strong praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pig Pen (Ron) gets special mention for vocals and organ, adding a unique flavor to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T12:17:18.561309+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-03-15.sbd.cotsman.4280.sbeok.shnf"
+}

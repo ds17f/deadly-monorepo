@@ -1,0 +1,72 @@
+{
+  "summary": "Audience tape with typical 1970 hiss and pops but surprisingly listenable; the show shines with a scorching Black Peter, epic China > Rider > High Time, fierce The Other One and a monster Lovelight.",
+  "review": "Even though this is a third‑generation audience recording that suffers from hiss, occasional splices and a few pitch quirks, the performance more than makes up for it. 1970’s raw energy erupts in a blistering Black Peter, an unforgettable China > Rider > High Time suite, a ferocious The Other One and a marathon Lovelight that leaves the crowd electric.  Listeners repeatedly note Jerry’s searing guitar, Phil’s thunder‑bass punches and the unstoppable drumming, making it a must‑listen for fans who can look past the tape’s technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average ~4.5 stars) while acknowledging moderate to poor recording quality (~3 stars). Weighted average (70 % show, 30 % tape) yields a solid 4.1‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Third‑generation AUD with noticeable hiss, pops, splices and occasional high‑pitch speed issues; crowd chatter sometimes overpowers the mix but overall intelligible and captures the concert’s intensity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "China > Rider > High Time",
+      "The Other One",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight seamless transitions – Black Peter opens, the China > Rider > High Time suite ignites the second set, followed by a high‑octane NFA → Drums → Good Lovin' → The Other One → NFA → Lovelight sequence that keeps the momentum rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and vocal work are repeatedly praised – “mind‑numbingly fast” leads on The Other One, soaring solos on Black Peter and a beautiful voice on Good Lovin'.",
+    "Phil": "Phil’s bass is described as a ‘machine‑gun’ intro into Good Lovin' and a driving force that punches through the Drums segment.",
+    "Bob": "Weir’s rhythm/lead guitar gets kudos for “burning” work on the Rider portion of the China > Rider sequence.",
+    "Keys": "Pigpen’s vocal performance is highlighted as powerful (“delivers like a man”) and his stage antics add to the show’s excitement, though organ solos are largely absent.",
+    "Drums": "Mickey and Bill (or “the drummers”) are lauded for a tribal‑like, high‑energy Drums segment that propels the NFA → Good Lovin' transition."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China > Rider > High Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T17:15:41.217737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-03-07.aud.hanno.6156.sbeok.shnf"
+}

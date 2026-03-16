@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear audience recording with a smoking Terrapin Station finale and an energetic second set",
+  "review": "The Unger AUD captures the show with exceptional clarity – reviewers rave about its crisp, crystal‑clear sound. Musically the concert shines, especially the powerful Terrapin Station ending and the high‑energy Alabama Getaway that fired up the Worcester crowd, with even a lightning‑fast El Paso getting nods.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise both the performance and the audio quality; a few outliers mention file corruption or give low scores, but they don’t reflect the recording itself."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple comments describe the AUD as crystal clear, crispy and “killer”; one reviewer could not open the file (likely a user‑side issue)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Alabama Getaway",
+      "El Paso"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is highlighted as especially strong, culminating in a powerful Terrapin Station > Drum solo; overall the concert is described as a great night with high energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:44:37.914244+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-04.aud.unger.11880.sbefail.shnf"
+}

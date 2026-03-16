@@ -1,0 +1,79 @@
+{
+  "summary": "Good‑quality audience tape of the 4/3/90 Omni show with a wild space into “I Will Take You Home” and a memorable a‑cappella “We Bid You Goodnight”.",
+  "review": "The Gardner audience recording is generally clear for a crowd source – reviewers note it as fair‑to‑good, with one saying it even sounds better than the SBD version. Musically the show shines in its improvisational peaks (a jazzy Shakedown Street jam, an ecstatic Estimated, and a crazy space that erupts into “I Will Take You Home”), while a few numbers like Sugaree are called uninspired. The crowd was electric, especially for the first‑time fans, and the set ends on a rare a‑cappella “We Bid You Goodnight”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4–5 stars, praising the performance and overall sound; only one noted average audio quality. The balance of strong musical moments with generally good audience recording yields a rating above four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Fair‑to‑good clarity for an audience tape; one user mentions a slight speed issue but overall finds it excellent, even better than the SBD version according to a reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Estimated",
+      "I Will Take You Home",
+      "We Bid You Goodnight"
+    ],
+    "poor_songs": [
+      "Sugaree"
+    ],
+    "setlist_flow": "The first set builds with a jazzy Shakedown Street and solid crowd‑pleasers; the second set launches into a psychedelic Estimated → Eyes transition before descending into filler, but the highlight is an explosive space that lands on “I Will Take You Home” and closes with a heartfelt a‑cappella encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers commend Jerry’s continued guitar presence and ‘virtues’ even after Brent’s death, noting his playing remains strong throughout.",
+    "Phil": "",
+    "Bob": "One reviewer called a Bobby tune uninspired; otherwise no specific comments on Bob's performance.",
+    "Keys": "Brent Mydland receives multiple shout‑outs – “run” on the keys, “tickling the ivories,” and his playing is highlighted as a key part of the show’s energy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "We Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:29:19.997003+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-04-03.nak.gardner.3577.sbeok.shnf"
+}

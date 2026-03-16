@@ -1,0 +1,88 @@
+{
+  "summary": "Clean soundboard capture of an August ’81 show featuring a scorching Scarlet>Fire and rare Morning Dew, with solid playing throughout.",
+  "review": "The recording is praised for its clarity—cleaner than previous tapes despite a few brief audience‑sourced gaps—making the performance easy to enjoy. Musically the concert shines with a tight first set and an especially memorable second set highlighted by Scarlet>Fire, Lost Sailor > Saint, Playing in the Band, Good Time Blues and a rare Morning Dew. Jerry, Brent and Bob receive specific praise for vocals and instrumental work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews highlight strong musical performance and mostly excellent soundboard quality; only minor recording gaps are noted, resulting in a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean and crisp SBD tape; a few minutes of audience recording (early Stranger, later Morning Dew) introduce lower‑fidelity sections but do not detract from overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Lost Sailor > Saint",
+      "Playing in the Band",
+      "Morning Dew",
+      "Good Time Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Respectable first set followed by an interesting, song‑rich second set with rare treats; tight playing and strong vocals keep the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "In good form for August ’81; solid vocals on Candyman, Loser and generally energetic guitar work.",
+    "Phil": "",
+    "Bob": "Recovered vocal strength after a shaky previous night; contributes well‑rounded vocals.",
+    "Keys": "Brent (keyboards) rips it up—great organ work and strong backing/vocal support.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lost Sailor > Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Time Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:03:43.756781+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-31.sbd.miller.30070.sbeok.flacf"
+}

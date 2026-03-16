@@ -1,0 +1,86 @@
+{
+  "summary": "High‑quality soundboard capture of an above‑average Spring ’90 show highlighted by a brooding Death Don't Have No Mercy and a king‑size Drum segment.",
+  "review": "The recording, sourced from the Miller upgrade soundboard, is clear and well‑balanced with no reported flaws. Musically the concert sits solidly in the middle of the 1990 Atlanta run – not the peak of the era but consistently strong, especially the second set’s Drums, The Other One and a powerful Death Don't Have No Mercy. Standout moments like Brown Eyed Women and Brent’s jazzy keyboards add extra sparkle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Both reviewers gave 4‑star ratings and praised the performance while noting only minor set‑list quirks; recording is described as a Miller upgrade soundboard with no issues, yielding an overall strong score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller upgrade (12198) source; reviewers mention crisp sound and no audible drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown Eyed Women",
+      "Drums",
+      "Death Don't Have No Mercy",
+      "The Other One",
+      "Looks Like Rain",
+      "Foolish"
+    ],
+    "poor_songs": [
+      "Around & Around"
+    ],
+    "setlist_flow": "A solid first set with a few rough edges, followed by a stronger second set that builds calm satisfaction and peaks with an excellent Drum/Space segment leading into The Other One and a brooding Death Don't."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing described as “magic” on Brown Eyed Women and generally strong throughout.",
+    "Phil": "",
+    "Bob": "Weir praised as \"Bobby is great\" during the first set.",
+    "Keys": "Brent Mydland noted for jazzy, swinging keyboards that add flavor to several tunes.",
+    "Drums": "Both drummers highlighted; Drums segment called “king” and a peak of ’90."
+  },
+  "song_mentions": {
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:20:26.177798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-02.sbd.miller.12198.sbeok.shnf"
+}

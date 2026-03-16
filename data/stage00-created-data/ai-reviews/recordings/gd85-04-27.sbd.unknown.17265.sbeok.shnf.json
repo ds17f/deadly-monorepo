@@ -1,0 +1,51 @@
+{
+  "summary": "Crisp soundboard capture of a high‑energy ’85 show highlighted by Brother Esau and Ramble On Rose, with mostly strong performances despite some vocal wear on Jerry.",
+  "review": "The recording is praised as crisp, well‑balanced and “amazing,” suggesting a solid soundboard source. The performance is generally lauded for its tight playing and standout moments like Brother Esau and Ramble On Rose, though one reviewer notes that Jerry’s voice had become labored after 1977. Overall the show is described as an exuberant ’80s‑era set with excellent mix clarity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Eight reviews overwhelmingly positive (average 4.25 stars) highlight both superb recording quality and strong musical performance, outweighing a single low‑rating comment about vocal strain."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound \"crisp,\" \"great sounding\" and an \"amazing recording\" with Phil high in the mix; no technical complaints are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brother Esau",
+      "Ramble On Rose",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic 80s vibe with seamless transitions; the band stays tight and the set feels cohesive despite a few vocal issues."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer mentions his voice sounding labored post‑1977, but others praise his guitar work and highlight a “special Jerry orgasm solo.”",
+    "Phil": "His bass is noted as being high in the mix and adds to the overall awesome sound.",
+    "Bob": "Brother Esau (Bob’s song) receives special attention as a favorite moment of the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brother Esau": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:05:47.296240+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-27.sbd.unknown.17265.sbeok.shnf"
+}

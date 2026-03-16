@@ -1,0 +1,63 @@
+{
+  "summary": "Audience‑sourced recording with noticeable reverb and midrange loss captures a mixed performance that shines on the rare \"Cosmic Charlie\" and a solid first set.",
+  "review": "The show receives polarized reactions – one reviewer finds it forgettable and criticizes the hollow, overly reverberant audience mix, while another hails the tight first‑set playing and Jerry’s vivid guitar storytelling. Highlights include the seldom‑heard \"Cosmic Charlie\" and the energetic St. Stephen > Not Fade Away > Drum segment, but the recording needs EQ work to tame its “skating rink” sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality is split between a glowing 5‑star review and a 2‑star critique; recording quality is judged poor to fair, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Hollow \"skating rink\" sound with excessive reverb; midrange had to be cut and treble/bass boosted in post‑processing to improve clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cosmic Charlie",
+      "St. Stephen",
+      "Not Fade Away",
+      "Drums",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as sharp and tightly performed; second set considered a classic, building‑block Dead experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Very present on guitar, weaving beautiful tales (positive).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's jazzy piano playing is fun and on point (positive).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:27:29.646796+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-09-25.148827.shure.sm57.sublette.miller.clugston.flac2496"
+}

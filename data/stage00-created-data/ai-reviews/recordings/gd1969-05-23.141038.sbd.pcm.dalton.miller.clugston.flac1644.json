@@ -1,0 +1,40 @@
+{
+  "summary": "Excellent soundboard capture of a legendary show highlighted by an epic Dark Star that flows into St. Stephen",
+  "review": "Both reviewers rave about this famous Florida performance, singling out the Dark Star as a standout moment that coils, snarls and segues beautifully into St. Stephen. The recording is a sound‑board source and is described as solid enough to stream on a good stereo system, with no technical complaints.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Two detailed five‑star reviews praise the musical performance (especially Dark Star) and note a clean soundboard source; limited number of reviews reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific issues mentioned; reviewers consider it suitable for streaming on a decent stereo, implying clear and balanced board recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as \"spazzy and feral\" with the Dark Star leading into St. Stephen, creating a high‑energy, psychedelic flow that many fans love."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T14:41:37.198813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-23.141038.sbd.pcm.dalton.miller.clugston.flac1644"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience recording with minimal crowd noise captures a solid Atlanta ’90 show highlighted by the rare “Death Don't Have No Mercy.”",
+  "review": "The tape is an audience (AUD) source that benefits from a center‑mic mix, giving it surprisingly low crowd noise and good dynamic range for a large indoor arena. The performance is described as solid throughout both sets, with the second set’s surprise inclusion of “Death Don't Have No Mercy” providing a vintage Dead vibe. Overall the show and its capture are well‑regarded, earning a four‑star rating from the reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single positive review (4 ★) praises both the musical performance and the audience recording quality, leading to a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Minimal crowd noise, decent dynamic range, center‑mic mix captures arena ambience nicely; no major flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Death Don't Have No Mercy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets described as solid; the second set stands out thanks to the rare inclusion of “Death Don't Have No Mercy,” giving it a vintage Fillmore vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:22:13.996209+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-02.137933.dbx.hale.flac16"
+}

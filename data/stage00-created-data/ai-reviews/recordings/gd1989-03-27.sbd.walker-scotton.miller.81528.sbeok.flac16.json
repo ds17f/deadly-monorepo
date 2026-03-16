@@ -1,0 +1,79 @@
+{
+  "summary": "A high‑quality soundboard capture of an early‑tour show, highlighted by a soaring Scarlet > Fire and a tight, energetic second set.",
+  "review": "The SBD from the March 27 1989 Omni show delivers a clear, lively mix with only minor glitches in the opening half‑step. The performance is full of standout moments – a blistering Scarlet > Fire, crisp Estimated > Eyes, a killer Candyman jam and an upbeat Wheel – though a few post‑drum sections feel rushed. Overall fans rave about the energy and Jerry’s vocal/guitar firepower, making this recording one of the more enjoyable early‑tour documents.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4–5 stars and praised both the musical performance and the soundboard quality; only a few outlier low‑star comments exist, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp SBD mix with lively balance; occasional half‑step glitch and audience patch blending noted but does not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Estimated > Eyes",
+      "Candyman (Cassidy Touch)",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "Standing on the Moon"
+    ],
+    "setlist_flow": "Strong half‑step opener leads into a high‑energy second set with fluid transitions; some post‑drum sections feel rushed but the overall pacing keeps momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's soaring vocals on Standing on the Moon and his fiery guitar work during Scarlet > Fire.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Candyman (Cassidy Touch)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "We Can Run": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:58:20.040108+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-03-27.sbd.walker-scotton.miller.81528.sbeok.flac16"
+}

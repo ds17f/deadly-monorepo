@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard recording of the Dec 5 1971 Felt Forum show, highlighted by stellar renditions of Jack Straw, Brown Eyed Women and an unforgettable El Paso.",
+  "review": "The Dec 5 1971 New York concert is consistently praised for its crisp, radio‑quality soundboard mix and a performance that many fans rank among the band’s finest. Standout moments include flawless versions of Jack Straw, Brown Eyed Women, Tennessee Jed, Ramblin’ Rose, Big Railroad Blues and an inspired El Paso, plus a memorable Dark Star jam. Jerry Garcia’s phrasing and tone receive special acclaim, and the presence of both Pigpen and Keith on keyboards adds historic weight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All reviews are five‑star, uniformly praising both the musical performance (70 % weight) and the high‑fidelity soundboard recording (30 % weight), indicating an exceptional show with excellent audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix that matches listeners' memories of the original NYC radio broadcast; transfer rated 4 stars but overall fidelity is very high with no notable drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Brown Eyed Women",
+      "Tennessee Jed",
+      "Ramblin' Rose",
+      "Big Railroad Blues",
+      "Dark Star",
+      "El Paso"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First‑set songs are delivered with perfect phrasing and energy, especially the new material; second set is shorter but still features a strong Dark Star jam and keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for incredible phrasing and tone throughout the set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's keyboards noted as a special addition alongside Pigpen, enhancing the historic feel of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramblin' Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T10:22:03.928794+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-05.sbd.unknown.18665.sbeok.shnf"
+}

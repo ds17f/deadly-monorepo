@@ -1,0 +1,51 @@
+{
+  "summary": "Good‑quality soundboard capture of a rain‑soaked UMass spring concert featuring a soaring Jack Straw and stellar Stella Blue.",
+  "review": "The tape offers a clear, well‑balanced soundboard recording that lets the chaos of the day—bikers, weather swings, and a massive crowd—shine through without drowning out the music. The show is remembered for its high energy, with standout moments like an intense Jack Straw, a spacey Fade Away into Stella Blue, and Jerry & Phil firing on all cylinders in the second set. Overall the performance is celebrated as a quintessential late‑70s Dead experience despite the occasional low‑key vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both the music and the recording; the soundboard is described as good, and the show is fondly recalled with several highlighted songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently noted as clear and well‑balanced with little audience bleed; no major dropouts or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Stella Blue",
+      "Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy, weather‑driven concert that built momentum early (drummers pushing the pace) and peaked in a memorable second set where Jerry and Phil were ‘on another level.’ The crowd’s chaos adds to the live feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is praised – his lines are merry, he’s “on another level” in set 2, plus the iconic hair‑in‑pigtails moment.",
+    "Phil": "Phil’s bass work is highlighted as “on another level” in set 2.",
+    "Bob": "Weir is noted only for giving a disapproving look to the biker; no musical comments.",
+    "Keys": "The new keyboardist (new guy) received positive remarks for his playing.",
+    "Drums": "Reviewers say the drummers pushed the pace from the first verse, driving an energetic feel."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:45:46.944367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-12.glassberg.vernon.18874.sbeok.shnf"
+}

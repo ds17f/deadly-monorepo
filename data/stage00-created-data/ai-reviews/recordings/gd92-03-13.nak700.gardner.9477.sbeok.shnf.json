@@ -1,0 +1,63 @@
+{
+  "summary": "Decent soundboard capture of a rainy Nassau show where the infamous train‑horn on Space shines, but a limp Wave to the Wind and a sluggish second set hold it back.",
+  "review": "The recording is generally clear with only occasional DAT‑mistracking sizzle, making it an enjoyable listen despite some technical quirks. Live, the first set was high‑energy while the second fell into average territory; the highlight is the massive train horn that bursts through Space, whereas Wave to the Wind is widely regarded as a mis‑step. Overall the show feels weather‑weary and uneven, but fans still appreciate the rare moments of intensity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "The performance is mixed – strong first set and memorable horn moment versus a weak Wave to the Wind and dull second half – while the soundboard source is mostly good but suffers from occasional sizzle, yielding an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with good balance; a few reviewers note DAT mistracking causing a brief sizzle. No major drop‑outs, but the transfer isn’t pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space (train horn)",
+      "Birdsong",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Wave to the Wind"
+    ],
+    "setlist_flow": "First set bursts with energy; second set drifts into an average, slower vibe. The train‑horn interlude in Space is a high point, while the post‑drums segment helps revive the mood."
+  },
+  "band_member_comments": {
+    "Jerry": "A few reviewers mention enjoying Jerry’s playing (“good jerry show”), and his work after Drums helped lift the set.",
+    "Phil": "Phil receives frequent shout‑outs for his presence (“plenty of Phil”, “Phil’s side not mellow”), though overall energy is described as dull at times.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drums segment is praised as solid and a savior for an otherwise sluggish set."
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T04:37:22.615680+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-13.nak700.gardner.9477.sbeok.shnf"
+}

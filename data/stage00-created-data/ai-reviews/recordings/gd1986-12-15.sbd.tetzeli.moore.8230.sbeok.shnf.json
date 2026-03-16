@@ -1,0 +1,31 @@
+{
+  "summary": "Terrible recording quality with no usable musical commentary",
+  "review": "The sole review indicates that the source has been degraded through multiple poor‑quality conversions and heavy compression, rendering it essentially unlistenable. No comments on the band's performance or set are provided, so the show itself cannot be evaluated.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one 1‑star review exists; it focuses solely on the disastrous recording quality and offers no insight into the performance, leading to a rating at the bottom of the scale."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple analog‑to‑digital conversions via a low‑grade internal sound card, cassette re‑recording, and heavy SHN compression have destroyed the audio; reviewer calls it \"not worth a fart's fart\"."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No performance details or song evaluations were provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T17:40:51.718670+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-15.sbd.tetzeli.moore.8230.sbeok.shnf"
+}

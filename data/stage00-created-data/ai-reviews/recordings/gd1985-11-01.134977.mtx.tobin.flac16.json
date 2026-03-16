@@ -1,0 +1,116 @@
+{
+  "summary": "Good Tobin matrix capture of a mixed‑bag ’85 show – standout Me & My Uncle, Big River and a soaring Comes A Time, but the second half drifts at times.",
+  "review": "The Tobin matrix recording is clean and captures the audience energy better than any existing soundboard, making the set enjoyable despite some sonic quirks. The performance swings between high points – a hot first‑set run featuring Me & My Uncle, Big River and He's Gone, and an inspired second‑set with Comes A Time, Lost Sailor and an electrifying Gloria – and weaker moments where songs feel clunky or off‑key. Overall the show is uneven but rewarding for fans of the mid‑80s Dead.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (one reviewer 3★, another 5★) while recording quality is consistently praised; weighted average yields a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Tobin matrix combines audience ambience with soundboard feed; reviewers call it \"fantastic\" and superior to the official release, though older SBD sources suffer ringing artifacts that do not affect this matrix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Me & My Uncle",
+      "Big River",
+      "Brown-Eyed Woman",
+      "Jack Straw",
+      "Don't Ease Me In",
+      "He's Gone",
+      "Comes A Time",
+      "Lost Sailor",
+      "Saint",
+      "Gimme Some Lovin'",
+      "She Belongs To Me",
+      "Gloria",
+      "Day Job"
+    ],
+    "poor_songs": [
+      "Lost Sailor (clunky in one review)",
+      "Gimme Some Lovin' (anti‑climactic in one review)",
+      "She Belongs To Me (rough in one review)",
+      "Gloria (bails in one review)"
+    ],
+    "setlist_flow": "First set starts upbeat and builds a strong groove; second set opens strongly with Comes A Time but later becomes uneven, alternating between inspired jams and lackluster covers."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised on Stagger Lee, Big River, Jack Straw and the epic Comes A Time, though a few wrong notes and lyric slips are noted later (Day Job).",
+    "Phil": "Lesh provides solid bass throughout; his shouted “Lovin!” at the end of Gimme Some Lovin' gets special mention.",
+    "Bob": "Weir’s vocals shine on She Belongs To Me and he leads Lost Sailor with a compelling vibe, though one reviewer felt he was left out early in the set.",
+    "Keys": "Brent Mydland’s keyboards are highlighted for adding sparkle to Big River, driving Dough Knees, phrasing on He's Gone and contributing heavily to the second‑set improvisations.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "She Belongs To Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Gloria": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:22:06.335119+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-01.134977.mtx.tobin.flac16"
+}

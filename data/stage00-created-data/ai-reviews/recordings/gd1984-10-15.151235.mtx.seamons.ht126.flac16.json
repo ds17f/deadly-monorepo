@@ -1,0 +1,50 @@
+{
+  "summary": "High‑quality matrix capture of an outstanding 1984 show highlighted by a marathon Scarlet > Fire and a smoking Sugaree.",
+  "review": "All three reviewers rate this performance as one of the best of 1984, praising the epic 29‑minute Scarlet > Fire sequence, the blistering Sugaree, and the overall fluid jams that make the show feel timeless. Though no specific recording issues are noted, the matrix source is regarded as clean enough to let the music shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently five‑star reviews emphasize top‑tier musical performance and no reported recording problems, yielding a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not mention any sound flaws; the matrix capture is assumed clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with a powerful first half (highlighted by Sugaree and Birdsong) and an explosive second half centered on the 29‑minute Scarlet > Fire jam, creating a memorable, high‑energy experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:48:01.826032+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-15.151235.mtx.seamons.ht126.flac16"
+}

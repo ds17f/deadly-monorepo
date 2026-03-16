@@ -1,0 +1,58 @@
+{
+  "summary": "Decent audience‑sourced recording that’s clear yet cavernous, capturing a strong early‑80s show with standout Lazy Lightnin' > Supplication and Black Peter.",
+  "review": "The tape is an audience (back‑of‑house) capture – clear enough for streaming but a bit cavernous with noticeable crowd noise. Musically the concert shines, especially the first set and the second‑set gems like Lazy Lightnin' > Supplication and Black Peter, though a rushed Truckin' transition drags it down slightly.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (many standout moments) while recording quality is decent but not pristine; weighted average yields a solid mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and clean front‑of‑house/back‑of‑board sound, but a cavernous venue feel and noticeable audience noise make it less balanced than an ideal soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin' > Supplication",
+      "Black Peter",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "Energetic opening trio and a sweet first set, followed by strong second‑set jams; only the hurried Truckin' transition interrupts an otherwise smooth flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Pulls several cool licks despite some overall sloppiness.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:48:24.321812+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-07.neumann.munder.13962.sbeok.shnf"
+}

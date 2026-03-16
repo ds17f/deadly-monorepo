@@ -1,0 +1,45 @@
+{
+  "summary": "Audience tape captures the intimate vibe of a classic Dead show, highlighted by a memorable Scarlet Begonias → Fire on the Mountain transition.",
+  "review": "The recording is an audience source that immerses the listener in the small‑venue atmosphere and the crowd’s enthusiasm. The performance is described as well played and classic, with the Scarlet Begonias/Fire on the Mountain segue standing out. Audio fidelity is typical of audience tapes – present but not pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "One moderate (3‑star) review praises the show’s playing and a specific song transition, suggesting solid musical quality, while noting only an audience source which limits recording fidelity."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Captures crowd enthusiasm and venue ambience; typical audience tape limitations such as ambient noise and limited clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Intimate, small‑venue setting with a classic Dead flow; highlights include a well‑executed Scarlet Begonias → Fire on the Mountain transition."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:11:24.284391+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-13.119845.aud.horvath.flac24"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Nice FM broadcast of a great Spring ’90 show featuring an outstanding Foolish Heart, with clear sound quality.",
+  "review": "The recording is a true FM (matrix) source that upgrades the old cassette copy and delivers a clean, listenable mix. The concert itself is praised as a great Spring‑1990 performance, highlighted by one of the best pre‑drums “Foolish Heart” moments ever heard.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "The single detailed review is strongly positive about both performance and sound quality, suggesting a high‑scoring show with a good recording; however confidence is limited by the small sample size."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "True FM broadcast source; clearer and better than an old cassette copy, no noted dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong pre‑drums segment and overall great Spring ’90 performance; the show flows well and is considered a highlight of that tour."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:59:00.623669+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-19.165619.Hartford.CT.WHCN.fm.taperjon.flac1644"
+}

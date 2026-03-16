@@ -1,0 +1,83 @@
+{
+  "summary": "High-energy Barcelona show with scorching Scarlet>Fire and jam‑heavy second set",
+  "blurb": "The band delivers a high‑octane performance highlighted by a blistering Scarlet Begonias → Fire on the Mountain transition, a fiery Spanish Jam, and a powerful Let It Grow. Jerry’s solos are aggressive and creative while Phil lays down bell‑clear bass lines. The second set rolls smoothly from Lost Sailor into Saint of Circumstance, culminating in an inspiring finish.",
+  "review": "On October 19, 1981 at the Sports Palace in Barcelona, the Grateful Dead closed out their European tour with a show that still feels fresh decades later.  From the opening “Jack Straw → Franklin’s Tower” to the closing “Don’t Ease Me In,” the night is packed with high‑energy moments – most notably the legendary Scarlet Begonias → Fire on the Mountain segue, which reviewers describe as \"scorching\" and \"on fire.\"  Jerry Garcia was in top form, launching aggressive, melodic solos on Loser, Let It Grow, and throughout the second‑set jams; Phil Lesh’s bass shines with a “clear as a bell” intro to Fire and heavy, bomb‑dropping lines during the extended improvisations.  Brent’s Hammond organ provides tasty growls that drive the music forward, even if it occasionally dominates the mix, while Bob Weir’s guitar and vocals sit low in the recording but remain part of the overall texture.  The second set flows seamlessly from Lost Sailor into Saint of Circumstance, then into a thunderous Drum‑Space‑Spanish Jam sequence that erupts into The Other One, Stella Blue, and a joyous Sugar Magnolia finish.  Despite some muddy mix issues on the soundboard source, the performance’s intensity and tightness make this a must‑listen snapshot of the Dead at their late‑‘80s peak.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive sentiment across all recordings: multiple reviewers call the show \"scorching\", \"high‑energy\", and highlight standout performances of Scarlet>Fire, Spanish Jam, Let It Grow, and Jerry’s aggressive solos. No consistent criticism of musical execution appears; mix issues are noted but pertain to recording quality only.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-10-19.sbd.miller.95781.sbeok.flac16",
+    "reason": "Decent soundboard capture that preserves the high‑energy performance; despite a muddy mix, it remains the clearest and most complete source of this show."
+  },
+  "key_highlights": [
+    "Scorching Scarlet Begonias → Fire on the Mountain transition",
+    "Extended Spanish Jam that fuels the second‑set momentum",
+    "Jerry’s aggressive solos on Loser, Let It Grow, and The Other One",
+    "Tight rhythm section driving a seamless flow from Lost Sailor into Saint of Circumstance"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Franklin's Tower",
+    "Loser",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Let It Grow",
+    "Spanish Jam",
+    "The Other One",
+    "Stella Blue",
+    "Sugar Magnolia",
+    "Don't Ease Me In"
+  ],
+  "band_performance": {
+    "Jerry": "In fine form, delivering aggressive, creative solos on Loser, Let It Grow and the second‑set jams; fully into the music and even jamming with the drummers after Saint of Circumstance.",
+    "Phil": "Provides bell‑clear bass lines—especially the intro to Fire—and drops heavy, bomb‑like grooves during improvisations, anchoring the high‑energy flow.",
+    "Bob": "Mix places his guitar and vocals low, reducing presence, but his rhythm work remains solid throughout the set.",
+    "Brent": "His Hammond organ shines with growling, tasty licks that drive the jams; occasionally too forward in the mix but overall a strong performance.",
+    "Mickey": "Delivers steady, supportive percussion; featured in the post‑Saint of Circumstance jam, highlighting solid rhythmic foundation.",
+    "Billy": "Works hand‑in‑hand with Mickey to keep the groove tight; his drumming underpins the extended improvisations and adds power to the Spanish Jam."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-13T16:20:19.696020+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw",
+      "Franklin's Tower"
+    ],
+    [
+      "Loser",
+      "C.C. Rider"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "The Other One",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Don't Ease Me In"
+    ]
+  ]
+}

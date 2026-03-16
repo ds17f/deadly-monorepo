@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent audience‑sourced recording captures a blistering 1981 MSG show, highlighted by Bird Song, China > Rider and Jerry Garcia’s electrifying lead work.",
+  "review": "The Rolfe/Miller tape is praised as crystal‑clear and far superior to the infamous MOTB version, delivering an almost studio‑quality soundboard feel. Musically the concert is described as one of the band’s finest of ’81, with standout performances of Bird Song, China Cat Sunflower → I Know You Rider, Samson, Uncle John’s Band, Terrapin tease and a fire‑breathing The Other One, all linked by seamless segues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All but one review are five‑star rave reviews praising both the performance and the recording; the lone zero‑star rating appears to be a rating glitch rather than a substantive criticism."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear capture from Steve Rolfe & Charlie Miller – described as \"WAY better\" than the MOTB version with no noted drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "China Cat Sunflower > I Know You Rider",
+      "Samson",
+      "Uncle John's Band",
+      "Terrapin Station tease",
+      "The Other One",
+      "Stella Blue",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about the seamless, joyous transitions – notably the meandering China/Rider into Samson and a tasteful Terrapin tease that keep the energy rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is described as \"crackling with electricity\" and \"perfect tone\", driving the show.",
+    "Phil": "",
+    "Bob": "Weir is praised for rocking The Other One.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station tease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:20:41.043954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-09.nak700.rolfe.miller.95179.flac24"
+}

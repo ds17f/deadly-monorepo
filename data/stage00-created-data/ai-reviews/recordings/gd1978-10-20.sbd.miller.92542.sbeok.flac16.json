@@ -1,0 +1,82 @@
+{
+  "summary": "Great soundboard capture of a fiery late‑70s run, highlighted by a scorching Dancin' and standout Tennessee Jed, though the transfer has minor speed quirks.",
+  "review": "The performance is classic late‑70s Dead – the band is on fire with a blistering Dancin', a top‑tier Tennessee Jed and strong second‑set moments like Franklin's and Black Peter. Charlie Miller’s SBD transfer sounds clear and lively, but listeners note a high‑frequency whistle filter, a slight speed issue and a brief glitch at the start of Lazy Lightning.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4–5 stars) and praise the musical energy, while recording comments are mostly positive with only minor technical complaints; weighted average yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD capture praised as 'great sounding board', but includes a high‑frequency whistle filter, slight fast pitch (+~1%) needing correction, and a brief botched minute on Lazy Lightning."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin'",
+      "Tennessee Jed",
+      "Franklin's Tower",
+      "Black Peter",
+      "Shakedown Street"
+    ],
+    "poor_songs": [
+      "Not Fade",
+      "Around",
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "First set is solid with a few average moments, while the second set delivers the magic typical of this run, though energy dips in places and tempos can feel sluggish."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Tennessee Jed (double‑stopping) and his tone on Dancin' are singled out as exceptional.",
+    "Phil": "Phil's bass is noted for keeping the set grounded, especially during the second set jams.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:45:05.131295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-10-20.sbd.miller.92542.sbeok.flac16"
+}

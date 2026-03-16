@@ -1,0 +1,51 @@
+{
+  "summary": "Fair‑quality soundboard capture of a rare 1966 Acid Test jam, highlighted by Pigpen’s raw vocals and the historic Foolish → Walkin' Blues → Day Job segment.",
+  "review": "The recording is an early‑era soundboard tape that retains the lo‑fi character of a 1966 Acid Test session – some listeners note microphone bleed and a “zoo‑like” ambience, but the performance shines through thanks to Pigpen’s passionate vocals and a memorable closing medley of Foolish, Walkin' Blues and Day Job. Opinions are split: longtime Deadheads celebrate its historical value while others find the material more noise than music.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Weighted analysis (70% show, 30% recording) shows a historically significant performance with strong vocal moments but modest audio fidelity; consistent mixed feedback across ten reviews gives high confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Low‑fidelity tape with noticeable mic bleed and ambient noise (“zoo” feel); overall listenable but not crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish",
+      "Walkin' Blues",
+      "Day Job"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A free‑form Acid Test jam with spoken rap and improvisation; lacks a conventional set structure but ends with a historic medley that many reviewers highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Not present in this recording (one reviewer notes \"No Jerry in the music\").",
+    "Phil": "",
+    "Bob": "Positive remarks about Bobby (Pigpen) navigating the material; desire expressed for him to sing with Brent.",
+    "Keys": "Brent is mentioned alongside Pigpen, but no specific comment on keyboard performance.",
+    "Drums": "One reviewer complains about a drum mic (“GET THAT GODDAMN MICROPHONE OUTTA MY FACE!\")"
+  },
+  "song_mentions": {
+    "Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:36:23.990863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-02-12.sbd.bershaw.9515.shnf"
+}

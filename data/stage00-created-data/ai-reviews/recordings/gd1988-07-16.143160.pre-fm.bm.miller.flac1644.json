@@ -1,0 +1,97 @@
+{
+  "summary": "Good‑quality matrix recording of a solid 1988 show with standout Birdsong, LL Rain and a high‑energy Other One despite some radio static on Terrapin.",
+  "review": "The performance is praised for its strong first‑set build‑up and an especially powerful second set highlighted by Birdsong (no MIDI effects), a shining LL Rain, and a fast‑paced The Other One that drives the show forward. Recording-wise the mix is generally clear with good drums, though static from the FM broadcast filler mars the ending of Terrapin. Overall the show feels typical of the late‑80s Dead era but delivers several memorable moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "One detailed 4‑star review emphasizes strong musical moments and overall good sound, offset only by minor static issues, leading to a high rating but limited confidence due to the single source."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear mix with solid drum presence; some radio‑broadcast static appears toward the end of Terrapin, no MIDI effects on Birdsong."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "LL Rain",
+      "The Other One",
+      "Stella Blue",
+      "Around & Around"
+    ],
+    "poor_songs": [
+      "Sugaree (not the strongest)",
+      "Terrapin (static at end)",
+      "China > Rider (nominal version)"
+    ],
+    "setlist_flow": "First set builds nicely from a solid Music Never Stopped‑> Sugaree into Memphis Blues, while the second set ramps up with China > Rider leading to a high‑energy climax of Other One, Stella Blue and a rousing OMSN."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"completely dialed in\" on LL Rain and overall strong guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums are noted as quite good, creating a cool sonic soundscape."
+  },
+  "song_mentions": {
+    "Music Never Stopped>Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LL Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "OMSN": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:46:29.094537+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-16.143160.pre-fm.bm.miller.flac1644"
+}

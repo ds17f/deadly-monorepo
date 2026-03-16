@@ -1,0 +1,45 @@
+{
+  "summary": "Energetic 1985 show with revived Mississippi Half‑Step and debut of Tom Thumb’s Blues; audience recording sounds good despite a fast‑pitch soundboard version.",
+  "review": "Fans rave about this tight, fun concert from start to finish, highlighting the return of “Mississippi Half‑Step” after three years and the first performance of “Tom Thumb’s Blues.” The audience source provides a clear, enjoyable listening experience, while the original soundboard runs slightly fast, prompting use of the audience mix. Overall it’s remembered as an energetic highlight of a great year for the Dead.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic reviews (4‑5 stars) praise both the musical performance and the usable recording, with only minor technical notes about pitch."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience capture is clear and enjoyable; soundboard version runs slightly fast, leading reviewers to favor the audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Tom Thumb's Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight and energetic from start to finish; fans describe the concert as a fun, high‑energy experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his energetic presence (noted wearing a maroon shirt) and strong playing throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:07:16.746648+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-27.aud.vernon.7369.sbeok.shnf"
+}

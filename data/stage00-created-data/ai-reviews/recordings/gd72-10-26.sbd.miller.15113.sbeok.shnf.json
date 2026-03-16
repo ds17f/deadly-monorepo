@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard capture with a little hiss and occasional cut‑offs preserves an iconic 1972 show highlighted by a monster Playing in the Band and stellar Brokedown Palace.",
+  "review": "The performance is repeatedly praised as one of the best ever – especially the epic Playing in the Band, a soaring Casey Jones, and a soulful Brokedown Palace.  The soundboard source is generally clear, though listeners note a faint hiss and that Brokedown Palace drops out near its end.  Overall the show’s energy and tightness outweigh these minor technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and rave about the musical performance; recording issues are limited to hiss and a brief cutoff, so the combined weighted score is well above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall with slight hiss; Brokedown Palace cuts off near the end; otherwise crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Brokedown Palace",
+      "Truckin' > Dark Star",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds to a massive Playing in the Band that many fans cite as a classic, with tight band interplay and memorable segues; despite an early finish noted by one attendee, the pacing feels natural and the second half shines."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring lead work, soulful tone, and “wawa” that drives the jams.",
+    "Phil": "Bass lines are highlighted as powerful and “send you into stupidville,” showing strong support for the band’s flow.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin' > Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:48:09.579851+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-26.sbd.miller.15113.sbeok.shnf"
+}

@@ -1,0 +1,97 @@
+{
+  "summary": "A remote, cloudy audience recording that still manages a decent second‑set performance highlighted by Rider and Watchtower despite weak moments like Eyes and Space.",
+  "review": "The sound is described as distant and clouded, giving the mix a muffled quality that even makes Jerry’s guitar sound screechy at times. Nevertheless, the second set shines with thrilling renditions of Rider, an intense Watchtower, and a strong opening of China, though some songs (Eyes, Space, Black Peter) fall flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is moderately good with several standout performances, but the recording is poor/fair which drags down overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Remote and cloudy sound; guitar can sound screechy, Space becomes discordant, overall mix feels muffled but still listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rider",
+      "Watchtower",
+      "China",
+      "Drums",
+      "Estimated"
+    ],
+    "poor_songs": [
+      "Eyes",
+      "Space",
+      "Black Peter"
+    ],
+    "setlist_flow": "The second set opens strong with China and builds momentum through Rider, Estimated and a silky Drums segment, but loses focus during the elongated Eyes jam and discordant Space before recovering with Watchtower and a mixed finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as both screechy due to poor sound and commanding when he takes over; some intros feel stunted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment is called silky and compelling, providing a solid backbone despite the overall muddy mix."
+  },
+  "song_mentions": {
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Lovelite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:34:56.963636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-17.set2.sennheiser.ladner.19286.sbeok.shnf"
+}

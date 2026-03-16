@@ -1,0 +1,78 @@
+{
+  "summary": "Superb Miller soundboard capture of a legendary 12/6/73 show, highlighted by an epic Dark Star and a soaring Here Comes Sunshine.",
+  "review": "The recording, sourced from Charlie Miller’s SBD tape, is consistently described as crystal‑clear, balanced and one of the best available for this era. Musically the concert is celebrated for its monumental 44‑minute Dark Star that flows into Eyes of the World and Stella Blue, plus a blistering Here Comes Sunshine and tight China Cat > Rider sequence – many reviewers call it a peak moment of the ’73 tour. While a handful of listeners found the Dark Star too long or “dull,” the overwhelming consensus is that the performance is inspired, with standout contributions from Jerry’s lead guitar, Phil’s bass wizardry and Keith’s jazzy electric‑piano.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the majority give 5 stars and praise both the musical performance and Miller’s soundboard source; only a few low‑star outliers criticize personal taste. The weighted average (70 % show + 30 % recording) yields a rating in the high‑4 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the Miller SBD “beautiful,” “crisp,” and “the best source ever.” No significant drop‑outs or mix problems are reported; the recording captures each instrument with clarity, allowing the interplay to shine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Here Comes Sunshine",
+      "China Cat > Rider",
+      "Eyes of the World",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is solid but less memorable; the second set launches into a massive Dark Star that morphs into Eyes and Stella Blue, punctuated by a fiery Here Comes Sunshine and tight China Cat > Rider. Reviewers note excellent pacing and an overall three‑hour arc that feels both expansive and cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring solos—especially the HC Sunshine solo and his inventive lead throughout Dark Star.",
+    "Phil": "Lauded as “the MVP” of the night; his bass is described as thunderous, melodic, and full of Seastones‑style textures.",
+    "Bob": "Mentioned briefly with a nice tone on rhythm guitar; no major critique either way.",
+    "Keys": "Keith’s electric piano work receives special attention for its jazzy, subtle, and sometimes front‑line contributions during Dark Star and other jams.",
+    "Drums": "Bill Kreutzmann (and occasional Mickey Hart) are called “on fire” and supportive of the band’s expansive dynamics."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 13,
+      "negative_mentions": 2,
+      "total_mentions": 15
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:08:09.983879+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-06.sbd.miller.105560.flac16"
+}

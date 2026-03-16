@@ -1,0 +1,57 @@
+{
+  "summary": "Audience-sourced recording captures a high‑energy 1981 show that cooks from start to finish, highlighted by a scorching “Eyes of the World”, fiery jam into drums and a hot Around & Around.",
+  "review": "The concert is repeatedly described as “smoking” with tremendous energy, crisp Jerry tones and flawless jams into the drum segment.  While most fans rave about the performance – especially Eyes of the World, the Drums jam and the scorching Around & Around segue – one reviewer calls it solid but not spectacular, keeping the overall sentiment upbeat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical praise (70% weight) outweighs a few lukewarm comments; recording is noted as good with clear audience sound, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers mention crisp Jerry tone and “good sound”; no major complaints about muddiness or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Drums",
+      "Around and Around",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with a hot Bob Weir segue into Around & Around, an inspired jam into Drums, and generally keeps the crowd energized throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for crisp tone and “crispy Jerry” throughout the show.",
+    "Phil": "",
+    "Bob": "Weir’s segue is called a “hump”, noted as a scorching hot jam into Around & Around.",
+    "Keys": "",
+    "Drums": "Jam into the Drum segment described as flawless and amazing."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:57:33.744546+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-10.senn421.miller.32880.sbeok.flac16"
+}

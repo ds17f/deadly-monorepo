@@ -1,0 +1,72 @@
+{
+  "summary": "Wharf Rat, Hard To Handle & The Other One shine in a tight ’71 set",
+  "blurb": "Features soaring renditions of Wharf Rat, Hard To Handle and The Other One alongside tight blues‑rock numbers like Casey Jones and Truckin'. Pigpen’s organ shines on Cumberland Blues while the second set delivers a seamless Good Lovin’ → Not Fade Away → Goin' Down The Road flow.",
+  "review": "April 21, 1971 at the Rhode Island Auditorium captures the Dead in a rare spell of focused fire. The first set builds momentum with a gritty Casey Jones that segues into a blistering Truckin', before bursting into an expansive The Other One and a heartfelt Wharf Rat where Jerry’s lead guitar sparkles and his vocal phrasing soars. Hard To Handle lands with lightning‑fast picking, while Pigpen’s organ and harmonica add soulful grit on Cumberland Blues. The second set rolls through a classic Good Lovin’ → Not Fade Away → Goin' Down The Road Feeling Bad sequence that feels both relaxed and tightly locked in, culminating in an encore of Uncle John's Band and a rollicking Johnny B. Goode. Across all sources the band is praised for its tight rhythm section—Phil’s bass driving the groove and Billy’s drums on fire—as well as Pigpen’s central organ presence, making this show a standout early‑’70 performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Three of four recordings deliver uniformly positive language about the performance—praise for Wharf Rat, Hard To Handle, The Other One, and overall tight playing. No consistent negative comments on musicianship appear; the lone negative review concerns only recording fidelity. This strong consensus warrants a high positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd71-04-21.sbd.kaplan.8227.sbeok.shnf",
+    "reason": "Clear soundboard capture with minimal hiss, tight mix, and full representation of the show’s standout songs."
+  },
+  "key_highlights": [
+    "Jerry’s sparkling leads on Wharf Rat and lightning‑fast picking on Hard To Handle.",
+    "Pigpen’s organ/harp anchors the set, especially on Cumberland Blues and The Other One.",
+    "The seamless Good Lovin’ → Not Fade Away → Goin' Down The Road Feeling Bad flow showcases a tight rhythm section."
+  ],
+  "song_highlights": [
+    "Wharf Rat",
+    "Hard To Handle",
+    "The Other One",
+    "Casey Jones",
+    "Truckin'",
+    "Good Lovin'",
+    "Uncle John's Band"
+  ],
+  "band_performance": {
+    "Jerry": "Sparkling leads on Wharf Rat, lightning‑fast picking on Hard To Handle, strong vocal phrasing and overall new heights of playing.",
+    "Phil": "Solid bass work driving the band; described as flying through tunes and praised for his foundational groove.",
+    "Bob": "Lyrical contributions noted (e.g., “A lot of poor men make a $5 bill”) and vocal parts receive nods.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "On fire, delivering wild‑man antics and powerful drum breaks that propel the jams."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-20T05:21:40.948997+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Casey Jones"
+    ],
+    [
+      "Good Lovin'",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away"
+    ],
+    [
+      "Uncle John's Band",
+      "Johnny B. Goode"
+    ]
+  ]
+}

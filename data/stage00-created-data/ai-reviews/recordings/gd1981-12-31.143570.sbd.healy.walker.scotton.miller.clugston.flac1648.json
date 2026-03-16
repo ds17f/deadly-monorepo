@@ -1,0 +1,45 @@
+{
+  "summary": "A classic show celebrated for a uniquely soaring Playing in the Band jam and a glorious Terrapin Station sequence, with an unspecified but apparently adequate recording.",
+  "review": "The reviewer ranks this concert as a personal classic, highlighting Set II’s unprecedented Playing‑in‑the‑Band improvisation and the Play‑Terrapin‑Play flow of Set III as the show’s high points. No comments were made about the audio source or fidelity, implying the recording is at least listenable. Overall the performance is described in glowing terms with no noted flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Strong, enthusiastic praise of the musical performance (70% weight) and absence of any recording complaints suggest a high‑quality show; limited review count keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer did not mention sound quality, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set II is highlighted for its epic Playing‑in‑the‑Band jam; Set III praised for the Play‑Terrapin‑Play sequence, indicating a strong flow and climax in the second half of the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for picking up a repeating riff that launches the unique Playing‑in‑the‑Band improvisation.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:00:55.580233+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-31.143570.sbd.healy.walker.scotton.miller.clugston.flac1648"
+}

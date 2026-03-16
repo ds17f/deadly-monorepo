@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of a stellar April 6, 1971 show featuring a smoking 'Hog for You Baby' and the band's finest Midnight Hour.",
+  "review": "The recording is a hi‑fi stereo soundboard mix that sounds cleaner than other copies, delivering crystal‑clear balance across the 24‑song set. The performance shines—Pigpen is in top form during the famed Midnight Hour and songs like 'Hog for You Baby', an electric 'Dire Wolf' and 'Oh Boy' are highlighted as standout moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviews award 5 stars, praising both the musical performance (around a 4‑plus out of 5) and the superb soundboard recording, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Hi‑Fi stereo soundboard with crisp, clean mix; described as cleaner than other copies and an excellent overall balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hog for You Baby",
+      "Dire Wolf (electric)",
+      "Oh Boy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A 24‑song marathon that flows smoothly with high energy; the second half especially shines during Pigpen's intense Midnight Hour segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tight synchronicity with Pigpen during the Midnight Hour.",
+    "Phil": "",
+    "Bob": "Noted as in crazy sync with Jerry and Billy during the Midnight Hour.",
+    "Keys": "",
+    "Drums": "Billy Cannon locks in tightly, driving the band especially during Pigpen’s spoken segment."
+  },
+  "song_mentions": {
+    "Hog for You Baby": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf (electric)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Oh Boy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:10:24.124782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-06.sbd.lai.118.sbefail.shnf"
+}

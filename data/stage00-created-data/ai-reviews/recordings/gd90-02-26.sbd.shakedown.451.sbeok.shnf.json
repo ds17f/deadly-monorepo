@@ -1,0 +1,71 @@
+{
+  "summary": "Crisp sound‑board capture of a classic spring‑1990 show highlighted by an epic Scarlet > Fire and tight first‑set jams.",
+  "review": "The recording is a solid SBD that most listeners describe as clear and well balanced, with only a handful of complaints about vocal levels or occasional drop‑outs. Musically the concert shines – the 30‑minute Scarlet > Fire sequence, a scorching Ramble On Rose, and an enthusiastic Baby Blue encore are repeatedly called out as standouts, while even the humorous missteps in Hell In A Bucket add character rather than detract. Overall the performance is regarded as one of the stronger shows from the 1990 spring tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority give 4‑5 stars and praise both the music (especially Scarlet > Fire) and the soundboard quality; a few isolated criticisms lower the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers note crisp, clear SBD audio with good instrument separation. A single reviewer calls it \"lousy\" and another mentions vocals a bit high, but overall the mix is praised as well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Ramble On Rose",
+      "Hell In A Bucket (for humor)",
+      "Baby Blue (encore)",
+      "Terrapin Station",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Hell In A Bucket (vocal flubs mentioned by some)"
+    ],
+    "setlist_flow": "Tight, joke‑filled first set leads into an expansive, relaxed second set where the long Scarlet > Fire jam serves as the centerpiece; transitions and banter keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for tasteful guitar tone and creative midi textures during Scarlet > Fire; occasional vocal flubs noted but not a major issue.",
+    "Phil": "Described as \"sick\" on bass, driving the jams and delivering standout moments (e.g., Lovelight intro, Phil‑centric improvisations).",
+    "Bob": "His banter (“Are you ready for Star Time?”) and humorous lyric slips in Hell In A Bucket are highlighted as entertaining highlights.",
+    "Keys": "Brent’s keyboard work is called solid and well‑in‑time; some note the midi effects add color to Scarlet > Fire.",
+    "Drums": "Billy & Mickey receive praise for tight, grooving playing that underpins the extended jams."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 17,
+      "negative_mentions": 1,
+      "total_mentions": 18
+    },
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T03:12:18.469791+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-02-26.sbd.shakedown.451.sbeok.shnf"
+}

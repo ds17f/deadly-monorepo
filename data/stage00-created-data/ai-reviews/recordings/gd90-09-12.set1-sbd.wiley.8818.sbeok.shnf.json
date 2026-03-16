@@ -1,0 +1,86 @@
+{
+  "summary": "Good soundboard recording with a few drop‑outs, but an emotionally charged show highlighted by a soaring Althea and powerful second‑set jams.",
+  "review": "The set captures a memorable 9/12/90 performance – fans rave about the standout Althea, Let It Grow, Jack Straw opener and an inspired second half featuring China Cat Sunflower → Spoonful, Wheel and Black Peter. The soundboard source is generally clear and well‑balanced, though one reviewer noted the first set cuts off mid‑Big River, indicating a minor technical hiccup.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (≈4 / 5) while noting generally good but not flawless soundboard quality (≈3.5 / 5); weighted combination yields ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear overall; a few reviewers mention occasional drop‑outs or an incomplete first set (cut off during Big River)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Let It Grow",
+      "Jack Straw",
+      "China Cat Sunflower",
+      "Spoonful",
+      "Wheel",
+      "Miracle",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid but a bit uneven; the second set hits an emotional high with tight jams and heartfelt moments, especially after Brent Mydland’s recent passing."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as croaky yet powerful; guitar work called ‘iron grip’, emotionally charged solos on He's Gone, Spoonful and Black Peter.",
+    "Phil": "Bass noted for jumping in with Jerry during jams and providing solid support throughout the show.",
+    "Bob": "",
+    "Keys": "Vince (keyboards) praised for fitting in seamlessly, delivering Brent‑like chords and a cheering solo.",
+    "Drums": "Mickey’s drumming described as ‘evil best’ and Bill’s support noted; overall drum work highlighted positively."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:55:41.886422+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-12.set1-sbd.wiley.8818.sbeok.shnf"
+}

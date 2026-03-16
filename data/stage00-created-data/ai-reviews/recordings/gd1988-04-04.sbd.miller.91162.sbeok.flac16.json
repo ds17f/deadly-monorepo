@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard recording that captures a high‑energy show featuring standout Truckin', Space, The Other One and superb keyboard work, despite some vocal/guitar issues from Jerry.",
+  "review": "The tape is praised as a great soundboard capture with clear mix and strong presence of Brent and Bobby on keys. Musically the concert shines with a pre‑drums Truckin', an intense Space, a shredding The Other One, and memorable solos on Stella Blue and Dear Mr. Fantasy, while Jerry’s vocals and guitar tone are occasionally criticized.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews highlight strong musical moments and a high‑quality soundboard source; only minor performance quirks are noted, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as a great recording with crisp, clear mix; occasional comments about vocals not bright and guitar tone but no major technical flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Dear Mr. Fantasy",
+      "Alabama > Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens with a high‑gear Alabama > Johnny B. Goode sequence, builds through strong Truckin' pre‑drums and jammed He's Gone into drums, peaks with intense Space and The Other One, and finishes on a heartfelt note despite some vocal roughness."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals and guitar tone are noted as uneven in places, but his solos on Stella Blue and Dear Mr. Fantasy receive high praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent and Bobby (keyboardists) stand out; Brent is highlighted for stepping forward with confidence.",
+    "Drums": "Drumming praised especially on the pre‑drums Truckin', the He's Gone > drums jam, and the intense Space segment."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama > Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:53:49.026039+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-04.sbd.miller.91162.sbeok.flac16"
+}

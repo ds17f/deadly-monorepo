@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience tape with crystal‑clear sound that showcases a scorching Scarlet > Fire transition and standout West LA solo.",
+  "review": "The recording is a very nice AUD capture – clear, well‑balanced and lively, with only a minor drum‑mix quirk on the Fire segment. Musically the show shines: Jerry’s guitar work (especially the West LA solo) is on fire, Brent’s organ/scat moments sparkle, and the Scarlet > Fire jam is repeatedly called one of the greatest moments of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews are overwhelmingly positive (mostly 4‑5 stars), praising both the musical performance and the audio quality; only minor technical complaints appear."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced audience tape with good instrument separation; a single comment notes drum sound on Fire being a bit off, but overall the audio draws the listener in."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "West LA Fadeaway",
+      "Minglewood",
+      "Drums",
+      "It's All Over Now"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note an unusual first‑set bookend but agree the Scarlet > Fire sequence anchors the show and leads to a strong, rock‑filled conclusion."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his guitar tone, soaring solos (West LA) and vocal performance; reviewers say \"Jerry was definitely on this evening\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s organ solo and scatting are highlighted as “bad ass”; his work in the Scarlet > Fire transition receives special praise.",
+    "Drums": "Mickey’s drum work gets accolades for bend‑out sounds, a great drum segment, and a unique talking‑drum moment; one reviewer notes the drum mix on Fire was a bit whack."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:26:08.168164+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-13.fob-eaton.21130.sbeok.shnf"
+}

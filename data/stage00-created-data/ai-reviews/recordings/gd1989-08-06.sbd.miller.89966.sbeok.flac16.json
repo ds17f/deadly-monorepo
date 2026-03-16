@@ -1,0 +1,115 @@
+{
+  "summary": "Soundboard recording with a few balance quirks captures an electrifying August show highlighted by a scorching Scarlet Fire, soaring Lovelight and monster Johnny B. Goode.",
+  "review": "The performance is consistently praised – the second‑set opener Scarlet > Fire, the searing Johnny B. Goode encore, The Other One and a flawless Let‑the‑Good‑Times‑Roll → Stranger → Franklin’s Tower sequence make this night stand out.  The soundboard source isn’t perfectly balanced and shows occasional guitar hiccups, but the overall mix is solid enough to let the band’s high‑energy playing shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate 4–5 stars and extol the musical moments; recording is described as unbalanced but still listenable, leading to a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Not perfectly balanced – some reviewers note uneven mix and occasional guitar glitches (e.g., Ship of Fools verse mix‑up, Ramble On Rose guitar issue), but overall clarity is sufficient."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Lovelight",
+      "Johnny B. Goode",
+      "The Other One",
+      "Let the Good Times Roll > Stranger > Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Ship of Fools"
+    ],
+    "setlist_flow": "Second‑set opener Scarlet > Fire is praised as a perfect launch, with smooth transitions into space and jam segments; the encore’s Johnny B. Goode → We Bid You Goodnight is described as epic."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for fiery guitar work, soaring vocals and his 'Wolf' guitar; only minor complaint about verse mix‑up on Ship of Fools.",
+    "Phil": "Described as sounding fine throughout the show.",
+    "Bob": "",
+    "Keys": "Brent (organ/keyboard) receives glowing remarks – superb organ solos all night and a standout presence in his final year.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let the Good Times Roll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:32:30.288031+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-06.sbd.miller.89966.sbeok.flac16"
+}

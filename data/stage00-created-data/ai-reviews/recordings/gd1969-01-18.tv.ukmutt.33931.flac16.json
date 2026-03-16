@@ -1,0 +1,45 @@
+{
+  "summary": "Good TV‑sourced recording captures a lively Playboy After Dark set with standout “Mountains on the Moon” and a kicking “St. Stephen”.",
+  "review": "The TV broadcast delivers decent audio that most listeners find clear enough for a 1969 performance, while the show itself shines with a groovy “Mountains on the Moon” and an energetic, if slightly trimmed, “St. Stephen”. Jerry Garcia’s witty on‑stage banter adds a memorable flavor, and the historic two‑drummer lineup is noted as a highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4–5 stars and praise both performance and video/audio quality; a few lower scores keep the average around strong‑good rather than exceptional."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "TV broadcast audio is decent and clear for its era; reviewers say it sounds fine with no major issues, though it's not a pristine soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mountains on the Moon",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well for a TV appearance—tight, upbeat numbers with a laid‑back “Mountains” and a punchy “St. Stephen”, albeit with a few verses trimmed for broadcast."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for witty improv and engaging banter with Hugh Hefner, adding humor to the performance.",
+    "Phil": "Mentioned only in passing during stage departure; no specific musical commentary.",
+    "Bob": "",
+    "Keys": "Tom Constanten’s keyboard work is noted as part of the historic lineup.",
+    "Drums": "The two‑drummer configuration (Mickey Hart and Bill Kreutzmann) is highlighted as a significant moment."
+  },
+  "song_mentions": {
+    "Mountains on the Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T10:23:52.318249+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-01-18.tv.ukmutt.33931.flac16"
+}

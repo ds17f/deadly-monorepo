@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording capturing a stellar show highlighted by a soaring \"Playing in the Band\" into \"Crazy Fingers\" and a powerful \"Touch of Grey\".",
+  "review": "The recording is praised as a master‑level capture, likely using a blend of soundboard and ambient mics that give it clarity and depth. Musically the concert shines from the opening \"Playing in the Band\" through an inspired segue into \"Crazy Fingers,\" with a heartfelt rendition of \"Touch of Grey\" rounding out the set. Overall both the performance and the audio quality are described as phenomenal.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "medium",
+    "rationale": "Single detailed 5‑star review highlights an outstanding performance and top‑notch recording, indicating an exceptional show despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Community effort with second‑set mics on a soundboard platform; clear, well‑balanced mix that captures both instrument detail and venue ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Crazy Fingers",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opens strongly with \"Playing in the Band\" and builds momentum into a superb \"Crazy Fingers\" jam, culminating in an emotionally resonant \"Touch of Grey\"."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:26:32.903508+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-15.134869.nak300.schley.flac2448"
+}

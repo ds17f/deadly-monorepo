@@ -1,0 +1,62 @@
+{
+  "summary": "Soundboard capture with occasional drop‑outs delivers strong performances of Jack Straw, Friend Of The Devil and a stellar Stella Blue.",
+  "review": "The recording is a mostly clean soundboard (sbd) source; a few scattered drop‑outs are noted but overall the character, clarity and balance are praised. Musically the show is competent with standout moments on Jack Straw, Friend Of The Devil, Stella Blue and an entertaining Me & My Uncle featuring rare lyric variation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong playing and good sound quality; only minor technical glitches are mentioned, leading to a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced with praised character and clarity; a few drop‑outs on Disc One reported by one reviewer, cassette‑derived sound noted as good."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Friend Of The Devil",
+      "Stella Blue",
+      "Me and My Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise, post‑Europe ’72 set that stays tight and competent; while lacking Pigpen and Dark Star it still delivers solid pacing and memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His clean vocal on Stella Blue is highlighted as sweet and his overall character/clarity are praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend Of The Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T17:07:28.118201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-09.sbd.miller.105458.flac16"
+}

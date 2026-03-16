@@ -1,0 +1,37 @@
+{
+  "summary": "Recording marred by a digital hiccup about 12 seconds into “Don’t Ease Me In”; performance details are absent.",
+  "review": "The sole reviewer flags a noticeable digital glitch early in the track “Don’t Ease Me In,” present in both copies of this file. No comments are made about the band’s playing, set flow, or any other aspect of the show, leaving its musical quality unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.8,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating highlighting a recording defect; no positive information about the show to offset the technical issue."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Digital hiccup (~12 sec) in “Don’t Ease Me In” appears in both copies of the file; otherwise no details on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Don't Ease Me In": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:18:23.214424+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-07.151264.sbd.healy.miller.fixed.flac2496"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "High‑quality soundboard capture featuring a fiery U.S. Blues and Jerry’s upbeat playing, though Bob’s lead on Truckin’ is weak.",
+  "review": "The tape benefits from an early digital PCM master recorded with Neumann microphones, delivering clear and well‑balanced audio overall. Musically the show shines in the second set – U.S. Blues erupts with energy and Jerry is visibly happy, while tracks like Might As Well, Crazy Fingers and Box of Rain get strong nods; however Bob’s lead vocals on Truckin’ draw criticism.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviews praise the recording's technical fidelity and several standout performances, but vocal issues on Truckin' and mixed star ratings keep the overall score just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early digital PCM master with Neumann mics; crisp and clear, though a reviewer notes possible mix‑related flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "U.S. Blues",
+      "Might As Well",
+      "Crazy Fingers",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "The concert builds strong momentum, especially in the second set where U.S. Blues ignites the crowd; a few vocal slip‑ups on Truckin' are offset by high energy elsewhere."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as insanely happy and delivering hot guitar work, particularly on U.S. Blues and Might As Well.",
+    "Phil": "",
+    "Bob": "Lead vocals on Truckin' judged weak; background vocals acceptable.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:19:41.196576+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-06-22.neumann-fleck.unknown.7281.sbeok.shnf"
+}

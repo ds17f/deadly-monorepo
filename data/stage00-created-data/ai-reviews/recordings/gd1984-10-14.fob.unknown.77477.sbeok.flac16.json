@@ -1,0 +1,45 @@
+{
+  "summary": "Great‑sounding recording captures a late‑night show where Jerry was soulful, highlighted by a midnight Not Fade Away that segued into a dark Lovelight.",
+  "review": "Both reviewers rave about the audio quality, calling it “great sounding” and “very good,” while also noting the unique atmosphere of the concert—playing past midnight, lights shut off, and an impromptu segue from Not Fade Away into Lovelight. Jerry’s guitar work is singled out as especially soulful, making this a memorable performance despite the lack of detailed technical info on the source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Both reviews are strongly positive (5 and 4 stars) and praise both the music and sound quality; with only two detailed reviews confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as “great sounding” and “very good,” indicating clear, well‑balanced sound despite no explicit source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert ran late into midnight; the fire marshal shut off stage lights during Not Fade Away, but the band kept playing and transitioned into Lovelight in darkness, creating a unique late‑night vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar had soul this night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:32:40.209922+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-14.fob.unknown.77477.sbeok.flac16"
+}

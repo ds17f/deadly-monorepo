@@ -1,0 +1,61 @@
+{
+  "summary": "Mixed energy Long Beach show; Bird Song and Hell In A Bucket stand out",
+  "blurb": "The set opens with a tentative Iko Iko and falters on Jack Straw, but the crowd lifts the band during Bird Song and Hell In A Bucket. Brent’s keyboards add life throughout, while Bob Weir delivers a solid rhythm guitar performance. Highlights include Foolish Heart and a spirited encore of The Mighty Quinn.",
+  "review": "On December 11, 1988 at Long Beach Arena the Dead delivered a night that felt uneven but still had memorable moments. An ill‑judged Iko Iko opener and a lackluster Jack Straw set a sluggish tone, yet the audience’s enthusiasm shone through on Bird Song and Hell In A Bucket, where Brent Mydland’s keyboards truly commanded the space. Jerry’s vocals sounded half‑step behind and his guitar wore a weary edge, but Bob Weir’s rhythm work was praised as strong, and the second set recovered with a heartfelt Foolish Heart before launching into an extended jam that flowed through drums, space, and a soaring I Need A Miracle → Dear Mr. Fantasy sequence. The show closed on a high note with a rousing Mighty Quinn encore, leaving fans with a mixed‑bag performance captured best by a solid audience recording that preserves the crowd’s energy despite its technical quirks.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "The single analysis notes both positive (standout Bird Song, Hell In A Bucket, Brent's lively keyboards, Bob strong) and negative (lazy Jerry vocals/guitar, weak Iko and Jack Straw). The overall tone is mixed but leans slightly positive, justifying a modest +0.4 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-12-11.aud.willy.16095.sbeok.shnf",
+    "reason": "Good‑quality audience tape that captures crowd reactions and the band's live dynamics, making it the clearest representation of this mixed performance."
+  },
+  "key_highlights": [
+    "Bird Song captures crowd energy and shines despite an uneven set.",
+    "Brent Mydland’s keyboards add life, especially on Hell In A Bucket.",
+    "Foolish Heart and a lively Mighty Quinn encore provide strong musical peaks.",
+    "Recording is a good‑quality audience tape that preserves the atmosphere."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Hell In A Bucket",
+    "Foolish Heart",
+    "The Mighty Quinn (Quinn The Eskimo)"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals sound lazy and half‑step behind; guitar tone is weary, though his presence remains typical.",
+    "Phil": "",
+    "Bob": "Strong rhythm guitar work praised on this night.",
+    "Brent": "Keyboards add life and command the space throughout the show.",
+    "Mickey": "Standard drumming foundation with no notable deviations.",
+    "Billy": "Standard drumming foundation with no notable deviations."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-16T15:39:07.205158+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Hell In A Bucket"
+    ],
+    [
+      "Victim Or The Crime",
+      "Foolish Heart"
+    ],
+    [
+      "The Mighty Quinn (Quinn The Eskimo)"
+    ]
+  ]
+}

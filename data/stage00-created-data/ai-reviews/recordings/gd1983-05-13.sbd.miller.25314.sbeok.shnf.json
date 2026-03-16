@@ -1,0 +1,57 @@
+{
+  "summary": "High‑quality soundboard capture of a tight early‑80s show highlighted by a blazing Eyes of the World and Brent’s glowing keyboards.",
+  "review": "The May 13, 1983 performance shines thanks to Brent Mydland’s crisp vocals and soaring keys, especially on the fast‑moving “Eyes of the World,” while the band delivers solid renditions of Hell in a Bucket, West L.A. and Throwing Stones. The soundboard recording is clear, loud and well balanced, with only minor sound‑check hiccups noted during West L.A., making it an enjoyable listen for fans of this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently positive reviews praise both the musical performance (standout songs, strong band interplay) and the excellent soundboard recording; weighting yields a rating above average but below elite."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, loud, thumping mix with crisp instrument separation; minor sound‑check issues noted during West L.A. but no dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Hell in a Bucket",
+      "West L.A.",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight early‑80s set with strong transitions; three‑hour length feels complete despite missing encore, reflecting the band’s focused energy that night."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s stage presence noted as solid (‘last year stage left does the trick’) and his tone blends well with Brent’s vocals.",
+    "Phil": "Praised as ‘formidable’ and ‘invincible,’ showing strong bass work and confidence throughout the show.",
+    "Bob": "",
+    "Keys": "Brent Mydland receives abundant praise for glowing vocals, crisp delivery, and impactful keyboard solos, especially on Eyes of the World.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:37:56.586850+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-05-13.sbd.miller.25314.sbeok.shnf"
+}

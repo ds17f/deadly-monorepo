@@ -1,0 +1,39 @@
+{
+  "summary": "Rough soundboard capture of a forgotten 1969 show, marred by a power loss but highlighted by an intriguing Lovelight moment.",
+  "review": "The recording is a sound‑board source that suffers from a noticeable power outage during the second set, causing drop‑outs and forcing the band into an improvised acapella interlude. Musically the concert is largely unremarkable except for a quirky, Pigpen‑driven Lovelight that manages to stand out despite the technical hiccup.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating; reviewer finds the show forgettable and notes serious recording interruptions, leading to a low overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Power loss during Lovelight causes drop‑outs and forces the band into an a‑capella section; otherwise typical soundboard clarity but overall compromised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Uneven set hampered by a mid‑song power outage that disrupts momentum; early portions are described as unmemorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar needed electricity to continue; the power cut halted his playing during Lovelight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:14:24.497742+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-11-15.141256.sbd.tiedrich.miller.clugston.pitch.corrected.flac1644"
+}

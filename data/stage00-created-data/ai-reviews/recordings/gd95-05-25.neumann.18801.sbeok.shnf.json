@@ -1,0 +1,86 @@
+{
+  "summary": "A solid Neumann soundboard records a mixed‑quality show – highlights include Feels Like A Stranger, He’s Gone and US Blues, but Jerry’s playing divides fans.",
+  "review": "The recording benefits from the crisp Neumann mics, delivering clear sound despite a few listeners noting occasional lackluster mix. The performance itself is polarizing: some fans rave about the joyful opener, strong second‑set space jam and memorable US Blues, while others criticize Jerry’s guitar/vocals and key moments like Slipknot! and Franklin’s Tower.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Reviews are split between strong positive comments on specific songs and recording quality, and several harsh critiques of the overall performance, especially Jerry's playing."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers praise the Neumann microphones as \"PHAT\" and note clear capture; a few mention the sound isn’t great overall but no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feels Like A Stranger",
+      "He's Gone",
+      "US Blues",
+      "The Wheel",
+      "Quinn"
+    ],
+    "poor_songs": [
+      "Slipknot!",
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "Listeners appreciate the song selection (Stranger, Schoolgirl!, He’s Gone) and a strong opener, but overall pacing feels uneven due to inconsistent playing, especially in the first set."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some describe his tone as happy and joyful, others call his guitar and vocals abysmal or weak.",
+    "Phil": "Generally described as solid with no major complaints.",
+    "Bob": "",
+    "Keys": "Vince receives both criticism for being uninspired and high praise for being \"fire\" on this night.",
+    "Drums": "The drums and space jams are frequently praised as exceptional."
+  },
+  "song_mentions": {
+    "Feels Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Schoolgirl!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T08:46:51.105533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-05-25.neumann.18801.sbeok.shnf"
+}

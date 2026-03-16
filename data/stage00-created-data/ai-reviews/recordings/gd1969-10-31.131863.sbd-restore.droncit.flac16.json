@@ -1,0 +1,51 @@
+{
+  "summary": "Cloudy sound‑board recording of a Halloween ’69 show, but the performance is flawless – highlighted by an outstanding \"That's It For the Other One\" and tight early China → Riders material.",
+  "review": "Both reviewers rave about the musical strength of this late‑1969 concert, noting that every song is solid and that the band sounds rejuvenated after the Fillmore/East run. The audio is described as “cloudy” with hiss that has been partially cleaned up, so while listenable it isn’t pristine. Standout moments include a superb \"That's It For the Other One\" and tight renditions of \"Easy Wind\" and the Working man's Dead material.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The show receives high praise for playing and song selection (70% weight), while the recording is noted as cloudy and in need of further cleanup (30% weight), resulting in a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cloudy, hiss‑laden capture; restoration has reduced hiss but the sound remains less than crystal clear. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "That's It For the Other One",
+      "Easy Wind",
+      "Workingman's Dead"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as uniformly strong, with early China→Riders material flowing naturally and every number feeling well‑played and well‑sung."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals get a humorous mention on \"cuz I'm hunting on top of the world\" and his playing is praised as excellent throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "That's It For the Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Workingman's Dead": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:42:16.611360+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-10-31.131863.sbd-restore.droncit.flac16"
+}

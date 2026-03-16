@@ -1,0 +1,69 @@
+{
+  "summary": "Crisp soundboard capture of a strong ’87 show with standout performances of Black Peter, Peggy‑O and Row Jimmy.",
+  "review": "The recording is praised for its clarity and solid mix, delivering a noticeably crisper board source than other versions. Musically the concert shines thanks to emotive renditions of Black Peter, a booming Scarlet > Fire jam, and tight takes on Peggy‑O and Row Jimmy, while Jerry’s post‑coma vocal depth adds an unexpected poignancy. A few reviewers note dated keyboards and a waning vocal tone, but overall the show is regarded as one of the better 1987 outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high marks for both performance and sound quality across many detailed reviews; weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the mix crisp, clear and well‑balanced; no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Scarlet > Fire",
+      "Peggy-O",
+      "Row Jimmy",
+      "All Over Now",
+      "Black Muddy River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the setlist as well‑chosen and consistently strong, with emotional peaks in the second set (Black Peter) and energetic jams (Scarlet > Fire)."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – some note his voice sounding weakened after his coma, but others praise his deep, emotive delivery on Black Muddy River and overall strong lead work.",
+    "Phil": "Positive – bass described as booming, especially during Scarlet > Fire, enough to “make you piss yourself.”",
+    "Bob": "Positive – noted for solid rhythm guitar and vocal contributions, “good lovin’” on the night.",
+    "Keys": "Mixed – a few call the keyboards \"tinkly\" and annoying, while others say there’s no tinkly annoyance here.",
+    "Drums": "Positive – drums hailed as legendary for 1987, with both Bill and Mickey receiving praise."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:52:38.141679+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-01.sbd.samaritano.23060.sbeok.shnf"
+}

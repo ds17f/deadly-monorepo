@@ -1,0 +1,50 @@
+{
+  "summary": "Average‑quality recording with decent sound; set highlights feature a strong Playing in the Band → Uncle John's Band transition and a nicely played Brokedown Palace.",
+  "review": "The reviewer finds this 1994 show to be neither great nor terrible, noting solid playing throughout but few standout moments. The second set shines thanks to a flowing PITB>UJB sequence and a nice rendition of Brokedown Palace, while the first set is competent without major highlights. No specific recording‑quality comments are given, so the audio appears serviceable but unremarkable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a 3‑star rating and describes an average performance with a few highlights; lack of recording details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound source or clarity; reviewer only says the show is \"not great, but not terrible,\" implying a passable but unremarkable recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Uncle John's Band",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is consistently played but lacks major highlights; second set stands out with a smooth PITB>UJB segue and a nicely rendered Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:16:59.197729+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-08-04.147726.schoepsCMC5MK21.ebel.flac16"
+}

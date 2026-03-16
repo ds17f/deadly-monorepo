@@ -1,0 +1,64 @@
+{
+  "summary": "Good-quality recording captures an emotionally charged final show with haunting \"So Many Roads\" and a magical Unbroken Chain, though the performance stumbles on Shakedown and Black Muddy River.",
+  "review": "The concert is remembered as a poignant farewell – fans rave about the beautiful rendition of \"So Many Roads\" and the spell‑binding Unbroken Chain and Box of Rain, while noting a double encore that felt like a proper send‑off. The sound is described as good, but some reviewers point out noticeable slip‑ups in Garcia’s playing on Shakedown and Black Muddy River, giving the show a mixed musical impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed with several standout moments but clear performance flaws; recording is generally praised as good, leading to an overall rating near 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Only one reviewer explicitly mentions the recording being of good quality; no details on source (soundboard vs. audience) or specific technical issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Unbroken Chain",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Shakedown",
+      "Black Muddy River"
+    ],
+    "setlist_flow": "The concert opened strongly, built to an emotional climax with a double encore and standout numbers, but later suffered from noticeable slips in Garcia’s playing that dampened the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for haunting \"So Many Roads\" and overall impact; criticized for forgetting lyrics on Shakedown and sounding off on Black Muddy River.",
+    "Phil": "Highlighted for delivering a rare Unbroken Chain performance and seemingly rescuing the show during its weaker moments.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:44:02.750395+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-09.127735.nick.flac16"
+}

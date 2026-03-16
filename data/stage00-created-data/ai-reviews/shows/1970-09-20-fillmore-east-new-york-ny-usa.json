@@ -1,0 +1,68 @@
+{
+  "summary": "Acoustic treat with epic Not Fade Away and stellar To Lay Me Down",
+  "blurb": "The Fillmore East show shines with a gorgeous acoustic first set, highlighted by \"Cumberland Blues\" and \"New Speedway Boogie.\" The second set delivers a powerhouse \"Not Fade Away\" jam and an emotional Jerry‑on‑piano version of \"To Lay Me Down.\" Overall the performance is consistently praised across recordings.",
+  "review": "On September 20, 1970 at the Fillmore East the Dead delivered one of their most memorable nights. The acoustic opening set flows like a warm‑up for the band, with Pigpen’s mournful piano underscoring Jerry’s superb guitar on \"Cumberland Blues\" and \"New Speedway Boogie,\" while Phil’s bass adds a solid foundation that many reviewers called a tour‑de‑force. The second set erupts into high‑energy territory – the legendary \"Not Fade Away\" segue into a scorching \"Caution (Do Not Stop On Tracks)\" and a wild \"Feedback\" jam keep the momentum rolling, and Jerry’s surprise piano on the heartfelt “To Lay Me Down” provides a unique emotional climax. Across all eight soundboard sources the show is praised for its seamless set‑to‑set flow, tight interplay, and standout moments; the only detractors are recording quirks in a few tapes, not the music itself.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 140,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Four recordings are explicitly positive, praising the setlist flow, specific songs and band performance; four are mixed but only note recording flaws, not musical shortcomings. No consistent negative comments about playing were found, so a moderate positive adjustment of +1.0 is applied.",
+      "final_calculation": "2.5 + 0.4 + 1.0 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-09-20.140664.sbd.boswell.smith.miller.clugston.flac1644",
+    "reason": "High‑quality soundboard capture with clear balance, minimal hiss and excellent representation of both acoustic and electric sets."
+  },
+  "key_highlights": [
+    "Acoustic first set described as a \"real treat\" with strong interplay.",
+    "\"Not Fade Away\" jam in the second set is highlighted as epic.",
+    "Jerry’s piano on the emotional \"To Lay Me Down\" stands out.",
+    "Stellar performances of \"Cumberland Blues\" and \"New Speedway Boogie\"."
+  ],
+  "song_highlights": [
+    "Cumberland Blues",
+    "New Speedway Boogie",
+    "To Lay Me Down",
+    "Not Fade Away",
+    "Caution (Do Not Stop On Tracks)",
+    "Mama Tried"
+  ],
+  "band_performance": {
+    "Jerry": "Superb guitar tone throughout; leads the band with crisp solos and surprises everyone by playing piano on \"To Lay Me Down\".",
+    "Phil": "Solid, tour‑de‑force bass work; adds electric bass to the acoustic set for extra depth.",
+    "Bob": "Provides solid rhythm guitar texture and earns a shout‑out for his vocal grit on songs like \"Truckin'\".",
+    "Brent": "Pigpen’s organ and piano add mournful color; his piano on \"To Lay Me Down\" is a highlight of the night.",
+    "Mickey": "Drums lock in tightly, driving both the acoustic groove and the high‑energy second set.",
+    "Billy": "Keeps steady pulse alongside Mickey, supporting the jams with reliable percussion."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-19T23:28:33.305876+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cumberland Blues"
+    ],
+    [
+      "New Speedway Boogie"
+    ],
+    [
+      "To Lay Me Down"
+    ],
+    [
+      "Not Fade Away",
+      "Caution (Do Not Stop On Tracks)",
+      "Feedback",
+      "And We Bid You Good Night"
+    ],
+    [
+      "Mama Tried"
+    ]
+  ]
+}

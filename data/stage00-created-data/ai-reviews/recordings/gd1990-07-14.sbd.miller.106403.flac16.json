@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard‑to‑DAT transfer captures a strong July 1990 show, highlighted by a fiery Shakedown Street opener and solid first‑set selections.",
+  "review": "The recording, sourced from Charlie’s SBD and transferred to DAT by Miller, is crystal clear and lets the band’s mature 1990 sound shine through. The performance features tight playing, especially on Shakedown Street and Far From Me, with a lively second set and double encore that keep the energy high. Overall the show feels like one of the stronger midsummer dates of that era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑5 stars and praised both the musical performance and the recording quality; detailed comments provide strong evidence for a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "SBD > DAT transfer noted as crisp, full‑frequency and better than the live mix; no reported dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Far From Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set with highlighted Shakedown Street and Far From Me, followed by a strong second set and a double encore that maintain momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s playing on Shakedown Street is singled out as a highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:34:12.715520+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-14.sbd.miller.106403.flac16"
+}

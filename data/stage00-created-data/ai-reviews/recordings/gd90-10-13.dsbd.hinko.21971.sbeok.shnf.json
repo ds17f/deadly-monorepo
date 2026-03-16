@@ -1,0 +1,70 @@
+{
+  "summary": "Clean soundboard capture of a flat first set and a surprisingly strong second set, highlighted by Touch‑of‑Grey/Estimated Prophet and Stella Blue.",
+  "review": "The recording is a clean SBD source that many listeners describe as superbly clear, though the performance itself was uneven – an off‑night marked by jet‑lag and a lack of intensity in the first set, but redeemed by a dazzling second set with standout jams. Songs like Touch‑of‑Grey into Estimated Prophet, Stella Blue, Candyman and Loser receive particular praise, while Crazy Fingers and Playing in the Band suffer from noticeable flubs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Show quality is judged as average to below‑average (many reviewers note flat playing, jet‑lag and off‑night), while recording quality is consistently praised as clean and superb; the weighted combination yields a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the SBD \"very clean\", \"superb\" and note excellent clarity and presence. No major drop‑outs are reported, though occasional performance flubs are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey / Estimated Prophet",
+      "Stella Blue",
+      "Candyman",
+      "Loser"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "Playing in the Band"
+    ],
+    "setlist_flow": "The first set is described as flat, lacking intensity and suffering from jet‑lag fatigue. The second set picks up dramatically, delivering strong jams and several high points that many reviewers cite as the highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia appears in good spirits; his guitar work is soulful and often stands out, though vocals are noted as rough on some songs.",
+    "Phil": "Phil briefly shouts \"Thanks Mom\" after the encore; no detailed comments on bass performance.",
+    "Bob": "Weir is quoted calling the show a \"horrible performance\" and later praised for vocal contributions on Walkin Blues, but otherwise receives little positive mention.",
+    "Keys": "Keyboards (Vince) are described as agitated or over‑done, adding a calliope‑like horn sound that some find dissonant.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey / Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:27:24.060324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-13.dsbd.hinko.21971.sbeok.shnf"
+}

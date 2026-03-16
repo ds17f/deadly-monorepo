@@ -1,0 +1,57 @@
+{
+  "summary": "Fair‑quality recording of a lively first set highlighted by a scorching Jack Straw and solid renditions of Peggy‑O and Friend of the Devil",
+  "review": "The performance is praised for its relaxed vibe, energetic playing and especially the intense Jack Straw, with several reviewers noting Garcia’s full engagement. Recording quality is mixed – listeners find it generally listenable but complain about reduced crispness, occasional hiss and clipping, leading to a fair technical rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around 4 (strong performances, standout songs) while recording quality is about 2.5–3 (listenable but not crisp). Weighted combination yields a ~3.6 overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Less crisp than desired, some hiss and occasional clipping; overall listenable but not high‑fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "Friend of the Devil",
+      "CR&S > LLRain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as mellow and relaxed yet builds into an intense, high‑energy performance; reviewers note good pacing and strong song transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted as intense on Jack Straw and fully engaged throughout the set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CR&S > LLRain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:26:03.757491+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-30.set1-sbd.munder.15408.sbeok.shnf"
+}

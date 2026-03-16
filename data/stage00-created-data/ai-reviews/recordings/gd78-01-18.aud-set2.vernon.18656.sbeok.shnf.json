@@ -1,0 +1,57 @@
+{
+  "summary": "Audience‑sourced recording captures a jazzy second set with Terrapin Station into Sugar Magnolia and a standout Stella Blue, though the tape is hoarse, incomplete and of mixed fidelity.",
+  "review": "The show shines with a ’73‑style second set that flows from Terrapin Station straight into a nonstop Sugar Magnolia, plus a soulful take on Stella Blue. While several listeners praise the overall sound and energy, the recording is an audience capture that suffers from occasional muddiness, missing first‑set material, and Jerry’s noticeably hoarse voice.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Four detailed reviews show strong musical performance (70% weight) but divergent opinions on recording quality (30% weight), leading to a solid yet imperfect overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note \"great sound\" and clear ambience, but also flag the tape as non‑board, incomplete, with hoarse vocals and occasional unevenness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Sugar Magnolia",
+      "Stella Blue",
+      "Passenger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as jazzy and 'out there', with a seamless Terrapin‑to‑Sugar Mag sequence and strong, drippy jams that keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is noticeably hoarse/lingering laryngitis throughout, but his playing remains solid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:26:19.432828+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-18.aud-set2.vernon.18656.sbeok.shnf"
+}

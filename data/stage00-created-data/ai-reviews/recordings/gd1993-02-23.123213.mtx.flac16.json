@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix recording shows occasional timing hiccups on “Cold Rain & Snow” but captures a heavy, jam‑rich 1993 show where Garcia’s playing is at its peak.",
+  "review": "The performance is praised as one of the band’s strongest from 1993, with a powerful, serious vibe and Garcia delivering his last consistently great guitar year. The matrix source delivers a warm overall sound, though the sync issue on “Cold Rain & Snow” creates a slap‑back delay effect and Phil’s bass sits unusually forward in the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show quality is highlighted as exceptional for the era, while recording issues are limited to a single track; the balance yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Mismatched source timing on “Cold Rain & Snow” creates a slap‑back delay; Phil’s bass is turned up in the mix, giving a bouncy tone. Overall matrix treatment yields a warm sound but requires better sync for perfect clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A heavy, serious set that showcases the band's tight jamming in 1993; the flow is praised as consistently strong throughout despite minor recording quirks."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is noted as being among his last consistently great years; vocals are clean with no phasing.",
+    "Phil": "Bass is unusually forward in the mix with a bouncy, prominent tone that some listeners find overwhelming on the matrix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T09:50:37.387329+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-02-23.123213.mtx.flac16"
+}

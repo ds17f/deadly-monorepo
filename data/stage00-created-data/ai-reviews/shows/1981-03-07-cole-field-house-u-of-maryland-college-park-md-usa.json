@@ -1,0 +1,81 @@
+{
+  "summary": "First‑set fireworks with Bird Song & Deal; second set uneven",
+  "blurb": "The opening half of the night erupts with soaring Bird Song, tight jams on Alabama Getaway and a blistering Deal. The second set loses momentum, ending on a high note with Truckin' and Johnny B. Goode.",
+  "review": "Cole Field House delivered an unforgettable first act on March 7, 1981. Jerry Garcia was “on fire,” launching an epic Bird Song that many reviewers called soaring, while his solo on Deal cut through the house like a knife. The band rode that energy through Alabama Getaway, Big River, Jack‑A‑Roe and a gorgeous Look Like Rain, with Brent’s keys barely audible but never getting in the way. Phil’s bass was unfortunately buried in several audience mixes, though the rhythm section kept solid time. The second set stumbled – Iko Iko sparked brief enthusiasm before a sagging Saint Of Circumstance and a missing drum track dulled the flow. Still, the night closed strong with a rousing Truckin' into Johnny B. Goode, giving fans a classic encore. For listeners wanting the clearest glimpse of this performance, the crystal‑clear Glassberg audience tape (gd1981-03-07.nak700.glassberg.motb.82370.sbeok.flac16) captures the first‑set brilliance with superb warmth and no dropouts.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 52,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Multiple recordings praised the first set (Bird Song, Deal, Alabama Getaway) with strong positive language, while the second set received mixed or negative remarks (dragging momentum, missing drums). Overall sentiment leans positive due to consistent acclaim of key songs, offset by noted flaws, yielding a moderate +0.8 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 0.8 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-03-07.nak700.glassberg.motb.82370.sbeok.flac16",
+    "reason": "Crystal‑clear audience capture with superb mix; preserves the first‑set fire and has no dropouts, making it the most complete and enjoyable listening experience."
+  },
+  "key_highlights": [
+    "First‑set brilliance – Bird Song, Deal, Alabama Getaway, Big River all sparkle.",
+    "Strong closing jam on Truckin' leading into a fiery Johnny B. Goode.",
+    "Crystal‑clear Glassberg audience tape provides the best sonic window into the show.",
+    "Second set suffers from uneven energy and missing drum track, but still offers memorable moments."
+  ],
+  "song_highlights": [
+    "Alabama Getaway",
+    "Big River",
+    "Jack-A-Roe",
+    "Bird Song",
+    "Looks Like Rain",
+    "Deal",
+    "Iko Iko",
+    "Truckin'",
+    "Johnny B. Goode"
+  ],
+  "band_performance": {
+    "Jerry": "Soaring solos on Bird Song and a powerful, gritty tone on Deal; even when reportedly ill he remained phenomenal.",
+    "Phil": "Bass often buried in audience mixes and occasionally inaudible; minimal positive commentary beyond keeping the low end.",
+    "Bob": "Brief Dire Wolf intro noted but otherwise not highlighted for this night.",
+    "Brent": "Keyboards present but low‑level in most recordings, never detracting from the guitars.",
+    "Mickey": "Drums solid during the first set; second‑set drum track missing on some tapes, reducing impact.",
+    "Billy": "Keeps a steady groove throughout the first half; absent or faint on the problematic second‑set recording."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-13T09:05:43.254468+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Alabama Getaway",
+      "Greatest Story Ever Told"
+    ],
+    [
+      "Me And My Uncle",
+      "Big River"
+    ],
+    [
+      "Jack-A-Roe"
+    ],
+    [
+      "Bird Song",
+      "Looks Like Rain",
+      "Deal"
+    ],
+    [
+      "Iko Iko",
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Jam",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Black Peter",
+      "Around & Around",
+      "Johnny B. Goode"
+    ]
+  ]
+}

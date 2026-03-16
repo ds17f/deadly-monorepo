@@ -1,0 +1,93 @@
+{
+  "summary": "Soundboard source with noticeable hiss and level quirks captures a late‑1972 Winterland set highlighted by a fire‑blazing Playin' in the Band, soaring Other One and bouncy Truckin'.",
+  "review": "The performance is widely praised for Jerry Garcia’s flawless lead, an inspired Playin' in the Band, a sparkling Other One and a buoyant Truckin', with standout moments like China Cat → I Know You Rider and Stella Blue. The soundboard recording suffers from hiss, occasional level problems and a few cuts, but remains listenable for fans who value the musical peaks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for the music (≈4.5/5) outweighs moderate recording flaws (≈3/5); weighted average yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss and level inconsistencies; occasional drop‑outs/cuts (notably in The Other One and Stella Blue); bass mixed a bit low; overall audible but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "The Other One",
+      "Truckin'",
+      "China Cat > I Know You Rider",
+      "Stella Blue",
+      "Cold Rain & Snow",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Uncle John's Band",
+      "The Other One (partial cut)"
+    ],
+    "setlist_flow": "Winterland opener with Cold Rain & Snow set a chilly tone, followed by an energetic first set. The second set surged with Playin' in the Band into a soaring Other One and a bouncy Truckin', while the encore‑type moments like China Cat → I Know You Rider kept momentum high despite some tape glitches."
+  },
+  "band_member_comments": {
+    "Jerry": "Flawless, fluid guitar work; leads an especially beautiful Other One and shines vocally on Stella Blue; brief out‑of‑tune moment in early Sugar Magnolia but otherwise top‑notch.",
+    "Phil": "Solid bass throughout most of the show but mixed a bit low in the recording; shows signs of fatigue later in the set.",
+    "Bob": "Matches Garcia note for note, provides lovely vocal accents (Deal, Sunshine Daydream) and strong backing on multiple songs.",
+    "Keys": "",
+    "Drums": "Billy's drumming praised as excellent and driving, holding the band together even when the mix is uneven."
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 3,
+      "total_mentions": 6
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:26:58.331583+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-12-10.sbd.gorinsky.5801.sbeok.shnf"
+}

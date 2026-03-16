@@ -1,0 +1,31 @@
+{
+  "summary": "A fan‑rated favorite show with a smiling Jerry, though recording details are unknown",
+  "review": "The lone five‑star review hails this concert as one of the reviewer’s top moments in 25 years of following the Dead, highlighting Jerry’s joyful presence onstage. No technical commentary is provided, so the sound source and fidelity remain unclear, but the emotional impact of the performance is unmistakable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong positive sentiment and perfect rating for the show itself, but no information on recording quality limits confidence; overall rating reflects an excellent performance with unknown audio fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review provides no details about soundboard vs. audience source, clarity, or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were given."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer notes a 'smiling Jerry', indicating an especially engaging performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T23:25:22.192652+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-17.141317.sbd.cm.miller.flac1644"
+}

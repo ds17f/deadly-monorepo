@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience‑captured audio showcases a rare, kickass Scarlet Begonias → Fire on the Mountain transition.",
+  "review": "The recording is praised for its crystal‑clear capture despite being an audience source, preserving every nuance of the band. Musically the show shines thanks to an unusual and exhilarating Scarlet Begonias into Fire on the Mountain segue that stands out as a highlight. Jerry’s vocals are noted as a bit “froggy,” but it doesn’t detract from the overall enjoyment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "A single five‑star review highlights both superb musical performance (rare transition) and excellent audio capture, warranting a high rating though confidence is limited by the small sample size."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Captured beautifully with clear mix; only minor vocal coloration on Jerry (a bit froggy) noted but not distracting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Features an atypical Scarlet Begonias → Fire on the Mountain transition that adds excitement and showcases creative set pacing compared to typical ’70s shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals sound a bit froggy but remain non‑distracting; guitar work not specifically mentioned.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:18:56.649346+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-06.167956.beyer.m160.vita.miller.clugston.fixed.167675.flac1648"
+}

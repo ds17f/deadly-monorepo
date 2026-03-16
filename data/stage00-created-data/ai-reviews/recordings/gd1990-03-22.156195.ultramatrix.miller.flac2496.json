@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer praises the tape as great, though provides no details about performance or recording specifics.",
+  "review": "The sole review is extremely brief, offering only a thank‑you and a positive headline (“Great tape!”). No information is given on the source type, sound quality nuances, setlist, or individual performances, leaving the musical content essentially unassessed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one very brief review; while the title is positive about the tape, there are no concrete details on either performance or technical quality to justify a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls the recording \"great\" but provides no specifics about clarity, mix, or source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T04:46:26.044795+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-22.156195.ultramatrix.miller.flac2496"
+}

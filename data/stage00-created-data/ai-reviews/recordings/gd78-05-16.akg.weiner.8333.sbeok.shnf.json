@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy 1978 show captured on a solid audience tape – crisp sound and standout performances of Comes A Time, Jack Straw and The Music Never Stopped.",
+  "review": "The recording is an impressive audience capture with clear detail and only minor mix quirks (Phil’s bass low). Musically the band is in top form: Jerry’s emotive vocals and daring two‑note solo on Comes A Time, a scorching Jack Straw opener, and a thundering mid‑section on The Music Never Stopped make this a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 20 reviews, the vast majority are 4–5 stars and praise both performance and sound; only a few low or mixed comments temper but do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, impressive tape quality with minimal audience noise; occasional mix issue (Phil’s bass buried) and typical audience‑tape ambience but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Jack Straw",
+      "The Music Never Stopped",
+      "Sugar Magnolia",
+      "Fire",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, fiery opener with Jack Straw, a solid first set that builds into a soaring second set highlighted by Comes A Time and an explosive The Music Never Stopped; the show closes with high‑energy Sugar Magnolia and a heartfelt He's Gone."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for raw emotional vocals on Comes A Time, daring two‑note solo, and overall strong guitar tone throughout.",
+    "Phil": "One reviewer notes his bass sits low in the mix; otherwise no specific criticism.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drumming described as powerful on Jack Straw and “savagely primal” on Sugar Magnolia (Mickey’s work); overall rhythm section praised."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-25T13:03:53.760810+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-16.akg.weiner.8333.sbeok.shnf"
+}

@@ -1,0 +1,44 @@
+{
+  "summary": "Crystal‑clear audience tape with excellent recording quality and a few standout moments like Shakedown Street, making for an overall positive listening experience.",
+  "review": "Both reviewers are enthusiastic, noting that the audience source sounds almost studio‑quality thanks to Dave Cohen’s meticulous taping and transfer work. The show offers about a CD‑length of high points – highlighted by Shakedown Street and a stretch through Take You Home – while the remainder is solid but more routine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Strong recording clarity (excellent audience source) and generally positive remarks outweigh the limited detail on overall show depth, yielding a rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the tape as crystal clear; Cohen’s taping and transfer are praised, indicating a very clean audience recording with minimal noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "One reviewer suggests appending Shakedown Street to the start of the second set and taking a CD‑length segment through Take You Home, implying a natural flow for the highlight portion."
+  },
+  "band_member_comments": {
+    "Jerry": "Enthusiastic shout‑out (“Jerry Forever!”) showing strong appreciation.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:32:21.105368+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-03.nak.cohen.106904.flac16"
+}

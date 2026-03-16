@@ -1,0 +1,81 @@
+{
+  "summary": "Crystal‑clear 1979 soundboard captures a superb late‑year show highlighted by an incendiary Sugaree, Alabama Getaway and a raving One More Saturday Night.",
+  "review": "The recording is praised as one of the era’s clearest soundboards – crisp and well‑balanced though Phil’s bass can slip into the mix. Musically the concert shines with a monster Sugaree, a blazing Alabama Getaway, a classic Playing in the Band jam and an electrifying second‑encore One More Saturday Night, earning it high marks from most fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and recording five stars, highlighting strong performances and excellent sound; only one strongly negative review tempers the overall enthusiasm, resulting in a high but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with superb instrument separation; occasional bass burying/distortion noted by several reviewers but does not detract significantly from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Alabama Getaway",
+      "Playing in the Band",
+      "One More Saturday Night",
+      "Terrapin Station",
+      "Mama Tried",
+      "Mexicali Blues",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as tight and inventive, second set builds into a long Alabama Getaway and a classic '79 Playin' jam before a high‑energy encore; overall pacing praised for sustained excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Interplay with Bob noted positively in the second‑encore; guitar work generally praised.",
+    "Phil": "Bass sometimes lost or slightly distorted in the mix, but not enough to mar the performance.",
+    "Bob": "Rhythm guitar and vocals highlighted as strong, especially on One More Saturday Night and during jam sections.",
+    "Keys": "Brent's inventive fills (especially on Terrapin) praised; keyboards add depth throughout.",
+    "Drums": "Drum work lauded for creative whistles and a 'drum city' vibe in the Playin' segment."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:52:06.931687+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-28.sbd.ladner.gmb.87394.sbeok.flac16"
+}

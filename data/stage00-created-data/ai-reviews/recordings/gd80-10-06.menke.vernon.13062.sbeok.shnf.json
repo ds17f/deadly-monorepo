@@ -1,0 +1,45 @@
+{
+  "summary": "Audience recording captures a solid Warfield show with a smoking The Other One despite the venue’s tricky acoustics.",
+  "review": "The tape is an audience (AUD) source that many reviewers describe as surprisingly clear given Warfield’s notoriously difficult acoustic environment, with loud announcer cues adding to the live feel. The performance itself gets high marks – especially the pre‑second‑verse jam in “The Other One” and a satisfying U.S. Blues encore – though one reviewer felt the overall sound was sub‑par.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Three of four reviewers rate the recording highly and praise the show, while one strongly dislikes it; the consensus points to a good musical performance with an acceptable audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note Warfield’s tough acoustic setting but overall find the AUD clear, with loud announcer cues and occasional “tough” ambience; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic setting described as difficult, but the performance flows well; a highlighted jam in The Other One and a satisfying encore make the show enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:10:27.611072+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-06.menke.vernon.13062.sbeok.shnf"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Excellent soundboard capture of Jerry’s first post‑coma show, highlighted by a soaring Touch of Grey and an epic Playing in the Band jam.",
+  "review": "The recording is a pristine soundboard (sbd) that delivers crystal‑clear instrument separation, with only minor mix quirks at the opening and a brief vocal over‑drive on Looks Like Rain. Musically the concert shines – Jerry Garcia’s inventive, melodic playing marks a triumphant return after his coma, Phil Lesh lays down smooth jazz‑inflected bass lines, Brent Mydland adds atmospheric keys, and Bill Kreutzmann/Mickey Hart lock in tight rhythmic support. Standout moments include an audience‑charged Touch of Grey and a six‑minute jam out of Playing in the Band, making this a historic and highly recommended show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviewers rate the release 4‑5 stars and praise both the musical performance and the soundboard quality; minor mix oddities are noted but do not detract from an overall exceptional experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with great instrument separation. Some reviewers note early‑show mix oddities and a brief vocal over‑drive on Looks Like Rain, but overall the sound is studio‑like."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "The concert flows naturally from an emotional opener (Jerry’s first show after his coma) through tight set work, culminating in a high‑energy second half highlighted by the epic Playing in the Band jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers strong, melodic and inventive playing; his voice is a bit creaky but more powerful than earlier in the year, energizing the band.",
+    "Phil": "Lesh’s bass work is described as smooth, jazzy and perfectly meshed with the rhythm section.",
+    "Bob": "A minor complaint that Bob Weir could have been heard more prominently; otherwise his rhythm work supports the flow.",
+    "Keys": "Brent Mydland creates atmospheric textures that enhance the jams.",
+    "Drums": "Bill Kreutzmann and Mickey Hart provide fluid, supportive accompaniment throughout, especially during the Playing in the Band segment."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:33:09.620136+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-15.sbd.braverman.13270.shnf"
+}

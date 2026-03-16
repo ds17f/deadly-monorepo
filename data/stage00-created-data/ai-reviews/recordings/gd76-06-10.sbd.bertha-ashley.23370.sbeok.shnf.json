@@ -1,0 +1,57 @@
+{
+  "summary": "A warm, well‑balanced soundboard capture of a classic Boston Music Hall show highlighted by a soaring Mission In The Rain and a tight Help > Slipknot! > Franklin's Tower sequence.",
+  "review": "The recording delivers rich, full‑bodied sound with excellent clarity for most instruments, though several listeners note Jerry Garcia’s guitar is buried in the mix and there are a few occasional gaps. Musically the performance shines – Mission In The Rain is repeatedly called breathtaking, and the second‑set medley of Help > Slipknot! > Franklin's Tower is praised for its tightness and energy. Overall fans consider this one of the standout 1976 Boston shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, praising both the show (especially Mission In The Rain and the Help/Slip/Franklin's sequence) and the sound quality; minor complaints about Jerry’s mix and a few tape gaps keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Warm, full‑bodied board sound with crisp highs and deep mids; many cite it as one of the best‑sounding SBD releases. A recurring issue is Garcia’s guitar being low in the mix and a handful of small gaps (U.S. Blues fade‑out, missing sections)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mission In The Rain",
+      "Help > Slipknot! > Franklin's Tower",
+      "Let It Grow",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The setlist is praised for its diversity and pacing – a soulful first set capped by Mission, followed by a creative second‑set medley (Samson, Help>Slip>KFranklin’s, Let It Grow, Friend of the Devil, Playin' in the Band > Dancin' In The Streets) that keeps the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are praised as sweet and on‑point, but many reviewers note his guitar sits low in the mix, leading to mixed feelings about his presence.",
+    "Phil": "Described as \"in fine form\"; Phil’s bass work is appreciated especially by fans of the “Phil Zone”.",
+    "Bob": "Bobby (Weir) is called \"spot on\" and solid throughout the performance.",
+    "Keys": "Keith is repeatedly lauded – \"on fire\", leading jams like Slipknot! with energetic playing.",
+    "Drums": "Bill Kreutzmann’s drumming gets positive nods for driving the grooves, though one reviewer felt he was \"all over the place\"."
+  },
+  "song_mentions": {
+    "Mission In The Rain": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:40:30.343376+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-10.sbd.bertha-ashley.23370.sbeok.shnf"
+}

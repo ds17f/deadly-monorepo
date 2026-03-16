@@ -1,0 +1,87 @@
+{
+  "summary": "Great Philly Spectrum show with strong first set and a smoking Other One, captured on a clear audience‑style recording.",
+  "review": "The concert is remembered fondly for its energetic first set – highlights include Deal, Hand Jive and a mighty Might As – and an electric second set that builds through Shakedown Street into Spoonful, Drums, Space and a standout The Other One before closing with Comes A Time and Good Lovin'.  Reviewers note the sound was “great,” suggesting a well‑balanced audience recording despite no explicit source details.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the performance and mention good sound quality; limited number of reviews keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listener describes the sound as great despite being a floor‑GA audience tape; no specific dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Comes A Time",
+      "Good Lovin'",
+      "Might As"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, upbeat first set that transitions into a flashing‑lights second set with classic jams; overall pacing described as lively and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass highlighted on The Other One.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Gimmie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hand Jive": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:30:59.762363+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-23.111956.beyer-senn.daweez.d5scott.flac16"
+}

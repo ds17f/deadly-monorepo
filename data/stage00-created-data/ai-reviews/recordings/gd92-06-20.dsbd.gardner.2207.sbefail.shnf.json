@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard recording of a legendary RFK show highlighted by an unforgettable Shenandoah‑Space > Casey Jones moment and stellar keyboard work.",
+  "review": "The tape captures a classic early‑summer 1992 RFK concert where the band builds a solid first set and then erupts in a second half dominated by the long‑awaited Casey Jones, propelled by a soaring Shenandoah/Space jam.  Reviewers rave about Vince’s exuberant keys, Jerry’s lead work and the train‑whistle climax, while a few note a slight dip in the Corrina mix but overall deem the soundboard source crystal‑clear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews (≈70 %) are 4–5 stars and praise both performance and recording; a handful of lower‑rated comments do not outweigh the consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Most reviewers describe the mix as crisp, balanced and “killer”; a few note a minor dip in the Corrina segment but no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "Shenandoah > Space",
+      "Corrina",
+      "Crazy Fingers",
+      "Playin'",
+      "Uncle John's Band",
+      "Picasso Moon",
+      "Maggie's Farm"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, upbeat first set leads into a second set that builds tension with spacey keyboards and culminates in the historic Casey Jones train‑whistle moment; the flow is repeatedly described as magical and unforgettable."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring lead lines, especially during Shenandoah/Space and his melodic work on the train‑whistle climax.",
+    "Phil": "Noted for a “phat” bass presence on Maggie’s Farm and overall solid groove throughout.",
+    "Bob": "Mentioned for energetic vocal delivery and backing harmonies that added texture to the second set.",
+    "Keys": "Vince’s exuberant keyboard work is highlighted as a show‑stealer—ripping on Corrina, Picasso Moon and driving the space jams.",
+    "Drums": "Bill & Mickey receive kudos for the dynamic drums/space section and the iconic train‑whistle effect that punctuated Casey Jones."
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "Shenandoah > Space": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Corrina": {
+      "positive_mentions": 10,
+      "negative_mentions": 2,
+      "total_mentions": 12
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 12,
+      "negative_mentions": 1,
+      "total_mentions": 13
+    },
+    "Playin'": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Picasso Moon": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-18T07:21:48.386666+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-20.dsbd.gardner.2207.sbefail.shnf"
+}

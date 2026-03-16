@@ -1,0 +1,103 @@
+{
+  "summary": "Excellent soundboard source with crisp audio; the show shines thanks to a monster Shakedown, masterful Masterpiece, and a stellar Picasso Moon → Fire sequence.",
+  "review": "The gd93‑05‑27.sbd.miller recording is widely praised for its clear, well‑balanced sound – many reviewers call it “excellent” or note that it’s the best version of this show on the net. Musically the concert delivers a solid first set highlighted by Shakedown Street, Dire Wolf and When I Paint My Masterpiece, while the second set offers peaks such as Picasso Moon into an outstanding Fire on the Mountain and the unique Cassidy → Uncle John’s Band → Cassidy segue; the only real blemish is the widely‑criticised Wave to the Wind.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈9/12) give 4–5 stars and praise both performance and sound quality; only a few note specific song weaknesses, so the combined show‑and‑recording score lands in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the audio as crisp, excellent and superior to previous releases; a couple note a slightly imperfect mix on later tracks and some compression in the summer‑93 era sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Dire Wolf",
+      "When I Paint My Masterpiece",
+      "Picasso Moon",
+      "Fire on the Mountain",
+      "Cassidy > Uncle John's Band > Cassidy",
+      "Gloria"
+    ],
+    "poor_songs": [
+      "Wave to the Wind",
+      "The Other One"
+    ],
+    "setlist_flow": "First set is consistently strong with a high‑energy opener and tight jams; second set swings between highs (Picasso Moon → Fire, unique Cassidy segue) and lows (the widely‑panned Wave), ending on an uplifting Gloria."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is repeatedly called “masterpiece” level, with a soaring solo on Masterpiece and tight interplay on Fire.",
+    "Phil": "His bass is described as thumping, resonant and providing a solid foundation throughout the night.",
+    "Bob": "",
+    "Keys": "Keyboards are praised – Brent’s era vibe noted, Vince’s Toccata outro on drums highlighted; overall keyboard work deemed great.",
+    "Drums": "The drumming is called “very nice” with an especially strong build into the Uncle John’s Band segue."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Dire Wolf": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "When I Paint My Masterpiece": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 5,
+      "total_mentions": 5
+    },
+    "Cassidy > Uncle John's Band > Cassidy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Gloria": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:18:20.582597+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-27.sbd.miller.27777.sbeok.flac"
+}

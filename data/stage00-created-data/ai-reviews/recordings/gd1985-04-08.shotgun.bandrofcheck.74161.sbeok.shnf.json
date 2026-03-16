@@ -1,0 +1,39 @@
+{
+  "summary": "A clean audience tape captures the Spectrum’s vibe, but the performance is uneven – Revolution shines while the rest of the show feels rushed and lackluster.",
+  "review": "The AUD recording is praised for its vivid, immersive sound that puts listeners right in the Spectrum, making it a strong technical document. Musically the concert is a mixed bag: early moments are exciting with a standout “Revolution” (called a masterpiece by some), but the band drifts into sloppiness and fatigue later on, leading reviewers to describe the overall show as weak and ragged.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average‑to‑below average (≈2.5/5) while recording quality is good (≈4/5); weighted combination yields about a 3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, immersive capture of the Spectrum atmosphere; praised as “great sound” with no major flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Revolution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early excitement gives way to a rushed, ragged spring ’85 feel; momentum drops after the first set and the second half feels sluggish."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia described as gasping for air and weaker later in the show.",
+    "Phil": "Phil Lesh receives affectionate shout‑outs (“Tish & Phil: I love ya!!”).",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Revolution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:39:54.630286+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-08.shotgun.bandrofcheck.74161.sbeok.shnf"
+}

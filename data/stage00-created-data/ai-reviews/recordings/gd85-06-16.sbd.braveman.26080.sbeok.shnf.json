@@ -1,0 +1,58 @@
+{
+  "summary": "Good‑quality soundboard capture of a strong Greek Theatre show, highlighted by an outstanding Other One despite a shaky Cryptical Envelopment.",
+  "review": "The recording is a well‑balanced soundboard (sbd) that presents the energy of the 20th‑anniversary run at the Greek Theatre.  The first set is solid and the second set shines with a tight Samson, a fiery Scarlet Fire and a monster Other One, though Cryptical Envelopment suffers from sloppy vocals and out‑of‑tune playing.  Overall the performance is worth hearing for posterity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers give high star ratings (4–5) and praise the show, especially the Other One; recording is described as good‑quality soundboard with decent balance, yielding a combined rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and well‑balanced sbd; reviewers note good overall fidelity. One reviewer feels an audience tape captures more ambience, but no major technical flaws are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Samson",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Cryptical Envelopment"
+    ],
+    "setlist_flow": "First set described as strong; second set is mixed—high‑energy peaks with Samson and Scarlet Fire, a weak Cryptical segment, then an energetic jam leading into a powerful Other One and a lively drum break."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as sounding drunk on Cryptical Envelopment with weak vocals, but delivers strong playing on the Other One.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drum jam (GDTRFB) noted as high‑energy, showcasing the drummers' power."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T05:04:14.342540+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-16.sbd.braveman.26080.sbeok.shnf"
+}

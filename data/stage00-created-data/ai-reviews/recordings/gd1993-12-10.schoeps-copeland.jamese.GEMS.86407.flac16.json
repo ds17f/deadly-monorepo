@@ -1,0 +1,51 @@
+{
+  "summary": "Decent 1993 show with solid playing and a nice acoustic‑y Garcia tone; audience recording is clear but not spectacular.",
+  "review": "The performance is energetic with good playing, a few vocal slip‑ups from Jerry, and standout moments like the brief Scarlet > Fire pairing, Branford’s cameo on “So Many Roads,” and an “Eternity” jam. The tape, captured from in front of the board by Chip Copeland, sounds clean enough for enjoyment though it lacks the goose‑bumps of a classic night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Three reviews give an average of ~3.3 stars; reviewers note solid musical performance and good but not exceptional sound quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Nice, clear sound with no major drop‑outs; a front‑of‑board audience tap that captures the band well despite being modest in fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Scarlet > Fire",
+      "Eternity"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally energetic with decent pacing; a short but lively Scarlet > Fire transition and an enjoyable Branford‑Marsalis cameo keep the momentum up."
+  },
+  "band_member_comments": {
+    "Jerry": "A few vocal flubs are noted, though his guitar has an interesting acoustic‑y tone throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:33:49.158564+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-10.schoeps-copeland.jamese.GEMS.86407.flac16"
+}

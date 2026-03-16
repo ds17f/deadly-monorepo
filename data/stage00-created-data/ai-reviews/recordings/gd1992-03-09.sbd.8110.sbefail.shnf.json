@@ -1,0 +1,61 @@
+{
+  "summary": "High‑energy 1992 show with scorching Cassidy > Deal and a fiery Corrina medley, captured on a solid soundboard recording.",
+  "review": "Fans rave about the over‑driven first‑set transition of Cassidy into Deal and the hot pre‑drums second set that lit up Corrina, even drawing a Beatles comparison. The performance is described as “blown away” and “very HOT,” while the matrix‑style soundboard source is praised as good though listeners note a desire for a fuller matrix mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three reviews (5, 4, 3 stars) consistently highlight strong musical moments and only minor recording wishes, leading to an overall high rating with confidence from multiple detailed comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard source; reviewers note it is solid but wish for a matrix mix to capture more ambience. No major clarity or dropout issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy > Deal",
+      "Corrina",
+      "Victim > Iko > Corrina"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as fun and then over‑driven into Cassidy>Deal; second set pre‑drums is “very HOT,” with an energetic post‑drums medley of Victim, Iko, and Corrina that kept the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim > Iko > Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:21:51.284614+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-09.sbd.8110.sbefail.shnf"
+}

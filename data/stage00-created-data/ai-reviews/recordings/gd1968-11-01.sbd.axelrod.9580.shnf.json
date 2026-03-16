@@ -1,0 +1,50 @@
+{
+  "summary": "Clear early soundboard captures a monumental The Other One and stellar Caution > Feedback > Goodnight, though the mix drops after New Potato.",
+  "review": "Reviewers rave about this show’s ferocious performance, especially the towering The Other One and the electrifying Caution‑Feedback‑Goodnight sequence. The soundboard recording is praised as the best‑sounding of the available versions in the first half, but it noticeably degrades after New Potato starts, with a muddy mix that buries Bob Weir’s guitar. Overall the musical delivery outweighs the later sonic issues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The show is highlighted as exceptional with multiple standout jams, while the recording is solid early but suffers a drop‑off later; two reviews give mixed technical feedback but strong musical praise."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "First half is crisp and clear, judged the best of six posted versions. After New Potato begins the sound quality plummets – the mix becomes muddy and Bob's guitar is buried."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Caution > Feedback > Goodnight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A powerful first half leads into a sonic dip after New Potato, but the band maintains high energy and delivers monumental improvisations in the second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s interplay with Phil is described as off‑the‑charts brilliant; his guitar becomes partially buried in the mix later on.",
+    "Phil": "Lesh’s bass work is highlighted for its creative dialogue with Garcia throughout the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Potato": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution > Feedback > Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:47:35.643282+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-11-01.sbd.axelrod.9580.shnf"
+}

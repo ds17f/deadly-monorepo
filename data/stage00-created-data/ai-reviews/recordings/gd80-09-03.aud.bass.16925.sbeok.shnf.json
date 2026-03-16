@@ -1,0 +1,82 @@
+{
+  "summary": "A high‑energy audience tape that captures a stellar first set and Let It Grow, with generally good sound despite occasional clapping intrusions.",
+  "review": "The show is remembered for an explosive first set – Let It Grow, Althea, High Time and Brokedown Palace are repeatedly singled out as highlights – and a solid second half that keeps the vibe rolling. The AUD (audience) recording is praised for its balance and lively crowd ambience, though one reviewer notes a disruptive clapper that muddies Althea and Let It Grow. Overall the performance outweighs the minor technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (11/15) give 4‑5 stars and extol the music, especially the first set; recording comments are largely positive with only isolated complaints."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Well‑balanced audience tape that captures crowd energy; clear enough for instrument detail. A few listeners mention an intrusive clapper on Althea/Let It Grow, but overall the mix is clean and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Althea",
+      "Brokedown Palace",
+      "High Time",
+      "Truckin'",
+      "Feel Like A Stranger"
+    ],
+    "poor_songs": [
+      "Althea (clapping interference)",
+      "Truckin' (criticized in one review)"
+    ],
+    "setlist_flow": "First set is described as high‑energy and tightly sequenced; the second set slows a touch but still delivers strong jams, space sections, and memorable closers."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fiery lead work and chord leads on Let It Grow; a few reviewers note his vocals were weak that night.",
+    "Phil": "",
+    "Bob": "One reviewer mentions Bob (\"Bobby\") singing off‑key, indicating weaker vocal performance.",
+    "Keys": "Brent Mydland receives specific praise for his keyboard work, described as ‘so good’.",
+    "Drums": "The drums and space sections are noted positively; no major criticisms."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy to Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:52:57.196751+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-03.aud.bass.16925.sbeok.shnf"
+}

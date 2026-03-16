@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent soundboard capture of the July 18‑1990 Deer Creek show that, despite some sloppy playing, delivers a smoking Help > Slipknot! > Franklin’s and strong Terrapin/Other One moments.",
+  "review": "The SBD source is praised for its clarity and near‑perfect balance, with only occasional mix dips (Phil disappearing briefly). Musically the band was uneven – Jerry and Brent sounded haggard in places, but the Help > Slipknot! > Franklin’s sequence, Terrapin Station, The Other One >Dew and a soaring Morning Dew make this a memorable show. Overall the performance is mixed‑quality, yet the standout jams outweigh the sloppy moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the recording highly and note excellent soundboard quality, while opinions on the performance range from sloppy to glowing; the weighted average lands just under 4‑star."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Improved SBD over earlier releases – crisp, balanced and near‑perfect sound. A few reviewers note a brief drop in Phil's bass presence and a flat moment on Franklin’s Tower, but overall the mix is clean and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Terrapin Station",
+      "The Other One > Dew",
+      "Morning Dew",
+      "Lady with a Fan"
+    ],
+    "poor_songs": [
+      "Cassidy",
+      "China Cat Sunflower > I Know You Rider",
+      "Looks Like Rain",
+      "Franklin's Tower (intro flatness)"
+    ],
+    "setlist_flow": "First set is considered one of the stronger early‑summer sets, while the second set is slightly shorter but still delivers adventurous jamming and a powerful close. The show swings between haggard, sloppy moments and high‑energy peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Often described as sounding haggard or sloppy, yet also noted to be “into it” with hints of Playin' in the Band during transitions.",
+    "Phil": "Mix issues cause his bass to dip briefly, but many reviewers say he shines through on this recording and asserts himself during jams like China Cat Sunflower.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards sound tired/haggard; noted for his calliope and carnival B‑3 contributions that add a unique texture despite the overall fatigue.",
+    "Drums": "Double‑time feel in parts, intense laughing at the end of the Drum segment, and a generally solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One > Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lady with a Fan": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T10:09:20.206869+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-18.sbd.miller.26352.sbeok.shnf"
+}

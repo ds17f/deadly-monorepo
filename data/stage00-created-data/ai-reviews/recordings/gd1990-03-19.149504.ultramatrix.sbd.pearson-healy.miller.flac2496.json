@@ -1,0 +1,31 @@
+{
+  "summary": "A brilliant show captured on an ultramatrix recording, though specific sound details are unavailable.",
+  "review": "The sole reviewer rates the concert a perfect five stars and calls it \"brilliant,\" indicating strong enthusiasm for the performance. No technical commentary is provided, so while the matrix source likely offers a balanced mix, the exact audio quality cannot be confirmed from the available feedback.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the show highly; without recording details we assume decent sound, yielding a strong but uncertain overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on clarity or mix; presumed acceptable given the positive overall impression."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T04:07:27.883881+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-19.149504.ultramatrix.sbd.pearson-healy.miller.flac2496"
+}

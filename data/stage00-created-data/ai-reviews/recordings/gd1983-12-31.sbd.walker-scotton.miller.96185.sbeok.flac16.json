@@ -1,0 +1,52 @@
+{
+  "summary": "Clear soundboard capture of a mixed‑quality New Year's show, highlighted by stellar Estimated Prophet and Eyes of the World performances.",
+  "review": "The recording is a clean soundboard source that many reviewers describe as crisp and clear, though one listener notes gaps caused by FM radio station IDs. Musically the concert swings between average and inspiring – the third set earned five‑star praise while Goodnight Irene fell flat for some, but Estimated Prophet and Eyes of the World were repeatedly called stellar. Overall the show offers a few unforgettable moments amid an otherwise uneven performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the sound quality and highlight several standout songs, but there are notable criticisms of specific numbers and overall consistency, leading to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the audio crisp, clear and ‘as clear as it gets’; one notes FM radio source gaps due to station IDs, but no major distortion or balance issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Goodnight Irene"
+    ],
+    "setlist_flow": "The third set received high praise and was described as a five‑star segment, while the first set suffered from long pauses (in FM recording) and overall inconsistency; the concert is seen as an uneven mix of average material punctuated by a few glowing moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's guitar work on 'Eyes of the World', calling it tight, energetic and a peak moment of the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "One reviewer proudly declares himself ‘The Duke Of Drums’, indicating strong approval of the drumming throughout."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goodnight Irene": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:32:31.960490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-31.sbd.walker-scotton.miller.96185.sbeok.flac16"
+}

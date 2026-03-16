@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a fun show highlighted by a stellar 'Might as Well' and nonstop post‑Space jams.",
+  "review": "The performance is described as a high‑energy, four‑night run with a terrific first set and standout sequences like Might as Well, Eyes→Foolish, Estimated>Gone, and the Other One>Wharf>Sugar Magnolia suite. Reviewers rave about the crisp soundboard recording despite the dense keyboard mix, noting Jerry Garcia’s joyful interplay with the keyboards. Overall the show is celebrated for its jam flow and enthusiastic vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both musical performance and soundboard quality; no significant complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced soundboard recording with no reported dropouts or muddiness; reviewers note a dense keyboard mix but overall consider it high quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Might as Well",
+      "Eyes -> Foolish",
+      "Estimated > Gone",
+      "Other One > Wharf > Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as terrific with a strong 'Might as Well' exclamation point; post‑Space jam never lets up, creating an energetic flow throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his joyous jamming, especially the interplay with the keyboards (referred to as Bruce).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Noted for a very busy mix – many keyboards and MIDI‑guitar elements that some find excessive but add to the 1991 sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Might as Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes -> Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated > Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One > Wharf > Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:43:39.781883+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-20.sbd.miller.fixed-98038.93177.sbeok.flac16"
+}

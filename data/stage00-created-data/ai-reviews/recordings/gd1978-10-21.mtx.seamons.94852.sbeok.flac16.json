@@ -1,0 +1,58 @@
+{
+  "summary": "Clear matrix recording captures a solid second set with Jerry on the prowl, standout \"He's Gone\" and high‑energy \"The Other One\", though \"Mojo\" feels a bit stuck.",
+  "review": "This matrix source delivers great clarity and ambiance, letting the band’s late‑1978 vibe shine through. The second set is highlighted by an inspired \"He's Gone\", a fire‑filled \"The Other One\" that rolls into a noteworthy \"Stella Blue\", while Jerry Garcia’s guitar work is described as being on the prowl. The only drawback mentioned is a slightly stuck and drawn‑out \"Mojo\" section.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review praises both the musical performance (strong second set, standout songs) and the recording quality (clarity, good matrix), with only minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Great clarity and ambiance noted; some comment about the SBDs sounding a bit dry and \"Mojo\" feeling stuck, but overall an excellent matrix mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "The Other One",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Mojo"
+    ],
+    "setlist_flow": "Second set carries the momentum with extended jams and strong transitions, delivering the highlight moments of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar described as \"on the prowl\" and full of energy during The Other One.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mojo": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:52:06.513637+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-10-21.mtx.seamons.94852.sbeok.flac16"
+}

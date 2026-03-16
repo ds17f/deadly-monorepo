@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard recording of a tight 1974 show highlighted by a fiery U.S. Blues → Promised Land jam and standout performances from Jerry, Keith and Bill.",
+  "review": "The remastered soundboard capture is crystal‑clear, with Charlie Miller’s mastering bringing the band right into the listener’s living room. Musically the concert is tight yet adventurous – a rare U.S. Blues post‑jam into Promised Land, superb “Going Down the Road” and an inspired “Playin’ in the Band” drum break make it a must‑hear for 1974 fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews are highly favorable, praising both the performance (tight set, unique jam) and the remastered soundboard quality; the consistency across detailed comments yields a strong positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered by Charlie Miller with pitch correction; reviewers describe the mix as crisp, full‑bodied and “like they’re playing in my living room.” No significant dropouts or muddiness noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Going Down the Road",
+      "U.S. Blues > Promised Land",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short but tight set typical of mid‑1974; the second half features a rare 10‑minute U.S. Blues jam that flows seamlessly into Promised Land, giving the show its high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s “kicking it,” his beautiful yet vigorous vocal tone and perfect guitar presence throughout.",
+    "Phil": "Phil’s bass is highlighted as being up in the mix and sounding fuller with only Bill on drums, giving him more space to explore.",
+    "Bob": "",
+    "Keys": "Keith is praised for using electric piano/Fender Rhodes all night, adding a funk‑jazz feel that foreshadows later Blues for Allah sessions.",
+    "Drums": "Bill Kreutzmann’s playing stands out with deep toms, extra fills (especially into “Playin' in the Band”), and an overall tighter rhythm section."
+  },
+  "song_mentions": {
+    "Going Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues > Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step > Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:02:12.875861+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-27.sbd.miller.107804.flac16"
+}

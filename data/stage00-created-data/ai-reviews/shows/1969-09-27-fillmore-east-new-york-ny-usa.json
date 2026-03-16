@@ -1,0 +1,39 @@
+{
+  "summary": "Surprisingly clear 1969 audience tape, but details sparse",
+  "blurb": "The lone audience recording from this Fillmore East night is unusually listenable for its era. Audio quality is good enough to capture the band's sound, though reviewers note a lack of specific performance highlights.",
+  "review": "Recorded on September 27, 1969 at the Fillmore East, this show survives only as an audience tape that surprises with its clarity given the technology of the time. Listeners report a \"good\" listening experience—clear enough to follow the set—even if the review notes are thin on musical specifics. While the performance itself isn’t described in detail, the recording offers a worthwhile glimpse into the early Dead sound for collectors who can tolerate the inevitable rough edges of a late‑60s crowd capture.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.5,
+    "confidence": "low",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 3,
+      "review_count_boost": 0.0,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "The sole analysis labels sentiment as 'mixed' with no consistent praise or criticism, leading to a neutral adjustment.",
+      "final_calculation": "2.5 + 0.0 + 0.0 = 2.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-09-27.aud.hanno.14857.sbeok.shnf",
+    "reason": "Only available tape; surprisingly clear for a 1969 audience recording, making it the most listenable source despite limited performance detail."
+  },
+  "key_highlights": [
+    "Unusually good clarity for a late‑60s audience tape",
+    "Provides a rare audible snapshot of the early Dead at Fillmore East"
+  ],
+  "song_highlights": [],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T17:24:06.193525+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed"
+}

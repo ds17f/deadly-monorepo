@@ -1,0 +1,31 @@
+{
+  "summary": "Average recording of a lackluster Philadelphia show with only a few highlights.",
+  "review": "The reviewer, who attended the concert in Philadelphia, felt the band was merely going through the motions and that the performance was largely unremarkable, though a few gems were noted. No comments were made about the audio source or sound quality, so the recording’s technical merits remain unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review that leans negative about the performance and provides no information on recording quality, resulting in an overall average rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not discuss audio clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Described as mostly unremarkable and going through the motions, with only a few standout moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T03:14:43.537555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-06.shotgun.bandrofcheck.73770.shnf"
+}

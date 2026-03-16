@@ -1,0 +1,90 @@
+{
+  "summary": "Matrix‑derived recording that sounds clear and lively, captured a legendary Jerry Garcia solo on “Death Don't Have No Mercy” that dominates an otherwise solid Shoreline ’89 show.",
+  "review": "The ultramatrix source delivers a surprisingly clean mix with good instrument separation, though a few reviewers note slight speed/pitch quirks and missing seconds in the pure SBD version. Musically the night is remembered almost entirely for Garcia’s searing “Death Don't Have No Mercy” solo, backed by strong first‑set work and an inspired second set that includes highlights like China Cat Sunflower, Rider, and Playing in the Band. A few songs (Terrapin, Blow Away) received mixed reactions, but overall the performance is hailed as one of the era’s finest.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and rave about the iconic Garcia solo; recording quality is good with only minor technical complaints, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced ultramatrix mix; some users note slight speed/pitch issues and missing two minutes of Terrapin in the SBD version, but overall listenable with decent separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Death Don't Have No Mercy",
+      "China Cat Sunflower",
+      "Rider",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Blow Away"
+    ],
+    "setlist_flow": "First set builds nicely with warm‑up numbers and strong mid‑set tunes; second set launches into a space‑jam vibe before exploding on the historic Death Don't, delivering an emotional climax despite a few uneven spots."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo on “Death Don't Have No Mercy” is repeatedly called epic, shredding, and one of the best moments in Dead history; his new MIDI‑enhanced guitar work is highlighted.",
+    "Phil": "Bass is mentioned only in passing (a note to ‘check Phil’), with no specific praise or criticism.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboard contributions are noted – praised for songwriting (Blow Away) and vocal moments, though one reviewer feels his vocals were weak on that track.",
+    "Drums": "Billy (drummer) gets a brief nod for “punchier drums” in the SBD source; otherwise no detailed comments."
+  },
+  "song_mentions": {
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:12:48.528520+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-09-29.ultramatrix.braverman.7282.sbeok.shnf"
+}

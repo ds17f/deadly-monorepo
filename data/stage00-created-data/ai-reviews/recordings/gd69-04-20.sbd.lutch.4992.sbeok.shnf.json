@@ -1,0 +1,76 @@
+{
+  "summary": "Mellow ’69 show with a stellar Dark Star and Mountains of the Moon, captured on a hiss‑y audience tape that’s still listenable",
+  "review": "The performance shines thanks to an epic Dark Star, a sweet rendition of Mountains of the Moon and standout moments like Doin’ That Rag and Death Don’t Have No Mercy.  The recording is an audience source with noticeable hiss, low volume and a bad cut on Eleven, but it remains enjoyable for fans who want this early‑69 vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.2/5; most comments praise the music while noting only moderate recording flaws, giving a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Low volume, noticeable hiss and some muddiness; a bad edit on Eleven.  No major drop‑outs, but the tape is not as clean as a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Mountains of the Moon",
+      "Doin' That Rag",
+      "Death Don't Have No Mercy",
+      "Lovelight",
+      "St. Stephen"
+    ],
+    "poor_songs": [
+      "Eleven"
+    ],
+    "setlist_flow": "A mellow, early‑69 vibe with long, spacey jams (four Dark Stars in a row) and smooth transitions; the show feels relaxed yet full of classic improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and vocals dominate; praised for heavy vocal lifting and stellar soloing on Dark Star.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocal contributions noted as nice; Ron \"Pig\" McKernan highlighted for his vocal work on Lovelight.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mountains of the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T13:31:06.939000+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-04-20.sbd.lutch.4992.sbeok.shnf"
+}

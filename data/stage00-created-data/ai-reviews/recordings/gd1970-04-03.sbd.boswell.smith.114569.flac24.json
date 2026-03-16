@@ -1,0 +1,39 @@
+{
+  "summary": "A highly praised 1970 show with an unforgettable acoustic Wake Up Little Susie and one of the year’s best recordings, though mixed reviewer ratings make overall sentiment ambivalent.",
+  "review": "Fans rave about this early‑'70 performance, especially the intimate acoustic moment when Jerry and Bob launched into Wake Up Little Susie, and the recording is described as among the finest of the year. One reviewer, however, gave a zero‑star rating, creating a mixed overall impression despite the glowing comments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "One five‑star review praises both show and recording; another gives a zero star despite positive language, leading to an average that reflects good musical performance but uncertain overall reception."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls it one of the best recordings of 1970; no specific technical issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wake Up Little Susie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is remembered for its relaxed, trippy vibe and a memorable acoustic segment early in the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his presence on acoustic Martin guitar during Wake Up Little Susie.",
+    "Phil": "",
+    "Bob": "Highlighted alongside Jerry in the acoustic moment, adding to the nostalgic feel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wake Up Little Susie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:57:50.526560+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-04-03.sbd.boswell.smith.114569.flac24"
+}

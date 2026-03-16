@@ -1,0 +1,101 @@
+{
+  "summary": "Soundboard capture delivers clear, crisp audio of a high‑energy ’85 performance highlighted by a smoking Music > Franklin’s > Estimated sequence.",
+  "review": "The show is widely praised for its fiery second set – especially the Music > Franklin’s Tower > Estimated Prophet stretch and a ripping Jack Straw – with Brent Mydland’s clavvy keyboards adding extra sparkle.  The soundboard source is generally clear, though a few listeners note flat cassette dynamics and occasional streaming glitches, while Phil’s bass is described as steady but a bit low‑key.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews are 4–5 ★ and highlight strong musical moments; recording quality is mostly clear with only minor complaints, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and crisp overall; some listeners mention cassette‑level flat dynamics, occasional streaming drop‑outs, and a bass that stays low in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music",
+      "Franklin's Tower",
+      "Estimated Prophet",
+      "Spoonful",
+      "Minglewood Blues",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "First set is tight and energetic; second set launches with a high‑octane Music > Franklin’s > Estimated sequence, stays powerful through Jack Straw and Minglewood, but shows a slight dip toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is described as \"smoking\", jazzy and full of wah‑wah solos; vocals are solid overall with occasional lyric flubs.",
+    "Phil": "Phil’s bass is noted as steady but lacking dynamic punch; a few reviewers wish it were louder.",
+    "Bob": "Weir’s vocal performance is praised for power, though some mention distracting vocal effects on his voice.",
+    "Keys": "Brent Mydland’s clavinet/keyboard presence is highlighted repeatedly as poppy, vibrant and a key part of the show’s texture.",
+    "Drums": "The rhythm section is tight; one reviewer notes an interesting percussion addition (Hamza El Din) but overall drumming is solid."
+  },
+  "song_mentions": {
+    "Music": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Spoonful": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:16:11.853274+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-13.sbd.barbella.9961.sbeok.shnf"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent soundboard capture of the legendary SPAC ’83 solstice show, with crisp rain‑soaked ambience and standout performances of Scarlet Begonias, Fire on the Mountain, Wheel and a monster Morning Dew.",
+  "review": "The Charlie Miller‑sourced soundboard is praised as virtually flawless – crystal‑clear, balanced and arguably better than any audience tape.  The show itself is celebrated for its rain‑driven energy, lightning‑lit Wheel, thunderous Scarlet intro and an unforgettable second set that culminates in a massive Morning Dew; only a few minor complaints (Jerry’s first‑set guitar level, a rough Throwing Stones) temper the enthusiasm.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic 5‑star reviews highlight both superb recording quality and an iconic performance; only isolated lower‑rated comments keep the rating just shy of perfection."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, clear, balanced and the best version available; multiple reviewers call it a “pristine SBD” and note no significant drop‑outs or hiss."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Wheel",
+      "Morning Dew",
+      "Althea"
+    ],
+    "poor_songs": [
+      "Throwing Stones (Bob's guitar tone)"
+    ],
+    "setlist_flow": "The rain‑soaked first set builds into a thunder‑charged second half; Scarlet’s intro and Fire on the Mountain are highlighted by unique percussion, while Wheel’s lightning and a soaring Morning Dew deliver the night’s emotional apex."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer notes his guitar was unusually low in the first set, but overall no major criticism.",
+    "Phil": "",
+    "Bob": "Complaints about a weak Throwing Stones tone; praised for leading a chant during Fire on the Mountain.",
+    "Keys": "Brent is singled out for playing “I Can See Clearly Now” during the second‑set intro and adding texture to Scarlet’s opening.",
+    "Drums": "Mickey & Bill receive high praise for an Afro‑Caribbean‑style percussion on the Scarlet intro and overall powerful, loud drumming throughout."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Wheel": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:18:21.793491+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-18.beyer.huston.miller.105236.flac16"
+}

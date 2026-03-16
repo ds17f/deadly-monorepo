@@ -1,0 +1,85 @@
+{
+  "summary": "A solid audience‑sourced recording that captures a jam‑heavy set with highlights like Shakedown and Saint, but the performance feels more decent than dazzling.",
+  "review": "Both reviewers praise the analog board‑mic capture for its warmth and “crunchy” vintage character, though one notes occasional drop‑outs. Musically the show is driven by a recurring Playin > Crazy Fingers theme with strong moments such as Shakedown, Saint and a spirited Not Fade Away, yet overall it’s described as an enjoyable but not outstanding performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two detailed reviews give high star ratings but note recording quirks and a show that is solid rather than exceptional; weighting the decent musical performance (≈3.5) with good recording quality (≈4.2) yields ~4.0."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded at the board with Healy's AKG mics; generally warm and clear for the era but a bit crunchy on tracks like Saint and Not Fade Away, with occasional drop‑outs noted by one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Saint",
+      "Not Fade Away",
+      "Crazy Fingers",
+      "Roses",
+      "Let It Grow",
+      "Stella"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set feels like a second‑set jam marathon, anchored by the Playin > Crazy Fingers motif; the second set opens with a killer Shakedown that segues back into the theme and builds to a blistering Saint."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer felt Jerry made little impression this night.",
+    "Phil": "",
+    "Bob": "Generally liked, but his slide work was described as annoying by one listener.",
+    "Keys": "Brent’s addition on Red Rooster was noted positively.",
+    "Drums": "\"The Beast\" (Hart & Kreutzmann) received special praise for their drumming and space."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:26:01.927639+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-15.akg414.streeter.miller.118449.flac16"
+}

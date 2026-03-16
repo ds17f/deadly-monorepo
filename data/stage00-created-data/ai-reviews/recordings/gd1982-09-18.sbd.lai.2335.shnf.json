@@ -1,0 +1,31 @@
+{
+  "summary": "A beloved performance captured on a soundboard that isn’t perfect but remains highly enjoyable.",
+  "review": "Both reviewers rate the show highly, calling it an all‑time favorite with great tunes. The recording is noted as not flawless, yet the soundboard source provides enough clarity to enjoy the music. Overall the concert shines despite minor audio imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive feedback on the musical performance (high show quality) combined with comments that the recording is decent but not perfect, yielding a weighted average around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers mention the recording isn’t perfect, implying minor flaws or lack of pristine clarity, but no serious issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Listeners describe the tunes as great and consider this concert an all‑time favorite, indicating a consistently strong set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T01:49:52.082493+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-18.sbd.lai.2335.shnf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Solid soundboard capture of a daring Spring ’92 show with standout Brown‑Eyed Women, Masterpiece and a psychedelic Bird Song.",
+  "review": "The performance is praised for its adventurous setlist choices and inventive playing – especially Garcia’s solos on Brown‑Eyed Women, Masterpiece and the “gooey” Bird Song. The soundboard source is clean enough to enjoy the music, though dense jam sections make Mickey’s drumming hard to follow at times. Overall the show feels fresh and well‑flowing despite a few rushed moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Detailed positive review highlighting strong musical moments and no serious recording complaints; weighted heavily toward show quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No major flaws mentioned; the soundboard feed is clear, though the dense jam makes drums difficult to isolate in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown-Eyed Women",
+      "Masterpiece",
+      "Bird Song",
+      "Space > The Wheel",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Wave to the Wind",
+      "Box of Rain"
+    ],
+    "setlist_flow": "The setlist flows surprisingly well, mixing Garcia originals with Weir covers and rare sequencing (two Garcia songs then two Weir songs), creating an engaging and varied concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers original, soaring solos on Brown‑Eyed Women, Masterpiece and the Bird Song.",
+    "Phil": "Misses a step in Box of Rain but recovers for the encore.",
+    "Bob": "",
+    "Keys": "MIDI expertise is noted as a highlight of the performance.",
+    "Drums": "Mickey struggles to cut through dense jam sections, but overall drumming remains solid."
+  },
+  "song_mentions": {
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space > The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:38:18.949595+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-13.141721.sbd.cm.miller.flac1644"
+}

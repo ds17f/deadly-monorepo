@@ -1,0 +1,44 @@
+{
+  "summary": "A solid 1993 Dead show that shines in performance but is hampered by a noisy, sizzle‑filled audience recording.",
+  "review": "The band delivers a strong set typical of ’93, with highlights like the Terrapin Station > Estimated Angel > Terrapin Station sequence, yet the audio suffers from distant mic placement and DAT‑mistracking that leaves the first set gritty and the overall mix buried under crowd noise. Listeners will enjoy the playing but may be frustrated by the subpar recording quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show performance is generally praised (good/great), but recording issues are repeatedly called poor, leading to a moderate combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Mic placed far from source, audience noise louder than music; first set exhibits DAT mistracking/sizzle artifacts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station > Estimated Angel > Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally solid 1993 set with an odd Terrapin Station/Eastern Angel pairing; overall playing praised but recording detracts from enjoyment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Angel": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:27:35.442632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-05.aud.wiley.8041.sbefail.shnf"
+}

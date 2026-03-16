@@ -1,0 +1,70 @@
+{
+  "summary": "Clear, well‑balanced recording captures a compelling mid‑90s show with standout Alabama breakout, Crazy Fingers, Matilda and Brokedown Palace performances.",
+  "review": "The tape offers surprisingly clear and balanced sound that lets listeners hear Jerry’s more aggressive phrasing and vocal strength. Musically the concert is solid – an exciting first set highlighted by the Alabama breakout and a second set featuring a brisk Matilda, a focused Crazy Fingers and a memorable Brokedown Palace, despite a confusing Don’t Ease moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Review is detailed and enthusiastic about both the performance and the sound quality; recording is good and the show is praised overall with only minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes more clarity and balance than comparable audience recordings, no major drop‑outs or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama breakout",
+      "Crazy Fingers",
+      "Matilda",
+      "Brokedown Palace",
+      "Way to Go Homes"
+    ],
+    "poor_songs": [
+      "Don't Ease"
+    ],
+    "setlist_flow": "Promising, energetic first set that jumps into an Alabama breakout; second set stays solid with abrupt but effective transition into drums and a strong closing stretch."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as determined to break new ground, stronger vocally and more aggressive on strings than the two prior nights.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Transition into drums is noted as abrupt but effective."
+  },
+  "song_mentions": {
+    "Alabama breakout": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Matilda": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way to Go Homes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:11:04.959637+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-19.141507.OTS.AKG.Ackerman.Miller.Noel.t-flac.1648"
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "Uneven spring‑93 show with strong Days Between & Jack Straw, rain‑soaked encore",
+  "blurb": "The first set delivers punchy performances of Jack Straw, New Minglewood Blues and Candyman, while the second set is uneven but features a fiery Days Between and a memorable Rain encore. Jerry’s guitar shines on several cuts, though some numbers feel under‑driven.",
+  "review": "April 1, 1993 at Nassau Coliseum offered a mixed bag of spring‑time energy and occasional sloppiness. The opening set hit its stride with a rousing Jack Straw, a soulful New Minglewood Blues, and a funky Candyman that let Bob’s vocal grit shine. Days Between in the second set erupted into one of the night’s high points, highlighted by Vince Welnick’s unexpected solo on Desolation Row and Phil’s cello‑like bass texture. The show’s pacing wavered—Wave To The Wind and Eternity fell flat for several listeners—but the rain‑soaked Rain encore lifted spirits as the crowd soaked up the final droplets of a night that felt both classic Dead and unevenly stitched together.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 27,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Multiple recordings note standout moments (Jack Straw, Days Between, Minglewood Blues) and praise Vince's Desolation Row solo, while also flagging sloppy transitions and under‑driven sections; overall sentiment is mixed but tilts positive, warranting a modest +1.0 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.0 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-04-01.sbd.hinko.23822.sbeok.shnf",
+    "reason": "Clear soundboard source with good fidelity and highlights the show’s strongest moments (Days Between, Jack Straw) while avoiding dropouts."
+  },
+  "key_highlights": [
+    "Strong performances of Jack Straw, New Minglewood Blues, and Candyman in Set 1",
+    "Fire‑brand Days Between and Vince’s funky Desolation Row solo in Set 2",
+    "Rain encore adds a unique atmospheric touch despite the weather"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "New Minglewood Blues",
+    "Candyman",
+    "Stagger Lee",
+    "Eternity",
+    "Liberty",
+    "Iko Iko*",
+    "Days Between",
+    "Rain"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers tight, expressive solos on Jack Straw and Days Between, though some numbers (e.g., Eternity) feel under‑driven.",
+    "Phil": "Lesh’s bass provides a solid foundation with a standout cello‑like tone on Days Between; occasionally buried behind the rack during Iko Iko.",
+    "Bob": "Weir’s vocals and interplay are strong, especially on New Minglewood Blues and Candyman.",
+    "Brent": "Vince (credited as Brent in some notes) adds a funky keyboard solo on Desolation Row that lifts the set.",
+    "Mickey": "Hart’s percussion drives the groove without notable issues; space‑time feels appropriately expansive.",
+    "Billy": "Kreutzmann lays down solid, propulsive drums that anchor the band through uneven passages."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-18T12:06:45.666778+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Stagger Lee"
+    ],
+    [
+      "Eternity"
+    ],
+    [
+      "Liberty"
+    ],
+    [
+      "Iko Iko*"
+    ],
+    [
+      "Crazy Fingers",
+      "Wave To The Wind",
+      "Drums",
+      "Space",
+      "Way To Go Home",
+      "Days Between",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Rain"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard capture of a nostalgic set featuring an eerie Dark Star, wild Love Light jam, and a stellar Mama Tried cover.",
+  "review": "Fans rave about the show’s standout moments – a spooky, gong‑laden Dark Star, a ferocious Love Light improv, and a faithful rendition of Merle Haggard’s Mama Tried. The recording is presumed to be a soundboard source with no reported flaws, making the performance easy to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are highly positive (average 4.5★) and highlight several exceptional songs; no recording complaints were noted, suggesting both a great show and good audio quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No reviewers mentioned dropouts, muddiness or other issues – the sound is assumed clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Love Light",
+      "Mama Tried"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Listeners describe a smoothly flowing concert with memorable improvisations and an engaging mix of originals and covers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Question about the organ on Help on the Way – likely Pigpen or Tom Constanten, indicating a notable keyboard presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:50:02.791563+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-23.sbd.lai.6639.shnf"
+}

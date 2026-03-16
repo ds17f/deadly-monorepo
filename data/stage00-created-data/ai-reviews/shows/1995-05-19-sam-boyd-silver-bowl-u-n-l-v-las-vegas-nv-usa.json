@@ -1,0 +1,59 @@
+{
+  "summary": "Mixed Vegas set with soaring Standing On The Moon and weak first half",
+  "blurb": "The second set shines with a soaring \"Standing On The Moon\" and tight jams on \"Playing In The Band > Uncle John's Band\", while the first set drags, especially an uninspired \"Althea\". Jerry’s playing is uneven, but the band delivers a strong closing \"Deal\" and an energetic encore.",
+  "review": "On May 19, 1995 at the Sam Boyd Silver Bowl in Las Vegas, the Dead delivered a night of highs and lows that epitomizes their mid‑90s era. The first set never really got off the ground – \"Picasso Moon\" and \"Friend Of The Devil\" were fine, but \"Althea\" suffered from a botched bridge and Jerry’s lackluster vibe, prompting comments about him “sleeping” on his guitar. By contrast, the second set erupted with a radiant \"Standing On The Moon\" that lifted the crowd, and the classic segue of \"Playing In The Band > Uncle John's Band\" unfolded into an expansive jam bolstered by marathon drum‑and‑space passages. A bright moment came when the band closed the night with a punchy \"Deal\", and they capped it off with a psychedelic encore of \"Lucy In The Sky With Diamonds\" that finally got Jerry smiling again. While the recording is only a fair audience capture, the performance’s strong second‑set moments make it worth a listen for fans who appreciate the era’s raw energy mixed with occasional missteps.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Multiple recordings praise the second‑set highlights (Standing On The Moon, Deal, Playing In The Band > Uncle John's Band) indicating consistent positive sentiment, while also noting negative aspects (Jerry’s disengagement, weak first set). The net effect is a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.5 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd95-05-19.schoeps.18704.sbeok.shnf",
+    "reason": "Only recording with a clear audience source; despite fair quality it captures the full set and is listed as the best available version."
+  },
+  "key_highlights": [
+    "Second‑set redemption with \"Standing On The Moon\" and expansive jam on \"Playing In The Band > Uncle John's Band\".",
+    "Jerry’s performance uneven – sleepy on first set, but moments of intensity on Althea and a grin after the encore.",
+    "Long drum/space passages dominate the middle of the second set, showcasing Mickey and Bill's rhythmic explorations."
+  ],
+  "song_highlights": [
+    "Standing On The Moon",
+    "Deal",
+    "Playing In The Band",
+    "Uncle John's Band"
+  ],
+  "band_performance": {
+    "Jerry": "His playing is uneven – described as “sleeping” and lacking energy on the first set, with a botched Althea, but he shows flashes of intensity on Althea in another account and ends the night smiling after the encore.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Vince is lightly blamed for the weak Althea bridge; otherwise keyboard work isn’t highlighted.",
+    "Mickey": "Drum/space sections stretch long, filling time during Jerry’s disengaged moments and adding a hypnotic texture to the second set.",
+    "Billy": "Shares in the extended drum/space passages that dominate much of the second set, contributing to the show’s uneven pacing."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T08:20:42.006610+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Easy Answers",
+      "Standing On The Moon",
+      "Around & Around"
+    ],
+    [
+      "Deal"
+    ]
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "summary": "Soundboard capture that sounds a bit muffled, highlighted by an off‑the‑wall second‑set jam with Boz Scaggs & John Cipollina but marred by heavily intoxicated playing.",
+  "review": "The recording is a soundboard source but suffers from a noticeably muffled mix and occasional vocal drop‑outs. Musically the show shines in its chaotic second set where guest blues players Boz Scaggs and John Cipollina join an otherwise drug‑slowed Dead, delivering memorable jams (especially a funny Truckin' ad‑lib), yet the overall performance is uneven as both Jerry and Bob appear heavily impaired.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews are split – several 4–5 star rave about the second‑set guests and unique moments, but others criticize muffled sound and severely intoxicated playing; average rating lands just above the midpoint."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Muffled arena ambience noted by reviewers; some vocal drop‑outs (Jerry's vocals shut off) and overall lack of clarity compared to typical soundboard releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Second set blues/rock jam with Boz Scaggs & John Cipollina"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens in a strange, pillar‑filled arena with a thin mix, but the second set erupts into an unpredictable blues‑rock showcase that outshines the first half despite sloppy, intoxicated playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals often shut off and his playing was described as heavily wasted, barely standing.",
+    "Phil": "",
+    "Bob": "Also noted as high on whatever he’d taken; performance suffered.",
+    "Keys": "Pigpen (former keyboardist) mentioned playing keyboards during 'Lovelight', but no comment on current keyboardist.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Goin' Down The Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Earthquake": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:24:41.448598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-05-28.sbd.skinner.11362.sbeok.shnf"
+}

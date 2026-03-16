@@ -1,0 +1,79 @@
+{
+  "summary": "Rough audience tape of a 1976 show, but it delivers an essential second set with standout Dancin' In The Streets, The Other One and a crushing Stella Blue.",
+  "review": "The performance is praised for its high‑energy 1976 vibe, especially the latter half of the second set where sequences like Dancin' In The Streets > The Other One and a devastating Stella Blue shine. While the audience recording is muddy and rough, listeners report it’s still listenable and can be improved with EQ or Audacity cleanup. Overall the music outweighs the technical flaws, making it a must‑hear for Deadheads despite the sonics.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised as essential 1976 material (≈4.5/5), but recording quality is noted as poor/fair (≈2.5/5). Weighted average yields ~3.9, rounded to 4.0."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audible but muddy; frequent comments about rough sonics, muffled sound and arena acoustics. Some reviewers note improvement with EQ or Audacity cleanup."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow > Might As Well",
+      "Samson And Delilah",
+      "Dancin' In The Streets",
+      "The Other One",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but hampered by audio; the second set builds into a spectacular climax, with the latter half highlighted as essential 1976 material."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone and vocal phrasing are repeatedly praised, especially on Stella Blue and The Other One.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Short engaging drum break noted before the unique version of The Other One."
+  },
+  "song_mentions": {
+    "MHBTR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow > Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson And Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' In The Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:01:17.546643+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-02.moore.weiner.14560.sbeok.shnf"
+}

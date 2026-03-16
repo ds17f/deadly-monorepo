@@ -1,0 +1,39 @@
+{
+  "summary": "Solid show highlighted by a nice Shakedown Street opener, but the soundboard is marred by noticeable digi‑noise.",
+  "review": "Fans note that the performance was enjoyable – especially the opening of \"Shakedown Street\" – and overall consider it a great show. However, the recording suffers from digital noise that some listeners feel needs an upgrade. The tape is a soundboard capture, so while the music shines, the audio fidelity is only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the show (show quality ~4) but complain about digi‑noise in the recording (recording quality ~2). Weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers mention digi‑noise and suggest an upgrade; overall clarity is acceptable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Positive remarks about the opening jam; no specific criticisms of pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:36:24.542863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-14.sbd.goetz.17816.shnf"
+}

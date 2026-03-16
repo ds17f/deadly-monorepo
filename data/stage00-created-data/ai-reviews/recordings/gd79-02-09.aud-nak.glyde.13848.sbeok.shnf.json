@@ -1,0 +1,137 @@
+{
+  "summary": "Solid Winter ’79 performance with several standout jams, but a muddied backstage audience tape limits enjoyment.",
+  "review": "The show delivers strong moments – “Promised,” “Cassidy,” the China‑Rider’s sequence and an emotional “Miracle” – and the band’s interplay shines throughout both sets. However, reviewers repeatedly note that the recording is a low‑fidelity backstage capture with muted guitars and overall muffled sound, which keeps the experience from being truly great.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance while flagging serious recording flaws; the weighted average yields a modestly positive but mixed score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Back‑stage audience tape with muted guitar on “Candyman,” overall muffled and “shoddy” sound; some reviewers call it the best they’ve heard of this source, others deem it poor."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised",
+      "Cassidy",
+      "China/Rider's",
+      "Miracle",
+      "Good Lovin'",
+      "He's Gone",
+      "Comes a Time",
+      "Around and Around"
+    ],
+    "poor_songs": [
+      "Candyman",
+      "Tennessee Jed",
+      "Jack",
+      "Stagger",
+      "Truckin'"
+    ],
+    "setlist_flow": "First set is high‑energy but uneven in pacing; the second set offers a smoother, more relaxed vibe with a strong NFA opener and an uplifting encore. Overall the flow feels engaging despite a few slower moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is generally praised – strong tones on many numbers and a “magical journey” solo – but the muted, muffled sound on “Candyman” hurts his impact.",
+    "Phil": "Phil’s entrance during the Not Fade Away clapping is highlighted as a crowd‑rousing moment that lifted the show’s energy.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum/space segment passes the test and the extended noodling with Jerry is noted positively; drummers are credited for keeping the groove solid."
+  },
+  "song_mentions": {
+    "Promised": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Es Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China/Rider's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:16:54.419471+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-02-09.aud-nak.glyde.13848.sbeok.shnf"
+}

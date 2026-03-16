@@ -1,0 +1,31 @@
+{
+  "summary": "A short, upbeat review that rates the recording positively but offers no details on sound or performance.",
+  "review": "The lone fan comment is a light‑hearted birthday nod to Phil and carries a four‑star rating, indicating overall appreciation. However, it provides no information about the audio source, mix quality, setlist, or musical execution, leaving the technical and musical merits of this show undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating; no concrete data on recording or performance quality, so the rating is inferred primarily from the star level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "\"The Sun is in Aries now so we can forget about all that Pisces stuff,\" – a humorous Phil quote but no performance comment.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T06:21:59.898569+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-21.152019.aud.ryan.miller.clugston.flac2496"
+}

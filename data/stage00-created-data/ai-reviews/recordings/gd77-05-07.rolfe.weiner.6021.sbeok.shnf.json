@@ -1,0 +1,81 @@
+{
+  "summary": "Crystal‑clear audience recording captures a stellar set highlighted by Terrapin Station, Mississippi Half‑Step and an outstanding Wheel.",
+  "review": "The show is repeatedly praised as one of the best in any collection – opening with a tight Bertha, soaring through Terrapin Station, Mississippi Half‑Step, Wharf Rat and a decade‑defining Wheel.  The audience (AUD) source is surprisingly clean and detailed, with vocals and instruments crystal‑clear despite the venue’s quirky acoustics; only the piano feels a touch heavy and one track (Do I Smell Sulfur) drags.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4‑5 stars), strong praise for both performance and audio clarity, with only minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very crisp and clear vocals/instruments; audience ambience audible at song starts/ends. Piano a bit heavy, one track (Do I Smell Sulfur) feels slow, but overall sound is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Mississippi Half-Step",
+      "Wheel",
+      "Wharf Rat",
+      "Bertha",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Do I Smell Sulfur"
+    ],
+    "setlist_flow": "Smooth flow from an energetic Bertha opener through a series of high‑energy jams; the second half builds with Terrapin Station and Mississippi Half‑Step, keeping momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Piano slightly heavy in the mix but otherwise solid.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Do I Smell Sulfur": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T23:06:54.914683+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-07.rolfe.weiner.6021.sbeok.shnf"
+}

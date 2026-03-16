@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 1984 East Coast show with smoking Playin in the Band, Uncle John's and China Doll runs; recording source unknown and only modestly detailed.",
+  "review": "Fans rave about this tight, high‑octane performance – especially the 20‑minute stretch of Playin in the Band, Uncle John’s Band and China Doll that showcase Jerry’s guitar at its peak. The existing tape’s technical pedigree isn’t described, and one reviewer even asks for a higher‑quality source, suggesting the current audio is only average.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Consistently enthusiastic comments about the musical performance (standout songs, tight playing) give a high show rating; lack of concrete recording details lowers the technical score, resulting in an overall solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on soundboard or audience source; one reviewer explicitly requests a higher‑quality recording, implying the current version is only average."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin in the Band",
+      "Uncle John's Band",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a high‑energy, tight East Coast set typical of 1984, with especially strong second‑set improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as haggard/off but guitar work praised as precise, tight and among his best long runs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland credited for cleaner, more polished keyboard textures that helped the show’s vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:10:14.596173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-18.nak701-beach.21131.sbeok.shnf"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Clear audience tape captures a solid show with standout moments like Stella Blue, The Other One and a scorching Scarlet Begonias/Estimated Prophet stretch.",
+  "review": "The recording is an audience capture that most listeners find pleasant and well‑balanced, delivering the full energy of the performance. Fans repeatedly point to the second set – especially Stella Blue, The Other One, Scarlet Begonias and Estimated Prophet – as highlights, making this a generally enjoyable show despite one outlier review giving a low rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance and the tape quality; only a single anomalous low‑star review drags the average down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as clear, ear‑friendly and well balanced; no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "The Other One",
+      "Scarlet Begonias",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is repeatedly highlighted as the high point; overall pacing and song transitions are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:37:35.078161+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-16.nak300.miller.94900.sbeok.flac16"
+}

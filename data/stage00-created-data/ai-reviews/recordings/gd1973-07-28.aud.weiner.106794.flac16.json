@@ -1,0 +1,31 @@
+{
+  "summary": "Audience‑sourced recording with mixed sound quality captures the massive Summer Jam ’73 vibe, a solid but not legendary 1973 show.",
+  "review": "The audience tape fluctuates – some sections are clear and lively while others sound muddy or fluxed – but it still conveys the enormity of the 600,000‑person event. Musically the concert is described as a typical 1973 Dead set with fine playing overall, though reviewers note no standout songs and consider it an underrated, solid performance rather than a classic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two positive reviews highlight the historic vibe, while two moderate reviews note uneven recording quality and an unremarkable set; weighting show (70%) and recording (30%) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers mention the audio fluxes in places, with occasional good clarity but overall typical audience tape limitations (ambient noise, uneven levels)."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Described as a regular 1973 summer show – solid playing and huge crowd energy, with the pre‑concert soundcheck often praised more than the main set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T16:04:22.477570+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-28.aud.weiner.106794.flac16"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Mixed‑energy show with strong Althea and Sugar Magnolia moments",
+  "blurb": "The performance swings between weary stretches and high‑energy peaks, highlighted by a inspired Althea and a lively Sugar Magnolia. Standout jams appear on Lazy River Road, Playing In The Band and Standing On The Moon, though the overall flow feels uneven.",
+  "review": "On March 31, 1993 at Nassau Coliseum the Dead delivered a set that felt both fatigued and fire‑lit. Jerry’s guitar tone was praised for its crunchy bite, especially on Althea, yet his vocals sounded thin and he missed a lyric that turned into an impromptu lead break. Phil supplied several “bass bombs” that added punch to the mix, while Bob’s rhythm guitars shared the same crunchy character. The first set limped through early numbers until Let It Grow revived the momentum, then the second set offered flashes of brilliance – a country‑twang Sugar Magnolia, a lazy‑river jam on Lazy River Road, an emotive Standing On The Moon and a soaring Playing In The Band that segued into Uncle John’s Band. The encore’s I Fought The Law closed the night with classic rock gusto. Recording quality varies: the Miller soundboard (gd1993-03-31.sbd.miller.114456.flac16) provides a clear, professional mix that captures these highs while still hinting at the show’s overall weariness.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "The analyses show mixed sentiment: several reviewers praise standout songs (Althea, Sugar Magnolia, Lazy River Road, Standing On The Moon) and specific playing moments, but many note uneven energy and a weary vibe. This balance yields a modest positive adjustment rather than strong positive or negative.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1993-03-31.sbd.miller.114456.flac16",
+    "reason": "Good soundboard capture with clear, professional mix and crunchy guitar tones; it balances the show’s mixed energy while preserving the standout moments."
+  },
+  "key_highlights": [
+    "Althea shines with a inspired lead despite thin vocals.",
+    "Sugar Magnolia delivers a country‑twang Garcia solo that lifts the set.",
+    "Lazy River Road provides a relaxed jam, and Standing On The Moon adds emotional depth.",
+    "Overall energy feels uneven, with the first set sluggish until Let It Grow."
+  ],
+  "song_highlights": [
+    "Althea",
+    "Sugar Magnolia",
+    "Lazy River Road",
+    "Standing On The Moon",
+    "Playing In The Band"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar tone is praised as crunchy and expressive, especially on Althea and Sugar Magnolia; his vocals are thin and he missed a lyric that turned into an improvised lead, with some reviewers calling his playing wan.",
+    "Phil": "Lesh delivers solid bass work with several powerful “bass bombs” that add drive to the performance.",
+    "Bob": "Weir’s rhythm guitar shares the crunchy character noted on stage; his vocals are described as thin in this show.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-18T11:59:35.444109+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Althea"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Standing On The Moon",
+      "Sugar Magnolia"
+    ],
+    [
+      "Lazy River Road"
+    ]
+  ]
+}

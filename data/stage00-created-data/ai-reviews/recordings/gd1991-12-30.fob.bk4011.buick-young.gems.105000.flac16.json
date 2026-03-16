@@ -1,0 +1,69 @@
+{
+  "summary": "High‑quality audience DAT capture of a punchy first set and an atmospheric second set highlighted by Airto’s percussion jam, with standout moments from Saint, Stella Blue, The Last Time and China Rider.",
+  "review": "Both reviewers praise the recording’s surprisingly pristine audience sound – crisp mids, improved bass response and plenty of room‑tone that adds to the live feel. Musically the show is described as a solid first set followed by an inspired second set where Airto’s guest percussion fuels a soaring jam, and songs like Saint, Stella Blue, The Last Time and China Rider shine despite the band’s slight fatigue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Both reviewers give high star ratings (4‑5) and focus on strong musical moments and excellent audience recording quality; the only drawback mentioned is mild band fatigue, which does not outweigh the positives."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience DAT capture with clear, punchy mids and surprisingly good bass response for an audience tape; some ambient crowd noise is present but overall the mix is crisp and very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint",
+      "Space",
+      "Stella Blue",
+      "China Rider",
+      "The Last Time",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as punchy and energetic; second set opens with a nice China Rider segue into Space, builds into an Airto‑driven jam that revitalizes the band, and closes with emotive performances of The Last Time and Stella Blue despite an overall tired vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal phrasing on “So Far Out” is praised and his guitar work is noted as feeding off Phil’s bass energy.",
+    "Phil": "Repeatedly lauded for a “raging giant tractor‑beam bass” that anchors the performance and makes the show compelling.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum/space segment with Airto is called the most beautiful jam of the night, highlighting the percussion’s power and creativity."
+  },
+  "song_mentions": {
+    "Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:10:45.530817+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-12-30.fob.bk4011.buick-young.gems.105000.flac16"
+}

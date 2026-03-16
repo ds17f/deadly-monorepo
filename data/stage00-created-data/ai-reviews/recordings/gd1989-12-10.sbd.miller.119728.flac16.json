@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent matrix recording of the Dec 10 1989 show captures a scorching performance highlighted by a blistering “I’m A Man.”",
+  "review": "The release, mastered by Charlie Miller, delivers crystal‑clear matrix sound that lets listeners hear every nuance of the band’s fire‑breathing playing. Reviewers rave about the overall energy – especially the standout “I’m A Man” – and note Bruce Hornsby’s tasteful keyboard additions, describing the night as a well‑oiled machine. While a few comments focus on pricing or unrelated technical issues, the consensus is that both the music and the remaster are top‑notch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Strong, consistent praise for both performance (multiple 5‑star reviews highlighting unique moments) and recording quality (matrix source praised as excellent), outweighing a few unrelated low ratings."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Charlie Miller’s remaster is described as one of the best recordings, with clear matrix blend, superb balance, and added depth from Bruce Hornsby; reviewers call it “crisp,” “blowing me away,” and a top‑choice over other versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I'm A Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is portrayed as a high‑energy, well‑oiled machine with seamless transitions; reviewers note the band “cranking on all cylinders” and delivering a consistently hot performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby's keyboard work is specifically praised for adding nicely to the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I'm A Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:09:47.700793+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-10.sbd.miller.119728.flac16"
+}

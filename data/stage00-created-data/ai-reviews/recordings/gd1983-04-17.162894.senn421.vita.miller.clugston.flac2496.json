@@ -1,0 +1,39 @@
+{
+  "summary": "Fair audience recording of a decent show, highlighted by a clear \"Love the One You're With\" performance.",
+  "review": "The audience tape offers acceptable clarity—especially on \"Love the One You're With\"—but overall the recording is on the weaker side. The concert itself is described as merely decent and not especially stellar, though it does feature noticeable Lesh bass bombs that aren’t overly suppressed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the show as decent (≈3.5) and the recording as fair/weak (≈2.5). Weighted combination yields ~3.2 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Decent clarity on key moments, but overall weak side with limited fidelity; Lesh's bass bombs are present without heavy suppression."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Love the One You're With"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or flow; reviewer simply calls it a decent, not stellar show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Lesh's bass bombs are audible and not overly suppressed, indicating solid low‑end presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Love the One You're With": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:46:18.348006+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-17.162894.senn421.vita.miller.clugston.flac2496"
+}

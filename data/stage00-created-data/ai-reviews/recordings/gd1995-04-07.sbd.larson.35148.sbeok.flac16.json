@@ -1,0 +1,45 @@
+{
+  "summary": "Recording quality is unclear, but fans rave about the memorable Eyes of the World and Not Fade Away performances.",
+  "review": "Listeners who attended the Tampa show on April 7, 1995 recall a magical atmosphere highlighted by powerful renditions of “Eyes of the World” and “Not Fade Away.” While reviewers never comment on the technical source, the overall sentiment about the music is highly positive despite a few unexplained low‑star ratings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about key songs and overall vibe (70% weight) offset by lack of recording details and a few zero‑star reviews (30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentions soundboard, audience mix, or clarity; recording fidelity cannot be determined from the available comments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans highlight a captivating second‑set moment with “Eyes of the World” and praise the overall energy; no criticism of pacing or set structure was noted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T08:12:36.771123+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-07.sbd.larson.35148.sbeok.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Good-quality recording captures a stellar performance with standout Sugaree, Bird Song and an epic 20‑minute Playing in the Band.",
+  "review": "The show is praised for its tight Sugaree and soaring Bird Song, and the second set delivers a monster >20‑minute jam on Playing in the Band. Reviewers call the recording great, noting no issues despite the lack of technical detail.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Enthusiastic 4‑star review highlighting strong performances and a generally good recording; limited data (single review) yields moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity or mix; reviewer rates recording positively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Bird Song",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid with highlighted tunes, while the second set builds momentum and peaks with an epic >20‑minute Playing in the Band jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:49:45.985260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-15.132331.Nak100CP4.Hill.Keo.Flac1644"
+}

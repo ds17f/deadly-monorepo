@@ -1,0 +1,57 @@
+{
+  "summary": "Solid soundboard source delivers a middling 1988 show highlighted by a fiery “Estimated” jam and a standout Bird Song.",
+  "review": "The recording is praised for its clear, well‑balanced audio – likely a soundboard capture – even though the performance itself is described as average, with the first set carrying more punch than the second. Reviewers single out “Estimated,” the Bird Song jam, and the Scarlet > Fire transition as the high points, while noting Jerry’s voice holds up despite lingering laryngitis.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average‑to‑good (mid‑pack 1988 performance) while the recording is consistently described as clear and pleasant, resulting in a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers comment on “nice‑sounding” or “Nice Audio,” indicating a clean, well‑mixed source with no major dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "Bird Song",
+      "Scarlet > Fire",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is noted as more energetic than the second; a peak occurs midway through “Estimated,” and the drummers really lift the band during the “I’ll call down thunder…” passage."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds solid despite previous laryngitis; delivers some creative lyrics on this night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers go “bananas” during the “I’ll call down thunder…” section, adding extra excitement."
+  },
+  "song_mentions": {
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:13:36.922602+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-10-18.upg-sbd.tobin.122733.flac16"
+}

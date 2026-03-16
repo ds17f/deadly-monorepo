@@ -1,0 +1,62 @@
+{
+  "summary": "Decent front‑of‑house capture with solid moments despite a loose performance and mixed recording quality.",
+  "review": "The show is noted as a loose, rehearsal‑like set with some standout jams—China into The Rider and a pre‑drums “Playing in the Band” > Terrapin Station stretch—but also sleepy spots like a lackluster Stella Blue solo. The front‑of‑house (FOB) recording is praised for its Phil zone presence and Schoeps mic clarity, yet other listeners find the audience mix muddy and uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Three reviews give a spread of 4‑5 stars for show moments but one notes very poor sound; overall performance is average to good, recording quality ranges from nice FOB capture to poor AUD, yielding a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "FOB audience tape captured with high‑end Schoeps gear; listeners note clear Phil zone bass and good crowd ambience but also report low keyboard presence, dominant drums, and overall muddy mix in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > The Rider",
+      "Playing in the Band > Terrapin Station"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "The concert feels like a rehearsal after a month off, with strong early jams but a rather uneventful second half and post‑space."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – occasional sleepy moments and a blown solo on Stella Blue, yet flashes of brilliance.",
+    "Phil": "Positive – bass is well captured in the Phil zone, giving a solid foundation.",
+    "Bob": "",
+    "Keys": "Vince's keyboards are low in the mix and not prominent.",
+    "Drums": "Bruce (drums) comes out fairly dominant in the front‑of‑house recording."
+  },
+  "song_mentions": {
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:52:54.430321+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-12.fob.brennecke-young.GEMS.96371.flac16"
+}

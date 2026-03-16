@@ -1,0 +1,77 @@
+{
+  "summary": "Jam‑heavy Oregon show with soaring Dark Star and heartfelt Friend of Mine",
+  "blurb": "The May 31, 1969 performance delivers standout renditions of He Was A Friend Of Mine, Dark Star and Turn On Your Lovelight. Jerry’s guitar soars while the band moves fluidly through extended jams, and the soundboard capture is clear despite a few minor cuts.",
+  "review": "On May 31, 1969 at McArthur Court in Eugene, the Grateful Dead rolled out a spring‑tour set that balanced tender ballads with high‑energy improvisations. The first set flowed from hard‑rocking “Hard To Handle” into a playful “Cryptical Envelopment → The Other One → Cryptical Envelopment” sequence, leading to a soulful “Turn On Your Lovelight”. The second set shines with an emotionally charged “He Was A Friend Of Mine”, a soaring and exploratory “Dark Star”, and the haunting encore “It’s All Over Now Baby Blue”. Reviewers consistently praised Jerry Garcia’s soaring lead guitar on the friend‑of‑mine ballad, Dark Star and Lovelight, noting his vocal delivery as raw yet moving. Bob Weir’s harmonies add depth on “Green Green Grass Of Home”, while the rhythm section stays tight throughout. The soundboard recording (gd69-05-31.sbd.oleynick.76.sbeok.shnf) captures this magic with good overall balance, only suffering a few drop‑outs at the tail end of “Doin’ That Rag” and a truncated fade on “Cosmic Charlie”.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 37,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Both recordings were described with positive language (e.g., \"electrifying\", \"stellar jams\", \"epic Baby Blue\", \"definitive Friend of Mine\"). Multiple reviewers highlighted the same standout songs and praised Jerry's playing, indicating strong consensus on performance quality.",
+      "final_calculation": "2.5 + 0.3 + 1.5 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-05-31.sbd.oleynick.76.sbeok.shnf",
+    "reason": "Good soundboard source with clear, balanced audio that captures the full set; minor cuts are outweighed by its overall fidelity and completeness."
+  },
+  "key_highlights": [
+    "Stellar jams on He Was A Friend Of Mine, Dark Star and Turn On Your Lovelight",
+    "Playful transition from The Other One into Cryptical Envelopment showcases tight group interplay",
+    "Emotional encore performance of It’s All Over Now Baby Blue"
+  ],
+  "song_highlights": [
+    "He Was A Friend Of Mine",
+    "Dark Star",
+    "The Other One",
+    "Turn On Your Lovelight",
+    "It Hurts Me Too",
+    "Green Green Grass Of Home",
+    "It's All Over Now Baby Blue"
+  ],
+  "band_performance": {
+    "Jerry": "Soaring guitar on He Was A Friend Of Mine, Dark Star and Turn On Your Lovelight; vocal delivery emotional and occasionally raw.",
+    "Phil": "",
+    "Bob": "Solid vocal contributions, especially prominent on Green Green Grass Of Home.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T14:58:48.368607+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "He Was A Friend Of Mine"
+    ],
+    [
+      "Dark Star",
+      "Doin' That Rag",
+      "Cosmic Charlie"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Sittin' On Top Of The World"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ],
+    [
+      "It Hurts Me Too"
+    ],
+    [
+      "Green Green Grass Of Home"
+    ],
+    [
+      "It's All Over Now Baby Blue"
+    ]
+  ]
+}

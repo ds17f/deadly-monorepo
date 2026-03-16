@@ -1,0 +1,98 @@
+{
+  "summary": "Matrix mix with occasional pitch/ distortion quirks captures an electrifying 1980 Lewiston show highlighted by a soaring Sugaree and blistering second‑set jams.",
+  "review": "The performance is widely celebrated – fans point to a smoking Sugaree, Alabama Getaway, Shakedown Street and a monster China > Rider sequence as the night’s high points.  The soundboard/audience matrix suffers from pitch slippage, audience distortion and occasional crowd‑noise bleed, but clever patching keeps it listenable.  Overall the music outweighs the technical flaws, making this recording a fan favorite.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews praise the musical performance (many 5‑star) while noting consistent but non‑show‑stopping recording issues; weighting gives a strong show score with a moderate recording score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch runs slightly slow, audience source has distortion and crowd noise, occasional dropouts; however patches fill gaps and overall mix remains intelligible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Alabama Getaway",
+      "Shakedown Street",
+      "China > Rider",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two full sets plus an encore with seamless transitions – China‑Rider‑Promised Land and the classic UJB sandwich are especially tight, giving the show a marathon‑like momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is repeatedly praised – soaring solos on Sugaree, Far From Me, Althea and high‑energy playing throughout.",
+    "Phil": "Lesh’s bass is described as powerful and “earth‑shaking” during jams like Shakedown Street, providing a solid foundation.",
+    "Bob": "Only one critical note about Bob’s volume drowning Jerry on Sugaree; otherwise not mentioned.",
+    "Keys": "Brent Mydland receives abundant praise for his B3/keyboard chops and is defended against vocal criticism.",
+    "Drums": "Bill Kreutzmann’s drumming gets highlighted as interesting, especially the post‑drums segment and overall “great drums.”"
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 20,
+      "negative_mentions": 0,
+      "total_mentions": 20
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China > Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Althea": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Far From Me": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:18:10.457738+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-06.sbd_aud.miller.25560.sbeok.shnf"
+}

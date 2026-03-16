@@ -1,0 +1,91 @@
+{
+  "summary": "High‑energy July 4th show with a stellar second set (Stranger → Birdsong → Playin' → NFA → Space) captured on a solid audience tape",
+  "review": "The performance is widely celebrated for its cowboy‑themed first set and an odyssey‑like second half that features a powerful The Stranger, extended Birdsong, a smoking Playin’ in the Band through Not Fade Away, and a spacey jam into Space.  Reviewers note the audience recording is clear enough to enjoy the band’s interplay, though occasional high‑end harshness and bass/drum masking are mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average rating across 20 reviews is 4.25; the vast majority praise both the musical performance and the tape’s quality, giving a strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear audience recording with a bit of high‑end harshness and slight tint; drums and bass can occasionally mask mids but overall captures the live energy well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "China Rider",
+      "The Stranger",
+      "Birdsong",
+      "Playin' in the Band",
+      "Not Fade Away",
+      "Space",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set carries a cowboy‑Americana vibe (Jack Straw, China Rider) while the second set unfolds as an odyssey – The Stranger into Birdsong, then Playin' → Not Fade Away → Space – delivering one of the most celebrated Fourth‑of‑July performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for bluesy chops on Not Fade Away, a legendary riff on Jack Straw, and overall stellar guitar interplay with Bob.",
+    "Phil": "",
+    "Bob": "Bobby Ace’s vocal energy shines; despite a lyric slip he carries the show, and his interplay with Jerry is highlighted.",
+    "Keys": "Brent’s synth/fill work receives credit for adding texture throughout the set.",
+    "Drums": "Tight drummer interplay before the Space jam is noted; some reviewers mention drums can drown out mids in the audience mix."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:32:29.564294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-04.nak700.clugston.2216.sbeok.shnf"
+}

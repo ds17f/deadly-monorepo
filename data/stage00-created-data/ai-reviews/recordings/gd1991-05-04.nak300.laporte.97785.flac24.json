@@ -1,0 +1,31 @@
+{
+  "summary": "A very nice show with a strong, into‑it Jerry and solid band performance; recording source and quality are not described.",
+  "review": "The reviewer praises the concert as a very nice show, highlighting Jerry Garcia’s powerful playing and the rest of the group’s solidity. A fun note is made about Bob Weir’s vocal impersonation reminiscent of his later William Shatner routine. No details on the recording source or sound quality are provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review, but it is positive (4 stars) and focuses on strong musical performance; no information on recording quality limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments about sound clarity, mix, or source type; assumed acceptable but unverified."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific remarks on set structure or pacing were made."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds good, strong and fully into the music.",
+    "Phil": "",
+    "Bob": "Sang with a William Shatner‑style impression, adding a humorous surprise.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T19:22:03.610532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-05-04.nak300.laporte.97785.flac24"
+}

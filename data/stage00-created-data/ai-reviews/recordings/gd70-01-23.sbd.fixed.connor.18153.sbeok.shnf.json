@@ -1,0 +1,76 @@
+{
+  "summary": "Crisp soundboard recording of a high‑energy Hawaii show with standout Dark Star, The Other One and an epic Lovelight",
+  "review": "The 1/23/1970 Hawaii set captures the band in top form – Jerry’s soaring slide on Dark Star, a marathon Other One, a scorching Lovelight and a killer Black Peter.  The fixed‑Connor SBD is exceptionally clear with just a hint of audience bleed that adds life, and despite a few pitch quirks it sounds superb.  Most fans rave about the jam flow and the strong second half, making this one of the era’s most celebrated recordings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews (≈80%) are 4‑5 stars and praise both performance and sound quality; only a few low‑star comments note minor flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with excellent instrument isolation; slight pitch correction needed in some spots and occasional early‑set dropout noted by one reviewer, but overall superb sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "Lovelight",
+      "Black Peter",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Hard to Handle",
+      "Lovelight"
+    ],
+    "setlist_flow": "Fans highlight a powerful second half, seamless transitions (China Cat → Rider, Other One → Cryptical → Dark Star) and high‑energy jams that keep the momentum flowing despite a modest audience size."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is repeatedly praised – magical Dark Star, scorching slide on Lovelight, and tight rhythm throughout.",
+    "Phil": "",
+    "Bob": "Weir’s Yellow Dog story adds humor; his rhythm guitar and vocals are noted as solid, especially on Black Peter.",
+    "Keys": "",
+    "Drums": "The rhythm section is described as tight and driving, keeping the jams grounded."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 11,
+      "negative_mentions": 2,
+      "total_mentions": 13
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Black Peter": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T14:56:11.520692+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-23.sbd.fixed.connor.18153.sbeok.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Very good sound quality captures an average show highlighted by a gem second‑set sequence of Uncle John's Band, Playing in the Band, The Wheel and China Doll.",
+  "review": "The concert is generally regarded as an average performance, but reviewers single out the second‑set UJB / Playing in the Band / The Wheel / Playing in the Band / China Doll sequence as a hidden treasure.  Sound quality is described as very good, making that portion especially worth owning despite some venue‑metadata confusion.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is average with a standout second‑set segment (≈3.5/5) while recording quality is praised as very good (≈4.5/5); weighted combination yields ~3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the sound quality is very good with no specific issues mentioned; source type not identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Playing in the Band",
+      "The Wheel",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall average set, but the second‑set sequence UJB / Playin / Wheel / Playin / China Doll is highlighted as a particularly strong and overlooked segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:44:10.531473+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-10.akg.dodd.9993.sbeok.shnf"
+}

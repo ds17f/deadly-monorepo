@@ -1,0 +1,79 @@
+{
+  "summary": "Good‑quality soundboard capture of a classic 1976 Roosevelt show with smoking Help>Slip>Franklin's, soaring Sugaree and a powerful Other One.",
+  "review": "The recording is a soundboard (SBD) that, while occasionally erratic and bass‑heavy, delivers clear instrument separation and even highlights Phil Lesh’s unusually forward bass. Musically the show shines – the second‑set Help>Slip>Franklin's combo, a 14‑minute Sugaree, a fiery Other One and tight Wheel‑Samson are repeatedly praised, making this a standout summer ’76 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 4‑5 stars and cite multiple highlight songs; recording issues are noted but not enough to outweigh the musical excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with occasional bass‑heavy, erratic patches (AUD artifacts) and some “bassy” moments; many reviewers praise the mix for bringing out Phil’s bass and audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Sugaree",
+      "The Other One",
+      "Wheel > Samson",
+      "Scarlet Begonias",
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, relaxed first set followed by a second‑set that builds into the classic Help‑Slip‑Frank combo and a high‑energy Wheel‑Samson transition; overall pacing described as “smoking” and “groovy”."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's solos are repeatedly called flowing, effortless and “coating the walls”; reviewers note he loved playing this venue.",
+    "Phil": "Phil’s bass is unusually loud and front‑center – praised as “pounding”, “leading the way” and a highlight of the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum fills described as absurdly energetic; rhythm section noted as still getting used to functioning together but in a good way."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Loser": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wheel > Samson": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:09:34.235736+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-08-04.sbd.cotsman.12830.sbeok.shnf"
+}

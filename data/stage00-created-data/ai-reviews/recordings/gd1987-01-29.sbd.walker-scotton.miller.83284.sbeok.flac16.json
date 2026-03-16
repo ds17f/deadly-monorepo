@@ -1,0 +1,45 @@
+{
+  "summary": "Great‑sounding soundboard capture of a mediocre show, highlighted by Brent Mydland’s keyboards and a few beloved songs like Sugaree and Terrapin Station.",
+  "review": "The recording is praised for its clear, well‑balanced soundboard quality, but the performance itself is viewed as uneven—some fans love the Sugaree and Terrapin Station while others criticize Bob Weir’s vocals and overall drag. Brent Mydland’s playing stands out, even as other members falter.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Reviews are split between a very positive view of the sound quality and a generally negative assessment of the musical performance, yielding an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer calls the recording \"great sounding\" with clear balance; no specific flaws or drop‑outs are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opinions differ: some enjoy the set’s highlights, while others feel the show drags and repeats issues from the previous night."
+  },
+  "band_member_comments": {
+    "Jerry": "Introduces the show with a deadpan comment about Bob having guitar trouble; thanked by fans.",
+    "Phil": "",
+    "Bob": "Weir’s vocal delivery is described as sloppy ('can't remember how his own jaw works') and Jerry notes he’s having guitar trouble.",
+    "Keys": "Brent Mydland receives strong praise for his playing, seen as a bright spot that compensates for other weaknesses.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:39:31.763503+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-29.sbd.walker-scotton.miller.83284.sbeok.flac16"
+}

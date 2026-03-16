@@ -1,0 +1,104 @@
+{
+  "summary": "A top‑tier soundboard capture with buttery, fat clarity that showcases an early‑'80s masterpiece – smoking Morning Dew, explosive Other One and a tight Shakedown Street set.",
+  "review": "The Miller SBD of the April 6 1982 show delivers crystal‑clear, full‑bodied audio that many reviewers call “the best release” of this concert. Musically the band is in peak form: Jerry’s guitar flames on Terrapin Station and Morning Dew, Phil’s bass sits prominently in the mix, and the second set rolls through Shakedown Street, Jack A‑Roe and a monster Other One with effortless flow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive 5‑star comments praise both the performance and the soundboard source; average rating across 17 reviews is ~4.6, with detailed technical and musical observations supporting a high score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly note a \"fuller, fatter, wider\" mix, buttery clarity, Phil’s bass prominent in the mix and virtually no audible flaws; occasional mentions of minor drop‑outs refer to official releases, not this SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "The Other One",
+      "Terrapin Station",
+      "Shakedown Street",
+      "Jack A Roe",
+      "Box Elder",
+      "Lost Letter",
+      "Sailor/Saint",
+      "Candyman",
+      "Brown Eyed Women",
+      "Mama Tried > Mexicali Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers praise the seamless transition into a powerful second set, especially the early‑'80s Spectrum vibe; the show builds energy from a smooth first set into an explosive, tightly connected second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers call his playing \"on fire\", highlight his Terrapin Station bridge solo and the playful trading licks with Brent on Shakedown.",
+    "Phil": "Consistently noted as more prevalent in the mix and delivering a solid, funky bass line throughout.",
+    "Bob": "Praised for lively keyboard work (Brent) that competes for attention; his solos are described as \"killing it\".",
+    "Keys": "Brent’s keyboards receive glowing remarks, especially during the Shakedown opener and the Terrapin bridge solo.",
+    "Drums": "Described as solid and dynamic, with the second‑set drum break noted as particularly strong."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack A Roe": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box Elder": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Letter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor/Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried > Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:23:47.084728+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-06.sbd.miller.105237.flac16"
+}

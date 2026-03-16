@@ -1,0 +1,63 @@
+{
+  "summary": "Monstrous Caution sandwich, fierce Eleven→St Stephen run",
+  "blurb": "The late‑show delivers a towering 24‑minute Caution epic framed by feedback bursts. Jerry’s guitar soars through an electrifying Eleven → Saint Stephen transition, while Alligator and Lovelight keep the momentum rolling.",
+  "review": "June 14, 1968 at the Fillmore East captures the Dead in a raw, psychedelic blaze that still feels vital despite the gritty audience tape. The set opens with a screaming feedback sandwich, dives into an unhinged but coherent journey – Alligator into Turn On Your Lovelight and then the monumental 24‑minute Caution (Do Not Stop On Tracks) – before a second drum‑and‑feedback interlude sends the band back out for a final Feedback burst. Highlights include Jerry Garcia’s “on another plane” guitar that dominates the mix, an incendiary Eleven → Saint Stephen run that many fans cite as one of the era’s finest, and Pigpen’s gritty harp on the Caution reprise. Bass is largely buried but provides occasional low‑end thrust, while drums are hard to hear yet drive the performance forward. For anyone tracing the Dead’s early experimental peak, this show is a must‑listen, best experienced through the recommended Cotsman audience recording which, despite its fair fidelity, captures the sheer intensity of that historic night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 42,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the epic Caution, soaring Eleven→St Stephen run and Jerry’s dominant guitar; a third is mixed but does not detract from overall enthusiasm. Consistent language like “legendary”, “monster 24‑minute Caution”, and “smoking Eleven → St Stephen” across sources yields a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd68-06-14.aud.cotsman.16532.sbeok.shnf",
+    "reason": "Despite fair fidelity, this tape captures the iconic feedback sandwich and the full 24‑minute Caution, offering the most complete listening experience of the night."
+  },
+  "key_highlights": [
+    "Monster 24‑minute “Caution (Do Not Stop On Tracks)” with wild dynamics",
+    "Opening/closing feedback sandwich framing the set",
+    "Electrifying Eleven → Saint Stephen run that showcases Garcia’s lead work",
+    "Alligator and Turn On Your Lovelight transition keeping the psychedelic momentum"
+  ],
+  "song_highlights": [
+    "Feedback",
+    "The Eleven",
+    "Saint Stephen",
+    "Alligator",
+    "Turn On Your Lovelight",
+    "Caution (Do Not Stop On Tracks)"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar is overwhelming and described as ‘on another plane’, carrying the show especially during Caution and the Eleven → St Stephen run.",
+    "Phil": "Bass is largely buried by tape limitations, but occasional low‑end “merciful bombs” provide a solid foundation.",
+    "Bob": "Vocals are mostly lost in the mix; no specific praise or criticism beyond that fact.",
+    "Pigpen": "Harpsichord‑style harmonica on the Caution reprise is noted as strong, adding texture amid the chaos.",
+    "Mickey": "Drums are almost inaudible on the audience tape yet the overall drive and intensity of the rhythm section are felt.",
+    "Billy": "Like Mickey, his drumming is buried but contributes to the relentless pulse that underpins the set."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T08:39:46.664689+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feedback",
+      "The Eleven",
+      "Saint Stephen"
+    ],
+    [
+      "Alligator",
+      "Turn On Your Lovelight",
+      "Caution (Do Not Stop On Tracks)",
+      "Drums",
+      "Caution (Do Not Stop On Tracks)",
+      "Feedback"
+    ]
+  ]
+}

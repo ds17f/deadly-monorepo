@@ -1,0 +1,116 @@
+{
+  "summary": "Excellent Charlie Miller sound‑board capture of a fiery 1984 show, highlighted by the smoking “Dancin’ > Bird Song” and tight second set.",
+  "review": "The recording is a pristine SBD (soundboard) source that most reviewers praise as crisp, clean and perfectly remastered, with only occasional complaints about Garcia’s low mix on the first set. Musically the concert is hailed as one of the band’s hottest ’80s outings – a high‑energy opener, a standout “Dancin’ > Bird Song” combo, soaring China‑related jams and a powerful second set capped by a double encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.2/5; the majority of comments are enthusiastic about both performance and sound‑board quality, with only a few isolated complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear Charlie Miller SBD with superb remaster; occasional remarks of low Garcia volume on the first set but no major drop‑outs or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' > Bird Song",
+      "China > Rider",
+      "China Doll",
+      "Cumberland",
+      "Ramble On Rose",
+      "Bucket",
+      "China Cat",
+      "I Know You Rider",
+      "Uncle John's Band",
+      "Dark Star",
+      "Throwing Stones > Not Fade Away"
+    ],
+    "poor_songs": [
+      "Don't Need Love"
+    ],
+    "setlist_flow": "A blistering opener leads into high‑energy jams; the first set suffers from low guitar volume for some listeners, while the second set rocks with tight transitions and a generous double encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as buzzing and perfect on many tracks, though several reviewers note his volume sits back in the mix during the first set.",
+    "Phil": "Phil’s bass work is highlighted for its “bombs galore” and adds drive to Bird Song and other jams.",
+    "Bob": "",
+    "Keys": "Brent Mydland receives glowing remarks – sparkling keys on the Dancin’ > Bird Song, soulful playing on \"Don't Need Love\", and overall vibrant keyboard presence.",
+    "Drums": "Mickey Hart’s drumming is described as “wicked” with strong beam work; the drum surprise before Uncle John's Band is noted positively."
+  },
+  "song_mentions": {
+    "Dancin' > Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Need Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones > Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:31:48.546983+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-15.sbd.walker-scotton.miller.96152.sbeok.flac16"
+}

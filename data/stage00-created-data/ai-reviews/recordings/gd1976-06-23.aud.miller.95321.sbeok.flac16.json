@@ -1,0 +1,120 @@
+{
+  "summary": "Clear, intimate audience recording captures a high‑energy 1976 Tower Theatre show with standout performances of St. Stephen, Wheel and a stellar Lazy Lightning > Supplication sequence.",
+  "review": "The tape, sourced from an audience (AUD) recorder, is surprisingly clear and intimate – you can hear the instruments and crowd ambience without major muddiness, aside from a few spots where the sound dips. Musically the concert shines: the first set builds momentum with high‑energy openers like Mama Tried and Sugaree before slipping into beautiful ballads, while the second set delivers knockout jams such as LiG > Drums > LiG > Cosmic Charlie and a blistering St. Stephen > Not Fade Away > St. Stephen sandwich, capped by a rousing Johnny B. Goode encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently glowing reviews praise both the musical performance and the surprisingly good audience‑tape quality; weighted average of strong show (≈4.5) and solid recording (≈4.0) yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, intimate sound that lets you hear most instruments distinctly; a few brief moments of degraded audio but overall very listenable for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Wheel",
+      "Lazy Lightning > Supplication",
+      "Cosmic Charlie",
+      "Johnny B. Goode",
+      "Mama Tried",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy opening set that balances upbeat numbers with slower ballads, followed by a second set packed with extended jams and seamless segues, ending on an exuberant encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "FOTD": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LiG": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:12:01.504356+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-23.aud.miller.95321.sbeok.flac16"
+}

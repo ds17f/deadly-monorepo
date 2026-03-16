@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent matrix recording captures a hot 1982 show highlighted by standout Mexicali Blues, Peggy‑O, Bird Song and many other gems.",
+  "review": "The matrix source is praised as crystal‑clear and the best sounding version of this concert, delivering a vivid listening experience. Reviewers rave about the band’s fire, citing Mexicali Blues, Peggy‑O, Bird Song, Estimated Prophet, Stella Blue, Iko Iko and Man Smart as high points throughout both sets.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviews are highly positive (4‑5 stars) and consistently praise both the musical performance and the matrix recording quality, indicating an overall excellent show with an excellent source."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the sound as very nice, great, and the best they have heard of this show – a clear, well‑balanced matrix mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mexicali Blues",
+      "Peggy-O",
+      "Bird Song",
+      "Estimated Prophet",
+      "Stella Blue",
+      "Iko Iko",
+      "Man Smart (Woman Smarter)",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set openings with Iko Iko and Man Smart are noted as fresh, while the second set delivers a strong flow with Peggy-O, Bird Song and other highlights, keeping energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:59:58.586870+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-12.138011.mtx.dusborne.flac16"
+}

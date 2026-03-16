@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording with noticeable EQ imbalances—Mydland too forward in Set II—but the show shines on the long intro to Help on the Way.",
+  "review": "The performance features a memorable, spacious intro to \"Help on the Way,\" which reviewers praise. However, the second set suffers from harsh EQ and an overly loud Brent Mydland mix, leading some listeners to call for a remaster. Overall the show is enjoyable but the technical flaws hold it back.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Positive remarks about the musical moment (Help on the Way) are offset by clear complaints about EQ and balance, especially in Set II; limited review count yields medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "EQ is uneven, with Brent Mydland's keyboards too loud in the second set; some songs sound better than others, suggesting a need for remastering."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is marred by mix issues, but the first set and the extended intro to Help on the Way provide strong highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's keyboards are mixed too loudly in Set II, detracting from balance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:23:40.649104+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-14.sbd.walker-scotton.miller.96120.sbeok.flac16"
+}

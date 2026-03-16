@@ -1,0 +1,69 @@
+{
+  "summary": "Hybrid audience/board tape delivers crystal‑clear second set with a monster Shakedown Street and standout Passenger, while the first‑set crowd mic is boomy.",
+  "review": "The show shines in its second half where the soundboard feed captures a ripping Shakedown Street, an inspired Passenger, and a tight Estimated, highlighted by a trippy pre‑drums space after a solid Eyes. The first set’s audience recording adds atmosphere but suffers from boominess, and a few listeners note a chaotic space segment that borders on a meltdown. Overall the performance is strong for the era, though the abrupt ending into Good Lovin’ leaves some wanting more.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical highlights and the clear board recording of set 2, while only a few note issues with the audience tape or an over‑experimental space segment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Set 1 is an audience tape – boomy hall ambience and occasional crowd yells add immediacy but reduce clarity. Set 2 is a soundboard feed – crystal‑clear mix with excellent instrument separation. Some listeners describe the space segment as chaotic, suggesting possible mixing or performance anomalies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Passenger",
+      "Estimated",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Good Lovin'"
+    ],
+    "setlist_flow": "Second set flows superbly with pre‑drums space after Eyes leading into a monster Shakedown Street; the abrupt transition out of the show into Good Lovin’ is the only notable dip."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia praised for shredding on Shakedown Street and Passenger, plus a memorable ending guitar break.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "One reviewer blames Brent (keys) for a “meltdown” sounding like a horror‑film soundtrack during the space segment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space Segment": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:49:38.742755+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-25.aud-set1.sbd-set2.miller.22311.shnf"
+}

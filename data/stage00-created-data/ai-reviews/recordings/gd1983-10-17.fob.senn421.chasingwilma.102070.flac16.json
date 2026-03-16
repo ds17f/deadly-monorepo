@@ -1,0 +1,31 @@
+{
+  "summary": "Poor recording plagued by a right‑channel dropout and a messed‑up sequence; the fall ’83 show is uneven with few highlights.",
+  "review": "Both reviewers rate this capture very low, citing a missing right‑hand channel for about a minute at the start of “Sugaree” and a botched song sequence. The soundboard source sounds decent otherwise, but the technical flaws dominate, and the performance itself is described as inconsistent for the fall‑83 period.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.4,
+    "confidence": "low",
+    "rationale": "Two 1‑star reviews highlight serious recording issues (channel loss, sequence error) and a lack of notable musical moments, leading to an overall poor rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Right channel drops out for ~1 minute at the start of Sugaree; otherwise sound is nice but the overall sequence appears corrupted."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note the set is not consistent for fall ’83 and that the song order/sequence is messed up, detracting from flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T13:01:38.980857+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-17.fob.senn421.chasingwilma.102070.flac16"
+}

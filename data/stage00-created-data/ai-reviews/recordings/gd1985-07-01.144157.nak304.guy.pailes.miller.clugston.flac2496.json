@@ -1,0 +1,31 @@
+{
+  "summary": "Recording plagued by corrupt FLAC files, rendering it unlistenable and leaving the show quality unknown",
+  "review": "The sole reviewer reports that a large portion of the FLAC files are corrupted, making playback impossible until fixed. Because the audio cannot be heard, no assessment of the musical performance or setlist can be made.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review focusing on file corruption; recording is effectively unusable and there is no information about the show itself."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple corrupt FLAC files reported; playback issues prevent evaluation of clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T07:23:01.340104+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-01.144157.nak304.guy.pailes.miller.clugston.flac2496"
+}

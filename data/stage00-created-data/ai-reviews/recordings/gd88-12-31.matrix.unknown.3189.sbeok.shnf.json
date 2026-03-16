@@ -1,0 +1,104 @@
+{
+  "summary": "Great NYE matrix recording with clean mix and standout performances (Let‑The‑Good‑Times‑Roll, The Wheel, Franklin’s Tower) despite occasional bass clipping.",
+  "review": "Fans rave about the high‑energy New Year’s Eve show – the saxophone cameo by Clarence Clemons, a monster Drums segment and soaring jams on Let‑The‑Good‑Times‑Roll, The Wheel and Franklin’s Tower.  The matrix source delivers a well‑balanced SBD/audience blend that sounds clean overall, though several reviewers note an over‑driven bass that clips in places.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "15 reviews with a mean rating of ~4.27; overwhelmingly positive comments about performance and sound, only isolated complaints about bass clipping."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix of soundboard and audience; many praise the clean sound. A few note an exaggerated/clip‑prone Phil bass (possible pre‑FM feed) that detracts slightly from perfection."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let The Good Times Roll",
+      "The Wheel",
+      "Franklin's Tower",
+      "Drums",
+      "Cassidy",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opens with a rolling Let‑The‑Good‑Times‑Roll, builds through tight first‑song energy and maintains momentum with strong set selections; seamless transitions (e.g., Wheel into Gimme) keep the NYE vibe high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp guitar tone, extra umph on Franklins, compelling vocal on “Inspiration”, and engaging stage presence.",
+    "Phil": "His bass is front‑and‑center – many love the heavy mix, though a few report clipping/over‑drive that muddies the low end.",
+    "Bob": "",
+    "Keys": "Brent’s organ work shines (lights up LTGTR, ethereal intro to GSL) and adds vigor throughout the set.",
+    "Drums": "Hailed as one of the best ever; guests like Olatunji and Kitaro add texture, and the drum/space segment is a highlight."
+  },
+  "song_mentions": {
+    "Let The Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Inspiration": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:57:53.456250+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-12-31.matrix.unknown.3189.sbeok.shnf"
+}

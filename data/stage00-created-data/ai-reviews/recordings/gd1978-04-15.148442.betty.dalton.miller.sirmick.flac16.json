@@ -1,0 +1,62 @@
+{
+  "summary": "High‑quality Betty soundboard capture of a 1978 show that shines on Half Step, Let It Grow and Brown‑Eyed Women.",
+  "review": "The recording benefits from the recent Betty board upgrade, delivering clear separation—especially for Keith’s keys—and puts Garcia’s guitar front and center, despite a little muddiness in the low end. Musically the set is praised for strong performances of Half Step, Let It Grow, Brown‑Eyed Women and Passenger, with fans noting the “blistering” jams and solid interplay among the band members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Three detailed reviews highlight a strong musical performance (70% weight) and a generally good soundboard recording with only minor low‑frequency muddiness (30% weight), resulting in an overall rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Betty board upgrade provides clear instrument separation and a crisp mix for keyboards; drums and bass are noted as slightly muddy but still listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Let It Grow",
+      "Brown‑Eyed Women",
+      "Passenger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds momentum with Half Step and Passenger, leading into a jam‑heavy second half highlighted by Let It Grow and Brown‑Eyed Women; overall pacing is praised as engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as ripping, front‑and‑center with his characteristic raspy voice.",
+    "Phil": "Bass is mentioned as a bit muddy in the mix but otherwise holds its own.",
+    "Bob": "Weir’s rhythm work and vocal interplay are highlighted, especially on Passenger and Half Step.",
+    "Keys": "Keith’s keyboard tone is noted as clear and well‑balanced in the mix.",
+    "Drums": "The drums keep solid time though their presence is described as slightly muddy."
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown‑Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:55:07.767727+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-15.148442.betty.dalton.miller.sirmick.flac16"
+}

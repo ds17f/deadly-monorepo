@@ -1,0 +1,74 @@
+{
+  "summary": "Crystal‑clear audience recording captures a fiery 1978 show highlighted by stellar versions of Dancing In The Street, Cold Rain and Snow, and soaring Garcia ballads.",
+  "review": "The audience (AUD) source is remarkably clean and well‑balanced, giving listeners the full energy of a night many fans describe as “mescaline‑charged.”  Standout moments include a ripping Dancing In The Street, an uplifting Cold Rain And Snow opener, a fun Werewolves Of London encore, and breathtaking ballads from Garcia on Peggy O and Stella Blue.  Overall the performance is tight, joyous, and consistently praised across reviews.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.7/5 with overwhelmingly positive comments about both the show and the recording; consistent praise for multiple songs and technical quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, level mix with minimal static or panning issues; crowd reaction is well captured. Reviewers note it sounds better than other available AUDs and even some soundboard releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancing In The Street",
+      "Cold Rain and Snow",
+      "Werewolves of London",
+      "Peggy O",
+      "Stella Blue",
+      "Lazy Lightnin > Supplication"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, high‑energy set that opened with Cold Rain And Snow, built momentum through Werewolves Of London and Dancing In The Street, and closed with soaring ballads and a fun encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos and vocals on Peggy O and Stella Blue are described as breathtaking; he ‘lets loose’ during the jams.",
+    "Phil": "Noted for a humorous line (“Werewolves of anywhere”) during Werewolves Of London, adding to the night’s fun vibe.",
+    "Bob": "Weir “whips” the ending of Supplication and delivers strong vocals on Dancing In The Street.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Werewolves of London": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancing In The Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:42:59.069396+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-11.aud.vernon.6317.sbeok.shnf"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Amazing matrix recording captures a high‑energy 1984 Charlotte show with standout Bertha, Promised Land and Johnny B. Goode, though the second‑set Eyes of the World feels rushed.",
+  "review": "The matrix source is praised for its crystal‑clear balance, making this Oct 5 1984 performance a vivid listen. Fans highlight the tight, energetic renditions of Bertha, Promised Land, West L.A. Fadeaway and a scorching Johnny B. Goode, while one reviewer laments a sloppy, overly‑fast Eyes of the World in the second set. Overall the show is remembered as a lively night with strong playing from Phil and Brent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Six detailed reviews, most giving 4‑5 stars and praising both performance and matrix sound quality; a single low‑star review notes a weak second‑set song, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the matrix mix 'amazing' and 'crisp', with no complaints about dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Promised Land",
+      "West L.A. Fadeaway",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Eyes of the World"
+    ],
+    "setlist_flow": "First set is generally praised for tight, fast playing; the second set divides opinion—some love the high‑energy Chuck Berry numbers while one critic feels the Eyes of the World segment is rushed and sloppy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil comes through beautifully on several tunes, especially noted during the 'Stranger' section.",
+    "Bob": "",
+    "Keys": "Brent Mydland's bridge jam takes the music into another dimension; his keyboard work is described as unique and energetic.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:08:59.175424+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-05.133026.mtx.dusborne.flac16"
+}

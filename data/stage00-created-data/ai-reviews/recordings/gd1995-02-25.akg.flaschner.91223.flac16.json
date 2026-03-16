@@ -1,0 +1,39 @@
+{
+  "summary": "Loud audience tape that drowns the mix, yet the second set shines – especially a standout \"Speedway\" performance.",
+  "review": "The recording is an audience (AUD) capture; reviewers note that crowd noise overwhelms the band at many high points, making it less than ideal technically. Musically, the second set receives praise with \"Speedway\" highlighted as a favorite, while the first set is described as weak. Overall listeners appreciate the show’s energy but wish for an SBD to fully enjoy it.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Reviews are split: positive comments about the second set and specific songs, but consistent criticism of the audience‑heavy recording and a weak first set lowers the overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience is louder than the band, drowning out instruments at key moments; no soundboard source available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Speedway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised as great; first set described as sub‑par, leading to an uneven overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Speedway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:21:47.895220+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-25.akg.flaschner.91223.flac16"
+}

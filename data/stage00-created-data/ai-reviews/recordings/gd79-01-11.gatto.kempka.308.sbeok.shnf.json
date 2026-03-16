@@ -1,0 +1,81 @@
+{
+  "summary": "Strong, high‑energy show highlighted by a ripping Jack Straw and solid second‑set jams; audience recording is decent but a bit muddy and noisy.",
+  "review": "Fans consistently praise the performance – especially Jerry’s fire on Jack Straw, the soaring Stella run and an eleven‑minute Miracle – while noting that the tape sounds like a typical late‑70s audience capture with hiss, occasional crowd overload and some tracking quirks. The show is remembered as a fun, “first‑show” experience with plenty of jams, even if the recording isn’t pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70 %) are 4‑5 stars and focus on strong musical moments; recording comments are mixed but generally describe a listenable, if imperfect, audience capture. Weighted scoring yields ~4.0."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hissy and muddy mid‑range typical of late‑70s audience tapes; crowd clapping and whistling can dominate the mix, occasional tracking errors (Space/Truckin’ split). Overall listenable and conveys the live atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Stella",
+      "Miracle",
+      "Sugaree",
+      "Estimated > He's Gone"
+    ],
+    "poor_songs": [
+      "Deal (Donna vocal ending)",
+      "Bob Weir early entry after Jack Straw"
+    ],
+    "setlist_flow": "First set builds momentum with a fiery Jack Straw; second set is jam‑heavy, featuring a seamless Stella/Truckin’ run and an extended Miracle. The pacing stays high throughout, though vocal miscues on Deal slightly dent the finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly described as ripping, machine‑gun fast, and delivering one of his best Jack Straw performances.",
+    "Phil": "Mentioned briefly as locking into a groove that supports Jerry’s lead.",
+    "Bob": "Noted for lyrical misquote on “We used to play for acid…”, early vocal entry after Jack Straw, and occasional slide‑guitar work on Sugaree.",
+    "Keys": "No specific performance comments; only references to Keith/Donna in passing.",
+    "Drums": "Few remarks, mainly about the Drum/Space segment preceding the Truckin’/Stella run."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Stella": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Miracle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated > He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-25T19:00:48.710850+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-11.gatto.kempka.308.sbeok.shnf"
+}

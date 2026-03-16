@@ -1,0 +1,93 @@
+{
+  "summary": "A legendary Cornell ’77 show captured in an outstanding matrix mix that delivers crystal‑clear sound and a fire‑filled performance.",
+  "review": "The Cornell May 8, 1977 concert is widely celebrated for its flawless flow – from the scorching Scarlet/Fire to the soaring Estimated Prophet, Row Jimmy, Dancin' and a breathtaking Morning Dew. Reviewers rave about the matrix blend of the Betty board with audience ambience, noting the mix’s clarity, Phil’s front‑center bass, and Jerry’s killer solos, making this arguably the definitive source for this historic night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over 30 reviews (all but two) give five stars and praise both the musical performance and the matrix recording; only minor drop‑out is noted, so the combined show/recording score is near perfect."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Outstanding blend of Betty soundboard and audience tape – crisp, balanced, with Phil’s bass pushed forward; a brief drop‑out noted at the Lazy Lightning → Supplication transition but otherwise flawless."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Estimated Prophet",
+      "Row Jimmy",
+      "Dancin'",
+      "Morning Dew",
+      "St. Stephen > Not Fade Away (NFA) jam",
+      "Jack Straw",
+      "Mama Tried",
+      "Loser",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a perfect pacing – tight tempos, seamless segues and iconic moments that keep the energy high from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are highlighted (especially on Brown‑Eyed Women) with “great stealth riffs” and overall top‑form playing.",
+    "Phil": "Phil’s bass is praised for being front‑and‑center in the mix and for driving the groove throughout the show.",
+    "Bob": "",
+    "Keys": "Keith’s keyboard presence varies – some note he sits a bit low in the mix (especially on Estimated), but overall the keys complement the band.",
+    "Drums": "The drummers (Bill & Mickey) receive kudos for tight, dynamic playing that propels the jams and coda sections."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen > Not Fade Away": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T23:47:45.691891+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.mtx.dan.29511.flac16"
+}

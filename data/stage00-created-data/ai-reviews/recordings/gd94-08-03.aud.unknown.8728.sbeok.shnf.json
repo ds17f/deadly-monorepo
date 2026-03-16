@@ -1,0 +1,70 @@
+{
+  "summary": "A low‑fidelity ambient audience tape of the notoriously poor 8/3/1994 Giants Stadium show, with the only real highlight being an intense Bird Song.",
+  "review": "The recording is a noisy audience capture with boomy bass and muddied mids that most reviewers found difficult to listen to. The performance itself is widely regarded as one of the weaker shows of the summer ’94 run, plagued by sloppy tempos and uninspired set choices, though a few listeners note a scorching Bird Song and occasional moments like Foolish Heart or solid Attics after‑drums. Overall the tape is only worth hunting down for completists or those seeking that singular Bird Song moment.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "high",
+    "rationale": "13 reviews overwhelmingly rate the show 1‑2 stars and criticize both performance and recording quality; only one positive review pushes the average up slightly, resulting in a below‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Ambient crowd mic, muffled mids, boomy bass, low clarity; several reviewers call it \"brutal\" or \"not clear.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Foolish Heart",
+      "Attics"
+    ],
+    "poor_songs": [
+      "Mississippi Half-Step",
+      "Stella Blue",
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "Most fans describe the set as disjointed and depressingly flat, with a weak opening half‑step, rushed tempos that sap the magic from ballads, and a second‑set song selection that fails to lift the energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – some note he sounded good early in the tour, but many cite botched verses and a generally lackluster performance.",
+    "Phil": "",
+    "Bob": "Generally okay; one reviewer says Bob hits most notes even on weaker shows.",
+    "Keys": "",
+    "Drums": "Post‑drums sections (Attics) receive praise, while pre‑drum segments are criticized as chaotic."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:03:56.625682+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-08-03.aud.unknown.8728.sbeok.shnf"
+}

@@ -1,0 +1,101 @@
+{
+  "summary": "Stunning soundboard capture of a classic ’76 show with a smoking Help‑Slip‑Franklin’s, first‑time gems and crystal‑clear mix.",
+  "review": "The recording is an excellent sound‑board source that delivers superb instrument separation, a warm Jerry tone and surprisingly forward keyboards. Musically the concert shines – Help>Slip>Franklin's smokes, first‑time performances of Samson, Lazy Lightning/Supplication, The Wheel and a gorgeous Candyman make it a fan favorite, even if the overall tempo feels a touch slow. Overall the show is praised for its energy, tight jams and standout moments despite minor speed quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 4‑5 stars, repeatedly praising both performance (standout songs, tight jams) and recording quality (crisp, excellent soundboard). Minor complaints about tempo do not outweigh the strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as crystal‑clear, well‑separated and “incredible”; a few note slight slowdown or minor hiss that has been corrected, but overall the mix is balanced with audible drums and prominent keyboards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Candyman",
+      "Cassidy",
+      "Might As Well",
+      "Samson & Delilah",
+      "Lazy Lightning / Supplication (first time)",
+      "The Wheel",
+      "Scarlet",
+      "Dancin'",
+      "Crazy Fingers",
+      "The Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Lazy Lightning / Supplication (shaky/slow)"
+    ],
+    "setlist_flow": "Reviewers note a strong setlist with an especially praised second‑set song list; the first set is described as a bit slower but still enjoyable, and the overall pacing feels lively despite occasional tempo quirks."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for perfect tone, warm guitar sound (Travis Bean), and spot‑on vocals that sound like studio takes.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith is highlighted as playing beautifully, unusually forward in the mix, adding to the overall richness of the performance.",
+    "Drums": "The drumming is described as extremely audible, with Bill and Mickey reclaiming a solid groove that drives the jams."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Candyman": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning / Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 4,
+      "total_mentions": 5
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T02:56:23.066969+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-03.sbd.serafin.7719.sbeok.shnf"
+}

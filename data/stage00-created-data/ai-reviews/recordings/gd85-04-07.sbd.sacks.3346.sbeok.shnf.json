@@ -1,0 +1,102 @@
+{
+  "summary": "Good‑quality soundboard capture of a high‑energy Easter Sunday show highlighted by Shakedown Street, Morning Dew and an inspired Half‑Step vocal moment.",
+  "review": "The recording is a clean soundboard source that most listeners find clear and listenable despite a few tape‑age quirks. Musically the concert is praised for its electric first set, a funky Shakedown Street opener, soaring Bird Song and a memorable Half‑Step vocal burst from Phil, though Jerry’s voice is often described as ragged and some songs (Why Don’t We Do It In The Road, C.C. Rider) receive mixed marks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑5 stars and extol its high points; recording quality is uniformly described as good, giving a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp soundboard mix noted by several reviewers; occasional mention of ‘cheapo equipment’ but no serious drop‑outs or distortion. Overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Morning Dew",
+      "Bird Song",
+      "Half Step",
+      "She Belongs To Me"
+    ],
+    "poor_songs": [
+      "Why Don't We Do It In The Road",
+      "C.C. Rider",
+      "Samson"
+    ],
+    "setlist_flow": "First set is repeatedly called outstanding and energetic, with a strong opener (Why Don’t We Do It In The Road) that sets a fun tone. The second set leans into funkier jams—Shakedown Street, Samson and a soaring Bird Song—culminating in the powerful Morning Dew > Sugar Magnolias finale."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are described as hurt, rough or 'shot' throughout, but his guitar leads (especially on Samson) receive praise.",
+    "Phil": "Highlighted for stepping up and singing the Half‑Step refrain, adding a vocal lift to the band.",
+    "Bob": "Criticized for an ‘awful slide solo’ on C.C. Rider; otherwise not heavily mentioned.",
+    "Keys": "Brent Mydland’s high‑pitched squeals and energetic keyboard work are noted as fun highlights.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "She Belongs To Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Why Don't We Do It In The Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "C.C. Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Man Smart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:26:34.871537+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-07.sbd.sacks.3346.sbeok.shnf"
+}

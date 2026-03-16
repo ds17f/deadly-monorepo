@@ -1,0 +1,61 @@
+{
+  "summary": "High‑energy 1971 show with blazing Casey Jones and smoky Ramble on Rose",
+  "blurb": "The set bursts with energy from a fiery Casey Jones into One More Saturday Night, while the second set delivers a scorching Ramble on Rose and tight Not Fade Away jams. Jerry’s guitar is solid despite a minor Brown Eyed Women flub, Phil lays down “lots o’ Phil” on bass, and Keith’s piano adds character throughout.",
+  "review": "On December 9, 1971 the Dead took St. Louis’ Fox Theatre by storm. From the opening “Truckin'” through a raucous “Brown Eyed Women” (despite a tiny vocal slip) the band kept the momentum rolling, hitting classics like “Mr. Charlie,” “Jack Straw,” and an exuberant “Sugaree.” The first set’s high point is a scorching “Casey Jones” that segues into a rollicking “One More Saturday Night,” where Phil’s bass work earns the nickname “Lots o’ Phil.”  \nThe second set turns up the heat even further. Keith’s piano on “Ramble On Rose” is delightfully distorted, giving the song a gritty edge while Pigpen’s harmonica weaves through. A punchy “Mexicali Blues,” followed by an infectious “Sugar Magnolia,” leads into a double‑take of “Not Fade Away” that rides a rolling groove with Bill’s steady drumming. The show closes on a high note with a joyful repeat of “Not Fade Away,” leaving the audience buzzing long after the lights went down.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All available analysis is positive: the recording is described as 'high‑energy' with multiple standout songs (Casey Jones, One More Saturday Night, Ramble on Rose) and no negative remarks about performance. Praise for guitar, bass, piano and overall set flow is consistent across the single source, justifying a strong positive sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd71-12-09.sbd.kaplan.3345.sbeok.shnf",
+    "reason": "Excellent soundboard capture with crisp, clean mix and minimal tape hiss; preserves the high‑energy performance while highlighting piano distortion on Ramble on Rose."
+  },
+  "key_highlights": [
+    "Fire‑brand “Casey Jones” that launches a powerful first set climax.",
+    "Distorted yet characterful Keith piano on “Ramble On Rose”.",
+    "Tight, double‑take “Not Fade Away” jam that drives the second set home."
+  ],
+  "song_highlights": [
+    "Casey Jones",
+    "One More Saturday Night",
+    "Black Peter",
+    "Ramble On Rose",
+    "Tennessee Jed"
+  ],
+  "band_performance": {
+    "Jerry": "Flubs the first verse of Brown Eyed Women but otherwise delivers strong, high‑energy lead work throughout the set.",
+    "Phil": "\"Lots o' Phil\" on bass shines, especially during One More Saturday Night where his groove drives the song.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-20T10:56:16.449510+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Casey Jones",
+      "One More Saturday Night"
+    ],
+    [
+      "Black Peter"
+    ],
+    [
+      "Ramble On Rose"
+    ],
+    [
+      "Tennessee Jed"
+    ]
+  ]
+}

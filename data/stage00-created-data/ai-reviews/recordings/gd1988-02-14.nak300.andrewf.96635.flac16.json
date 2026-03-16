@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording captures a punchy China Cat Sunflower → Samson transition and a Gilmour‑esque Space jam.",
+  "review": "Both reviewers rave about the surprisingly clear audience sound, noting that the tape lets you hear every nuance—from the tight, punchy China Cat Sunflower segue into Samson to Garcia’s surprising Pink Floyd‑style lick in Space. The show itself is described as a short, solid set with those highlights standing out, making it an enjoyable listen despite its modest length.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently positive 4‑star reviews highlight strong musical moments and a high‑quality audience recording; limited to two reviews, so confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience tape praised for clarity and punch—captures the energy of China Cat Sunflower, Samson, and subtle Space nuances; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Samson",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Short, standard set that flows well; highlights include a tight China Cat → Samson transition and an inspired Space segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers a Gilmour‑like lick in Space, switching from intense fuzz to clean tone with notable expression.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:10:01.838965+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-02-14.nak300.andrewf.96635.flac16"
+}

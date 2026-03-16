@@ -1,0 +1,96 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a 1989 Frost show with standout China > Rider, Pocky Way and a fiery Ship of Fools.",
+  "review": "The recording is an excellent soundboard mix – crisp, well balanced and virtually free of drop‑outs, letting the band’s 1989 energy shine through.  The performance is highlighted by Brent Mydland’s vibrant keyboards (especially on Pocky Way), a smashing China > Rider close to set one and a soaring Ship of Fools solo, while a few moments such as Jack Straw feel flat.  Overall the show is a solid, high‑energy Dead concert that rewards repeated listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (13/15) are 5‑star and praise both the sound quality and musical highlights; only a single detailed review is mixed, yielding an overall strong positive assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with rich highs and solid lows; occasional slight muddiness at the very start of the show but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Pocky Way",
+      "Ship of Fools",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "The Wheel",
+      "Wharf"
+    ],
+    "setlist_flow": "First set builds nicely and closes with a memorable China > Rider; second set is jam‑heavy, moving from energetic Pocky Way through solid Ship of Fools into tight transitions like Playing in the Band → Eyes of the World."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers standout solos (Ship of Fools, Pocky Way) but slips on lyrics early (Jack Straw) and isn’t always soaring.",
+    "Phil": "Bass is clear and driving; several reviewers note Phil’s tone shines in the broadcast mix.",
+    "Bob": "",
+    "Keys": "Brent Mydland is praised for vibrant Hammond work, especially on Pocky Way and his overall keyboard presence.",
+    "Drums": "The rhythm section stays tight; drum‑to‑space transitions are noted as energetic but receive no specific criticism."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Pocky Way": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Need a Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around And Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "TLEO": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T19:18:24.549159+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-05-06.sbd.nawrocki.14262.sbefixed.shnf"
+}

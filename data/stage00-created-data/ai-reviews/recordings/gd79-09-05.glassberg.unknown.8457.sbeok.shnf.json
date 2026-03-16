@@ -1,0 +1,96 @@
+{
+  "summary": "A high‑quality audience tape captures a solid late‑70s show with a standout second set (Scarlet Begonias, Fire on the Mountain, Estimated Prophet) and warm, fuzzy sound.",
+  "review": "The recording, taken from a sweet spot in the crowd, sounds warm and clear – a little EQ can make it shine. Musically the concert is solid overall, with an especially strong second set that many reviewers cite as the highlight, though the first‑set opener Half‑Step and some vocal moments show minor flaws. The band plays above average throughout, and Brent Mydland’s integration into the group is noted positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three detailed reviews give a combined picture of strong musical performance (especially the second set) and an excellent audience recording; weighted rating yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded from a high sweet‑spot position, warm & fuzzy sound with good clarity; minor EQ tweaks improve it further. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Estimated Prophet > Eyes of the World > Drums > Space > Black Peter",
+      "I Need a Miracle > Bertha > Good Lovin'",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Half-Step > Franklin's (opener)",
+      "Miracle > Bertha > Good Lovin' (felt like going through the motions)",
+      "Eyes of the World (a bit too fast for some reviewers)"
+    ],
+    "setlist_flow": "First set is solid but shows signs of fatigue; second set flows brilliantly with seamless transitions and high energy, making it the concert’s highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal struggles noted (laryngitis effects on Half‑Step and Black Peter) and occasional pitch wobble, though guitar work remains strong.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent \"Brett\" Mydland is praised for finally fitting in and adding warmth to the keyboards.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half-Step > Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:21:05.656995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-09-05.glassberg.unknown.8457.sbeok.shnf"
+}

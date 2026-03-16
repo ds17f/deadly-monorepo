@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent soundboard capture of an intimate show highlighted by a stellar Black Peter and Lovelight, though the surprise guest’s late‑set singing mars the final three numbers.",
+  "review": "The recording is a crisp SBD transfer that reproduces the band’s hot playing and the warm acoustic atmosphere of the small venue. Highlights include a crushing Black Peter and a smoky Lovelight, but an unknown guest (believed to be Elvin Bishop) takes over the last three songs, drawing sharp criticism from listeners. Overall the performance is strong until the abrupt finish.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised as excellent; show quality is mixed – strong early set and standout songs but a poorly received guest appearance at the end, leading to an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear sound with a good transfer; no major drop‑outs or muffiness reported. Reviewers repeatedly call the audio \"great\" and \"not flat for an SBD.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Not Fade Away",
+      "Katie Mae",
+      "Cold Rain & Snow (cut)"
+    ],
+    "setlist_flow": "The intimate venue and acoustic set create a warm, on‑the‑night vibe that carries through most of the performance. The flow is disrupted when an unknown guest steps in for the final three numbers, which many listeners felt ruined the ending."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Katie Mae": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:19:38.143817+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-03-08.sbd.miller.113359.flac16"
+}

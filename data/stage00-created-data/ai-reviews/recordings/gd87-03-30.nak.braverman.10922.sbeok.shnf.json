@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent audience recording that captures a high‑energy show highlighted by a soaring He's Gone, a killer Loser solo and a standout Shakedown.",
+  "review": "The performance is consistently praised for its tight, energetic second set – especially the long jam in He's Gone, Jerry's blistering solo on Loser, and a powerful Shakedown. The audience‑sourced tape is described as clear with a great crowd mix, though one reviewer notes the Baby Blue track is missing. Overall the show and its capture are regarded as top‑tier by the fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews are overwhelmingly positive about both the musical performance and the sound quality; only a minor complaint about a missing Baby Blue segment prevents a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced audio with a good crowd mix; reviewers call it \"A+ quality\" and note the sound is crisp. The only technical drawback mentioned is that Baby Blue is cut from the tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Loser",
+      "Shakedown",
+      "Cassidy",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Baby Blue"
+    ],
+    "setlist_flow": "Fans describe a strong first set (notably \"Shakedown\" and Phil's pumping bass) and an especially tight, energetic second half anchored by He's Gone and the Loser solo."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo at the end of Loser is called the best ever; he struggles slightly with high notes on He's Gone but remains spirited.",
+    "Phil": "\"Phil is pumpin' on Shakedown\" – bass work highlighted as a highlight of the show.",
+    "Bob": "Bobby (Bob Weir) and Brent create a really nice harmony during He's Gone.",
+    "Keys": "Brent's keyboard work adds strong harmonic texture, especially in He's Gone and Good Time Blues.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Time Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:13:07.536343+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-30.nak.braverman.10922.sbeok.shnf"
+}

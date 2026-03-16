@@ -1,0 +1,31 @@
+{
+  "summary": "Attendee rates the show a perfect 5 stars but offers no details on sound or performance.",
+  "review": "The sole reviewer, who was apparently at the concert, gives the recording five stars and mentions being there, yet provides no commentary on the audio fidelity or musical highlights. With such limited feedback we can only infer a positive overall impression while the technical and musical specifics remain unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Only one brief, highly positive review; no concrete information on sound quality or performance, so rating is based primarily on the 5‑star score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer does not discuss song selection or set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T01:17:43.026228+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-13.149309.senn441.hunt.mattes.miller.clugston.flac1648"
+}

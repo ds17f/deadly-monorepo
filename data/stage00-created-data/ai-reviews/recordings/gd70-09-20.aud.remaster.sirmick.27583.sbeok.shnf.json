@@ -1,0 +1,82 @@
+{
+  "summary": "Remastered sound‑board capture of a legendary 9/20/70 Fillmore East show – pristine acoustic set and smoking electric jams despite lingering tape hiss.",
+  "review": "The September 20, 1970 Fillmore East performance is hailed as one of the band’s finest from that year: an immaculate acoustic opening (Rosie McFall, New Speedway, Brokedown Palace) followed by a fiery second set highlighted by Easy Wind, To‑Lay‑Me‑Down and an incendiary Not Fade Away > Caution sequence.  The Sir Mick remaster cleans up much of the original tape noise, though some hiss and occasional volume swings remain; overall the recording is clear enough to showcase the band’s tight interplay.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 70 % of reviews are 5‑star, praising both performance and the remaster; only a handful note hiss or mix quirks, so the combined show (70 %) + recording (30 %) rating lands in the 4.5 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remaster removes most tape hiss and fixes volume dips, but some residual hiss, warble and occasional drum‑mix highs remain; overall clarity is strong with good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Wind",
+      "To Lay Me Down",
+      "Brokedown Palace",
+      "New Speedway",
+      "Ripple",
+      "Sugar Magnolia",
+      "Not Fade Away > Caution > Feedback > Goodnight"
+    ],
+    "poor_songs": [
+      "Caution"
+    ],
+    "setlist_flow": "Acoustic set opens the show with gentle, blue‑grass‑flavored numbers that build into a high‑energy electric second half; reviewers note the pacing feels natural and the transition from acoustic to electric is seamless."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead guitar is described as “out of control” and his piano on To Lay Me Down receives special praise.",
+    "Phil": "Bass noted for its warm, woody tone (“wood and strings”) that grounds the acoustic set.",
+    "Bob": "Bobby (Bob Weir) steals the spotlight on Easy Wind with searing lead work; his rhythm/lead duel with Jerry is highlighted.",
+    "Keys": "Pigpen’s organ shines on Me and My Uncle and Attics; keyboards are generally praised though some mixes put drums too high.",
+    "Drums": "Mickey’s drumming is energetic but a few reviewers mention the drum mix being overly loud in spots."
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "New Speedway": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Ripple": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Not Fade Away > Caution > Feedback > Goodnight": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-12T21:25:48.544427+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-09-20.aud.remaster.sirmick.27583.sbeok.shnf"
+}

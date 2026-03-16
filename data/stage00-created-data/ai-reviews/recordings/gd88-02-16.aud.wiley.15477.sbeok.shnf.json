@@ -1,0 +1,74 @@
+{
+  "summary": "A muddy audience recording that’s still listenable, with a few highlights like Fantasy and Watchtower amid generally subdued performances.",
+  "review": "The tape captures an early‑80s show on an audience source that sounds muddled and statically dirty, though the crowd ambience is preserved. Musically the band holds back for most of the set, but moments such as the above‑average Fantasy, a solid Watchtower, and strong Jerry riffs on Not Fade Away provide enough interest to keep it from being unlistenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Both reviewers note significant recording flaws and a largely average performance, but they also highlight several strong songs; the weighted assessment yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers describe the sound as muddy, statically dirty and somewhat messy, though the raw crowd noise and song transitions are retained."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fantasy",
+      "Watchtower",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Space",
+      "Playing in the Band"
+    ],
+    "setlist_flow": "First set is decent but subdued; second set opens with a percussive drum/Iko segment and includes mixed material, with occasional high points that prevent it from being a total let‑down."
+  },
+  "band_member_comments": {
+    "Jerry": "His riffs on Fantasy and Not Fade Away are praised; noted as waking up later in the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard coloring is highlighted during Eyes, adding activity.",
+    "Drums": "The drum segment (Iko/Chinese New Year ensemble) is described as messy but present."
+  },
+  "song_mentions": {
+    "Bird": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:15:12.532890+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-02-16.aud.wiley.15477.sbeok.shnf"
+}

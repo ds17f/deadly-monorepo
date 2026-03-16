@@ -1,0 +1,85 @@
+{
+  "summary": "Audience‑sourced recording that’s uneven but listenable, capturing a solid ’95 Palace show highlighted by an inspired Loser solo and fiery China Rider/Estimated Prophet transition.",
+  "review": "The performance is generally praised – Jerry’s lead on The Loser, the China Rider → Estimated Prophet jam, Mississippi Half‑Step and the final Attics/“Lucy” sequence get enthusiastic mentions.  Recording quality is mixed: many note that it’s a noisy audience (AUD) tape with moments of muffled or overly loud crowd noise, though some listeners find it acceptable for background listening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated as decent‑to‑good (average ~3.8/5) while recording quality skews lower (~2.5/5). Weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers call it a ‘bad AUD’ or note screaming louder than the band, muffled sections and overall weak fidelity. A few say it’s decent enough for background listening, but overall the tape is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Loser",
+      "China Rider > Estimated Prophet (Uncle John's)",
+      "Mississippi Half Step",
+      "Attics",
+      "\"Lucy\" in the Sky with Diamonds"
+    ],
+    "poor_songs": [
+      "Big Rare Rabbit (RxR) Blues"
+    ],
+    "setlist_flow": "The show is described as a solid, typical late‑90s set – a strong first half with fan‑favorites, an especially praised second‑set jam chain (China Rider → Estimated Prophet), and a memorable encore that leaves many listeners emotionally resonant."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s inspired Loser solo, light‑fast fingerwork, and overall strong playing despite the tour’s reputation.",
+    "Phil": "Positive nods to Phil’s bass work on Tom Thumb (described as a great droned groove) and steady support throughout.",
+    "Bob": "",
+    "Keys": "Vince Welnick is mentioned negatively (“painful token Vince tune”) and generally not praised; no specific positive keyboard moments noted.",
+    "Drums": "One reviewer describes the drum mix as “underwater” in the audience tape, but no performance criticism."
+  },
+  "song_mentions": {
+    "The Loser": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Rider > Estimated Prophet (Uncle John's)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "School Girl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Attics": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "\"Lucy\" in the Sky with Diamonds": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Big Rare Rabbit (RxR) Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:17:09.945500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-28.schoeps.10154.sbeok.shnf"
+}

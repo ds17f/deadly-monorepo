@@ -1,0 +1,51 @@
+{
+  "summary": "Decent audience recording with standout Bird Song, Crazy Fingers in Space, and a gorgeous Stella Blue",
+  "review": "The tape offers a decent listening experience that captures several highlights—Bird Song, an inspired Crazy Fingers woven into Space, and a beautiful rendition of Stella Blue. While the recording isn’t pristine, it’s enough to enjoy the strong moments from what appears to be the band’s final show at the Greek Theatre.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; reviewer praises specific songs but notes only a 'decent' recording, leading to an estimated rating that balances good show moments with average audio quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a decent recording; no specific issues mentioned, suggesting acceptable clarity but not high‑fidelity soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Crazy Fingers",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on overall flow; focus is on the highlighted moments rather than set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:47:07.703012+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-18.sennMD421.andrewf.89375.sbeok.flac16"
+}

@@ -1,0 +1,50 @@
+{
+  "summary": "Fair audience recording captured with ambient mics; the show delivers a standout Lazy River Road and an above‑average Bird Song amid generally uneven performance.",
+  "review": "The tape is sourced from ambient audience microphones, resulting in a modest sound quality that some listeners find thin. Musically the concert is mixed – Walkin' Blues fell flat for the reviewer, but a beloved rendition of Lazy River Road rescued the set and Bird Song was praised as above average. Overall the performance feels okay but not consistently compelling.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; reviewer finds the show just okay and notes only fair recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Recorded with ambient mics; lacks crispness and depth, described as merely adequate by the reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy River Road",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer felt the concert was uneven, noting long waits and a lack of consistent Jerry guitar work; however, Lazy River Road and Bird Song provided high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer complained about hearing little of Jerry's playing, only occasional 'nuggets' of his guitar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Walkin' Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:45:38.619392+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-21.sbd.serafin.11269.shnf"
+}

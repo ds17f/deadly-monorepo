@@ -1,0 +1,93 @@
+{
+  "summary": "Crisp audience recording captures a hot show with a monster Playing in the Band kickoff, standout The Wheel and The Other One, despite a slightly thin Phil bass.",
+  "review": "The audience (AUD) tape is surprisingly clear, delivering crisp instrument separation while still conveying the crowd’s excitement. Musically the concert shines – the second set rolls from a fiery Playin' in the Band into a superb Wheel, a soaring The Other One and many other strong selections, only marred by a few vocal flubs and a bass that could use more oomph.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The reviewer gives 4 stars, praising both the performance (many standout songs) and the recording quality (crisp AUD tape). With only one detailed review the confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced sound that captures all band members; crowd ambience present but not distracting. Minor complaint about Phil’s bass lacking a bit of oomph."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feels Like A Stranger",
+      "Loser",
+      "Bird Song",
+      "China Cat Sunflower / I Know You Rider",
+      "Playing in the Band",
+      "The Wheel",
+      "Truckin'",
+      "Stella Blue",
+      "The Other One",
+      "It's All Over Now, Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set flows smoothly from Playin' → Dark Star → The Wheel → a quick Playin' reprise → Truckin' → Stella Blue, delivering a psychedelic, high‑energy arc that the reviewer describes as “monster” and “very strong.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Great guitar solos (Shakedown Street‑style) and fluid playing; vocal tone rough on some songs with occasional flubs.",
+    "Phil": "Bass present but could use more oomph, especially noted in the second set.",
+    "Bob": "Provides slashing, fuzzed stabs on The Other One and participates in ragged yet passionate harmonies; also has a few vocal flubs.",
+    "Keys": "Brent's synth work adds spacey textures, droning sounds and high‑velocity runs throughout the jam sections.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feels Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower / I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now, Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:19:35.609658+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-28.150938.fob.nak700.wagner.miller.clugston.flac1648"
+}

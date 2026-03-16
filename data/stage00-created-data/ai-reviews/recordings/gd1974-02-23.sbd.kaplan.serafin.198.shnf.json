@@ -1,0 +1,78 @@
+{
+  "summary": "High‑energy 1974 Winterland show with a smoking Here Comes Sunshine and an epic The Other One, captured on a clean soundboard source.",
+  "review": "Fans rave about the standout performances – a blistering Here Comes Sunshine with an unforgettable Jerry solo, a out‑of‑this‑world The Other One that even veers into Slipknot territory, plus beautiful renditions of Eyes of the World, Weather Report Suite and Ship of Fools. The recording is a soundboard capture that sounds clear enough for listeners, though no specific technical issues were noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All four reviews are enthusiastic (average 4.5★) and highlight multiple strong musical moments; the source is a soundboard with no reported flaws, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on fidelity; presumed clean soundboard capture typical of the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "The Other One",
+      "Eyes of the World",
+      "Weather Report Suite",
+      "He's Gone",
+      "Ship of Fools",
+      "Promised Land > Bertha > Greatest"
+    ],
+    "poor_songs": [
+      "Here Comes Sunshine (compared to 1973 version)",
+      "Jack Straw"
+    ],
+    "setlist_flow": "First set mixes upbeat openers like Around & Around with ballads and a solid closing trio (Promised Land‑Bertha‑Greatest). The second half delivers big jams – especially The Other One, Weather Report Suite and a powerful Here Comes Sunshine – keeping the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an epic solo on Here Comes Sunshine and his Slipknot‑style improvisation during The Other One.",
+    "Phil": "Noted for “strange” bass explorations on The Other One, backing vocals on Going Down the Line and Jack Straw.",
+    "Bob": "",
+    "Keys": "Keith Godchaux receives a compliment for a nice solo in the Going Down the Line segment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land > Bertha > Greatest": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:06:06.147643+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-02-23.sbd.kaplan.serafin.198.shnf"
+}

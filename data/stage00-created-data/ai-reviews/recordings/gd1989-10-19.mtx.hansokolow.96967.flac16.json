@@ -1,0 +1,63 @@
+{
+  "summary": "Matrix recording captures a top‑notch 1989 show with standout new tunes like Victim, Built To Last, Blow Away and a solid Franklin’s Tower.",
+  "review": "The concert is praised as a \"top‑notch\" performance, highlighted by an excellent first set of newer material (Victim, Built To Last, Blow Away) and a powerful second set that includes Death Don't Have No Mercy and a well‑paced nine‑minute Franklin's Tower. The matrix source delivers a balanced sound with no reported issues, making the show both musically and technically enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Single detailed 5‑star review emphasizes strong performance and a good matrix recording; limited sample size reduces confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix blend provides balanced, clear sound; reviewer did not note any specific audio flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim of the Crime",
+      "Built To Last",
+      "Blow Away",
+      "Death Don't Have No Mercy",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set delivers a strong run of new material; second set moves efficiently through heavy selections, keeping the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Victim of the Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built To Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:55:24.939257+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-19.mtx.hansokolow.96967.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Great show with standout Franklin's Tower, captured on a clear audience recording.",
+  "review": "Both reviewers rave about the performance, calling it a \"hell of a show\" and highlighting the memorable (though mis‑named) Franklin's Tower. The recording is praised for its pleasant audience ambience and overall good sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "low",
+    "rationale": "Both reviews give 5 stars and emphasize a strong performance and clear sound, but only two brief comments limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note an especially nice audience and great overall sound, suggesting a clean capture with good crowd presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing; reviewers simply describe the concert as an excellent overall experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:28:52.571481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-04..nak700.glassberg.96585.flac24"
+}

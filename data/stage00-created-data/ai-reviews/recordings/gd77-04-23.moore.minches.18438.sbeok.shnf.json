@@ -1,0 +1,51 @@
+{
+  "summary": "Crisp, powerful audience recording captures a strong spring‑'77 set highlighted by Sugaree, Scarlet>Fire and a fiery Bertha.",
+  "review": "The tape is an audience (matrix‑style) capture that many reviewers describe as crisp, full‑range and surprisingly clean for the era. Musically the show shines with a solid first set – opening with a tasty Sugaree and building to a standout Scarlet > Fire – and a second‑set Bertha that ranks among fans’ favorites. Overall the performance is energetic and well‑balanced, making it one of the more underrated spring ’77 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) and enthusiastic comments about both the music and recording quality indicate a strong show with good technical fidelity."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note crisp, full‑range sound with a bit of distortion/reverb but overall clear and very listenable; praised for extra power and presence despite being an audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Scarlet>Fire",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds nicely from a strong opening Sugaree, gains momentum through the first‑set climax of Scarlet > Fire, and delivers a memorable second‑set Bertha; a few reviewers mention a rough early start but overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos are described as hot, extra‑sauced and on point throughout the show.",
+    "Phil": "Bass is highlighted for its range and power, contributing to the force‑of‑nature rhythm section.",
+    "Bob": "Keeps solid rhythm guitar work, holding down the groove.",
+    "Keys": "Keith contributes organ parts; praised overall though one reviewer notes occasional out‑of‑step moments.",
+    "Drums": "Mickey and Bill are lauded as a powerful rhythmic foundation."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:23:29.896039+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-04-23.moore.minches.18438.sbeok.shnf"
+}

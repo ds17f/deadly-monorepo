@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience recording of a great show, hailed as the best‑sounding AUD tape.",
+  "review": "The single fan review rates this release five stars, calling it the best‑sounding audience (AUD) tape of an already great concert. The sound quality is praised as clear and well balanced for an audience source, making the recording highly listenable even without detailed song commentary.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one positive review; it rates both the performance and the audio very highly, but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best‑sounding AUD tape, indicating a clear, balanced capture despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewer simply calls the show great."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T12:18:27.096316+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-14.135319.Unk-Hill.Keo.Flac2496"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Warm audience recording of an early Vegas show praised for its energy and a standout Fire on the Mountain, though one reviewer finds the audio whack.",
+  "review": "Fans rave about the intimate vibe and strong playing of this early Las Vegas gig, highlighting a memorable Fire on the Mountain. The audience‑recorded tape is described as warm and clear by most listeners, but one critic calls it “whack sounding,” giving the recording quality mixed reviews.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating is 4.14; most reviewers praise both performance and sound, with only a single very negative audio comment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Mixed feedback: one reviewer calls the tape whack‑sounding and muffled, while others praise it as warm, clear, and even excellent after EQ adjustments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early Vegas setting created an intimate atmosphere; reviewers describe the show as one of the best early Vegas performances with strong overall energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:04:48.632272+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-31.aud.munder.9619.sbeok.shnf"
+}

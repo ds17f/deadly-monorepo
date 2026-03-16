@@ -1,0 +1,82 @@
+{
+  "summary": "Crisp soundboard capture of a high‑energy 1985 show highlighted by the legendary Half‑Step → Rider transition and a stellar Feel Like a Stranger set.",
+  "review": "The recording is a very clean SBD mix with crystal‑clear drums, tight guitar tones and just enough audience ambience to convey the night’s excitement. Musically the band rides a wave of high voltage energy – Jerry’s soaring vocals and surprising Half‑Step → Rider segue, a fiery Feel Like a Stranger close, and standout jams on Stagger Lee, Sugaree and Cassidy keep the setlist moving with momentum. A few reviewers note occasional pop‑crackle or a couple of weaker moments (Comes‑A‑Time vocal wobble), but overall the performance is celebrated as one of the better fall ’85 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈80%) are 4‑5 stars and praise both the performance and the crisp soundboard recording; only a handful cite technical flaws or weak songs, yielding a weighted rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with very little distortion; reviewers highlight “crackles and POPS” as part of the board’s character and note occasional pop‑crackle or a ‘shrieky’ moment but overall the sound is balanced and highly listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step > Rider",
+      "Feel Like a Stranger",
+      "Stagger Lee",
+      "Sugaree",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Comes A Time",
+      "Round and Round",
+      "Good Lovin'"
+    ],
+    "setlist_flow": "The concert builds strong momentum from an opening drum‑driven burst, rolls through a punchy first set and erupts into an explosive second set where the half‑step to Rider surprise fuels the crowd. The Feel Like a Stranger closer ties the night together with communal row‑singing, making for a satisfying arc despite a few minor dips."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful vocals and soaring guitar tone; his unexpected jump into Half‑Step → Rider is called ‘surprising’ and “awesome”.",
+    "Phil": "",
+    "Bob": "His energetic Cassidy solo and the brief pause before “Flight of the Sea Birds” are highlighted; overall described as “into it” and driving the jam.",
+    "Keys": "",
+    "Drums": "Billy and Mickey’s opening drum attack is noted as “juiced”; Dark‑Star drums called “great”."
+  },
+  "song_mentions": {
+    "Half-Step > Rider": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Comes A Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Round and Round": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:20:38.079409+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-10.sbd.barbella.12264.sbeok.shnf"
+}

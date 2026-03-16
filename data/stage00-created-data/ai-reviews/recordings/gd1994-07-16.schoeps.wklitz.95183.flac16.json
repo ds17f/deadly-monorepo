@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent stadium audience recording capturing a strong first set with Ramble on Rose, Loose Lucy and Promised Land, plus solid second‑set gems like Last Time and Stella Blue.",
+  "review": "Both reviewers praise the audio, calling it the best audience source and noting its clear, stadium‑sized sound. The performance shines in the first set – Ramble on Rose hits hard, Loose Lucy is spot‑on and Promised Land is a killer – while the second set offers reliable renditions of Last Time and Stella Blue, though no standout moments are highlighted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Reviews are uniformly positive about both show and recording quality; with limited (2) reviews the rating is based on strong musical highlights and excellent audience source but confidence remains low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear stadium ambience with crisp audience mix; reviewers describe it as the best AUD source and note no audible flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Loose Lucy",
+      "Promised Land",
+      "Last Time",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is highlighted as strong and energetic, while the second set maintains a solid, though less spectacular, groove."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:24:25.318955+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-16.schoeps.wklitz.95183.flac16"
+}

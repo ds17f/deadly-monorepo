@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a balanced May 23‑1992 show with standout performances of Candyman, Box of Rain, The Wheel and a stellar Stella Blue jam",
+  "review": "The recording is a clean soundboard source that lets the subtle Bill Kreutzmann drumming, Mickey Hart’s diagonal chops and the elevated mix of Phil Lesh shine, while Brent Welnick adds atmospheric keys. Musically the band delivers an impressively balanced set—Jerry Garcia’s pure melodic solos and weathered vocals, Bob Weir’s slide‑filled chords, and highlight moments like Candyman, Box of Rain, The Wheel, a gorgeous Stella Blue jam and a tight Playing in the Band—all noted as clever and harmonious rather than explosive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong positive show feedback with many standout song mentions and no recording complaints; limited number of detailed reviews yields moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Review highlights clear mix, especially the prominent Lesh bass and crisp drum work; no issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Box of Rain",
+      "The Wheel",
+      "Stella Blue",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Balanced and breezy performance with subtle passages, clever contributions, and smooth transitions; lacks bomb‑astic peaks but sustains a high level of musicianship throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Pure, potent melodic solos and raw, weathered vocals praised as powerful.",
+    "Phil": "Bass sits way up in the mix with anticipatory trickery, adding strength to the sound.",
+    "Bob": "Fizzling, against‑the‑grain chords and slide guitar noted as a nice texture.",
+    "Keys": "Brent Welnick provides floaty, atmospheric textures; occasional over‑doing but generally adds lovely landscapes.",
+    "Drums": "Bill Kreutzmann’s subtle tasteful drumming carries the set; Mickey Hart contributes diagonal chopping."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:41:01.759711+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-23.sbd.miller.92271.sbeok.flac16"
+}

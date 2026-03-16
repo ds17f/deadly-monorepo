@@ -1,0 +1,51 @@
+{
+  "summary": "Good-quality audio captures a fun, high‑energy show highlighted by a strong Bertha opener and a smoking Deal to close the first set.",
+  "review": "Both reviewers rate this performance four stars, praising the upbeat vibe, tight opening with \"Bertha\" and \"The Greatest Story Ever Told,\" and a fiery \"Deal\" that caps the first set. The recording is described as clear enough for repeated listening despite minor slip‑ups and a slightly froggier Jerry vocal tone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised with standout songs noted; recording is good but has minor imperfections, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Minor mistakes and Jerry's voice sounding froggier than usual are mentioned; overall clarity is sufficient for enjoyable repeated listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "The Greatest Story Ever Told",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy opening with \"Bertha\" and \"The Greatest Story Ever Told,\" maintaining momentum through a smoking \"Deal\" to close the first set."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal tone described as froggier than usual for the late ’80s.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:20:02.882460+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-04.nak300.bleich.sirmick.101996.sbeok.flac16"
+}

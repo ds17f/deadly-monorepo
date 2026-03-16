@@ -1,0 +1,87 @@
+{
+  "summary": "Boombey, distant audience recording but a fiery ’78 show highlighted by an electrifying Black Peter, Friend of the Devil and Stagger Lee.",
+  "review": "The performance shines despite a muffled, back‑of‑the‑room sound that many reviewers describe as fuzzy, booming or clouded. Jerry’s playing is often praised – especially his vocal fire on Black Peter and his energy on the first set – while the band delivers strong jams of Stagger Lee, Playin' in the Band and other classics. The audience‑sourced tape suffers from cuts, splices and a lack of clarity, but fans who can “get used to it” still find the show one of the better ’78 outings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers love the musical performance (especially Jerry and key songs) but uniformly note poor, distant audience recording quality; the weighting yields a solid above‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Fuzzy, back‑of‑the‑room distant sound; boomy and cloudy with occasional cuts/splices. EQ helps but the tape lacks clarity and detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Friend of the Devil",
+      "Stagger Lee",
+      "Dire Wolf",
+      "Passenger",
+      "Brown Eyed Women",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "Energetic first set with Jerry on fire; solid second‑set jams despite recording issues, overall pacing keeps the show engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed notes – occasional vocal flubs early, but generally on fire with powerful guitar and a standout Black Peter performance.",
+    "Phil": "Bass was so strong it threatened to blow speakers; his playing felt forceful.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:44:46.973613+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-21.aud.cotsman.15209.sbeok.shnf"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Fair‑quality tape of a low‑energy Shoreline ’93 show; highlights include Wave to the Wind, Lazy River Road and Broken Arrow, but the performance is uneven.",
+  "review": "The recording is listenable but shows a slight high‑frequency wobble that hints at an audience source rather than a clean soundboard. Musically the concert drifts, with Jerry’s voice and guitar a bit off and the band losing steam after the first set, yet moments like Wave to the Wind, Lazy River Road and Phil’s moving Broken Arrow shine through.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Reviews are split between a few strong song moments and many comments about low energy, vocal/guitar issues and recording oddities; the weighted average of show (≈2.5) and recording (≈3.0) yields a rating around 2½‑3 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note a subtle tape‑wobble/high‑frequency oddness; overall clarity is acceptable but not pristine, suggesting an audience tap rather than a professional soundboard feed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wave To The Wind",
+      "Lazy River Road",
+      "Broken Arrow",
+      "Corrina"
+    ],
+    "poor_songs": [
+      "Playing In The Band",
+      "IFTL"
+    ],
+    "setlist_flow": "The set starts sluggishly, only picking up after Johnny B. Goode; the first half loses momentum while the second half offers a few high points before ending on an under‑whelming encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds strained and his guitar sits low on the frets; overall playing is off, though his vocal performance is decent for ’93.",
+    "Phil": "Delivers a moving rendition of Broken Arrow and is highlighted as a bright spot.",
+    "Bob": "",
+    "Keys": "Vince’s keyboard transition into Playing In The Band sounds odd, almost like an unintended reprise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wave To The Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "IFTL": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:10:15.696528+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-08-27.sbd.wiley.9486.sbeok.shnf"
+}

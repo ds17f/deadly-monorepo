@@ -1,0 +1,44 @@
+{
+  "summary": "Good audience recording with a missing early Jerry lead on the China>Rider segue, but overall a strong show.",
+  "review": "The audience tape captures an enjoyable performance, though the mix drops Jerry’s guitar for much of the China Cat Sunflower → I Know You Rider sequence until midway through Rider. Aside from that flaw the show is loved by the reviewer and the copy is considered a worthwhile listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the release 4 stars, praising the show while noting a specific recording flaw, leading to an overall strong but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear audience tape, but Jerry Garcia's guitar is buried in the mix during the early part of the China>Rider sequence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer highlights the China Cat Sunflower → I Know You Rider segue as a key moment, with no complaints about overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is missing early in the China>Rider sequence but later delivers monumental leads.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:44:22.307324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-19.144904.nak700.severson.miller.clugston.flac1648"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Highly rated show with disputed hiss – matrix source considered usable by most listeners",
+  "review": "Both reviewers gave the recording five stars, praising the performance and Dan Haugh's mastering work. One reviewer complained of pervasive hiss, while another insisted the FLACs are fine and suggested the issue lies with playback equipment, leaving the musical quality unaddressed in the comments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviewers rate it 5‑star despite a technical disagreement; lack of musical commentary limits confidence, but overall rating is very high."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "One user reports constant hiss in both FLAC and WAV files; another claims the files are clean and attributes any noise to the listener's setup. No consensus on clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No musical observations were provided in the reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T23:50:14.539686+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.mtx.dts.dan.30756.flac16"
+}

@@ -1,0 +1,68 @@
+{
+  "summary": "A solid early‑'69 soundboard capture with an uneven mix but a stellar set highlighted by soaring Dark Star, scorching The Eleven and fiery Turn On Your Lovelight.",
+  "review": "The performance is quintessential winter‑’69 psychedelia – Jerry’s guitar is on fire throughout Dark Star and The Eleven, Pigpen wails on Turn On Your Lovelight, and the band rides a tight, improvisational groove.  The soundboard source is decent for its era but suffers from an uneven mix, thin low end and a few splices that keep it from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average ~4.8 stars) while noting consistent but moderate recording issues (average ~3.7). Weighted combination yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear for the period, but mix is uneven with thin bottom‑end and occasional splices (notably in The Eleven). Some listeners note a lack of definition in the rhythm section."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Turn On Your Lovelight",
+      "Other One > Cryptical",
+      "Good Mornin' Little Schoolgirl"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short, seven‑song set that captures the peak psychedelic intensity of early ’69, moving from high‑energy blues (Good Mornin' Little Schoolgirl) into extended improvisations (Dark Star, The Eleven) and concluding with soulful Pigpen moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is repeatedly called ‘amp’d’, ‘soaring’ and the focal point of the show; solos on Dark Star and The Eleven are described as inspired and phenomenally tight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Eleven": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Mornin' Little Schoolgirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One > Cryptical": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:49:41.023371+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-02-02.sbd.cotsman.9758.sbeok.shnf"
+}

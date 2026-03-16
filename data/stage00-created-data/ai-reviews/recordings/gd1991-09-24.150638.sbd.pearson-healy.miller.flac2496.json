@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording of a highly praised Boston show with standout Dark Star and other rare gems, though audio quality isn’t specifically commented on.",
+  "review": "The reviewer rates this September‑1991 Boston performance four stars, calling it their fourth favorite from the run and highlighting Dark Star, Not So Bad, BRR, Foolish Heart (post‑drums) and SOTM as bust‑out moments. No explicit comments on the recording itself were made, so the audio is assumed to be a typical soundboard capture.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Single positive review emphasizes strong musical moments; lack of audio commentary keeps confidence low but suggests an overall good experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific remarks on sound clarity, mix or issues were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Not So Bad",
+      "BRR",
+      "Foolish Heart (post‑drums)",
+      "SOTM"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes this is the fourth‑favorite show of the Boston run, indicating a consistently strong set flow with several rare or especially inspired moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not So Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BRR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart (post‑drums)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "SOTM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:53:28.783948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-24.150638.sbd.pearson-healy.miller.flac2496"
+}

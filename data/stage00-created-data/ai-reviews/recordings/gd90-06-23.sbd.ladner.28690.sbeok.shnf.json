@@ -1,0 +1,97 @@
+{
+  "summary": "Crisp soundboard capture of the legendary June‑23 1990 Eugene show, highlighted by smoking Eyes, thunderous Looks Like Rain and a velvet Cassidy.",
+  "review": "The recording is an exceptionally clear SBD that lets the band’s summer‑90 energy shine through – the mix is punchy, bass‑heavy and virtually free of glitches. Musically the performance is often called “near‑nirvana,” with Eyes, Looks Like Rain (complete with thunder effects), Feel Like a Stranger, Far From Me, Cassidy and Uncle John’s Band cited as standouts; even the second‑set transitions (PITB → UJB → PITB) are praised for their seamless flow. Overall reviewers rave about Jerry’s soaring leads, Brent’s lush keyboards and Phil’s booming bass, making this one of the era’s most celebrated shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 4‑5 stars and repeatedly praise both performance and recording; only a single mixed review mentions lack of edge, so the combined weighted score is very high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with strong bass presence; minor splice noted by one reviewer but otherwise no drop‑outs or muddiness. Described as “stellar,” “crystal clear,” and a “perfect sonic balance.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Looks Like Rain",
+      "Cassidy",
+      "Feel Like a Stranger",
+      "Far From Me",
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Morning Dew",
+      "West LA"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about the seamless energy flow from song to song, especially the PITB → UJB → PITB sequence and the second‑set transitions; the set is described as “perfectly paced,” with a natural rise‑and‑fall that keeps momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring lead tones, silky runs on Eyes, and overall band leadership.",
+    "Phil": "Noted for “thick bass heavy sound” and dropping “mega‑ton bombs” across the show.",
+    "Bob": "",
+    "Keys": "Brent’s playing described as velvet, jazzy and a key element of the night’s magic; his keyboards add depth to Far From Me and other jams.",
+    "Drums": "Mickey’s thunderous drum work on Looks Like Rain and overall tight drumming from both Mickey and Bill highlighted as “blowing minds.”"
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me and My Uncle > Cumberland": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-17T08:08:35.297527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-06-23.sbd.ladner.28690.sbeok.shnf"
+}

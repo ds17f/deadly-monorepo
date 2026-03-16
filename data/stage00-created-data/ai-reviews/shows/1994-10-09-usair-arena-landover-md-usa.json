@@ -1,0 +1,66 @@
+{
+  "summary": "Strong Broken Arrow, moving Comes A Time and solid Rain",
+  "blurb": "The show delivers a standout Broken Arrow and an emotional Comes A Time finale, with Rain closing the night on a high note. Jerry’s guitar shines on So Many Roads and the final ballad, while Phil’s bass underpins the set. Overall performance is solid despite some mix issues in the second half.",
+  "review": "On October 9, 1994 at USAir Arena, the Dead offered a respectable outing that captures the band’s late‑era strengths. The first set rolls through classics like Hell In A Bucket and Bertha before hitting a highlight with Broken Arrow, which reviewers praised for its tight arrangement and melodic drive. Jerry Garcia delivers a heartfelt solo on the closing ballad Comes A Time (often referred to as “Last Comes A Time” in fan notes) and his presence is felt all the way through the encore’s Rain, giving the evening an uplifting finish.\n\nThe second set wanders into familiar territory with Here Comes Sunshine and the traditional drum‑and‑space excursion, but it’s the emotive arc from Space into I Need A Miracle and finally Comes A Time that leaves a lasting impression. Phil Lesh’s bass work shines, especially on the final songs, while Vince Welnick’s keyboard tone drew some criticism for sounding “Fisher‑Price” in audience recordings. The soundboard capture (gd1994-10-09.sbd.miller.34562.sbeok.flac16) offers the clearest picture of this performance despite a phasey dip after Big River, making it the recommended source for listeners.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Four recordings are mixed (highlighting both strong moments like Broken Arrow, Comes A Time and Rain, and flaws such as a phasey mix after Big River or weak keyboard tone) while two recordings are positive about overall sound. The consensus leans toward modest praise with notable highlights, warranting a small positive sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 0.5 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-10-09.sbd.miller.34562.sbeok.flac16",
+    "reason": "Soundboard source with generally good clarity, captures the key highlights (Broken Arrow, Comes A Time, Rain) despite a minor phase issue after Big River."
+  },
+  "key_highlights": [
+    "Broken Arrow delivers tight, melodic energy early in Set 1.",
+    "Jerry’s moving solo on Comes A Time provides an emotional climax.",
+    "Rain closes the show on an uplifting note.",
+    "So Many Roads showcases solid guitar work despite health concerns."
+  ],
+  "song_highlights": [
+    "Broken Arrow",
+    "Comes A Time",
+    "Rain",
+    "So Many Roads"
+  ],
+  "band_performance": {
+    "Jerry": "Inspiring solo on Comes A Time and strong playing on So Many Roads; his presence is felt throughout, especially in the emotive finale.",
+    "Phil": "Great bass work, particularly during Comes A Time, and a notable vocal contribution on Broken Arrow.",
+    "Bob": "",
+    "Vince": "Keyboard tone draws criticism in audience recordings, described as sounding like a 'Fisher‑Price' instrument.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-19T02:53:16.171946+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Broken Arrow"
+    ],
+    [
+      "Saint Of Circumstance",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Comes A Time",
+      "Throwing Stones",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Rain"
+    ],
+    [
+      "So Many Roads"
+    ]
+  ]
+}

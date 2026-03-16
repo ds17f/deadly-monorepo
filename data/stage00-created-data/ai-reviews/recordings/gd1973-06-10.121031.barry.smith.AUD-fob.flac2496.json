@@ -1,0 +1,63 @@
+{
+  "summary": "Nice‑sounding audience recording capturing a great show highlighted by a soaring Birdsong jam and an unforgettable third set",
+  "review": "The AUD tape is praised as one of the nicest‑sounding audience recordings, with Charlie's transfer delivering clear detail despite some loss of the live tightness. Musically the concert shines – fans rave about the extended Birdsong jam, a goose‑bumps‑inducing Morning Dew, a fireworks‑capped Playin’ in the Band and a powerful Dark Star that makes the third set the night’s high point.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers are enthusiastic about both performance and sound quality; the show is described as great with standout jams, while the audience recording is noted as very good though not a studio‑level master."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as one of the nicest‑sounding AUD tapes; clear enough for enjoyable listening, with Charlie's transfer noted as solid despite some inevitable loss of live tightness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Birdsong",
+      "Playing in the Band",
+      "Dark Star",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First two sets solid but a notch below the previous night; third set steals the show with an epic Birdsong jam and dark, exploratory playing that leaves a lasting impression."
+  },
+  "band_member_comments": {
+    "Jerry": "General praise for the band being \"ON\" and tight, implying strong Garcia guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:38:42.685633+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-10.121031.barry.smith.AUD-fob.flac2496"
+}

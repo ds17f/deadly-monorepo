@@ -1,0 +1,51 @@
+{
+  "summary": "Solid NAK soundboard capture of a classic MSG Saturday night, highlighted by Shakedown Street, New Speedway Boogie and an uplifting Standing on the Moon.",
+  "review": "The recording is praised for its clear, solid NAK‑mic sound and faithful capture of the band. The show itself gets kudos for a strong opener (Shakedown Street) and a second set that shines with New Speedway Boogie and a memorable Standing on the Moon, making it a satisfying, if fairly standard, MSG performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "All three reviewers are favorable; two give four stars and one gives three while still calling the show solid. Recording is described as clear and well‑taped, and the performance receives several specific highlights."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear NAK mic capture; reviewers note a solid, crisp sound with no major dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "New Speedway Boogie",
+      "Standing on the Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard Saturday night MSG set – a strong opener followed by a second‑set that peaks with New Speedway Boogie and an uplifting Standing on the Moon."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T03:30:13.003958+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-15.nak300.wiley.8043.sbeok.shnf"
+}

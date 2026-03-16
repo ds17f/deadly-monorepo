@@ -1,0 +1,83 @@
+{
+  "summary": "Excellent audience recording captures a tight, soulful show with soaring Jerry solos and standout jams on Eyes of the World and It Must Have Been The Roses.",
+  "review": "The audience tape is praised as crystal‑clear and one of the best available for this concert. Musically the band delivers a solid performance – the first set warms up around Althea, then erupts into sublime jamming on Eyes of the World, while the second set stays tight with a monster It Must Have Been The Roses and memorable solos on They Love Each Other and El Paso.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑5 stars, highlighting an excellent recording and a strong performance with several standout moments; the consistency of praise yields a high confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as ‘excellent audience recording’, ‘crisp’, and “best of all uploaded versions”, with no noted dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "It Must Have Been the Roses",
+      "They Love Each Other",
+      "El Paso",
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set starts rough but gains momentum around Althea; second set stays tight with strong transitions (e.g., Shakedown → Minglewood) and a particularly tight, jam‑light performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note soaring solos on El Paso, They Love Each Other, and overall tasteful guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:44:46.166523+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-13.nak700.rolfe.minches.99104.flac16"
+}

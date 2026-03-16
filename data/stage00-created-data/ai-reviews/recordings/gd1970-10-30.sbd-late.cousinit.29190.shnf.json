@@ -1,0 +1,67 @@
+{
+  "summary": "Excellent soundboard capture of a stellar 1970 show featuring Smokestack Lightnin', St. Stephen and an epic Dancing In The Streets.",
+  "review": "The three fans unanimously praise this October 30‑31, 1970 recording for its classic dead‑era soundboard clarity and the high‑energy set that rolls from St Stephen into Not Fade Away, then into Turn On Your Lovelight. Highlights repeatedly mentioned are Smokestack Lightnin', Dancing In The Streets (a rare extended stretch), and a superb turn on the Lovelight finale, while Garcia’s guitar work is called “wheel turning.” No technical flaws are reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews give 5‑star ratings and focus on both superb performance and clean soundboard audio; the show is described as a must‑have with no noted flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers mention classic 1970 soundboard tone and give no complaints about clarity, balance or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightnin'",
+      "St. Stephen",
+      "Dancing In The Streets",
+      "Turn On Your Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its seamless flow—St Stephen into Not Fade Away and then into a powerful Turn On Your Lovelight, with Pigpen opening and closing the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is highlighted as ‘getting the wheel turning’ on Dancing In The Streets and stretching out the tune.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack Lightnin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing In The Streets": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T00:12:58.726057+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-30.sbd-late.cousinit.29190.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Lively hall recording with a smoking ambience but an uneven performance that leaves the show feeling average.",
+  "review": "The audience‑sourced tape captures a vibrant, dance‑floor vibe and clear sound that many reviewers describe as \"smoking,\" making it enjoyable for casual listening. However, the musical execution is seen as unfocused, with Jerry Garcia’s guitar work specifically called out as lacking its usual spark, so the show doesn’t hold up to repeated, attentive listening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is praised (≈4 stars) while the musical performance receives mixed feedback (≈3 stars); weighted average yields a modest 3.3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, lively sound that captures hall ambience; no major glitches or dropouts reported, though not a professional soundboard mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Performance feels unfocused and somewhat flat; Garcia’s playing is noted as weaker than usual, making the show enjoyable for dancing but lacking depth for focused listening."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone and overall playing are described as not sounding particularly well.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T01:11:45.395954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-12.nak300.holtz.JAZ.96701.flac16"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Warm, slightly gritty soundboard capture of a solid ’78 show highlighted by a scorching Jack Straw and an incendiary Playing in the Band jam.",
+  "review": "The recording is a good‑quality SBD that retains the warm, dryer vibe of the early‑’70s era while still sounding clear enough to enjoy the strong performances.  Highlights include a blazing Jack Straw, a fiery Playing in the Band sandwich and standout Shakedown Street, with Garcia on fire throughout; the second set is short but packed with energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise the musical performance, while recording comments are generally positive despite a few notes about grit; this yields a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Warm and slightly dirty SBD sound; some reviewers call it “beat” or “dirtier,” but the majority note its clarity, warmth and pleasing lack of excessive glisten."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Playing in the Band",
+      "Shakedown Street",
+      "Ship of Fools",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "I Need a Miracle",
+      "It's All Over Now"
+    ],
+    "setlist_flow": "First set is described as non‑descript, while the short second set packs strong jams (Playin, Shakedown) and energetic finishes; overall flow is solid despite lacking classic first‑set fireworks."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is praised for being “on fire” on Ship of Fools and leading an outrageous Playing in the Band jam; reviewers note his serious, high‑energy playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The 1978 drum work is highlighted as tidy and lively, with both Bill and Mickey delivering a strong rhythmic foundation."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:13:18.799544+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-13.sbd.hinko.22145.sbeok.shnf"
+}

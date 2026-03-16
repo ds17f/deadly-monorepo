@@ -1,0 +1,62 @@
+{
+  "summary": "Raw, hiss‑laden soundboard of a historic Halloween ’69 show featuring the only Cryptical Suite → China Cat Sunflower combo and solid performances throughout.",
+  "review": "The performance is praised for its historical significance – a Halloween 1969 set that includes the one‑and‑only Cryptical Suite into China Cat Sunflower, plus strong renditions of Dire Wolf, Rider and Hell. However, listeners repeatedly note heavy hiss and overall poor recording fidelity, describing it as raw and noisy, which limits enjoyment despite the great show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high due to unique setlist and solid song performances, while recording quality is consistently described as poor/hissy; the weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Heavy hiss throughout, raw and noisy sound; overall poor fidelity but no specific dropouts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical Suite > China Cat Sunflower",
+      "Dire Wolf",
+      "Rider",
+      "Hell"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Historic Halloween 1969 set with a unique Cryptical‑China Cat transition; overall solid flow despite raw recording."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:41:38.381857+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-10-31.sbd.lai.3377.sbefail.shnf"
+}

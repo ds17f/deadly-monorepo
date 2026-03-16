@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp DSBD sound captures a top‑10 ’93 performance highlighted by a stellar The Other One and an a‑cappella He's Gone jam.",
+  "review": "The recording is praised for its crystal‑clear, pristine digital soundboard quality that shines even on cheap speakers. Musically the show ranks among the best of 1993, with standout moments like Phil’s soaring work on The Other One, a magical a‑cappella He's Gone, and strong versions of Desolation Row and Dark Star. Overall the crowd response and band interplay are described as tight and inspiring.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (average ~4.0) combined with repeated praise for both the superb soundboard recording and the strong musical performance push the rating into the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the audio crisp, clean, pristine and note that it sounds great even on weak speakers; no significant dropouts or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "He's Gone",
+      "Desolation Row",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set singled out as a top‑10 moment of ’93, with tight playing throughout and memorable transitions such as the a‑cappella He's Gone jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Enthusiastic praise (\"Long live Jerry!\") but no specific guitar details.",
+    "Phil": "Repeatedly praised for his zone presence and standout work on The Other One and He's Gone.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:37:57.181388+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-12.dsbd.miller.28783.sbeok.flacf"
+}

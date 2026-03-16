@@ -1,0 +1,72 @@
+{
+  "summary": "A wildly inventive ’78 second set with scorching Jack‑a‑Roe → Playing in the Band → Shakedown Street and a rare World to Give, but the tape is riddled with cuts and missing sections.",
+  "review": "Fans rave about this show’s second set – calling it jazzy, trippy and one of the best of ’78, highlighted by an insane jam into Jack‑a‑Roe, the Playin’ → Shakedown Street → World to Give sequence and a rare third performance of “If I Had The World To Give.”  The recording, however, is far from pristine; multiple cuts, missing songs and splice artifacts detract from an otherwise legendary performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) praise the musical performance while noting significant recording issues; weighting shows heavy emphasis on show quality yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Several audible cuts and missing portions (e.g., start of Peggy-O, Lazy/Supplication, early drums), plus splice artifacts; overall listenable but fragmented."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-a-Roe",
+      "Playing in the Band",
+      "Shakedown Street",
+      "If I Had The World To Give"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is a continuous, improvisational surge with an unusual jam opener, wild transitions and a jazzy feel; fans describe it as one of the most inspired ’78 shows despite its erratic recording."
+  },
+  "band_member_comments": {
+    "Jerry": "Some reviewers note Jerry’s tone sounds more like his early‑'80 style than typical ’78.",
+    "Phil": "",
+    "Bob": "Mixed comments on Bob’s presence – some say he was sick and missing, others hear him clearly on Shakedown Street backing vocals and rhythm guitar.",
+    "Keys": "Keith’s keyboard work is described as wild yet tight, often giving away the band’s direction.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "If I Had The World To Give": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mexicalli Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lazy/Supplication": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:36:04.403304+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-20.set2-sbd.unknown.12947.sbeok.shnf"
+}

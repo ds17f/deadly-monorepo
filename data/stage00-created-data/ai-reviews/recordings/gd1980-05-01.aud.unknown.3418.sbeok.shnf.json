@@ -1,0 +1,45 @@
+{
+  "summary": "Nice audience recording of a solid 1980 show; the sound improves after a muffled start and the set flows well despite minor tape‑speed issues.",
+  "review": "Both reviewers praise this 1980 performance as a strong example of the band’s peak era, highlighting an improving Alabama Getaway and an energetic Minglewood Blues. The audience (AUD) source is generally clear and pleasant, though early parts are muffled and the tape runs fast, requiring correction. Overall it’s a recommended listen for fans of the ’80s Dead.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers give 4‑star ratings and speak positively about the music; recording is described as very nice with only minor speed and muffling issues, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very nice overall sound but early Alabama portion is muffled; tape runs fast (especially on Alabama > Promised Land, Me & My Uncle, Althea) and may need speed correction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Minglewood Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical strong ’80 set; early muffling improves quickly, ending felt a bit weak to one reviewer but overall the performance is solid and representative of the year."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:16:26.135683+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-01.aud.unknown.3418.sbeok.shnf"
+}

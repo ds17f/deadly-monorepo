@@ -1,0 +1,62 @@
+{
+  "summary": "Patchy '95 Memorial Stadium show with soaring Estimated Prophet",
+  "blurb": "Second set shines with an electrifying Estimated Prophet and a fiery Bird Song jam. Jerry delivers Sharrock‑style lines on the Bird Song but falters on Touch of Grey lyrics, while Bob keeps vocals restrained. The show is uneven overall, with strong moments offset by gaps and a patchy first set.",
+  "review": "Memorial Stadium in Seattle saw the Dead on May 24, 1995 deliver a concert that feels like two different shows stitched together. The opening half of Set 1 drifts through Touch of Grey, New Minglewood Blues and a lackluster Lazy River Road before the band really clicks on Bird Song, where Garcia throws out Sharrock‑style licks that many reviewers called “stellar.”  Set 2 is where the night truly lifts: I Want To Tell You stumbles, but Estimated Prophet erupts with Jerry wide awake and on fire, propelling the band into a tight Drums/Space excursion before a soaring I Need A Miracle.  The encore U.S. Blues caps it off, but listeners should be aware that several recordings miss the first set or contain mismatched tracks, making the overall pacing feel uneven despite the high points.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Mixed sentiment dominates (3 mixed, 2 positive) but several recordings praise standout jams like Estimated Prophet and Bird Song, giving a modest positive tilt without consistent negative criticism.",
+      "final_calculation": "2.5 + 0.2 + 0.4 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-05-24.partial.sbd.larson.35181.sbeok.flac16",
+    "reason": "Clear soundboard capture that includes the key second‑set performances (Estimated Prophet, Bird Song) despite missing the first set."
+  },
+  "key_highlights": [
+    "Estimated Prophet jam lifts the second set and showcases Garcia at his most awake.",
+    "Bird Song features Sharrock‑style guitar lines that many fans call stellar.",
+    "Tough Mama may represent Jerry’s final live rendition, adding historical intrigue.",
+    "Recording quality varies widely; the SBD partial capture is clear but incomplete."
+  ],
+  "song_highlights": [
+    "Estimated Prophet",
+    "Bird Song",
+    "Touch of Grey"
+  ],
+  "band_performance": {
+    "Jerry": "Mixed remarks: not blazing early, but on fire during Estimated Prophet and delivers Sharrock‑style lines in Bird Song; forgets some Touch of Grey lyrics.",
+    "Phil": "",
+    "Bob": "Keeps vocal delivery restrained, avoiding his usual over‑dramatic style.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-19T08:45:13.039243+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "I Want To Tell You",
+      "Estimated Prophet",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Wharf Rat",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Touch of Grey"
+    ]
+  ]
+}

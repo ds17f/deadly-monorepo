@@ -1,0 +1,51 @@
+{
+  "summary": "Good summer‑’82 show with strong blues moments and a solid piano performance, but the SBD recording suffers from low bass and frequent audience patches.",
+  "review": "The concert delivers memorable highlights – a soaring \"Looks Like Rain,\" an adventurous Terrapin Station → Drums jam, and a raucous U.S. Blues encore – all buoyed by Brent Mydland’s rare Yamaha electric‑grand piano work. However, the soundboard tape is hampered by a noticeably quiet Phil Lesh bass line and numerous audience‑patch insertions that break up the flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review praises the musical performance while noting significant recording flaws; weighting shows (70%) and tape quality (30%) yields a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Bass is too quiet, likely due to SBD mix; many audience‑patch segments cause the recording to be split up and affect continuity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Terrapin Station → Drums",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set moves through blues‑heavy material, builds into a compelling Terrapin/Drums jam, and closes with high‑energy rockers and an encore, though the X‑factor feels intermittent."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as a perfect instrumental foil for Brent's piano, indicating solid interplay.",
+    "Phil": "Bass is notably quiet in this recording, making his presence hard to hear.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s Yamaha electric grand piano shines; he proves himself an adept pianist beyond organ work.",
+    "Drums": "Jam into Drums after Terrapin Station highlighted the band's improvisational strength."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station → Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:15:28.374695+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-04.141652.sbd.pcm.streeter.dalton.miller.clugston.flac1644"
+}

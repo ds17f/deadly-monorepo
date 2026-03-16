@@ -1,0 +1,70 @@
+{
+  "summary": "A fair matrix recording captures a lively show with standout performances of Sugaree, Let It Grow and He's Gone despite a modest post‑space setlist.",
+  "review": "Fans rave about the high energy of this concert – Bob Weir’s soaring Sugaree, Phil Lesh’s powerful Let It Grow and Jerry’s bluesy vocals on He’s Gone are repeatedly highlighted. The tape is a front‑of‑soundboard/audience matrix that many describe as having too much crowd bleed and limited headroom, giving it a fair but listenable sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance (many 4‑5 stars) while noting mixed recording quality; overall balance yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Crowd is prominent in the mix, some head‑room issues and limited dynamic range; occasional muddiness but no clipping. Described as a front‑of‑soundboard tape with imperfect balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Let It Grow",
+      "He's Gone",
+      "Touch of Grey",
+      "Iko Ika"
+    ],
+    "poor_songs": [
+      "\"Sugar?\" (opening song) – cited as lackluster"
+    ],
+    "setlist_flow": "Early set feels a bit tentative, especially the opening \"Sugar?\", but picks up quickly with strong performances of Sugaree and Let It Grow. Second set maintains momentum; encore Iko adds upbeat closure."
+  },
+  "band_member_comments": {
+    "Jerry": "Decent night overall, weak vocals on Touch of Grey but bluesy singing on He's Gone.",
+    "Phil": "Vocals sound good; Phil’s bass work not specifically mentioned but mix highlights his presence.",
+    "Bob": "Incredible playing on Sugaree and other numbers; praised for creative licks.",
+    "Keys": "Brent's impassioned vocals noted positively; overall keyboard presence mixed in the blend.",
+    "Drums": "Drums/Space described as gentle thumping whispers; no major complaints."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Ika": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "\"Sugar?\" (opening song)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:25:13.157998+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-05-09.sbd.cole.5059.sbeok.shnf"
+}

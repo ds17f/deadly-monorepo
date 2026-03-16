@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording with clear sound and great harmonies, but it starts mid‑set and omits the early part of the concert.",
+  "review": "The recording is praised for its clean sound quality and tight vocal harmonies, sourced from a soundboard. However, listeners note that the tape begins with the 15th song (the last track of the first set) and then runs straight into a 15‑song second set, making the concert incomplete.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Positive comments on sound quality and performance are offset by the missing first‑set material; with only one review, confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced sound noted as 'Good Sound', but the recording starts mid‑show (15th song) and therefore lacks completeness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The tape begins with the last song of the first set (PITB, ~16 min) and then runs a full 15‑song second set; missing earlier material disrupts the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:14:30.048391+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-19.sbd.123987.miller.flac16"
+}

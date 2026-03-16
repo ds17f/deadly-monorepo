@@ -1,0 +1,96 @@
+{
+  "summary": "Stunning matrix capture of a high‑energy 1981 Uptown show, highlighted by an unforgettable Red Rooster and soaring jams on He's Gone and Samson & Delilah.",
+  "review": "The matrix source blends audience ambience with soundboard clarity to deliver a crisp, well‑balanced listening experience that puts Jerry’s voice right in your ear. Musically the concert is praised for its fire—Red Rooster, Truckin' into Black Peter, a killer He's Gone jam and a rocking Samson & Delilah—though a few listeners note the vocals sit too forward and the original He’s Gone version feels a bit flat. Overall the show is regarded as one of the era’s gems.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews (10/13) are 4‑5 stars and rave about both the performance and the matrix recording, outweighing a few isolated criticisms."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix that captures crowd ambience; vocals are occasionally too forward for some listeners, but overall the sound is clean with only minor early‑show hiccups."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Red Rooster",
+      "Truckin'",
+      "Black Peter",
+      "He's Gone",
+      "Samson & Delilah"
+    ],
+    "poor_songs": [
+      "He's Gone",
+      "Tennessee Jed"
+    ],
+    "setlist_flow": "The concert opens strong and maintains momentum, with a particularly fire‑filled second set that features extended jams (He’s Gone, China > Rider) and finishes on a high note."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring tone, shredding leads and vocal presence; some criticism of his slide on Red Rooster as noisy.",
+    "Phil": "Bass is audible and clear in the matrix blend, adding depth to the mix.",
+    "Bob": "Lead slide on Red Rooster highlighted as unmatched; vocals noted as strong throughout.",
+    "Keys": "Brent's toy‑piano/keyboard parts are prominent—some find them a bit over‑present.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:50:07.368623+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-02-26.mtx.chappell.sb02a.28383.sbefail.flac16"
+}

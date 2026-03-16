@@ -1,0 +1,68 @@
+{
+  "summary": "Clear audience tape captures a stellar show with a smoking China‑Cat/Sugar Magnolia bridge, standout Uncle John's Band, Throwing Stones and a powerful Promised Land.",
+  "review": "Fans rave about the lively second set – especially the seamless China Cat Sunflower → Sugar Magnolia transition, an inspired Uncle John's Band with Mickey’s crisp cowbell, and a monster Throwing Stones. The audience‑sourced recording is surprisingly clear, though a few note a slightly thin low end. Overall the performance is high‑energy and memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both musical performance (multiple standout songs) and recording clarity, with only minor criticism about bass depth."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, energetic capture of the crowd; audible ambience adds excitement. Slight thinness in the bass frequencies noted by reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Sugar Magnolia",
+      "Uncle John's Band",
+      "Throwing Stones",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds slowly before kicking in, while the second set is a highlight with strong transitions and high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass feels a bit thin according to reviewers.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey's clean cowbell and percussive snap are specifically praised."
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tighten Up Loose Ends": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:51:31.494180+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-24.nak700.guch.poris.russjcan.98308.flac16"
+}

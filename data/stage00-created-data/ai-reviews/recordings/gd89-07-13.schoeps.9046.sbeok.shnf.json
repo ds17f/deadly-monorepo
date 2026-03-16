@@ -1,0 +1,81 @@
+{
+  "summary": "A well‑captured ambient stereo recording of the rain‑soaked July 13 1989 RFK show, with Brent’s “I Will Take You Home” and a thunderous Terrapin/Looks Like Rain set standing out.",
+  "review": "The performance is remembered as a classic summer rain‑show – the second set erupted into a downpour that drove the crowd wild, highlighted by powerful renditions of \"Terrapin Station\", \"Looks Like Rain\" and Brent’s heartfelt \"I Will Take You Home\". The Schoeps audience recording delivers an impressive stereo soundstage with deep bass response, though it sits a bit low and benefits from a modest EQ boost. Overall the show is praised for its energy and memorable moments despite a few lukewarm selections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8/10) are 4‑5 stars praising the show’s energy and memorable songs; recording comments note good stereo imaging with only minor level issues, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Stereo 3‑D field captured by Schoeps mics; bass frequencies come through well, but overall level is slightly low and may need a modest EQ/volume boost."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Will Take You Home",
+      "Terrapin Station",
+      "Looks Like Rain",
+      "Tennessee Jed",
+      "Wharf Rat",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "He's Gone"
+    ],
+    "setlist_flow": "The first set built momentum with strong openers; the second set opened with a bold \"He's Gone\" and transitioned into an unforgettable rain‑driven jam, though some felt the latter half lingered a bit."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for choosing strong openers like \"He's Gone\" and delivering solid guitar work throughout.",
+    "Phil": "Noted for his playful reaction to a Dark Star sign and a brief Dark Star tease during the first‑set tune‑up.",
+    "Bob": "",
+    "Keys": "Brent's keyboard visuals (photos of his daughters) and his performance on \"I Will Take You Home\" were highlighted as memorable.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Will Take You Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:13:30.705426+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-07-13.schoeps.9046.sbeok.shnf"
+}

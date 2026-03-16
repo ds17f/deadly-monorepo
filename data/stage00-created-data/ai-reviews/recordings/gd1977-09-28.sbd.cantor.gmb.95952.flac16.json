@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent Betty Board sound captures a stellar 1977 performance highlighted by a soaring Wharf Rat solo, while the dual‑drummer setup draws mixed reactions.",
+  "review": "The recording is a pristine Betty (soundboard) capture that lets the band’s 1977 energy shine through, especially Jerry Garcia’s haunting Wharf Rat solo and the revived Wolf jam. Reviewers rave about the tightness of Bill and Mickey on drums but split on whether having two drummers adds interest, leaving the overall show feeling both powerful and occasionally plodding.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show is praised for standout performances (Jerry’s solos, Estimated Prophet) but criticized for the duplicated drum feel; recording quality is described as perfect Betty Board sound, yielding a high combined weighted score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as 'perfect Betty Board sound' – clear, balanced and free of audible defects; only note is that part of the first set is missing from the source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Wolf",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and well‑sequenced show with strong transitions, but the dual‑drummer configuration makes some sections feel duplicated or plodding according to a few reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Wharf Rat is called 'hauntingly beautiful' and his voice shines; also noted for bringing back the Wolf jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey is criticized for ‘clogging’ the groove while Bill is praised; overall reviewers note the two‑drummer sync can feel both tight and overly duplicated."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:02:43.382328+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-09-28.sbd.cantor.gmb.95952.flac16"
+}

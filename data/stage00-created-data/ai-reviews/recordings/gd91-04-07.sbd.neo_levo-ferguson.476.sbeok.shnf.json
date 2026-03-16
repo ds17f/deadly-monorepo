@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard recording captures a standout 1991 Orlando show highlighted by a blazing Reuben & Cherise, soaring Row Jimmy solo, and powerful Playin' → Uncle John’s Band jam.",
+  "review": "The performance is consistently praised for its tight first set and an adventurous second set that features one of the best live versions of “Reuben & Cherise,” a jaw‑dropping MIDI‑flute solo on “Row Jimmy,” and a thunderous Playin' → Uncle John’s Band sequence.  The soundboard source is described as clear, crisp and sweet (with only minor EQ quirks), making the show both musically and technically enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly positive about both performance and sound quality; strong show rating (~4.5) combined with good recording quality (~4.0) yields a weighted average around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers repeatedly call the audio crisp, clear and sweet; a few note a flat sound‑board that could use a touch of EQ but overall it is listenable and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Reuben & Cherise",
+      "Row Jimmy",
+      "Box of Rain",
+      "Playin' in the Band > Uncle John's Band",
+      "Crazy Fingers",
+      "Sugaree",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as tight and jazzy with strong openers (Jack Straw, Sugaree); second set ramps up into deep jams, pre‑drums, and the iconic Playin' → UJB sequence, delivering a high‑energy climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers laud his MIDI‑flute solo on Row Jimmy as quintessential Garcia, plus strong interplay with Bob after Playin'.",
+    "Phil": "Praised for “insane jamming” and leading the second‑set improvisations; one reviewer calls his contribution “fantastic”.",
+    "Bob": "Noted for solid rhythm work and excellent interplay with Jerry during the Playin' → UJB transition.",
+    "Keys": "Bruce (Horn​sby) receives mixed notes – praised for richness on UJB but occasionally overbearing; dueling keyboards are mentioned as a slight drawback in the second set.",
+    "Drums": "Predrums section highlighted as “fantastic” and “PITB” (Playin' in the Band) noted for its power."
+  },
+  "song_mentions": {
+    "Reuben & Cherise": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Row Jimmy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' in the Band > Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:41:26.661522+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-07.sbd.neo_levo-ferguson.476.sbeok.shnf"
+}

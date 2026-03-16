@@ -1,0 +1,57 @@
+{
+  "summary": "Audience tape plagued by loud crowd noise yet preserves an historic Yale Bowl show highlighted by a soaring Dark Star and classic early‑’70s gems.",
+  "review": "The July 31, 1971 Yale Bowl performance is revered for its monumental Dark Star, first‑time Sugaree, Bird Song and Pig Pen highlights, delivering one of the strongest early‑‘70s shows.  The audience recording suffers from intrusive screams and uneven mids, but listeners who can push past the crowd find a surprisingly listenable document of an iconic night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (especially Dark Star and historic moments) while recording quality is noted as noisy but still usable, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crowd screams dominate at key moments (especially the Dark Star intro), mids are a bit off and there is significant background chatter, but the tape remains surprisingly clear for a 1971 audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Bird Song",
+      "Sugaree",
+      "Big Boss Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic early‑70s setlist with high energy; historic first performance of Sugaree and a long, jazzy Dark Star that keeps the momentum alive despite external chaos."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work gets ample space on the extended Dark Star, earning repeated praise for tone and improvisational freedom.",
+    "Phil": "",
+    "Bob": "Bob's rhythm guitar and vocals are noted positively in several reviews, contributing to the overall strength of the performance.",
+    "Keys": "Pig Pen’s organ/harmonica playing is highlighted as a standout element throughout the show.",
+    "Drums": "Bill Kreutzmann’s drumming is mentioned favorably; Mickey Hart is absent but no criticism is directed at the percussion."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:53:12.664933+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-07-31.winberg.weiner.5678.gdADT05.sbefail.shnf"
+}

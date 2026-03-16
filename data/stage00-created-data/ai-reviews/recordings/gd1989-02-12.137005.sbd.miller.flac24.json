@@ -1,0 +1,69 @@
+{
+  "summary": "Sublime soundboard capture of a party‑like 1989 show, highlighted by stellar performances of Cassidy, Monkey and the Engineer and Alabama Getaway.",
+  "review": "Todd Campbell revels in the crystal‑clear, front‑row soundstage of this soundboard recording, calling it “sublime.” He praises the festive atmosphere, guest spots from Spencer Davis and an unannounced Bob Dylan, and especially lauds the renditions of Cassidy, Monkey and the Engineer, Alabama Getaway and other classics. Overall the show is described as a memorable celebration for both band and fan.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review but it is overwhelmingly positive about both performance and recording; the rating reflects strong show quality and excellent soundboard capture."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer notes a sublime, crystal‑clear soundstage with no reported glitches; the mix is balanced and immersive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Monkey and the Engineer",
+      "Alabama Getaway",
+      "Dire Wolf",
+      "How Long Blues",
+      "Gimme Some Loving"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A fun, party‑like vibe with guest appearances (Spencer Davis, Bob Dylan) and surprise song choices; the second set feels especially spontaneous and celebratory."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his guitar work on Alabama Getaway and overall presence throughout the show.",
+    "Phil": "Highlighted for a strong bass performance on Cassidy, one of the reviewer’s reasons for being a Deadhead.",
+    "Bob": "Mentioned as adding Cassidy and participating in pre‑drums sections; no specific performance critique.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Monkey and the Engineer": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "How Long Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Loving": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:51:36.118976+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-02-12.137005.sbd.miller.flac24"
+}

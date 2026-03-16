@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording captures a killer \"Other One\" jam, but timing anomalies raise questions about the source.",
+  "review": "Reviewers rave about the soaring improvisation on The Other One, calling it one of the coolest early‑70s jams. However, another listener points out that this segment runs about two minutes longer than expected, suggesting a speed or looping glitch in the source. The recording appears to be a soundboard feed, but the timing issue detracts from an otherwise stellar performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Show quality is praised highly (5/5) while recording quality shows a notable flaw (timing error). Weighted combine yields ~4.1 stars, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer notes a ~2‑minute excess in The Other One, likely due to speed error or repeated segment; otherwise no explicit comments on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient information; reviews focus solely on The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:27:26.820863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-12-10.132778.sbd.droncit.restore5801.flac16"
+}

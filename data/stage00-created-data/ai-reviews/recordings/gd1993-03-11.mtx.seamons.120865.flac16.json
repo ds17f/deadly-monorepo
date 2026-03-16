@@ -1,0 +1,77 @@
+{
+  "summary": "Matrix source with crisp AUD brings the crowd’s vibe alive, and the show shines thanks to a smoking Help‑Slip‑Franklin opener, stellar Althea, Masterpiece and a monster Truckin‑Spoonful‑He's Gone sequence.",
+  "review": "The March 11 1993 recording benefits from a well‑balanced matrix mix that highlights both the soundboard clarity and audience ambience, though the bass drum can be a bit hot and Nordine’s spoken‑word intro is low. Musically the concert is praised for focused Jerry solos, heavy Phil in the mix, superb Vince piano on Franklin’s, and standout moments like Help>Slip>Franklin, Althea, Masterpiece, Truckin>Spoonful>He's Gone and a “fabulous” The Other One, making it a highly recommended show despite a few uneven cuts such as Wave to the Wind.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (5,5,5,5,4,3) with strong praise for performance and mostly positive technical comments; minor recording quirks do not detract from the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "AUD matrix mix adds live ambience and brings out audience interaction; soundboard clarity is praised, but bass drum can be overly hot on the SBD source and Nordine’s spoken‑word segment is initially low in volume."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's",
+      "Althea",
+      "Masterpiece",
+      "Truckin > Spoonful > He's Gone",
+      "The Other One",
+      "Days Between"
+    ],
+    "poor_songs": [
+      "Wave to the Wind",
+      "Iko Iko"
+    ],
+    "setlist_flow": "Set 1 launches with a high‑energy Help>Slip>Franklin and stays strong through Althea, Masterpiece and a solid Music; Set 2 is more varied—uneventful Iko Iko, a polarizing Wave to the Wind, then peaks with Truckin>Spoonful>He's Gone and a superb The Other One before winding down with decent Days Between and Around & Around."
+  },
+  "band_member_comments": {
+    "Jerry": "Focused throughout, delivering thoughtful solos, energetic enthusiasm on Franklin's and strong ballad work on Days Between; provides a notable solo on Wave to the Wind.",
+    "Phil": "Prominent and heavy in the mix, contributing a solid low‑end foundation praised by listeners.",
+    "Bob": "",
+    "Keys": "Vince’s piano is highlighted as great, especially on Franklin's and throughout the show.",
+    "Drums": "Overall good but bass drum can be overly hot on the SBD source; drumming between Drums and Space is solid though Nordine’s spoken‑word segment overpowers it initially."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin > Spoonful > He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T10:12:40.603817+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-11.mtx.seamons.120865.flac16"
+}

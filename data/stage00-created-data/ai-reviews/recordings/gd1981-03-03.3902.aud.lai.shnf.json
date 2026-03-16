@@ -1,0 +1,31 @@
+{
+  "summary": "Over‑saturated recording quality contrasts with a generally praised but vaguely described performance.",
+  "review": "One reviewer notes that the levels were set too high during \"Stranger,\" resulting in noticeable saturation, while another gives a nostalgic three‑star rating for the March 3, 1981 Cleveland Music Hall show, praising its energy and vibe but offering no concrete details about the music or recording. The limited feedback leaves the technical side as fair at best and the musical side positively remembered yet undefined.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one flags severe recording level issues (negative) and the other gives a middling 3‑star, generic praise of the show (neutral). Combined weighting yields an overall below‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Levels were set too high during \"Stranger,\" causing saturation; no other recording details provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer mentions overall energy and transcendental vibe but gives no specifics on song flow or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T08:37:26.868709+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-03.3902.aud.lai.shnf"
+}

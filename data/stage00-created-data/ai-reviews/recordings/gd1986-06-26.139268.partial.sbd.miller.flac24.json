@@ -1,0 +1,45 @@
+{
+  "summary": "Pristine Charlie Miller soundboard captures a hesitant one‑set show that many consider a stinker.",
+  "review": "The Miller SBD provides crystal‑clear audio, removing the notorious Metrodome echo and delivering an excellent listening experience despite being a partial recording. Musically, the concert is uneven – a tentative first set with only a few bright spots like Terrapin Station and Estimated Prophet, and overall it’s regarded as one of the weaker shows of 1986.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is praised as excellent (≈5/5) while show performance is viewed as poor to average (≈2/5). Weighted combination yields an overall rating around 3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp board with echo removed; partial recording missing some sections makes it incomplete but still highly listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "One‑set format feels hesitant and uneven, with the band appearing unsure; a few moments rise above the general flatness."
+  },
+  "band_member_comments": {
+    "Jerry": "Opening described as \"killer\", but overall performance is seen as inconsistent.",
+    "Phil": "",
+    "Bob": "Bob's playing is portrayed as muddled early on, improving only during the Petty interlude before slipping again.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:26:19.512052+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-26.139268.partial.sbd.miller.flac24"
+}

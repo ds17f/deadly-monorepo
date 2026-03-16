@@ -1,0 +1,76 @@
+{
+  "summary": "Full‑sounding audience tape with some top‑end distortion captures a strong set highlighted by Bird Song, Sugaree and a powerful Bertha.",
+  "review": "The recording, made with a Sennheiser 441 mic, delivers a fuller picture than the soundboard version but suffers from occasional high‑frequency distortion and overly hot levels. Musically the show is praised for its energetic first set and a rager second set, with standout moments like Bird Song, Sugaree, Let It Grow > Deal, The Other One, Casey Jones and an especially fierce Bertha, though Jerry's Shakedown is noted as tepid.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high (≈4.2) while recording quality is mixed (≈2.5); weighted average yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Uses Sennheiser 441 mic; fuller than soundboard but has top‑end distortion and overly high levels according to some reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Sugaree",
+      "Let it Grow > Deal",
+      "The Other One",
+      "Casey Jones",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Shakedown"
+    ],
+    "setlist_flow": "First set described as excellent and energetic; second set called a rager with strong transitions, especially the powerful Bertha and heavy Sugaree."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for presence in this tape, though his Shakedown is noted as a little tepid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's organ playing is highlighted as particularly strong throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let it Grow > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:40:16.769716+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-10.sennmd441-weiskircher.eurodead.7481.sbeok.shnf"
+}

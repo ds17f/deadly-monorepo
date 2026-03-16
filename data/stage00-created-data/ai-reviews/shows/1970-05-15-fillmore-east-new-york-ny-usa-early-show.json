@@ -1,0 +1,61 @@
+{
+  "summary": "Epic early May 15 double‑show with stellar jams and tight playing",
+  "blurb": "The set showcases standout versions of The Other One, Candyman and Cold Jordan, all propelled by Jerry's soaring guitar improvisations. Bob Weir adds solid rhythm work and even joins the New Riders on Mama Tried. Bill and Mickey lock in a driving drum foundation throughout the marathon electric second set.",
+  "review": "On May 15 1970 at the Fillmore East the Dead delivered an unforgettable early‑show marathon that still feels fresh today. The first acoustic half runs a tight program of folk‑rock staples, but the real fireworks begin with the electric second set – a seamless flow from Casey Jones into an inspired Attics Of My Life, then a legendary Saint Stephen → Cryptical Envelopment → Drums → The Other One → Cryptical Envelopment sequence that culminates in a soaring Cosmic Charlie. Jerry Garcia’s tone is on fire throughout, especially on The Other One and the blistering Candyman; his improvisational daring makes those jams feel like fresh discoveries. Bob Weir’s rhythm work is rock‑solid, highlighted by his guest spot with the New Riders on Mama Tried, while Bill Kreutzmann’s intro and Mickey Hart’s brushwork keep the groove both grounded and adventurous. Pigpen adds texture on keyboards and harmonica, rounding out a performance that captures the band at a creative peak.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 142,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All available analyses are positive, praising multiple jams (The Other One, Dark Star, Candyman) and describing the overall show as 'epic' with 'standout performances'. Consistent high‑energy language across recordings justifies a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-05-15.early-late.sbd.97.sbeok.shnf",
+    "reason": "Soundboard source with crisp, low‑hiss mix; captures the full double‑show without major dropouts, making it the most complete and listenable version."
+  },
+  "key_highlights": [
+    "Standout electric second set featuring The Other One → Cryptical Envelopment sequence",
+    "Jerry’s incendiary guitar on Candyman and The Other One",
+    "Bob Weir’s guest appearance with New Riders on Mama Tried adds a rare collaborative moment",
+    "Crisp soundboard capture that preserves the marathon show’s energy"
+  ],
+  "song_highlights": [
+    "Candyman",
+    "Cold Jordan*",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers scorching tone and improvisational fire on The Other One, Dark Star (though not on the setlist) and Candyman, driving the jams with relentless energy.",
+    "Phil": "",
+    "Bob": "Weir provides solid rhythm throughout, joins the New Riders on Mama Tried, and supports the extended electric explorations.",
+    "Brent": "",
+    "Mickey": "Hart’s brush work adds texture and dynamics, especially during the drum break leading into The Other One.",
+    "Billy": "Kreutzmann opens the second set with a powerful intro and maintains a driving pulse that anchors the marathon jams."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-19T19:51:13.149467+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Candyman"
+    ],
+    [
+      "Cold Jordan*"
+    ],
+    [
+      "Saint Stephen",
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Cosmic Charlie"
+    ]
+  ]
+}

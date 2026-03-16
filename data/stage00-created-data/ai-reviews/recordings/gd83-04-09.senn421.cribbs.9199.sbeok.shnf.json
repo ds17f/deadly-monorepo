@@ -1,0 +1,68 @@
+{
+  "summary": "A mixed‑quality audience recording of an intense 1983 spring show, highlighted by a stellar Help‑Slip‑Franklin’s sequence and a fiery Throwing Stones, but hampered by poor sound capture.",
+  "review": "The performance shines with a blistering Help > Slipknot! > Franklin's Tower to open the second set and a scorching Throwing Stones that ends in a Here Comes Sunshine‑style climax. However, listeners note that the recording fails to capture the band’s low‑end power and contains distracting audio flaws, making it an uneven listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality averages around a solid 3½ based on multiple positive comments about standout songs, while recording quality is consistently described as inadequate, pulling the overall weighted score down to just above three stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers say the audio distracts from the music, fails to capture Phil's six‑string bass intensity and lacks clarity; one calls it merely 'adequate' and wishes for a better audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot! > Franklin's Tower",
+      "Smokestack Lightning (jam)",
+      "Throwing Stones"
+    ],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": "The first set builds strong energy with a smoking opener and a China Rider climax; the second set opens spectacularly with Help‑Slip‑Franklin’s but loses momentum later, ending in a fizzle that leaves some listeners disappointed."
+  },
+  "band_member_comments": {
+    "Jerry": "Early in the show Jerry is on fire, but after leaving stage he 'mails it in' and skips the Black Peter solo.",
+    "Phil": "Phil's new six‑string bass provides insane low‑end intensity that reviewers feel the tape fails to capture.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) is up in the mix, delivering one of his best performances with an Other One‑ish solo and strong work on Throwing Stones.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:36:20.864037+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-09.senn421.cribbs.9199.sbeok.shnf"
+}

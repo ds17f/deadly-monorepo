@@ -1,0 +1,58 @@
+{
+  "summary": "Solid ’69 set with standout Big Boy Pete and Good Lovin'",
+  "blurb": "The show delivers a robust performance of Big Boy Pete, Good Lovin' and He Was A Friend Of Mine, with Jerry’s rock‑solid tone leading the way. Pigpen adds a memorable harmonica moment while the band occasionally drifts on slower transitions.",
+  "review": "On September 6, 1969 at San Francisco’s Family Dog, the Dead offered a concise one‑set show that leans into blues‑rock grit and occasional folk‑flair. Jerry Garcia’s guitar is described as “rock‑solid” with thick, twangy leads on \"Good Lovin'\" and a strong vocal presence, while his solo on the extended \"He Was A Friend Of Mine\" draws particular praise. The highlight for many listeners is the raucous rendition of \"Big Boy Pete,\" captured cleanly in later tracks of the best soundboard source. Pigpen’s harmonica shines on an unnamed moment, adding a bluesy counterpoint that lifts the set. Though the early songs suffer from low volume and the organ on \"It's All Over Now\" is reported out‑of‑key, the overall energy remains engaging, making this show a worthwhile snapshot of the Dead’s late‑sixties transition period.\n\nWhile the recording quality varies—some tracks exhibit tape hiss that can be tamed with EQ—the best SBD capture balances clarity and atmosphere. Fans looking for solid early material should give this performance a spin, especially for the rare \"All Over Now\" cover and the gritty blues vibe that permeates the set.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Mixed sentiments dominate (3 mixed, 1 positive) with modest praise for specific songs and performances but no consistent criticism; a small positive adjustment reflects the overall mild approval.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-09-06.sbd.samaritano.16608.sbeok.shnf",
+    "reason": "Good‑quality soundboard with clean mix on later tracks, captures standout \"Big Boy Pete\" and \"Good Lovin'\" while keeping the set listenable despite low early volume."
+  },
+  "key_highlights": [
+    "\"Big Boy Pete\" captured with a clean, powerful mix",
+    "Jerry’s rock‑solid tone and strong lead vocals on \"Good Lovin'\"",
+    "Rare cover of \"All Over Now\" adds historical interest",
+    "Pigpen’s harmonica moment provides a bluesy lift"
+  ],
+  "song_highlights": [
+    "Big Boy Pete",
+    "Good Lovin'",
+    "He Was A Friend Of Mine",
+    "It's All Over Now"
+  ],
+  "band_performance": {
+    "Jerry": "Rock‑solid tone with thick, twangy leads; strong vocal on \"Good Lovin'\" and praised solo on \"Friend of Mine\".",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-24T17:15:20.561676+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Big Boy Pete",
+      "Good Lovin'"
+    ],
+    [
+      "He Was A Friend Of Mine"
+    ],
+    [
+      "It's All Over Now"
+    ]
+  ]
+}

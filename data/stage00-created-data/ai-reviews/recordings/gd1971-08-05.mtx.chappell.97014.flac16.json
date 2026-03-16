@@ -1,0 +1,55 @@
+{
+  "summary": "Excellent matrix mix captures a stellar 1971 performance with standout \"The Other One\" and a superb That's It suite.",
+  "review": "The matrix blend of soundboard and audience delivers a balanced, crystal‑clear live sound that many reviewers call far superior to a straight board tape. The concert itself is praised for its strong 1971 energy, highlighted by a complete “Other One” and an impressive “That’s It” suite, though a few note the odd omission of “Not Fade” and “Bird Song.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews overwhelmingly rate the show and recording highly (mostly 5‑star), with only one low rating concerning missing tracks; overall musical performance and matrix sound quality are judged excellent."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced mix praised as far superior to a pure soundboard, clear and superb live feel; reviewers highlight the matrix’s crispness and overall superb fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "That's It"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong 1971 set praised for its energy; notable “Other One” suite and a great “That’s It” sequence, with only minor disappointment over missing Not Fade and Bird Song."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That's It": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:11:05.965867+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-05.mtx.chappell.97014.flac16"
+}

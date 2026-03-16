@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown; the March 3 1992 show is viewed as an average performance with no standout moments.",
+  "review": "The three reviews provide little information about audio fidelity, leaving the recording quality uncertain. The concert itself is described as unremarkable – the setlist and playing were not considered special, though the presence of Rush drummer Neil Peart and a brief glimpse of Jerry Garcia are noted. Overall the commentary is mixed, with two reviewers giving zero stars and one rating it three stars.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Only one detailed review offering a moderate (3‑star) assessment of the show; no concrete recording quality data, leading to an average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned sound clarity, mix, or source type, so recording quality cannot be definitively assessed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers felt the performance was fairly ordinary with no notable peaks or troughs in the setlist."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned only briefly as a gray‑haired figure on stage; no specific musical commentary.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart and Bill Kreutzmann praised for their interlocking, complementary rhythmic unit."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T03:53:52.800263+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-03.nak300.carpenter.andrewf.92897.flac16"
+}

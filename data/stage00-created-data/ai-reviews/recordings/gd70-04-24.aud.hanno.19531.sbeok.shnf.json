@@ -1,0 +1,67 @@
+{
+  "summary": "Rough audience‑recorded tape but the performance soars – a monster Eleven, a soaring Dark Star and an ethereal acoustic It's A Man’s World.",
+  "review": "The show is widely praised for its historic set‑list highlights – a blistering The Eleven, a transcendent Dark Star > St. Stephen > The Eleven segue, and a haunting acoustic It’s A Man’s World that many fans call timeless.  The AUD source is noisy and the venue acoustics were poor, yet most listeners say the music shines through the flaws and makes the recording worth owning.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.1; most comments rave about the performance (Eleven, Dark Star) while noting the recording is poor but listenable – a strong show with a mediocre source yields an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Many reviewers call the sound \"crappy\", \"muddy\" and note venue acoustics like a bus‑station bathroom; some upgrades removed artifacts, but overall the tape is noisy with occasional dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Dark Star > St. Stephen > The Eleven",
+      "It's A Man's World (acoustic)",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The early acoustic set is uneven, but the electric second half builds to a peak with The Eleven and Dark Star; power cuts forced an abrupt end, yet the energy stays high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is repeatedly praised – licks on The Eleven and Dark Star are described as \"straight to the soul\" and perfectly crisp.",
+    "Phil": "Bass is noted for staying clear; one reviewer appreciates that Lesh’s tone isn’t muddy during The Eleven.",
+    "Bob": "Bob Weir’s stage banter (the sit‑down/stand‑up story) is highlighted as memorable.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "It's A Man's World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T18:29:26.908583+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-04-24.aud.hanno.19531.sbeok.shnf"
+}

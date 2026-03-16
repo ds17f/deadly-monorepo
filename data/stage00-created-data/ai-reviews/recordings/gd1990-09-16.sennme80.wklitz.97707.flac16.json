@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent Garden show highlighted by a rollicking Tennessee Jed and smoky Samson & Delilah bookends, though the recording source isn’t specified.",
+  "review": "The reviewer describes this Garden performance as a sleeper hit, noting that the energy kicked in with a lively Tennessee Jed midway through set I and that set II featured strong “smoky” bookends like Samson & Delilah. Keyboardist Keith receives special kudos, and the overall enthusiasm earns a full‑star rating despite no comments on audio fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 5‑star review praises the musical performance and Keith’s playing; lack of recording details keeps confidence low, but show quality drives a high rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Review does not mention any audio characteristics or issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Samson & Delilah"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show started slowly, gaining momentum midway through set I with Tennessee Jed and delivering strong, smoky bookends in set II."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Praised Keith’s playing (“kudos, keith!”)",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:29:19.715651+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-16.sennme80.wklitz.97707.flac16"
+}

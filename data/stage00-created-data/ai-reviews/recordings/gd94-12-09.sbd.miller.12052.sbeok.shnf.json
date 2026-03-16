@@ -1,0 +1,68 @@
+{
+  "summary": "Soundboard capture sounds clearer than the original mix, with a strong 1994 show highlighted by a soaring Fire on the Mountain and an extended Scarlet‑Begonias/Fire jam.",
+  "review": "The recording is a soundboard source that improves on the notoriously poor Coliseum mix, delivering clear instrument separation despite occasional balance quirks. Musically the concert shines thanks to Jerry’s fat guitar tone and a percussion‑heavy Fire on the Mountain, while the long Scarlet → Fire sequence makes the second set unforgettable; the only real blemish is a forgetful rendition of Ramble On Rose. Overall the performance is praised by most listeners as a standout late‑’94 show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70 %) are 4–5 stars and highlight strong jams and good soundboard clarity; a few criticisms about lyric slips and keyboard work lower the score slightly but not enough to move it out of the ‘good‑to‑great’ range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note that the disc version sounds clearer than the original Coliseum mix, with decent clarity and separation; some mention a muddy live mix but overall the soundboard capture is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Scarlet Begonias",
+      "The Stranger"
+    ],
+    "poor_songs": [
+      "Ramble On Rose"
+    ],
+    "setlist_flow": "A generous first set that stretches past an hour, followed by a long second set dominated by a guest‑drummer‑enhanced Fire on the Mountain and an extended Scarlet → Fire jam; only one post‑drums/space song appears."
+  },
+  "band_member_comments": {
+    "Jerry": "Rich, fat guitar tone praised throughout; occasional lyric slips and a forgotten verse in Ramble On Rose are noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboard work described as repetitive, overly loud and sometimes disruptive to the jam flow.",
+    "Drums": "Three drummers add a percussion‑intensive feel on Fire on the Mountain; long drums/space segment highlighted."
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That Would Be Something": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T04:16:43.352555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-09.sbd.miller.12052.sbeok.shnf"
+}

@@ -1,0 +1,84 @@
+{
+  "summary": "Fair audience recording of a polarizing 1995 Charlotte show; standout moments like Women Are Smarter and Black Peter contrast with Jerry’s off‑night performance.",
+  "review": "The set captures an uneven 1995 Dead concert that many fans remember as a low point, especially noting Garcia’s strained playing and vocal issues. Nevertheless, the first set delivers strong renditions of Women Are Smarter, Black Peter, and several bird songs, making it worthwhile for collectors despite the mediocre audience‑sourced tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Reviews are split between strongly negative (performance, Jerry off) and positive personal experiences; recording is generally described as poor to fair, resulting in an overall middle‑of‑the‑road rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple reviewers call the tape 'lousy' or note it sounds like a low‑fidelity audience recording with occasional dropouts; no soundboard source is identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Women Are Smarter",
+      "Black Peter",
+      "Stagger Lee",
+      "High Time",
+      "Black Throated Wind",
+      "If the Shoe Fits"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert starts strong with a solid first‑set selection, but the momentum stalls as Jerry’s playing wanes; the second set still offers moments of excitement for those who appreciate the era's bird songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly described as strained, off‑key, drugged out, and vocally scratchy throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Women Are Smarter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "If the Shoe Fits": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:43:47.868732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-24.akg.5668.sbeok.shnf"
+}

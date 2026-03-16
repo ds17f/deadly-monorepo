@@ -1,0 +1,31 @@
+{
+  "summary": "A well‑recorded concert with good sound quality that fans remember fondly for its nostalgic vibe and Pigpen’s “operator” organ playing.",
+  "review": "Reviewers consistently praise this show, noting the solid recording quality and the emotional connection they feel to the performance – especially highlighting Pigpen’s organ work. While no specific songs are called out, the overall sentiment is that the concert captures the classic Dead atmosphere that fans cherish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "All three reviewers give high marks (5, 5, 4) and focus on positive aspects of both the performance and recording; limited detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer explicitly says the recording quality is good; no further technical details are provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers emphasize overall nostalgic enjoyment rather than detailed set analysis."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ (referred to as “operator”) is specifically praised.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T01:05:53.937133+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-08.aud-weinberg.cousinit.18639.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent recording quality praised by the reviewer, though no details on the musical performance are provided",
+  "review": "The sole fan review is unequivocally positive, calling the recording excellent and urging others to grab it. No comments were made about the band's playing, setlist flow, or individual members, so the analysis of the show itself remains undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one five‑star review focusing on recording quality; no information on performance, so rating reflects strong audio but limited data on the show."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as 'Excellent' and recommends grabbing it; no specific technical details given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T03:48:29.107450+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-16.nak300.juteau.116749.flac"
+}

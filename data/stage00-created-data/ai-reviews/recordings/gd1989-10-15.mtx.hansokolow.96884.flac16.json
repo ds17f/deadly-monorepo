@@ -1,0 +1,57 @@
+{
+  "summary": "Decent matrix recording of a solid late‑80s setlist with strong Jerry ballads, though the band's overall energy feels subdued.",
+  "review": "The matrix source captures the show with decent clarity and some nice MIDI‑enhanced guitar textures. Fans appreciate the classic Jerry ballads – Row Jimmy, Standing, Crazy Fingers and Stella Blue – but note that the band’s energy is lower than expected for a late‑80s gig. The recording quality is mixed; one listener praises the matrix mix while another finds the sound lacking.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is moderately good (solid setlist, standout ballads) but hampered by low energy; recording quality receives both praise and criticism, leading to an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer calls the matrix work 'nice' with clear MIDI effects, while another complains about sub‑par sound from the recorder. Overall clarity is acceptable but not consistently high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Row Jimmy",
+      "Standing",
+      "Crazy Fingers",
+      "Stella"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical late‑80s setlist that fans enjoy, but the overall band energy is perceived as somewhat low."
+  },
+  "band_member_comments": {
+    "Jerry": "His ballads (Row Jimmy, Standing, Crazy Fingers, Stella) are highlighted and praised for good MIDI‑enhanced guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:25:55.742558+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-15.mtx.hansokolow.96884.flac16"
+}

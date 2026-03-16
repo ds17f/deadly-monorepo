@@ -1,0 +1,80 @@
+{
+  "summary": "Soundboard recording with a stellar early‑Dead performance (standout Feedback, Dark Star and The Other One) but marred by severe tape drop‑outs in the middle.",
+  "review": "The show captures the raw, psychedelic power of late‑1968 with a gorgeous Jerry Garcia tone that brings out the magic of Feedback, Dark Star and an unforgettable take on The Other One.  The mix puts Garcia front‑and‑center, highlighting his amp harmonics, while Phil Lesh’s bass interplay shines in the high points.  Unfortunately the tape deteriorates after New Potato, rendering large sections unlistenable and pulling the overall listening experience down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average ~4.2/5) while consistently noting major recording problems in the middle of the tape (average ~3.0/5). Weighted combination yields a solid but imperfect 3.8‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Excellent front‑of‑stage mix with Jerry prominent, but severe tape drop‑outs and muffled sections after \"New Potato\" make much of the second half unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feedback",
+      "Dark Star",
+      "The Other One",
+      "Good Night"
+    ],
+    "poor_songs": [
+      "Alligator",
+      "New Potato"
+    ],
+    "setlist_flow": "A single, high‑energy set that swings from intense early‑68 psychedelia to polished late‑68 moments; the flow is disrupted only by the badly recorded middle segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is front‑and‑center with crisp amp feedback and harmonics; his solo on The Other One is described as \"shreds\" and \"monstrous.\"",
+    "Phil": "Lesh’s bass interplay during The Other One is called \"off‑the‑charts brilliant\" and a highlight of the performance.",
+    "Bob": "",
+    "Keys": "References to Bear's (Keith) genius in the mix; keyboards are audible but sometimes buried behind Garcia.",
+    "Drums": "A long drum solo is noted as uninteresting; overall drumming receives little specific praise."
+  },
+  "song_mentions": {
+    "Feedback": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "New Potato": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Night": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T09:44:48.573309+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-11-01.sbd.cotsman.18100.sbeok.shnf"
+}

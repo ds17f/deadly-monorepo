@@ -1,0 +1,56 @@
+{
+  "summary": "A solid 4/6/87 show highlighted by a rocking Jack Straw and out‑of‑space Terrapin Station, with strong playing despite no clear details on recording source.",
+  "review": "Reviewers rave about the performance, especially the fiery Jack Straw>Deal pairing, an otherworldly Terrapin Station jam that flows into The Other One and Stella Blue, and Jerry Garcia’s sweet tone. No specific comments on the tape quality were offered, so the rating focuses on the musical excellence of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "All three reviews are positive and emphasize standout songs; recording quality is not discussed, so rating leans heavily on the strong musical performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on sound clarity or mix; one reviewer noted their download came from a different source no longer available, implying uncertainty about this particular tape's fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Deal",
+      "Terrapin Station",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set one is described as solid throughout, with the Jack Straw>Deal sequence standing out and a notable Terrapin Station jam that transitions smoothly into The Other One and Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as playing at his sweetest with excellent tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T21:09:08.838945+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-06.schoeps.eD.10924.sbeok.shnf"
+}

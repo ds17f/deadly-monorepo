@@ -1,0 +1,52 @@
+{
+  "summary": "A rough, unfinished recording of a shaky show – only Morning Dew and Around & Around offer brief highlights.",
+  "review": "The tape sounds half‑studio like, with Brent's keyboard work described as disconnected and the drums stumbling, giving the overall sound a poor, unfinished feel. While most reviewers lament the performance, a few bright moments shine through – Jerry’s rescuing guitar on Morning Dew and a soothing Around & Around. The emotional backstory of Brent’s divorce is noted but does not redeem the musical shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Consistent criticism of both recording fidelity and performance outweighs a few positive song mentions, leading to an overall below‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers call the sound unfinished, studio‑like, with disconnected keyboards and failed drum attempts; no clear indication of a clean soundboard or audience mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Around and Around"
+    ],
+    "poor_songs": [
+      "Maybe You Know"
+    ],
+    "setlist_flow": "The set is described as uneven and disjointed, hampered by Brent's personal turmoil and lack of cohesion."
+  },
+  "band_member_comments": {
+    "Jerry": "Rescues the vibe on Morning Dew with solid guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard playing is repeatedly called disconnected, random, and indicative of a poor performance.",
+    "Drums": "Failed drum attempts are specifically noted as a weak point."
+  },
+  "song_mentions": {
+    "Maybe You Know": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:22:14.684455+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-21.sbd-pcm.miller.34766.flac16"
+}

@@ -1,0 +1,47 @@
+{
+  "summary": "Soundboard capture with excellent clarity of a modest Sunday show that feels a bit off‑kilter.",
+  "review": "The recording is praised for its fantastic, crisp sound and strong presence, typical of an SBD source. The performance itself is described as uneven – the band sounds tired after a long weekend and the set lacks the spark of adjacent shows, though the banter between songs adds some charm. Overall it’s a solid technical document of a show that isn’t among the Dead’s finest.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised as excellent, but reviewers note the band was out of shape and the show is only average, yielding a mixed overall impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound \"fantastic\", \"great recording\" and note good presence; no complaints about drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Partial show with an opening instrumental not identified; overall energy is low, the band sounds tired after a long weekend, but banter between songs provides some entertainment."
+  },
+  "band_member_comments": {
+    "Jerry": "Quoted saying \"WE have to remember it's Sunday night. It's been a long, weird weekend,\" indicating relaxed mood and less sharp playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Runaround Sue": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:39:38.446695+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-10-26.sbd.fink.9509.sbeok.shnf"
+}

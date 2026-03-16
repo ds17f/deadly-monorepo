@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive information on recording or performance; reviewer gave a zero‑star rating",
+  "review": "The sole review provides only a brief personal note and assigns a zero‑star rating, offering no details about sound quality, setlist, or individual performances. With such limited feedback the recording cannot be evaluated beyond the apparent dissatisfaction expressed by the reviewer.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one terse review with a 0‑star rating; no concrete information on music or audio quality, so rating is based primarily on the low star score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific comments about sound; zero stars suggest reviewer was dissatisfied with the recording or show."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T23:28:52.586923+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-27.117501.Senn421.Darby.Flac2448"
+}

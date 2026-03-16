@@ -1,0 +1,51 @@
+{
+  "summary": "Dynamic audience recording captures a tight Scarlet Fire and standout Samson/Terrapin performances.",
+  "review": "The Laurentis audience tape is surprisingly listenable and dynamic, offering near‑studio clarity for a 1988 show. Garcia’s solos on Scarlet Fire are described as wailing and the second set before the drum break shines, with Samson and Terrapin Station performed tightly. Overall the performance earns high marks while the recording quality approaches a five‑star level.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Single detailed review rates the show a solid 4 and the audio near‑5, indicating a strong performance paired with excellent audience recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listener notes dynamic, listenable sound; M. Laurentis did a fine job capturing the show with near‑studio clarity for an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Samson and Delilah",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Pre‑drums portion of the second set is highlighted as the best part, indicating strong pacing and momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia wails his solos on Scarlet Fire; tight intro and expressive lead work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:33:01.870064+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-31.124843.AT835.laurentis.flac16"
+}

@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard capture with generally good audio despite occasional digital noise, featuring a memorable second set at the Rainbow.",
+  "review": "The show is fondly remembered for its intimate vibe and a standout second set that many fans cite as a highlight of the night. While most listeners report a clear, well‑balanced soundboard recording, several note digital wind‑chime artifacts or missing Bob Weir in the mix, leading to mixed opinions on the technical quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show performance is highly praised (many 5‑star comments) while recording quality shows both strong and problematic reports, resulting in an overall rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers find the lossless SHN source clear and free of corruption, but a few report constant digital wind‑chime noise and suspect over‑aggressive noise reduction. One early reviewer warned of corrupted zip files."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opened late but quickly built momentum, with the second set described as especially spaced‑out and memorable; overall pacing is praised despite some early technical hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Multiple reviewers complain that Bob Weir's rhythm guitar is barely audible or missing throughout most of the performance.",
+    "Keys": "Brent Mydland's keyboard playing is noted as pleasant and nicely integrated.",
+    "Drums": "The drum sound receives positive remarks, described as close‑up and thrilling."
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:15:35.769273+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-03.sbd.jeffm.2369.sbeok.shnf"
+}

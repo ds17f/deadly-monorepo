@@ -1,0 +1,82 @@
+{
+  "summary": "An excellent flat‑transfer soundboard capture of a fiery 1969 show, highlighted by Dupree's Diamond, The Eleven and Lovelight.",
+  "review": "The multi‑track SBD transfer is praised as crystal‑clear and “flat”, delivering an impressively clean listening experience. Musically the concert shines with acoustic gems like Dupree's Diamond Blues, soaring moments in The Eleven, and a sweet Lovelight, though Hey Jude and some of the Dark Star/Mountains sections are noted as weaker. Overall the performance is regarded as one of the stronger 1969 San Francisco runs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and transfer highly (5‑star) and cite multiple standout songs; a few mixed comments lower the average slightly, yielding a strong but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Flat‑transfer praised as the cleanest possible copy; crisp detail (even mic lip brushing) and balanced mix. Minor pitch‑correction notes in some reviews but no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dupree's Diamond Blues",
+      "Mountains of the Moon",
+      "The Eleven",
+      "Lovelight",
+      "The Other One",
+      "St. Stephen"
+    ],
+    "poor_songs": [
+      "Hey Jude",
+      "Dark Star (bland version)"
+    ],
+    "setlist_flow": "First set opens strong with acoustic Dupree's and a solid New Potato suite; second set is mixed but peaks at The Eleven, while Lovelight provides a sweet close despite a weaker Hey Jude finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and swirling fret‑board explorations are repeatedly praised; acoustic work on Dupree's and Mountains highlighted.",
+    "Phil": "Phil’s bass solo in New Potato and his interplay with Jerry on The Eleven receive strong compliments.",
+    "Bob": "Weir is noted for blazing trails on The Eleven and cutting the outro jam short, adding energy to the set.",
+    "Keys": "Constanten’s contributions are mentioned as a “best representation” of his playing; organ at 15:05 in Dark Star called prime‑time.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mountains of the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:07:21.750291+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-03-01.132657.healy-latvala-wise.sbd.multi.track.flac16"
+}

@@ -1,0 +1,93 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an electrifying 4/28/85 Frost show, highlighted by a blistering first set (Birdsong, Gimme Some Lovin') and the classic China Cat→I Know You Rider transition plus a superb Playin’ in the Band jam.",
+  "review": "The Charlie Miller upgrade delivers an A+‑level soundboard mix that is crisp, well‑balanced and lets each instrument shine. Musically the show bursts with energy – a scorching first set, a standout China Cat→I Know You Rider finish, a rare She Belongs to Me encore and a fiery Playin’ in the Band jam – even if Crazy Fingers and a few late‑set cuts feel a bit uneven. Overall reviewers rave about both the performance and the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the soundboard quality (clear, crisp, A+ mix) and strong musical performance with multiple standout moments; only occasional minor performance or pitch issues keep it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with superb instrument separation; reviewers note the upgrade removes typical tape hiss and balances Brent's keys (though a few mention his level is slightly low). Minor pitch‑correction complaints refer to alternate sources, not this SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "China Cat > I Know You Rider",
+      "She Belongs To Me",
+      "Gimme Some Lovin'",
+      "Minglewood Blues",
+      "Playin' in the Band jam"
+    ],
+    "poor_songs": [
+      "Crazy Fingers (mixed)",
+      "Half-Step Mississippi (shaky start)",
+      "Throwing Stones (cut/pitch issues)"
+    ],
+    "setlist_flow": "A blistering first set that builds to a classic China Cat→I Know You Rider finale, followed by a second set highlighted by an unusual China Doll → Playing jam and a rare She Belongs to Me encore; the energy stays high despite a few uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for \"smoking\" solos, sustained notes, lightning‑fast runs and overall on‑point performance.",
+    "Phil": "Noted as an all‑star alongside Jerry, delivering powerful bass lines and tight interplay.",
+    "Bob": "Mentioned briefly; no specific criticism or praise beyond general band energy.",
+    "Keys": "Brent's keyboards described as intense and \"on a serious voyage\"; a few reviewers note his mix level is slightly low but overall impressive.",
+    "Drums": "Drums/Space segment called solid with good dynamics; praised for driving the second‑set jams."
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat > I Know You Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "She Belongs To Me": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step Mississippi": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:16:46.272985+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-28.sbd.new.miller.28439.sbeok.flacf"
+}

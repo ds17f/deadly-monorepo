@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard recording with perfect levels, featuring a nice rendition of Cassidy and Peggy‑O",
+  "review": "The reviewer praises the recording for its flawless sound levels, indicating a high‑quality soundboard source. Musically the show is noted positively for strong performances of \"Cassidy\" and \"Peggy‑O\", though no further detail on the set is provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One detailed review gives a solid 4‑star rating; recording quality is described as perfect, while musical comments are limited but positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Sound levels described as perfect; clear, balanced mix with no noted issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:14:57.636342+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-16.sbd.unknown.20085.shnf"
+}

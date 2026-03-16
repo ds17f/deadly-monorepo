@@ -1,0 +1,45 @@
+{
+  "summary": "Clear audience recording captures a great show highlighted by an epic Looks Like Rain and a lively Birdsong jam.",
+  "review": "The three reviewers all rate this tape four stars, praising the performance as “great” with one of the best “Looks Like Rain” ever and a crowd‑rousing Birdsong jam.  The audience source is noted for its surprising clarity and immersive ambient mix, making it an enjoyable listen despite being a non‑soundboard recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently positive 4‑star reviews highlight strong musical performance and clear audience recording; weighting gives a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the tape as clear, with an ambient crowd mix that puts listeners in the venue; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Birdsong"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall positive pacing and energy, with highlighted moments on Looks Like Rain and an enthusiastic Birdsong jam that excited the crowd."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob (Bobby) Weir is praised for going ‘sick house’ on Looks Like Rain.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:25:27.402874+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-07-07.beyer.connor.2584.sbeok.shnf"
+}

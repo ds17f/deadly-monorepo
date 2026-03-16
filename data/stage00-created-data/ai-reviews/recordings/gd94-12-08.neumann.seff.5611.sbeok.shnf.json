@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audience recording of a high‑energy 1994 show with a standout “Around and Around” but uneven Garcia performance.",
+  "review": "The tape captures an energetic 1994 Oakland show that many listeners recall fondly; “Around and Around” is highlighted as a fun moment and Jerry’s tone is praised by some, while others note his occasional forgetfulness and lackluster solos. The audience recording is mixed – it sounds surprisingly clear to some ears but suffers from mic‑proximity chatter and talking in the crowd, making the overall listening experience only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality is divided (some high praise, several criticisms) and recording quality ranges from good to problematic; average star rating across reviews is ~2.4, so a weighted score around 2.8 reflects the mixed nature."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear for an audience tape, but mic placement is too close, leading to crowd chatter and occasional muffling; some listeners find it surprisingly good for a 1994 AUD, others call it unacceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Around and Around"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy performance with a loose feel; Jerry occasionally forgets lyrics and compensates with heavy solos, giving the night an uneven but spirited vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sounding more together and having confident tone in some reviews, yet described as sleepwalking or forgetting words in others.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:12:58.268124+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-08.neumann.seff.5611.sbeok.shnf"
+}

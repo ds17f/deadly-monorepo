@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a magical show highlighted by an ecstatic Wheel and a ripping Althea‑LLR‑Deal closing triptych.",
+  "review": "Both reviewers rave about the performance, calling it beautiful and noting that the post‑drum segment and The Wheel are pure magic. The recording is praised as wonderful and clear, though one reviewer mentions it can’t fully convey the psychedelic atmosphere inside the venue. Overall the show shines with standout moments like Althea → LLR → Deal and a powerful drum showcase.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on both musical performance and recording clarity; weighted toward show quality (70%) with excellent soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the recording wonderful and clear, noting only that it cannot fully capture the building's psychedelic, communal vibe."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Althea",
+      "LLR",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Closing first‑set triptych Althea → LLR → Deal is praised as ripping; the second set features an ecstatic Wheel segment and a drum section described as pure magic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment after which the show reaches 'pure magic' is highlighted positively."
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:36:06.134150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-27.143469.sbd.healy.miller.clugston.flac2496"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "An echo‑chamber audience recording that still captures the Dead’s energy, with a standout “Stella Blue” and prominent Weir vocals despite bass and high‑frequency issues.",
+  "review": "The tape offers an atmospheric glimpse of a 1980 show – the venue’s reverberant acoustics give it a unique, sometimes harsh character, but the performance shines through, especially on “Stella Blue” and with Bob Weir’s vocal presence. Recording quality is mixed: listeners praise its depth and energy while noting a thin bass response and an over‑applied Dolby processing that squashes the highs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate it highly for musical performance and overall listenability, but a strong negative comment about excessive Dolby and echo‑chamber acoustics drags the average down to a solid “good” rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Echo‑chamber venue creates a harsh, sometimes painful sound; bass is thin (common in AUDs); excessive Dolby processing squashes highs according to one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as driven and energetic despite acoustic challenges; overall performance is compelling enough to mesmerize the listener."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass is noted as lacking, a typical issue with audience recordings of this era.",
+    "Bob": "Weir's vocals stand out prominently in the mix.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:36:54.234439+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-14.aud.severson.minches.91362.flac1644"
+}

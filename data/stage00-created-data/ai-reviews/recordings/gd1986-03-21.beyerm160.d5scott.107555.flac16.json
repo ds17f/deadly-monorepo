@@ -1,0 +1,45 @@
+{
+  "summary": "Stunning 1986 show with a tight setlist and superb Stella Blue, captured on an excellent audience recording despite minor tinny quirks.",
+  "review": "Reviewers rave about the performance – calling the setlist tight, the playing wonderful, and highlighting Supplication and an all‑time great Stella Blue. The tape is praised as one of the best audience recordings available, though a few note a tinny midrange, vocal lapses and a messy start to Set 2. Overall the music outweighs the recording flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Four reviews (three 5‑star, one 4‑star) praise the show’s musical quality; two explicitly call the audience recording excellent, while only minor technical complaints lower the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively audience capture, regarded as one of the best available; however listeners mention a tinny mid‑range, occasional vocal dropouts and a messy beginning to Set 2."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Supplication",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist described as tight and wonderfully played; the overall flow is praised even though the start of Set 2 feels a bit chaotic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T13:20:45.569744+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-21.beyerm160.d5scott.107555.flac16"
+}

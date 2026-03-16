@@ -1,0 +1,31 @@
+{
+  "summary": "Highly rated recording with no detailed comments on sound or performance",
+  "review": "The only review gives this release a five‑star “EXCELENTE!” rating and expresses enthusiasm for downloading the audio, but provides no specifics about the source type, sound quality, or the band's playing. With such limited information we cannot evaluate the technical recording aspects or highlight any musical moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one brief, enthusiastic review; rating is high but lacks detail to assess show or recording quality accurately."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not mention any details about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T14:35:12.113792+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-24.fm.minches.82486.sbeok.flac16"
+}

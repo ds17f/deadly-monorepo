@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1982 show highlighted by a monster “Other One”, stellar Althea and Black Peter, despite a shaky start to the second set.",
+  "review": "The tape is a pristine soundboard recording that delivers deep bottom‑end and crystal‑clear instrument separation. Musically the concert shines with a blistering first set and standout performances of The Other One, Althea, Black Peter and China Rider, while the opening four songs of the second set (Day Job, West LA, Far From Me) are widely regarded as weak. Overall the energy, Brent’s other‑worldly organ work and Jerry’s soaring leads make this one of the most celebrated ’82 dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (average >4.4) and overwhelmingly positive comments about both performance and recording outweigh the few criticisms of the second‑set opening."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly note fantastic soundboard clarity, deep bottom end from the cassette generation, and immaculate presentation with no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Althea",
+      "Black Peter",
+      "China Rider",
+      "Duprees",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Day Job",
+      "West LA",
+      "Far From Me"
+    ],
+    "setlist_flow": "First set sizzles and maintains high momentum; the second set opens with four weaker, newly‑debuted tracks that disrupt flow, but the band quickly recovers with powerful performances of The Other One, Althea, Black Peter and a crisp China Rider, ending on an inspired encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for electrifying leads, high energy (even soloing through intermission), though some reviewers note lyrical improvisation and occasional breathing difficulty.",
+    "Phil": "Mentioned frequently for strong presence and “lots of Phil” in the fast‑up‑tempo first set.",
+    "Bob": "",
+    "Keys": "Brent’s organ work is described as out‑of‑this‑world, bordering on Black Sabbath intensity, and a key factor in the show’s magic.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Duprees": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:26:25.694182+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-28.sbd.walker-scotton.miller.106749.flac16"
+}

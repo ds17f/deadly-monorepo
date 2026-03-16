@@ -1,0 +1,75 @@
+{
+  "summary": "Matrix source with decent but occasionally muffled sound captures an energetic 1989 Philadelphia run highlighted by a smoking Bird Song, Shakedown and Terrapin.",
+  "review": "The show is widely praised for its high‑energy playing, long jams on Shakedown and Bird Song, and standout moments like Terrapin, US Blues and Man Smart/Women Smarter. While many listeners find the matrix mix good enough to enjoy the performances, a few note muffled mids and occasional clipping that make it sound less crisp than other ’89 recordings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight exceptional musical moments; recording quality is mixed but generally acceptable, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers call the sound good or decent, but others describe it as muffled, not as sharp as comparable shows, with occasional clipping on the opening of China Cat and a heavy AUD patch on Shakedown that adds harshness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Shakedown",
+      "Terrapin",
+      "U.S. Blues",
+      "Man Smart Women Smarter",
+      "I Know You Rider",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is driven by long, exploratory jams on Shakedown and Bird Song, while the second set maintains a pedal‑to‑the‑metal feel with a ripping Rider, spacey post‑Terrapin jam, and a fiery Black Peter finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his MIDI‑enhanced solos on Bird Song, Terrapin and Black Peter, calling one solo \"Hendrix‑like\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work is highlighted as a standout on many songs, especially the psychedelic solo on Shakedown and overall contribution throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Shakedown": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Man Smart Women Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T00:41:20.656490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-18.sbd-matrix.nawrocki.12091.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "A historically significant 1968 set featuring a soaring Dark Star and Eleven, but marred by muddy, over‑processed soundboard recording.",
+  "review": "The performance captures a high‑energy late‑summer ’68 show with standout moments on Dark Star, St. Stephen and The Eleven, though Death Don't Have No Mercy falls flat. Recording quality is consistently described as muddy, low‑volume and overly processed, making careful listening difficult despite the musical merit.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Reviews agree the show is musically strong (many positive comments) while the audio is poor (multiple complaints). Weighted blend of good show (≈4.5) and bad recording (≈1.5) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Muddy, underwater‑like sound; over‑processed with heavy noise reduction/EQ; low volume; overall listenable but well below par for a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "The Eleven"
+    ],
+    "poor_songs": [
+      "Death Don't Have No Mercy"
+    ],
+    "setlist_flow": "A single high‑energy set from late August 1968 that opens strong, builds momentum through Dark Star and The Eleven, then loses focus on Death Don't Have No Mercy before snapping back with a solid Lovelight."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for blazing guitar work on Dark Star, The Eleven (\"mach‑speed\" solo) and a nice jam behind Pigpen during Lovelight.",
+    "Phil": "Noted for staying close behind Jerry on The Eleven, providing tight bass support.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:03:46.256993+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-08-28.sbd.cotsman.18104.sbeok.shnf"
+}

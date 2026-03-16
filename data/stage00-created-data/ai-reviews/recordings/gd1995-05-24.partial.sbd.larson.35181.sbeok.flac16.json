@@ -1,0 +1,57 @@
+{
+  "summary": "Clear soundboard capture of a patchy 1995 show, with an electrifying Estimated Prophet but overall uneven performance.",
+  "review": "The recording sounds crisp and well‑balanced, typical of a soundboard source, though it is only a partial set and even includes tracks from other dates. Listeners rave about the fire in Jerry’s playing on Estimated Prophet and enjoy the tight group work, yet several reviewers note that the first set is missing and that some moments (e.g., “I Want To Tell You”) fall flat. Overall the show shines in spots but feels inconsistent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the sound quality and highlight strong moments (especially Estimated Prophet), but many criticize missing material and uneven playing, leading to a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix with typical sound‑board fidelity; however the file is partial, omits the first set and contains tracks from other shows causing some confusion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "I Want To Tell You"
+    ],
+    "poor_songs": [
+      "I Want To Tell You"
+    ],
+    "setlist_flow": "Partial recording – first set missing, second‑set highlights (Estimated Prophet) stand out, but overall pacing feels uneven due to gaps and mismatched tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – some say he’s not blazing yet plays well as a group; others note he’s wide awake and on fire during Estimated Prophet.",
+    "Phil": "",
+    "Bob": "Positive note that Bob avoids his usual over‑dramatic vocal style in this show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "I Want To Tell You": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T08:40:38.661878+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-24.partial.sbd.larson.35181.sbeok.flac16"
+}

@@ -1,0 +1,93 @@
+{
+  "summary": "A fan‑favorite show packed with killer Spanish Jam, soaring Other One and classic MSG moments, captured on a muddy but still enjoyable source.",
+  "review": "Listeners rave about the energy of this concert – from the explosive Spanish Jam and flawless second‑set flow to standout renditions of The Other One, Throwing Stones, Truckin' and Sugar Magnolia. While the performance is universally praised, one reviewer notes the recording sounds muddy, suggesting a less than pristine capture but not enough to spoil the experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight exceptional musical moments; only one mentions muddy sound, so the show scores high while recording quality pulls the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer calls the audio muddy; no other technical complaints were mentioned, implying a listenable but not pristine capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam",
+      "The Other One",
+      "Throwing Stones",
+      "Truckin'",
+      "Sugar Magnolia",
+      "Scarlet>Fire",
+      "Terrapin Station",
+      "El Paso",
+      "Duprees",
+      "Shakedown"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is described as nearly flawless with smooth transitions (e.g., Scarlet>Fire into Terrapin), delivering high energy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Playing a four‑string bass and finally hitting the opening riff to The Other One, which was noted as a highlight.",
+    "Bob": "",
+    "Keys": "Brent's soulful keyboard work is praised for adding depth to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Duprees": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:56:01.815843+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-20.cohen.minches.19145.sbeok.shnf"
+}

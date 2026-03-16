@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality copy of a hot early‑fall show featuring a standout Dark Star → Morning Dew splice, though a few listeners note minor vocal bleed.",
+  "review": "Fans rave about this energetic early‑fall concert, calling it an \"excellent\" and \"one of the best shows ever,\" with particular praise for the extended Dark Star that segues into a nicely edited Morning Dew. The recording is generally clean – reviewers appreciate the splice – but one listener points out an odd vocal bleed before “Let Me Sing Your Blues Away,” suggesting a small tape‑issue.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Two strong 5‑star reviews highlight an outstanding performance and good sound, while one 2‑star review notes a minor recording flaw; overall the show shines more than the small technical issue detracts."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Splice at the end of Dark Star into Morning Dew praised; a few listeners hear unexpected vocal bleed before “Let Me Sing Your Blues Away,” indicating minor tape/bleed‑through issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first half leads into a powerful second set highlighted by an extended Dark Star that transitions smoothly into a well‑edited Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal presence is heard earlier than expected, noted as a minor issue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:15:22.026532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-11.116231.aud.warburton.berger.cousinit-patched.flac16"
+}

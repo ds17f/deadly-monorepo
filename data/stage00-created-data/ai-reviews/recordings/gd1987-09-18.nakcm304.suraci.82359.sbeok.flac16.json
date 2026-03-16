@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality audience tape that delivers a vivid \"you are there\" feel and captures one of the era’s best shows, with only a brief cut in Bird Song.",
+  "review": "Both reviewers praise this audience recording for its clarity and immersive presence, noting it surpasses previous audience tapes. The show is lauded as one of the period's finest, with the only drawback being a short glitch in Bird Song at the 9:31 mark.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4 stars and highlighted an excellent performance with only minor recording issues, leading to a solid rating above average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, immersive sound that captures the concert atmosphere; minor glitch – a cut in Bird Song at 9:31 before Weir's announcement."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not comment on set structure, but overall describe the show as one of the best of the era."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:48:01.778559+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-18.nakcm304.suraci.82359.sbeok.flac16"
+}

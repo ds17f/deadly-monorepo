@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source and quality unknown; reviewer recalls a great weekend vibe at the show",
+  "review": "The sole review is heavily garbled but conveys a positive impression of the concert atmosphere, describing it as a \"great weekend\" with memorable seating. No concrete details about the audio source, mix clarity, or musical performance are provided, leaving the technical quality indeterminate.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only one vague review with no clear rating; positive language about the experience but no information on performance or recording quality, resulting in a cautious low‑average score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard, audience mix, clarity, or any audio issues were given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer did not comment on specific songs or set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T14:39:32.307024+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-13.140011.fob.senn421.streeter.miller.clugston.flac1644"
+}

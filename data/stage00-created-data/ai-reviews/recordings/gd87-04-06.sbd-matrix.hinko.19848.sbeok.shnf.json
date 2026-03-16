@@ -1,0 +1,58 @@
+{
+  "summary": "A clear matrix recording captures a hot Spring ’87 Meadowlands show, highlighted by the final “Dancin’ > Franklin’s Tower”, a scorching Jack Straw, and a soaring Terrapin > Other One.",
+  "review": "The audience‑matrix tape is surprisingly clean – deep, rich lows with well‑balanced levels that let the band’s energy shine through.  The performance is a classic early‑summer ’87 set: a blistering first half driven by Dancin’, Franklin’s Tower and Jack Straw, followed by a tighter second set anchored by Terrapin > Other One, though a few mid‑set numbers (notably “Stranger”) feel muted.  Overall the show feels hot, lively, and worth repeated listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "30 reviews with a mean of ~4.0 stars; most praise both the music and the matrix recording quality, outweighing the few negative comments."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners repeatedly note a deep, rich sound with well‑balanced levels and crisp clarity for an audience source; occasional remarks about thin vocals or muted sections but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' > Franklin's Tower",
+      "Jack Straw",
+      "Terrapin > Other One"
+    ],
+    "poor_songs": [
+      "Stranger"
+    ],
+    "setlist_flow": "First set is high‑octane with the final Dancin’ and Jack Straw firing on all cylinders; second set is shorter on extended jams but still delivers a powerful Terrapin > Other One sequence, despite a few lackluster moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Dynamic guitar work praised – fanning string bends, strong solos even post‑coma, and an overall “on fire” presence.",
+    "Phil": "Bass ‘bombs’ highlighted especially during Jack Straw and the first set, adding drive to the groove.",
+    "Bob": "",
+    "Keys": "Brent (and occasionally Keith) noted as “on fire,” with synth textures boosting Terrapin’s intensity.",
+    "Drums": "Bill Walton’s drumming described as solid; some note a short pre‑drums/space segment but overall good."
+  },
+  "song_mentions": {
+    "Dancin' > Franklin's Tower": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Jack Straw": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Terrapin > Other One": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T21:08:31.952405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-06.sbd-matrix.hinko.19848.sbeok.shnf"
+}

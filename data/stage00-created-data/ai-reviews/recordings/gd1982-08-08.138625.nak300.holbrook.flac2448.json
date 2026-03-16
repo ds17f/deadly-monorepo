@@ -1,0 +1,39 @@
+{
+  "summary": "Great show with a standout Not Fade Away and an excellent audience recording",
+  "review": "Both reviewers love this performance, highlighting the beloved Not Fade Away where the keyboards have that signature scratchy texture. The tape is praised as a solid capture – clear enough for listeners to enjoy the music despite being an audience taping.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Consistently positive remarks about both the musical performance and the sound quality, though only two reviews limit certainty."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the recording as excellent/very good; no specific issues noted beyond typical audience tape ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set pacing, but overall enthusiasm suggests a well‑received show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Scratchy keyboard sound noted during Not Fade Away",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:57:17.028803+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-08.138625.nak300.holbrook.flac2448"
+}

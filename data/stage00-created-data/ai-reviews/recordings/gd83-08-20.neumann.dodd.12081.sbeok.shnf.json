@@ -1,0 +1,51 @@
+{
+  "summary": "Snappy audience recording captures an energetic 1983 show with a heavy‑metal Bird Song jam and raging Eyes of the World, though drums are missing in places.",
+  "review": "The tape delivers a lively, almost ‘acid‑test’ vibe that many fans love – Jerry’s guitar erupts into power chords on Bird Song, and the band burns through Eyes of the World and The Other One. Recording quality is generally good (VG, snappy) but suffers from missing drum tracks and occasional mono/lo‑fi quirks, which keeps the overall experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the performance and energy (show quality high) while noting recording issues like missing drums and occasional sloppiness, yielding a solid but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "VG‑style tape with snappy, lively sound; some listeners note mono feel and missing drum tracks; overall clear enough for enjoyment despite the gaps."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Eyes of the World",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlists from this late‑summer 1983 stretch are described as sensible and solid, with a high‑energy first half that slightly loses focus in the middle of set two before regaining momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Heavy‑metal power chords on Bird Song; later described as tense and labored by one reviewer.",
+    "Phil": "",
+    "Bob": "Opening chords noted as blaring (poor opener) but otherwise not highlighted.",
+    "Keys": "",
+    "Drums": "Drum tracks are missing from the recording; when present Mickey & Bill are praised for a raging performance."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:43:50.624220+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-08-20.neumann.dodd.12081.sbeok.shnf"
+}

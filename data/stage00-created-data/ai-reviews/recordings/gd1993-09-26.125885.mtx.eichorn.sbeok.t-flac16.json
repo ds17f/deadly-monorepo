@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent matrix recording of a great run",
+  "review": "The reviewer, who attended the concert, gives the show a perfect five‑star rating and highlights a “great run” along with a “nice matrix” source, indicating both strong performance and high‑quality recording. No specific song or band member details are mentioned, but the overall sentiment is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one five‑star review; it praises both performance and matrix recording, suggesting a top‑tier experience, but limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer specifically calls the matrix source \"nice\" and reports no problems, implying clear and well‑balanced sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Described as a \"great run,\" indicating a solid overall flow and energy throughout the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T17:53:56.506920+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-26.125885.mtx.eichorn.sbeok.t-flac16"
+}

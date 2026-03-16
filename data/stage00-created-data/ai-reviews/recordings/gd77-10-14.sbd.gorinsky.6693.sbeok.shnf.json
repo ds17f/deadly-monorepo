@@ -1,0 +1,81 @@
+{
+  "summary": "Mellow ’77 show with strong second‑set jams; soundboard recording is good but shows tape hiss and a brief glitch.",
+  "review": "The performance is praised for its relaxed first set and an explosive second set highlighted by Half Step, a monster Wharf Rat jam and seamless Playing in the Band transitions. The soundboard source delivers clear detail, though listeners note consistent tape‑hiss and a small drop‑out during the Wharf Rat → Around and Around segue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3–5 stars and highlight excellent musical moments; recording quality is solid but hampered by hiss and a glitch, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture with tape hiss throughout and a brief glitch during Wharf Rat into Around and Around; occasional vocal flubs noted but no major balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Wharf Rat",
+      "Playing in the Band",
+      "The Wheel",
+      "Brokedown Palace",
+      "Tennessee Jed",
+      "Music Never Stopped",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, laid‑back first set gives way to a high‑energy second set with long, flowing jams and smooth transitions (e.g., PITB into The Wheel)."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:05:21.722733+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-10-14.sbd.gorinsky.6693.sbeok.shnf"
+}

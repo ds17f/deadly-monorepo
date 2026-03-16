@@ -1,0 +1,63 @@
+{
+  "summary": "Good‑quality audience recording that sounds like ear candy, with a relaxed Let It Grow close and a sweet Box of Rain encore, though Sugar Magnolia feels cut short.",
+  "review": "The taper captures an atmospheric New York crowd with floorboard ambience that many fans will call “ear candy,” despite some crowded mix due to the stage layout. Musically the show offers a gentle first set and a standout Let It Grow finale plus a lovely Box of Rain encore, but the Sugar Magnolia is abruptly truncated and the brief Playin’ in the Band snippet falls flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "A single 4‑star review praises the recording’s warmth but notes performance cuts; rating reflects moderate‑high show quality with good but not pristine audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Talkative New York crowd audible, floorboard resonance present; mix feels a bit crowded due to stage density and taper section post‑1986, but overall pleasant ear candy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "Playing In The Band"
+    ],
+    "setlist_flow": "First set is a relaxed, meandering walk through older material; second set slows down with a gentle Let It Grow close, but momentum drops as Sugar Magnolia is cut short and the Playin’ snippet feels under‑delivered."
+  },
+  "band_member_comments": {
+    "Jerry": "Appears disengaged on Sugar Magnolia, cutting it off early.",
+    "Phil": "",
+    "Bob": "His vocal finish on Sugar Magnolia is interrupted by Jerry’s premature ending.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:44:23.085886+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-12.fob.brennecke-young.GEMS.97386.flac16"
+}

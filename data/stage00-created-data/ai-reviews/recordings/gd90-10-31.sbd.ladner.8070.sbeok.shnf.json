@@ -1,0 +1,76 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a high‑energy Halloween show, highlighted by an incendiary Help > Slip > Franklin’s and stellar first‑set jams.",
+  "review": "The recording is a solid soundboard source with crisp instrument separation, only occasional vocal roughness from Garcia and minor clipping on the opening of Scarlet Begonias. Musically the concert shines – the Help‑Slip‑Franklin’s sequence, Loose Lucy and He's Gone are repeatedly praised, while the Werewolves encore draws mixed feelings due to Jerry’s strained voice. Overall fans deem it an A‑list 1990 Halloween performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 25 reviews, most 4–5 stars, consistently lauding the show’s energy and key jams while noting only minor vocal or clipping issues; recording quality is repeatedly called excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix with strong instrument definition. Minor drawbacks: Garcia’s voice sounds rough on several songs and a brief clipping at the start of Scarlet Begonias; otherwise crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Loose Lucy",
+      "He's Gone",
+      "Franklin's Tower",
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Werewolves of London",
+      "Scarlet Begonias (intro clipping)"
+    ],
+    "setlist_flow": "A punchy first set builds momentum with Help‑Slip‑Franklin’s and Loose Lucy, leading into a jam‑heavy second set that peaks with Scarlet > Fire; the Halloween encore feels obligatory but still delivers fun energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice is noticeably rough or strained on several numbers (especially Werewolves), yet his guitar work remains powerful and he drives the jams.",
+    "Phil": "Generally audible, though a few reviewers note Phil can be buried in the mix on some mixes; otherwise solid bass foundation.",
+    "Bob": "",
+    "Keys": "Vince’s keyboards are praised for energy, with occasional monotony toward the end of Fire; also switches to accordion on Masterpiece.",
+    "Drums": "High‑energy drumming noted throughout; drums > space segment receives positive remarks."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Loose Lucy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Werewolves of London": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Birdsong": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:36:27.091639+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-31.sbd.ladner.8070.sbeok.shnf"
+}

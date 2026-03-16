@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard recording with early hissy/compressed moments but overall good quality, delivering an excellent mid‑70s show highlighted by Rain & Snow, Crazy Fingers, Cassidy and Ship of Fools.",
+  "review": "Fans rave about the musical performance – the set is packed with standout jams like Rain & Snow, Crazy Fingers, Cassidy, Ship of Fools and a rocking Promised Land. The soundboard source suffers from a muffled, hiss‑filled first half, but clears up after the early tracks, showcasing Phil’s bass and the piano nicely balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Strong positive comments on musical performance outweigh moderate complaints about early‑set audio quality; five detailed reviews give a consistent picture."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early portion described as hissy, compressed and muffled; board comes in clearer around 2:40 of Rain & Snow, with praised bass clarity and piano level."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rain & Snow",
+      "Scarlet Begonias",
+      "Crazy Fingers",
+      "Cassidy",
+      "Ship of Fools",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens with solid jam tunes but suffers from sound drop‑off early on; once the board engages the performance shines, maintaining strong energy through the remainder of the set and closing with a rock‑filled Promised Land."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His bass is highlighted as clear and well‑balanced in the mix.",
+    "Bob": "",
+    "Keys": "Piano/keyboard levels are noted as nicely balanced and audible.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:32:08.112542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-09.set1-sbd.cotsman.12382.sbeok.shnf"
+}

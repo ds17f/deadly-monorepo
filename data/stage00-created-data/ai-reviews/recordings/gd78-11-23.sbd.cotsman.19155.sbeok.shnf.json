@@ -1,0 +1,58 @@
+{
+  "summary": "A mixed‑source (matrix) recording with audience patches, but an outstanding 1978 show highlighted by a sublime Half‑Step/Franklin's Tower and a ripping Shakedown Street.",
+  "review": "Fans rave about the setlist and energy of this late‑'78 concert – Jerry’s playing shines even when his voice sounds road‑weary, and the half‑step into Franklin’s Tower is called “sublime.” The recording is a hybrid soundboard/audience mix that delivers clear board moments but suffers from several full‑song audience patches, making it listenable yet imperfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated near‑perfect (5 stars) while recording quality is mixed (~3 stars); weighted combination yields a solid 4.2 overall."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Primary soundboard source praised as clear, but the edit jumps to full‑song audience patches and overall tape is described as “iffy,” causing uneven listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step/Franklin's Tower",
+      "Shakedown Street",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Stagger Lee"
+    ],
+    "setlist_flow": "Strong song selection with a highlight half‑step into Franklin’s Tower; the first set suffers from audience patches, while the second set (including Space → Shakedown Street) is noted as particularly compelling."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds strained/road‑weary but his guitar work and overall playing are praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half-Step/Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:48:22.862933+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-23.sbd.cotsman.19155.sbeok.shnf"
+}

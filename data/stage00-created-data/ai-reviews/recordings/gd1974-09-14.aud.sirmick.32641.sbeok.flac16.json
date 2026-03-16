@@ -1,0 +1,31 @@
+{
+  "summary": "Great 1974 performance with Jerry's biting guitar tone, though the grainy audience recording is only fair.",
+  "review": "Both reviewers rave about the concert, highlighting an energetic show and especially noting Jerry Garcia’s guitar having extra bite thanks to the sound system. The recording is described as very grainy, suggesting an audience source that limits clarity but does not drown out the musical excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality receives high praise (average ~4.5/5) while recording quality is noted as grainy (~3/5); weighted average yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Very grainy audio with limited clarity; however, the mix lets Jerry's guitar bite through."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers focus on overall excitement and performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar has a noticeable bite thanks to the sound system.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T00:30:28.261800+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-14.aud.sirmick.32641.sbeok.flac16"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Fair‑quality soundboard recording plagued by tape hiss and speed issues, but the show shines with a stellar Mississippi Half‑Step and a memorable Big Boss Man.",
+  "review": "The performance is highlighted by an inspired Mississippi Half‑Step and a powerful rendition of Big Boss Man, showing the band still delivering fresh material in ’95. Recording quality suffers from noticeable tape hiss, occasional clipping and a fast‑playback speed that muddies Jerry’s playing on a few songs, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Show quality is decent with standout jams, but recording defects (hiss, distortion, speed) lower overall enjoyment; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Tape hiss from cassette generation, clipping on louder sections, and a noticeable speed/pitch problem that makes the show sound too fast."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Big Boss Man"
+    ],
+    "poor_songs": [
+      "Samba In The Rain",
+      "Eyes"
+    ],
+    "setlist_flow": "The set opens strong with Half‑Step and maintains energy, though a few songs feel rushed due to speed issues; overall the band delivers solid jams and new material despite occasional slips."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong guitar work and vocals at the start, but becomes discordant on Samba In The Rain and Eyes; also affected by the fast‑playback speed.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big Boss Man": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samba In The Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:03:04.848520+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-07-06.sbd.9119.sbeok.shnf"
+}

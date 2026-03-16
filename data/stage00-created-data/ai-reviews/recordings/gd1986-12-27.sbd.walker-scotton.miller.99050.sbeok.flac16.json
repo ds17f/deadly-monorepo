@@ -1,0 +1,63 @@
+{
+  "summary": "Pristine soundboard captures a solid mid‑80s set with standout Ramble On Rose and Push Comes to Shove, though the show feels more like the sum of its parts than a transcendental experience.",
+  "review": "The recording is a clean, high‑fidelity soundboard capture that lets every instrument shine, especially Jerry Garcia’s “tip‑top” guitar work. Musically the concert delivers strong individual performances – Ramble On Rose, Might Quinn, Dancin' In The Street → Black Muddy River and Push Comes to Shove – but it never quite reaches a higher‑level flow, lacking deep jams or spacious moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "One detailed review rates the show 4 stars and praises the pristine soundboard; recording quality is excellent while musical performance is good but not exceptional, yielding a combined rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, crisp mix with beautiful balance across the band; no audible flaws or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Might Quinn",
+      "Dancin' In The Street",
+      "Black Muddy River",
+      "Push Comes to Shove"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed West‑coast vibe with effortless transitions (e.g., Dancin' In The Street into Black Muddy River), but limited space between songs and little deep jamming."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as in tip‑top shape, delivering beautiful string work and precise, energetic runs.",
+    "Phil": "Very creative bass playing noted by the reviewer.",
+    "Bob": "Usual bold and brash style but plagued by lyric lapses, even admitting forgetting words during Ramble On Rose.",
+    "Keys": "Brent Mydland’s playing is understated yet spot‑on throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' In The Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:01:48.601892+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-27.sbd.walker-scotton.miller.99050.sbeok.flac16"
+}

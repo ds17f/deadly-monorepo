@@ -1,0 +1,70 @@
+{
+  "summary": "Stunning audience tape with razor‑sharp stereo imaging captures a stellar show highlighted by a smoking Help > Slip > Franklin’s Tower and Terrapin.",
+  "review": "The recording is an exceptionally clear audience master – the two‑mic setup delivers vivid left/right separation (vocals on the left, Jerry on the right) and every instrument sits nicely in the mix. The performance itself is a fan favorite, with a blazing second set featuring Help > Slip > Franklin’s Tower, Terrapin Station, Mexicali Blues and a soulful Samson, only marred by a weak Touch‑of‑Grey outing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All 12 reviews are overwhelmingly positive (mostly 5 stars) and praise both the superb audience recording quality and the high‑energy show; only one song is criticized, so the combined rating is near the top of the scale."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Two Sony cardioid mics give excellent stereo imaging (vocals left, Jerry right), clear instrument separation and a warm analog sound; no major drop‑outs or noise reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Terrapin Station",
+      "Mexicali Blues",
+      "Samson and Delilah",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "A powerhouse second set that lifts the entire concert; the only dip is a lackluster Touch‑of‑Grey, but overall the band rides a hot, relaxed vibe throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's tone is described as 'over the top' and his guitar work is highlighted for its brilliance and vivid placement in the mix.",
+    "Phil": "",
+    "Bob": "Weir’s slide chords on Samson are praised as cruelly effective, adding to the set’s excitement.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:07:59.686131+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-01.fob.sonyECM220t.kirschner.miller.95693.sbeok.flac16"
+}

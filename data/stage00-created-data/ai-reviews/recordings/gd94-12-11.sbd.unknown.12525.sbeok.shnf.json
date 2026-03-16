@@ -1,0 +1,76 @@
+{
+  "summary": "Good soundboard capture of a mixed‑quality 1994 show where the standout Days Between shines despite a shaky Help > Slip sequence.",
+  "review": "The recording is a solid sound‑board source that sounds clear enough to enjoy, though the MIDI horns on Sugar Magnolia and occasional tuning problems are audible. Musically the concert is uneven – Jerry’s lyrics wobble and the Help > Slip > Franklin's trek feels disjointed, but the band erupts on the Days Between, Watchtower and several late‑set numbers, making it a worthwhile listen for fans of that era.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Many detailed reviews praise the Days Between and other highlights while noting significant performance flaws; recording quality is generally good, leading to an overall middle‑to‑upper rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for a listening experience; occasional MIDI horn artifacts on Sugar Magnolia and minor tuning issues are mentioned, but no major drop‑outs or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "Watchtower",
+      "Promised Land",
+      "Sugar Magnolia",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Samba in the Rain"
+    ],
+    "setlist_flow": "The first set feels rough with lyrical slips and a clunky Help‑Slip transition, but the second half gains momentum – strong jams on Days Between and Watchtower lift the show despite occasional tuning problems."
+  },
+  "band_member_comments": {
+    "Jerry": "Lyrics often stumble and some out‑of‑tune moments are noted, yet his solo on Days Between is praised as fiery and expressive.",
+    "Phil": "Only a brief mention (quoted by another reviewer) noting the nostalgic feel of the era; no specific performance critique.",
+    "Bob": "His distorted guitar tone is highlighted – both lauded for energy and criticized for being out of tune, especially when paired with the MIDI horn effect on Sugar Magnolia.",
+    "Keys": "Vince receives praise for gaining confidence toward the end of the show; keyboards otherwise functional.",
+    "Drums": "Mickey’s Beam vibrations get special mention as a Pink‑Floyd‑esque texture; overall rhythm section described as occasionally autopilot."
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 9,
+      "negative_mentions": 1,
+      "total_mentions": 10
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 4,
+      "total_mentions": 7
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samba in the Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T04:21:07.280221+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-11.sbd.unknown.12525.sbeok.shnf"
+}

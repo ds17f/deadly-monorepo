@@ -1,0 +1,58 @@
+{
+  "summary": "Mixed performance with a heavy Playing in the Band but uneven moments and no clear recording info",
+  "review": "The show is noted for its short length and a powerful, late‑era heavy rendition of Playing in the Band that showcases Jerry’s intense lead work. However, reviewers also hear Jerry “crumbling” and a band trying to hold it together on tracks like Stagger Lee, Crazy Fingers and China Doll. No details about the source or sound quality were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Three reviews give an average of ~2.3 stars; positive remarks focus on a single standout jam while negative comments highlight broader performance issues, leading to a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers commented on sound quality or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Stagger Lee",
+      "Crazy Fingers",
+      "China Doll"
+    ],
+    "setlist_flow": "The concert runs just over two hours, with a notably short second set; tension is felt throughout as the band seems to be holding together despite some shaky moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – one reviewer says he’s “crumbling,” while another praises his intense lead work and ‘going off’ during jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:06:13.264267+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-19.sbd.miller.34419.flac16"
+}

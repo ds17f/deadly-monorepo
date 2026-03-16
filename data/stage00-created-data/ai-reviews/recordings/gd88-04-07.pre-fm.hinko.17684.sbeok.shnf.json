@@ -1,0 +1,92 @@
+{
+  "summary": "High‑energy ’88 Worcester show with smoking Sugar Mag > Scarlet > Estimated > Eyes and a standout Memphis Blues, captured on a generally good soundboard tape that suffers occasional radio‑fuzz glitches.",
+  "review": "The performance is consistently tight and energetic – the first set rolls out strong with Minglewood Blues and Big Railroad, while the second set delivers a blazing Sugar Mag sequence, a fiery Estimated Prophet and an unforgettable Memphis Blues.  The recording is mostly clear (soundboard) but listeners note intermittent radio‑fuzz or signal dropouts at song starts and a too‑loud Bobby guitar mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.1 stars; the show is praised for its energy and standout jams, while recording issues are noted but not severe enough to outweigh the musical strengths."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard tape, but intermittent radio‑fuzz/static at song beginnings and occasional signal dropouts; Bobby’s guitar sits high in the mix, Jerry’s vocal is a bit croaky from a cold."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Sugar Magnolia > Scarlet Begonias > Estimated Prophet > Eyes of the World",
+      "Memphis Blues",
+      "Big Railroad Blues",
+      "Around & Around",
+      "Wheel > Goin' Down The Road Feeling Bad > Watchtower"
+    ],
+    "poor_songs": [
+      "Stranger (synth out early)",
+      "Black Peter (weak vocal delivery)"
+    ],
+    "setlist_flow": "Tight, high‑energy first set that builds momentum into an explosive second set; seamless segues (Scarlet → Estimated, Wheel → GSL) keep the pacing driving forward."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are rough/creaky due to a cold, but his guitar work remains solid and energetic throughout.",
+    "Phil": "Bass is present and supportive; no specific remarks beyond being 'on'.",
+    "Bob": "Bobby’s rhythm guitar is prominent (sometimes too loud) and his vocals add enthusiasm, especially on Sugar Mag and Memphis Blues.",
+    "Keys": "Brent’s synth drops out early in Stranger; otherwise keyboards blend well with the band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia > Scarlet Begonias > Estimated Prophet > Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Memphis Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel > Goin' Down The Road Feeling Bad > Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T08:15:34.761022+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-07.pre-fm.hinko.17684.sbeok.shnf"
+}

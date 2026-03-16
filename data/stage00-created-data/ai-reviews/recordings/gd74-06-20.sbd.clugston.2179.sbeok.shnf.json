@@ -1,0 +1,91 @@
+{
+  "summary": "High‑quality soundboard capture of a short ’74 show that shines on the Truckin’ → Eyes → Slipknot! → China Doll sequence.",
+  "review": "The performance is widely praised for its electric first appearance of Slipknot!, a scorching Truckin’, and what many call the best Eyes of the World of the summer.  The soundboard source is generally clear and balanced, though a few listeners note occasional mud‑ness and brief drop‑outs.  Overall the recording delivers a vivid snapshot of one of ’74’s most exciting mid‑summer nights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the majority are 4–5 stars and highlight exceptional musical moments while noting only minor recording quirks; this yields a strong combined show (≈4.8) + recording (≈4.2) rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the mix as crisp, bass‑heavy and well‑balanced; a few call it muddy or note tiny drop‑outs in China Cat Sunflower and early Truckin’.  Overall the board is considered solid for a ’74 capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Eyes of the World",
+      "Slipknot!",
+      "China Doll",
+      "Scarlet Begonias",
+      "Ship of Fools"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower"
+    ],
+    "setlist_flow": "A brief first set followed by a powerhouse second set; the highlight is the seamless jam chain Truckin' → Eyes → Slipknot! → China Doll, with jazzy interludes and strong band interaction throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an electric tone on Slipknot!, soaring solos on Eyes and Truckin', and a haunting lead on China Doll; one reviewer found his playing on China Cat Sunflower painfully off‑key.",
+    "Phil": "His bass solo is described as long, developed and prominently featured in the mix; also noted for high vocal parts on I Know You Rider.",
+    "Bob": "Credited with jazzy guitar work especially during Eyes and Slipknot!; vocals praised on several numbers.",
+    "Keys": "Keith’s church‑y electric piano shines on Ship of Fools; overall keyboard presence is solid but not a focal point in most comments.",
+    "Drums": "The drum sound is highlighted as strong and well‑balanced, with the mix described as bass‑heavy yet clear; Bill’s playing gets specific commendation for driving the jams."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "Slipknot!": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Truckin'": {
+      "positive_mentions": 16,
+      "negative_mentions": 0,
+      "total_mentions": 16
+    },
+    "China Doll": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T20:58:47.979112+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-20.sbd.clugston.2179.sbeok.shnf"
+}

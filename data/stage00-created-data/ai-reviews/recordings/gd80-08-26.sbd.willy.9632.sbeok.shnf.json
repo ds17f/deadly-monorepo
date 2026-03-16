@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording with a bright vocal mix and occasional low guitar, delivering a solid show highlighted by a sweet Comes A Time and Brent’s organ‑rich Sugaree.",
+  "review": "The set is short but well‑played, featuring an especially lovely rendition of Comes A Time that several reviewers call a favorite, and a standout organ solo from Brent Mydland on Sugaree. The soundboard source sounds generally full, though the vocal mix sits a bit high and some guitar solos are buried. Memories of Mickey and Bill’s drum‑stick toss during Johnny B. Goode add fun atmosphere, while the encore Casey Jones is noted as merely adequate.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Four reviews give an average of 3.5 stars; most praise the musical moments (Comes A Time, Sugaree) while noting mix quirks and a mediocre encore, leading to a modestly above‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Vocals are mixed a bit high, making lyrics clear but sometimes masking guitar solos; overall full sound with occasional mix imbalance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Casey Jones"
+    ],
+    "setlist_flow": "Short setlist that flows well, energetic first half and a memorable encore; the performance feels solid despite not being a career‑high."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar solos noted as sometimes low in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's organ on Sugaree praised for adding \"meat to the bones\".",
+    "Drums": "Mickey Hart and Bill Kreutzmann remembered tossing drumsticks high during Johnny B. Goode; overall drumming described as lively."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:09:20.937834+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-26.sbd.willy.9632.sbeok.shnf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Terrapin jam shines, Scarlet>Fire solid, but pacing uneven",
+  "blurb": "The second set delivers a standout Terrapin Station jam and a tight Scarlet Begonias > Fire on the Mountain transition. Jerry’s guitar is crisp with Branford Marsalis adding jazzy sax textures, while the first set offers mixed results. Overall the show has high points but uneven pacing.",
+  "review": "Los Angeles’ Sports Arena on Dec 10‑1993 gave Deadheads a night of highs and hiccups. The first set wanders through Hell In A Bucket, Loser and So Many Roads with moments of solid playing but also a lyric slip that left some listeners cringing. The real magic erupts in the second set: a Terrapin Station jam that glitters under Branford Marsalis’s saxophone, followed by a seamless Scarlet Begonias → Fire on the Mountain segue that keeps the dance floor alive. Garcia’s tone is bright and his solos on both Terrapin and Scarlet>Fire feel climactic, even if he sounds a little weary at times. The rhythm section holds steady, though one reviewer noted a distant snare mic on a soundboard source. The show closes with an uplifting Not Fade Away and a gentle Brokedown Palace encore, leaving the evening memorable despite its uneven pacing.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 23,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "All three recordings describe mixed sentiment—praise for Terrapin Station, Scarlet>Fire and jazzy sax work balanced by notes of weary Garcia, lyric slips, and uneven pacing. Positive remarks outweigh the negatives enough to merit a modest +0.5 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.5 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1993-12-10.sbd.miller.83770.flac16",
+    "reason": "Charlie Miller’s mastering delivers a crisp, clean soundboard capture that highlights the Terrapin jam and sax textures without drop‑outs."
+  },
+  "key_highlights": [
+    "Terrapin Station jam with Branford Marsalis adds jazzy texture.",
+    "Scarlet Begonias > Fire on the Mountain transition is tight and energetic.",
+    "So Many Roads showcases a strong acoustic‑y Garcia tone despite a lyric slip."
+  ],
+  "song_highlights": [
+    "Terrapin Station",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "So Many Roads",
+    "Eternity",
+    "Corinna",
+    "Hell In A Bucket",
+    "Loser"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone stays bright and his solos on Terrapin Station and the Scarlet>Fire segue are climactic, though he sounds a bit weary at times and slips a lyric during So Many Roads.",
+    "Phil": "",
+    "Bob": "",
+    "Vince": "Welnick provides solid keyboard support; his playing is mostly tasteful, though one reviewer noted a weaker solo moment on a different song.",
+    "Mickey": "Hart’s percussion adds steady drive throughout the set, with no major issues despite a distant snare mic note on one SBD source.",
+    "Billy": "Kreutzmann locks in tightly with Hart, delivering the reliable rhythmic foundation characteristic of this era."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-18T18:36:29.166978+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Corinna",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Standing On The Moon",
+      "Not Fade Away"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "So Many Roads"
+    ],
+    [
+      "Eternity"
+    ],
+    [
+      "Hell In A Bucket"
+    ],
+    [
+      "Loser"
+    ]
+  ]
+}

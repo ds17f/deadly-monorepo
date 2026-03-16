@@ -1,0 +1,45 @@
+{
+  "summary": "Fair matrix recording with noticeable time‑delay glitches on Jerry’s lead, but a tasty Rider transition and smoking TLEO keep the 1982 show enjoyable.",
+  "review": "The performance is generally praised – the long, tasty segue into the Rider medley and a smoking TLEO (Truckin' > Little ...?) are highlighted as stand‑outs. The matrix mix, however, suffers from delay problems on Jerry’s lead and occasional hot vocals/low bass that detract from an otherwise solid show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high (good to very good) while recording quality is mixed/fair due to matrix timing and mix issues; the weighted average yields a ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Time‑delay artifacts on Jerry's lead in TLEO, hot vocal levels, imperfect keyboard balance and occasional low/no bass typical of early‑80s matrix mixes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "TLEO",
+      "Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth pacing with a long, tasty transition into the Rider medley; overall flow praised despite minor performance glitches."
+  },
+  "band_member_comments": {
+    "Jerry": "Raspy vocal tone appreciated; lead guitar suffers from time‑delay issues in TLEO.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "TLEO": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:08:46.272655+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-14.mtx.griesman.30206.sbeok.flac16"
+}

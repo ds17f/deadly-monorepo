@@ -1,0 +1,31 @@
+{
+  "summary": "Decent recording with a noted track‑order issue",
+  "review": "The review praises the overall decent sound quality of this tape, though it points out that the temporary file is misplaced and shifts all titles down by one, creating confusion about the final track date. No specific comments on performance or song execution are provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single five‑star review that mentions decent audio but gives no musical detail, leading to a moderate‑high rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Review notes the recordings are 'somewhat decent' and highlights a track‑order problem (tmp file at start, last track date likely mis‑listed). No specific comments on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer indicates the setlist order is off due to a misplaced temporary file, causing titles to shift; no musical quality commentary provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T23:28:40.670381+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-27.sbd.123743.miller.flac16"
+}

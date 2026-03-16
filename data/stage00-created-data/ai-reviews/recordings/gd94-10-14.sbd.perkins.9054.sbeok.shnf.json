@@ -1,0 +1,81 @@
+{
+  "summary": "High‑quality soundboard capture of a 1994 MSG show highlighted by an epic Scarlet > Fire jam and strong mid‑set performances.",
+  "review": "The recording is a clean, well‑balanced soundboard tape that lets the band’s dynamics shine; occasional minor hiss is outweighed by crisp instrument separation. Musically the night is driven by a monumental 30‑plus‑minute Scarlet > Fire that many reviewers call “mind‑blowing,” with solid renditions of Jack Straw, Lazy River Road, Box of Rain and a standout Corrina > Jam leading into Attics. A few critics note weak moments (Samba, occasional tempo slips), but the overall consensus is that this is one of the top post‑Bruce shows of ’94.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews award 4–5 stars and praise both performance and sound quality; a smaller but vocal minority point out flaws, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp mix with clear separation of guitars, keyboards and drums. Reviewers note the tape is “great” or “almost perfect,” with only occasional comments that other boards from the era sound slightly better."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Corrina > Jam",
+      "Attics",
+      "Lazy River Road",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Samba",
+      "Jack Straw (off‑tempo in some spots)"
+    ],
+    "setlist_flow": "First set is a solid mix of classics (Jack Straw, Lazy River Road, Box of Rain, Ramble On Rose). The second set builds tension before exploding into the 30‑minute Scarlet > Fire, followed by a fluid Corrina > Jam → Attics sequence that carries the energy to the close."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fiery solos and tone during Fire; a few reviewers note occasional lyric flubs or “sleep‑walking” moments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s keyboards are described as sounding “really good” and adding depth to the jam sections.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 22,
+      "negative_mentions": 6,
+      "total_mentions": 28
+    },
+    "Jack Straw": {
+      "positive_mentions": 7,
+      "negative_mentions": 2,
+      "total_mentions": 9
+    },
+    "Lazy River Road": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Box of Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Corrina > Jam": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Attics": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 8,
+      "total_mentions": 8
+    }
+  },
+  "processed_date": "2025-09-19T03:19:16.063105+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-14.sbd.perkins.9054.sbeok.shnf"
+}

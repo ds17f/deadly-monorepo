@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording with variable sound quality but a memorable Playing in the Band and an exquisite Comes A Time solo.",
+  "review": "The show is praised for its loose, entertaining vibe, highlighted by a soaring Playing in the Band that opened the set and Jerry Garcia’s beautifully precise solo on Comes A Time. The soundboard source is usable, though listeners note uneven balance – the first set sounds clear while the second set can be trebly and occasionally harsh. Overall the performance outweighs the modest recording quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (standout songs, strong energy) while recording quality receives mixed feedback (variable clarity, treble issues), yielding a solid but not outstanding combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Variable sound – first set clear, second set has excessive treble that can cause listener fatigue. Overall decent but not polished; file‑list errors noted but unrelated to audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Comes A Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set sounds tighter, second set a bit harsher in tone but maintains the show’s loose, entertaining flow; Playing in the Band opens strong and the encore includes playful banter."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Comes A Time is described as some of his most perfect picking ever.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Comment that the drummers have ‘figured it out,’ indicating solid percussion despite variable mix."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:00:59.125288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-12-27.sbd.candyman.9152.sbeok.shnf"
+}

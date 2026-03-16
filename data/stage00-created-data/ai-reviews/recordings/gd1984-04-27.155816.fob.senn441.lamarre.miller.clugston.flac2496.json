@@ -1,0 +1,31 @@
+{
+  "summary": "A wonderful recording praised by the reviewer, though no specifics on performance or audio source are provided",
+  "review": "The lone fan review rates this show five stars and calls it 'Wonderful', indicating a highly positive impression despite offering no details about the setlist, individual performances, or technical aspects of the tape.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one brief five‑star review; positive sentiment but lacks concrete information on sound quality or musical performance"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as wonderful, but provides no specific technical comments"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T17:19:49.941653+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-27.155816.fob.senn441.lamarre.miller.clugston.flac2496"
+}

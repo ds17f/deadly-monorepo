@@ -1,0 +1,39 @@
+{
+  "summary": "Rare first performance of Spoonful shines, but the noisy audience makes the recording difficult to enjoy.",
+  "review": "The show is notable for featuring Spoonful for the first time, a highlight that many fans appreciate. However, the recording captures a bar‑like ambience with loud crowd chatter that drowns out the music, especially during Spoonful, resulting in a mixed listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Reviews are split: one praises the rare Spoonful performance (4★), another complains about noisy recording (2★), and a neutral comment gives an average rating (3★). The show has a unique highlight but suffers from poor audio clarity, leading to a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Heavy crowd noise and chatter make it hard to hear the music, especially during Spoonful; sounds more like a noisy New York bar than a clean soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spoonful"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or flow; the only noted highlight is the debut of Spoonful."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T15:55:42.560348+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-15.beyer.stankiewicz.126147.flac2496"
+}

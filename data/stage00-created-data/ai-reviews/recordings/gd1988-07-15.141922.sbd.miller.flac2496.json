@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality not specified, but the concert is praised for a standout Morning Dew performance.",
+  "review": "The lone review gives the show an above‑average rating and singles out Morning Dew as a highlight. No details are provided about the audio source or mix, so the technical side remains unclear while the musical moment is clearly appreciated.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one 4‑star review mentioning a strong performance; no recording details, so rating reflects an above‑average show with unknown audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:32:06.977566+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-15.141922.sbd.miller.flac2496"
+}

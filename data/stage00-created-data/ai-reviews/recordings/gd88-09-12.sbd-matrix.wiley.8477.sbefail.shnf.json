@@ -1,0 +1,75 @@
+{
+  "summary": "Silky‑smooth matrix mix captures a stellar Philly ’88 show – Althea, Cold Rain, Women > Eyes and an epic Other One blaze.",
+  "review": "The Healy‑engineered soundboard/audience matrix is described as crisp, silky and turn‑up‑to‑three‑o‑clock perfect, making the recording feel like you’re right in the hall. Musically the concert is a fan favorite – tight jams, standout transitions (Women into Eyes), soaring Althea and Cold Rain, plus a long, fiery Other One. Overall reviewers are overwhelmingly enthusiastic, noting both superb performance and exceptional audio.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high 4‑5 star reviews praise both the show (standout songs, strong jams) and the recording (Healy mix, crisp matrix), yielding a rating well above average."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Healy mix described as silky‑smooth, crisp, balanced soundboard/audience blend; listeners note it can be turned up past three o’clock without distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Cold Rain",
+      "Box of Rain",
+      "Women > Eyes",
+      "The Other One",
+      "Good Lovin'",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first‑set flow with solid Jack Straw and Althea, a seamless Women → Eyes transition, and an expansive post‑space jam on The Other One that keeps the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as perfect/crisp; solo praised; vocals noted as better than previous shows; his jam at the end of Women highlighted.",
+    "Phil": "Shows “good chops” in Eyes and a standout outro jam on The Other One; perked up during post‑space sections.",
+    "Bob": "Critiqued for bringing Jack Straw out of the solo a bit early, but overall solid rhythm/vocal work noted.",
+    "Keys": "Brent (keyboards) called “awesome” and praised for singing on Women; keyboards generally lauded throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women > Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T13:35:18.988679+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-12.sbd-matrix.wiley.8477.sbefail.shnf"
+}

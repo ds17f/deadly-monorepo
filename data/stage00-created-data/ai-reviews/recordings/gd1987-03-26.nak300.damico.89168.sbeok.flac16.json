@@ -1,0 +1,63 @@
+{
+  "summary": "High‑energy Hartford show with superb He's Gone, Bird Song and China Cat Sunflower, captured on a clear soundboard recording.",
+  "review": "The concert is praised for its electric atmosphere and relentless drive, highlighted by a uniquely soaring He’s Gone jam that hints at Bird Song, plus first‑time Jerry solos on Midnight Hour and Cold Rain and Snow. Reviewers also rave about the superb performances of China Cat Sunflower and Bird Song. The recording is described as excellent, offering clear, well‑balanced sound that lets the band’s energy shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave high marks (4 and 5 stars) and emphasized an outstanding performance with no technical complaints, leading to a strong combined show‑plus‑recording rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No issues noted; reviewers describe the recording as excellent and clear, preserving the band’s energy and detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Bird Song",
+      "China Cat Sunflower",
+      "Midnight Hour",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high intensity from start to finish, featuring a unique He’s Gone jam that segues into Bird Song and strong early moments like Jerry's first guitar solo on Midnight Hour."
+  },
+  "band_member_comments": {
+    "Jerry": "First guitar solo on Midnight Hour and first vocal on Cold Rain and Snow were highlighted; his meow‑like twang shines on He’s Gone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:48:37.635635+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-26.nak300.damico.89168.sbeok.flac16"
+}

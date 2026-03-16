@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording that captures a joyous St. Patrick’s Day show with standout performances of Box of Rain, Spoonful and The Weight.",
+  "review": "The tape is an AUD that puts the listener right in the crowd, delivering clear ambience and well‑timed crowd yelps.  Musically the band is on a high‑water mark – Phil’s bass shines on Box of Rain, the group rides a playful Spoonful into a heartfelt rendition of The Weight, and the overall vibe is pure fun.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Detailed five‑star review praises both performance and recording; a second one‑star (0) rating adds uncertainty, so the overall score is high but not maximal."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Immersive audience tape with clear crowd ambience, well‑balanced levels and a nicely timed, not‑too‑loud YELP; no major dropouts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Spoonful",
+      "The Weight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A festive, sing‑along heavy set that moves smoothly from Box of Rain into Spoonful and finishes with a heartfelt The Weight; the band’s interaction with the crowd feels especially warm for St. Patrick’s Day."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for his big‑hearted playing, highlighted on Box of Rain and throughout to Spoonful and The Weight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:49:20.639899+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-17.Nak300CP4.Baker.Keo.126960.Flac2496"
+}

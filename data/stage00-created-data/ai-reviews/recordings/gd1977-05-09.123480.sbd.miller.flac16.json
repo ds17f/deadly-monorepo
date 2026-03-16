@@ -1,0 +1,109 @@
+{
+  "summary": "A superb Charlie Miller soundboard remaster that captures a May ’77 show bursting with an incendiary Help‑Slip‑Franklin’s and standout Ship of Fools.",
+  "review": "The Miller‑remastered SBD delivers crystal‑clear, bright audio with every gap expertly patched, making the recording feel as fresh as a live mix. Musically the concert is hailed as one of the strongest in the famed 1977 “Holy Trilogy,” featuring a fire‑filled first set and a second set that, while slightly uneven, still boasts classic moments like Help > Slip > Franklin’s, Ship of Fools, The Other One and Comes a Time. Overall reviewers are uniformly enthusiastic, rating both performance and sound near the top of the scale.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All ten reviews are overwhelmingly positive (9‑star, 1‑four‑star) praising both the musical performance and the remastered soundboard quality; no substantive criticisms were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller’s remaster adds brightness, clarity and punch; gaps are patched with high‑quality AUDs; no drop‑outs or volume issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Ship of Fools",
+      "The Other One",
+      "Comes a Time",
+      "Estimated Prophet",
+      "Sunrise"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as one of the best ever—high energy, tight transitions and several career‑highlight moments. Second set is slightly less consistent but still delivers major peaks (Ship of Fools, Estimated Prophet, The Other One) with a solid closing Comes a Time."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Big River is called a \"glorious mess\" and his overall tone/playing throughout the show receives high praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Ship of Fools": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes a Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sunrise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:10:42.147000+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-09.123480.sbd.miller.flac16"
+}

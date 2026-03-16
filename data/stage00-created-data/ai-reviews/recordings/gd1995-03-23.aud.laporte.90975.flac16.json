@@ -1,0 +1,51 @@
+{
+  "summary": "Jerry’s emotional Scarlet solo and strong jams make this 1995 show memorable, though the recording quality isn’t described.",
+  "review": "The reviewer praises the heartfelt Jerry Garcia solo in Scarlet Begonias and highlights Unbroken Chain and Foolish Heart as standout moments, giving the performance four stars. No details are provided about the audio source or fidelity, so the technical side remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single review is available; it rates the show highly but gives no information on recording quality, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention sound clarity, mix, or source type; assume a typical audience capture with unknown fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Unbroken Chain",
+      "Foolish Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing or flow were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotional solo in Scarlet; reviewer notes his frail health at the time.",
+    "Phil": "",
+    "Bob": "Foolish Heart singled out as a highlight.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:38:37.176964+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-23.aud.laporte.90975.flac16"
+}

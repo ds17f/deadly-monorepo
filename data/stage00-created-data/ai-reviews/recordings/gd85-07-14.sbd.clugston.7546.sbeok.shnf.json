@@ -1,0 +1,100 @@
+{
+  "summary": "Mint soundboard capture of the classic July‑14 1985 show, highlighted by an epic second set that erupts with Truckin’, Estimated, Esau and a legendary Hell in a Bucket home stretch.",
+  "review": "The recording is a pristine sound‑board dump – crisp, balanced and with flawless drum separation – making it feel like you’re back on the stage.  Musically the band is in top form: a long, jam‑heavy second set delivers standout moments such as Truckin’, Estimated, Esau, China, Looks Like Rain and the unforgettable Hell in a Bucket finale.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over twenty enthusiastic reviews praise both the performance (many call it one of the best of ’85) and the mint‑condition soundboard source; weighting yields a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, mint SBD with perfect drum separation; no clipping on Phil's bass and clear mix throughout the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Estimated",
+      "Esau",
+      "China",
+      "Looks Like Rain",
+      "Hell in a Bucket",
+      "Might As Well"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid first set builds into a marathon second set that’s jam‑heavy and energetic; the band rides the momentum through spacey interludes into a climactic finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is praised as perfect, carrying notes on Samson/Space and generally soaring throughout the show.",
+    "Phil": "Bass comes in clear and strong with no clipping – highlighted as especially audible compared to nearby shows.",
+    "Bob": "Weir’s vocal intensity shines on Hell in a Bucket (\"tiltin' the head\") and his rhythm work is noted as energetic.",
+    "Keys": "",
+    "Drums": "Both drummers are praised for perfect separation; Mickey pounds with power and Bill's kit sits cleanly in the mix."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Esau": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:47:03.878662+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-07-14.sbd.clugston.7546.sbeok.shnf"
+}

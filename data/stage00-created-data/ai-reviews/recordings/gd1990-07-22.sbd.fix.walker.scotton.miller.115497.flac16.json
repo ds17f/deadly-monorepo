@@ -1,0 +1,131 @@
+{
+  "summary": "Fair soundboard recording of a mixed‑quality show; standout performances of “Feel Like a Stranger”, “Loser” and “Samson & Delilah” amid an uneven second set.",
+  "review": "The SBD fix helps mask the venue’s echo, delivering a listenable but not pristine audio picture. Musically the concert swings between highlights – a surprisingly strong “Feel Like a Stranger”, tight “Loser”, and a whipping “Samson & Delilah” – and several lackluster moments that leave the second set feeling disjointed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "The show has both strong and weak sections (≈70% weight) while the recording is acceptable but not excellent (≈30% weight), yielding an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "SBD helps overcome the venue’s poor acoustics, but balance issues are noted across different uploads; overall clarity is adequate but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Loser",
+      "Samson & Delilah"
+    ],
+    "poor_songs": [
+      "West L.A.",
+      "Estimated",
+      "Eyes",
+      "Throwing Stones"
+    ],
+    "setlist_flow": "A long second set (~2 hours) that starts strong but becomes uneven, with several songs sounding unfocused and the band never fully locking in."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers powerful solos that often rescue weaker moments (e.g., “Far From Me”, “Hellina”).",
+    "Phil": "Consistently solid bass work, highlighted on tracks like “Eyes”.",
+    "Bob": "Described as ‘trainwrecking’ the “Hellina” closer; generally less effective here.",
+    "Keys": "Brent’s final‑song comment adds an eerie vibe; no specific keyboard performance remarks.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line-24": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hellina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Pocky A-way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knockin' On Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:43:59.172726+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-22.sbd.fix.walker.scotton.miller.115497.flac16"
+}

@@ -1,0 +1,49 @@
+{
+  "summary": "Clear soundboard recording of a superb ’77 show, anchored by an unforgettable Sugaree.",
+  "review": "Fans rave about the crystal‑clear sound and the sheer joy of this performance, calling it one of their favorite shows from 1977. The highlight is the Sugaree stretch (joined by Peggy‑O and Jimmy), which reviewers describe as the best they’ve ever heard. No technical flaws are mentioned, making the tape both a listening pleasure and a showcase of the band at peak form.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews give 5‑star ratings and praise both the musical performance and the sound quality, indicating an exceptional show with a good‑to‑excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note \"Good sound\" and no issues; the mix is clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the show as a pure joy with a strong flow, especially highlighting the Sugaree segment; no complaints about pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T01:56:04.263686+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-19.sbd.bertha.9394.sbeok.shnf"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "High‑quality soundboard capture of a powerhouse 1972 show highlighted by an explosive Truckin’ → Dark Star → Comes A Time sequence and stellar Keith piano work.",
+  "review": "The performance is praised for its soaring jams – especially the Truckin' > Dark Star > Comes A Time stretch, a transcendent Dark Star, and a beautiful Sing Me Back Home.  While the soundboard source is generally clear and enjoyable, reviewers note occasional squeaks, buzzing and a cut on Stella Blue.  Overall the music outweighs the minor glitches, making it a must‑listen show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and highlight standout jams; recording issues are mentioned but are minor, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced sound, but occasional squeaking, buzzing and a noticeable cut on Stella Blue; some glitches during Truckin'."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Dark Star",
+      "Comes A Time",
+      "Sing Me Back Home"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "Three‑set show with generous stage banter and a gospel‑filled third set; despite onstage technical hiccups the flow remains strong, highlighted by powerful jam sequences."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is described as unstoppable and transcendent, especially on Dark Star and Truckin'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s piano work is noted as a turning point in the band’s sound, adding new texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T15:20:48.224514+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-07-18.sbd.unknown.9097.shnf"
+}

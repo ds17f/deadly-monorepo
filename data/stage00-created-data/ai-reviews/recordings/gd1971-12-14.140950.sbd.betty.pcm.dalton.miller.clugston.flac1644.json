@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture of the Dec 14‑1971 Ann Arbor show delivers a symphonic performance highlighted by a stellar \"The Other One\" → \"Wharf Rat\" sequence.",
+  "review": "Reviewers rave about this late‑'71 Dead concert, calling it well‑played with Pigpen in fine form and noting the addition of Ron that adds new complexity. The standout moments include an epic “Other One” into “Wharf Rat” stretch, and the soundboard recording is regarded as solid enough to be worth the price of admission.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews are highly positive (average 4.75 stars) and praise the musical performance; no technical complaints suggest at least good recording quality, yielding a combined rating near 4.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific sound‑quality comments were made; reviewers thank the archivists and say the release is worth its price, implying satisfactory clarity and mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the late‑1971 set as symphonic and well‑played, with strong transitions especially around The Other One into Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pig (Ron \"Pigpen\" McKernan) is praised for being in fine form and adding new complexity to the sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:13:41.659632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-14.140950.sbd.betty.pcm.dalton.miller.clugston.flac1644"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Fair audience recording captures solid highlights like Shakedown, Victim, and Terrapin, but the overall show is considered modest.",
+  "review": "The FLAC release is an upgrade from older cassette copies yet still falls short of a stellar sound, offering a decent but not pristine listening experience. The performance includes notable moments on Shakedown, Victim, Terrapin, and the outro jam from Standing on the Moon, though the reviewer felt the concert was unremarkable overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one moderate review; show has some standout songs but recording quality is only fair, leading to an average combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Upgrade from cassette sources but still not a stellar sounding copy; likely some muddiness and limited clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Victim",
+      "Terrapin Station",
+      "Standing on the Moon (outro jam)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall good but not especially exciting; highlights noted, yet the concert felt fairly ordinary."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon (outro jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:53:45.959639+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-06.fob.senn421.alabamabob.andrewf.92964.sbeok.flac16"
+}

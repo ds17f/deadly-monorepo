@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard capture of Brent Mydland’s final show offers clear mix and memorable Jerry solos, but the performance feels uneven and historic rather than consistently strong.",
+  "review": "The recording is a refined sound‑board remaster that presents all instruments and vocals with good clarity, though some listeners note an “oogley‑boogley” character. Musically the night contains moments of brilliance – Jerry’s soaring solo work and Brent’s Hornsby‑like piano – but overall the set drifts with a languid pace and omits a Garcia‑lead tune, leaving fans divided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (one positive, one negative review) while recording quality is generally praised; combined weighted score yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered soundboard with clear instrument separation and full vocal presence; occasional quirky 'oogley‑boogley' coloration but overall clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long (2 hr 20 min) set that drifts in a hot‑weather, languid mood; notable jams and space but missing a typical Garcia lead tune."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as soaring into the ionosphere, providing a highlight of the night.",
+    "Phil": "Phil's bass is praised as a passive roar like an erupting volcano.",
+    "Bob": "Bob Weir (referred to as Bobby) follows closely behind Jerry in the improvisations.",
+    "Keys": "Brent Mydland delivers Hornsby‑like piano etchings; his final performance is highlighted as historic.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:00:53.706047+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-23.sbd.bertha.81303.sbeok.flac16"
+}

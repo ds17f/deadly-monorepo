@@ -1,0 +1,97 @@
+{
+  "summary": "High‑quality soundboard capture of an early‑1970 show, highlighted by a monster Dark Star → St. Stephen → Mason’s sequence and killer Uncle John’s.",
+  "review": "The performance is widely praised for its peak‑era improvisations – the extended Dark Star/St. Stephen/Mason's run and the tight Good Lovin' into Uncle John's are called “totally wicked.”  Recording-wise the Miller‑Gans SBD source sounds solid, with only minor reel‑change quirks noted by a few listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Four detailed reviews emphasize outstanding musical moments and a generally clean soundboard source; the only drawbacks are minor tape‑source glitches, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller‑Gans SBD provides clear, balanced audio. Some reviewers note a reel‑change around the 4‑minute mark that may cause brief speed or missing‑sample artifacts, but overall the sound is reliable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "Mason's Children",
+      "Good Lovin'",
+      "Uncle John's Band",
+      "Mama Tried",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Hard to Handle"
+    ],
+    "setlist_flow": "One long, late‑starting set that rolls through a superb early‑70 sequence; despite logistical delays the band builds momentum and delivers a cohesive, high‑energy performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry steps up; his guitar tone on Dark Star is singled out as exceptional.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mason's Children": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:19:26.848505+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-02.sbd.miller.gans.121041.flac16"
+}

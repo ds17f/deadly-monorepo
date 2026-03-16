@@ -1,0 +1,74 @@
+{
+  "summary": "A vibrant Baltimore concert captured with solid sound, highlighted by a blazing Terrapin Station > Estimated Prophet > Eyes of the World run and other classics.",
+  "review": "Fans rave about this 1977 Baltimore performance, noting the quick‑dialed sound that made the venue’s “old barn” acoustics surprisingly clear. The set is praised for its seamless flow—Terrapin Station into Estimated Prophet, then Eyes of the World, followed by a string of crowd‑pleasers like Not Fade Away and Goin' Down the Road Feeling Bad—making it a memorable show despite the lack of detailed recording specs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 4‑5 stars and highlighted both strong musical moments and good sound quality, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers mention the sound was “dialed right” quickly despite the venue’s acoustics, indicating clear and balanced audio even if the exact source (soundboard vs audience) isn’t specified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Not Fade Away",
+      "Goin' Down the Road Feeling Bad",
+      "Around and Around"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Listeners appreciated the seamless transitions, especially the Terrapin Station > Estimated Prophet > Eyes of the World sequence, noting that the band “played one song into another” as they love."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T02:44:12.763221+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-26.aud.wizard.32092.shnf"
+}

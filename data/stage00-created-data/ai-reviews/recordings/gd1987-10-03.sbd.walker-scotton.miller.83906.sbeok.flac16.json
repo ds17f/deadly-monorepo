@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent Miller‑remastered soundboard capture of an ’87 show highlighted by a smoking Maggie’s Farm → Cumberland, Terrapin, Bird Song, Other One and a flawless Stella Blue.",
+  "review": "The recording is a clean, well‑balanced soundboard (Miller) master that lets every instrument shine, even if Brent’s keyboards sit a touch forward in the mix. Musically the concert is a showcase of late‑‘80s Dead energy – Jerry’s soaring solos on Looks Like Rain and Terrapin, vibrant renditions of Maggie’s Farm, Cumberland, Bird Song and an emotive Stella Blue make this a standout performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑5 stars and praised both the musical performance and recording quality; the show is described as exceptional with an excellent Miller soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller remaster sounds crisp and clean; good sounding overall, though Brent's keyboard can be a bit loud in the mix. No drop‑outs or major noise issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Maggie's Farm",
+      "Cumberland",
+      "Looks Like Rain",
+      "Terrapin > Drums",
+      "Bird Song",
+      "Other One",
+      "Stella Blue",
+      "Hey Pocky Way"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with Bird Song, Maggie’s Farm and Quinn; the second set keeps the energy high with Terrapin, Cumberland, a focused Other One segue from Space, and a heartfelt Stella Blue finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his guitar tone, soaring solos (Looks Like Rain, Terrapin) and vocal performance (Stella Blue).",
+    "Phil": "Mentioned as “everywhere” on Other One and noted for not taking a verse on Maggie’s Farm, but overall positive.",
+    "Bob": "Acknowledged in the space/Other One jam, weaving fast spirals with Jerry and Phil.",
+    "Keys": "Brent’s keyboard work highlighted – violin sample on Maggie’s Farm, mellotron on Terrapin, though occasionally a bit loud in the mix.",
+    "Drums": "Drumz described as adventurous ‘87 samples; drummers “throttle down” for high energy jams."
+  },
+  "song_mentions": {
+    "Maggie's Farm": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin > Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:43:11.082728+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-03.sbd.walker-scotton.miller.83906.sbeok.flac16"
+}

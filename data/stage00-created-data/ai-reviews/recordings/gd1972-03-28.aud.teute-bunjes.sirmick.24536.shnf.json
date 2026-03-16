@@ -1,0 +1,44 @@
+{
+  "summary": "Great Dead performance hampered by a horrid, almost unlistenable audience recording.",
+  "review": "Fans agree the concert itself was strong – even historic moments like the first \"Donna\" PITB caterwaul are noted – but the audio quality is described as horrible, muffled and often unlistenable. The tape is an audience capture that, while better than some alternatives, fails to do justice to the show.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (≈4/5) but recording quality is rated very poorly (≈1/5). Weighted average yields a low‑mid rating and the mixed but overall negative tone of the reviews gives medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers call the sound \"horrid\", \"lousy\" and \"unlistenable\"; there are drop‑outs and muffled audio that make listening difficult, though it is considered marginally better than some other sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Donna"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is remembered as a solid show with strong audience participation (e.g., clapping on \"Cumberland\"), but the infamous \"Donna\" PITB caterwaul intro is singled out as a weak moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Donna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:41:23.714012+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-28.aud.teute-bunjes.sirmick.24536.shnf"
+}

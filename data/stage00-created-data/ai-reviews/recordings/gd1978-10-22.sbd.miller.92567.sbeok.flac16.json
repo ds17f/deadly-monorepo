@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording of decent clarity captures a mixed Winterland show highlighted by strong 'Friend of the Devil' and 'I Need a Miracle' moments.",
+  "review": "The Miller SBD source is well‑patched and generally clear, though it doesn’t use the superior AUD matrix that also exists. Musically the concert sits in the middle of the road – the first set is average until a powerful Friend of the Devil, while the second set offers fire‑filled jams, a standout I Need a Miracle, but also stretches of vamping and a shaky Johnny B. Goode attempt.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "One detailed review gives a 3‑star overall rating; the show is mixed with both highlights and drawbacks, while the soundboard recording is considered good but not optimal."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller SBD source patched and loved; matrix version omits a better AUD source. Overall clear with some editing of audience claps, no major drop‑outs noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "I Need a Miracle",
+      "Fire",
+      "Mojo Workin'"
+    ],
+    "poor_songs": [
+      "Scarlet",
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "First set drifts through an average '78 vibe before a strong Friend of the Devil lifts it; second set swings between flubby Scarlet, solid Fire and an extended jam that includes Not Fade with John Cipollina, steel‑drum textures, and a long NFA that often feels like waiting for someone to take the lead."
+  },
+  "band_member_comments": {
+    "Jerry": "Jer is praised for whipping off flurries and picking up the jam after Bobby's chord work.",
+    "Phil": "Phil adds bass sequences similar to the \"Caution Jam\" feel, noted but not highlighted as a standout.",
+    "Bob": "Bobby contributes Scarlet riffs, attempts a clumsy Johnny B. Goode, and drives the Mojo Workin' jam; mixed appraisal.",
+    "Keys": "",
+    "Drums": "Steel drums are highlighted in the Drums section, adding a unique texture."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mojo Workin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:59:37.012277+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-10-22.sbd.miller.92567.sbeok.flac16"
+}

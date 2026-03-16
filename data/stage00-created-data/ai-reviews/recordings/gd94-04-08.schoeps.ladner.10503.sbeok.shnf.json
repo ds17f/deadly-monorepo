@@ -1,0 +1,78 @@
+{
+  "summary": "Great spring ’94 show with standout Days Between and Lazy River Road, captured in excellent audience sound.",
+  "review": "The performance is energetic and features a superb first set highlighted by Peggy‑O, So Many Roads, Scarlet > Fire, Lazy River Road and an unforgettable Days Between. Reviewers rave about the crystal‑clear audience recording, though some note a weaker second‑set opener (Scarlet > Fire) and occasional wavering from Jerry in set 2.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the sound quality and many songs, especially Days Between and Lazy River Road, while a few point out a weak Scarlet > Fire opener; overall this balances to a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers describe the sound as crisp, great and excellent; no major drop‑outs or distortion were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "Lazy River Road",
+      "Corrina"
+    ],
+    "poor_songs": [
+      "Scarlet > Fire"
+    ],
+    "setlist_flow": "Set 1 is praised for its energy and song selection; Set 2 starts with a weaker Scarlet > Fire but recovers later, maintaining the high‑energy vibe typical of spring ’94 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally lauded for an incredible performance and warm‑up tune; some reviewers note wavering in set 2 and a near miss on Days Between before rallying.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lazy River Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:47:54.276767+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-04-08.schoeps.ladner.10503.sbeok.shnf"
+}

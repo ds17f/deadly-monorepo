@@ -1,0 +1,88 @@
+{
+  "summary": "Solid rock‑heavy show with a stellar Touch of Grey and strong second set, recorded at decent quality despite unknown source.",
+  "review": "The concert is praised as an energetic, ‘rockin’ balls‑to‑the‑walls’ performance highlighted by a standout opening Touch of Grey, powerful renditions of Stranger, Stuck Inside of Mobile, Sugar Magnolia, All Along the Watchtower and a solid Box‑of‑Rain encore.  Recording quality is not described in detail but no major flaws are noted, suggesting an acceptable source even though the exact type (soundboard/audience) is unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review emphasizes many strong musical moments and only minor set‑list criticisms; recording quality appears adequate but unspecified."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit complaints about sound; reviewer mentions quadraphonic speaker setup but does not comment on tape or mix clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Stranger",
+      "Stuck Inside of Mobile",
+      "Sugar Magnolia",
+      "All Along the Watchtower",
+      "Black Peter",
+      "Sunshine Daydream",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias"
+    ],
+    "setlist_flow": "The set never lets up, though the reviewer notes a missed transition from Scarlet Begonias into Fire and wishes for more seamless segues; overall pacing is described as consistently high‑energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Recovered from a cold and delivers a muscular Sunshine Daydream; shares a flourish ending with Bob.",
+    "Phil": "",
+    "Bob": "Bob (Weir) provides inventive, forceful guitar lines and striking falsetto vocals throughout the show.",
+    "Keys": "",
+    "Drums": "More electronic drums are heard in the Drum segment."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stuck Inside of Mobile": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:16:32.543660+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-07.141711.mtx.tobin.flac1644"
+}

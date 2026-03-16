@@ -1,0 +1,62 @@
+{
+  "summary": "Flat‑sounding soundboard capture of a scorching Brent era show, highlighted by a blazing Foolish Heart and The Other One",
+  "review": "The performance is consistently praised – fans rave about the hot‑fire setlist, especially Foolish Heart, The Other One and Blow Away – while the SBD source suffers from flatness, generational loss and occasional mono/mix issues.  Overall the music outweighs the technical shortcomings, making it a worthwhile listen for Brent‑era enthusiasts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong playing; recording quality is repeatedly called flat or mono, pulling the overall score down a bit but not enough to offset the high show rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Repeated references to a flat, sometimes mono mix and generational loss; occasional drop‑outs noted.  Some reviewers say it sounds decent for the era, but overall the tape lacks clarity and depth."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "The Other One",
+      "Blow Away",
+      "The Weight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a hot, high‑energy two‑day run with an excellent song selection; the second set is often called historic and the band “on fire,” despite the afternoon heat."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for his guitar work, but one reviewer notes he cut off Brent’s rap in Blow Away.",
+    "Phil": "Bass work highlighted as strong on several nights (“Brent keys and Phil’s bass going off”).",
+    "Bob": "Vocals on The Other One called “crazy” and a highlight.",
+    "Keys": "Brent’s keyboards receive glowing praise – described as driving the band forward and one of his best periods.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Blow Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Weight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:53:48.655268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-05-06.sbd.wiley.11661.sbeok.shnf"
+}

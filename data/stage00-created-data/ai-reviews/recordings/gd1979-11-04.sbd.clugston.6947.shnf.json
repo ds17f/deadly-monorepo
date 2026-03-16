@@ -1,0 +1,92 @@
+{
+  "summary": "A high‑energy 1979 show shines with a monster He's Gone and vibrant Wharf Rat, captured on a clean but occasionally flawed soundboard.",
+  "review": "The performance is consistently praised for its powerful second‑set jam—especially the sprawling He's Gone—and standout moments like Wharf Rat and Estimated Prophet. The soundboard source is generally clear, though it suffers from occasional guitar level drops and short cuts that keep the recording quality from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show receives uniformly high praise with multiple standout songs; recording is solid but has noticeable fades and cuts, lowering the technical score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean overall sound, but suffers from occasional guitar level drops, several short cuts (Minglewood intro, Easy to Love You start, Alabama intro, a 6‑second gap in He's Gone) and pitch‑correction issues; mix sometimes hides bass/guitar."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Wharf Rat",
+      "Estimated Prophet",
+      "Lost Sailor > Saint of Circumstance",
+      "Deal",
+      "Althea",
+      "Alabama"
+    ],
+    "poor_songs": [
+      "Around & Around"
+    ],
+    "setlist_flow": "First set builds smoothly with energetic blues and folk numbers; second set escalates into a lengthy, fusion‑laden He's Gone jam that serves as the high point, followed by a fiery Wharf Rat before the show tapers off."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals strong and solos inspired; however several reviewers note his guitar fades in and out on this recording.",
+    "Phil": "New Irwin Tiger‑style bass adds a punchy, rich low end that many fans praised.",
+    "Bob": "Mesa‑head tone described as warm and bright; distortion still restrained compared to later years.",
+    "Keys": "Brent's electric piano and Hammond are front‑and‑center, delivering jazzy textures and key‑click nuances; his Rhodes/organ work highlighted throughout.",
+    "Drums": "The drummers are described as on fire, providing solid backbeat and dynamic fills."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:58:39.649977+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-04.sbd.clugston.6947.shnf"
+}

@@ -1,0 +1,88 @@
+{
+  "summary": "Clear audience recording captures a fiery 1979 show highlighted by explosive “Eyes of the World”, soaring “Not Fade Away” with John Cipollina, and a scorching “Shakedown Street”.",
+  "review": "The tape offers surprisingly clean auditorium ambience for an AUD source, letting the band’s high‑energy second set shine. Standout moments include a blistering “Estimated → Eyes of the World”, a monster “Not Fade Away” featuring Cipollina’s lead, and a raucous “Shakedown Street”. Overall the performance is tight, enthusiastic, and well‑captured despite occasional crowd boom.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (20+) give 4–5 stars and praise both the musical set and the clear audience recording; only a few low‑star or mixed comments appear."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear auditorium ambience, balanced mix with good instrument separation. Some listeners note heavy crowd boom and occasional synth interference, but overall the recording is listenable and captures the live energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated → Eyes of the World",
+      "Not Fade Away",
+      "Shakedown Street",
+      "Black Peter",
+      "Passenger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid but a bit uneven; second set launches into a high‑octane jam marathon, with “Estimated” paving the way for an epic “Eyes of the World” and a monster “Not Fade Away”, delivering a satisfying arc that ends on a joyous “Around and Around”."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching lead work (especially alongside John Cipollina), vocal power on several numbers, and a jazzy solo on “Candyman”.",
+    "Phil": "Noted for strong bass foundation and more extroverted vocal contributions; his interplay with Brent’s keyboards highlighted in “Peggy‑O”.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s first month shines – delicate keys on “Peggy‑O”, energetic organ/synth textures (though one reviewer felt a synth patch was slightly intrusive).",
+    "Drums": "Rhythm Devils’ generous drum segment praised; double‑drumming dynamics noted as a highlight of the era."
+  },
+  "song_mentions": {
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Not Fade Away": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around and Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T21:17:07.527575+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-07.glassberg.vernon.18877.sbeok.shnf"
+}

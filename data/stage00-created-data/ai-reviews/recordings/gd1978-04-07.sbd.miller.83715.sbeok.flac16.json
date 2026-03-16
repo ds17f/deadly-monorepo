@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a tight, trippy 1978 show featuring a stellar “The Music Never Stopped” and a lively Jack Straw.",
+  "review": "Reviewers rave about the crystal‑clear soundboard recording and the band’s tight, high‑energy performance. Highlights include Jerry’s soaring solo on “The Music Never Stopped,” Donna’s vocal work, and Bob Weir’s spoken intro during Jack Straw. Overall it feels like a quintessential 1978 Dead night with great vibes and flawless audio.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "All four reviewers gave 4‑5 stars, praising both the musical performance and the pristine soundboard recording, indicating a strong show with high‑quality audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear soundboard capture; no dropouts or muddiness reported. Great instrument balance and overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stopped",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band stays tight throughout, delivering trippy, high‑energy rock that flows smoothly from the opening into later numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is highlighted as 'rocking' with a high‑energy solo on The Music Never Stopped.",
+    "Phil": "",
+    "Bob": "Weir's spoken intro at 3:25 into Jack Straw is noted, showing his presence.",
+    "Keys": "Donna’s vocal contributions on The Music Never Stopped are praised.",
+    "Drums": "A comment about the drum riser being fixed during Jack Straw suggests solid drum sound."
+  },
+  "song_mentions": {
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:44:47.909203+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-07.sbd.miller.83715.sbeok.flac16"
+}

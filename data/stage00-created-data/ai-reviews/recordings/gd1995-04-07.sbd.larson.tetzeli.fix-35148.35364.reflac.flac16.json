@@ -1,0 +1,76 @@
+{
+  "summary": "Soundboard capture delivers clear audio of a mixed‑feel spring ’95 finale, highlighted by standout performances of Visions of Johanna, Unbroken Chain and Days Between.",
+  "review": "The recording is a well‑balanced soundboard source that sounds good overall, with no major technical flaws reported. Musically the show elicits mixed feelings – many fans praise the emotive vocals, strong jams on Visions of Johanna, Unbroken Chain, Days Between and Jerry’s lead on Loose Lucy, while others criticize Corrina and Easy Answers as weak points. Overall it feels like a solid, if uneven, snapshot of the Dead’s late‑spring 1995 tour.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise key songs and the recording quality, but a notable minority criticize specific performances (Corrina, Easy Answers). Weighted average yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; reviewers describe it as a good‑sounding recording with no significant dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "Unbroken Chain",
+      "Days Between",
+      "Loose Lucy",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Corrina",
+      "Easy Answers"
+    ],
+    "setlist_flow": "Setlist is praised for its pacing – a concise first set with classics and a second‑set jam sequence from Unbroken Chain through Drumz to Days Between, though some feel the overall flow is uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are described as soulful but not always at peak sharpness; his lead on Loose Lucy and emotive delivery on Days Between receive particular praise.",
+    "Phil": "No direct criticism of Phil's playing; one reviewer compares the Unbroken Chain performance to Furthur’s version, another wonders about his choice for a different release.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drumming is highlighted in the post‑drum segment leading into Days Between and noted as part of the strong second‑set jam."
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T08:06:23.648750+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-07.sbd.larson.tetzeli.fix-35148.35364.reflac.flac16"
+}

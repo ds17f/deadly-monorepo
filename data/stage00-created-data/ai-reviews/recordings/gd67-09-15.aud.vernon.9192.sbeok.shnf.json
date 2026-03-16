@@ -1,0 +1,68 @@
+{
+  "summary": "Fair‑quality audience recording of the 9/15/67 Hollywood Bowl show captures a solid mid‑'67 performance with Jerry and Pigpen in top form, though drop‑outs and hiss limit clarity.",
+  "review": "The 1967 Hollywood Bowl set is praised for its energetic jams—Alligator, Viola Lee Blues, Morning Dew and Beat It On Down The Line—all highlighted by fiery interplay between Jerry Garcia and Pigpen and a thumping fretless bass from Phil Lesh.  Technically the .aud audience tape suffers from hiss, frequent drop‑outs and muffled mids, making it a borderline listenable document, but fans repeatedly note that the historic vibe more than compensates for the flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers love the performance (average ~4‑5 stars) but criticize the audio quality (many note drop‑outs, hiss, and crude sound). Weighted combination of strong show (70%) and fair recording (30%) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crude 1967 audience tape with noticeable hiss, frequent drop‑outs, muffled mids and crowd chatter; some reviewers find it acceptable for the era but overall limits listening enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator",
+      "Viola Lee Blues",
+      "Morning Dew",
+      "Cold Rain and Snow",
+      "Beat It On Down The Line"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical late‑1967 set: a mix of short, snappy numbers (Schoolgirl, Alligator) and extended psychedelic jams (Viola Lee Blues), delivering solid energy despite occasional uneven pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly praised—listeners love his “full‑hog” leads and tight control on Morning Dew.",
+    "Phil": "Lesh’s fretless bass is noted as thumping away, adding a solid low end to the jams.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ/harmonica work gets strong mentions, providing the characteristic 1967 vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alligator": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Schoolgirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:33:43.410041+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd67-09-15.aud.vernon.9192.sbeok.shnf"
+}

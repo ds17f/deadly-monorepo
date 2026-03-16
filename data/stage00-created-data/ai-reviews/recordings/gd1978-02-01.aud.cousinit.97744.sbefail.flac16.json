@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience recording of a wildly adventurous show, praised for its clear sound and satisfying performance",
+  "review": "All six reviewers rave about the audio quality, calling the aud recording crisp, well‑balanced and captured by someone who knew what they were doing. The concert itself is described as “wonderful,” “dripping with adventure” and overall very satisfying, even if one fan notes it wasn’t quite as superb as the previous night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4‑5) and uniformly positive language about both sound quality and performance indicate a strong show with an excellent audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced audience capture; recorder demonstrated skill, resulting in a crisp and satisfying listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers praise the overall flow and energy of the set, noting it was adventurous and satisfying, though one comment mentions it wasn’t as superb as the previous night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T09:13:38.569528+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-02-01.aud.cousinit.97744.sbefail.flac16"
+}

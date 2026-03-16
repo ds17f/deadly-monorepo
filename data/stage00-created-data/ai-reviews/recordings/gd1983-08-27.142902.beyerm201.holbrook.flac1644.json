@@ -1,0 +1,45 @@
+{
+  "summary": "Crispy, near‑top audience recording with a beastly first set (Jack Straw → Deal) and a solid second set.",
+  "review": "Both reviewers praise the sound quality, calling this the best‑sounding version of the show and describing it as crisp and “Crispy.” The first set is highlighted as an absolute beast from the Jack Straw opener through a supernova Deal, while the second set, though not quite as electrifying, remains strong. Overall the performance and recording are viewed very positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality averages around 4 stars with a standout first set; recording quality is rated 5 stars and described as the best‑sounding source, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear audience tape; reviewers call it the best‑sounding version of this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set rolls nonstop from Jack Straw to Deal, delivering a high‑energy “beast.” The second set dips slightly in excitement but stays strong overall."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:04:14.991486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-27.142902.beyerm201.holbrook.flac1644"
+}

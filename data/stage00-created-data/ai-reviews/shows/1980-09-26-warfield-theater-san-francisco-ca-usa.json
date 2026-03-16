@@ -1,0 +1,88 @@
+{
+  "summary": "Acoustic brilliance with solid rock set; standout China Doll and Ripple",
+  "blurb": "The first set delivers a sparkling acoustic marathon featuring To Lay Me Down, China Doll and Ripple, all rendered with crisp clarity. The electric second set is competent but less inspired, while the third set rolls through classic pairings like Scarlet>Fire and a tight Sugar Magnolia finish.",
+  "review": "On September 26, 1980 at the Warfield, the Dead served up an unforgettable acoustic‑heavy opening that still shines decades later. Jerry’s warm vocal tone and tasteful guitar work on songs such as China Doll and Ripple are highlighted by Brent’s real‑piano texture – even a harpsichord‑like sheen on China Doll that nods to his early‑Mydland era sound. The electric portion of the second set, while solid, never quite captures the same lift, but the third set recovers with a seamless Scarlet Begonias > Fire On The Mountain segue, a soaring Estimated Prophet into Eyes Of The World, and a jubilant Sugar Magnolia that sends the audience home on a high. For listeners seeking the clearest window into this night, the Miller soundboard (gd1980-09-26.sbd.miller.118444.flac16) offers excellent balance with only minor track imperfections.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings are clearly positive, praising the acoustic set and specific songs (China Doll, Ripple, To Lay Me Down). One mixed review notes minor track imperfections but still calls the show spectacular. The single negative comment is unrelated to performance quality. Overall sentiment is strongly positive, warranting a +1.2 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1980-09-26.sbd.miller.118444.flac16",
+    "reason": "Soundboard source with good overall clarity and balance; minor imperfections do not detract from the full‑show experience."
+  },
+  "key_highlights": [
+    "Acoustic set shines with China Doll, Ripple, To Lay Me Down and Cassidy.",
+    "Jerry’s guitar riffs and heartfelt vocals stand out on the acoustic numbers.",
+    "Brent’s piano adds a warm, early‑Mydland texture, especially on China Doll.",
+    "Third‑set delivers classic Scarlet Begonias > Fire On The Mountain segue and tight Sugar Magnolia finish."
+  ],
+  "song_highlights": [
+    "To Lay Me Down",
+    "On The Road Again",
+    "China Doll",
+    "Ripple",
+    "Cassidy",
+    "Feel Like A Stranger",
+    "Sugaree",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Estimated Prophet"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers tasteful acoustic guitar work, especially on China Doll, with warm, wistful vocals throughout the set.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Provides a real‑piano foundation that replaces the typical electric keyboard sound; his harpsichord‑like texture on China Doll adds a distinctive early‑Mydland flavor.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-13T03:40:24.652420+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "To Lay Me Down"
+    ],
+    [
+      "On The Road Again"
+    ],
+    [
+      "China Doll"
+    ],
+    [
+      "Ripple"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Not Fade Away",
+      "Black Peter",
+      "Sugar Magnolia"
+    ]
+  ]
+}

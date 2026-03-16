@@ -1,0 +1,95 @@
+{
+  "summary": "Excellent soundboard capture of a fiery show highlighted by a scorching Scarlet>Victim>Fire sequence, a standout first‑set Dark Star and superb Bruce Hornsby keyboards.",
+  "review": "The performance is praised for its high energy, with the second set’s Scarlet→Victim→Fire chain and the rare first‑set Dark Star drawing particular acclaim. Jerry’s guitar work shines despite a few minor slips, Phil’s new green bass suffers an EQ hiccup on Jack Straw, and Hornsby adds memorable keyboard texture. The soundboard source is clean and well‑balanced, making the show highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4–5 stars) praise musical highlights and note no recording flaws; weighting favors strong show quality with excellent soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix with no reported dropouts or muddiness; reviewers did not mention any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Victim>Fire",
+      "Dark Star (first set)",
+      "Space > Playin",
+      "Good Lovin'",
+      "Stuck On The Moon (SOTM)"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "The show opens strong with Jack Straw > Bertha and a rare first‑set Dark Star, then builds into a second‑set arc that flows smoothly from Scarlet through Victim into Fire and on to Truckin', punctuated by expansive Space jams and tight closers."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is praised for soaring licks and a near‑gasket‑blowing vocal moment, though a missed verse of Scarlet and a couple of slightly off chords are noted.",
+    "Phil": "Phil’s new green bass had an EQ problem on Jack Straw, detracting slightly from that song.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s piano/accordion adds depth, especially during the Scarlet→Victim transition and the Space‑>Playin jam.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Scarlet": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Victim": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stuck On The Moon (SOTM)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T23:18:28.986555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-08-16.sbd.17011.sbeok.flac"
+}

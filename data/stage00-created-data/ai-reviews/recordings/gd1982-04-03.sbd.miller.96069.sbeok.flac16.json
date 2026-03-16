@@ -1,0 +1,64 @@
+{
+  "summary": "A mixed‑quality matrix recording that still delivers a blazing Scarlet > Fire transition, stellar Peggy‑O and a memorable Estimated→Eyes jam.",
+  "review": "The show is widely praised for its high‑energy setlist and standout moments – the explosive Scarlet > Fire segue, a soaring Peggy‑O, an emotional Let It Grow, and a beautifully executed Estimated→Eyes outro. Recording-wise the tape blends audience ambience with patched‑in board feeds, resulting in a fair‑to‑good sound that some listeners find gritty but many accept as part of the 1982 era aesthetic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight exceptional performances, while acknowledging recording flaws that keep the technical rating in the fair range; weighted average yields a solid 4‑star score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Predominantly audience capture with patched soundboard sections; gritty, sometimes muffled, but retains enough clarity to follow the music. No major dropouts reported, but overall fidelity is typical of early‑’80s SBD tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Peggy-O",
+      "Estimated > Eyes",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Never Trust a Woman"
+    ],
+    "setlist_flow": "The set flows with a psychedelic undercurrent, highlighted by the unusual yet thrilling Scarlet‑Fire transition and a cohesive jam that builds into a delicate Estimated→Eyes outro; overall pacing is praised as exploratory and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s vocal inflection and guitar licks on Scarlet, calling his phrasing ‘hot’ and his tone “stellar”.",
+    "Phil": "One comment mentions a stage‑position change for Phil (and Jerry) but no specific musical appraisal.",
+    "Bob": "",
+    "Keys": "Brent’s focused grand‑piano work is highlighted, especially on the Estimated→Eyes outro, with praise for his tasteful contributions throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Peggy-O": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Never Trust a Woman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:05:30.024651+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-03.sbd.miller.96069.sbeok.flac16"
+}

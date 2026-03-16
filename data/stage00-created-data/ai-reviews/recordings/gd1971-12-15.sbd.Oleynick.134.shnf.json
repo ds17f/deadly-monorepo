@@ -1,0 +1,39 @@
+{
+  "summary": "Crisp soundboard recording with a stellar Dark Star, overall a great show",
+  "review": "Both reviewers rave about this set‑board capture, calling the audio very crisp and highlighting an outstanding Dark Star. The performance is praised enough that one reviewer wishes they had the entire concert, indicating a high‑quality show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Two 5‑star reviews uniformly praise both the performance (especially Dark Star) and the crystal‑clear soundboard recording, suggesting an excellent show with top‑notch audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Audio described as very crisp and clear; no reported dropouts or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers felt the concert was strong throughout and even expressed a desire for the full show, implying smooth pacing and engaging set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:22:04.071207+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-15.sbd.Oleynick.134.shnf"
+}

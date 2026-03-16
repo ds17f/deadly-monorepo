@@ -1,0 +1,52 @@
+{
+  "summary": "Binaural audience recording with variable first‑set levels but highlights a classic ’84 Spring Tour set featuring a fiery Scarlet Begonias → Fire On The Mountain and an adventurous Space/Drums/Space sequence.",
+  "review": "The show captures the legendary 1984 spring tour energy, especially the second‑set flow of Scarlet Begonias into Fire on the Mountain with Mickey Hart’s djembe and the far‑out Space‑Drums‑Space after Estimated Prophet. The binaural recording is vivid on headphones but suffers from uneven levels in the early first‑set songs and frequent tape stops that interrupt the flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one detailed review; shows strong musical moments but notes uneven recording quality, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Binaural dummy‑head mics give an immersive headphone experience; first four songs of set 1 have variable levels and tape stops between tracks, while the second set sounds more consistent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire On The Mountain",
+      "Estimated Prophet",
+      "The Wheel",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic spring‑tour setlist with a strong second set; tape flips and stops interrupt the first set, but overall pacing builds nicely toward the adventurous Space/Drums/Space sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart's djembe/talking drum is highlighted during Fire On The Mountain, adding a distinctive texture to the performance."
+  },
+  "song_mentions": {
+    "Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:32:59.467195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-13.132772.Sennheiser-holbrook.flac24"
+}

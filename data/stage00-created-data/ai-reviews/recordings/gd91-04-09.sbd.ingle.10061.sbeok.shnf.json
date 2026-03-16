@@ -1,0 +1,39 @@
+{
+  "summary": "Average cassette‑sourced soundboard capture of the spring tour’s final show, featuring a beloved double opener but a second set that felt a bit recycled.",
+  "review": "The recording comes from a cassette master of the soundboard, giving it an average fidelity that listeners describe as merely fair. The concert is remembered fondly for being the last night of the spring tour and for its quirky double‑opener, though many fans felt the second set was a little recycled and lacked the lift they hoped for after the tragic lake incident.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (double opener, historic final‑tour status) but second set received criticism; recording quality is only noted as a cassette soundboard source with no strong praise, yielding an overall weighted rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Taken from a cassette master of the SBD; reviewers did not comment on clarity, and the moderate star rating suggests average fidelity without notable issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Throwing Stones"
+    ],
+    "setlist_flow": "The concert opened with an unusual double opener that fans love, but the second set felt a bit recycled and was impacted by the mood‑changing lake tragedy, leaving some listeners wanting more than the Throwing Stones segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:54:41.336066+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-09.sbd.ingle.10061.sbeok.shnf"
+}

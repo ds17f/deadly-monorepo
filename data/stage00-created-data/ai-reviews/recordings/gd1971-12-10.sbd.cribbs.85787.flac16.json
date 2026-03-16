@@ -1,0 +1,51 @@
+{
+  "summary": "Sweet theater‑room sound from a solid soundboard capture, highlighted by powerful renditions of Comes A Time, Big Railroad and The Other One.",
+  "review": "The recording (a soundboard source) delivers clear, sweet theatre‑room audio, though the excessive indexing creates tiny gaps that can be noticeable on non‑gapless players. Musically the show is praised for its laid‑back yet emotionally charged vibe, with Comes A Time, Big Railroad and The Other One standing out as fan favorites.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (5‑star praise) and note excellent musical moments, while a few criticize the track indexing and minor playback hiccups; overall the positives outweigh the negatives."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sweet theatre sound and clear mix, but many tiny track splits (e.g., a 16‑second intro to The Other One) cause audible hiccups on devices that don’t handle gapless playback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Big Railroad",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Laid‑back yet emotionally charged, with a relaxed groove that builds into powerful moments on the highlighted tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:00:00.484757+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-10.sbd.cribbs.85787.flac16"
+}

@@ -1,0 +1,37 @@
+{
+  "summary": "No substantive details provided; reviewer gave a zero‑star rating indicating strong dissatisfaction",
+  "review": "The sole review consists only of the phrase “There's no \\\"A\\\" in Iko Iko” and assigns a 0‑star rating. It offers no insight into the musical performance or audio fidelity, leaving both recording and show quality indeterminate aside from the reviewer’s clear displeasure.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review with a zero‑star rating; insufficient information to assess quality beyond strong dislike"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific comments on sound clarity or mix; the zero rating suggests overall dissatisfaction."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:30:01.773310+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-16.168794.ScheopsCMC34.melamed.semrod.flac1648"
+}

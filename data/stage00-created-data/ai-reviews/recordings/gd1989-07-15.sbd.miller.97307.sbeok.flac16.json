@@ -1,0 +1,97 @@
+{
+  "summary": "High‑fidelity soundboard captures a solid set with standout Truckin' and Peggy-O despite several sloppy moments.",
+  "review": "The recording shines—especially the first set’s crystal‑clear mix—while the performance is mixed: energetic highlights like Truckin', Peggy‑O, Bertha and a jazzy China Doll jam sit beside weaker spots such as Candyman, Foolish Heart and Space. Jerry’s lead work soars on the highs but falters on the lows, and the keyboards get both praise and criticism.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "low",
+    "rationale": "Show quality averages around a 3‑star level with many mixed comments; recording quality is rated good to excellent, yielding an overall weighted score near 3.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "First set described as 'thing of beauty' with perfect mix and crisp clarity; second set noted as inferior with a splice/glitch in Crazy Fingers, but overall the board capture is strong."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Truckin'",
+      "Bertha",
+      "China Doll"
+    ],
+    "poor_songs": [
+      "Candyman",
+      "Foolish Heart",
+      "Space",
+      "Watchtower"
+    ],
+    "setlist_flow": "First set starts with high energy but becomes uneven; second set opens a bit sloppy, recovers with strong Truckin' → Smokestack transition and a jazzy China Doll jam before winding down."
+  },
+  "band_member_comments": {
+    "Jerry": "Inconsistent—lacks feeling on Candyman and flubs Crazy Fingers, yet delivers stellar leads on Truckin', Smokestack and other jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards sound cheesy on Foolish Heart but shine on 'We Can Run' and Bird Song; overall mixed reception.",
+    "Drums": "Strong start with funky rhythms in Smokestack, then becomes disjointed toward the end."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:24:10.432454+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-15.sbd.miller.97307.sbeok.flac16"
+}

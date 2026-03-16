@@ -1,0 +1,63 @@
+{
+  "summary": "A powerful 1978 performance highlighted by a superb second set (Black Peter, Let It Grow) captured on a decent matrix recording that’s especially clear in the latter half.",
+  "review": "Fans rave about this show’s soaring second set – vintage Garcia on Black Peter, Jerry’s incendiary Let It Grow solo, and tight yet loose Terrapin interplay make it a ’78 benchmark. The recording is a soundboard‑audience matrix; while the first half has some echo, the second half sounds clean and crisp, delivering an enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average user rating is 4.25 stars; most comments praise the show (especially the second set) and note good sound quality, leading to a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First set shows an echo/half‑step artifact in the audience portion; second set is mostly soundboard and sounds markedly clearer. Overall listenable with no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Let It Grow",
+      "Candyman",
+      "Truckin'",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is described as a crescendo‑building masterpiece with tight transitions and no need for an encore; the first half is solid but less remarkable."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised – vintage Garcia on Black Peter, peak guitar work on Let It Grow, and beautiful vocals on Candyman and Black Peter.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T09:02:44.373139+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-31.sbd-aud.cotsman.17074.sbeok.shnf"
+}

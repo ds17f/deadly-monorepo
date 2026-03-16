@@ -17,16 +17,22 @@ class GitHubDataService @Inject constructor(
     
     companion object {
         private const val TAG = "GitHubDataService"
+        /** Data version pinned at build time from data/version. Update when bumping data release. */
+        const val REQUIRED_DATA_VERSION = "2.3.0"
     }
     
     suspend fun getLatestRelease(): GitHubRelease? {
+        return getRelease("data-v$REQUIRED_DATA_VERSION")
+    }
+
+    suspend fun getRelease(tag: String): GitHubRelease? {
         return try {
-            Log.d(TAG, "Fetching latest release from GitHub")
-            val release = gitHubApi.getLatestRelease()
+            Log.d(TAG, "Fetching release $tag from GitHub")
+            val release = gitHubApi.getReleaseByTag(tag)
             Log.d(TAG, "Got release: ${release.tagName} with ${release.assets.size} assets")
             release
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to fetch latest release", e)
+            Log.e(TAG, "Failed to fetch release $tag", e)
             null
         }
     }

@@ -1,0 +1,80 @@
+{
+  "summary": "A scorching spring‑1990 show with a smoking second set (High Time, The Weight, Foolish Heart) captured on a clear soundboard recording that has a little hiss.",
+  "review": "Fans rave about this hidden gem from March 28 1990 – the first set delivers rare treats like High Time and a blistering Deal, while the second set is called “sublime” with standout performances of The Weight, Foolish Heart and Hey Pocky Way. The soundboard source is generally clear and well‑balanced, only showing some mild hiss and occasional audience bleed, making it an enjoyable listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4‑5 stars praising both the music and the recording; only a single outlier is negative, so the combined show (70%) + recording (30%) score lands in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear mix with solid instrument separation; a little tape hiss noted and some audience bleed, but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "The Weight",
+      "Foolish Heart",
+      "Deal",
+      "Hey Pocky Way"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "First set packs rare gems (High Time, Easy to Love You) and builds momentum; the second set is the highlight with seamless transitions into The Weight, Foolish Heart and a rousing Hey Pocky Way, delivering a tight yet adventurous flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful vocals on Deal and energetic guitar work throughout; fans note his “jam” energy.",
+    "Phil": "Only briefly mentioned – one reviewer felt Phil was less prominent this night.",
+    "Bob": "",
+    "Keys": "Brent Mydland shines, delivering memorable keyboard lines and even a profane moment that became talk of the show.",
+    "Drums": "Bill and Mickey receive kudos for solid, driving rhythm; pre‑drum segment highlighted as a highlight by one reviewer."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Weight": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Foolish Heart": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy to Love You": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T05:27:24.108538+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-28.sbd.gorinsky.8510.sbeok.shnf"
+}

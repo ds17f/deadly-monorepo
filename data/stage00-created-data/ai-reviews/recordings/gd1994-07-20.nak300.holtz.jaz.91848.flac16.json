@@ -1,0 +1,88 @@
+{
+  "summary": "Clear, crisp audience recording captures a solid post‑Brent set highlighted by a beautiful Peggy‑O and spirited Box of Rain, despite some fizzling moments.",
+  "review": "The audience tape is wonderfully clear and balanced, letting the band's relaxed vibe shine through. The show offers several high points – a standout Peggy‑O, tight harmonies on High Time, a heartfelt first‑time outing of Childhood's End, and an energetic Box of Rain – though the Samba segment never quite takes off and the set is punctuated by frequent pauses. Overall it’s a enjoyable post‑Brent performance that rewards repeat listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Review praises both the recording (clear, crisp, listenable) and the musical performance (many standout songs), with only minor criticisms about song flow and a few weaker moments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear and crisp sound with just enough crowd ambience to convey the live atmosphere; no major drop‑outs or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "High Time",
+      "Childhood's End",
+      "Box of Rain",
+      "Corrina",
+      "Matilda",
+      "Space",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Samba"
+    ],
+    "setlist_flow": "The set is marked by frequent pauses between songs, which the reviewer notes as a drawback, but overall the performance maintains energy and strong vocal harmonies throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "Enjoys himself onstage, contributing to a lively party atmosphere; no specific guitar commentary.",
+    "Phil": "His singing is praised for confidence and growth over the years.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Childhood's End": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Matilda": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:53:34.156003+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-20.nak300.holtz.jaz.91848.flac16"
+}

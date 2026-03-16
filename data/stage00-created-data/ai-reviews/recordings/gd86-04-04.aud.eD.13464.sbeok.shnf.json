@@ -1,0 +1,56 @@
+{
+  "summary": "A listenable recording of a mixed‑quality Hartford show that shines on Crazy Fingers, Looks Like Rain and the Box of Rain encore.",
+  "review": "The performance is uneven – some fans call it the weakest Hartford show they saw, while others point to memorable moments like Crazy Fingers, the first live Looks Like Rain with Weir’s echoing vocals, and a joyous Box of Rain encore. The recording itself isn’t described in detail, but listeners find it generally listenable. Overall the concert is viewed as an average‑to‑good show with a few standout highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Four reviews give mixed impressions of the show (average to good) and provide no concrete recording‑quality details, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not comment on soundboard or audience source; they simply note the show is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Looks Like Rain",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set highlighted by Crazy Fingers and a unique post‑Smokestack jam; the show ends with a memorable Box of Rain encore. Overall pacing is considered modest, lacking the high‑energy rock of other 1986 dates."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as “blowing doors” and praised in the closing remarks (\"R.I.P. Jerry G!!\").",
+    "Phil": "Noted for his friendly \"Thank you all, very kind\" sign‑off after the encore.",
+    "Bob": "\"Looks Like Rain\" highlighted with Weir’s echoing vocals; Bob’s vocal performance is praised.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Keep Your Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:41:46.290823+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-04-04.aud.eD.13464.sbeok.shnf"
+}

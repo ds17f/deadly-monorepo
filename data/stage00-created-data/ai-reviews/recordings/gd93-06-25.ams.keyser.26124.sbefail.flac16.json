@@ -1,0 +1,87 @@
+{
+  "summary": "Good audience recording that captures the vibe of a solid RFK outdoor show with standout renditions of Sugar Magnolia, Wharf Rat and The Weight.",
+  "review": "Both reviewers describe the concert as a memorable, high‑energy outdoor performance at RFK, highlighting songs such as Cumberland Blues, Promised Land, China Cat Sunflower > I Know You Rider, Sugar Magnolia, Wharf Rat and The Weight. The audience (AMS) source is praised for conveying atmosphere despite no detailed technical flaws being noted, making the set feel both lively and well‑balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Two detailed reviews emphasize a strong musical performance with many standout songs and an engaging atmosphere; recording is described as better than prior audience tapes, yielding a good but not exceptional technical rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the tape captures the outdoor venue atmosphere well and sounds better than previous audience recordings; no major clarity or drop‑out issues are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "Tom Thumb's Blues",
+      "Althea",
+      "Promised Land",
+      "China Cat Sunflower > I Know You Rider",
+      "Sugar Magnolia",
+      "Wharf Rat",
+      "The Weight",
+      "Half-Step"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a strong first set highlighted by Cumberland Blues and Promised Land, followed by an energetic second set that rolls through Sugar Magnolia into Wharf Rat and closes with The Weight, maintaining high momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his guitar work – ‘plucked the first few chords’, ‘opened my door to Jerry’, and overall strong playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T15:26:13.861061+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-25.ams.keyser.26124.sbefail.flac16"
+}

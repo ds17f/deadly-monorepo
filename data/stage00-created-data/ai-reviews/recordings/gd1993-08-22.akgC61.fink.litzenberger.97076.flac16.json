@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of a stellar ’93 show highlighted by a soaring Broken Arrow, magical Days Between, and arguably the best ‘90s Help > Slip > Franklin’s.",
+  "review": "The recording is praised as an analog‑free master soundboard with crisp clarity (aside from a slight tinny edge) that lets the band’s high‑energy performance shine. Reviewers repeatedly cite Broken Arrow, Days Between and the Help > Slip > Franklin’s sequence as standout moments, and even note the beautiful drum/space section, making this one of the top shows of 1993.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews are 4‑5 stars and uniformly praise both the musical performance and the soundboard recording; no significant criticisms were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, analog‑free master soundboard; a few reviewers note a slight tinny quality compared to other tapes but overall very clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow",
+      "Days Between",
+      "Help on the Way > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as having many high spots, a beautiful drum/space segment, and an overall uplifting flow that makes it one of the best ’93 performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work receives glowing praise, especially on the Help>Slip>Franklin's sequence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum/space section is highlighted as beautiful and a high‑point of the performance."
+  },
+  "song_mentions": {
+    "Broken Arrow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:57:47.595905+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-22.akgC61.fink.litzenberger.97076.flac16"
+}

@@ -1,0 +1,50 @@
+{
+  "summary": "Soundboard capture with spacious yet slightly brittle ’71 sound; show features a standout Other One and solid Dark Star.",
+  "review": "The recording is a sound‑board source that delivers an unusually open, spacious feel for the era, though some listeners note a hard‑edged, brittle tone lacking later‑year warmth. Musically the concert is “fairly good,” highlighted by an excellent The Other One and a nicely flowing Dark Star, with an ambitious (if imperfect) attempt at the full That's It suite.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Both reviewers rate the set highly (5 and 4 stars). The performance is praised for specific jams, while the recording is described as good but a bit thin‑sounding; combined weighting yields an overall ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Spacious and open sound typical of early ’71 Fillmore recordings, but described as hard‑edged and brittle with less warmth than later years; no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a fairly good show that attempts the full That's It suite; the intimate Fillmore venue contributes to an open feel, though Cryptical Envelopment (part 1) was deemed not up to release quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:01:15.148162+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-28.126262.sbd.boswell.smith.flac16"
+}

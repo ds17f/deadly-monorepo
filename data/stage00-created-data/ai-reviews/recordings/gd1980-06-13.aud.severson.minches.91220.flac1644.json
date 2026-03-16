@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed reception – a brief enthusiastic note alongside criticism of a jarring slide on Minglewood Blues, with no clear recording details.",
+  "review": "One reviewer gave a terse five‑star endorsement, while another highlighted an odd, jarring slide squeal during Minglewood Blues that drew a crowd reaction, suggesting a rough guitar moment. No concrete information about the source or sonic clarity is provided, leaving the technical quality uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Only two reviews with divergent opinions; a single positive comment gives little insight, while the negative review points to a performance flaw. Lack of recording details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on soundboard or audience clarity; only an odd slide squeal is mentioned, which appears to be a performance issue rather than a recording flaw."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Minglewood Blues"
+    ],
+    "setlist_flow": "Insufficient information to assess set structure or overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Slide squeal noted during Minglewood Blues, indicating a rough or experimental guitar moment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:31:44.663827+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-13.aud.severson.minches.91220.flac1644"
+}

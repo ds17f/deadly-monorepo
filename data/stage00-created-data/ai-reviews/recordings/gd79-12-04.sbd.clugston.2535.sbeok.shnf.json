@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent soundboard recording that captures a high‑energy fall ’79 show highlighted by a soaring Franklin’s Tower and tight Estimated → Not Fade Away flow.",
+  "review": "The GD‑79-12‑04 SBD capture is praised for its crystal‑clear mix, with many fans calling it the best‑ever board tape they’ve heard. Musically the concert shines on the second‑set pairings—Estimated into a blistering Franklin’s Tower and an epic Not Fade Away—while occasional sleepy moments from Jerry are outweighed by standout jams from Bobby and powerful drumming. Overall the performance is regarded as a must‑listen snapshot of the band’s late‑’70s peak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) and repeated praise for both the audio fidelity and key song performances outweigh a few minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note crisp, balanced sound; one mentions a heavy left‑channel mix that can mask layers, but overall the board tape is described as ‘stellar’, ‘best sound ever heard’, and ‘great sound quality’."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Estimated",
+      "Not Fade Away",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Peggy-O",
+      "Stagger Lee"
+    ],
+    "setlist_flow": "The set is praised for its unique pairings—especially the Estimated → Franklin’s Tower segue and a high‑energy Not Fade Away that launches into a powerful jam. Reviewers describe the second set as “mind‑blowing” with tight transitions and memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Some note a ‘sleepy’ vibe early on, but most agree his guitar hits the notes and his voice returns (though a few find Peggy-O vocal a bit shaky).",
+    "Phil": "",
+    "Bob": "Bobby’s melodic jams after Not Fade Away receive high marks; his interplay with Jerry is highlighted as a highlight of the night.",
+    "Keys": "",
+    "Drums": "Mickey’s Egyptian‑flavored feel and the “dynamic duo” drum work are repeatedly praised for power and creativity, especially on the NFA climax."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Estimated": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Not Fade Away": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:53:56.489780+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-04.sbd.clugston.2535.sbeok.shnf"
+}

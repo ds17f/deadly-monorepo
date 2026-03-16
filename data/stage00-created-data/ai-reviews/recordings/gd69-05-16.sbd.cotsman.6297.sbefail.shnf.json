@@ -1,0 +1,52 @@
+{
+  "summary": "Fair audience recording of a rough early Dead show – School Girl and Lovelight shine, but the overall performance is largely uninspired.",
+  "review": "The tape, captured on an old high‑school gym cassette, delivers surprisingly clear sound for its age, though it still sounds like a 1965‑era snapshot rather than a polished ’69 recording. Musically the concert falls short of Dead standards; most reviewers cite a lackluster set and weak moments (especially Hard to Handle), with only a few songs such as School Girl and Lovelight offering any real excitement.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently rated low (uninspired, poor set), while recording quality is judged fair to good for an audience tape; the weighted average yields a sub‑3 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience cassette recorded in a high‑school gym; surprisingly clear given source, but limited fidelity and vintage '65‑style sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "School Girl",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Hard to Handle"
+    ],
+    "setlist_flow": "Setlist is considered uninspired and uneven; a few bright spots are outweighed by overall lack of energy and cohesion."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's organ playing is noted as soulful despite the rough overall performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "School Girl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T14:33:27.560413+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-05-16.sbd.cotsman.6297.sbefail.shnf"
+}

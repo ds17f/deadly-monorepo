@@ -1,0 +1,68 @@
+{
+  "summary": "Crisp, slightly over‑compressed audience tape captures a stellar ’86 Spectrum show highlighted by an explosive Morning Dew and soaring Box of Rain.",
+  "review": "The Nak microphone capture is full‑bodied and clear but suffers from noticeable clipping in the high‑end. Musically the concert is revered – the first set builds to a jubilant Box of Rain while the second set delivers a soulful High Time, a raging Saint and one of the most impassioned Morning Dew jams of ’86.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) praise the performance, especially the second set; recording is praised for clarity despite some clipping, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, full and balanced sound from the Nak mics; however levels were pushed to the edge causing substantial clipping on highs and lows."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "High Time",
+      "Saint",
+      "Morning Dew",
+      "Lost Sailor"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid, climaxing with a jubilant Box of Rain; second set shines with smooth transitions, emotional vocals and an explosive space‑>Dew jam that many reviewers cite as the highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as ‘almost uncontrollable passion’ with a feedback‑laden solo during Morning Dew.",
+    "Phil": "Phil’s bass sounds clearer than usual and his vocals on Box of Rain are highlighted as a roof‑lifting moment.",
+    "Bob": "Bob Weir’s vocal expletives during Saint are noted, and he famously “calls it quits” after the Dew jam.",
+    "Keys": "Brent Mydland’s keyboard accompaniment is praised, especially on the space/Dew climax.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:36:16.694397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-24.naks.braverman.16746.sbeok.shnf"
+}

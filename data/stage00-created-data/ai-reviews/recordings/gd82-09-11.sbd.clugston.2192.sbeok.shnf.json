@@ -1,0 +1,79 @@
+{
+  "summary": "A high‑quality soundboard capture of a scorching 1982 show, highlighted by blistering Let It Grow and an iconic Scarlet > Fire.",
+  "review": "The recording delivers a clear, well‑balanced soundboard image of one of the band’s peak ’82 performances.  The night is famed for its relentless energy – Let It Grow, Scarlet > Fire, Sailor > Saint and Truckin’/Stella Blue all soar – even though a few releases suffer from mix quirks that bury Jerry’s lead at times.  Overall the show feels tight, dynamic and unmistakably “hot”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over 20 detailed reviews overwhelmingly praise the musical performance (many 5‑star comments) while noting only minor mix issues; recording is described as crisp soundboard, giving a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear for a 1982 cassette‑sourced board.  Several reviewers note level spikes, a heavy Brent keyboard presence and occasional low Jerry guitar levels, but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Scarlet > Fire",
+      "Sailor > Saint",
+      "Truckin'",
+      "Stella Blue",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set rides a tight, driving groove with the Let It Grow/Scarlet > Fire transition often singled out as magical; pacing stays high‑energy throughout and the second‑set segues feel seamless."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is repeatedly called “spectacular”, “out of his head” and a key driver of Let It Grow, Scarlet > Fire and other jams; a few mixes bury his guitar but the performance itself is praised.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocals are highlighted as strong and clear, especially on Scarlet > Fire and in the second‑set vocal sections.",
+    "Keys": "Brent (and/or Keith) receives praise for soaring solos and a “awesome” keyboard sound, though some mixes make his level dominate the mix.",
+    "Drums": "Mickey Hart and Bill Kreutzmann are lauded for a tight, powerful groove, especially the pre‑drums section of the second set."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:53:14.508829+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-11.sbd.clugston.2192.sbeok.shnf"
+}

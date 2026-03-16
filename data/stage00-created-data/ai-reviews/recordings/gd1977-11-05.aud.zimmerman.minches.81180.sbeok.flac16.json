@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience‑sourced recording capturing a high‑energy 1977 show highlighted by a soaring Mississippi Half‑Step and killer Eyes of the World.",
+  "review": "The performance is repeatedly described as electric, with Jerry Garcia’s incendiary runs and Phil Lesh’s thunderous solo on Eyes of the World standing out, while songs like Mississippi Half‑Step, Minglewood Blues, Dire Wolf, Jack Straw and a scorching Eyes of the World sequence earn particular praise. The audience recording conveys the crowd’s excitement and the band‑crowd interplay, though one reviewer notes occasional mix roughness; overall the sound is clear enough to let the musical magic shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviewers are enthusiastic (average 4.75 stars), highlighting multiple standout songs and strong performances; recording is praised as clear with only minor mix concerns."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear audience ambience captures the live energy; a few reviewers mention slight sound roughness but overall the mix is listenable and well‑balanced for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Minglewood Blues",
+      "Dire Wolf",
+      "Jack Straw",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a powerful first set that built momentum into an even hotter second set, with the band feeding off the crowd and delivering seamless transitions, especially during the Eyes of the World jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s runs are called \"incredible\" and his tone praised; he also asks for mercy for the crowd, adding to the show’s lore.",
+    "Phil": "Lesh’s solo is highlighted as a long‑lasting memory, with him turning up his amp and driving the audience into a frenzy.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T06:45:13.435812+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-11-05.aud.zimmerman.minches.81180.sbeok.flac16"
+}

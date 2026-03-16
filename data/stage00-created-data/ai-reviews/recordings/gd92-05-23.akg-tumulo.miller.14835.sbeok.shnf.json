@@ -1,0 +1,63 @@
+{
+  "summary": "Good audience recording with a boomy edge captures an energetic 1992 Shoreline show highlighted by Box of Rain, Ship of Fools and a monster Wheel > Stella Blue sequence.",
+  "review": "The tape is an audience source that suffers from the typical Shoreline boom but remains clear enough to enjoy. The concert delivers strong energy, especially from Jerry and Phil, with standout moments like Box of Rain, Ship of Fools, the Wheel‑>Stella Blue combo and a powerful Drums→Space segment, while the encore Knockin' on Heaven's Door rounds it out.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Show quality is praised (energetic playing, several standout songs) and recording quality is decent though marred by boominess; the weighted average yields a near‑4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Noticeable boomy low‑end typical of Shoreline audience tapes, but overall clear with enough detail; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Ship of Fools",
+      "The Wheel > Stella Blue",
+      "Drums->Space",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid west‑coast set with high energy, a concise Playing > UJB transition, and a non‑freakout vibe that keeps the audience engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as introspective and full of energy; his lead work on Box of Rain and Ship of Fools is praised.",
+    "Phil": "Noted for feeling the energy and feeding it back to the crowd, especially during the high‑octane second set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey & Bill deliver a \"brutal beam‑bashing\" Drums→Space segment that is highlighted as a treat."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel > Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums->Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:41:57.460805+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-05-23.akg-tumulo.miller.14835.sbeok.shnf"
+}

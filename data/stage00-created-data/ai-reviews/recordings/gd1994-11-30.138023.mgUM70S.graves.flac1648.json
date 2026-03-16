@@ -1,0 +1,118 @@
+{
+  "summary": "A largely disappointing show with many missteps but a standout Cassidy; the audience‑matrix recording is only fair and needs pitch correction.",
+  "review": "The performance is riddled with slip‑ups—Jerry disappears on the Touch opener, several songs sound lost or off‑beat, and the second set drags until an odd Space jam. The only high point noted is a superb rendition of Cassidy, while the audience‑matrix source offers better clarity in the latter half but suffers from low levels and pitch issues.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.9,
+    "confidence": "medium",
+    "rationale": "The review rates the show at roughly 1¼ stars and describes many musical flaws; recording quality is only fair, leading to a low combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Matrix of two audience recordings with better clarity in set 2 but overall low levels, pitch errors (+1% on Touch, –1% on Uncle/Cassidy) and occasional talking bleed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Loose Lucy",
+      "Space",
+      "Standing on the Moon",
+      "Liberty"
+    ],
+    "poor_songs": [
+      "Touch",
+      "Greatest Story",
+      "Victim",
+      "Samba in the Rain",
+      "Crazy Fingers",
+      "Estimated",
+      "Terrapin",
+      "Miracle",
+      "Lovelight"
+    ],
+    "setlist_flow": "The setlist feels uneven; a bonus song before Drums offers a slight lift, but most of the show is described as cringeworthy and disjointed."
+  },
+  "band_member_comments": {
+    "Jerry": "Absent on Touch opener, missing until midway through Greatest Story; non‑committal on Victim and loses thread on Crazy Fingers.",
+    "Phil": "",
+    "Bob": "Acoustic turn on Me & My Uncle, average contributions elsewhere, faux‑Muppet shouting on Estimated, vamping on Lovelight, participates in squeak‑MIDI jams.",
+    "Keys": "Vince (keys) leads end jams and Space peak, adds squeak‑MIDI textures; other source notes better low‑end response from keyboards.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samba in the Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:04:33.707562+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-11-30.138023.mgUM70S.graves.flac1648"
+}

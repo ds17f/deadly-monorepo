@@ -1,0 +1,57 @@
+{
+  "summary": "Rough audience tape of the legendary Flatbed Truck show captures an intense 21‑minute Viola Lee jam and fiery blues covers, though sound is uneven.",
+  "review": "The recording is an audience (flatbed) capture with occasional drop‑outs, battery‑cut sections and a background fire‑alarm whistle, but it still conveys the manic energy of the impromptu Haight‑Ashbury free show.  Highlights include a scorching 20‑minute Viola Lee Blues jam and powerhouse performances of Smokestack Lightning, Turn On Your Lovelight and Hurts Me Too, with the crowd practically roaring along.  While the audio fidelity is only fair, fans overwhelmingly praise the historic vibe and raw power of the performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show positively (4‑5 stars) for its historic energy and standout jams, but many note that the audience recording is uneven and suffers from battery cut‑offs, pulling the overall rating down to a solid “good” level."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Flatbed audience tape with limited battery power; noticeable drop‑outs and occasional muffling, background fire‑alarm whistle, but overall intelligible and captures crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "Smokestack Lightning",
+      "Turn On Your Lovelight",
+      "Hurts Me Too"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An impromptu, free‑form flatbed concert that bursts with manic energy; long blues jams flow into each other with plenty of stage banter and crowd interaction, giving the show a raw, unfiltered feel."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing is described as intense and central to the 21‑minute Viola Lee jam; reviewers note his freedom‑focused vibe.",
+    "Phil": "Phil's bass is highlighted as distinct and magical, especially during the extended jams.",
+    "Bob": "Bob takes over vocal duties on Lovelight; one reviewer felt his turn wasn’t pretty, but overall his presence adds to the blues feel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Hurts Me Too": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T07:52:26.996497+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-03-03.aud.jools.19904.sbeok.shnf"
+}

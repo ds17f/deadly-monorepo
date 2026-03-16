@@ -1,0 +1,51 @@
+{
+  "summary": "A fan‑favorite 8/31/81 performance highlighted by a soaring Franklin's Tower, though the recording source and quality are not detailed.",
+  "review": "The lone review is wildly enthusiastic, calling the August 31 1981 show one of the best of their life. Highlights mentioned include an emotional “Morning Dew,” an epic “China Doll,” and a ringing “Franklin's Tower.” No information about the recording method or sound quality was provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "The show is praised highly (5‑star review) with multiple standout songs, but there is no data on recording quality, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard vs. audience, clarity, or mix issues; recording quality cannot be assessed from the available comments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Morning Dew",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the night as filled with gems and emotional peaks, especially noting the impact of Franklin's Tower after a powerful set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:13:52.527525+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-11.148624.fob.nak700.severson.miller.clugston.flac2496"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture with clear moments but plagued by interference and dropouts; the show shines on a scorching Samson & Delilah and an insane Let It Grow jam.",
+  "review": "The SBD source is generally clear and balanced, yet suffers from noticeable buzz, intermittent interference, and occasional drop‑outs that detract from the listening experience. Musically the performance is memorable – a powerhouse rendition of “Samson & Delilah” and an out‑of‑this‑world jam during “Let It Grow” (including an all‑band space section) make up for the missing first set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Strong musical moments boost the rating, but missing first‑set material and technical glitches lower overall enjoyment; three reviews give a balanced view."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Clear and balanced when intact, but suffers from buzz/interference on “Let It Grow” and occasional drop‑outs/cuts throughout the tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is missing, leaving only a strong second set highlighted by an all‑band space jam and a killer “Samson & Delilah” performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "All‑band space jam during the second set is highlighted as a major positive."
+  },
+  "song_mentions": {
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T09:03:53.019246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-31.sbd.unknown.1807.sbeok.shnf"
+}

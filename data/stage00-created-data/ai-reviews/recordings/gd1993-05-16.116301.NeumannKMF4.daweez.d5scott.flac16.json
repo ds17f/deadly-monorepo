@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent show with unclear recording source and limited technical details",
+  "review": "One reviewer rates the performance as an excellent show, while another is unsure about microphone placement and whether the tape came from a board or audience source. No specific songs or mix qualities are mentioned, leaving the recording quality ambiguous.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Positive comment about the show balances with uncertainty about the recording source; limited detail leads to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer questions mic placement and possible board vs. audience source, but provides no clear assessment of clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T12:40:53.922707+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-16.116301.NeumannKMF4.daweez.d5scott.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "High‑fidelity FM broadcast of the historic Fillmore closing captures strong Pigpen moments and solid playing, though the show is a bit uneven early on.",
+  "review": "The recording is an FM‑simulcast soundboard feed that many reviewers describe as crisp, with less click‑noise than other versions. Musically the show features standout Pigpen‑heavy numbers like Hard to Handle, Deal, Mama Tried and Big Boss Man, but the band sounds a little loose at the start before tightening up later.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Three very positive reviews praise both performance and FM soundboard quality; one moderate review notes some tuning issues, yielding a weighted average around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "FM broadcast of the board signal provides clear, full‑spectrum sound with fewer clicks than other versions; some reviewers note minor click‑noise but overall crisp and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Deal",
+      "Mama Tried",
+      "Big Boss Man",
+      "The Rub"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A historic long set with two halves; the early part is a bit out of tune and loose, but the band tightens up later, delivering strong Pigpen‑centric numbers and cohesive jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone praised – he was using his Strat and shines throughout, especially on the highlighted songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rub": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:43:23.547501+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-07-02.sbd.clevenger.lai.fix-128.6193.sbefail.shnf"
+}

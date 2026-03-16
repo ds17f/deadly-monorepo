@@ -1,0 +1,80 @@
+{
+  "summary": "Soundboard recording with noticeable wobble and pitch issues but captures a high‑energy Red Rocks show highlighted by tight El Paso, soaring U.S. Blues and a standout Black Peter.",
+  "review": "The performance on 9/6/85 (Red Rocks) is remembered for its upbeat tempo, a punchy El Paso, a powerful U.S. Blues and a moving Black Peter, with Brent’s keyboards and Mickey’s drums adding extra fire. The SBD source suffers from slow‑wow, pitch errors and speed inconsistencies that require EQ and slight tempo correction, though the overall mix is clean enough to feel the band’s fun vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments (especially Black Peter, U.S. Blues and El Paso) while noting serious but fixable recording flaws; the blend of strong show quality and fair‑to‑good soundboard yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Slow wow and pitch errors throughout; first set needs –1% speed correction, second set +1%; noticeable wobble on several tracks; clean overall mix but requires EQ and minor tempo fixes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "U.S. Blues",
+      "Black Peter",
+      "El Paso",
+      "Sugaree",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Dough Knees"
+    ],
+    "setlist_flow": "Both sets are unusually short but high‑energy; the first set builds nicely with Sugaree and Bird Song, while the second set stays uptempo, featuring a tight El Paso, an engaging Spoonful/Drums>Space segment and a powerful finish with U.S. Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar was described as both “tight” (El Paso) and a bit off‑lyrics; he left stage for a Spoonful solo, prompting extra drums.",
+    "Phil": "Praised for a strong bass run after the guitar lead on El Paso and noted using a slide during Space—a rare moment.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards were called “smokin’” and “tight,” adding sparkle to the set.",
+    "Drums": "Mickey’s drumming was highlighted as anxious but inventive, with extra drums in Spoonful and an energetic Drums>Space segment."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:45:31.382662+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-06.sbd.weiner.12181.sbeok.shnf"
+}

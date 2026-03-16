@@ -1,0 +1,85 @@
+{
+  "summary": "Good‑quality audience tape captures a stellar second set highlighted by a monster Scarlet and a smoking Help‑Slip‑Franklin's sequence.",
+  "review": "The recording is an audience (AUD) capture that sounds surprisingly clear for 1976, with a bit of bass mud but overall very listenable. Musically the show shines in the second half – a soaring Help > Slipknot > Franklin’s, extended Slipknot jams, a fiery Scarlet and memorable post‑Wheel improvisations make this a standout performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4–5 stars) praising the musical performance, especially the second‑set jams, while noting only modest recording limitations typical of audience tapes."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound for an early AUD; a bit chunky with reduced low‑end on Phil's bass and occasional muffling, but the mix lets vocals and guitars shine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet",
+      "Help > Slipknot > Franklin's Tower",
+      "Slipknot",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "Friend of the Devil",
+      "Bertha"
+    ],
+    "setlist_flow": "First set solid, but the second set erupts into long, exploratory jams with seamless segues – Help‑Slip‑Franklin’s leading into a massive Slipknot, followed by a beautiful Wheel jam and an inspired Ship of Fools close."
+  },
+  "band_member_comments": {
+    "Jerry": "Guides the extended improvisations; his guitar tone is present and drives the jams.",
+    "Phil": "Bass lacks bottom‑end on this tape but remains audible and especially engaged during later songs like Ship of Fools.",
+    "Bob": "Rhythm guitar very present, \"rippin\" throughout the set.",
+    "Keys": "Keith (Kieth) is subdued in the mix; keyboards don’t cut through as much as desired.",
+    "Drums": "The drummers provide inventive intros and strong support for transitions, praised on Dancin’/Ship of Fools."
+  },
+  "song_mentions": {
+    "Scarlet": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Help > Slipknot > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Slipknot": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:54:51.053746+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-01.moore.weiner.14558.sbeok.shnf"
+}

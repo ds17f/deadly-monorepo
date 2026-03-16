@@ -1,0 +1,103 @@
+{
+  "summary": "Crisp soundboard capture of a fire‑blazing Nassau show, highlighted by an epic Morning Dew, superb Iko Iko and a masterful second set.",
+  "review": "The recording is generally crisp and tight – likely a soundboard source with only minor splice quirks – and it preserves one of the most celebrated 1994 performances.  The band was on fire: Jerry’s guitar and vocals roared on Morning Dew, Phil drove the groove from the bass throne, and the second set delivered a monster Playing in the Band → Uncle John’s Band transition, blistering Samson & Delilah, and a breathtaking Other One.  Even with a few lyric slips (Candyman) and brief tech hiccups, the show is consistently praised for its energy, tightness, and unforgettable jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten reviews (mostly 5‑star) celebrate the performance and note a high‑quality soundboard capture; only isolated comments mention minor sound‑quality issues, so the weighted average is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, tight mix with clear instrument separation. Reviewers note a splice that should be left untouched and one comment about overall sound quality not being perfect, but the consensus is that the audio is very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Iko Iko",
+      "Playing in the Band",
+      "Uncle John's Band",
+      "The Other One",
+      "Samson and Delilah",
+      "Deal",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Candyman"
+    ],
+    "setlist_flow": "A strong first set builds momentum with tight renditions of Jack Straw, Deal and others; the second set shines with seamless transitions (Playing → Uncle John's) and extended jams that keep the energy soaring."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching guitar tone, powerful vocals on Morning Dew, and overall enthusiasm; occasional lyric slips in Candyman and a brief tech glitch with his rig.",
+    "Phil": "Described as ‘in the driver’s seat’, delivering creative, crystal‑clear bass lines that propelled the jams.",
+    "Bob": "Noted for solid rhythm work, humorous stage stumble on Samson & Delilah, and steady vocals on early songs.",
+    "Keys": "Vince's organ/piano work lauded as skilled and musical (despite one reviewer disliking his vocal contribution).",
+    "Drums": "Bill/Kreutzmann praised for excellent drumming and the spacious ‘drums/space’ segment that added depth to the second set."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Easy Answers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:46:37.852124+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-27.daud.unLDed.4851.shnf"
+}

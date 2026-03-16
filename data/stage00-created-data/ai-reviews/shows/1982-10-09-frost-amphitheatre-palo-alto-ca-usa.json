@@ -1,0 +1,87 @@
+{
+  "summary": "Powerful Morning Dew, tight On‑The‑Road segue & high‑energy second set",
+  "blurb": "The show delivers a smoking Morning Dew and a seamless On The Road Again → Beat It On Down The Line transition in the first set. A second‑set surge with Estimated Prophet → Eyes Of The World and an expansive Truckin' → The Other One jam keeps the momentum rolling. Overall performance is tight, melodic and full of 1982‑era vigor.",
+  "review": "On October 9, 1982 at Frost Amphitheatre the Dead were in top form, opening with a rollicking Alabama Getaway that quickly settled into a flawless first set. Highlights include an immaculate On The Road Again → Beat It On Down The Line segue, a bright West L.A. Fadeaway and a truly smoking Morning Dew where Garcia’s lead work was described as “powerful and emotionally charged.”  The second set builds relentlessly – Throwing Stones segues straight into Touch of Grey before launching into one of the era’s classic Estimated Prophet → Eyes Of The World stretches, followed by a thunderous Drums > Space leading into a soaring Truckin' → The Other One marathon that culminates in an uplifting Morning Dew and Saturday Night encore.  Across all recordings the band sounds tight: Phil’s bass lines lock in especially during the deep dissonant passages, Brent adds texture with his electric piano, while Mickey and Bill drive the groove with “strong” drumming.  Despite a few mix quirks (Bob’s rhythm guitar low on one SBD), the performance is consistently praised as energetic, adventurous, and quintessentially 1982.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 76,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.8,
+      "sentiment_rationale": "The majority of recordings (9 out of 11) carry a strongly positive sentiment, repeatedly praising the same standout moments – Morning Dew, On The Road Again → Beat It On Down The Line, Estimated Prophet → Eyes Of The World and the Truckin' → The Other One jam. No consistent negative comments were found, only two mixed notes about mix balance. This consensus warrants a high positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.8 = 4.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd82-10-09.sbd.samaritano.23730.sbeok.shnf",
+    "reason": "Clean soundboard capture with good overall balance; limited hiss and only minor mix quirks, making it the most reliable source for hearing the show’s nuances."
+  },
+  "key_highlights": [
+    "Smoking Morning Dew with Garcia’s soaring lead work",
+    "Seamless On The Road Again → Beat It On Down The Line segue",
+    "Estimated Prophet → Eyes Of The World sequence that drives second‑set momentum",
+    "Truckin' → The Other One marathon delivering expansive improvisation"
+  ],
+  "song_highlights": [
+    "Morning Dew",
+    "On The Road Again",
+    "Beat It On Down The Line",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "Throwing Stones",
+    "Touch of Grey",
+    "Dupree's Diamond Blues",
+    "Big River",
+    "West L.A. Fadeaway",
+    "Truckin'",
+    "The Other One",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers powerful, emotionally charged leads on Morning Dew and rides the high‑energy jams with a Dylan‑channeled tone and adventurous improvisation throughout.",
+    "Phil": "Lesh’s bass is solid and often highlighted – from the smiling GSET opener to the deep, dissonant passages in the second set – locking in tightly despite occasional mix low‑end issues.",
+    "Bob": "Weir’s vocals are strong and his rhythm guitar shines on most tracks; a few recordings note his guitar lower in the mix, but overall he adds texture and humor with quirky vocal moments.",
+    "Brent": "Mydland’s electric piano provides rich texture across the set; occasional patch‑jump glitches are noted, yet his support work and vocal pushes (e.g., on Deal) remain solid.",
+    "Mickey": "Hart delivers strong, unobtrusive drumming that powers the jams, especially during the explosive Drums > Space segment.",
+    "Billy": "Kreutzmann’s drumming pairs with Mickey to give a deep, well‑separated stereo presence and drives the rhythmic foundation of the extended second‑set jams."
+  },
+  "processed_recordings": 11,
+  "processed_date": "2025-09-14T02:44:47.093359+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "The Other One",
+      "Morning Dew"
+    ],
+    [
+      "On The Road Again",
+      "Beat It On Down The Line"
+    ],
+    [
+      "Throwing Stones",
+      "Touch of Grey"
+    ],
+    [
+      "Dupree's Diamond Blues"
+    ],
+    [
+      "Me And My Uncle",
+      "Big River"
+    ],
+    [
+      "West L.A. Fadeaway"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

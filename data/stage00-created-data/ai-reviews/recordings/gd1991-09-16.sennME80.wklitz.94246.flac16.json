@@ -1,0 +1,45 @@
+{
+  "summary": "Mixed show with an exciting first set but a second set hampered by overbearing Hornsby keyboards; recording quality not discussed",
+  "review": "The reviewer rates the first set as very good and exciting, while the second set feels messy due to aggressive Hornsby keyboard work that overwhelms songs like \"Saint\" and \"Comes A Time,\" with Garcia apparently stepping back. No comments are made about the audio source or fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only a single, moderate‑rating review; performance is split between strong and weak parts and there is no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Saint",
+      "Comes A Time"
+    ],
+    "setlist_flow": "First set praised as exciting; second set described as a mess with keyboards overwhelming the material."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is said to defer to Hornsby, implying subdued playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby's aggressive keyboard playing overruns tunes he doesn't fully know.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:09:19.421750+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-16.sennME80.wklitz.94246.flac16"
+}

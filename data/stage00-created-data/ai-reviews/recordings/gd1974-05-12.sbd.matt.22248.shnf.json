@@ -1,0 +1,72 @@
+{
+  "summary": "Good soundboard recording captures a solid May 12 1974 show highlighted by a stellar Truckin’→Other One→Mind‑Left‑Body jam sequence.",
+  "review": "The performance is strong in the second set, with the Truckin' → Other One → MLB jam standing out as a highlight, and Keith’s keyboards receive particular praise. Vocal slips from Jerry, Bob and Donna Jean are noted, and the rest of the show feels a bit tame compared to other ’74 dates, but the overall sound is clear enough to enjoy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑5 stars and praise the major jam sequence; recording is described as good, yielding a combined weighted rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sound is described as \"real good but not great\" – clear and listenable with no major drop‑outs or muffiness noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Mind Left Body Jam",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is considered tighter by some reviewers, while the second set shines with the Truckin'→Other One→MLB jam; after Row Jimmy the show loses momentum for several listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal and lyric slips noted throughout the show.",
+    "Phil": "",
+    "Bob": "Also cited for vocal flubs, especially on The Other One.",
+    "Keys": "Keith's playing is praised as a highlight of the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:50:20.988249+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-12.sbd.matt.22248.shnf"
+}

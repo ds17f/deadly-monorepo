@@ -1,0 +1,44 @@
+{
+  "summary": "Recording is missing the expected “Row Jimmy” track and contains an incorrect “Ramble on Rose” from another show, rendering it unusable.",
+  "review": "The reviewer reports that the download lacks the promised “Row Jimmy” and instead includes a random “Ramble on Rose” taken from the 9/20/90 Photoleon matrix. No comments are made about the audio fidelity or performance because the tracklist is incorrect, making the recording essentially faulty.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "medium",
+    "rationale": "Only one review, rating it 0 stars and complaining about missing/incorrect tracks; both show and recording quality cannot be assessed positively."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Missing expected track (Row Jimmy) and includes an incorrect track from another concert, indicating a file or metadata error."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Row Jimmy"
+    ],
+    "setlist_flow": "Cannot evaluate set flow due to missing track and erroneous inclusion."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:07:47.187474+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-31.138041.BK4011.Darroch.Ammons.flac1648"
+}

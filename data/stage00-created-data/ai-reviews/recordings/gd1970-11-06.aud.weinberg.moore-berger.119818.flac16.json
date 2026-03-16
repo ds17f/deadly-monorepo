@@ -1,0 +1,57 @@
+{
+  "summary": "Audience tape with solid sound quality (despite slight speed quirks) captures the monster second‑half featuring Good Lovin > Main Ten > Alligator and a magical NFA jam.",
+  "review": "The recording, sourced from an audience mic, is generally clear and shows a noticeable improvement over older versions, though it runs slightly fast in spots and only covers the final ~30 minutes. Musically the show is hailed as “absolute monster” with standout moments like Good Lovin, Main Ten, Alligator and a superb jam into NFA, earning high praise from reviewers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (9/5) outweighs the decent but imperfect recording that is limited to the last half hour; overall rating reflects a high‑quality show with good audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall, slight speed/pitch variation noted by one reviewer; praised as an upgrade over older sources but only the last ~30 minutes are present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Main Ten",
+      "Alligator",
+      "NFA"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only the latter half of the concert is captured, but it flows powerfully with Good Lovin > Main Ten > Good Lovin and then Alligator into a thrilling NFA jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Unusual lyric (“Mama told me don’t go down there”) noted, though not tied to a specific song.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Main Ten": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:41:51.685738+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-06.aud.weinberg.moore-berger.119818.flac16"
+}

@@ -1,0 +1,97 @@
+{
+  "summary": "Fair‑sounding matrix recording captures a strong 1976 set with smoking Help>Slip>Franklin's and stellar Cosmic Charlie despite patchy audience sections.",
+  "review": "The show is widely praised for its high‑energy moments – the Help>Slip>Franklin’s sequence, a soaring Candyman, and a trippy Cosmic Charlie among others – and many listeners consider it a highlight of the ’76 tour.  The recording, however, is a patchwork of soundboard tracks and boomy audience (AUD) sections that vary from excellent instrument separation to muddy, distant patches, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance 4‑5 stars and love key songs, but many note inconsistent audio quality; the weighted average of star ratings (3.75) adjusted for strong musical merit yields a solid 4.1."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Combination of soundboard and audience sources; SBD portions are clear with good instrument separation, but numerous AUD patches are boomy, distant or muffled.  Patching is uneven – some sections sound crisp while others are muddy or have drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's",
+      "Cosmic Charlie",
+      "Mission In The Rain",
+      "Candyman",
+      "Let It Grow",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Stella Blue (shaky in some sections)",
+      "Mission In The Rain (audio patch quality)"
+    ],
+    "setlist_flow": "Overall a solid, laid‑back ’76 set with a strong second half; transitions are generally smooth but the listening flow is disrupted by inconsistent audio patches."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos receive high praise on Candyman, Cosmic Charlie and Let It Grow, though a few reviewers note occasional inconsistency or lack of energy.",
+    "Phil": "Phil Lesh’s bass work is highlighted for correcting timing issues during the Stella Blue segue with strong chords.",
+    "Bob": "",
+    "Keys": "Keith's piano is singled out as excellent on Sugaree and throughout the show; overall keyboard work is praised.",
+    "Drums": "The drummers are described as ‘dialed in’ and providing a solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Mission In The Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:17:14.727761+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-04.sbd.cotsman.9797.sbeok.shnf"
+}

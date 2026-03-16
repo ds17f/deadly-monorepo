@@ -1,0 +1,68 @@
+{
+  "summary": "A spirited 1974 Philadelphia show captured on a listenable audience tape – China > Rider and the Truckin' jam shine, while the recording sounds tinny to some ears.",
+  "review": "The performance is widely praised for its high‑energy first‑set China > Rider and an expansive second‑set Truckin' improvisation that borders on a Dark Star vibe.  Most listeners find the audience tape surprisingly clear for the era, though several note a thin, mono‑ish sound with limited instrument separation.  Overall the show is considered one of the standout gigs of the ’74 run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Thirteen reviews give an average of ~4.4 stars; the majority are enthusiastic about the music, while recording quality draws mixed but generally acceptable comments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners describe a tinny, somewhat mono sound with limited instrument separation and occasional low‑volume sections, but many still find it balanced enough to enjoy the performance.  No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Truckin' Jam",
+      "The Other One (themes)",
+      "Playin'",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds around the soaring China > Rider, while the second set delivers a marathon Truckin' jam that keeps the band in top improvisational form; reviewers note the concert’s pacing as consistently high‑energy."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone and wah‑pedal clicks are highlighted as exceptional, especially during the Truckin' sequence.",
+    "Phil": "Mentioned positively for being “out there” with strong bass presence in the jam sections.",
+    "Bob": "",
+    "Keys": "Keith’s wild Rhodes piano work on Scarlet Begonias and Playin’ is praised, though some reviewers feel the tape doesn’t capture its nuance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin' Jam": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Seastones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:42:41.816743+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-08-05.aud.weiner.21294.sbeok.shnf"
+}

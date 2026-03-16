@@ -1,0 +1,39 @@
+{
+  "summary": "A wildly enthusiastic fan recounts backstage antics surrounding \"Touch of Grey\" but provides no details on the recording itself.",
+  "review": "The sole review is a colorful, drug‑laden anecdote about Jerry Garcia and the band’s backstage vibe, declaring this performance the best ever for \"Touch of Grey.\" No information is given about sound quality, source type, or musical execution beyond that single song reference.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one highly‑rated (5‑star) review exists and it praises the show in a non‑technical, anecdotal way; lack of recording details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "The reviewer does not mention any aspects of sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer describes Jerry experimenting with ketamine backstage and inventing new words, but makes no comment on his playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:22:01.634441+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-04-05.mk21-fob-dnk.raras.8842.sbeok.shnf"
+}

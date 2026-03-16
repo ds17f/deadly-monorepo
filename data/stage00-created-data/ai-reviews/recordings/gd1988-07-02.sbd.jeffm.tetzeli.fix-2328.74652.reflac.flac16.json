@@ -1,0 +1,44 @@
+{
+  "summary": "Great performance highlighted by an exceptional Playing in the Band, but no specific information on recording quality.",
+  "review": "The reviewer rates the show highly, noting that the second set outshines the first and praising the crazy guitar work and a standout Playing in the Band. Minor criticism is directed at the vocalist’s shouting during All Along the Watchtower, while stage banter adds to the fun atmosphere. No details are given about the audio fidelity of the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Single positive review (4 stars) emphasizes strong musical performance; lack of recording comments leads to a cautious rating around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on audio clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as considerably stronger than the first; stage banter noted as entertaining."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "All Along the Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:09:45.096849+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-02.sbd.jeffm.tetzeli.fix-2328.74652.reflac.flac16"
+}

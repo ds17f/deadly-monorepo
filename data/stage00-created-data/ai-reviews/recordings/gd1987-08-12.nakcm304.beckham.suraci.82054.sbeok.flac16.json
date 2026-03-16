@@ -1,0 +1,88 @@
+{
+  "summary": "Clear, well‑balanced tape captures a strong two‑set show highlighted by a soaring Wharf Rat and tight Good Times.",
+  "review": "The recording is praised for its clarity, minimal hiss and good vocal presence, making the band’s interplay easy to hear. Musically the concert delivers solid performances throughout both sets, with the Wharf Rat singled out as a highlight alongside strong renditions of Good Times, Sugaree, Bird Song and the China/Rider pairing. Overall the fans are enthusiastic about both the sound and the playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All four reviewers express enthusiasm; three give 4‑5 stars, one notes a modest recording score but still rates the material highly. The show is described as strong with several standout songs and the audio quality is repeatedly called clear and great."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Clear sound with nice vocal detail, audible Phil bass ‘thunder’, some hiss but not distracting; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Good Times",
+      "Sugaree",
+      "Bird Song",
+      "China/Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are described as strong and well‑balanced; the first set is solid though a bit short, while the second set builds momentum with a nice China/Rider sequence and an emotional Wharf Rat finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as sounding wonderful and delivering plenty of guitar.",
+    "Phil": "His bass (‘Phil thunder’) is audible and praised.",
+    "Bob": "",
+    "Keys": "Keyboards are noted (“plenty of… keys”) but no specific comment on the player.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Times": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:43:06.172746+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-12.nakcm304.beckham.suraci.82054.sbeok.flac16"
+}

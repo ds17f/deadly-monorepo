@@ -1,0 +1,31 @@
+{
+  "summary": "Good recording of a nice Grateful Dead show",
+  "review": "The reviewer rates the set with four stars, calling it a \"nice show\" and praising the recording as good. No specific details about performance or sound quality are given, but the overall impression is positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief 4‑star review mentioning a good recording and nice show; limited detail reduces confidence in rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as good but provides no further technical details."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T04:44:27.837361+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-10.140085.aud.lamarre.berger.flac16"
+}

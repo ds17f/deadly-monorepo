@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent sound‑board capture of a stellar April ’71 show, highlighted by Bertha, The Greatest Story Ever Told, Sugar Magnolia, Truckin' and several other gems.",
+  "review": "Reviewers rave about this being the best SBD version available – crystal‑clear mix with no audible flaws. Musically the first set is described as lazy, but the second set (especially its latter half) is superlative, featuring standout performances of Bertha, The Greatest Story Ever Told, Sugar Magnolia, Not Fade Away reprise and Truckin'.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers gave high marks (5, 5, 4) and praised both the performance and the soundboard quality; weighted average of show (≈4.5) and recording (≈5) yields a strong 4.6 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best SBD version to date – crisp, clear mix with no noted drop‑outs or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "The Greatest Story Ever Told",
+      "Sugar Magnolia",
+      "Not Fade Away (reprise)",
+      "Truckin'",
+      "Oh Boy",
+      "Hog For You Baby",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set considered lazy, while the second half of the show is praised as superlative, giving the concert a strong overall arc."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away (reprise)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Oh Boy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hog For You Baby": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:11:18.302548+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-06.sbd.ifthir.smith.gems.109026.flac24"
+}

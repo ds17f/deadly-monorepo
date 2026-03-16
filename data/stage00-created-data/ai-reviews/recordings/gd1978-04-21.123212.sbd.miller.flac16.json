@@ -1,0 +1,45 @@
+{
+  "summary": "High‑fidelity soundboard capture of an energetic spring‑tour show with standout percussion jam, Bob’s guitar flourishes and Donna Jean’s full‑throttle vocals.",
+  "review": "The recording is praised for its crystal‑clear fidelity and punchy drum mix, delivering a vivid listening experience. The performance shines in the extended percussion segment, powerful Truckin' drive and a full‑body rendition of Playing In The Band, though one reviewer felt Garcia’s vocal was lackluster that night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong consensus on excellent recording quality and several standout musical moments; a single mixed review about Garcia lowers the overall show rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great fidelity, crisp mix, punchy drums described as \"artillery\" and clear percussion throughout; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show builds a lively groove early and culminates in an extended percussion jam at the end, keeping the energy high despite occasional vocal slur from Garcia."
+  },
+  "band_member_comments": {
+    "Jerry": "Joins the late‑show percussion segment, adding drums alongside the rest of the band; some note his guitar work was less adventurous.",
+    "Phil": "",
+    "Bob": "Provides “nice flourishes” on rhythm guitar that reviewers highlight positively.",
+    "Keys": "",
+    "Drums": "Described as having a powerful, artillery‑like punch and driving the overall high energy of the performance."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:36:17.507505+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-21.123212.sbd.miller.flac16"
+}

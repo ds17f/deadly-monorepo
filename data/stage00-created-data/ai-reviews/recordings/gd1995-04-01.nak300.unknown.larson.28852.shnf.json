@@ -1,0 +1,61 @@
+{
+  "summary": "A crisp, up‑front audience recording captures a solid 1995 spring‑tour show highlighted by a soaring Foolish Heart jam and tight group interplay.",
+  "review": "The performance is praised for Jerry’s inspired guitar work on Foolish Heart, thunderous drums, and strong keyboard contributions, with standout moments like Hell in a Bucket and a fast‑paced Eyes. The audience recording, while occasionally shaky, sounds surprisingly clear—almost soundboard quality—making the show both enjoyable and historically interesting.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Three detailed reviews consistently note a strong musical performance (≈4.2) and generally good recording quality (≈3.8), yielding an overall rating around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally up‑front and clear, sounding close to a soundboard; occasional shakiness noted in one review but overall crisp with good balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Hell in a Bucket",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid, well‑paced set with many first‑time tour performances; the band’s interplay feels tight and the energy builds nicely through the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong guitar tone, especially on Foolish Heart where he steps back to mesh with the band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s keyboards are highlighted for inventive solos and a unique arpeggiating drum‑like effect.",
+    "Drums": "Described as thunderous, off‑the‑chain, and featuring creative effects that add to the jam dynamics."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:34:47.974249+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-01.nak300.unknown.larson.28852.shnf"
+}

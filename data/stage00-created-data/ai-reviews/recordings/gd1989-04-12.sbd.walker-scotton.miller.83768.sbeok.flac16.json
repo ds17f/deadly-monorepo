@@ -1,0 +1,94 @@
+{
+  "summary": "Solid soundboard capture of an average‑to‑good show highlighted by a ripping Brent solo on New Minglewood and a strong blues set, though the second half loses focus.",
+  "review": "The recording (a soundboard source) is generally clear with nice balance – C Miller’s work is praised, even if some older audience copies sounded tinny. Musically the night delivers a hot first set and a solid rock‑blues second set featuring standout moments like Brent’s solo on New Minglewood Blues and a tight Truckin’ → Smokestack Lightning → Spoonful run, but the later portion drifts, especially the puzzling handling of “He’s Gone.” Overall it’s a respectable show with flashes of brilliance rather than a classic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Reviews are mixed but lean toward moderate praise; performance is decent with notable highlights, and the soundboard recording is generally good, yielding an overall rating in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice, clear mix noted by reviewers (C Miller), though some older audience copies were described as tinny. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Minglewood Blues",
+      "Truckin'",
+      "Wharf Rat",
+      "Black Muddy River"
+    ],
+    "poor_songs": [
+      "He's Gone"
+    ],
+    "setlist_flow": "First set fires up, second set starts strong with a blues‑rock sequence but later becomes confused, especially around “He’s Gone,” ending on a solid encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Has fun leading the crowd (e.g., ‘Tenn Jed’) and keeps energy high.",
+    "Phil": "",
+    "Bob": "Vocals sound nasal and slightly strained, affecting a few songs.",
+    "Keys": "Brent delivers a ripping solo on New Minglewood Blues; keyboard work praised throughout.",
+    "Drums": "Funky, solid drumming noted as a strength of the performance."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:30:16.565221+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-12.sbd.walker-scotton.miller.83768.sbeok.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Crystal‑clear audience tape captures a solid 1970 show with standout versions of That's It into Sugar Magnolia and deep blues numbers.",
+  "review": "The patched audience recording is remarkably clear—some reviewers call it the best‑sounding 1970 audience tape—even though a quirky reversed wah‑pedal blip appears at the start of Sugar Magnolia. Musically the concert delivers solid playing with highlights such as That's It segueing into Sugar Magnolia, a snaky Smokestack Lightning, Deep Elem Blues and a strong Pigpen presence, making it an enjoyable listen despite not being the band’s peak 1970 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Four reviews are largely enthusiastic about both the recording (clear, excellent audience source) and the musical performance (several standout songs), offset by one modest 3‑star review noting only an average show."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptionally clear and sweet for a 1970 audience tape; extensive patch work noted but successful. Minor oddity: a reversed Vox wah‑pedal sound at the beginning of Sugar Magnolia."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "That's It",
+      "Sugar Magnolia",
+      "The Other One",
+      "Smokestack Lightning",
+      "Deep Elem Blues",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical early‑70s setlist that smolders and erupts in intensity; strong transitions especially the That's It → Sugar Magnolia segue, with Pigpen’s organ adding a bluesy backbone."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's Strat tone on The Other One is praised as sweet; his brief wah‑pedal mishap at the start of Sugar Magnolia is noted.",
+    "Phil": "",
+    "Bob": "Bob Weir’s rhythm work described as solid ‘Good Bob rockers.’",
+    "Keys": "Pigpen’s organ and vocal leadership highlighted as a strong presence throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That's It": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:59:43.287253+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-12-28.sonyECM22p.kaslow-todd.patched-tobin.87365.sbeok.flac16"
+}

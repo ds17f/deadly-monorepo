@@ -1,0 +1,64 @@
+{
+  "summary": "St. Stephen > Not Fade Away > Midnight Hour shines; sweet acoustic set",
+  "blurb": "The show delivers a scorching St. Stephen → Not Fade Away → Midnight Hour medley and a beautifully rendered acoustic segment highlighted by Black Peter. Jerry’s vocals are especially soulful on Baby Blue, while Pigpen’s organ adds a churchy texture. Overall the performance is tight with crisp drums and strong transitions.",
+  "review": "June 4, 1970 at Fillmore West captures the Dead in top form, moving effortlessly from a warm acoustic set into a fiery electric second half. Highlights include a flawless Black Peter that lets Jerry’s voice sound unusually sweet, an inspiring Attics Of My Life, and the legendary three‑song stretch – Saint Stephen into Not Fade Away and straight into In The Midnight Hour – where Mickey Hart’s “decidedly non‑country country” drumming drives the band forward. Pigpen’s organ, though low in some mixes, adds a powerful church‑like undercurrent on It’s All Over Now Baby Blue, and the rhythm section of Mickey and Bill stays crisp and tight throughout. With several recordings available, the Miller soundboard snippet stands out for its crystal‑clear guitars and drums, making it the go‑to source for anyone wanting to experience this iconic Fillmore night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 32,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four recordings describe the show in glowing terms (stellar St. Stephen > Not Fade Away > Midnight Hour, sweet acoustic set, superb organ and vocal work) while one is mixed. Consistent praise across multiple sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-06-04.sbd.miller.12135.sbeok.shnf",
+    "reason": "Excellent soundboard capture with crisp drums, front‑center guitars and a stellar St. Stephen jam; clean mix makes it the most reliable listening source."
+  },
+  "key_highlights": [
+    "Legendary Saint Stephen → Not Fade Away → Midnight Hour sequence",
+    "Sweet acoustic set featuring Black Peter and Attics Of My Life",
+    "Rare Pigpen organ presence adding churchy texture on Baby Blue",
+    "Crisp, tight drumming that drives the transitions between sets"
+  ],
+  "song_highlights": [
+    "St. Stephen",
+    "Not Fade Away",
+    "In The Midnight Hour",
+    "It's All Over Now Baby Blue",
+    "Attics Of My Life",
+    "Black Peter"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s voice is unusually sweet on the acoustic numbers and turns soulful on “It’s All Over Now Baby Blue,” while his lead guitar drives the electric set with confidence.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Mickey’s drumming is crisp, tight, and adds a distinctive non‑country feel that propels the St. Stephen → Not Fade Away → Midnight Hour transition.",
+    "Billy": "Bill’s drums lock in with Mickey, delivering clean, driving rhythms throughout both sets."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-19T20:32:50.603111+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Saint Stephen",
+      "Not Fade Away",
+      "In The Midnight Hour"
+    ],
+    [
+      "It's All Over Now Baby Blue"
+    ],
+    [
+      "Attics Of My Life"
+    ],
+    [
+      "Black Peter"
+    ]
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "summary": "Laid‑back Paris show with soaring Eyes Of The World and strong Seastones",
+  "blurb": "The set features standout Peggy‑O, an extended Deal intro and a soaring Eyes Of The World. Phil’s bass is consistently praised while Bob’s rhythm guitar is largely buried in the mix. Seastones adds an experimental edge to the second set.",
+  "review": "On September 21, 1974 at Paris’s Palais Des Sports the Dead delivered a relaxed yet adventurous performance that still rewards repeated spins. The first set rolls through familiar terrain – Bertha, Sugaree and a crisp Peggy‑O – before slipping into an extended, funk‑laden Deal intro that sets up a soaring Eyes Of The World segue into China Doll. After a brief intermission the second set dives into experimental territory with Seastones*, then bursts back into the classic double‑Playin’ In The Band jam, while Phil’s “smoking” bass drives every groove. The third set supplies fan‑favorites – Uncle John’s Band, Ship Of Fools and an emotionally charged Morning Dew – before closing with Sugar Magnolia and a rousing Casey Jones encore. Across all three soundboard sources the band is in solid form: Phil Lesh’s bass work shines, Jerry Garcia’s lead lines are tasteful (if occasionally restrained), and Mickey Hart and Bill Kreutzmann keep a steady pulse, even if Mickey’s playing is described as pushing ahead at times. The main drawback is the mix – Bob Weir’s rhythm guitar is often buried or missing, and the panning can feel odd – but the musical moments more than compensate for these technical quirks.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 39,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.1,
+      "sentiment_rationale": "Multiple recordings praise standout songs (Peggy-O, Eyes Of The World, Seastones) and Phil's bass, while only a single source notes mixed/negative aspects (Jerry slow, Bob buried). Overall sentiment is clearly positive, warranting a moderate +1.1 adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.1 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd74-09-21.sbd.miller.30654.sbeok.flacf",
+    "reason": "Crisp soundboard with good stereo imaging captures the highlights clearly, despite the occasional Bob mix issue."
+  },
+  "key_highlights": [
+    "Peggy‑O and Deal deliver a relaxed yet funky first‑set momentum.",
+    "Eyes Of The World soars with expansive improvisation.",
+    "Seastones* provides an experimental interlude that shifts the show’s texture.",
+    "Phil Lesh’s bass is consistently described as ‘smoking’ and drives the groove."
+  ],
+  "song_highlights": [
+    "Peggy-O",
+    "Deal",
+    "Eyes Of The World",
+    "Seastones*",
+    "Morning Dew",
+    "Ship Of Fools",
+    "Uncle John's Band",
+    "Sugaree"
+  ],
+  "band_performance": {
+    "Jerry": "Provides solid lead work and tasteful solos; some listeners note a slower, more restrained approach on this night.",
+    "Phil": "Delivers ‘smoking’ bass throughout, praised for both groove and vocal contribution on Uncle John's Band.",
+    "Bob": "Rhythm guitar is largely buried or missing in the mix, especially noticeable early in the set.",
+    "Keith": "Atmospheric keyboards add depth to Seastones*; balance issues are noted but overall texture is appreciated.",
+    "Mickey": "Steady drumming with occasional over‑playing that pushes ahead of the beat, yet keeps a solid foundation.",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-23T01:04:14.129334+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Peggy-O"
+    ],
+    [
+      "Deal"
+    ],
+    [
+      "Eyes Of The World",
+      "China Doll"
+    ],
+    [
+      "Seastones*",
+      "Playing In The Band",
+      "Drums",
+      "Playing In The Band"
+    ],
+    [
+      "Morning Dew"
+    ],
+    [
+      "Ship Of Fools"
+    ],
+    [
+      "Uncle John's Band"
+    ],
+    [
+      "Sugaree"
+    ]
+  ]
+}

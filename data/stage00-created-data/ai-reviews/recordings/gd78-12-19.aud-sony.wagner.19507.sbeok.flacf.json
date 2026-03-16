@@ -1,0 +1,116 @@
+{
+  "summary": "Excellent audience recording that captures a late‑'78 show highlighted by a blistering Stella Blue→Not Fade Away transition and solid performances throughout.",
+  "review": "The tape delivers an unusually clear, stereo‑rich audience sound that lets listeners feel like they’re twenty rows back from the stage, despite occasional low‑end loss. Musically the concert shines in the second set – Scarlet > Fire, Truckin', The Other One and the unforgettable Stella Blue→Not Fade Away segue are repeatedly praised, while the first set is seen as a slower warm‑up.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews are overwhelmingly positive (mostly 4–5 stars), highlighting both superb audience recording quality and strong musical performance, especially the second‑set jams."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, stereo audience mix with drums that echo nicely; feels like sitting close to the stage. Some reviewers note low bass/frequency loss and Keith's keyboards being drowned out, but overall crispness is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue > Not Fade Away",
+      "Scarlet > Fire",
+      "Truckin'",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Me and My Uncle",
+      "Promised Land",
+      "Stagger Lee"
+    ],
+    "setlist_flow": "First set described as a slower, mellow start (Half Step > Franklin's, Me & My Uncle) that builds into a high‑energy second set with seamless transitions and several classic jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is repeatedly praised – finger‑work on Stella Blue, strong tone throughout, though one reviewer felt he sounded a bit “sick” early in the first set.",
+    "Phil": "Bass often described as lost or weak in the audience mix; vocal contributions on choruses noted as sub‑par by at least one fan.",
+    "Bob": "Weir’s rapport with Garcia highlighted as excellent, especially in the second set jams.",
+    "Keys": "Keith’s keyboards are said to be drowned out in the mix and some note a lack of keyboard presence overall.",
+    "Drums": "Drum sound is praised for its echo and presence; drums segment during Truckin' gets specific commendation."
+  },
+  "song_mentions": {
+    "Stella Blue > Not Fade Away": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step > Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lightning > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:36:07.848277+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-19.aud-sony.wagner.19507.sbeok.flacf"
+}

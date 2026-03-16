@@ -1,0 +1,37 @@
+{
+  "summary": "Decent, well‑played performance with no clear recording details.",
+  "review": "The lone reviewer gives the show a modest three‑star rating, noting that it was \"well‑played\" and highlighting a nice NFA/GDTR jam. No comments are made about the source or clarity of the audio, so the technical quality remains uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review; it praises the playing (show quality) but provides no recording information, leading to a middle‑of‑the‑road rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer mentions a nice NFA/GDTR jam, suggesting the set had solid momentum but provides no further detail on pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:20:23.599064+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-24.sbd.clevenger.6190.sbefail.shnf"
+}

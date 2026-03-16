@@ -1,0 +1,72 @@
+{
+  "summary": "Excellent soundboard mix captures a powerhouse Dead show highlighted by a scorching Truckin', a 28‑minute epic The Other One, and a fiery He's Gone.",
+  "review": "The Miller soundboard source delivers crystal‑clear instrument separation with only a brief glitch in the middle of The Other One. Musically the performance is top‑notch – Jerry rips through Truckin', the band stretches The Other One to over 28 minutes of spacey improvisation, and He's Gone closes with strong vocals. Overall the recording is listenable and the set flows smoothly from high‑octane jams to tight songwork.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive (average 4.4 stars), praising both the musical performance and the high‑quality soundboard mix; minor technical glitches do not detract from overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix where every instrument is distinct; slight feedback issue on Truckin' and a brief glitch around the 14‑minute mark of The Other One, but otherwise clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "He's Gone",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight four‑track set (Truckin' → Drums → The Other One → He's Gone) that builds energy early and sustains it with a massive, space‑laden Other One before wrapping up on an upbeat He's Gone; transitions are seamless and the jam sections feel organic."
+  },
+  "band_member_comments": {
+    "Jerry": "Ripping solos on Truckin', heavy reverb/wah in The Other One, strong intro before Me & My Uncle, occasional feedback but overall stellar guitar work.",
+    "Phil": "Solid bass foundation noted throughout especially during the space jam; stays locked with drums and Jerry's wah.",
+    "Bob": "Slashing leads on Truckin' and The Other One; limited vocal verse on Truckin' due to deep immersion in the jam.",
+    "Keys": "Keith's piano shines, Pigpen's organ adds eerie fills throughout The Other One, both clear in the mix.",
+    "Drums": "Billy’s jazzy, hammer‑on drumbeat drives the set; praised for powerful kit work on Truckin' and PITB."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wrong Doing Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Donna Jean": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T13:54:20.049876+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-05-13.psbd.miller.21725.sbeok.shnf"
+}

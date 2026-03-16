@@ -1,0 +1,31 @@
+{
+  "summary": "A solid audience recording praised for its great sound quality.",
+  "review": "The lone review rates the tape four stars, calling it \"Sounds great\" and noting it as the best audience source available. While no musical details are given, the positive tone indicates listeners find the audio clear and enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Only one review (4 ★) focusing on sound quality; no musical commentary, so rating leans toward the recording’s strength but limited data keeps confidence moderate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Review mentions the audio sounds great with no reported issues, implying a clear and pleasant listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T03:17:05.703155+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-12-31.150302.FOB.DFC.Schoeps.Buick.Noel.t-flac1648"
+}

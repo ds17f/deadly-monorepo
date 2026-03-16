@@ -1,0 +1,89 @@
+{
+  "summary": "Excellent soundboard mix of a classic Winterland show with standout performances of Turn On Your Lovelight, Cumberland Blues and Deal, despite some missing portions.",
+  "review": "The recording is a high‑fidelity SBD capture (with the first set only available as audience tape) that delivers crisp instrument separation and an overall excellent mix, though it needs slight pitch correction on several tracks. Musically the show shines in the second set – Pigpen’s Turn On Your Lovelight, tight unit work on Cumberland Blues and Big Boss Man, and inspired solos from Jerry on Me & My Uncle and Johnny B. Goode – while a few fans note that the Lovelight performance has aged. Overall the consensus is very positive with only occasional remarks about missing songs or modest set‑list strength.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (6 of 7) give 4–5 stars and praise both the soundboard quality and many standout songs; only one lukewarm review mentions lack of highlights, leading to a solid high‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, Hi‑Fi stereo SBD mix praised as excellent; first set only exists as audience tape. Minor pitch‑correction needed on several tracks and a few isolated drop‑outs noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn On Your Lovelight",
+      "Cumberland Blues",
+      "Big Boss Man",
+      "Me & My Uncle",
+      "Deal",
+      "Uncle John's Band",
+      "Johnny B. Goode",
+      "Next Time You See Me",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Turn On Your Lovelight"
+    ],
+    "setlist_flow": "Second set is highly praised for tight unit playing and memorable solos; first set, available only as audience recording, is considered average but still solid."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong lead work – inventive solo behind Bob on Me & My Uncle, fiery Johnny B. Goode, and overall “Jer bein’ good” throughout the second set.",
+    "Phil": "Described as a ‘behemoth driving a tank’ on Cumberland Blues, contributing to a tight rhythm section.",
+    "Bob": "Mentioned indirectly – Jerry’s solo sits behind Bobby’s rhythm during Me & My Uncle.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Boss Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:31:31.800411+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-05-30.sbd.miller.94119.flac16"
+}

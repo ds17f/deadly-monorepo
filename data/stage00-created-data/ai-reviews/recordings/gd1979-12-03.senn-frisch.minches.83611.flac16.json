@@ -1,0 +1,39 @@
+{
+  "summary": "Energetic audience‑captured performance with a notably strange Truckin' ending; recording quality not detailed.",
+  "review": "One reviewer raves about the electric vibe from the stage, having been in the third row center, while another flags the unusually odd conclusion to Truckin'. No concrete comments on sound fidelity are provided, leaving the technical quality uncertain. Overall the show is praised for its energy but marred by a puzzling ending.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "low",
+    "rationale": "Limited data (2 reviews) with one positive and one critical comment; show is energetic but has an odd ending, recording quality not discussed."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit remarks about audio clarity or mix; reviewer was in the audience but provides no technical assessment."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "High energy throughout, but the concert ends with a strangely executed Truckin' that left listeners confused."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:50:37.423387+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-03.senn-frisch.minches.83611.flac16"
+}

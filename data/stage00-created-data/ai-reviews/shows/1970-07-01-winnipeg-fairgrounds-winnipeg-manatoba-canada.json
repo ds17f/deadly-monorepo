@@ -1,0 +1,55 @@
+{
+  "summary": "Novel Festival Express excerpt; uneven playing, humorous moments",
+  "blurb": "The three-song set features Hard To Handle, Easy Wind and Candyman, captured as a brief soundboard clip from the Festival Express film. Performance is uneven and audio quality is only fair, though Jerry and Phil’s banter is noted as \"really really funny.\" Drums are minimal, giving the excerpt more of a novelty feel than a full concert.",
+  "review": "On July 1 1970 at the Winnipeg Fairgrounds, the Grateful Dead slipped into the Festival Express film with a three‑song snippet that feels more like a quirky side‑project than a polished set. The band runs through Hard To Handle, Easy Wind and Candyman, but the playing is uneven and the soundboard capture is only fair – reviewers describe it as \"not great\" and lacking polish. What does shine, however, is the humor: both Jerry Garcia and Phil Lesh are called \"really really funny\" in this fragment, offering a glimpse of their lighter side on stage. The percussion section is notably sparse; listeners note that Pigpen (and by extension the drummers) \"does not say much if anything regrettably,\" leaving the rhythm feeling thin. Overall, this recording serves as a novelty excerpt for completists rather than a definitive representation of the show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.5,
+    "confidence": "low",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 3,
+      "review_count_boost": 0.0,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Recording analysis labels sentiment as mixed, with neither strong praise nor consistent criticism, leading to a neutral adjustment.",
+      "final_calculation": "2.5 + 0.0 + 0.0 = 2.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-07-01.sbd.cotsman.9624.sbeok.shnf",
+    "reason": "Only available soundboard excerpt of this show; despite fair quality it is the sole source."
+  },
+  "key_highlights": [
+    "Novel Festival Express excerpt rather than a full concert",
+    "Humorous interplay between Jerry and Phil, described as \"really really funny\"",
+    "Sparse drum presence gives the recording a novelty feel"
+  ],
+  "song_highlights": [
+    "Hard To Handle",
+    "Easy Wind",
+    "Candyman"
+  ],
+  "band_performance": {
+    "Jerry": "Shows a humorous side, described as \"really really funny\" in the clip.",
+    "Phil": "Also noted as \"really really funny,\" adding playful banter to the set.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Drumming is minimal; reviewer notes Pig does not say much if anything regrettably.",
+    "Billy": "Drums are sparse, contributing to the thin rhythmic texture of the excerpt."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-19T21:48:10.268299+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Easy Wind"
+    ],
+    [
+      "Candyman"
+    ]
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent matrix recording with crystal‑clear mix, featuring a high‑energy 1980 show highlighted by Jack Straw > Franklin’s, Lightning > Supplication and an all‑time Althea.",
+  "review": "The crowd‑sourced matrix tape captures the 1980 performance with outstanding clarity and balance – reviewers rave about the superb mix and “excellent sound.” Musically the show is praised for its brisk pacing, seamless transitions and several standout moments such as the Jack Straw > Franklin’s opener, Lightning > Supplication, Althea and a soaring Terrapin Station, all delivered with high‑effort playing from the whole band.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven detailed reviews are 4–5 stars and consistently highlight both a superb performance and an excellent‑quality matrix recording, giving the combined weighted score well above 4.5."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the mix \"crisp\", \"great\" and \"excellent sound,\" noting a clean balance of instruments with no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Franklin's Tower",
+      "Lightning > Supplication",
+      "Althea",
+      "Terrapin Station",
+      "Good Lovin'",
+      "The Other One",
+      "Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers praise the brisk pace, tight transitions (e.g., Playin → Uncle John's, Space vehicle), and an overall energetic arc that builds from a strong first set into an all‑timer second set."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar swings from mellow to \"ape‑shit\" intensity, delivering soaring leads on the opener and Rider.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocal harmonies receive special love; fans note his presence as a highlight for Bobby enthusiasts.",
+    "Keys": "Brent’s B3 organ work shines – backing vocals, rich comping, and standout moments throughout.",
+    "Drums": "The drum section gets nods for tight transitions (cow‑bell usage) and the driving Space segment."
+  },
+  "song_mentions": {
+    "Jack Straw > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lightning > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:42:55.555014+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-15.126692.mtx.dusborne.flac16"
+}

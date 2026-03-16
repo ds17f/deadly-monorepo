@@ -1,0 +1,52 @@
+{
+  "summary": "Matrix‑sourced recording with an echo‑y, slightly warbly sound that some listeners find charming, capturing a solid performance highlighted by a melting \"Let It Grow,\" a smooth second set and a standout \"Passenger\" encore.",
+  "review": "The show is praised for its compact, rocking energy, tight second‑set flow and memorable moments like the fusion‑ish \"Let It Grow\" and an unforgettable \"Passenger\" encore. The matrix recording adds an indoor‑bounce echo and occasional speed‑related warble that divides listeners – loved by some for its ambience, criticized by others as a distracting chorus‑like effect.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently rave about the musical performance while being split on the matrix recording’s speed/warble issues, leading to a solid but not flawless overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Echo‑y, indoor‑bounce character with toms, cymbals and cowbell prominent; slightly distorted keyboards. A noticeable warble/chorus effect from a minor speed mismatch is reported, giving the sound a quirky but sometimes distracting quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Passenger"
+    ],
+    "poor_songs": [
+      "Playin'"
+    ],
+    "setlist_flow": "Compact rocking first set followed by a second set that flows smoothly; fans appreciate the tighter, more concise performance compared to the longer '73‑'74 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Hoarse vocals noted; guitar tone praised and meshes well with Bob's playing.",
+    "Phil": "",
+    "Bob": "Guitar tones loved overall, though his instrument goes out of tune during \"Playin'.\"",
+    "Keys": "Slightly distorted keyboard presence highlighted.",
+    "Drums": "Toms and cymbals (and cowbell) are pushed forward in the mix."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:02:39.641845+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-11.mtx.mccabe.motb0152.110959.flac16"
+}

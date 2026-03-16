@@ -1,0 +1,78 @@
+{
+  "summary": "Soundboard recording is a bit muddy with some hiss, but it captures the high‑energy 12/29/69 show featuring standout Mason’s Children, Hard to Handle and a scorching Dancing in the Street.",
+  "review": "The tape offers a solid soundboard source (B+/A‑ grade) that, despite a touch of muddiness and hiss, conveys the room ambience and priceless banter of the night. Musically the concert shines with a monster Mason’s Children, an inspired Hard to Handle, one of the year’s best Black Peter, a juicy Easy Wind jam, and Jerry Garcia’s ferocious lead on Dancing in the Street.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Reviews overwhelmingly praise the performance (many standout songs, energetic vibe) while noting only minor recording imperfections; weighted calculation yields a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Somewhat muddy with a little hiss and room ambience that adds presence; no major drop‑outs or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mason's Children",
+      "Hard to Handle",
+      "Black Peter",
+      "Easy Wind",
+      "Dancing in the Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energy builds toward New Year's, with tight banter between songs and a solid mix of bluesy jams and rockers; the set feels cohesive despite some confusion over exact song order."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as deep, hard‑pushing and ‘dirty, nasty’ on Dancing in the Street, plus he urges crowd sing‑along during Dire Wolf.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mason's Children": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T19:25:46.772008+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-12-29.sbd.8044.sbeok.shnf"
+}

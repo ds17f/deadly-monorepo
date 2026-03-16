@@ -1,0 +1,56 @@
+{
+  "summary": "Killer‑sounding audience recording captures a smoky show with standout Comes A Time > Deal, Terrapin Station and Throwing Stones.",
+  "review": "The audience tape is remarkably clear and full‑bodied, delivering an immersive listening experience. Musically the concert smokes, highlighted by a tight Comes A Time > Deal segue, a hot Terrapin Station despite a brief vocal slip, and a solid Throwing Stones, though Phil’s Tom Thumb segment fell short of his best.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives the show a 4‑star rating and praises both performance and sound quality; minor vocal slip and a weaker Tom Thumb keep it from perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as \"killer sounding aud\" with crisp, full‑bodied audio and no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time > Deal",
+      "Terrapin Station",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set closes short with a strong Comes A Time > Deal transition; the second half maintains high energy with Terrapin Station and Throwing Stones, overall a consistently smoky performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal slip on Terrapin Station – a couple of verses messed up, but guitar work remains solid.",
+    "Phil": "Tom Thumb segment not among his better performances despite the overall smoke.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes A Time > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:37:59.959496+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-28.111343.BeyerM160.daweez.d5scott.flac16"
+}

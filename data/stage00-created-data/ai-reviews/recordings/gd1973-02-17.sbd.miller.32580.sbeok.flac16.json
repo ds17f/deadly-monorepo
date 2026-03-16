@@ -1,0 +1,107 @@
+{
+  "summary": "Soundboard recording with generally good clarity (some occasional tape cuts) captures a lively 1973 show highlighted by a smoking Here Comes Sunshine → China Cat Sunflower → I Know You Rider and upbeat Row Jimmy.",
+  "review": "The performance is praised for its energetic setlist, especially the seamless HC‑Sunshine/China‑Rider sequence, an uplifting Row Jimmy, and strong early versions of The Other One and Looks Like Rain.  While most listeners find the mix crisp and enjoyable, a few note intermittent technical glitches and tape drops in the first set.  Overall the show is considered a standout entry from the winter ’73 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of 15 reviews are 4‑5 stars, emphasizing strong musical moments and generally good soundboard quality; a few lower‑rated comments note technical hiccups, which keeps the rating just above a solid “good” level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the mix as crisp and enjoyable.  Several mention occasional technical difficulties – tape cuts, on‑stage sound issues, and occasional muddiness in the first set – but these do not dominate the overall impression."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine > China Cat Sunflower > I Know You Rider",
+      "Row Jimmy",
+      "Looks Like Rain",
+      "The Other One (early version)",
+      "Bird Song",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Loose Lucy",
+      "Here Comes Sunshine (chorus vocals)"
+    ],
+    "setlist_flow": "Fans note a solid first set hampered by occasional sound glitches, while the second set shines with smooth transitions – especially HC‑Sunshine into China Rider – and an upbeat Truckin' opener that keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as soulful, lilting, and on fire; his guitar tone is praised though a brief drop in Looks Like Rain is noted.",
+    "Phil": "Repeatedly highlighted for standout bass work, especially on the Playing‑in‑the‑Band jam and overall tightness throughout the show.",
+    "Bob": "",
+    "Keys": "Keith’s ragtime piano style shines on Looks Like Rain; keyboards are praised for melodic support during several numbers.",
+    "Drums": "Bill (Billy) Kreutzmann receives commendation for energetic drumming, notably on Beer Barrel Polka and the overall driving feel."
+  },
+  "song_mentions": {
+    "Here Comes Sunshine > China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "You Ain't Woman Enough": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beer Barrel Polka": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:18:37.953725+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-17.sbd.miller.32580.sbeok.flac16"
+}

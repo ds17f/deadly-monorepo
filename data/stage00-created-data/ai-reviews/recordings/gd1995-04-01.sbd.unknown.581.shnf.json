@@ -1,0 +1,74 @@
+{
+  "summary": "Soundboard capture of a late‑night Memphis show with standout Candyman and Foolish Heart, but plagued by a noticeable speed/pitch flaw.",
+  "review": "The performance is praised for its dreamy Candyman, a soaring Foolish Heart, and strong moments like Take Me To The River and Eyes of the World, giving the concert a warm, nostalgic feel. However, listeners report that the SBD runs about a quarter‑step sharp, making the recording sound fast and limiting its usefulness despite the solid playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight strong musical moments (high show quality) while a few flag a serious speed/pitch issue with the soundboard source, pulling the overall rating toward the middle."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Both circulating SBDs are reported to play back about a quarter‑step sharp (too fast), which many consider a fatal flaw; otherwise the mix is acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Foolish Heart",
+      "Take Me To The River",
+      "Eyes of the World",
+      "The Deal",
+      "Lazy River Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Late‑night Memphis vibe with a strong second set; transitions praised (e.g., Eyes into Drums/Space and back), though some reviewers felt the overall set was average aside from the highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as the ‘last show with Jerry’ by one reviewer and highlighted on Candyman, adding emotional weight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Positive nod to the Drums/Space segment that took listeners to an “insectoid planet.”"
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Take Me To The River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:33:40.548923+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-01.sbd.unknown.581.shnf"
+}

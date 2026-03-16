@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent Miller soundboard capture of an average April ’71 show with standout China Cat Sunflower > I Know You Rider and Beat It on Down the Line.",
+  "review": "The recording, taken from a Miller soundboard source, is praised as excellent despite some monitor problems that disrupt continuity in the first set. Musically the concert is regarded as an average ’71 performance (C+ grades), with a few high points – notably a soaring China Cat Sunflower > I Know You Rider and a superb Beat It on Down the Line – while Bertha falls flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average (≈C+), but recording quality is rated excellent; weighted blend yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller source described as excellent and crisp, though monitor problems in the first set affect continuity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "China Cat Sunflower > I Know You Rider",
+      "Beat It on Down the Line"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "First set hampered by monitor issues, second set generally average with a few high‑water marks; overall performance graded around C+."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Beat It on Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Second That Emotion": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:32:37.712397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-25.sbd.miller.95625.sbeok.flac16"
+}

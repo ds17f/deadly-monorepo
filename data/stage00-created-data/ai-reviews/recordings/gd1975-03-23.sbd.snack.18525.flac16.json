@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a historic show highlighted by an explosive Blues For Allah jam and blistering Johnny B. Goode.",
+  "review": "The recording is a clean, well‑balanced soundboard source that most listeners describe as “as good as you’re gonna get,” with only occasional minor cuts noted. Musically the concert is praised for its intense, focused jamming – especially the half‑hour Blues For Allah improvisation and a fiery Johnny B. Goode – and many reviewers call it a rare gem that hinted at the band’s future direction.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9 out of 12) are 4‑5 stars and specifically commend both performance and sound quality; only a few low‑star comments focus on band‑member preferences rather than the recording itself."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with excellent balance; a couple of reviewers note minor repeats and occasional cuts but overall regarded as top‑tier for the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blues For Allah",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as a tight, focused half‑hour Blues For Allah jam that serves as the centerpiece, bookended by high‑energy numbers like Johnny B. Goode; reviewers feel the performance flows brilliantly and foreshadows the band’s later funk‑fusion direction."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note that Merl Saunders’ keyboards push Jerry’s guitar playing to new heights, calling his tone “perfect” and the interplay “jazzy”.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Both Merl Saunders and Keith Godchaux receive high praise; Saunders is hailed for his improvisational fire while Keith’s piano work is defended as some of the best in Dead history.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Blues For Allah": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T02:00:32.635744+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-03-23.sbd.snack.18525.flac16"
+}

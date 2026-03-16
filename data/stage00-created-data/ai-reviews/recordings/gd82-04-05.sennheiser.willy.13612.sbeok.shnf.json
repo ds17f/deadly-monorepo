@@ -1,0 +1,81 @@
+{
+  "summary": "Mellow mid‑80s Spectrum show with a standout Wheel and jam‑filled second set; audience recording is rough and a bit hollow but still listenable.",
+  "review": "The performance is praised for its relaxed first set and an explosive second half highlighted by The Wheel, a massive Bertha → Playin’ in the Band → Ship of Fools sequence and tight drumming from Bill and Mickey. Recording quality varies – early‑set reverb, oversaturation and a hollow mid‑range make it a fair audience capture, yet later sections sound balanced enough to enjoy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers love the musical flow and several standout jams, while recording quality is described as uneven; weighting show (70%) and audio (30%) yields a solid mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Early‑set reverb, slight hollowness and occasional oversaturation; overall a bit too close to the board but later sections become clear with decent instrument balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "The Wheel",
+      "Bertha",
+      "Playin' in the Band",
+      "Ship of Fools",
+      "Wharf Rat",
+      "Good Lovin'",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as mellow and smooth; second set builds into long, improvisational jams that keep the energy high and showcase strong interplay among the band."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is noted as being in great shape with a sweet tone; he leads the extended jams confidently.",
+    "Phil": "Presence confirmed and bass sits well in the mix, though no specific standout comment.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboard jam (\"Brent Jam #1\") adds texture to the second set; overall keyboards are praised for blending nicely.",
+    "Drums": "Bill Kreutzmann's hi‑hat work and Mickey Hart's power are highlighted as a major strength of the performance."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:18:44.071138+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-05.sennheiser.willy.13612.sbeok.shnf"
+}

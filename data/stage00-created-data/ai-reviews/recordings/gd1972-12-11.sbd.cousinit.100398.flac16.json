@@ -1,0 +1,51 @@
+{
+  "summary": "Decent Winterland performance with solid setlist, but the recording is notably hissy and overly bright.",
+  "review": "The show delivers a rehearsed, hungry set featuring strong versions of Promised Land, Sugar Magnolia and Sunshine Daydream that capture the energy of a hometown crowd. The soundboard source is usable yet suffers from excessive hiss and a harsh EQ, requiring listeners to adjust their playback settings. Overall the music shines despite the technical shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Reviews praise the musical performance (good show quality) but criticize the recording as very hissy and bright (poor recording quality), leading to a balanced mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Described as extremely hissy, overly bright EQ; some tracks are audience recordings. Listeners report the mix is decent but far from perfect and benefit from EQ adjustments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land",
+      "Sugar Magnolia",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, rehearsed set that feels professional and hungry, delivering classic late‑1972 material for the Winterland crowd."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:32:01.784986+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-12-11.sbd.cousinit.100398.flac16"
+}

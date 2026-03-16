@@ -1,0 +1,39 @@
+{
+  "summary": "A stellar performance highlighted by a scorching Althea jam, but the soundboard mix is unbalanced with an overly loud Bob guitar and a poor‑quality audience source.",
+  "review": "The show receives high praise – especially the concluding Althea jam where Jerry’s playing is described as \"on fire\" – earning it a five‑star musical rating. However, the Charlie Miller soundboard mix is problematic, with Bob's guitar too prominent and only one bathroom‑sounding audience feed available, resulting in a poor recording assessment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Reviewers love the musical performance (5 ★) but criticize the mix heavily (2 ★); weighted average yields a solid 4.1 ★ despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Mix imbalance with Bob's guitar excessively loud; only one audience source that sounds like it was recorded in a bathroom, limiting matrix potential."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show praised for overall energy and especially the fiery Althea jam; no specific flow comments provided."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\" during the Althea jam, indicating excellent playing.",
+    "Phil": "",
+    "Bob": "His guitar is noted as being too loud in the mix, detracting from balance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:13:55.339208+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-02-19.141847.sbd.cm.miller.flac1644"
+}

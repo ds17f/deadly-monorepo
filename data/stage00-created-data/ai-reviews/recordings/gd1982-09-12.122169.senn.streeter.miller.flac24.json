@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard recording with heavy natural reverb; standout performances of Not Fade Away, The Wheel and Morning Dew make the second set a highlight.",
+  "review": "All three reviewers rave about the pristine yet unusually reverberant sound quality of this September‑12 show, crediting Frank Streeter’s board placement for the unique ambience. Musically the concert shines with an inspired Not Fade Away that closes the night, a powerful entrance into The Wheel and a moving Morning Dew, giving the second set particular sparkle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently five‑star reviews praise both the musical performance (standout songs, strong second set) and the recording quality (crisp, excellent soundboard with unique reverb), yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear board mix with an unusually heavy natural reverb caused by front‑of‑house mic placement; no dropouts or distortion reported, just a bright, upfront sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "The Wheel",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set highlighted as the show’s high point; smooth transitions and a strong opening into The Wheel, with Not Fade Away serving as an elevated closer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:03:28.866736+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-12.122169.senn.streeter.miller.flac24"
+}

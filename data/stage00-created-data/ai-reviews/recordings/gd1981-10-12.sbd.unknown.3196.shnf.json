@@ -1,0 +1,45 @@
+{
+  "summary": "A solid soundboard recording that captures Brent Mydland’s fireworks, with a soaring Althea and an exuberant “Going Down The Road.”",
+  "review": "The three reviewers rave about the show’s energy – Brent Mydland’s keyboards are described as “off the hook,” and both Althea and Going Down The Road receive glowing praise. Recording quality is noted as good with only a slight hiss, making the performance enjoyable from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive (4‑5 stars), highlighting standout songs and strong keyboard work while noting only minor hiss in the soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; a small amount of hiss is mentioned but does not detract from overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Going Down The Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the concert as firing on all cylinders, with consistent excitement from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland receives enthusiastic praise for his keyboard work and “Brent Bells.”",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Going Down The Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T15:44:57.811803+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-12.sbd.unknown.3196.shnf"
+}

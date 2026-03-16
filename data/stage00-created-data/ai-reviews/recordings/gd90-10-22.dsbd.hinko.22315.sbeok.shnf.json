@@ -1,0 +1,64 @@
+{
+  "summary": "Clear digital soundboard capture of a fiery European ’90 show with standout Valley Road, Victim of the Crime and Standing on the Moon performances.",
+  "review": "The recording is a solid digital‑board source that delivers excellent clarity and headroom, though the keyboards sit a bit high in the mix at the very start. Musically the concert bursts with energy – short but tight versions of the songs, a debut‑ever Valley Road, volcanic Victim of the Crime and an electrifying Standing on the Moon – despite a weak Bertha that many listeners will skip.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise both the performance and the clear digital‑board recording, while one notes this show as the weakest of the German dates; the weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Digital soundboard (DSBD) with amazing clarity and headroom; early mix has Vince's keyboards slightly high but balances out later. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Greatest Story Ever",
+      "Valley Road",
+      "Victim of the Crime",
+      "Standing on the Moon"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "Short, tight renditions keep momentum high; first set builds energy despite a weak Bertha, while the second set erupts with volcanic intensity and several standout moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince is a little high in the mix for the first few tunes but mellows out as the show progresses.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Valley Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim of the Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:59:24.650819+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-22.dsbd.hinko.22315.sbeok.shnf"
+}

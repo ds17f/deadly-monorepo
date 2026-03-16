@@ -1,0 +1,39 @@
+{
+  "summary": "Strong audience recording of a solid 1985 show with Garcia shredding \"Fire\" despite some sloppiness",
+  "review": "The performance is highlighted by an inspired, high‑energy rendition of “Fire,” where Jerry’s guitar work is praised as truly shredding. While the show is described as good rather than great and shows occasional slip-ups, the audience source is regarded as one of the better crowd recordings available, making it a worthwhile listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three reviews with mostly high ratings (average 4.33) note strong playing on key songs and an above‑average audience recording, yielding a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as the best AUD among similar sources; no specific audio flaws mentioned, implying clear enough crowd capture for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a good show with energetic moments, especially the Fire performance, though reviewers note occasional sloppiness that prevents it from being called great."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia \"absolutely SHREDS\" Fire and his earnestness shines through despite some sloppiness.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:41:33.183203+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-13.nak300.tonys.77489.sbeok.flac16"
+}

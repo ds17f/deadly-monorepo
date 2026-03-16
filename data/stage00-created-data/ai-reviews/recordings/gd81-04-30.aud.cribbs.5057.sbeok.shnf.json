@@ -1,0 +1,46 @@
+{
+  "summary": "Clear, well‑recorded performance highlighted by Jerry’s soaring solos and a memorable Shakedown Street, though some feel the band sounded jet‑lagged.",
+  "review": "The recording is praised for its pristine clarity, giving listeners a vivid picture of the interplay that makes early ’80s shows special. Jerry Garcia receives particular acclaim for “lofty” solo work, and Shakedown Street stands out as a highlight, while one reviewer notes a lackluster vibe on songs like Casey Jones. Overall opinions are mixed but lean positive.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four detailed reviews show generally strong musical performance (average 4‑star rating) and consistently positive comments about sound quality, yielding a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers describe the audio as clear, crisp, or “pristine,” with no complaints of drop‑outs or muddiness; likely a clean broadcast or soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [
+      "Casey Jones"
+    ],
+    "setlist_flow": "Energetic second set praised, though some feel the band sounded a bit jet‑lagged early on; overall pacing is lively with memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Lofty, soaring solos noted as a highlight; described as “at his best.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:24:53.364909+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-04-30.aud.cribbs.5057.sbeok.shnf"
+}

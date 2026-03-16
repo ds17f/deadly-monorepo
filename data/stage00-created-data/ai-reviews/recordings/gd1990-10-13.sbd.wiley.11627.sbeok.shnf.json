@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed show with a notable Jerry Garcia performance despite a flub on Bird Song; recording quality unknown",
+  "review": "One reviewer notes that Jerry was given a pot cookie before the concert and struggled, even flubbing Bird Song, yet still manages an impressive performance. No comments are made about the audio source or mix, so the technical quality remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; reviewers are ambivalent about the performance (some praise for Jerry despite difficulty) and give no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentions sound clarity, mix, or source type; unable to assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Bird Song"
+    ],
+    "setlist_flow": "No comments on pacing or set structure were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "Had a hard time playing after receiving a pot cookie; flubbed Bird Song but still performed admirably.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:28:34.404969+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-13.sbd.wiley.11627.sbeok.shnf"
+}

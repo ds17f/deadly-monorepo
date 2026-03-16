@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent ultramatrix recording of a great show, highlighted by an awesome Bird Song and strong Set 2.",
+  "review": "The reviewer rates the performance a perfect five stars, calling it a “really gr8 show” and singling out The Bird Song as outstanding. No specific technical complaints are noted, implying the ultramatrix mix sounds solid enough to let the music shine, especially the impressive second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single 5‑star review praises the show strongly but gives no concrete recording details; rating reflects strong musical impression with assumed decent matrix sound."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity or issues; reviewer’s enthusiasm suggests the ultramatrix mix is satisfactory for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 2 described as “awesome” and a major highlight of an overall great concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:46:23.091317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-29.149396.sbd.ultramatrix.miller.flac24"
+}

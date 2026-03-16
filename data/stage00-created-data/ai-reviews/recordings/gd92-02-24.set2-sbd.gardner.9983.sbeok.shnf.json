@@ -1,0 +1,67 @@
+{
+  "summary": "Good soundboard capture of a laid‑back 1992 new‑song set, highlighted by an excellent Corrina and solid The Other One despite mixed energy.",
+  "review": "The recording is generally clear with strong bass presence; a few mix quirks leave Garcia buried on several tracks. Musically the show leans toward the slower side, but fans rave about the Corrina performance and the workmanlike delivery of The Other One and Iko. Overall it’s an enjoyable snapshot of the 1992 new‑song era, though the pacing may feel sluggish to some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Three positive reviews praise sound quality and standout songs while one negative review criticizes energy and mix balance; weighted average yields a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall with strong bass, occasional mix issues (Garcia low on Corrina, Way to Go Home, Same Thing) and a slight slowdown noted by one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Corrina",
+      "The Other One",
+      "Iko",
+      "Same Thing"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set packed with newer 1992 material; the pacing is slower than usual, giving a relaxed vibe that some listeners find lacking in energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar often buried in the mix on several songs (Corrina, Way to Go Home, Same Thing).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboard tone described as carnival‑like but his solos on Iko and Same Thing were praised.",
+    "Drums": "Drummers kept a solid groove throughout; reviewers noted the band stayed “on the ball” even during slower passages."
+  },
+  "song_mentions": {
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Same Thing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:33:09.289566+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-02-24.set2-sbd.gardner.9983.sbeok.shnf"
+}

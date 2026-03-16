@@ -1,0 +1,81 @@
+{
+  "summary": "Tight second‑set jams with standout Shakedown Street and soaring Garcia",
+  "blurb": "The show delivers a punchy first set of classics and a jam‑heavy second set highlighted by Shakedown Street, Estimated Prophet into Eyes Of The World, and an inspired Jerry solo. Brent’s keyboards sit front‑and‑center in the mix and Bob adds a colorful spoken intro to Casey Jones.",
+  "review": "April 30, 1981 at Greensboro Coliseum captures the Dead in prime early‑’80s form. The first set rolls through fan favorites – Jack Straw, Peggy‑O, C.C. Rider and a bright China Cat > I Know You Rider segue – with tight pacing that feels like a greatest‑hits showcase. The second set flips the switch: Shakedown Street erupts into a soaring jam, followed by a fluid Estimated Prophet → Eyes Of The World sequence where Jerry’s improvisations are described as “creative” and “soaring,” even “at his best.” Brent Mydland’s keyboards are unusually forward in the mix, adding inventive color to the extended improvisations. The encore closes with a lively Casey Jones, complete with Bob’s colorful spoken intro. Across multiple sources the performance is praised for its energy and musicianship, though a few note a slight jet‑lagged feel early on; overall the show stands out as a solid, enjoyable snapshot of the era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings are clearly positive, praising the soundboard capture, standout songs (China Rider, Shakedown Street, Loser, Casey Jones) and Jerry’s soaring solos; two recordings are mixed but only note minor jet‑lagged feeling and a weaker Casey Jones. The consistent high praise across multiple sources warrants a moderate positive sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-04-30.sbd.miller.91728.flac16",
+    "reason": "Excellent soundboard capture with clean, well‑balanced mix; Brent’s keys are prominent and the recording is virtually free of audience bleed, delivering crystal clarity throughout."
+  },
+  "key_highlights": [
+    "Second set jam‑fest with tight transitions and extended improvisations.",
+    "Brent Mydland’s keyboards sit front‑and‑center and deliver inventive solos.",
+    "Jerry Garcia’s soaring second‑set solos are highlighted as creative and “at his best.”",
+    "Strong performances of Shakedown Street, Estimated Prophet → Eyes Of The World, and a colorful Casey Jones encore."
+  ],
+  "song_highlights": [
+    "C.C. Rider",
+    "Loser",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Shakedown Street",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "Casey Jones"
+  ],
+  "band_performance": {
+    "Jerry": "Creative solo improv especially in the second set; soaring, “at his best” leads.",
+    "Phil": "",
+    "Bob": "Adds a colorful spoken intro to Casey Jones and delivers solid vocals.",
+    "Brent": "Keyboard work is prominent and inventive, sitting nicely up front in the mix.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-13T10:28:11.413481+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Peggy-O",
+      "C.C. Rider"
+    ],
+    [
+      "Loser",
+      "Looks Like Rain"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Shakedown Street",
+      "Samson & Delilah"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Black Peter",
+      "Around & Around",
+      "Johnny B. Goode"
+    ],
+    [
+      "Casey Jones"
+    ]
+  ]
+}

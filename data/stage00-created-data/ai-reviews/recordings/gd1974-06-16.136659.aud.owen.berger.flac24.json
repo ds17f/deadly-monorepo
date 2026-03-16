@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from a slowed‑tape playback resulting in noticeably low pitch, with no positive musical comments noted.",
+  "review": "The sole reviewer flags a serious technical flaw – the tape was run at a slower speed, making the entire performance sound flat and out of tune. No remarks are made about the band's playing or setlist, so the musical quality remains unknown beyond the recording issue.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief 2‑star review, focusing on pitch/tempo problems; no positive or detailed feedback to raise the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Tape appears to have been played back at a slower speed, resulting in low‑pitch, muddy sound and overall poor fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No musical commentary provided; reviewers did not discuss performance quality or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T20:32:16.074463+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-16.136659.aud.owen.berger.flac24"
+}

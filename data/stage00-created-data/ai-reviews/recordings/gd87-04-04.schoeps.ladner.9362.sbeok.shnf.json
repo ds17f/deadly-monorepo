@@ -1,0 +1,99 @@
+{
+  "summary": "Excellent audience recording that captures a high‑energy 1987 show – Hand Jive, Comes A Time and Iko roar while the mix is crisp despite a few minor fade‑outs.",
+  "review": "The tape is an audience (AUD) source with superb balance and clarity; listeners repeatedly note how well the instruments sit in the mix, even if the closing of “Dew” fizzles and Brent’s keyboards can dominate at times.  Musically the concert is a late‑’80s peak – the second set smokes with Hand Jive, Comes A Time, Iko and a sing‑along Truckin’, while moments like the “We Want Phil” chant and Jerry’s on‑stage dancing add extra magic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise both performance and sound; the show rates ~4.2/5 for musical quality and the recording ~4.5/5, yielding a weighted average of ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Well‑balanced, crisp AUD tape with clear instrument separation; occasional mix quirks (Mydland heavy in the mix, Dew fade‑out) and a missing Touch Of Grey opener but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hand Jive",
+      "Comes A Time",
+      "Iko",
+      "Truckin'",
+      "Morning Dew",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Touch (opener missing)",
+      "Dew (fizzles out at the end)",
+      "Althea",
+      "El Paso"
+    ],
+    "setlist_flow": "First set builds with solid rockers and a few uneven moments, but the second set erupts into pure energy – seamless transitions from ‘Iko’ into ‘Comes A Time’, a smoking Hand Jive, and a crowd‑singing Truckin’.  Overall pacing is tight and keeps the audience dancing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for stellar guitar tone, on‑stage dancing during “Iko”, and genuine excitement that lifts the whole show.",
+    "Phil": "Noted for the classic “We Want Phil” chant; his presence is highlighted as a highlight of the night.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are occasionally too forward in the mix, but his playing adds texture throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Comes A Time": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Hand Jive": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Playing Reprise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T21:03:01.086555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-04.schoeps.ladner.9362.sbeok.shnf"
+}

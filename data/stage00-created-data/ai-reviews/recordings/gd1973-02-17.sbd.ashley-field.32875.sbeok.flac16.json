@@ -1,0 +1,73 @@
+{
+  "summary": "A superb soundboard capture of the Feb 17‑1973 Wall‑of‑Sound era, highlighted by a smoking Here Comes Sunshine → China Cat → Rider sequence and tight Playin’ in the Band jams.",
+  "review": "The 2/17/73 recording delivers an outstanding representation of the new monster PA system, with crystal‑clear separation, balance and the famed Wall of Sound ambience. Musically the show shines – Jerry’s guitar is described as “metallic” and soaring, Phil drives Playin’ in the Band, and the Here Comes Sunshine > China Cat > Rider suite is repeatedly called spectacular. Minor tape glitches are noted, but they do not detract from an overall brilliant performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Seven detailed reviews overwhelmingly rate the show 4‑5 stars, praising both the musical execution and the soundboard quality; only a few note technical hiccups, so the combined weighted rating is high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers rave about great separation, balance and the accurate Wall of Sound reproduction. A couple of comments mention tape‑snap at the end and some technical problems, but overall the sound is described as outstanding and crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine > China Cat > Rider",
+      "Playin' in the Band",
+      "He's Gone",
+      "Loose Lucy",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for novelty and energy, second set noted for jazzy, extended jams (Playin', Here Comes Sunshine suite) with an abrupt tape ending that nevertheless dovetails into the final songs."
+  },
+  "band_member_comments": {
+    "Jerry": "His Strat is described as soaring, metallic and “defying logic,” filling every space in the mix.",
+    "Phil": "Strong, leading bass work on Playin' in the Band; multiple reviewers call out a powerful Phil/Donna box.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine > China Cat > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:14:47.762270+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-17.sbd.ashley-field.32875.sbeok.flac16"
+}

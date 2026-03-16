@@ -1,0 +1,39 @@
+{
+  "summary": "Audible Wall‑of‑Sound tape with some hiss yet a solid performance highlighted by a hot “Money Money” and a primo second set.",
+  "review": "The recording captures the classic Wall of Sound era with noticeable hiss, distortion and generational noise, but remains listenable. Musically the show is praised as well‑played, with the first‑set “Money Money” singled out as a standout and the entire second set described as primo. Overall it’s a fun, competent performance despite modest audio fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviewers rate the playing at five stars and give the presentation three stars; weighted combination of strong show quality (70%) and average recording quality (30%) yields a high‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable hiss, slight distortion and interference from tape generations, but the Wall of Sound character is still present and the mix remains usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Money Money"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid with a hot “Money Money” highlight; second set described as primo, giving the concert an overall strong flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Money Money": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T19:56:34.813262+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-21.amick.prescott.sbeok.114321.flac16"
+}

@@ -1,0 +1,106 @@
+{
+  "summary": "Solid 1976 Syracuse show with standout Bertha, Samson & Delilah jam and a tight first set, but the soundboard mix is described as jangly and occasionally glitchy.",
+  "review": "The concert captures an energetic East‑Coast ’76 performance – the first set rolls tight with highlights like Bertha, Cassidy and a fiery Goin’ Down the Road Feeling Bad, while the second set delivers a memorable Samson & Delilah jam and a soaring Eyes of the World. Reviewers praise the band’s interplay and Phil’s bass intro, yet one listener finds the soundboard tone harsh and notes occasional drop‑outs, giving the recording an uneven technical quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Two detailed positive reviews (4‑5 stars) praise the musical performance and overall sound, while a single negative review criticizes the mix; the weighted average of show (≈4.5) and recording (≈3.0) yields an AI rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer calls the tone jangly and unpleasant; another notes a brief glitch at :26 in ‘Friend of the Devil’ and a short sound issue early in the second set, but overall most listeners find the mix consistent enough to enjoy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Cassidy",
+      "New Minglewood Blues",
+      "Goin' Down the Road Feeling Bad",
+      "Samson & Delilah > Jam",
+      "Eyes of the World > Jam",
+      "Dancing in the Streets",
+      "Let it Grow > Goin' Down the Road Feeling Bad",
+      "Comes a Time",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Playin'",
+      "The Wheel"
+    ],
+    "setlist_flow": "Uptempo East‑Coast ’76 set with a tight, rock‑filled first half and a free‑form, jam‑heavy second half; transitions are sometimes abrupt (e.g., Playin' → Wheel) but the overall pacing keeps the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer describes his tone as jangly and unpleasant, while others note his active playing and solid solos throughout.",
+    "Phil": "Praised for a great bass intro on Let It Grow > Goin' Down the Road and overall strong presence in the mix.",
+    "Bob": "Noted for rhythmic drive (dancing around the \"1\"), vocal delivery on Johnny B. Goode, and energetic rhythm guitar work.",
+    "Keys": "",
+    "Drums": "Comments range from “drums were sometimes pointless in ’76” to appreciation of tight interplay with Keith during jams."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah > Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World > Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let it Grow > Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:40:30.034683+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-09-28.sbd.vernon.14355.sbeok.shnf"
+}

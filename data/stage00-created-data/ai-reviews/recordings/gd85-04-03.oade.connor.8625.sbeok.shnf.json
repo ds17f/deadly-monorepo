@@ -1,0 +1,57 @@
+{
+  "summary": "Solid show with high energy first set and standout Ship of Fools, Truckin' > Spoonful mash, but recording source and sound quality are not documented.",
+  "review": "The reviewer rates the concert a solid 4‑star performance, praising an energetic first set, Jerry Garcia’s “on” playing, a superb rendition of Ship of Fools, and an inspired Truckin' > Spoonful mash highlighted by a great Brent B3 solo. No details are given about the recording source or audio fidelity, so the technical quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single 4‑star review emphasizes strong musical performance; no recording details to adjust rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not mention soundboard, audience mix, clarity or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "Truckin'",
+      "Spoonful",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set with fast playing; second set starts slowly but gains momentum after Ship of Fools, leading into a lively Truckin' > Spoonful mash and an enjoyable Space."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on\" with great licks throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Nice Brent B3 solo, praised as \"one hell of a player.\"",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:54:35.984088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-03.oade.connor.8625.sbeok.shnf"
+}

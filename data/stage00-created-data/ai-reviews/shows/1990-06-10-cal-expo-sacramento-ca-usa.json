@@ -1,0 +1,80 @@
+{
+  "summary": "High‑energy show with killer Crazy Fingers jam and strong Bertha opener",
+  "blurb": "The concert kicks off with a ferocious Bertha and Jack Straw, then rolls through a solid first set. The second set shines after Space, building into an intense sequence of Eyes Of The World, Crazy Fingers and Gimme Some Lovin'. Standout moments include Brent’s fiery keys and tight drumming from Bill.",
+  "review": "June 10, 1990 at Cal Expo delivered one of the spring‑time high points for the Dead. An explosive Bertha opened the night, followed by a punchy Jack Straw that set a high‑octane tone for the first set. While the early songs kept the crowd moving, the real magic unfolded after Space: Eyes Of The World launched into a seamless Playin’ In The Band → Crazy Fingers jam that many fans describe as “killer,” and the subsequent Gimme Some Lovin' stretch, Standing On The Moon and Throwing Stones kept the momentum soaring. Brent Mydland’s keyboards were on fire, slapping out bright lines that cut through Bill Kreutzmann’s tight groove, while Phil’s bass dropped bombs and even sparked a memorable anti‑rumor speech. Jerry’s leads sounded “alive, heavy and berserk,” delivering Hendrix‑like licks that lit up the second half despite a hint of vocal strain later on. The encore closed with The Last Time, leaving the audience buzzing long after the final chord.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 63,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Six recordings praised the performance (high‑energy opening, killer Crazy Fingers jam, standout Eyes Of The World) while six were mixed but never negative about the music; overall sentiment is clearly positive, meriting a moderate +1.0 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.0 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1990-06-10.mtx.dan.30369.sbeok.flac16",
+    "reason": "A good‑quality matrix capture that balances clarity and audience ambience, presenting the full show without dropouts and showcasing the powerful second‑set energy."
+  },
+  "key_highlights": [
+    "Killer Crazy Fingers jam that drives the second set",
+    "Explosive Bertha and Jack Straw opening the concert",
+    "Eyes Of The World highlighted on multiple sources as a stellar performance",
+    "Tight drumming and fiery Brent keyboards lift Gimme Some Lovin' into a peak moment"
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Jack Straw",
+    "Eyes Of The World",
+    "Box of Rain",
+    "Row Jimmy",
+    "Crazy Fingers",
+    "Gimme Some Lovin'",
+    "Standing On The Moon",
+    "Throwing Stones",
+    "The Last Time"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers Hendrix‑like leads after Space, with an alive, heavy tone; occasional vocal strain later but overall electrifying solos.",
+    "Phil": "Bass drops bombs and sits front‑and‑center in the mix; anti‑rumor speech energizes the crowd.",
+    "Bob": "Missed a few vocal cues early but provides solid vocal work for most of the set.",
+    "Brent": "Fiery, “on fire” keyboard playing throughout, slapping keys during jams and adding strong melodic fills.",
+    "Mickey": "",
+    "Billy": "Tight drumming with a sweet groove, especially notable during the Gimme Some Lovin' jam."
+  },
+  "processed_recordings": 12,
+  "processed_date": "2025-09-17T07:38:17.596984+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "Eyes Of The World",
+      "Playing In The Band",
+      "Crazy Fingers",
+      "Drums",
+      "Space",
+      "Gimme Some Lovin'",
+      "Standing On The Moon",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Row Jimmy"
+    ],
+    [
+      "The Last Time"
+    ]
+  ]
+}

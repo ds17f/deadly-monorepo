@@ -1,0 +1,87 @@
+{
+  "summary": "Mixed audio quality (fair audience tape) but a respectable show highlighted by the rare “Only A Fool” and strong second‑set jams.",
+  "review": "The recording suffers from below‑average clarity, especially on the first set, though the second half sounds cleaner when sourced from the board. Musically the concert is modest – a short first set with decent versions of \"Sugaree\" and \"Cassidy\" – but the second set shines with an extended Saint → Uncle John segment, a solid Spanish Jam, and the only known performance of Brent Mydland’s “Only A Fool.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Three reviews give mixed impressions: sound quality is fair to poor while the show is average overall but contains a few standout moments, leading to a middling combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Below‑average clarity and some muddiness on the first set; second‑set excerpts noted as clearer when sourced from the board, but overall tape lacks crispness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Only A Fool",
+      "Saint",
+      "Uncle John",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief first set with solid renditions of \"Sugaree\" and \"Cassidy,\" followed by a more adventurous second set featuring long jams (Lost > Saint > Uncle John > Jam) and the unique Mydland ballad."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers note nice Jerry guitar chops and tone, though nothing extraordinary.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Only A Fool": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:43:54.464622+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-23.atm.willy.14563.sbeok.shnf"
+}

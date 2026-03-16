@@ -1,0 +1,82 @@
+{
+  "summary": "Strong mid‑80s show with standout versions of I Know You Rider, Man Smart (Woman Smarter) and Little Red Rooster, captured on a solid soundboard recording despite occasional mix quirks.",
+  "review": "The performance shines in the second set – Jerry’s lead work is blazing, Phil erupts on the China > Rider sequence and the band delivers a ferocious Little Red Rooster and an astonishing I Know You Rider. The SBD source is generally clear and easy on the ears, though Bobby’s guitar can be buried at times and a few songs (China Rider, Far From Me) feel a bit flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance and note good soundboard quality; only minor criticisms about specific songs and occasional mix issues keep the rating just above a solid four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced SBD with pitch fixes; some listeners note Bobby’s guitar buried in parts and occasional roughness typical of an open‑air venue, but overall easy on the ears."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Rider",
+      "Man Smart (Woman Smarter)",
+      "Let It Grow",
+      "Little Red Rooster",
+      "Row Jimmy",
+      "China > Rider"
+    ],
+    "poor_songs": [
+      "China Rider",
+      "Far From Me"
+    ],
+    "setlist_flow": "First set is solid but unremarkable (C+), while the second set ramps up with a surprising sequence of high‑energy jams and strong finishes, earning a B‑ rating from reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "Blazing lead guitar throughout; called the strongest player in the show, though his vocals slip on Far From Me.",
+    "Phil": "Turns heads with fiery bass work, especially during the China > Rider jam.",
+    "Bob": "Provides solid rhythm and vocal support, but noted for comical croaking on Far From Me.",
+    "Keys": "Brent’s solo in The Women is described as a bit biffed; also highlighted as taking lead vocals on some moments.",
+    "Drums": "Great beam episode during the Drums > Space excursion praised."
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:35:48.243499+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-02.sbd.miller.121960.flac16"
+}

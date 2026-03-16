@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer gave a five‑star rating but provides no details about the audio or performance.",
+  "review": "The sole review is limited to a five‑star rating and a brief title, offering no insight into recording quality, setlist, or band performance. Consequently, any assessment of this show must remain tentative.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one high‑rating review with no substantive comments; rating is therefore provisional."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T17:17:19.345549+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-20.AT835B.laurentus.96889.flac16"
+}

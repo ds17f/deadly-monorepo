@@ -1,0 +1,58 @@
+{
+  "summary": "Second‑set fireworks with Scarlet > Fire; vocals rough but jams strong",
+  "blurb": "The second set lifts the night with a soaring Scarlet Begonias → Fire on the Mountain and a fiery Turn On Your Lovelight. Jerry’s vocals are uneven, yet his guitar work shines through the jams. Phil’s bass drives the band while Brent adds eerie texture on Black Peter.",
+  "review": "February 20, 1985 at Oakland’s Henry J. Kaiser Convention Center delivers a mixed‑bag performance that rewards listeners who can look past the vocal roughness. The first set wanders a bit—Day Tripper falls flat and Bob’s voice sounds hoarse on Looks Like Rain—but the band regroups for an electrifying second half. Scarlet Begonias segues into Fire on the Mountain with Jerry pulling off crisp runs despite his strained vocals, and the jam‑centric flow continues through Playing In The Band, a tight Drums‑Space pair, and a soaring Wheel. Black Peter emerges as a haunting centerpiece, buoyed by Brent’s spooky keys, while Turn On Your Lovelight closes the set in high‑octane glory. Though Mickey and Billy’s drumming can feel sluggish early on, they ignite during the post‑Space jam, giving the night a fiery pulse. Overall, the show is remembered for its second‑set brilliance rather than its vocal polish.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 32,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Multiple recordings praise the second‑set jams—Scarlet>Fire, Black Peter, and Lovelight receive consistent positive mentions—while all sources note ragged vocals and occasional sluggish drumming. The net sentiment is mildly positive, yielding a modest +0.8 adjustment.",
+      "final_calculation": "2.5 + 0.3 + 0.8 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-02-20.sbd.miller.21917.sbeok.shnf",
+    "reason": "Crisp, well‑balanced soundboard capture that highlights the standout second set while preserving overall mix clarity."
+  },
+  "key_highlights": [
+    "Scarlet Begonias → Fire on the Mountain sequence drives the second set.",
+    "Black Peter’s eerie atmosphere is amplified by Brent’s keyboards.",
+    "Turn On Your Lovelight delivers a fiery closing jam.",
+    "Phil’s bass sits front‑and‑center, anchoring the band through the scrappy moments."
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Black Peter",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals are uneven and often ragged—described as \"drug‑up\" or hoarse—but his guitar provides crisp runs on Scarlet and West L.A., and he recovers form during key moments.",
+    "Phil": "Bass fills the mix, front‑and‑center, delivering strong low‑end support; occasional criticism for limited vocal contribution but overall solid playing.",
+    "Bob": "Voice sounds rusty and frog‑gargle early (Looks Like Rain), improves in the Mama Tried > Big River duet and shines on Black Peter with an extroverted slide; overall vocal performance is rough yet effective.",
+    "Brent": "Creates eerie textures on Black Peter and adds warm, pleasant keys throughout; his playing helps shape the show’s spooky vibe.",
+    "Mickey": "Drumming can feel sluggish and thudding in the first set, but becomes fiery during the post‑Space jam, adding momentum to the second half.",
+    "Billy": "Shares the same early‑set lethargy, yet regains energy alongside Mickey during later jams, contributing to the overall percussion drive."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-15T00:57:41.978548+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience-sourced tape of a solid show – second‑set highlights like Eyes > Corrina and Wave To The Wind shine despite low volume and no soundboard source.",
+  "review": "The concert is remembered fondly, especially the second set where Eyes > Corrina and Wave To The Wind receive strong praise. Reviewers note the lack of an official sound‑board (SBD) tape and a slightly low‑volume mix, but overall rate the performance highly and find the audience recording satisfactory.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Three consistent 4‑star reviews highlight a strong musical show with standout moments; recording quality is decent but limited by low volume and missing soundboard source, yielding an overall rating just under 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Low‑volume mix noted; no official SBD available, but audience capture is considered acceptable for nostalgia."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Corrina",
+      "Wave To The Wind"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as especially strong; overall show described as solid and enjoyable, with good energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Magic interplay with Brent noted by reviewers.",
+    "Phil": "Wave To The Wind singled out as a highlight for Phil fans.",
+    "Bob": "",
+    "Keys": "Brent Mydland's playing praised as magical alongside Jerry's guitar.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes > Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave To The Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:52:01.417962+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-18.akg460.gardner.9756.sbeok.shnf"
+}

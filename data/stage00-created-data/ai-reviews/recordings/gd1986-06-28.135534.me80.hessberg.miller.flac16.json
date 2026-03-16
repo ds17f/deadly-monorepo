@@ -1,0 +1,70 @@
+{
+  "summary": "Decent audience recording of a quirky 1986 show with spacey jams and solid vocal work, though the set feels short and uneven.",
+  "review": "The tape captures an odd‑ball 1986 performance that bursts into wild improvisations – notably the BIODTL > Touch combo, a soaring Playin' in the Band, and a surprisingly adventurous Lovelight. Recording quality is better than most 86 audience sources, with enough clarity to hear Jerry’s pickup switch and Bobby’s fluid vocals, but it still bears the era’s limitations.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show is judged average (3 ★) with several high points; recording is considered good (4 ★). Weighted combination yields ~3.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Improved clarity for a 1986 audience tape; decent balance and enough detail to enjoy the mix, though typical mud‑dullness of the era remains. Reviewer noted switching to an SBD source for the second set when available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "B.I.O.D.T.L. > Touch",
+      "Playin' in the Band",
+      "Lovelight",
+      "Row Jimmy",
+      "Ramble on Rose"
+    ],
+    "poor_songs": [
+      "Uncle John's"
+    ],
+    "setlist_flow": "A brief, strange first half that quickly gives way to intense, space‑filled improvisations. The second set feels rushed but delivers strong jams and a fluid vocal performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Switches his pickup to the 'China Doll' setting; launches a textbook Uncle John's that ends too soon.",
+    "Phil": "No specific musical comment – reviewer only recalled audience dancing on Phil's side of the stage.",
+    "Bob": "Delivers a fluid vocal that drives the jazzy Lovelight and other loose sections.",
+    "Keys": "",
+    "Drums": "The drummers (Bill/Mickey) create an abstract jam leading into a 21‑minute pre‑drums section."
+  },
+  "song_mentions": {
+    "B.I.O.D.T.L. > Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:34:51.641165+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-28.135534.me80.hessberg.miller.flac16"
+}

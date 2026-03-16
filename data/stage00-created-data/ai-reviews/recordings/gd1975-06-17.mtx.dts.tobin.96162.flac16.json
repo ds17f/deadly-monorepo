@@ -1,0 +1,31 @@
+{
+  "summary": "Recording unavailable in DTS format, leaving listeners unable to stream or download the show.",
+  "review": "Both reviewers express frustration that the 5.1 DTS board feed cannot be streamed or downloaded, effectively rendering the recording inaccessible. No musical comments are provided, so the quality of the performance remains unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "medium",
+    "rationale": "Reviews focus solely on lack of access rather than show or sound quality, indicating a poor overall experience."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Board feed is blocked; archive.org does not stream/download the 5.1 DTS file, making it unusable for listeners."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T02:11:33.880407+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-06-17.mtx.dts.tobin.96162.flac16"
+}

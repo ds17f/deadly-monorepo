@@ -1,0 +1,39 @@
+{
+  "summary": "A cranky old audience tape that nonetheless delivers a standout Dark Star performance.",
+  "review": "Both reviewers highlight the Dark Star as a major draw, calling it one of the most interesting and compelling versions ever heard. The recording is noted as an aging audience source – “cranky” and not pristine – but still worth listening to for the music. Conflicting star ratings (3‑5) reflect mixed feelings about sound quality versus performance merit.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Strong praise for Dark Star boosts the show rating, but two brief reviews and mentions of a low‑fidelity audience source keep overall confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Described as a \"cranky old recording\" – an audience tape with noticeable age and limited clarity, yet the Dark Star remains audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set pacing; focus is solely on the extended Dark Star jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T22:48:33.334365+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-17.partial.aud.weinberg.33826.flac16"
+}

@@ -1,0 +1,99 @@
+{
+  "summary": "Near‑perfect audience recording of a New Year’s Eve show that captures stellar moments like Jack Straw, Stella Blue and a monster Not Fade Away despite minor cross‑channel quirks.",
+  "review": "The three‑set performance is highlighted by an inspired third set – Althea, Uncle John’s Band, Not Fade Away and a soaring Good Lovin’ – while the audience capture is praised as better than many soundboard tapes, even if occasional channel interference shows through. Jerry’s guitar slips are noted but quickly forgiven, and Phil’s bass shines through Joani Walker’s mic setup.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance (multiple standout songs) and the recording quality (audience tape described as ‘near perfect’ and ‘better than a SBD’), with only minor technical quirks."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptionally clear crowd‑mic capture; Phil’s bass is especially well rendered. Reviewers note occasional cross‑channel interference and a brief motorcycle rev‑up before Truckin', but overall the tape is considered superior to many soundboard recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Stella Blue",
+      "Althea",
+      "Uncle John's Band",
+      "Not Fade Away",
+      "Good Lovin'",
+      "Franklin's Tower",
+      "Ship of Fools"
+    ],
+    "poor_songs": [
+      "Rascal's Song",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "First two sets are solid but relatively restrained; the third set ignites with high energy, delivering a powerful climax that leaves listeners forgetting earlier minor slips."
+  },
+  "band_member_comments": {
+    "Jerry": "A few lyrical flubs and repeated verses (notably on Stella Blue) but overall strong guitar work; added John Cipollina guitar adds extra fire.",
+    "Phil": "Massive bass notes captured superbly by Joani Walker's microphone array, a highlight of the recording.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums briefly venture into space before launching into Not Fade Away; overall solid but not singled out for special praise."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Star Wars": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rascal's Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:18:13.674295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-31.sonyecm-walker.walker-scotton-miller.88768.flac16"
+}

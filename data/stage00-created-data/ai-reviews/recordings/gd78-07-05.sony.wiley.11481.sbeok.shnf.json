@@ -1,0 +1,72 @@
+{
+  "summary": "Clear audience tape with good sound captures a high‑energy ’78 show highlighted by monster Lazy Lightning > Supplication and a soaring The Other One.",
+  "review": "The recording is an audience source that’s surprisingly clear, though a few reviewers note occasional sharpness or pitch issues. Musically the concert shines – the first set packs a punch with Sugaree and a blistering Lazy Lightning > Supplication, while the second set delivers a monumental Estimated Prophet, The Other One and a rousing Truckin'. Overall fans rave about Jerry’s guitar work and Keith’s solos, making this one of the standout ’78 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (9/12) give 4‑5 stars and praise both the performance and the tape’s clarity; only a few note minor recording flaws, yielding a strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and nicely balanced for an audience tape; some listeners mention it sounds sharp or could use a pitch fix, but overall the sound is decent enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightning > Supplication",
+      "The Other One",
+      "Estimated Prophet",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set delivers a tight, punchy start with Sugaree and the monster Lazy Lightning > Supplication; second set builds into an epic Estimated Prophet jam and flows through The Other One, Wharf Rat, Truckin' and other highlights, keeping energy high from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his guitar tone, flanger work and the \"sickest\" The Other One ever heard.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s solos in The Other One are singled out as especially groovy and surly, a highlight of the show.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are praised for rocking drums that sound like the famed Red Rocks shows."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T13:46:56.864901+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-07-05.sony.wiley.11481.sbeok.shnf"
+}

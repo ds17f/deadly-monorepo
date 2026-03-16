@@ -1,0 +1,57 @@
+{
+  "summary": "A legendary 1989 Cal Expo show with soaring Bird Song and blistering Scarlet > Fire, captured in crystal‑clear Neumann first‑set audio but marred by a muddy NAK second‑set feed.",
+  "review": "The performance is hailed as one of the band’s finest of ’89 – Jerry’s ferocious guitar work, Brent’s sparkling keys, and tight group interaction make the setlist unforgettable, especially Bird Song, Scarlet > Fire and The Other One.  The recording shines on the Neumann‑sourced first set (crisp, gorgeous bird song) while the NAK‑sourced second set suffers from low‑mid mud and a loud audience, leaving a mixed but still highly enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4–5) and enthusiastic language indicate an outstanding show; recording quality is excellent for the first set but only fair for the second, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First‑set Neumann source is crystal‑clear and balanced; second‑set NAK source is muddy in the low mids with a louder audience, requiring EQ cuts to be fully listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Scarlet > Fire",
+      "The Other One",
+      "Stranger into Franklin's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A powerful first set that builds momentum, followed by an intense second set where the band’s interaction (especially Jerry‑Brent trading) reaches a peak; overall pacing is described as tight, relaxed and unforgettable."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ferocious, exquisite, and especially dazzling on Bird Song, Scarlet > Fire, and during his rare Stratocaster 360° solo; his tone is repeatedly praised.",
+    "Phil": "Not in ‘biscuit’ mode but very musical and funky throughout the show.",
+    "Bob": "Called ‘minimally Bobish but always a treat’, contributing solid rhythm vocals.",
+    "Keys": "Brent’s keyboard work receives high praise, notably his trade with Jerry on Bird Song and his overall great night.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger into Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:33:59.287790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-06.neumann-nak.nawrocki.14197.sbeok.shnf"
+}

@@ -1,0 +1,78 @@
+{
+  "summary": "Good soundboard recording with some hiss but captures a stellar 1973 three‑set performance highlighted by The Other One, Eyes of the World and Playing in the Band.",
+  "review": "The show is repeatedly described as one of the best early‑’73 performances – three sets outdoors, rain turning into sunshine and a double rainbow, with marathon jams on The Other One, Eyes of the World, Playing In The Band and others.  The SBD source is listenable despite noticeable hiss and a Jerry‑centric mix, making it a solid listening experience for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive comments on the musical performance (many 5‑star reviews) combined with mixed but generally acceptable remarks about the soundboard recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Noticeable hiss and a mix that leans toward Jerry's guitar, but overall clear enough to be enjoyable; some reviewers call it 'listen­able' and 'good SBD' despite the noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Eyes of the World",
+      "Playing in the Band",
+      "Here Comes Sunshine",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set outdoor marathon with rain turning to sunshine, a double rainbow and seamless transitions; the second set is especially praised for its long jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Mix is Jerry‑centric; his guitar tone and soloing are prominently featured and widely praised.",
+    "Phil": "Bass described as having 'cello' quality in a few reviews.",
+    "Bob": "",
+    "Keys": "Keith's piano on Eyes of the World noted for its McCoy Tyner‑like sound; overall keyboard work is well regarded.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T07:32:48.696351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-05-13.sbd.powell-ladner.24997.sbeok.shnf"
+}

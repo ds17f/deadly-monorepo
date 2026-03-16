@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording of a classic Shrine show, highlighted by a blistering Scarlet Begonias and the rolling Dancin’→Wharf Rat→Dancin' medley.",
+  "review": "The performance is consistently praised – Jerry’s lead work is described as “firing on all cylinders,” Scarlet Begonias is called jaw‑droppingly fierce, and the Dancin’ → Wharf Rat → Dancin’ sequence turns heads. The source is an audience (AUD) tape that many note sounds among the best of 1976 Shrine recordings, though a few wish it were a bit clearer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical praise across most reviews (70% weight) and generally good to excellent audience recording quality (30% weight) lead to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively; regarded as one of the best‑sounding 1976 AUD tapes, though some note it could be crisper."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Dancin' > Wharf Rat > Dancin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set rolls smoothly, especially the second set; the Dancin’/Wharf Rat medley and Scarlet Begonias keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry firing on all cylinders with exceptional guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin' > Wharf Rat > Dancin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-23T08:28:02.780260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-14.bertrando.vernon.12079.sbeok.shnf"
+}

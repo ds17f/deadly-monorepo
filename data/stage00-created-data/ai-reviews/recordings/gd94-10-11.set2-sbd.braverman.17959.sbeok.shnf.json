@@ -1,0 +1,88 @@
+{
+  "summary": "Mixed performance with highlights like “Eyes” and “China Doll,” but the recording is low‑fidelity and likely not a true soundboard.",
+  "review": "The second set offers a few bright spots – the crowd‑charged opener “Eyes” and an emotional “China Doll” – yet much of the night feels uneven, with several songs described as forgettable or rushed. The audio is widely regarded as sub‑par (hissy, bassy and possibly audience‑matrix rather than a clean soundboard), which further dampens enjoyment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "high",
+    "rationale": "Most reviewers note mediocre show quality with only occasional strong moments, and the recording is consistently described as low‑quality or mis‑identified, pulling the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers call it hissy, bass‑heavy and possibly a matrix (crowd + board) rather than a true soundboard; crowd roar on “Eyes” is audible, indicating audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "China Doll",
+      "Jack-a-Ro",
+      "High Time"
+    ],
+    "poor_songs": [
+      "Sambe",
+      "Sugar Magnolia",
+      "Picasso Moon",
+      "Easy Answers",
+      "If the Shoe Fits"
+    ],
+    "setlist_flow": "First set is praised for energy and good song choices, while the second set is viewed as largely forgettable with a few bright moments (Eyes opener, China Doll) amid weaker, rushed performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Often described as tired or fractured; occasional strong moments on “Eyes” but generally low‑energy and nervous.",
+    "Phil": "No direct comments about his playing; only mentioned indirectly in criticism of weak song selection.",
+    "Bob": "Praised for solid performances on “Jack-a-Ro” and “High Time,” but noted that the set relied on his energy to compensate for weaker tune choices.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-a-Ro": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sambe": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "If the Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:03:43.980434+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-11.set2-sbd.braverman.17959.sbeok.shnf"
+}

@@ -1,0 +1,62 @@
+{
+  "summary": "Solid first set but a shaky second set; recording quality not clearly described.",
+  "review": "Reviewers are split – one praises the first set and calls the overall tape great, while another laments Jerry’s lyrical slips and choppy playing on the second set. No concrete details about the source or sound quality are given, leaving the technical side uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Two reviews with opposing views: a 5‑star fan rating praising the show versus a 2‑star critique focusing on performance flaws. No concrete recording info, so rating reflects mixed musical impression and unknown audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments about soundboard vs. audience; one reviewer calls the tape \"great\" for set 1 but gives no technical details."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Estimated Prophet",
+      "Terrapin Station"
+    ],
+    "setlist_flow": "First set described as great; second set portrayed as a \"heart‑breaker\" with missed lyrics and uneven playing, especially after the drums break."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgets many words to Scarlet and Fire, playing becomes choppy, weird, and angry in set 2.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:47:14.738420+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-02.134759.aud.wise.minches.flac24"
+}

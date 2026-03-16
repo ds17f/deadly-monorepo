@@ -1,0 +1,60 @@
+{
+  "summary": "Mixed performance with a monster Morning Dew, uneven set flow",
+  "blurb": "The concert delivers a soaring Morning Dew and a solid Scarlet Begonias, but the pacing feels sluggish and transitions are weak. Jerry’s guitar remains strong while his vocals lose edge later in the night. Drums/Space stay fluid but sound muted in the mix.",
+  "review": "On November 6, 1987 at Oakland’s Henry J. Kaiser Convention Center the Dead gave a set that swings between brilliance and fatigue. The first set stumbled through bluesy numbers like \"Big Boss Man\" and \"When Push Comes To Shove,\" never quite finding its groove. In the second set the band sparked to life with \"Scarlet Begonias\" into \"Hell In A Bucket\" and built toward a monster \"Morning Dew\" that many listeners still cite as the night’s high point. However, the overall flow feels uneven – reviewers note weak segues, a sluggish pacing, and several songs (including \"Big Boss Man,\" \"Push,\" and \"All Along The Watchtower\") that never fully click. Jerry Garcia’s guitar work stays on point, but his vocals dip into a half‑asleep vibe during the later numbers. Brent Mydland holds down solid keys while Mickey Hart and Bill Kreutzmann keep the rhythmic foundation fluid yet sound muted in most recordings. For fans willing to wade through the rough patches, the show offers a memorable \"Morning Dew\" and flashes of classic Dead energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 9,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.2,
+      "sentiment_rationale": "The three recordings show mixed sentiment: one positive (monster Morning Dew), one mixed (sloppy performance, weak transitions), and one negative (possible setlist mismatch). Consistent criticism of pacing and several weak songs outweighs the isolated praise, leading to a slight negative adjustment.",
+      "final_calculation": "2.5 + 0.1 - 0.2 = 2.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1987-11-06.sbd.miller.122166.flac16",
+    "reason": "Good sound quality and captures the standout \"Morning Dew\" without major audio flaws."
+  },
+  "key_highlights": [
+    "Monster \"Morning Dew\" that rises above an otherwise uneven set.",
+    "\"Scarlet Begonias\" provides a bright moment early in Set 2.",
+    "Drums/Space remain fluid despite being muted in the mix.",
+    "Overall pacing feels sluggish with several weak transitions."
+  ],
+  "song_highlights": [
+    "Morning Dew",
+    "Scarlet Begonias",
+    "The Wheel"
+  ],
+  "band_performance": {
+    "Jerry": "Guitar work stays solid throughout, but his vocals dip and sound half‑asleep later in the set.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Provides steady keyboard textures that support the band’s dynamics.",
+    "Mickey": "Drums are fluid during the space segment but often sound muted in the recordings.",
+    "Billy": "Keeps a reliable groove, though like Mickey his parts suffer from muffled mix quality."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-16T05:00:37.199880+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "He's Gone",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Gimme Some Lovin'",
+      "Morning Dew",
+      "All Along The Watchtower"
+    ],
+    [
+      "Scarlet Begonias",
+      "Hell In A Bucket"
+    ]
+  ]
+}

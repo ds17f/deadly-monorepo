@@ -1,0 +1,73 @@
+{
+  "summary": "Audience‑sourced tape with an excellent transfer captures the legendary 8/4/74 Philadelphia Wall of Sound show, highlighted by a soaring Weather Report Suite, marathon Playing in the Band and a sweet Peggy‑O.",
+  "review": "The recording is sourced from audience UD‑120 cassette tapes but the Moore transfer makes it surprisingly clear, especially once the massive Wall of Sound settled. Musically the concert is praised for its long, varied set – the full Weather Report Suite, an epic Playing in the Band, and standout moments like Peggy‑O, U.S. Blues and Jack Straw – making it a quintessential 1974 Dead performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (mostly 4‑5) and enthusiastic comments about both the music and the transfer quality indicate a strong show with good audio, justifying a rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Original source is audience UD‑120 cassette tapes; Moore's transfer is described as excellent and clear once the Wall of Sound settled, capturing ambience without major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Weather Report Suite",
+      "Playing In The Band",
+      "U.S. Blues",
+      "Peggy-O",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An extra‑long, varied setlist typical of the Wall of Sound era; early tunes get clearer as the PA balances, leading to a powerful second set that many reviewers cite as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone cleared up after the first few songs and his noodling on 'El Paso' is specifically praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T23:32:55.643839+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-08-04.aud-moore.weiner.20369.sbeok.shnf"
+}

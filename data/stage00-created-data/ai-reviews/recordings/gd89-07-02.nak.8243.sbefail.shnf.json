@@ -1,0 +1,69 @@
+{
+  "summary": "A rough‑but‑listenable audience tape captures a scorching Foxboro ’89 show highlighted by the monster Dear Mr. Fantasy/Hey Jude jam and a rare Friend‑of‑the‑Devil second‑set opener.",
+  "review": "The performance is consistently praised for its high energy, especially the opening Playing‑in‑the‑Band → Crazy Fingers burst, the unprecedented Friend‑of‑the‑Devil kicker to set two, and the legendary Dear Mr. Fantasy/Hey Jude sequence that many callers call “monstrous.”  The recording is an audience capture – not pristine but decent enough to convey the heat, crowd ambience, and the band’s tight playing, with occasional muddiness and a slight post‑drums lag.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the show (standout jams, rare set order) while noting only modest recording flaws; this yields a high combined score with strong confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent audience tape – clear enough to hear instruments and crowd, but with occasional muddiness, slight post‑drums lag, and overall less polish than a soundboard. Listeners note it’s “better than the tapes I have had for years” yet still not high‑fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr. Fantasy / Hey Jude",
+      "Friend of the Devil (second set opener)",
+      "Playing in the Band > Crazy Fingers",
+      "He's Gone",
+      "Eyes of the World",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual set order – Playin' → Crazy Fingers opens the first set, Friend of the Devil kicks off the second set, creating a fresh pacing that keeps the crowd engaged. The rare sequencing is repeatedly highlighted as a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his fierce guitar tone, greeting the audience from the mic, and “fighting” to pull the band into Smokestack after He's Gone.",
+    "Phil": "Noted for holding a long note during Brent's final howl and delivering solid bass throughout; no major criticism.",
+    "Bob": "Mentioned as resisting some jam transitions (e.g., refusing the move from Smokestack to Eyes) but otherwise solid rhythm work.",
+    "Keys": "Brent Mydland receives glowing remarks – “on a tear” during Dear Mr. Fantasy/Hey Jude and generally called the best version of that sequence.",
+    "Drums": "Drummers get shout‑outs for a Hendrix‑style riff during drums, overall strong playing, though a few note a slight post‑drums lag."
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy / Hey Jude": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Playing in the Band > Crazy Fingers": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "He's Gone": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:11:07.270146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-07-02.nak.8243.sbefail.shnf"
+}

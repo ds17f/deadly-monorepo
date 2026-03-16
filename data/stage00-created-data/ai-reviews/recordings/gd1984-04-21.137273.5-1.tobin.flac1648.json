@@ -1,0 +1,31 @@
+{
+  "summary": "Positive rating but no specific details on recording or performance",
+  "review": "The sole reviewer gave this tape a solid four‑star rating, indicating overall enjoyment, yet provided only the brief comment “Like this.” without elaborating on sound quality, setlist, or individual performances. With such limited feedback, we can infer a generally positive impression but lack concrete information about the recording source or musical highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating; positive sentiment inferred but no detailed evidence to adjust rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T16:29:18.354704+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-21.137273.5-1.tobin.flac1648"
+}

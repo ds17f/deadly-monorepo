@@ -1,0 +1,61 @@
+{
+  "summary": "High‑quality audience recording of a solid summer ’90 show, highlighted by a rare Sugar Magnolia > Scarlet Begonias sequence and an inspired Space jam.",
+  "review": "The audience tape is praised for its clarity and captures the massive stadium atmosphere well. Musically the concert is considered decent with standout moments like the treat‑worthy Sugar>Scarlet segue, a strong Space segment, and a memorable Breakdown encore, though some fans note the omission of \"Fire\" after Scarlet Begonias. Overall the performance is enjoyable but not deemed exceptional.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Average to good show quality (rare highlights, solid playing) combined with a well‑recorded audience source; mixed reviewer scores (3–4 stars) lead to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the tape as a high‑quality AUD with clear sound and no major dropouts; captures crowd ambience nicely."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia > Scarlet Begonias",
+      "Space",
+      "Breakdown"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set with strong transitions; second set shines thanks to an extended Space and the rare Sugar>Scarlet pairing, while the encore’s Breakdown left a lasting impression."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia > Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Breakdown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:56:28.443858+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-16.fob.alabamabob.andrewf.95580.flac16"
+}

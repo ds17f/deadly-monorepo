@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audience recording with a strong performance highlighted by a great “He’s Gone”, but the tape suffers from harsh high‑end frequencies.",
+  "review": "Reviewers generally praise the show, especially the rendition of “He’s Gone,” and note that it captures the energy of a crowd‑filled night. The recording quality is mixed: one listener finds it sound‑great while another complains about excessive high‑frequency harshness, suggesting an audience source with limited fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is positively rated (≈4 stars) while recording quality ranges from good to poor; weighting the show higher yields an overall rating around 3.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crowd audible, generally decent balance but excessive high‑end harshness reported by a reviewer; not a clean soundboard tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He’s Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Positive comments about overall vibe and performance; no detailed set‑list analysis provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He’s Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:02:32.950135+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-23.aud.miller.89130.sbeok.flac16"
+}

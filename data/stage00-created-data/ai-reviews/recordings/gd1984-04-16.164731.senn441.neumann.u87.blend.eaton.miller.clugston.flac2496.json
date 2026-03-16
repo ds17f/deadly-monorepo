@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard‑style capture that shines on a standout Shakedown Street performance",
+  "review": "The reviewer raves about throwing the recording on headphones and being blown away, indicating a clear, well‑balanced mix. The show is highlighted by an especially powerful rendition of “Shakedown Street,” making this both a great listening experience and a memorable concert moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "A single enthusiastic 5‑star review praises the audio fidelity and the performance, suggesting top‑tier show quality and excellent recording; limited data keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, detailed sound with good stereo imaging; headphones are recommended. No issues or artifacts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure, but the highlighted Shakedown Street implies an energetic and engaging performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:50:54.747508+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-16.164731.senn441.neumann.u87.blend.eaton.miller.clugston.flac2496"
+}

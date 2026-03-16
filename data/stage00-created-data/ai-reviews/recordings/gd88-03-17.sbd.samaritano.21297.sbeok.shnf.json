@@ -1,0 +1,92 @@
+{
+  "summary": "Good soundboard recording with clear mix, but the show is a mixed bag – energetic second set and China‑Rider shine while some cuts and average moments hold it back.",
+  "review": "The sbd capture is generally clean and well balanced, though one reviewer notes the Let It Grow segment was truncated. The concert has a laid‑back Bay‑Area vibe with a standout China → Rider sequence, an enthusiastic Hey Jude finale and solid second‑set energy, but many listeners describe it as an average, typical setlist overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Show quality is moderate (average to good) while the recording is clear and pleasant; weighting yields a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, balanced mix praised by several reviewers; minor complaint about the Let It Grow track being cut short."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China",
+      "I Know You Rider",
+      "Hey Jude Finale",
+      "Memphis Blues",
+      "Space",
+      "Goin' Down The Road Feeling Bad"
+    ],
+    "poor_songs": [
+      "Let It Grow",
+      "Fantasy"
+    ],
+    "setlist_flow": "Typical Dead set with a relaxed first half and a more energetic second set; the Mardi‑Gras atmosphere adds flavor, but many fans feel it follows a familiar, average structure."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as slightly scratchy yet spirited; notable wah‑wah bridge on Estimated Prophet.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocals are said to have conviction and drive the band forward.",
+    "Keys": "Brent Mydland is mentioned for hand‑gesturing during the Hey Jude finale, indicating his keyboard presence.",
+    "Drums": "The drum segment features Mardi Gras percussionists adding extra flavor."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude Finale": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fantasy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:31:55.503326+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-03-17.sbd.samaritano.21297.sbeok.shnf"
+}

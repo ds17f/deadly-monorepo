@@ -1,0 +1,51 @@
+{
+  "summary": "Recording details are unclear but the performance is exceptional – high‑energy versions of Stranger, U.S. Blues and a killer Deal make this show stand out.",
+  "review": "Fans rave about an electrifying set despite an average‑looking setlist, highlighting the opening jam on “Stranger,” the soaring “U.S. Blues,” and a blistering finish on “Deal.” No reviewer commented on the audio source or fidelity, so the technical quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews give five stars and focus on outstanding musical moments; recording quality is not discussed, but the consensus on the show’s greatness drives a high rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention soundboard vs. audience or any audio clarity issues, leaving recording characteristics uncertain."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "U.S. Blues",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Even though the setlist seemed ordinary on paper, the band’s energy turned it into a high‑octane performance from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T10:58:34.646212+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-08.fob.atm11.chasingwilma.101936.sbeok.flac16"
+}

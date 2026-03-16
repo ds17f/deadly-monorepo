@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewers are enthusiastic (5‑star) despite no concrete details on recording quality; the only highlighted moment is the “Cowboy Song” similarity.",
+  "review": "The single fan review gives a perfect rating, focusing solely on the resemblance of the Cowboy Song to the Marshall Tucker Band’s later track. No information is provided about the source or clarity of the audio, nor any broader comments on the performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one 5‑star review exists and it mentions only a song comparison, giving little insight into show or recording quality; rating reflects high enthusiasm but low data confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard, audience mix, clarity, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T18:02:29.149934+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-04-09.171655.sbd.aud.composite.miller.clugston.flac1644"
+}

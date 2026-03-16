@@ -1,0 +1,97 @@
+{
+  "summary": "A solid soundboard capture with occasional static, highlighted by an emotional Morning Dew and a high‑energy East Coast crowd.",
+  "review": "The recording is a soundboard source that generally sounds clear, though a few spots of static are noted. The show itself is praised for Jerry’s moving performance on “Morning Dew,” strong second‑set momentum with “Looks Like Rain,” and an enthusiastic Brent Mydland presence. Overall the fans view it as a good to great Dead night despite some minor sonic blemishes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑star ratings and highlight strong performances, especially Morning Dew; a few note static and weaker moments, pulling the average down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced soundboard mix; occasional static/hiss noted but never distracting. Crowd ambience is captured nicely, adding to the live feel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Looks Like Rain",
+      "Hey Pocky Away",
+      "West L.A. Fadeaway",
+      "Turn On Your Lovelight"
+    ],
+    "poor_songs": [
+      "Dough Knees",
+      "Black Muddy",
+      "West L.A. Fadeaway"
+    ],
+    "setlist_flow": "Fans describe an electric first set that builds excitement, with Brent Mydland stepping forward on several tunes, and a second set that “warms up” around Looks Like Rain before launching into a powerful post‑drums sequence (Drums → Space → The Wheel → Gimme Some Lovin’ → Morning Dew)."
+  },
+  "band_member_comments": {
+    "Jerry": "His emotional cries and soaring guitar on “Morning Dew” are repeatedly praised; riffs described as ‘mad’ throughout the show.",
+    "Phil": "",
+    "Bob": "Weir’s vocals receive compliments, especially on songs like Looks Like Rain; his Dylan‑style phrasing is noted.",
+    "Keys": "Brent Mydland shines as a front‑man with strong backing vocals and keyboard work, highlighted on several numbers (e.g., Hey Pocky Away, West L.A.).",
+    "Drums": "The drumming is described as powerful and punchy; the post‑drum sequence (Drums → Space → The Wheel) is called solid and energetic."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Hey Pocky Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Muddy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:22:49.907980+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-30.sbd.miller.91159.sbeok.flac16"
+}

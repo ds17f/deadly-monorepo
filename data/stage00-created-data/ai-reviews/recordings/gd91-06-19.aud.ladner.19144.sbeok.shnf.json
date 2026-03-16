@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality audience tape captures a strong farewell performance with standout keyboard work and solid drums.",
+  "review": "The audience recording is praised as the best of the three available tapes and offers good clarity, making it pleasant for listeners even with hearing sensitivities. The show itself is remembered as a farewell gig featuring solid drum work and virtuoso keyboards, with Vince especially shining on Scarlet Fire, Women R Smarter and JB Goode.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently positive 4‑5 star reviews highlight both a solid musical performance (especially drums and keyboards) and good audience recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as the best of three audience tapes, clear enough for hearing‑impaired listeners; praised as a fine companion to board recordings despite not being a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Women R Smarter",
+      "JB Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A farewell show with solid pacing; drums and keyboards receive particular praise, creating an energetic and satisfying set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboard work is highlighted as technically virtuosic and especially strong on Women R Smarter and JB Goode.",
+    "Drums": "Solid drum performance noted, contributing to the overall strength of the show."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women R Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "JB Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:43:18.710298+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-19.aud.ladner.19144.sbeok.shnf"
+}

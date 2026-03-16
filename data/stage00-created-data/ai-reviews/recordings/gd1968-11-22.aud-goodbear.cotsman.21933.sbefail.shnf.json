@@ -1,0 +1,75 @@
+{
+  "summary": "Harsh, primitive audience tape of the Dead’s first Ohio show, but a legendary late‑68 performance shines with a blistering Dark Star and soaring Morning Dew.",
+  "review": "The recording is an uneven audience capture – mids‑heavy, tape‑flanged and lacking bass/treble – yet the show itself is a standout, featuring a ferocious Dark Star, a soaring Morning Dew, and a powerful Other One > Cryptical sequence. Jerry’s guitar is described as a snarling beast, Phil’s bass gets lost in the mix, and the organ barely cuts through, but the energy of this debut makes it worth the effort.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (high‑energy performances, several standout songs) while recording quality is repeatedly called poor or primitive; weighted average yields a solid but not stellar rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Harsh, mid‑heavy sound with tape‑flange artifacts; virtually no bass or treble, making the mix feel like an unmodified tube screamer. Lyrics and guitar are audible, but overall clarity is low."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One > Cryptical Envelopment",
+      "Morning Dew",
+      "St. Stephen (opening notes)",
+      "Schoolgirl",
+      "Pig Pen",
+      "New Potato"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First Ohio appearance captures the raw, crusading late‑68 Dead sound; despite Mickey Hart playing solo drums, the band maintains high energy and seamless transitions, especially in the extended Dark Star and Other One > Cryptical pairing."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as a snarling, snapping beast with ripping guitar tones that dominate the performance.",
+    "Phil": "Bass often muddled and hard to discern through the poor recording mix.",
+    "Bob": "",
+    "Keys": "Organ barely audible; New Potato’s organ is faint but still noted positively.",
+    "Drums": "Mickey Hart alone on drums (Kreutzmann absent); no specific criticism of his playing."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One > Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Schoolgirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pig Pen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Potato": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:52:15.245113+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-11-22.aud-goodbear.cotsman.21933.sbefail.shnf"
+}

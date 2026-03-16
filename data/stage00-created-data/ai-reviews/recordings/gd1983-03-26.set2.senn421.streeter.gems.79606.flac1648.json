@@ -1,0 +1,45 @@
+{
+  "summary": "Mixed‑quality audience tape of an energetic 80s Vegas show, highlighted by a stellar \"Other One\" sandwich and a soaring Stella Blue.",
+  "review": "The performance is generally praised – fans note a strong second set with the classic Other One sandwich and a top‑notch rendition of Stella Blue, capturing that late‑80s Vegas vibe. Recording quality is contentious: some listeners describe it as sub‑par or even unusable, while others commend a clean transfer with good stereo balance and deep low end. Overall the show shines despite the uneven audio source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around 4/5 based on multiple positive comments, while recording quality averages ~3/5 due to mixed opinions; combined weighted score yields ~3.7."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Transfer is praised for a balanced stereo field and low‑end punch, but many reviewers call the source sub‑par or even unusable, citing lack of soundboard clarity and overall hiss/imperfections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Cool 80s Vegas set with a strong second‑set momentum; the \"Other One\" sandwich and heartfelt ballad work give the show cohesion and excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Multiple reviewers note impressive low‑end from Phil's bass, describing it as deep and powerful.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:07:29.520322+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-03-26.set2.senn421.streeter.gems.79606.flac1648"
+}

@@ -1,0 +1,68 @@
+{
+  "summary": "Matrix (SBD + AUD) recording with a stellar performance – epic Dark Star and tight first‑set tunes – marred by a weak audience mix but rescued by excellent soundboard tracks.",
+  "review": "The show is widely hailed as one of the top Europe ’72 performances, highlighted by a 44‑minute Dark Star that many reviewers rank among the band’s all‑time best.  The SBD portion is crisp and captures the band at peak form (Keith’s piano echo, Jerry’s soaring leads, Bob’s vocal fills), while the AUD source is described as thin and muffled, making the matrix mix a mixed‑bag technically but still very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.1; 70 % weight on overwhelmingly positive musical comments and 30 % on mixed technical feedback yields a solid 4‑star recommendation."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "AUD (audience) patch is described as thin, muffled and not capturing the show’s mood; SBD (soundboard) sections are crisp, with excellent instrument separation.  Some reviewers note speed/pitch anomalies and occasional splices, but overall the mix remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Me & My Uncle > Dark Star > Wharf Rat > Sugar Magnolia",
+      "Black‑Throated Wind",
+      "Tennessee Jed (solo)",
+      "Loser",
+      "Next Time You See Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for tight interplay and strong vocals; second set dominated by the marathon Dark Star suite; third set solid but less historic, with a high‑energy encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his soaring lead work on Dark Star and other jams.",
+    "Phil": "Mentioned only in passing (mix notes about clearer bass on official releases).",
+    "Bob": "Vocals described as excellent; fills on Loser highlighted as “incredible”.",
+    "Keys": "Keith’s piano echo on the Dark Star praised as unique; also credited for elevating Casey Jones.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-21T14:28:19.291460+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-24.sbd-aud.cotsman.16332.sbeok.shnf"
+}

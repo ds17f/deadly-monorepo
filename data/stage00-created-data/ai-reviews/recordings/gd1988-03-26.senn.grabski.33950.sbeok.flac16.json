@@ -1,0 +1,45 @@
+{
+  "summary": "Recording source unknown; vocals on “Stir It Up” were shaky but the show was still a blast overall.",
+  "review": "The two fan reviews are split – one gives the recording a perfect five‑star rating while merely wondering who is handling vocals, and the other rates it three stars, criticizing the muddled singing on “Stir It Up” (and the “So What” noodling) but still calling the concert a blast. No concrete information about the tape’s source or sound quality is provided, so the technical side remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Average star rating (4.0) tempered by vocal performance criticism; lack of recording‑quality details keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not mention sound clarity, mix balance, or source type, so no concrete assessment can be made."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Stir It Up",
+      "So What"
+    ],
+    "setlist_flow": "Reviewers note odd vocal placement and a weak “Stir It Up” slot, but overall describe the concert as fun despite those hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Vocals (presumably Bob’s) were described as confused or missing on certain songs.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stir It Up": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "So What": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:53:21.384132+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-26.senn.grabski.33950.sbeok.flac16"
+}

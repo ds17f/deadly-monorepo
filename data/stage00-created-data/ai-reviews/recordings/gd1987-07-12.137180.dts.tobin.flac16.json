@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is essentially white‑noise only, rendering the show unlistenable.",
+  "review": "The sole review flags this release as a faulty source – every track sounds like white noise, and the reviewer points to an alternate version as the only viable listening option. No musical details are given because the audio is unusable, so both performance quality and set flow cannot be evaluated from this file.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one very negative review; recording is completely garbled, making the show impossible to assess."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "All tracks described as white noise; likely a corrupted or badly captured source with no usable audio."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Cannot be judged due to unusable recording."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T01:03:17.019889+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-12.137180.dts.tobin.flac16"
+}

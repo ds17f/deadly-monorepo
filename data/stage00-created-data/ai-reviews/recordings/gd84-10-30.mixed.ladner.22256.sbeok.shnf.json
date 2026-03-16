@@ -1,0 +1,87 @@
+{
+  "summary": "Clean soundboard capture of the 1984 Berkeley show with blistering Let It Grow, fiery Jerry, and strong Space/The Other One moments.",
+  "review": "The recording is a clean 1984‑era soundboard tape that delivers crisp instrument separation and the classic ’84 vibe, though drums can feel a bit artificial compared to an audience mix. Musically the show shines with a scorching Let It Grow, powerful Space and The Other One, while tracks like Dire Wolf, Stella Blue and Cassidy feel awkward in the 80s‑style production.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All reviewers gave 4‑star ratings, praising both the performance (especially Let It Grow and jam sections) and the clean soundboard source; minor criticisms are limited to a few songs and drum tone, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean SBD for most of the show with classic ’84 sound; clear mix but drums can sound slightly artificial compared to an audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Little Red Rooster",
+      "Fire",
+      "Space",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Dire Wolf",
+      "Stella Blue",
+      "Cassidy"
+    ],
+    "setlist_flow": "Tight, energetic Berkeley performance with strong transitions; the second set builds momentum through Space and The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is on fire during Let It Grow, delivering a blistering solo.",
+    "Phil": "Enthusiastic shout‑out from a reviewer, indicating solid bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum sound feels slightly less natural than an audience mix, described as somewhat artificial."
+  },
+  "song_mentions": {
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:40:29.381507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-30.mixed.ladner.22256.sbeok.shnf"
+}

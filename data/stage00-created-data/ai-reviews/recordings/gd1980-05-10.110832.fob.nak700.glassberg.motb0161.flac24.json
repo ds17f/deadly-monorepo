@@ -1,0 +1,45 @@
+{
+  "summary": "Audience-sourced recording captures an excellent show that builds to a standout Alabama Getaway/One More Saturday Night finale despite early vocal thinness.",
+  "review": "The audience tape is surprisingly clear, though the limiter‑induced drops and early lack of vocals can be noticeable for audiophiles. Musically the concert improves as it progresses, culminating in an enthusiastic rendition of the Arista single Alabama Getaway that segues into a rousing One More Saturday Night. Overall the performance is praised as excellent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single 5‑star review highlights an outstanding show with only minor recording quirks; weighting favors the strong musical performance."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear audience tape, but limiter clipping causes occasional drops and early set suffers from thin vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set feels vocal‑thin, but sound improves as the night goes on, leading to a high‑energy closing sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:13:24.671349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-10.110832.fob.nak700.glassberg.motb0161.flac24"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Clear audience tape captures a high‑energy 1993 West Coast show with China Rider and a blistering Way to Go Home intro, though Estimated Prophet suffers from noticeable flubs.",
+  "review": "The recording is an audience capture that retains good clarity and lets Jerry’s guitar sit prominently in the mix. Musically the concert is a classic spring‑tour blaze – China Rider cooks, the Way to Go Home intro sizzles and Morning Dew shines, while Estimated Prophet shows both daring improvisation and a few embarrassing missteps.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise its energy and several standout moments; the recording is described as clear and enjoyable, with only occasional performance glitches lowering the average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear tape with a strong guitar presence; no major drop‑outs or muddiness reported, but as an audience source it lacks the polish of a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Rider",
+      "Way To Go Home (intro)",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "First set is solid and well‑played, second set builds into a hotter, more intense groove typical of the ’93 West Coast spring tour; the band recovers quickly from any missteps."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is prominent and often praised, but several reviewers note a noticeable flub in Estimated Prophet where he went off‑key before recovering.",
+    "Phil": "",
+    "Bob": "Bobby (Bob Weir) receives strong compliments for his vocals on Estimated Prophet and overall energy throughout the show.",
+    "Keys": "Vince’s keyboard work is mentioned positively – “not half bad” solo and finally fitting in with the band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "China Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Way To Go Home (intro)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T12:45:42.125372+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-21.schoeps.gardner.9400.sbeok.shnf"
+}

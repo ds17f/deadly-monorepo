@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience tape with a brief digital noise glitch, highlighted by a standout \"I'm a Man\" performance.",
+  "review": "The recording is an audience capture that sounds remarkably clear for the format, aside from a short burst of harsh diginoise in the second set. Reviewers describe the show as fun and energetic, singling out \"I'm a Man\" as a must‑listen moment. Overall it ranks among the better late‑80s tapes despite the minor glitch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Both reviewers are generally enthusiastic; one gives 4 stars and praises the recording, the other gives 3 stars but enjoys the show. The strong positive comments about performance and mostly excellent audio push the rating into the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear and well‑balanced for an audience tape, with only a brief horrible diginoise artifact in the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I'm a Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fun, energetic show that flows nicely according to reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I'm a Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:12:53.523270+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-10.nak300.bowen.foster.102175.flac16"
+}

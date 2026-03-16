@@ -1,0 +1,92 @@
+{
+  "summary": "A soundboard recording plagued by mic problems and tape hiss, yet the marathon jam‑track and spikes like Samson & Delilah and The Other One keep it interesting.",
+  "review": "The show is a mixed bag – the first half features an epic Ollin Arrageed → Not Fade Away jam that many reviewers cite as a highlight, and later moments such as Samson & Delilah and The Other One provide genuine Dead magic.  Unfortunately the soundboard source suffers from severe microphone drop‑outs, massive hiss and missing vocal sections, making large portions of the concert feel instrumental or muffled.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is average with a few standout jams (≈3 / 5) while recording quality ranges from poor to fair (≈2.5 / 5); weighted combination yields ~3.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Severe microphone issues render much of the mix instrumental; massive tape hiss and occasional missing vocal sections (e.g., Donna on Scarlet Begonias, Jerry on several songs). Some tracks (Ollin Arrageed → Not Fade Away) are clearer, but overall the recording is uneven and muffled."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ollin Arrageed",
+      "Not Fade Away",
+      "Samson & Delilah",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias",
+      "Sugaree",
+      "Truckin'",
+      "Space"
+    ],
+    "setlist_flow": "The concert opens with an unusually long jam that transitions into Not Fade Away, setting a high bar.  The first set then drifts through mixed material, while the second set contains a few spikes (Samson & Delilah, The Other One) but is marred by sloppy performances and technical glitches."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work shines during the Ollin Arrageed jam, but mic problems leave many of his vocals low or missing; several reviewers note he disappears from large portions of the set.",
+    "Phil": "Joins the early jam and contributes solidly, though no specific praise or criticism is given beyond general performance remarks.",
+    "Bob": "Vocals are described as low on the first set and generally weak; however his delivery on Samson & Delilah receives positive attention.",
+    "Keys": "",
+    "Drums": "The drum segment is called bland and dry with a few seconds missing, though one reviewer cites it as the best drumming moment of the night."
+  },
+  "song_mentions": {
+    "Ollin Arrageed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:04:35.536224+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-09-14.sbd.miller.22169.sbeok.shnf"
+}

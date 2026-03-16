@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording featuring a nicely played Bird Song.",
+  "review": "The sole review highlights a strong performance of \"Bird Song,\" giving the show a solid four‑star rating. While no specific comments about the audio fidelity are provided, the .sbd designation suggests a clean soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4 stars) mentioning a positive moment; no negatives or technical complaints, so rating aligns with the reviewer’s score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound quality; assumed clear due to soundboard source and lack of criticism."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed set‑list commentary provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:20:02.883075+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-24.140834.sbd.betty.pcm.miller.clugston.flac1644"
+}

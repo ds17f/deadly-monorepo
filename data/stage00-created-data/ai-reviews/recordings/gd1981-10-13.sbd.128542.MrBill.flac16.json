@@ -1,0 +1,56 @@
+{
+  "summary": "Good show highlighted by Spanish Jam and Black Peter, captured on a soundboard with modest sound issues.",
+  "review": "The performance shines with a tasty Spanish Jam, a strong rendition of The Wheel and a breathtaking Black Peter, though the transition into The Wheel feels a bit clunky. The SBD source is an improvement over previous releases, but listeners note occasional distant guitar and other minor sound quirks. Overall the music outweighs the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (Spanish Jam, Black Peter, The Wheel) while recording has some sound issues; weighted average yields a solid mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Improved over older versions but still exhibits occasional muffled guitar, clunky transition into The Wheel and minor sound imperfections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam",
+      "The Wheel",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall flow is strong with a flavorful Spanish Jam, though the segue into The Wheel feels uneven; Black Peter provides an especially striking moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Occasionally distant in the mix but praised for bluesy tone on Spanish Jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:51:06.305872+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-13.sbd.128542.MrBill.flac16"
+}

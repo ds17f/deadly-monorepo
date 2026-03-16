@@ -1,0 +1,51 @@
+{
+  "summary": "Fiery Lovelight and relentless Alligator jam in a two‑song set",
+  "blurb": "The brief two‑song set delivers a scorching Turn On Your Lovelight followed by an expansive Alligator jam. Pigpen’s vocal power shines on Lovelight while the band locks into tight ensemble work throughout. Recording quality is solid soundboard capture, making it a must‑listen snapshot of ’67.",
+  "review": "On August 5, 1967 at Toronto’s O'Keefe Center, the Grateful Dead offered a lightning‑fast two‑song set that has become legendary among early‑era fans. The show opens with a blistering Turn On Your Lovelight, where Ron “Pigpen” McKernan commands the mic and his organ/harmonica adds extra fire, while Jerry Garcia’s guitar tears through the groove and drives the crowd wild. Without missing a beat the band dives into Alligator, a primal psychedelic jam that showcases Bob Weir’s rich rhythm tone and the tight, telepathic interplay of the whole unit. Both songs are captured on a soundboard source that is generally clear and only benefits from modest EQ tweaks, preserving the raw energy of this historic performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All four recording analyses are uniformly positive, repeatedly calling the Lovelight \"fiery\"/\"scorching\" and Alligator \"blistering\"/\"legendary\". No negative comments about performance appear, indicating strong consensus that the band was locked in. This consistent high praise justifies a +1.6 sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd67-08-05.sbd.hanno.16753.sbeok.shnf",
+    "reason": "Solid soundboard capture with clear audio; includes both iconic songs and is the community‑designated top source."
+  },
+  "key_highlights": [
+    "Turn On Your Lovelight showcases Pigpen’s vocal peak and organ/harmonica fire.",
+    "Alligator delivers a relentless psychedelic jam with tight ensemble work.",
+    "Both tracks are preserved on a good‑quality soundboard recording, needing only light EQ."
+  ],
+  "song_highlights": [
+    "Turn On Your Lovelight",
+    "Alligator"
+  ],
+  "band_performance": {
+    "Jerry": "Tearing up the place with searing guitar work and vocal phrasing that drives the Lovelight.",
+    "Phil": "",
+    "Bob": "Provides a rich, full rhythm tone on Alligator, anchoring the jam.",
+    "Pigpen": "Organ and harmonica shine during Lovelight; vocals hit a powerful peak.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-24T06:19:19.772805+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Alligator"
+    ]
+  ]
+}

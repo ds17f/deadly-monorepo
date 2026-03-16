@@ -1,0 +1,42 @@
+{
+  "summary": "Warm, solid '70s show with a great mix of early‑era songs, but the soundboard recording is a bit muffled and Ron's organ gets buried.",
+  "review": "The concert captures an impressive setlist that pulls heavily from the first album, Workingman's Dead, American Beauty, three Skull & Roses cuts and even China Cat Sunflower, delivering strong pacing and song selection. Reviewers praise the overall warmth of the recording yet note that the first‑set sound is thin, Ron \"Pigpen\" McKernan’s organ is hard to hear, and a large portion of the second set is missing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Three reviews give an average of 4.3 stars; most praise the performance and song choice while flagging noticeable recording flaws, leading to a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Warm overall tone but first‑set suffers from muffled, 'biffetta' sound; Ron's organ is buried in the mix and a large chunk of the second set is missing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Songs from Workingman's Dead",
+      "Songs from American Beauty",
+      "Three cuts from Skull & Roses"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Balanced set that jumps between early‑era material and mid‑period selections, praised for pacing and variety."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Ron \"Pigpen\" McKernan's organ is difficult to hear; it gets buried in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:48:13.540499+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-12-26.sbd.unknown.14124.sbefail.shnf"
+}

@@ -1,0 +1,82 @@
+{
+  "summary": "Good soundboard capture of a sweet 1988 Shoreline show featuring standout To Lay Me Down, Crazy Fingers and Stella Blue.",
+  "review": "The recording is a solid SBD that sounds clear and stays on‑pitch, letting the band’s relaxed Sunday performance shine. Highlights include an emotional “To Lay Me Down,” fiery “Crazy Fingers” and a soaring “Stella Blue,” while the first‑set opener “Cold Rain” feels flat and the late‑show “Black Muddy River” is forgettable. Overall the show is enjoyable but uneven, reflected in mixed fan sentiment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Many reviewers praise key songs and the soundboard quality (positive weight), but a sizable minority note bland moments and give low star ratings, pulling the overall average down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, on‑pitch SBD with crisp mix; no major dropouts reported but some listeners note it’s simply solid rather than exceptional."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down",
+      "Crazy Fingers",
+      "Stella Blue",
+      "Peggy-O",
+      "Memphis Blues"
+    ],
+    "poor_songs": [
+      "Cold Rain",
+      "Black Muddy River",
+      "Eyes"
+    ],
+    "setlist_flow": "A relaxed Sunday afternoon set that builds from a modest first‑set opener into a spacey second set, highlighted by strong mid‑set jams and a warm, audience‑filled vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally solid guitar work – tender on “Peggy-O” and “To Lay Me Down,” but occasional stumbling noted in the later second‑set.",
+    "Phil": "Bass solo praised; his lines on “Estimated” veer into classic ’77 territory, adding depth to the performance.",
+    "Bob": "Mixed remarks – some elaborate MIDI‑enhanced guitar parts (especially on “Crazy Fingers”), yet occasional forgetfulness of venue cues.",
+    "Keys": "Brent (keyboard) described as \"on fire\" all weekend, contributing strong texture throughout.",
+    "Drums": "Standard Dead drumming with the usual “wacky warblings” in the space sections; no specific praise or criticism."
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Memphis Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T14:49:30.636063+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-10-02.sbd.sacks.7637.sbeok.shnf"
+}

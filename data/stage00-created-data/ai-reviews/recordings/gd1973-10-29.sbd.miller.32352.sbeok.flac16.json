@@ -1,0 +1,94 @@
+{
+  "summary": "Excellent audience recording with superb mix and standout performances of Eyes, China Doll, The Other One and Truckin'",
+  "review": "Fans rave about the high‑energy 1973 show, highlighting a razor‑sharp Eyes of the World, a soaring China Doll, relentless The Other One and smoky Truckin' jams. The audience source delivers surprisingly clear instrument separation despite occasional rough patches (notably on El Paso) and minor pitch drift, making it an enjoyable listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.56 with overwhelmingly positive comments about both performance and sound quality; over a dozen detailed reviews provide consistent praise."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced mix with excellent instrument separation; occasional rough audio patches (especially on El Paso) and slight pitch drift but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "China Doll",
+      "The Other One",
+      "Truckin'",
+      "Brokedown Palace",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Honky‑tonk first set builds into a high‑energy second set; jazzy interludes and seamless transitions keep the momentum, culminating in memorable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Unique playing highlighted (guitar sounding like a tuba at times), tears up every solo and delivers great tone.",
+    "Phil": "Booming transition into China Doll; jazzy contributions on Truckin' and The Other One, praised for his bass‑driven intensity.",
+    "Bob": "Mix places his vocals too far forward; some reviewers wish he were more balanced in the mix.",
+    "Keys": "Keith's jazz‑inflected chord work (McCoy Tyner‑like) shines throughout; keyboards described as fantastic and integral to jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:50:29.173939+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-29.sbd.miller.32352.sbeok.flac16"
+}

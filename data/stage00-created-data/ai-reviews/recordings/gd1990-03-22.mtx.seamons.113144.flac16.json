@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent matrix capture of a fiery 1990 Hamilton show, highlighted by a blistering Scarlet > Fire/Fire on the Mountain jam and a full‑length Hey Jude.",
+  "review": "The Seamons matrix delivers crisp detail that lets listeners hear Mickey’s extra percussion and Brent’s keyboard flourishes, making this a technically superb document of the night. Musically the band is in top form – the second set erupts with a standout Scarlet > Fire into Fire on the Mountain, a heartfelt full version of Hey Jude, and a razor‑sharp Sugar Magnolia to close the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers are enthusiastic; two give five stars and one gives four. Both performance and recording quality are praised, with only minor song‑specific criticisms."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Hunter matrix (seamons.113144) is lauded for its clarity, instrument separation and the ability to hear details like Mickey’s fire‑specific percussion; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Fire on the Mountain",
+      "Hey Jude",
+      "Sugar Magnolia",
+      "Beat It On Down the Line",
+      "The Last Time",
+      "It's All Over Now, Baby Blue"
+    ],
+    "poor_songs": [
+      "Picasso Moon",
+      "Dough Knees"
+    ],
+    "setlist_flow": "A solid first set that settles in quickly, followed by an explosive second set where the band builds a high‑energy jam from Scarlet > Fire into Fire on the Mountain and caps it off with a tight Sugar Magnolia and a memorable encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His tone is praised throughout; emotional vocal on \"It's All Over Now, Baby Blue\" and occasional lyrical slip in Hey Jude noted.",
+    "Phil": "Described as “pwns it” during the second set, highlighting strong bass work.",
+    "Bob": "Bobby’s performance on Sugar Magnolia is called “letter perfect”; his contribution to Picasso Moon is criticized for clunky transitions.",
+    "Keys": "Brent’s era highlighted – great playing, insertion of Dear Mr. Fantasy into Hey Jude, and overall keyboard brilliance noted.",
+    "Drums": "Mickey’s fire‑specific percussion (marimbas) is singled out as a highlight in the matrix recording."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now, Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T04:45:30.252686+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-22.mtx.seamons.113144.flac16"
+}

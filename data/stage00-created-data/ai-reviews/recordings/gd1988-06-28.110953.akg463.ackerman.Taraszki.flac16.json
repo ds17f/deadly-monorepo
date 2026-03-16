@@ -1,0 +1,39 @@
+{
+  "summary": "Front‑row balcony audience recording that captures an amazing Dark Star with solid overall sound.",
+  "review": "The three reviewers all give the show four stars, praising both the performance—especially a stellar Dark Star—and the quality of the balcony‑mic capture.  No technical flaws are reported, and the recording is described as “great,” suggesting a clear and well‑balanced audience source that does justice to an already great concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "All three reviews are uniformly positive (4 ★) and highlight both the show’s musical high point and a good‑quality recording, giving confidence in a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded from front‑row balcony on both sets; reviewers note no issues and call the recording great, implying clear audience capture with good balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not specifically discussed, but reviewers note the recording covers the first set from left‑center and the second set from right‑center balcony positions, indicating good coverage of both halves."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:42:06.157522+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-28.110953.akg463.ackerman.Taraszki.flac16"
+}

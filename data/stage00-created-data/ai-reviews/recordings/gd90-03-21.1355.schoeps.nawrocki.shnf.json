@@ -1,0 +1,76 @@
+{
+  "summary": "Audience recording captures a high‑energy Canadian show with standout performances of Cumberland Blues and Half‑Step, though crowd noise sometimes masks bass articulation.",
+  "review": "The March 1990 Hamilton concert delivers an enthusiastic setlist highlighted by a rare “Cumberland Blues,” a soaring “Half‑Step (Without a Net),” and fun moments like “Loose Lucy” and “Hey Pocky Way.” Reviewers praise the band’s energy and song variety, while noting that the audience‑mic mix lets crowd ambience dominate and bass detail fade in places. Overall the show shines despite modest recording imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑star ratings and highlight strong musical moments; recording quality is decent but mixed, leading to an overall solid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally good levels and vibe capture the energy, but crowd is overly present in the mix and bass articulation suffers on tracks like “Cumberland Blues.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim > SOTM",
+      "Cumberland Blues",
+      "Half-Step (Without a Net)",
+      "Loose Lucy",
+      "Hey Pocky Way",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [
+      "It Must Have Been the Roses"
+    ],
+    "setlist_flow": "The setlist offers great variety and momentum, with an energetic second‑set opener (“Hey Pocky Way”) leading into “Crazy Fingers” and a rare, fun “Cumberland Blues.” Overall pacing feels like a long party for Canadian fans."
+  },
+  "band_member_comments": {
+    "Jerry": "Bobby cuts off Jerry's \"It Must Have Been the Roses\" segueing into \"Queen Jane,\" which some reviewers found annoying.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Victim > SOTM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half-Step (Without a Net)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T04:27:22.499007+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-21.1355.schoeps.nawrocki.shnf"
+}

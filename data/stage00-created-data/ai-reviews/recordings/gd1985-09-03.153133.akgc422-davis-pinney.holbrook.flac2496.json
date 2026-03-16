@@ -1,0 +1,51 @@
+{
+  "summary": "A distant audience tape that still delivers a solid 1985 outdoor performance, highlighted by a standout Cryptical and heartfelt Comes A Time.",
+  "review": "The recording is an audience capture with low‑level start‑up that builds into a clear enough mix for fans who appreciate the free taping spirit. Musically the show shines – short, punchy first‑set cuts give way to an expansive second set where Cryptical Envelopment stands out and Jerry closes with an emotional Comes A Time and Baby Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review praises the show heavily; recording is acceptable but not pristine, leading to a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Starts low and builds, distant soundstage with some echo, crowd noise minimal and cooperative, overall acceptable for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical Envelopment",
+      "Comes A Time",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set features short, compact and intense numbers; second set stretches out with extended jams, most notably Cryptical, delivering a strong emotional climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as psyched and expressive, especially on Comes A Time.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboard) noted as sounding good; his playing contributes to the overall vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:35:22.224545+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-03.153133.akgc422-davis-pinney.holbrook.flac2496"
+}

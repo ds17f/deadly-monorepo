@@ -1,0 +1,45 @@
+{
+  "summary": "Clear audience‑sourced recording captures an exciting show highlighted by a fiery Shakedown Street opener and a soaring Terrapin Station.",
+  "review": "Both reviewers rave about the performance, noting the excitement of the set, a strong Shakedown Street opener and a powerful Terrapin Station later in the night. The audience (AUD) recording is praised as clear and lively, with board patches used only sparingly to enhance the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly positive (4‑5 stars) and emphasize excellent sound quality plus standout performances; limited to two detailed reviews, giving moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, live feel; board used only for short patch inserts; overall crisp and well‑balanced AUD recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Exciting start with Shakedown Street, solid middle, culminating in a soaring Terrapin Station; overall pacing described as solid and lively."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers the goods – strong guitar work praised.",
+    "Phil": "",
+    "Bob": "Seemed a little under the weather, not as wild as usual.",
+    "Keys": "Brent's singing was stellar.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:26:19.785880+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-11.nak100.holtz.LMPP.94240.flac16"
+}

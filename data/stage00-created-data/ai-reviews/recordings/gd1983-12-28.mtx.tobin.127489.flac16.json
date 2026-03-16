@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix mix balances the board tape’s quirks, giving a decent listen though Bob’s guitar still dominates and the show feels solid yet spotty.",
+  "review": "The matrix version of this 1983‑84 show improves on the original board tape by blending audience ambience with the mix, but Bob Weir’s rhythm guitar remains unusually forward, sometimes masking Jerry Garcia’s lead on “Stranger.” Overall the performance is good for the era, though listeners should expect the typical spotty moments of the mid‑80s Dead.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; comments praise the matrix mix but note balance issues and spotty performance, leading to an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix blend offers a clearer picture than pure board tape; Bob's guitar is still overly forward and Jerry's lead on “Stranger” is buried, but the mix overall is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Stranger"
+    ],
+    "setlist_flow": "No specific comments on set pacing; reviewer describes the show as generally good despite typical mid‑80s inconsistencies."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead guitar is barely audible on “Stranger” in the original board tape, though the matrix mix brings him up a bit.",
+    "Phil": "",
+    "Bob": "Bob's rhythm guitar is unusually loud, providing energy but sometimes overpowering other parts.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:18:33.890662+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-28.mtx.tobin.127489.flac16"
+}

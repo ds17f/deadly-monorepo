@@ -1,0 +1,69 @@
+{
+  "summary": "Uneven Charlotte show with strong Stagger Lee but shaky vocals",
+  "blurb": "The set delivers a solid Stagger Lee and Black Throated Wind, while Jerry’s vocal performance is often strained. High Time and Bird Song fall flat, making the pacing feel uneven. Overall it’s a mixed‑quality night that rewards fans who appreciate the era’s quirks.",
+  "review": "On March 24, 1995 at the Charlotte Coliseum the Dead gave a show that swings between highlights and missteps. The first set opens with the upbeat Feel Like A Stranger before slipping into a lackluster High Time that drags the energy down. By the time Stagger Lee rolls around, Jerry’s raspy vocal grit actually shines and the band finds a groove, leading into New Minglewood Blues and a strong Black Throated Wind. Bird Song and The Promised Land feel flat, and the second set offers flashes of brilliance – Man Smart, Woman Smarter, Eyes Of The World segues into Space, then a moody Black Peter and a rollicking Around & Around – but Jerry’s voice remains strained throughout. Vince Welnick’s keyboards sit low in the mix, with some listeners wishing they were muted. The clean soundboard capture (gd1995-03-24.sbd.hiroki…) provides the clearest window into this uneven performance despite a half‑step pitch anomaly.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.7,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0,
+      "sentiment_rationale": "Recording analyses show mixed sentiment overall – some reviewers praise Stagger Lee and Black Throated Wind, while others note consistently strained vocals and weak songs; no clear positive or negative consensus to shift the rating.",
+      "final_calculation": "2.5 + 0.2 + 0 = 2.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-03-24.sbd.hiroki.35182.sbeok.flac16",
+    "reason": "Clean soundboard source with good overall mix; despite minor pitch/speed issue it captures the fullest set and offers the clearest listening experience."
+  },
+  "key_highlights": [
+    "Stagger Lee delivers an emotive vocal moment amid otherwise strained singing.",
+    "Black Throated Wind stands out as a tight, improvisational highlight.",
+    "Man Smart, Woman Smarter and Black Peter provide bright spots in the second set.",
+    "Vince Welnick's keyboard presence is divisive, with some listeners preferring it muted."
+  ],
+  "song_highlights": [
+    "Stagger Lee",
+    "Black Throated Wind",
+    "Man Smart, Woman Smarter",
+    "Black Peter",
+    "If The Shoe Fits"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals are raspy, off‑key and lyric‑chopped on many songs, though his emotive lead on Stagger Lee is praised.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T06:45:45.301058+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Stagger Lee"
+    ],
+    [
+      "Black Throated Wind"
+    ],
+    [
+      "Man Smart, Woman Smarter"
+    ],
+    [
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Black Peter",
+      "Around & Around"
+    ],
+    [
+      "If The Shoe Fits"
+    ]
+  ]
+}

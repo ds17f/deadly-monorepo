@@ -1,0 +1,51 @@
+{
+  "summary": "Sharp soundboard recording of a fiery 1969 show highlighted by an epic Dark Star and crisp St. Stephen",
+  "review": "The tape captures a crisp, well‑balanced soundboard mix with a hot vocal presence and razor‑sharp drums that let the band’s 1969 fire shine through. Musically the performance is lauded for a soaring, Calypso‑flavored Dark Star, crystal‑clear St Stephen and an electrifying Eleven, even though the set is incomplete due to missing cuts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviewers award 5‑star ratings and praise both the musical performance (especially Dark Star) and the sound quality; a few lower scores reflect only the missing portions, not the core show or recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear mix with slightly hot vocals and drums a touch recessed; some reviewers note minor balance quirks but overall crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "The Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brisk, high‑energy late‑summer ’69 set that feels loose yet zip‑filled; the show is cut short, but the existing tracks flow tightly and keep the band on fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for flawless tone and every note being spot‑on during Dark Star and other jams.",
+    "Phil": "Mentioned briefly as adding color to the jams; no specific critique of his bass work.",
+    "Bob": "His chiming, chopping guitar is noted as slightly louder than Garcia’s Les Paul but weaves perfectly into transitions.",
+    "Keys": "A brief keyboard arpeggio appears in Dark Star before disappearing; otherwise no major comments.",
+    "Drums": "Drumming described as aggressive, razor‑sharp, loud and clear – a driving force throughout the set."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:21:34.133500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-03-22.sbd.cotsman.8994.sbeok.shnf"
+}

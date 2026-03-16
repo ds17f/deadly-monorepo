@@ -1,0 +1,31 @@
+{
+  "summary": "Review only corrects taper name; provides no insight into recording or performance",
+  "review": "The sole review for this recording focuses solely on correcting the taper's name, stating that it is Ray Ackerman rather than Ron. No information is given about the audio source, sound quality, or musical performance, leaving those aspects unevaluated.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating and no substantive comments on sound or show quality; rating reflects the star given but lacks supporting detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on audio source, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T12:46:21.494792+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-18.141167.OTS.AKG.Ackerman.Miller.Noel.t-flac1648"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "Fair audience recording captures a solid late‑80s Omni show with a killer “Franklin’s/Stranger” jam and an inspiring old‑style “Playin’”, though a few numbers feel rushed or thin.",
+  "review": "The performance is a good snapshot of the Dead in the late ’80s – the band rides strong drum attacks, Brent’s Hammond chops and Jerry’s MIDI‑flavored solos, delivering highlights like the Franklin’s → Stranger transition and a rare, full‑length Playin’. The audience tape picks up the cavernous Omni ambience; it isn’t crystal‑clear but conveys the energy, while some songs (Foolish Heart, Box) come off a bit hurried or lackluster.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews praise the musical moments and band interplay (70% weight), while recording quality is only fair due to venue acoustics (30% weight). The average user rating is ~3.5, nudged up by strong show highlights."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Venue’s cavernous Omni hall creates some muddiness and limited clarity, but the tape captures strong drum presence and crowd vibe; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's",
+      "Stranger",
+      "Playin'",
+      "Wharf Rat",
+      "Gimmie Some Lovin"
+    ],
+    "poor_songs": [
+      "Foolish Heart",
+      "Box",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "First set opens mellow with “Let the Good Times Roll” and builds into rock‑heavy numbers; second set leans into deep jams (Franklin’s → Stranger, Playin') and ends with a modest encore. The pacing feels relaxed but occasionally rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for energetic MIDI riffs and strong lead work; occasional vocal flatness and lyric slips noted.",
+    "Phil": "Mentioned in crowd chants and praised for solid interplay with the drummers; backing vocals highlighted.",
+    "Bob": "Back‑up vocals noted especially on “Gimmie Some Lovin” and “Wharf Rat”.",
+    "Keys": "Brent’s Hammond organ shines on “Gimmie Some Lovin”; keyboards add texture to jams.",
+    "Drums": "Bill and Mickey receive high marks for intense, powerful playing throughout both sets."
+  },
+  "song_mentions": {
+    "Let the Good Times Roll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimmie Some Lovin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Box": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T17:06:08.013017+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-03-28.aud.wiley.9205.sbeok.shnf"
+}

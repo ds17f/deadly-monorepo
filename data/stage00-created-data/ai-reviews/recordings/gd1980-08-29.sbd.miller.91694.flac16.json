@@ -1,0 +1,79 @@
+{
+  "summary": "A crystal‑clear soundboard recording of an electric Spectrum show, driven by Jerry’s blistering Wharf Rat and a soaring Goin’ Down the Road Feeling Bad.",
+  "review": "The performance is consistently high‑energy with a standout second set – Jerry goes off on Wharf Rat and GDTRFB, Phil’s bass cuts through the mix, and the band delivers memorable jams on The Other One and Let It Grow. The soundboard source is praised for its crisp, well‑balanced mix (Phil prominent, Jerry pristine) with only occasional minor glitches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and highlight both superb musical moments and an excellent soundboard mix; a few low‑star entries appear to be rating errors, so overall quality is judged very good."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix with Jerry and Phil front‑and‑center; a few reviewers note occasional skips or dropouts but they are rare and do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Goin' Down the Road Feeling Bad",
+      "The Other One",
+      "Let It Grow",
+      "Lost Sailor / St. Stephen",
+      "Space > Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely with a trippy Row Jimmy and strong jams; second set opens unusually but quickly erupts into high‑octane performances, especially the Jerry‑led Wharf Rat/ GDTRFB climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his guitar pyrotechnics – big solo on Wharf Rat, soaring tone throughout, and a monster GDTRFB.",
+    "Phil": "His bass is described as prominent and “dropping bombs,” making the mix feel powerful.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart gets special shout‑outs (\"Mickey the wizard\") especially during the Space > Wharf Rat transition."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor / St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space > Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:18:24.916269+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-29.sbd.miller.91694.flac16"
+}

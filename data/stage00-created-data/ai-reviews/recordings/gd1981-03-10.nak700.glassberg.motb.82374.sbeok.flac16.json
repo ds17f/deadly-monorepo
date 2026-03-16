@@ -1,0 +1,57 @@
+{
+  "summary": "Pristine front‑of‑house audience tape captures a solid second set highlighted by a smoking Scarlet > Fire, while the first set feels uneven after an early on‑stage hiccup.",
+  "review": "The recording is a superb FOB audience capture with tight bass, clear mids and just enough crowd ambience to feel present. Musically the show starts shaky – an early “Half‑Step” incident leaves the first set disjointed – but the second half fires on all pistons, delivering standout versions of Scarlet > Fire and Sugar Magnolia along with strong drumming and Phil’s buoyant bass work.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Excellent recording quality boosts the rating, but the performance is mixed – a weak first set offset by an outstanding second set."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Fully‑saturated front‑of‑house tape recorded near the PA boxes; slightly thin high end but tight bass and clear mids. Crowd is present as ambience only, no individual voices."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire On The Mountain",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Half-Step (early solo disruption)"
+    ],
+    "setlist_flow": "First set feels disorganized after an on‑stage mishap, but the band regroups for a tight, high‑energy second set that maintains momentum and showcases strong interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Early solo was drawn out due to a stage issue; later his playing steadies as the second set builds.",
+    "Phil": "Bouncing all around with buoyant bass lines, especially in the second set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Amazing drums, loud and driving throughout; highlighted by reviewers."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire On The Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step (early solo disruption)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:28:11.114830+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-10.nak700.glassberg.motb.82374.sbeok.flac16"
+}

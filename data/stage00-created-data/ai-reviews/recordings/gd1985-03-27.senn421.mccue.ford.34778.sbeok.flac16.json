@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent front‑of‑house soundboard capture of a high‑energy show highlighted by Shakedown and Mississippi Half‑Step",
+  "review": "The recording is praised for its crisp FOB mix that perfectly conveys the crowd’s supernova‑like energy, especially on the second‑set opener Shakedown. The performance itself is lauded as a standout night with memorable renditions of Mississippi Half‑Step and a recommended Mama Tried, making it a must‑listen for Deadheads seeking pure live power.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Single detailed positive review rates the show 4 stars and praises both the performance and the high‑quality FOB soundboard recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "FOB AUD mix is described as crystal clear and captures crowd energy; no reported flaws or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Shakedown",
+      "Mama Tried"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic second‑set opener (Shakedown) creates a supernova exchange between band and audience; overall flow praised for high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:08:36.558482+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-27.senn421.mccue.ford.34778.sbeok.flac16"
+}

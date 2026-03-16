@@ -1,0 +1,57 @@
+{
+  "summary": "An excellent soundboard capture of the underrated 10/24/70 show, highlighted by dazzling performances of Dancing in the Streets, Hurts Me Too, Good Lovin' and a fiery Lovelight.",
+  "review": "The recording is a superbly balanced sound‑board mix that lets every instrument shine, while the performance itself radiates smooth uniformity and energetic cohesion. Reviewers single out the opening “Dancing in the Streets” jam, Pigpen’s powerhouse on “Hurts Me Too,” an expansive “Good Lovin’”, and a scorching “Lovelight” as show‑highlights. Overall it’s hailed as one of the best—and most overlooked—gigs from the Fall ’70 period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "A single detailed 5‑star review praises both the musical performance and the soundboard quality, indicating an exceptional show with excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Wonderful balance and mix; no major flaws noted, only brief cuts that do not affect overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancing in the Streets",
+      "Hurts Me Too",
+      "Good Lovin'",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with smooth uniformity, building from a melodic “Dancing” jam into high‑energy numbers and closing with an intense “Lovelight”, delivering a cohesive and electrifying performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised as the instrumental MVP of the night; takes reins in jams like Dancing and Good Lovin' while also providing supportive rhythm elsewhere.",
+    "Bob": "Pigpen shines on vocals, harmonica and organ, especially on “Hurts Me Too”, delivering his best‑ever performance.",
+    "Keys": "Recognized for impressive organ chops that drive the songs forward.",
+    "Drums": "Both drummers are noted for constructing an “aerial railroad” that propels the music with tight, energetic playing."
+  },
+  "song_mentions": {
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:58:33.432165+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-24.140923.SBD.Dalton.Miller.Noel.flac1644"
+}

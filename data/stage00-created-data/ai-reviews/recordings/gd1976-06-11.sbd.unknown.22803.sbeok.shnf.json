@@ -1,0 +1,83 @@
+{
+  "summary": "Studio‑like soundboard recording captures an excellent 1976 Boston run with standout St. Stephen > Dancing > Music Never Stopped and Eyes > Stella Blue sequences",
+  "review": "The three reviewers rave about the fluid, precise performance that sounds almost like a studio album, noting superb soundboard quality with no audible cuts. Highlights include a “out‑of‑this‑world” St. Stephen > Dancing > Music Never Stopped suite, a soaring Eyes > Stella Blue pairing, and strong first‑set rockers such as Lazy Lightning and Ship of Fools. Donna Jean’s vocals also receive special praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three 5‑star reviews describe an exceptional performance and a pristine, studio‑like soundboard recording; the consistency and detail give high confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crystal‑clear, studio‑like, with no audio cuts (unlike other copies). Fluid mix, precise balance; no reported dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen > Dancing > Music Never Stopped",
+      "Eyes > Stella Blue",
+      "Lazy Lightning",
+      "Ship of Fools",
+      "Donna Jean"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a strong, well‑balanced set that blends rockers and ballads, with deep, flowing sequences that keep the momentum high throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Donna Jean": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:52:07.397701+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-11.sbd.unknown.22803.sbeok.shnf"
+}

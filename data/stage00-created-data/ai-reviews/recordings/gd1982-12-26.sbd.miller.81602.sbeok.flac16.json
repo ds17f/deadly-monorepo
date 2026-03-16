@@ -1,0 +1,45 @@
+{
+  "summary": "Mixed performance – a strong start that loses steam when the band rushes China Cat Sunflower into I Know You Rider; recording source unclear and no clear sound‑quality comments.",
+  "review": "Reviewers note the concert opens well but gets sloppy after the rushed China Cat Sunflower → I Know You Rider sequence, leaving the overall show feeling uneven. No concrete information about the tape’s fidelity is given beyond a mention that Joani recorded the MSC source, so the audio quality remains uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (some praise for the start but criticism of rushed songs) while recording quality cannot be assessed definitively; overall rating falls in the average range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Only note that Joani taped the MSC source; no explicit comments on clarity, balance, or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    "setlist_flow": "Starts great but the band rushes China Cat Sunflower into I Know You Rider, resulting in a sloppy feel for the remainder of the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:29:17.015610+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-12-26.sbd.miller.81602.sbeok.flac16"
+}

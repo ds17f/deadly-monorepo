@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording of decent sound captures a great show highlighted by the full‑length Brokedown Palace tribute to Ken Kesey.",
+  "review": "The concert is praised as a strong performance, with the emotional climax of an uncut Brokedown Palace played for Ken Kesey. The audience tape sounds okay but falls short of the clarity found on the official soundboard release.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "One detailed review rates the show positively (4 ★) and notes only modest recording quality, leading to a solid but not exceptional overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is acceptable but noticeably less clear than the available soundboard version; typical audience tape ambience present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall great performance with a memorable emotional ending when the band turned to Kesey and played an uncut Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:50:54.128190+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-05-08.sonyecm.andrewf.29304.sbefail.flac16"
+}

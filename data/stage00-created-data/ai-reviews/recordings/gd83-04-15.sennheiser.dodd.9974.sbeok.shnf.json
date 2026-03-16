@@ -1,0 +1,115 @@
+{
+  "summary": "Vivid audience tape of the 04‑15‑83 show captures a high‑energy performance (Shakedown, Brown‑Eyed Women, GDTRFB) with good balance and only a brief glitch.",
+  "review": "The recording is an audience capture using a Sennheiser mic that delivers a lively, well‑balanced sound; the only technical flaw is a short cut between GDTRFB and Around & Around. Musically the show is celebrated by reviewers for its hot second set, standout jams on Shakedown Street, Feel Like A Stranger, Bob Star, GDTRFB and the seamless flow into Around & Around, with Jerry Garcia repeatedly praised as the driving force.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All six reviews are detailed and overwhelmingly positive about both performance and tape quality; only a minor recording glitch is noted, so the combined rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced Sennheiser audience mic capture with a lively atmosphere. One reviewer notes a brief cut between GDTRFB and Around & Around but otherwise no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Brown-eyed Women",
+      "Feel Like A Stranger",
+      "Samson and Deliah",
+      "He's Gone / Bob Star",
+      "GDTRFB",
+      "Around & Around",
+      "Johnny B. Good",
+      "It's All Over Now, Baby Blue",
+      "Lazy Lightnin'",
+      "Supplication",
+      "Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a strong first set with classics like Shakedown Street and a second set that ‘went into hyper‑drive’, noting tight transitions, extended jams and an especially magical Bob Star moment that propelled the show to its peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised – “Jerry rocks GDTRFB”, “Jerry was the driver of the bus”, noted for his jam on Stones and overall guitar fire.",
+    "Phil": "",
+    "Bob": "Highlighted for singing the rare Bob Star transition and leading vocals on several numbers.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown-eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson and Deliah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone / Bob Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bob Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Good": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now, Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightnin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T05:19:45.290222+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-15.sennheiser.dodd.9974.sbeok.shnf"
+}

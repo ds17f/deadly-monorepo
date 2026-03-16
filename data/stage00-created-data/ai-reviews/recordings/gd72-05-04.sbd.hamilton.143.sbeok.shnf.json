@@ -1,0 +1,93 @@
+{
+  "summary": "Excellent soundboard mix captures a stellar 1972 Paris show highlighted by a soaring Dark Star, blistering Good Lovin' and an unforgettable The Other One.",
+  "review": "The recording is a clean SBD capture with crisp balance and no noticeable drop‑outs – the mix is frequently praised as “perfect” or “mixed to perfection.”  Musically the concert shines after a slow start, delivering a monster Dark Star, a blazing Good Lovin', superb Pigpen moments and one of the best Sugar Magnolia performances ever heard.  Overall reviewers are overwhelmingly enthusiastic, noting the band’s loose‑but‑tight vibe and standout contributions from Jerry and Billy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews rate the show 4–5 stars, highlight exceptional performances and a pristine soundboard recording; only a few low‑star comments relate to availability rather than quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as clean, crisp and well‑mixed SBD; no major drop‑outs despite an early electricity cut that didn’t affect the audio integrity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Good Lovin'",
+      "The Other One (NFA>GDTRFB)",
+      "Sugar Magnolia",
+      "Sing Me Back Home"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early first‑set feels sluggish, but Pigpen’s organ and vocal spotlight turn the momentum around; the second set erupts with a monster Dark Star and tight, high‑energy jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being in rare form, delivering favorite guitar tones especially on Jack Straw and throughout the jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ work highlighted as a major treat; his chops described as “West Coast” flavor and essential to the show’s vibe.",
+    "Drums": "Billy’s drum solo singled out as one of his best, with reviewers noting its brilliance within the Dark Star."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Good Lovin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "RxR Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "You Win Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T13:23:40.264909+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-05-04.sbd.hamilton.143.sbeok.shnf"
+}

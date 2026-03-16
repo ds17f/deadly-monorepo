@@ -1,0 +1,95 @@
+{
+  "summary": "Audience recording captures a high‑energy Buffalo show with standout Bertha/Greatest Story/Cold Rain & Snow suite and an uplifting U.S. Blues encore.",
+  "review": "The performance is praised for its upbeat vibe, tight setlist flow and several highlight moments – notably the Bertha > Greatest Story > Cold Rain and Snow sequence, Touch > Man Smart, Terrapin Station and a soaring U.S. Blues finale. The audience‑sourced tape is considered decent; reviewers wish it were an SBD but find it listenable enough to enjoy the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently strong 4‑5 star reviews highlight a solid, energetic performance; recording is an audience tape that’s deemed good but not exceptional."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note it is an audience (AUD) source and would give a higher rating if it were SBD; no major drop‑outs or distortion reported, overall acceptable clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Greatest Story Ever Told",
+      "Cold Rain and Snow",
+      "Touch",
+      "Man Smart (House of the Rising Sun)",
+      "Terrapin Station",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens strong with a Bertha‑Greatest Story‑Cold Rain suite; second set maintains momentum with Touch > Man Smart and moves into reflective ballads before ending on an uplifting U.S. Blues encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sounding better in ’89, setting the mood, and missed by fans.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart (House of the Rising Sun)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T20:21:46.747395+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-04.akg414s.alexander.78771.flac16"
+}

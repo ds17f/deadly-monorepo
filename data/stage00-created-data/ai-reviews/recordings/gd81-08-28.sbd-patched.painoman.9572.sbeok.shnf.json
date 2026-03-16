@@ -1,0 +1,80 @@
+{
+  "summary": "High‑quality soundboard captures a legendary second‑set with a soaring Wheel jam and tight Shakedown Street, despite occasional mix hiccups.",
+  "review": "The recording is a generally clear soundboard capture; early songs suffer from low guitar levels and a few splices, but the bulk of the set shines. Reviewers rave about the pre‑drums Wheel, the second‑half Shakedown Street jam, Spanish Jam and the Lost Sailor > Saint of Circumstance sequence, calling it one of the band’s finest early‑’80s performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews consistently praise the musical performance (especially the Wheel and Shakedown Street) while noting only minor recording flaws, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp; first song suffers from low guitar volume and occasional splice artifacts. Overall the SBD is listenable with decent balance, especially in the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Shakedown Street",
+      "Spanish Jam",
+      "Lost Sailor > Saint of Circumstance",
+      "Althea"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "Early set is solid but uneven; the second set shines with a pre‑drums Wheel, a monster Shakedown Street jam and tight transitions into Spanish Jam and Good Times Blues, delivering an unforgettable flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is praised for thoughtful interplay with Brent and strong solos, though a few reviewers note his guitar being low in the opening song or needing a mix boost on Jack Straw.",
+    "Phil": "",
+    "Bob": "Bob Weir receives criticism for sloppy vocals on Truckin' and later moments, but his rhythm work is otherwise accepted as part of the band’s texture.",
+    "Keys": "Brent Mydland gets high marks for keyboard creativity, solid voicings, and a rare vocal on Good Times Blues; reviewers highlight his tight interplay with Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Good Times Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:51:33.909850+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-28.sbd-patched.painoman.9572.sbeok.shnf"
+}

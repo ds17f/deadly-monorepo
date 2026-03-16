@@ -1,0 +1,33 @@
+{
+  "summary": "Energetic show with a solid first set but a sloppy second set; recording quality not described.",
+  "review": "Reviewers note that the first set was pretty good while the second set felt sloppy and \"gasping for air,\" though the concert’s overall energy was praised as over‑the‑top. No comments were made about the audio source or mix, leaving the technical quality unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Average reviewer scores (3 and 4 stars) and mixed commentary on performance lead to a middling rating; lack of recording details prevents higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not mention sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "second set"
+    ],
+    "setlist_flow": "First set described as pretty good; second set criticized for being sloppy and lacking breath, though the overall concert energy was highlighted as high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T21:09:22.611446+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-05.beyerm88.suraci.77703.flac16"
+}

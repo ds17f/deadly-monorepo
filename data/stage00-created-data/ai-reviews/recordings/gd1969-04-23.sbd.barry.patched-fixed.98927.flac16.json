@@ -1,0 +1,31 @@
+{
+  "summary": "Very good overall sound with minor speed issues, complemented by an excellent band performance.",
+  "review": "The reviewer praises the audio as very good but notes occasional speed fluctuations that suggest tape damage from heat or moisture, giving the recording a slightly minimal character. Despite these technical quirks, the show itself is described as an excellent performance, earning a full five‑star rating.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single detailed review gives a perfect show rating but mentions recording flaws; weighted average yields a high overall score, though confidence is low due to only one source."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Minor speed issues and tape damage (heat/moisture) cause occasional slowing; overall sound remains very good but minimal in some sections."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T13:54:58.286473+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-23.sbd.barry.patched-fixed.98927.flac16"
+}

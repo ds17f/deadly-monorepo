@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality recording captures a rain‑soaked, wild night highlighted by standout performances of Althea and Standing on the Moon.",
+  "review": "The fans rave about this recording’s clear capture of crowd ambience and tunings, making it one of the best versions of the show available.  The concert itself is remembered for its torrential rain, a gritty first set that eventually kicks into gear, and two memorable moments – an inspired Althea and a favorite take on Standing on the Moon.  While a few note the sluggish start, the overall vibe is upbeat and atmospheric.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks for both performance and recording; occasional criticism of the first set lowers the average slightly, resulting in a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners praise the clarity of crowd sounds and tuning details; no major dropouts or muffling are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Standing on the Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rain created a dramatic atmosphere; the first set is described as slow and \"ghostly\" for Garcia, but picks up toward the end, while the second set is consistently praised."
+  },
+  "band_member_comments": {
+    "Jerry": "First‑set playing described as a 'ghost of himself' until he finally kicks in later.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby’s addition after Brent left is highlighted as a positive change.",
+    "Drums": "Bill and Mickey are praised for answering the thunder with energetic drumming."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:38:26.332988+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-29.schoeps.evans-gross.GEMS.91193.flac16"
+}

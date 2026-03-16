@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture of a celebrated Brent‑era three‑day run, though the ending of “Picasso Moon” falls flat.",
+  "review": "Fans rave about this recording as part of what they consider one of the best three‑day stretches of the Brent Mydland era, praising its overall energy and historical significance. The soundboard source is generally assumed to be clear, but a reviewer notes that the conclusion of “Picasso Moon” sounds like a train wreck, providing the only notable blemish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Four enthusiastic reviews (three 5‑star, one 4‑star) indicate strong show appreciation; recording quality is inferred as good from the soundboard source with no reported issues, offset slightly by a negative comment on one song."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio clarity; file name suggests a soundboard capture and fans' positive response implies acceptable to good fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "Regarded as part of an outstanding three‑day Brent era run with strong overall flow; only the ending of “Picasso Moon” is criticized."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:17:14.148626+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-26.sbd.griesman.6697.sbeok.shnf"
+}

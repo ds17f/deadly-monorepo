@@ -1,0 +1,103 @@
+{
+  "summary": "Excellent UltraMatrix matrix recording captures a solid 1990 European show with standout Ramble On Rose, Rider and Throwing Stones.",
+  "review": "Both reviewers praise the upgraded UltraMatrix SBD/CM transfer as crisp, clear and the new go‑to source for this night. Musically the concert is described as an average‑to‑good performance overall, with a consistently solid first set and a second set that shines thanks to Ramble On Rose, Rider, Throwing Stones, Stella and a free‑form Playing segment. Phil’s bass work and Brent’s keyboard fireworks are highlighted, while Vince is hard to hear in the mix and a few songs (Saint, Promised Land) fall short.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two detailed reviews: one mixed (3★) but very positive on audio; the other strongly positive (4★) on both sound and performance, leading to an overall rating above 4."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "CM‑processed UltraMatrix transfer praised as the best available source; clear, balanced mix though Vince’s keyboards sit low and Bruce’s drum solo is less prominent on some mixes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Rider",
+      "Throwing Stones",
+      "Stella",
+      "Crazy Fingers",
+      "Playing",
+      "China Cat"
+    ],
+    "poor_songs": [
+      "Saint",
+      "Promised Land"
+    ],
+    "setlist_flow": "First set solid and consistent with good energy; second set builds momentum, delivering several high points (Rider, Throwing Stones, Stella) that make it one of the year’s top performances despite a few average moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Fine form throughout; backs off when Bruce gets hot and shows humor during the encore.",
+    "Phil": "Particularly vibrant and bouncy; great synth‑bass adventure, uses 6‑string bass on Throwing Stones.",
+    "Bob": "",
+    "Keys": "Dual‑keys show with Brent (Bobby) going nuts; Vince low in the mix but overall keyboards add color.",
+    "Drums": "Bruce’s solo less evident on some mixes but generally solid; overall drum sound clear."
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hellina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:11:05.970663+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-27.141693.UltraMatrix.sbd.cm.miller.flac1644"
+}

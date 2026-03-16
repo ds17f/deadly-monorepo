@@ -1,0 +1,51 @@
+{
+  "summary": "Matrix recording with a spacious yet occasionally “underwater” sound captures an electrifying 1985 show highlighted by powerful Samson, Smokestack Lightning and Alabama Getaway performances.",
+  "review": "The performance is widely praised for its high energy, especially the fiery rendition of Samson and Delilah, the storm‑inspired Smokestack Lightning and a soaring Alabama Getaway. The matrix source provides an unusually spacious mix, though several listeners note a phase‑delay that gives Jerry’s guitar a muted “underwater” quality. Overall the show shines despite the modest technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and extol the musical performance; only a few note matrix delay issues, leading to a strong but not flawless overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe a spacious mix with an upfront audience feel, but a noticeable delay between soundboard and audience tracks creates a muddy/underwater guitar tone for some songs. The effect is seen by many as unique rather than detrimental."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson and Delilah",
+      "Smokestack Lightning",
+      "Alabama Getaway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is remembered for its weather‑driven drama – a sunny first set followed by an intense rainstorm that inspired thunderous drumming and heightened the second‑set jams, creating a memorable ebb and flow."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar often sounds ‘underwater’ due to matrix phase issues, yet many praise his tone (Scofield‑like) and especially his vocal work on Alabama Getaway.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Thundering drums echoed the storm; the Drums→Space segment was described as frighteningly powerful."
+  },
+  "song_mentions": {
+    "Samson and Delilah": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:36:29.163788+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-24.mtx.pytlik.32310.sbeok.flac16"
+}

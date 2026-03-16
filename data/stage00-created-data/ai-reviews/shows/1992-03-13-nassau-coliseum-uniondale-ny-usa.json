@@ -1,0 +1,67 @@
+{
+  "summary": "Mixed‑energy Nassau show with strong Bird Song and Space",
+  "blurb": "The concert features standout moments like Brown Eyed Women, Bird Song, and a train‑horn‑enhanced Space. Jerry’s soaring solos lift the Garcia originals while the post‑drums segment rescues an otherwise sluggish second set. Wave to the Wind and a limp Box of Rain keep the momentum uneven.",
+  "review": "On March 13, 1992 at Nassau Coliseum the Dead delivered a show that swings between brilliance and lethargy. The first set crackles with energy – Garcia’s lyrical leads on Brown Eyed Women and Masterpiece sit beside Weir’s soulful Bird Song, and the band rides a tight groove into a memorable Space where a rain‑soaked train horn pierces the mix. After the dual drum excursion, the post‑drums jam injects fresh life, but the second half never fully recovers; Wave to the Wind trudges along and the encore Box of Rain feels more like an afterthought than a climax. Fans will love the highlighted moments, yet should temper expectations for a uniformly high‑octane night.\n\nAcross the three available recordings the soundboard captures are solid – the Gardner SBD (gd92-03-13.nak700.gardner.9477.sbeok.shnf) offers the most complete and balanced picture despite minor DAT sizzle, while the Miller SBD is praised for clarity though drums can get buried in dense jams. One audience‑based source deems the entire performance dull, underscoring the mixed reception this night received among listeners.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "The three recordings show mixed sentiment: one positive, one mixed, and one negative review. No consistent praise or criticism dominates, so the adjustment remains neutral.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd92-03-13.nak700.gardner.9477.sbeok.shnf",
+    "reason": "Decent soundboard capture with good balance and the most complete set, highlighting the train‑horn Space while avoiding major drop‑outs."
+  },
+  "key_highlights": [
+    "Standout performances of Brown Eyed Women, Bird Song, and a train‑horn‑enhanced Space",
+    "Post‑drums segment revitalizes a sluggish second half",
+    "MIDI/keyboard work noted as a highlight despite overall mixed set flow"
+  ],
+  "song_highlights": [
+    "Brown Eyed Women",
+    "Bird Song",
+    "Space",
+    "The Wheel",
+    "Wharf Rat",
+    "Box of Rain"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers soaring solos on Brown Eyed Women, Masterpiece and Bird Song; his post‑drums playing helps lift the set.",
+    "Phil": "Phil’s presence is frequently praised (“plenty of Phil”), though he misses a step in Box of Rain before recovering for the encore.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Mickey’s drumming struggles to cut through dense jams but remains solid, especially during the post‑drums segment that rescues momentum.",
+    "Billy": "Bill provides steady rhythmic support; his work is solid throughout despite occasional mix‑down issues."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-18T04:40:12.350639+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Brown Eyed Women"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Wave To The Wind",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Box of Rain"
+    ]
+  ]
+}

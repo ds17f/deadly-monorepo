@@ -1,0 +1,63 @@
+{
+  "summary": "Good audience recording of a solid Spring‑92 show with standout Touch of Grey and Music Never Stopped, though the second set falls a bit short.",
+  "review": "The three reviewers agree this is one of the better captures of the Spring ’92 run – an audience tape that’s not pristine but listenable. The first set shines with up‑tempo crowd‑pleasers like Touch of Grey, Black Throated Wind, Loose Lucy and a strong Music Never Stopped jam, while the second set is considered weaker. Jerry’s horn‑solo on Music is praised despite a later guitar‑tone volume issue, and Vince’s keyboard work is noted as repetitive.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (70% weight) with a few criticisms of the second set; recording is deemed decent but not high‑fidelity (30% weight). The mix yields an overall solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Not the highest fidelity tape, but considered the best sounding capture of this evening; some listeners note a slightly muffled guitar tone and repetitive keyboard chords."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Black Throated Wind",
+      "Loose Lucy",
+      "Big Railroad",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, high‑energy first set packed with up‑tempo crowd pleasers; the second set doesn’t quite match the excitement of the opener but remains an enjoyable night."
+  },
+  "band_member_comments": {
+    "Jerry": "Great horn solo on Music, later trad guitar tone suffers from drive/volume issue, but he twirls licks throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s repetitive chord work is noted; Hornsby’s absence is mentioned as a turning point for the tour.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T04:13:40.692600+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-08.Nak300CP4.Floater.Keo.113039.Flac2496"
+}

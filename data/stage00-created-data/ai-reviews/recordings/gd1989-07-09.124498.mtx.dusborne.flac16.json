@@ -1,0 +1,39 @@
+{
+  "summary": "Recording source unknown with mixed feedback; reviewers note a questionable Bob Weir performance on “Shakedown.”",
+  "review": "The two brief reviews provide little insight into the audio fidelity, leaving the recording source and quality indeterminate. One reviewer hints that Bob Weir may have been over‑extended during “Shakedown,” suggesting a modest dip in performance, while the other simply asks about the concert’s date, resulting in an overall mixed impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "low",
+    "rationale": "Only two short reviews; one neutral query and one mild criticism of a specific song give limited evidence for either high or low quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Shakedown"
+    ],
+    "setlist_flow": "No information provided about the overall set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Reviewer suggests Bob may have been “too much too fast,” implying an over‑indulgent performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:55:22.368112+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-09.124498.mtx.dusborne.flac16"
+}

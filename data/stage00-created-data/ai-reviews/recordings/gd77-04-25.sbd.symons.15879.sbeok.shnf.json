@@ -1,0 +1,85 @@
+{
+  "summary": "Fair‑sounding soundboard capture of a typical ’77 show highlighted by a stellar Playing‑Wharf Rat stretch and the Scarlet > Fire jam.",
+  "review": "The recording is a muffled, high‑clipped soundboard tape that many listeners describe as “mid‑rangy” or like hearing the band from ten feet away. Musically the concert is an average first set but the second set shines – the Playing → Drums → Wharf Rat → Playing sequence and the Scarlet > Fire combo are repeatedly called out as must‑hear moments, with solid Terrapin and U.S. Blues finishes. Overall fans find the performance worth hearing for completists despite the audio shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is generally praised (≈4‑star level) while recording quality is consistently described as fair to poor (≈2½‑star). Weighted average (70 % show, 30 % recording) yields a rating around 3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Muffled mids, clipped highs, tape‑generation hiss; many reviewers note the sound is “mid‑rangy”, distant and lacking crispness, though no major dropouts are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing",
+      "Wharf Rat",
+      "Scarlet > Fire",
+      "Terrapin",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Peggy-O"
+    ],
+    "setlist_flow": "First set is described as subdued or average, while the second set erupts into a high‑energy jam stretch (Playing → Drums → Wharf Rat → Playing) and a memorable Scarlet > Fire sequence, giving the concert its highlight moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Jerry’s guitar – especially on Fire, Playin', and during the jam sections.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's organ is noted as buried in the mix; overall keyboards are described as “okay” but not a standout.",
+    "Drums": "The Drums segment receives positive mention for its flow into Wharf Rat, though no specific critique of Bill/Mickey."
+  },
+  "song_mentions": {
+    "Playing": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Wharf Rat": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T21:33:36.304857+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-04-25.sbd.symons.15879.sbeok.shnf"
+}

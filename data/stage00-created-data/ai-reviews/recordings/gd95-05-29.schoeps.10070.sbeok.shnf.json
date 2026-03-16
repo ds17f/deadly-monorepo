@@ -1,0 +1,74 @@
+{
+  "summary": "Wind‑blown audience tape captures a strong second set with Shakedown, Looks Like Rain and an unforgettable Days Between, but the windy recording limits clarity.",
+  "review": "The show is remembered for its powerful Set II – Jerry’s magic‑wand‑enhanced Looks Like Rain, a soaring Shakedown vocal jam, the haunting Days Between and a classic Sugar Magnolia finale.  However, most listeners note that wind‑swept audience recordings scatter the sound, making some moments muddy despite the performance strength.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Many detailed reviews describe a very good musical performance (especially the second set) but repeatedly mention wind‑affected audience recording quality, leading to an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Wind noise dominates the tape, causing scattered and muffled sound; occasional clarity but no soundboard source available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Looks Like Rain",
+      "Days Between",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "Set II opens with authority – Shakedown and Looks Like Rain burst forth with strong vocals and Jerry’s magic‑wand effect.  The middle of the set features a haunting Days Between that many fans cite as a highlight, while Terrapin suffers from a missed riff.  The concert closes on an uplifting Sugar Magnolia that lifts the wind‑laden atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for magic‑wand pedal work on Looks Like Rain, focused playing and great vocals on Days Between, and a sizzling Liberty; criticized for missing verses in Shakedown later and a flubbed Terrapin riff, seeming low‑energy toward the end.",
+    "Phil": "Mentioned as a little lazy vocal-wise by one reviewer but otherwise not highlighted for any major issues.",
+    "Bob": "Weir noted for solid tunes and vocal contributions; even quoted for his \"F the Christian Right\" comment.",
+    "Keys": "Vince (keys) took lead on the jam after Shakedown, occasionally missing cues; no specific criticism of keyboard tone.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:12:13.534251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-05-29.schoeps.10070.sbeok.shnf"
+}

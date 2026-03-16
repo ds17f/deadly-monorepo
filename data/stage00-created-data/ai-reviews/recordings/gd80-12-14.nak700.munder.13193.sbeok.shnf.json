@@ -1,0 +1,118 @@
+{
+  "summary": "High‑energy 12/14/80 show captured on a solid audience tape with standout Estimated Prophet, Wheel, Space and The Other One performances.",
+  "review": "The concert is widely praised for its electrifying vibe and memorable moments – from Jerry’s dazzling Estimated Prophet and Samson to the sweet Wheel leading into an epic Drums‑Space‑Other One sequence. Recording quality is generally good despite a few mix quirks (light on Jerry's mic early on and a muddied Stella toward the end). Overall, fans describe it as a classic late‑80s Dead show that rewards repeated listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.56/5; comments are overwhelmingly positive about both performance and sound, with only minor recording complaints."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively, but mix is unusual (light on Jerry's mic in early songs) and Stella sounds muddied toward the end."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Bertha",
+      "Greatest",
+      "Althea",
+      "Bird Song",
+      "Passenger",
+      "Candyman",
+      "Cold Rain and Snow",
+      "Samson",
+      "Wheel",
+      "Space",
+      "The Other One",
+      "Brokedown"
+    ],
+    "poor_songs": [
+      "Stella"
+    ],
+    "setlist_flow": "Strong first set energy carries into a superb second set where Wheel transitions smoothly into an inspired Drums‑Space jam, culminating in a fresh, high‑octane Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his inventive guitar work (knob fiddling, Estimated Prophet, smoking on Samson) though early tracks are low on his mic and his voice wanes on Stella.",
+    "Phil": "Noted for blasting the band into a third instrumental after The Other One verse two, adding extra power to the jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums & Space described as amazing, with a particularly powerful, chant‑filled segment that drives the show."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:05:41.542145+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-12-14.nak700.munder.13193.sbeok.shnf"
+}

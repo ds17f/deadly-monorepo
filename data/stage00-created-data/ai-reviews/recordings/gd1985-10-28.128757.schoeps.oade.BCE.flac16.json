@@ -1,0 +1,45 @@
+{
+  "summary": "A high‑quality audience recording captures a mellow yet well‑played set with standout Touch of Grey and an outstanding Ramble On Rose featuring Brent’s superb keyboard solo.",
+  "review": "The Oade/Schoeps ambient capture delivers crystal‑clear bass, balanced crowd ambience and a vivid live feel that fans rave about. Musically the show is solid—though not as epic as other ’85 dates, it shines on Touch of Grey and a killer Ramble On Rose with Brent Mydland’s soaring solo. Overall listeners find the performance enjoyable and the recording excellent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 4‑5 stars, praising both the musical performance and the superb ambient recording; no significant negatives were noted."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience capture with Schoeps mics praised for deep bass response, clear instrument definition and a perfect balance between crowd and music; listeners describe it as beautiful live sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as mellow yet appreciative, well‑played throughout; not the most epic night of the ’85 tour but consistently solid with high energy moments (e.g., Touch of Grey) and a highlight in the second half (Ramble On Rose)."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Excellent Brent Mydland keyboard work, especially his solo on Ramble On Rose.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:52:22.120942+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-28.128757.schoeps.oade.BCE.flac16"
+}

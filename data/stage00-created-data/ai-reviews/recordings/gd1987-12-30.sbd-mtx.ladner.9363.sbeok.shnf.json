@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent recording of a tremendous show",
+  "review": "The sole reviewer rates the release five stars, calling it a great recording of a tremendous performance. While no specific details about sound quality or individual songs are given, the overall impression is highly positive for both the audio capture and the concert itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic 5‑star review; positive but lacks detailed evidence, so rating is based mainly on the reviewer’s overall praise."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as great but provides no specific technical comments."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T05:48:12.979474+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-30.sbd-mtx.ladner.9363.sbeok.shnf"
+}

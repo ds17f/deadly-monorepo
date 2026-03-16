@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent matrix recording of a scorching fall‑82 show with a fiery second set, highlighted by Morning Dew and The Other One.",
+  "review": "Fans rave about the crystal‑clear matrix mix, calling it the best recording of this night and noting its “awesome” sound. Musically the concert is described as one of the hottest on the Fall East Coast tour, with a sweet‑spicy second set and standout performances of Morning Dew, The Other One, Throwing Stones → Deal and US Blues. Overall the show is celebrated for its energy, crowd interaction and strong playing from all members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Average star rating across nine reviews is 4.44; comments uniformly praise both the performance (strong setlist flow, standout jams) and the recording quality (perfect matrix mix). The high volume of detailed, consistent feedback yields a confident high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the mix \"perfect,\" \"awesome,\" and \"pleasant Matrix,\" noting crispness and balance; described as the best recording of this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "The Other One",
+      "Throwing Stones",
+      "Deal",
+      "US Blues",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is praised as sweet‑spicy and energetic, with a strong first‑set finish (Throwing Stones → Deal). Overall pacing is described as hot, lively, and life‑changing for many listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice shows some strain but still powerful; guitar tone praised as perfect and \"real good\" throughout.",
+    "Phil": "Bass work highlighted as loud, omnipresent, and crowd‑engaging; Phil even led chants and took vocal duties on a verse.",
+    "Bob": "Solid vocal contributions noted on Candyman and closing remarks; kept the show grounded.",
+    "Keys": "Brent (keyboardist) did not sing but delivered strong keyboard work, noted as \"great keys\" despite his absence from vocals.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:36:43.844387+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-17.mtx.haugh.82208.sbefail.flac16"
+}

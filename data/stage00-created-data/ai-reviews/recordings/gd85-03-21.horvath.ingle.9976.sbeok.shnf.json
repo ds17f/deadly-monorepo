@@ -1,0 +1,80 @@
+{
+  "summary": "Fine audience tape capturing a spirited Hampton ’85 show with standout China Cat > I Know You Rider, Alabama Getaway and a powerful L.L.R. → Might As Well sequence.",
+  "review": "The audience recording is generally clear and lets the vocal work of Jerry shine, though drum sections are lost during a tape‑flip.  The concert itself is praised for a strong first set (Alabama Getaway, China Cat > Rider, Wharf Rat) and an inspired second half highlighted by L.L.R. into Might As Well and a spirited Other One jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and note good performance, while several call the tape marginal or point out missing drum portions; overall rating lands around a solid 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear audience mix with Jerry's vocals audible; drums are cut during a tape‑flip and occasional tape‑noise, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Alabama Getaway",
+      "Wharf Rat",
+      "L.L.R. > Might As Well",
+      "The Other One",
+      "TLEO",
+      "The Bottom"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as strong and spirited with solid song choices; second set solid though some reviewers found the selection less exciting, overall a cohesive, high‑energy Hampton performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed views – some felt his stage presence was listless, others praised his vocal work and guitar on this night.",
+    "Phil": "",
+    "Bob": "Positive mentions of Bob being 'really on' during the show.",
+    "Keys": "",
+    "Drums": "Drum tracks are missing in sections due to a tape flip."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.L.R. > Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "TLEO": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Bottom": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:26:55.439479+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-21.horvath.ingle.9976.sbeok.shnf"
+}

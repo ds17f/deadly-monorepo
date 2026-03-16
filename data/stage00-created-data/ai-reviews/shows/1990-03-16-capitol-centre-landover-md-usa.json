@@ -1,0 +1,83 @@
+{
+  "summary": "Scorching Scarlet>Estimated, soaring Blow Away, sweet Stella Blue",
+  "blurb": "The set opens with a rousing Let The Good Times Roll and builds through a fiery Scarlet Begonias → Estimated Prophet sequence, high‑energy Blow Away and an emotive Stella Blue ballad. Brent Mydland’s keyboard fireworks and Jerry Garcia’s soaring guitar dominate, while the rhythm section drives powerful jams throughout.",
+  "review": "On March 16, 1990 at the Capital Centre, the Dead delivered a show that feels both tight and inspired. The first set rolls out with Let The Good Times Roll and a punchy Touch of Grey before diving into a blistering Black Throated Wind and an uplifting Blow Away that many reviewers cite as a highlight. The second‑set centerpiece—Scarlet Begonias seamlessly segued into Estimated Prophet, then into Ship Of Fools → Man Smart, Woman Smarter—showcases the band’s improvisational chemistry, with Brent Mydland’s “head full o’ steam” keyboard work and Jerry Garcia’s scorching soloing on Scarlet Begonias. The night closes on a gentle yet powerful Stella Blue before an encore of The Last Time, leaving listeners with both high‑octane rockers and tender ballads in equal measure.\n\nAcross the available recordings, soundboard sources (especially Charlie Miller’s SBD) are praised for crystal‑clear fidelity, while matrix mixes capture the live atmosphere without noticeable glitches. Even audience tapes convey the show’s fire, highlighting Garcia’s “smokin’ hot” guitar on Loser and Bob Weir’s flawless falsetto on Black Throated Wind. Overall, the performance is consistently lauded as a high point of the spring‑90 tour, with only minor dips noted on a few songs such as Sugar Magnolia.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 55,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Six of eight recordings are marked positive, with reviewers repeatedly using terms like 'excellent', 'scorching', and 'must‑listen' for multiple songs (Scarlet Begonias, Blow Away, Stella Blue). Two mixed reviews note isolated weak spots but do not detract from the overall enthusiasm. This strong, consistent praise warrants a +1.6 sentiment boost.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1990-03-16.sbd.miller.85201.sbeok.flac16",
+    "reason": "Charlie Miller’s soundboard capture is described as clean, crisp and perfect with no dropouts, delivering the clearest representation of the band’s performance."
+  },
+  "key_highlights": [
+    "Fiery Scarlet Begonias → Estimated Prophet transition with tight improvisation.",
+    "Soaring Blow Away featuring Brent Mydland’s electrifying vocals and keyboards.",
+    "Gentle, emotive Stella Blue ballad showcasing Garcia’s sweet phrasing.",
+    "Powerful Drums/Space segment highlighted as a white‑hot melty performance."
+  ],
+  "song_highlights": [
+    "Let The Good Times Roll",
+    "Scarlet Begonias",
+    "Estimated Prophet",
+    "Ship Of Fools",
+    "Man Smart, Woman Smarter",
+    "Blow Away",
+    "Black Throated Wind",
+    "Bird Song",
+    "Stella Blue",
+    "Loser"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers scorching leads on Scarlet Begonias and Blow Away, a ‘smokin’ hot’ solo on Loser, and a gentle, sweet delivery on Stella Blue; his vocals are praised as powerful throughout.",
+    "Phil": "Lesh provides a solid low‑rumbling foundation, with a memorable bass solo noted during the second set (referred to as “Phil’s 50”).",
+    "Bob": "Weir’s vocal performance shines on Black Throated Wind and other songs, with his falsetto described as perfect and emotive.",
+    "Brent": "Mydland is highlighted for happy, high‑energy playing—‘head full o’ steam’—delivering driving keyboards, powerful vocals on Blow Away, and contributing to the overall vibe of the show.",
+    "Mickey": "His drumming is praised as a white‑hot, melty performance that propels jams, especially during the Drums/Space segment.",
+    "Billy": "Kreutzmann’s beats lock in tightly with Mickey, driving the rhythmic momentum and helping sustain the high‑energy flow."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-17T03:51:35.894967+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let The Good Times Roll"
+    ],
+    [
+      "Scarlet Begonias",
+      "Estimated Prophet",
+      "Ship Of Fools",
+      "Man Smart, Woman Smarter"
+    ],
+    [
+      "Blow Away"
+    ],
+    [
+      "Black Throated Wind"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Jam",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Loser"
+    ]
+  ]
+}

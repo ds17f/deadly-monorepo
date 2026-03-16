@@ -1,0 +1,68 @@
+{
+  "summary": "Crystal‑clear audience tape captures an electrifying ’85 show highlighted by a monster Sugaree, soaring Birdsong and a smoking Help>Slip>Franklin's.",
+  "review": "The audience recording is praised as “better than a soundboard” – clear, spacious and with deep bass that lets every instrument shine.  The performance itself is consistently described as intense and energetic, with Sugaree repeatedly called the best ever, plus standout runs of Jack Straw, Birdsong, Let It Grow and the Help‑Slip‑Franklin’s sequence.  Overall the show feels like a high‑water mark for the 1985 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 detailed reviews are overwhelmingly positive about both the music and the tape quality; only a few moderate scores appear, so the combined show (≈4.5) and recording (≈4.2) yield an average of ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience noise balanced at the right level, deep bass, crisp and spacious soundstage; drums punchy with good bounce, no significant drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Jack Straw",
+      "Birdsong",
+      "Let It Grow",
+      "Help > Slip > Franklin's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy opener (1‑2‑3) drives a powerful first set; the second set builds with spacey jams, a hot Help‑Slip‑Franklin’s segue and finishes on an exuberant high."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is described as crystal clear, fast and “smoking” – especially on Sugaree, Jack Straw and Let It Grow; vocals noted as slightly low but generally solid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are strong, bouncy and fun to crank up; several reviewers highlight the percussion’s presence in the mix."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Jack Straw": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Birdsong": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:52:50.174501+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-25.nak300.barbella.14497.sbeok.shnf"
+}

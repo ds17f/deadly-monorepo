@@ -1,0 +1,57 @@
+{
+  "summary": "Nice audience recording captures a strong ending to Looks Like Rain and an especially good Death Don't performance.",
+  "review": "The audience tape is clear enough for a pleasant listening experience, and the show features a powerful finish to \"Looks Like Rain\" plus a standout rendition of \"Death Don't Hurt Me.\" Reviewers note an interesting vocal cadence from Bob Weir and Brent Mydland on \"He's Gone,\" though it ends abruptly into \"Last Time,\" and Jerry Garcia’s phrasing on the final verse shows him pulling back before the band joins in.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show 4 stars, praising key moments and noting a decent audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a \"nice aud recording\" with no complaints about clarity or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Death Don't Hurt Me"
+    ],
+    "poor_songs": [
+      "He's Gone"
+    ],
+    "setlist_flow": "Interesting setlist with a strong closing to Looks Like Rain; the transition from He's Gone into Last Time feels abrupt."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds like Jerry was pulling back on the last verse of Death Don't before the band came in.",
+    "Phil": "",
+    "Bob": "Bob and Brent’s vocal cadence on He's Gone is highlighted as interesting but ends too quickly.",
+    "Keys": "Brent Mydland’s vocal contribution noted alongside Bob on He's Gone.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Hurt Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:23:03.379464+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-02.nak.cohen.106763.flac16"
+}

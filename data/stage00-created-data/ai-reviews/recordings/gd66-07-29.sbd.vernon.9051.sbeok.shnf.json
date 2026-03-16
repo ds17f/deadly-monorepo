@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard capture of the July‑29‑66 Vancouver show, with Cardboard Cowboy, Viola Lee Blues and Baby Blue blowing up as early‑Dead highlights.",
+  "review": "The recording is remarkably clear for a mid‑1960s tape – a crisp soundboard source that lets Jerry’s guitar tone and Pigpen’s organ roar through the mix.  Musically the performance is consistently praised; the band stretches out on Cardboard Cowboy, rolls into a scorching Viola Lee Blues and delivers a joyous Baby Blue, making this one of the most celebrated early shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over twenty reviews overwhelmingly rate the show 4‑5 stars, praising both performance and sound quality; only a single outlier is negative."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note a little hiss or fuzziness typical of the era but describe the audio as clear, crisp and surprisingly detailed for 1966; the mix balances Jerry and Pigpen well, with only occasional comments about low‑level audience mics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cardboard Cowboy",
+      "Viola Lee Blues",
+      "Baby Blue",
+      "Standing on the Corner",
+      "Cream Puff War",
+      "Stealin'",
+      "Big Boss Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as a tight early‑Dead showcase with extended segues, hard‑edged experimental jams and a strong mid‑set momentum that builds from the opening numbers into the psychedelic climax of Cardboard Cowboy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone on Baby Blue and Next Time You See Me is called perfect; his guitar work is highlighted as the main instrumental voice.",
+    "Phil": "Phil’s high‑part vocal in Viola Lee Blues gets praise, and he’s noted for trying to emulate the period’s psychedelic feel.",
+    "Bob": "Bob is mentioned as being low in the mix but still present on rhythm guitar.",
+    "Keys": "Pigpen’s organ is repeatedly praised – ‘cranked’, ‘fantastic’, and a driving force on Stealin' and Baby Blue.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cardboard Cowboy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Baby Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Standing on the Corner": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cream Puff War": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stealin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T05:29:18.307500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd66-07-29.sbd.vernon.9051.sbeok.shnf"
+}

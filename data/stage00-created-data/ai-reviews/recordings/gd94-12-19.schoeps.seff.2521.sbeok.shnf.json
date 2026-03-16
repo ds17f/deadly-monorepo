@@ -1,0 +1,81 @@
+{
+  "summary": "Fair‑quality audience recording of a memorable late‑era show highlighted by an epic Days Between and a stellar New Speedway > Nobody's Fault sequence",
+  "review": "Fans rave about the musical highs – a soaring Days Between, a blazing New Speedway into Nobody's Fault, and inspired renditions of Stagger Lee, Deal and Miracle – while noting a few rough spots (sloppy first set, post‑space lull and a weak Lovelight closer). The audience‑sourced tape is generally listenable but suffers from audible chatter during the NSB/NFB segment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (average 4‑5★) but several call out recording noise and occasional sloppiness, pulling the overall weighted score to a solid mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Background chatter audible during New Speedway > Nobody's Fault; otherwise decent clarity and listenable audio, though not as clean as a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "New Speedway > Nobody's Fault",
+      "Stagger Lee",
+      "Deal",
+      "Saint of Circumstance",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "First set solid but a bit uneven; the early half of the second set flows beautifully (NSB > NFB, Saint opener, Miracle), then loses momentum after the post‑space segment before ending on an emotional Brokedown encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for emotive vocals on Saint of Circumstance and a heartfelt solo on Days Between; his bluesy lead on New Speedway is called 'great' despite slight sloppiness, though one reviewer notes he was beginning to drift out of it.",
+    "Phil": "No direct comments on bass playing, but Lesh’s quote calling Days Between \"achingly nostalgic\" underscores his contribution to the song's emotional weight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers provide an extended ~10‑minute jam before Miracle and receive a neutral nod for the Women Are Smarter segue; overall rhythm section is described as solid."
+  },
+  "song_mentions": {
+    "New Speedway > Nobody's Fault": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:49:10.343050+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-19.schoeps.seff.2521.sbeok.shnf"
+}

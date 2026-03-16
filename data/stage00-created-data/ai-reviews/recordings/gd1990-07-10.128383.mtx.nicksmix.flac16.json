@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent matrix recording of the July 10 1990 show, with clear sound and a resilient performance that kept rolling through a mid‑set power outage.",
+  "review": "The matrix mix is praised as perfect, delivering crisp, balanced audio that captures the ambience of the night. Although the stage lost power during \"Promised Land,\" the band recovered instantly and maintained the groove, earning mixed reactions from reviewers but overall showing solid musicianship.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "One reviewer gave a strong positive rating (4 stars) highlighting the flawless matrix mix, while another gave a zero rating focusing on a power outage and personal dislike of accordion; the divergent feedback leads to a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the matrix as perfect—clear, well‑balanced mix of soundboard and audience with no noted dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief power loss occurred during \"Promised Land,\" but the band resumed without missing a beat, keeping the set's momentum intact."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby appreciated; reviewer disliked accordion elements.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:04:47.425171+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-10.128383.mtx.nicksmix.flac16"
+}

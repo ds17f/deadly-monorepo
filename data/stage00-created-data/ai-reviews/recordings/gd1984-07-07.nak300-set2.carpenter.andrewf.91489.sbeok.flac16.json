@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear audience recording captures a solid 80s show, highlighted by Cold Rain and Snow, a rare post‑space Terrapin Station and an out‑of‑the‑blue Lovelight.",
+  "review": "Both reviewers rave about the tape’s vivid sound—an audience source that delivers clear bass, minimal crowd noise and excellent balance. Musically the set is praised for its surprising second half, with Cold Rain and Snow, a post‑space Terrapin Station and an unexpected Lovelight standing out, while the first set is deemed decent but unremarkable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is rated excellent by both reviewers; show performance is solid with notable highlights, yielding a combined rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear and balanced tape; bass comes through distinctly, few whistles only where expected, no muddy distant sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow",
+      "Terrapin Station",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as standard and decent; second set delivers surprises with rare song placements and an unexpected Lovelight, creating a compelling arc."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:02:39.338634+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-07.nak300-set2.carpenter.andrewf.91489.sbeok.flac16"
+}

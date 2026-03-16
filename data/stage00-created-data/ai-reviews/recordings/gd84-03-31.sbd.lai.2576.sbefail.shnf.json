@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording of a Marin Civic show with standout He’s Gone and Help‑Slip‑Franklin’s, but marred by early cuts in Fire on the Mountain.",
+  "review": "The performance shines in moments like the extended Scarlet → Fire transition, an inspired Althea vocal, and the classic Help>Slip>Franklin's sequence, while He's Gone receives high praise for its trippy ending. Unfortunately the soundboard source suffers brutal drop‑outs – Fire on the Mountain disappears early and a vocal jam in He's Gone is cut – leaving the listening experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is good to great with several standout songs, but recording issues (major cuts) lower overall enjoyment, resulting in a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Early chorus of Fire on the Mountain is cut; vocal jam at end of He's Gone also missing. Aside from these drop‑outs the tape sounds reasonably clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Fire on the Mountain",
+      "Scarlet > Fire",
+      "Althea",
+      "Help > Slip > Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Dupree's Diamond Blues"
+    ],
+    "setlist_flow": "The concert moves at a deliberate, exploratory pace with extended improvisations; the Scarlet‑to‑Fire transition is highlighted as an all‑time favorite, and the second set offers deep, trippy moments despite a lack of high‑energy Jerry songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for vocal work on Althea ('to lay your head'), but criticized for stumbling over lyrics on Dupree's Diamond Blues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's early‑84 psychedelic keyboard textures (Star Wars‑like buzz and laser sounds) are noted positively.",
+    "Drums": "Mickey keeps the vibe lively on talking drum during the Scarlet → Fire transition."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:59:21.793879+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-03-31.sbd.lai.2576.sbefail.shnf"
+}

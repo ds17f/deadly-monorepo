@@ -1,0 +1,106 @@
+{
+  "summary": "Crisp soundboard recording with strong moments like Stella and Cumberland, though some listeners note mix issues and flat passages in the second set.",
+  "review": "The concert bursts with energy, delivering highlights such as a solid Stella and an excellent rendition of Cumberland while the first set is more uneven. The SBD source sounds generally clear and crisp, but several reviewers cite heavy‑handed EQ, muffed vocals on Truckin' and a weak mix during Space that detract from parts of the show. Overall sentiment is enthusiastic yet tempered by noted technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise both the performance and sound quality (average 4.5‑5 stars), but a detailed low‑rating review flags mix problems, pulling the weighted rating to about 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers describe the sound as crisp and great; however one detailed critique mentions a muffed patch in Truckin', heavy‑handed EQ needs, and an uneven mix that especially affects the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland",
+      "Stella",
+      "They Love Each Other",
+      "Estimated"
+    ],
+    "poor_songs": [
+      "Might as Well",
+      "Franklin's",
+      "The Wheel",
+      "Truckin'",
+      "Good Lovin'",
+      "Brokedown",
+      "Space",
+      "Dewiminna"
+    ],
+    "setlist_flow": "First set is described as average to below‑average with a few bright spots, while the second set contains mixed quality—some flat or stilted moments but also peaks like Stella. Overall the show feels energetic yet shows signs of end‑of‑tour fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Searches for better tone during Franklin's, cycling mods; overall guitar work noted as solid on highlights.",
+    "Phil": "Absent early in the set, goofs off during Space and is barely audible later, contributing to mix issues.",
+    "Bob": "Adds drama‑vox and slide practice; his vocal dramatics are mentioned as both a highlight and a drawback (e.g., on Good Lovin' and Truckin').",
+    "Keys": "Brent's keyboard work is highlighted as key during the Jer songs in the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dewiminna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Might as Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:49:18.278829+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-19.144567.sbd.healy.streeter.smith.miller.clugston.flac1648"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording that captures Brent’s vibrant keyboards and a memorable Louie Louie cover, though the show feels average and runs a bit fast.",
+  "review": "The performance is solid but unremarkable, with highlights like a jazzy Louie Louie, a beautiful Stella Blue vocal by Jerry, and several standout Brent keyboard moments (Foolish Heart jam, Ramble On Rose runs). The SBD tape sounds good overall, though listeners note the mix feels slightly fast‑pitch on songs such as U.S. Blues and The Other One.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers find the show average to good with clear positives (Brent’s playing, Louie Louie) but criticize speed/pitch issues and a lack of overall excitement; recording quality is generally praised despite minor tempo concerns."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD tape with good crowd presence; some listeners perceive the tape as slightly fast‑pitch and note Brent dominates the mix, but overall sound is decent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Louie Louie",
+      "Stella Blue",
+      "Foolish Heart",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "Average for the ’89 tour – mellow and laid‑back with a few high points, but overall the pacing feels a bit rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for beautiful vocal on Stella Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent is highlighted repeatedly – loud in the mix, jazzy flute/sax patches, impressive piano and synth solos, driving much of the show’s energy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Louie Louie": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:13:54.643054+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-09.sbd.miller.13207.sbeok.shnf"
+}

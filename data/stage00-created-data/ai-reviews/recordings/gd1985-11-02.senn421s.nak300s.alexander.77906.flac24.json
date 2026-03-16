@@ -1,0 +1,115 @@
+{
+  "summary": "First‑class audience recording of a high‑energy show with standout Bertha, Dupree's and Estimated jams, though the first set has some uneven moments.",
+  "review": "The two fan reviews praise the 24‑bit audience (AUD) source as crystal‑clear and full of crowd ambience, making the performance highly enjoyable. Musically the concert shines on tracks like Bertha, GSET, Dupree's, Estimated → Uncle John’s Band and the soaring Dew, but the first set suffers from a disappointing finish to Let It Grow and weaker cuts such as CC Rider and Brother Esau.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Both reviewers note excellent audio quality, and the show contains many high points despite several middling songs; overall rating falls just above average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "24‑bit AUD capture described as first‑class, crisp, and full of crowd reactions; no dropouts or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "GSET",
+      "Dupree's",
+      "Candyman",
+      "Estimated > Uncle John's Band",
+      "Dew",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "CC Rider",
+      "Brother Esau",
+      "Let It Grow (unfinished ending)",
+      "China Doll"
+    ],
+    "setlist_flow": "First set is a mixed bag with high‑octane openers and a disappointing Let It Grow finish; second set builds momentum with strong jams (Estimated, UJB, Dew) and ends on a satisfying Baby Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Hot soloing praised throughout, especially on Bertha, Dupree's and Estimated, but criticized for quitting the Let It Grow climax and omitting a Playin' tease.",
+    "Phil": "Stood out in several spots, adding enthusiasm to the performance.",
+    "Bob": "Described as \"rock star Bobby\" with outstanding vocal delivery.",
+    "Keys": "Brent's harmonies highlighted on GSET, Candyman and other moments, energizing the crowd.",
+    "Drums": "Kermit's (drummer) voice sounded a bit froggy at times; occasional fat drips noted."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GSET": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CC Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:38:12.454752+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-02.senn421s.nak300s.alexander.77906.flac24"
+}

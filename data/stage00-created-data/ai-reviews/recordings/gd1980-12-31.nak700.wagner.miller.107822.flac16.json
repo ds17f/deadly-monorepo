@@ -1,0 +1,44 @@
+{
+  "summary": "Fans are split – some rave about the nonstop excitement of the show while others lament an over‑repeated Sugar Magnolia/Sunshine Daydream sandwich.",
+  "review": "The recording elicits strong enthusiasm from at least one listener, who describes it as a perfect pick‑me‑up from start to finish. Another reviewer is disappointed by what they see as excessive repetition of the Sugar Magnolia–Sunshine Daydream pairing and feels the band never figured out how to end the song. No concrete details about the audio source or fidelity are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "medium",
+    "rationale": "One five‑star glowing review versus one zero‑star critical review yields an average rating around 2½; limited data gives medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not discuss sound clarity, mix, or source type, so recording quality cannot be definitively assessed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Sugar Magnolia / Sunshine Daydream"
+    ],
+    "setlist_flow": "Mixed feedback – praised for overall excitement by one listener but criticized for over‑use of the Sugar Magnolia/Sunshine Daydream sandwich by another."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:36:22.949056+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-31.nak700.wagner.miller.107822.flac16"
+}

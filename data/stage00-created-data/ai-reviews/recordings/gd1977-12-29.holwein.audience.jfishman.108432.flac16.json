@@ -1,0 +1,69 @@
+{
+  "summary": "Audience recording is a bit muddy and fast‑pitched, yet the Dec 29 1977 show scorches with New Fat Albert, China Cat Sunflower, Sunrise and more.",
+  "review": "The audience tape captures a raw, raucous vibe – some listeners note mud‑dy mids and an overly fast pitch – but the performance itself is repeatedly hailed as one of ’77’s best. Highlights include blistering Jerry Garcia leads on New Fat Albert, China Cat Sunflower and Sunrise, while the band’s overall energy keeps fans glued to every moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is overwhelmingly praised (most 5‑star reviews) while recording quality is mixed but still listenable; weighting yields a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch runs fast, mids are muddy and some listeners describe the mix as not stellar, yet the raw audience ambience adds excitement and the tape remains enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Fat Albert",
+      "China Cat Sunflower",
+      "Sunrise",
+      "From the Heart of Me",
+      "Playing in the Band",
+      "New Minglewood Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high‑energy first‑set jams and a second‑set that many describe as “absolutely amazing,” keeping the crowd dancing from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is repeatedly called relentless, terrifying and an unbridled attack on the cosmos – often cited as one of his best performances.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Donna’s vocals receive mixed commentary; some reviewers praise her moments (e.g., \"Sunrise\"), while others are critical of her style compared to Janis Joplin.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Fat Albert": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:19:22.947799+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-12-29.holwein.audience.jfishman.108432.flac16"
+}

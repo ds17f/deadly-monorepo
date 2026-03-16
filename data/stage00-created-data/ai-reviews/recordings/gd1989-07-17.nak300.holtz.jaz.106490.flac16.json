@@ -1,0 +1,37 @@
+{
+  "summary": "Good audience recording with clear sound despite mixed opinions on noise reduction; the show’s Goin’ Down the Road tease draws attention.",
+  "review": "The audience‑sourced tape is generally praised for its clean, well‑balanced sound, though one reviewer feels the noise reduction was over‑applied. Performance‑wise there are no major complaints, with a brief discussion of the Goin' Down The Road ending that shows listeners were engaged with the set. Overall the recording is considered listenable and enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑5 stars and commend the clean audience sound; a single low rating about noise reduction tempers the score, leading to a solid but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with minimal processing; some listeners note phasing from repeater stacks and faint echo from house mics. One reviewer objects to heavy noise reduction, while others confirm none was applied."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on overall set pacing; only a note about the Goin' Down The Road ending being treated as part of the song rather than a separate tease."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Goin' Down The Road": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:40:04.374529+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-17.nak300.holtz.jaz.106490.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "High‑energy 1985 show with strong crowd vibe, captured on a clean soundboard recording",
+  "review": "Both reviewers rave about the concert’s excitement – one calls it an \"fast break 85 show\" and highlights the punchy rendition of “Deal,” while the other describes being transported by the band and a bananas‑going crowd. No specific audio flaws are noted, and the SBD source suggests a clear, well‑balanced mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly positive (4–5 stars) with enthusiastic comments about performance; recording quality is inferred as good from the soundboard source, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit complaints; SBD designation implies clear and balanced audio with no reported issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic, fast‑paced set typical of a mid‑80s Dead show; crowd reaction described as ecstatic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T11:35:43.884488+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-11.143073.sbd.cole.miller.tobin.pp.flac1644"
+}

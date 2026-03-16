@@ -1,0 +1,87 @@
+{
+  "summary": "Fair audience tape of a vibrant Hampton show where Stella Blue and an epic Eyes jam shine despite tinny keyboard issues.",
+  "review": "The performance is remembered for its emotional Stella Blue moment and a soaring Estimated→Eyes jam that many fans cite as the highlight. While Jerry’s lead work is generally praised, Brent’s keyboards are described as thin and distorted, giving the recording a somewhat tinny, audience‑heavy character that detracts from an otherwise solid set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and celebrate the show’s musical peaks, but several note significant audio flaws that keep the recording from being truly excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience‑heavy tape with noticeable tinny/distorted keyboard sound and occasional hiss; overall listenable but lacking clarity of a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Eyes",
+      "Estimated",
+      "Truckin'",
+      "Minglewood"
+    ],
+    "poor_songs": [
+      "Mississippi",
+      "Mexicali",
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "First set is uneven with a few weak spots, but the second set builds strong momentum—especially the Estimated→Eyes jam and a moving Stella Blue that caps the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for powerful solos (esp. Eyes jam), though a tad weak on \"Mississippi\" in one reviewer’s view.",
+    "Phil": "Provides solid bass foundation; noted for a nice one‑two punch with Brent during jams.",
+    "Bob": "Vocal and guitar work described as showmanship‑filled and ‘bolero’ style, generally positive.",
+    "Keys": "Brent's keyboards are criticized for a thin, distorted tone that muddies the mix, yet also credited later as an energizing focus for the band.",
+    "Drums": "Drumming occasionally called out for 'disco' patterns during Mexicali; otherwise appropriate, especially in the Drum/Space segment."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:00:08.627053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-04.glassberg.vernon.18878.sbeok.shnf"
+}

@@ -1,0 +1,99 @@
+{
+  "summary": "High‑quality soundboard capture of a solid Red Rocks show with standout Althea, Lost Sailor and Estimated Prophet, though the mix runs slightly fast and has occasional buzzes.",
+  "review": "The recording is a clean soundboard source that lets the organ shine and reproduces the band's mid‑'70s energy, especially on Althea, Passenger, Lost Sailor and the soaring Estimated Prophet.  While most fans praise the performance as an exciting early Brent era set, one reviewer notes uneven pacing in the second set and a pitch‑speed issue that makes the drums sound thin.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Three out of four reviewers give five‑star praise for both performance and audio, while one points out recording speed/pitch problems and uneven set flow, resulting in an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp organ and clear mix praised; however the tape runs slightly fast (≈‑3 % pitch correction needed), has a faint buzzing/harmonic interference and occasional cuts on Brown Eyed Women and the encore."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Passenger",
+      "Lost Sailor",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Brown Eyed Women",
+      "Lazy Lightnin'",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Lost Sailor (not memorable per one reviewer)",
+      "Rider (rough start)"
+    ],
+    "setlist_flow": "First set is upbeat and tight, highlighted by Brown Eyed Women; the second set starts unevenly but builds into a strong Estimated Prophet/Eyes of the World segment before a slightly flubby finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir adds nice slide work on Not Fade Away.",
+    "Keys": "The organ shines throughout; Brent-era keyboards are prominent and well‑balanced.",
+    "Drums": "Bill \"Bobby\" Kreutzmann sounds a bit flat, partly due to the tape running fast."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightnin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:24:08.356097+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-12.sbd.clugston.tetzeli.fix-9288.35038.reflac.flac16"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Soundboard capture of a late‑starting but stellar 12/4/73 set, highlighted by an epic Eyes of the World and a killer Truckin’ > Stella Blue transition.",
+  "review": "The Miller SBD recording is generally crisp and clear, with only a slight balance hiccup on “One More Saturday Night.” Musically the show shines – a dark, soaring Eyes of the World, a jaw‑dropping Truckin’→Stella Blue segue, and a joyous finish with Sugar Magnolia make it one of the fall ’73 tour’s standout performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are 5‑star and overwhelmingly praise the performance; only a minor recording balance issue is noted, leading to an excellent overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller board capture is generally crisp and well‑balanced; a slight mix imbalance is mentioned on “One More Saturday Night,” but the recording remains very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Truckin'",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opened late and ran short, but quickly settled into a happy early set before diving into a deep, dark middle (notably Eyes of the World). The band resurfaced with an uplifting Sugar Magnolia and closed on a high note."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s shredding on “Johnny B. Goode” and his soaring lead during Eyes of the World are repeatedly praised; he trades a sci‑fi duet with Phil.",
+    "Phil": "Lesh’s bass is highlighted for its “bombs” that lock in with Jerry’s lead during the extended Eyes of the World jam.",
+    "Bob": "Weir’s rhythm work shines on “Sugar Magnolia,” where his picking lifts the song after the long jam.",
+    "Keys": "Keith Godchaux adds tasteful chords and ornaments throughout, especially seasoning the Eyes of the World jam.",
+    "Drums": "Bill Kreutzmann is described as “jackhammering” the snare, driving the intense middle section of Eyes of the World."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:52:59.111483+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-04.sbd.miller.86845.flac16"
+}

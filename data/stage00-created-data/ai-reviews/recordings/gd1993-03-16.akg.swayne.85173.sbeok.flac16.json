@@ -1,0 +1,39 @@
+{
+  "summary": "Decent recording of a strong second set highlighted by a killer Uncle John’s Band and great drum work.",
+  "review": "The reviewer rates the show 4 stars, praising the energy of the second‑set drum segment and calling “Uncle John’s Band” one of their all‑time favorites. No specific comments about the tape quality are provided, so the recording is assumed to be listenable but unremarked on.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only a single review; it rates the show positively (4 stars) and mentions no recording issues, leading to an estimated overall rating of ~3.7 with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on sound clarity, balance, or source; no reported problems but also no praise for the audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set receives strong praise, especially the drum segment and the performance of Uncle John’s Band."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Great drum work in the second‑set highlighted by the reviewer."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:28:57.792932+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-16.akg.swayne.85173.sbeok.flac16"
+}

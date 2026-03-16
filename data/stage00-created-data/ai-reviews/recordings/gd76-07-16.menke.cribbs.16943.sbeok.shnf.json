@@ -1,0 +1,93 @@
+{
+  "summary": "Warm, surprisingly clear audience recording captures a jazzy 1976 set highlighted by a stellar Playing‑in‑the‑Band → Stronger‑Than‑Dirt → Cosmic Charlie sequence.",
+  "review": "The Aud tape from the cozy Orpheum delivers an unusually warm and present sound that makes listeners feel right in the balcony, with only minor crowd‑noise quirks between songs. Musically the show shines—especially the second set’s flowing jam from Playing in the Band into Stronger Than Dirt and Cosmic Charlie, plus standout moments like Samson & Delilah, Spanish Jam, and a double‑tap solo in Brown Eyed Women. Overall both performance and recording are praised by the community.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (17) give 4‑5 stars, consistently praising both the sound quality of this audience recording and the exceptional 1976 performance, especially the second‑set jams."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Warm, fuzzy presence with impressive fidelity for an AUD; crisp mids/highs, good low‑end control despite being audience‑sourced. Ambient crowd noise adds atmosphere; occasional annoyance from between‑song chatter but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Stronger Than Dirt",
+      "Cosmic Charlie",
+      "Samson & Delilah",
+      "Spanish Jam",
+      "Drums",
+      "High Time",
+      "Row Jimmy",
+      "Scarlet Begonias",
+      "Brown Eyed Women"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set flows superbly with a jazzy, improvisational vibe; the Playin' → Stronger Than Dirt → Cosmic Charlie sequence is repeatedly highlighted as a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an outstanding solo, including double‑tap work in Brown Eyed Women and overall jazzy lead playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment is called out as exciting ('Whewww!!') and adds to the set’s momentum."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stronger Than Dirt": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:30:05.032803+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-16.menke.cribbs.16943.sbeok.shnf"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Great‑sounding tape captures a mixed Dead show – Cassidy’s jam shines while the second set fizzles and Watchtower falls flat.",
+  "review": "The recording is praised as a great‑sounding tape, delivering clear audio that lets listeners hear the band’s nuances. Musically the concert starts strong with an inspired Cassidy improvisation and solid High Time/Jack‑a‑Roe renditions, but energy wanes by the end of the second set, highlighted by a weak Watchtower performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviews range from glowing (5★) to poor (0★); most comments note an uneven show despite good tape quality, leading to a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a \"great sounding tape\"; no specific flaws or dropouts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "High Time",
+      "Jack-a-Roe"
+    ],
+    "poor_songs": [
+      "Watchtower"
+    ],
+    "setlist_flow": "Strong opening and first set, but the second set loses steam and ends with a disappointing Watchtower."
+  },
+  "band_member_comments": {
+    "Jerry": "Solos meandered and lyrics were flubbed; struggled to sustain the early energy.",
+    "Phil": "",
+    "Bob": "Bobby (Bob Weir) did his best to pick up the slack on guitar/vocals.",
+    "Keys": "Brent Mydland helped fill gaps on keyboards during the weaker moments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:28:24.394151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-12-09.aud.willy.16093.sbeok.shnf"
+}

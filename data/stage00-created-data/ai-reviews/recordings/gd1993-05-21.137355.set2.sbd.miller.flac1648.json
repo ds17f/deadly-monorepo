@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality not discussed, but Morning Dew is highlighted as a standout moment.",
+  "review": "The two fan reviews give little insight into the technical side of this set, offering no details on source or mix quality. However, one reviewer points out that \"Morning Dew\" stands out, suggesting at least one memorable performance in the show. Overall sentiment is mixed due to the lack of substantive commentary.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one gives a perfect rating without comment, the other notes a single song highlight and rates it average. Insufficient data to assess recording quality, so overall rating leans modest."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention any aspects of sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:46:45.226790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-21.137355.set2.sbd.miller.flac1648"
+}

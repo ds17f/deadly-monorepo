@@ -1,0 +1,118 @@
+{
+  "summary": "Clear, well‑balanced audience recording captures a mixed‑energy 1995 Deer Creek show with standout renditions of Dire Wolf, Here Comes Sunshine and other classics.",
+  "review": "The tape is praised for its crisp, front‑of‑house sound – drums are crystal clear and crowd noise minimal – making it one of the better recordings from the turbulent July 2 1995 Deer Creek concert.  Musically the show receives mixed feedback: some fans note a lack of energy and Jerry’s fading voice, yet many classic numbers (Dire Wolf, Here Comes Sunshine, Desolation Row, etc.) are described as sounding great even 30 years later.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (excellent), while show performance is described as both mediocre and containing several standout songs, leading to an overall good‑to‑great rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear front‑of‑house mix; drums crisp, vocals solid, minimal crowd bleed. Reviewers note mics close to speaker stacks and a well‑balanced mono monitor mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dire Wolf",
+      "Here Comes Sunshine",
+      "Walkin' Blues",
+      "It's All Over Now",
+      "Desolation Row",
+      "Tennessee Jed",
+      "Let It Grow",
+      "Scarlet Fire",
+      "Victim",
+      "It's All Too Much",
+      "New Speedway Boogie",
+      "Attics of My Life",
+      "The Mighty Quinn"
+    ],
+    "poor_songs": [
+      "Broken Arrow"
+    ],
+    "setlist_flow": "The concert suffered from a chaotic atmosphere and a perceived dip in energy, but the setlist still delivered many beloved classics that sound surprisingly fresh on this recording."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as strong yet fading; flashes of greatness noted.",
+    "Phil": "Thumping bass, solid foundation throughout.",
+    "Bob": "Solid guitar work and flawless vocal delivery on his songs.",
+    "Keys": "",
+    "Drums": "Drums are exceptionally clear and well‑mixed; Rhythm Devils keep a steady groove."
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Too Much": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics of My Life": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:52:21.084371+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-02.139737.cmc5-mk4.ebel-varnum.flac1644"
+}

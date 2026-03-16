@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording with occasional blurriness captures a loose, happy 1971 performance highlighted by a stellar Not Fade Away → Going Down the Road Feeling Bad medley and soaring Jerry solos.",
+  "review": "The set shines thanks to a tight NFA > GDTRFB sequence, an inspiring Dark Star > El Paso transition and a wildly inventive jam that lets Jerry soar and Bobby add crucial texture. The soundboard source is generally clear but suffers from some vocal muddiness on El Paso and early NFA moments. Overall the show feels loose, happy and quintessentially ’71.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (strong jams, standout medley) while noting only minor recording flaws; the weighted average of show (≈4.5) and recording (≈3.8) yields a solid 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp ’71 sound, but El Paso vocals are blurry and slower than expected; the first minutes of NFA start muddy before clearing up."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away > Going Down the Road Feeling Bad",
+      "Dark Star > El Paso",
+      "China Cat Sunflower",
+      "Jam"
+    ],
+    "poor_songs": [
+      "Dark Star (some felt it was not stellar)",
+      "El Paso (blurry, slower than liked)"
+    ],
+    "setlist_flow": "Strong transitions – Dark Star segues into El Paso, followed by a lively jam that feeds into a tight NFA>GDTRFB medley; the second set stays loose and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring solos, especially a beautiful China Cat passage; described as ‘redefined’ and electric.",
+    "Phil": "Mentioned as soloing off Jerry during jams, adding to the band’s space‑y sound.",
+    "Bob": "Mixed views – defended for his slide and vocal contributions by some, criticized as “slaughtering blues” by others.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T09:46:54.305669+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-11-15.sbd.set2.jupille.7735.shnf"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "Rare excellent soundboard of a mixed‑quality 1995 show with standout Stella Blue outro and solid Alabama Getaway, though the band sounds a little off.",
+  "review": "The SBD capture is praised for its crisp mix, vibrant vocals and Vince’s spirited piano, delivering an unusually clear snapshot of a 1995 Dead concert. Musically the night has high points – a powerful Alabama Getaway opener, an inspiring Stella Blue guitar outro and generous Space jams – but several tunes (Unbroken Chain, Crazy Fingers, Corinna) feel uneven and the overall band tightness is described as slightly off.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight a high‑quality soundboard and several strong performances, while only a few note uneven playing; the weighted average of detailed comments yields an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great mix, crisp clarity, vocals and piano stand out; rare high‑fidelity SBD for a 1995 show. Minor performance flaws noted but they do not detract from the recording itself."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Alabama Getaway",
+      "Space",
+      "NFA"
+    ],
+    "poor_songs": [
+      "Unbroken Chain",
+      "Crazy Fingers",
+      "Corinna",
+      "Long Way to Hear This"
+    ],
+    "setlist_flow": "First set is short (six songs) and ends with the first‑ever performance of a song, giving it a historic hook. The second set offers unique moments, generous Space jams and an emotionally resonant close, though the overall band feels slightly off compared to other ’95 dates."
+  },
+  "band_member_comments": {
+    "Jerry": "Pulls out hot licks and solid solos (Stella Blue outro) but has a few flubs (Crazy Fingers, teleprompter lag) and sounds less dominant than usual.",
+    "Phil": "",
+    "Bob": "Wonderful vocal performance noted; briefly cuts off Jerry on Samson.",
+    "Keys": "Vince’s piano described as spirited and adds to the mix's richness.",
+    "Drums": "Long, soaring Space section typical of ’95, highlighted as a high point."
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Corinna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Long Way to Hear This": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T06:00:45.570649+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-19.136858.sbd.miller.flac1648"
+}

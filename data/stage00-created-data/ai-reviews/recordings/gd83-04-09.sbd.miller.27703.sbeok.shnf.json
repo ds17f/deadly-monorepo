@@ -1,0 +1,87 @@
+{
+  "summary": "High‑energy 1983/84 Hampton show captured on a decent soundboard tape with crisp mix, featuring smoking West LA, Esau, China Cat→Rider and a standout Help→Slip→Franklin’s sequence.",
+  "review": "The performance is widely praised for its tight first set (West LA Fadeaway, Esau, China Cat‑Rider) and an explosive second set highlighted by Help→Slip→Franklin’s and Truckin'.  The soundboard source is generally clear and lively, though a few listeners note missing low end, occasional splices and Brent’s keyboard level overpowering Phil on Brown Eyed Women.  Overall the show is considered a classic example of the band’s early‑80s peak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.2, with consistent praise for musical performance and generally good soundboard quality; only minor mix complaints keep the score just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced; some reviewers note a bit of bottom‑end loss, occasional splices between songs, and Brent’s keyboards can be too loud on Brown Eyed Women, but overall the mix is clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West LA",
+      "Esau",
+      "China Cat > Rider",
+      "Help > Slip > Franklin's",
+      "Truckin'",
+      "Smokestack Lightning"
+    ],
+    "poor_songs": [
+      "Brown Eyed Women",
+      "The Other One"
+    ],
+    "setlist_flow": "First set builds strong momentum with tight jams (West LA, Esau, China Cat‑Rider) and a powerful close; the second set bursts open with an electrifying Help→Slip→Franklin’s that feeds into a fiery Truckin' and extended Smokestack jam, keeping the energy sky‑high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his sick tone on West LA, soulful vocals, and zone‑level solos during China Cat‑Rider; consistently described as sounding great.",
+    "Phil": "Noted for dropping “bombs” and solid bass work, though occasionally buried under Brent’s loud keyboards (e.g., Brown Eyed Women).",
+    "Bob": "One reviewer complained that Bob Weir's guitar was inaudible on China Cat‑Rider, indicating a mix shortfall rather than performance.",
+    "Keys": "Brent’s playing is described as “whole show” and eccentric, but also at times too loud or “rinky‑dink,” affecting balance on certain songs.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "West LA": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Esau": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Truckin'": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:31:52.547367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-09.sbd.miller.27703.sbeok.shnf"
+}

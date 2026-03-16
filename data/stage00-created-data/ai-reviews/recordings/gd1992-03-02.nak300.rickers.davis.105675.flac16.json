@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience recording of a high‑energy Omni show, highlighted by a fiery Cold Rain & Snow opener and a standout Space → The Other One sequence.",
+  "review": "The four reviewers rave about the performance – calling it powerful, “right up there” with classic Omni shows and noting strong playing from start to finish. The taping is praised as an excellent audience pull that captures the band’s energy without noticeable flaws, while the setlist flow (a tight first set and a second‑set adventure featuring Terrapin Station jam, Space → The Other One and a Knockin’ encore) keeps the momentum high.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews are 4‑5 stars, consistently praising both the musical performance and the recording quality; detailed comments allow a confident high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the tape as an \"excellent\" and \"fine pull from the taper\", with no mention of drop‑outs, muddiness or other issues – indicating a clear, well‑balanced audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow",
+      "Terrapin Station (jam)",
+      "Space",
+      "The Other One",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is short but tightly executed; second set provides an adventurous flow with solid favorites, a post‑Terrapin jam and a rewarding Space → Other One sequence leading into a Knockin’ encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as playful and the driving force of the night – \"as goes Jerry, there goes the band\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station (jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:49:59.609004+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-02.nak300.rickers.davis.105675.flac16"
+}

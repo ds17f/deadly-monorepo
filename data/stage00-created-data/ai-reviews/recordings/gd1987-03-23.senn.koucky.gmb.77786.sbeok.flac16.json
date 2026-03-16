@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience tape of a high‑energy Hampton ’87 show with standout Althea and Stella Blue performances.",
+  "review": "The recording captures the spring‑’87 energy with clear, well‑balanced audience sound that lets the crowd’s excitement shine without overwhelming the music. Highlights include a scorching Althea, gorgeous Stella Blue, vibrant Iko Iko vocals and a fast‑paced Stranger, all supported by Brent’s superb keys and Garcia’s inspired guitar work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance (standout songs, energetic show) and the clear audience recording; minor sound‑quality adjustment noted but not detracting."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear tape with just the right amount of audience ambience; reviewers note it’s great for an AUD, though one mentions a brief learning curve for the sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Stella Blue",
+      "Iko Iko",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows with high energy typical of spring ’87, moving smoothly between upbeat numbers and heartfelt ballads; the crowd’s excitement adds to the momentum without interrupting the music."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals on Iko Iko are praised as amazing, and his guitar solo on Althea is called some of his best work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard playing is highlighted as fantastic throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:23:59.646788+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-23.senn.koucky.gmb.77786.sbeok.flac16"
+}

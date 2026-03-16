@@ -1,0 +1,31 @@
+{
+  "summary": "Terrific show captured on a nicely recorded source.",
+  "review": "Reviewers rave about this performance, calling the show terrific and noting that the recording sounds really nice. While no specific details are given about the mix or setlist, the overall impression is of an enjoyable concert with a clean, listenable audio capture.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises both the performance and the recording; with no contradictory comments, the rating leans toward excellent but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as \"really nice\" with no reported issues; no specifics on soundboard vs. audience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T11:53:08.848818+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-29.akg.andrewf.96025.flac1648"
+}

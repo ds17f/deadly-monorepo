@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality recording (aside from a brief neighbor intrusion) captures an under‑appreciated show highlighted by a blazing Samba and a free‑jazz Estimated Prophet jam.",
+  "review": "Both reviewers rave about the performance, calling it one of the best circulating versions of this show. The recording is praised as excellent overall, with only the opening of “Samba” marred by a noisy neighbor. Phil Lesh’s playing is singled out as being at his peak, and the modal jam on “Estimated Prophet” is noted as the night’s standout moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Consistently high star ratings (5) with enthusiastic comments about the music and only a minor recording flaw, leading to a strong combined show‑and‑recording score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the recording as excellent overall; one notes a brief neighbor noise that ruins the start of “Samba,” but otherwise the sound is clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samba",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is regarded as a stellar, under‑appreciated performance with strong flow; the highlight is the modal/free‑jazz jam on Estimated Prophet."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as being at his peak during this show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Samba": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:37:42.739451+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-12-16.138603.fob.Schoeps.Ammons.Noel.t-flac16"
+}

@@ -1,0 +1,126 @@
+{
+  "summary": "Excellent matrix recording that captures a monster 1980 show highlighted by a blistering Scarlet Begonias→Fire sequence and soaring China Doll.",
+  "review": "The matrix source is crisp, dry and surprisingly balanced for its era, delivering Jerry’s guitar and vocals with striking presence while still preserving the room ambience. Musically the performance is often described as one of the best non‑acoustic 1980 shows – the Scarlet Begonias→Fire segue, a fiery Playing in the Band suite, soaring China Doll and an electric Bird Song are repeatedly called out as standouts, with only minor quibbles about Garcia’s mutron solo in Fire and a synth‑heavy intro to Wheel.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews overwhelmingly praise both the musical performance (70% weight) and the matrix recording quality (30% weight). The weighted average of show (~4.5) and sound (~4.8) yields ~4.6."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, dry matrix with clear instrument separation; occasional minor issues (mutron solo out‑of‑tune, post‑drums shakiness) but overall very listenable and faithful to the live vibe."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias → Fire on the Mountain",
+      "Playing in the Band",
+      "China Doll",
+      "Bird Song (electric version)",
+      "Deal",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Fire on the Mountain (Garcia mutron solo out of tune)"
+    ],
+    "setlist_flow": "The first set builds steadily with strong openers like Feel Like a Stranger and Bird Song, leading into an emotive ballad stretch; the second set erupts with the famed Scarlet > Fire segue and a marathon Playing‑in‑the‑Band jam that carries through Wheel, China Doll and R&R before a high‑energy encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching guitar tone, powerful vocals and emotional ballad delivery; described as \"crushing\" the show.",
+    "Phil": "Noted for solid, syncopated bass lines that lock tightly with Bill’s drumming, especially on Fire.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboards are highlighted as a major boost—his synth work adds excitement (though his high‑wah intro to Wheel drew some criticism).",
+    "Drums": "Bill Kreutzmann’s groove is called \"syncopated\" and a key driver of the Fire jam; post‑drums section noted as slightly shaky by one reviewer."
+  },
+  "song_mentions": {
+    "Scarlet Begonias → Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:31:00.543899+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-30.110936.mtx.chappell.sb31.flac16"
+}

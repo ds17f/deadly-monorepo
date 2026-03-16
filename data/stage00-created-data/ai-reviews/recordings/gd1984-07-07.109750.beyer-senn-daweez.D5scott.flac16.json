@@ -1,0 +1,39 @@
+{
+  "summary": "Tough show featuring a noteworthy Brother Esau performance, with limited information on recording quality",
+  "review": "The lone 4‑star review praises the concert as “one of the toughest,” highlighting the Brother Esau rendition as a standout moment. No specifics about the source or sound quality are given, so the technical side remains unclear, but the positive rating suggests an overall enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating; it praises the show but gives no recording details, so the rating leans toward good show quality with unknown recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brother Esau"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer calls the concert “one of the toughest,” implying a high‑energy, possibly intense set, but no further details on pacing or flow are given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:02:58.373847+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-07.109750.beyer-senn-daweez.D5scott.flac16"
+}

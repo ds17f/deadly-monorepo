@@ -1,0 +1,44 @@
+{
+  "summary": "Solid soundboard capture of a fast‑paced 1970 show highlighted by an energetic Friend of the Devil.",
+  "review": "The recording is a decent‑quality soundboard tape that preserves the high‑energy feel of this early‑'70 performance. Reviewers rave about the brisk tempo of Friend of the Devil and consider the show “fantastic,” though one notes the annoying three‑track split of New Speedway Boogie. Overall the music shines and the audio is clean enough for enjoyable listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently positive comments about the show’s fast pace and standout Friend of the Devil, with no major complaints about sound quality; recording is a good‑quality soundboard but minor track‑splitting issues keep it from being rated higher."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced, though the split of New Speedway Boogie into three tracks disrupts continuity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend Of The Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fast‑paced early‑'70 performance with energetic tempos; reviewers note it feels quicker than later ’70 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend Of The Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T19:33:12.900793+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-05-14.sbd.cotsman.24223.shnf"
+}

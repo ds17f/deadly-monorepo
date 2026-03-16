@@ -1,0 +1,71 @@
+{
+  "summary": "High‑energy Red Rocks set with tight El Paso and soaring U.S. Blues",
+  "blurb": "The show delivers a punchy first set highlighted by Sugaree, Bird Song and an especially tight El Paso. The second set rides a driving groove through Spoonful → Drums → Space into a standout Black Peter and a rousing U.S. Blues encore. Overall performance is solid despite some recording wobble.",
+  "review": "September 6, 1985 at Red Rocks Amphitheatre captures the Dead in a high‑octane mood. The first set bursts open with Hell In A Bucket and quickly settles into bright moments – Sugaree’s lyrical stretch, Bird Song’s soaring harmonies and a razor‑sharp El Paso where Jerry’s lead is tight and Phil lays down an impressive bass run. While the recording suffers from slight speed drift and wobble, the musical chemistry shines through.\nThe second set leans into a propulsive groove: after Iko Iko and Looks Like Rain, the band launches into a seamless Spoonful → Drums → Space segment that feels both anxious and inventive, with Mickey pushing extra percussive colors. Black Peter receives a heartfelt storytelling treatment from Jerry, followed by an energetic stretch through The Wheel, Throwing Stones and Not Fade Away, culminating in a rousing U.S. Blues encore that caps the night on a high note. Brent’s keyboards add sparkle throughout, keeping the set tight despite the brief run‑time.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Multiple recordings note strong performances – tight El Paso, soaring U.S. Blues, standout Black Peter and a lively Spoonful>Drums>Space segment – while also acknowledging recording wobble; overall sentiment is modestly positive.",
+      "final_calculation": "2.5 + 0.2 + 0.8 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-09-06.sbd.weiner.12181.sbeok.shnf",
+    "reason": "Only full‑show soundboard source; despite minor wobble it captures the complete set and highlights with the cleanest mix."
+  },
+  "key_highlights": [
+    "Tight, high‑energy El Paso leading into an inventive Spoonful → Drums → Space segment",
+    "Standout Black Peter storytelling outro and soaring U.S. Blues encore",
+    "Brent’s smokin’ keyboard work adds sparkle throughout"
+  ],
+  "song_highlights": [
+    "El Paso",
+    "U.S. Blues",
+    "Black Peter",
+    "Sugaree",
+    "Bird Song"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a tight lead on El Paso and an emotive outro on Black Peter, though occasional lyric slips are noted.",
+    "Phil": "Provides a strong bass run after the El Paso lead and even slides during Space, adding depth to the groove.",
+    "Bob": "",
+    "Brent": "Keyboards described as smokin’ and tight, adding sparkle and driving energy to the set.",
+    "Mickey": "Drumming is anxious yet inventive, with extra percussion in Spoonful and a dynamic Drums → Space flow.",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-15T08:48:05.994132+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "El Paso"
+    ],
+    [
+      "U.S. Blues"
+    ],
+    [
+      "He's Gone",
+      "Spoonful*",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Black Peter",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Hell In A Bucket",
+      "Sugaree"
+    ],
+    [
+      "Bird Song"
+    ]
+  ]
+}

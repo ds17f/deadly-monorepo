@@ -1,0 +1,68 @@
+{
+  "summary": "Fair soundboard capture of an odd‑sounding 1969 show with a fiery Hard To Handle and hot Other One, but plagued by muddiness and tape cuts in several tracks.",
+  "review": "The performance offers a few standout moments – a jam‑filled Hard To Handle and a scorching version of The Other One – yet the setlist feels unusual for the year and some songs (Slewfoot, Silver Strings) are regarded as weak. Recording quality is decent overall but suffers from muddier sections, a nasty cut on the Pig’s BB Man segue and a garbled ending to Lovelight.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Multiple reviewers provide consistent comments: show is average with a couple of highlights, recording is decent but has notable flaws; weighting yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy compared to adjacent nights, nasty cut on the Pig’s BB Man intro, tape drop and garbled ending on Lovelight; otherwise a decent capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard To Handle",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Slewfoot",
+      "Silver Strings"
+    ],
+    "setlist_flow": "An atypical summer‑tour setlist for ’69, missing the usual Dark Star > St. Stephen > The Eleven sequence and featuring several rarely‑played tunes that make the flow feel odd."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned mediating a picket line before the show and praised for his steel‑pedal guitar work; no specific playing critique beyond that.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Pig's BB Man": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Slewfoot": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Silver Strings": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hard To Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T16:28:20.205112+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-08-02.sbd.miller.30651.sbeok.flacf"
+}

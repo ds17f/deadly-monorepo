@@ -1,0 +1,46 @@
+{
+  "summary": "Solid soundboard capture with occasional digital distortion, highlighted by a stellar Foolish Heart performance and Jerry's fiery playing.",
+  "review": "The show shines on the powerful rendition of Foolish Heart, with reviewers noting Jerry Garcia’s high‑energy guitar work. The SBD source is an improvement over earlier cloudy uploads, though a digital distortion glitch during the Music Never Stopped jam detracts slightly from the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Positive comments on song performance and Jerry’s playing boost the show rating, while the noted digital distortion lowers the recording score; combined they yield a solid above‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clearer than earlier cloudy versions, but some digital distortion appears in the Music Never Stopped jam."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart"
+    ],
+    "poor_songs": [
+      "Music Never Stopped"
+    ],
+    "setlist_flow": "Reviewers focus mainly on Foolish Heart and Jerry’s playing; no detailed comments on overall set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fast, energetic guitar work on Foolish Heart.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:08:58.994762+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-03.sbd.gardner.fix-4735.107083.flac16"
+}

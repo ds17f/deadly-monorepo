@@ -1,0 +1,47 @@
+{
+  "summary": "Excellent audience recording that captures a fire‑filled performance highlighted by a smashing \"Loser\" and the funky \"Crazy Fingers\".",
+  "review": "The tape is praised as one of the best audience recordings, delivering crystal‑clear sound that makes listeners feel like they're in the venue. Musically the show shines, with most fans raving about the powerhouse \"Loser\" jam and the inventive \"Crazy Fingers\", though one reviewer called the same version of \"Loser\" horrendous.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Strong, mostly five‑star praise for both performance and audio capture; recording is lauded as excellent while the show receives high marks despite a single negative comment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience tape recorded with wired equipment backstage; reviewers describe it as crystal‑clear, immersive and among the best audience recordings available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "No specific comments on overall set pacing; reviewers focus on the energy of individual jams, especially \"Loser\" and \"Crazy Fingers\"."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Multiple reviewers highlight Phil Lesh's killer bass runs and solo during \"Loser\".",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-13T21:42:39.711650+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-18.fob.senn421-m160.wise.miller.102501.flac16"
+}

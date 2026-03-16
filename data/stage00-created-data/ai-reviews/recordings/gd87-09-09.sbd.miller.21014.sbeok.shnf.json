@@ -1,0 +1,51 @@
+{
+  "summary": "Muffled but listenable soundboard captures a high‑energy 9/9/87 show highlighted by scorching Jack Straw, fiery Hey Pocky Way and a superb Greatest Story > Devil With A Blue Dress.",
+  "review": "The recording is a sound‑board source that suffers from a slight muffling, yet it remains clear enough to enjoy the band’s 1987 energy. Fans rave about the first‑set firepower – especially Jack Straw, Greatest Story into Devil With a Blue Dress and the debut of Hey Pocky Way – while the second set is solid if not spectacular. Overall the performance shines despite the modest sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (15+) give 3‑5 stars and praise the show’s energy and standout songs; only a few note muffled sound, so the combined musical and technical score is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Slightly muffled and lacking crisp high‑end detail; overall balance acceptable for a live board tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Hey Pocky Way",
+      "Greatest Story > Devil With a Blue Dress"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set bursts with energy and tight transitions (Greatest Story into Devil With a Blue Dress, Jack Straw); second set is solid but described as more pedestrian."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sharp guitar tone and memorable notes in Jack Straw; sounds healthy and lively.",
+    "Phil": "Noted for dropping “a bomb” during the final jam of Jack Straw, driving the band into a high‑octane stretch.",
+    "Bob": "",
+    "Keys": "Brent’s playing is highlighted repeatedly – his solo opening and overall presence are called out as a major highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story > Devil With a Blue Dress": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-16T02:50:09.926941+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-09.sbd.miller.21014.sbeok.shnf"
+}

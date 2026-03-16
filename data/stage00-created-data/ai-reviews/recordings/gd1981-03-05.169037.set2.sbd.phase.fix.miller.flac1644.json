@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised killer show, though recording specifics are unclear",
+  "review": "The reviewer rates the performance a perfect five stars and calls it a \"killer\" show worth hearing at random. No details about song selection, band members or audio fidelity are provided, leaving the technical quality unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only a single five‑star review is available; it praises the show but offers no insight into recording or musical specifics."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not mention soundboard vs. audience, clarity, or any mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments; reviewer simply described the show as \"killer\"."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T08:44:58.958075+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-05.169037.set2.sbd.phase.fix.miller.flac1644"
+}

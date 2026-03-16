@@ -1,0 +1,103 @@
+{
+  "summary": "Clean soundboard captures a high‑energy desert show with standout “Here Comes Sunshine”, “Uncle John’s Band” and “The Last Time”, despite a few rough moments.",
+  "review": "The SBD recording is crisp and well‑balanced, letting Bobby's gritty guitar and the band’s desert‑vibe shine.  The performance is full of memorable moments – a surprise opener with Here Comes Sunshine, powerful renditions of Uncle John’s Band, The Last Time and China Doll, plus an intense Space segment – though some songs suffer from vocal slips and a few wonky transitions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.3 stars; most comments praise the show and note a clean soundboard, with only occasional performance or technical glitches."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean, crisp mix; Bobby’s guitar sits high in the front.  Minor issues: late mic cut‑ins, a few vocal rough spots and occasional transition dropouts, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Uncle John's Band",
+      "The Last Time",
+      "China Doll",
+      "Althea",
+      "Throwing Stones"
+    ],
+    "poor_songs": [
+      "Me & My Uncle",
+      "Maggie's Farm",
+      "Not Fade Away (transition)"
+    ],
+    "setlist_flow": "The show opens with an unexpected, uplifting Here Comes Sunshine and builds through a tight first set.  The second set delivers heavy jams and emotional peaks (Uncle John’s, The Last Time, China Doll) before a solid encore, despite a few rough vocal moments and a couple of transition hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as soulful, weathered and surprisingly revitalized/younger; one reviewer notes an off‑night with very rough voice on a later song.",
+    "Phil": "",
+    "Bob": "Bobby’s (Weir) guitar is prominent and gritty throughout, praised especially on Althea and Throwing Stones; also noted for occasional lyrical slip‑ups and a generally ‘off’ night.",
+    "Keys": "Vince’s keyboards get special praise on the “Greatest Story” segment and add texture to the jam sections; machine‑gin sounds highlighted as intriguing.",
+    "Drums": "Drummers (Bill) receive kudos for intense, fun Space/Last Time passages and overall strong rhythmic drive."
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Last Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:39:38.075023+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-06.sbd.wiley.8706.sbeok.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Crisp audience recording captures a high‑energy show with standout performances of Sugaree, Terrapin > ... > Bertha and Uncle John’s Band.",
+  "review": "The audience tape is surprisingly clear and well balanced, letting the band’s fire shine through. Reviewers rave about the first‑set highlights like Sugaree, Row Jimmy and High Time, and a scorching second set that rolls from Terrapin through Bertha into an epic Uncle John’s Band double encore. Overall the concert is hailed as one of the stronger shows of the run despite a handful of dissenting opinions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise both performance and sound; only one negative review exists, giving a strong overall positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clean mix of band and crowd; highly listenable despite being an audience tape. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Row Jimmy",
+      "Terrapin Through Bertha",
+      "High Time",
+      "Music Never Stopped",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first set with tight song selection and a second set that builds through Terrapin into a double encore, ending on an electrifying post‑drums jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drums section praised for its energy and the way it drove the crowd wild."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Through Bertha": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-26T04:00:47.920467+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-28.rolfe.vernon.16117.sbeok.shnf"
+}

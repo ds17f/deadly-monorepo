@@ -1,0 +1,39 @@
+{
+  "summary": "Fair, hissy audience recording of a rare acoustic set with noticeable drum channel problems and an uneven performance.",
+  "review": "The tape captures a seldom‑heard acoustic Grateful Dead set from the summer of ’70, but the sound is cloudy and the right‑hand drum track sounds completely different, making Mickey’s playing come across as “horrible.” Reviewers note the primitive recording quality yet appreciate the uniqueness of the setlist; overall opinions range from very critical to mildly enthusiastic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Three reviews give mixed signals (2, 3, 5 stars). The show is considered unusual but not consistently praised, while the recording is described as hissy and having channel issues, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hissy, cloudy tape; right channel appears to have a completely different drum track; primitive live‑recording era but still impressive given the time."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Candyman"
+    ],
+    "setlist_flow": "Rare acoustic set that is not a common setlist; reviewers note its uniqueness but also describe it as repetitive of other shows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey's drumming on 'Candyman' is called horrible, with a mismatched drum track in the right channel."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:22:54.394651+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-08-05.sbd.thecore.4941.sbeok.shnf"
+}

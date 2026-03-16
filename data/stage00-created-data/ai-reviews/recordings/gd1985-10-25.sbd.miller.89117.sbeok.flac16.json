@@ -1,0 +1,83 @@
+{
+  "summary": "Mixed matrix recording – first set audience‑only and noisy, second set superb soundboard; strong mid‑80s show with standout Let It Grow, Morning Dew and Eyes of the World",
+  "review": "The recording is a split source: the opening set is an audience tape plagued by high‑end imbalance, clicks and drop‑outs, while the second set is a clean sound‑board capture that many fans describe as “super sounding.” Musically the night shines in the middle‑80s style – the Let It Grow stretch, a soaring Morning Dew opener for the second set, and an especially pretty Eyes of the World are repeatedly praised, though some listeners note a sloppy Deal opener and a puzzling Baby Blue encore.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Show quality is generally good with several highlighted songs, but the first‑set recording issues drag the overall experience down; enough detailed reviews give a confident combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Set 1: audience (AUD) – overly bright cymbals, drop‑outs, clicks, levels too high; difficult to listen. Set 2: soundboard (SBD) – clear, balanced, “super sounding” with good mids and low noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Morning Dew",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Deal"
+    ],
+    "setlist_flow": "Unusual opening with Deal (audience‑only) followed by a more conventional second set that kicks off with Morning Dew; the flow is quirky but the second half delivers strong transitions and highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocal performance gets special praise – “more to offer vocally than Weir.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:32:36.030471+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-25.sbd.miller.89117.sbeok.flac16"
+}

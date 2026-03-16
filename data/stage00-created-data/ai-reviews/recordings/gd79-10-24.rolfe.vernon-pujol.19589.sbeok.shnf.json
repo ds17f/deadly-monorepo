@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience recording that captures a fiery Scarlet Begonias → Fire transition despite some early‑set sound issues.",
+  "review": "The tape, recorded by Steve Rolfe, delivers a solid live feel with balanced bass and decent clarity for a 1979 audience source. While the first few minutes are a bit muddy, the second set shines—especially the legendary Scarlet Begonias into Fire segue—making it worth a listen.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is mixed (some reviewers call it the poorest of the summer shows, others rave about Scarlet > Fire), but recording quality is generally praised as a good audience tape; weighted average yields ~3.6."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Balanced sound with a bit more bass than other sources; early‑set muddiness and high crowd noise during Scarlet, but overall clear enough to convey the live atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist is strong overall; early songs suffer from recording hiccups, but the second set builds momentum and culminates in a standout Scarlet Begonias → Fire transition."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T23:35:48.029710+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-10-24.rolfe.vernon-pujol.19589.sbeok.shnf"
+}

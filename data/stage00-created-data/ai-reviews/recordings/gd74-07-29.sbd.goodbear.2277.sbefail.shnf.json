@@ -1,0 +1,100 @@
+{
+  "summary": "Excellent soundboard mix captures a smoking 1974 performance highlighted by a blazing Let It Grow, an epic The Other One / Spanish Jam suite and the rare late‑show Peggy‑O.",
+  "review": "The recording is a clean, crisp sound‑board capture with only minimal hiss, making every instrument clear. Musically the show shines – Jerry’s guitar is in overdrive on Let It Grow, The Other One morphs into a 30‑minute Spanish Jam, and the unexpected Peggy‑O near the end adds a special treat. Minor slip-ups (Bob missing lyrics on Truckin’ and a few omitted verses on Peggy‑O) don’t detract from an overall exhilarating concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.6/5, with consistent praise for both performance and mix; the show is regarded as a standout 1974 concert while the soundboard source is described as excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with very little hiss; occasional minor hiss noted in Set I but overall superb balance and fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "The Other One > Spanish Jam",
+      "Peggy-O",
+      "Cumberland",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "Strong first set builds into a cooking second set that stretches into a 30‑minute sonic soundscape before landing back on Wharf Rat; the final material (Around & Around, US Blues, Sugar Magnolia) is tight and well‑executed."
+  },
+  "band_member_comments": {
+    "Jerry": "Dominant force with wilder, Hendrix‑style guitar work; never lets up, especially on Let It Grow and The Other One.",
+    "Phil": "",
+    "Bob": "Forgets some lyrics on Truckin' and drops verses on Peggy-O.",
+    "Keys": "Keith's keyboards are described as amazing, adding fire to Let It Grow and the Spanish Jam.",
+    "Drums": "Billy Kreutzmann’s drumming is praised for being concise and clean; Mickey was on hiatus."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:13:16.236272+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-07-29.sbd.goodbear.2277.sbefail.shnf"
+}

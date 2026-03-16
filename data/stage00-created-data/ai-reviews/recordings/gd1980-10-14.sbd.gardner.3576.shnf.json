@@ -1,0 +1,62 @@
+{
+  "summary": "Crisp soundboard recording of a tight 1980 set with standout Let It Grow, The Wheel and an epic Estimated Prophet jam.",
+  "review": "The show is praised for its concise first set and a second half that builds around a remarkable Estimated Prophet improvisation. Reviewers highlight the tight interplay between Jerry Garcia and Brent Mydland and note the crisp, well‑balanced soundboard capture, making it a worthwhile listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews emphasize strong musical performance and clear recording quality; weighting yields a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix with no reported drop‑outs or major issues; reviewers describe the band as sounding crisp even after many shows at the venue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "The Wheel",
+      "Estimated Prophet",
+      "Alabama Getaway / The Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as concise and tight; second set builds momentum with a standout Estimated Prophet jam and strong transitions, especially the Let It Grow > Wheel sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Interplay with Brent noted for exotic melodic turns and strong improvisational chemistry.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboard work and vocals praised; ability to sustain through long jams highlighted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway / The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stands Still": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:52:02.620939+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-14.sbd.gardner.3576.shnf"
+}

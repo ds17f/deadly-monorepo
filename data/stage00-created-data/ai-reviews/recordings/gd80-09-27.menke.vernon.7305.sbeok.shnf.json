@@ -1,0 +1,31 @@
+{
+  "summary": "Average recording of a mixed‑quality concert where the electric sets felt mediocre, but the eleventh acoustic set stood out.",
+  "review": "The lone review rates this show three stars, noting that all of the electric portions were merely average while praising the acoustic set performed as the 11th segment. No details about the tape’s source or sonic clarity are given, so the recording quality is assumed to be unremarkable but listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one brief review; it gives a middling 3‑star rating and comments on mixed show quality with no recording details, leading to an overall modest score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard or audience source, nor any clarity or mix issues; assumed average listenability."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes all electric sets as mediocre and highlights the acoustic set (the 11th) as the best part of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T03:41:35.525442+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-27.menke.vernon.7305.sbeok.shnf"
+}

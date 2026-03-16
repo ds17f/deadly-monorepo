@@ -1,0 +1,63 @@
+{
+  "summary": "Matrix recording with heavy crowd presence captures an outstanding Terrapin Station performance and a punchy set overall.",
+  "review": "The show is celebrated for a legendary second‑set Terrapin Station, fierce guitar duels between Jerry and Bob, and a killer opener that pits Jack Straw against a Godzilla jam. While the matrix source leans heavily toward audience ambience—crowd noise can be intrusive and the mix is biased left—the musical firepower shines through, making it a must‑listen despite the technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviewers give high marks for the performance (especially Terrapin Station) and only note moderate recording flaws; weighted averaging yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Heavy audience bleed makes crowd noise prominent, especially during Terrapin Station; left‑channel bias noted; overall listenable but not a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Jack Straw",
+      "Godzilla (jam)",
+      "Good Lovin'",
+      "Black Muddy River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy opener (Jack Straw vs. Godzilla) leads into a classic set, climaxing with an unforgettable Terrapin Station; pacing is praised despite the lack of a first‑set SBD."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead work on Terrapin Station is repeatedly highlighted, trading solos with Bob and driving the performance.",
+    "Phil": "",
+    "Bob": "Noted for taking turns on lead with Jerry during Terrapin, creating a fierce guitar duel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Godzilla (jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:34:36.932952+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-24.set2-sbd.miller.25581.sbeok.shnf"
+}

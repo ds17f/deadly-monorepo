@@ -1,0 +1,86 @@
+{
+  "summary": "Pristine soundboard capture of the March 28 1973 Springfield show, highlighted by an hour‑long Dark Star → Eyes → Playing jam and crystal‑clear mix.",
+  "review": "The Miller‑restored SBD delivers a crystal‑clear listening experience that lets every instrument shine.  Musically the concert is a showcase of ’73’s peak – a tight first set followed by a monumental second set anchored by the Dark Star → Eyes of the World → Playing in the Band sequence, with standout moments from Weather Report Prelude, Stella Blue and Jack Straw.  While a few early‑set cuts are merely serviceable, the overall performance is consistently inspired.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (over 20) award 4–5 stars and praise both the musical performance and Miller’s pristine soundboard restoration; only a handful note minor set‑list weaknesses, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with very good vocal definition and balanced instrument levels.  One reviewer notes a brief bug in the first song but otherwise the tape is described as ‘pristine’ and ‘flawless.’"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star → Eyes of the World → Playing in the Band",
+      "Weather Report Prelude",
+      "Stella Blue",
+      "Half Step",
+      "Jack Straw",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Mexicali"
+    ],
+    "setlist_flow": "First set builds energy with solid renditions of new and classic material; the second set launches into an hour‑long jam sequence that forms the show’s centerpiece, delivering a satisfying arc from the Weather Report Prelude through Dark Star, Eyes, and Playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for inventive, soaring solo work and tight lock‑in with Weir during the long jams; described as ‘possessed’ on Jack Straw and flawless throughout.",
+    "Phil": "Noted for solid, melodic bass lines—especially on Box of Rain—and overall steady foundation.",
+    "Bob": "His rhythm guitar licks are highlighted as lead‑like in the Playing jam; vocal harmonies praised on several numbers.",
+    "Keys": "Keith’s keyboards receive strong compliments for clear presence, interplay with guitars, and driving the band’s ’73 sound.",
+    "Drums": "Bill Kreutzmann’s one‑drummer groove is described as solid and “crispy” after Miller’s cleanup."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "Eyes of the World": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Playing in the Band": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Weather Report Prelude": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Half Step": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T07:01:35.792269+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-28.sbd.miller.86459.sbeok.flac16"
+}

@@ -1,0 +1,113 @@
+{
+  "summary": "Stunning front‑of‑house analog tape with crystal‑clear soundstage captures a tight, high‑energy 1980 show highlighted by scorching Alabama > Promised Land and a barn‑burning second set.",
+  "review": "The Bob Wagner FOB recording delivers an almost perfect analog soundstage – the mix is clear, the audience ambience is present but never overwhelms the music, and even onstage conversations are audible. Musically the concert is a showcase of Jerry Garcia’s aggressive “Tiger” tone and inspired playing, with Phil Lesh stepping up his bass work and Brent Mydland adding vibrant organ colors; the setlist flows from a punchy first set into an explosive second half featuring standout moments like Alabama > Promised Land, Fire on the Mountain and a searing Terrapin jam. Overall the performance is described as tight, enthusiastic, and one of the best of the year.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single detailed 5‑star review praises both the musical performance and the recording quality; weighting gives a high rating but confidence is limited by only one source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑house analog tape (Bob Wagner FOB) recorded on NAKS CM‑700 and Sony D5; soundstage is described as stunning, clear separation, audience audible but not overbearing, occasional conversation captured adding atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama > Promised Land",
+      "Loser",
+      "Big Railroad Blues",
+      "Music Never Stopped",
+      "Scarlet",
+      "Fire on the Mountain",
+      "Terrapin",
+      "Playing in the Band",
+      "Black Peter",
+      "Around > Jack"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, work‑horse first set with Jerry and Bob locked in sync leads into a barn‑burner second set that builds energy through concise gems (Scarlet) to expansive jams (Terrapin, PITB), ending on a powerful Around > Jack close."
+  },
+  "band_member_comments": {
+    "Jerry": "His new “Tiger” guitar tone is described as aggressive, sharp and explosive; numerous highlights note his inspired licks and vocal peak.",
+    "Phil": "Less prominent in the mix early but steps up with strong bass lines, a near‑solo moment during PITB, and pulls notes from older eras.",
+    "Bob": "Praised for tight interplay with Jerry, strong vocals on Terrapin and overall synchronicity throughout the show.",
+    "Keys": "Brent Mydland gets room to shine on the Leslie organ during AON and adds color throughout; his playing is called “chops”.",
+    "Drums": "Described as a fast‑paced kettle‑drum barrage that drives the high‑energy jams."
+  },
+  "song_mentions": {
+    "Alabama > Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.L. Rains": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around > Jack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:23:53.896421+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-11.156013.nak700.wagner.miller.flac24"
+}

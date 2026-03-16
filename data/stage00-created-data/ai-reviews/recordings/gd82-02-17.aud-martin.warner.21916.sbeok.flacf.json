@@ -1,0 +1,69 @@
+{
+  "summary": "Hot Warfield show with standout Minglewood, Estimated Prophet and a sizzling Scarlet‑Begonias→Fire sequence; audience tape has modest hiss but remains listenable.",
+  "review": "Fans rave about the energy of this 1982 Warfield performance – opening with a blazing Minglewood Blues, cruising through a monster Estimated Prophet, jazzy Birdsong and an unforgettable Scarlet‑Begonias into Fire on the Hill. The recording is an audience tape that carries some amp hiss and “warts,” yet it captures the vibe well enough for most listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are enthusiastic (4‑5 stars) praising the musical flow and several highlight songs, while recording quality is described as good despite minor hiss; this yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape with typical amp hiss and occasional noise (“warts”), but generally clear and balanced enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Sugaree",
+      "Estimated Prophet",
+      "Birdsong",
+      "Scarlet Begonias > Fire on the Hill",
+      "The Tiger (solo within The Space)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opens with a fiery Minglewood Blues, moves into Sugaree, then a grooving Estimated Prophet and jazzy Birdsong; the high point is the seamless Scarlet‑Begonias→Fire on the Hill sequence, capped by Jerry’s rare Tiger solo before The Wheel."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers a rare 'The Tiger' solo in the space, adding excitement before The Wheel.",
+    "Phil": "",
+    "Bob": "Bob (referred to as Bobby) adds scatting/harmony vocals during Estimated Prophet.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire on the Hill": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Tiger (solo)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:19:33.442878+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-02-17.aud-martin.warner.21916.sbeok.flacf"
+}

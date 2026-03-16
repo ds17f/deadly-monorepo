@@ -1,0 +1,69 @@
+{
+  "summary": "A solid audience recording that captures a summer‑'83 show with a spectacular second set – highlights include a blazing Scarlet > Fire and tight Jack Straw.",
+  "review": "Listeners rave about the hypnotic second set, especially the marathon Scarlet > Fire and the fiery Space > Other One jam, while the first set is seen as merely serviceable. The audience tape isn’t pristine – it starts a bit warbly but settles into clear enough sound that the band’s energy shines through, making this a highly recommended 1983 Ventura performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews praise the musical performance (especially the second‑set jams) and consider the audience recording decent enough to enjoy, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Starts warbly but stabilizes; limited crowd bleed, generally clear mids and highs; not as clean as an SBD but pleasant for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Space > The Other One",
+      "Wharf Rat",
+      "Deal",
+      "Jack Straw",
+      "Mexicali"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is serviceable, but the second set delivers a hypnotic, jam‑heavy flow with long improvisations and a rare double encore, making the overall pacing very satisfying."
+  },
+  "band_member_comments": {
+    "Jerry": "Stage presence appeared off (birthday moment, seemed 'wasted'), yet his vocals were praised as sweet and emotionally charged.",
+    "Phil": "Bass work highlighted on Jack Straw and Mexicali; described as hot and jam‑centric.",
+    "Bob": "",
+    "Keys": "Brent's keyboards noted as tight and integral to the jams, especially during Scarlet > Fire.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Space > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:38:14.169611+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-07-31.aud.dodd.11933.sbeok.shnf"
+}

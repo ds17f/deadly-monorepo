@@ -1,0 +1,44 @@
+{
+  "summary": "Warm, well‑meshed soundboard capture of a loose ’82 benefit set with a standout Walkin' Blues, though occasional mic glitches appear.",
+  "review": "The recording delivers a smooth, organic sound that lets the band’s rock‑and‑blues vibe shine, highlighted by Cipollina’s guest work on Walkin' Blues. It’s a soundboard source with generally good clarity, but a high‑pitched spook on Alabama Getaway and intermittent vocal‑mic dropouts are noticeable. Overall the show feels synchronized and satisfying for fans of this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "One detailed review rates the show 4/5; performance is praised while recording has minor issues, leading to an overall good rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and warm mix, but a brief high‑pitched spook on 'Alabama Getaway' and occasional loss of Jerry's vocal mic are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walkin' Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A half‑hour benefit set focused on rock and blues rather than long jams; the simple, tight pacing works for listeners seeking a concise ’82 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tones mesh well; vocal mic drops out at points.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:26:06.351223+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-05-28.sbd.latvala-lee-smith.131808.flac16"
+}

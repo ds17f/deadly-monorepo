@@ -1,0 +1,75 @@
+{
+  "summary": "Phenomenal sound captures a nostalgic Las Vegas show highlighted by Unbroken Chain, Jack Straw and So Many Roads.",
+  "review": "The recording delivers clear, lively audio that lets listeners relive a hot‑day Vegas concert where the band rolled out a memorable opener with Jack Straw and a second‑set highlight featuring Unbroken Chain and an inspired So Many Roads. While Jerry was noted as tired, his guitar work and vocal endings still shone, and the jam sequence (Corrina > Drums > Outer Space > Area 51 > Spanish Jam) earned particular praise. Overall the performance is mixed‑positive – many fans cherish it as a “last show” memory despite occasional fatigue.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the music and the sound quality, citing standout songs and vivid memories; only a few note tired playing or minor disappointment, yielding an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the sound phenomenal, crisp and “great”; no major drop‑outs or muddiness are reported. The Corrina’s echo effect is highlighted as especially vivid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Unbroken Chain",
+      "Jack Straw",
+      "So Many Roads",
+      "Corrina",
+      "Outer Space",
+      "Area 51",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong, upbeat opening with Jack Straw set the tone; the second set delivered a highlight in Unbroken Chain and an extended jam (Corrina > Drums > Outer Space > Area 51 > Spanish Jam) that many fans remember fondly despite some fatigue on stage."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as tired but still delivering strong vocals and guitar work; his ending on So Many Roads received particular praise.",
+    "Phil": "Noted for playing two songs and contributing solid bass to Unbroken Chain.",
+    "Bob": "",
+    "Keys": "Vince's high‑pitched keyboard voice was mentioned as detracting from some harmonies.",
+    "Drums": "Drumming highlighted in the Corrina > Drums > Outer Space sequence; a security guard even photographed the drummer on stage."
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Outer Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Area 51": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T08:36:13.911976+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-05-21.schoeps.18799.sbeok.shnf"
+}

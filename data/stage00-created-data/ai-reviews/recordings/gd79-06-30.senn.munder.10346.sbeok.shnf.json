@@ -1,0 +1,63 @@
+{
+  "summary": "Good front‑of‑board recording with a solid show despite rainy weather – standout moments include The Other One and a smoking Good Lovin' while the lead guitar mix is a bit low.",
+  "review": "The recording captures a front‑of‑board sound that is generally clear, though reviewers note the lead guitar is buried in the mix for much of the set. Musically the concert was memorable for many fans – the sun breaking through during The Other One, a fiery Good Lovin', and strong solos from Jerry and Brent – but the wet, overcast day left some feeling the show was a bit mundane overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (some fans rave about specific songs while others call the night mundane) and recording quality is good but with noted mix issues, leading to an overall rating in the low‑mid 3s."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑board capture is generally crisp; however several reviewers mention a consistently low lead‑guitar level that makes Jerry's solos less prominent. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Jack Straw",
+      "Good Lovin'",
+      "Estimated Prophet",
+      "I Need a Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rainy, overcast afternoon with opening acts (Bromberg; McGuinn/Clark/Hillman) set the stage. The Dead came on as clouds broke, delivering strong moments – especially in the second set – but the dreary weather and logistical hassles left some fans feeling the overall vibe was a bit muted."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo work (e.g., during Little Light/Estimated Prophet) is praised, though the lead‑guitar mix is reported as low throughout.",
+    "Phil": "Seen boogying onstage but no specific performance critique.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) made a strong positive impression right away.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:00:07.964659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-06-30.senn.munder.10346.sbeok.shnf"
+}

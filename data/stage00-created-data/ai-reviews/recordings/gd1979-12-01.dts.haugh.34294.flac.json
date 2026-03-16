@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is unusable due to static noise, preventing any assessment of the performance.",
+  "review": "All reviewers report that this tape consists only of static with no audible music, rendering it unlistenable. Consequently, the musical quality of the show cannot be evaluated and the recording is effectively a loss.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review, rating 0 stars, cites complete audio failure; no positive aspects to offset the poor recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Static noise on every track, no music audible; likely a corrupted or failed capture."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Cannot evaluate set flow due to lack of audible content."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T02:43:53.127072+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-01.dts.haugh.34294.flac"
+}

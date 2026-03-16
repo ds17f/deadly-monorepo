@@ -1,0 +1,31 @@
+{
+  "summary": "Disappointing non‑soundboard recording with poor audio quality and no show details provided",
+  "review": "The sole reviewer flags that this tape is not a soundboard (SBD) recording, resulting in a low rating and clear dissatisfaction. No comments are made about the musical performance or specific songs, leaving the show's quality undefined.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review giving a 1‑star rating and noting the lack of soundboard quality; no positive information to raise the score"
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes it is not a soundboard (SBD) recording, implying sub‑par audio fidelity"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T12:15:48.736487+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-06.aud.rumrunners.97071.flac16"
+}

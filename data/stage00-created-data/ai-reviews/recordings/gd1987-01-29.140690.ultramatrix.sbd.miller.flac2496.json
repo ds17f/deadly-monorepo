@@ -1,0 +1,45 @@
+{
+  "summary": "Matrix recording captures a gritty but rewarding show with sweet Sugaree licks and a smoking Scarlet > Fire sequence.",
+  "review": "The performance is described as rough at the start yet mostly excellent, highlighted by Jerry Garcia’s “sweet licks” on Sugaree and a fiery Scarlet Begonias → Fire on the Mountain stretch. The ultramatrix source delivers clear FLAC sound despite an initially uneven mix, making the show enjoyable for listeners who appreciate the band’s gritty nights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave high star ratings (4 and 5) and praised the music while noting only minor roughness at the beginning; the ultramatrix FLAC source is regarded as solid, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Ultramatrix FLAC provides clear detail; reviewers mention a rough start but overall excellent sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show starts off unevenly (“rough at the beginning”) but quickly settles into a strong performance, with standout moments in the second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Gets in some sweet licks during Sugaree; highlighted for his guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:40:06.966804+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-29.140690.ultramatrix.sbd.miller.flac2496"
+}

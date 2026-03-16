@@ -1,0 +1,69 @@
+{
+  "summary": "Solid matrix mix captures a strong ’94 show with standout Peggy‑O, Queen Jane, He’s Gone and the Lovelight > Stella Blue > Lovelight sandwich.",
+  "review": "The matrix recording praised by listeners is clean and well‑balanced, letting the band’s tight playing shine through. Highlights include a smooth Peggy‑O/Queen Jane combo, an emotional He’s Gone, and a beloved Lovelight‑Stella‑Blue‑Lovelight sandwich, though a few reviewers were disappointed with the vocal delivery on Stella Blue.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show receives strong praise for several songs and overall performance; recording is noted as a well‑done matrix. Mixed sentiment stems from two negative comments about the Stella Blue vocal, lowering confidence slightly."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Remastered matrix praised for clarity and balance; no major dropouts or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Queen Jane",
+      "He’s Gone",
+      "Lovelight > Stella Blue > Lovelight"
+    ],
+    "poor_songs": [
+      "Stella Blue (vocals)"
+    ],
+    "setlist_flow": "Even with a slightly odd set order, the show flows smoothly; transitions—especially He’s Gone into Matilda Matilda and then into Drums—are highlighted as seamless."
+  },
+  "band_member_comments": {
+    "Jerry": "Two reviewers criticize his vocal delivery on Stella Blue ('channeling Donna'), while others focus on his guitar work only indirectly.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Positive note about an awesome segue into the Drum segment."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He’s Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Matilda Matilda": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:22:27.378010+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-21.125739.mtx.eichorn.sbeok.t-flac16"
+}

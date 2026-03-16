@@ -1,0 +1,72 @@
+{
+  "summary": "High‑energy Worcester show with smoking Shakedown Street and stellar Bird Song",
+  "blurb": "The set erupts with a blistering Shakedown Street and tight first‑set energy on Hell In A Bucket, Kansas City and Bird Song. Jerry’s solo on Just Like Tom Thumb's Blues shines while Brent adds soaring descants on Bird Song. Recording quality ranges from crystal‑clear soundboard to an exceptional audience capture.",
+  "review": "On November 5 1985 the Dead lit up The Centrum in Worcester with a show that still feels fresh. The first set rolled out strong, opening with Hell In A Bucket and cruising through Kansas City, Tennessee Jed and a seamless Bird Song that segued into Looks Like Rain. The second set hit its peak with a smoking Shakedown Street that sparked the crowd, followed by an inspired Just Like Tom Thumb's Blues where Jerry’s lead was “on fire,” complete with his trademark towel‑swinging antics. Brent’s bright arpeggios over Bird Song and Phil’s thundering bass added depth throughout, while the rhythm duo of Mickey and Bill kept the groove solid. Highlights also include a soulful Black Peter and a rousing Good Lovin' that closed the night, capped off by a heartfelt Brokedown Palace encore. The show is captured in several formats, but the crisp 1985 soundboard (gd85-11-05.sbd.lai.1188.sbefail.shnf) delivers the clearest picture of this high‑octane performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 45,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings are clearly positive (soundboard, audience, unknown) praising Shakedown Street, Bird Song, Tom Thumb Blues and overall energy; one mixed review still notes strong moments. The consistency of high praise across multiple sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-11-05.sbd.lai.1188.sbefail.shnf",
+    "reason": "Crystal‑clear soundboard with excellent instrument separation and no dropouts, capturing the full detail of the band’s high‑energy performance."
+  },
+  "key_highlights": [
+    "Smoking Shakedown Street that serves as the show's climax",
+    "Jerry’s fiery solo on Just Like Tom Thumb's Blues and memorable stage antics",
+    "Brent’s soaring descant arpeggios on Bird Song",
+    "Phil’s resonant, thundering bass throughout both sets"
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Bird Song",
+    "Hell In A Bucket",
+    "Just Like Tom Thumb's Blues",
+    "Looks Like Rain",
+    "Good Lovin'",
+    "Black Peter"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a fiery solo on Just Like Tom Thumb's Blues, adds mid‑range leads and a sweet ‘Tiger’ tone; stage antics (towel, sweater) are highlighted.",
+    "Phil": "Provides thundering, resonant bass that underpins the whole show; occasional shouted “Garciaaa” before solos noted but no criticism of playing.",
+    "Bob": "Shows passionate vocals on Looks Like Rain despite some listeners finding it hard to hear; otherwise unremarked.",
+    "Brent": "Adds bright descant arpeggios over Jerry’s leads on Bird Song, earning specific praise for his keyboard work.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-15T10:57:14.512484+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Bird Song",
+      "Looks Like Rain",
+      "Don't Ease Me In"
+    ],
+    [
+      "Hell In A Bucket"
+    ],
+    [
+      "Don't Need Love",
+      "Drums",
+      "Space",
+      "Just Like Tom Thumb's Blues",
+      "Goin' Down The Road Feeling Bad",
+      "Black Peter",
+      "Around & Around",
+      "Good Lovin'"
+    ]
+  ]
+}

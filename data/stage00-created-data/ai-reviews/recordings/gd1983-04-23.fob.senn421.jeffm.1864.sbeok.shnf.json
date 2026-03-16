@@ -1,0 +1,64 @@
+{
+  "summary": "High‑energy 1983 show featuring monster Scarlet Begonias → Fire on the Mountain and a soaring The Other One, captured on an audience tape that benefits from a little EQ.",
+  "review": "The performance is widely praised – the first set rolls nicely and the second delivers classic stretches of Scarlet/Fire, Drums‑Space and a powerful The Other One. Recording quality is decent for an audience source; listeners note some flubby mids and recommend EQ, but overall it captures the concert’s vibe well.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with several standout jams outweighs minor tape‑quality issues; most reviewers gave 4–5 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Tape needs a bit of EQ and sounds slightly flubby, but many consider it better than a typical board mix; overall captures the concert atmosphere with acceptable clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "The Other One",
+      "Drums/Space",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Lost > Saint (missed changes)"
+    ],
+    "setlist_flow": "First set is solid and nicely paced; second set builds momentum with seamless transitions into the epic Scarlet/Fire sequence, extended Drums‑Space, and a soaring The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Cool Drums/Space highlighted as a highlight of the night."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Drums/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:15:36.635526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-23.fob.senn421.jeffm.1864.sbeok.shnf"
+}

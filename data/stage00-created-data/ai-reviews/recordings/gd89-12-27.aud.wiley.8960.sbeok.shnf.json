@@ -1,0 +1,39 @@
+{
+  "summary": "Crystal‑clear audience tape with a few glitches, highlighted by an epic Playing in the Band > Crazy Fingers > Uncle John’s Band jam.",
+  "review": "The recording captures a late‑80s Oakland show that sounds surprisingly clear for an audience source, though a cable slip mutes Jerry Garcia’s closing solo and makes his guitar faint at times. Musically the concert shines – the \"Playing in the Band → Crazy Fingers → Uncle John’s Band\" sequence (the famed “Dew”) is repeatedly praised as one of the era’s best, and the rest of the set is described as stellar.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance with multiple standout jams outweighs minor technical glitches; reviewers consistently give 4‑5 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally crystal‑clear audience capture, but a cable slip mutes Jerry’s closing solo and makes his guitar low in the final jam; overall listenable despite the glitch."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Crazy Fingers > Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly with a powerful second‑set jam (the \"Dew\") and strong finishes; only the closing jam suffers from the missing Garcia solo."
+  },
+  "band_member_comments": {
+    "Jerry": "Early in the show his playing shines, but the audience tape renders his guitar nearly inaudible during the final jam due to a cable issue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band > Crazy Fingers > Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-17T02:18:34.672014+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-12-27.aud.wiley.8960.sbeok.shnf"
+}

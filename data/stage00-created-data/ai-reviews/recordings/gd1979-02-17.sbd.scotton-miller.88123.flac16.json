@@ -1,0 +1,70 @@
+{
+  "summary": "Clear soundboard capture of a high‑energy 1979 show, highlighted by a blistering Lazy Lightnin' → Supplication and soaring Terrapin Station.",
+  "review": "The recording is a solid soundboard source that delivers a clean, listenable mix despite the era’s analog quirks. Musically the concert is remembered as a “sleeper” classic – Jerry’s solos on Lazy Lightnin’, Terrapin Station and Bertha are repeatedly praised, while the second set flows with powerful picks like The Wheel and Shakedown Street. Minor vocal slips from Donna Jean and Keith’s low‑key keyboard presence are noted but do not detract from the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 5★) and enthusiastic language indicate an excellent performance; recording comments are uniformly positive with only minor caveats, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced soundboard mix; a few reviewers note typical analog imperfections (cassette‑derived hiss, occasional flubs) but no serious dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin' > Supplication",
+      "Terrapin Station",
+      "Bertha",
+      "The Wheel",
+      "Shakedown Street"
+    ],
+    "poor_songs": [
+      "From the Heart of Me"
+    ],
+    "setlist_flow": "The concert builds strong energy from the opening “Greatest Story Ever Told” through a tight first set, then erupts on a second‑set that strings together high‑impact numbers (Lazy Lightnin', Supplication, The Wheel, Shakedown) with seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers hail his fearless, soaring solos – especially on Lazy Lightnin', Terrapin Station and the Bertha solo – calling it “lightning” and “high‑note” brilliance.",
+    "Phil": "A few notes suggest Phil’s bass was solid; one reviewer mentions he may have improved over time.",
+    "Bob": "",
+    "Keys": "Donna Jean’s vocal on \"From the Heart of Me\" is described as sad and uneven; Keith’s piano is noted as barely audible, while Brent’s newer B‑3 sound draws mixed reactions.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T20:30:31.787238+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-17.sbd.scotton-miller.88123.flac16"
+}

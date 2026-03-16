@@ -1,0 +1,93 @@
+{
+  "summary": "Soundboard recording of a March‑28‑88 Hampton show with adventurous jams like “Stranger” and a standout “Franklin’s Tower,” but the mix is uneven and some vocal moments (Box, Truckin’) fall flat.",
+  "review": "The performance captures a high‑energy late‑summer 1988 run – fans rave about the deep dive into “Stranger,” the fluid lead work on “Franklin’s Tower,” and classic moments such as “Box of Rain” and “Birdsong.”  The Miller soundboard source is usable but not pristine; listeners note occasional muddiness, blown‑out vocals and a less‑clean FM broadcast alternative.  Overall the show is fun and adventurous, though it suffers from a few rough patches that keep it from being an all‑time classic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised with several standout jams, but recording fidelity is uneven and several reviewers note vocal and mix problems; the weighted average yields a solid‑above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Miller soundboard capture is usable but not immaculate – occasional muddiness, blown‑out vocals (Truckin’, Box), and the FM broadcast version is noted as less clean.  Overall mix is uneven, with some moments sounding great while others are sketchy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Franklin's Tower",
+      "Box of Rain",
+      "Birdsong",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Ship of Fools",
+      "Throwing Stones",
+      "Mighty Quinn"
+    ],
+    "setlist_flow": "First set opens strong with an adventurous “Stranger” and builds to a peak at “Franklin’s Tower,” then settles into solid mid‑set numbers.  The second set is less cohesive – highlights like the big drum segment are offset by vocal fatigue and uneven jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Fluid, adventurous lead work especially on “Franklin’s Tower” and overall fun vibe; a few verse flubs noted in later songs.",
+    "Phil": "Bass bombs praised on some cuts but criticized for mangling the words to “Box of Rain” and occasional off‑beat moments.",
+    "Bob": "Vocals blow out on “Truckin’,” sound reluctant on “Throwing Stones,” yet he stays engaged throughout.",
+    "Keys": "",
+    "Drums": "Second‑set drums described as a big, psychedelic stadium shaker that adds excitement."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:12:13.023244+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-28.sbd.miller.91233.sbeok.flac16"
+}

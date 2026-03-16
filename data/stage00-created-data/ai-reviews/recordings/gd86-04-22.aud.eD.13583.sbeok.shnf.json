@@ -1,0 +1,90 @@
+{
+  "summary": "Audience‑taped show with uneven performance – strong first set (Box of Rain, Visions, Bird Song) and a shaky second half, recorded okay but lacking the crisp SBD sound.",
+  "review": "The recording is an audience tape (AUD) that delivers decent clarity on the opening numbers but overall sounds rough compared to a soundboard source. Musically the first set shines with Box of Rain, Visions of Johanna and a fiery Bird Song, while Brent Mydland’s in‑state playing adds both quirky flourishes and noticeable off‑key moments; the second set is more uneven, though highlights like China>Rider and a memorable Rooster break still stand out.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the first‑set songs and overall show vibe (≈3.5/5) but note a lack of SBD quality and a spotty second set, pulling the combined rating to about 3.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No soundboard (SBD) source; audience tape with clear first two numbers but overall muddy/uneven mix, occasional spotty sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Visions of Johanna",
+      "Bird Song",
+      "China > Rider",
+      "Rooster (Brent break)"
+    ],
+    "poor_songs": [
+      "Throwing Stones > Black Peter transition"
+    ],
+    "setlist_flow": "First set is strong and engaging; second set feels rough with a clumsy Terrapin tease and uneven transitions, though it still contains enjoyable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work on Bird Song gets praised for its “chirping” textures despite lyric slips.",
+    "Phil": "Phil Lesh delivers solid vocals on Box of Rain.",
+    "Bob": "Bob Weir’s parts on China>Rider are exaggerated and comedic, adding fun energy.",
+    "Keys": "Brent Mydland is noticeably drunk – off‑key at times but adds quirky keyboard flourishes, B3 work on Deal, and a memorable break in Rooster.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Visions of Johanna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:27:31.707801+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-04-22.aud.eD.13583.sbeok.shnf"
+}

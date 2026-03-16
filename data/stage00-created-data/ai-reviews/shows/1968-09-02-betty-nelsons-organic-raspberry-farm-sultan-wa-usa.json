@@ -1,0 +1,71 @@
+{
+  "summary": "Primal high-energy set with epic Dark Star, The Eleven & soaring jams",
+  "blurb": "The show erupts with a monster Dark Star and a blistering The Eleven, followed by relentless Alligator‑Caution improvisations. Jerry’s lead guitar is incendiary while Phil anchors the rhythm; Bob adds vibrant vocal grit. Recording quality is excellent on the Miller SBD, making it the definitive listen.",
+  "review": "On September 2, 1968 at Betty Nelson's Organic Raspberry Farm the Dead delivered a raw, high‑octane performance that feels like the band was firing on all six cylinders. The first half launches with a sprawling Dark Star that never loses its momentum, segues into Saint Stephen and then explodes into an unforgettable The Eleven where Jerry’s signature lick sets the tone for the night. After a brief interlude of Death Don't Have No Mercy the second set rolls forward with relentless energy: The Other One morphs into Alligator, which bursts into a ferocious jam that feeds directly into Caution (Do Not Stop On Tracks) and a noisy Feedback finale. Throughout, Phil’s bass provides a solid foundation even as the mix occasionally buries him, Bob’s rhythm work and vocals are especially vibrant, and Mickey and Billy drive the groove with powerful, propulsive drumming. The Miller soundboard capture is crystal‑clear, preserving every nuance of this primal set and making it the go‑to version for anyone wanting to experience the 1968 Dead at full throttle.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 34,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive sentiment across all three recordings: two describe the show as 'excellent', 'fiery' and highlight Dark Star, The Eleven, Alligator, Caution and The Other One; no consistent negative comments about performance quality appear. This consensus earns a robust +1.6 adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1968-09-02.sbd.miller.115592.flac16",
+    "reason": "Excellent soundboard capture with crisp, outstanding mix; no drop‑outs and fully conveys the band’s high‑energy performance."
+  },
+  "key_highlights": [
+    "Epic Dark Star that launches the set with relentless improvisation",
+    "The Eleven featuring Jerry’s signature opening lick and soaring guitar",
+    "Alligator → Caution jam sequence delivering high‑octane, seamless transitions",
+    "Powerful drumming by Mickey and Billy driving the entire performance"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Saint Stephen",
+    "The Eleven",
+    "Alligator",
+    "The Other One",
+    "Caution (Do Not Stop On Tracks)",
+    "Feedback"
+  ],
+  "band_performance": {
+    "Jerry": "Incendiary lead guitar throughout, highlighted by a signature lick on The Eleven and soaring tones on Dark Star.",
+    "Phil": "Provides a solid bass foundation and shifts rhythm/key during The Eleven; occasionally buried in the mix but fundamentally steady.",
+    "Bob": "Delivers vibrant rhythm work and gritty vocals, adding ‘crazy stuff’ energy to the jam sections.",
+    "Brent": "",
+    "Mickey": "Drums are powerful and drive the high‑energy pacing, especially evident in the Alligator‑Caution suite.",
+    "Billy": "Provides propulsive drumming alongside Mickey, reinforcing the band's relentless groove."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T09:11:24.643897+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Death Don't Have No Mercy"
+    ],
+    [
+      "Alligator",
+      "Drums",
+      "Jam",
+      "Alligator",
+      "Caution (Do Not Stop On Tracks)",
+      "Feedback"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment"
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "A heartfelt farewell show highlighted by a moving Brokedown Palace, though the recording suffers from modest sound quality.",
+  "review": "The performance is charged with emotion – fans rave about Jerry’s voice and the encore of Brokedown Palace as a poignant high point. Recording-wise the mix is described as “not great,” typical of many ’95 Shoreline captures, but it remains listenable enough to relive the night. While two reviewers give glowing five‑star praise, one notes a disappointing guitar performance, yielding an overall mixed sentiment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two strong positive reviews (5★) and one negative (2★); show quality is praised while recording quality is noted as sub‑par, leading to a solid but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers mention the sound wasn’t great for a ’95 Shoreline show – somewhat muddy and lacking clarity, though still adequate for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An emotionally resonant finale with a memorable encore; the concert feels like a heartfelt goodbye despite mixed feelings about overall execution."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for moving vocals and the emotional impact of the encore, but one reviewer felt his playing was awful.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:37:15.018341+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-04.sennME40.sturtevant-swayne.85723.flac16"
+}

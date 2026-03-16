@@ -1,0 +1,87 @@
+{
+  "summary": "Scorching summer set with fiery Jack Straw and soaring Looks Like Rain",
+  "blurb": "The show features a blistering first set highlighted by Jack Straw, Althea and a standout Looks Like Rain. The second set delivers Dylan‑Dead collaborations and strong performances of Tangled Up In Blue and Gotta Serve Somebody. Overall the band plays tight and energetic despite the heat.",
+  "review": "On July 10, 1987, the Grateful Dead turned John F. Kennedy Stadium into a furnace of pure rock‑and‑roll energy. From the opening “Iko Iko” the first set never let up – “Jack Straw” roared, “Althea” glittered with crisp guitar work, and “Looks Like Rain” rose to a soaring climax that many reviewers called the night’s highlight. The band rode the heat with relentless drive, weaving classics like “New Minglewood Blues,” “Cassidy,” and the seamless “China Cat Sunflower > I Know You Rider” transition. The second set was equally memorable, featuring an unforgettable Dylan‑Dead collaboration and powerful renditions of “Tangled Up In Blue,” “Gotta Serve Somebody,” and a rousing “All Along The Watchtower.” Closing with the sing‑along anthem “Touch of Grey,” the night captured the Dead at their most vibrant – tight, melodic, and unabashedly joyous.\n\nAcross the available recordings the performance is consistently praised. The Miller soundboard (gd1987-07-10.sbd.miller.101651.flac16) delivers crystal‑clear instrument separation, making every nuance of Jerry’s roaring lead on “New Minglewood Blues” and Brent’s lush keys shine. Phil’s bass provides a solid backbone, especially evident in the soaring “Terrapin Station” segment, while Billy’s tight drumming fuels the classic drums‑to‑space journey. Though one audience tape notes a low mix early on and a single reviewer felt Bob wasn’t at his peak, the overall consensus is that the band was locked in, delivering a show that still feels fresh and exhilarating.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 49,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Consistent praise across the majority of recordings – multiple reviewers highlight ‘Looks Like Rain’, ‘Jack Straw’, ‘Althea’, and the Dylan‑Dead second set as standout moments. Only one mixed review notes unevenness; no negative commentary on overall playing. The positive sentiment therefore warrants a strong +1.6 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1987-07-10.sbd.miller.101651.flac16",
+    "reason": "Excellent Miller soundboard capture with crisp instrument separation, no drop‑outs, and the clearest presentation of the show’s highlights (Looks Like Rain, Jack Straw, Althea)."
+  },
+  "key_highlights": [
+    "Standout Looks Like Rain performance that tops the first set.",
+    "Roaring New Minglewood Blues and tight drumming drive the high‑energy vibe despite 100+° heat.",
+    "Unique Dylan‑Dead collaboration in the second set adds historic significance.",
+    "Tight transitions and solid jams (China Cat Sunflower > I Know You Rider, drums‑to‑space) showcase the band’s chemistry."
+  ],
+  "song_highlights": [
+    "Looks Like Rain",
+    "Jack Straw",
+    "Althea",
+    "Cassidy",
+    "Tangled Up In Blue",
+    "New Minglewood Blues",
+    "Sugaree",
+    "Space",
+    "Gotta Serve Somebody"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a roaring, crisp lead especially on New Minglewood Blues and Althea; early mix low in the audience tape but recovers with powerful phrasing throughout.",
+    "Phil": "Provides steady, melodic bass that anchors the set, highlighted on Terrapin Station and lifting the overall groove.",
+    "Bob": "Solid rhythm work; a single comment notes he wasn’t at his best, yet his playing remains reliable across the night.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Tight, driving drums that power the classic Drums > Space transition and post‑drums jam, keeping the energy high."
+  },
+  "processed_recordings": 9,
+  "processed_date": "2025-09-16T00:57:23.108569+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Looks Like Rain"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Tangled Up In Blue"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Black Peter",
+      "Around & Around",
+      "One More Saturday Night"
+    ],
+    [
+      "Queen Jane Approximately",
+      "Gotta Serve Somebody"
+    ]
+  ]
+}

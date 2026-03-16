@@ -1,0 +1,45 @@
+{
+  "summary": "Great front‑of‑house capture of a long, rocking Hartford show with a hot second set highlighted by a smoking Lovelight.",
+  "review": "Both reviewers rave about the marathon first set and the fiery second set, calling the performance one of their favorites and singling out the Not Fade Away → Lovelight sequence as a standout moment. The FOB (front‑of‑house) recording is praised as solid and enjoyable despite the venue’s notoriously quirky acoustics.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Consistently positive comments about a strong performance and a decent FOB recording lead to a high combined rating, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FOB (front‑of‑house) mix noted as great; sound described as \"interesting\" in the Civic Center, indicating a clear but venue‑colored capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set was long and steady; second set turned up the heat, delivering an especially exciting Not Fade Away → Lovelight transition."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:33:20.719841+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-14.fob.beyerm88.suraci.77990.sbeok.flac16"
+}

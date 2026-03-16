@@ -1,0 +1,45 @@
+{
+  "summary": "Boomy first set but crystal‑clear second set, this audience tape captures a spirited performance highlighted by a superb Playing In The Band sandwich and an unexpected shift into Wharf Rat.",
+  "review": "The show is praised as well‑played throughout, with the PITB (Playing In The Band) sandwich and a surprising transition into Wharf Rat standing out as highlights. Recording-wise the first set sounds a bit boomy, while the second set is crystal clear, making it an enjoyable listen despite Jerry’s slightly hoarse vocals in the latter half.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 5‑star ratings and highlighted strong musical moments; recording quality is mixed but overall listenable, leading to a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "First set is on the boomy side, second set crystal clear; overall enjoyable despite minor tonal imbalance early on."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Well‑played show with a strong PITB sandwich and an unexpected, exciting shift from SOTM into Wharf Rat; overall pacing keeps the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Gets a bit hoarse in the second set but remains spirited.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:42:07.228496+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-11-01.aud-sbd.romanowski.3861.shnf"
+}

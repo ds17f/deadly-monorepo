@@ -1,0 +1,69 @@
+{
+  "summary": "A solid audience tape that captures a high‑energy show – the second set erupts with a smoking Scarlet > Fire and a Terrapin > Playin' > Drums sequence.",
+  "review": "The Glassberg audience recording is surprisingly clear for an AUD, with enough presence to hear each instrument while still conveying the raucous crowd atmosphere.  Musically the concert shines on the second‑set jams – Scarlet Fire, Terrapin Station into Playin' and a lengthy Other One – despite a few wobbling moments on China Doll.  Overall it’s regarded as one of the better May‑79 captures.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.1; most comments praise both performance and tape quality, with only a handful of negative remarks."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively audience recording; occasional crowd clapping and minor muddiness noted by a few reviewers, but overall the tape is listenable and captures the band’s dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Terrapin > Playin' > Drums",
+      "Shakedown",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "China Doll"
+    ],
+    "setlist_flow": "First set builds tension and feeds off the crowd, while the second set launches with a frenzied Shakedown and sustains high energy through extended jams and seamless segues."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for frantic, spiraling guitar licks and high‑octane solos; a few reviewers note minor slip-ups on China Doll.",
+    "Phil": "Generally present, holding down the low end; one reviewer mentions the mix is slightly light on Phil but still audible.",
+    "Bob": "",
+    "Keys": "Early Brent Mydland work highlighted – solid organ work and improving keyboard presence, though occasionally tentative.",
+    "Drums": "Drums/Space segment described as powerful and well‑captured; overall drum performance praised."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin > Playin' > Drums": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T21:21:35.006684+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-08.glassberg.vernon.18876.sbeok.shnf"
+}

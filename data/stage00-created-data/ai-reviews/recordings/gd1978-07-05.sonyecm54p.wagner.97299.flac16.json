@@ -1,0 +1,39 @@
+{
+  "summary": "A clean audience recording at the correct speed/pitch that captures a standout Sugaree performance.",
+  "review": "Listeners rave about this tape’s accurate speed and relatively low noise, noting only slight muffling of vocals and bass. The musical highlight is the Sugaree, which one reviewer calls the best you’ll ever hear. Overall sentiment is very positive, with high marks for both sound and playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviews are favorable (4‑5 stars). The show receives strong praise for Sugaree, while the recording is praised for correct speed/pitch and low static despite minor muffling."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Correct speed/pitch compared to other sources; minimal static; vocals and bass are a little muffled when turned up high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing or structure were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:50:23.565017+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-05.sonyecm54p.wagner.97299.flac16"
+}

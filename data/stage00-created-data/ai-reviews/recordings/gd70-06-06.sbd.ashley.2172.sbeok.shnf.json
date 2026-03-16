@@ -1,0 +1,83 @@
+{
+  "summary": "Sharp‑ish soundboard capture of a 1970 Fillmore West show that shines on Dancing in the Street, Alligator jam and rare Attics moments.",
+  "review": "The recording is a solid 1970 sound‑board (sbd) with enough clarity to hear Jerry’s soaring solos and the tight drum work, despite a few occasional cuts. Musically the set is praised for a smoking Dancing in the Street, a monster Alligator jam, rare Attics, and one of the best Morning Dew renditions of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑5 stars, highlighting strong performances and a listenable soundboard; only a few 3‑star notes mention missing acoustic set or average moments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sharp for a 34‑year‑old tape, solid SBD of the era; a few cuts and occasional dropouts are noted but overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancing in the Street",
+      "Alligator",
+      "Morning Dew",
+      "Attics",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers love the seamless segues (Dire→Alligator, Love→NFA→Love) and the high‑energy second set; missing acoustic portion is noted but does not detract from the electric flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his tone, two soaring Morning Dew solos, and a fiery early China>Rider jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum work is repeatedly praised for precision, thunderous lock‑in, and standout jams (e.g., the post‑Alligator drum segment)."
+  },
+  "song_mentions": {
+    "Dancing in the Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "New Orleans": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Darkness": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China>Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tighten Up": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:53:18.505290+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-06-06.sbd.ashley.2172.sbeok.shnf"
+}

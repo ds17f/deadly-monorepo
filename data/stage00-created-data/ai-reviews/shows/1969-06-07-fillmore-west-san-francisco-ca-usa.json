@@ -1,0 +1,65 @@
+{
+  "summary": "Scorching Dark Star, Janis guest on Lovelight, solid early set",
+  "blurb": "Features an incendiary Dark Star and a rare Janis Joplin turn on Turn On Your Lovelight. The set flows from acoustic openers through extended improvisations like The Eleven and Doin' That Rag, with solid performances throughout.",
+  "review": "On June 7 1969 the Dead rolled into Fillmore West for a classic early‑’69 marathon that still feels fresh. The night opens with folk‑rock staples—Dire Wolf, Dupree's Diamond Blues and Mountains Of The Moon—before launching into an expansive Dark Star that Jerry drives with “rage”‑filled leads, seamlessly segues into Saint Stephen and then erupts into the complex, high‑energy The Eleven. Mid‑set the band gifts fans a surprise guest appearance: Janis Joplin joins for Turn On Your Lovelight*, her raw blues howl adding a historic highlight to an already stellar night. After a brief acoustic breather, the group dives into a marathon Doin' That Rag jam and rounds out the set with tight renditions of Sitting On Top Of The World, Cold Rain And Snow, and Me And My Uncle. While the best‑available soundboard (gd69-06-07.sbd.kaplan.9074.sbeok.shnf) is hissy and limited in dynamics, it captures the full flow and Janis’s guest spot, making it the go‑to source for this unforgettable performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.8,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 36,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Both recordings are described as mixed in sentiment—positive remarks about standout songs (Dark Star, Lovelight, Doin' That Rag) coexist with criticism of the Janis guest spot and recording quality. No consistent strong praise or repeated negative commentary across sources, so a neutral adjustment is applied.",
+      "final_calculation": "2.5 + 0.3 + 0.0 = 2.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-06-07.sbd.kaplan.9074.sbeok.shnf",
+    "reason": "Despite hissy, fair‑quality soundboard capture, it includes the full set and Janis Joplin’s Lovelight performance, making it the most complete source."
+  },
+  "key_highlights": [
+    "Janis Joplin's surprise appearance on Turn On Your Lovelight adds a historic moment.",
+    "Dark Star stretches into a fiery, rage‑filled improvisation showcasing Jerry's soloing.",
+    "The Eleven delivers tight, high‑energy interplay leading into an expansive Doin' That Rag jam."
+  ],
+  "song_highlights": [
+    "Turn On Your Lovelight*",
+    "Dark Star",
+    "The Eleven",
+    "Sitting On Top Of The World",
+    "Dupree's Diamond Blues",
+    "Cold Rain And Snow",
+    "Dire Wolf",
+    "Doin' That Rag"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers beautiful tone and nimble soloing on Me & My Uncle, leads Dark Star with fierce rage, and shines throughout the set.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T15:16:20.083518+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Turn On Your Lovelight*"
+    ],
+    [
+      "Dire Wolf",
+      "Dupree's Diamond Blues",
+      "Mountains Of The Moon",
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Sitting On Top Of The World",
+      "Cold Rain And Snow",
+      "Doin' That Rag"
+    ]
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "summary": "Fiery first set and stellar The Other One; second half tapers off",
+  "blurb": "The first set delivers tight jams with highlights like Franklin’s Tower, Bird Song and a powerful The Other One segue. Jerry’s guitar howls from the opening Saint of Circumstance while Phil’s bass drops bombs in the mix. The second half loses focus, ending on a meandering Stella Blue before a bright Sugar Magnolia.",
+  "review": "On December 28‑1980 at Oakland Auditorium Arena the Dead kicked off with a high‑energy first set that still shines today. A rousing Mississippi Half‑Step Uptown Toodeloo segues straight into Franklin’s Tower, and the band rides that momentum through Bird Song, Althea and Jack Straw, all underscored by Jerry’s fierce, howling guitar work and Phil’s booming bass that practically shakes the hall. The second set opens strong with a soulful Don’t Ease Me In before launching into an expansive The Other One, but after a wandering Stella Blue the momentum wanes, closing on a bright Sugar Magnolia and a classic Casey Jones encore. Overall, the show captures the band in solid form—especially in the first half—though the latter portion feels a bit unfocused.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "All five recordings are marked positive; multiple sources praise the first‑half jams, standout The Other One intro, and strong bass presence. Consistent enthusiasm across analyses warrants a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-12-28.sbd.cousinit.17421.sbeok.shnf",
+    "reason": "High‑quality soundboard with clear mix and pronounced bass thump, capturing the strong first half perfectly."
+  },
+  "key_highlights": [
+    "Tight, high‑energy first set with standout jams",
+    "\"The Other One\" intro and extended jam shine",
+    "Strong guitar work from Jerry and booming bass from Phil",
+    "Second half loses focus, ending on a meandering Stella Blue"
+  ],
+  "song_highlights": [
+    "Franklin's Tower",
+    "Bird Song",
+    "Althea",
+    "Jack Straw",
+    "Don't Ease Me In",
+    "The Other One",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar howls from the opening Saint of Circumstance and stays fierce throughout, delivering soaring leads on The Other One and other jams.",
+    "Phil": "Lesh drops bombs with a pronounced bass thump that stands out in the mix, anchoring the first‑half grooves.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-13T07:28:37.859899+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Franklin's Tower"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "Don't Ease Me In"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ]
+  ]
+}

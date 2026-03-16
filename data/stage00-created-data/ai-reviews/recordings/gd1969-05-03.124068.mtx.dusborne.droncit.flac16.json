@@ -1,0 +1,57 @@
+{
+  "summary": "High‑quality matrix recording of a tight, compact set highlighted by He Was a Friend, Doin’ That Rag, Me & My Uncle and a smoking Cryptical > Other 1 > Cryptical sequence.",
+  "review": "The show is praised for its concise, well‑flowing performance with standout versions of “He Was a Friend of Mine,” “Doin' That Rag,” and the classic “Me & My Uncle.” Reviewers also note an especially tight Cryptical > Other 1 > Cryptical (Cryptical Reprise) run and Jerry Garcia’s picking‑up‑the‑pace guitar work. The matrix source provides good, clear sound that lets these moments shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are overwhelmingly positive about both the performance and the audio; the show is described as a tight set with multiple standout songs, and the recording quality is noted as good."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers comment on “Good sound” and a clean capture of the compact set; no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He Was a Friend of Mine",
+      "Doin' That Rag",
+      "Me & My Uncle",
+      "Cryptical > Other 1 > Cryptical"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise, well‑sequenced set that closes strongly with “Me & My Uncle”; the Cryptical/Other 1 transition is highlighted as particularly tight."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s playing picking up speed and delivering beautifully developed guitar solos.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He Was a Friend of Mine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical > Other 1 > Cryptical": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T14:14:46.086292+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-03.124068.mtx.dusborne.droncit.flac16"
+}

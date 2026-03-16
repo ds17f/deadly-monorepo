@@ -1,0 +1,82 @@
+{
+  "summary": "Clear sound‑board recording of a high‑energy June ’69 show highlighted by Pigpen’s organ on “Sittin’ on Top of the World” and an epic 21‑minute “Lovelight” featuring guest Ronnie Hawkins.",
+  "review": "The tape captures a solid performance with Jerry’s lead guitar roaring, Pigpen delivering some of his best organ work, and the band really locking in during the second half. Recording quality is generally crisp and well‑balanced (soundboard), with only minor feedback around the 13‑minute mark. A few tuning hiccups on “Morning Dew”/“The Eleven” are noted, but overall the show is praised for its jam flow and guest appearances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising both the musical performance and the clear soundboard source; occasional tuning issues slightly lower the average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear overall, described as top‑notch by several reviewers. Minor feedback noted at ~13 min; no major dropouts. Some listeners mention occasional out‑of‑tune instruments which affect perception but not the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sittin' on Top of the World",
+      "St. Stephen > The Eleven > Lovelight",
+      "Morning Dew",
+      "China Cat Sunflower",
+      "Good Morning Little Schoolgirl"
+    ],
+    "poor_songs": [
+      "The Eleven",
+      "Morning Dew",
+      "China Cat Sunflower"
+    ],
+    "setlist_flow": "Energy builds after the opening numbers; the band really gets loose in the second half, delivering long jams (notably a 21‑minute Lovelight) and strong transitions between songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for tearing it up on guitar, leading Lovelight, and delivering powerful solos; one reviewer notes a brief “wrong dose” moment but overall his playing is a highlight.",
+    "Phil": "Mentioned as ‘valiantly ripping’ during the St. Stephen > Eleven > Lovelight sequence; no major criticism.",
+    "Bob": "Highlighted for exceptional organ work on “Sittin' on Top of the World” and vocal rap sections; guest vocals (Ronnie Hawkins or Wayne Ceballos) add texture.",
+    "Keys": "Tom Constanten’s keys are described as clear; guest flutist(s) (Charles Lloyd, Gary Larkey) noted positively.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are said to be “dancing” behind the kit, providing solid rhythmic drive."
+  },
+  "song_mentions": {
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Sittin' on Top of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:25:44.039594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-13.sbd.barbella.7775.sbeok.shnf"
+}

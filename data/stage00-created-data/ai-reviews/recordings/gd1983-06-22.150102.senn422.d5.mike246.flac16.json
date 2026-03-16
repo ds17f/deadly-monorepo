@@ -1,0 +1,113 @@
+{
+  "summary": "Fair audience‑style recording of a mixed‑energy show that shines on Playing in the Band, Goin' Down the Road Feeling Bad and a tight Brokedown Palace.",
+  "review": "The performance swings between a sleepy first set and a more exciting second half, highlighted by an expansive Playing in the Band, a strong Goin' Down the Road Feeling Bad, and a surprisingly tight Brokedown Palace. The source is a tape‑derived audience mix that needs pitch correction, has swapped channels and some clipped beginnings, giving it only fair listenability.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "Only one detailed review; the show is uneven but has notable peaks, while the recording suffers from speed and clipping issues, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tape runs fast, requires -2% pitch correction, channels are swapped, several song beginnings are clipped or cut; overall frequency response is decent but artifacts limit clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Goin' Down the Road Feeling Bad",
+      "Brokedown Palace",
+      "China Cat Sunflower",
+      "Rider"
+    ],
+    "poor_songs": [
+      "Brother Esau",
+      "Hellina",
+      "Miracle",
+      "Drums"
+    ],
+    "setlist_flow": "First set feels uptempo but sluggish and unfocused, while the second set gains momentum after China Cat, peaks with Playing in the Band and Goin' Down the Road, then ends on a tight Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "Ready on opener Feel Like a Stranger, keeps Deal going, acts as the spark throughout the show.",
+    "Phil": "Joins Jer in Space jam; no specific praise or criticism noted.",
+    "Bob": "Sloppy performance, odd speech about a 'radioactive volcano', and leads a basic Spanish jam in Space.",
+    "Keys": "Brent Mydland shines on Friend of the Devil and contributes to the end jam of Stella Blue.",
+    "Drums": "Described as very basic; drummers struggle to command the ship during Playing in the Band."
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "See, See Rider Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hellina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:54:40.891715+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-22.150102.senn422.d5.mike246.flac16"
+}

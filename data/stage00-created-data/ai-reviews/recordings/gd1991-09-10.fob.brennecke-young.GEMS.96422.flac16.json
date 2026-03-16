@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear audience recording captures a solid early‑'90s show highlighted by Shakedown Street and an electrifying Dark Star.",
+  "review": "The three fan reviews rave about the clear, well‑separated AUD source that still lets the crowd’s excitement shine through. Musically the performance is praised for classic ’91 staples like Shakedown Street and Dark Star, while Jerry Garcia plays tight and leaves space for Brent Hornsby’s keyboards and Branford Marsalis’ saxophone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive (5, 5, 4 stars) and highlight both excellent audience recording quality and a good musical performance with standout songs."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑separated mix with enough crowd ambience to convey the live vibe; minor note that track titles for “Lovelight” and “Crowd” are swapped."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid set that balances tight playing with space for Hornsby’s keyboards and Marsalis’ sax, giving the show a dynamic, relaxed feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Tight guitar work; doesn’t shred as much but leaves room for Hornsby and Marsalis.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Hornsby's keyboards shine, adding texture alongside Branford Marsalis’ saxophone.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:36:54.657720+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-10.fob.brennecke-young.GEMS.96422.flac16"
+}

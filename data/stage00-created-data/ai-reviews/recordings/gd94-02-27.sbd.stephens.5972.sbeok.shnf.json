@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording with noticeable hiss but a powerhouse second set – Cosmic Charlie tease, soaring Wharf Rat and a wild Uncle John’s jam stand out.",
+  "review": "The show is remembered for an electric second set where Jerry’s Cosmic Charlie tease ignited the crowd, a thrilling Wharf Rat burst forth after The Other One, and Uncle John’s Jam unfolded into a Supplication‑style excursion.  The SBD source captures the energy but suffers from tape hiss and occasional muddiness that keep the audio quality at a fair level.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show performance averages around 4 / 5 with several standout moments, while recording quality hovers near 3 / 5 due to hiss and cassette artifacts; weighted combination yields ~3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss (cassette source) and occasional muddiness, but overall the mix is usable and captures the band's dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cosmic Charlie tease",
+      "Wharf Rat",
+      "Uncle John's Jam",
+      "Samson",
+      "The Touch"
+    ],
+    "poor_songs": [
+      "The Corrina"
+    ],
+    "setlist_flow": "Second set is the highlight – a series of improvisational peaks with teases, jams and surprise transitions that keep the momentum high despite a few uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his daring Cosmic Charlie tease, Supplication‑type jam work and an ‘off the wall’ finish on Uncle John's Jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:21:31.901575+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-02-27.sbd.stephens.5972.sbeok.shnf"
+}

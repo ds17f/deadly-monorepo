@@ -1,0 +1,93 @@
+{
+  "summary": "An excellent sound‑board capture of the legendary 3‑29‑90 Nassau show, highlighted by a monster Dark Star, soaring Bird Song and an unforgettable Knockin' on Heaven's Door.",
+  "review": "The recording is praised as crystal‑clear, 5‑star soundboard quality that lets every nuance shine. Musically the concert is lauded for its fluid second set with Branford Marsalis, delivering a towering Dark Star, a 16‑minute Eyes of the World and one of the best Knockin' on Heaven’s Door performances ever. Overall the show is described as emotionally charged, improvisationally rich, and a must‑have for any Dead collector.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over twenty enthusiastic reviews rate the performance 4–5 stars and repeatedly call the sound quality 5/5; minor first‑set criticisms do not outweigh the overwhelming praise."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers give the audio a perfect 5/5, describing it as crisp, clear and superior to other copies; no significant drop‑outs or mix problems are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Dark Star",
+      "Eyes of the World",
+      "Knockin' on Heaven's Door",
+      "Estimated Prophet",
+      "Jack Straw",
+      "Throwing Stones > Turn On Your Lovelight"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "We Can Run"
+    ],
+    "setlist_flow": "Reviewers repeatedly note a fluid, flowing performance that never feels rushed; the second set especially shines with Branford Marsalis adding a jazzy edge and several extended jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for emotional vocal delivery, soaring guitar work and ‘fighting to save’ the Promised Land; described as climbing strings fluidly.",
+    "Phil": "",
+    "Bob": "Highlighted for an awesome 15‑minute Estimated Prophet and strong rhythm work throughout the set.",
+    "Keys": "",
+    "Drums": "Described as powerful, especially during the Drum segment leading into Space; overall drumming praised for intensity."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "Dark Star": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones > Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "We Can Run": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:36:48.571063+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-29.sbd.hinko.24996.sbeok.shnf"
+}

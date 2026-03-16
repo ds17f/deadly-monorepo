@@ -1,0 +1,57 @@
+{
+  "summary": "Punchy, even‑level audience recording from the Palladium shows, but plagued by a glitch and missing Not Fade Away/Bird Song.",
+  "review": "The tape captures two raw, high‑energy sets with clear audience ambience and a nicely balanced mix that many fans call outstanding. However, listeners note a noticeable glitch in \"Me & My Uncle\" and the complete absence of \"Not Fade Away\" and \"Bird Song,\" which detracts from an otherwise solid document.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised but lacks specific performance highlights; recording quality is good overall yet suffers from a glitch and missing tracks, leading to an average‑ish combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Even levels and added punch praised; raw audience feel appreciated. Noted glitch at ~0:21 in \"Me & My Uncle\" and missing \"Not Fade Away\" and \"Bird Song\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Not Fade Away",
+      "Bird Song"
+    ],
+    "setlist_flow": "Two sets feel energetic; some reviewers think the sets may come from different sources, but overall the raw performance is well‑received."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:09:01.670074+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-05.fob-SonyECM22p.miller.88859.sbeok.flac16"
+}

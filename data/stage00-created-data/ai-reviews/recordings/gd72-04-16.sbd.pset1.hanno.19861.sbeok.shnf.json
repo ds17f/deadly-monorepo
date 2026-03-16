@@ -1,0 +1,68 @@
+{
+  "summary": "Soundboard capture with a rough first‑set but an exceptional second set highlighted by Truckin', Good Lovin' and an epic The Other One jam.",
+  "review": "The recording is a soundboard source that suffers from cuts and muted audio in the opening set, yet the later material shines. Reviewers rave about Jerry’s ripping solos on Truckin', Pigpen’s powerhouse Good Lovin', and a uniquely structured, mostly drum‑less The Other One jam that builds into a stellar NFA > Goin’ Down the Road Feeling Bad > NFA suite. Overall the show is considered a strong E72 performance despite the uneven first half.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four detailed reviews give an average user rating of 4.25 and consistently praise the second‑set performances while noting only modest recording flaws in the first set, leading to a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First set contains several cuts and generally poor sound quality; second set is clear and well‑balanced. Transfer is considered superior to other versions for the first set, but overall the audio is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Truckin'",
+      "The Other One",
+      "Goin' Down the Road Feeling Bad",
+      "Playin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is fragmented and suffers from audio issues, making it feel average; the second set flows superbly with extended jams, strong Pigpen moments, and a psychedelic climax that many reviewers label as the highlight of the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Ripping solos on Truckin', unique riff work in El Paso, and collaborative improvisation during The Other One jam.",
+    "Phil": "Locks in with Pigpen on The Other One, leads much of the jam, and provides strong bass foundation throughout.",
+    "Bob": "Delivers powerful organ jams (Good Lovin'), brief lock‑in on The Other One, and overall peak Pigpen performance.",
+    "Keys": "Keith chimes in late during The Other One jam, adding texture to the improvisation.",
+    "Drums": "Billy is largely absent during the early part of The Other One, returning later for the NFA groove; first‑set drumming is sparse."
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:01:56.845706+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-16.sbd.pset1.hanno.19861.sbeok.shnf"
+}

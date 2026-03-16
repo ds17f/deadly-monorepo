@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent audience recording of a magical 1980 show with superb sound, standout Black Peter and a quirky double‑Fire on the Mountain set.",
+  "review": "Fans rave about the crystal‑clear tape that captures the Dead at a high point in ’80, calling the performance magical and the sound “as good as it gets.”  The only blemishes are metadata errors – a duplicated Fire on the Mountain track, a missing Franklin’s Tower entry and a truncated ending – but the music itself, especially Black Peter, shines.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average rating from 11 reviews is ~4.27; overwhelmingly positive comments on both performance and sound outweigh a single negative review."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced tape praised as superb; minor issues are only tracking/listing errors (duplicate Fire on the Mountain, missing Franklin's Tower, truncated final seconds)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias"
+    ],
+    "setlist_flow": "Setlist includes a rare double Fire on the Mountain (once per set) that creates a déjà‑vu feeling; overall pacing is praised despite a few song‑listing mistakes."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally lauded for being “at their peak,” though one reviewer felt his vocals and guitar were off that night.",
+    "Phil": "",
+    "Bob": "His contributions are called “fine” and he receives heartfelt thanks in a nostalgic review.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:28:11.877487+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-04.aud.glassberg.motb-0037.96584.flac16"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Rough but listenable recording captures a mixed performance with rare first‑set gems and a fiery Estimated→Eyes jam.",
+  "review": "The tape is uneven – some listeners note muffled vocals and overall low fidelity, while others find the soundboard‑derived source surprisingly clear for its age. Musically the show swings between a strong, rarity‑filled first set (including Supplication) and a second half that shines on the high‑tempo Estimated → Eyes sequence, though Jerry’s strained voice drags a few numbers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Average of reviewer star ratings (3.4) plus balanced commentary: solid musical moments offset by notable recording flaws."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Inconsistent clarity – some describe it as a soundboard source with little difference in quality, others call the sound ‘not good’ and note muffled/croaky vocals. Overall listenable but far from pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "Eyes",
+      "Supplication"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "First set praised for rare selections and a solid jam; second set uneven, highlighted by an explosive Estimated→Eyes segment but hampered by vocal fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as croaky, gasping and not fully recovered, yet guitar work on the fast Eyes jam is lauded as technically impressive.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:36:44.753547+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-08.schoeps.yuda.3420.sbeok.shnf"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Fair soundboard capture of a historic May‑24‑1969 Miami show – some standout jams but overall an average performance.",
+  "review": "The recording, sourced from a soundboard (unknown quality), is listenable but suffers from cuts, a brief pitch wobble and missing bits that keep it from being pristine. Musically the concert offers a few high points—a unique Jerry jam early on and a solid Feedback—but much of the set drifts, with shaky Doin' That Rag, a draggy Just a Hand to Hold, a loose Alligator and an unfocused drum segment. Fans who value historic context will enjoy it, though serious listeners may find it only middling.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Three out of four reviewers gave high star ratings, but the detailed review highlights numerous performance and technical flaws; weighting show (70%) and recording (30%) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Contains a ~36 sec cut, a pitch drop of about –2% during a solo, and some missing seconds at the start/end of tracks; overall clearer than audience tapes but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feedback"
+    ],
+    "poor_songs": [
+      "Doin' That Rag",
+      "Just a Hand to Hold",
+      "Alligator",
+      "Drums"
+    ],
+    "setlist_flow": "The first half contains the best jam of the night and a brief unique Jerry segment, but the set quickly loses momentum; overall it feels average for a 1969 show with occasional high‑water moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Brief unique jam noted around 13:45; otherwise not highlighted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Described as \"shoes in the dryer\" with little cohesion or interplay."
+  },
+  "song_mentions": {
+    "Doin' That Rag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Just a Hand to Hold": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Feedback": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:46:48.555360+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-24.sbd.unknown.10737.sbeok.shnf"
+}

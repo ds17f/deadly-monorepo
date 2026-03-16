@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture of a fiery 1992 jam with Jerry in top form and a standout Space featuring the Ollin Arageed theme.",
+  "review": "Both reviewers rave about the performance, noting that Jerry Garcia was \"very Dead\" and that the band delivered a gem of jamming. The recording sounds clean enough to be an enjoyable listen, highlighted by an especially compelling Space segment with the Ollin Arageed motif.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Both reviews give 4‑star ratings and praise the musical performance; no recording problems are mentioned, suggesting a good show on a decent soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No complaints about clarity or balance; listeners describe it as a pleasant and clean listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall strong performance with a particularly memorable Space segment; the show flows smoothly and keeps the listener engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"very Dead\" and delivering top‑form guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:26:26.500767+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-02-23.set2.sbd.walker-scotton.miller.96396.sbeok.flac16"
+}

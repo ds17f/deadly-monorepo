@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard recording with standout Scarlet Fire and Sugaree, though the show elicits mixed feelings among fans.",
+  "review": "The SBD capture is praised as the best‑sounding source of this concert, even including a quirky Jamaican intro that leads into Garcia’s “Sugaree.” While several reviewers name‑check “Scarlet Fire” and call the performance one of their favorites, another reviewer recalls the night being a disappointment, resulting in an overall mixed sentiment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the recording highly and note superb sound quality; show comments are largely positive with one clear negative, yielding a solid but not flawless overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best‑sounding of multiple sources, crisp enough to include the pre‑show Jamaican intro; no dropout or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unique Jamaican spoken intro leads directly into “Sugaree,” giving the show a memorable start; overall regarded as a favorite by tape traders despite one reviewer calling the night a bummer."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia launches into “Sugaree” right after the funny Jamaican intro.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:22:44.321197+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-11-26.sbd.clugston.5647.sbefail.shnf"
+}

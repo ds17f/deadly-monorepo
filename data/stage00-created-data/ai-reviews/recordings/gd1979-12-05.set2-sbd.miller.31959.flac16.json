@@ -1,0 +1,69 @@
+{
+  "summary": "Stunning soundboard capture of a Jerry‑led winter ’79 set featuring a smoking He's Gone, epic The Other One and arguably the best Shakedown ever heard.",
+  "review": "All five reviewers rave about this show’s energy and improvisational peaks – from a blistering He’s Gone jam to an inspired rendition of The Other One and a standout Shakedown. The Miller‑sourced soundboard tape is praised as clear and well balanced, with only a note that the recording is slightly incomplete, but overall it delivers an excellent listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Uniform five‑star reviews highlight exceptional musical performance and a high‑quality soundboard source; only minor comment about incompleteness keeps the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Soundboard (SBD) recording described as clear, well‑balanced and very listenable; one reviewer notes the set is not fully complete but this does not detract from overall quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "He's Gone",
+      "The Other One",
+      "Drumz",
+      "Black Peter",
+      "Ship of Fools"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A Jerry‑driven, high‑energy flow with long, mellow jams; the band rides a cohesive groove throughout, even without a traditional Space segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his tone, an extra‑long solo, and his vocal croon on Black Peter – a true centerpiece of the show.",
+    "Phil": "",
+    "Bob": "Noted for briefly reverting to a pre‑Brent chorus/verse arrangement during a song, an interesting spontaneous moment.",
+    "Keys": "References to the pre‑Brent keyboard style (Keith era) and a brief comment that Hart sits in sounding like Garcia and Brent, indicating solid keyboard work.",
+    "Drums": "Drumz segment highlighted as “choice”; the percussion is singled out for its quality."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drumz": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:03:30.262886+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-05.set2-sbd.miller.31959.flac16"
+}

@@ -1,0 +1,82 @@
+{
+  "summary": "Excellent soundboard capture with full bass‑and‑drums presence, featuring a mellow Bird Song, stellar Space → Wheel, and a bopping Good Lovin' despite a tired Jerry.",
+  "review": "The MOB mix delivers an immersive listening experience, highlighting the band’s tight rhythm section and clear board tone. Musically the show shines with a rare, laid‑back Bird Song, a powerful Desolation Row → Don't Ease Me In sequence, and an expansive Space that morphs into Wheel before a lively Good Lovin', though Jerry appears a bit weary and He’s Gone falls flat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "The single detailed review is overwhelmingly positive, praising both the recording fidelity and several standout performances; minor performance issues keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Full bass and drums presence creates an immersive MOB experience; sound is clear and well‑balanced, with only a few minor unfocused moments (e.g., Jack Straw)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Desolation Row",
+      "Don't Ease Me In",
+      "Space",
+      "Wheel",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "He's Gone"
+    ],
+    "setlist_flow": "A typical mid‑summer 1987 set that still carves its own identity; the first set is relatively uneventful aside from a mellow Bird Song, while the second set builds with strong Desolation Row → Don't Ease Me In, a spectacular Space/Wheel journey and an energetic post‑drums Good Lovin'."
+  },
+  "band_member_comments": {
+    "Jerry": "Seems a little tired and doesn’t bite on the Bunny Foo Foo cue; guitar tone remains solid though.",
+    "Phil": "",
+    "Bob": "Shows nimble, adventurous playing on Good Lovin', taking the song to new places.",
+    "Keys": "Brent (keyboard) is eager, trying to prod Bobby and Jerry into action early in the show.",
+    "Drums": "Full drum presence throughout; drives the expansive Space and Wheel sections."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:41:18.118630+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-12.akg.thompson.motb.81970.sbeok.flac24"
+}

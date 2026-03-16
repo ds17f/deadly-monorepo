@@ -1,0 +1,111 @@
+{
+  "summary": "High‑quality soundboard capture of Jerry Garcia’s birthday show, highlighted by an epic Dark Star > El Paso > Eyes > Morning Dew sequence and a powerhouse second set.",
+  "review": "The recording is a clean SBD source with only minor instrument‑balance quirks (notably on Bird Song), making it very listenable after a light EQ tweak. Musically the night shines – the first set is uneven, but the second set delivers one of the era’s classic ‘meat’ sequences and standout moments like Big River, Jack Straw and an electrifying Sugar Magnolia > Goin’ Down The Road Feeling Bad > Saturday Night. Overall fans regard it as a must‑have for 1973 collectors.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Five detailed reviews (average 4.6★) praise the performance, especially the Dark Star sequence, while noting only minor sound‑balance issues; this yields a strong show rating (70%) plus good recording quality (30%)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced SBD capture; occasional instrument balance dip on Bird Song; EQ recommended for optimal IA playback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > El Paso > Eyes > Morning Dew",
+      "Big River",
+      "Jack Straw",
+      "Sugar Magnolia > Goin' Down the Road Feeling Bad > Saturday Night"
+    ],
+    "poor_songs": [
+      "Bird Song (instrument balance issues)",
+      "Row Jimmy (sloppy start)",
+      "You Ain't Woman Enough (questionable choice)"
+    ],
+    "setlist_flow": "First set never quite turns the corner, but the energy spikes after the intermission; the second set is a tour‑de‑force anchored by the legendary Dark Star/El Paso/Eyes/Dew ‘meat’ sequence and finishes strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as solid, professional and full of unique solo ideas – highlighted on Big River, Me & My Uncle and the two‑fer Morning Dew.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s piano work gets a shout‑out for nudging Sugaree and almost “breaking” his instrument; overall keyboards add strong energy throughout.",
+    "Drums": "Bill Kreutzmann praised as possibly the best drummer ever, with extra limbs, tight snare work and superb timing during the Dark Star sequence."
+  },
+  "song_mentions": {
+    "Dark Star > El Paso > Eyes > Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia > Goin' Down the Road Feeling Bad > Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "You Ain't Woman Enough": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:41:33.986385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-08-01.sbd.sirmick.patch-12222.92478.sbeok.flac16"
+}

@@ -1,0 +1,112 @@
+{
+  "summary": "Excellent matrix recording captures a strong Oct‑14 1977 show highlighted by a soaring Bertha, epic Playing in the Band and a standout Friend of the Devil.",
+  "review": "The fixed‑up matrix source delivers crisp instrument separation and eliminates most dropouts, giving listeners a clear window onto an October ’77 performance that many fans describe as “very strong.” Standout moments include a fiery Bertha, a soaring Playing in the Band, a monster Friend of the Devil, and an unforgettable Brokedown Palace finale, while the first set offers solid Texas‑flavored rock. The overall vibe is upbeat and energetic, with only a few sleepy spots (Candyman) noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high 4‑5 star reviews praising both the musical performance and the improved matrix recording; over ten detailed comments give a clear picture of a great show with excellent sound."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Fixed dropouts, good instrument separation, generally crisp mix; minor early clipping on the opening of Mississippi Half‑Step but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Bertha",
+      "Playing in the Band",
+      "Brokedown Palace",
+      "Wharf Rat",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Candyman",
+      "Passenger"
+    ],
+    "setlist_flow": "First set delivers solid Texas‑flavored rock and tight songwork; second set builds into deep jams with a soaring Playing in the Band and an epic Brokedown Palace finale, creating a satisfying arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for picture‑perfect lead on Brokedown Palace and soaring guitar on Bertha; overall high energy throughout.",
+    "Phil": "Described as a “monster” with standout bass work and a nice solo during Playin'.",
+    "Bob": "",
+    "Keys": "Keith's solo noted as slightly buried in the mix, but keyboards are well‑balanced after the matrix fix.",
+    "Drums": "Drum‑heavy 1977‑78 sound highlighted; driving the Texas‑flavored first set and powering the jam‑heavy second set."
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:04:01.041202+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-14.sbd.fixed.miller.110419.flac16"
+}

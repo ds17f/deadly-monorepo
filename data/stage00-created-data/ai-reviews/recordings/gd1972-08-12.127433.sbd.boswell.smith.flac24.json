@@ -1,0 +1,75 @@
+{
+  "summary": "A lively 1972 show with strong vocals and jams, but the recording suffers from noticeable cuts in several songs.",
+  "review": "The performance shines with a fiery Ramble On Rose, soaring Bird Song, an energetic Playing in the Band jam, and Donna Jean’s standout vocal on Across the Rio Grande. Jerry’s classic Sugar Magnolia call‑out and Phil’s clear bass presence are highlighted, though the tape drops parts of El Paso, The Other One and Sugar Magnolia, keeping the listening experience only fair.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show is praised for many strong moments (70% weight) while recording quality is downgraded by cuts (30% weight), yielding an overall high‑four rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Several cuts noted – middle of El Paso, portions of The Other One and Sugar Magnolia – but the mix is generally clear with Phil’s bass standing out."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Playing in the Band",
+      "Ramble On Rose",
+      "Across the Rio Grande"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "First set feels hefty with strong rockers; second set settles into a relaxed jam session, reflecting a transitional period for the band as Pigpen was out sick."
+  },
+  "band_member_comments": {
+    "Jerry": "Calls out Sugar Magnolia and adds his signature vocal tag.",
+    "Phil": "Bass is noted as “pretty neat” in the mix.",
+    "Bob": "Weir does the yelling during One More Saturday Night.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Across the Rio Grande": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T16:03:28.301697+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-12.127433.sbd.boswell.smith.flac24"
+}

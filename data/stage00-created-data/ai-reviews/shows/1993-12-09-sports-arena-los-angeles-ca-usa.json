@@ -1,0 +1,75 @@
+{
+  "summary": "Space soaring, Ornette cameo, solid set with mixed quirks",
+  "blurb": "The show shines on a blistering Space → The Other One and a classic China Cat Sunflower > I Know You Rider. Highlights also include Easy Answers, Wharf Rat and Broken Arrow, while Wave To The Wind falls flat for some listeners. Recording quality varies but the performance remains memorable.",
+  "review": "On December 9, 1993 at Los Angeles’ Sports Arena the Dead delivered a show that still sparks conversation among deadheads. Jerry Garcia was “playing like a god,” trading inspired riffs with guest saxophonist Ornette Coleman during an electrifying Space → The Other One stretch, and his guitar work throughout the night earned high praise despite occasional vocal strain. The first set built momentum with Touch of Grey and a killer Easy Answers, while the second set provided the usual fireworks: China Cat Sunflower into I Know You Rider, an uplifting Estimated Prophet, and a wild turn into Space → The Other One that many listeners cite as the night’s high point. The encore‑closing Liberty rounds out a performance that, despite thumping pops on some soundboard tapes and pitch quirks on others, remains a standout snapshot of the early ’90s era, especially with the Ornette guest spot adding an “old‑school” flavor to the modern set.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings are mixed and one is clearly positive; the positive review highlights multiple standout moments (Space→Other One, Ornette guest, China>Rider) while the mixed reviews note technical flaws but no consistent performance criticism, yielding a modest +0.6 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1993-12-09.sbd.miller.91958.sbeok.flac16",
+    "reason": "Soundboard capture with decent overall balance; highlights Space and Easy Answers despite minor thumping/popping, making it the most reliable representation of the show."
+  },
+  "key_highlights": [
+    "Ornette Coleman guest adds fire to the Space → The Other One jam",
+    "Blazing China Cat Sunflower > I Know You Rider transition",
+    "Standout Easy Answers and Wharf Rat performances",
+    "Mixed recording quality (thumping/popping, pitch quirks) but solid musical delivery"
+  ],
+  "song_highlights": [
+    "Space**",
+    "The Other One",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Estimated Prophet",
+    "Wharf Rat",
+    "Broken Arrow",
+    "Easy Answers"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia is praised as playing like a god, delivering inspired riffs especially during the Ornette Coleman‑enhanced Space → The Other One, though his vocal mic showed occasional weakness.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-18T18:28:56.085956+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Space**",
+      "The Other One",
+      "Wharf Rat",
+      "Turn On Your Lovelight***"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Estimated Prophet",
+      "Wave To The Wind",
+      "He's Gone",
+      "Drums*"
+    ],
+    [
+      "Broken Arrow"
+    ],
+    [
+      "Easy Answers",
+      "Don't Ease Me In"
+    ]
+  ]
+}

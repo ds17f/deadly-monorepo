@@ -1,0 +1,94 @@
+{
+  "summary": "Clear audience tape captures strong moments like High Time and Eyes, but the set is weighed down by weak song choices and a shaky LSD finale.",
+  "review": "The recording is an audience source with surprisingly clear sound that even outshines the existing SBD copy. Musically the show offers several highlights—Jack‑a‑Roe, High Time, Deal, Eyes, He's Gone and China Doll—but is marred by a string of weaker cuts (If the Shoe Fits, Easy Answers, Samba in the Rain) and an uneven LSD ending where Garcia flubs the lyrics. Overall it’s a mixed bag that will please fans who enjoy the strong moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed with both high points and notable low points, while the audience recording is praised for its clarity; combined weight yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape noted as clear and well‑balanced, better than the comparable SBD copy; no major dropouts or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack a Roe",
+      "High Time",
+      "Deal",
+      "Eyes",
+      "He's Gone",
+      "China Doll"
+    ],
+    "poor_songs": [
+      "If the Shoe Fits",
+      "Easy Answers",
+      "Samba in the Rain",
+      "LSD"
+    ],
+    "setlist_flow": "The first half of the set rides a high wave with solid performances, but energy wanes after several weaker selections and an uneven LSD finale that leaves the show feeling inconsistent."
+  },
+  "band_member_comments": {
+    "Jerry": "Mostly absent during the drum jam after He's Gone and fumbled lyrics on the LSD ending; contribution noted as minimal.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The post‑He's Gone jam was described as odd, suggesting a less cohesive rhythm section moment."
+  },
+  "song_mentions": {
+    "Jack a Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "If the Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samba in the Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "LSD": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:04:44.400192+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-11.akg.nawrocki.2620.sbeok.shnf"
+}

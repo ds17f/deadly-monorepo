@@ -1,0 +1,31 @@
+{
+  "summary": "Review provides no details on recording or performance, only a positive anecdotal comment.",
+  "review": "The lone review is enthusiastic and awards five stars, but it focuses entirely on unrelated commentary about Joan Baez and holiday music rather than the Grateful Dead show. Consequently there are no concrete observations about the audio source, sound quality, setlist flow, or musicianship to evaluate.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one review with a high star rating but no relevant information about the performance or recording; rating reflects uncertainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information about set structure or song performance was mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T18:01:49.848462+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-31.sbd.unknown.14686.shnf"
+}

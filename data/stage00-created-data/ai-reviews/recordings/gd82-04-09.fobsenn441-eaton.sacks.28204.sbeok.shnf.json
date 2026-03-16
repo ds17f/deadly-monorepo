@@ -1,0 +1,45 @@
+{
+  "summary": "Clean audience recording captures a solid early‑80s show highlighted by a sparkling Bird Song and a satisfying set‑closer.",
+  "review": "The tape offers a clear, well‑positioned audience capture that many reviewers call “clean” and “sparkling,” though a few note a slightly hollow tonal quality. Musically the concert is described as solid and rock‑in‑your‑face, with the Bird Song standing out as possibly the best of the era and Bobby Harris’s “Satisfaction” closing the set on a high note.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show is generally praised with standout moments, recording is clean and well‑balanced despite occasional hollowness; weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very clean and clear floor positioning with minimal blemishes; some reviewers describe the sound as slightly hollow or hallow, but overall the audience capture is praised for its clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set noted for solid jams and a loose vibe; second set builds to a memorable Bird Song and closes with a strong rendition of Satisfaction, giving the concert a satisfying arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sparkling tone on Bird Song and for feeling the notes during the last great Jerry period.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:41:11.338437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-09.fobsenn441-eaton.sacks.28204.sbeok.shnf"
+}

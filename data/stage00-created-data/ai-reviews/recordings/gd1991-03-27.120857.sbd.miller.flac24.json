@@ -1,0 +1,58 @@
+{
+  "summary": "Average soundboard recording with decent performance; Minglewood shines while keyboard woes mar the Scarlet jam.",
+  "review": "The show is remembered as a pretty good performance, highlighted by a hot rendition of Minglewood Blues and a brilliant transition from Space into Watchtower. However, the soundboard capture suffers from poor location balance and Vince’s off‑beat, cheesy synth tones that spoil the Scarlet Begonias jam and over‑load the Reuben & Cherise coda.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a balanced 3‑star rating, noting both solid musical moments and noticeable recording flaws; this yields an average overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Sound quality was poor in the listener's location, with front‑heavy, off‑beat synthesizer tones and timing issues from Vince; overall mix is muddy in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Space",
+      "Watchtower"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias"
+    ],
+    "setlist_flow": "The set flows well, especially the Space → Watchtower transition, but keyboard excess detracts from the Scarlet jam and Reuben & Cherise coda."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's timing is off and his synth tone is cheesy and overly forward; patches sound horrible, making the reviewer miss Brent.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:22:17.057528+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-27.120857.sbd.miller.flac24"
+}

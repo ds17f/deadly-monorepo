@@ -1,0 +1,51 @@
+{
+  "summary": "Audience tape with thin bass and crowd‑noise but captures a high‑energy show highlighted by a stellar China Cat/Rider sequence.",
+  "review": "The recording is an audience source that suffers from a slightly thin low end and heavy crowd ambience, making vocals and Phil’s bass hard to hear at times.  Musically the concert is praised for its infectious second set – especially the China Cat → Rider segue and a fiery Truckin' – and reviewers generally describe the band as having a great time on stage.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "7 reviews, 5 of them 4‑5 stars, all praising the performance despite modest recording flaws; the show quality outweighs the technical issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crowd noise is prominent and the bass feels thin; Jerry’s vocals are hard to make out in places, but overall the tape is listenable and captures the concert's energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat",
+      "Rider",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a particularly strong second set with the China Cat → Rider transition and an intense, high‑energy vibe that builds throughout the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are often buried in the crowd noise; no specific guitar comments.",
+    "Phil": "Bass is described as thin and sometimes inaudible.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T21:26:34.280645+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-09.glassberg.vernon.18875.sbeok.shnf"
+}

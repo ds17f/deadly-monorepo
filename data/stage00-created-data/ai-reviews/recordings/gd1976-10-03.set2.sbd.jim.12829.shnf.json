@@ -1,0 +1,79 @@
+{
+  "summary": "Spectacular second set with a soaring Wheel and Comes a Time, captured on an audience recording that shines after early level hiccups",
+  "review": "Both reviewers rave about the 1976‑10‑03 Detroit show, especially the jam‑laden second set featuring The Wheel, Comes a Time and a stellar Jerry solo. The audience tape has some rough start‑up level problems but settles into an immersive, high‑energy sound that lets the band’s playfulness shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (standout second set, strong solos) while recording quality is good despite early level issues; weighted average yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Levels were problematic for the first two songs and conversation can be heard, but once settled the tape delivers clear ambience, strong instrument separation and an immersive live feel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Comes a Time",
+      "It Must Have Been the Roses",
+      "Playin' in the Band",
+      "Good Lovin'",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set has solid moments (notably Scarlet), but the second set flows superbly with seamless transitions and extended jams that keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as having immense fun, delivering stunning solos and relentless jam energy throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s keyboards weave in and out, echoing Jerry's ideas and adding playful, wandering textures.",
+    "Drums": "The drumming is described as a ‘get‑up‑and‑dance’ force that drives the band forward."
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:11:00.635599+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-03.set2.sbd.jim.12829.shnf"
+}

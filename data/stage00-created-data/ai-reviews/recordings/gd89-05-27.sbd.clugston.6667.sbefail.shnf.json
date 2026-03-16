@@ -1,0 +1,79 @@
+{
+  "summary": "Soundboard recording of a short but fun 1989 benefit show, highlighted by an outstanding Blow Away and tight band play.",
+  "review": "The show is praised for its high‑energy setlist – especially the monster Blow Away, fiery Fire on the Mountain, and tight Iko/Iko and Hell In A Bucket jams.  Reviewers note a clear soundboard source that captures the performance well, with no serious audio flaws.  Overall it’s considered a fun, memorable night rather than an epic masterpiece.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight several standout songs; the soundboard recording is consistently described as clear, yielding a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, balanced mix with good instrument separation; reviewers repeatedly mention it sounded great and there are no notable drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away",
+      "Fire on the Mountain",
+      "Hell In a Bucket",
+      "Birdsong",
+      "The Other One",
+      "Iko Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short benefit set that stays lively throughout; guests like Clarence Clemons add extra spice, and the band keeps a fun, spirited vibe from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His slide work on Blow Away is repeatedly praised; reviewers note he was happy and delivered strong leads.",
+    "Phil": "Described as 'bombing all over the place' – solid bass performance.",
+    "Bob": "",
+    "Keys": "Brent's keyboard work gets special shout‑outs, especially his rap at the end of Blow Away and overall tight playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hell In a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:34:25.741826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-05-27.sbd.clugston.6667.sbefail.shnf"
+}

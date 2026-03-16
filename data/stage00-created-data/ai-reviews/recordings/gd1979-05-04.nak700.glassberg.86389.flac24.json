@@ -1,0 +1,50 @@
+{
+  "summary": "Mixed‑quality recording featuring a smoking Truckin' and superb Stella Blue, while Brent's piano intro on Franklin’s Tower draws mixed reactions.",
+  "review": "The show is praised for its energetic Truckin' and an especially moving rendition of Stella Blue, marking Brent Mydland’s third appearance with the band. Reviewers note Brent’s piano work at the start of Franklin’s Tower but criticize the later keyboard tone as “toylike.” No specific comments about the recording source or sound quality were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Three reviews give an average of ~3.7 stars; a strong positive review is balanced by two mediocre ones, and there is no concrete information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Limited commentary on set structure; reviewers focus mainly on the strength of Truckin' and Stella Blue while noting mixed feelings about the keyboard texture on Franklin’s Tower."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's piano intro on Franklin's Tower is highlighted positively, but his later keyboard tone is described as 'toylike' and not favored.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:01:58.258757+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-04.nak700.glassberg.86389.flac24"
+}

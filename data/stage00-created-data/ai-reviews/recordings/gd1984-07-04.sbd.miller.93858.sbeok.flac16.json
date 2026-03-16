@@ -1,0 +1,52 @@
+{
+  "summary": "Crisp soundboard recording of an electrifying summer‑84 show, highlighted by a scorching “Feel Like A Stranger” and “He’s Gone”.",
+  "review": "The Miller remaster delivers exceptional clarity and separation that many reviewers say beats other sources. Musically the concert is described as a barn‑burner from start to finish with a second set that flows with passionate heat, though a few listeners note vocal oddities on “Friend of the Devil” and a hint of fatigue after the Kansas City run.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical praise (standout songs, high energy) combined with unanimous acclaim for recording clarity yields a rating above four stars despite a few vocal/recording complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear separation; reviewers say it beats the Ashley source and praise Miller’s remaster. No major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like A Stranger",
+      "He's Gone"
+    ],
+    "poor_songs": [
+      "Friend of the Devil"
+    ],
+    "setlist_flow": "High‑energy first set leading into a second set that “flows with passionate heat”; some felt the band was a bit tired after the KC show, but overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "General praise of the band’s fire; no specific guitar comments.",
+    "Phil": "",
+    "Bob": "Mentioned positively as a “Bobby tune” by one reviewer.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:42:57.984721+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-04.sbd.miller.93858.sbeok.flac16"
+}

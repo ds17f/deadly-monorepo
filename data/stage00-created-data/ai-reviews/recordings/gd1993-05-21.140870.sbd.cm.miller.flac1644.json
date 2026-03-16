@@ -1,0 +1,64 @@
+{
+  "summary": "Soundboard mix is uneven, missing Bob's guitar early, but the show delivers unique Friend of the Devil moments and a solid Liberty closer.",
+  "review": "The performance is a mixed bag: highlights include an unusually inspired Friend of the Devil, a well‑placed Liberty as the first‑set closer, and an interesting overdriven intro on Way To Go Home. On the downside the China Rider jam never reaches its peak and Estimated suffers from a noticeable misstep, compounded by a soundboard mix that omits Bob's rhythm guitar for most of the first set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "low",
+    "rationale": "Single detailed review shows an average musical show with several strong moments but also notable performance slips and a recording that lacks Bob's guitar early, lowering overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix omits Bob Weir's rhythm guitar until late in the first set; otherwise clear but instrument balance is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Liberty",
+      "Way To Go Home"
+    ],
+    "poor_songs": [
+      "China Rider",
+      "Estimated"
+    ],
+    "setlist_flow": "The set has a promising start with strong early songs, but momentum drops during China Rider and Estimated, leading to an overall uneven but occasionally brilliant performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Provides an interesting overdriven intro on Way To Go Home but makes timing errors in Estimated.",
+    "Phil": "",
+    "Bob": "His rhythm guitar is missing from the mix for most of the first set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Way To Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:47:26.975926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-21.140870.sbd.cm.miller.flac1644"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "High‑fidelity UltraMatrix recording captures a solid March 21, 1994 show highlighted by stellar Stella Blue and He's Gone.",
+  "review": "Both reviewers praise the sound quality, noting an excellent 24‑bit UltraMatrix (matrix) source that sounds crisp and clear. Musically the concert is regarded as one of the better ’94 dates, with standout performances of “Stella Blue” and “He’s Gone,” and Jerry Garcia playing with extra intensity throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Consistently positive comments on both performance (standout songs, strong Jerry) and technical quality (excellent matrix recording) lead to a high‑mid rating; only two reviews give medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "UltraMatrix 24‑bit FLAC noted as crisp and clear; no dropouts or muffling mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall favorable impression with most songs played well; reviewers consider it a top‑tier show for the year 1994."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as giving it his all and delivering strong playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:23:38.438506+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-21.158173.UltraMatrix.sbd.cm.miller.t.flac1644"
+}

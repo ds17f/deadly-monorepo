@@ -1,0 +1,72 @@
+{
+  "summary": "High‑energy Crazy Fingers, soaring Help>Slip>Franklin’s Tower, epic Other One",
+  "blurb": "The setlist flows near‑perfectly, with a punchy first set and a second set that builds into an expansive jam ending in Morning Dew. Standout moments include Crazy Fingers, the Help‑Slip‑Franklin's Tower sequence, and a barn‑burning Other One that rolls straight into Morning Dew. Recording quality varies between sources, but the band's playing is consistently praised.",
+  "review": "On September 23, 1976 at Cameron Indoor Stadium, the Dead delivered one of their most energetic performances of the year. Jerry’s Travis Bean neck‑pickup sang sweetly on every tune – from a “tickles the strings” solo on Dancin’ In The Street to solid leads throughout Crazy Fingers and High Time. Keith’s keyboards were described as “hot,” driving the band forward, while Phil’s bass shone with a quadraphonic depth that added extra weight to the jams. The first set kept things moving with a brisk Lazy Lightning transition into a searing Crazy Fingers, but it was the second set that truly lifted off: Help On The Way > Slipknot > Franklin's Tower flowed seamlessly into Looks Like Rain, then exploded on Eyes Of The World and Samson & Delilah before soaring through High Time. A highlight reel capped with Wharf Rat, a barn‑burning Other One, and an expansive Morning Dew left the audience breathless. While one soundboard source suffers from treble loss and hiss, another captures the show in good condition with sweet guitar tone and clear bass, making this concert a must‑listen despite minor audio flaws.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Both recordings highlight strong performance – one calls the show \"high‑energy\" and praises standout songs, the other labels it a \"fiery\" second set with soaring moments. Although the first analysis notes mixed recording quality, the musical sentiment is positive; the second analysis is outright positive. The consensus across sources yields a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.9 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd76-09-23.sbd.backus.14687.sbeok.shnf",
+    "reason": "Most complete capture of the full show, preserving the set flow and energy despite some treble loss; listeners can still hear the standout jams clearly."
+  },
+  "key_highlights": [
+    "High‑energy Crazy Fingers that ignites the first set",
+    "Seamless Help On The Way → Slipknot → Franklin's Tower sequence",
+    "Barn‑burning Other One into an expansive Morning Dew finale",
+    "Sweet guitar tone on High Time and strong quadraphonic bass"
+  ],
+  "song_highlights": [
+    "Crazy Fingers",
+    "Help On The Way",
+    "Slipknot",
+    "Franklin's Tower",
+    "The Other One",
+    "Morning Dew",
+    "High Time",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s Travis Bean neck‑pickup delivers a sweet, clear tone; his solos are described as ‘tickles the strings’ and he provides solid lead throughout, especially on Crazy Fingers and High Time.",
+    "Phil": "Lesh’s bass shines with a noted quadraphonic effect that adds depth to the jams, particularly in the second set.",
+    "Bob": "",
+    "Brent": "",
+    "Keith": "Keith is highlighted as ‘hot’ and driving, contributing energetic keyboard work that propels the band forward during peaks like Other One and Morning Dew.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-23T07:19:03.433627+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Crazy Fingers",
+      "El Paso"
+    ],
+    [
+      "Help On The Way",
+      "Slipknot",
+      "Franklin's Tower",
+      "Looks Like Rain"
+    ],
+    [
+      "Dancin' In The Street",
+      "Wharf Rat",
+      "The Other One",
+      "Morning Dew"
+    ],
+    [
+      "High Time"
+    ]
+  ]
+}

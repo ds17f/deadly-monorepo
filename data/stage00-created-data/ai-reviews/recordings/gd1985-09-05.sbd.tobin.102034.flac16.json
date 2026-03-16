@@ -1,0 +1,75 @@
+{
+  "summary": "Good‑quality soundboard capture of a strong Red Rocks run, highlighted by an all‑time Scarlet Begonias and solid second‑set gems.",
+  "review": "The SBD source is now properly pitched and patched, delivering clear, well‑balanced audio with only minor mixing quirks in the first set. Musically the show shines – Scarlet Begonias ranks among the top five ever, and the second set delivers standout performances of See See Rider, Me & My Uncle, Eyes of the World and a stellar drum duet.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "The review praises many musical moments (high show weight) while noting only modest recording issues, resulting in an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "New SBD is correctly pitched and patched; earlier AUD sources were wobbly. Minor first‑set mix problem noted, but overall clear and well balanced with a great headphone‑friendly drum segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "See, See Rider",
+      "Me & My Uncle",
+      "Eyes of the World",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "First set is short and a bit uneven (B‑ rating), while the second set builds momentum with several peaks, earning a B+; overall the show feels tight and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Outstanding solo on Scarlet Begonias with multiple transpositions and reverse phrasing; on‑game during Eyes of the World.",
+    "Phil": "",
+    "Bob": "Uses slide sparingly early in the set; flubs Estimated Prophet later in the second set.",
+    "Keys": "Brent gets room to shine on Big River, contributing solid keyboard textures.",
+    "Drums": "Drums segment praised as top‑20 all time and sounds superb on headphones."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "See, See Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:40:42.813846+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-05.sbd.tobin.102034.flac16"
+}

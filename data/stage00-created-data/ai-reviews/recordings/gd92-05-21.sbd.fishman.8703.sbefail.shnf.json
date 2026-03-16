@@ -1,0 +1,71 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy May ’92 show, highlighted by a scorching Scarlet>Fire, soaring Standing on the Moon and a legendary Estimated with Pharoah Sanders.",
+  "review": "The recording is crisp, slick and virtually hiss‑free, though a slight left‑right imbalance and a low‑volume right channel are noted. Musically the concert shines – the second set bursts with energy, featuring standout performances of Scarlet>Fire, Standing on the Moon, Watchtower, Estimated (with Pharoah Sanders) and Gloria. Overall fans rave about the emotional intensity and superb playing despite one dissenting view on the tempo of Standing on the Moon.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of 14 reviews praise both the performance (mostly 4‑5 stars) and the sound quality (described as crisp, slick and hiss‑less), with only a single moderate criticism; this yields an overall rating around 4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix with front‑center guitar solos and rock‑solid bass, hiss‑less playback. Reviewers note a hard left‑side panning of most instruments and a slightly low right‑channel volume that may have been corrected in remastering."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Standing on the Moon",
+      "Watchtower",
+      "Estimated",
+      "Gloria",
+      "Birdsong"
+    ],
+    "poor_songs": [
+      "Standing on the Moon"
+    ],
+    "setlist_flow": "The second set is described as high‑energy and jam‑heavy, launching with Scarlet>Fire and maintaining momentum through Standing on the Moon, Estimated and Gloria, delivering a seamless, emotionally charged flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his expressive finger slides, front‑forward guitar tone and overall superb playing.",
+    "Phil": "Noted for crisp, rock‑solid bass that stands out in the mix.",
+    "Bob": "Highlighted for roaring vocal delivery on Watchtower and powerful presence throughout.",
+    "Keys": "Vince (keyboards) described as superb both instrumentally and vocally, especially on Estimated with Pharoah Sanders.",
+    "Drums": "One reviewer mentions a hard‑left panning of the band with the drummer isolated to the right channel; another notes a slightly low right‑channel volume."
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gloria": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:35:27.575573+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-05-21.sbd.fishman.8703.sbefail.shnf"
+}

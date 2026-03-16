@@ -1,0 +1,63 @@
+{
+  "summary": "A blazing Greek show highlighted by a smoking Watchtower and Franklin’s Tower, captured on a soundboard that suffers from noticeable static.",
+  "review": "Fans rave about the high‑energy performance – especially the second‑set opener Space into an incendiary Watchtower, plus standout renditions of Franklin's Tower, Deal and The Other One.  The recording is a soundboard source but is marred by pervasive static and occasional mix quirks, though many listeners still find the ambience part of its charm.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviewers praise the musical performance (multiple 5‑star comments) while opinions on the audio vary from unacceptable static to appreciation of its character, leading to a solid but not perfect overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Prominent static throughout; some listeners note missing oddball samples and a mix where Phil's bass is occasionally louder than Jerry's guitar. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Watchtower",
+      "Franklin's Tower",
+      "Space",
+      "Deal",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong second‑set opener (Space > Watchtower) set the tone for an electric night, with the first set kept tight (~45‑50 min). The show maintains high momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "No specific praise; some mixes have his guitar slightly lower than Phil's bass.",
+    "Phil": "Boomed into The Other One and is highlighted on Franklin's Tower; a few reviewers note his bass sits higher in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Deal cited as an excellent drums/space vehicle; overall rhythm section praised."
+  },
+  "song_mentions": {
+    "Watchtower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:07:24.125644+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-20.sbd.clugston.11943.sbefail.shnf"
+}

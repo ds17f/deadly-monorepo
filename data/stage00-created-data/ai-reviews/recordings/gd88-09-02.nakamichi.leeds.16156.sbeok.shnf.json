@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy Landover show with standout performances of Wolfman’s Brother, Scarlet Begonias, Fire on the Mountain and a soaring Stella Blue.",
+  "review": "The recording is praised as the best‑sounding of all the Landover shows – crisp, clear and well‑balanced. The concert itself is described as energetic and tight, with Jerry’s guitar work shining on Wolfman’s Brother and intertwining beautifully with Brent on Stella Blue, while the band delivers strong renditions of Scarlet Begonias, Fire on the Mountain, Let It Grow and more.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviews are highly favorable (4‑5 stars), highlighting both superb sound quality and a strong musical performance; the consistency across reviewers yields a confident high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, clear and the best‑sounding of the Landover tapes; no dropouts or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wolfman's Brother",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Let It Grow",
+      "Minglewood Blues",
+      "Watchtower",
+      "Stella Blue",
+      "Sugar Magnolia",
+      "Bucket"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout with tight playing; jams are noted as shorter than typical ’88 shows but the set maintains strong momentum and engaging transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s guitar tone and solos, especially on Wolfman’s Brother and his soaring interplay with Brent on Stella Blue.",
+    "Phil": "Praised for interesting interplay with Jerry and Brent during Scarlet Begonias.",
+    "Bob": "Noted for using MIDI on Watchtower, adding a fresh texture to the performance.",
+    "Keys": "Brent Mydland receives commendation for his keyboard work and melodic intertwining, particularly on Stella Blue and Scarlet Begonias.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wolfman's Brother": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:50:52.438126+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-02.nakamichi.leeds.16156.sbeok.shnf"
+}

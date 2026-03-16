@@ -1,0 +1,76 @@
+{
+  "summary": "Clear soundboard recording of a solid ’86 show with a killer Box → Visions opener and strong first‑set energy, but marred by erratic Brent keyboard work.",
+  "review": "The tape is a clean soundboard capture that puts the vocals forward and lets Jerry’s classic lead tones shine, especially on the Box → Visions of Johanna sequence and his soaring China Cat → I Know You Rider solo. The first set rolls beautifully with standout moments like Big River, Birdsong and Lil’ Red Rooster, while the second set holds its own despite a few missteps. Keyboardist Brent’s playing is a major point of contention – praised for emotive B‑3 work on some songs but criticized as chaotic on others, which drags down the overall impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly for performance and the recording is described as clear soundboard; however several detailed criticisms of Brent’s keyboards lower the overall impression, yielding a solid but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear SB with vocals slightly forward; no reported drop‑outs or muffiness, praised for upload quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box → Visions of Johanna",
+      "Big River",
+      "Birdsong",
+      "Lil' Red Rooster",
+      "China Cat Sunflower → I Know You Rider (Jerry solo)"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Brokedown Palace"
+    ],
+    "setlist_flow": "First set is praised for its fresh order and a powerful Box‑Visions opener; the second set maintains momentum but occasional keyboard missteps create uneven spots."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is highlighted as classic and soaring, especially on Visions and China Cat → Rider; a few critics note sloppy playing on Terrapin.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent receives mixed feedback – lauded for emotive B‑3 moments on Birdsong and Lil' Red Rooster but heavily criticized as chaotic, especially on China Cat and during the encore (Brokedown Palace).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box → Visions of Johanna": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lil' Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower → I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T15:29:05.307591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-22.sbd-pcm.miller.34768.flac16"
+}

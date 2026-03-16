@@ -1,0 +1,71 @@
+{
+  "summary": "Solid second set with Uncle John's Band and strong Jack Straw",
+  "blurb": "The show builds momentum in the second set, featuring a powerful Uncle John's Band and a standout Jack Straw solo by Bob Weir. Jerry’s vocals stumble on Touch of Grey, but Phil’s bass shines. Recording quality varies, with a good front‑row audience tape capturing most of the energy.",
+  "review": "June 25, 1983 at St. Paul Civic Center finds the Dead in a mixed groove that tightens as the night wears on. The first set drags a bit—Jerry’s voice slips on the Touch of Grey opener and some fans note a wacked Bob Weir—but by the second set the band is firing on all cylinders. Uncle John's Band roars forward, bolstered by Brent’s steady keys and Phil’s “popping” bass at the close. Bob Weir slices‑and‑dices through Jack Straw, earning high praise, while the Space/Throwing Stones stretch brings a classic late‑’80s jam vibe. The encore’s gentle “It’s All Over Now Baby Blue” rounds out a night that, despite a few rough edges, captures the era’s raw energy. The best listening experience comes from the front‑row audience tape (gd83-06-25.aud.dodd.11802.sbeok.shnf), which balances instrument clarity with crowd ambience, even if the B‑side drums are partially missing.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are positive (highlighting Uncle John's Band, Jack Straw, Black Peter) while two are mixed (noting vocal slip‑ups and uneven pacing). The overall tone leans slightly positive, warranting a moderate +0.8 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd83-06-25.aud.dodd.11802.sbeok.shnf",
+    "reason": "Front‑row audience tape with balanced instruments and clear capture of the set’s highlights, despite a missing drum mix on the B side."
+  },
+  "key_highlights": [
+    "Uncle John's Band shines as a centerpiece of the second set.",
+    "Bob Weir delivers a slicing‑and‑dicing solo on Jack Straw.",
+    "Strong bass pops from Phil at the end of the show add extra drive.",
+    "Solid performances of Black Peter and Ship Of Fools round out the set."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Uncle John's Band",
+    "It's All Over Now Baby Blue",
+    "Black Peter",
+    "Ship Of Fools",
+    "Man Smart, Woman Smarter"
+  ],
+  "band_performance": {
+    "Jerry": "Vocal slip on the Touch of Grey opener, but guitar work remained solid.",
+    "Phil": "Bass pops at the end of the set were highlighted as a strong point.",
+    "Bob": "Weir delivered a slicing‑and‑dicing solo on Jack Straw; one reviewer called his playing “wacked,” indicating mixed impressions.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-14T08:12:22.992127+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Throwing Stones",
+      "Black Peter",
+      "Goin' Down The Road Feeling Bad",
+      "One More Saturday Night"
+    ],
+    [
+      "It's All Over Now Baby Blue"
+    ],
+    [
+      "Ship Of Fools"
+    ],
+    [
+      "Man Smart, Woman Smarter"
+    ]
+  ]
+}

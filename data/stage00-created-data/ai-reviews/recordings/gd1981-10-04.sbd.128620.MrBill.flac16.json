@@ -1,0 +1,42 @@
+{
+  "summary": "A fiery soundboard capture that many love, though some find the guitar sloppy and dislike the split of Scarlet Begonias/Fire on the Mountain into separate tracks.",
+  "review": "The recording is a sound‑board source praised for its clear, energetic capture of a \"on fire\" performance. While several fans rank it among their favorites, others criticize fast but sloppy guitar work and are annoyed by the decision to separate Scarlet Begonias and Fire on the Mountain into distinct tracks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality receives mixed feedback (high praise from one reviewer, criticism of guitar from another) while recording quality is generally praised; the weighted average yields a rating just under four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Board is described as clear and solid; no major audio flaws are noted, though one reviewer objects to the track‑splitting of Scarlet Begonias/Fire on the Mountain."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the band as tightly together and \"on fire,\" but a split of the Scarlet Begonias → Fire on the Mountain sequence into separate tracks is viewed as an odd editorial choice."
+  },
+  "band_member_comments": {
+    "Jerry": "Some reviewers feel his fast playing sounds sloppy, while others praise the overall fiery energy he brings.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:21:19.632099+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-04.sbd.128620.MrBill.flac16"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Audience‑recorded show captures a high‑energy 1985 performance highlighted by a memorable Cryptical > Other One > Cryptical suite, with solid sound quality.",
+  "review": "The recording is praised as a clean audience capture that lets the band’s chemistry shine.  Fans repeatedly cite the rare Cryptical/Other One/Cryptical sequence and a soaring Comes A Time as show high‑points, while noting Jerry’s occasional lyric flubs and a rushed Eyes segment.  Overall the performance is regarded as one of the stronger mid‑80s outings and the Oade audience tape is considered very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers award 4–5 stars, lauding both the music (especially the Cryptical suite) and the audience recording quality; only a few minor criticisms appear."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call it a \"great sounding audience recording\" and praise Oade's pull for clarity; no significant drop‑outs or muffling are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical > The Other One > Cryptical",
+      "Comes A Time"
+    ],
+    "poor_songs": [
+      "Eyes"
+    ],
+    "setlist_flow": "The set is highlighted for its strong, high‑energy flow with the rare Cryptical suite opening the second set and a solid mix of classics that kept the crowd elevated."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"way too high\" and flubbing lyrics on Cryptical/Other One; also walked off stage during Brent's vocal moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) is mentioned for his vocal section \"I don't need love…\"",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cryptical > The Other One > Cryptical": {
+      "positive_mentions": 7,
+      "negative_mentions": 4,
+      "total_mentions": 11
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:30:34.351455+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-03.oade.sacks.7691.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience (AUD) recording delivers a scorching 1978 show highlighted by a ripping The Other One > Stella Blue sequence and a dueling Promised Land finale.",
+  "review": "The tape captures an electrifying performance that \"spits fire\" from start to finish, with reviewers singling out the The Other One into Stella Blue transition and the high‑energy Promised Land duel between Jerry and Bob. As an audience recording it’s surprisingly clear and well‑balanced, offering a rare mass‑accessible version now that the soundboard sources have vanished.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviews are 5‑star and praise both the musical performance and the audience recording; the show is described as exceptional with standout moments, while the AUD source is noted as clear and enjoyable."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience (AUD) tape praised for clarity and balance; no major dropouts or muddiness reported, making it a solid mass‑accessible version after SBDs were removed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Stella Blue",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently high energy throughout, with a particularly fiery The Other One > Stella Blue segue and a climactic Promised Land duel that keeps the momentum soaring."
+  },
+  "band_member_comments": {
+    "Jerry": "Fast hard‑strumming on Promised Land, dueling with Bob at the song's end.",
+    "Phil": "",
+    "Bob": "Mix favors him, showcasing his excellent rhythm guitar work and strong presence during the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:52:40.548888+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-10-21.aud.rhinotrocity5.motb-0015.94600.flac24"
+}

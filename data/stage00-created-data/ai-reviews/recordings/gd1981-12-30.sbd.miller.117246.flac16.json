@@ -1,0 +1,74 @@
+{
+  "summary": "Soundboard recording with mixed fidelity but a solid set highlighted by Cumberland Blues, Dire Wolf and a blistering Might As Well.",
+  "review": "The performance is remembered fondly for its energetic first‑set trio of On the Road Again, Dire Wolf and Cumberland Blues and a second‑set that many describe as dreamy, with standout moments like a scorching Might As Well and a powerful Casey Jones. The Miller soundboard transfer suffers from a canned, treble‑heavy mix and occasional vocal distortion, though listeners who EQ it report decent clarity. Overall the show is praised for song selection and energy despite the uneven recording quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight strong musical moments and good setlist flow, while several point out consistent recording flaws; the weighted blend of solid show (70%) and fair recording (30%) yields a rating just under 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers note a canned, overly treble‑heavy sound with occasional vocal distortion and insufficient bass presence; however, some find the mix acceptable after EQ adjustments and praise moments of clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "Dire Wolf",
+      "On the Road Again",
+      "Might As Well",
+      "Casey Jones",
+      "Supplication Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A unique first‑set combination of Cumberland, Dire Wolf and On the Road Again, followed by a high‑energy second set that was shortened by an extended Joan Baez segment; overall pacing is described as lively with strong song transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Prominent vocal presence on Althea (not distracting) and praised guitar work especially on the blistering Might As Well.",
+    "Phil": "Mix often lacks enough bass, with reviewers calling out a treble‑heavy balance and reduced Phil presence.",
+    "Bob": "",
+    "Keys": "Brent is absent from several tracks ('Stranger') and reportedly left after the first set, leading to missing keyboard textures.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "On the Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:44:39.353615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-30.sbd.miller.117246.flac16"
+}

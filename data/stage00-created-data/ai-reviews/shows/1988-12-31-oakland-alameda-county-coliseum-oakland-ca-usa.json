@@ -1,0 +1,83 @@
+{
+  "summary": "High‑energy NYE set with killer Franklin's Tower and The Wheel",
+  "blurb": "The show bursts open with Let The Good Times Roll and rolls through a fiery Franklin's Tower, Wang Dang Doodle and West L.A. Fadeaway. A thunderous second set delivers Sugar Magnolia, Terrapin Station, a monster Drum/Space segment and an unforgettable Wheel into Gimme Some Lovin'.",
+  "review": "On New Year’s Eve 1988 the Dead turned the Oakland Coliseum into a rolling party that still feels fresh. The first set kicks off with a crisp Let The Good Times Roll that segues straight into a soaring Franklin's Tower – Jerry adds extra umph on the “roll‑away” section and his stage‑presence is electric, constantly locking eyes with fans. Wang Dang Doodle and West L.A. Fadeaway keep the momentum high, while Cassidy shows the band still in lockstep. The second set erupts with Sugar Magnolia into Touch of Grey and a tightly‑woven Terrapin Station that leads into one of the most celebrated Drum/Space excursions of the era – Mickey’s African percussion and Olatunji chants are “fuckin’ awesome,” and the ensuing Wheel > Gimme Some Lovin' > All Along The Watchtower sequence is seamless. The night closes with a heartfelt Wharf Rat, a rousing Goin’ Down The Road Feeling Bad and a jubilant One More Saturday Night that sends the crowd into 1990. Brent’s organ shines throughout, from ethereal intros to GSL (Gimme Some Lovin') to soaring lines on West L.A., while Phil’s bass sits front‑and‑center – heavy enough to be felt but occasionally a touch clipped in the matrix mix. Bob’s growling vocal delivery adds grit, and Billy’s steady drumming locks tightly with Mickey’s adventurous textures.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 38,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Four recordings (3 positive, 2 mixed) consistently praise the performance – especially Franklin's Tower, The Wheel, and the Drum/Space segment – with no recurring negative criticism of playing quality. This yields a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-12-31.matrix.unknown.3189.sbeok.shnf",
+    "reason": "Clean, well‑balanced matrix mix that captures the full band sound; praised for clear organ work and strong overall balance despite minor bass clipping."
+  },
+  "key_highlights": [
+    "Franklin's Tower opens with extra guitar fire and a crowd‑pulsing vibe.",
+    "The Drum/Space segment featuring Olatunji percussion is one of the era’s best.",
+    "Seamless segues through The Wheel > Gimme Some Lovin' into All Along The Watchtower keep the energy high.",
+    "Brent's organ textures lift every song, from West L.A. to Terrapin Station."
+  ],
+  "song_highlights": [
+    "Let The Good Times Roll",
+    "Franklin's Tower",
+    "Wang Dang Doodle*",
+    "West L.A. Fadeaway",
+    "Cassidy",
+    "Women Are Smarter*",
+    "The Wheel",
+    "Terrapin Station",
+    "Sugar Magnolia",
+    "Touch of Grey"
+  ],
+  "band_performance": {
+    "Jerry": "Adds extra umph on Franklin's Tower, delivers crisp guitar tone and engaging stage presence throughout the night.",
+    "Phil": "Bass sits front‑and‑center with a heavy, dark tone; solid foundation even when occasional clipping occurs in the matrix mix.",
+    "Bob": "Growling, spitting vocal delivery adds grit to his parts, especially on higher‑energy numbers.",
+    "Brent": "Organ work shines – ethereal intros, soaring lines on West L.A. and Gimme Some Lovin', and tight interplay with Jerry's guitar.",
+    "Mickey": "Memorable sound‑effects and percussion highlights, including the Olatunji segment and Kitaro‑style chants during Drum/Space.",
+    "Billy": "Provides steady, driving drumming that locks tightly with Mickey’s adventurous textures throughout the set."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T16:05:34.427239+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let The Good Times Roll"
+    ],
+    [
+      "Franklin's Tower"
+    ],
+    [
+      "Wang Dang Doodle*"
+    ],
+    [
+      "West L.A. Fadeaway"
+    ],
+    [
+      "Cassidy",
+      "Don't Ease Me In"
+    ],
+    [
+      "Sugar Magnolia",
+      "Touch of Grey",
+      "Man Smart, Woman Smarter*",
+      "Terrapin Station",
+      "Drums**",
+      "Space",
+      "The Wheel",
+      "Gimme Some Lovin'",
+      "All Along The Watchtower",
+      "Morning Dew",
+      "Sunshine Daydream"
+    ]
+  ]
+}

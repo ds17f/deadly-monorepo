@@ -1,0 +1,87 @@
+{
+  "summary": "Good soundboard capture of a mixed‑feel show, highlighted by a scorching Scarlet > Fire and a soaring Althea amid uneven performance.",
+  "review": "The recording is a solid SBD with occasional drop‑outs (Touch vocals fade, a brief glitch in the middle of a jam) but overall clear enough to enjoy.  Musically the concert swings between brilliant moments – the blistering Scarlet > Fire sequence, an uplifting Althea and strong Jack Straw – and weaker spots such as a flaccid Touch opener and some off‑key stretches that left a few fans disgruntled.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Average star rating (≈3.6) combined with many positive comments about standout songs and a generally good soundboard source yields a solid‑above‑average overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix, but suffers from vocal fade on Touch, a noticeable dropout around 2:31 in one jam, and the typical average fidelity of fall‑1990 SBDs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet",
+      "Fire",
+      "Althea",
+      "Jack Straw",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Touch",
+      "Not Fade Away",
+      "Fire"
+    ],
+    "setlist_flow": "The set has high‑energy peaks (Scarlet > Fire, Althea) that contrast with a sluggish opening and occasional off‑key moments; overall the pacing feels uneven but rewarding for fans of the late‑1990 run."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong tone on Scarlet/Fire and an explosive Althea buildup, yet criticized for missed vocal entry on Touch and even walking off stage during Fire in one negative account.",
+    "Phil": "",
+    "Bob": "Noted that Bob (Bobby) cut off Stella Blue a bit early; no further commentary on his playing.",
+    "Keys": "Bruce is repeatedly called out as ‘strong’ and ‘jamming’, with some reviewers lamenting the later keyboard transition after Brent's death but not critiquing his performance directly here.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:49:15.998910+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-13.sbd.kowalski.520.sbeok.shnf"
+}

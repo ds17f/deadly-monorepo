@@ -1,0 +1,69 @@
+{
+  "summary": "Decent audience recording captures a high‑energy 1995 show with standout Ramble on Rose, an epic long Sugaree and a smooth uptempo Dark Star.",
+  "review": "The performance is praised for its energy and tight playing – highlights include a soaring Ramble on Rose, a 15‑minute Sugaree, the Corrina→Terrapin segue and a crisp, faster‑tempo Dark Star. The audience‑sourced tape is noisy but listenable, offering a solid snapshot of this overlooked spring ’95 set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 3‑4 stars and commend the playing; recording is described as decent despite crowd noise, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "No soundboard source; a handful of audience mics give a noisy but clear enough picture. Crowd chatter is audible, yet the mix remains listenable with decent instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble on Rose",
+      "Sugaree",
+      "Dark Star",
+      "Corrina",
+      "Terrapin Station",
+      "Iko Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise six‑song first set (~50 min) packs high energy, opening with Stranger and a marathon Sugaree. The second set builds on a dramatic drum solo intro to Victim, then flows through classic segues (Corrina→Terrapin) and a crisp Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as feeling good, adding lead lines to the Terrapin chord intro and generally playing with enthusiasm.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "MIDI/electric percussion effects noted during Iko Iko, adding a modern ’95 texture.",
+    "Drums": "Heavy drum solo intro to Victim praised as dramatic and cool."
+  },
+  "song_mentions": {
+    "Ramble on Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:53:41.480913+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-04.aud.matera.123593.sbeok.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "A stellar audience tape of an iconic 1980 Alaska show, featuring a fire‑filled setlist and crystal‑clear mids/low end with only slightly muffled highs.",
+  "review": "The performance is repeatedly described as one of the band’s top shows of the era – every song “on fire,” with standout renditions of Sugaree, Lazy Lightning → Supplication, Feel Like a Stranger, Terrapin and Playin’ in the Band. The audience recording is hailed as a gem: well‑balanced, clear and surprisingly detailed for an AUD source, with only minor high‑frequency dullness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (7/8) are highly enthusiastic about both the musical performance and the audience recording, yielding a strong consensus of excellent show quality and excellent recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Aud tape praised as a GEM; mids and low end are well‑balanced, overall clarity is high. A few reviewers note the highs are slightly muffled but this does not detract from the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Lazy Lightning > Supplication",
+      "Feel Like a Stranger",
+      "Terrapin",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a strong, energetic set list that captures the vibe of late‑’70s shows; the flow is described as fire‑filled and consistently high‑energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:19:43.689040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-21.nak700.severson.minches.89214.flac16"
+}

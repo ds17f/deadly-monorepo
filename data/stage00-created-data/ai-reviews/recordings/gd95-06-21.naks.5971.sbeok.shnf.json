@@ -1,0 +1,76 @@
+{
+  "summary": "A solid audience (AUD) tape that captures an emotionally charged final Morning Dew and a standout Scarlet→Fire transition, though the rest of the show is uneven.",
+  "review": "The .shn audience recording is surprisingly clear – listeners note good low‑end definition and overall listenability despite occasional drop‑outs.  Musically the highlight is undeniably the soaring final “Morning Dew” (and the fiery Scarlet→Fire segue), while other moments such as Row Jimmy shine for some but songs like U.S. Blues, Bertha and Take Me to the River draw criticism.  Overall the performance feels mixed – a few brilliant peaks set against an otherwise uneven 1995 show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Many reviewers praise the recording quality and the iconic Morning Dew, but a large number also call the overall performance uneven or poor; the weighted average of show (70%) and recording (30%) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear audience capture with strong low‑end definition (Phil's bass) and overall crispness; some listeners note occasional drop‑outs, muffled vocals, or brief mix issues but the tape is generally listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Scarlet > Fire",
+      "Row Jimmy"
+    ],
+    "poor_songs": [
+      "U.S. Blues",
+      "Bertha",
+      "Take Me To The River",
+      "It's All Too Much"
+    ],
+    "setlist_flow": "The set swings between high‑energy peaks (the Dew and Scarlet→Fire) and weaker, sloppy moments; many feel the first set is solid while the second set loses momentum, resulting in an uneven but emotionally potent show."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work on Morning Dew is described as heartfelt and powerful; some note equipment troubles and occasional off‑night form, but overall his performance on the Dew is praised as one of his last great moments.",
+    "Phil": "Bass presence gets specific praise for definition in the low end of the audience recording.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Row Jimmy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Take Me To The River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "It's All Too Much": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:25:42.745714+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-21.naks.5971.sbeok.shnf"
+}

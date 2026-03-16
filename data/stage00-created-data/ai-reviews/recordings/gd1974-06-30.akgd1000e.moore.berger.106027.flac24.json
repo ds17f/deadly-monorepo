@@ -1,0 +1,69 @@
+{
+  "summary": "A good‑quality (if not pristine) recording that immerses you in a mellow 1974 Dead show, highlighted by gorgeous keyboards and a monster Playing In The Band > Uncle John’s Band > Playing In The Band sequence.",
+  "review": "The three reviews rave about the warm, vintage feel of this 1974 performance – especially the “mellow” keyboard textures on Peggy‑O, Jack Straw, Cumberland and the epic PITB/UJB/PITB sandwich. While the sound isn’t as crystal clear as other Jerry recordings, it’s still clean enough to showcase a tight set with standout guitar work from Jerry and vibrant vocals from Bob.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical praise (multiple 5‑star reviews) outweighs minor recording clarity concerns, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the audio isn’t as clear as other 1974 tapes but still “puts you right down on the floor”; keyboards are well‑defined and guitar moments are clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Jack Straw",
+      "Loser",
+      "Cumberland",
+      "Playing In The Band > Uncle John's Band > Playing In The Band",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as mellow and flowing, with seamless transitions that build to a monster PITB/UJB/PITB sequence; overall the show feels like a classic 1974 Dead vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar from ~4:00‑4:38 is called “clean” and “schools every other guitarist from ’74”; a notable duel with Keith at 4:15‑5:00.",
+    "Phil": "",
+    "Bob": "Vocals praised as “fatman's vocals” and “loud Bobby”, adding sweet peaks and valleys to the mix.",
+    "Keys": "Keyboards described as mellow, beautiful, and “killer”; multiple songs highlighted for their keyboard work (Peggy‑O, Jack Straw, Cumberland).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band > Uncle John's Band > Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:20:16.616575+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-30.akgd1000e.moore.berger.106027.flac24"
+}

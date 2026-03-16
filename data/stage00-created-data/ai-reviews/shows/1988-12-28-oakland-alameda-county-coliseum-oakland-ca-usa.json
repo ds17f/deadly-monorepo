@@ -1,0 +1,69 @@
+{
+  "summary": "Soaring Bird Song, rousing Jack Straw, magical Miracle jam & strong Baby Blue",
+  "blurb": "The show delivers a soaring Bird Song and a rousing Jack Straw that ignite the first set. The second set stays focused with a magical Miracle jam linking Space into I Need A Miracle, and closes with a powerful Baby Blue. Highlights also include Estimated Prophet and Turn On Your Lovelight.",
+  "review": "The December 28‑1988 New Year’s Eve show at the Oakland Coliseum finds the Dead firing on all cylinders. Jerry rides a soaring Bird Song and delivers a heavy, emotive lead on Baby Blue that fans described as “talking through his guitar,” while Bob’s shouted “YOU KEEP US ON THE RUUUONNNY!” during Jack Straw lifts the crowd. The first set closes tight with Jack Straw, then the second set stays focused – Space rolls into an inspired I Need A Miracle jam, threaded through Uncle John’s Band and a blissful turn on Foolish Heart, before the band launches into Turn On Your Lovelight. The night ends on a powerful note with It’s All Over Now Baby Blue, leaving the audience buzzing.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.3,
+      "sentiment_rationale": "Multiple recordings use strongly positive language (‘soaring Bird Song’, ‘magical Miracle jam’, ‘unforgettable Baby Blue’). No negative sentiment appears; the two mixed reviews still praise key moments, yielding a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.3 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-12-28.sbd-matrix.3914.sbeok.shnf",
+    "reason": "Clear matrix mix with drums forward, prominent Brent organ and balanced sound; consistently praised for clarity and captures the show’s energy."
+  },
+  "key_highlights": [
+    "Soaring Bird Song with emotive guitar leads.",
+    "Rousing Jack Straw featuring Bob's enthusiastic shout‑outs.",
+    "Magical Miracle jam linking Space into I Need A Miracle.",
+    "Powerful closing of It’s All Over Now Baby Blue."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Jack Straw",
+    "I Need A Miracle",
+    "It's All Over Now Baby Blue",
+    "Estimated Prophet",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers heavy, emotive guitar on Baby Blue and soaring leads on Bird Song; described as ‘talking through his guitar’ with a commanding presence throughout.",
+    "Phil": "Provides solid bass foundation; while some wish for more mix presence, his playing shines especially on the ending of Turn On Your Lovelight.",
+    "Bob": "Vocals stand out on Jack Straw and his shouted “YOU KEEP US ON THE RUUUONNNY!” energizes the crowd, adding a lively vocal punch to the set.",
+    "Brent": "Hammond organ sits front‑and‑center with lush B‑3 solos; praised for glowing work on “It's All Over Now” and throughout the Miracle jam.",
+    "Mickey": "Drums are crisp, driving and placed forward in the mix, giving the performance a tight rhythmic thrust.",
+    "Billy": "Provides a solid, punchy backbeat that meshes with Mickey’s groove, contributing to the overall clean and energetic drum sound."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T15:46:23.500029+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "Estimated Prophet",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "Uncle John's Band",
+      "I Need A Miracle",
+      "Foolish Heart",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "It's All Over Now Baby Blue"
+    ]
+  ]
+}

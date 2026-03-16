@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent matrix mix with booming bass and crystal‑clear balance, highlighted by a spectacular Tennessee Jed and an unusually adventurous St. Stephen.",
+  "review": "The recording is a front‑of‑board matrix capture that sounds “pretty awesome” – the mix is clear, the low end punchy and the overall fidelity excellent. Musically the show shines with Jerry’s killer final C chord on Tennessee Jed, a rare envelope‑filter St. Stephen jam, and an inspired guest performance of Olin Arranged, making it one of the most memorable concerts despite a merely average encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "A single detailed five‑star review praises both the musical performance and the technical quality, indicating an outstanding show recorded with excellent matrix sound."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑board placement (10–20 ft), strong bass response even on cheap headphones, crisp mix, ANRS noise reduction; reviewer calls the mix “awesome” and highly recommends it."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "St. Stephen",
+      "Olin Arranged"
+    ],
+    "poor_songs": [
+      "One More Saturday Night"
+    ],
+    "setlist_flow": "A marathon three‑hour set with a 12‑song first half, rare jam twists (reverse‑progression St. Stephen), and an energetic encore; overall flow described as unique and highly rewarding."
+  },
+  "band_member_comments": {
+    "Jerry": "Powerful lead work highlighted – especially the final C chord on Tennessee Jed and inventive envelope‑filter playing on St. Stephen.",
+    "Phil": "",
+    "Bob": "Mentioned in a story about Clive Davis and his lyrical quip during Mexicali Blues, but no specific performance comment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Olin Arranged": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:15:56.345941+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-30.123100.mtx.dusborne.flac16"
+}

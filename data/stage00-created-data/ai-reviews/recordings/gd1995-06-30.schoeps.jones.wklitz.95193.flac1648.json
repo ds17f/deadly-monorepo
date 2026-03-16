@@ -1,0 +1,31 @@
+{
+  "summary": "Mixed reception – some fans say the show rocked while others call it horrible, with no concrete information on recording source or sound quality.",
+  "review": "The two reviews are diametrically opposed: one enthusiastically rates the concert a solid 4 stars and declares it “rocked,” whereas the other slams it as terrible with a 1‑star rating. Neither reviewer provides details about the audio source, clarity, or specific songs, leaving the recording quality undefined.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "low",
+    "rationale": "Only two contradictory reviews; show feedback is split and no technical details are given, resulting in a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience, or any audio clarity issues; recording quality cannot be assessed from the available comments."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not discuss specific songs or set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T11:33:04.254926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-30.schoeps.jones.wklitz.95193.flac1648"
+}

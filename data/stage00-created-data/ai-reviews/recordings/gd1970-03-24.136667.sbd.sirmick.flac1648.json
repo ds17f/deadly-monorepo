@@ -1,0 +1,63 @@
+{
+  "summary": "Crispy, top‑notch sound captures a psychedelic set with standout Dark Star and The Other One",
+  "review": "The recording is praised for its crisp, top‑notch audio quality, though the source type isn’t specified. Reviewers highlight a high‑energy performance featuring strong renditions of Dark Star, St Stephen, Me & My Uncle and an urgent Garcia lead on The Other One.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One detailed review praises both the performance and sound quality; other reviews are non‑informative, so rating reflects a generally positive impression with limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Review mentions “top notch sound” and “crispy”, indicating clear and well‑balanced audio; no specific issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "St. Stephen",
+      "Me & My Uncle",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the set as a rapid‑fire burst of Dead mojo with strong transitions and psychedelic jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s urgent lead on The Other One is highlighted as a high point.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:53:00.073269+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-03-24.136667.sbd.sirmick.flac1648"
+}

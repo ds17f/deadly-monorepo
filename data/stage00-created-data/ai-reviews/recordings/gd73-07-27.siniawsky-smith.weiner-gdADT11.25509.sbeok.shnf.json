@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality recording captures an electrifying Wharf Rat jam (dubbed “Franklin’s fire”) as the Dead stay on fire despite rain.",
+  "review": "The three reviewers rave about the show’s energy, especially the extended jam into Wharf Rat that one fan calls the highest point of the band’s onstage creativity. Even a rainstorm didn’t dampen the vibe—keyboardist kept things moving and a nod from Jerry added to the excitement. No concrete complaints about the audio are made; listeners simply wish for lossless files, suggesting the existing source is decent but not described in detail.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about performance (70% weight) and no clear recording issues (30% weight) lead to a high overall rating, though limited technical detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not mention specific sound problems; one notes desire for lossless formats but no complaints about clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rain fell during the set, yet the band kept momentum—keyboardist played through it and audience stayed engaged, highlighted by a nod exchange with Jerry."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer exchanged a nod with him, indicating strong stage presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboardist (referred to as “keyboardest”) kept the vibe alive despite the rain.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:45:57.210752+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-07-27.siniawsky-smith.weiner-gdADT11.25509.sbeok.shnf"
+}

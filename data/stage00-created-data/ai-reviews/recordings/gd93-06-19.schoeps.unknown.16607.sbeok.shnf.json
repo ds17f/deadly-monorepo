@@ -1,0 +1,79 @@
+{
+  "summary": "Audience recording captures the rainy Soldier Field atmosphere with good fidelity despite low‑end pops, while the show delivers strong performances of Maggies Farm, Deal, China>Rider and a memorable Rain encore.",
+  "review": "The crowd‑sourced Schoeps mic capture does a solid job of rendering the storm‑soaked ambience, though listeners note occasional low‑frequency popping and some static on the AUD tape. Musically the concert is remembered for blistering versions of Deal, China>Rider, Smokestack and Throwing Stones, plus an especially harmonious Rain encore that many fans cite as a highlight.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (strong song selections, energetic moments) while noting moderate recording flaws; the balance yields an overall above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Captures swirling rain ambience well; occasional low‑end \"popping\" and static on the AUD tape, but generally clear enough for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Maggies Farm",
+      "Deal",
+      "China>Rider",
+      "Smokestack",
+      "Throwing Stones",
+      "Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The rain‑soaked night produced a mixed energy level—some felt it was lackluster, others described the show as swinging and infectious. Highlights flow from a strong first set (Maggies Farm, Deal) into a second set that builds through China>Rider, Smokestack and culminates with an emotional Rain encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praised Jerry Garcia’s tone, harmony work on the encore, and his ability to captivate the audience.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums received positive notes for creating a spooky “drumz>space” vibe during Smokestack."
+  },
+  "song_mentions": {
+    "Maggies Farm": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China>Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Smokestack": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T14:42:01.838030+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-19.schoeps.unknown.16607.sbeok.shnf"
+}

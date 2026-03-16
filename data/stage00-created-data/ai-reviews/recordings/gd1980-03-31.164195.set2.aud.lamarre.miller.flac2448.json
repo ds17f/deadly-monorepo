@@ -1,0 +1,39 @@
+{
+  "summary": "A quirky, atypical show highlighted by an amazing Terrapin performance; recording quality not specified",
+  "review": "The reviewers note that this concert deviates from the Dead's usual set structures, calling it a 'strange' show, but they single out the rendition of Terrapin as exceptional. No details about the audio source or sound quality are provided, leaving the recording aspect unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Based on a single 3‑star review that offers mixed feedback—praise for Terrapin but overall oddness—and no recording comments, the rating reflects an average show with unknown audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as unconventional and not following typical Dead set structures."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T21:50:18.668348+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-03-31.164195.set2.aud.lamarre.miller.flac2448"
+}

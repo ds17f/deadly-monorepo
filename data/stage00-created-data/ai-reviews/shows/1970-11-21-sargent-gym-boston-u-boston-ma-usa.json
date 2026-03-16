@@ -1,0 +1,62 @@
+{
+  "summary": "Wild late‑70 set with blazing Cryptical → Other One → Cosmic Charlie jam",
+  "blurb": "The show features a fiery Cryptical Envelopment → The Other One → Cosmic Charlie sequence and strong vocal performances from Jerry and Bob. Phil’s bass is sweet and bouncy throughout, while the band delivers solid versions of Easy Wind and Uncle John’s Band. Recording quality is poor, but the musical moments shine.",
+  "review": "On November 21, 1970 at Boston University’s Sargent Gym, the Dead rolled out a high‑energy first set that still manages to thrill despite the sub‑par tapes that survive it. After a handful of country‑rock numbers the band launches into an unforgettable Cryptical Envelopment → The Other One → Cosmic Charlie stretch, with Jerry and Bob delivering heartfelt, conviction‑filled vocals and Phil laying down a sweet, bouncy bass line that propels the jam. Highlights also include a crisp rendition of Easy Wind and a spirited Uncle John’s Band, both underscored by Pigpen’s (unrecorded) keyboard presence in the live mix. While both available recordings suffer from severe distortion, muffled highs and occasional drop‑outs – the soundboard tape being the most complete – the performance itself remains a vivid snapshot of the band’s late‑70s wildness.\n\nListeners should temper expectations about audio fidelity; the best source is the Cotsman SBD (gd70-11-21.sbd.cotsman.17033.sbeok.shnf), which captures the full set despite its technical flaws. For those who can push the volume and cut through the noise, this show offers a rare glimpse of the Dead’s improvisational firepower at a pivotal moment in their evolution.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Both recordings describe the performance in positive terms (vocal conviction, sweet bass, high‑energy jam) while noting poor audio quality; the mixed sentiment stems from recording issues rather than musical flaws, warranting a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-11-21.sbd.cotsman.17033.sbeok.shnf",
+    "reason": "Most complete source, captures the entire set despite poor audio quality."
+  },
+  "key_highlights": [
+    "Blazing Cryptical Envelopment → The Other One → Cosmic Charlie sequence",
+    "Strong vocal delivery from Jerry and Bob throughout the set",
+    "Phil’s sweet, bouncy bass especially shines on the Cryptical reprise",
+    "Recording quality is poor (severe distortion, muffled highs) but the musical moments are vivid"
+  ],
+  "song_highlights": [
+    "Cryptical Envelopment",
+    "The Other One",
+    "Cosmic Charlie",
+    "Easy Wind",
+    "Uncle John's Band"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals are heartfelt and driving, especially on Cryptical Envelopment; his singing is praised for conviction throughout the set.",
+    "Phil": "Bass work is described as sweet and bouncy, providing a solid foundation during the high‑energy jam sections.",
+    "Bob": "Passionate, high‑strung vocal contributions complement Jerry’s lead, adding intensity to the Cryptical stretch.",
+    "Brent": "",
+    "Mickey": "Drum mix is thin in the audience tape; overall rhythm feels solid but is obscured by recording issues.",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-20T01:31:45.189253+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Cosmic Charlie"
+    ],
+    [
+      "Easy Wind"
+    ],
+    [
+      "Uncle John's Band"
+    ]
+  ]
+}

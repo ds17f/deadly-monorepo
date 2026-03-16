@@ -1,0 +1,45 @@
+{
+  "summary": "Matrix recording captures an exciting first set but a second set that suffers from overbearing keyboards.",
+  "review": "The show delivers a very good, energetic first set, while the second set feels muddied by aggressive Vince/Welnick keyboards that overwhelm songs like \"Saint\" and \"Comes A Time,\" with Garcia apparently stepping back. The matrix source is praised as solid, though reviewers give no specific technical complaints.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (strong first set, weak second) while the recording is regarded as good; limited number of reviews yields moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit sound issues mentioned; reviewers note matrix recordings are generally preferable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Saint",
+      "Comes A Time"
+    ],
+    "setlist_flow": "First set flows well and energizes the crowd; second set loses cohesion due to dominant keyboard playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Defers to keyboards on the second set, perceived as a negative.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Aggressive Vince/Welnick keyboards overrun tunes, especially in the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:07:52.744737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-16.mtx.haugh.100910.flac16"
+}

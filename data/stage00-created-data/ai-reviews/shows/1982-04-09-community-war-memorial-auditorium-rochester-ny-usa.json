@@ -1,0 +1,72 @@
+{
+  "summary": "High-energy Rochester show with soaring Bird Song and epic Other One",
+  "blurb": "The set crackles from the opening Alabama Getaway through a fiery first half highlighted by Bird Song, Loser and a sparkling China Cat Sunflower > I Know You Rider. The second set delivers an emotional To Lay Me Down, a blistering Space > The Other One jam, and closes with a heartfelt Brokedown Palace encore.",
+  "review": "On April 9 1982 the Grateful Dead lit up the Community War Memorial Auditorium in Rochester with one of those classic early‑’80s high‑energy nights. From the opening Alabama Getaway into Greatest Story Ever Told, the first set never let up – Jerry’s tone on Bird Song was described as “sparkling” and his vocals stayed strong throughout, while Brent’s frenzied organ added extra fire to China Cat Sunflower > I Know You Rider. The second half deepened the emotional core with a beautifully rendered To Lay Me Down, followed by a thunder‑driven Space that seamlessly rolled into an unforgettable The Other One jam, highlighted by both drummers’ rhythmic power. The night capped off with a tender Brokedown Palace encore that left the house buzzing. Across all available sources the performance is consistently praised for its tight playing, soaring solos and vocal harmonies, making this show a standout snapshot of the band’s 1982 run.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 33,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "All but one of the recordings are marked positive; multiple sources highlight Bird Song, To Lay Me Down, The Other One, Space and Brokedown Palace as standout moments. Praise for Jerry’s tone, Brent’s organ work, and the overall high‑energy vibe appears across many reviews, while only a single corrupted recording is negative, yielding strong positive sentiment.",
+      "final_calculation": "2.5 + 0.3 + 1.5 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1982-04-09.sbd.miller.32716.sbeok.flac16",
+    "reason": "Excellent soundboard capture – crisp, clean and clearly conveys the show’s high energy plus the beloved Brokedown Palace encore."
+  },
+  "key_highlights": [
+    "Bird Song shines with sparkling Garcia tone and tight vocal harmonies.",
+    "Space > The Other One delivers a thunderous, immersive jam that defines the second set.",
+    "Brokedown Palace encore provides an emotional, fan‑favorite close to an electric night."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "To Lay Me Down",
+    "The Other One",
+    "Space",
+    "Brokedown Palace",
+    "China Cat Sunflower"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar tone is clean and soaring, especially on Bird Song; his vocals stay strong throughout, anchoring the harmonies with Bob.",
+    "Phil": "Lesh lays down a solid bass foundation and delivers a big intro on The Other One, keeping the groove tight.",
+    "Bob": "Weir’s vocal contributions are highlighted as impressive, particularly in the harmonized sections of Bird Song and the overall set.",
+    "Brent": "Mydland’s frenzied organ playing enlivens the band, with superb keyboard‑driven moments on To Lay Me Down and standout harmony on New Minglewood Blues.",
+    "Mickey": "",
+    "Billy": "Kreutzmann’s drumming drives the high‑energy feel; his work in the Space segment is noted as a rhythmic highlight."
+  },
+  "processed_recordings": 11,
+  "processed_date": "2025-09-13T19:48:57.390220+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "To Lay Me Down"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Goin' Down The Road Feeling Bad",
+      "(I Can't Get No) Satisfaction"
+    ],
+    [
+      "Brokedown Palace"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ]
+  ]
+}

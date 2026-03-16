@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality C. Miller soundboard captures an energetic show with a bursting second set and a sweet Shakedown Street encore.",
+  "review": "The recording is praised for the typical C. Miller excellence, delivering clear and balanced sound. The concert itself bursts with energy, especially in the second set, and the Shakedown Street encore hits a sweet spot for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single enthusiastic 5‑star review highlights both superb soundboard quality and an energetic performance, leading to a high rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Typical C. Miller excellence – clear, crisp mix with no noted issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as bursting with energy; encore (Shakedown Street) praised as a sweet closing highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T21:56:58.244465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-04-01.152610.sbd.miller.flac1644"
+}

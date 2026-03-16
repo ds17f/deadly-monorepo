@@ -1,0 +1,73 @@
+{
+  "summary": "Matrix recording with vocal and mix problems, yet a handful of gems such as Althea, Black Peter and the Cold Rain > Rooster sequence shine through.",
+  "review": "The source is a matrix mix that suffers from an over‑hot Bobby Weir mic, clumsy fades on the first three tracks and uneven reverb, making the overall sound only fair.  Despite these issues the performance contains several highlights – Althea, To Lay Me Down, Black Peter, Brokendown and especially Cold Rain > Rooster – though Bob’s vocals are largely weak except on Rooster.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "One detailed review points to many performance and recording flaws offset by a few strong songs, leading to an average overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Bobby's mic too hot, limited reverb on vocals; first three songs required fade‑in from SBD to AUD and sound clumsy; other tracks clearer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "To Lay Me Down",
+      "Black Peter",
+      "Brokendown",
+      "Cold Rain > Rooster"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Uneven – a rough, clumsy opening three songs followed by stronger second‑half material and several standout moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Singing generally better than Bob's; however his vocals on Jack-A-Roe were described as iffy.",
+    "Phil": "",
+    "Bob": "Vocals described as horrible for most of the show, with Rooster being the sole exception where he performed well.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokendown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain > Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:53:23.810514+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-04.135560.mtx.dusborne.flac16"
+}

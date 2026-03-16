@@ -1,0 +1,101 @@
+{
+  "summary": "Fair‑quality soundboard capture of a late‑’93 set with standout King Bee, Morning Dew and Rain, but the mix is uneven and several tunes fell flat.",
+  "review": "The concert delivers a solid late‑1993 Dead outing highlighted by rare treats like King Bee, Morning Dew, Row Jimmy and a rain‑soaked opener that many fans love. While the performance swings between inspired moments and filler (Picasso Moon, Way To Go Home, The Last Time), the recording itself receives mixed reports – some praise the Miller remaster while others describe it as sounding like a pocket tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is generally good with several praised songs, but recording quality is disputed (some call it excellent remaster, others terrible), leading to an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews are split: one calls it a fine Miller remaster, another says it sounds like a pocket‑tape and is terrible. Overall clarity is uneven, with occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "King Bee",
+      "Morning Dew",
+      "Rain",
+      "Row Jimmy"
+    ],
+    "poor_songs": [
+      "Picasso Moon",
+      "Way To Go Home",
+      "The Last Time"
+    ],
+    "setlist_flow": "Rain opens the show, followed by a mix of rarities and classics. The set swings between high‑energy highlights and some filler that left listeners underwhelmed."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as “present” but no specific praise or criticism of his playing.",
+    "Phil": "",
+    "Bob": "Referred to as “Bobby” who announced a treat for the audience; no detailed performance notes.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "King Bee": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Way To Go Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Last Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "I Fought The Law": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:17:00.917552+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-08.sbd.miller.83399.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "No clear information on recording quality or performance; reviewer is simply seeking show details.",
+  "review": "The sole review asks for identification of the concert and provides no commentary on the music or audio fidelity, leaving both recording and show quality undefined.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one vague review without any evaluative comments; insufficient data to assign a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No remarks on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on the setlist or performance flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T01:03:35.308265+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-12.nakcm100-cp4.pasternak.106819.flac16"
+}

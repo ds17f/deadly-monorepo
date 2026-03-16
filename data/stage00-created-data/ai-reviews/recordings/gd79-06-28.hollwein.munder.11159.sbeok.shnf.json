@@ -1,0 +1,57 @@
+{
+  "summary": "Sweet‑sounding audience tape of a relaxed ’79 show highlighted by an epic Stagger Lee and a powerful Scarlet > Fire segment.",
+  "review": "The recording captures a laid‑back second half of 1979 with sweet, decent audience sound that many reviewers prefer to the board mix. Musically the concert shines – relaxed playing on Fire and Not Fade Away, an unusually long and adventurous Stagger Lee, and a high‑energy Scarlet > Fire transition make it a standout show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (average ~4.5) while noting the audience source is decent but not pristine (average ~3.5). Weighted combination yields a solid 4.2‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Sweet and fairly clear sound; considered decent by most, though not the best possible audience tape and lacking the polish of a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee",
+      "Scarlet Begonias > Fire",
+      "Fire",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second half is especially strong, with relaxed playing that builds into a long Stagger Lee and an energetic Scarlet > Fire transition; the overall pacing feels natural and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards bring fresh ideas and intensity, while Keith is noted as solid early on but later less inspiring.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T21:56:29.427473+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-06-28.hollwein.munder.11159.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "A rough 1970 audience tape that nevertheless captures a stellar Dark Star and explosive Other One, making this one of the year’s top performances.",
+  "review": "The November‑5‑70 show is celebrated for its cosmic Dark Star, ferocious Other One and a ripping Not Fade Away jam that many fans rank among the best of ’70.  The audience recording is widely described as muddy, bass‑heavy and full of hiss, so the sound quality is poor, but the musical fire shines through.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Nearly all reviewers praise the performance (especially Dark Star and Other One) while consistently condemning the audience‑tape sound; the strong show weight drives the rating up despite poor recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Many note awful, horrendous or crappy sound with heavy bass distortion and noticeable hiss; a few mention occasional clarity but overall fidelity is low for a 1970 audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "The set is highlighted by a space‑heavy Dark Star that segues into an intense Other One, followed by a legendary Not Fade Away/Going Down the Road jam and a crowd‑responsive St. Stephen, delivering a cosmic arc despite a few less‑energized moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is described as bluesy, Coltrane‑like and 'killing it' throughout the Dark Star and other jams.",
+    "Phil": "Phil’s bass is called rumbly yet funky, with rolling blues bottom runs that drive the Not Fade Away jam.",
+    "Bob": "",
+    "Keys": "Ned Lagin (and Keith on piano) are noted for adding intensity to The Other One → Dark Star, though Lagin is barely audible in this tape.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Other One": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:33:29.775562+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-05.aud.warner.17182.sbeok.shnf"
+}

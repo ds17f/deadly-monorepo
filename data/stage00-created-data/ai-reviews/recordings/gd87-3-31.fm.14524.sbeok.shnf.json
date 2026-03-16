@@ -1,0 +1,69 @@
+{
+  "summary": "Good‑quality FM broadcast capture of a fire‑filled 1987 Philly show, highlighted by scorching Jack Straw and Franklin’s Tower.",
+  "review": "The recording is an off‑air FM feed that suffers from typical radio compression but remains clear enough to enjoy the band’s high energy. The performance shines with a legendary first‑set Jack Straw, a blazing Franklin’s Tower, a soaring Estimated Prophet into Terrapin, and a heartfelt Brokedown Palace finale. Reviewers overwhelmingly praise the setlist and the band’s tight playing despite occasional track‑order glitches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars, lauding the setlist and musicianship; recording quality is noted as good but not pristine, yielding an overall strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Off‑air FM broadcast with dynamic compression that makes the mix a bit muddy and raises crowd noise; some users note track‑order offset errors but overall clarity is sufficient for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Franklin's Tower",
+      "Estimated Prophet",
+      "Terrapin (Station)",
+      "Brokedown Palace",
+      "Desolation Row"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows naturally, opening with a high‑octane Jack Straw that leads into an explosive Franklin’s Tower, followed by a tight Estimated Prophet into Terrapin and a tender close with Brokedown Palace. Reviewers describe the night as “on fire” from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is described as crisp and his vocals on the ‘candyman’ line are highlighted as a special moment.",
+    "Phil": "",
+    "Bob": "Weir’s vocal delivery on Desolation Row is praised for its emotion and charm.",
+    "Keys": "",
+    "Drums": "The drumming is called “bananas” and a major driver of the show’s energy."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin (Station)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:27:38.117356+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-3-31.fm.14524.sbeok.shnf"
+}

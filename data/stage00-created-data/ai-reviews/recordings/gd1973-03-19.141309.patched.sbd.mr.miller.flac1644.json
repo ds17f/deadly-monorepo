@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent soundboard capture of a spring ’73 show that delivers a legendary first set and soaring solos.",
+  "review": "The recording, sourced from Charlie Miller’s famed SBD tape, is crystal‑clear and showcases the band at a high point in the Spring ’73 tour. Reviewers rave about the first‑set brilliance – especially the epic solo passages on “He’s Gone,” “They Love Each Other,” and “Box of Rain” – while one critic notes that the vocal on “Wave That Flag” feels a bit muddied. Overall the set flows with inspired sequencing and a polished mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two highly enthusiastic 5‑star reviews praise both performance and recording, offset by one very negative review; the weighted average yields a strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller’s SBD source is praised as a ‘godsend’ with clear, polished sound; one reviewer mentions occasional vocal mumble, but overall the mix is clean and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He’s Gone",
+      "They Love Each Other",
+      "Box of Rain",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Wave That Flag"
+    ],
+    "setlist_flow": "The set maintains a consistent momentum with inspired sequencing – opening with a masterful “He’s Gone,” followed by tight country covers and a seamless jam flow that keeps listeners engaged for the full 3.5‑hour run."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar solos on “He’s Gone” (and other tracks) are highlighted as spectacular, plus his enthusiastic vocal exclamations add character.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He’s Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave That Flag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:14:06.910380+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-19.141309.patched.sbd.mr.miller.flac1644"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a fiery August 15 1971 show, highlighted by a smoking Truckin → Other One sequence and glowing Pigpen and Phil moments.",
+  "review": "The performance is praised as an engaging fire‑brand set with standout stretches like Truckin→Drums→The Other One, Wharf Rat and Turn On Your Lovelight, plus bright contributions from Jerry, Phil and the late Ron \"Pigpen\" McKernan. The soundboard recording sounds good overall – crisp enough to be called “classic 1971” despite a few anomalies that listeners can smooth with EQ.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All four detailed reviews rate the show 5 stars and highlight strong musical moments and a generally good soundboard recording; weighted average of show (≈4.5) and recording (≈4.3) yields ~4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp classic 1971 sound; a few anomalies/flubs noted, but listeners report it sounds great and recommend EQ adjustments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin",
+      "The Other One",
+      "Wharf Rat",
+      "Turn On Your Lovelight",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong flow with a classic mid‑set sequence Truckin → Drums → The Other One and solid second‑set material, delivering an engaging firebrand performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his Les Paul tone and overall guitar work (“Scurvy Les Paul Jerry”).",
+    "Phil": "Highlighted as shining on this night.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:45:44.650124+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-15.sbd.gustin.131.sbeok.shnf"
+}

@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard recording with clear stereo captures a fire‑filled 1980 Alaska show highlighted by a blistering Sugaree, soaring Terrapin Station and a smoking Lazy Lightning/Supplication.",
+  "review": "The concert is widely praised for its high energy and tight playing, especially Jerry Garcia’s scorching guitar on Sugaree, Terrapin Station and the lightning‑fast Lazy Lightning/Supplication.  The SBD source delivers good clarity and strong stereo separation despite a few early glitches, making it an essential listen for Deadheads who love the 1980 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 5‑star with enthusiastic language about both performance and sound; only a handful of moderate or negative comments exist, so the combined show (70%) and recording (30%) score is very high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with strong stereo separation; a few reviewers note minor early glitches or slight speed issues, but overall the mix is balanced and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Terrapin Station",
+      "Playing in the Band",
+      "Lazy Lightning/Supplication",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Far From Me",
+      "Truckin'"
+    ],
+    "setlist_flow": "The first set builds with tight, high‑energy numbers and a standout Sugaree opener; the second set sustains momentum with Terrapin Station flowing into a spacey Playing in the Band and a smoking Lazy Lightning/Supplication, delivering a cohesive, high‑octane experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fiery solos, fast ‘noodles’, melting tone and overall on‑fire performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work receives mixed feedback – some reviewers love his contributions, while others criticize his song Far From Me as out of place.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Playing in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lazy Lightning/Supplication": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:03:00.650443+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-21.sbd.clugston.8639.sbeok.shnf"
+}

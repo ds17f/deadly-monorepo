@@ -1,0 +1,51 @@
+{
+  "summary": "Great show featuring China Doll, Stella Blue and a scorching Help>Slipknot, though the recording source and sound quality are not documented.",
+  "review": "Fans rave about this performance, highlighting the rare appearances of China Doll and Stella Blue as well as a fire‑spitting Help on the Way > Slipknot! sequence. No details on the tape source or audio fidelity were provided, but the musical moments receive unanimous praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "All four reviewers express enthusiasm for the music and give 4‑5 star ratings (one zero-star entry is an outlier with no negative commentary). Lack of recording‑quality comments keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience, or any audio issues; the source type and fidelity cannot be determined from the available comments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Stella Blue",
+      "Help on the Way > Slipknot!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its rare deep‑cut selections (China Doll, Stella Blue) and a high‑energy Help>Slipknot sequence that kept the crowd excited."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Positive mention of Vince's keyboard action.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:57:39.499347+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-22.akg.gardner.3388.sbeok.shnf"
+}

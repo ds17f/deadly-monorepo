@@ -1,0 +1,87 @@
+{
+  "summary": "Solid soundboard capture with a few speed‑waver glitches, featuring a stellar early set (Mason’s Children, Casey Jones, Cosmic Charlie) and a late‑show Dark Star that shines.",
+  "review": "The recording is an SBD source that sounds generally clear but suffers from occasional cuts, channel swaps and pitch‑speed wavers that benefit from corrective EQ. Musically the shows are highly regarded – the early set delivers tasty renditions of Mason’s Children, Casey Jones, Black Peter and a classic Cosmic Charlie segue, while the late show offers one of the last ’70 Dark Stars with strong contributions from Tom Constanten and Jerry Garcia. Overall fans praise the performance despite the rough edges in the audio.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight numerous standout songs; recording issues are noted but not severe enough to outweigh the strong musical performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD, but contains nasty cuts, channel‑swap anomalies and speed/pitch wavering that require balancing and minor pitch correction. The hanno_12624 source is praised as the best available for the early show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mason's Children",
+      "Casey Jones",
+      "Black Peter",
+      "Cosmic Charlie",
+      "Dark Star",
+      "High Time"
+    ],
+    "poor_songs": [
+      "Cumberland (early version)",
+      "The Other One (late version) – less interesting"
+    ],
+    "setlist_flow": "The early show builds momentum with tight, soulful numbers and a memorable Cosmic Charlie segue; the late show shifts into exploratory territory highlighted by a long Dark Star that, despite missing its tail, showcases deep improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo work is lauded, especially his “cut‑loose” playing in the lengthy Dark Star jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Tom Constanten’s organ adds a distinctive texture to the Dark Star and High Time; Pigpen’s organ also noted for its presence in the mix.",
+    "Drums": "Mickey Hart’s percussion is highlighted as creative on Casey Jones and tumbling on High Time; overall drumming praised for energy."
+  },
+  "song_mentions": {
+    "Mason's Children": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:11:21.897428+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-02.late.sbd.hanno.12624.sbefail.shnf"
+}

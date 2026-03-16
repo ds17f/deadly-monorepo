@@ -1,0 +1,67 @@
+{
+  "summary": "Mellow 1973 show with a nice Eyes‑Stella transition and solid Bird Song, but plagued by audience splices, dropouts and horn arrangements that hurt the listening experience.",
+  "review": "The performance is an average‑to‑good Dead set that shines in moments like the seamless Eyes of the World → Stella Blue segue and a pleasant Bird Song, yet the added horns on Weather Report Suite > Let It Grow are divisive. The recording is an audience tape with noticeable splices and audio dropouts (Bertha, El Paso, Ramblin' Rose, and a missing Don't Ease Me In), which drags the overall enjoyment down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality is around average (≈3/5) while recording issues lower it further; combined weighted score yields ~2.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple audience splices and dropouts (Bertha, El Paso, Ramblin' Rose) plus a complete cut of \"Don't Ease Me In\"; overall muddiness and inconsistent levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Eyes of the World > Stella Blue"
+    ],
+    "poor_songs": [
+      "\"Don't Ease Me In\" (cut out)"
+    ],
+    "setlist_flow": "Laid‑back, reminiscent of 1974 vibe; starts rough due to audio glitches but smooths after \"Ramblin' Rose\", with a strong mid‑show transition and mellow finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramblin' Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "\"Don't Ease Me In\"": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:21:37.648968+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-12.152015.sbd.gems.flac16"
+}

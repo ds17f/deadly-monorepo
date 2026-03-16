@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is mislabeled; reviewers flag incorrect date and identifier with no comments on audio or performance.",
+  "review": "The handful of reviews focus almost entirely on the wrong metadata – several users point out that the tape is from March 27‑28 1989 in Atlanta, not a 1987 show, and request its removal. No reviewer mentions sound quality, mix, or musical highlights, leaving the actual performance undocumented.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "medium",
+    "rationale": "Two reviewers gave 4‑star ratings (but only about correct dating) and two gave 0 stars due to the misidentification; average rating is low and there is no performance or audio information."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality; reviewers only discuss incorrect identifier and date."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on the musical flow or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T19:54:26.384035+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-27.147894.UltraMatrix.sbd.cm.miller.flac16"
+}

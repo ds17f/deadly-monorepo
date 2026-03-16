@@ -1,0 +1,69 @@
+{
+  "summary": "Clean soundboard capture of the legendary 10/9/82 Frost Amphitheatre show, highlighted by a smoking Morning Dew and an immaculate On‑the‑Road‑Again → Beat It on Down the Line transition.",
+  "review": "The performance is consistently praised for its high energy, with multiple fans calling the Morning Dew one of the best ever and lauding the seamless On‑the‑Road‑Again into Beat It on Down the Line as “Swiss‑watch” perfect. The recording is generally clean SBD, though a few listeners note wind‑noise, slightly loud levels and an oddly missing Bob Weir rhythm guitar in the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All nine reviews are 4–5 stars with enthusiastic comments about both the show and the recording; minor technical quirks do not detract from overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean SBD with limited cassette‑gen hiss; some listeners note wind‑noise and a slightly loud master, plus an apparent drop of Bob Weir's rhythm guitar in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "On the Road Again → Beat It On Down The Line",
+      "Estimated > Eyes",
+      "Dupree's Diamond Blues",
+      "Mississippi Half‑Step Uptown Toodeloo > Deal",
+      "Throwing Stones > Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans rave about the tight first‑set flow (notably the On‑the‑Road‑Again segue) and a second set that builds momentum with powerful jams, culminating in an emotional Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work on Morning Dew is described as powerful and emotionally charged.",
+    "Phil": "Lesh’s bass wind‑up into the GSET opener is highlighted as a crowd‑pleaser; several reviewers note his smiling presence.",
+    "Bob": "One reviewer reports Bob Weir’s rhythm guitar is virtually missing from the mix, though his vocals are praised.",
+    "Keys": "The electric piano (Brent Mydland) sounds fine and adds texture to the set.",
+    "Drums": "Drums are generally described as solid and unobtrusive."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "On the Road Again → Beat It On Down The Line": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half‑Step Uptown Toodeloo > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones > Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:33:12.018370+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-10-09.sbd.samaritano.23730.sbeok.shnf"
+}

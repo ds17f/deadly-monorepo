@@ -1,0 +1,93 @@
+{
+  "summary": "Crisp soundboard capture of a legendary Missoula ’74 show highlighted by a smoking WRS > Dark Star > China Doll and scorching Scarlet Begonias.",
+  "review": "The recording is a clean, well‑balanced soundboard tape that lets every instrument shine – from Keith’s soaring keys to Bill’s thunderous drums. Musically the concert is often called one of the year’s best, with a second‑set jam marathon (WRS → Dark Star → China Doll, Playing in the Band, Not Fade Away → GDTRFB) that fans repeatedly cite as unforgettable. A few reviewers note occasional vocal quirks or mix quirks, but they are far outweighed by the overwhelming praise for the band’s inspired playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (≈90 %) award 4–5 stars and extol both the musical performance and the audio fidelity; only a handful of outliers criticize mix balance or vocals, so the combined show‑quality (70 %) and recording quality (30 %) yields a rating in the high‑4 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, clear, and well‑balanced; occasional comments about a weak Jerry mix are isolated and contradicted by many who say the guitar is front‑and‑center."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat Suite > Dark Star > China Doll",
+      "Scarlet Begonias",
+      "Let It Grow",
+      "Playing in the Band",
+      "Not Fade Away > Good Times Bad Times (GDTRFB)",
+      "Row Jimmy",
+      "Loser",
+      "Roses"
+    ],
+    "poor_songs": [
+      "Donna vocal sections (some reviewers note mis‑cues)"
+    ],
+    "setlist_flow": "The first set is described as solid and spartan, while the second set delivers a seamless jam flow with stellar transitions (WRS → Dark Star → China Doll, then into NFA → GDTRFB). Overall pacing and energy are praised as high‑octane throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for inspired, soaring guitar work; a single reviewer claims his mix is weak, but most say he’s front‑and‑center and “hammering away.”",
+    "Phil": "Praised for solid low‑frequency bass presence and overall tight playing.",
+    "Bob": "Noted for strong rhythm guitar and vocals; also mentioned being struck by a plastic pitcher during the show.",
+    "Keys": "Keith Godchaux receives high marks for his piano/moog work, “shining” especially on early Scarlet and improvisational passages.",
+    "Drums": "Bill Kreutzmann’s drumming is described as “on fire,” “destroying those drums,” with particular acclaim for the intense Playing in the Band section."
+  },
+  "song_mentions": {
+    "Wharf Rat Suite > Dark Star > China Doll": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "Dark Star": {
+      "positive_mentions": 24,
+      "negative_mentions": 2,
+      "total_mentions": 26
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Let It Grow": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Playing in the Band": {
+      "positive_mentions": 13,
+      "negative_mentions": 2,
+      "total_mentions": 15
+    },
+    "Not Fade Away > Good Times Bad Times (GDTRFB)": {
+      "positive_mentions": 16,
+      "negative_mentions": 0,
+      "total_mentions": 16
+    },
+    "Row Jimmy": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Loser": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Roses": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Donna Godchaux vocals": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-22T19:07:15.625246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-05-14.sbd.murphy.1823.sbeok.shnf"
+}

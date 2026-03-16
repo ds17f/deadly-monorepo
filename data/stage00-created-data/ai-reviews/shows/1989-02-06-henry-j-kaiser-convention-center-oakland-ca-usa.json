@@ -1,0 +1,70 @@
+{
+  "summary": "Terrapin Station jam shines amid a mixed‑bag set",
+  "blurb": "The show delivers a powerful Terrapin Station suite and a standout Sugaree, with Brown Eyed Women adding extra punch. While the first set settles into groove, the second set has uneven moments—Tennessee Jed and Jack‑A‑Roe fall flat—but recovers with The Other One and Stella Blue.",
+  "review": "On February 6, 1989 at the Henry J. Kaiser Convention Center in Oakland, the Dead presented a set that oscillated between high‑water moments and occasional lulls. Highlights included an expansive Terrapin Station jam that let Brent’s jazzy keyboards swirl over Phil’s melodic bass, a sweetly rendered Sugaree where Garcia’s subtle inflections shone despite some vocal wobble, and a driving Brown Eyed Women that kept the energy up. The first set opened with the familiar bounce of Not Fade Away before slipping into weaker spots like Tennessee Jed and Jack‑A‑Roe, while the second set recovered after an uneven Hell In A Bucket/Scarlet Begonias transition, building through Looks Like Rain into the soaring Terrapin Station, then flowing into a solid The Other One, heartfelt Stella Blue, and a rousing Turn On Your Lovelight encore. Drummers Mickey Hart and Bill Kreutzmann provided powerful accents throughout, though occasional drumming filler in the Space segment was merely serviceable. Overall the performance is solid with enough standout moments to make it worth a listen, especially for fans of the late‑'80s era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two soundboard analyses note strong moments (Sugaree, Terrapin Station) and a few weak spots, while the audience recording is positive. No consistent negative criticism of performance; mixed sentiments lead to a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd89-02-06.sbd.miller-walker-scotton.26330.sbeok.shnf",
+    "reason": "Clear, well‑mixed soundboard capture praised as “fantastic” and “clear,” preserving the band's nuances while avoiding dropouts."
+  },
+  "key_highlights": [
+    "Terrapin Station suite with jazzy Brent keyboards and tight rhythm section.",
+    "Sugaree showcases Garcia's nuanced vocals despite occasional weakness.",
+    "Strong second‑set recovery featuring The Other One, Stella Blue, and a rousing Turn On Your Lovelight."
+  ],
+  "song_highlights": [
+    "Sugaree",
+    "Wang Dang Doodle",
+    "Brown Eyed Women",
+    "Terrapin Station",
+    "The Other One",
+    "Stella Blue",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia's vocals were uneven—weak/meek in places and a lyric slip on Jack‑A‑Roe—but his guitar tone remained strong and he added nice phrasing on Sugaree.",
+    "Phil": "Lesh delivered solid, melodic bass lines that shone in the Terrapin Station jam, though the mix got muddy when the rhythm section swelled and he showed some erratic clamping during tuning segments.",
+    "Bob": "Weir stayed quieter than usual but kept a solid rhythmic foundation throughout the set.",
+    "Brent": "Mydland's keyboards were orchestral and jazzy, providing lush textures on Terrapin Station and adding an organ sheen elsewhere, though the mix occasionally made his parts sound a bit muddy.",
+    "Mickey": "Hart contributed powerful drum accents, delivering strong slams that propelled the second‑set transitions.",
+    "Billy": "Kreutzmann locked in with Hart, maintaining a steady groove and supporting the jams with reliable drumming."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T16:22:47.989174+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Sugaree"
+    ],
+    [
+      "Wang Dang Doodle"
+    ],
+    [
+      "Brown Eyed Women"
+    ],
+    [
+      "Hell In A Bucket",
+      "Scarlet Begonias",
+      "Looks Like Rain",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

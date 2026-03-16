@@ -1,0 +1,53 @@
+{
+  "summary": "Unknown‑source recording that sounds decent enough to enjoy a lively first set (Bertha, Good Lovin', Not Fade Away) but suffers from a second‑set slump according to some listeners.",
+  "review": "The tape is of an indeterminate source—likely a TEAC PC‑10 audience capture—but it is listenable and captures the band’s exuberant vibe. Reviewers rave about the opening numbers, especially Bertha and Good Lovin', and note a memorable Not Fade Away jam with Mickey Hart’s bike antics, yet one critic finds the second set deteriorates into amateurish playing that should be skipped.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "One highly positive review praises the performance and overall sound, while another rates it very low due to a poor second set; averaging these viewpoints yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Source appears to be an audience recording (possible TEAC PC‑10) with uncertain mic setup; no major dropouts reported, but lack of definitive soundboard clarity keeps it from being rated higher."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Good Lovin'",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Second Set (overall)"
+    ],
+    "setlist_flow": "First set is described as energetic and enjoyable, highlighted by strong openers; the second set is criticized for devolving into sloppy, possibly intoxicated playing, though some listeners still hear high energy."
+  },
+  "band_member_comments": {
+    "Jerry": "His envelope‑filter guitar work is noted (the ‘wolf’ Irwin guitar) and a brief mention of his gear, but no explicit praise or criticism of his playing.",
+    "Phil": "",
+    "Bob": "Apologizes for being “horribly out of tune” after the Bertha → Good Lovin' opener.",
+    "Keys": "Mentions Keith Godchaux’s reluctance to use synths and references Brent Mydland later; no direct comment on keyboard performance this night.",
+    "Drums": "Mickey Hart’s bike mic antics and steel‑drum experiments are highlighted, adding a unique texture to the jam."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:27:04.558311+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-06-04.aud.unknown.87090.flac16"
+}

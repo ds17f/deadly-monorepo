@@ -1,0 +1,39 @@
+{
+  "summary": "Kick‑ass live performance with a surprise Eyes of the World → Walking jam, though recording details are unclear",
+  "review": "The concert was an energetic house‑rocker that got the crowd dancing from the first song, highlighted by an unexpected Eyes of the World into Walking transition. Reviewers who were there rave about the vibe and overall fun, but give no specifics on the audio source or its fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review (4 ★) praising the show; no information about recording quality, so rating reflects strong performance but uncertain audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World > Walking"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy opener that immediately 'rocked the house' and kept the crowd dancing throughout; a feel‑good, tightly‑gapped set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World > Walking": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:34:55.044630+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-17.dts.dan.33670.sbeok.flac16"
+}

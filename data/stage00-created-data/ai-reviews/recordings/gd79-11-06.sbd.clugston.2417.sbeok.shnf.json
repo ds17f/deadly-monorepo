@@ -1,0 +1,75 @@
+{
+  "summary": "A crisp soundboard capture of the legendary 11/6/79 show, highlighted by a blistering Jack Straw and an epic Playin' In The Band jam.",
+  "review": "The recording is a clean‑soundboard source that lets every instrument shine – even with a touch of hiss it remains clear and punchy. Musically the concert is a fan favorite: a powerhouse first set capped by a monster Jack Straw, followed by Terrapin Station into a soaring Playin' In The Band, massive drums/space, and a fiery Black Peter. Reviewers rave about the renewed energy brought by Brent on keys and the tight interplay of Jerry, Phil, Bob and the dual drummers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Average star rating is ~4.2; overwhelmingly positive comments on both performance and soundboard quality push the overall score into the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the soundboard \"excellent\" or \"crisp\"; a few note mild hiss but instrument separation is clear and bass can be boosted for extra punch."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Terrapin Station",
+      "Playin' In The Band",
+      "Drums > Space",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "The first set is described as strong and bouncy, culminating in a monster Jack Straw. The second set builds with Terrapin Station into a 20‑minute Playin' that launches into an intense drums/space sequence before a passionate Black Peter and upbeat encores. A few reviewers note a dip in energy after the drums, but overall the pacing is praised for its ebbs and flows."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his soaring leads, mad‑scientist solo on Jack Straw, emotive tone on Black Peter, and tight interplay with Brent during Playin'.",
+    "Phil": "Praised for deep bass “bombs,” thumping on Alabama Getaway, feedback experiments, and overall revitalized playing after Brent joined.",
+    "Bob": "Vocals highlighted as strong on Good Lovin' and US Blues; rhythm guitar noted as solid throughout.",
+    "Keys": "Brent receives the bulk of attention – synth, B3, clavinet, piano comping and solo work are called \"exceptional\" and a catalyst for the band’s renewed energy. Keith is mentioned once negatively (lethargic).",
+    "Drums": "Bill & Mickey praised for powerful dual drumming, gongs, tar mic tricks, and seamless transition into The Eleven during the jam."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' In The Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Drums": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T01:15:47.721725+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-06.sbd.clugston.2417.sbeok.shnf"
+}

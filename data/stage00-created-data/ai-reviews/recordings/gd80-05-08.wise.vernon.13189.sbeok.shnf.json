@@ -1,0 +1,81 @@
+{
+  "summary": "Crystal‑clear audience recording of an all‑time‑great 1980 show highlighted by a monster Uncle John’s drum break and superb transitions.",
+  "review": "Fans rave that this Wise audience tape is remarkably crisp and clean, capturing one of the strongest 1980 performances. The band delivers A‑plus playing throughout, with standout moments including a legendary Uncle John's Band drum solo, an inspired Ramble On Rose, and seamless segues from Estimated Prophet into Eyes of the World and Truckin' into Stella Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are glowing (average 4.8★) and consistently praise both the musical performance and the clean audience recording, giving a clear consensus of an exceptional show with excellent sound."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the tape “crispy”, “clean” and “great AUD”; no drop‑outs or muddiness are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Ramble On Rose",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Truckin'",
+      "Stella Blue",
+      "Alabama Getaway",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The setlist is described as “nice” with exceptional phrasing on transitions (Prophet → Eyes, Truckin' → Stella Blue) and a flowing energy that keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an exquisite lead break in Uncle John's Band and a melodic solo that defies his usual “five‑note” philosophy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum break in Uncle John's Band is called the best the reviewer has ever heard."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:59:11.206379+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-08.wise.vernon.13189.sbeok.shnf"
+}

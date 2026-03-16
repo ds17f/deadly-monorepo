@@ -1,0 +1,91 @@
+{
+  "summary": "Spotty audience recording with mix and clipping problems, and a shaky performance that still manages a surprisingly strong second‑set according to some listeners.",
+  "review": "The tape is an audience (AUD) capture from the late‑90s SBD era and suffers from sector errors, clipping at song starts and a generally thin mix that leaves Jerry’s guitar and vocals buried. The show itself is uneven – a short first set riddled with low volume issues, but a second set that some fans recall as one of the year’s best, highlighted by Jack Straw, Drums and a lively Baba O'Riley / Truckin' medley.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "low",
+    "rationale": "One detailed negative review dominates the assessment of both performance and recording, while a brief second comment praises the second set; limited data leads to a low‑confidence rating around average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Spotty SBD era audience cam with sector errors, clipping at song starts and limited dynamic range; mix is thin, often burying Jerry's guitar and vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Peggy-O",
+      "Walkin' Blues",
+      "So Many Roads",
+      "Tennessee Jed",
+      "Last Time"
+    ],
+    "setlist_flow": "A brief, seven‑song first set plagued by low guitar levels and vocal dropouts; the second set is chaotic but builds to a strong drum peak and includes an energetic Baba O'Riley / Truckin' segment that some fans cite as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar often turned down or missing, vocals frequently cut out; occasional moments of presence in later songs.",
+    "Phil": "Recording captures enough of Phil's bass to EQ, but no specific performance commentary.",
+    "Bob": "Bobby (Vince) leaves it all on stage, acoustic El Paso, and drives the energy when Jerry is silent.",
+    "Keys": "",
+    "Drums": "Drum segment is a set peak; praised for its intensity despite overall mix issues."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Baba O'Riley": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:00:18.558696+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-11-29.141190.FOB.Schoeps.Clark.Miller.Noel.t-flac1648"
+}

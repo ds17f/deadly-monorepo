@@ -1,0 +1,75 @@
+{
+  "summary": "A vivid matrix recording captures an outstanding 1977 Winterland show highlighted by soaring Playing in the Band and an unforgettable Terrapin Station.",
+  "review": "The performance is praised as one of the era’s finest, with Jerry’s guitar work on Playing in the Band called “the best ever” and the band delivering magical jams that lift the entire set. The matrix source provides crystal‑clear, three‑dimensional sound that solves previous flutter issues and makes every piano lick and drum thump feel immediate.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All six reviews are highly positive (average 4.83 stars), consistently praising both the musical performance and the vivid matrix recording."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix mix praised for vivid, three‑dimensional sound; solves flutter on Terrapin Station, clear piano, tight drums, overall crisp and immersive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Terrapin Station",
+      "Franklin's Tower",
+      "Loser",
+      "Eyes of the World",
+      "Warf Rat",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a seamless, energetic flow with extended jam moments and magical transitions that keep the music moving forward."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and attack are highlighted as extraordinary, especially on Playing in the Band.",
+    "Phil": "Phil is noted as part of an early‑set extended jam moment with Keith, Jerry and Bob.",
+    "Bob": "Bob (referred to as \"bobby\") is mentioned for his contribution to the first break’s extended segment.",
+    "Keys": "Keith’s piano work receives high praise, called the sweetest and most gentle on Warf Rat and Uncle John's Band.",
+    "Drums": "The drums are described as right on with a solid thump that drives the jams."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Warf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:49:39.780480+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-03-19.mtx.hansokolow.96856.flac16"
+}

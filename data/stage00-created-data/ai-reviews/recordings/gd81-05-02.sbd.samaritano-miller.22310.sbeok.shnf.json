@@ -1,0 +1,82 @@
+{
+  "summary": "A solid soundboard capture of an ’81 Spectrum show that delivers strong performances of Candyman, Althea, Fire and Estimated Prophet despite a few rough spots.",
+  "review": "The recording is a clean sound‑board source with only occasional hiccups (most notably early in Althea) that don’t detract from the overall listening experience. Musically the concert shines on the first‑set highlights Candyman and Althea and an energetic second set featuring Fire and Estimated Prophet, while Jack Straw and El Paso feel a bit under‑cooked.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.3; most comments praise the performance and soundboard quality with only minor, isolated criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced; a brief sound hiccup early in Althea and some occasional drop‑outs are noted but easily overlooked."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Althea",
+      "Fire on the Mountain",
+      "Estimated Prophet",
+      "Scarlet Begonias",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "El Paso"
+    ],
+    "setlist_flow": "First set balances mellow ballads (Candyman, Althea) with solid playing; second set picks up the tempo with a driving Fire and crowd‑rousing Estimated Prophet, giving the show good overall pacing despite a few weaker moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals and guitar praised on Candyman and Althea, though several reviewers note his voice was slightly off on Althea.",
+    "Phil": "",
+    "Bob": "His slide work receives positive nods for dynamic interplay with Brent during the mid‑set jams.",
+    "Keys": "Brent’s keyboards are highlighted as bluesy and dynamic, especially in the post‑drum jam sections.",
+    "Drums": "The drum segment is described as pure, simple frenzy, indicating a strong rhythmic foundation."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:41:05.253288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-02.sbd.samaritano-miller.22310.sbeok.shnf"
+}

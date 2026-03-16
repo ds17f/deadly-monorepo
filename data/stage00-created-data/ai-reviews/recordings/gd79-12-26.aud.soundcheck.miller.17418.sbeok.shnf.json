@@ -1,0 +1,50 @@
+{
+  "summary": "Low‑fidelity soundcheck recording but boasts a killer Friend of the Devil and an electrifying Space → Not Fade Away transition.",
+  "review": "The tape suffers from very poor audio quality – reviewers call it \"absolute shit recording\" – yet fans rave about the performance, especially the unforgettable Friend of the Devil and the seamless Space into Not Fade Away. Because it’s a rare Dicks Pick, listeners are willing to overlook the technical flaws and consider it a favorite despite the sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show performance is praised (5‑star) while recording quality is condemned (1‑star). Weighted blend (70% show, 30% recording) yields a moderate‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers describe the audio as \"absolute shit\" and note low fidelity; likely a rough soundcheck capture with significant clarity issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Space > Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Even as a soundcheck, the set flows well enough to feature a memorable Space into Not Fade Away transition."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:39:48.959014+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-26.aud.soundcheck.miller.17418.sbeok.shnf"
+}

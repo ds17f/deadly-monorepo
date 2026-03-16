@@ -1,0 +1,71 @@
+{
+  "summary": "Good‑quality audience recording of a strong 1977 show highlighted by a smoking Ramble On Rose, Comes A Time > Reprise jam and a soaring Brokedown Palace",
+  "review": "Fans rave about the vivid sound of this audience tape, noting its clarity and balanced ambience while praising the setlist – especially the first‑set Jerry tunes, the Playin' sandwich in the second set and the powerful Comes A Time → Reprise transition. The performance is described as tight and energetic with standout moments from Keith Godchaux’s keyboards and a rousing crowd interaction.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviewers give 4‑5 stars, lauding both the musical performance and the audio quality; only one outlier rating is negative despite a positive comment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the tape \"nice\" or \"excellent aud\", noting good clarity and effective use of audience ambience; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Comes A Time > Reprise",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is praised for groovy Jerry-led numbers, while the second set shines with a Playin' sandwich and an expansive Comes A Time jam that carries into a strong closing."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly highlighted for tight, groovy playing and standout guitar passages.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux gets specific praise for his keyboard work and interplay with Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TLEO": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Donna Jean": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time > Reprise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' sandwich": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T22:13:48.508770+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-01.141830.sony.ecm33p.moore.dalton.miller.clugston.flac1644"
+}

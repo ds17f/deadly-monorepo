@@ -1,0 +1,44 @@
+{
+  "summary": "Low‑generation recording with a muted intro and low‑energy Bertha, but a solid setlist and Jerry’s uplifting post‑set message.",
+  "review": "The reviewer notes that the FM capture is “low gen,” with a busted Ramrod intro that leaves the band sounding bummed and a lackluster Bertha. Despite the audio shortcomings, they praise the professionalism of the setlist and love hearing Jerry’s reassuring comment after the first set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "The show is regarded as professionally sequenced and enjoyable for the era, but the recording quality is described as low‑generation and unappealing, pulling the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer calls it a “low gen” recording, mentions a busted intro on Ramrod that sounds muted; overall audio is not suitable for download or burning."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "The setlist is praised as professional and generous to the audience despite the recording flaws."
+  },
+  "band_member_comments": {
+    "Jerry": "His post‑set message “Everything's gonna be alright” was highlighted positively.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramrod": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T08:30:02.297317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-10-23.fm.cotsman.10359.sbeok.shnf"
+}

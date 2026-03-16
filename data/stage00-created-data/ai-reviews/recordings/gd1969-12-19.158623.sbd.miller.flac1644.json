@@ -1,0 +1,69 @@
+{
+  "summary": "Great sound captures a fun acoustic‑opened set with the first performance of \"Mason's Children\" and classic early tunes.",
+  "review": "The recording delivers clear, high‑quality audio (with an audience patch on \"Casey Jones\") that lets listeners enjoy the unusual acoustic opener by Bob and Jerry.  The show is praised for its fun vibe, the debut of \"Mason's Children\", and a solid selection of early folk numbers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one review (4 stars) but it highlights both strong musical moments and excellent sound quality, leading to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Great overall sound; audience source patch used for \"Casey Jones\" preserves the song fully."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Monkey",
+      "Little Sadie",
+      "Long Black Limousine",
+      "I've Been All Around This World",
+      "Mason's Children",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Phil arrived late, so Bob and Jerry opened with a four‑song acoustic set before the full band entered, creating an unusual but enjoyable flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Opened the show with acoustic guitar alongside Bob; praised for his contribution.",
+    "Phil": "Arrived late and missed the acoustic opening; no performance comments.",
+    "Bob": "Participated in the acoustic opener; positive mention.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Monkey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Sadie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Long Black Limousine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I've Been All Around This World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mason's Children": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:57:43.553299+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-12-19.158623.sbd.miller.flac1644"
+}

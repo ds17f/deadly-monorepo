@@ -1,0 +1,46 @@
+{
+  "summary": "Good soundboard remaster with a standout China Cat Sunflower, though St. Stephen suffers from tuning issues.",
+  "review": "The recording is a solid soundboard remaster that most listeners find clear and enjoyable, earning a four‑star rating for its technical quality. Musically the show shines on China Cat Sunflower, but the performance of St. Stephen is noted as out of tune, leading to mixed feelings overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One reviewer praises the remaster and a key song (4★), while another gives a zero rating with vague criticism; overall show quality is moderate, recording quality good."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remaster is solid and clear; no major mix issues reported, though performance tuning problems are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [
+      "St. Stephen"
+    ],
+    "setlist_flow": "No detailed comments on set pacing; reviewers focus on individual song quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:25:04.208569+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-07-12.123434.sbd.latvala-lee-smith.flac16"
+}

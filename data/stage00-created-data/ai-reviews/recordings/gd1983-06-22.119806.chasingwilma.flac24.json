@@ -1,0 +1,37 @@
+{
+  "summary": "Recording quality unknown; show noted for its unique setlist lacking new material aside from “My Brother Esau.”",
+  "review": "The sole reviewer does not comment on the audio source or fidelity, so the recording characteristics remain unclear. The performance is described as unique for its scarcity of newer songs, with only “My Brother Esau” representing fresh material in an otherwise classic‑heavy set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief review that mentions no recording details and offers a neutral comment about the setlist, leading to a cautious low rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound quality, clarity, or mix; recording characteristics cannot be assessed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is characterized by a lack of new material for the era, with “My Brother Esau” being the sole newer song mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "My Brother Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:55:39.709442+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-22.119806.chasingwilma.flac24"
+}

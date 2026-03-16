@@ -1,0 +1,31 @@
+{
+  "summary": "Fantastic performance but recording details are unclear and the concert date is disputed.",
+  "review": "Both reviewers rave about the show, calling it fantastic and awarding high marks (4‑5 stars). The only concrete feedback concerns a disagreement over the correct concert date, with no comments on sound quality or specific musical moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Both reviewers gave high star ratings and praised the show, but there is no information about recording quality or performance specifics, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details about set structure or pacing were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T05:04:21.568884+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-20.sennME80.wklitz.96171.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "While the exact source type isn’t noted, the recording captures a spirited UMass spring‑fest show highlighted by a stellar Terrapin and lively new keyboard textures.",
+  "review": "The concert is remembered fondly for its energetic setlist – Jack Straw, Tennessee Jed, Terrapin, Good Lovin', Not Fade Away and Saturday Night all receive enthusiastic shout‑outs.  Reviewers praise Jerry’s guitar work and the overall vibe despite mixed feelings about Brett’s debut on keyboards, and no major recording flaws are reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong performances; no technical complaints were noted, suggesting a good listening experience overall."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer mentioned soundboard or audience issues; absence of criticism implies the audio is at least listenable and clear enough for fans."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Jack Straw",
+      "Tennessee Jed",
+      "Good Lovin'",
+      "Not Fade Away",
+      "Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a well‑chosen, high‑energy set that captured the excitement of a spring concert, with memorable moments like the biker on a Harley and the debut of Brett’s richer keyboard sound."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised; reviewers say “Anything Jerry did will last forever.”",
+    "Phil": "",
+    "Bob": "Mentioned positively as part of the group that ‘prevailed’ during the show.",
+    "Keys": "Brett’s keyboards are noted for adding richness; one reviewer found the new sound took getting used to, another called it fuller and enjoyable.",
+    "Drums": "Bill (Kreutzmann) and Mickey (Hartford) are both cited as part of the strong, spirited performance."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:46:46.763334+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-12.nakcm300-glassberg.egert-sirmick.motb0034.85220.flac16"
+}

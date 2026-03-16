@@ -1,0 +1,58 @@
+{
+  "summary": "Good soundboard capture of a lively Cal Expo show with standout Wheel, Miracle and Bird Song, though the second set drags for some listeners.",
+  "review": "The recording is a solid sound‑board source with a pleasant “beefy” mix and characteristic cassette hiss, offering clear bass and overall good clarity. Musically the concert shines early on – Jerry’s post‑Space Wheel and Miracle, plus an above‑average Bird Song, keep the energy high, but the second set loses momentum for several fans (notably a skipped solo in Stella Blue). Overall the show is remembered fondly by many, yet opinions are split.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (average to good) while recording quality is generally good; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Cassette hiss adds vintage character; mix is strong and beefy with pronounced bass, clear overall but not immaculate – another copy of this show is noted as cleaner."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wheel",
+      "Miracle",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "First set is praised for strong playing and crowd‑jammers; second set receives mixed feedback – some describe vivid, hallucinogenic moments while others call it lame due to a missed solo."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an awesome Wheel after Space, a soaring Miracle and overall energetic presence; criticized for skipping his solo in Stella Blue.",
+    "Phil": "Bass comes through very strong and is highlighted as a highlight of the mix.",
+    "Bob": "",
+    "Keys": "One reviewer finds Vince/keyboard work intrusive, describing it as ‘shitty’.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:50:57.826444+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-08-12.sbd.fishman.8109.sbeok.shnf"
+}

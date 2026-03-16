@@ -1,0 +1,71 @@
+{
+  "summary": "Historic Unbroken Chain debut, uneven set but stellar Stella Blue outro",
+  "blurb": "The show delivers a historic first performance of “Unbroken Chain” that lifts an otherwise uneven set, while the second‑set features a soaring Space jam and a beautifully toned Stella Blue outro. Highlights also include a punchy Alabama Getaway and strong moments from Crazy Fingers.",
+  "review": "On March 19, 1995 at The Spectrum in Philadelphia the Grateful Dead offered a night of contrasts. A six‑song first set stumbled through new material, but the surprise debut of “Unbroken Chain” electrified the house and became the evening’s defining moment. The second set recovered with a classic Space excursion, a heartfelt Stella Blue outro that showcased Jerry’s gorgeous guitar tone, and an energetic stretch that included Alabama Getaway, Crazy Fingers and Corinna. While Jerry’s solos sparkled at times they were marred by occasional flubs and shaky vocals on “So Many Roads,” the rhythm section kept things moving, and Vince’s piano added a spirited lift throughout. The encore closed with a warm rendition of Brokedown Palace, leaving fans with a mixed‑but‑memorable snapshot of the mid‑90s Dead.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 106,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Three recordings are clearly positive (praising Stella Blue, Alabama Getaway and overall sound quality) while three are mixed (noting uneven first set but still highlighting Unbroken Chain). The balance yields a modestly positive sentiment, meriting a +0.9 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 0.9 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-03-19.136858.sbd.miller.flac1648",
+    "reason": "Excellent soundboard mix with crisp clarity, capturing the Stella Blue outro and Space jam beautifully while minimizing performance flaws."
+  },
+  "key_highlights": [
+    "Historic debut of “Unbroken Chain” electrifies the crowd.",
+    "Stella Blue outro features a beautiful guitar tone and extended jam.",
+    "Alabama Getaway breakout adds punch to the first set.",
+    "Expansive Space segment showcases classic ’95 improvisational depth."
+  ],
+  "song_highlights": [
+    "Alabama Getaway",
+    "Unbroken Chain",
+    "Stella Blue",
+    "Crazy Fingers",
+    "Corinna",
+    "Matilda, Matilda",
+    "Brokedown Palace",
+    "Space"
+  ],
+  "band_performance": {
+    "Jerry": "Shows flashes of brilliance with a soaring Stella Blue outro and strong solos, but his playing is uneven at times—flubs on Crazy Fingers and shaky vocals on So Many Roads reveal the band was a little off.",
+    "Phil": "",
+    "Bob": "Delivers solid vocal work, especially on Crazy Fingers where his voice shines; briefly cuts off Jerry during Samson & Delilah.",
+    "Brent": "Vince’s piano is spirited and adds richness to the mix, particularly evident in the clear SBD capture.",
+    "Mickey": "Provides the expansive Space jam that lifts the second set, keeping the rhythmic flow despite an uneven overall performance.",
+    "Billy": "Locks in tight with Mickey, delivering a crisp transition into drums noted as effective on the show."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-19T06:13:35.363977+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Alabama Getaway"
+    ],
+    [
+      "Unbroken Chain"
+    ],
+    [
+      "Crazy Fingers",
+      "Corinna",
+      "Matilda, Matilda",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Stella Blue",
+      "Not Fade Away"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

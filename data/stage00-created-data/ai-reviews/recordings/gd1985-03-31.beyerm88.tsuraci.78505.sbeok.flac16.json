@@ -1,0 +1,45 @@
+{
+  "summary": "Clean audience recording captures a high‑energy 85‑minute show highlighted by the opening “The Music Never Stopped” and a fiery jam after “Wheel”, with overall good sound quality.",
+  "review": "Both reviewers rave about the performance – the opener from The Music Never Stopped and an inspired post‑Wheel noodling get special mention – and praise the surprisingly clean audience tape. While it isn’t an SBD, the recording is clear enough to let the band’s high‑energy set shine, making it a solid listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two detailed positive reviews (4 & 5 stars) highlight excellent performance and good‑to‑great audience sound; a third brief neutral note does not detract, yielding an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clean, crisp audience tape with strong crowd reaction; not a soundboard (SBD) but still very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stopped",
+      "Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy 85‑minute set that opens with The Music Never Stopped and builds momentum into a memorable jam after Wheel; pacing keeps the crowd engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:39:08.560554+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-31.beyerm88.tsuraci.78505.sbeok.flac16"
+}

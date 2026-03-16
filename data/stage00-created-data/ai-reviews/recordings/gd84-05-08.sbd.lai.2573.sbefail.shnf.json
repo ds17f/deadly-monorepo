@@ -1,0 +1,72 @@
+{
+  "summary": "A classic ’84 Dead show with standout Jack Straw, Minglewood Jam and Terrapin, captured on a soundboard that suffers from occasional static and an uneven mix.",
+  "review": "The performance shines in the first set – Jerry’s guitar on Jack Straw, Brent’s soaring keyboards on Minglewood Jam, and a inspired Terrapin – while the second half delivers hot drums and a powerful Wharf Rat.  The SBD recording is generally good but is marred by intermittent static on the third disc and a mix that often buries Jerry’s guitar and pushes Brent too high, giving listeners mixed feelings about the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (standout songs, energetic first set) while a substantial minority note consistent recording flaws (static, low Jerry levels, Brent too high). Weighted 70% show quality and 30% recording yields an overall rating around 4.0."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Occasional static on the third disc (noted in several reviews), low guitar levels for Jerry, Brent's keyboards often too high in the mix; otherwise the board captures the 1984 energy with decent clarity and no digi‑pop."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Cold Rain",
+      "Minglewood Jam",
+      "Terrapin",
+      "Wharf Rat",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Scarlet > Touch",
+      "Might As Well"
+    ],
+    "setlist_flow": "The first set is tight and energetic, highlighted by a stellar Jack Straw and an inspired Minglewood Jam.  The second set builds with hot drums and a powerful Wharf Rat but ends on a slightly sloppy back‑end, especially the Scarlet > Touch combo."
+  },
+  "band_member_comments": {
+    "Jerry": "Early in the show his guitar work is praised (Jack Straw), but later reviewers note his levels are low in the mix and that he \"mailing it in\" during much of the second set.",
+    "Phil": "Praised for deep, pounding bass on Jack Straw and driving the rhythm; some reviews mention him being less inspired later or largely absent.",
+    "Bob": "Generally referenced positively as part of a tight band; no specific criticisms beyond overall mix issues.",
+    "Keys": "Brent's keyboards are lauded for classic ’84 sound and inventive effects (Warriors), yet many note his volume is excessively high, often drowning other instruments.",
+    "Drums": "The drums/space segment is described as hot, wild and a highlight of the second set."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T17:47:15.785636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-05-08.sbd.lai.2573.sbefail.shnf"
+}

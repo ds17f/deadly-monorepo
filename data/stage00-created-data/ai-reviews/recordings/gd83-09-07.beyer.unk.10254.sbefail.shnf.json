@@ -1,0 +1,73 @@
+{
+  "summary": "High‑quality audience recording of a tight late‑summer ’83 Red Rocks show, highlighted by standout Jack Straw and Miracle performances.",
+  "review": "The concert captures a solid, tight performance from the Dead’s 1983 western run, with fans raving about Jack Straw, Candyman, Cassidy and the China>Rider sequence. Most reviewers praise the crisp audience capture, though one notes distortion on Bob Weir’s vocals and guitar. Overall the show is considered a gem of that era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong musical moments; recording quality is generally praised despite an isolated complaint about distortion, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp audience capture with clear instrument separation; Phil’s bass sits high in the mix. One reviewer reports distorted Bob Weir vocals and guitar on several songs, but the majority find the recording excellent for an AUD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Candyman",
+      "Miracle",
+      "Cassidy",
+      "China Cat Sunflower > The Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows tightly from start to finish, with the band staying locked in and delivering tight jams; fans note a consistent high energy throughout the three‑night run."
+  },
+  "band_member_comments": {
+    "Jerry": "Wicked licks on Miracle and unique improvisations praised.",
+    "Phil": "Bass \"bombs\" highlighted; his part is prominent and praised for joyfulness.",
+    "Bob": "One reviewer cites distorted vocals and guitar making several songs unlistenable.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:06:14.538286+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-07.beyer.unk.10254.sbefail.shnf"
+}

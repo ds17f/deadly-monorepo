@@ -1,0 +1,75 @@
+{
+  "summary": "Stellar '74 jam from Weather Report Suite into U.S. Blues captured on a generally good soundboard source despite minor mix quirks.",
+  "review": "The performance is hailed as one of the band’s finest, with the post‑Weather Report suite jam (Let It Grow → Mind Left Body/Heaven Help The Fool → U.S. Blues) described as “the greatest moment in live GD history.”  Recording-wise the soundboard source delivers clear instrument tones and strong drums, though a few listeners note left‑channel guitar imbalance and a dry, early‑’74 mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Overwhelmingly enthusiastic 5‑star reviews praise the musical peak; recording issues are noted but do not outweigh the show’s brilliance, yielding a high weighted score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear instrument tones and strong drum presence, but some reviewers mention left‑channel guitar imbalance, a dry mix typical of ’74 board recordings, occasional AUD tape dropouts, and a brief cut in the Let It Grow section."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Weather Report Suite (Prelude > Part 1)",
+      "Let It Grow",
+      "Mind Left Body/Heaven Help The Fool Jam",
+      "U.S. Blues",
+      "Scarlet",
+      "Mississippi Half‑Step",
+      "Mexicali"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but hampered by the board’s channel quirks; the second set erupts into an unforgettable 30‑minute jam that defines the show and carries it to a dramatic U.S. Blues finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for sweet noodling, telepathic interplay, and soaring solos throughout the jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s presence is quieter than on adjacent nights; overall keyboard tone is acceptable but not a highlight.",
+    "Drums": "Drum sound is lauded as strong and well‑defined."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Weather Report Suite (Prelude > Part 1)": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Mind Left Body/Heaven Help The Fool Jam": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "U.S. Blues": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Scarlet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi Half‑Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:04:45.850507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-28.set1.sbd.snider.10984.sbeok.shnf"
+}

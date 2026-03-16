@@ -1,0 +1,64 @@
+{
+  "summary": "Hypnotic Viola Lee jam and fiery blues in early ’68 flatbed set",
+  "blurb": "The show delivers a towering 21‑minute Viola Lee Blues jam and scorching Smokestack Lightning. Jerry’s Les Paul with P90s dominates the blues onslaught while Phil’s bass adds magical depth to the extended jams. The set wraps up with a crowd‑pleasing Dancin’ In The Street.",
+  "review": "On March 3, 1968 the Grateful Dead took their flatbed truck out onto Haight Street and turned it into an impromptu stage that still feels raw and electric today. From the opening riff of “Viola Lee Blues” the band launches into a hypnotic, 21‑minute excursion where Jerry’s Les Paul wails with both precision and abandon, and Phil’s bass underpins the whole thing with a distinct, almost magical tone. The momentum never lets up as they blaze through “Smokestack Lightning,” then swing into the soulful shout of “Turn On Your Lovelight” and the plaintive blues of “It Hurts Me Too.” Pigpen’s presence is felt in the ambience even if he isn’t front‑and‑center, and Bob Weir adds a gritty final verse on “Lovelight” before the band caps the set with the upbeat crowd‑pleaser “Dancin’ In The Street.” While the recordings are all audience tapes with fair fidelity – muddy mids, occasional drop‑outs, and pitch drift – the energy of that early ’68 street gig shines through, making it a must‑listen snapshot of the Dead’s formative blues period.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 51,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings note strong positive language (hypnotic Viola Lee, scorching Smokestack, intense jam) while the third is mixed but not overtly negative; overall sentiment leans modestly positive.",
+      "final_calculation": "2.5 + 0.4 + 0.6 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd68-03-03.aud.vernon.9374.sbeok.shnf",
+    "reason": "Fair‑quality audience tape that captures the full set with relatively clear instrument separation and fewer drop‑outs than the alternatives."
+  },
+  "key_highlights": [
+    "21‑minute hypnotic Viola Lee Blues jam",
+    "Scorching Smokestack Lightning blues run",
+    "Intense, magic‑filled bass work from Phil during extended jams",
+    "Historical flatbed truck ambience despite modest audio fidelity"
+  ],
+  "song_highlights": [
+    "Viola Lee Blues",
+    "Smokestack Lightning",
+    "Turn On Your Lovelight",
+    "It Hurts Me Too",
+    "Dancin' In The Street"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a hypnotic, shredding lead on Viola Lee and Smokestack, driving the extended blues jams with his Les Paul/P90 combo.",
+    "Phil": "Provides distinct, magical bass lines that anchor the long improvisations, especially during the Viola Lee jam.",
+    "Bob": "Adds a gritty final verse on Turn On Your Lovelight, contributing vocal texture despite occasional distortion.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T07:54:59.138272+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Viola Lee Blues"
+    ],
+    [
+      "Smokestack Lightning"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ],
+    [
+      "It Hurts Me Too"
+    ],
+    [
+      "Dancin' In The Street"
+    ]
+  ]
+}

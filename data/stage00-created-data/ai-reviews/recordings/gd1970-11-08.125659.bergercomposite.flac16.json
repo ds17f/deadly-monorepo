@@ -1,0 +1,97 @@
+{
+  "summary": "A historically interesting show with strong acoustic and electric sets, but the composite audience recording is pitch‑off and heavily edited.",
+  "review": "The performance captures a playful night in late‑1970 with standout moments like Rosalie McFall, Casey Jones, Truckin' and an original Dark Star, while the acoustic set offers near‑perfect renditions of Ripple and Friend of the Devil. The composite audience source is listenable yet suffers from slight pitch errors, clapping noise and noticeable editing that removes some crowd ambience and tuning nuances.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Average overall rating (≈3.2) with strong musical highlights offset by notable recording flaws such as pitch drift and heavy editing."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Composite of several audience tapes; some sections run slightly slow and need +1% pitch correction, clapping noise ruins parts of Ripple, and the edit removes crowd noise and a few musical moments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rosalie McFall",
+      "Casey Jones",
+      "Truckin'",
+      "Dark Star",
+      "Goin' Down the Road",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Around & Around",
+      "New Orleans"
+    ],
+    "setlist_flow": "Acoustic first set flows into a more experimental electric second set; early songs are solid, the middle contains quirky covers, and the show peaks with Casey Jones, Truckin' and a uniquely sci‑fi Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Mystery Train is highlighted as solid; overall guitar work praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rosalie McFall": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mystery Train": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "New Orleans": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:03:54.557283+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-08.125659.bergercomposite.flac16"
+}

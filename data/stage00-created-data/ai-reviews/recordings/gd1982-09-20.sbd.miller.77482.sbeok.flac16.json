@@ -1,0 +1,62 @@
+{
+  "summary": "Miller soundboard capture delivers crystal‑clear audio, and the concert roars with standout Shakedown Street, Scarlet > Fire, and an all‑out All Over Now.",
+  "review": "The Miller SBD source provides an excellent, crisp soundboard that lets every nuance shine. Fans rave about the high‑energy performance—Shakedown Street, the rare Throwing Stones > Day Job pairing, a scorching Scarlet‑Fire sequence, and an unforgettable All Over Now—all of which make this show a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Two detailed 5‑star reviews praise both the musical performance and the high‑quality Miller soundboard; only one neutral/ambiguous comment lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller source noted as crystal‑clear, no reported dropouts or muddiness; listeners describe it as “awesome” and a “gem.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Scar-Fire (Scarlet Begonias > Fire on the Mountain)",
+      "All over now",
+      "Throwing Stones > Day Job"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑octane, seamless flow with a daring Throwing Stones → Day Job segue and relentless energy throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scar-Fire (Scarlet Begonias > Fire on the Mountain)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All over now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:57:45.547256+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-20.sbd.miller.77482.sbeok.flac16"
+}

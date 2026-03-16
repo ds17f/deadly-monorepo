@@ -1,0 +1,31 @@
+{
+  "summary": "No meaningful details on recording or performance; reviewer posted unrelated poem and gave zero stars",
+  "review": "The sole review contains a poetic piece rather than any commentary on the concert’s music or audio quality, and assigns a rating of zero. Consequently there is insufficient information to assess the show or recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one non‑informative review with a zero star rating; unable to gauge performance or sound quality"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on audio clarity, mix, or source type"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T13:28:58.173986+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-13.aud.holtz.GEMS.92841.flac16"
+}

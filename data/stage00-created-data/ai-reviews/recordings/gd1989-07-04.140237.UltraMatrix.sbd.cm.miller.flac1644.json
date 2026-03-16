@@ -1,0 +1,51 @@
+{
+  "summary": "Matrix recording of a July 4th show with solid performances of Bertha, Rain and Snow and Watchtower despite limited technical commentary.",
+  "review": "The UltraMatrix source captures this Fourth‑of‑July gig from Buffalo, but reviewers give no concrete details on sound clarity. Musically the set opened strong with a “great” Bertha, carried through Rain & Snow and closed with a solid Watchtower, though the overall vibe is described as “middle of the road.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one brief review; positive remarks about a few songs but no recording quality details and a zero‑star rating suggest limited enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on clarity or mix; reviewers focus on anecdotal story rather than audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Rain and Snow",
+      "Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Starts strong, settles into a middle‑of‑the‑road groove before finishing solidly; overall pacing described as uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:20:35.373595+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-04.140237.UltraMatrix.sbd.cm.miller.flac1644"
+}

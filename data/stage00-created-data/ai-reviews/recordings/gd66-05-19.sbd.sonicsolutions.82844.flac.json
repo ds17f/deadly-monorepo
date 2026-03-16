@@ -1,0 +1,31 @@
+{
+  "summary": "Recording receives mixed feedback – praised for its mix by some, but others claim the FM‑radio version sounds better.",
+  "review": "Reviews focus almost entirely on the audio quality. One reviewer rates it five stars, lauding the soundboard mix and balance, while another complains that an FM‑radio broadcast has fuller bass and higher levels; a third gives a low two‑star rating without comment. No musical performance details are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality is unknown, so rating relies on recording feedback which is contradictory; overall assessment leans toward average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mixed opinions: praised for clear mix by one reviewer, but another notes weaker bass and prefers FM radio version's higher levels."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on musical performance or set structure were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T05:09:41.621511+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd66-05-19.sbd.sonicsolutions.82844.flac"
+}

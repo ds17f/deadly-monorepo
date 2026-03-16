@@ -1,0 +1,74 @@
+{
+  "summary": "Soundboard capture of the 4/6/85 Philadelphia show delivers decent audio, yet Jerry’s ragged vocals shadow strong guitar work and a standout China Cat Sunflower → I Know You Rider / Playing‑in‑the‑Band stretch.",
+  "review": "The recording is a clean soundboard source that presents the band clearly, though a few listeners note occasional level quirks. Musically the night is uneven – Jerry Garcia’s voice is widely described as “shot” or “croaking,” but his guitar solos remain fierce and the China Cat Sunflower → Rider transition plus the jazzy Playing‑in‑the‑Band jam are praised. Highlights also include a powerful Other One, while songs like Dupree’s Diamond Blues suffer from the vocal woes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Across 17 reviews the average rating is ~3.35. The show receives mixed musical feedback (average ~3) while the soundboard recording is generally regarded as good (positive comments about clarity). Combined weighted score yields a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix typical of SBD releases; a few reviewers mention minor level issues but overall the tape sounds clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Playing in the Band",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Dupree's Diamond Blues",
+      "Fade Away"
+    ],
+    "setlist_flow": "Setlist is conventional for a mid‑80s run, with a solid first‑half transition into a jazzy second set. The China Cat Sunflower → Rider segue shines, while vocal fatigue drags the energy on several numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as severely ragged or “shot” throughout; guitar playing praised as fierce and inspiring.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland mentioned disparagingly by one reviewer, but no specific keyboard performance comments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:09:22.225245+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-06.sbd.miller.13467.sbeok.shnf"
+}

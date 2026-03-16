@@ -1,0 +1,95 @@
+{
+  "summary": "Warm matrix mix captures a stellar May ’77 Buffalo show with a smoking Help‑Slip‑Franklin’s and sublime Comes A Time.",
+  "review": "The May 1977 Buffalo concert is praised for its high energy first set and a second half that delivers classics like the incendiary Help! → Slipknot! → Franklin's Tower and a sublime Comes A Time. Reviewers repeatedly note the warm, well‑balanced matrix mix – a little more soundboard would be nice but the recording is essentially flawless. Overall the performance is considered one of the era’s peaks with standout moments throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Virtually all reviews are 5‑star, highlighting both an excellent performance and a superb matrix recording; only minor critiques (e.g., desire for more soundboard presence, one negative comment on Sunrise) keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Warm, well‑balanced mix praised as ‘sparkling’, ‘crisp’ and ‘top‑line quality’; a few reviewers wanted stronger soundboard presence but overall the matrix is described as clear with no noticeable flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help! > Slipknot! > Franklin's Tower",
+      "Comes A Time",
+      "Franklin's Tower (solo)",
+      "Sunrise",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Sunrise (one reviewer called it ‘stinks’)"
+    ],
+    "setlist_flow": "First set is described as a perfect 1977 opener with strong energy; second set keeps the momentum with classic segues, though a few think it isn’t the absolute peak of the week."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called ‘all‑time greatest’, his lead guitar on Comes A Time and Uncle John’s is highlighted as near perfect.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The post‑drum segment is described as ‘phenomenal’; overall drumming praised for driving the show’s energy."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help! > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sunrise": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:25:09.553856+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-09.mtx.seamons.98168.flac16"
+}

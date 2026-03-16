@@ -1,0 +1,118 @@
+{
+  "summary": "Excellent soundboard recording (with some echo and pitch quirks) captures a legendary second set highlighted by massive Eyes, Play‑in‑the‑Band jams and stellar performances from the whole band.",
+  "review": "Both reviewers rate this show five stars, praising an A+ second set that features a 39‑minute “Eyes” suite, a monster “Playin’ in the Band”, and standout renditions of “Brown Eyed Women”, “Jack Straw”, “Big River”, “Sugar Magnolia” and more. The Bertha‑Ashley soundboard source is generally good but shows echoey texture, compression artifacts, occasional pitch drift and channel swaps that require correction. Overall the musical performance outweighs the modest technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Two detailed 5‑star reviews emphasize a superb performance (especially the second set) while noting only moderate recording imperfections, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Echoey and compression artifacts present; parts run slightly fast/slow and need pitch correction; occasional channel swap and brief loss of Bobby's guitar; overall clear enough to enjoy the music."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown Eyed Women",
+      "Jack Straw",
+      "Big River",
+      "Playin' in the Band",
+      "Eyes",
+      "Wharf Rat",
+      "Ship of Fools",
+      "Goin' Down the Road",
+      "Sugar Magnolia",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid but uneven; second set a marathon jam session with Seastones intermission, culminating in an epic 39‑minute Eyes suite and a high‑energy encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone praised throughout; rare harmonic work during the Eyes jam; audible laughter after a 72‑minute stretch.",
+    "Phil": "Lesh delivers a massive 12½‑minute bass solo within Eyes and contributes subsonic tones that drive the jam.",
+    "Bob": "Weir’s guitar occasionally drops out in the mix but shines on solos in “Ship of Fools” and “Goin' Down the Road”.",
+    "Keys": "Keith Godchaux joins mid‑second set, adding keyboard texture to the Eyes/Wharf Rat transitions.",
+    "Drums": "Bill Kreutzmann starts quietly in the second set, then takes a dominant role after 21 minutes, driving the long jams."
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Beat It on Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Musta Been Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:20:58.873627+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-11.sbd.bertha-ashley.7365.shnf"
+}

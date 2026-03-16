@@ -1,0 +1,97 @@
+{
+  "summary": "Sharp audience recording with crisp crowd ambience captures a fun Fall‑'87 show highlighted by the Good Lovin → La Bamba segue and searing jams.",
+  "review": "The tape is an audience capture (Sony ECM‑220T) that sounds sharp and clear, though a touch high on the treble and with a slight echo. Musically the concert is a solid early‑Fall ’87 outing – Stranger opens strong, Franklin’s is serviceable, but the real treats are the Good Lovin → La Bamba mash‑up, a ripping Black Peter jam, and a stellar Truckin′ → Spoonful stretch, all driven by Jerry’s inspired guitar work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews consistently rate the show 4‑star and praise both performance highlights and the clear audience recording, outweighing a few minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Sharp, crisp sound with a bit of treble boost and echo; crowd is audible and adds atmosphere. Rawness noted but not detrimental to listening enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin' > La Bamba",
+      "Black Peter",
+      "Truckin' > Spoonful",
+      "Iko",
+      "Playin' Jam"
+    ],
+    "poor_songs": [
+      "Franklin's (mixed)",
+      "Walkin'",
+      "Esau"
+    ],
+    "setlist_flow": "A strong opening set that settles the band into Fall‑87 form, followed by a second set packed with party‑song energy (Iko, Uncle John) and expansive jams (Playin', Black Peter). The Good Lovin → La Bamba segue caps a fun, upbeat show."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for searing lead work, especially on the La Bamba jam and the closing Black Peter solo; described as stellar leadership throughout.",
+    "Phil": "Highlighted for fab playing during the Playin' Jam, adding depth to the improvisation.",
+    "Bob": "Noted for his enthusiastic screams on Good Lovin' and vocal contributions in several numbers.",
+    "Keys": "Brent Mydland’s Hammond surges on Walkin', scat singing on Aiko, and overall bright keyboard presence are mentioned positively.",
+    "Drums": "Mickey Hart’s drumming described with vivid imagery (\"headless horsemen chasing…\") and noted for its characteristic drive."
+  },
+  "song_mentions": {
+    "Good Lovin' > La Bamba": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin' > Spoonful": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let it Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:37:56.590877+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-07.aud-sonyecm220t.unknown.8596.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Decent Dallas show marred by poor recording quality",
+  "review": "The reviewers appreciate the performance, calling it a good Dallas‑loving show, but are disappointed with the audio, saying the sound quality blows and wishing for a better source. The recording is judged subpar while the musical set itself receives modest praise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "One low‑star review (2) points out bad sound quality but notes a good show; weighted average of a decent performance (≈4) and poor recording (≈2) yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer says the sound quality blows and wishes for a better recording; no specific mix issues mentioned beyond overall poor fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; reviewer simply calls it a good show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T05:13:21.925449+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-15.sbd.tobani.fink.6664.sbeok.shnf"
+}

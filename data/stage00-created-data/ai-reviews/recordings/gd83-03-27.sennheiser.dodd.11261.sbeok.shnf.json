@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality audience recording of a hot, jam‑filled show highlighted by Shakedown Street and China Cat Sunflower",
+  "review": "The tape captures an energetic Irvine Meadows performance with plenty of jamming – Jerry’s ripping solo on “China Cat Sunflower” and a standout “Shakedown Street” are repeatedly praised.  The audience source is generally clear and decent, though a few listeners note a tinny character or slight speed issues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (10 of 14) give 4‑5 stars and praise both the music and the audio; only a few low‑star comments mention weak performance or venue dislike, so overall rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity for an audience tape; some listeners note a tinny coloration and occasional speed anomaly, but overall the sound is described as clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a fast‑paced, jam‑heavy set with the band staying “hot” throughout; no major pacing issues were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s hot, competitive playing – especially his rips on \"China Cat Sunflower\" and overall high energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:10:57.408481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-03-27.sennheiser.dodd.11261.sbeok.shnf"
+}

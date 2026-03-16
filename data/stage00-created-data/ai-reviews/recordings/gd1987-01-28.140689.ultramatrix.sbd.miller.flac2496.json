@@ -1,0 +1,31 @@
+{
+  "summary": "Review offers praise for the information provided but gives no specifics about the concert or recording quality.",
+  "review": "The lone reviewer gave a solid four‑star rating and complimented the informational content, yet no details were shared regarding the performance, setlist, or audio fidelity. With no concrete comments on sound source or musical highlights, the overall impression remains generally positive but vague.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "A single 4‑star review indicates a favorable view, but the lack of any performance or recording details limits the ability to assess quality, resulting in a moderate rating with medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on audio clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T18:32:49.071117+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-28.140689.ultramatrix.sbd.miller.flac2496"
+}

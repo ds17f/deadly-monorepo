@@ -1,0 +1,44 @@
+{
+  "summary": "High‑quality soundboard recording of a Brent‑era show, highlighted by an ecstatic Dark Star, though a ~10 minute Drums/Space segment is missing.",
+  "review": "Fans rave about the crystal‑clear soundboard source and describe the performance as one of the best Brent‑and‑Jerry shows, with Dark Star eliciting a frenzied crowd reaction. The recording is praised as “best sounding,” but it is unfortunately missing a ten‑minute Drums/Space excerpt, which detracts slightly from an otherwise superb document.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (70% weight) combined with a very good but incomplete soundboard recording (30% weight) yields an overall rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Praised as the best‑sounding source by multiple reviewers, but a ~10 minute Drums/Space section is missing, limiting completeness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic crowd response and strong interplay between Brent and Jerry; overall flow described as memorable despite the missing drum/space portion."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised; reviewers note his playing as a highlight of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are highlighted as part of one of the best Brent‑and‑Jerry shows.",
+    "Drums": "No specific performance comment, but a missing Drums/Space segment is noted."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:58:11.760575+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-09.099647"
+}

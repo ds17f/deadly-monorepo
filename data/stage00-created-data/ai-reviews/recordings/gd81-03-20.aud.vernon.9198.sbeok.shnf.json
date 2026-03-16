@@ -1,0 +1,51 @@
+{
+  "summary": "Solid performance featuring Truckin', Wharf Rat, and He's Gone, but low‑quality audio keeps the recording from shining.",
+  "review": "The show is described as a warm‑up gig with good variety; fans point to Truckin', Wharf Rat and He's Gone as the bright spots. However, the recording quality is noted as low, which detracts from an otherwise decent set. Overall it’s a respectable Dead outing that suffers from subpar sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Three moderate (3‑star) reviews highlight a few good songs but consistently note poor audio quality, leading to an average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers mention the audio is low quality; no specific source type given and no details about clarity beyond being subpar."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Wharf Rat",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A warm‑up show with a mix of songs and decent variety, but lacking major highlights or dramatic peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:57:24.821044+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-20.aud.vernon.9198.sbeok.shnf"
+}

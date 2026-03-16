@@ -1,0 +1,101 @@
+{
+  "summary": "Great matrix recording of a high‑energy ’88 Meadowlands show with smoking Scarlet > Fire, Terrapin and GDTRFB, though Watchtower flops and some drum/space gaps are noted.",
+  "review": "The performance shines on the first set’s punchy Hell in a Bucket, Brown‑Eyed Women and Let It Grow, while the second set delivers a blistering Scarlet > Fire, Terrapin Station and an electrifying GDTRFB. The matrix mix (soundboard plus crowd) is generally praised for its balance, but a few reviewers note digital noise early on and missing drum/space sections that slightly dull the flow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews (30+) are 4‑5 stars, highlighting strong musical moments and a solid matrix mix; only a handful mention technical flaws or weak song sections, so the weighted score leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally praised for a clean blend of board and audience, giving a vivid sense of room. Some listeners note digi‑noise/distortion in the opening tracks and missing drum/space segments that affect continuity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Terrapin Station",
+      "GDTRFB (Space > Drums > Fire)",
+      "Hell in a Bucket",
+      "Let It Grow",
+      "Brown‑Eyed Women"
+    ],
+    "poor_songs": [
+      "Watchtower"
+    ],
+    "setlist_flow": "First set is high‑energy and tight, building momentum into a second set that peaks with Scarlet > Fire and GDTRFB. A few missteps (slow Watchtower, missing drum/space) interrupt the flow but overall pacing stays exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s runs on Fire and the scarlet sequence are described as “crazy” and “blazing”; his vocal tone is noted as thin later in the show.",
+    "Phil": "Phil’s bass is highlighted as prominent in the mix by some reviewers, though a few feel he isn’t as forward‑present as they’d like.",
+    "Bob": "Bobby’s vocals are criticized on Watchtower (slow tempo) and off‑key during Hey Jude/Fantasy; otherwise his groove mode on Watchtower is praised by one reviewer.",
+    "Keys": "Brent Mydland’s keyboard work and vocal contributions receive strong praise, especially on the post‑drums sections and the ‘88 vibe.",
+    "Drums": "The drum/space segment is missing in the tape for some listeners; opinions vary from “post drums is no great shakes” to “fabulous” when present."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown‑Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "GDTRFB (Space > Drums > Fire)": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle > Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feelin' Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:27:30.406311+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-03-31.sbd.unknown.8137.sbeok.shnf"
+}

@@ -1,0 +1,42 @@
+{
+  "summary": "Soundboard capture of a killer 1986 show marred by muddy sound and occasional drop‑outs.",
+  "review": "Fans rave that the performance on this December 28, 1986 recording is a must‑hear, even noting that “Marty was there” and praising the Jerry-led tunes. However, reviewers repeatedly flag technical flaws – noticeable mud‑dying of the mix and early‑song drop‑outs that detract from an otherwise great show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (high rating) while recording quality is criticized for mud and drop‑outs, resulting in a solid but not outstanding overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy mix throughout; noticeable drop‑outs especially at the start of the first song; overall listenable but lacking clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Set list is generally well received, though reviewers note a mislabeling error (Scarlet Begonias actually Baby Blue) which reflects the era’s sloppy tape documentation."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer calls the next Jerry tune \"good\" despite recording issues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:07:04.736154+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-28.sbd.miller.77445.flac16"
+}

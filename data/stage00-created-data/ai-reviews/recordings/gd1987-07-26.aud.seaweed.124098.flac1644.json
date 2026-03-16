@@ -1,0 +1,31 @@
+{
+  "summary": "Very low‑quality audience recording with virtually no insight into the musical performance",
+  "review": "All three reviewers focus on the poor audio fidelity of this audience tape, noting that it is barely listenable and wishing for a proper soundboard source. No specific songs or band performances are highlighted, leaving the show quality essentially undocumented.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.4,
+    "confidence": "medium",
+    "rationale": "The majority of reviews rate the recording 0–3 stars and explicitly call it poor; lack of any positive musical commentary drives the overall rating down despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers describe the tape as a bad recording, lacking clarity and balance; one reviewer specifically wishes for a soundboard source, indicating noticeable deficiencies in fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or performance quality were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T01:25:09.515441+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-26.aud.seaweed.124098.flac1644"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Positive show with an awesome setlist; recording quality not detailed but presumed decent",
+  "review": "The reviewer rates the concert a perfect five stars, praising the exciting 1980s setlist and the band's enjoyable playing. No specific comments on the audio fidelity are provided, so the technical quality is assumed to be adequate.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single enthusiastic review gives a high show rating; recording quality is unspecified but likely acceptable, leading to an overall strong score with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound clarity or mix; assumed adequate based on positive overall impression."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the setlist as awesome and notes that the band seemed to be having a good time, indicating a well‑flowing performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T03:26:36.070999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-06.147839.fob.shure.sm57.sublette.miller.clugston.flac1648"
+}

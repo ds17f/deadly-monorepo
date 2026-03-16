@@ -1,0 +1,64 @@
+{
+  "summary": "Above‑average audience recording of a solid 1971 show featuring first‑time Bird Song/Deal and an enthusiastic Good Lovin', though the tape flip between Other One and Wharf Rat hurts flow.",
+  "review": "The fan community generally enjoys this early ’71 audio – it captures the raw flavor of the Dead with decent clarity for an audience source, despite a few tape‑flip hiccups. Musically the show shines on first‑time performances of Bird Song and Deal and a rapturous Good Lovin', while the transition between The Other One and Wharf Rat is noted as a disappointment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers rate 4‑5 stars and praise the performance (first‑time songs, Good Lovin') while noting only minor recording flaws; weighted average of show (≈3.8) and recording quality (≈4.0) yields ~3.9."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Initial taper with modern assistance gives an above‑average audience sound; some reviewers mention tape‑flip issues and occasional “sterile” feel versus pure soundboard, but overall the audio is clear enough to enjoy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Deal",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "setlist_flow": "First‑time debuts of Bird Song and Deal add excitement; however the tape flip between The Other One and Wharf Rat disrupts continuity, making the second half feel a bit disjointed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "PigPen’s presence is highlighted as intensifying the vibe of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:52:20.500241+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-19.aud.Vadnais.30230.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Fantastic performance but the soundboard runs noticeably fast, leading to mixed impressions.",
+  "review": "The show is praised as a great Dead concert, with fans calling it fantastic despite being from an off‑year. However, one reviewer notes that the recording plays 1.5%–4% too fast, which detracts from the listening experience. Overall the performance shines while the technical issues keep the rating modest.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "One reviewer gave a perfect 5‑star rating for the show, another gave 0 stars due to speed problems; combined with a clear technical flaw (fast playback) the overall rating settles in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Playback runs 1.5%–4% fast, causing pitch/speed issues; no other sound quality comments provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T00:09:41.372632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-10.sbd.willy.11601.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Fantastic New Haven show with a soaring Birdsong and monster Other One; recording quality not detailed.",
+  "review": "The concert is praised as a solid, gritty performance in a small New England arena, highlighted by an outstanding Birdsong, a tight China Cat Sunflower > I Know You Rider segue, and a killer The Other One that even features a hint of Eleven at the end. Reviewers note Phil Lesh’s dominant presence throughout. No specific comments on the audio source or fidelity are provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "One enthusiastic 5‑star review emphasizes excellent musical performance; recording quality is unspecified, so rating reflects strong show weight and uncertain audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were mentioned in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "China Cat Sunflower > I Know You Rider",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a solid, gritty jam session with strong momentum and memorable transitions, especially in the second half."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil Lesh is noted for dominating the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:52:37.062424+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-24.fob.gidley.92518.sbeok.flac16"
+}

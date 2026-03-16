@@ -1,0 +1,44 @@
+{
+  "summary": "Audience tape with noisy mic placement but a standout Help‑Slip‑Frank sequence and Jerry’s rolling guitar, overall a mixed‑quality listening experience.",
+  "review": "The show captures a fun second set highlighted by an exceptional Help > Slip > Franklin's and a still‑rolling Jerry Garcia, while Phil Lesh is audible despite the rough recording. The audience source suffers from poor mic placement and crowd noise that muddies the mix, making the tape only fair in technical quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers are enthusiastic about Jerry’s performance and the Help‑Slip‑Frank segment (show quality ~3.5/5) but note significant recording flaws typical of a bad audience tape (recording quality ~2/5). Weighted together this yields an overall rating around 3.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Mic placement was poor, with a loud fan near the mics causing audible whoops and masking some instruments; Phil can be heard but not crystal clear, overall muddy ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set energy is strong, with the band having fun and Jerry delivering a surprising, rolling performance despite the era’s challenges."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'rolling' and delivering a surprise performance; guitar tone praised.",
+    "Phil": "Audible and less distorted than in some other venues, though not perfectly clear.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:57:14.806458+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-10.schoeps.wiley.8042.sbefail.shnf"
+}

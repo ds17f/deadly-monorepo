@@ -1,0 +1,70 @@
+{
+  "summary": "Fair Healy‑Ultramatrix matrix recording of a somber show; Jerry shines on Sugaree while Bob’s grieving vocals drag the first set, with Scarlet / Fire as the only bright spot.",
+  "review": "The recording captures an early‑80s Healy Ultramatrix source that suffers from double‑tracked vocals and a slight delay between room mics and the board feed, making the mix sound odd. Musically the concert is weighed down by Bob Weir’s mournful, out‑of‑tune performance after the death of his dog Otis, though Jerry Garcia remains focused and energetic on songs like Sugaree, and the second set lifts a bit with a strong Scarlet / Fire transition.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers criticize the performance (especially Bob’s vocals) and note recording quirks, yielding a low show rating; however a few point out positive moments (Jerry’s playing, Scarlet/Fire), so the overall score sits just below average."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Healy Ultramatrix prototype – vocals sound double‑tracked due to delay between room mics and SBD feed; not the warm Betty Cantor‑Jackson tape quality; some listeners prefer the Clugston FOB source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet/Fire",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "El Paso",
+      "Johnny B. Goode",
+      "Drums",
+      "Hell in a Bucket"
+    ],
+    "setlist_flow": "First set feels heavy and lethargic, dominated by Bob’s grieving vocals; the second set picks up momentum with a solid Scarlet / Fire transition and more energy from Jerry."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for focus, energy and strong playing (especially on Sugaree); appears comfortable despite the night’s sadness.",
+    "Phil": "",
+    "Bob": "Struggles throughout; voice sounds raw, out of tune and he forgets lyrics (notably on El Paso). Emotional but technically weak.",
+    "Keys": "",
+    "Drums": "Described as “worst‑ever” by at least one reviewer."
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet/Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:38:37.194656+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-01-29.sbd.bobh.10535.sbeok.shnf"
+}

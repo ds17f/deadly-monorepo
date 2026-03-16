@@ -1,0 +1,71 @@
+{
+  "summary": "Crisp soundboard recording with a solid ’92 show highlighted by Dark Star, Morning Dew and a memorable Corrina",
+  "review": "The board feed is exceptionally clear – vocals are crisp and the instruments sit nicely apart – making this one of the cleaner ’92 tapes.  Musically the night shines on a dark‑and‑textured Dark Star, a peppy Morning Dew and a standout Corrina (despite a few dissenting listeners), while Deal and Big River also get strong nods.  Overall the performance is solid with a few mixed feelings about the Satisfaction encore.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "23 reviews give an average of ~3.3 stars; most praise the sound quality and key songs, but a handful of negative comments (especially about Satisfaction and Corrina) keep the overall rating in the mixed‑positive range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, clean board feed with great instrument separation; occasional slight shakiness on a few rows but no hiss or dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "Corrina (Corinna)",
+      "Deal",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Satisfaction",
+      "Corrina (Corinna)"
+    ],
+    "setlist_flow": "Setlist is generally praised as solid and well‑balanced; the second set receives a note that its song choices leave a little to be desired, yet the playing remains strong throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for rich, thoughtful guitar tone on Dark Star and Corrina; some reviewers note he seemed tired or under the influence later in the night.",
+    "Phil": "Described as sounding \"phat\" with a fat bass line on Corrina; overall bass work is highlighted positively.",
+    "Bob": "",
+    "Keys": "Keyboard interplay called finely tuned, honky‑tonk piano and MIDI praised; strong synergy with Jerry noted.",
+    "Drums": "Bruce’s last tour noted for energizing the band; drum/space sections called scintillating, though one reviewer missed the kick drum."
+  },
+  "song_mentions": {
+    "Corinna": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-18T04:21:05.575163+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-09.sbd.braverman.9755.sbeok.shnf"
+}

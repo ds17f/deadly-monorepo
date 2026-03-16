@@ -1,0 +1,82 @@
+{
+  "summary": "Solid soundboard recording of a mixed‑quality show – standout Help > Slip > Frank and early ’93 BIODTL shine despite a weak first set.",
+  "review": "The Miller SBD capture is generally clear, though levels are low, and fans rave about the ultra‑hot Help > Slip > Frank sequence and the first 1993 BIODTL. The performance swings from a sleepy first set (notably Althea) to a stronger second half with crowd‑pleasing Aiko, pre‑drums China Doll and a beautiful Stella Blue, earning both high praise for Jerry’s leads and some criticism for uneven moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (average 3‑star written scores but many enthusiastic comments about key songs) while the soundboard source is clear and well‑recorded; combined weighting yields a solid 4‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear board mix with low playback levels noted; no major dropouts or distortion, praised as one of the best DATBRAD AUD captures."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Frank",
+      "First BIODTL (1993)",
+      "China Doll (pre‑drums)",
+      "Aiko",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Althea",
+      "Wave to the Wind",
+      "Franklin's (Garcia solo lost in mediocrity)"
+    ],
+    "setlist_flow": "First set starts promising but quickly drifts into a sleepy, uneven vibe; second set recovers with tighter jams and crowd‑pleasers, culminating in an especially hot Help‑Slip‑Frank sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight his authoritative leads, perfect tone and \"crushes it\" solo on the Help>Slip>Frank segment.",
+    "Phil": "Praised for amazing bass work that stood out during the show.",
+    "Bob": "",
+    "Keys": "Keyboards exceeded expectations; Vince (Vinnie) found his spot and delivered a strong outro on the Help>Slip>Frank jam.",
+    "Drums": "Drummers described as \"awesome\" and especially impressive to watch."
+  },
+  "song_mentions": {
+    "Help > Slip > Frank": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "First BIODTL (1993)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's (Garcia solo)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:57:01.554243+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-22.set1.sbd.miller.28430.sbeok.flacf"
+}

@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "ui/**"
+      - "data/version"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -29,10 +30,15 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
       - name: Fetch show data
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          ASSET_URL=$(curl -s https://api.github.com/repos/ds17f/dead-metadata/releases/latest \
-            | jq -r '.assets[] | select(.name == "data.zip") | .browser_download_url')
-          curl -sL "$ASSET_URL" -o /tmp/data.zip
+          DATA_VERSION=$(cat data/version | tr -d '[:space:]')
+          echo "Fetching data-v${DATA_VERSION} release..."
+          gh release download "data-v${DATA_VERSION}" \
+            --repo "${{ github.repository }}" \
+            --pattern 'data.zip' \
+            --output /tmp/data.zip
           mkdir -p ui/data
           unzip -q /tmp/data.zip -d ui/data
           rm /tmp/data.zip

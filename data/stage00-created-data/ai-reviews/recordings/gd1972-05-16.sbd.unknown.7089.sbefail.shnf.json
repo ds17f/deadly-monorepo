@@ -1,0 +1,99 @@
+{
+  "summary": "Tight, focused performance highlighted by a smoking Truckin' → Drums → Other One run, captured in a clear soundboard recording.",
+  "review": "The show is praised for its precision and tightness, with the band operating as a powerful whole. Reviewers repeatedly point to the Truckin'>Drums>Other One sequence and Mr. Charlie as stand‑outs, while the soundboard source delivers crisp, clean audio without reported drop‑outs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong musical moments; no major recording complaints and the source is a soundboard, yielding an overall high‑quality experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix with no reported dropouts or muffiness; captures the band's tight performance well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Mr. Charlie",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [
+      "Hurts Me Too"
+    ],
+    "setlist_flow": "A concise three‑hour set that stays focused throughout; the first set builds with strong renditions of Bertha, China Cat → Rider and others, while the second set peaks with a full‑blast Truckin' leading into Drums and The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "All over the neck on 'Mr. Charlie' with distinctive fills, showing a focused, high‑energy lead guitar performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann is more restrained than usual but provides solid support; drums come early into The Other One."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hurts Me Too": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T13:59:39.823325+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-16.sbd.unknown.7089.sbefail.shnf"
+}

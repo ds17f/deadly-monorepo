@@ -1,0 +1,93 @@
+{
+  "summary": "High‑quality soundboard capture of a stellar June‑15‑1985 show with crisp China Cat > Rider, smoking Wheel → Gimme Some Lovin', and an inspired first set.",
+  "review": "The Walker‑Scotton SBD delivers clear, well‑balanced audio (with only minor pitch quirks) that lets the band’s tight 1985 performance shine. Highlights include a flawless China Cat Sunflower → I Know You Rider, a soaring Wheel into Gimme Some Lovin', and a fiery Lost Sailor, while a few drum slippages on Big River and U.S. Blues keep the set from being perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musicianship and soundboard quality across nine reviews; minor criticisms are limited to a few song‑specific issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear, crisp mix with excellent instrument separation. Reviewers note slight pitch/speed anomalies (-1% on some sections) and a few missing encore tracks, but overall the SBD is preferred over other sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "The Wheel > Gimme Some Lovin'",
+      "Lost Sailor",
+      "Cassidy",
+      "Me & My Uncle",
+      "In the Dark"
+    ],
+    "poor_songs": [
+      "Big River",
+      "U.S. Blues",
+      "Touch of Grey"
+    ],
+    "setlist_flow": "The first set builds nicely with strong openers and a fiery finish, while the second set delivers long, inventive jams and seamless segues (notably Wheel → GSL). Minor drumming hiccups prevent an outright flawless rating."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is fast yet focused; he belts out lyrics on China>Rider and shows strong tone throughout, though he stumbles a bit on She Belongs.",
+    "Phil": "Lesh’s bass is powerful – “busts your speakers” on Northbound Train – and adds depth to the Fat sound on many jams.",
+    "Bob": "",
+    "Keys": "Brent’s unique intro on China Cat and his added layers on Lost Sailor and Might As Well are highlighted as standout keyboard moments.",
+    "Drums": "Bill/Mickey provide a loose, energetic feel but exhibit occasional tightness issues (Big River) and out‑of‑sync playing on U.S. Blues."
+  },
+  "song_mentions": {
+    "In the Dark": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Wheel > Gimme Some Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:43:44.119446+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-15.sbd.walker-scotton.miller.96317.sbeok.flac16"
+}

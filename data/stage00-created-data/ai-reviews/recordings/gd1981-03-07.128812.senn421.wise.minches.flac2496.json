@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive details on recording or performance; reviewer gave a dismissive low rating",
+  "review": "The sole review provides only a brief, dismissive comment and assigns zero stars, offering no insight into the sound source, audio clarity, or musical execution. With no mention of specific songs, set flow, or band members, both the show quality and recording fidelity remain indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one extremely brief review with a zero-star rating; insufficient information to assess performance or audio, leading to a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound quality, source type, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Review does not describe set structure or performance details."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T09:03:50.618120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-07.128812.senn421.wise.minches.flac2496"
+}

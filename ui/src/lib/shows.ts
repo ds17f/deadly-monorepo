@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import type { Show } from "@/types/show";
 import type { Recording } from "@/types/recording";
+import type { ShowIndexEntry, YearBucket } from "@/types/homepage";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -58,4 +59,42 @@ export function getRecordingById(id: string): Recording | null {
   if (!fs.existsSync(filePath)) return null;
   const raw = fs.readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as Recording;
+}
+
+export function buildShowIndex(): ShowIndexEntry[] {
+  const ids = getSortedShowIds();
+  const showsDir = path.join(DATA_DIR, "shows");
+  return ids.map((id) => {
+    const raw = fs.readFileSync(path.join(showsDir, `${id}.json`), "utf-8");
+    const s: Show = JSON.parse(raw);
+    return {
+      id: s.show_id,
+      d: s.date,
+      v: s.venue,
+      c: s.city,
+      s: s.state,
+      r: s.ai_show_review?.ratings?.ai_rating ?? 0,
+      rc: s.recording_count,
+      sum: s.ai_show_review?.summary ?? "",
+      ar: s.avg_rating,
+    };
+  });
+}
+
+export function getTopRatedShows(
+  index: ShowIndexEntry[],
+  count: number
+): ShowIndexEntry[] {
+  return [...index].sort((a, b) => b.r - a.r).slice(0, count);
+}
+
+export function buildYearHistogram(index: ShowIndexEntry[]): YearBucket[] {
+  const counts = new Map<number, number>();
+  for (const entry of index) {
+    const year = parseInt(entry.d.slice(0, 4), 10);
+    counts.set(year, (counts.get(year) ?? 0) + 1);
+  }
+  return Array.from(counts.entries())
+    .map(([year, count]) => ({ year, count }))
+    .sort((a, b) => a.year - b.year);
 }

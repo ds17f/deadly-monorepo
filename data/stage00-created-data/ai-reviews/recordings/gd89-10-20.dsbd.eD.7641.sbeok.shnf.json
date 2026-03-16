@@ -1,0 +1,81 @@
+{
+  "summary": "High‑energy Fall ’89 Spectrum show with a monster Other One jam and solid soundboard capture despite occasional mix quirks.",
+  "review": "The performance captures the band at a creative peak – the 15‑minute Other One excursion, a searing California Earthquake, and a tight Hey Pocky Way > Scarlet > Fire sequence make the second set unforgettable.  The DSBD source is generally clear and balanced, though a few audience splices and an overly bright symbols mix give parts of the show a slightly rough edge.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (30+) rate the show 4‑5 stars and praise the music; recording is described as good with only isolated mix issues, yielding a weighted rating of ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced DSBD capture; occasional audience splices, low volume in the early second set, and a harsh high‑frequency “symbols” mix on drums noted by several reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "California Earthquake",
+      "The Other One",
+      "Truckin'",
+      "Hey Pocky Way > Scarlet > Fire",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Fire on the Mountain",
+      "I Will Take You Home (interruption)"
+    ],
+    "setlist_flow": "A long, inspired first set sets up a spectacular second set; the Other One jam anchors the middle, while an ill‑timed I Will Take You Home break slightly disrupts momentum before the finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Occasional vocal slip-ups and lyric forgetfulness on Fire on the Mountain; otherwise strong lead guitar work.",
+    "Phil": "Repeated “intro bomb” on The Other One, helping launch the epic jam.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard and MIDI work receive high praise – bright, inventive, though at times mixed too loud.",
+    "Drums": "The drum mix (“symbols”) is noted as overly bright/high in the mix; otherwise solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "California Earthquake": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "The Other One": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 4,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Hey Pocky Way > Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T01:09:18.762989+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-20.dsbd.eD.7641.sbeok.shnf"
+}

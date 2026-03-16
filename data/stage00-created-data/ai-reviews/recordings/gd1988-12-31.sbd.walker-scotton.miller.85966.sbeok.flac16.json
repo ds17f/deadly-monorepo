@@ -1,0 +1,80 @@
+{
+  "summary": "Great NYE show captured via FM broadcast; lively performance with standout Franklin's Tower and Wang Dang Doodle, though sound quality is decent but not top‑tier.",
+  "review": "The concert is remembered as a classic New Year's Eve outing with superb song selection, tight band interplay and several highlight moments (Franklin’s Tower, Wang Dang Doodle, West L.A., Cassidy). The FM broadcast source conveys the atmosphere well, but listeners note that the dedicated Healey Mix sounds clearer, so the recording is good rather than pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Four of five reviewers give 5‑star praise for the performance; one gives a modest 3‑star and another an unusable 0‑star, leading to a strong but not unanimous endorsement. Recording quality is acceptable (FM broadcast) but not optimal, pulling the overall rating slightly lower."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Identified as an FM broadcast; captures the concert’s feel and crowd ambience. Sound is clear enough for enjoyment but lacks the fidelity of the Healey Mix, with occasional broadcast‑style compression."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Wang Dang Doodle",
+      "West L.A.",
+      "Cassidy",
+      "Women Are Smarter",
+      "Wheel",
+      "GSL"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight seamless transitions (notably the intro to Wheel) and full‑band listening, with a particularly energetic first set and a strong second set. The third set/encore is good but left some listeners wanting more."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for adding extra umph on the ‘roll‑away’ section of Franklin's Tower and for his engaging stage presence (staring at fans).",
+    "Phil": "",
+    "Bob": "Described as “growling and spitting” during his vocal parts, indicating a powerful performance.",
+    "Keys": "Brent (Keith) receives extensive praise for his organ work, ethereal intros to GSL and overall contribution to the band’s texture.",
+    "Drums": "Mickey’s sound‑effects and drum features (Baba Olatunji, Sikiru Adepoju, Kitaro chants) are highlighted as memorable."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GSL": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:53:02.820295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-12-31.sbd.walker-scotton.miller.85966.sbeok.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording suffers a dip after \"New Potato\" but recovers with a monumental The Other One and crystal‑clear Caution > Feedback > Goodnight.",
+  "review": "Both reviewers rave about the 1968 performance, calling it avant‑prog brilliance highlighted by an astonishingly ferocious The Other One and a must‑hear Caution > Feedback > Goodnight sequence. The soundboard source loses clarity right after \"New Potato\" begins and Bobby's guitar is often buried, yet the later sections retain excellent sonics that outweigh those flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Show quality is rated near‑perfect (5) while recording quality is fair due to early dropouts; weighted average yields ~4.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Clarity drops sharply after \"New Potato\" starts and the mix buries Bobby's guitar, but later portions regain good sonics and balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Caution > Feedback > Goodnight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early set is marred by recording issues, but the second half erupts with avant‑prog intensity and seamless segues, especially the Cryptical/Other One stretch."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's interplay with Lesh is called \"off‑the‑charts brilliant\"; his guitar shines despite being buried in the mix.",
+    "Phil": "Lesh's bass work is praised for its creative interplay with Garcia.",
+    "Bob": "Bobby's guitar is noted as largely buried in the mix, though not detracting from the overall impact.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution > Feedback > Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:45:30.112732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-11-01.sbd.kaplan.9965.shnf"
+}

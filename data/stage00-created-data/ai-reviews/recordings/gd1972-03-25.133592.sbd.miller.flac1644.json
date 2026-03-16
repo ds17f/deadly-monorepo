@@ -1,0 +1,86 @@
+{
+  "summary": "Pristine sound‑board capture of a historic Bo Diddley‑backed show, highlighted by stellar performances of How Sweet It Is, Deal and Sittin’ on Top of the World.",
+  "review": "The Miller FLAC source restores the original sound‑board tape to excellent clarity, eliminating the hiss and flutter that plagued earlier audience copies. Musically the night is a mixed bag – the first set delivers rare gems like How Sweet It Is and an inspired Sittin’ on Top of the World, while the second set swings between a powerful Deal and looser moments such as Playin’. Overall the show feels historic and often exhilarating despite a few uneven stretches.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Recording is rated excellent by reviewers; show receives an average of ~4‑star praise with several standout tracks, yielding a weighted rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Restored from decades‑old poor audience copies; reviewers describe the SBD as “perfect shape,” crisp and clear with no notable drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "How Sweet It Is",
+      "Deal",
+      "Sittin' on Top of the World",
+      "Smokestack",
+      "Last Train"
+    ],
+    "poor_songs": [
+      "Playin'",
+      "Casey Jones"
+    ],
+    "setlist_flow": "Unique Bo Diddley opening set followed by two Dead sets; the first set is historic with rare covers and strong early‑show energy, while the second set is uneven – high points like Deal contrast with looser jams such as Playin'."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for expressive guitar work, pedal‑steel touches, and memorable noodling on “B.E. Women.”",
+    "Phil": "Noted for solid bass lines, harmony vocals on How Sweet It Is and Last Train, and driving the rhythm on Smokestack.",
+    "Bob": "Mentioned for bluesy rhythm guitar and occasional vocal highlights; overall positive but not a focal point of the reviews.",
+    "Keys": "Keith appears briefly, possibly adding theremin/pedal‑steel texture under Pigpen’s boogie‑woogie.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "How Sweet It Is": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sittin' on Top of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Smokestack": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bo Diddley": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Last Train": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:22:43.114926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-25.133592.sbd.miller.flac1644"
+}

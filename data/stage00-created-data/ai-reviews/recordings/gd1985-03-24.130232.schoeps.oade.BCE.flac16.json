@@ -1,0 +1,31 @@
+{
+  "summary": "Decent recording quality noted as good, but no details on the performance itself",
+  "review": "The sole review praises the sound quality, calling it \"good,\" which suggests a clear and listenable source. No information is provided about the musical performance, setlist flow, or individual band members, leaving the show aspect unassessed. Overall the recording seems satisfactory for casual listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating mentioning good sound; lacking any performance details, so rating leans on recording quality alone."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer simply states \"Sound is good\" with no further technical commentary."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T01:43:26.402241+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-24.130232.schoeps.oade.BCE.flac16"
+}

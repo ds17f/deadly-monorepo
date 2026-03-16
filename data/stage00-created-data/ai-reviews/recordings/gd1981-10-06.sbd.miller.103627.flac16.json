@@ -1,0 +1,83 @@
+{
+  "summary": "Clear soundboard recording with a high‑energy show highlighted by a post‑drums Sugar Magnolia and a soaring Stella Blue jam.",
+  "review": "The performance captures the band in top form during their October‑81 European run – a generous first set, an inventive second set with standout moments like the post‑drums Sugar Magnolia, a climactic Stella Blue finale, and powerful renditions of He's Gone and Blues For Allah. The soundboard source is generally clean and well balanced, though a few listeners note Jerry’s guitar sits low in the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (6 of 9) give high marks and praise both the musical energy and the clear recording; only minor mix complaints are noted, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and hiss‑free sound with good overall balance; a few comments about Jerry’s guitar being low in the mix but no major dropouts or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Stella Blue",
+      "He's Gone",
+      "Blues For Allah",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generous first set with smooth flow of standards; second set praised for creativity and energy, though one reviewer felt the transition from Stella Blue into Good Lovin' was a bit awkward."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice strong and in‑front; guitar noted as too low in the mix by at least one reviewer.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drums segment highlighted as a highlight of the night."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Man Smart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Blues For Allah": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:24:45.140746+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-06.sbd.miller.103627.flac16"
+}

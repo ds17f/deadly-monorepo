@@ -1,0 +1,81 @@
+{
+  "summary": "Crystal‑clear soundboard captures a legendary 1977 Buffalo show highlighted by an epic Franklin’s Suite and a soaring Music Never Stopped jam.",
+  "review": "The recording is a pristine soundboard dump that many reviewers call gorgeous, with only a brief reel‑change skip in the middle of The Music Never Stopped. Musically the concert is hailed as one of the band’s finest of ’77 – the first three tunes, the Help > Slipknot! > Franklin’s suite, Peggy‑O and the second‑set highlights are described as chilling and unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Uniformly glowing reviews (9×5★, 1×4★) praise both the performance and the soundboard quality; only a minor technical skip prevents a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix praised as superior to audience tapes. A reel‑change causes a short jump in the middle of The Music Never Stopped jam, but most listeners find it seamless."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stopped",
+      "Franklin's Suite",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Peggy-O",
+      "Bertha",
+      "Estimated Prophet",
+      "Comes A Time",
+      "Sunrise"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid and favorable; after the break the band launches into a spectacular second set with seamless segues, delivering several emotional peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is called \"crying\" and full of energy; vocals praised alongside Bob's harmonies.",
+    "Phil": "Described as \"on point\" during the performance.",
+    "Bob": "Noted for staying right behind Jerry, providing strong rhythm/vocals.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Suite": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:08:47.854330+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-09.sbd.painoman.77462.shnf"
+}

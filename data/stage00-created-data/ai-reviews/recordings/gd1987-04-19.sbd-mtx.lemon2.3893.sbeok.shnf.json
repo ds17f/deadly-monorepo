@@ -1,0 +1,44 @@
+{
+  "summary": "Matrix‑derived soundboard capture of a powerful Easter Sunday show highlighted by Jerry’s revitalized playing and an epic China Cat Sunflower → I Know You Rider jam.",
+  "review": "Patnem2003 raves that this 1987 Irvine concert is one of the best of the year, noting Jerry Garcia’s energized tone and nonstop licks from start to finish. The standout moment is the soaring jam between “China Cat Sunflower” and “I Know You Rider,” which he calls “epic.” No recording flaws are mentioned, suggesting a clean matrix mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single five‑star review praises the musical performance highly and reports no audio issues; rating reflects an excellent show with presumed good recording quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints; reviewers imply a clear, well‑balanced matrix (soundboard) mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as powerful and consistently strong from the opening through the closing, with a particularly high‑energy first set."
+  },
+  "band_member_comments": {
+    "Jerry": "Revitalized, happy, ripping lick after lick; some of his finest playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:02:36.295674+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-19.sbd-mtx.lemon2.3893.sbeok.shnf"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Decent early‑90s show with solid front‑row energy; good enough recording (source unknown) that captures highlights like So Many Roads and a nice Brokedown Palace encore.",
+  "review": "The concert is viewed as an average but enjoyable 1993 performance – fans note a strong front‑row experience, a standout rendition of So Many Roads and a pleasant Brokedown Palace encore, though Jerry’s vocal on Bird Song is criticized. No specific recording flaws are mentioned, suggesting the capture is at least listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Two moderately positive reviews (4 stars) and one negative review (2 stars) give an average show rating around 3.3; no recording issues are reported, so a neutral‑good recording rating yields an overall weighted score near 3.2."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not mention any audio problems, implying the tape is at least clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "So Many Roads",
+      "Black Muddy River"
+    ],
+    "poor_songs": [
+      "Bird Song"
+    ],
+    "setlist_flow": "Generally solid but unremarkable; fans describe a decent groove typical of the early‑90s era, with a pleasant encore and no major flow issues."
+  },
+  "band_member_comments": {
+    "Jerry": "Front‑row experience praised; vocal on Bird Song criticized, but his singing on So Many Roads highlighted as exceptional.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:07:59.431450+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-19.sbd.braverman.12573.sbeok.shnf"
+}

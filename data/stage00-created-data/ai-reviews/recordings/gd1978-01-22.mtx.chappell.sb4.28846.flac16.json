@@ -1,0 +1,63 @@
+{
+  "summary": "Good matrix recording with track‑order glitches captures a legendary second set highlighted by an epic The Other One and a smoking St. Stephen jam.",
+  "review": "The show is praised as one of the Dead’s greatest, especially the second half where Drums flows into a mesmerizing NFA stretch, a transcendent The Other One, and a joyful St. Stephen jam.  The matrix source sounds clean and beautiful to most listeners, though several reviewers note mis‑ordered and mislabeled tracks and occasional muffled mic quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Strong consensus on an outstanding performance (especially the second set) combined with a generally good matrix recording, tempered by consistent complaints about track order and occasional sound issues."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clean and beautiful overall, but tracks are mis‑ordered/mislabeled and some listeners describe a muffled mic‑under‑pillow sound; matrix mix improves listenability despite these flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "St. Stephen",
+      "A&A",
+      "Drums > NFA",
+      "Close Encounters Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as competent, while the second set is legendary—45 minutes from Drums through NFA are highlighted as a peak performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Early‑January laryngitis still present but his energy shines on the St. Stephen jam and other moments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Drums segment, especially its transition into NFA, is praised as one of the best continuous 45‑minute stretches."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "A&A": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > NFA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Close Encounters Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:43:34.474347+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-22.mtx.chappell.sb4.28846.flac16"
+}

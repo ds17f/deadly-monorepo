@@ -1,0 +1,49 @@
+{
+  "summary": "Hybrid soundboard‑audience recording captures a solid 1971 performance highlighted by a stellar The Other One, though missing Bird Song and Not Fade.",
+  "review": "The show delivers classic early‑'71 Dead energy with an especially praised The Other One that flows smoothly from Phil’s bass to the drums. Recording quality is strong on the soundboard portion but degrades after Sugar Magnolia when it switches to audience tape, and both sources lack Bird Song and Not Fade, which some listeners find disappointing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers award five‑star marks for performance and mix, but several note missing songs and the audience‑only second set, pulling the overall average down to a solid but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard tracks are clear and well mixed up to Sugar Magnolia; the remainder is audience‑sourced with lower fidelity. Both sources omit Bird Song and Not Fade, and the audience portion was patched in later."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set benefits from clean soundboard recording; second set is largely audience tape, resulting in a noticeable change in audio quality and some missing tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His bass line into The Other One is highlighted as a smooth transition that avoids interruptions.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:06:35.425985+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-05.sbd.miller.96540.sbeok.flac16"
+}

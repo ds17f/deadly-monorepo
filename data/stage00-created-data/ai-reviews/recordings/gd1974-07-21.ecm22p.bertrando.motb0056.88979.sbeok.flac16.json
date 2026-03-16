@@ -1,0 +1,93 @@
+{
+  "summary": "Crystal‑clear audience tape capturing a soaring 1974 performance with standout Playing in the Band, Wharf Rat and Truckin' jams",
+  "review": "Fans rave about the astonishing clarity of this audience recording—often described as “crystal clear” and “outstanding”—while noting a few quirks like splashy cymbals and a brief cut on Truckin'. Musically the show is highlighted by an explosive Playing in the Band jam, a searing Wharf Rat, a build‑up to a transcendent Truckin', plus superb moments from Jack Straw, Scarlet Begonias, China, Rider and more. Overall the performance feels tight, energetic and full of memorable segues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average star rating is 4.5; reviewers consistently praise both sound quality and musical performance with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptionally clear, detailed capture of the Wall of Sound; some listeners note overly splashy cymbal levels and occasional vocal suppression, plus a brief cut in Truckin', but overall the mix is balanced and vivid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Wharf Rat",
+      "Truckin'",
+      "Jack Straw",
+      "Scarlet Begonias",
+      "Sugar Magnolia",
+      "Sunshine Daydream",
+      "China",
+      "Rider",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows seamlessly with strong segues—especially the hallmark Playing‑in‑the‑Band jam that launches into extended improvisations. Energy builds through Truckin' and peaks on Wharf Rat, while the second set maintains momentum with tight transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring guitar tone, “brass‑band” end sounds, and hot, liquid‑country phrasing.",
+    "Phil": "Noted as loud and strong; his bass “bombs” around the 8:50 mark receive special commendation.",
+    "Bob": "Highlighted for beautiful dual guitar work on Sugar Magnolia and expressive playing in the Spanish‑jam sections.",
+    "Keys": "Keith’s keyboards are lauded for a Chick Corea‑style, Bitches Brew vibe that punches through the mix.",
+    "Drums": "Bill Kreutzmann receives enthusiastic shout‑outs; cymbal presence is described as splashy but adds power."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:47:20.665967+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-21.ecm22p.bertrando.motb0056.88979.sbeok.flac16"
+}

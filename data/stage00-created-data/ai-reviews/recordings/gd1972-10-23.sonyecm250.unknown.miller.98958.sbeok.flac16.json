@@ -1,0 +1,51 @@
+{
+  "summary": "Great audience recording of a high‑energy 10/72 show, highlighted by a gorgeous Stella Blue, sizzling Deal and an epic Dark Star.",
+  "review": "The tape captures a vibrant two‑hour first set with standout performances of Stella Blue, Deal and a soaring Dark Star. Reviewers rave about the depth, warmth and overall clarity of the audience recording despite occasional “cloudy” moments and a lower‑generation patch source, making it a highly enjoyable listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "The majority of reviews are 5‑star praises focusing on strong musical performance and generally good audio quality; a few lower ratings note minor tape‑generation or sound clarity issues, yielding an overall high but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience cassette sources stitched together (first night plus later tape from a friend). Reviewers note some cloudy sound and a lower‑generation patch, but overall the mix is warm, clear enough for a great listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Deal",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy two‑hour first set with strong pacing; the show maintains momentum throughout and delivers memorable improvisational peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-22T00:40:14.978533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-23.sonyecm250.unknown.miller.98958.sbeok.flac16"
+}

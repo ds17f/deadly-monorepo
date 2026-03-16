@@ -1,0 +1,75 @@
+{
+  "summary": "Fiery first set, epic 29‑min Other One jam, sweet Stella Blue",
+  "blurb": "The Austin show bursts with crowd‑pleasers like Candyman and Bird Song before launching into a monumental 29‑minute The Other One. Jerry’s guitar is scorching, Phil’s bass meditative, and Keith’s piano adds absurdly perfect counterpoint. Highlights include a goosebump‑inducing Stella Blue vocal and an instrument‑less I Know You Rider finale.",
+  "review": "On November 22, 1972 the Dead turned the Austin Municipal Auditorium into a late‑summer Texas blaze. The first set crackles with high‑energy numbers – Candyman’s flanged‑wah piano riff, a soaring Bird Song, and a tight Playing In The Band where Jerry lays down white‑hot licks while Phil weaves a meditative bass line. After a solid Casey Jones the band rolls into a second‑set cocktail of He's Gone → Truckin' → Drums → The Other One → Stella Blue that feels like high‑ethanol fuel, culminating in an expansive 29‑minute jam on The Other One that many fans cite as the night’s apex. Keith’s piano arpeggios before I Know You Rider are described as “absurd” in the best way, and his chops shine throughout the improvisations. The show closes with a sweet, goosebump‑inducing vocal on Stella Blue and an instrumentless I Know You Rider that leaves the room humming. Across three soundboard sources the performance is uniformly praised – the band was locked in, the jams were stellar, and the recording quality, especially the “gd72-11-22.sbd.lai.4081.sbeok.shnf” capture, showcases the warm, roomy feel of a classic early‑'70s Dead show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 22,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All three recordings label the show as positive, repeatedly praising the scorching Candyman, monumental 29‑minute The Other One jam, sweet Stella Blue vocal and tight band interplay. Consistent language such as \"scorching\", \"incandescent\", \"stellar\" across sources warrants a strong positive sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd72-11-22.sbd.lai.4081.sbeok.shnf",
+    "reason": "Warm, roomy soundboard capture with clear up‑front mix; includes all standout tracks and despite minor early mix issues it delivers the most complete listening experience."
+  },
+  "key_highlights": [
+    "Scorching Candyman and fiery Bird Song open a high‑energy first set.",
+    "Monumental 29‑minute The Other One jam serves as the night’s apex.",
+    "Sweet, goosebump‑inducing vocal on Stella Blue and an instrumentless I Know You Rider finale.",
+    "Seamless second‑set flow: He's Gone → Truckin' → Drums → The Other One → Stella Blue."
+  ],
+  "song_highlights": [
+    "Candyman",
+    "Bird Song",
+    "The Other One",
+    "He's Gone",
+    "Playing In The Band",
+    "Stella Blue",
+    "I Know You Rider",
+    "Black Throated Wind"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers white‑hot, ice‑cool licks on Playing In The Band and a goosebump‑inducing vocal on Stella Blue; guitar tone described as perfect.",
+    "Phil": "Provides meditative bass lines in Playing In The Band, thumb‑popping groove on The Other One, and strong supportive riffs throughout.",
+    "Bob": "Rips vocally, especially on Bird Song and Casey Jones, adding energy to the set.",
+    "Brent": "Keith’s piano arpeggios before I Know You Rider are called absurd in a good way; his flanged‑wah on Candyman and jam‑time chops during The Other One shine.",
+    "Mickey": "",
+    "Billy": "Bill’s drumming is hot and propulsive, driving the energy of The Other One and Truckin', with a clean drum solo after Truckin' that earns special praise."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-22T02:15:02.330518+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Candyman"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "He's Gone",
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Stella Blue"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Black Throated Wind"
+    ]
+  ]
+}

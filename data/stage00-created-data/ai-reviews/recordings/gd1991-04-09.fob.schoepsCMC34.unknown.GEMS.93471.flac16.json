@@ -1,0 +1,51 @@
+{
+  "summary": "Good sound quality but a weak performance with only a few decent moments.",
+  "review": "The recording is praised for its solid sound quality, though the reviewer notes it comes from an unknown source. Musically the show is described as pretty weak overall, with only a handful of highlights such as \"It Must've Been The Roses,\" \"Let It Grow,\" and a strong post‑space jam. The consensus is that the set has moments worth hearing but generally falls short of a strong Dead concert.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "low",
+    "rationale": "Only one low‑star review; reviewer finds the show weak (≈2/5) but notes good sound quality (≈4/5). Weighted average yields a rating around 2.6."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer states \"Sound quality on this copy is good\"; no details about soundboard, audience, or matrix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It Must've Been The Roses",
+      "Let It Grow",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall the set feels uneven and weak despite a few highlights; the performance is described as pretty weak with only occasional good moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "It Must've Been The Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:56:53.874021+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-09.fob.schoepsCMC34.unknown.GEMS.93471.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Positive vibe with a fantastic Wharf Rat → Sugar Magnolia flow; recording source unclear but listeners enjoy the show.",
+  "review": "The lone review is enthusiastic, calling the performance \"fantastic\" and specifically praising the transition from Wharf Rat to Sugar Magnolia. No details are given about the audio source or sound quality, so the recording remains a mystery, but the musical moment highlighted suggests a memorable segment of the concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief, positive 4‑star review; shows enthusiasm for the music but provides no technical info, so rating reflects a solid show with unknown recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer highlights the seamless and exciting flow from Wharf Rat into Sugar Magnolia as a highlight of the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:44:41.885763+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-20.aud-set2.mcgugh.hanscom.76521.sbeok.flac16"
+}

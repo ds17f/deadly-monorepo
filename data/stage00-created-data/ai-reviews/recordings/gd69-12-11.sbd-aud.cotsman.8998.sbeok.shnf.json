@@ -1,0 +1,92 @@
+{
+  "summary": "Fair matrix recording with hiss and occasional speed issues captures a relaxed late‑'69 show highlighted by a stellar Dark Star, The Eleven and a memorable Yellow Dog story.",
+  "review": "The tape is a composite of soundboard and audience sources that sounds a bit hissy, mono‑handheld in places and suffers from some pitch‑speed quirks, but it remains listenable. Musically the performance is an easy‑going late‑1969 set – not as hard‑hitting as earlier ’69 dates yet full of good vibes, with Dark Star, The Eleven and Yellow Dog standing out. Overall fans appreciate the intimate feel despite the technical imperfections.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show around average‑good (3–4 stars) and note recording flaws that keep it from being excellent; the combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Hissy mono handheld ambience, limited frequency response (nothing above ~8 kHz), occasional drop‑outs and speed/pitch issues on several tracks; a few reel‑flip cuts but overall intelligible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Yellow Dog",
+      "Dark Star",
+      "The Eleven",
+      "Morning Dew",
+      "Next Time You See Me",
+      "Sittin' on Top of the World"
+    ],
+    "poor_songs": [
+      "High Time",
+      "Dancing in the Streets"
+    ],
+    "setlist_flow": "Set list is out of order and contains a few tape glitches, but the band plays with relaxed confidence; the vibe is informal and fun rather than tightly driven."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s improvisational jams are highlighted, especially his extended Dark Star solo and interplay on The Eleven.",
+    "Phil": "Phil’s bass virtuosity shines on The Eleven and he holds down the groove throughout.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers nail a rare drum break in The Eleven that reviewers praised."
+  },
+  "song_mentions": {
+    "Yellow Dog": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sittin' on Top of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:41:37.180594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-12-11.sbd-aud.cotsman.8998.sbeok.shnf"
+}

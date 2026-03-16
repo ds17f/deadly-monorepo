@@ -1,0 +1,82 @@
+{
+  "summary": "Good soundboard recording with solid second set highlights like China>Rider, Box of Rain and The Other One, though first‑set songs such as Picasso Moon fall short.",
+  "review": "The reviewer rates the show four stars, praising a strong second set that delivers standout moments – a respectable China>Rider segue, a killer Box of Rain, an engaging Drums → Space stretch, and a sweet Brokedown Palace finale. The first set is more mixed, with Picasso Moon, Black‑Throated Wind and Bird Song receiving lukewarm comments. No specific audio quality remarks were made; the tape appears to be a soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a solid 4‑star rating, highlighting many strong musical moments and only minor performance criticisms; recording quality is not discussed, so overall rating leans on show quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not comment on audio clarity or mix; filename suggests a soundboard source but no explicit assessment available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > I Know You Rider",
+      "Box of Rain",
+      "Drums > Space",
+      "The Other One",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Picasso Moon",
+      "Black-Throated Wind",
+      "Bird Song"
+    ],
+    "setlist_flow": "First set is uneven, with several songs falling short of expectations; second set delivers consistently strong performances and is recommended to be listened straight through."
+  },
+  "band_member_comments": {
+    "Jerry": "Bust‑out moment on He's Gone but not super amazing.",
+    "Phil": "Nailed his bass line on Box of Rain.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Strong performance; Drums → Space highlighted as a worthwhile 30‑minute segment."
+  },
+  "song_mentions": {
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:22:29.975254+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-04-01.142364.sbd.gastwirt.miller.sirmick.flac1644"
+}

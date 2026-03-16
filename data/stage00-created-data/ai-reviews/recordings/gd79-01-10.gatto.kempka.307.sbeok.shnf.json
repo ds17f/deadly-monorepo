@@ -1,0 +1,82 @@
+{
+  "summary": "Excellent audience‑tape capture of a legendary 1/10/79 Nassau show – crystal‑clear for an AUD with crowd ambience and a monster second set highlighted by Dark Star, Shakedown Street and Miracle.",
+  "review": "The recording is an audience tape that manages to sound surprisingly clear; the mix lets you hear the instruments well while the crowd adds atmosphere, though vocals are sometimes buried. Musically the show is consistently praised as one of ’79’s best – a blistering second set with a soaring Dark Star, fiery Shakedown Street and a killer Miracle, plus strong performances of St. Stephen, Wharf Rat and Good Lovin'.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority are 4‑5 stars and focus on outstanding musical moments; recording comments note good‑to‑excellent sound for an audience source, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear instrument balance for an AUD, crowd noise present but not overwhelming. Vocals are occasionally recessed and a few sections sound slightly muffled, but overall the tape is considered one of the better audience recordings of this era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Shakedown Street",
+      "Miracle",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight first set (Chuck Berry opener, Good Lovin') builds into an epic second set that many reviewers call a “monster” – the Dark Star and Shakedown Street flow seamlessly into a high‑energy finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is repeatedly called flawless and soaring on Dark Star, Shakedown Street and Miracle; some note his voice was a bit off later in the set but his emotional stage presence shines.",
+    "Phil": "Bass described as tight and sharp, contributing to the overall “clean playing” of the night.",
+    "Bob": "",
+    "Keys": "Keyboard/organ trade‑offs highlighted during Bertha’s break and praised for melodic leads throughout the second set.",
+    "Drums": "Generally solid; a few reviewers felt the drummers sounded a bit “march‑like” or less jazzy in places, but overall the rhythm section kept the momentum."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 14,
+      "negative_mentions": 2,
+      "total_mentions": 16
+    },
+    "Shakedown Street": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Miracle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T18:46:10.756984+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-10.gatto.kempka.307.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Terribly recorded audience tape of a show featuring the obscure \"Victim\" and a mangled \"Row Jimmy\", with virtually no musical value.",
+  "review": "All five reviewers agree that the audio is essentially unlistenable – slowed, out‑of‑tune, and missing critical low end – making even the rare appearance of “Victim” or “Row Jimmy” impossible to appreciate. The performance itself isn’t praised; instead it’s described as buried beneath the worst sound quality the reviewers have heard.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.7,
+    "confidence": "high",
+    "rationale": "Consistently low star ratings (0‑3) and uniformly negative comments about both the recording and the performance drive a rating near the bottom of the scale."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Audience tape with severe muffling, slowed playback, pitch issues, and loss of bass; described as the worst sound ever heard at a venue and an apparent experimental edit."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Victim",
+      "Row Jimmy"
+    ],
+    "setlist_flow": "Audio problems obscure any sense of set structure or pacing, leaving listeners unable to follow the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals sound distorted and overly slow; his voice is practically unrecognizable.",
+    "Phil": "Bass notes are extremely low and buried, making Phil's playing inaudible.",
+    "Bob": "",
+    "Keys": "Brent's keyboard parts disappear in the poor‑quality tape.",
+    "Drums": "Drum sound is muffled and contributes to the overall muddy mix."
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:33:53.117355+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-17.aud.goetz.19544.sbeok.shnf"
+}

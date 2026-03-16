@@ -1,0 +1,69 @@
+{
+  "summary": "Good soundboard recording captures an enthusiastic first‑show vibe, highlighted by a stellar opening of \"Feel Like A Stranger\" and strong jams through Terrapin Station, Space and \"The Last Time > Days Between\".",
+  "review": "The show is remembered fondly as many fans’ first Dead concert, with the opener \"Feel Like A Stranger\" setting an upbeat tone and extended jams on Terrapin Station, Space and the seamless \"The Last Time > Days Between\" sequence earning high praise. Recording quality is described as good soundboard sound, though one reviewer disliked Hornsby’s accordion interludes. Overall the performance shines despite a single negative comment about keyboard instrumentation.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating ~4.2, strong positive comments on both show and recording; only one outlier low‑star review about Hornsby, so confidence is high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note good sound quality with clear mix; no major dropouts or balance issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like A Stranger",
+      "Terrapin Station",
+      "Space",
+      "Birdsong",
+      "Lazy River Road",
+      "The Last Time > Days Between"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans highlight a welcoming opening with \"Feel Like A Stranger\" followed by diverse, jam‑heavy selections; the space segment and unique song pairings (e.g., The Last Time > Days Between) are praised for flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers mention Jerry’s presence as a highlight, noting his on‑stage sit‑in and the excitement of first‑time listeners.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mixed: some praise Vince Welnick’s era, while one reviewer criticizes Hornsby’s accordion playing as detracting from songs.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Last Time > Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:34:38.617300+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-26.sbd.tetzeli-fix-7742.76834.flac16"
+}

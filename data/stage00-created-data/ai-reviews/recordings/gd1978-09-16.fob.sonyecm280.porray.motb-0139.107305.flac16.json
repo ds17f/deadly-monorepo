@@ -1,0 +1,45 @@
+{
+  "summary": "Gorgeous audience recording featuring a standout Shakedown Street and space segment, despite some crowd chatter",
+  "review": "The tape captures an especially vivid audience experience, with many reviewers calling it one of the best AUD recordings they've heard—clear, gorgeous sound that lets the music shine. The performance shines on the mellow yet intense rendition of Shakedown Street and a memorable space jam, though occasional talking from the crowd can be distracting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive feedback on recording quality (high marks) and solid praise for key performance moments; limited detail on overall show leads to a weighted rating around 4.2"
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Highly praised as one of the best audience recordings—clear and gorgeous—but contains noticeable crowd talk and occasional neighbor complaints that add background noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight the strength of the Shakedown Street performance and a powerful space segment; no specific criticism of set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:22:33.557271+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-16.fob.sonyecm280.porray.motb-0139.107305.flac16"
+}

@@ -1,0 +1,74 @@
+{
+  "summary": "Excellent soundboard recording with a smoking Help‑Slip‑Franklin sequence and strong first‑set flow, highlighted by great guitar work and solid vocals.",
+  "review": "The SBD capture is crystal‑clear, delivering an immaculate mix that lets the band's chemistry shine – especially during the famed Help > Slip > Franklin stretch.  The performance itself is a fan favorite: tight rhythm from Bob, soaring leads from Jerry (despite occasional low‑mix vocals), and Phil’s “harmonic bombs” that lift songs like Rider, Casey Jones, and To Lay Me Down.  Overall the show flows smoothly with an inspiring first set and a satisfying second half.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the pristine soundboard quality and the musical highlights, with only minor complaints about vocal mix and one song’s execution."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as clean, crisp, and well‑balanced; a few notes mention Jerry's vocals being low in the Help segment or slightly rough, but no major dropouts or hiss."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Rider",
+      "Casey Jones",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower"
+    ],
+    "setlist_flow": "The first set builds nicely with strong transitions (Just Like Tom Thumb's Blues → To Lay Me Down → El Paso, then Speedway Boogie into Smokestack Lightning).  The second half of the first set and the early second‑set jam are highlighted as particularly tight, making for a well‑paced, engaging show."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals occasionally low in the mix (Help) or rough; guitar work praised and generally “dead on”.",
+    "Phil": "Delivers “harmonious bombs” that add depth throughout the set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Just Like Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Speedway Boogie > Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T08:00:02.349023+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-28.sbd.miller.28395.sbeok.flacf"
+}

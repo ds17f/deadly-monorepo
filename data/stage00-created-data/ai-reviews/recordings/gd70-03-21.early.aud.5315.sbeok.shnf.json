@@ -1,0 +1,81 @@
+{
+  "summary": "Audience recording captures a spirited early‑1970 show with standout performances of “He Was A Friend Of Mine”, “Walking The Dog” and the Viola Lee Blues → The Seven combo, while sound quality ranges from lively to muddy.",
+  "review": "The concert is praised for its rare set – early renditions of “Friend Of The Devil”, a haunting “He Was A Friend Of Mine”, and an eclectic mix that includes “Walking The Dog” and the Viola Lee Blues → The Seven sequence.  Although the audience tape is generally listenable and even described as “stereo‑like”, several reviewers note channel wobble, bass‑heavy mix and occasional tape‑speed issues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks for the performance and highlight many classic moments; recording flaws are noted but do not dominate, resulting in an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Tape is lively with a pleasant ambience, but suffers from right‑channel wobble, bass‑heavy mix, muddy vocals and occasional tape‑curl/speed issues that require EQ and slight pitch correction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He Was A Friend Of Mine",
+      "Walking The Dog",
+      "Viola Lee Blues > The Seven",
+      "Me & My Uncle",
+      "Death Don't Have No Mercy",
+      "Dire Wolf"
+    ],
+    "poor_songs": [
+      "Walking The Dog"
+    ],
+    "setlist_flow": "A single early‑show set that weaves folk‑rock cuts with rare blues numbers; highlights include the Viola Lee Blues → The Seven transition, a spirited “Me & My Uncle”, and crowd‑driven moments like the Dark Star call‑out.  The flow is energetic but occasionally uneven due to the band adjusting to new material."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone on “He Was A Friend Of Mine” is praised, yet some note he sounds “all over the place” and struggles with NYC crowd restraint.",
+    "Phil": "Phil’s bass leads into a compelling Cumberland jam during The Seven sequence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He Was A Friend Of Mine": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Seven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walking The Dog": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Friend Of The Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:35:09.555622+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-03-21.early.aud.5315.sbeok.shnf"
+}

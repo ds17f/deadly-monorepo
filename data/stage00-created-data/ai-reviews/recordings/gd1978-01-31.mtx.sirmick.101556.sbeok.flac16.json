@@ -1,0 +1,57 @@
+{
+  "summary": "Good matrix mix with energetic Jerry on Passenger; show is mixed but highlights Fire, Black Peter, Scarlet and Passenger.",
+  "review": "The recording offers a clear, well‑balanced matrix mix that fans praise for its pleasant sound. Musically the performance is uneven – Jerry Garcia’s playing shines especially on Passenger, while songs like Fire, Black Peter and Scarlet receive positive nods, though the overall show is described as generally lackluster.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (some standout moments but overall lazy feel) weighted at 70%, while the matrix recording is solid and rated good, giving a combined rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Nice mix with clear sound; reviewers note pleasant listening experience despite the show’s uneven performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Passenger",
+      "Fire",
+      "Black Peter",
+      "Scarlet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on flow; reviewers mention hot spots and general lackluster feel overall."
+  },
+  "band_member_comments": {
+    "Jerry": "Playing described as energetic, especially on Passenger.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:03:16.002530+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-31.mtx.sirmick.101556.sbeok.flac16"
+}

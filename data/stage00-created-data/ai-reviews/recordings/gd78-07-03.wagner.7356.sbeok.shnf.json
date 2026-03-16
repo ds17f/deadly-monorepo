@@ -1,0 +1,82 @@
+{
+  "summary": "Audience recording from ’78 with fair sound quality captures an energetic show highlighted by Fire, Stella Blue, Sugar Magnolia and a standout Peggy‑O, though Werewolves receives criticism.",
+  "review": "The performance is praised for its high energy, scorching renditions of Fire, Dancin', Stella Blue, Sugar Magnolia and a beautifully sung Peggy‑O, with Jerry’s guitar work and vocals especially animated. The audience tape is surprisingly clear for a 1978 AUD but suffers from occasional muddiness, and the Werewolves slide draws negative remarks. Overall the show shines despite modest recording fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Average star rating ≈3.8 with many detailed positive comments about the music and a few consistent criticisms of sound quality and specific songs, leading to an overall solid 4‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is surprisingly clear for a 1978 audience tape; some reviewers note muffled or low‑grade quality (rating of 2), but most find it listenable and pleasant."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire",
+      "Dancin'",
+      "Stella Blue",
+      "Sugar Magnolia",
+      "Peggy-O",
+      "Scarlet Begonias",
+      "Mama Tried"
+    ],
+    "poor_songs": [
+      "Werewolves"
+    ],
+    "setlist_flow": "First set described as a \"barn burner\" with strong closing trio; second set shorter but well‑played, overall energetic and animated performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar runs and vocal delivery are highlighted as strong and animated; one reviewer notes he seemed to be trying to impress Donna.",
+    "Phil": "Bass is noted in the mix (high in the mix) but no specific musical comments; firecracker anecdote attributed to Phil at show start.",
+    "Bob": "Weir’s slide on Werewolves called \"god awful\" and a werewolf mask onstage was distracting.",
+    "Keys": "Keith’s piano adds Nashville flourishes and a Floyd Cramer‑style ending; praised for tasteful touches.",
+    "Drums": "One reviewer describes the drumming as sounding like \"war is coming,\" indicating mixed perception."
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T13:42:44.538043+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-07-03.wagner.7356.sbeok.shnf"
+}

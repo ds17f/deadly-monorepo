@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent front‑of‑house (FOB) audience recording captures a heavy, tight 1992 show with an electrifying Dark Star and soaring crowd energy.",
+  "review": "The four reviewers all rave about the performance – describing it as well‑played, tight, and featuring a standout Dark Star that makes this one of the heavier shows of the era.  The FOB source is praised as “great sounding” and “finally a great sounding source,” indicating clear, lively audio despite being an audience tap.  Overall the setlist flow and atmosphere receive high marks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All four reviews are 4‑5 stars, highlighting both a strong musical performance and a good‑quality FOB recording; the weighted average yields a rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers call it a \"great sounding source\" with no complaints about muffiness or dropouts, indicating clear FOB capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, well‑played set with a great setlist; crowd energy noted as amazing and the show described as heavy and exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:02:37.154169+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-20.fob.schoeps.gems.76478.sbeok.flac16"
+}

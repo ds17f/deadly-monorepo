@@ -1,0 +1,83 @@
+{
+  "summary": "High‑quality recording of a solid ’86 show with first‑rate sound and several standout jams like Fire > Samson and Truckin’",
+  "review": "The tape captures a lively mid‑80s Dead performance that many reviewers describe as “first‑rate” and “terrific,” with the band in good form and a funky first set that builds into a strong second half. While most listeners praise the overall sound and highlight several jams, a lone reviewer finds the Fire opener odd, giving the collection an overall mixed‑positive feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (four of six) give 4‑star praise for both performance and sound quality; only one extremely negative comment drags the average down slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the sound “first rate” and “terrific,” noting no major drop‑outs or muffling; however, the source (soundboard vs. audience) is not explicitly identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire > Samson",
+      "Ship",
+      "Man Smart (Women Smarter)",
+      "Truckin'",
+      "Going Down the Road",
+      "Stella Blue",
+      "U.S. Blues",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Fire"
+    ],
+    "setlist_flow": "The first set is described as getting funkier and building momentum, while the second set mixes high‑energy numbers (Fire > Samson) with slower, emotive tunes, creating a balanced, engaging flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work and vocals are repeatedly praised – fast and slow passages both noted as strong.",
+    "Phil": "Phil Lesh “nails the end verse” on Box of Rain and other songs.",
+    "Bob": "Bob Weir delivers a memorable “Lovelight rap” during the second set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire > Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Ship": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart (Women Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:17:38.135246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-22.sbd.walker-scotton.miller.81646.flac16"
+}

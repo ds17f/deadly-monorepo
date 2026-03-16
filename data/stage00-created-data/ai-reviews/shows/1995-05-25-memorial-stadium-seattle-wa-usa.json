@@ -1,0 +1,63 @@
+{
+  "summary": "Solid set with strong He's Gone > Wheel, but Jerry uneven",
+  "blurb": "The show delivers memorable moments – a fiery He’s Gone into The Wheel segue and a heartfelt Feel Like A Stranger opener. Phil holds down a solid groove while the dual‑drums and space sections shine. Jerry’s tone swings between joyful and thin, making the performance mixed overall.",
+  "review": "On May 25, 1995 at Seattle’s Memorial Stadium the Dead rolled out a set that oscillates between brilliance and inconsistency. The first half opens with a warm Feel Like A Stranger and rolls through classic covers before stumbling on a few lackluster spots like Slipknot! (absent from this show) and an uneven early jam. The second set is where the night truly clicks: He’s Gone launches into an inspired drum‑and‑space excursion that seamlessly folds into The Wheel, delivering one of the night’s high points. Vince Welnick’s keyboards draw mixed reactions – some listeners hear a “fire” vibe while others find him uninspired – but the dual‑drumming from Mickey Hart and Bill Kreutzmann is consistently praised for its power and texture. Overall, the band sounds solid with Phil Lesh anchoring the low end, yet Jerry Garcia’s guitar and vocal delivery divide fans, ranging from joyful sparkle to moments of weakness. The recording quality varies across sources, but the Neumann‑mic FOB capture (gd95-05-25.neumann.18801.sbeok.shnf) offers a clear window into this uneven but memorable performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings are clearly positive, highlighting solid performance and excellent front‑of‑house capture; two mixed reviews note both strong moments (He’s Gone, The Wheel) and weak spots (Jerry’s tone, some songs); one negative review offers no specifics. Net sentiment is mildly positive, warranting a modest +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd95-05-25.neumann.18801.sbeok.shnf",
+    "reason": "Good‑quality soundboard with clear Neumann capture; includes highlighted songs and minimal drop‑outs, making it the most reliable listening source."
+  },
+  "key_highlights": [
+    "He’s Gone → The Wheel sequence shines with tight drums and space.",
+    "Feel Like A Stranger opens the set with a warm, joyful vibe.",
+    "Vince’s keyboards draw mixed reactions – fire for some, uninspired for others.",
+    "Dual‑drumming from Mickey Hart and Bill Kreutzmann is consistently praised."
+  ],
+  "song_highlights": [
+    "Feel Like A Stranger",
+    "He's Gone",
+    "The Wheel",
+    "The Mighty Quinn (Quinn The Eskimo)"
+  ],
+  "band_performance": {
+    "Jerry": "Tone swings between joyful sparkle and weaker, thin moments; overall uneven especially in the first set.",
+    "Phil": "Solid bass foundation throughout with no major complaints.",
+    "Bob": "",
+    "Brent": "",
+    "Vince": "Divisive – praised as \"fire\" by some listeners while others find his playing uninspired.",
+    "Mickey": "Drums and space jams are highlighted as exceptional, driving the second‑set flow.",
+    "Billy": "Drumming consistently praised; contributes to the powerful dual‑drum texture."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-19T08:49:56.181925+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "He's Gone",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "The Mighty Quinn (Quinn The Eskimo)"
+    ]
+  ]
+}

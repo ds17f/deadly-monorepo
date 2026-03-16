@@ -1,0 +1,39 @@
+{
+  "summary": "Fans rave about the vibe and space jam, but there are no details on recording quality and one reviewer gave a zero rating.",
+  "review": "The first review is highly enthusiastic, awarding five stars and highlighting an exciting Space segment and Jerry’s presence. The second comment is very brief and assigns zero stars, offering no insight into performance or sound, leading to a mixed overall impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "One glowing five‑star review versus one terse zero‑star rating; with only two comments and no technical details, the average falls to a middling score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not enough information; reviewers only referenced the general feel and a brief mention of Space."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:55:09.324671+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-28.senn441.lynch.34561.flac16"
+}

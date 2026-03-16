@@ -1,0 +1,63 @@
+{
+  "summary": "Decent tape with modest sound; Black Peter shines while the rest of the show feels punchless.",
+  "review": "The recording is a typical taper's capture – listen first to gauge quality, as it lacks some punch in the mix. Musically the highlight is a strong performance of \"Black Peter,\" and the second‑set opener (Bertha → Playing In The Band → Terrapin Station) is pleasant, but much of the remainder falls flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Only two reviews (one very brief) with mixed opinions; show quality is average with a clear standout track, while recording quality is only vaguely described and seems merely adequate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer notes the tape is \"punchless\" and suggests listening before downloading; no specific comments on soundboard vs. audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Bertha",
+      "Playing In The Band",
+      "Terrapin Station",
+      "Uncle>River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set opens strong with Bertha, Playing In The Band and Terrapin Station, but the energy wanes afterward, leaving much of the show feeling flat."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle>River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:42:01.950944+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-30.beyerM88.russjcan.94477.flac16"
+}

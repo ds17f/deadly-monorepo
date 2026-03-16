@@ -1,0 +1,87 @@
+{
+  "summary": "Matrix recording that starts a bit muffled but clears up, delivering an energetic 1989 show highlighted by Jerry’s shredding solos on Let It Grow and Deal plus fluid second‑set jams.",
+  "review": "The performance is widely praised for its strong setlist and inspired playing – especially the heavy‑metal‑styled Garcia tone on Let It Grow and Deal, a seamless UJB → Space jam and tight Playin' reprise. The recording, a matrix mix, is a little muffled in the opening sections but becomes clear enough to enjoy the show’s high points.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and highlight superb musical moments, while recording quality is mixed but acceptable; overall rating reflects strong performance with decent audio."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Early parts sound muffled, but clarity improves by the second set; overall listenable with no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Deal",
+      "Uncle John's (UJB)",
+      "Space",
+      "Dark Star",
+      "Playin' Reprise Jam"
+    ],
+    "poor_songs": [
+      "Uncle John's (UJB)",
+      "Hey Jude"
+    ],
+    "setlist_flow": "Second set praised for fluid transitions and extended jams, though a few reviewers note rough segues (e.g., Dark Star → Playin', Playin' → Uncle John's). Overall pacing is energetic and well‑balanced."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone described as ‘shredding’ and ‘heavy metal’, especially on Let It Grow and Deal.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Jam after UJB into Space and the Playin' reprise into drums are highlighted as strong rhythmic moments."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's (UJB)": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' Reprise Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "1/2 Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:34:23.992642+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-16.mtx.hansokolow.96899.flac16"
+}

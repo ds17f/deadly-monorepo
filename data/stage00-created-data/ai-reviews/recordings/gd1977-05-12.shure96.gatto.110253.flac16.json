@@ -1,0 +1,96 @@
+{
+  "summary": "Fair audience tape of a spring ’77 show with standout Samson, Mississippi Half‑Step and a soaring Comes a Time despite pitch glitches.",
+  "review": "The performance shines with Jerry’s fluid solos, Bob’s fiery rhythm work and Keith’s hot keyboards, delivering highlights like Samson & Delilah, Mississippi Half‑Step, Tennessee Jed and an inspired Comes a Time. The audience recording suffers from noticeable pitch wobble, low‑end clipping and occasional distortion, but the music still comes through for most listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (70% weight) while noting significant recording flaws (30% weight), resulting in a solid but not stellar overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch wobble throughout (+/-1‑3%), low‑end clipping, occasional tape‑melt distortion and a weak house mix; crowd chatter present but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes a Time",
+      "Samson & Delilah",
+      "Mississippi Half-Step",
+      "Tennessee Jed",
+      "Brown Eyed Women",
+      "Sunrise"
+    ],
+    "poor_songs": [
+      "They Love Each Other"
+    ],
+    "setlist_flow": "First set is described as hot and fluid, while the second set drops a bit in energy for some listeners but still contains several high‑points such as Samson & Delilah and the extended Playing > Not Fade Away jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s soaring solos, his use of envelope filters and a well‑tuned vocal on Comes a Time.",
+    "Phil": "",
+    "Bob": "Bob (referred to as Bobby) receives repeated praise for his rhythm work on Tennessee Jed, Mississippi Half-Step and Samson & Delilah.",
+    "Keys": "Keith’s keyboards are highlighted as “hot” with both Moog and piano clearly audible; many call the keyboard work a highlight of the night.",
+    "Drums": "The drummers are described as tight and driving throughout the set."
+  },
+  "song_mentions": {
+    "Comes a Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "They Love Each Other": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:44:52.931708+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-12.shure96.gatto.110253.flac16"
+}

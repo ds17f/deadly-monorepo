@@ -1,0 +1,92 @@
+{
+  "summary": "Soundboard capture that’s mostly clear (with a few drum‑mix hiccups), spotlighting a monster Weather Report Suite, a scorching China Cat Sunflower → Feelin’ Groovy jam and an out‑of‑this‑world The Other One.",
+  "review": "The show is widely praised for its high energy and adventurous jams – the Weather Report Suite, China > Feelin’ Groovy, Truckin' into a wild Nobody’s Fault/Other One sequence and a soulful Me & Bobby McGee are repeatedly called out as highlights.  The Miller SBD source is generally good, though several listeners note occasional drum drop‑outs and a thin mix on early songs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "13 reviews average 4.7/5; the vast majority are glowing about performance, with only one moderate‑rating noting mix problems – overall a strong show on a solid soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well balanced; occasional drop of Johnny B. and a thin drum mix in the first half, but overall listenable and faithful to the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Weather Report Suite",
+      "China Cat Sunflower > Feelin' Groovy Jam",
+      "The Other One",
+      "Me & Bobby McGee",
+      "Big River",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Stella",
+      "Wharf Rat"
+    ],
+    "setlist_flow": "A sprawling 1st set with classic ’73 material builds into a second set that launches from Truckin' into an inventive Nobody's Fault/Other One sequence, capped by a quirky Wharf Rat → Stella pairing that some felt broke the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring leads in the Weather Report Suite, extra‑sweet vocals, commanding guitar tone and climactic solos throughout.",
+    "Phil": "Noted for an inspired solo in Rider and deep, resonant space‑jam work during The Other One (\"Phil & Ned‑like\" dissonances).",
+    "Bob": "Highlighted on Me & Bobby McGee and his prominent guitar presence early in the mix.",
+    "Keys": "Keith's keyboard work gets special mention – a solo splurge in Rider, strong presence on They Love Each Other, and a showpiece moment late in the set.",
+    "Drums": "Early drum levels are thin or missing in parts of the mix; later sections (e.g., Truckin' and The Other One) bring the drums back into clearer focus."
+  },
+  "song_mentions": {
+    "Weather Report Suite": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feelin' Groovy Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & Bobby McGee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:17:53.025016+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-08.sbd.miller.105607.flac16"
+}

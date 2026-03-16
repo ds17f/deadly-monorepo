@@ -1,0 +1,69 @@
+{
+  "summary": "A hybrid soundboard/audience matrix (slightly low‑pitch) captures a solid show highlighted by the marathon Scarlet>Fire and strong versions of They Love Each Other, Samson & Delilah, Playin' in the Band and Black Peter.",
+  "review": "The Miller_113354 recording is a mixed‑source (soundboard with audience patches) that runs a hair slow and sounds dry, requiring about +1 % pitch correction for the long Scarlet>Fire segment. Musically the concert is an average to good outing from Brent’s first year – the 33½‑minute Scarlet>Fire dominates, while They Love Each Other, Samson & Delilah, Playin' in the Band and Black Peter receive particular praise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show receives mixed feedback (average 3‑star rating) with several standout songs, while recording is decent but suffers from pitch and dryness issues; combined weighting yields a modest overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Hybrid soundboard‑audience source; SBD portion is dry and runs ~1 % slow, requiring pitch correction for the Scarlet>Fire through Terrapin. Audio patches are clean but overall mix lacks fullness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "They Love Each Other",
+      "Samson & Delilah",
+      "Playin' in the Band",
+      "Black Peter",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens strong with Jack Straw and a smoking They Love Each Other but settles into an average middle; second set is dominated by the epic Scarlet>Fire leading into tight performances of Samson, Playin' in the Band and Black Peter, ending with a spirited Good Lovin'."
+  },
+  "band_member_comments": {
+    "Jerry": "Shaky on the Scarlet>Fire opening but praised for his nuanced approach on They Love Each Other.",
+    "Phil": "Less highlighted; reviewers felt the Rhythm Devils outshone Phil in this show.",
+    "Bob": "",
+    "Keys": "Early Brent era noted; keyboards provide period flavor though no specific praise is given.",
+    "Drums": "Unique drumming intro on Looks Like Rain and strong Rhythm Devil work on Good Lovin'."
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:42:34.615988+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-01.sbd.miller.113354.flac16"
+}

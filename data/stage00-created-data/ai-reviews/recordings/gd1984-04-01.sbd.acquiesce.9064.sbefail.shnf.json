@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from noticeable speed-up, making it difficult to enjoy; show details are unclear.",
+  "review": "The sole reviewer flags that this tape runs faster than the original performance, resulting in pitch and tempo issues that severely detract from listening enjoyment. No information is provided about the musical quality of the concert itself, so the overall impression is negative due primarily to the flawed recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one 1‑star review mentions a major playback speed problem; no other feedback on performance or sound quality is available."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Playback appears sped up, causing unnatural pitch and tempo; no comments about clarity or mix beyond the speed issue."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details provided about the set or its pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T15:10:31.103448+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-01.sbd.acquiesce.9064.sbefail.shnf"
+}

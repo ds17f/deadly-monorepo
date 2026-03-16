@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard source with unknown audio quality; reviewers provided no details on performance.",
+  "review": "The sole review offers a brief personal note and assigns zero stars, giving no insight into the concert's musical merit or the recording's fidelity. The file appears to be a soundboard capture, but without listener feedback its technical quality remains unclear.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one extremely brief review with a zero‑star rating; no substantive comments to support a higher assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix balance, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information on set structure or pacing was mentioned in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T14:25:28.477322+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-30.sbd.barbella.tetzeli.fix-6678.34645.reflac.flac16"
+}

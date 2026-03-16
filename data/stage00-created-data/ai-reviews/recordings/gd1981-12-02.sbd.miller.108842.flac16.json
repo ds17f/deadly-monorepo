@@ -1,0 +1,82 @@
+{
+  "summary": "Good‑quality soundboard capture of a mixed‑but‑energetic 1981 show with standout Lost Sailor/Saint of Circumstance/Terrapin Station and Brent’s Never Trust a Woman, though the ultra‑fast Franklin’s Tower drew criticism.",
+  "review": "The Miller SBD recording is generally clear and well‑balanced, offering fans a solid listening experience despite a few comments about pitch correction. Musically the concert shines on Lost Sailor, Saint of Circumstance, Terrapin Station, Never Trust a Woman and a spirited China Rider, while an overly rushed Franklin’s Tower left some listeners disappointed. Overall the performance is energetic with strong second‑half momentum, but tempo choices make the show feel mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality shows both high points and notable flaws (tempo issues), while the soundboard recording is clean; weighted combination yields a solid but not stellar rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced SBD capture. A few listeners noted pitch‑correction processing, but no major dropouts or muddiness were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor",
+      "Saint of Circumstance",
+      "Terrapin Station",
+      "Never Trust a Woman",
+      "Hey Pockey Way",
+      "China Rider",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "The concert builds strong momentum in the second quarter, with an especially lively closing sequence. Tempo spikes (e.g., a very fast Franklin’s Tower) interrupt the flow for some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his friendly interaction and opening jams; one reviewer felt the rushed Franklin’s Tower limited improvisational space.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s work on Never Trust a Woman and Hey Pockey Way was highlighted as a high point, though some noted limited exploratory space.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Never Trust a Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Pockey Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:35:09.480463+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-02.sbd.miller.108842.flac16"
+}

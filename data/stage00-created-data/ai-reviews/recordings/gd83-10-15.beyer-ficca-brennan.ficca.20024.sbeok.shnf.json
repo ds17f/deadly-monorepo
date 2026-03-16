@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent audience (AUD) tape of an electrifying 1983 show, highlighted by a monster China → Rider, thunderous Big Railroad Blues and a soaring St. Stephen.",
+  "review": "The recording is praised for its crisp, full‑bodied audience sound that lets the band’s tight playing shine through.  Fans repeatedly cite the first‑set firepower (Brown Eyed Women, Let It Grow) and a second‑set that peaks with China → Rider, Big Railroad Blues, Day Job and an energetic St. Stephen.  Jerry’s guitar work, Brent’s keyboards and Mickey’s anticipatory drum fills receive consistent commendation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority are 4‑5 stars and extol both performance and sound quality; only a handful of mixed or low comments do not outweigh the strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Repeated mentions of ‘crispy’, ‘full’, ‘nice sound’, and ‘crystal clear mix’; a few early‑listen criticisms are quickly dismissed as the jams transcend any minor flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Big Railroad Blues",
+      "St. Stephen",
+      "Let It Grow",
+      "Brown Eyed Women",
+      "Day Job",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as a ‘killer’ opener with classic blues and folk numbers; the second set builds momentum, delivering a seamless flow of high‑energy jams and tight transitions that keep the crowd engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and playing are called ‘perfect’, ‘deft’, ‘tight’ and the driving force behind the China → Rider sequence.",
+    "Phil": "Phil’s bass work is praised for locking with the drums; a reviewer notes the first time a mic was set up specifically for him.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard fills are highlighted as ‘exceptionally tasty’, weaving around Jerry and providing backbone to the show.",
+    "Drums": "Mickey’s anticipatory drum fill before St. Stephen is singled out as a moment of group‑mind brilliance."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "St. Stephen": {
+      "positive_mentions": 10,
+      "negative_mentions": 2,
+      "total_mentions": 12
+    },
+    "Let It Grow": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Day Job": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Throwing Stones": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T12:29:16.483251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-15.beyer-ficca-brennan.ficca.20024.sbeok.shnf"
+}

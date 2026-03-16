@@ -1,0 +1,55 @@
+{
+  "summary": "Clear soundboard capture of a solid 1984 show with standout performances of Wharf Rat and The Other One, plus a creative second‑set flow.",
+  "review": "The recording is praised for its clarity and deep bass, offering an eight‑times clearer picture than other SBD sources despite some residual noise on Terrapin Station. The performance is described as solid and creatively upbeat, highlighted by strong renditions of Wharf Rat and The Other One, with a notable second‑set that breaks the usual Scarlet > Fire sequence. Overall listeners find the show enjoyable and worth revisiting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about both sound quality (clear, deep bass) and musical performance (standout songs, creative set), with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clear overall, deep plunging bass; some residual digi‑noise on Terrapin Station but far less than comparable sources. Minor track‑label issue noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid, venue‑focused performance with a creative second set; notable for breaking the usual Scarlet Begonias → Fire on the Mountain transition and featuring an engaging space jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:48:16.500943+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-05-08.sbd.walker-scotton.miller.77312.sbeok.flac16"
+}

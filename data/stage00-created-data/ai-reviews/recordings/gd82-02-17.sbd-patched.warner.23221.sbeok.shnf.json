@@ -1,0 +1,79 @@
+{
+  "summary": "A solid soundboard capture (with a bit of hiss) of an energetic 1982 Warfield show, highlighted by a scorching Scarlet > Fire, fiery Estimated, and blazing Sugar Magnolia.",
+  "review": "The recording is a patched SBD that sounds clear enough for most listeners, though a few hissy moments and AUD‑patch quirks are noted. Musically the concert bursts with energy – the second set especially shines with Scarlet > Fire, Estimated, All Over Now and a jazzy Bird Song, making it one of the more memorable 1982 outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of 15 reviews praise both performance and sound quality; only a handful mention hiss or flatness, so the overall rating is strong with high reviewer agreement."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced, but several listeners note hissy/high‑end noise and occasional AUD patch artifacts that may require EQ adjustment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Estimated",
+      "All Over Now",
+      "Sugar Magnolia",
+      "Bird Song",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds steadily, with a powerful first half and an especially fiery second set; transitions (e.g., Scarlet into Fire and the Estimated jam) are praised for their flow and energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note that Warfield brings out Jerry’s fire and keeps him in top form.",
+    "Phil": "Mixed feedback – some wish for more Phil early on, while others appreciate his late‑set appearance on Loser.",
+    "Bob": "Positive remarks about Bob ‘going off’ and adding humor to the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:18:16.377034+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-02-17.sbd-patched.warner.23221.sbeok.shnf"
+}

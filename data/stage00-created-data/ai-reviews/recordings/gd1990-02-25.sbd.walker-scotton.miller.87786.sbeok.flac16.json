@@ -1,0 +1,93 @@
+{
+  "summary": "A solid soundboard capture of a lively early‑1990 spring show, driven by Brent’s blazing Little Red Rooster solo and strong Wheel/Wharf Rat moments.",
+  "review": "The recording is a well‑mixed Charlie Miller remix of the Feb‑25‑1990 soundboard, praised for its clarity though a few listeners note vocals pushed forward and Mickey Hart’s drums a touch loud. Musically the concert shines with Brent Mydland’s fiery Little Red Rooster, a tight Wheel into Wharf Rat, and energetic renditions of The Last Time, Just A Little Light and Estimated Prophet, making it a fun, if occasionally uneven, snapshot of the Dead’s spring ’90 energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong performances; mixed comments on mix balance keep the rating just under four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Charlie Miller’s remix is generally praised as one of the best sources, with crisp overall sound. A minority note the vocal mix too forward, rhythm section recessed and Mickey Hart’s drum mic overly loud."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Little Red Rooster",
+      "The Wheel",
+      "Wharf Rat",
+      "Just a Little Light",
+      "Estimated Prophet",
+      "Gimme Some Lovin'",
+      "Heaven's Door"
+    ],
+    "poor_songs": [
+      "Eyes of the World",
+      "The Wheel"
+    ],
+    "setlist_flow": "First set described as a bit choppy but picks up momentum; second set fires after the Drums, with Wharf Rat and Heaven’s Door providing smooth transitions and strong emotional payoff."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being \"on top of his game\" and delivering strong leads (especially on Eyes of the World), though one reviewer felt his playing made some songs feel short and uninspired.",
+    "Phil": "",
+    "Bob": "Vocal performance highlighted on Estimated Prophet; noted for solid rhythm guitar chords on the “Sugar Mag” moment.",
+    "Keys": "Brent Mydland receives abundant praise – fiery solo on Little Red Rooster, slide‑guitar work likened to Willie Dixon, and overall energetic contribution.",
+    "Drums": "Mickey Hart’s drum mic is described as too loud in the mix; however, the post‑Drums segment energizes the second set."
+  },
+  "song_mentions": {
+    "Little Red Rooster": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Mag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:02:59.655668+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-02-25.sbd.walker-scotton.miller.87786.sbeok.flac16"
+}

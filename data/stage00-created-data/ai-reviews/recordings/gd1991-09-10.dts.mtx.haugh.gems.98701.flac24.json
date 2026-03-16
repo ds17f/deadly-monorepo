@@ -1,0 +1,31 @@
+{
+  "summary": "Positive fan impression of a hot, little‑known show but no details on recording quality",
+  "review": "The reviewer describes the concert as a very good, high‑energy performance that rivals more famous shows, yet provides no information about the audio source or sound quality. No specific songs or band member performances are mentioned, and the review is presented as a poetic tribute rather than a technical assessment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "low",
+    "rationale": "Only one review, which praises the show but gives no recording details; rating reflects a decent performance with unknown audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes the show was hot and energetic but does not discuss set pacing or song order."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T00:35:48.349948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-10.dts.mtx.haugh.gems.98701.flac24"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "Punchy audience recording captures a scorching 1990 show with blistering Scarlet Begonias, sweet Stella Blue and a fiery second‑set jam marathon.",
+  "review": "The crowd‑sourced tape is praised as one of the better audience recordings – punchy, clear and full of the heat of that Bonner Springs night. Musically the concert shines, especially Brent’s soaring keyboards on Scarlet Begonias, a tight Victim→Foolish transition, a standout Just A Little Light into Scarlet→Fire, and sweet moments from Stella Blue and Sugar Magnolia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 4‑5 stars and highlighted strong performances plus a high‑quality audience recording, giving the show a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as one of the better audience tapes – punchy, clear and ‘right there’ in the pit despite ambient heat noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Just A Little Light",
+      "Stella Blue",
+      "Sugar Magnolia",
+      "Loose Lucy",
+      "Loser",
+      "Victim",
+      "Foolish",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A hot, energetic first set followed by a second‑set jam marathon; transitions like Victim→Foolish and Scarlet→Fire were highlighted as especially inspired."
+  },
+  "band_member_comments": {
+    "Jerry": "Opened with Cold Rain & Snow and delivered his usual quirky banter; no specific performance criticism.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work was a major highlight, especially on Scarlet Begonias; noted as his last show before his passing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Just A Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:35:04.192560+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-04.133536.aud.Holtz.NakCM104.flac2496"
+}

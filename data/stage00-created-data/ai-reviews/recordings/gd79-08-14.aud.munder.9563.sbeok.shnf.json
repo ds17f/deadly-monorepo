@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent audience recording that captures a terrific show highlighted by a stellar Stella Blue and an electrifying Playing in the Band.",
+  "review": "The performance is praised for its strong start, a standout Stella Blue, and a soaring Playing in the Band after Jerry’s solo revives the set. The audience tape is noted as very good—close to sound‑board quality—even if the early portion sounds a bit rough. Overall the concert is regarded as a high‑energy, enjoyable Dead experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised with only minor criticisms; recording is described as very good audience tape close to soundboard, yielding a combined weighted rating around 4.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very good audience recording, close to sound‑board clarity; early songs may be slightly muffled but overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Playing in the Band",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Easy to Love You",
+      "Passenger",
+      "Stagger Lee",
+      "The Music Never Stopped"
+    ],
+    "setlist_flow": "Strong opening with a bouncy Tennessee Jed, a dip after Brent's new tune, then Jerry’s solo lifts the energy leading into a nice Terrapin Station and a great Playing in the Band; the second set builds momentum and ends on high."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo reignites the show and his guitar work on Stella Blue is called masterful.",
+    "Phil": "Provides solid bass foundation during the improvisational jam (mis‑named \"Space\").",
+    "Bob": "",
+    "Keys": "Brent Mydland’s debut composition “Easy to Love You” is noted, though opinions differ on its impact.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T22:40:10.736141+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-08-14.aud.munder.9563.sbeok.shnf"
+}

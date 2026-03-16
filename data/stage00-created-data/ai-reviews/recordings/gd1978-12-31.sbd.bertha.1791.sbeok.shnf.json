@@ -1,0 +1,136 @@
+{
+  "summary": "Excellent FM broadcast of a New Year's Eve show – solid sound despite slight static and standout performances from Sugar Magnolia through Johnny B. Goode.",
+  "review": "The recording captures the legendary late‑1978 NYE concert with a mostly clean FM broadcast mix (minor static and occasional low‑level guest bleed) that remains very listenable. Musically the band is in top form – opening hot with Sugar Magnolia, delivering a mellow Scarlet > Fire jam, an epic Friend of the Devil, a classic third‑set mini‑suite (Dark Star → The Other One → Dark Star Jam → Wharf Rat → Saint Stephen → Good Lovin'), and closing with a blistering Johnny B. Goode that showcases Jerry’s fiercest guitar work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Five‑star and four‑star reviews consistently praise the performance and only note minor static in the FM broadcast; the show is highlighted as one of the best NYE sets, justifying a high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Partial FM broadcast (Bertha DAW) with occasional slight static and low‑level guest mixes; overall clear and balanced, no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Scarlet > Fire",
+      "Friend of the Devil",
+      "Stagger Lee",
+      "Heart of Me",
+      "Sunshine Daydream",
+      "Samson & Delilah",
+      "Ramble on Rose",
+      "Dark Star",
+      "The Other One",
+      "Dark Star Jam",
+      "Wharf Rat",
+      "Saint Stephen",
+      "Good Lovin'",
+      "Casey Jones",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Me & My Uncle > Big River"
+    ],
+    "setlist_flow": "Three‑set marathon starting at midnight; the first set builds with hot openers, the second set stretches to a 1:45 jam marathon, and the third set delivers a classic mini‑suite that caps the night perfectly."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is praised throughout – especially on Johnny B. Goode (called his hardest rock) and the Dark Star/Other One sequences.",
+    "Phil": "",
+    "Bob": "Bob’s slide work and vocal quirks are highlighted (“Bobby’s slide practice”, “Bobby screams into mic”), generally viewed positively.",
+    "Keys": "Keith’s keyboard moments noted – an Itsy‑Bitsy lick into Casey Jones and solid support throughout the jams.",
+    "Drums": "Bill’s drumming is steady; the Drums segment includes Kesey’s Thunder Machine, though its mic level is unclear."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle > Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Heart of Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T18:22:33.474004+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-31.sbd.bertha.1791.sbeok.shnf"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard capture of the first Soldier Field show, highlighted by a soaring Shakedown Street and an epic Playin' → Terrapin → Dark Star sequence.",
+  "review": "The upgraded Charlie Miller SBD transfer delivers crystal‑clear audio that lets the band's tight playing shine despite the windy, rainy stadium ambience. Fans rave about the first set’s jam‑heavy flow and a second‑set climax featuring Shakedown Street, Playin' in the Band into Terrapin Station and a soaring Dark Star, with the weather adding an unforgettable backdrop.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six reviews are 4‑5 stars and uniformly praise both the musical performance and the soundboard quality; the show is described as jam‑rich and memorable, while the recording is called an upgrade and crisp."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced SBD transfer by Charlie Miller; minor ambient wind noise from the venue but overall clear and detailed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Masterpiece",
+      "Let It Grow",
+      "Playin' in the Band",
+      "Terrapin Station",
+      "Dark Star",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for nonstop jamming and strong song choices; second set starts a bit slowly but lifts off with Playin' into an extended Terrapin → Dark Star jam, delivering a dreamy yet powerful finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry Garcia’s unexpected sax‑like lines on Shakedown Street are noted and his guitar work is praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:05:26.218040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-22.sbd.miller.105541.flac16"
+}

@@ -1,0 +1,86 @@
+{
+  "summary": "Crystal‑clear soundboard recording of the November 3 1984 Berkeley show, highlighted by a blistering Feel Like A Stranger → Cumberland and a soaring Jam‑Drums‑Space sequence.",
+  "review": "The Miller SBD transfer is praised as one of the best‑sounding Dead tapes on the Archive – crisp mids, deep bass that makes sub‑woofers work, and only occasional wobble noted by a few reviewers. Musically the concert shines with an energetic second set, standout renditions of Feel Like A Stranger > Cumberland, It Must Have Been The Roses > The Music Never Stopped, and a powerful Jam‑Drums‑Space excursion, though some listeners felt the latter half wavered.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (8/10) give 5‑star ratings and laud both the performance and the superb soundboard quality; only a few note minor inconsistencies, keeping the overall score in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with strong low‑end that ‘works the sub‑woofers’; Miller’s transfer praised as one of the best SBDs on Archive. A couple of reviewers mention occasional wobble or unevenness in parts of the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like A Stranger > Cumberland",
+      "It Must Have Been The Roses > The Music Never Stopped",
+      "Alabama Getaway",
+      "Brokedown Palace",
+      "Jam > Drums > Space",
+      "Down in the Bottom"
+    ],
+    "poor_songs": [
+      "Down in the Bottom"
+    ],
+    "setlist_flow": "A quirky, intimate second‑set sequence that blends classic favorites with newer material; high energy early in set II (Stranger → Cumberland) and a deep‑cut Down In The Bottom that split opinion."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as solid throughout; his solo on the second set praised for creativity, especially when sharing mic with Bob.",
+    "Phil": "Bass highlighted as a ‘bass lover’s dream’ with powerful low‑end; several reviewers note Phil sounds amazing.",
+    "Bob": "Bob Weir’s voice noted as “shot” by one reviewer but still part of an electrifying performance; his interaction with Jerry during Gloria praised.",
+    "Keys": "Brent Mydland receives consistent praise for sounding great and adding energy to the mix.",
+    "Drums": "Jam → Drums → Space segment singled out as a favorite, indicating strong drumming throughout."
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been The Roses > The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jam > Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Down in the Bottom": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Gloria": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:03:42.685682+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-11-03.sbd.miller.110773.flac16"
+}

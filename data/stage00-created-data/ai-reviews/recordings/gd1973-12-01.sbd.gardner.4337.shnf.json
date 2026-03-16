@@ -1,0 +1,69 @@
+{
+  "summary": "Decent soundboard capture of a mixed‑quality show with hot moments like Mexicali Blues, Big River and Goin' Down the Road Feeling Bad",
+  "review": "The Gardner matrix‑derived soundboard (sbd) is fairly clear but shows some wobble, slight pitch correction needs and occasional wow‑flutter. Musically the concert is uneven – a flat first set followed by standout performances of Mexicali Blues, Big River, They Love Each Other, Me & My Uncle, Uncle John's Band and a joyous Goin' Down the Road Feeling Bad, though fire‑code interruptions break the flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "One detailed review notes an average show (3 ★) with several high points and a decent but not pristine recording, leading to a blended rating around the low‑mid 3 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear Gardner matrix source; slight wobble in width/hall, -1 % pitch correction needed, some wow & flutter artifacts from transport fluctuations."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mexicali Blues",
+      "Big River",
+      "They Love Each Other",
+      "Me & My Uncle",
+      "Uncle John's Band",
+      "Goin' Down the Road Feeling Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set starts flat and feels warm‑up; fire‑code interruptions and banter disrupt second‑set flow, but after a brief warm‑up the band launches into strong, high‑energy numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Jer races on Mexicali Blues, starts Uncle John's Band in a different key with weird diatonic scale, and 'fires everybody' during the set – overall praised for his energy.",
+    "Phil": "",
+    "Bob": "Bobby backs into Keith's hot rod on early songs; no specific vocal or guitar critique beyond that.",
+    "Keys": "Keith's playing described as a ‘hot rod’ underpinning the early set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:37:45.240033+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-01.sbd.gardner.4337.shnf"
+}

@@ -1,0 +1,55 @@
+{
+  "summary": "Great‑sounding matrix recording of the spring ’89 tour with standout U.S. Blues and a beautifully executed China Doll.",
+  "review": "The show is generally praised for a strong first set that includes an exciting Dupree’s Diamond Blues → Let It Grow → U.S. Blues sequence, while the second set delivers a nicely played China Doll with a long Jerry solo. Recording quality is described as “great sounding” and “pretty darn good,” making the performance easy to enjoy despite no groundbreaking moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews highlight solid musical performance (especially U.S. Blues and China Doll) and a high‑quality matrix recording, yielding a rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers repeatedly note the recording sounds great or pretty darn good; no significant drop‑outs or mix problems mentioned, aside from a wish for a Healey mix on other shows."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "U.S. Blues",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for its tight playing and the surprise Dupree’s → Let It Grow → U.S. Blues sequence; second set deemed decent but lacking the usual open jams, though China Doll shines."
+  },
+  "band_member_comments": {
+    "Jerry": "Long, strong solo on China Doll noted; his voice sounded a bit worn.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's playing described as shining throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "U.S. Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:45:30.386409+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-05.sbd-matrix.unknown.5491.sbefail.shnf"
+}

@@ -1,0 +1,99 @@
+{
+  "summary": "Strong 1988 Saratoga performance with standout Scarlet>Fire and other gems, captured on a decent soundboard source despite some treble‑thin FM matrix quirks.",
+  "review": "The show shines with a superb second set – highlights include a smoking Scarlet > Fire, an astonishing Goin' Down the Road Feelin' Bad, and a roaring Stella Blue finale. Recording-wise the newer SBD capture is clear enough to enjoy, though earlier FM‑matrix tapes are thin and missing parts of the band. Overall it’s a solid 1988 outing that rewards listeners who can work around the occasional mix shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviewers praise the musical performance heavily while noting recording imperfections; weighting show quality higher yields a rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Earlier FM‑matrix sources are trebly‑thin, missing Phil and one drummer, and lack Brent's mix; the newer SBD (134530_sbd_miller) is clearer but still imperfect with slight pitch issues on a few tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Hell in a Bucket",
+      "Candyman",
+      "Goin' Down the Road Feelin' Bad",
+      "I Need a Miracle",
+      "Stella Blue",
+      "Not Fade Away",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "First set is solid but average (C+), while the second set ramps up to an A‑ level, delivering high energy peaks and seamless transitions that keep the momentum alive."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for leading jams, tight vocals, and standout solos on multiple songs; noted for taking extra verses on Knockin' on Heaven's Door.",
+    "Phil": "",
+    "Bob": "His guitar is mixed out early and his vocal shouting on Estimated is mentioned as a drawback.",
+    "Keys": "Brent cuts loose on several numbers (Candyman, Take You Home) and adds intensity; overall keyboard work is viewed positively despite mix issues.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feelin' Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:41:39.396205+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-28.134530.sbd.miller.flac16"
+}

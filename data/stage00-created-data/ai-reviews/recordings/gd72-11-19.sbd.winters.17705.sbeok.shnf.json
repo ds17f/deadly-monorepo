@@ -1,0 +1,99 @@
+{
+  "summary": "Soundboard source with fair audio fidelity, yet the performance shines on Bird Song, Box of Rain, Black‑Throated Wind and a polarizing Dark Star.",
+  "review": "The show is praised for strong renditions of Bird Song, Box of Rain, Black‑Throated Wind, Playin’ in the Band and several rare treats like Tomorrow Is Forever.  Recording quality is mixed – later tracks are clear, but the first songs suffer from low levels, hiss and occasional splice cuts.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the musical performance 4‑5 ★ while noting both good and poor aspects of the audio; weighting 70 % show (≈4.6) and 30 % recording (≈3.2) yields a combined rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Early tracks are low‑level with hiss and a few noticeable splice cuts; later portions sound clear and balanced, but overall the tape suffers from occasional dropouts and could benefit from remastering."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Box of Rain",
+      "Black Throated Wind",
+      "Playin' in the Band",
+      "Ramble On Rose",
+      "Stella Blue",
+      "Around and Around",
+      "Don't Ease Me In",
+      "Tomorrow Is Forever"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "The set flows well with a solid first half, strong jams in the middle, and a divisive Dark Star that some find weak while others love; overall pacing is praised despite missing intro tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is described as crisp, snappy and full of improvisational riffs; vocals on Ramble On Rose are highlighted.",
+    "Phil": "Mixed feedback – a weak solo in Dark Star for some, but his bass shines on Box of Rain and he adds quirky noises that many enjoy.",
+    "Bob": "",
+    "Keys": "Keith’s piano work is called “nice” and “fun”, with a brief “Stars and Stripes Forever” quote after Box of Rain.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around and Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tomorrow Is Forever": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:02:56.379257+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-11-19.sbd.winters.17705.sbeok.shnf"
+}

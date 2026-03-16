@@ -1,0 +1,31 @@
+{
+  "summary": "No details on recording or performance; reviewer gave a zero‑star rating and left the show early.",
+  "review": "The sole review provides no information about sound quality, setlist, or individual performances. The reviewer’s zero‑star rating and comment that they sang for a bit then “flew on” suggest a negative overall impression, but there are no concrete details to assess either the recording or the show.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a zero‑star rating and no substantive comments; insufficient data for a reliable assessment, but the rating indicates strong dissatisfaction."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on sound quality or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T20:40:26.329629+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-07.Nak300CP4.Baker.Keo.125119.Flac2496"
+}

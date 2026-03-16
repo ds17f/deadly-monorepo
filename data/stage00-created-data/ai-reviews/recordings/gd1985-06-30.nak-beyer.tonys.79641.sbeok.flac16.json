@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent audience recording of an epic show, highlighted by a smoking Shakedown and blazing Sugar Magnolia with crisp sound and strong second‑set performances.",
+  "review": "The tape captures a legendary Dead concert that many fans rank among the best, especially for its fiery Shakedown and high‑octane Sugar Magnolia. Reviewers praise the audience recording as one of the cleanest ever uploaded, though they note a clumsy Cryptical and a missing second half after The Other One. Overall the performance is described as deep, well‑played, and unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Four detailed reviews are overwhelmingly positive (average 4.5 stars) with minor performance complaints; recording is repeatedly called the best audience source, justifying a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience tape praised as the cleanest and fullest of its kind, louder than comparable Oade recordings with low background noise and good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Sugar Magnolia",
+      "He's Gone"
+    ],
+    "poor_songs": [
+      "Cryptical"
+    ],
+    "setlist_flow": "First set described as ‘white‑bread’, but the second set is tasty and epic, delivering strong transitions and memorable moments despite a few slip‑ups."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work on \"He's Gone\" is highlighted as especially nice.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:04:13.086598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-30.nak-beyer.tonys.79641.sbeok.flac16"
+}

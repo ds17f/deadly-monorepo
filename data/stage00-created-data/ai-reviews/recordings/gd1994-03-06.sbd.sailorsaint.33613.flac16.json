@@ -1,0 +1,52 @@
+{
+  "summary": "Soundboard source plagued by overly hot levels and a clicking bass drum, yet the first set dazzles with a scorching Help on the Way > Slipknot! and Jerry’s on‑fire playing.",
+  "review": "The performance captures Jerry Garcia at peak energy, especially during Help on the Way flowing into Slipknot!, delivering torrential guitar volleys that keep the first set high‑octane. Recording-wise the mix is too hot, with frequent dropouts and a bass drum that sounds like a click, which mutes key moments such as the Let It Grow solo and makes the big jam feel rushed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is strong (≈4/5) while recording quality is poor (≈2/5); weighted average yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Levels are excessively hot, causing distortion; bass drum registers as a constant click; noticeable dropouts especially during the Let It Grow solo and later jam sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way",
+      "Slipknot!"
+    ],
+    "poor_songs": [
+      "Let It Grow"
+    ],
+    "setlist_flow": "First set is energetic and tightly paced, highlighted by seamless transitions; however the latter part feels rushed as the band cuts off a burning Jerry solo to end the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'so freaking ON' with torrential volleys; his solo in Let It Grow is marred by dropouts, but overall he’s on fire.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bass drum registers as a click throughout the recording."
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:46:10.089084+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-06.sbd.sailorsaint.33613.flac16"
+}

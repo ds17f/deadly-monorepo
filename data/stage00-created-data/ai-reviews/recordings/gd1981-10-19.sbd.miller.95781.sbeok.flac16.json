@@ -1,0 +1,109 @@
+{
+  "summary": "Soundboard capture of a high‑energy 1981 Europe show with standout Loser, Scarlet > Fire and Let It Grow performances; recording is decent though the mix is a bit muddy.",
+  "review": "Fans rave about this late‑October 1981 Barcelona concert, highlighting Garcia’s aggressive solos on Loser, the fiery Scarlet > Fire segue and an inspired Let It Grow. The soundboard source sounds good enough for most listeners, but several reviewers note a messy mix that lets keyboards dominate and pushes Weir low in the front‑of‑house balance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9 out of 11) are 4–5 stars and praise both the setlist and performance, while recording comments note only moderate mix issues, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for enjoyment; however the mix is described as ‘a mess’ with keyboards and drums often overwhelming vocals, and Bob Weir’s guitar/vocals sitting low in the front‑of‑house."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Scarlet > Fire",
+      "Sugar Magnolia",
+      "Let It Grow",
+      "The Other One",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy end of the European tour; both sets praised, with a particularly creative and Spanish‑flavored second set that flows smoothly from Lost Sailor through Space and beyond."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as in fine form—creative, aggressive and crafting memorable solos especially on Loser.",
+    "Phil": "Phil’s bass intro on Fire is called ‘clear as a bell’ and adds a New‑Orleans groove to the Scarlet > Fire transition.",
+    "Bob": "Weir is noted as often low in the mix, detracting from his vocal/guitar presence.",
+    "Keys": "Brent (on B3) shines, with keyboards highlighted but occasionally dominating the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:14:05.388877+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-19.sbd.miller.95781.sbeok.flac16"
+}

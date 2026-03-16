@@ -1,0 +1,99 @@
+{
+  "summary": "Crisp, clean SBD capture of a high‑energy 1983 show with Phil’s bass leading the band and multiple standout jams.",
+  "review": "The five‑star reviews rave about this soundboard recording’s crystal‑clear mix (with only occasional crackle) and praise an explosive first set followed by a uniquely uptempo, jam‑heavy second set. Highlights include a blazing China Cat Sunflower → I Know You Rider, a monster The Other One, and Phil Lesh’s commanding bass work, while Jerry Garcia’s guitar is described as “charging” and Brent Mydland’s keyboards add extra sparkle. Overall the performance is deemed a hidden gem from what many consider the peak of the 1983 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All five reviews give 5‑star ratings, consistently praising both the musical performance and the soundboard quality; no negative comments were found."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crisp, clean and superlative with only minor crackle/hiss in spots; a few reviewers note the mix could use slight EQ tweaks but overall the SBD is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "The Other One",
+      "Big Railroad Blues",
+      "Beat It on Down the Line",
+      "They Love Each Other",
+      "Dewimmina"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Explosive, uptempo first set followed by a uniquely cohesive and high‑energy second set; the concert is praised for its seamless transitions and overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is described as “charging,” “tearing through Big Railroad,” and delivering manic flurries on Cumberland.",
+    "Phil": "Phil Lesh receives repeated acclaim for leading the band, providing rumbling mastery, and being front‑and‑center throughout the show.",
+    "Bob": "",
+    "Keys": "Brent Mydland is highlighted for his standout moments (Dixie, Saturday Night) and overall keyboard brilliance.",
+    "Drums": "Mickey Hart is noted as slightly rigid and overbearing; no specific comment on Bill Kreutzmann."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It on Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dewimmina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dixie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:16:32.055723+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-10.139299.sbd.eaton.miller.flac1648"
+}

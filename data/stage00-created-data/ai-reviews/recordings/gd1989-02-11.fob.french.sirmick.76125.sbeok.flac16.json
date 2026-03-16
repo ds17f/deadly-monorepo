@@ -1,0 +1,39 @@
+{
+  "summary": "Good recording overall but missing a portion of Black Peter",
+  "review": "The tape is generally clear and well‑balanced, though reviewers note an unfortunate edit that cuts out the middle of Black Peter. Aside from that gap, the sound quality is solid, making it a decent listen for collectors despite the incomplete performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one brief review; it praises the recording quality but flags a significant missing section, leading to an average rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Clear and balanced overall, but Black Peter is cut from \"...in pain\" into the solo, creating a noticeable gap."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:44:40.802556+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-02-11.fob.french.sirmick.76125.sbeok.flac16"
+}

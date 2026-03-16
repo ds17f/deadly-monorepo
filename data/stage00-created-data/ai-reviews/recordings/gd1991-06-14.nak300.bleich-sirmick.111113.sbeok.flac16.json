@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic first‑time listener praises the concert’s energy and overall performance, though no recording details are provided.",
+  "review": "The reviewer’s excitement is palpable, describing a powerful, all‑encompassing vibe that made this show stand out among many Dead concerts they’ve attended. They note that Bobby (Bob Weir) steered the band back to its roots for a memorable finish, but give no information about the audio source or sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "A single five‑star review indicates a highly enjoyable performance, but the lack of any recording‑quality comments forces a cautious rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific remarks about soundboard, audience mix, clarity, or other technical aspects were made by the reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer emphasizes overall energy and a strong closing led by Bobby, but provides no detailed commentary on song sequence or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Mentioned as 'Bobby' who guided the band back to its roots for the finale.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T21:00:53.708465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-14.nak300.bleich-sirmick.111113.sbeok.flac16"
+}

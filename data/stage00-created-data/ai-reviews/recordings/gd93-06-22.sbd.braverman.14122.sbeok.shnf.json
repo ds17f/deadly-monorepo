@@ -1,0 +1,88 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a summer ’93 Deer Creek run, highlighted by a monster Help→Slip→Franklin’s and one of the best Tom Thumb performances of the era.",
+  "review": "The recording is a pristine sound‑board mix that lets Vince’s piano sit nicely in the background while preserving the full punch of Jerry’s guitar and Phil’s vocal nuances.  The show shines on the opening Help‑Slip‑Frank sequence, an unforgettable Tom Thumb Blues, and a second set that rolls through Victim, L.L. Rain, He's Gone and a soaring High Time, despite a weaker first set and a few uneven moments like Days Between and Johnny B. Goode.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.1★, with the majority praising both performance and recording; strong consensus on standout songs and excellent soundboard quality pushes the AI rating into the 4‑star range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly note the boards are crystal‑clear, well‑balanced and free of major drop‑outs.  Some mention Vince’s keyboards can bite into the mix on other tapes, but here they stay nicely in the background, giving a clean overall sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's",
+      "Tom Thumb Blues",
+      "High Time",
+      "Victim",
+      "L.L. Rain",
+      "He's Gone",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [
+      "Days Between",
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "The first set is described as a bit uneven, but the killer Help‑Slip‑Frank opener sets a high bar that carries into an exceptional second set where the band strings together Victim, L.L. Rain, He's Gone and a soaring High Time, creating a classic summer ’93 vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for shredding on Slipknot, finger‑picking on Tom Thumb, and delivering an emotional solo on He's Gone; described as “on point” and “the heart of the show.”",
+    "Phil": "His vocal delivery on Tom Thumb is highlighted as crystal‑clear and powerful; a few reviewers note he should not sing on certain numbers, but overall his bass work and harmonies are praised.",
+    "Bob": "Vocals described as limited compared to Jerry in one review, yet also credited with solid performance on High Time and keeping the vibe alive.",
+    "Keys": "Vince’s piano is lauded for tasteful, classy playing and strong presence without overwhelming the mix; a few note occasional mix quirks on other tapes but not here.",
+    "Drums": "Bill Kreutzmann’s drumming called “nice drumz” and generally solid, though one reviewer calls the Miracle set “average.”"
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Tom Thumb Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "High Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Victim": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "L.L. Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T14:59:24.711472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-22.sbd.braverman.14122.sbeok.shnf"
+}

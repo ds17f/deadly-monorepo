@@ -1,0 +1,75 @@
+{
+  "summary": "Matrix recording with echo‑filled, slightly muddy sound that benefits from pitch correction, capturing a strong Red Rocks show highlighted by the Boss Man return and a stellar Loser/Cassidy/Far From Me sequence.",
+  "review": "The show is widely praised for its emotional setlist—Big Boss Man’s surprise comeback, a tight first‑set flow, and a standout Loser → Cassidy → Far From Me stretch topped by a soaring Not Fade Away. The source is an Healy‑matrix (soundboard blended with audience mics) that sounds echoey and a bit muddy out of the box, running fast and needing EQ and pitch correction to sound its best.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently rated high (4‑5 stars) while recording quality is mixed (1‑4 stars). Weighting 70 % show and 30 % recording yields a combined rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Echoy bleed from on‑stage mics, moderately muddy bass, crowd noise present throughout, runs ~2 % fast and benefits from pitch correction and mid‑high EQ adjustments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boss Man",
+      "Loser",
+      "Cassidy",
+      "Far From Me",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Estimated"
+    ],
+    "setlist_flow": "The first set builds nicely with a surprising Boss Man opener and tight jams; the second set shifts into vivid improvisations (Stella, Throwing Stones) and finishes with an emotional three‑song encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is highlighted for ‘top‑grade flights’ on Not Fade Away and his intense delivery during the Stella sequence.",
+    "Phil": "Phil’s bass “bombs” are noted in the first set, though they’re partially buried by the matrix mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Drums→Space segment is described as decent and typical for the era."
+  },
+  "song_mentions": {
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:49:57.955196+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-13.sbd.unknown.7992.sbeok.shnf"
+}

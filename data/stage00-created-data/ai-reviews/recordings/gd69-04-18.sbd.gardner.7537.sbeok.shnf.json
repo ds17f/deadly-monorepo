@@ -1,0 +1,84 @@
+{
+  "summary": "Soundboard recording with good vintage fidelity captures a mostly strong ’69 show highlighted by the Cryptical‑Other One sandwich, Love Light and King Bee.",
+  "review": "The tape offers solid sound quality for its era – clear enough to enjoy the band despite some hiss and occasional flatness. Musically the concert shines on the Cryptical → The Other One → Cryptical sequence, a smoking Love Light, and powerful renditions of Hard to Handle and King Bee, though a few listeners note a sluggish vibe and a weak Cosmic Charlie. Overall the performance is well‑regarded among 1969 shows.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical highlights and find the soundboard recording listenable; only one low rating points to a weak performance, resulting in an overall four‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear for a 1969 tape with a little hiss and occasional flatness; one reviewer calls it the best soundboard of this show, another notes mediocre sound but nothing prohibitive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical > The Other One > Cryptical",
+      "Love Light",
+      "Hard to Handle",
+      "King Bee"
+    ],
+    "poor_songs": [
+      "Cosmic Charlie"
+    ],
+    "setlist_flow": "The set opens with a power outage during Hard to Handle but recovers quickly; the second half features tight transitions, especially the Cryptical‑Other One sandwich and an extended Love Light that keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Flat bass noted by one reviewer (DanK).",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sitting on Top of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Love Light": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cryptical > The Other One > Cryptical": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "King Bee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T13:26:46.670082+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-04-18.sbd.gardner.7537.sbeok.shnf"
+}

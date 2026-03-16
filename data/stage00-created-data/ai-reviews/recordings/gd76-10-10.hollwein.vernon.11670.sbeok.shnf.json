@@ -1,0 +1,73 @@
+{
+  "summary": "A listenable, echo‑y audience recording of the Oct 10 1976 show that shines thanks to a spectacular second set – Dancin' > Wharf Rat > Dancin', El Paso, Loser and more.",
+  "review": "The tape is an audience (AUD) source with some muddiness and echo, but fans find it sufficiently clear to feel present at the concert. Musically the show is lauded for its seamless second‑set flow, especially the Dancin' → Wharf Rat → Dancin' sequence, plus standout performances of El Paso, Loser, Cassidy and powerful vocal harmonies from Donna Jean. Overall the performance is described as a “pure beauty” that turned many first‑time listeners into lifelong Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars and praise the musical performance heavily, while noting only moderate recording flaws; this yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Not the clearest tape – some echo, occasional muffled bass and lack of high‑frequency detail – but generally listenable and even atmospheric for many listeners. A few reviewers wanted a soundboard version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' in the Street",
+      "Wharf Rat",
+      "El Paso",
+      "Loser",
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is highlighted for its seamless segues (especially Dancin' → Wharf Rat → Dancin') and overall “pure beauty,” with strong vocal harmonies and energetic jams throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is praised – slide on a wah pedal during the Dancin' jam, solid tone and improvisational flair.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dancin' in the Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:24:09.535677+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-10.hollwein.vernon.11670.sbeok.shnf"
+}

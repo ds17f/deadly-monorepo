@@ -1,0 +1,39 @@
+{
+  "summary": "Great show with a standout Cumberland Blues, but the recording suffers from a jarring cut and a brief hiccup during Help on the Way.",
+  "review": "The concert is praised as an excellent performance, highlighted by an \"awesome\" rendition of Cumberland Blues. However, listeners encounter a disruptive cut in the middle of that song and a short glitch during Help on the Way, which detracts from an otherwise solid recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One review gives a moderate 3‑star rating, noting a great show but significant recording interruptions; the mixed feedback leads to an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Nice overall quality but contains a jarring cut in the middle of Cumberland Blues and a brief hiccup during Help on the Way."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well and is enjoyed by listeners, though the mid‑song cut interrupts the momentum briefly."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:05:49.596092+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-12.senn441.chasingwilma.101954.sbeok.flac16"
+}

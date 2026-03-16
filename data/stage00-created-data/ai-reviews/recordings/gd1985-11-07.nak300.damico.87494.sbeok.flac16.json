@@ -1,0 +1,57 @@
+{
+  "summary": "A high‑energy show with a standout “Stella Blue” and fiery Midnight Hour encore, captured in a solid recording that fans find clean and well‑balanced.",
+  "review": "The reviewer raves about Jerry’s inventive guitar runs on Stella Blue, the crisp vocal harmonies and the wild Midnight Hour encore featuring Bobby and Brent. The performance is remembered as “rock‑and‑freaking‑roll” with a tight tempo on Deal and an early Touch of Grey, while the recording sounds clean enough to let those details shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic 5‑star review; both show and recording are praised, but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes a slightly different mix but overall describes the sound as clean with good vocal balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "The Midnight Hour",
+      "Deal",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic full‑set performance highlighted by a powerful encore; pacing described as high‑energy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Cool guitar runs and a slightly different tone on Stella Blue.",
+    "Phil": "Mention of his massive amp rig, but no specific comment on playing.",
+    "Bob": "",
+    "Keys": "Bobby and Brent’s vocals go wild on the Midnight Hour encore.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:02:17.791986+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-07.nak300.damico.87494.sbeok.flac16"
+}

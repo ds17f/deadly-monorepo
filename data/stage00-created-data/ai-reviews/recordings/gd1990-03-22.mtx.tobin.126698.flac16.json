@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent matrix recording captures a beautiful show, though Brent’s keyboard misstep in the latter half of the second set dents an otherwise strong performance.",
+  "review": "The MTX source delivers clear, immersive audio that makes listeners feel like they’re right in the venue, and fans describe the concert as “beautiful.” The only drawback noted is Brent’s sloppy handling of a song late in the second set, which some reviewers felt turned a good moment into a weak one.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Two reviews – both praise the matrix recording’s quality (5‑star) but one points out a performance slip, yielding an overall balanced rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear and immersive sound; reviewers say it feels like being there. No specific technical flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Overall beautiful concert, but the second set suffers a dip when Brent’s keyboard playing goes off‑track on a song in its latter half."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent screws the pooch by taking a bad song and making it worse in the latter half of the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T04:46:06.670538+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-22.mtx.tobin.126698.flac16"
+}

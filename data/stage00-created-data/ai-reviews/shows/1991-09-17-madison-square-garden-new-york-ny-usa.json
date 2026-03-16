@@ -1,0 +1,62 @@
+{
+  "summary": "Solid Samson & Eyes of the World with a standout Picasso Moon",
+  "blurb": "The show features a tight second set highlighted by a strong Samson solo and an elegant Eyes Of The World. Jerry delivers a compelling lead on those numbers while his earlier playing feels muted, especially on Black Peter. Picasso Moon shines as the only first‑set highlight.",
+  "review": "September 17, 1991 at Madison Square Garden delivered a mixed bag of Dead magic. The first set drifted a bit, with most of the energy lagging until the luminous \"Picasso Moon\" rescued it from an otherwise listless feel – even \"Black Peter\" suffered from half‑assed guitar work. The second set, however, turned the tide: \"Samson & Delilah\" featured a focused Jerry Garcia solo that locked the band into a tight groove, and the ensuing \"Eyes Of The World\" unfolded with elegant interplay and melodic depth. Drums and Space flowed smoothly into the finale, but the overall momentum never quite matched the high points. For fans seeking the clearest capture of this uneven night, the soundboard recording is the best bet, offering pristine balance that lets the strong moments shine despite the occasional dip.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings (matrix and audience) praise the show as positive, highlighting Samson & Delilah and Eyes Of The World, while one soundboard source notes a muted overall vibe with a weak Black Peter. The consensus leans positive but acknowledges notable dips, yielding a moderate sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-09-17.sbd.unknown.12847.sbeok.shnf",
+    "reason": "Clear, well‑balanced soundboard capture that includes the full set; despite muted energy it presents the standout moments with the best fidelity."
+  },
+  "key_highlights": [
+    "Picasso Moon stands out as the lone first‑set high point.",
+    "Samson & Delilah showcases a focused Jerry solo and tight band interplay.",
+    "Eyes Of The World delivers an elegant, melodic journey.",
+    "Overall set feels muted with Black Peter dragging down momentum."
+  ],
+  "song_highlights": [
+    "Picasso Moon",
+    "Samson & Delilah",
+    "Eyes Of The World"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry's playing is uneven; early songs feel listless, particularly on Black Peter, but he recovers with a strong solo on Samson & delivers a compelling lead on Picasso Moon.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-18T01:15:27.819949+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Picasso Moon"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Black Peter",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

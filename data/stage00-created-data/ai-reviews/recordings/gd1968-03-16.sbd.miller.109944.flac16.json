@@ -1,0 +1,81 @@
+{
+  "summary": "Clear soundboard recording with a high‑energy ‘68 show – highlights include Alligator > Caution, Dark Star and a potent The Other One.",
+  "review": "The Miller‑sourced SBD captures an early‑1968 Dead that was firing on all cylinders. Reviewers rave about the tight Dark Star, the blazing Alligator > Caution sequence and the newly‑noticed drum segue into The Other One, while noting a few tape cuts and pitch quirks that require correction. Overall the performance is praised as exploratory and energetic, and the audio is considered clean enough for repeated listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (7 out of 8) award 5‑star ratings and praise both the musical performance and the clear soundboard source; only minor recording glitches are mentioned, so a strong rating is justified."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced SBD with channel swap issues that need –1%/+1% pitch correction; occasional tape cuts (TIFTOO, Morning Dew intro, Cryptical/Alligator) but overall crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator > Caution",
+      "Dark Star",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, exploratory first set leading into a second set with strong transitions – notably the drum segue between Cryptical and The Other One – and a climactic Alligator > Caution pairing."
+  },
+  "band_member_comments": {
+    "Jerry": "His tone is described as perfect and his playing drives the high‑energy vibe.",
+    "Phil": "Mentioned stopping behind Jerry during a jam, indicating a brief bass hiccup, but otherwise solid.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segue between Cryptical and The Other One is highlighted as a positive surprise."
+  },
+  "song_mentions": {
+    "Alligator > Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little School Girl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "TOO": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T07:56:19.925147+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-03-16.sbd.miller.109944.flac16"
+}

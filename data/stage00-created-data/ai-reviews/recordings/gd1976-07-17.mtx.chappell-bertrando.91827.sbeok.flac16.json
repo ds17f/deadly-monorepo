@@ -1,0 +1,55 @@
+{
+  "summary": "Vivid matrix recording delivers a powerful Comes A Time and standout Sugaree, though some listeners note vocal echo issues.",
+  "review": "The show is widely praised for its emotional high points—especially Jerry’s soaring solo on “Comes A Time” and a memorable “Sugaree.” Most reviewers find the matrix mix engaging and atmospheric, but one critic describes the vocals as echo‑y and buried under crowd noise. Overall the performance shines while the recording quality is generally good with a few noticeable flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Strong consensus on an excellent musical performance (70% weight) combined with mostly positive but slightly divided opinions on the matrix recording quality (30% weight) leads to a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the matrix as clear, atmospheric and well‑balanced; however one reviewer notes echo‑y vocals and crowd masking that detracts from vocal clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid with Sugaree highlighted; second set described as outstanding, featuring an excellent Comes A Time > jam sequence and many unique moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a powerful solo on “Comes A Time” and overall emotional delivery; one reviewer mentions his vocals suffer from echo in the matrix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:43:28.386773+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-17.mtx.chappell-bertrando.91827.sbeok.flac16"
+}

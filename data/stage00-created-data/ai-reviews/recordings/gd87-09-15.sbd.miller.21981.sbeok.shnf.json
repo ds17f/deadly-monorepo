@@ -1,0 +1,167 @@
+{
+  "summary": "High‑quality soundboard recording (minor static) captures a stellar 1987 MSG show highlighted by a flawless second set and soaring performances of Dark Star, Help>Slipknot!>Franklin’s, Space and Baby Blue.",
+  "review": "The concert is widely praised for its energetic first set and an almost perfect second set where Jerry’s voice was in top form and the band locked into classic jams.  Although a few listeners note intermittent static on this SBD source, the overall sound remains clear enough to enjoy the standout moments.  Fans repeatedly cite Dark Star, Help>Slipknot!>Franklin’s, Space and Baby Blue as high points.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews celebrate the musical performance (especially the second set) while only a minority mention minor static issues; the combined weighted assessment yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced SBD, but several reviewers report intermittent interference/static throughout the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Help > Slipknot! > Franklin's Tower",
+      "Space",
+      "Baby Blue",
+      "Sugar"
+    ],
+    "poor_songs": [
+      "Eyes of the World",
+      "Queen",
+      "Tennessee"
+    ],
+    "setlist_flow": "The first set is described as brisk and solid, with a few minor missteps; the second set flows flawlessly, delivering extended jams and tight vocal performances that keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are noted as unusually strong for ’87 and his guitar tone/feedback work in Space receives high praise.",
+    "Phil": "",
+    "Bob": "Weir’s vocal delivery is called energetic (over‑the‑top on Estimated, “manana” on Baby Blue) and generally solid.",
+    "Keys": "Brent Mydland is highlighted as having carved out his niche; his keyboard work shines on Gimme and other moments.",
+    "Drums": "The drum segment builds from mild to intense, with reviewers noting a powerful, destructive feel."
+  },
+  "song_mentions": {
+    "Hey Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beer Barrel Polka": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle/Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Attics of My Life": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Handjive": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:16:24.534552+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-15.sbd.miller.21981.sbeok.shnf"
+}

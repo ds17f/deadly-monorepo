@@ -1,0 +1,52 @@
+{
+  "summary": "Fair‑quality soundboard tape with flips, cuts and buried vocals, yet it captures a notable Estimated guitar moment and some inspiring Eyes passages amid an overall uneven show.",
+  "review": "The recording suffers from audible flips, occasional drop‑outs and very low vocal levels on tracks like Jack Straw, making the listening experience inconsistent. Musically the band is hit‑or‑miss: Jerry’s playing drifts at times but he delivers a historic chord‑strumming finale during Estimated, and the Eyes segment receives genuine enthusiasm, while other jams feel bogged down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Multiple reviewers flag serious recording flaws and a generally disappointing performance, but there are pockets of musical interest (Estimated solo, Eyes) that keep the rating from being lower."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Frequent flips and cuts, poor vocal mix (Jack Straw barely audible), overall muddy sound; some tracks retain clarity but the tape is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "The set feels disjointed with jams that get bogged down, yet moments like the Estimated solo and a spirited Eyes segment stand out."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'all over the place' in parts but also credited for a historic chord‑strumming finale during Estimated.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:09:35.216369+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-09-15.set2-sbd.murphy.5933.sbeok.shnf"
+}

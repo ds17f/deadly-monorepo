@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording with crisp low‑end and a fiery Scarlet Begonias that rides the bouncy Stranger into a seamless Rain & Snow transition.",
+  "review": "The show shines with Jerry’s infectious enthusiasm—especially on a ripping Scarlet Begonias—and Phil’s bass sits right up front.  The matrix source is praised for its clear, well‑balanced low end, making the performance sound vibrant and immersive.  Overall the recording captures a tight set that flows naturally from Stranger into Rain & Snow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers highlight strong musical moments and commendable sound quality; limited to two detailed reviews, so rating is weighted toward the positive feedback while acknowledging modest sample size."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Low‑end nicely adjusted, clear mix, praised by listeners as “so freaking good”; no notable dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Stranger",
+      "Rain & Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly from the upbeat Stranger into a fitting Rain & Snow, with Scarlet Begonias highlighted as a high‑energy centerpiece."
+  },
+  "band_member_comments": {
+    "Jerry": "Enthusiastic throughout; especially rips it on Scarlet Begonias.",
+    "Phil": "Bass shows up nicely and is well‑defined in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:16:51.587936+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-20.166578.mtx.seamons.ht165.flac16"
+}

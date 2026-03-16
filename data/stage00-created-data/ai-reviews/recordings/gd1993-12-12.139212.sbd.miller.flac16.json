@@ -1,0 +1,31 @@
+{
+  "summary": "Poor performance with no standout moments; recording source unknown",
+  "review": "The reviewer felt the concert was off‑kilter and lacked any highlights, giving it a low rating. No specific comments about the audio were provided, so the recording quality cannot be assessed from this review.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief 2‑star review mentioning a weak performance and no audio details; rating reflects the reviewer’s negative impression."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer did not comment on sound quality, so recording assessment is based solely on lack of information."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer described the night as 'a little off' with no highlights, indicating overall disappointment in the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T18:40:15.184274+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-12.139212.sbd.miller.flac16"
+}

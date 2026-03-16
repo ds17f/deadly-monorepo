@@ -1,0 +1,42 @@
+{
+  "summary": "Mixed performance with strong high‑energy moments and a clear audience recording, though some listeners consider it overrated.",
+  "review": "The show delivers a powerful, high‑energy first set that many fans love—especially the blazing intro to “Music Never Stopped”—and an engaging flow from Alabama into The Greatest Story Ever Told before heading into Terrapin.  Sound quality is generally clear with only a hint of hiss and captures the audience vibe well, but several listeners criticize sloppy playing and feel the concert is overrated compared to other classics.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is split between high praise for energy and criticism of sloppiness, while recording quality is good but not pristine; combined weighting yields a moderate‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with a slight hiss; captures the crowd ambience nicely and has no major drop‑outs, though not a pristine soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped",
+      "Alabama",
+      "The Greatest Story Ever Told",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Starts with a contrasting mood shift (Alabama → The Greatest Story Ever Told) before moving into Terrapin, delivering high energy throughout; overall flow is praised for its intensity but some feel the performance is uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:02:55.845948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-28.senn421.walker-scotton.miller.pitch-corrected.103117.flac16"
+}

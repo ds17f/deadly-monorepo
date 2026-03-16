@@ -1,0 +1,39 @@
+{
+  "summary": "Good show highlighted by a strong Jack Straw performance; recording source and quality not specified.",
+  "review": "The reviewer rates the concert as a very good show, giving it four stars and calling out an excellent rendition of \"Jack Straw.\" No details are provided about the recording method or audio fidelity, so the technical side remains unknown. Overall sentiment is positive with the music being the primary focus.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single four‑star review was available; it praises the performance but offers no recording details, leading to a moderate rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix balance, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific remarks about set pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:15:43.892608+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-08.wise.munder.7912.sbeok.shnf"
+}

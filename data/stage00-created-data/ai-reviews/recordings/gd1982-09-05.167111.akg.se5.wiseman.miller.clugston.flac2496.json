@@ -1,0 +1,31 @@
+{
+  "summary": "Review only corrects the date to 9/5/82; no comments on audio or performance",
+  "review": "The sole reviewer points out that the recording's listed date is incorrect and should be September 5, 1982. No observations are made about the sound quality, source type, or musical performance, leaving those aspects unassessed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only a single, brief comment about the date; no information on show or recording quality to base a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on audio clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on the setlist or performance flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T00:42:28.482058+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-05.167111.akg.se5.wiseman.miller.clugston.flac2496"
+}

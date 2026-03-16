@@ -1,0 +1,31 @@
+{
+  "summary": "Matrix recording of an unknown‑date show with no clear comments on sound quality and very sparse performance notes.",
+  "review": "The two fan reviews provide almost no concrete information about the music or the audio fidelity. One reviewer gives a 5‑star rating but only mentions the pacing, while the other flags a date error and makes a vague comment about Jerry and Brent. Consequently, both the recording quality and the show itself remain uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "low",
+    "rationale": "Only two brief, contradictory reviews (5★ and 0★) with no substantive detail on performance or audio; rating reflects the average star score and high uncertainty."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not discuss clarity, balance, or any technical issues, so recording quality cannot be confidently assessed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned in a cryptic remark (“Jerry and Brent came back from the grave”).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboard) referenced alongside Jerry, though context is unclear.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T15:42:37.975828+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-12-28.149731.ultramatrix.sbd.pearson-healy.miller.flac2496"
+}

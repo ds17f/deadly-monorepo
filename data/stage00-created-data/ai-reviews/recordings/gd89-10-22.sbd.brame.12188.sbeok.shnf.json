@@ -1,0 +1,53 @@
+{
+  "summary": "Good‑quality soundboard capture of a mixed show – crisp audio, Brent’s keyboards shine, Help>Slip>Franklin’s divides fans.",
+  "review": "The recording is a clean soundboard source that most listeners describe as crisp and listenable. Musically the concert is uneven: some reviewers rave about a stellar Blow Away and an inspired Help‑Slip‑Franklin's jam, while others felt the band was fatigued and that the same sequence fell flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average rating ~3.9 from 11 reviews; strong positive notes on audio quality and several standout moments offset by consistent criticism of band fatigue and a polarizing Help‑Slip segment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the sound 'crispy' and clear; no major dropouts or mix problems noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's",
+      "Blow Away",
+      "Space/Jam/Drums"
+    ],
+    "poor_songs": [
+      "Help>Slip>Franklin's"
+    ],
+    "setlist_flow": "The concert is described as an off‑night after a heavy touring stretch, with the band sounding fatigued for some listeners; however others felt the second set recovered and delivered strong improvisational peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work (Blow Away) is praised, though he occasionally falls off his chair during the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Blow Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space/Jam/Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:15:36.901151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-22.sbd.brame.12188.sbeok.shnf"
+}

@@ -1,0 +1,90 @@
+{
+  "summary": "Excellent soundboard capture of a storm‑charged Raleigh show, with a solid performance highlighted by Bird Song, Space/Other One and a powerful Masterpiece despite a PA dropout.",
+  "review": "The recording is a sound‑board source that sounds good overall, though it contains a splice for the Promised Land power outage and a few seconds missing from Masterpiece. The concert itself is remembered as one of the most electric on the 1990 summer tour – hot, thunder‑stormed, and full of memorable jams (Space > Other One, Playin' jam, Bird Song) with Jerry’s grin, Brent’s keyboards and Bill/Mickey locked in tight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 30 reviews give 4‑5 stars, praising the musical energy and key moments while noting only moderate technical glitches (splice, missing seconds). The weighted average of show quality (≈4.6) and recording quality (≈3.8) yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix; a PA dropout during Promised Land caused a splice, and Masterpiece is missing a minute‑plus at the end. No major hiss or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Space > The Other One",
+      "Playin' Jam",
+      "Masterpiece",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Iko‑Iko"
+    ],
+    "setlist_flow": "The set was interrupted by a power outage mid‑Promised Land, but the band resumed exactly where they left off. The first set is described as “by the numbers,” while the second set bursts into heavy improvisation and storm‑driven energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his grin, excitement, and tight playing; many note he was 'having a great time' and his tone was spot‑on.",
+    "Phil": "Mentioned once as still powered up during the lightning strike; otherwise not highlighted.",
+    "Bob": "Noted as fully into the atmosphere and contributing to the show’s vibe.",
+    "Keys": "Brent (and occasional Keith) praised for his accordion/squeeze‑box work, especially on the horn‑filled sections.",
+    "Drums": "Bill and Mickey described as 'locked in tight' with rain adding extra texture; their drums were a focal point of the storm‑enhanced jam."
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Masterpiece": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Bird Song": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Space > The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playin' Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko‑Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:04:10.588439+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-10.sbd.unknown.8256.sbeok.shnf"
+}

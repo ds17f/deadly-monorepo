@@ -1,0 +1,31 @@
+{
+  "summary": "A fun, energetic show praised for Jerry and Brent's playing, captured on an audience tape of modest (fair) quality.",
+  "review": "Both reviewers enjoyed the concert, highlighting Jerry’s presence and Brent Mydland’s “crazy fingers” on keyboards, with one noting the overall fun vibe. No specific comments were made about the audio fidelity, suggesting a typical audience recording that is listenable but not exceptional.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "High star ratings (4‑5) and enthusiastic remarks about the performance outweigh the lack of recording detail, yielding a strong show rating with an assumed average recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound; presumed typical audience tape with ambient noise and limited clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviews do not discuss set structure; overall impression is that the concert was enjoyable and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned positively ('Jerry @ vince'), indicating an enjoyable performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Praised Brent Mydland’s “crazy fingers” on keyboards.",
+    "Drums": "Reference to \"knockin\" suggests strong drumming."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T11:15:40.297950+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-07.nak300.bleich.sirmick.101018.sbeok.flac16"
+}

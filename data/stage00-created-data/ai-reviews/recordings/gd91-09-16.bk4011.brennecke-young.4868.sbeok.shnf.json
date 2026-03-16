@@ -1,0 +1,52 @@
+{
+  "summary": "Audience‑mic recording captures clear, balanced sound while delivering an exciting first set and a mixed second set, highlighted by a beautiful It Must Have Been the Roses.",
+  "review": "The tape, captured with handheld cardioids and transferred from DAT, is praised for its clarity and balance, letting the audience ambience shine through. Musically the show shines early with spirited playing and an unforgettable It Must Have Been the Roses, but the second set trips over aggressive keyboard overdubs that blunt the impact of Saint and Comes a Time.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give five‑star ratings, praising both the recording fidelity and overall performance; only one moderate review notes second‑set issues, so the weighted average leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Handheld B&K cardioid mics fed into a Neumann preamp and DAT give crisp, balanced sound; reviewers note clear audience sing‑alongs and overall fine capture despite occasional roughness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It Must Have Been the Roses"
+    ],
+    "poor_songs": [
+      "Saint",
+      "Comes a Time"
+    ],
+    "setlist_flow": "Unusual set list with an exciting, tight first set; second set feels messier as aggressive keyboard playing overwhelms certain tunes."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is noted to defer to the keyboards on the second set, reducing his usual presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Aggressive Hornsby‑style keyboard overdubs overrun Saint and Comes a Time, detracting from the flow.",
+    "Drums": "A listener highlighted an especially distinctive drum moment that stood out."
+  },
+  "song_mentions": {
+    "It Must Have Been the Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:06:26.253397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-16.bk4011.brennecke-young.4868.sbeok.shnf"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Superb matrix recording captures standout performances of Eyes, Dew and Brokedown Palace.",
+  "review": "Reviewers praise this matrix source for its crystal‑clear sound, calling it “superb.” The performance shines on the three highlighted numbers – Eyes, Dew and Brokedown Palace – which are singled out as the best moments of the show. No major flaws are noted in either the playing or the audio.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single review, but it rates the recording highly (4 stars) and highlights several standout songs, indicating both good sound quality and an enjoyable performance."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the matrix as “superb,” implying clear instrument separation and overall crispness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Dew",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or flow; emphasis is placed on the three highlighted tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:50:17.966525+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-16.126718.mtx.dusborne.flac16"
+}

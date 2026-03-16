@@ -1,0 +1,74 @@
+{
+  "summary": "Decent show with standout moments like Comes a Time banter, West L.A. Fadeaway and strong drums/space; recording quality is unmentioned but appears listenable.",
+  "review": "The reviews highlight several musical high points – Jerry’s in‑flight commentary teaching Vince on “Comes a Time,” solid renditions of West L.A. Fadeaway, Cumberland Blues, Samson & Delilah and Standing On The Moon, plus an enjoyable Drums/Space stretch. Recording details are sparse, but no complaints suggest the source is at least reasonably clear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show receives praise for specific songs and banter but also notes it isn’t among the band’s best; recording quality is not discussed, leading to an overall solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer mentions sound issues or clarity problems, implying a listenable source despite lack of explicit details."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes a Time",
+      "West L.A. Fadeaway",
+      "Cumberland Blues",
+      "Samson & Delilah",
+      "Standing On The Moon",
+      "Drums/Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Mix of sound‑check material and live performance; banter and teaching moments add character, though some feel it’s not the band’s top tier."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his in‑flight commentary – instructing Vince on “Comes a Time” and telling Bob how to play his own song.",
+    "Phil": "",
+    "Bob": "Mentioned when Jerry tells him how to play “Easy Answers.”",
+    "Keys": "Vince receives guidance from Jerry during the performance.",
+    "Drums": "Drums/Space segment described as cool and enjoyable."
+  },
+  "song_mentions": {
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing On The Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:37:51.541615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-04-06.set1-fob.set2-sbd.miller.28358.sbeok.flacf"
+}

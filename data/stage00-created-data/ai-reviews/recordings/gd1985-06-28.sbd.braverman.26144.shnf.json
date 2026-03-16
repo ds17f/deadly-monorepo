@@ -1,0 +1,76 @@
+{
+  "summary": "Clean soundboard capture of a rain‑soaked 1985 show highlighted by a soaring Bird Song > Comes a Time > Deal sequence, stellar Morning Dew and an epic Music Never Stopped jam.",
+  "review": "The Braverman SBD delivers crystal‑clear audio despite the downpour, letting the band’s high‑energy performance shine. Highlights include the Bird Song > Comes a Time > Deal trifecta, a transcendent Morning Dew and a jaw‑dropping Healy Sound Attack → Music Never Stopped jam, while Jerry’s vocals show strain but his guitar work remains superb.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars praising both the performance and recording; a single low rating concerns venue security, not the music, yielding an overall strong but slightly moderated score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as clean, clear and crisp with no reported drop‑outs; the mix holds up well even under heavy rain."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song > Comes A Time > Deal",
+      "Morning Dew",
+      "Healy Sound Attack > Music Never Stopped",
+      "Tom Thumb's Blues",
+      "Estimated > Terrapin"
+    ],
+    "poor_songs": [
+      "Ramble On Rose",
+      "Terrapin"
+    ],
+    "setlist_flow": "A bizarre, rain‑laden first set gives way to a second set that erupts with improvisational fireworks and strong vocal/ instrumental moments despite Jerry’s health issues."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocally strained due to health problems but guitar playing described as stellar throughout the show.",
+    "Phil": "Delivers a powerful vocal on Tom Thumb's Blues; his bass even blows a speaker during Morning Dew, underscoring his intensity.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song > Comes A Time > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Healy Sound Attack > Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated > Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:32:24.903388+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-28.sbd.braverman.26144.shnf"
+}

@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard cassette captures a quirky after‑show jam with Hot Tuna; “Rock Me Baby” shines but the overall vibe is modest.",
+  "review": "The recording is an SBD cassette of the post‑Dead encore where Bob Weir and Hot Tuna traded riffs, delivering a rare “Rock Me Baby” that many reviewers call a delicious treat. While the tape transfer sounds clear enough, several listeners felt the performances were only mildly exciting, making it more of an interesting artifact than a classic show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed – praised for rare moments like “Rock Me Baby” but overall described as not very exciting; recording is a decent soundboard cassette with no major flaws, leading to an average‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "SBD cassette transferred from reel‑to‑cassette (48 kHz); clear enough for listening but no specific praise or complaints about clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rock Me Baby"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Post‑concert jam featuring Bob Weir with Hot Tuna members; informal encores after the Dead's main set, mixing blues numbers and a Jorma‑styled “I Know You Rider.”"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rock Me Baby": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T02:05:31.734103+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-12-31.aftershow.sbd.cole.6171.sbeok.shnf"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent audience recording of the Dead's final New Year's Eve show, highlighted by a soaring Terrapin jam and a transcendent Estimated.",
+  "review": "The tape captures a reverent, zone‑locked performance where Jerry rides high and Vince Welnick adds elegant piano chords, with the Terrapin Station jam and an unforgettable version of Estimated stealing the spotlight. The audience‑sourced recording is praised as crystal‑clear despite its non‑studio origin, though one reviewer notes the Not Fade Away rendition feels unusually subdued.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Consistently high praise for both the musical performance and recording quality across four enthusiastic reviews; one off‑topic low rating does not affect overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as very good/A+, crisp and clear for an audience capture, with no major dropouts or muffling noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Estimated",
+      "Heaven's Door"
+    ],
+    "poor_songs": [
+      "Not Fade Away"
+    ],
+    "setlist_flow": "The concert flows smoothly with minimal band patter and seamless transitions between songs; the lack of typical NYE hype gives it a more intimate, reverent feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'on' and liberated, delivering inspired guitar work throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick receives strong praise for his piano chords and vocal contributions; Hornsby’s presence is noted as having initially seemed odd but ultimately freeing for Jerry.",
+    "Drums": "The percussion segment featuring Billy, Mickey, Airto, Baba (and possibly Bela Fleck) is highlighted as a flavorful, percussive jam."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:16:48.782539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-12-31.sennME80.wklitz.94248.flac16"
+}

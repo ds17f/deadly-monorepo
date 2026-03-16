@@ -1,0 +1,62 @@
+{
+  "summary": "Soundboard capture of the June 28, 1969 show delivers solid audio (minor hiss/brightness quirks) while showcasing a country‑infused set highlighted by a stellar “Doin’ That Rag” and “High Time.”",
+  "review": "The recording is a soundboard source that sounds clear enough for casual listening, with only occasional background hiss or a slight treble imbalance that can be EQ’d out. Musically the band is in a transitional phase, trading psychedelic jams for folk‑rock and country flavors; Jerry’s pedal‑steel intro on “Doin’ That Rag,” his vocal on “Me & My Uncle,” and Pigpen’s bluesy contributions are repeatedly praised. Overall the performance feels tight, energetic, and worth revisiting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and enthusiastic comments about both the music and recording indicate a strong show with good‑to‑excellent audio quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable; occasional background hiss on OGG, slight brightness/dullness variations likely from Dolby B encoding, but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Doin' That Rag",
+      "High Time",
+      "Lovelight",
+      "Me and My Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set reflects the band’s shift from late‑’68 psychedelic explorations to a folk/country/Working Man’s Dead direction, with tight transitions (e.g., pedal‑steel intro into “Doin' That Rag” leading into “High Time”)."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for pedal‑steel intro on “Doin’ That Rag,” ripping licks on “Sittin’ On Top of the World,” strong vocal on “Me & My Uncle,” and overall energetic playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Doin' That Rag": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sittin' On Top Of The World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:54:20.027771+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-28.sbd.samaritano.20548.sbeok.shnf"
+}

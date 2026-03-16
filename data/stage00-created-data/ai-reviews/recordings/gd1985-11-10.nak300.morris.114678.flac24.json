@@ -1,0 +1,31 @@
+{
+  "summary": "Below‑average recording of an otherwise OK show",
+  "review": "The sole reviewer rates the performance as merely okay but calls the audio below average, indicating that the listening experience suffers from subpar sound quality. No specific songs or band moments are highlighted, and no details about the source type are provided.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "low",
+    "rationale": "Only one brief review; it gives a low star rating (2) and criticizes the recording, with no positive details to raise the overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer describes the audio as \"below average\" but provides no specifics about mix, clarity, or source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments beyond noting the show was okay."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T11:28:20.691296+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-10.nak300.morris.114678.flac24"
+}

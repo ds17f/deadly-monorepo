@@ -1,0 +1,76 @@
+{
+  "summary": "Tight set with rare UJB sandwich, magic Jed solo & solid second‑set jams",
+  "blurb": "The show kicks off with a rare Uncle John's Band > Playing In The Band sandwich and stays strong through a blistering Tennessee Jed. Phil’s bass is booming, Brent adds extra sparkle, and the second set delivers tight jams on Estimated Prophet and Eyes Of The World. Sugar Magnolia and Alabama Getaway close the night on a high note.",
+  "review": "On June 8, 1980 at Folsom Field in Boulder, the Dead delivered one of those classic early‑summer performances that feels both intimate and expansive. From the opening sandwich—Uncle John's Band → Playing In The Band → Uncle John's Band—the band was “tight and beautiful,” with Brent Mydland’s fresh keyboard colors tightening the whole sound. Jerry Garcia turned on the heat, laying down a “magic” solo on Tennessee Jed and roaring through Alabama Getaway, while Phil Lesh was described as a “beast” on bass, grounding the improvisations that followed. The second set kept the momentum with an inspired Estimated Prophet into Eyes Of The World, even if Saint Of Circumstance sagged a bit. Highlights like Sugar Magnolia’s soaring climax and the encore’s Alabama Getaway left the crowd buzzing, making this show a must‑listen despite some occasional clipping on the soundboard source.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Four recordings are clearly positive, praising the Uncle John's Band sandwich, Jerry’s solos and tight band playing; three are mixed but note only minor issues (clipping, a weak Saint Of Circumstance). The overall tone is upbeat, warranting a moderate +1.0 sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 1.0 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1980-06-08.SonyECM250.walker-scotton.miller.88452.sbeok.flac16",
+    "reason": "Only soundboard source; despite occasional clipping it captures the band's tight playing and most of the highlighted moments with clear instrument separation."
+  },
+  "key_highlights": [
+    "Rare Uncle John's Band → Playing In The Band sandwich opens the first set.",
+    "Jerry’s “magic” Tennessee Jed solo and roaring Alabama Getaway.",
+    "Second‑set jam flow on Estimated Prophet into Eyes Of The World.",
+    "Sugar Magnolia high point and energetic encore."
+  ],
+  "song_highlights": [
+    "Uncle John's Band",
+    "Playing In The Band",
+    "Tennessee Jed",
+    "Samson & Delilah",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "Sugar Magnolia",
+    "Alabama Getaway"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia is repeatedly praised as a beast, delivering a magic solo on Tennessee Jed, a roar on Alabama Getaway and overall stellar guitar work throughout.",
+    "Phil": "Lesh is highlighted for booming, powerful bass—called a beast—that drives the jams, especially during Uncle John's Band and the second‑set sequences.",
+    "Bob": "Weir receives a brief positive nod but no detailed commentary in the reviews.",
+    "Brent": "Mydland’s arrival is noted as a key factor that made the band sound tighter and more beautiful, adding lush keyboard textures.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-13T00:22:06.349797+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Uncle John's Band"
+    ],
+    [
+      "Tennessee Jed"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Saint Of Circumstance",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    [
+      "Alabama Getaway",
+      "Brokedown Palace"
+    ]
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Matrix recording captures the vibrant energy of a stellar early‑87 show, with standout performances of Iko, Half‑Step, and a memorable Brokedown Palace encore.",
+  "review": "The concert is praised for its high audience energy and superb song selection, highlighted by an electrifying Iko opener, a bluesy Half‑Step finale with strong Jerry vocals, and a classic moment when the crowd carried Garcia through a lyric slip on Brokedown Palace. The soundboard‑plus‑audience matrix source delivers clear, balanced audio that lets listeners hear both the band’s tight playing and the room’s excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑5 stars and emphasized strong musical performance plus a clean, well‑mixed matrix recording, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear mix that balances board clarity with audience ambience; reviewers note the sound is great and captures crowd energy without noticeable flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Half-Step",
+      "Brokedown Palace",
+      "Mighty Quinn",
+      "Wharf Rat",
+      "Throwing Stones",
+      "The Promised Land",
+      "Saint of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers commend the ‘golden’ first‑set finish (Half‑Step → The Promised Land) and a second set that opened with Iko and featured a solo Saint of Circumstance, describing the overall flow as solid and exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong vocals highlighted on Half‑Step; memorable moment when he forgot lyrics to Brokedown Palace and the audience filled in.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:09:12.061468+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-03.sbd-mtx.walker-scotton.miller.82725.sbeok.flac16"
+}

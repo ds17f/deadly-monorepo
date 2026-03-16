@@ -1,0 +1,58 @@
+{
+  "summary": "Clear soundboard capture of a historic 1967 show, highlighted by an outstanding Viola Lee Blues and a hidden Dark Star jam inside a shaky Dancing In The Street.",
+  "review": "The recording is a solid sound‑board source with no reported audio problems, letting listeners hear the band's 1967 brilliance. While Bob Weir’s rhythm on Dancing In The Street draws criticism, the rest of the set – especially Viola Lee Blues and Alligator – is praised as superb, and the jam that hints at Dark Star adds historic intrigue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong performances and historical significance; recording quality is soundboard with no issues noted, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard capture; reviewers did not mention any clarity or mix problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "Alligator",
+      "Dancing In The Street (Dark Star jam)"
+    ],
+    "poor_songs": [
+      "Dancing In The Street"
+    ],
+    "setlist_flow": "The set opens with a problematic Dancing In The Street that some find rhythmically loose, but it contains an intriguing Dark‑Star‑style jam. Afterward the band recovers, delivering standout performances of Viola Lee Blues and Alligator, making the show historically memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for great playing on Viola Lee Blues and Alligator.",
+    "Phil": "",
+    "Bob": "Criticized as rhythmically clueless on Dancing In The Street.",
+    "Keys": "Pigpen receives strong compliments for his organ work on Viola Lee Blues and Alligator.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dancing In The Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T06:27:24.339146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-09-03.sbd.miller.43.sbeok.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "High‑quality matrix recording captures a solid 1983 show with standout Brokedown Palace, Terrapin Station and an inspired Space jam.",
+  "review": "The matrix SBD source delivers clear, well‑balanced sound that lets the band’s late‑'80s energy shine through. Reviewers praise the deep jams – especially the post‑drums Space segment and strong renditions of Brokedown Palace, Terrapin Station, Saint Stephen, Far From Me and Good Lovin'. While Jerry only sings a couple of numbers, his guitar work and Bob Weir’s vocal presence are highlighted as highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and describe both the performance and the matrix recording positively; the weighting of a strong musical showing (70%) and good technical quality (30%) yields an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Nice matrix SBD with solid, high‑quality sound; clear mix despite being a combination source, no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Terrapin Station",
+      "Saint Stephen",
+      "Far From Me",
+      "Space",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show moves smoothly through two sets, featuring a jam‑heavy second set with a memorable post‑drums Space segment and strong song transitions that keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Sings only two songs but delivers strong guitar work; highlighted on Brokedown Palace, Terrapin Station and in the post‑drums space jam.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocal contributions dominate; his songs and a “Bobby fest” are repeatedly praised as highlights of the performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:22:37.600394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-03-31.mtx.seamons.94016.sbeok.flac16"
+}

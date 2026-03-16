@@ -1,0 +1,66 @@
+{
+  "summary": "Tight first set, fiery West L.A. jam, soaring Bird Song, strong Drums/Space",
+  "blurb": "The show opens with a crisp first set that includes Touch of Grey and a standout Bird Song. The second set erupts with the West L.A. Fadeaway jam, extended Drums / Space, and a powerful Wharf Rat. The sound‑board recording is praised for its clear, phenomenal audio.",
+  "review": "July 1 1992 at Buckeye Lake delivers a solid Grateful Dead outing that balances tight songwriting with late‑night improvisational fire. Jerry’s voice shows a hint of wear, but his guitar tone and occasional MIDI excursions are on point, especially during the soaring Bird Song and the blistering West L.A. Fadeaway jam. Phil lays down “nice bombs” toward the end, while the dual‑drum attack from Mickey and Billy turns Drums / Space into a train‑like, quadraphonic showcase complete with an air‑horn flourish. Vince’s keyboards rock the mix, and guest harmonica adds extra color to the set. The first set feels disciplined, and the second set builds momentum that carries through an inspired Wharf Rat and a rousing Turn On Your Lovelight, capped off by a fun Baba O’Riley/Tomorrow Never Knows encore. Both the crisp sound‑board source and the high‑energy audience tape capture different sides of this night, making it a worthwhile listen for any Deadhead.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 46,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "One recording is clearly positive, the other mixed; overall sentiment leans positive but isn’t uniformly glowing across all sources, warranting a modest +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 0.6 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd92-07-01.prefm.ladner.5701.sbeok.shnf",
+    "reason": "Crisp sound‑board capture with good clarity; highlights the West L.A. jam, Bird Song and Drums/Space while preserving full show flow."
+  },
+  "key_highlights": [
+    "West L.A. Fadeaway extended jam",
+    "Bird Song soaring performance",
+    "Drums / Space with train‑like quadraphonic effects",
+    "Wharf Rat delivering powerful vocals"
+  ],
+  "song_highlights": [
+    "West L.A. Fadeaway",
+    "Bird Song",
+    "Drums",
+    "Space",
+    "Wharf Rat",
+    "Truckin'"
+  ],
+  "band_performance": {
+    "Jerry": "Voice sounds a bit frayed, but guitar tone is perfect; delivers solid solos and occasional MIDI excursions.",
+    "Phil": "Provides steady bass foundation with \"nice bombs\" toward the end of the show.",
+    "Bob": "",
+    "Brent": "Keyboards rock the mix; Vince supplies strong organ/synth textures and guest harmonica adds extra color.",
+    "Mickey": "Drums/Space are incredible, featuring train‑like quadraphonic effects and an eye‑catching air‑horn.",
+    "Billy": "Pairs with Mickey to create a powerful rhythmic wall during Drums/Space and drives the high‑energy jams."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-18T08:17:44.243963+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "West L.A. Fadeaway"
+    ],
+    [
+      "Bird Song",
+      "The Promised Land"
+    ],
+    [
+      "Truckin'",
+      "Spoonful*",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Wharf Rat",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

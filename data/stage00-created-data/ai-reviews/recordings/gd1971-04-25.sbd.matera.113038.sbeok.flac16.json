@@ -1,0 +1,68 @@
+{
+  "summary": "Excellent soundboard recording of an April ’71 show featuring scorching Hard to Handle, a monster Good Lovin', and a soaring Morning Dew.",
+  "review": "Fans rave about the pristine, almost‑perfect tape quality while celebrating the band’s high‑octane performance – Jerry’s searing lead on “Hard to Handle,” Phil’s steady bass riffs, Bob’s quirky rhythm on “Ukulele‑style” chords, and tight drums from Bill. Standout moments include a blistering Hard to Handle, an inspired Good Lovin', and a heartfelt Morning Dew, with the set flowing smoothly through extended jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and enthusiastic comments about both performance and sound quality outweigh a single moderate review."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the tape as crisp, close‑to‑perfect, and “excellent sound.” One reviewer notes that Good Lovin' was split into separate tracks (drums isolated), which is a minor editing inconvenience but does not detract from overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Good Lovin'",
+      "Morning Dew",
+      "Second That Emotion",
+      "Sing Me Back Home"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for its high‑energy pacing, with tight transitions (e.g., China>Rider) and extended jams that let the band stretch out without losing momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as scorching on Hard to Handle and generally “tight” throughout.",
+    "Phil": "Phil’s bass work gets kudos for constant riffs; also a technical note about his drum‑track isolation in Good Lovin'.",
+    "Bob": "Weir’s rhythm playing likened to a ukulele, adding quirky texture.",
+    "Keys": "Pig (keyboardist) noted for key work on the China>Rider transition and overall keyboard contributions.",
+    "Drums": "Bill’s drumming is praised as “letting loose on the skins,” though one reviewer questions why drums were isolated into a separate track."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Second That Emotion": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:31:10.376753+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-25.sbd.matera.113038.sbeok.flac16"
+}

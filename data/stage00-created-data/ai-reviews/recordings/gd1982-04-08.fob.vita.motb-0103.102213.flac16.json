@@ -1,0 +1,50 @@
+{
+  "summary": "Fat, upfront audience tape captures a divisive Syracuse show highlighted by a strong Playing in the Band → Uncle John's Band segue.",
+  "review": "The Jim Vita audience recording is praised for its rich, forward‑focused sound that brings out the room’s energy. While some listeners love the Playin → UJB stretch and consider the tape a solid capture, others feel the performance itself was lackluster, making overall impressions mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (good), but show performance receives both high and low marks, resulting in a mixed average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as very fat, upfront with strong presence; no major flaws noted, just typical audience tape ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance opinions are split – some enjoy the Playin → UJB transition, while others criticize overall energy and engagement."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:37:37.292422+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-08.fob.vita.motb-0103.102213.flac16"
+}

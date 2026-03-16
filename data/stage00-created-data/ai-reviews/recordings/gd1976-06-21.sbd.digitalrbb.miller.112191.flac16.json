@@ -1,0 +1,39 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a Tower Theater blowout, with Jerry’s soaring guitar and a fiery first set built around Scarlet Begonias.",
+  "review": "The recording is praised for its crystal‑clear, high‑fidelity sound that lets every nuance of the band shine. The performance is described as a pure blowout from start to finish, especially the first set cooking around “Scarlet Begonias,” while one reviewer felt it was merely average. Overall the show and tape are highly regarded with only a single mixed comment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Four out of five substantive reviews give 5‑star praise for both performance and sound quality, while one review is lukewarm (3 stars). The strong consensus on an excellent soundboard recording and a great show yields a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note crystal‑clear, crisp sound; no mention of dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds momentum around Scarlet Begonias and maintains high energy throughout; the band is described as “on” from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar tone is highlighted as awesome and soaring.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:58:09.226415+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-21.sbd.digitalrbb.miller.112191.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "A stellar audience (AUD) recording that captures a magical three‑set June 10 1973 show, anchored by a legendary Morning Dew opener.",
+  "review": "Both reviewers rave about the extraordinary performance – three blissful sets with an iconic Morning Dew opening and a jam‑filled encore featuring Jerry.  Although the tape is an audience (AUD) source rather than a soundboard, the recording is praised for its clarity, especially Phil’s bass, making it a highly enjoyable listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 5‑star ratings and highlighted an exceptional show with only minor recording limitations typical of audience tapes."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to hear individual instruments, notably Phil’s bass; no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three uninterrupted sets of “hour after hour” bliss, with a rare Morning Dew opener and a jammed encore that kept the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned jamming on the encore, adding to the night’s excitement.",
+    "Phil": "Bass comes through strongly; performance described as extremely tight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T14:37:42.749269+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-10.aud.barry-gadsden.tobin.90796.flac16"
+}

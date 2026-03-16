@@ -1,0 +1,83 @@
+{
+  "summary": "Clear enough sound‑board capture of a vibrant June 8 1992 show, highlighted by scorching Loser, soaring So Many Roads and a stellar Stella Blue.",
+  "review": "The performance is widely praised for its high energy jams – an intense Loser solo, a frenzied So Many Roads, a punchy Dark Star and a beautiful Stella Blue – with most fans calling it one of the best shows of the summer ’92 run. The sound‑board source is generally clear, though a few reviewers note muffled percussion and vocals that sit too far forward in the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviews (over 20) give 4‑5 stars and highlight many standout songs; recording quality is described as clear with only minor mix issues, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear and balanced; occasional muffled percussion, vocals pushed forward, and tape‑flip fade‑ins noted, but the guitar and overall mix are solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "So Many Roads",
+      "Stella Blue",
+      "Dark Star",
+      "China Cat > Rider",
+      "Crazy Fingers",
+      "Stranger",
+      "Last Time > Stella > Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "China Cat > Rider"
+    ],
+    "setlist_flow": "First set strong but a bit short; second set builds momentum with extended jams and smoother transitions, delivering an engaging, well‑paced two‑hour experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Intense solo on Loser, frenzied vocal work on So Many Roads, consistently active guitar throughout; vocals sometimes too forward in the mix.",
+    "Phil": "Mixed remarks – some praise for his bass lines and standout moments, but one reviewer called him \"bombing\" during a Stella.",
+    "Bob": "Recognized for delivering a powerful anthem (U.S. Blues) and solid rhythm work.",
+    "Keys": "Brent absent (missed), Vince praised in later comments; keyboards generally supportive without dominating.",
+    "Drums": "Post‑drum segment highlighted as awesome; Bill and Mickey noted as playing at their best on Stella Blue."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "So Many Roads": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Last Time > Stella > Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T06:37:32.626096+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-08.sbd.stevens.12561.sbeok.flacf"
+}

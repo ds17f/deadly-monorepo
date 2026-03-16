@@ -1,0 +1,45 @@
+{
+  "summary": "Good matrix recording captures a mellow Jerry performance with stretched‑out Mississippi Half‑Step and a spooky The Other One, plus two encores.",
+  "review": "The show is praised for its relaxed vibe – Jerry’s guitar is notably mellow and the band stretches out the songs, delivering a smooth Mississippi Half‑Step and a nicely eerie stretch in The Other One. Recording quality is described as pretty good with an occasional odd mix, typical of a matrix source, but overall it serves the music well.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) which highlights both solid musical performance and decent recording quality; rating reflects a good show with minor mix quirks."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Pretty good sound overall, but the mix is slightly odd at times."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Mellow, stretched‑out feel with two encores; songs are smooth and laid‑back, creating a relaxed second‑half atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as really mellow and laid‑back, which the reviewer liked.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:45:34.778774+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-17.mtx.chappell.sb25.95734.flac16"
+}

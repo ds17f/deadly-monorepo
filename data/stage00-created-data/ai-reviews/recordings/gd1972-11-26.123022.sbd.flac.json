@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent soundboard capture featuring a soaring Dark Star > Me & Bobby combo.",
+  "review": "The reviewer gave the recording five stars and praised the \"Dark Star > Me & Bobby\" sequence, calling the combination a highlight. While no specific comments about audio fidelity are provided, the .sbd suffix suggests a soundboard source that is generally clear and balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review (5 ★) mentions a standout song sequence; recording quality is inferred from the .sbd soundboard tag, leading to a high but tentative rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio clarity or issues; assumed typical soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Me & Bobby"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Limited detail provided; only the highlighted Dark Star segue is mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & Bobby": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:22:32.822408+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-26.123022.sbd.flac"
+}

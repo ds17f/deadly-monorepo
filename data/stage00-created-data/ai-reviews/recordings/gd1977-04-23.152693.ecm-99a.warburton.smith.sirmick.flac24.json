@@ -1,0 +1,31 @@
+{
+  "summary": "A highly poetic and enthusiastic description of the show with no specific technical details",
+  "review": "The lone review gushes about the concert’s atmosphere, describing it as a luminous dance party that builds to a soaring crescendo. No concrete information is given about the recording source or sound quality, nor are any particular songs or performances singled out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one highly abstract review with a glowing tone; lacking concrete details on performance or recording quality makes it difficult to assign a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity, or any technical issues were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer praises the overall vibe and crescendo but does not mention individual songs or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T21:27:01.409939+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-23.152693.ecm-99a.warburton.smith.sirmick.flac24"
+}

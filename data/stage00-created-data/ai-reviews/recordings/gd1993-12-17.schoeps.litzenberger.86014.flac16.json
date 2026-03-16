@@ -1,0 +1,81 @@
+{
+  "summary": "A mixed‑quality arena recording that captures a strong mid‑90s set with highlights like Help > Slipknot! and Broken Arrow, but suffers from a jangling mix and uneven guitar work.",
+  "review": "The show delivers several standout moments – a fiery Help > Slipknot! sequence, heartfelt Phil on Broken Arrow, and an expansive Corrina jam – making it a favorite for Vince‑era fans. However the recording is hampered by arena acoustics and a mix that gets increasingly tangled later in the set, and one reviewer notes Jerry’s struggling guitar throughout.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "One review rates the performance highly (4★) while another is critical (2★); recording quality is described as decent but with mix and arena issues, leading to an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Mix becomes increasingly jangled as the show progresses; sound quality suffers due to arena acoustics, though some listeners find it listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Ramble On",
+      "Desolation Row",
+      "Broken Arrow",
+      "Help > Slipknot!",
+      "Corrina",
+      "Attics of My Life",
+      "I Fought the Law"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features strong jams and memorable transitions, especially in the second half, but overall pacing is viewed as typical mid‑90s fare with some uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Struggling throughout the show, as noted by a reviewer.",
+    "Phil": "Delivers an urgent, warm vocal on Broken Arrow that many fans love.",
+    "Bob": "",
+    "Keys": "Vince's playing is highlighted as a reason this is a favorite Vince‑era show.",
+    "Drums": "Described as a tribal meets psychotic techno blend, adding excitement to the performance."
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help > Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics of My Life": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:56:40.774365+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-17.schoeps.litzenberger.86014.flac16"
+}

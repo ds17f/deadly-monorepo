@@ -1,0 +1,57 @@
+{
+  "summary": "A solid Oakland Coliseum show with strong sets and a clear front‑of‑house recording that fans rate as one of the better FOB sources.",
+  "review": "The concert delivers two tight, energetic sets – a rock‑filled first set highlighted by Bertha > Good Lovin' and a second set that kicks off with Jack Straw and rolls through a well‑executed C.Cat > Rider into Estimated > Terrapin.  The front‑of‑house (FOB) recording is praised for its clarity, good rigging and minimal crowd bleed, making it one of the more listenable audience mixes from the Coliseum.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings and highlighted a solid musical performance plus a good‑quality FOB recording; with limited review count the rating reflects strong show quality (≈70%) and decent audio quality (≈30%)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑house mix is clear with a well‑balanced rig; slight PA feedback and occasional hand claps noted, but overall a pleasant and listenable recording for the Coliseum venue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha > Good Lovin'",
+      "Jack Straw",
+      "C.Cat > Rider",
+      "Estimated > Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid and rock‑driven, second set ramps up the energy with a classic opener and tight transitions between Cat > Rider and Estimated > Terrapin, giving the concert a strong forward momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.Cat > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated > Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:42:26.393574+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-30.142692.fob.schoeps.cmc3.mk4.mattes.miller.clugston.flac1648"
+}

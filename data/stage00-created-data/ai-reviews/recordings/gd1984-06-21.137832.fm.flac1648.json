@@ -1,0 +1,51 @@
+{
+  "summary": "Decent recording with a fun set highlighted by Good Times, New Orleans and Big Boss Man.",
+  "review": "The reviewer finds the show enjoyable enough to be “worth the spin,” singling out Good Times, New Orleans, and Big Boss Man as high points. No details about the source or mix are given, so the audio quality is assumed average, but the performance itself seems solid for a casual listen.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rating (3‑star) review; positive remarks about a few songs but no information on recording quality, leading to an overall average score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Times",
+      "New Orleans",
+      "Big Boss Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the show as fun with a few highlighted numbers but gives no broader commentary on pacing or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Orleans": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:25:06.378858+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-21.137832.fm.flac1648"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Fair‑quality soundboard capture of a mixed ’95 show highlighted by a soaring Estimated Prophet and an electrifying Other One > Morning Dew.",
+  "review": "The performance swings between inspired and sloppy – the second set delivers classics like Estimated Prophet, a powerful Other One > Dew, and a strong Eternity, while Terrapin Station and Crazy Fingers suffer from missed verses and lyrical flubs. The soundboard recording is generally listenable but has noticeable dips in clarity that keep it from being excellent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers praise key moments (Estimated Prophet, Other One > Dew) and rate the show around 3‑4 stars, while recording comments range from good to poor, giving an overall weighted score of about 3.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Sound quality is generally decent and ‘in‑your‑face’, but several reviewers note sections that are muddy or have poor sound, leading to an uneven listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Other One > Morning Dew",
+      "Eternity",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Terrapin Station",
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "The first set is solid but unremarkable; the second set shines with high energy and cohesive jams, though occasional sloppy moments keep the overall flow from being consistently brilliant."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is a mixed bag – powerful on Estimated Prophet and Other One, but sloppier on Terrapin Station and Crazy Fingers, missing verses and showing diminished dexterity.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Other One > Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "Eternity": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T06:51:19.518114+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-26.sbd.3909.sbeok.shnf"
+}

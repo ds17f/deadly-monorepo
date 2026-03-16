@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard recording patched to fix a gap, delivering the historic first Scarlet > Fire medley and standout renditions of Sugaree, Peggy‑O, Cassidy and Not Fade Away.",
+  "review": "The patched soundboard capture fixes a notorious edit and offers generally clear audio, though a few reviewers note the transition could be smoother. Musically this show is celebrated for the first-ever Scarlet > Fire medley and strong performances of fan favorites like Sugaree, Peggy‑O and Not Fade Away, with Jerry’s guitar and vocals praised as back on track.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star, highlighting both a historically significant performance and a solid soundboard source (with only minor transition complaints)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Patch fixes the major gap in the original; audio is generally clear, but some listeners wish the patched transition sounded more seamless."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Sugaree",
+      "Mingle",
+      "Peggy-O",
+      "Cassidy",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Highly praised for its historic first Scarlet > Fire medley and a smooth, energetic flow of classic Dead favorites; the patched edit improves continuity."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as back on track with an ‘oh‑so good’ vocal performance throughout the show.",
+    "Phil": "Noted for helping get Jerry back on track, indicating solid supportive playing.",
+    "Bob": "",
+    "Keys": "Keith Godchaux’s keyboards and Donna Jean’s vocals are said to be on top of their game.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mingle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:32:04.192681+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-03-18.sbd.clugston.254-patch.79098.shnf"
+}

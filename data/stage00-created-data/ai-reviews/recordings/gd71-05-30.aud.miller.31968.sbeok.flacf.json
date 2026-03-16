@@ -1,0 +1,56 @@
+{
+  "summary": "Rough audience recording with poor sound quality but a solid show highlighted by Loser and Morning Dew.",
+  "review": "The performance is generally praised for its energy and strong moments like a bass‑heavy Loser and a decent Morning Dew, even though the tape suffers from serious audio problems—hiss, muffled sections after Bertha, and an almost unlistenable Lovelight. The audience source captures the atmosphere but limits enjoyment, making this more of a historical document than a high‑fidelity listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is decent (good energy and standout songs) while recording quality is consistently reported as poor to horrid, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Early part suffers from EQ issues, Lovelight becomes nearly unlistenable, and the end of the show has additional sound problems; overall tape is described as horrid, hissy, and at times inaudible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Morning Dew",
+      "Rub"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance picks up after Bertha with solid energy; however the recording mixes portions from 5‑28‑71 and 5‑30‑71, causing some confusion about set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rub": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:32:33.416766+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-05-30.aud.miller.31968.sbeok.flacf"
+}

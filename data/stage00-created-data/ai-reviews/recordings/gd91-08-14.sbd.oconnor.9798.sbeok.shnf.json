@@ -1,0 +1,56 @@
+{
+  "summary": "Rain‑soaked show with solid setlist and memorable pre‑drums, but the recording is muffled and likely an audience/matrix source.",
+  "review": "The performance shines despite August rain in Sacramento – fans highlight a powerful Estimated Prophet, a rain‑themed second set (Cold Rain & Snow → Box of Rain) and a sick pre‑drums intro. However, most listeners agree the tape is not a true soundboard; it sounds muffled, static‑filled and dominated by audience noise, suggesting an audience or matrix source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (average ~4.3 stars) while recording quality receives low marks (~2.1 stars); weighted combination yields a solid‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muffled mids, wind and rain noise, static bursts (especially in \"Knockin'\"), not crisp; many reviewers suspect a matrix or audience capture rather than a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow",
+      "Box of Rain",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rain‑themed second set opened with Cold Rain & Snow, flowing into Box of Rain and other rain references; pre‑drums intro was highlighted as a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drums intro praised as 'sick' by listeners"
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:08:03.261944+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-08-14.sbd.oconnor.9798.sbeok.shnf"
+}

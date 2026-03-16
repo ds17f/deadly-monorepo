@@ -1,0 +1,52 @@
+{
+  "summary": "Mediocre, listenable recording of a low‑energy show that still delivers a standout 'Standing on the Moon' but feels overall lackluster.",
+  "review": "The tape captures a performance many fans found uninspired and low in energy, with several reviewers noting miscues and a general sense that the band wanted to be elsewhere. The only bright spots are Jerry’s connection on “Standing on the Moon” and a highlighted rendition of “Let It Grow.” Sound quality is described as mediocre but still usable.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show poorly (1‑3 stars) and describe low energy and miscues, while the recording is only mediocre but listenable; combined weighting yields a sub‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Sound quality described as mediocre yet listenable; no specific mention of soundboard or audience source, and track listings are reportedly inaccurate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Corrina"
+    ],
+    "setlist_flow": "Setlist is decent with a few good jams, but overall energy is low and several vocal/musical miscues disrupt flow; track‑listing errors add to frustration."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – praised for his connection on “Standing on the Moon,” but also noted flubbing lines and seeming disengagement.",
+    "Phil": "",
+    "Bob": "Vocal performance criticized; reviewer mentions Bobby (Bob Weir) flubbing lines.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:18:25.723886+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-13.wankelswurth.10384.sbeok.shnf"
+}

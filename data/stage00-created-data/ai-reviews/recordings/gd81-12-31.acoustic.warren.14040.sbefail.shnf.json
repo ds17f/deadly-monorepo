@@ -1,0 +1,118 @@
+{
+  "summary": "Mostly clear audience recording of an iconic four‑set New Year’s Eve show, highlighted by a monster Shakedown Street, soaring Dark Star and an inspired Other One sequence.",
+  "review": "Fans rave about the sheer magnitude of this four‑set NYE performance – from the electrifying Shakedown Street to the epic Dark Star > Bertha > Good Lovin' run and a powerful Other One > NFA > Goin’ Down the Road sandwich.  While several reviewers note hiss and limited presence typical of an audience (AUD) source, others praise sections that sound exceptionally clean and recommend downloading the alternate soundboard for sets 2‑4.  Overall the musical delivery is considered one of the best late‑'80s Dead shows despite mixed feelings about Joan Baez’s contributions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9/14) are 4–5 stars and extol the performance, citing multiple standout songs and a memorable four‑set flow. Recording quality receives mixed comments but leans toward “good” with several mentions of clear sound, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers describe hiss, distortion and a lack of presence typical of an AUD source, while others call the capture \"smoothest and clearest\" and recommend the alternate soundboard for the later sets.  Overall the audio is listenable with occasional fidelity issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Playing > Terrapin > Playin'",
+      "The Other One",
+      "Dark Star > Bertha > Good Lovin'",
+      "Dew",
+      "Iko Iko"
+    ],
+    "poor_songs": [
+      "Bobby McGee",
+      "Baby Blue",
+      "Joan Baez vocal contributions (overpowering harmony)"
+    ],
+    "setlist_flow": "A rare four‑set New Year’s Eve marathon: an acoustic‑tinged first set, a monster second set opening with Shakedown Street, a third set that builds into a seamless Playing/Terrapin/Playin sandwich and a space/drums climax, and a fourth set delivering Dark Star into Bertha/Good Lovin' followed by a memorable Joan Baez duet."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his lead guitar work – acoustic on 'Banks of the Ohio', electric fire later, mellow space‑guitar during drums, and soaring leads in Dark Star.",
+    "Phil": "No direct musical praise; mentioned only in context of backstage dynamics with Joan Baez.  Drums (Mickey) receive a nod for providing the foundation for the space segment.",
+    "Bob": "Limited acoustic contribution noted – only a few tunes like 'Bobby McGee' were played on acoustic guitar by Weir, not Bob himself.",
+    "Keys": "Brent Mydland’s keyboard groove is highlighted as a key factor in the show’s energy, especially in sets 2‑4.",
+    "Drums": "Mickey Hart’s drumming underpins the space/Drums section and is referenced for its uniqueness (Jerry adding mellow guitar over it)."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Boss Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing > Terrapin > Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bobby McGee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "\"It's All Over Now Baby Blue\"": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_places": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down > Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:08:23.497053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-31.acoustic.warren.14040.sbefail.shnf"
+}

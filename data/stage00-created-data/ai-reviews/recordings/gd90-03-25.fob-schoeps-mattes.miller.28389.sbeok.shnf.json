@@ -1,0 +1,80 @@
+{
+  "summary": "Reference‑quality audience recording with a massive soundstage; the show shines especially on Eyes, Bird Song, Let It Grow and Black Peter.",
+  "review": "The FOB recording is praised as a reference‑grade capture – deep, tall and wide with an impressive stereo image (aside from a fixable phase‑inverted channel). Musically the concert is lauded for its strong second set, seamless flow and standout performances of Eyes, Bird Song, Let It Grow, Truckin' and Black Peter, though a few listeners note Jerry’s timing was a bit loose on the first set and Let It Grow feels slightly “phoned‑in” to one reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars, highlighting both superb audio fidelity and a high‑energy performance; only minor criticisms (timing, one mixed song) keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Huge, immersive soundstage with crystal‑clear ambience; one channel was phase‑inverted (fixable). No dropouts or major noise issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Bird Song",
+      "Let It Grow",
+      "Truckin'",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Let It Grow"
+    ],
+    "setlist_flow": "First set mixes rock, blues and folk; second set is laid‑back, nuanced and transformational, delivering a seamless, high‑energy arc that many fans call the highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as massive and reference‑grade; timing/attack a bit off in first set but delivers smooth Bird Song and restrained, tasteful playing later.",
+    "Phil": "",
+    "Bob": "Weir is noted to be in fine form throughout the show.",
+    "Keys": "",
+    "Drums": "Sublime drum fill on Truckin' praised; overall drumming solid."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T05:08:05.150632+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-25.fob-schoeps-mattes.miller.28389.sbeok.shnf"
+}

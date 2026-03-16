@@ -1,0 +1,45 @@
+{
+  "summary": "Muddy, overly bright recording with weak Dylan/Bob Weir moments and a confusing set order.",
+  "review": "The audience‑type recording is muddy and excessively bright, making many of the Bob‑led tunes sound terrible. The concert itself feels disjointed – Tom Petty’s brief appearance and a rushed Dylan cover left the floor cleared, while the overall setlist is considered just okay. Reviewers consistently rate it low, citing both audio and performance issues.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "high",
+    "rationale": "All three reviews give 2‑star ratings and point to poor sound quality and a lackluster, uneven performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Sound described as way too bright and muddy; lacks clarity, especially on songs featuring Bob Weir."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Don't Think Twice",
+      "Desolation Row"
+    ],
+    "setlist_flow": "Set order appears off compared to the rest of the tour; floor cleared after Tom Petty/Dylan spots, overall pacing feels uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Tunes with Bob sounded terrible.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Don't Think Twice": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:55:52.363237+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-07-02.beyer160.walstib.22381.sbeok.shnf"
+}

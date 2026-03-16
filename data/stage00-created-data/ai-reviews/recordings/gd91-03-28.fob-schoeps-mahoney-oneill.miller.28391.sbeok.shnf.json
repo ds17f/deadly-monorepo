@@ -1,0 +1,51 @@
+{
+  "summary": "Rough audience recording with noticeable crowd noise but captures a memorable show highlighted by strong Black‑Throated Wind, Good Lovin' and the Terrapin encore.",
+  "review": "The performance is remembered fondly – Black‑Throated Wind and Good Lovin' were noted as standout moments and the Terrapin encore added extra excitement. The recording, however, suffers from heavy auditorium noise and a generally low‑fidelity mix, making it an okay listen for collectors who value atmosphere over clarity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (standout songs, good vibe) while recording quality is repeatedly criticized as noisy and low‑fidelity; weighted average yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crowd noise and noisy auditorium dominate the mix; overall clarity is limited, though audience singing adds some atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black-Throated Wind",
+      "Good Lovin'",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Encore was placed at the end of the first set to fit on two discs; overall flow is viewed as solid with a memorable finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:27:26.259783+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-28.fob-schoeps-mahoney-oneill.miller.28391.sbeok.shnf"
+}

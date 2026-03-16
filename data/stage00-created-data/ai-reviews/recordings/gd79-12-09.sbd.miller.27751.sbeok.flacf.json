@@ -1,0 +1,105 @@
+{
+  "summary": "A stellar soundboard capture of a jam‑heavy ’79 show, highlighted by scorching Shakedown Street, an epic Row Jimmy and flawless Terrapin.",
+  "review": "This recording delivers crystal‑clear soundboard quality with only occasional drop‑outs, letting the band’s high‑energy performance shine. Fans rave about the blazing Shakedown Street, a marathon Row Jimmy, tight Black Peter and a near‑perfect Terrapin, while Jerry’s guitar work is praised despite some vocal shakiness. Overall the show feels like a quintessential late‑’70s Dead experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4–5 stars and explicitly praise both the musical performance and the soundboard recording; only a few minor criticisms appear, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the audio crisp, clear and “perfect,” noting that the Keil Center’s acoustic problems are hidden. One reviewer mentions occasional black‑hole dropouts, but overall the mix is balanced with strong vocals and Brent’s piano."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Terrapin",
+      "Row Jimmy",
+      "Black Peter",
+      "Bertha > Good Lovin'",
+      "Sailor > Saint",
+      "Lightning > Supplication"
+    ],
+    "poor_songs": [
+      "Alabama Getaway",
+      "High Time",
+      "Easy to Love You",
+      "Good Lovin'"
+    ],
+    "setlist_flow": "The pre‑drums segment flows smoothly and builds into a second set that’s jam‑heavy, with seamless transitions (e.g., Saint > Drumz) and an epic Row Jimmy that keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as “smoking,” “excellent” and a highlight of many songs; his vocals are noted as occasionally shaky or tentative.",
+    "Phil": "Praised for strong backup vocals on Shakedown Street and overall solid contribution to the group sound.",
+    "Bob": "Mentioned as delivering solid lead vocals and helping make Shakedown Street a highlight.",
+    "Keys": "Brent’s piano/keyboard receives glowing praise (\"perfect mellowness\", \"Brent lived\"); one reviewer called a Brent‑song “cheesy” but the consensus is positive.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Terrapin": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lightning > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Easy to Love You": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:14:04.497016+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-09.sbd.miller.27751.sbeok.flacf"
+}

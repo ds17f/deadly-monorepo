@@ -1,0 +1,75 @@
+{
+  "summary": "Solid 1976 show with standout Scarlet Begonias and a magical Dancin'‑>Wharf Rat‑>Dancin' sequence, captured on a mixed audience/soundboard matrix that’s good but not pristine.",
+  "review": "Fans rave about the extended Scarlet Begonias and the seamless Dancin'‑>Wharf Rat‑>Dancin' jam, plus strong renditions of Music Never Stopped, Peggy‑O and Looks Like Rain. The recording is a matrix of audience tape for the first set and Cotsman soundboard for the second, offering clear inner details but with occasional EQ quirks and a cut on Around & Around.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise the musical highlights; recording is good but has minor issues, leading to an overall strong yet not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First set is audience (AUD) only, second set and encore are soundboard (SBD) with some patches; inner detail is clear, but listeners note a need for EQ adjustments and a 44‑second cut on Around & Around."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Dancin' in the Streets > Wharf Rat > Dancin'",
+      "Music Never Stopped",
+      "Peggy-O",
+      "Ramble on Rose",
+      "Tennessee Jed",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set (AUD) is considered less engaging, while the short second set (SBD) shines with the Dancin'‑>Wharf Rat‑>Dancin' jam; overall a lower‑tier 1976 performance but still enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as 'possessed' on this night, indicating an especially inspired bass performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dancin' in the Streets > Wharf Rat > Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:27:13.653703+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-14.sbd.cotsman.12614.sbeok.shnf"
+}

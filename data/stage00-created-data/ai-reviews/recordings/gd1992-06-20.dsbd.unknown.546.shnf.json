@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent recording of a great show, highlighted by booming locomotive horns that dominate the jam.",
+  "review": "Fans rave about this performance, calling it a fantastic and memorable show thanks largely to the dramatic air‑horn moment that erupts around 8:30 into the Jam. The recording is praised as crystal‑clear and well‑preserved, making the horn blasts both audible and thrilling without detracting from the music.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews praise both the musical performance and the audio fidelity, outweighing a single non‑informative 0‑star comment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Sound is clear and well balanced; the only notable feature is the extremely loud locomotive/air‑horns that cut through the mix around 8:30 into the Jam, adding excitement but also a sudden jump for listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is remembered chiefly for its dramatic horn moment during the Jam, which gives the show an extra burst of energy; overall reviewers describe the performance as great and enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T07:24:49.751361+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-20.dsbd.unknown.546.shnf"
+}

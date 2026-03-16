@@ -1,0 +1,61 @@
+{
+  "summary": "A‑plus audience recording capturing a sparkling late‑1990 show with a soaring Terrapin jam, tight Wheel and beautiful Stella Blue.",
+  "review": "This audience (AUD) tape is praised as one of the best live recordings, offering crystal‑clear instrument separation, deep bass and an almost pin‑drop quiet crowd during Stella Blue. The performance shines from the Terrapin Station ending jam through a compelling Drums → Space sequence into an energetic Wheel where Jerry Garcia “rolls” nonstop, finishing with a heartfelt Stella Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "The single detailed 5‑star review highlights an outstanding musical performance and exceptional audio clarity, warranting a near‑top rating despite the limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Review notes crystal‑clear mix, deep bass, balanced crowd, and pin‑drop quiet moments—unusual for an AUD source, suggesting a high‑grade audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station (ending jam)",
+      "The Wheel",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Seamless flow from the Terrapin ending jam into a compelling Drums → Space segment, then an uptempo Wheel and a moving Stella Blue, creating strong momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted as nonstop, rolling the Wheel with energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station (ending jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:49:18.678171+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-03.150653.FOB.NAK.700.DSD.Mow.Miller.Noel.t.flac2496"
+}

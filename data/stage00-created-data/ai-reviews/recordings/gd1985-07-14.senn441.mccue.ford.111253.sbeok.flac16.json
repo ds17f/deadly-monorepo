@@ -1,0 +1,75 @@
+{
+  "summary": "Audience recording with a windy, slightly indistinct bass yet captures a terrific show highlighted by a hot TLEO, Big River/Looks Like Rain medley, smoking China Cat Sunflower/Rider/Samson sequence, and an amazing Ship of Fools.",
+  "review": "The performance is described as terrific, with several standout moments – a fiery TLEO, the seamless Big River into Looks Like Rain, a blazing China Cat Sunflower/I Know You Rider/Samson run, and a superb rendition of Ship of Fools. The audience tape is praised as one of the best, though it suffers from wind noise and a muddy low end.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only a single detailed review; it rates the show highly while noting minor recording flaws, leading to a strong positive overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Windy ambience and indistinct bass level make the low end muddy, but overall clarity is solid for an audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "TLEO",
+      "Big River",
+      "Looks Like Rain",
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Samson",
+      "Ship of Fools"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review highlights a strong flow with seamless transitions between highlighted numbers, especially the Big River/Looks Like Rain segue and the China/Rider/Samson sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "TLEO": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:49:10.488748+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-14.senn441.mccue.ford.111253.sbeok.flac16"
+}

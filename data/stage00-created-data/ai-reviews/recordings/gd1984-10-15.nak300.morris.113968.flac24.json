@@ -1,0 +1,45 @@
+{
+  "summary": "Well‑balanced audience recording that captures a strong second set, highlighted by a hot Wharf Rat leading back into Playin' in the Band.",
+  "review": "Both reviewers find this October 1984 show solid and enjoyable. The audience (AUD) source is generally well balanced, with a slight low‑end boost but enough crowd ambience to feel present, while the performance shines on the second set – especially the hot Wharf Rat and the return to Playin' in the Band. Though not a pristine recording, it’s complete and good enough for most fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Two moderate‑to‑high reviews (both 4 stars) praise the show’s musical flow and deem the audience recording decent, leading to an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Slightly heavy low end but well balanced; ample crowd presence adds atmosphere. Not the best‑sounding AUD, and some listeners may note missing drum segment in other versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set builds nicely, with a hot Wharf Rat that propels the band back into Playin' in the Band, giving the concert strong momentum and satisfying pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:49:18.124148+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-15.nak300.morris.113968.flac24"
+}

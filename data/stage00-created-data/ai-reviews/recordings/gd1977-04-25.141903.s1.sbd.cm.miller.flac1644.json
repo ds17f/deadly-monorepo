@@ -1,0 +1,100 @@
+{
+  "summary": "Soundboard‑derived recording (first set pristine, second set muffled) captures a high‑energy spring‑77 show with standout performances of Deal, Scarlet Begonias into Fire, Samson & Delilah and Terrapin Station.",
+  "review": "The review highlights an exceptional three‑night NYC run, noting the first set’s crystal‑clear SBD sound while the second set suffers from muffling and pitch issues that require correction. Musically the concert shines on Deal, Scarlet Begonias/Fire, Samson & Delilah and a brisk Terrapin Station, though Fire on the Mountain and U.S. Blues show minor slips. Overall the performance is praised for inventive keyboard synths, soaring bass lines and Jerry’s adventurous leads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Detailed review praises most of the show and notes strong musical moments; recording quality is mixed (first set excellent, second set muffled), yielding a solid but not perfect overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "First set captured in top‑tier SBD clarity; second set is noticeably muffled and runs slow, requiring +1–1.5% pitch correction. Other source mixes are washed out or contain microphonics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Mama Tried",
+      "Estimated Prophet",
+      "Brown Eyed Women",
+      "Music Never Stopped",
+      "Scarlet Begonias",
+      "Samson & Delilah",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Fire on the Mountain",
+      "Wharf Rat",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "A 21‑song marathon spread over three nights; the first set launches with high energy and maintains momentum, while the second set offers a mix of soaring jams (Scarlet > Fire) and tighter tunes despite occasional looseness."
+  },
+  "band_member_comments": {
+    "Jerry": "His improvisational runs are highlighted throughout, especially the MLB‑themed variation before Fire; a few flubs noted on Fire on the Mountain.",
+    "Phil": "High‑bass notes praised on Estimated Prophet, Samson & Delilah and overall buoying the band’s dynamics.",
+    "Bob": "",
+    "Keys": "Keith’s piano foundation is solid and his rare synth textures (“squishy” tones) add a distinctive layer to several songs.",
+    "Drums": "Bill’s drumming receives commendation on Mama Tried; U.S. Blues noted as not the tightest, but overall energetic."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T21:35:48.854763+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-25.141903.s1.sbd.cm.miller.flac1644"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Remarkably clear 1969 soundboard capture featuring a soaring 17‑minute Dark Star, though the track splits interrupt the flow.",
+  "review": "The September 1 1969 Baton Rouge show shines with an expansive 17:22 Dark Star that many reviewers describe as “mean” and classic ’69 vibe. The soundboard source is praised as surprisingly good for its era despite some hiss and a splice, while listeners note the modern track‑splitting breaks up the natural continuity between St Stephen and The Eleven.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviews are overwhelmingly enthusiastic about the performance (especially Dark Star) and consider the 1969 soundboard surprisingly clear; only minor criticism about track interruptions lowers the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp for a 1969 tape with some hiss and a noticeable splice in Dark Star; reviewers recommend EQ adjustments. The only drawback mentioned is the modern file‑splitting that creates audible gaps between songs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical late‑60s Dead set (Dark Star → St Stephen → William Tell → The Eleven → Turn On Your Lovelight), praised for its energy but disrupted by artificial track breaks in the digital release."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "William Tell": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "And We Bid You Good Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:09:17.992125+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-09-01.sbd.kaplan.5216.shnf"
+}

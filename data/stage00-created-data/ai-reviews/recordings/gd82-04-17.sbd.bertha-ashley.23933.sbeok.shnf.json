@@ -1,0 +1,90 @@
+{
+  "summary": "High‑energy 1982 Hartford show captured on a mostly soundboard source; stellar second set with Shakedown, Lost Sailor > Saint, Spanish Jam and an emotional Baby Blue.",
+  "review": "The performance is widely praised for its tight playing and memorable moments – a thunderous Shakedown, a killer Lost Sailor > Saint combo, a laid‑back Spanish Jam before the drums, and one of the most moving Baby Blue encores of the era.  The recording is principally a soundboard (with an early audience patch) that sounds solid though not as crisp as some other 1982 tapes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight exceptional musical moments; recording quality is good but occasionally described as less crisp, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mainly soundboard with an audience (FOB) patch for the first ~3 min of Sugaree; generally solid mix and clear vocals, though several reviewers note it is a bit less crisp or slightly muddy compared to other 1982 SBDs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Lost Sailor > Saint",
+      "Spanish Jam",
+      "Uncle John's Band",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Not Fade Away (short)"
+    ],
+    "setlist_flow": "The second set flows without downtime, moving from a powerful Shakedown into the Lost Sailor > Saint sequence, through an unhurried Spanish Jam and a seamless post‑drums stretch that culminates in a heartfelt Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for playful riff trading with Brent, soaring guitar tone, strong vocals on Baby Blue and Bird Song, and a tasteful fanning technique on Sugaree.",
+    "Phil": "Noted goofing behind Bob during Sailor > Saint; otherwise few specific comments.",
+    "Bob": "Shines vocally on Lost Sailor > Saint and delivers an emotive Baby Blue; praised for his “backup‑dancer” choreography in the Sailor segment.",
+    "Keys": "Brent Mydland’s trippy keys, massive jam within Shakedown, and subtle color/tonal growth highlighted as a highlight of 1982.",
+    "Drums": "Bill Kreutzmann’s spacey drumming before the drums is called “remarkable”; post‑drums segment (UJB → Not Fade Away) praised for its groove."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Lost Sailor > Saint": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Spanish Jam": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Baby Blue": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Around and Around > One More Saturday Night": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:20:38.370273+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-17.sbd.bertha-ashley.23933.sbeok.shnf"
+}

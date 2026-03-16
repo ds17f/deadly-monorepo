@@ -1,0 +1,50 @@
+{
+  "summary": "High‑fidelity audience capture of a strong 1985 show featuring a crushing Feel Like A Stranger closer and an outstanding Space → Truckin' segue.",
+  "review": "The recording delivers exceptional clarity and dynamic range—far surpassing typical board mixes and even the famed Oade tapes—making every instrument, especially Phil's bass, sit prominently. Musically the band clicks as one unit, highlighted by a powerful Feel Like A Stranger finish, an unusually pretty Space segment, and a seamless Space‑to‑Truckin' transition, while Jerry’s 1985‑thin vocals are offset by his stellar guitar work and Brent Mydland’s inspired keyboards.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance (≈4.5/5) and recording quality (≈5/5) across three reviews yields a weighted average around 4.6."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Dynamic range exceeds typical board mixes; crisp, well‑balanced mix with Phil's bass clearly audible and no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like A Stranger",
+      "Space > Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Traditional three‑song opening set, a strong Feel Like A Stranger closer, and a second set highlighted by an unusually pretty Space segment and a killer Space‑to‑Truckin' segue."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice thin (typical of 1985) but guitar work is superb.",
+    "Phil": "Prominent in the mix; bass sits high enough that listeners never miss it.",
+    "Bob": "",
+    "Keys": "Remarkably good input from Bobby (Brent Mydland) on keyboards.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:24:00.652956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-10.nak-beyer.suraci.79689.sbeok.flac16"
+}

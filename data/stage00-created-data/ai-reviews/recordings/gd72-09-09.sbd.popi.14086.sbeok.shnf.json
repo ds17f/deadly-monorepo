@@ -1,0 +1,62 @@
+{
+  "summary": "Fair‑sounding soundboard captures an above‑average late‑'72 show highlighted by a monster 35‑minute Other One and long Playin’ in the Band jams.",
+  "review": "The performance is solid, with the band stretching out on The Other One (over half an hour) and a 19‑minute Playin’ in the Band that showcase the transitional period of Fall ’72. While the soundboard mix is muddy – guitars, drums and keyboards sit low under vocals and Phil’s bass – the show still delivers strong moments like He's Gone, Friend of the Devil and a tasty Truckin' tease.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise key performances; recording quality is noted as muddy but still usable, yielding an overall above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix described as muddy; vocals and Phil’s bass cut through while guitars, drums and keyboards are recessed. EQ adjustments can improve listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Playin' in the Band",
+      "He's Gone",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical late‑'72 transition period set with extended jams and new song additions; pacing is strong despite occasional abrupt transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for excellent playing that meshes well with the Truckin' tease.",
+    "Phil": "Bass noted as clear and cutting through the muddy mix.",
+    "Bob": "Vocals highlighted as a strength; Bobby’s truckin tease mentioned positively.",
+    "Keys": "Keith lays down nice transition turns, but keyboards are largely inaudible in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:08:15.435289+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-09.sbd.popi.14086.sbeok.shnf"
+}

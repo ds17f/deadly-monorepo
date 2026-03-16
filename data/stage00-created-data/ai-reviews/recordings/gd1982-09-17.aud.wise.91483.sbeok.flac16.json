@@ -1,0 +1,92 @@
+{
+  "summary": "An excellent audience field recording that captures a joyous 1982 show featuring the debut of “Touch of Grey” and a scorching “The Other One”.",
+  "review": "Fans rave about both the vibe and the sound of this tape – the performance is described as high‑spirited with memorable moments like the first‑time “Touch of Grey”, an electrifying Phil chant after Spanish Jam, and a monster “The Other One”. The audience recording delivers surprisingly clear, immersive 3‑D space that makes listeners feel right in the room, despite only minor vocal softness from Jerry. Overall it’s regarded as one of the standout shows of the fall ’82 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All seven reviews are 4‑5 stars and overwhelmingly praise both performance and audio, indicating a top‑tier show with an excellent field recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Highly praised for its immersive 3‑D soundstage, crisp clarity, and minimal issues; only minor comment about Jerry’s vocal subtlety but no technical flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "The Other One",
+      "Spanish Jam (Phil Chant)",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, upbeat set that builds momentum through the first half and delivers a powerhouse second set; new song arrangements feel fresh and the crowd energy stays high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer notes his voice lacks some of its usual sweetness on this date, though he still gives it his all.",
+    "Phil": "Phil receives huge cheers during the post‑Spanish Jam chant, with fans shouting “PHIL!” and the band launching into a fiery \"The Other One\".",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Going Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T01:31:50.984403+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-17.aud.wise.91483.sbeok.flac16"
+}
