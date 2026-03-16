@@ -167,7 +167,7 @@ struct DataImportService: Sendable {
         let versionRecord = DataVersionRecord(
             id: 1,
             dataVersion: manifest?.packageInfo?.version ?? release.tagName,
-            packageName: "dead-metadata",
+            packageName: "deadly-monorepo-data",
             versionType: "release",
             description: "Imported from GitHub release \(release.tagName)",
             importedAt: now,

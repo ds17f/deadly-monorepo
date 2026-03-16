@@ -80,7 +80,7 @@ Semantic version of metadata package.
 
 **Example**: `"2.0.0"`, `"2.1.3"`
 
-**Source**: `manifest.json` from dead-metadata package
+**Source**: `manifest.json` from data pipeline package (`data/`)
 
 **Usage**:
 - Display "Data version: 2.0.0"
@@ -153,7 +153,7 @@ Timestamp when metadata was imported.
 
 #### `git_commit` (TEXT, NULLABLE)
 
-Git commit SHA from dead-metadata repository.
+Git commit SHA from monorepo data pipeline.
 
 **Format**: 40-character hexadecimal SHA
 
@@ -172,7 +172,7 @@ Git commit SHA from dead-metadata repository.
 
 #### `git_tag` (TEXT, NULLABLE)
 
-Git tag from dead-metadata repository.
+Git tag from monorepo data pipeline.
 
 **Format**: Tag name
 
@@ -464,7 +464,7 @@ if (isFirstRun()) {
 
 ## Manifest Format
 
-The `manifest.json` file in dead-metadata package provides version information:
+The `manifest.json` file in data pipeline package (`data/`) provides version information:
 
 ### Example manifest.json
 
@@ -530,7 +530,7 @@ data class Statistics(
 
 ### Checking for Updates
 
-1. Fetch remote `manifest.json` from dead-metadata GitHub releases
+1. Fetch remote `manifest.json` from monorepo data releases
 2. Parse remote version
 3. Compare with local version
 4. If remote > local, prompt user to update
