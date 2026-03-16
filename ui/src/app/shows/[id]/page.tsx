@@ -56,7 +56,7 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: `https://beta.thedeadly.app/shows/${id}`,
+      url: `https://share.thedeadly.app/shows/${id}`,
       siteName: "The Deadly",
     },
     twitter: {
