@@ -6,7 +6,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
@@ -14,8 +13,6 @@ import com.grateful.deadly.core.design.resources.IconResources
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShareChooserSheet(
-    attachImage: Boolean,
-    onAttachImageChanged: (Boolean) -> Unit,
     onMessageShare: () -> Unit,
     onQrShare: () -> Unit,
     onDismiss: () -> Unit
@@ -65,34 +62,6 @@ fun ShareChooserSheet(
                     onDismiss()
                 }
             )
-
-            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
-
-            // Attach image checkbox
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onAttachImageChanged(!attachImage) }
-                    .padding(vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Checkbox(
-                    checked = attachImage,
-                    onCheckedChange = onAttachImageChanged
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Column {
-                    Text(
-                        text = "Attach image",
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-                    Text(
-                        text = "Included with message",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
         }
     }
 }

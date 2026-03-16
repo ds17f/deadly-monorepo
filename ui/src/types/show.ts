@@ -15,6 +15,18 @@ export interface LineupMember {
   image_url: string;
 }
 
+export interface TicketImage {
+  url: string;
+  filename: string;
+  side: string;
+}
+
+export interface ShowPhoto {
+  url: string;
+  filename: string;
+  thumbnail_url?: string;
+}
+
 export interface Show {
   show_id: string;
   band: string;
@@ -33,6 +45,8 @@ export interface Show {
   raw_rating: number;
   source_types: Record<string, number>;
   ai_show_review: AiShowReview | null;
+  ticket_images: TicketImage[];
+  photos: ShowPhoto[];
 }
 
 export interface BandPerformance {

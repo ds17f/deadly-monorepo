@@ -17,7 +17,7 @@ struct QRShareSheet: View {
     @Environment(\.dismiss) private var dismiss
 
     private var shareUrl: String {
-        var url = "https://share.thedeadly.app/show/\(showId)"
+        var url = "https://share.thedeadly.app/shows/\(showId)"
         if let rid = recordingId { url += "/recording/\(rid)" }
         if let track = trackNumber { url += "/track/\(track)" }
         return url

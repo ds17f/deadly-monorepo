@@ -63,6 +63,23 @@ struct DeepLinkTests {
         ))
     }
 
+    // MARK: - Universal Links (https://share.thedeadly.app/shows/ plural)
+
+    @Test func universalLinkShowsPlural() {
+        let url = URL(string: "https://share.thedeadly.app/shows/1977-05-08")!
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: nil, trackNumber: nil))
+    }
+
+    @Test func universalLinkShowsPluralWithRecording() {
+        let url = URL(string: "https://share.thedeadly.app/shows/1977-05-08/recording/gd77-05-08.xxx")!
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: "gd77-05-08.xxx", trackNumber: nil))
+    }
+
+    @Test func universalLinkShowsPluralWithTrack() {
+        let url = URL(string: "https://share.thedeadly.app/shows/1977-05-08/recording/gd77-05-08.xxx/track/3")!
+        #expect(DeepLink.parse(url) == .show(id: "1977-05-08", recordingId: "gd77-05-08.xxx", trackNumber: 3))
+    }
+
     @Test func universalLinkWrongHost() {
         let url = URL(string: "https://example.com/show/foo")!
         #expect(DeepLink.parse(url) == nil)

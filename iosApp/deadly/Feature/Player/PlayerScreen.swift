@@ -198,10 +198,6 @@ struct PlayerScreen: View {
         }
         .sheet(isPresented: $showShareChooser) {
             ShareChooserSheet(
-                attachImage: Binding(
-                    get: { container.appPreferences.shareAttachImage },
-                    set: { container.appPreferences.shareAttachImage = $0 }
-                ),
                 onMessageShare: {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         showMessageShare = true
@@ -218,18 +214,7 @@ struct PlayerScreen: View {
             if let show = container.playlistService.currentShow,
                let recording = container.playlistService.currentRecording {
                 let url = buildShareUrl(showId: show.id, recordingId: recording.identifier, trackNumber: currentTrackNumber)
-                let text = MessageShareService.buildShareMessage(
-                    showDate: DateFormatting.formatShowDate(show.date),
-                    venue: show.venue.name,
-                    location: show.venue.displayLocation,
-                    songTitle: streamPlayer.currentTrack?.title,
-                    shareUrl: url
-                )
-                let items = MessageShareService.shareItems(
-                    text: text,
-                    image: container.appPreferences.shareAttachImage ? buildMessageImage(show: show, recording: recording) : nil,
-                    url: URL(string: url)
-                )
+                let items = MessageShareService.shareItems(url: url)
                 ShareActivityView(items: items)
             }
         }
@@ -459,24 +444,12 @@ struct PlayerScreen: View {
     }
 
     private func buildShareUrl(showId: String, recordingId: String?, trackNumber: String?) -> String {
-        var url = "https://share.thedeadly.app/show/\(showId)"
+        var url = "https://share.thedeadly.app/shows/\(showId)"
         if let rid = recordingId { url += "/recording/\(rid)" }
         if let track = trackNumber { url += "/track/\(track)" }
         return url
     }
 
-    private func buildMessageImage(show: Show, recording: Recording) -> UIImage? {
-        let url = buildShareUrl(showId: show.id, recordingId: recording.identifier, trackNumber: currentTrackNumber)
-        guard let qr = ShareCardGenerator.generateQRCodeWithLogo(url: url, size: 600) else { return nil }
-        return ShareCardGenerator.buildShareCard(
-            qrImage: qr,
-            coverImage: nil,
-            showDate: DateFormatting.formatShowDate(show.date),
-            venue: show.venue.name,
-            location: show.venue.displayLocation,
-            songTitle: streamPlayer.currentTrack?.title
-        )
-    }
 }
 
 // MARK: - Share Activity View
