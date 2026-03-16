@@ -1,0 +1,15 @@
+:80 {
+	handle /api/* {
+		reverse_proxy api:3001
+	}
+
+	handle /ws/* {
+		reverse_proxy api:3001
+	}
+
+	handle {
+		root * /srv/ui
+		file_server
+		try_files {path} {path}.html /index.html
+	}
+}

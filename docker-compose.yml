@@ -1,0 +1,55 @@
+services:
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    volumes:
+      - ui_static:/out
+    restart: "no"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+      - ui_static:/srv/ui:ro
+    depends_on:
+      - api
+      - ui
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - PORT=3001
+      - HOST=0.0.0.0
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - USERS_DB_PATH=/app/data/users.db
+      - CORS_ORIGIN=${CORS_ORIGIN:-*}
+    volumes:
+      - api_data:/app/data
+    expose:
+      - "3001"
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    expose:
+      - "6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  caddy_data:
+  caddy_config:
+  api_data:
+  redis_data:
+  ui_static:

@@ -1,4 +1,8 @@
+.PHONY: dev dev-up dev-down dev-logs dev-ps api-dev api-install api-build api-typecheck
+.PHONY: api-remote-pull api-remote-up api-remote-down api-remote-logs api-remote-ps api-remote-dev api-remote-health
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
+.PHONY: ui-install ui-dev ui-build ui-typecheck ui-data
+.PHONY: ui-remote-install ui-remote-dev ui-remote-build ui-remote-dev-build ui-dev-build
 .PHONY: android-release android-release-version android-release-dry-run android-install
 .PHONY: ios-release ios-release-version ios-release-dry-run
 .PHONY: setup-signing setup-github-secrets setup-hooks
@@ -10,11 +14,127 @@
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
+.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output
+
+# =============================================================================
+# API & DOCKER COMPOSE
+# =============================================================================
+
+# Start full stack locally (Docker Compose dev mode)
+dev-up:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d
+
+# Stop the local stack
+dev-down:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml down
+
+# View logs from all services
+dev-logs:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml logs -f
+
+# Show running service status
+dev-ps:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml ps
+
+# Run API locally without Docker (for quick iteration)
+api-dev:
+	cd api && npm run dev
+
+# Install API dependencies
+api-install:
+	cd api && npm install
+
+# Build API TypeScript
+api-build:
+	cd api && npm run build
+
+# Type-check API
+api-typecheck:
+	cd api && npm run typecheck
+
+# =============================================================================
+# UI (Next.js)
+# =============================================================================
+
+DEAD_METADATA  ?= ../dead-metadata/stage02-generated-data
+
+# Install UI dependencies
+ui-install:
+	cd ui && npm install
+
+# Run UI dev server
+ui-dev:
+	cd ui && npm run dev
+
+# Build static UI export
+ui-build:
+	cd ui && npm run build
+
+# Fast dev build — only 10 pages for quick iteration
+ui-dev-build:
+	cd ui && DEV_PAGES=10 npm run build
+
+# Type-check UI
+ui-typecheck:
+	cd ui && npx tsc --noEmit
+
+# Copy dataset from dead-metadata into ui/data/
+ui-data:
+	@echo "Copying dataset from $(DEAD_METADATA) to ui/data/..."
+	@mkdir -p ui/data
+	@cp -r $(DEAD_METADATA)/shows ui/data/
+	@cp -r $(DEAD_METADATA)/recordings ui/data/
+	@if [ -f $(DEAD_METADATA)/collections.json ]; then cp $(DEAD_METADATA)/collections.json ui/data/; fi
+	@echo "Done. $$(ls ui/data/shows/ | wc -l) shows, $$(ls ui/data/recordings/ | wc -l) recordings."
+
+# UI Remote targets (Linux → Mac)
+ui-remote-install:
+	@$(MAKE) ios-remote-sync
+	@echo "Installing UI deps on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && npm install"
+
+ui-remote-dev:
+	@$(MAKE) ios-remote-sync
+	@echo "Starting UI dev server on $(REMOTE_HOST)... (ctrl-c to stop)"
+	@ssh -t $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && npm run dev"
+
+ui-remote-build:
+	@$(MAKE) ios-remote-sync
+	@echo "Building UI on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && npm run build"
+
+# Fast dev build — only generates 10 pages (middle of the catalog so prev/next works)
+ui-remote-dev-build:
+	@$(MAKE) ios-remote-sync
+	@echo "Building UI (dev, 10 pages) on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && DEV_PAGES=10 npm run build"
 
 # Default target shows all available commands
 help:
 	@echo "Deadly Monorepo - Available Make Targets"
 	@echo "========================================"
+	@echo ""
+	@echo "API & LOCAL DEV:"
+	@echo "  dev-up           - Start full stack locally (Caddy + API + Redis via Docker Compose)"
+	@echo "  dev-down         - Stop the local stack"
+	@echo "  dev-logs         - View logs from all services"
+	@echo "  dev-ps           - Show running service status"
+	@echo "  api-dev          - Run API locally without Docker (fast iteration)"
+	@echo "  api-install      - Install API dependencies"
+	@echo "  api-build        - Build API TypeScript"
+	@echo "  api-typecheck    - Type-check API"
+	@echo ""
+	@echo "UI (Next.js):"
+	@echo "  ui-install       - Install UI dependencies"
+	@echo "  ui-dev           - Run UI dev server"
+	@echo "  ui-build         - Build static UI export"
+	@echo "  ui-typecheck     - Type-check UI"
+	@echo "  ui-data          - Copy dataset from dead-metadata into ui/data/"
+	@echo ""
+	@echo "UI REMOTE (Linux → Mac):"
+	@echo "  ui-remote-install  - Sync + install UI deps on Mac"
+	@echo "  ui-remote-dev      - Sync + run UI dev server on Mac"
+	@echo "  ui-remote-build    - Sync + build static UI on Mac"
 	@echo ""
 	@echo "ANDROID RELEASE:"
 	@echo "  android-release          - Android release with auto-versioning"
@@ -56,6 +176,14 @@ help:
 	@echo "  ios-resolve          - Resolve SPM package dependencies"
 	@echo "  ios-log              - Stream app logs from simulator via os_log"
 	@echo ""
+	@echo "API REMOTE (Linux → Mac):"
+	@echo "  api-remote-up      - Sync + start full stack on Mac (Docker Compose)"
+	@echo "  api-remote-down    - Stop stack on Mac"
+	@echo "  api-remote-logs    - View logs from remote stack"
+	@echo "  api-remote-ps      - Show remote service status"
+	@echo "  api-remote-dev     - Sync + run API directly on Mac (no Docker)"
+	@echo "  api-remote-health  - Health check against remote API"
+	@echo ""
 	@echo "ANDROID REMOTE BUILD (Linux → Mac):"
 	@echo "  android-remote-sync        - Rsync working tree to Mac"
 	@echo "  android-remote-build       - Sync + build debug APK on Mac"
@@ -74,6 +202,14 @@ help:
 	@echo "  ios-remote-sim       - Sync + build + run on iPhone 17 simulator"
 	@echo "  ios-remote-test      - Sync + run tests on Mac simulator"
 	@echo "  ios-remote-resolve   - Sync + resolve SPM package dependencies"
+	@echo ""
+	@echo "INFRASTRUCTURE (OCI):"
+	@echo "  infra-init       - Initialize Terraform providers"
+	@echo "  infra-plan       - Preview infrastructure changes"
+	@echo "  infra-apply      - Apply infrastructure changes"
+	@echo "  infra-retry      - Retry instance creation until capacity available (make infra-retry INTERVAL=5)"
+	@echo "  infra-destroy    - Tear down all infrastructure"
+	@echo "  infra-output     - Show current Terraform outputs (instance IP, etc.)"
 	@echo ""
 	@echo "DOCUMENTATION:"
 	@echo "  docs-help       - Show documentation-specific help"
@@ -427,3 +563,75 @@ ios-log:
 	@xcrun simctl spawn booted log stream \
 		--predicate 'subsystem == "$(BUNDLE_ID)" OR subsystem == "SwiftAudioStreamEx"' \
 		--level debug
+
+# =============================================================================
+# API REMOTE (Linux → Mac)
+# =============================================================================
+
+REMOTE_BREW    := /usr/local/opt
+REMOTE_DOCKER  := /Applications/Docker.app/Contents/Resources/bin
+REMOTE_ENVPATH := export PATH=$(REMOTE_DOCKER):$(REMOTE_BREW)/node@22/bin:/usr/local/bin:$$PATH
+
+# Pre-pull base images (avoids keychain auth issues over SSH)
+api-remote-pull:
+	@echo "Pulling base images on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine"
+
+# Sync + build + start full stack on remote Mac (requires KEYCHAIN_PASSWORD env var)
+api-remote-up:
+	@$(MAKE) ios-remote-sync
+	@echo "Starting stack on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "security unlock-keychain -p '$(KEYCHAIN_PASSWORD)' ~/Library/Keychains/login.keychain-db && $(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d"
+
+# Stop stack on remote Mac
+api-remote-down:
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml down"
+
+# View logs from remote stack
+api-remote-logs:
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml logs -f"
+
+# Show remote service status
+api-remote-ps:
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml ps"
+
+# Run API directly on remote Mac (no Docker, fast iteration)
+api-remote-dev:
+	@$(MAKE) ios-remote-sync
+	@echo "Starting API on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/api && npm install && npm run dev"
+
+# Health check against remote API
+api-remote-health:
+	@curl -s http://worklaptop.local:3001/api/health | python3 -m json.tool
+
+# =============================================================================
+# INFRASTRUCTURE (OCI)
+# =============================================================================
+
+TERRAFORM      ?= terraform
+INTERVAL       ?= 5
+INFRA_PROVIDER ?= digitalocean
+INFRA_DIR      := infra/$(INFRA_PROVIDER)
+
+infra-init:
+	@cd $(INFRA_DIR) && $(TERRAFORM) init
+
+infra-plan:
+	@cd $(INFRA_DIR) && $(TERRAFORM) plan
+
+infra-apply:
+	@cd $(INFRA_DIR) && $(TERRAFORM) apply
+
+# Retry instance creation, cycling through ADs every INTERVAL minutes.
+# OCI free tier A1.Flex capacity is often exhausted — this will keep trying.
+#   make infra-retry              # retry every 5 minutes (default)
+#   make infra-retry INTERVAL=10  # retry every 10 minutes
+infra-retry:
+	@cd infra/oci && TERRAFORM=$(TERRAFORM) ./retry-apply.sh $(INTERVAL)
+
+infra-destroy:
+	@cd $(INFRA_DIR) && $(TERRAFORM) destroy
+
+infra-output:
+	@cd $(INFRA_DIR) && $(TERRAFORM) output

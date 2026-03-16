@@ -1,0 +1,20 @@
+services:
+  caddy:
+    ports: !override
+      - "8080:80"
+    volumes:
+      - ./Caddyfile.dev:/etc/caddy/Caddyfile:ro
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+      target: builder
+    command: npx tsx watch src/server.ts
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./api/src:/app/src:ro
+      - api_data:/app/data
+    environment:
+      - LOG_LEVEL=debug
