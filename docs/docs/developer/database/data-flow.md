@@ -8,7 +8,7 @@ This document explains how data flows through the system from initial import thr
 
 Data flows through the app in three primary scenarios:
 
-1. **Initial Setup** - One-time metadata import from dead-metadata package
+1. **Initial Setup** - One-time metadata import from data pipeline package (`data/`)
 2. **Runtime Access** - Show browsing, playback, search
 3. **User Actions** - Library management, play tracking
 

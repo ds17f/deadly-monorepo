@@ -140,8 +140,8 @@ Curated collections of shows:
 ```
 User initiates first-time setup
   ↓
-1. Download ZIP from dead-metadata GitHub release
-   - URL: https://github.com/ds17f/dead-metadata/releases/latest
+1. Download ZIP from monorepo data release
+   - URL: https://github.com/ds17f/deadly-monorepo/releases/tags/data-v{VERSION}
    - File: deadly-metadata-v2.0.0.zip (~500KB)
   ↓
 2. Save to app cache directory
@@ -584,7 +584,7 @@ fun startAdjacentPrefetch() {
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
 │  GitHub Release                                              │
-│  (dead-metadata)                                             │
+│  (deadly-monorepo data release)                              │
 │         │                                                    │
 │         │ Download ZIP                                       │
 │         ↓                                                    │

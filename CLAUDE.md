@@ -19,6 +19,12 @@ This is a **monorepo** containing separate iOS and Android native applications:
   - Min SDK: 24, Target/Compile SDK: 36
   - JVM Target: Java 11
 
+- **data/** - Grateful Dead metadata pipeline (Python)
+  - `stage00-created-data/` - AI reviews + collections (committed, source of truth)
+  - `scripts/` - 13 Python scripts for 4-stage data pipeline
+  - `version` - Pinned data version read by all platforms + CI
+  - Produces `data.zip` consumed by iOS, Android, and web via GitHub Releases
+
 **Note**: The directory structure differs from AGENTS.md documentation. Actual paths are `iosApp/` and `androidApp/`, not `deadly/` and `dead/v2/`.
 
 ## Build & Development Commands
@@ -78,6 +84,15 @@ Test structure:
 - `CamelCase` for types
 - `lowerCamelCase` for variables/functions
 - Use `swiftlint` for linting
+
+### Data Pipeline
+```bash
+make data-download VERSION=2.3.0   # Download released data + populate ui/data/
+make data-generate                  # Build stage02 from stage00+stage01
+make data-package                   # Package stage02 into data.zip
+make data-release VERSION=2.4.0    # Tag + push, CI publishes data.zip
+make data-download-stage01          # Fetch stage01 API cache from release
+```
 
 ## Gradle Configuration
 
